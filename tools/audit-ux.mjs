@@ -327,6 +327,7 @@ try {
       }
       await inspect(p, tag('join'))
       await name.fill('Rae UX')
+      await p.locator('.join-field input[autocomplete="address-level2"]').first().fill('Oakland')
       await p.locator('.join-field input[type="tel"]').first().fill(email)
       /* Both: which is required depends on the channel the server can use. */
       await p.locator('.join-field input[type="email"]').first()
@@ -344,6 +345,12 @@ try {
       })
     }
     if (!signedIn) fail(tag('join'), 'could not sign in', 'the rest of this walk is a signed-out visitor, so gated screens are missing')
+    /* A new member lands on Find friends (2026-10-19); look at it, then go Home. */
+    if (await p.locator('.ff').count()) {
+      await inspect(p, tag('find-friends'))
+      await p.locator('.nav-back').first().click()
+      await p.waitForTimeout(900)
+    }
     await p.keyboard.press('Escape')
     await p.waitForTimeout(700)
     await inspect(p, tag('home'))

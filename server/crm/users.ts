@@ -152,6 +152,17 @@ export async function usersOverview(r: Range) {
     .prepare(`SELECT ${SOURCE} AS k, COUNT(*) AS n FROM members m WHERE ${REAL_USER} AND m.created_at >= ? AND m.created_at < ? GROUP BY k ORDER BY n DESC`)
     .all<{ k: string; n: number }>(r.since, r.until)
 
+  /* WHERE THEY LIVE, all members (not just the period's sign-ups): Glenn,
+     2026-10-19, asking for City and State at sign-up, "It is also good to
+     add to our analytics." Members from before then have none until they
+     add it on Profile or sign in again. */
+  const homes = await db
+    .prepare(
+      `SELECT CASE WHEN m.city IS NULL OR m.city = '' THEN '' ELSE m.city || COALESCE(', ' || m.state, '') END AS k, COUNT(*) AS n
+       FROM members m WHERE ${REAL_USER} GROUP BY k ORDER BY n DESC LIMIT 15`,
+    )
+    .all<{ k: string; n: number }>()
+
   /* The sign-up funnel, over the part of the period tracking covered, so
      every step counts the same days. */
   const lo = Math.max(r.since, tracked)
@@ -202,6 +213,7 @@ export async function usersOverview(r: Range) {
     activeBefore: before?.whole ? { n: before.active, returning: before.returning } : null,
     activated: { signedUp: num(act?.signed_up), n: num(act?.activated) },
     sources: sources.map((x) => ({ key: x.k, label: SOURCES[x.k] ?? x.k, count: num(x.n) })),
+    homes: homes.map((x) => ({ key: x.k || 'unknown', label: x.k || 'Not given yet', count: num(x.n) })),
     funnel: funnel
       ? {
           since: lo,

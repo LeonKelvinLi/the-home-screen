@@ -22,6 +22,7 @@ import { MembersApp } from './apps/MembersApp'
 import { CalendarApp } from './apps/CalendarApp'
 import { MemberCardApp } from './apps/MemberCardApp'
 import { ProfileApp } from './apps/ProfileApp'
+import { FindFriendsApp } from './apps/FindFriends'
 
 /**
  * Everything behind the landing page: the fake OS, every app, and the whole
@@ -67,6 +68,8 @@ function renderApp(appId: string, api: ShellApi) {
       return <ShareApp api={api} />
     case 'join':
       return <JoinApp api={api} />
+    case 'friends':
+      return <FindFriendsApp api={api} />
     case 'members':
       return <MembersApp api={api} />
     case 'calendar':

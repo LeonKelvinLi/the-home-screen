@@ -127,6 +127,7 @@ for (const world of WORLDS) {
   await p.locator('input[type=email]').fill(email)
   const nameBox = p.locator('.join input').first()
   await nameBox.fill('Chan Nel')
+  await p.locator('.join input[autocomplete="address-level2"]').fill('Oakland')
   await p.waitForTimeout(200)
   await p.evaluate(() => document.querySelector('.join button[type=submit]')?.click())
   /*

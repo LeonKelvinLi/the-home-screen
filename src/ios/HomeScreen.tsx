@@ -1029,34 +1029,52 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hidden, receding, inert])
 
-  /* The reels bubble: once per visit (sessionStorage), 15 to 45 seconds after
-     the home screen is in front, never while the first-visit bubble is up,
-     and not for automated browsers, whose checks tap what it would cover. */
-  const [reelHint, setReelHint] = useState(false)
+  /*
+    THE REELS AFTER THREE QUIET SECONDS. Glenn, 2026-10-19: "when the user is
+    on the home screen, after 3 seconds of no activity, can we let it default
+    onto the video reels page? This way it feels like a social media page and
+    users are more likely to discover places." Any touch, key, wheel or scroll
+    starts the three seconds again. Once a visit (sessionStorage): someone who
+    backs out of the reels has chosen the home screen, and opening them again
+    every three seconds would trap them. Members only, because for a visitor
+    the reels door is a sign-up prompt, and a prompt nobody asked for is not
+    discovery. Never while the first-visit bubble is up, and never for
+    automated browsers, whose checks need the home screen to stay put.
+    It replaces the reels bubble, which he asked to delete in the same note.
+  */
+  const IDLE_REELS_MS = 3000
   useEffect(() => {
-    if (hidden || receding || inert || hint || reelHint) return
+    if (hidden || receding || inert || hint || !account) return
     if (typeof navigator !== 'undefined' && navigator.webdriver) return
     try {
-      if (sessionStorage.getItem('fb.reelHint.v1') === '1') return
+      if (sessionStorage.getItem('fb.idleReels.v1') === '1') return
     } catch {
       return
     }
-    const t = window.setTimeout(() => {
-      setReelHint(true)
-      try {
-        sessionStorage.setItem('fb.reelHint.v1', '1')
-      } catch {
-        /* it may show again; harmless */
-      }
-    }, 15000 + Math.random() * 30000)
-    return () => window.clearTimeout(t)
+    let t = 0
+    const arm = () => {
+      window.clearTimeout(t)
+      t = window.setTimeout(() => {
+        const el = watchRef.current
+        const rect = el && rectInScreen(el)
+        if (!rect) return
+        try {
+          sessionStorage.setItem('fb.idleReels.v1', '1')
+        } catch {
+          /* it may happen again this visit; harmless */
+        }
+        onOpen(WATCH_APP.id, rect)
+      }, IDLE_REELS_MS)
+    }
+    const EVENTS = ['pointerdown', 'pointermove', 'keydown', 'wheel', 'touchstart', 'scroll'] as const
+    EVENTS.forEach((e) => window.addEventListener(e, arm, { passive: true, capture: true }))
+    arm()
+    return () => {
+      window.clearTimeout(t)
+      EVENTS.forEach((e) => window.removeEventListener(e, arm, { capture: true }))
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hidden, receding, inert, hint])
-  useEffect(() => {
-    if (!reelHint) return
-    const t = window.setTimeout(() => setReelHint(false), 9000)
-    return () => window.clearTimeout(t)
-  }, [reelHint])
+  }, [hidden, receding, inert, hint, account])
   const badgeFor = (appId: string) => {
     if (appId === 'sys.cart') return cart.count
     /* Friend requests waiting for an answer (apps/Friends.tsx). */
@@ -1401,33 +1419,15 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
           people have a short attention span."
         */}
         {/*
-          THE REELS BUBBLE. Glenn, 2026-10-02: "Reminder to put a moving glow on
-          the video reel button and maybe have a random pop up bubble saying
-          something like watch foodie reviews here to discover a new gems."
-          Once a visit, after a random wait; tapping it opens the reels.
+          The reels bubble ("watch foodie reviews here to discover new gems",
+          2026-10-02) is gone: Glenn, 2026-10-19, "maybe we could delete that
+          pop-up bubble for the video reels", now that a quiet home screen
+          opens the reels by itself (see IDLE_REELS_MS above).
         */}
-        {/* The bubble hangs off the reels button itself, not the row: on
-            Glenn's installed iPhone a row-relative bubble drew half off the
-            screen's left edge (2026-10-05, "fix this context glitch"). */}
         <span className="spotlight-watch-wrap">
-          {reelHint && !hidden && !receding && !inert && (
-            <button
-              type="button"
-              className="reel-hint"
-              onClick={() => {
-                setReelHint(false)
-                const el = watchRef.current
-                const rect = el && rectInScreen(el)
-                if (rect) gate('watch', () => onOpen(WATCH_APP.id, rect))
-              }}
-            >
-              Watch foodie reviews here to discover new gems.
-            </button>
-          )}
           <button
             className="spotlight-glass is-watch"
             onClick={() => {
-              setReelHint(false)
               const el = watchRef.current
               const rect = el && rectInScreen(el)
               if (rect) gate('watch', () => onOpen(WATCH_APP.id, rect))

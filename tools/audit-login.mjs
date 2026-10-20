@@ -61,6 +61,7 @@ console.log('reached form  :', reached)
 
 // Fill the details and ask for a code.
 await p.fill('.join-field input[autocomplete="name"]', 'Ola Bright')
+await p.fill('.join-field input[autocomplete="address-level2"]', 'Oakland')
 /* BOTH FIELDS, because which one is required now depends on what the
    deployment can actually deliver — a number when texting is configured, an
    address when it is not. Filling only the number left the submit button

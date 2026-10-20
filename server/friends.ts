@@ -17,6 +17,8 @@ import type { Express, Request, RequestHandler } from 'express'
 import { db } from './db/schema'
 import { track } from './analytics'
 import { SPECIES, COATS, BACKDROPS, ACCESSORIES } from '../src/data/pets'
+import { CITY_MAX, cleanCity, cleanState, placeLine } from '../src/data/usStates'
+import { POINTS_PER_REFERRAL } from '../src/data/membership'
 
 export const DECLINE_COOLDOWN_MS = 30 * 24 * 60 * 60 * 1000
 export const REQUESTS_PER_DAY = 30
@@ -131,8 +133,9 @@ export async function topOf(id: string, shortName: (n: string) => string): Promi
 
 /** What a member's page adds for friends: their pet, line, count, Top 3, and where the viewer stands. */
 export async function profileExtras(viewer: string, id: string, shortName: (n: string) => string) {
-  const [pets, count, top3, relation, bio] = await Promise.all([petsFor([id]), friendCount(id), topOf(id, shortName), relationOf(viewer, id), bioOf(id)])
-  return { pet: pets.get(id) ?? null, friendCount: count, top3, relation, bio }
+  const [pets, count, top3, relation, bio, places] = await Promise.all([petsFor([id]), friendCount(id), topOf(id, shortName), relationOf(viewer, id), bioOf(id), placesFor([id])])
+  const p = places.get(id)
+  return { pet: pets.get(id) ?? null, friendCount: count, top3, relation, bio, place: placeLine(p?.city, p?.state) }
 }
 
 /*
@@ -162,6 +165,72 @@ export async function saveBio(me: string, v: unknown): Promise<string> {
   if (bio === null) throw new Refused(400, `One line of up to ${BIO_MAX} characters, with no links, numbers or emails.`)
   await db.prepare('UPDATE members SET bio = ? WHERE id = ?').run(bio || null, me)
   return bio
+}
+
+/*
+  WHERE THEY LIVE, "Concord, CA" (Glenn, 2026-10-19). Shown on the Contacts
+  list and their page; the city is a town, never a street.
+*/
+export async function placesFor(ids: string[]): Promise<Map<string, { city: string; state: string }>> {
+  const out = new Map<string, { city: string; state: string }>()
+  if (!ids.length) return out
+  const rows = await db
+    .prepare(`SELECT id, city, state FROM members WHERE id IN (${ids.map(() => '?').join(',')})`)
+    .all<{ id: string; city: string | null; state: string | null }>(...ids)
+  for (const r of rows) out.set(r.id, { city: r.city ?? '', state: r.state ?? '' })
+  return out
+}
+
+export async function savePlace(me: string, city: unknown, state: unknown): Promise<{ city: string; state: string }> {
+  const c = cleanCity(city)
+  if (c === null) throw new Refused(400, `A city name of up to ${CITY_MAX} letters, with no numbers.`)
+  const s = cleanState(state)
+  if (s === null) throw new Refused(400, 'Pick your state from the list.')
+  await db.prepare('UPDATE members SET city = ?, state = ? WHERE id = ?').run(c || null, s || null, me)
+  return { city: c, state: s }
+}
+
+/*
+  FIND FRIENDS, his Beli screen of 2026-10-19 ("Get recs from people you
+  trust ... change it to something referring to the 💎 points"). Members who
+  are not already friends or asked, each with their 💎 points, people in the
+  viewer's own city first, then the most points, then the newest. Points are
+  POINTS_PER_REFERRAL for each real referral (src/data/membership.ts).
+*/
+export async function suggestions(me: string, shortName: (n: string) => string) {
+  const self = await db.prepare('SELECT city, state FROM members WHERE id = ?').get<{ city: string | null; state: string | null }>(me)
+  const rows = await db
+    .prepare(
+      `SELECT m.id, m.name, m.city, m.state, m.created_at,
+              (SELECT COUNT(*) FROM members r WHERE r.referred_by = m.id) AS refs
+         FROM members m
+        WHERE m.id <> ?
+          AND NOT EXISTS (
+            SELECT 1 FROM member_friendships f
+             WHERE f.status IN ('pending','accepted')
+               AND ((f.requester_id = ? AND f.addressee_id = m.id) OR (f.requester_id = m.id AND f.addressee_id = ?)))
+        LIMIT 1000`,
+    )
+    .all<{ id: string; name: string; city: string | null; state: string | null; created_at: number | string; refs: number | string }>(me, me, me)
+  const near = (r: { city: string | null; state: string | null }) =>
+    !!self?.city && r.city === self.city && (r.state ?? '') === (self.state ?? '') ? 1 : 0
+  const ranked = rows
+    .map((r) => ({ ...r, points: Number(r.refs) * POINTS_PER_REFERRAL, near: near(r) }))
+    .sort((a, b) => b.near - a.near || b.points - a.points || Number(b.created_at) - Number(a.created_at))
+    .slice(0, 30)
+  const pets = await petsFor(ranked.map((r) => r.id))
+  const mine = await db.prepare('SELECT COUNT(*) AS n FROM members WHERE referred_by = ?').get<{ n: number | string }>(me)
+  return {
+    myPoints: Number(mine?.n ?? 0) * POINTS_PER_REFERRAL,
+    people: ranked.map((r) => ({
+      id: r.id,
+      name: shortName(r.name),
+      pet: pets.get(r.id) ?? null,
+      place: placeLine(r.city, r.state),
+      points: r.points,
+      sameCity: r.near === 1,
+    })),
+  }
 }
 
 class Refused extends Error {
@@ -390,6 +459,15 @@ export function mountFriends(app: Express, { memberFromRequest, rateLimiter, sho
     rateLimiter(30, 10),
     handle(async (me, req) => ({ bio: await saveBio(me.id, (req.body as { bio?: unknown })?.bio) })),
   )
+  app.put(
+    '/api/members/me/place',
+    rateLimiter(30, 10),
+    handle(async (me, req) => {
+      const b = (req.body ?? {}) as { city?: unknown; state?: unknown }
+      return await savePlace(me.id, b.city, b.state)
+    }),
+  )
+  app.get('/api/friends/suggested', rateLimiter(60, 20), handle((me) => suggestions(me.id, shortName)))
   app.put(
     '/api/members/me/avatar',
     rateLimiter(30, 10),

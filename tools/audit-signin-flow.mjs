@@ -71,6 +71,7 @@ await p.waitForSelector('.join', { timeout: 20000 })
 const A = 'first@example.invalid'
 const B = 'second@example.invalid'
 await p.locator('.join input').first().fill('Flow Audit')
+await p.locator('.join input[autocomplete="address-level2"]').fill('Oakland')
 await p.locator('.join input[type=email]').fill(A)
 await p.locator('.join button[type=submit]').click()
 await p.waitForSelector('.join-otp', { timeout: 15000 })

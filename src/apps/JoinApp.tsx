@@ -9,6 +9,7 @@ import {
   type LoginChannels,
 } from '../lib/account'
 import { useGate } from '../lib/gate'
+import { US_STATES, DEFAULT_STATE, CITY_MAX, cleanCity } from '../data/usStates'
 import type { ShellApi } from '../ios/Device'
 
 /**
@@ -60,6 +61,11 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
   const [email, setEmail] = useState('')
   const [instagram, setInstagram] = useState('')
   const [phone, setPhone] = useState('')
+  /* Where they live — Glenn, 2026-10-19: "add City and State when people sign
+     up to appear here. That way people can befriend people in their same
+     city." Shown beside their name on Contacts. */
+  const [city, setCity] = useState('')
+  const [usState, setUsState] = useState(DEFAULT_STATE)
   /*
     THE PROVIDER HAS TO BE TOLD, or the gate keeps firing after a successful
     sign-up. It loads the account once on boot and holds it; nothing else
@@ -146,7 +152,8 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
   /* An address good enough to be worth a round trip; the server checks it
      properly. Only the field that will actually be used is required. */
   const emailLooksRight = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.trim())
-  const ready = name.trim().length >= 2 && (byText ? phoneLooksRight : emailLooksRight)
+  const cityLooksRight = !!cleanCity(city)
+  const ready = name.trim().length >= 2 && cityLooksRight && (byText ? phoneLooksRight : emailLooksRight)
 
   /* The one send, called by the details form and by Resend. Both need the same
      handling of a failure, and two copies of it drift. */
@@ -160,6 +167,8 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
       ...(phone.trim() ? { phone: phone.trim() } : {}),
       ...(email.trim() ? { email: email.trim() } : {}),
       instagram: instagram.trim() || undefined,
+      city: city.trim(),
+      state: usState,
     })
     if (!r.ok) {
       setError(r.error)
@@ -227,7 +236,11 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
     }
     setAccount(r.account)
     onDone?.(r.account)
-    api.closeApp()
+    /* A brand-new member goes straight to Find friends, the way Beli opens
+       on "Get recs from people you trust" (Glenn, 2026-10-19). A sign-in
+       goes back to where they were. */
+    if (r.created) api.openApp('sys.friends')
+    else api.closeApp()
   }
 
   /*
@@ -322,6 +335,34 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
                 : 'Kept on your account. The code goes to your email.'}
             </small>
           </label>
+
+          <div className="join-row">
+            <label className="join-field join-city">
+              <span>City</span>
+              <input
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                autoComplete="address-level2"
+                placeholder="Oakland"
+                maxLength={CITY_MAX}
+                enterKeyHint="next"
+                required
+              />
+            </label>
+            <label className="join-field join-state">
+              <span>State</span>
+              <select value={usState} onChange={(e) => setUsState(e.target.value)} autoComplete="address-level1" required>
+                {US_STATES.map(([code, label]) => (
+                  <option key={code} value={code}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <small className="join-hint join-row-hint">
+            Shown beside your name on Contacts, so people near you can find you. Just the town, never a street.
+          </small>
 
           <label className="join-field">
             <span>

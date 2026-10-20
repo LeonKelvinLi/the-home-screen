@@ -41,7 +41,8 @@ const join = async (url, name, email) => {
   await p.click('[aria-label="Enter BEASTY"]', { timeout: 90000 }); await p.waitForTimeout(2500)
   await p.click('.spotlight'); await p.waitForTimeout(400)
   await p.click('.gate-card .btn-primary'); await p.waitForTimeout(900)
-  await p.fill('.join-field:nth-of-type(1) input', name)
+  await p.fill('.join-field input[autocomplete="name"]', name)
+  await p.fill('.join-field input[autocomplete="address-level2"]', 'Oakland')
   /* By TYPE, not by position, and both of them. Which field is required now
      follows what the deployment can deliver, and nth-of-type(2) silently means
      a different box the moment the form's order changes. */

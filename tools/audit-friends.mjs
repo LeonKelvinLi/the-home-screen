@@ -172,7 +172,9 @@ const shot = async (p, name) => { if (SHOTS) await p.screenshot({ path: `${SHOTS
 const openContactsOn = async (p, letter, who) => {
   await p.goto(`${base}/contacts`, { waitUntil: 'domcontentloaded' })
   await p.waitForSelector('.contacts-letter-head', { timeout: 20000 })
-  await p.locator('.contacts-letter-head', { hasText: letter }).first().click()
+  /* Contacts groups names in sets of letters since 2026-10-19 (A–H, I–Q, R–Z). */
+  const set = letter <= 'H' ? 'A\u2013H' : letter <= 'Q' ? 'I\u2013Q' : 'R\u2013Z'
+  await p.locator('.contacts-letter-head', { has: p.locator('.contacts-letter-mark', { hasText: set }) }).first().click()
   await p.locator('.contact-row', { hasText: who }).first().click()
   await p.waitForSelector('.member-page .prof-name', { timeout: 20000 })
   await p.waitForTimeout(600)

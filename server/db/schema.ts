@@ -830,6 +830,18 @@ CREATE TABLE IF NOT EXISTS affiliate_rewards (
   UNIQUE (member_id, source_kind, source_id, kind)
 );
 CREATE INDEX IF NOT EXISTS idx_affrewards_member ON affiliate_rewards(member_id, created_at);
+
+/*
+  WHERE A MEMBER LIVES, city and state. Glenn, 2026-10-19: "add City and State
+  when people sign up to appear here. That way people can befriend people in
+  their same city if they want to. It is also good to add to our analytics."
+  Asked on the sign-up form (held in login_codes until the code is proved, like
+  the name) and editable on Profile; src/data/usStates.ts cleans both.
+*/
+ALTER TABLE members ADD COLUMN IF NOT EXISTS city TEXT;
+ALTER TABLE members ADD COLUMN IF NOT EXISTS state TEXT;
+ALTER TABLE login_codes ADD COLUMN IF NOT EXISTS pending_city TEXT;
+ALTER TABLE login_codes ADD COLUMN IF NOT EXISTS pending_state TEXT;
 `
 
 /**

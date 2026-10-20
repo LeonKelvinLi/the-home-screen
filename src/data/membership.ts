@@ -90,6 +90,16 @@ export type Perk = {
 export const PER_MILESTONE_REFERRALS = 3
 export const DISCOUNT_PER_MILESTONE = 10
 
+/*
+  💎 POINTS, his rate of 2026-09-02: "3 points is basically 10% of the $39
+  membership fee minus the $9 donation for the foundation." Counted from real
+  referrals only, so nobody's number is invented. Shown beside each member on
+  the Find friends screen (his Beli idea of 2026-10-19, "change it to something
+  referring to the 💎 points"). Promotional doubling, also his idea, is not
+  built: nothing here multiplies.
+*/
+export const POINTS_PER_REFERRAL = 3
+
 export const TIERS: Tier[] = [
   {
     id: 'pass',

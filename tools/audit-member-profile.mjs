@@ -98,14 +98,23 @@ try {
   const listed = await page.waitForSelector('.contacts-count', { timeout: 15000 }).then(() => true).catch(() => false)
   check(listed, 'Contacts lists real members for a signed-in member')
   /* Glenn, 2026-09-22: a drop-down per letter, "just to minimize the page". */
-  check((await page.locator('.contacts-letter-head[aria-expanded="false"]').count()) >= 1 && (await page.locator('text=Ada O.').count()) === 0, 'each letter starts closed, so the list is short')
+  check((await page.locator('.contacts-letter-head[aria-expanded="false"]').count()) >= 1 && (await page.locator('text=Ada O.').count()) === 0, 'each set of letters starts closed, so the list is short')
   if (process.env.SHOTS) await page.screenshot({ path: `${process.env.SHOTS}/contacts-closed.png` })
-  await page.locator('.contacts-letter-head', { has: page.locator('.contacts-letter-mark', { hasText: /^A$/ }) }).click()
+  await page.locator('.contacts-letter-head', { has: page.locator('.contacts-letter-mark', { hasText: /^A\u2013H$/ }) }).click()
   if (process.env.SHOTS) await page.screenshot({ path: `${process.env.SHOTS}/contacts-open.png` })
   check(await page.locator('text=Ada O.').first().isVisible().catch(() => false), 'tapping A shows the names under it')
   check(await page.locator('.nav-bar-right .chrome-pill.is-share').isVisible().catch(() => false), 'Contacts carries a share button, top right')
-  const heads = await page.$$eval('.ios-section-header', (h) => h.map((e) => e.textContent?.trim()))
-  check(heads.indexOf('CTO/Co-Founder') === heads.indexOf('Co-CEO/Co-Founder') + 1 && heads.indexOf('Co-CEO/Co-Founder') > heads.indexOf('CEO/Founder'), 'Leon\'s line sits right below Janelle\'s, under his title', heads.slice(0, 4).join(' | '))
+  /* The owners sit behind one button since 2026-10-19 ("make the owners a
+     button that will drop down the 3 contacts"), one line each with a phone
+     and an email icon, and the note rises as a bubble two seconds in. */
+  check((await page.locator('.owner-line').count()) === 0, 'the owners start closed behind one button')
+  await page.waitForSelector('.owners-bubble.is-shown', { timeout: 5000 })
+  check((await page.locator('.owners-bubble.is-shown').innerText()).includes('Text or email is preferred'), 'the owners bubble rises in after two seconds')
+  await page.locator('.owners-head').click()
+  const roles = await page.$$eval('.owner-role', (h) => h.map((e) => e.textContent?.trim()))
+  check(roles.join('|') === 'CEO/Founder|Co-CEO/Co-Founder|CTO/Co-Founder', 'Leon\'s line sits right below Janelle\'s, under his title', roles.join(' | '))
+  const lines = await page.$$eval('.owner-line', (l) => l.map((e) => ({ h: e.getBoundingClientRect().height, calls: e.querySelectorAll('button.owner-act').length, mails: e.querySelectorAll('a.owner-act[href^="mailto:"]').length })))
+  check(lines.every((l) => l.h < 80) && lines[0].calls === 1 && lines[0].mails === 1 && lines[1].calls === 1 && lines[1].mails === 1, 'one line per owner, with a phone and an email icon', JSON.stringify(lines))
   await page.locator('text=Ada O.').first().click({ timeout: 15000 }).catch(() => {})
   const opened = await page.waitForSelector('.member-page', { timeout: 15000 }).then(() => true).catch(() => false)
   check(opened, 'tapping her row opens her page')

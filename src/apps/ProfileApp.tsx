@@ -22,7 +22,8 @@ import {
 import type { ShellApi } from '../ios/Device'
 import { MyFriendsSection } from './Friends'
 import { petFor } from './FriendFace'
-import { myPageLink, saveBio, syncMyPet } from '../lib/friends'
+import { myPageLink, saveBio, savePlace, syncMyPet } from '../lib/friends'
+import { US_STATES, DEFAULT_STATE, CITY_MAX, placeLine } from '../data/usStates'
 import { shareOrCopy } from '../lib/share'
 
 /**
@@ -77,6 +78,12 @@ export function ProfileApp({ api }: { api: ShellApi }) {
   const [editingBio, setEditingBio] = useState(false)
   const [bioDraft, setBioDraft] = useState('')
   const [bioError, setBioError] = useState<string | null>(null)
+  /* Where they live (Glenn, 2026-10-19), shown beside their name on Contacts.
+     Asked on sign-up; members from before that add it here. */
+  const [editingPlace, setEditingPlace] = useState(false)
+  const [cityDraft, setCityDraft] = useState('')
+  const [stateDraft, setStateDraft] = useState(DEFAULT_STATE)
+  const [placeError, setPlaceError] = useState<string | null>(null)
   const fileRef = useRef<HTMLInputElement | null>(null)
 
   const m = member()
@@ -204,6 +211,16 @@ export function ProfileApp({ api }: { api: ShellApi }) {
       void refresh()
     } catch (e) {
       setBioError(e instanceof Error ? e.message : 'That did not save.')
+    }
+  }
+  const commitPlace = async () => {
+    try {
+      await savePlace(cityDraft.trim(), cityDraft.trim() ? stateDraft : '')
+      setPlaceError(null)
+      setEditingPlace(false)
+      void refresh()
+    } catch (e) {
+      setPlaceError(e instanceof Error ? e.message : 'That did not save.')
     }
   }
   const shareApp = async () => {
@@ -348,6 +365,61 @@ export function ProfileApp({ api }: { api: ShellApi }) {
             {bioError && (
               <p className="friend-note is-error" role="alert">
                 {bioError}
+              </p>
+            )}
+
+            {account &&
+              (editingPlace ? (
+                <form
+                  className="prof-place-form"
+                  onSubmit={(e) => {
+                    e.preventDefault()
+                    void commitPlace()
+                  }}
+                >
+                  <input
+                    className="co-input prof-place-city"
+                    value={cityDraft}
+                    onChange={(e) => setCityDraft(e.target.value)}
+                    placeholder="Your city"
+                    aria-label="Your city"
+                    autoComplete="address-level2"
+                    maxLength={CITY_MAX}
+                    autoFocus
+                  />
+                  <select
+                    className="co-input prof-place-state"
+                    value={stateDraft}
+                    onChange={(e) => setStateDraft(e.target.value)}
+                    aria-label="Your state"
+                  >
+                    {US_STATES.map(([code]) => (
+                      <option key={code} value={code}>
+                        {code}
+                      </option>
+                    ))}
+                  </select>
+                  <button type="submit" className="btn-primary prof-place-save">
+                    Save
+                  </button>
+                </form>
+              ) : (
+                <button
+                  type="button"
+                  className={`prof-place${account.city ? '' : ' is-empty'}`}
+                  onClick={() => {
+                    setCityDraft(account.city ?? '')
+                    setStateDraft(account.state || DEFAULT_STATE)
+                    setPlaceError(null)
+                    setEditingPlace(true)
+                  }}
+                >
+                  {account.city ? placeLine(account.city, account.state) : 'Add your city'}
+                </button>
+              ))}
+            {placeError && (
+              <p className="friend-note is-error" role="alert">
+                {placeError}
               </p>
             )}
 

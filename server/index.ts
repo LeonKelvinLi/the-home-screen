@@ -8,6 +8,7 @@ import { crmOnApplication, mountCrm } from './crm/routes'
 import { mountOnboarding } from './onboarding'
 import { sendEmail as sendLeadEmail } from './email'
 import { bioOf, mountFriends, petsFor, profileExtras, waitingCount } from './friends'
+import { cleanCity, cleanState, placeLine } from '../src/data/usStates'
 import { businessSlug, flagReferral, isOwnDevice, mountAffiliate } from './affiliate'
 import { crmOpenMode } from './crm/open'
 import { autoImport, syncListedAt, syncSnapshots } from './crm/backfill'
@@ -2090,6 +2091,8 @@ interface MemberRow {
   tier_status: string
   tier_since: number | null
   tier_interval: string
+  city?: string | null
+  state?: string | null
   created_at: number
 }
 
@@ -2325,6 +2328,9 @@ async function memberPayload(m: MemberRow) {
     friendRequests: await waitingCount(m.id),
     /* Their one line, under their name (server/friends.ts). */
     bio: await bioOf(m.id),
+    /* Where they live, editable on Profile (Glenn, 2026-10-19). */
+    city: m.city ?? '',
+    state: m.state ?? '',
   }
 }
 
@@ -2704,6 +2710,12 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   */
   const name = str(b.name)
   if (name.length < 2) return res.status(400).json({ error: 'Your name is required.' })
+  /* Where they live (Glenn, 2026-10-19), checked for everyone like the name.
+     Blank is allowed here; the form asks for both. */
+  const city = cleanCity(b.city)
+  if (city === null) return res.status(400).json({ error: 'Enter your city by name, with no numbers.' })
+  const state = cleanState(b.state)
+  if (state === null) return res.status(400).json({ error: 'Pick your state from the list.' })
   /* What brought them here, reduced to what is safe to keep (analytics.ts). */
   const attribution = cleanAttribution(b.attribution, OWN_HOSTS)
 
@@ -2767,7 +2779,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
     await db.prepare(
       `UPDATE login_codes SET
          pending_name = ?, pending_instagram = ?, pending_phone = ?, pending_ref = ?, pending_via = ?,
-         pending_attribution = COALESCE(?::jsonb, pending_attribution)
+         pending_attribution = COALESCE(?::jsonb, pending_attribution),
+         pending_city = ?, pending_state = ?
        WHERE destination = ?`,
     ).run(
       name || null,
@@ -2776,6 +2789,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
       str(b.ref).toUpperCase() || null,
       viaFrom(b.via),
       attribution ? JSON.stringify(attribution) : null,
+      city || null,
+      state || null,
       destination,
     )
     return res.status(202).json({
@@ -2791,8 +2806,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   await db.prepare(
     `INSERT INTO login_codes
        (destination, channel, code_hash, purpose, pending_name, pending_instagram, pending_phone, pending_ref,
-        pending_via, pending_attribution, attempts, created_at, expires_at)
-     VALUES (?,?,?,?,?,?,?,?,?,?::jsonb,0,?,?)
+        pending_via, pending_attribution, pending_city, pending_state, attempts, created_at, expires_at)
+     VALUES (?,?,?,?,?,?,?,?,?,?::jsonb,?,?,0,?,?)
      ON CONFLICT(destination) DO UPDATE SET
        channel = excluded.channel,
        code_hash = excluded.code_hash,
@@ -2803,6 +2818,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
        pending_ref = excluded.pending_ref,
        pending_via = excluded.pending_via,
        pending_attribution = excluded.pending_attribution,
+       pending_city = excluded.pending_city,
+       pending_state = excluded.pending_state,
        attempts = 0,
        created_at = excluded.created_at,
        expires_at = excluded.expires_at`,
@@ -2817,6 +2834,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
     str(b.ref).toUpperCase() || null,
     viaFrom(b.via),
     attribution ? JSON.stringify(attribution) : null,
+    city || null,
+    state || null,
     now,
     now + CODE_TTL_MS,
   )
@@ -2871,6 +2890,8 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
         pending_ref: string | null
         pending_via: string | null
         pending_attribution: Record<string, unknown> | null
+        pending_city: string | null
+        pending_state: string | null
         attempts: number
         expires_at: number
       }
@@ -2919,6 +2940,14 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
   await db.prepare('DELETE FROM login_codes WHERE destination = ?').run(destination)
 
   if (existing) {
+    /* A member from before 2026-10-19 has no city yet: the sign-in form now
+       asks, so what they typed fills it. One already set is never changed
+       from here; Profile is where they edit it. */
+    if (!existing.city && row.pending_city) {
+      await db.prepare('UPDATE members SET city = ?, state = ? WHERE id = ? AND city IS NULL').run(row.pending_city, row.pending_state, existing.id)
+      existing.city = row.pending_city
+      existing.state = row.pending_state
+    }
     const sessionId = await startSession(res, existing.id)
     /* The device they signed in on is theirs from now on; see server/intel.ts. */
     const anon = req.get('sec-gpc') === '1' ? null : visitorOf(req, res)
@@ -2944,8 +2973,8 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
 
   const id = `mb_${randomBytes(8).toString('hex')}`
   await db.prepare(
-    `INSERT INTO members (id, name, email, instagram, phone, referral_code, referred_by, joined_via, signup_attribution, created_at)
-     VALUES (?,?,?,?,?,?,?,?,?::jsonb,?)`,
+    `INSERT INTO members (id, name, email, instagram, phone, referral_code, referred_by, joined_via, signup_attribution, city, state, created_at)
+     VALUES (?,?,?,?,?,?,?,?,?::jsonb,?,?,?)`,
   ).run(
     id,
     row.pending_name ?? 'Member',
@@ -2958,6 +2987,8 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
     referrer?.id ?? null,
     viaFrom(row.pending_via),
     row.pending_attribution ? JSON.stringify(row.pending_attribution) : null,
+    row.pending_city,
+    row.pending_state,
     Date.now(),
   )
   // Their referrer may have just crossed a milestone.
@@ -2976,6 +3007,9 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
       channel: byPhone ? 'sms' : 'email',
       utm_source: String(row.pending_attribution?.utm_source ?? ''),
       utm_campaign: String(row.pending_attribution?.utm_campaign ?? ''),
+      /* "It is also good to add to our analytics" — Glenn, 2026-10-19. */
+      city: row.pending_city ?? '',
+      state: row.pending_state ?? '',
     },
   })
   if (referrer) await track('friend_joined', { memberId: referrer.id, entityType: 'member', entityId: id })
@@ -3004,13 +3038,15 @@ app.get('/api/members/directory', rateLimiter(60, 20), async (req, res) => {
   const me = await memberFromRequest(req)
   if (!me) return res.status(401).json({ error: 'Not signed in.' })
   const rows = await db
-    .prepare('SELECT id, name, created_at FROM members ORDER BY LOWER(name) ASC, created_at ASC LIMIT 1000')
-    .all() as { id: string; name: string; created_at: number }[]
+    .prepare('SELECT id, name, city, state, created_at FROM members ORDER BY LOWER(name) ASC, created_at ASC LIMIT 1000')
+    .all() as { id: string; name: string; city: string | null; state: string | null; created_at: number }[]
   /* The pet each member built, so the list shows it (server/friends.ts). */
   const pets = await petsFor(rows.map((r) => r.id))
   res.json({
     count: rows.length,
-    members: rows.map((r) => ({ id: r.id, name: shortName(r.name), since: r.created_at, me: r.id === me.id, pet: pets.get(r.id) ?? null })),
+    /* Their town and state, "Concord, CA", on Glenn's markup of 2026-10-19,
+       so members can find people in their own city. A town, never a street. */
+    members: rows.map((r) => ({ id: r.id, name: shortName(r.name), since: r.created_at, me: r.id === me.id, pet: pets.get(r.id) ?? null, place: placeLine(r.city, r.state) })),
   })
 })
 

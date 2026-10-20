@@ -36,6 +36,8 @@ export interface UsersData {
   activeBefore: { n: number; returning: number } | null
   activated: { signedUp: number; n: number }
   sources: { key: string; label: string; count: number }[]
+  /** Every member by "City, ST" (Glenn, 2026-10-19). Optional for an older server. */
+  homes?: { key: string; label: string; count: number }[]
   funnel: { since: number; steps: { key: string; label: string; count: number }[] } | null
   engagement: { since: number; rows: { name: string; label: string; times: number; people: number }[] } | null
 }
@@ -221,6 +223,22 @@ export function UsersBlock({ u, scope, busy }: { u: UsersData; scope: Scope; bus
         </ChartCard>
         <Funnel f={u.funnel} tracked={tracked} scope={scope} />
       </div>
+
+      {u.homes && u.homes.length > 0 && (
+        <div className="crm-dash-row">
+          <ChartCard
+            title="Where members live"
+            sub={`Every member, by the city and state they gave. Asked at sign-up from 19 October 2026; earlier members add it on Profile or when they next sign in.`}
+            table={{ head: ['City', 'Members', 'Share'], rows: u.homes.map((h) => [h.label, h.count, u.total ? pct(h.count / u.total) : '—']) }}
+          >
+            <HBars
+              rows={u.homes.map((h) => ({ label: h.label, value: h.count, muted: h.key === 'unknown' }))}
+              total={u.total}
+              empty="No member has given a city yet."
+            />
+          </ChartCard>
+        </div>
+      )}
 
       <Cohorts admin={admin} tracked={tracked} />
 

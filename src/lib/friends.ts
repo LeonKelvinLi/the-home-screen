@@ -64,6 +64,22 @@ export const removeFriend = (id: string) =>
 /** My one line, under my name. Sixty characters, no links, numbers or emails. */
 export const saveBio = (bio: string) => call<{ bio: string }>('PUT', '/api/members/me/bio', { bio }).then((r) => r.bio)
 
+/** Where I live. Blank clears it; the server refuses a street or a made-up state. */
+export const savePlace = (city: string, state: string) =>
+  call<{ city: string; state: string }>('PUT', '/api/members/me/place', { city, state })
+
+/* FIND FRIENDS, his Beli idea of 2026-10-19 with 💎 points (server/friends.ts). */
+export interface Suggested {
+  id: string
+  name: string
+  pet: FriendPet | null
+  place: string
+  points: number
+  sameCity: boolean
+}
+
+export const fetchSuggested = () => call<{ myPoints: number; people: Suggested[] }>('GET', '/api/friends/suggested')
+
 export const saveTopFriends = (ids: string[]) => call<{ top: string[] }>('PUT', '/api/friends/top', { ids }).then((r) => r.top)
 
 /** The pet I built goes to my account; a photo or nothing clears it. Never throws. */

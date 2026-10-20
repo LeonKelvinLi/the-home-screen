@@ -107,6 +107,7 @@ await p.waitForTimeout(1200)
 step('5  the sign-in form opens', !!(await p.$('form.join')))
 
 await p.fill('.join-field input[autocomplete="name"]', 'Rae Journey')
+await p.fill('.join-field input[autocomplete="address-level2"]', 'Oakland')
 /* BOTH FIELDS, because which one is required now depends on what the
    deployment can actually deliver — a number when texting is configured, an
    address when it is not. Filling only the number left the submit button

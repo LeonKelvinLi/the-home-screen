@@ -53,6 +53,9 @@ export interface Account {
   friendRequests?: number
   /** Their one line, under their name. */
   bio?: string
+  /** Where they live, set on sign-up or on Profile. Blank until they say. */
+  city?: string
+  state?: string
 }
 
 export interface SignUp {
@@ -66,6 +69,9 @@ export interface SignUp {
   phone?: string
   email?: string
   instagram?: string
+  /* Where they live, "Concord" and "CA" (Glenn, 2026-10-19). */
+  city?: string
+  state?: string
 }
 
 const json = { 'content-type': 'application/json' }
@@ -244,7 +250,7 @@ export async function startSignUp(fields: SignUp): Promise<StartResult> {
   }
 }
 
-export type VerifyResult = { ok: true; account: Account } | { ok: false; error: string }
+export type VerifyResult = { ok: true; account: Account; created?: boolean } | { ok: false; error: string }
 
 /** Step two: prove the number. This is the only call that creates a member. */
 export async function verifyCode(destination: string, code: string): Promise<VerifyResult> {
@@ -267,7 +273,9 @@ export async function verifyCode(destination: string, code: string): Promise<Ver
     if (!r.ok) return { ok: false, error: body?.error ?? 'That code did not work.' }
     clearReferral()
     clearVia()
-    return { ok: true, account: body as Account }
+    /* 201 is a new account, 200 a sign-in; only the holder of a right code
+       ever sees which. A new member is shown Find friends once. */
+    return { ok: true, account: body as Account, created: r.status === 201 }
   } catch {
     return { ok: false, error: 'No connection. Try again in a moment.' }
   }
@@ -281,6 +289,8 @@ export interface DirectoryMember {
   me: boolean
   /** The pet they built, or null. */
   pet?: FriendPet | null
+  /** "Concord, CA", or blank when they have not said. */
+  place?: string
 }
 
 /**
@@ -411,6 +421,8 @@ export interface MemberProfile {
   relation?: Relation
   /** Their one line, under their name. */
   bio?: string
+  /** "Concord, CA", or blank. */
+  place?: string
 }
 
 export async function fetchMemberProfile(id: string): Promise<MemberProfile | null> {

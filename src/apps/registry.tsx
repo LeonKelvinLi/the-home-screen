@@ -18,7 +18,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
   | 'reserve' | 'designs' | 'share' | 'members' | 'calendar' | 'membercard' | 'profile'
-  | 'supply' | 'gallery' | 'watch' | 'join' | 'news' | 'affiliate'
+  | 'supply' | 'gallery' | 'watch' | 'join' | 'news' | 'affiliate' | 'friends'
 
 export interface AppDef {
   id: string
@@ -342,6 +342,18 @@ export const JOIN_APP: AppDef = {
   tint: '#141416',
 }
 
+/* Find friends, his Beli idea (apps/FindFriends.tsx): opened after joining
+   and from Contacts, never from the grid. */
+export const FIND_FRIENDS_APP: AppDef = {
+  id: 'sys.friends',
+  name: 'Find friends',
+  label: 'Friends',
+  icon: <GemIcon />,
+  kind: 'system',
+  systemKey: 'friends',
+  tint: '#141416',
+}
+
 export const MEMBERS_APP: AppDef = {
   id: 'sys.members',
   name: 'BEASTY members',
@@ -596,6 +608,8 @@ export const ALL_APPS: AppDef[] = [
   JOIN_APP,
   /* Likewise: Profile opens it. */
   AFFILIATE_APP,
+  /* Likewise: joining and Contacts open it. */
+  FIND_FRIENDS_APP,
 ]
 
 /*

@@ -12,7 +12,7 @@ import { Symbol } from '../ios/ui/Symbol'
 import { BrandLogo } from '../ios/BrandLogo'
 import { BRANDS, brandById } from '../data/brands'
 import type { ShellApi } from '../ios/Device'
-import { OPERATOR, OWNERS, hasOperatorContact } from '../lib/operator'
+import { OPERATOR, OWNERS, hasOperatorContact, type Owner } from '../lib/operator'
 import { CallOrTextSheet } from '../ios/ui/CallOrText'
 import { fetchDirectory, fetchMemberCount, fetchMemberProfile, type DirectoryMember, type MemberProfile } from '../lib/account'
 import { SHARE_CONTACTS, shareOrCopy, shareUrl } from '../lib/share'
@@ -21,14 +21,28 @@ import { ShareMark } from './dialer/glyphs'
 const SINCE = new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' })
 
 /*
-  ONE DROP-DOWN PER LETTER. Glenn, 2026-09-22: "for every letter on the
-  contacts. Can you have a drop-down for all the names under each letter?
-  Just to minimize the page." Each letter starts closed and says how many
-  names are under it; a tap opens it and another closes it.
+  ONE DROP-DOWN PER SET OF LETTERS. Glenn, 2026-09-22, asked for one per
+  letter "just to minimize the page"; on 2026-10-19, with 46 members, he
+  went further: "minimize the contacts to this. Have a drop-down for each set
+  of letters", over a note reading "A-H 18 members, I-Q 18 members, R-Z 10
+  members". Each set starts closed and says how many are in it.
 */
+const LETTER_SETS: [string, string][] = [
+  ['A', 'H'],
+  ['I', 'Q'],
+  ['R', 'Z'],
+]
+
+/** "A–H" for a name starting with a letter in it; "#" for anything else. */
+function letterSet(name: string): string {
+  const c = (name.trim()[0] || '#').toUpperCase()
+  const set = LETTER_SETS.find(([a, z]) => c >= a && c <= z && /[A-Z]/.test(c))
+  return set ? `${set[0]}\u2013${set[1]}` : '#'
+}
+
 function LetterGroup({ letter, count, children }: { letter: string; count: number; children: ReactNode }) {
   const [open, setOpen] = useState(false)
-  const id = `contacts-letter-${letter}`
+  const id = `contacts-letter-${letter.replace(/\W/g, '') || 'other'}`
   return (
     <section className="ios-section contacts-letter">
       <div className="ios-list">
@@ -39,7 +53,7 @@ function LetterGroup({ letter, count, children }: { letter: string; count: numbe
           aria-controls={id}
           onClick={() => setOpen((v) => !v)}
         >
-          <span className="contacts-letter-mark">{letter}</span>
+          <span className={`contacts-letter-mark${letter.length > 1 ? ' is-range' : ''}`}>{letter}</span>
           <span className="ios-row-body">
             <span className="ios-row-label">
               {count} {count === 1 ? 'member' : 'members'}
@@ -52,6 +66,111 @@ function LetterGroup({ letter, count, children }: { letter: string; count: numbe
         {open && <div id={id}>{children}</div>}
       </div>
     </section>
+  )
+}
+
+/* An envelope, drawn: Symbol has no mail glyph. */
+function MailMark({ size = 17, color = 'currentColor' }: { size?: number; color?: string }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="2.5" y="5" width="19" height="14" rx="2.5" fill={color} />
+      <path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+/*
+  THE OWNERS, BEHIND ONE BUTTON. Glenn, 2026-10-19: "can you make the owners a
+  button that will drop down the 3 contacts to minimize the space?" and, on
+  his markup of the open list, "Can you just have a phone & email icon to tap
+  all on a single line for each of our contact info? I want to minimize it to
+  just one line for each of us. They will see the phone number and email after
+  they tap it anyways." So each owner is one line: role, name, and the two
+  icons. The phone icon still asks "call or text?" (ios/ui/CallOrText), and
+  the envelope opens their mail app with the address filled in.
+*/
+function OwnersDrop({ onDial }: { onDial: (o: Owner) => void }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <section className="ios-section owners-drop" id="contacts-owners">
+      <div className="ios-list">
+        <button
+          type="button"
+          className={`ios-row is-tappable owners-head${open ? ' is-open' : ''}`}
+          aria-expanded={open}
+          aria-controls="contacts-owners-list"
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span className="owners-mark" aria-hidden="true">
+            <Symbol name="person.crop.circle.fill" size={18} color="#141416" />
+          </span>
+          <span className="ios-row-body">
+            <span className="ios-row-label owners-label">Owners</span>
+          </span>
+          <span className="owners-count">{OWNERS.length}</span>
+          <span className="ios-row-chevron contacts-letter-chevron">
+            <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
+          </span>
+        </button>
+        {open && (
+          <div id="contacts-owners-list">
+            {OWNERS.map((o) => (
+              <div className="ios-row owner-line" key={o.name}>
+                <span className="owner-who">
+                  <span className="owner-name">{o.name}</span>
+                  <span className="owner-role">{o.role}</span>
+                </span>
+                <span className="owner-acts">
+                  {o.phone && (
+                    <button
+                      type="button"
+                      className="owner-act"
+                      aria-label={`Call or text ${o.name}`}
+                      onClick={() => onDial(o)}
+                    >
+                      <Symbol name="phone.fill" size={17} color="#fff" />
+                    </button>
+                  )}
+                  {o.email && (
+                    <a className="owner-act" href={`mailto:${o.email}`} aria-label={`Email ${o.name}`}>
+                      <MailMark size={18} color="#fff" />
+                    </a>
+                  )}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  )
+}
+
+/*
+  THE NOTE AS A BUBBLE. Glenn, 2026-10-19, circling "Get in touch directly
+  with the owners for any questions. Text or email is preferred": "Can you
+  make this a bubble that pops up after 2 seconds pointing to 'owners' below?"
+  It rises in two seconds after Contacts opens, its tail pointing down at the
+  Owners button, and a tap puts it away.
+*/
+function OwnersBubble() {
+  const [shown, setShown] = useState(false)
+  const [gone, setGone] = useState(false)
+  useEffect(() => {
+    const t = window.setTimeout(() => setShown(true), 2000)
+    return () => window.clearTimeout(t)
+  }, [])
+  if (gone) return null
+  return (
+    <button
+      type="button"
+      className={`owners-bubble${shown ? ' is-shown' : ''}`}
+      aria-hidden={!shown}
+      tabIndex={shown ? 0 : -1}
+      onClick={() => setGone(true)}
+    >
+      {OPERATOR.note} <strong>{OPERATOR.preferred}</strong>
+    </button>
   )
 }
 
@@ -246,6 +365,9 @@ export function PhoneApp({ api }: { api: ShellApi }) {
               </span>
               {loaded?.bio && <p className="prof-bio-line">{`\u201C${loaded.bio}\u201D`}</p>}
               <p className="prof-spread">Member since {SINCE.format(new Date(loaded?.since ?? open.row.since))}</p>
+              {(loaded?.place || open.row.place) && (
+                <p className="prof-spread member-place">{loaded?.place || open.row.place}</p>
+              )}
               {loaded && typeof loaded.friendCount === 'number' && (
                 <p className="prof-spread member-friends">
                   {loaded.friendCount} {loaded.friendCount === 1 ? 'friend' : 'friends'}
@@ -370,10 +492,6 @@ export function PhoneApp({ api }: { api: ShellApi }) {
             <img src="/biggie.webp" alt="" draggable={false} />
           </span>
           <span className="operator-name">{OPERATOR.name}</span>
-          <span className="operator-note">
-            {OPERATOR.note}
-            <strong className="operator-note-preferred">{OPERATOR.preferred}</strong>
-          </span>
         </div>
 
         {/*
@@ -383,20 +501,10 @@ export function PhoneApp({ api }: { api: ShellApi }) {
           (see ios/ui/CallOrText): the card above says text is preferred.
         */}
         {live ? (
-          OWNERS.map((o) => (
-            <ListSection key={o.name} header={o.role}>
-              {o.phone ? (
-                <ListRow
-                  label={o.name}
-                  value={o.phone}
-                  onClick={() => setDial({ name: o.name, phone: o.phone })}
-                />
-              ) : (
-                <ListRow label={o.name} chevron={false} />
-              )}
-              {o.email && <ListRow label="Email" value={o.email} href={`mailto:${o.email}`} />}
-            </ListSection>
-          ))
+          <div className="owners-wrap">
+            <OwnersBubble />
+            <OwnersDrop onDial={(o) => setDial({ name: o.name, phone: o.phone })} />
+          </div>
         ) : (
           <ListSection footer="The phone line and email are not connected yet. Every kitchen below can still be opened.">
             <ListRow label="Phone" value="Not connected yet" chevron={false} />
@@ -429,9 +537,14 @@ export function PhoneApp({ api }: { api: ShellApi }) {
             <p className="contacts-count">
               <strong>{dir.count}</strong> {dir.count === 1 ? 'member' : 'members'} &amp; growing
             </p>
+            {/* His Beli idea, from the list itself (apps/FindFriends.tsx). */}
+            <button type="button" className="contacts-find" onClick={() => api.openApp('sys.friends')}>
+              Find friends near you
+              <Symbol name="chevron.right" size={12} color="currentColor" weight={2.8} />
+            </button>
             {[...dir.members
               .reduce((m, mem) => {
-                const letter = (mem.name[0] || '#').toUpperCase()
+                const letter = letterSet(mem.name)
                 m.set(letter, [...(m.get(letter) ?? []), mem])
                 return m
               }, new Map<string, DirectoryMember[]>())
@@ -449,7 +562,12 @@ export function PhoneApp({ api }: { api: ShellApi }) {
                         {mem.me ? ' (you)' : ''}
                       </span>
                     }
-                    detail={`Member since ${SINCE.format(new Date(mem.since))}`}
+                    detail={
+                      <span className="contact-detail">
+                        Member since {SINCE.format(new Date(mem.since))}
+                        {mem.place && <span className="contact-place">{mem.place}</span>}
+                      </span>
+                    }
                     onClick={() => openMember(mem)}
                   />
                 ))}
@@ -457,8 +575,8 @@ export function PhoneApp({ api }: { api: ShellApi }) {
             ))}
             <p className="ios-section-footer">
               {dir.count === 1 ? '1 member so far.' : `${dir.count} members so far.`} Everyone who signs
-              up appears here the moment they do. Tap a letter to see its names, and open one to see
-              what they have starred and liked.
+              up appears here the moment they do. Tap a set of letters to see its names, and open one
+              to see what they have starred and liked.
             </p>
           </>
         ) : (
