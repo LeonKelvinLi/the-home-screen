@@ -9,3 +9,5 @@ Glenn's 7:04 pm send: Pizza Casamia, "San Jose • Eats / BEASTY • Eats", with
 Their site is an Adora POS ordering app. It shows the menu only after a delivery address or store is chosen, so no prices were read, and the page sends people to order there. An ordering template counts as a stopgap site (the Masa precedent), so they get the needs-a-website red ring. No hours are published.
 
 `tsc -b`, the build and the data audit pass. A before-and-after seat diff shows only the two new seats. `tools/audit-batch57.mjs` passed on a local build.
+
+Live: release `ff0b5e1`. Both Render services went live at 7:42 pm on 19 October. `tools/audit-batch57.mjs` passed against beastypages.com: the page, its images and both seats (San Jose, page 19).
