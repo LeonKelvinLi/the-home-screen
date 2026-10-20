@@ -42,3 +42,11 @@ Bakefections is seated on BEASTY • Bakery by hand. Left to the automatic fill,
 - Seven audits that fill the sign-up form now type a city. The Contacts audits open the letter sets and the Owners drop-down.
 
 Docker Desktop was stuck behind a macOS admin prompt this session. The suite ran one audit at a time against PGlite on the test port (`npx pglite-server -p 55432`), restarted fresh for each audit, because PGlite gives every test the same database.
+
+## Live
+
+Production release `32ad201`. Both Render services (the site and the CRM) went live at 7:06 pm on 19 October 2026.
+- **The migration ran:** a read-only query shows `members.city`, `members.state` and their `login_codes` columns in production. All 46 existing members have no city yet.
+- **`audit-batch56.mjs` passed against beastypages.com:** all four pages, the menus (25, 90 and 61 items), both films and every city seat.
+- **The full `tools/live-verify.mjs` passed.** It now checks that the reels bubble text is gone and that the new screens shipped.
+- **A signed-out browser on beastypages.com:** Contacts shows Owners closed, the bubble rises in, three owner lines open, and the sign-up form asks for City with State set to CA.

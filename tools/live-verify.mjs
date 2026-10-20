@@ -602,16 +602,22 @@ for (const s of [
   /* 2026-10-05: BEASTY • Pages tiles, Sweets and AYCE, the reels bubble, button counts, Search's share link. */
   /* 2026-10-05, later: BEASTY • Foodies pages and the review lists. */
   'foodie-reviews', 'Their reviews', 'Foodie reviews', '/clips/review-',
-  /* B•P and the yellow More pages sheet, the bubble on the reels button (2026-10-05, evening). */
+  /* B•P and the yellow More pages sheet (2026-10-05, evening). The reels
+     bubble that sat here went on 2026-10-19, at his ask; see the list below. */
   'spotlight-pages', 'spotlight-watch-wrap', 'A new BEASTY category, coming soon',
-  'cat-icon', 'Watch foodie reviews here to discover new gems.', 'button_tapped', 'Search BEASTY pages', 'Barbers, cuts and shaves', 'Shaved ice', 'Chicken sandwich', 'brand-panel-link',
+  'cat-icon', 'button_tapped',
+  /* 2026-10-19: the owners behind one button, City and State, Find friends,
+     and the reels after three quiet seconds. */
+  'owners-bubble', 'Earn points with people you trust', 'address-level2', 'fb.idleReels.v1', 'Search BEASTY pages', 'Barbers, cuts and shaves', 'Shaved ice', 'Chicken sandwich', 'brand-panel-link',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }
 /* And what he asked to have taken off: the old addresses, the city line, the
    $20 holding card, Leon's number, the old acronym. A deploy that still ships
    one of these is the old build. */
-for (const s of ['Glennmalicdem78', 'leondragon3798', 'splk3798', 'Richmond, California', 'Holding your spot', '5108267735', 'BARP', 'What you cook', 'A shared cart']) {
+/* The reels bubble too: "maybe we could delete that pop-up bubble for the
+   video reels" (2026-10-19). */
+for (const s of ['Glennmalicdem78', 'leondragon3798', 'splk3798', 'Richmond, California', 'Holding your spot', '5108267735', 'BARP', 'What you cook', 'A shared cart', 'Watch foodie reviews here to discover new gems.']) {
   if (bundles.includes(s)) fails.push(`"${s}" is still in a deployed chunk`)
 }
 /* 2026-09-21 evening, read from the data in the bundle because signed out
