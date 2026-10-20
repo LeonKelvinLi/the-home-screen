@@ -184,3 +184,4 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `bakefections.webp` | [Original artwork](https://www.instagram.com/bakefections/) | Their own logo from the header of their order form, on its own colour. |
 | `dope-pho.webp` | [Original artwork](https://dopepho.menu11.com/) | Their own bowl mark, whole disc, from their Instagram picture. |
 | `m-dumpling.webp` | [Original artwork](https://mdumplingsanramon.com/) | Their own round badge on its own cream. |
+| `pizza-casamia.webp` | [Original artwork](https://www.instagram.com/pizzacasamiasanjose/) | Their own wordmark, inside its ring, on its own white. |

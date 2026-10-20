@@ -410,6 +410,7 @@ export const ICON_LUMA: Record<string, number> = {
   'pijja-paradise': 0.8398,
   'pineapple-king-bakery-san-francisco': 0.881,
   'pippal': 0.1375,
+  'pizza-casamia': 0.923,
   'pizza-deli-and-grill': 0.2548,
   'pizza-gallery': 0.2621,
   'pizza-ponte': 0.0438,

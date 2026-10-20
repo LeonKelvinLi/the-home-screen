@@ -1595,4 +1595,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-goods2-31': 'b_dopepho',
   'san-ramon-goods-2': 'b_mdumpling',
 
+  /* Batch 57, Glenn, 19 October 2026, 7:04 pm: Pizza Casamia, "San Jose • Eats / BEASTY • Eats".
+     San Jose's Italian spot is Wow Mia Pizza's and BEASTY • Eats' Pizza spot is King's. */
+  'san-jose-goods2-19': 'b_pizzacasamia',
+  'beasty-goods2-32': 'b_pizzacasamia',
+
 }

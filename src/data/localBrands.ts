@@ -20702,4 +20702,24 @@ export const LOCAL_SEED: LocalSeed[] = [
       "siteNote": "Prices are from the online ordering page their own website links to.",
       "orderUrl": "https://order.online/store/-45081389/"
   },
+  /* BATCH 57, 2026-10-19 evening: Glenn's 7:04 pm send. Sources: research/roster/batch57.json. */
+  {
+      "slug": "pizza-casamia",
+      "name": "Pizza Casamia",
+      "label": "Pizza Casamia",
+      "cuisine": "Pizza and wings",
+      "color": "#ffffff",
+      "icon": "pizza-casamia",
+      "site": "https://www.pizzacasamia.com/",
+      "tagline": "Fresh pizza, wings and salads on Branham Lane, from the family behind Via Mia Pizza in Morgan Hill.",
+      "prep": 0,
+      "category": "Pizza and wings",
+      "items": [],
+      "address": "1423 Branham Ln, San Jose, CA 95118",
+      "phone": "(408) 265-2222",
+      "email": "info@pizzacasamia.com",
+      "needsSite": true,
+      "contactOnly": "Pizza Casamia takes take-out and delivery orders on its own ordering site, where the menu and prices are. Or call (408) 265-2222.",
+      "siteCta": "Order online"
+  },
 ]

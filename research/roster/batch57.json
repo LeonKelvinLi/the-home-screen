@@ -1,0 +1,41 @@
+[
+  {
+    "id": "b_pizzacasamia",
+    "name_exact": "Pizza Casamia",
+    "checked_on": "2026-10-19",
+    "sources": [
+      "Instagram @pizzacasamiasanjose (Glenn's screenshots: bio, address, Call and Email)",
+      "https://www.pizzacasamia.com/ (link preview and page)"
+    ],
+    "facts": {
+      "slug": "pizza-casamia",
+      "name": "Pizza Casamia",
+      "label": "Pizza Casamia",
+      "cuisine": "Pizza and wings",
+      "color": "#ffffff",
+      "icon": "pizza-casamia",
+      "site": "https://www.pizzacasamia.com/",
+      "tagline": "Fresh pizza, wings and salads on Branham Lane, from the family behind Via Mia Pizza in Morgan Hill.",
+      "prep": 0,
+      "category": "Pizza and wings",
+      "items": [],
+      "address": "1423 Branham Ln, San Jose, CA 95118",
+      "phone": "(408) 265-2222",
+      "email": "info@pizzacasamia.com",
+      "needsSite": true,
+      "contactOnly": "Pizza Casamia takes take-out and delivery orders on its own ordering site, where the menu and prices are. Or call (408) 265-2222.",
+      "siteCta": "Order online"
+    },
+    "placements": [
+      "san-jose-goods2-19",
+      "beasty-goods2-32"
+    ],
+    "glenn": "Glenn, 19 Oct 2026, 7:04 pm: \"San Jose • Eats\", \"BEASTY • Eats\". No reel sent. San Jose's Italian spot is Wow Mia Pizza's and BEASTY • Eats' Pizza spot is King's, so the yellow sheets.",
+    "flags": [
+      "Their site is an Adora POS ordering app: the menu only shows after a delivery address or store is chosen, so no prices were read; the page points to their ordering site.",
+      "An ordering template is a stopgap site (the Masa precedent), so needsSite: a pilot pitch.",
+      "Hours are not published in the screenshots or on the site's landing page.",
+      "Sister shop: Via Mia Pizza in Morgan Hill (their bio), not listed."
+    ]
+  }
+]
