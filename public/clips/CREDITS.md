@@ -318,3 +318,10 @@ Not used: `DelACp9h8Xf` (sent as “Foodie” with One’s Cafe) reviews Big Tac
 | File | Business/page | Original reel | Excerpt | Request & credit |
 |---|---|---|---|---|
 | `dps-hauling.mp4` | DP's Hauling, Oakland | [DYDwnUxJLvA](https://www.instagram.com/reel/DYDwnUxJLvA/) | 10.35s-35.95s of 64s | Glenn, 19 Oct 2026: “Clip this video plz”; Posted by @dps.hauling (shot by @shotbyadamkg). |
+
+## Batch 56 — 19 October 2026
+
+| File | Business/page | Original reel | Excerpt | Request & credit |
+|---|---|---|---|---|
+| `molinari-delicatessen.mp4` | Molinari Delicatessen, San Francisco | [DeIZ4S2qyuI](https://www.instagram.com/reel/DeIZ4S2qyuI/) | 13s-37s of 107s | Glenn, 19 Oct 2026: “Clip this video plz”; Filmed by @festusfeasts. |
+| `dope-pho.mp4` | Dope Pho, Fremont | [DY8MzCwBEp8](https://www.instagram.com/reel/DY8MzCwBEp8/) | 35s-59s of 59s | Glenn, 19 Oct 2026: “Clip this video plz”; Posted by @dope_pho. |

@@ -180,3 +180,7 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `cuppayo-danville.webp` | [Original artwork](https://www.cuppayo.com/) | Their own badge on their own orange. |
 | `dps-hauling.webp` | [Original artwork](https://dpshauling.com/) | Their own mark on its own black. |
 | `matts-motivated-movers.webp` | [Original artwork](https://www.mattsmotivatedmovers.com/) | Their own site icon, on its own white. |
+| `molinari-delicatessen.webp` | [Original artwork](https://www.themolinarideli.com/) | Their own M mark, inside its ring, on its own white. |
+| `bakefections.webp` | [Original artwork](https://www.instagram.com/bakefections/) | Their own logo from the header of their order form, on its own colour. |
+| `dope-pho.webp` | [Original artwork](https://dopepho.menu11.com/) | Their own bowl mark, whole disc, from their Instagram picture. |
+| `m-dumpling.webp` | [Original artwork](https://mdumplingsanramon.com/) | Their own round badge on its own cream. |

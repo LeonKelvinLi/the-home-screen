@@ -1582,4 +1582,17 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'bay-area-services2-0': 'b_mattsmotivatedmovers',
   'beasty-services2-31': 'b_mattsmotivatedmovers',
 
+  /* Batch 56, Glenn, 19 October 2026: Molinari "San Francisco • Eats / BEASTY • Eats", Bakefections
+     "San Francisco • Sweets / BEASTY • Bakery", Dope Pho "Fremont • Eats / BEASTY • Eats", M Dumpling
+     "San Ramon • Eats". Sandwiches, Pho and the cities' Asian spots are held where named, so the
+     yellow sheets; San Ramon's Asian spot was open. BEASTY • Bakery fills by type line. */
+  'san-francisco-goods2-43': 'b_molinaridelicatessen',
+  'beasty-goods2-30': 'b_molinaridelicatessen',
+  'san-francisco-goods2-44': 'b_bakefections',
+  /* By hand, so the Sweets sheet's automatic fill does not hand her Baked Blooms' Cupcakes spot. */
+  'beasty-bakery-12': 'b_bakefections',
+  'fremont-goods2-7': 'b_dopepho',
+  'beasty-goods2-31': 'b_dopepho',
+  'san-ramon-goods-2': 'b_mdumpling',
+
 }

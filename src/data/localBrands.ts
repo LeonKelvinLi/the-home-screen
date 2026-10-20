@@ -19618,4 +19618,1088 @@ export const LOCAL_SEED: LocalSeed[] = [
           }
       ]
   },
+  /* BATCH 56, 2026-10-19: Glenn's 19 October sends. Official-site facts only;
+     sources, conflicts and left-out items: research/roster/batch56.json. */
+  {
+      "slug": "molinari-delicatessen",
+      "name": "Molinari Delicatessen",
+      "label": "Molinari",
+      "cuisine": "Italian deli and sandwiches",
+      "color": "#ffffff",
+      "icon": "molinari-delicatessen",
+      "site": "https://www.themolinarideli.com/",
+      "tagline": "An Italian deli in North Beach, run by the same family tradition since 1896.",
+      "prep": 0,
+      "category": "Italian deli and sandwiches",
+      "items": [],
+      "address": "373 Columbus Ave, San Francisco, CA",
+      "hours": "Mon–Thu 9am–5:30pm; Fri–Sat 9am–9pm; Sun 10:30am–4:30pm",
+      "sections": [
+          {
+              "name": "Custom Sandwiches",
+              "items": [
+                  [
+                      "Custom Sandwich",
+                      "Build your own.",
+                      2050
+                  ],
+                  [
+                      "Dirty Chips",
+                      "",
+                      350
+                  ]
+              ]
+          },
+          {
+              "name": "Gourmet Sandwiches",
+              "items": [
+                  [
+                      "Molinari Special Italian Combo",
+                      "A combination of their cold cuts with \"the works\": mayo, mustard, vinaigrette, lettuce, tomatoes, onions, pepperoncinis and choice of cheese.",
+                      2149
+                  ],
+                  [
+                      "Luciano Special",
+                      "Prosciutto di Parma, sweet or hot coppa, fresh mozzarella, sun-dried tomatoes, onions and lettuce on grilled focaccia.",
+                      2199
+                  ],
+                  [
+                      "Basil Turkey Special",
+                      "Oven-roasted turkey, fresh mozzarella, sweet bell peppers, sun-dried tomatoes and basil spread.",
+                      2199
+                  ],
+                  [
+                      "Renzo Special",
+                      "Prosciutto, coppa, fresh mozzarella and sun-dried tomatoes.",
+                      2050
+                  ],
+                  [
+                      "North Beach Special",
+                      "Prosciutto, provolone, sun-dried tomatoes and sweet bell peppers.",
+                      2050
+                  ],
+                  [
+                      "South Beach Special",
+                      "Oven-roasted turkey, provolone, artichoke hearts, sun-dried tomatoes and basil spread.",
+                      2050
+                  ],
+                  [
+                      "Lucca Special",
+                      "Imported mortadella with pistachio, provolone, sweet bell peppers, sun-dried tomatoes and lettuce.",
+                      2050
+                  ],
+                  [
+                      "Veggie Special",
+                      "Sun-dried tomatoes, artichoke hearts, lettuce, fresh tomatoes, pepperoncini, Italian vinaigrette, sweet bell peppers, onion and basil spread.",
+                      1950
+                  ],
+                  [
+                      "Joe Special",
+                      "Extra fresh mozzarella, sweet bell peppers, sun-dried tomatoes and basil spread.",
+                      1950
+                  ],
+                  [
+                      "Grilled Focaccia Special",
+                      "Prosciutto di Parma, fresh mozzarella, sun-dried tomatoes and sweet bell pepper on grilled focaccia.",
+                      2199
+                  ]
+              ]
+          },
+          {
+              "name": "Hot Sandwiches",
+              "items": [
+                  [
+                      "Eggplant Parmigiano",
+                      "Buried in homemade marinara, fresh mozzarella and imported sun-dried tomatoes.",
+                      2099
+                  ],
+                  [
+                      "Meatball Sandwich",
+                      "Homemade meatballs in homemade marinara with melted provolone.",
+                      2199
+                  ],
+                  [
+                      "Sausage Sandwich",
+                      "Their own Molinari sausages with peppers and onions sauteed in garlic, melted provolone and grated Parmigiano Reggiano.",
+                      2099
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Coca-Cola",
+                      "",
+                      350
+                  ],
+                  [
+                      "Diet Coca-Cola",
+                      "",
+                      350
+                  ],
+                  [
+                      "San Pellegrino Blood Orange",
+                      "",
+                      350
+                  ],
+                  [
+                      "San Pellegrino Lemon",
+                      "",
+                      350
+                  ],
+                  [
+                      "San Pellegrino Aranciata (Orange)",
+                      "",
+                      350
+                  ],
+                  [
+                      "San Pellegrino Grapefruit",
+                      "",
+                      350
+                  ],
+                  [
+                      "San Pellegrino Pomegranate & Orange",
+                      "",
+                      350
+                  ],
+                  [
+                      "San Pellegrino Sparkling Water",
+                      "8.4 oz.",
+                      350
+                  ],
+                  [
+                      "Gazzosa (Limone Costa d'Amalfi)",
+                      "",
+                      350
+                  ],
+                  [
+                      "Crystal Geyser Water",
+                      "16.9 oz.",
+                      325
+                  ]
+              ]
+          }
+      ],
+      "siteNote": "Sandwich and drink prices are from their own online ordering page.",
+      "siteCta": "Order Sandwich Online",
+      "orderUrl": "https://order.online/business/molinari-delicatessen-155843",
+      "clip": {
+          "src": "/clips/molinari-delicatessen.mp4",
+          "poster": "/clips/molinari-delicatessen-poster.webp",
+          "href": "https://www.instagram.com/reel/DeIZ4S2qyuI/",
+          "credit": "Filmed by @festusfeasts",
+          "platform": "Instagram",
+          "by": "festusfeasts"
+      }
+  },
+  {
+      "slug": "bakefections",
+      "name": "Bakefections",
+      "label": "Bakefections",
+      "cuisine": "Custom cake and cupcake bakery",
+      "color": "#a39694",
+      "icon": "bakefections",
+      "site": "https://docs.google.com/forms/d/e/1FAIpQLSeFLlcU7-b8bP8UXesXZSa8VgXpgFldKt6AnNX8G4jlteO_fQ/viewform",
+      "tagline": "Custom cakes and cupcakes made to order in South San Francisco.",
+      "prep": 0,
+      "category": "Custom cake and cupcake bakery",
+      "items": [],
+      "address": "South San Francisco, CA 94080",
+      "phone": "(650) 532-0159",
+      "email": "bakefectionss@gmail.com",
+      "sections": [],
+      "contactOnly": "Every cake is made to order and Bakefections publishes no prices. Send a request through their form, text (650) 532-0159 or email them to ask about flavors, sizes and pricing.",
+      "siteCta": "Request a cake",
+      "needsSite": true
+  },
+  {
+      "slug": "dope-pho",
+      "name": "Dope Pho",
+      "label": "Dope Pho",
+      "cuisine": "Vietnamese pho and rice plates",
+      "color": "#e4e4e4",
+      "icon": "dope-pho",
+      "site": "https://dopepho.menu11.com/",
+      "tagline": "Pho, banh mi, rice plates, Vietnamese coffee and milk tea on Grimmer Blvd in Fremont.",
+      "prep": 0,
+      "category": "Vietnamese pho and rice plates",
+      "items": [],
+      "address": "43460 Grimmer Blvd, Fremont, CA 94538",
+      "phone": "(510) 249-9902",
+      "email": "Dopephofremont@gmail.com",
+      "sections": [
+          {
+              "name": "Appetizer",
+              "items": [
+                  [
+                      "Crispy Ginger Tofu",
+                      "",
+                      795
+                  ],
+                  [
+                      "Grilled Beef Skewers",
+                      "",
+                      695
+                  ],
+                  [
+                      "Egg Rolls (3pcs)",
+                      "",
+                      845
+                  ],
+                  [
+                      "Rocket Shrimp Eggrolls",
+                      "",
+                      695
+                  ],
+                  [
+                      "Chicken Pot Stickers",
+                      "",
+                      695
+                  ],
+                  [
+                      "Shrimp Cake",
+                      "",
+                      965
+                  ],
+                  [
+                      "Grilled Shrimp Skewers",
+                      "",
+                      895
+                  ],
+                  [
+                      "Shrimp Spring Rolls",
+                      "",
+                      845
+                  ],
+                  [
+                      "Grilled Chicken Skewers",
+                      "",
+                      695
+                  ],
+                  [
+                      "Grilled Pork Skewers",
+                      "",
+                      695
+                  ],
+                  [
+                      "Crispy Calamari",
+                      "",
+                      995
+                  ],
+                  [
+                      "Fried Rice Flour Cakes",
+                      "",
+                      1295
+                  ],
+                  [
+                      "Roasted Quails",
+                      "",
+                      1095
+                  ],
+                  [
+                      "Shrimp Tempura",
+                      "",
+                      895
+                  ],
+                  [
+                      "Chicken Wing Fish Sauce",
+                      "",
+                      895
+                  ],
+                  [
+                      "Original Fried Chicken Wings",
+                      "",
+                      845
+                  ],
+                  [
+                      "Spicy Chicken Wings",
+                      "",
+                      895
+                  ]
+              ]
+          },
+          {
+              "name": "Vegetarian",
+              "items": [
+                  [
+                      "Tofu Spring Rolls",
+                      "",
+                      745
+                  ],
+                  [
+                      "Fried Vegetarian Spring Rolls",
+                      "",
+                      845
+                  ],
+                  [
+                      "Vegetable & Rice Noodle Soup",
+                      "",
+                      1645
+                  ]
+              ]
+          },
+          {
+              "name": "Noodle Soup",
+              "items": [
+                  [
+                      "Short Rib Noodle Soup (Bone In)",
+                      "",
+                      1845
+                  ],
+                  [
+                      "Combination Beef Noodle Soup",
+                      "Meatballs, rare beef, flank, tripe and brisket",
+                      1845
+                  ],
+                  [
+                      "Rare Beef Choice Beef Flap",
+                      "",
+                      1745
+                  ],
+                  [
+                      "Spicy Beef Noodle",
+                      "",
+                      1785
+                  ],
+                  [
+                      "Meatballs Noodle Soup",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Seafood Rice Noodle Soup",
+                      "",
+                      1845
+                  ],
+                  [
+                      "Rare Beef & Meatballs Noodle",
+                      "",
+                      1745
+                  ],
+                  [
+                      "Rare Beef & Tendon Noodle",
+                      "",
+                      1745
+                  ],
+                  [
+                      "Rare Beef & Brisket Noodle",
+                      "",
+                      1745
+                  ],
+                  [
+                      "Rare Beef & Short Rib Noodle",
+                      "",
+                      1995
+                  ],
+                  [
+                      "Brisket Noodle Soup",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Chicken Noodle Soup",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Wonton & Egg Noodle Soup",
+                      "",
+                      1645
+                  ],
+                  [
+                      "Brisket & Tendon Noodle",
+                      "",
+                      1745
+                  ],
+                  [
+                      "Seafood Egg Noodle",
+                      "Yellow noodle, shrimp, squid, imitation crab and fish balls",
+                      1845
+                  ],
+                  [
+                      "Tom Yum Seafood Noodle Soup",
+                      "Rice noodle, shrimp, squid, imitation crab and fish balls",
+                      1895
+                  ],
+                  [
+                      "Oxtail Beef Noodle",
+                      "",
+                      1845
+                  ]
+              ]
+          },
+          {
+              "name": "Vietnamese Sandwich",
+              "items": [
+                  [
+                      "Combination Sandwich",
+                      "",
+                      895
+                  ],
+                  [
+                      "Grilled Pork Belly Sandwich",
+                      "",
+                      795
+                  ],
+                  [
+                      "Grilled Pork Sandwich",
+                      "",
+                      795
+                  ],
+                  [
+                      "Grilled Beef Sandwich",
+                      "",
+                      895
+                  ],
+                  [
+                      "Pork Ham Sandwich",
+                      "",
+                      795
+                  ],
+                  [
+                      "Grilled Chicken Sandwich",
+                      "",
+                      795
+                  ],
+                  [
+                      "Vietnamese Sizzling Steak (Filet Mignon) and Eggs",
+                      "Egg, pork roll, pate and filet mignon with baguette",
+                      2295
+                  ],
+                  [
+                      "Beef Stew Bread / Noodle",
+                      "",
+                      1745
+                  ]
+              ]
+          },
+          {
+              "name": "Vermicelli Bowl",
+              "items": [
+                  [
+                      "Egg Roll, Grilled Beef Vermicelli",
+                      "",
+                      1845
+                  ],
+                  [
+                      "Grilled Pork Egg Roll Vermicelli",
+                      "",
+                      1765
+                  ],
+                  [
+                      "Grilled Pork Vermicelli",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Egg Roll Vermicelli",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Grilled Shrimp & Egg Roll Vermicelli",
+                      "",
+                      1795
+                  ],
+                  [
+                      "Grilled Pork & Shrimp Vermicelli",
+                      "",
+                      1765
+                  ],
+                  [
+                      "Grilled Chicken & Shrimp Vermicelli",
+                      "",
+                      1765
+                  ],
+                  [
+                      "Grilled Chicken & Egg Roll Vermicelli",
+                      "",
+                      1765
+                  ]
+              ]
+          },
+          {
+              "name": "Rice Plate",
+              "items": [
+                  [
+                      "Grilled Chicken over Rice",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Grilled Pork Chop over Rice",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Grilled Pork over Rice",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Grilled Shrimp over Rice",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Roast Chicken French Style over Rice",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Korean BBQ Beef over Rice",
+                      "",
+                      1895
+                  ],
+                  [
+                      "Shaking Beef (Filet Mignon) over Rice",
+                      "",
+                      1995
+                  ],
+                  [
+                      "Lemongrass Chili Chicken Rice",
+                      "",
+                      1845
+                  ],
+                  [
+                      "Grilled Pork Chop & Chicken Wing",
+                      "",
+                      1845
+                  ],
+                  [
+                      "Grilled Pork Chop & Egg Roll",
+                      "",
+                      1845
+                  ],
+                  [
+                      "Grilled Pork & Chicken Wing",
+                      "",
+                      1845
+                  ],
+                  [
+                      "Grilled Pork & Egg Roll",
+                      "",
+                      1845
+                  ],
+                  [
+                      "Korean BBQ Beef & Chicken Wing",
+                      "",
+                      1945
+                  ],
+                  [
+                      "Korean BBQ Beef & Egg Roll",
+                      "",
+                      1945
+                  ],
+                  [
+                      "Grilled Pork Chops, Shrimp Cake",
+                      "",
+                      1865
+                  ],
+                  [
+                      "Grilled Chicken, Shrimp Cake",
+                      "",
+                      1865
+                  ]
+              ]
+          },
+          {
+              "name": "Beverages",
+              "items": [
+                  [
+                      "Vietnamese Coffee",
+                      "Phin-filtered coffee and condensed milk",
+                      695
+                  ],
+                  [
+                      "Egg Coffee",
+                      "Phin-filtered coffee, condensed milk and egg cream",
+                      795
+                  ],
+                  [
+                      "Salted Egg Cream Coffee",
+                      "Phin-filtered coffee, condensed milk and salt cream",
+                      715
+                  ],
+                  [
+                      "Coconut Coffee",
+                      "Coffee, coconut milk, milk and heavy cream",
+                      715
+                  ],
+                  [
+                      "Jasmine Milk Tea",
+                      "",
+                      645
+                  ],
+                  [
+                      "Taro Jasmine Milk Tea",
+                      "",
+                      645
+                  ],
+                  [
+                      "Super Mango Jasmine Tea",
+                      "",
+                      695
+                  ],
+                  [
+                      "Sugar Cane",
+                      "",
+                      795
+                  ],
+                  [
+                      "Passion Fruit Jasmine Tea",
+                      "",
+                      695
+                  ],
+                  [
+                      "Strawberry Mango Jasmine Tea",
+                      "",
+                      695
+                  ],
+                  [
+                      "Passion Fruit Mango Jasmine Tea",
+                      "",
+                      695
+                  ],
+                  [
+                      "Peach Jasmine Tea",
+                      "",
+                      695
+                  ],
+                  [
+                      "Thai Iced Tea",
+                      "",
+                      695
+                  ],
+                  [
+                      "Coke",
+                      "",
+                      300
+                  ],
+                  [
+                      "Diet Coke",
+                      "",
+                      300
+                  ],
+                  [
+                      "Sprite",
+                      "",
+                      300
+                  ],
+                  [
+                      "Hot Tea",
+                      "",
+                      295
+                  ],
+                  [
+                      "Apple Juice",
+                      "",
+                      299
+                  ],
+                  [
+                      "Sunny D",
+                      "",
+                      299
+                  ],
+                  [
+                      "Coconut Drink",
+                      "",
+                      725
+                  ],
+                  [
+                      "Salted Cream Jasmine Tea",
+                      "",
+                      645
+                  ]
+              ]
+          }
+      ],
+      "siteCta": "Order online",
+      "orderUrl": "https://dopepho.menu11.com/fremont/order",
+      "needsSite": true,
+      "siteNote": "Prices are from their own online ordering page. Their Instagram and ordering page list different hours, so none are shown; call before you go.",
+      "clip": {
+          "src": "/clips/dope-pho.mp4",
+          "poster": "/clips/dope-pho-poster.webp",
+          "href": "https://www.instagram.com/reel/DY8MzCwBEp8/",
+          "credit": "Posted by @dope_pho",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "m-dumpling",
+      "name": "M Dumpling",
+      "label": "M Dumpling",
+      "cuisine": "Chinese dumplings and dim sum",
+      "color": "#f5efe0",
+      "icon": "m-dumpling",
+      "site": "https://mdumplingsanramon.com/",
+      "tagline": "Soup dumplings, dim sum and Chinese comfort food on Bollinger Canyon Rd.",
+      "prep": 0,
+      "category": "Chinese dumplings and dim sum",
+      "items": [],
+      "address": "11040 Bollinger Canyon Rd, Suite A, San Ramon, CA 94582",
+      "phone": "(925) 406-2707",
+      "hours": "Mon–Tue 11am–3pm & 5pm–9:30pm; Wed–Sun 11am–9:30pm",
+      "sections": [
+          {
+              "name": "Soup Dumplings",
+              "items": [
+                  [
+                      "Original Pork Soup Dumplings (8 pc)",
+                      "Pork, ginger and scallion xiao long bao.",
+                      1400
+                  ],
+                  [
+                      "Chicken Soup Dumplings (8 pc)",
+                      "",
+                      1499
+                  ],
+                  [
+                      "Crab and Pork Soup Dumplings (8 pc)",
+                      "Crab meat, pork, scallions and ginger.",
+                      1799
+                  ]
+              ]
+          },
+          {
+              "name": "Steamed Dumplings",
+              "items": [
+                  [
+                      "Pork and Cabbage Steamed Dumplings (8 pc)",
+                      "",
+                      1299
+                  ],
+                  [
+                      "Pork, Shrimp and Chive Steamed Dumplings (8 pc)",
+                      "",
+                      1399
+                  ],
+                  [
+                      "Chicken and Corn Steamed Dumplings (8 pc)",
+                      "",
+                      1499
+                  ],
+                  [
+                      "Vegetable Steamed Dumplings (8 pc)",
+                      "",
+                      1399
+                  ]
+              ]
+          },
+          {
+              "name": "Signature Pan Fried",
+              "items": [
+                  [
+                      "Egg and Chive Empanada (3 pc)",
+                      "",
+                      1599
+                  ],
+                  [
+                      "Beef Potstickers (6 pc)",
+                      "Pan-fried beef dumplings.",
+                      1599
+                  ],
+                  [
+                      "Scallion Pancake",
+                      "",
+                      850
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Cucumber Salad",
+                      "Fresh cucumber in their sweet and sour sauce with a light drizzle of chili oil.",
+                      750
+                  ],
+                  [
+                      "Rainbow Salad",
+                      "House-made glass noodles with cucumber, cabbage, carrot and wood ear mushroom in their sesame sauce.",
+                      1399
+                  ],
+                  [
+                      "Marinated Beef Shank",
+                      "Slow-braised with spices.",
+                      1299
+                  ],
+                  [
+                      "Fried Wontons (8 pc)",
+                      "",
+                      1199
+                  ],
+                  [
+                      "Veggie Spring Rolls (4 pc)",
+                      "",
+                      799
+                  ]
+              ]
+          },
+          {
+              "name": "Soups",
+              "items": [
+                  [
+                      "Hot and Sour Soup",
+                      "Bamboo shoot, tofu, egg drop and wood ear.",
+                      1150
+                  ],
+                  [
+                      "Slow Simmer Bone Soup",
+                      "Chicken, pork and beef bone broth with beef shank, radish and carrot.",
+                      1399
+                  ],
+                  [
+                      "Wonton Soup",
+                      "Pork and water chestnut wontons in their bone broth.",
+                      1199
+                  ]
+              ]
+          },
+          {
+              "name": "Boiled",
+              "items": [
+                  [
+                      "Mushroom Pork Dumplings (8 pc)",
+                      "",
+                      1299
+                  ],
+                  [
+                      "Red Oil Pork Wontons (8 pc)",
+                      "With sesame sauce and house-made red oil, or red oil alone.",
+                      1299
+                  ]
+              ]
+          },
+          {
+              "name": "Noodles and Rice",
+              "items": [
+                  [
+                      "House Special Bone Broth Noodle Soup",
+                      "Slow-simmered chicken, pork and beef bone broth with noodles and beef shank.",
+                      1699
+                  ],
+                  [
+                      "Minced Pork Dry Noodles",
+                      "Braised minced pork with shredded cucumber and carrot.",
+                      1699
+                  ],
+                  [
+                      "Wonton Noodle Soup (10 pc)",
+                      "",
+                      1600
+                  ],
+                  [
+                      "House Special Stir-Fried Noodles",
+                      "Garlicky, with mushroom, egg, carrot and cabbage.",
+                      1699
+                  ],
+                  [
+                      "Braised Pork Belly Bowl",
+                      "Over rice or noodles.",
+                      1599
+                  ],
+                  [
+                      "Egg Fried Rice",
+                      "",
+                      1599
+                  ],
+                  [
+                      "Crab and Shrimp Fried Rice",
+                      "",
+                      1899
+                  ],
+                  [
+                      "Black Truffle Fried Rice",
+                      "",
+                      1899
+                  ],
+                  [
+                      "Chicken Egg Stir-Fried Noodles",
+                      "",
+                      1899
+                  ],
+                  [
+                      "Chicken Egg Fried Rice",
+                      "",
+                      1799
+                  ],
+                  [
+                      "Beef Egg Fried Rice",
+                      "",
+                      1899
+                  ],
+                  [
+                      "Combo Egg Fried Rice",
+                      "",
+                      2199
+                  ],
+                  [
+                      "Beef Egg Stir-Fried Noodles",
+                      "",
+                      1999
+                  ],
+                  [
+                      "Combo Egg Stir-Fried Noodles",
+                      "",
+                      2199
+                  ],
+                  [
+                      "White Rice",
+                      "",
+                      250
+                  ]
+              ]
+          },
+          {
+              "name": "Stir Fry",
+              "items": [
+                  [
+                      "Sauteed Green Beans with Garlic",
+                      "",
+                      1799
+                  ],
+                  [
+                      "Sauteed Bok Choy with Garlic",
+                      "",
+                      1799
+                  ],
+                  [
+                      "Sauteed Broccoli with Garlic",
+                      "",
+                      1799
+                  ],
+                  [
+                      "Sauteed Water Spinach with Garlic",
+                      "",
+                      2099
+                  ],
+                  [
+                      "House Special Roasted Crispy Chicken (Half)",
+                      "",
+                      3333
+                  ],
+                  [
+                      "Orange Chicken",
+                      "",
+                      2199
+                  ],
+                  [
+                      "Broccoli Chicken",
+                      "",
+                      2199
+                  ],
+                  [
+                      "Mongolian Chicken",
+                      "",
+                      2199
+                  ],
+                  [
+                      "Scallion Beef",
+                      "",
+                      2599
+                  ],
+                  [
+                      "Broccoli Beef",
+                      "",
+                      2599
+                  ],
+                  [
+                      "Mongolian Beef",
+                      "",
+                      2599
+                  ]
+              ]
+          },
+          {
+              "name": "Desserts",
+              "items": [
+                  [
+                      "Salted Egg Custard Buns (4 pc)",
+                      "Soft steamed buns with creamy salted egg custard.",
+                      1300
+                  ],
+                  [
+                      "Red Bean Sesame Balls (8 pc)",
+                      "",
+                      799
+                  ],
+                  [
+                      "Crispy Mochi Sticks with Brown Sugar (6 pc)",
+                      "",
+                      800
+                  ],
+                  [
+                      "Honey Braised Lotus Root",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Osmanthus Rice Cake (4 pc)",
+                      "",
+                      1199
+                  ],
+                  [
+                      "Rose Buns (4 pc)",
+                      "Steamed buns with rose and oat custard.",
+                      1300
+                  ],
+                  [
+                      "Crispy Pumpkin Red Bean Cake",
+                      "",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Coke",
+                      "",
+                      250
+                  ],
+                  [
+                      "Diet Coke",
+                      "",
+                      250
+                  ],
+                  [
+                      "Sunkist",
+                      "",
+                      250
+                  ],
+                  [
+                      "Sprite",
+                      "",
+                      250
+                  ],
+                  [
+                      "Root Beer",
+                      "",
+                      250
+                  ],
+                  [
+                      "Sparkling Water",
+                      "",
+                      300
+                  ],
+                  [
+                      "Guava Green Tea",
+                      "",
+                      600
+                  ],
+                  [
+                      "Winter Melon Tea",
+                      "",
+                      600
+                  ]
+              ]
+          }
+      ],
+      "siteNote": "Prices are from the online ordering page their own website links to.",
+      "orderUrl": "https://order.online/store/-45081389/"
+  },
 ]
