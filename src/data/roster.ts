@@ -5206,7 +5206,12 @@ export const BEASTY_EATS_ROSTER: (string | null)[] = [
   null, //                     8  Greek food
   null, //                     9  Italian food
   null, //                     10 French cuisine
-  null, //                     11 Udon
+  /* "Hey bro, can you put this on the open spots on BEASTY • Eats page?" —
+     Glenn, 2026-10-21, 5:18 pm, with Empire State's own page. Udon and
+     Jamaican were the two spots nobody filled; Pizza is King's and Italian is
+     The Great Impasta's, so it takes the first open one. Its tile shows its
+     own name; a later udon shop goes to More eats. */
+  'b_empirestatepizza', //     11 Udon (open spot)
   'b_gaovietkitchen', //       12 Pho
   null, //                     13 Ramen
   'b_bulapies', //             14 Fijian food

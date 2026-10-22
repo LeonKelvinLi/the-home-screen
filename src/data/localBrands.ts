@@ -20722,4 +20722,2175 @@ export const LOCAL_SEED: LocalSeed[] = [
       "contactOnly": "Pizza Casamia takes take-out and delivery orders on its own ordering site, where the menu and prices are. Or call (408) 265-2222.",
       "siteCta": "Order online"
   },
+  /* BATCH 58, 2026-10-21: Glenn's 21 October sends. Official-site facts only;
+     sources, conflicts and left-out items: research/roster/batch58.json. */
+  {
+      "slug": "funky-elephant",
+      "name": "Funky Elephant",
+      "label": "Funky Elephant",
+      "cuisine": "Thai",
+      "color": "#fefefe",
+      "icon": "funky-elephant",
+      "site": "https://www.funkyelephantthai.com/",
+      "tagline": "Non-traditional Thai comfort food on Ninth Street in Berkeley, from a former Hawker Fare chef de cuisine.",
+      "prep": 0,
+      "category": "Thai",
+      "items": [],
+      "address": "1313 Ninth St, Suite 120, Berkeley, CA 94710",
+      "phone": "(510) 356-4855",
+      "email": "funkyelephantthai@gmail.com",
+      "sections": [
+          {
+              "name": "Appetizer",
+              "items": [
+                  [
+                      "Fried Brussel Sprouts",
+                      "Tossed with King sauce; medium spicy (GF)",
+                      1400
+                  ],
+                  [
+                      "Crispy Hodo Tofu",
+                      "Seasoned with funky powder, sweet chili sauce (vegan)",
+                      1400
+                  ],
+                  [
+                      "Party Wings",
+                      "Four fried Mary’s organic wings tossed with house-made chili jam, crispy Thai basil; Thai spicy, contains shellfish",
+                      1800
+                  ],
+                  [
+                      "Green Papaya Salad",
+                      "Som tum: cherry tomatoes, garlic, dried shrimp, Thai chilies, fish sauce, lime, peanuts (GF)",
+                      1700
+                  ],
+                  [
+                      "Crispy Rice Salad",
+                      "Nam kao todd: fried jasmine rice in house-made red curry paste, herbs, peanuts, lime, fish sauce, fermented pork; Thai spicy (GF)",
+                      2000
+                  ],
+                  [
+                      "Fried Eggs Salad",
+                      "Yum khai dao: Siamese-style fried eggs, grilled shrimp, herbs, shallot, cherry tomatoes, Thai chili, garlic, fish sauce, lime (GF)",
+                      1800
+                  ],
+                  [
+                      "Hella Drunken Mussels",
+                      "Wok-tossed Prince Edward Island mussels, house-made chili jam, Thai basil, Thai chili, garlic, Asian rice wine; spicy",
+                      2100
+                  ],
+                  [
+                      "Blisted Green (vegan)",
+                      "Market greens blistered in a hot wok, garlic, Thai basil vinaigrette; not spicy",
+                      1400
+                  ],
+                  [
+                      "Why You Cry Tiger? aka Spicy Beef Salad",
+                      "E-saan-style sliced beef salad, roasted rice powder, Thai chilies, alliums, herbs, vegetables",
+                      2100
+                  ],
+                  [
+                      "Lucky Pork aka Larb Moo (spicy minced pork salad)",
+                      "E-sarn-style minced pork salad, alliums, herbs, roasted rice powder, vegetables",
+                      1800
+                  ],
+                  [
+                      "Roti with yellow curry",
+                      "Two roti, yellow curry sauce",
+                      1500
+                  ],
+                  [
+                      "Grilled Oyster Mushroom (V)",
+                      "House-made peanut sauce, sesame seeds, chives",
+                      1300
+                  ]
+              ]
+          },
+          {
+              "name": "Main",
+              "items": [
+                  [
+                      "Pad Thai Old Skool",
+                      "White shrimp, Chan noodle, Hodo tofu, peanuts, bean sprouts, garlic chive, egg, shallot, Thai chili powder; Thai spicy (GF)",
+                      2300
+                  ],
+                  [
+                      "K.M.G. #2",
+                      "Poached organic chicken thigh with garlic-and-ginger rice, fermented soybean sauce",
+                      2300
+                  ],
+                  [
+                      "O’s Breakfast Grilled Pork",
+                      "Marinated pork shoulder, Thai-style fried eggs, jaew, cabbage slaw",
+                      2700
+                  ],
+                  [
+                      "Gang Rawang Beef",
+                      "Grilled Certified Angus steak (medium rare), house-made green curry paste, turmeric, coconut milk, Thai basil, Thai chili; at least 20 minutes to cook (GF)",
+                      3100
+                  ],
+                  [
+                      "Motherland Curry",
+                      "Rock cod, house-made red curry, coconut milk, herbs, bean sprouts, shredded cabbage, vermicelli; medium spicy",
+                      2300
+                  ],
+                  [
+                      "Yellow Curry w/grilled chicken",
+                      "Grilled chicken thigh, roasted carrot, potato, onion, coconut milk, pickled cucumber",
+                      2300
+                  ],
+                  [
+                      "Yellow Curry Vegan",
+                      "Organic Hodo tofu, roasted carrot, potato, onion, coconut milk, pickled cucumber",
+                      2300
+                  ],
+                  [
+                      "Super Jungle Curry Beef",
+                      "House-made red curry without coconut milk, snake beans, Thai basil, dill, squash, sliced picanha; Thai hot, no modifications",
+                      2700
+                  ],
+                  [
+                      "Super Jungle Curry Fish",
+                      "House-made red curry without coconut milk, snake beans, Thai basil, dill, squash, rock fish; Thai hot, no modifications",
+                      2700
+                  ],
+                  [
+                      "Super Jungle Curry VEGAN",
+                      "House-made red curry without coconut milk, snake beans, Thai basil, dill, squash, organic Hodo tofu; Thai hot, no modifications",
+                      2700
+                  ],
+                  [
+                      "Wholesome Noodle (soup noodle)",
+                      "Chan noodle (Thai rice stick), minced pork, chili jam, bean sprouts, peanut, scallion, cilantro; Thai medium spicy",
+                      2200
+                  ],
+                  [
+                      "Drunken Noodle",
+                      "Egg noodle, mussels, chili jam (contains shellfish), Asian wine, basil; spicy",
+                      2300
+                  ],
+                  [
+                      "Curry Noodle (V)",
+                      "Mixed curry soup, yellow noodle, rotating greens, sesame seed, Hodo tofu",
+                      2500
+                  ],
+                  [
+                      "Chicken Curry Noodle",
+                      "Mixed curry soup, yellow noodle, sesame seed, rotating greens, grilled chicken",
+                      2500
+                  ],
+                  [
+                      "New Skool Fried Rice",
+                      "Twice-cooked rice, two fried Gulf shrimp, tomato, greens, allium, garlic",
+                      2300
+                  ],
+                  [
+                      "Fried Chicken&Roti",
+                      "Battered fried chicken, roti, shallot, pickles, sweet chili sauce, yellow curry sauce",
+                      2400
+                  ]
+              ]
+          },
+          {
+              "name": "Sweet",
+              "items": [
+                  [
+                      "Sweet Roti",
+                      "Fried roti, condensed milk, brown sugar, roasted coconut, rotating soft serve",
+                      1250
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Butterfly pea jasmine rice",
+                      "",
+                      300
+                  ],
+                  [
+                      "GG rice",
+                      "Garlic and ginger, chicken stock",
+                      300
+                  ],
+                  [
+                      "Sticky rice",
+                      "",
+                      300
+                  ],
+                  [
+                      "Side Vermicelli",
+                      "",
+                      300
+                  ],
+                  [
+                      "K.M.G. soup",
+                      "",
+                      400
+                  ],
+                  [
+                      "Ajad",
+                      "Pickled cucumber",
+                      600
+                  ],
+                  [
+                      "Fried egg",
+                      "",
+                      400
+                  ],
+                  [
+                      "Lettuce set",
+                      "Red leaf lettuce, mint, dill, cilantro",
+                      400
+                  ],
+                  [
+                      "K.M.G sauce bottle (5oz.)",
+                      "Their house-made all-purpose sauce: fermented soybean, Thai chili, garlic, ginger, vinegar, soy sauce; vegan",
+                      1200
+                  ],
+                  [
+                      "Sweet Chili Sauce bottle (5oz.)",
+                      "Thai chili, sugar, soy sauce, vinegar; vegan",
+                      1300
+                  ],
+                  [
+                      "Gulf Shrimp",
+                      "",
+                      400
+                  ]
+              ]
+          },
+          {
+              "name": "Drink",
+              "items": [
+                  [
+                      "Thai Ice Tea",
+                      "Thai tea, milk; soy milk on request",
+                      700
+                  ],
+                  [
+                      "Unsweetened Mango Tea",
+                      "Iced black mango tea",
+                      550
+                  ],
+                  [
+                      "Hot Tea Black",
+                      "Earl Grey",
+                      600
+                  ],
+                  [
+                      "Hot Tea Green",
+                      "Jasmine tea",
+                      600
+                  ],
+                  [
+                      "Hot Tea Herbal",
+                      "Blood orange",
+                      600
+                  ],
+                  [
+                      "Fresh Squeezed Limeade with Butterfly pea",
+                      "",
+                      800
+                  ],
+                  [
+                      "Mexican Coke",
+                      "Cane sugar",
+                      550
+                  ],
+                  [
+                      "Sparkling water",
+                      "",
+                      550
+                  ],
+                  [
+                      "Matcha Latte (soy milk)",
+                      "Matcha, soy milk",
+                      775
+                  ],
+                  [
+                      "Strawberry Matcha Latte",
+                      "Strawberry purée, matcha, soy milk",
+                      875
+                  ],
+                  [
+                      "Thai Iced Coffee",
+                      "Thai coffee, milk; soy milk on request",
+                      700
+                  ],
+                  [
+                      "ThaiTea x Matcha",
+                      "Lightly sweetened Thai tea, non-dairy milk, matcha",
+                      875
+                  ],
+                  [
+                      "Strawberry Thai Tea Latte",
+                      "Strawberry purée, non-dairy milk, Thai tea",
+                      875
+                  ]
+              ]
+          },
+          {
+              "name": "Kids' Menu",
+              "items": [
+                  [
+                      "Kids' Noodle Soup",
+                      "Vermicelli noodle soup with Hodo tofu, chicken stock",
+                      1100
+                  ],
+                  [
+                      "Kids' Wings",
+                      "",
+                      1100
+                  ]
+              ]
+          }
+      ],
+      "orderUrl": "https://funkyelephantca.smiledining.com",
+      "siteNote": "Prices are from the online ordering page their own website links to. Their website and Instagram give different weekend lunch hours, so none are shown; call before you go. Their San Francisco room on Valencia Street closed on 21 June 2026; Berkeley is their one shop.",
+      "siteCta": "Order online",
+      "clip": {
+          "src": "/clips/funky-elephant.mp4",
+          "poster": "/clips/funky-elephant-poster.webp",
+          "href": "https://www.instagram.com/reel/C8BJwc2REwu/",
+          "credit": "Filmed by @sophiaxbayarea",
+          "platform": "Instagram",
+          "by": "sophiaxbayarea"
+      }
+  },
+  {
+      "slug": "kemuri-japanese-baru",
+      "name": "Kemuri Japanese Barú",
+      "label": "Kemuri",
+      "cuisine": "Japanese izakaya",
+      "color": "#ffffff",
+      "icon": "kemuri-japanese-baru",
+      "site": "https://kemuri-baru.com/",
+      "tagline": "A Japanese fusion tapas izakaya on Broadway in downtown Redwood City, with smoked plates, katsu and wagyu rice dishes.",
+      "prep": 0,
+      "category": "Japanese izakaya",
+      "items": [],
+      "address": "2616 Broadway St, Redwood City, CA 94063",
+      "phone": "(650) 257-7653",
+      "hours": "Lunch Wed–Fri 11:30am–1:30pm, Sat–Sun 11:30am–2pm; dinner daily 5:30pm–9pm, Fri–Sat until 10pm",
+      "sections": [
+          {
+              "name": "Premium Bento",
+              "items": [
+                  [
+                      "Beef Tongue Bento",
+                      "Grilled Wagyu Beef Tongue + Tail Soup, salad, side of small dish, rice, umami scallion sauce, sesame",
+                      3200
+                  ]
+              ]
+          },
+          {
+              "name": "Wagyu Curry Rice",
+              "items": [
+                  [
+                      "Kurobuta Katsu & Wagyu Curry Rice",
+                      "Slow-simmered Wagyu beef curry over rice with super thick-cut Kurobuta pork katsu",
+                      2250
+                  ],
+                  [
+                      "Chicken Katsu & Wagyu Curry Rice",
+                      "Slow-simmered Wagyu beef curry over rice with habanero chicken katsu",
+                      1950
+                  ]
+              ]
+          },
+          {
+              "name": "Rice Bowls",
+              "items": [
+                  [
+                      "Wagyu & Garlic Rice",
+                      "Tender, dice-cut Wagyu grilled over Binchotan charcoal for deep umami. Served with our signature savory garlic rice, garlic chips and scallions.",
+                      2700
+                  ],
+                  [
+                      "Sakura Pork Katsu Don",
+                      "Super thick-cut Kurobuta pork katsu with Japanese-style scramble eggs over rice",
+                      2200
+                  ],
+                  [
+                      "Grilled Unagi Bowl",
+                      "Grilled eel on the rice, sesame, seaweed frikake, sansho pepper",
+                      2000
+                  ],
+                  [
+                      "Smoked Poke Bowl",
+                      "Semi smoked salmon (chopped sashimi), red onion, scallion, greens, poached egg, sesame, seaweed frikake, spicy miso sauce",
+                      2200
+                  ],
+                  [
+                      "Black Pepper Chicken Bowl",
+                      "Japanese style fried chicken, greens, scallion, sesame, shredded red pepper, sweet garlic soy sauce",
+                      1800
+                  ],
+                  [
+                      "Spicy Miso Tofu Bowl",
+                      "Fried tofu, assorted veggie, greens, spicy miso sauce, scallion, sesame, shredded red pepper",
+                      1600
+                  ],
+                  [
+                      "Garlic Rice",
+                      "",
+                      700
+                  ],
+                  [
+                      "Steamed Rice",
+                      "",
+                      300
+                  ]
+              ]
+          },
+          {
+              "name": "Noodle & Soup",
+              "items": [
+                  [
+                      "Kemuri Udon",
+                      "Beef bone & oxtail base, veggie, scallion, onion, yuzu, chashu, garlic chips",
+                      1700
+                  ],
+                  [
+                      "Spicy Kemuri Udon",
+                      "Beef bone & oxtail base, veggie, scallion, onion, yuzu, chashu, garlic chips, spicy garlic miso paste",
+                      1850
+                  ],
+                  [
+                      "Wagyu Curry Udon",
+                      "Wagyu beef curry soup, fried veggie, scallion, bonito flake, veggie chips",
+                      2000
+                  ],
+                  [
+                      "Kemuri Miso Soup",
+                      "Oxtail and Japanese style broth, seaweed, tofu, scallion",
+                      650
+                  ]
+              ]
+          },
+          {
+              "name": "Tapas",
+              "items": [
+                  [
+                      "Chicken Karaage",
+                      "Japanese style fried chicken Karaage, Kemuri tartar sauce",
+                      1350
+                  ],
+                  [
+                      "Spicy Wings",
+                      "Fried Chicken Wing, kemuri spicy seasoning",
+                      1200
+                  ],
+                  [
+                      "Shiitake Karaage",
+                      "Shiitake mushroom, kemuri tartar sauce",
+                      1200
+                  ],
+                  [
+                      "Atsuage & Veggie Tempura",
+                      "Fried tofu, assorted veggie, smoked soy sauce",
+                      1600
+                  ],
+                  [
+                      "Crispy Shrimps",
+                      "Fried small whole shrimp, kemuri seasoning (eat with head and shell)",
+                      1395
+                  ],
+                  [
+                      "Smoked Poke",
+                      "Smoked Salmon, red onion, scallion, poached egg, spicy miso sauce, wonton chips",
+                      2000
+                  ],
+                  [
+                      "Green Salad",
+                      "Fresh spring mix, garlic chips, mushroom dressing",
+                      850
+                  ],
+                  [
+                      "Smoked Octopus Carpaccio Salad",
+                      "Smoked octopus, baby arugula, red onion, fuji apple, shiso & basil dressing, veggie chips",
+                      2000
+                  ],
+                  [
+                      "Assorted Grilled Vegetables",
+                      "Umami garlic sauce",
+                      1200
+                  ],
+                  [
+                      "Umami Edamame",
+                      "Garlic umami sauce",
+                      650
+                  ]
+              ]
+          },
+          {
+              "name": "Beverages",
+              "items": [
+                  [
+                      "Coke",
+                      "",
+                      300
+                  ],
+                  [
+                      "Diet Coke",
+                      "",
+                      300
+                  ],
+                  [
+                      "Ramune (Original)",
+                      "",
+                      500
+                  ],
+                  [
+                      "Ramune (Lychee)",
+                      "",
+                      500
+                  ],
+                  [
+                      "Oi Ocha Green Tea (Iced)",
+                      "",
+                      500
+                  ]
+              ]
+          },
+          {
+              "name": "Sauce",
+              "items": [
+                  [
+                      "Golden Mustard",
+                      "Made in Japan. Mustard seeds, rice vinegar, white soy sauce, maple syrup, wine vinegar and sweet sake. 5oz.",
+                      2200
+                  ],
+                  [
+                      "Kemuri Original Dressing",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Kemuri Smoked Soy Sauce",
+                      "",
+                      1200
+                  ]
+              ]
+          }
+      ],
+      "orderUrl": "https://order.toasttab.com/online/kemurirwc",
+      "siteNote": "Prices are from the online ordering page their own website links to.",
+      "clip": {
+          "src": "/clips/kemuri-japanese-baru.mp4",
+          "poster": "/clips/kemuri-japanese-baru-poster.webp",
+          "href": "https://www.instagram.com/reel/Dep69EZBSlI/",
+          "credit": "Posted by @kemurirwc",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "the-breakfast-club-sf",
+      "name": "The Breakfast Club at Midtown",
+      "label": "Breakfast Club",
+      "cuisine": "All-day breakfast, brunch and lunch",
+      "color": "#ffffff",
+      "icon": "the-breakfast-club-sf",
+      "site": "https://www.bcmidtown.com/",
+      "tagline": "All-day breakfast, brunch and lunch, opening on Haight Street in fall 2026.",
+      "prep": 0,
+      "category": "All-day breakfast, brunch and lunch",
+      "items": [],
+      "address": "1428 Haight Street, San Francisco, CA 94117",
+      "phone": "(415) 374-7513",
+      "sections": [
+          {
+              "name": "Basics",
+              "items": [
+                  [
+                      "Two Egg Breakfast",
+                      "Two eggs, cooked however you like, hashbrowns or potatoes and choice of bread.",
+                      1500
+                  ],
+                  [
+                      "Bacon & Eggs",
+                      "Five pieces of bacon with two eggs, hashbrowns or potatoes, and your choice of bread.",
+                      1800
+                  ],
+                  [
+                      "Sausage & Eggs",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Chicken Apple Sausage & Eggs",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Loco Moco",
+                      "3/4lb hamburger patty, jasmine rice, topped with eggs and mushroom gravy. Comes with homemade macaroni salad and kimchi",
+                      2200
+                  ],
+                  [
+                      "Steak Frites",
+                      "Sliced ribeye, mushrooms gravy, garlic parmesan fries, sunny side up eggs.",
+                      2900
+                  ],
+                  [
+                      "Spicy Chicken Fried Rice",
+                      "",
+                      2200
+                  ],
+                  [
+                      "Country Fried Steak & Eggs",
+                      "",
+                      2300
+                  ],
+                  [
+                      "Burger Steak & Eggs",
+                      "Three-quarter pound hamburger patty, two eggs, hashbrowns or potatoes, and your choice of bread.",
+                      2100
+                  ],
+                  [
+                      "Canadian Bacon & Eggs",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Ham & Eggs",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Hot Links & Eggs",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Italian Sausage & Eggs",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Linguicia & Eggs",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Ribeye Steak & Eggs",
+                      "",
+                      2900
+                  ]
+              ]
+          },
+          {
+              "name": "Omelettes & Scrambles",
+              "items": [
+                  [
+                      "Chicken Apple Omelette",
+                      "Chicken apple sausage, mushrooms, green onions, cheese, avocado, and sour cream.",
+                      2000
+                  ],
+                  [
+                      "Chorizo Hash",
+                      "Chorizo and potatoes topped with eggs, sour cream, pico de gallo, guacamole, and jalapeños.",
+                      2000
+                  ],
+                  [
+                      "Corned Beef Hash",
+                      "Herb potatoes with house-made corned beef, bell peppers, onions, and topped with eggs.",
+                      2000
+                  ],
+                  [
+                      "El Dorado",
+                      "Blackened chicken breast, bell peppers, onions on herb potatoes, topped with cheese, eggs, sour cream, pico, and guacamole.",
+                      2100
+                  ],
+                  [
+                      "Farm House Omelette",
+                      "Mushrooms, spinach, onions, avocado, bell peppers, and tomato.",
+                      2000
+                  ],
+                  [
+                      "Garbage Plate",
+                      "Herb potatoes with bacon, ham, bell peppers, onions, jalapeños, cheddar jack cheese, and topped with eggs.",
+                      2000
+                  ],
+                  [
+                      "George Scramble",
+                      "Scrambled eggs, bacon, tomato, green onions, cheddar jack cheese, cream cheese, topped with avocado and sour cream.",
+                      2000
+                  ],
+                  [
+                      "Hot Links Scramble",
+                      "Scrambled eggs, hot links, red bell peppers, cheddar jack cheese, sour cream on herb potatoes.",
+                      2000
+                  ],
+                  [
+                      "Jalisco Omelette",
+                      "Braised short ribs, onions, bell peppers, fresh jalapeno, Anaheim peppers, topped with cheddar jack cheese, chili Verde sauce, sour cream, pico de gallo, avocado.",
+                      2300
+                  ],
+                  [
+                      "Tofu Scramble",
+                      "Vegan Eggs, Tofu, onions, bell peppers, fresh jalapenos, zucchini and tomatoes, side of fresh salsa.",
+                      1800
+                  ],
+                  [
+                      "Kentucky Scramble",
+                      "Scrambled eggs with ham, sausage, red bell peppers, topped with cheddar jack cheese and sour cream on herb potatoes.",
+                      2000
+                  ],
+                  [
+                      "Lo Carb Breakfast",
+                      "Chicken breast, spinach, and diced tomatoes in scrambled egg whites. Served with fresh fruit and homemade salsa.",
+                      1800
+                  ],
+                  [
+                      "Midtown Scramble",
+                      "Scrambled eggs with ham, mushrooms, green onions, tomato, cheddar jack cheese, and sour cream on a bed of hashbrowns. Topped with hollandaise.",
+                      2000
+                  ],
+                  [
+                      "Popeye Omelette",
+                      "Spinach, mushrooms, and bacon, topped with jack cheese, tomatoes, and sour cream.",
+                      2000
+                  ],
+                  [
+                      "Santa Cruz",
+                      "Grilled salmon on a bed of herb potatoes, sautéed onions, and bell peppers, topped with eggs, hollandaise, fresh dill, and capers.",
+                      2200
+                  ],
+                  [
+                      "Santa Maria",
+                      "Steak, bell peppers, and onions on a bed of herb potatoes, topped with 2 eggs, cheddar jack cheese, sour cream, pico, guacamole.",
+                      2100
+                  ],
+                  [
+                      "Shrimp & Crab Omelette",
+                      "Sautéed shrimp and crab with cream cheese, green onions, topped with hollandaise sauce.",
+                      2200
+                  ],
+                  [
+                      "Veggie Hash",
+                      "Avocado, spinach, mushrooms, bell peppers, and onions on a bed of herb potatoes, topped with 2 eggs.",
+                      2000
+                  ]
+              ]
+          },
+          {
+              "name": "Benedicts",
+              "items": [
+                  [
+                      "California Bene",
+                      "On an English Muffin topped with hollandaise, bacon, roasted tomato, and avocado.",
+                      2000
+                  ],
+                  [
+                      "Classic Bene",
+                      "On an English Muffin topped with hollandaise and poached eggs with Canadian bacon.",
+                      1900
+                  ],
+                  [
+                      "Midtown Duo",
+                      "Can't decide? Choose two of the delicious benedicts!",
+                      2600
+                  ],
+                  [
+                      "New York Bene",
+                      "On an Everything Bagel topped with cream cheese, lox, poached eggs, pickled red onion, fried capers, and fresh dill.",
+                      2200
+                  ],
+                  [
+                      "Surf and Turf Bene",
+                      "",
+                      2500
+                  ],
+                  [
+                      "Carnitas Benedicts",
+                      "Homemade carnitas on an English Muffin. Comes with avocado, sour cream, pico and jalapenos, queso fresco Includes poached eggs and potato choice.",
+                      2300
+                  ],
+                  [
+                      "Crab Cake Bene",
+                      "On an English Muffin topped with hollandaise and poached eggs with avocado and homemade crab cakes.",
+                      2200
+                  ],
+                  [
+                      "Neptune Bene",
+                      "Shrimp, crab, cream cheese, and green onions in scrambled eggs, on an English Muffin topped with hollandaise.",
+                      2200
+                  ],
+                  [
+                      "Veggie Bene",
+                      "Roasted tomatoes, roasted red peppers, spinach, and avocado on an English Muffin with hollandaise and poached eggs.",
+                      2000
+                  ]
+              ]
+          },
+          {
+              "name": "Ranchero Breakfast",
+              "items": [
+                  [
+                      "Burrito",
+                      "Chorizo, eggs, green onions and cheddar jack cheese inside a flour tortilla. Topped with sour cream, pico, guac and jalapenos. Served with potato choice and refried beans.",
+                      2000
+                  ],
+                  [
+                      "Enchiladas",
+                      "Chorizo and cheddar jack cheese with scrambled eggs inside corn tortillas, topped with homemade enchilada sauce, topped with cheese, sour cream, guac, pico and jalapenos. Served with homemade refried beans and potatoes.",
+                      2000
+                  ],
+                  [
+                      "Mexican Scramble",
+                      "Chorizo and green onions in scrambled eggs, topped with sour cream, guac, pico, and jalapenos.",
+                      1900
+                  ],
+                  [
+                      "Nachos",
+                      "Homemade tortilla chips, topped with red sauce, scrambled eggs with green onions and chorizo, cheese, pico, guac, sour cream and jalapenos. Includes refried beans.",
+                      2000
+                  ],
+                  [
+                      "Red Chilaquiles",
+                      "Braised Beef on Homemade Corn Chips, tossed in a red chili sauce. Topped with sour cream, guacamole, Pico de Gallo and jalapeños, and queso fresco. Served with potato choice and refried beans.",
+                      2100
+                  ],
+                  [
+                      "Steak Huevos Rancheros",
+                      "Corn tortillas, red sauce, sliced steak, topped with eggs, pico, guac, sour cream and jalapenos.",
+                      2200
+                  ],
+                  [
+                      "Verde Chilaquiles",
+                      "Braised Beef on homemade corn tortilla chips tossed in a chili Verde sauce, topped with eggs, cheese, sour cream, guacamole, Pico de Gallo, and jalapeños. Served with potato choice and homemade refried beans.",
+                      2100
+                  ]
+              ]
+          },
+          {
+              "name": "Sweets",
+              "items": [
+                  [
+                      "Midtown Trio",
+                      "Can't decide? Get them all or 3! Mix and Match French Toast or Pancakes.",
+                      2100
+                  ],
+                  [
+                      "Banana Apricot French Toast",
+                      "Topped with caramelized bananas, caramel, and powdered sugar.",
+                      1800
+                  ],
+                  [
+                      "Banana Pecan Coconut Waffle",
+                      "",
+                      1700
+                  ],
+                  [
+                      "Blueberry Lemon Ricotta Pancakes",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Brioche French Toast",
+                      "Dusted with powdered sugar, butter, and syrup on the side.",
+                      1500
+                  ],
+                  [
+                      "Buttermilk Pancakes",
+                      "4 buttermilk pancakes topped with powdered sugar, butter, and syrup on the side.",
+                      1200
+                  ],
+                  [
+                      "California French Toast",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Chicken & Waffle",
+                      "Crisp waffle with 4 pieces of bone-in chicken, topped with powdered sugar, gravy on the side.",
+                      2000
+                  ],
+                  [
+                      "Chocolate Chip Pancakes",
+                      "3 chocolate chip pancakes, dusted with powdered sugar, topped with Nutella and chocolate sauce.",
+                      1500
+                  ],
+                  [
+                      "Blueberry Cream French Toast",
+                      "Topped with cream cheese frosting, blueberry compote, fresh blueberries, and powdered sugar.",
+                      1800
+                  ],
+                  [
+                      "Tiramisu Pancakes",
+                      "Espresso pancakes, marscapone cream, cocoa powder.",
+                      1600
+                  ],
+                  [
+                      "Cookie Butter Pancakes",
+                      "Layered with Biscoff Spread and cookie crumbles.",
+                      1600
+                  ],
+                  [
+                      "Gluten-Free Blueberry Banana Pancakes",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Peach Cobbler Cakes",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Raspberry Cream Cheese French Toast",
+                      "French toast stuffed with raspberry cream cheese, dusted with powdered sugar, and topped with raspberry sauce.",
+                      1800
+                  ],
+                  [
+                      "S'mores Pancakes",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Single Apricot French Toast",
+                      "",
+                      600
+                  ],
+                  [
+                      "Single Cali French Toast",
+                      "",
+                      600
+                  ],
+                  [
+                      "Single French Toast",
+                      "",
+                      400
+                  ],
+                  [
+                      "Single Pancake",
+                      "",
+                      400
+                  ],
+                  [
+                      "Single Raspberry French Toast",
+                      "",
+                      600
+                  ],
+                  [
+                      "Special Single Pancake",
+                      "",
+                      600
+                  ],
+                  [
+                      "Strawberry Banana Crepe",
+                      "Bananas and Nutella in a homemade crepe.",
+                      1600
+                  ],
+                  [
+                      "Strawberry Waffle",
+                      "Crisp waffle topped with fresh strawberries and raspberry drizzle.",
+                      1700
+                  ],
+                  [
+                      "Waffle",
+                      "Crisp waffle dusted with powdered sugar, served with a side of fresh fruit.",
+                      1700
+                  ],
+                  [
+                      "Churro Waffle",
+                      "Crisp waffle.",
+                      1800
+                  ]
+              ]
+          },
+          {
+              "name": "Sandwiches",
+              "items": [
+                  [
+                      "BLTA",
+                      "On sourdough with bacon, lettuce, tomato, avocado, and mayo.",
+                      1700
+                  ],
+                  [
+                      "Chicken Club",
+                      "Grilled chicken, Swiss cheese, bacon, mayo, lettuce, onion, and avocado on a French roll.",
+                      1800
+                  ],
+                  [
+                      "Club House Sandwich",
+                      "Turkey, bacon, cheddar cheese, avocado, lettuce, and tomato on sourdough with mayo.",
+                      1800
+                  ],
+                  [
+                      "Short Rib French Dip",
+                      "Short ribs topped with Swiss cheese and grilled onions on a sourdough roll, served with creamy horseradish and au jus on the side.",
+                      2100
+                  ],
+                  [
+                      "Grilled Cheese",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Tuna Melt",
+                      "Tuna salad, bacon avocado cheddar on sourdough.",
+                      1800
+                  ],
+                  [
+                      "Spicy Crispy Chicken",
+                      "Buttermilk fried chicken breast with coleslaw and chipotle aioli.",
+                      1800
+                  ],
+                  [
+                      "Ribeye Sandwich",
+                      "Ribeye steak, garlic aioli, grilled sweet onions, Swiss cheese, and spicy chimichurri on a grilled sourdough roll.",
+                      2400
+                  ],
+                  [
+                      "The Breakfast Sandwich",
+                      "On grilled brioche with ham, bacon, cheddar, eggs, lettuce, tomato, and onions.",
+                      1800
+                  ]
+              ]
+          },
+          {
+              "name": "Burgers",
+              "items": [
+                  [
+                      "Bacon Cheese Burger",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Texas Burger",
+                      "Bacon, BBQ, cheddar, coleslaw, fried onion strings",
+                      1900
+                  ],
+                  [
+                      "Veggie Burger",
+                      "Portabella mushroom, roasted red peppers, avocado, and sprouts with chipotle aioli",
+                      1800
+                  ],
+                  [
+                      "Jalapeno Patty Melt",
+                      "1/2 lb Angus beef, swiss cheese, grilled onions, on rye.",
+                      1800
+                  ],
+                  [
+                      "Breakfast Burger",
+                      "1/2 lb Angus Beef, cheddar, pepper bacon, hashbrowns, sriracha mayo, and sunny side up egg.",
+                      2000
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "Chicken Caesar",
+                      "",
+                      1700
+                  ],
+                  [
+                      "Tossed Salad",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Beet Salad",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Cobb Salad",
+                      "Chicken, Bacon, Avocado, Blue Cheese Crumbles, Tomato, and Egg.",
+                      1800
+                  ],
+                  [
+                      "Yogurt Bowl",
+                      "Fresh Berries, Granola, Pumpkin Seeds, Walnuts, and Honey.",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "1 Egg",
+                      "",
+                      400
+                  ],
+                  [
+                      "Two Eggs",
+                      "",
+                      600
+                  ],
+                  [
+                      "Three Eggs",
+                      "",
+                      800
+                  ],
+                  [
+                      "Avocado",
+                      "",
+                      300
+                  ],
+                  [
+                      "Bacon",
+                      "",
+                      800
+                  ],
+                  [
+                      "Sausage",
+                      "",
+                      800
+                  ],
+                  [
+                      "Toast",
+                      "",
+                      300
+                  ],
+                  [
+                      "Salsa",
+                      "",
+                      100
+                  ],
+                  [
+                      "Jalapeño (Grilled)",
+                      "",
+                      100
+                  ],
+                  [
+                      "Beans",
+                      "",
+                      300
+                  ],
+                  [
+                      "Biscuits & Gravy",
+                      "",
+                      800
+                  ],
+                  [
+                      "Chicken Apple Sausage",
+                      "",
+                      800
+                  ],
+                  [
+                      "Canadian Bacon",
+                      "",
+                      700
+                  ],
+                  [
+                      "Bacon Candy",
+                      "",
+                      800
+                  ],
+                  [
+                      "Chamuco",
+                      "",
+                      600
+                  ],
+                  [
+                      "Chicken Breast",
+                      "",
+                      900
+                  ],
+                  [
+                      "Chile Verde Sauce",
+                      "",
+                      200
+                  ],
+                  [
+                      "Cream Cheese",
+                      "",
+                      100
+                  ],
+                  [
+                      "Fruit",
+                      "",
+                      600
+                  ],
+                  [
+                      "Chimichurri",
+                      "",
+                      100
+                  ],
+                  [
+                      "Coffee Cake",
+                      "",
+                      400
+                  ],
+                  [
+                      "Chips",
+                      "",
+                      250
+                  ],
+                  [
+                      "Chorizo",
+                      "",
+                      500
+                  ],
+                  [
+                      "Club Fries",
+                      "Garlic fries topped with parmesan.",
+                      600
+                  ],
+                  [
+                      "Coleslaw",
+                      "",
+                      300
+                  ],
+                  [
+                      "Corned Beef Hash",
+                      "",
+                      900
+                  ],
+                  [
+                      "Cottage Cheese",
+                      "",
+                      350
+                  ],
+                  [
+                      "Country Fried Steak",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Crab Cakes (2)",
+                      "",
+                      750
+                  ],
+                  [
+                      "French Fries",
+                      "",
+                      500
+                  ],
+                  [
+                      "Fried Chicken",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Guacamole",
+                      "",
+                      250
+                  ],
+                  [
+                      "Ham",
+                      "",
+                      700
+                  ],
+                  [
+                      "Hamburger Steak",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Hash Browns",
+                      "",
+                      500
+                  ],
+                  [
+                      "Herb Potatoes",
+                      "",
+                      500
+                  ],
+                  [
+                      "Hollandaise",
+                      "",
+                      300
+                  ],
+                  [
+                      "Hot Links",
+                      "",
+                      800
+                  ],
+                  [
+                      "Italian Sausage",
+                      "",
+                      700
+                  ],
+                  [
+                      "Jalapeño (Fresh)",
+                      "",
+                      100
+                  ],
+                  [
+                      "Jalapeño (Pickled)",
+                      "",
+                      100
+                  ],
+                  [
+                      "Kimchi Side",
+                      "",
+                      300
+                  ],
+                  [
+                      "Linguica",
+                      "",
+                      700
+                  ],
+                  [
+                      "Oatmeal",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Potato Salad",
+                      "",
+                      300
+                  ],
+                  [
+                      "Rice",
+                      "",
+                      300
+                  ],
+                  [
+                      "Salmon",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Sautéed Veggies",
+                      "",
+                      450
+                  ],
+                  [
+                      "Side Gravy",
+                      "",
+                      300
+                  ],
+                  [
+                      "Side Ground Beef",
+                      "",
+                      400
+                  ],
+                  [
+                      "Side Lox (Smoked Salmon)",
+                      "",
+                      700
+                  ],
+                  [
+                      "Side Macaroni Salad",
+                      "",
+                      300
+                  ],
+                  [
+                      "Side Nutella",
+                      "",
+                      100
+                  ],
+                  [
+                      "Side Pickle",
+                      "",
+                      100
+                  ],
+                  [
+                      "Side Pico",
+                      "",
+                      100
+                  ],
+                  [
+                      "Side Short Rib",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Side Carnitas",
+                      "",
+                      700
+                  ],
+                  [
+                      "Side Shrimp",
+                      "",
+                      600
+                  ],
+                  [
+                      "Side Yogurt",
+                      "",
+                      500
+                  ],
+                  [
+                      "Sliced Tomatoes",
+                      "",
+                      250
+                  ],
+                  [
+                      "Sour Cream",
+                      "",
+                      100
+                  ],
+                  [
+                      "Steak Tri-Tip",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Chipotle Aioli",
+                      "",
+                      100
+                  ],
+                  [
+                      "Side Soyrizio",
+                      "",
+                      500
+                  ],
+                  [
+                      "Ice Cream",
+                      "",
+                      250
+                  ],
+                  [
+                      "Red Sauce",
+                      "",
+                      200
+                  ]
+              ]
+          },
+          {
+              "name": "Kids",
+              "items": [
+                  [
+                      "Mickey Mouse Pancake",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Dollar Pancakes",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Kid Bacon & Eggs",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Kid Sausage & Eggs",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Kid French Toast",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Kid Grilled Cheese",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Kid Chicken Tenders",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Kid Burger",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Cheese Quesadilla",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Kids Cheeseburger",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Kid Mac & Cheese",
+                      "",
+                      1300
+                  ]
+              ]
+          },
+          {
+              "name": "Beverages",
+              "items": [
+                  [
+                      "Chocolate Milk",
+                      "",
+                      400
+                  ],
+                  [
+                      "Hot Chocolate",
+                      "",
+                      400
+                  ],
+                  [
+                      "Cold Brew",
+                      "",
+                      400
+                  ],
+                  [
+                      "Juice",
+                      "",
+                      450
+                  ],
+                  [
+                      "Orange Juice",
+                      "",
+                      600
+                  ],
+                  [
+                      "Coffee",
+                      "",
+                      350
+                  ],
+                  [
+                      "Hot Tea",
+                      "",
+                      350
+                  ],
+                  [
+                      "Iced Tea",
+                      "",
+                      350
+                  ],
+                  [
+                      "Milk",
+                      "",
+                      400
+                  ],
+                  [
+                      "Soda",
+                      "",
+                      350
+                  ],
+                  [
+                      "Red Bull",
+                      "",
+                      500
+                  ]
+              ]
+          }
+      ],
+      "siteNote": "Menu and prices from their own website, checked 21 October 2026. It is one menu for every Breakfast Club location, and the Haight Street room has not opened yet.",
+      "quoteOnly": "Opening at 1428 Haight Street in fall 2026. These are the prices the Breakfast Club publishes for all its rooms; Haight Street's own are not out yet, so nothing can be ordered here until it opens.",
+      "clip": {
+          "src": "/clips/the-breakfast-club-sf.mp4",
+          "poster": "/clips/the-breakfast-club-sf-poster.webp",
+          "href": "https://www.instagram.com/reel/DZ6Qh9uJB4j/",
+          "credit": "Posted by @thebreakfastclubsf",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "home-thai-cafe",
+      "name": "Home Thai Cafe",
+      "label": "Home Thai",
+      "cuisine": "Thai",
+      "color": "#ffffff",
+      "icon": "home-thai-cafe",
+      "site": "https://www.homethaimartinez.com/",
+      "tagline": "Thai curries, noodle soups, pad thai and wok dishes on Alhambra Ave in Martinez.",
+      "prep": 0,
+      "category": "Thai",
+      "items": [],
+      "address": "6656 Alhambra Ave, Martinez, CA 94553",
+      "phone": "(925) 433-2925",
+      "email": "homethairestaurant@gmail.com",
+      "sections": [
+          {
+              "name": "Specials",
+              "items": [
+                  [
+                      "Crispy Pork Belly",
+                      "Crispy Pork Belly, Chinese Broccoli in Garlic-Soy Sauce. Served with rice",
+                      2195
+                  ],
+                  [
+                      "Paradise Chicken",
+                      "Crispy Sliced Chicken, tomato, bell pepper, onion, pineapple and cashew nut in house Paradise Sauce. Served with rice.",
+                      2195
+                  ],
+                  [
+                      "Wild Salmon Green Curry",
+                      "Salmon in green curry, bell pepper, basil, eggplant, broccoli, carrot, served with rice",
+                      2495
+                  ],
+                  [
+                      "Pad Thai Crab Meat",
+                      "",
+                      2295
+                  ],
+                  [
+                      "Ginger Scallop",
+                      "",
+                      2495
+                  ],
+                  [
+                      "Crispy Salmon Salad",
+                      "",
+                      2495
+                  ],
+                  [
+                      "Tom Kha Pumpkin",
+                      "Coconut milk soup, soft tofu and pumpkin",
+                      1800
+                  ],
+                  [
+                      "Crazy Seafood",
+                      "Mixed seafood stir fried with special butter sauce, bell pepper and basil.",
+                      2495
+                  ],
+                  [
+                      "Crispy Chili Fish",
+                      "",
+                      2495
+                  ],
+                  [
+                      "New york Steak Fried rice",
+                      "",
+                      2995
+                  ],
+                  [
+                      "Garlic fillet fish",
+                      "",
+                      2495
+                  ],
+                  [
+                      "Choo Chee Curry White fish",
+                      "",
+                      2495
+                  ],
+                  [
+                      "Pineapple Curry chicken",
+                      "Pineapple in red curry served with rice",
+                      2195
+                  ],
+                  [
+                      "pineapple curry shrimp",
+                      "",
+                      2495
+                  ],
+                  [
+                      "Happy wings",
+                      "Deep fried chicken wings served with super spicy home Thai dipping sauce",
+                      1595
+                  ],
+                  [
+                      "Calling 911 Seafood",
+                      "Pad Cha Talay: Shrimps, Calamari, Scallops, Mussels with bell pepper, finger root, young green pepper corn, basil, kaffir leaves and bamboo shoot in garlic sauce. Served with rice.",
+                      2495
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Happy wings",
+                      "Deep fried chicken wings served with home Thai super spicy dipping sauce",
+                      1595
+                  ],
+                  [
+                      "Crispy Tofu",
+                      "Deep fried tofu served with peanut-sweet&sour sauce.",
+                      1195
+                  ],
+                  [
+                      "Chicken Satay",
+                      "Grilled marinated chicken breast served with cucumber salad and peanut sauce.",
+                      1395
+                  ],
+                  [
+                      "Crispy Calamari",
+                      "Deep fried battered calamari served with creamy sweet & sour sauce.",
+                      1495
+                  ],
+                  [
+                      "Fresh Rolls Tofu",
+                      "Rice Paper roll with mixed green salad and rice noodle served with peanut sauce.",
+                      1395
+                  ],
+                  [
+                      "Fresh Rolls Shrimp",
+                      "Rice Paper roll with mixed green salad served with peanut sauce.",
+                      1495
+                  ],
+                  [
+                      "Veggie Roll",
+                      "Deep fried wheat roll with silver noodle and mixed veggies served with sweet & sour sauce.",
+                      1195
+                  ],
+                  [
+                      "Pot Sticker",
+                      "Chicken and Cabbage Dumpling served with house sweet soy sauce. You Choose Crispy Fried or Steamed?",
+                      1295
+                  ],
+                  [
+                      "Samosa",
+                      "Puff pastry stuffed with potato, carrot and onion. Served with cucumber salad",
+                      1395
+                  ],
+                  [
+                      "Roti-Yellow Curry Sauce",
+                      "Indian Pancake with Yellow Curry Sauce",
+                      1395
+                  ],
+                  [
+                      "Crab Rangoon.",
+                      "Deep fried wonton with crab meat and cream cheese served with sweet & sour sauce.",
+                      1395
+                  ],
+                  [
+                      "Shrimp Roll",
+                      "Fried wheat roll wrap shrimp served with sweet & sour sauce.",
+                      1395
+                  ],
+                  [
+                      "Home Thai Combo",
+                      "",
+                      2495
+                  ],
+                  [
+                      "Chicken lettuce wraps",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Happy belly",
+                      "",
+                      1695
+                  ]
+              ]
+          },
+          {
+              "name": "Salad",
+              "items": [
+                  [
+                      "Larb",
+                      "Minced Chicken or Slice Pork with lime dressing, rice powder, mint, cilantro and onions",
+                      1595
+                  ],
+                  [
+                      "Papaya Salad Thai Style (Som-Tum Thai)",
+                      "Shredded green papaya, green bean, tomato, garlic, fresh chili, peanut, shrimp with lime dressing",
+                      1595
+                  ],
+                  [
+                      "Papaya Salad Lao Style (Som-Tum Lao)",
+                      "Shredded green papaya, green bean, tomato, garlic, fresh chili with fermented fish dressing",
+                      1595
+                  ],
+                  [
+                      "Home Thai Salad",
+                      "Crispy Fried Chicken over mixed green, tomato, red onion, cucumber with honey cream dressing.",
+                      1795
+                  ],
+                  [
+                      "Seafood Salad",
+                      "Shrimp, scallop, calamari, mussel with fresh chili, cilantro, green onion with chili lime dressing",
+                      2295
+                  ]
+              ]
+          },
+          {
+              "name": "Soup",
+              "items": [
+                  [
+                      "Tom Yum",
+                      "Spicy & Sour broth with shrimp paste, lemon grass, galangal, mushroom, onion, tomato, and kaffir leaf",
+                      1595
+                  ],
+                  [
+                      "Tom Kha",
+                      "Coconut broth with lemon grass, galangal, mushroom, onion, tomato, kaffir leaf and green onion.",
+                      1595
+                  ],
+                  [
+                      "Po Tak Seafood",
+                      "Spicy & Sour broth with Shrimp, Calamari, Scallop, Mussel and fresh chili and Basil",
+                      2295
+                  ],
+                  [
+                      "Chicken Noodle Soup",
+                      "Ground Chicken, Thin rice noodles, cabbage, bean sprout and green onion.",
+                      1695
+                  ],
+                  [
+                      "Beef Noodle Soup",
+                      "Slice beef, Slow cooked beef, thin rice noodle, bean sprout, chinese broccoli and green onion",
+                      1895
+                  ]
+              ]
+          },
+          {
+              "name": "Curry",
+              "items": [
+                  [
+                      "Green Curry",
+                      "Green Bean, Eggplant, Bamboo Shoots, Basil, Carrots and Bell Peppers (Rice not included)",
+                      1595
+                  ],
+                  [
+                      "Panang Curry",
+                      "Kaffir lime leaves, Basil, Carrot and Bell Peppers (Rice not included)",
+                      1595
+                  ],
+                  [
+                      "Red Curry",
+                      "Bamboo Shoots, Zucchini, Snow Peas, Basil, Carrots and Bell Peppers (Rice not included)",
+                      1595
+                  ],
+                  [
+                      "Yellow Curry",
+                      "Potatoes, Carrots and Onions (Rice not included)",
+                      1595
+                  ],
+                  [
+                      "Pumpkin Curry",
+                      "Pumpkin, bell pepper, basil in red curry (Rice not included)",
+                      1695
+                  ],
+                  [
+                      "Khao Soi Chicken",
+                      "",
+                      2195
+                  ],
+                  [
+                      "Khao Soi Beef",
+                      "Northern Thai curry Noodle, egg noodles in coconut milk curry broth, sliced beef top with crispy egg noodles and bean sprouts.",
+                      2195
+                  ]
+              ]
+          },
+          {
+              "name": "Grilled",
+              "items": [
+                  [
+                      "Grilled Chicken",
+                      "Served with Sweet and Sour Sauce and rice",
+                      1995
+                  ],
+                  [
+                      "Grilled Pork",
+                      "Served with Sweet and Sour Sauce and Side of rice",
+                      1995
+                  ],
+                  [
+                      "New York Steak with steam veggie",
+                      "Grilled New York Steak served with stream veggies",
+                      2995
+                  ]
+              ]
+          },
+          {
+              "name": "Noodles and Fried Rice",
+              "items": [
+                  [
+                      "Pad Thai",
+                      "Pan-Fried Thin Rice Noodles, Egg, Peanut, Tofu, Chives and Bean Sprouts",
+                      1595
+                  ],
+                  [
+                      "Pad Wood Sen",
+                      "Silver Noodles, Egg, Green Onions, Mushrooms, Carrots, Broccoli and Onions, Sesame oil.",
+                      1695
+                  ],
+                  [
+                      "Pad See You",
+                      "Pan-Fried Flat Rice Noodles, Egg, Broccoli and Carrots",
+                      1595
+                  ],
+                  [
+                      "Pad Kee Mow",
+                      "Pan-Fried Rice Noodles, Onions, Broccoli, Carrots, Basil, Bamboo Shoots, Bell Peppers and Fresh Chili.",
+                      1595
+                  ],
+                  [
+                      "Fried Rice",
+                      "Egg, Tomatoes, Onion and Green Onion",
+                      1595
+                  ],
+                  [
+                      "Fried Chicken Fried Rice",
+                      "Fried Rice, Egg, Onion Top with Fried Chicken",
+                      1795
+                  ],
+                  [
+                      "BBQ Pork Fried Rice",
+                      "Fried Rice, Egg, Onion Top with BBQ Pork",
+                      1795
+                  ],
+                  [
+                      "Crab Fried Rice",
+                      "Crab Meat, Onion and Green Onions.",
+                      2295
+                  ],
+                  [
+                      "Green Curry Fried Rice",
+                      "Fried Rice, Green Curry Paste, Green Bean, Carrots, Bamboo Shoots, Bell Peppers, Basil with Chicken and Shrimp",
+                      2195
+                  ],
+                  [
+                      "Hawaiian Fried Rice",
+                      "Egg, Tomatoes, Onion and Green Onion, Cashew Nuts, Raisins, Pineapple, Curry Powder with Chicken and Shrimp",
+                      2195
+                  ],
+                  [
+                      "Kua Kai",
+                      "Pan-Fried Rice Noodles, Egg, Bean Sprouts, Green Onions, Peanut with Chicken",
+                      1595
+                  ],
+                  [
+                      "Basil Fried Rice",
+                      "fried rice, basil, onion, bell pepper",
+                      1595
+                  ],
+                  [
+                      "Fried chicken with garlic noodle",
+                      "",
+                      1995
+                  ],
+                  [
+                      "Crabmeat Pad Thai",
+                      "Rice noodles stir fried with tamarind sauce, crabmeat, egg, tofu, chives, bean sprouts and peanut",
+                      2295
+                  ]
+              ]
+          },
+          {
+              "name": "Wok",
+              "items": [
+                  [
+                      "Spicy Basil",
+                      "Garlic, Bell Peppers, Basil and Fresh Chili (Rice not included)",
+                      1595
+                  ],
+                  [
+                      "Cashew Nut",
+                      "Cashew Nut, Onions, Bell Peppers and Shrimp Paste (Rice not included)",
+                      1595
+                  ],
+                  [
+                      "Pa Ram",
+                      "Steamed Broccoli, Carrots, Cabbage, Sugar Peas and Zucchini Served with Peanut Sauce (Rice not included)",
+                      1595
+                  ],
+                  [
+                      "Eggplant",
+                      "Eggplant, Bell Peppers and Basil (Rice not included)",
+                      1695
+                  ],
+                  [
+                      "Fresh Ginger",
+                      "Fresh Ginger, Carrots, Onions and Mushroom (Rice not included)",
+                      1595
+                  ],
+                  [
+                      "Mixed Veggies",
+                      "Cabbage, Carrots, Zucchini, Sugar Peas, Bean Sprout, Broccoli with Garlic. Rice not included",
+                      1595
+                  ],
+                  [
+                      "Garlic Broccoli",
+                      "Broccoli with Garlic. Rice not included",
+                      1595
+                  ],
+                  [
+                      "Calling 911",
+                      "Galangal, baby corn peppers, basil, kaffir lime leaves, onion, finger roots with garlic Chili sauce (Rice not included)",
+                      1595
+                  ],
+                  [
+                      "Spicy Green Beans",
+                      "Green Bean, Bell Peppers, Garlic and Red Chili Paste (Rice not included)",
+                      1695
+                  ],
+                  [
+                      "Garlic Green Beans",
+                      "Green beans garlic oyster sauce (Rice not included)",
+                      1595
+                  ]
+              ]
+          },
+          {
+              "name": "Desserts",
+              "items": [
+                  [
+                      "Sticky Rice and Mango (Seasonal)",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Sticky Rice and Ice Cream",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Roti and Ice Cream",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Vanilla Ice Cream",
+                      "",
+                      600
+                  ],
+                  [
+                      "sweet sticky rice",
+                      "",
+                      600
+                  ]
+              ]
+          },
+          {
+              "name": "Drink",
+              "items": [
+                  [
+                      "Hot Tea",
+                      "",
+                      400
+                  ],
+                  [
+                      "Thai Iced Tea",
+                      "",
+                      600
+                  ],
+                  [
+                      "Thai Iced Coffee",
+                      "",
+                      600
+                  ],
+                  [
+                      "Regular Iced Tea",
+                      "",
+                      600
+                  ],
+                  [
+                      "Lemonade",
+                      "",
+                      600
+                  ],
+                  [
+                      "Mint Lemonade",
+                      "",
+                      600
+                  ],
+                  [
+                      "Mango lemonade",
+                      "",
+                      600
+                  ],
+                  [
+                      "Strawberry Lemonade",
+                      "",
+                      600
+                  ],
+                  [
+                      "Passion Fruit Lemoade",
+                      "",
+                      600
+                  ],
+                  [
+                      "Thai Lemon ice tea",
+                      "",
+                      600
+                  ],
+                  [
+                      "Shriley Temple",
+                      "",
+                      600
+                  ],
+                  [
+                      "Coca-Cola",
+                      "Can of coke",
+                      400
+                  ],
+                  [
+                      "D-Coke",
+                      "Can",
+                      400
+                  ],
+                  [
+                      "Sprite",
+                      "Can of Sprite",
+                      400
+                  ]
+              ]
+          },
+          {
+              "name": "Side",
+              "items": [
+                  [
+                      "Jasmine Rice",
+                      "",
+                      400
+                  ],
+                  [
+                      "Brown Rice",
+                      "",
+                      400
+                  ],
+                  [
+                      "Sticky Rice",
+                      "",
+                      400
+                  ],
+                  [
+                      "Roti",
+                      "",
+                      400
+                  ],
+                  [
+                      "Fried Egg",
+                      "",
+                      400
+                  ],
+                  [
+                      "Cucumber Salad",
+                      "",
+                      500
+                  ],
+                  [
+                      "Peanut Sauce",
+                      "",
+                      700
+                  ],
+                  [
+                      "Steamed veggies",
+                      "",
+                      700
+                  ],
+                  [
+                      "Side Curry Sauce",
+                      "12 OZ",
+                      1000
+                  ],
+                  [
+                      "Steamed Thin Rice Noodle",
+                      "",
+                      400
+                  ],
+                  [
+                      "Steamed Thick Rice Noodle",
+                      "",
+                      400
+                  ],
+                  [
+                      "Fried Chicken",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Egg Fried Rice",
+                      "",
+                      1000
+                  ]
+              ]
+          }
+      ],
+      "orderUrl": "https://order.toasttab.com/online/homethaicafe",
+      "siteNote": "Prices are from the online ordering page their own website links to.",
+      "clip": {
+          "src": "/clips/home-thai-cafe.mp4",
+          "poster": "/clips/home-thai-cafe-poster.webp",
+          "href": "https://www.instagram.com/reel/DeEM7DWvcEK/",
+          "credit": "Posted by @homethai_martinez",
+          "platform": "Instagram"
+      }
+  },
 ]

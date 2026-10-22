@@ -189,3 +189,10 @@ Secondary and unavailable links:
 - `Ddxk-6MBHSr` for Crazy Block Cheesecakes: @shua.tangco caption explicitly says New York City and New Jersey; excluded.
 - `DeODcFCCMKM` for Dolores Deluxe: Instagram returned empty media response. Not published as a broken film.
 - `DeF-p4_hm_4` for Wilfred’s Lounge: Instagram returned empty media response for the secondary review. Main verified film is published.
+
+### Batch 58 — 21 October 2026
+
+| Sent | Creator | What the reel shows | On BEASTY? |
+|---|---|---|---|
+| 21 Oct 2026 | @sophiaxbayarea (Sophia) | Funky Elephant, at their San Francisco room before it closed — [C8BJwc2REwu](https://www.instagram.com/reel/C8BJwc2REwu/), sent as "Clip this video plz" | **Yes.** Credited film on Funky Elephant's page |
+| 21 Oct 2026 | @sophiaxbayarea (Sophia) | Narisawa, Minami-Aoyama, Tokyo: the "Bread of the Forest" course — [DPnNRYQjL2s](https://www.instagram.com/reel/DPnNRYQjL2s/), sent as "Foodie" the same minute | No, and not the Bay Area |

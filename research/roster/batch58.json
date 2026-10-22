@@ -1,0 +1,2329 @@
+[
+  {
+    "id": "b_funkyelephant",
+    "name_exact": "Funky Elephant",
+    "checked_on": "2026-10-21",
+    "sources": [
+      "https://www.funkyelephantthai.com/",
+      "https://www.funkyelephantthai.com/location",
+      "https://www.funkyelephantthai.com/about",
+      "https://funkyelephantca.smiledining.com (their 'Berkeley Online Order' page, linked from their site; menu and prices read 2026-10-21)",
+      "https://www.instagram.com/funky.elephant/ (bio and contact sheet: Glenn's screenshots 1752-IMG_7529, 1752-IMG_7531)",
+      "Glenn's screenshot 1752-IMG_7536 (their website's Location section and footer)",
+      "Glenn's screenshot 1752-IMG_7538 (their Instagram profile picture, opened; the icon is cut from it)",
+      "https://www.instagram.com/p/DZTWLn7jxOs/ (their own post, 7 Jun 2026: 'Our San Francisco last service day is Sunday, June 21st.')",
+      "https://www.instagram.com/reel/C8BJwc2REwu/ (the film; @sophiaxbayarea, 10 Jun 2024, at 1270 Valencia St, San Francisco)",
+      "https://www.instagram.com/reel/DPnNRYQjL2s/ (Glenn's 'Foodie' reel; @sophiaxbayarea at Narisawa, Tokyo, not this restaurant)"
+    ],
+    "facts": {
+      "slug": "funky-elephant",
+      "name": "Funky Elephant",
+      "label": "Funky Elephant",
+      "cuisine": "Thai",
+      "color": "#fefefe",
+      "icon": "funky-elephant",
+      "site": "https://www.funkyelephantthai.com/",
+      "tagline": "Non-traditional Thai comfort food on Ninth Street in Berkeley, from a former Hawker Fare chef de cuisine.",
+      "prep": 0,
+      "category": "Thai",
+      "items": [],
+      "sections": [
+        {
+          "name": "Appetizer",
+          "items": [
+            [
+              "Fried Brussel Sprouts",
+              "Tossed with King sauce; medium spicy (GF)",
+              1400
+            ],
+            [
+              "Crispy Hodo Tofu",
+              "Seasoned with funky powder, sweet chili sauce (vegan)",
+              1400
+            ],
+            [
+              "Party Wings",
+              "Four fried Mary’s organic wings tossed with house-made chili jam, crispy Thai basil; Thai spicy, contains shellfish",
+              1800
+            ],
+            [
+              "Green Papaya Salad",
+              "Som tum: cherry tomatoes, garlic, dried shrimp, Thai chilies, fish sauce, lime, peanuts (GF)",
+              1700
+            ],
+            [
+              "Crispy Rice Salad",
+              "Nam kao todd: fried jasmine rice in house-made red curry paste, herbs, peanuts, lime, fish sauce, fermented pork; Thai spicy (GF)",
+              2000
+            ],
+            [
+              "Fried Eggs Salad",
+              "Yum khai dao: Siamese-style fried eggs, grilled shrimp, herbs, shallot, cherry tomatoes, Thai chili, garlic, fish sauce, lime (GF)",
+              1800
+            ],
+            [
+              "Hella Drunken Mussels",
+              "Wok-tossed Prince Edward Island mussels, house-made chili jam, Thai basil, Thai chili, garlic, Asian rice wine; spicy",
+              2100
+            ],
+            [
+              "Blisted Green (vegan)",
+              "Market greens blistered in a hot wok, garlic, Thai basil vinaigrette; not spicy",
+              1400
+            ],
+            [
+              "Why You Cry Tiger? aka Spicy Beef Salad",
+              "E-saan-style sliced beef salad, roasted rice powder, Thai chilies, alliums, herbs, vegetables",
+              2100
+            ],
+            [
+              "Lucky Pork aka Larb Moo (spicy minced pork salad)",
+              "E-sarn-style minced pork salad, alliums, herbs, roasted rice powder, vegetables",
+              1800
+            ],
+            [
+              "Roti with yellow curry",
+              "Two roti, yellow curry sauce",
+              1500
+            ],
+            [
+              "Grilled Oyster Mushroom (V)",
+              "House-made peanut sauce, sesame seeds, chives",
+              1300
+            ]
+          ]
+        },
+        {
+          "name": "Main",
+          "items": [
+            [
+              "Pad Thai Old Skool",
+              "White shrimp, Chan noodle, Hodo tofu, peanuts, bean sprouts, garlic chive, egg, shallot, Thai chili powder; Thai spicy (GF)",
+              2300
+            ],
+            [
+              "K.M.G. #2",
+              "Poached organic chicken thigh with garlic-and-ginger rice, fermented soybean sauce",
+              2300
+            ],
+            [
+              "O’s Breakfast Grilled Pork",
+              "Marinated pork shoulder, Thai-style fried eggs, jaew, cabbage slaw",
+              2700
+            ],
+            [
+              "Gang Rawang Beef",
+              "Grilled Certified Angus steak (medium rare), house-made green curry paste, turmeric, coconut milk, Thai basil, Thai chili; at least 20 minutes to cook (GF)",
+              3100
+            ],
+            [
+              "Motherland Curry",
+              "Rock cod, house-made red curry, coconut milk, herbs, bean sprouts, shredded cabbage, vermicelli; medium spicy",
+              2300
+            ],
+            [
+              "Yellow Curry w/grilled chicken",
+              "Grilled chicken thigh, roasted carrot, potato, onion, coconut milk, pickled cucumber",
+              2300
+            ],
+            [
+              "Yellow Curry Vegan",
+              "Organic Hodo tofu, roasted carrot, potato, onion, coconut milk, pickled cucumber",
+              2300
+            ],
+            [
+              "Super Jungle Curry Beef",
+              "House-made red curry without coconut milk, snake beans, Thai basil, dill, squash, sliced picanha; Thai hot, no modifications",
+              2700
+            ],
+            [
+              "Super Jungle Curry Fish",
+              "House-made red curry without coconut milk, snake beans, Thai basil, dill, squash, rock fish; Thai hot, no modifications",
+              2700
+            ],
+            [
+              "Super Jungle Curry VEGAN",
+              "House-made red curry without coconut milk, snake beans, Thai basil, dill, squash, organic Hodo tofu; Thai hot, no modifications",
+              2700
+            ],
+            [
+              "Wholesome Noodle (soup noodle)",
+              "Chan noodle (Thai rice stick), minced pork, chili jam, bean sprouts, peanut, scallion, cilantro; Thai medium spicy",
+              2200
+            ],
+            [
+              "Drunken Noodle",
+              "Egg noodle, mussels, chili jam (contains shellfish), Asian wine, basil; spicy",
+              2300
+            ],
+            [
+              "Curry Noodle (V)",
+              "Mixed curry soup, yellow noodle, rotating greens, sesame seed, Hodo tofu",
+              2500
+            ],
+            [
+              "Chicken Curry Noodle",
+              "Mixed curry soup, yellow noodle, sesame seed, rotating greens, grilled chicken",
+              2500
+            ],
+            [
+              "New Skool Fried Rice",
+              "Twice-cooked rice, two fried Gulf shrimp, tomato, greens, allium, garlic",
+              2300
+            ],
+            [
+              "Fried Chicken&Roti",
+              "Battered fried chicken, roti, shallot, pickles, sweet chili sauce, yellow curry sauce",
+              2400
+            ]
+          ]
+        },
+        {
+          "name": "Sweet",
+          "items": [
+            [
+              "Sweet Roti",
+              "Fried roti, condensed milk, brown sugar, roasted coconut, rotating soft serve",
+              1250
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "Butterfly pea jasmine rice",
+              "",
+              300
+            ],
+            [
+              "GG rice",
+              "Garlic and ginger, chicken stock",
+              300
+            ],
+            [
+              "Sticky rice",
+              "",
+              300
+            ],
+            [
+              "Side Vermicelli",
+              "",
+              300
+            ],
+            [
+              "K.M.G. soup",
+              "",
+              400
+            ],
+            [
+              "Ajad",
+              "Pickled cucumber",
+              600
+            ],
+            [
+              "Fried egg",
+              "",
+              400
+            ],
+            [
+              "Lettuce set",
+              "Red leaf lettuce, mint, dill, cilantro",
+              400
+            ],
+            [
+              "K.M.G sauce bottle (5oz.)",
+              "Their house-made all-purpose sauce: fermented soybean, Thai chili, garlic, ginger, vinegar, soy sauce; vegan",
+              1200
+            ],
+            [
+              "Sweet Chili Sauce bottle (5oz.)",
+              "Thai chili, sugar, soy sauce, vinegar; vegan",
+              1300
+            ],
+            [
+              "Gulf Shrimp",
+              "",
+              400
+            ]
+          ]
+        },
+        {
+          "name": "Drink",
+          "items": [
+            [
+              "Thai Ice Tea",
+              "Thai tea, milk; soy milk on request",
+              700
+            ],
+            [
+              "Unsweetened Mango Tea",
+              "Iced black mango tea",
+              550
+            ],
+            [
+              "Hot Tea Black",
+              "Earl Grey",
+              600
+            ],
+            [
+              "Hot Tea Green",
+              "Jasmine tea",
+              600
+            ],
+            [
+              "Hot Tea Herbal",
+              "Blood orange",
+              600
+            ],
+            [
+              "Fresh Squeezed Limeade with Butterfly pea",
+              "",
+              800
+            ],
+            [
+              "Mexican Coke",
+              "Cane sugar",
+              550
+            ],
+            [
+              "Sparkling water",
+              "",
+              550
+            ],
+            [
+              "Matcha Latte (soy milk)",
+              "Matcha, soy milk",
+              775
+            ],
+            [
+              "Strawberry Matcha Latte",
+              "Strawberry purée, matcha, soy milk",
+              875
+            ],
+            [
+              "Thai Iced Coffee",
+              "Thai coffee, milk; soy milk on request",
+              700
+            ],
+            [
+              "ThaiTea x Matcha",
+              "Lightly sweetened Thai tea, non-dairy milk, matcha",
+              875
+            ],
+            [
+              "Strawberry Thai Tea Latte",
+              "Strawberry purée, non-dairy milk, Thai tea",
+              875
+            ]
+          ]
+        },
+        {
+          "name": "Kids' Menu",
+          "items": [
+            [
+              "Kids' Noodle Soup",
+              "Vermicelli noodle soup with Hodo tofu, chicken stock",
+              1100
+            ],
+            [
+              "Kids' Wings",
+              "",
+              1100
+            ]
+          ]
+        }
+      ],
+      "address": "1313 Ninth St, Suite 120, Berkeley, CA 94710",
+      "phone": "(510) 356-4855",
+      "email": "funkyelephantthai@gmail.com",
+      "orderUrl": "https://funkyelephantca.smiledining.com",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from the online ordering page their own website links to. Their website and Instagram give different weekend lunch hours, so none are shown; call before you go. Their San Francisco room on Valencia Street closed on 21 June 2026; Berkeley is their one shop.",
+      "clip": {
+        "src": "/clips/funky-elephant.mp4",
+        "poster": "/clips/funky-elephant-poster.webp",
+        "href": "https://www.instagram.com/reel/C8BJwc2REwu/",
+        "credit": "Filmed by @sophiaxbayarea",
+        "platform": "Instagram",
+        "by": "sophiaxbayarea"
+      }
+    },
+    "placements": [
+      "berkeley-goods2-10",
+      "beasty-goods2-33"
+    ],
+    "glenn": "Glenn, 21 Oct 2026, 5:52 pm: \"Berkeley • Eats\", \"San Francisco • Eats\", \"BEASTY • Eats\"; 5:54 pm: \"Clip this video plz\" (reel C8BJwc2REwu); 5:54 pm: \"Foodie\" (reel DPnNRYQjL2s). He named San Francisco, but their San Francisco room (1270 Valencia St) served its last day on 21 June 2026 by their own Instagram post; Berkeley is the only shop open.",
+    "flags": [
+      "SAN FRANCISCO IS CLOSED. Glenn named Berkeley and San Francisco. Berkeley: 1313 Ninth St, Suite 120, Berkeley, CA 94710, (510) 356-4855, open; hours by their website Tue–Fri 11:30am–2:30pm & 5–8:30pm, Sat–Sun 12–3pm & 5–8:30pm, closed Mon (their Instagram bio says Tue–Sun 11:30–2:30 & 5–8:30, so hours are left out of facts). San Francisco: 1270 Valencia St, San Francisco; their own post https://www.instagram.com/p/DZTWLn7jxOs/ (7 Jun 2026) says 'Our San Francisco last service day is Sunday, June 21st ... You can still see us in Berkeley', and their Instagram bio now reads '📍 SF 86′' (kitchen slang for gone). Their website's Location page still lists the Valencia Street address; it is stale. The site never gave San Francisco its own phone or hours. Recommend seating on Berkeley • Eats and BEASTY • Eats only, not San Francisco • Eats. (KRON4 and WhatNow reported the same closure; not used as sources.)",
+      "THE FILM IS OF THE CLOSED SAN FRANCISCO ROOM. @sophiaxbayarea's reel C8BJwc2REwu (10 Jun 2024) was shot at 1270 Valencia St ('Since my go-to Berkeley Thai spot, @funky.elephant, opened up in SF...'). Same restaurant, same logo mural and dishes, and Glenn asked for it, so it is cut; but it shows a room that no longer exists. The siteNote says the SF room closed so the page does not mislead.",
+      "HOURS LEFT OUT (sources disagree). Website: 'Tuesday - Friday 11.30am - 2.30pm, 5pm - 8.30pm; Saturday - Sunday 12pm - 3pm, 5pm - 8.30pm'. Instagram bio: 'Tue-Sun:11.30-2.30&5-8.30'. They differ on weekend lunch. Their ordering page's pickup windows (e.g. Sunday 12:20-2:45pm and 5-8pm) agree with the website. Both say closed Monday.",
+      "ZIP CODES SWAPPED on their Location page: 'Berkeley, CA 94110' and 'San Francisco, CA 94710'. Their footer and ordering page say Berkeley 94710, which is used.",
+      "NAME: their website, logo and ordering page say 'Funky Elephant'; their Instagram display name is 'Funky Elephant Thai' (domain funkyelephantthai.com). Recorded as Funky Elephant.",
+      "MENU: 7 sections, 58 items, from their Smile Dining ordering page (Berkeley), which their website's 'Berkeley Online Order' button links to. Their section headings as published, with 'SIDES' written 'Sides'. Left out: 'Beer & Wine' (Singha Beer $8, Original Pattern IPA $13: age check), 'Utensils needed' ($0), a hidden 'Open Item' ($0). Asterisks stripped from names ('**Super Jungle Curry Beef**' etc.); their own spellings kept ('Blisted Green', 'Fried Brussel Sprouts', 'ThaiTea x Matcha'). Descriptions shortened from theirs.",
+      "Grilled Oyster Mushroom (V), $13, was marked out of stock on the ordering page on 2026-10-21; kept because it is on their menu.",
+      "Merchandise section kept as published (pin, Thai mat, and a 'Hong Thai Inhaler' at $7 whose own description says 'Relieve dizziness'). The health claim is not repeated; drop the inhaler if BEASTY should not sell it.",
+      "GLENN'S 'FOODIE' REEL IS NOT THIS RESTAURANT. https://www.instagram.com/reel/DPnNRYQjL2s/ is @sophiaxbayarea at Narisawa ('@restaurantnarisawa'), a two-Michelin-star restaurant in Minami-Aoyama, Tokyo, showing its 'Bread of the Forest'. It is a second review by the same creator, as with @_cynlacson on 13 Oct, not a second review of Funky Elephant. Do not give it brand b_funkyelephant. The review copy is cut anyway: public/clips/review-DPnNRYQjL2s.mp4, 36s-50s of 74s; its poster is a chestnut course from the same meal.",
+      "The tagline uses their own words ('non-traditonal THAI COMFORT FOOD' on the homepage; 'Chef owner, Supasit was a former Chef de cuisine of Hawker Fare SF' on About). Their Instagram's 'MICHELIN GUIDE CALIFORNIA 19-24' is left out of the tagline on purpose.",
+      "needsSite: not set. funkyelephantthai.com is a real Squarespace site of their own.",
+      "Coordinator: the Merchandise section (pin, Hong Thai inhaler, picnic mat) is left out, as The Breakfast Club's T-shirt is: goods, not food, and one is a health product.",
+      "Coordinator: the \"Foodie\" reel DPnNRYQjL2s is @sophiaxbayarea at Narisawa in Tokyo, not a review of Funky Elephant. Not the Bay Area and not on BEASTY, so it is logged in docs/FOODIES.md and not cut or listed (the @tiff.eatz precedent)."
+    ]
+  },
+  {
+    "id": "b_kemurijapanesebaru",
+    "name_exact": "Kemuri Japanese Barú",
+    "checked_on": "2026-10-21",
+    "sources": [
+      "https://kemuri-baru.com/ (address, phone, hours table, ordering/reservation links)",
+      "https://kemuri-baru.com/contact-kemuri/ (same address, phone and hours table)",
+      "https://kemuri-baru.com/kemuri-lunch-menu/ (item list, no prices)",
+      "https://kemuri-baru.com/kemuri-dinner-menu/ (item list, no prices)",
+      "https://order.toasttab.com/online/kemurirwc (Toast online ordering, linked from their site's Online Order button: prices, ordering hours, logo)",
+      "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-109065000000000000/restaurant_1652212965.jpg (their logo as uploaded to their Toast page; icon source)",
+      "Instagram @kemurirwc (Glenn's screenshot 1800-IMG_7540: bio, address, kemuri-baru.com link)",
+      "Glenn's screenshots 1800-IMG_7544 (kemuri-baru.com header) and 1800-IMG_7545 (kemuri-baru.com Contact Us)",
+      "https://www.instagram.com/reel/Dep69EZBSlI/ (posted by @kemurirwc, 19 Oct 2026)"
+    ],
+    "facts": {
+      "slug": "kemuri-japanese-baru",
+      "name": "Kemuri Japanese Barú",
+      "label": "Kemuri",
+      "cuisine": "Japanese izakaya",
+      "color": "#ffffff",
+      "icon": "kemuri-japanese-baru",
+      "site": "https://kemuri-baru.com/",
+      "tagline": "A Japanese fusion tapas izakaya on Broadway in downtown Redwood City, with smoked plates, katsu and wagyu rice dishes.",
+      "prep": 0,
+      "category": "Japanese izakaya",
+      "items": [],
+      "address": "2616 Broadway St, Redwood City, CA 94063",
+      "phone": "(650) 257-7653",
+      "hours": "Lunch Wed–Fri 11:30am–1:30pm, Sat–Sun 11:30am–2pm; dinner daily 5:30pm–9pm, Fri–Sat until 10pm",
+      "sections": [
+        {
+          "name": "Premium Bento",
+          "items": [
+            [
+              "Beef Tongue Bento",
+              "Grilled Wagyu Beef Tongue + Tail Soup, salad, side of small dish, rice, umami scallion sauce, sesame",
+              3200
+            ]
+          ]
+        },
+        {
+          "name": "Wagyu Curry Rice",
+          "items": [
+            [
+              "Kurobuta Katsu & Wagyu Curry Rice",
+              "Slow-simmered Wagyu beef curry over rice with super thick-cut Kurobuta pork katsu",
+              2250
+            ],
+            [
+              "Chicken Katsu & Wagyu Curry Rice",
+              "Slow-simmered Wagyu beef curry over rice with habanero chicken katsu",
+              1950
+            ]
+          ]
+        },
+        {
+          "name": "Rice Bowls",
+          "items": [
+            [
+              "Wagyu & Garlic Rice",
+              "Tender, dice-cut Wagyu grilled over Binchotan charcoal for deep umami. Served with our signature savory garlic rice, garlic chips and scallions.",
+              2700
+            ],
+            [
+              "Sakura Pork Katsu Don",
+              "Super thick-cut Kurobuta pork katsu with Japanese-style scramble eggs over rice",
+              2200
+            ],
+            [
+              "Grilled Unagi Bowl",
+              "Grilled eel on the rice, sesame, seaweed frikake, sansho pepper",
+              2000
+            ],
+            [
+              "Smoked Poke Bowl",
+              "Semi smoked salmon (chopped sashimi), red onion, scallion, greens, poached egg, sesame, seaweed frikake, spicy miso sauce",
+              2200
+            ],
+            [
+              "Black Pepper Chicken Bowl",
+              "Japanese style fried chicken, greens, scallion, sesame, shredded red pepper, sweet garlic soy sauce",
+              1800
+            ],
+            [
+              "Spicy Miso Tofu Bowl",
+              "Fried tofu, assorted veggie, greens, spicy miso sauce, scallion, sesame, shredded red pepper",
+              1600
+            ],
+            [
+              "Garlic Rice",
+              "",
+              700
+            ],
+            [
+              "Steamed Rice",
+              "",
+              300
+            ]
+          ]
+        },
+        {
+          "name": "Noodle & Soup",
+          "items": [
+            [
+              "Kemuri Udon",
+              "Beef bone & oxtail base, veggie, scallion, onion, yuzu, chashu, garlic chips",
+              1700
+            ],
+            [
+              "Spicy Kemuri Udon",
+              "Beef bone & oxtail base, veggie, scallion, onion, yuzu, chashu, garlic chips, spicy garlic miso paste",
+              1850
+            ],
+            [
+              "Wagyu Curry Udon",
+              "Wagyu beef curry soup, fried veggie, scallion, bonito flake, veggie chips",
+              2000
+            ],
+            [
+              "Kemuri Miso Soup",
+              "Oxtail and Japanese style broth, seaweed, tofu, scallion",
+              650
+            ]
+          ]
+        },
+        {
+          "name": "Tapas",
+          "items": [
+            [
+              "Chicken Karaage",
+              "Japanese style fried chicken Karaage, Kemuri tartar sauce",
+              1350
+            ],
+            [
+              "Spicy Wings",
+              "Fried Chicken Wing, kemuri spicy seasoning",
+              1200
+            ],
+            [
+              "Shiitake Karaage",
+              "Shiitake mushroom, kemuri tartar sauce",
+              1200
+            ],
+            [
+              "Atsuage & Veggie Tempura",
+              "Fried tofu, assorted veggie, smoked soy sauce",
+              1600
+            ],
+            [
+              "Crispy Shrimps",
+              "Fried small whole shrimp, kemuri seasoning (eat with head and shell)",
+              1395
+            ],
+            [
+              "Smoked Poke",
+              "Smoked Salmon, red onion, scallion, poached egg, spicy miso sauce, wonton chips",
+              2000
+            ],
+            [
+              "Green Salad",
+              "Fresh spring mix, garlic chips, mushroom dressing",
+              850
+            ],
+            [
+              "Smoked Octopus Carpaccio Salad",
+              "Smoked octopus, baby arugula, red onion, fuji apple, shiso & basil dressing, veggie chips",
+              2000
+            ],
+            [
+              "Assorted Grilled Vegetables",
+              "Umami garlic sauce",
+              1200
+            ],
+            [
+              "Umami Edamame",
+              "Garlic umami sauce",
+              650
+            ]
+          ]
+        },
+        {
+          "name": "Beverages",
+          "items": [
+            [
+              "Coke",
+              "",
+              300
+            ],
+            [
+              "Diet Coke",
+              "",
+              300
+            ],
+            [
+              "Ramune (Original)",
+              "",
+              500
+            ],
+            [
+              "Ramune (Lychee)",
+              "",
+              500
+            ],
+            [
+              "Oi Ocha Green Tea (Iced)",
+              "",
+              500
+            ]
+          ]
+        },
+        {
+          "name": "Sauce",
+          "items": [
+            [
+              "Golden Mustard",
+              "Made in Japan. Mustard seeds, rice vinegar, white soy sauce, maple syrup, wine vinegar and sweet sake. 5oz.",
+              2200
+            ],
+            [
+              "Kemuri Original Dressing",
+              "",
+              1200
+            ],
+            [
+              "Kemuri Smoked Soy Sauce",
+              "",
+              1200
+            ]
+          ]
+        }
+      ],
+      "orderUrl": "https://order.toasttab.com/online/kemurirwc",
+      "siteNote": "Prices are from the online ordering page their own website links to.",
+      "clip": {
+        "src": "/clips/kemuri-japanese-baru.mp4",
+        "poster": "/clips/kemuri-japanese-baru-poster.webp",
+        "href": "https://www.instagram.com/reel/Dep69EZBSlI/",
+        "credit": "Posted by @kemurirwc",
+        "platform": "Instagram"
+      }
+    },
+    "placements": [
+      "redwood-city-goods-2",
+      "beasty-goods2-34"
+    ],
+    "glenn": "Glenn, 21 Oct 2026, 6:00 pm: \"Redwood City • Eats\", \"BEASTY • Eats\"; 6:02 pm: \"Clip this video plz\" with https://www.instagram.com/reel/Dep69EZBSlI/. Their site, their Toast page and their Instagram bio all put them at 2616 Broadway St in downtown Redwood City, as Glenn wrote.",
+    "flags": [
+      "City confirmed first-party: kemuri-baru.com (home and Contact Us), their Toast page and their Instagram bio all say 2616 Broadway St, Redwood City, CA 94063 (\"downtown Redwood City\" in the bio). Matches Glenn's \"Redwood City • Eats\".",
+      "Prices: kemuri-baru.com's Lunch and Dinner menu pages list dishes with no prices (\"please use the menu provided as examples of what we offer\"), so every price is from their Toast ordering page, which only shows the To Go, Soft Drinks and Merchandise menus. The dine-in \"from the Kitchen\" menu on Toast (Appetizer, Binchotan Grill Seafood, Kemuri Style Paella, Rice Dish, Udon Noodle & Soup, Extra Sauce, Weekend Special, Lunch Special) shows no items online, so none of the dine-in dishes (uni paella, sashimi, omakase, seasonal plates) are on the record.",
+      "Item names keep Toast's \"(To Go) \" prefix exactly as published; the coordinator may prefer to strip it, since every item in those five sections is from the To Go menu.",
+      "Descriptions copied from Toast with three obvious typos fixed: \"scallio\" -> \"scallion\" (Spicy Miso Tofu Bowl), \"porched egg\" -> \"poached egg\" (Smoked Poke Bowl, Smoked Poke), \"Beef born\" -> \"Beef bone\" (Kemuri Udon, Spicy Kemuri Udon). \"frikake\" left as they spell it. Golden Mustard's long blurb shortened to its ingredient line (dropped their award and \"exclusively sold at Kemuri\" claims).",
+      "Two items were marked OUT OF STOCK on Toast on 21 Oct and are kept at their listed price: Ramune (Lychee) $5 and Kemuri Smoked Soy Sauce $12.",
+      "Left out: Utensils Set and Chopsticks (no price), the empty Gift certificate group, and the site's Cocktail and Whisky/Shochu/Sake pages (alcohol). No alcohol is on the Toast menus.",
+      "Sauce section is bottled retail (Golden Mustard, dressing, smoked soy sauce), sold on their own ordering page.",
+      "Hours are the site's (home and Contact Us agree): lunch closed Mon–Tue; dinner every day. Toast's 'Location and Ordering Hours' end 30 min earlier on 9pm nights and 1 hour earlier on 10pm nights (e.g. Fri/Sat ordering 5:30–9pm), which reads as an online-ordering cutoff, not different opening hours, so the site's hours were kept (same call as earlier batches). Toast's hidden location schedule field says 10am–2am daily; it is not shown on the page and was ignored. Strict reading of the brief would drop hours; left to the coordinator.",
+      "Name: their own spelling is \"Kemuri Japanese Barú\" (Instagram name, Toast, logo); the site's title and footer write \"Kemuri Japanese Baru\" without the accent. Glenn and the domain say \"Kemuri Baru\". Slug kemuri-japanese-baru.",
+      "Omakase: the site says seasonal or full Omakase must be ordered for the whole party, reserved three days ahead by phone, and is not available Thursdays and Sundays. No Omakase price published.",
+      "No email published on the site or in the screenshots. The Instagram bio's other four links ('and 4 more') were not visible.",
+      "Icon: their wordmark (\"kemuri / JAPANESE BARÚ\") from the 720px logo they uploaded to their Toast page, the same mark as the kemuri-baru.com header, used as-is on its own white. Chosen over the Instagram picture (the same wordmark engraved on a wood disc with their street address) because the screenshot's disc is only ~255px across.",
+      "Film: reel Dep69EZBSlI was posted by their own account @kemurirwc (yt-dlp channel: kemurirwc) on 19 Oct 2026: their seasonal Smoked Wagyu Katsu with Golden Mustard, ending on the kemuri logo card. Credit: Posted by @kemurirwc, no 'by'. The dish is a limited-time special and is not on the Toast menu.",
+      "needsSite not set: kemuri-baru.com is their own WordPress site.",
+      "Coordinator: the \"(To Go) \" prefix Toast puts on every item is dropped from the names."
+    ]
+  },
+  {
+    "id": "b_thebreakfastclubsf",
+    "name_exact": "The Breakfast Club at Midtown",
+    "checked_on": "2026-10-21",
+    "sources": [
+      "https://www.bcmidtown.com/",
+      "https://www.bcmidtown.com/location/san-francisco/",
+      "https://www.bcmidtown.com/hours-and-online-ordering/",
+      "https://www.bcmidtown.com/menus/",
+      "https://www.bcmidtown.com/about/",
+      "https://www.bcmidtown.com/jobs/",
+      "https://www.bcmidtown.com/contact/",
+      "https://images.getbento.com/accounts/1ef93e3fc8865d33ecc57227bbb3d012/media/images/9300Breakfast-Club-Logo-HQ.png (the site's own logo file)",
+      "https://www.instagram.com/thebreakfastclubsf/ (Glenn's screenshots 1806-IMG_7551, 1806-IMG_7552)",
+      "Glenn's screenshot 1806-IMG_7554 (their logo)",
+      "https://www.instagram.com/reel/DZ6Qh9uJB4j/"
+    ],
+    "facts": {
+      "slug": "the-breakfast-club-sf",
+      "name": "The Breakfast Club at Midtown",
+      "label": "Breakfast Club",
+      "cuisine": "All-day breakfast, brunch and lunch",
+      "color": "#ffffff",
+      "icon": "the-breakfast-club-sf",
+      "site": "https://www.bcmidtown.com/",
+      "tagline": "All-day breakfast, brunch and lunch, opening on Haight Street in fall 2026.",
+      "prep": 0,
+      "category": "All-day breakfast, brunch and lunch",
+      "items": [],
+      "sections": [
+        {
+          "name": "Basics",
+          "items": [
+            [
+              "Two Egg Breakfast",
+              "Two eggs, cooked however you like, hashbrowns or potatoes and choice of bread.",
+              1500
+            ],
+            [
+              "Bacon & Eggs",
+              "Five pieces of bacon with two eggs, hashbrowns or potatoes, and your choice of bread.",
+              1800
+            ],
+            [
+              "Sausage & Eggs",
+              "",
+              1800
+            ],
+            [
+              "Chicken Apple Sausage & Eggs",
+              "",
+              1900
+            ],
+            [
+              "Loco Moco",
+              "3/4lb hamburger patty, jasmine rice, topped with eggs and mushroom gravy. Comes with homemade macaroni salad and kimchi",
+              2200
+            ],
+            [
+              "Steak Frites",
+              "Sliced ribeye, mushrooms gravy, garlic parmesan fries, sunny side up eggs.",
+              2900
+            ],
+            [
+              "Spicy Chicken Fried Rice",
+              "",
+              2200
+            ],
+            [
+              "Country Fried Steak & Eggs",
+              "",
+              2300
+            ],
+            [
+              "Burger Steak & Eggs",
+              "Three-quarter pound hamburger patty, two eggs, hashbrowns or potatoes, and your choice of bread.",
+              2100
+            ],
+            [
+              "Canadian Bacon & Eggs",
+              "",
+              1900
+            ],
+            [
+              "Ham & Eggs",
+              "",
+              1900
+            ],
+            [
+              "Hot Links & Eggs",
+              "",
+              1900
+            ],
+            [
+              "Italian Sausage & Eggs",
+              "",
+              1900
+            ],
+            [
+              "Linguicia & Eggs",
+              "",
+              1900
+            ],
+            [
+              "Ribeye Steak & Eggs",
+              "",
+              2900
+            ]
+          ]
+        },
+        {
+          "name": "Omelettes & Scrambles",
+          "items": [
+            [
+              "Chicken Apple Omelette",
+              "Chicken apple sausage, mushrooms, green onions, cheese, avocado, and sour cream.",
+              2000
+            ],
+            [
+              "Chorizo Hash",
+              "Chorizo and potatoes topped with eggs, sour cream, pico de gallo, guacamole, and jalapeños.",
+              2000
+            ],
+            [
+              "Corned Beef Hash",
+              "Herb potatoes with house-made corned beef, bell peppers, onions, and topped with eggs.",
+              2000
+            ],
+            [
+              "El Dorado",
+              "Blackened chicken breast, bell peppers, onions on herb potatoes, topped with cheese, eggs, sour cream, pico, and guacamole.",
+              2100
+            ],
+            [
+              "Farm House Omelette",
+              "Mushrooms, spinach, onions, avocado, bell peppers, and tomato.",
+              2000
+            ],
+            [
+              "Garbage Plate",
+              "Herb potatoes with bacon, ham, bell peppers, onions, jalapeños, cheddar jack cheese, and topped with eggs.",
+              2000
+            ],
+            [
+              "George Scramble",
+              "Scrambled eggs, bacon, tomato, green onions, cheddar jack cheese, cream cheese, topped with avocado and sour cream.",
+              2000
+            ],
+            [
+              "Hot Links Scramble",
+              "Scrambled eggs, hot links, red bell peppers, cheddar jack cheese, sour cream on herb potatoes.",
+              2000
+            ],
+            [
+              "Jalisco Omelette",
+              "Braised short ribs, onions, bell peppers, fresh jalapeno, Anaheim peppers, topped with cheddar jack cheese, chili Verde sauce, sour cream, pico de gallo, avocado.",
+              2300
+            ],
+            [
+              "Tofu Scramble",
+              "Vegan Eggs, Tofu, onions, bell peppers, fresh jalapenos, zucchini and tomatoes, side of fresh salsa.",
+              1800
+            ],
+            [
+              "Kentucky Scramble",
+              "Scrambled eggs with ham, sausage, red bell peppers, topped with cheddar jack cheese and sour cream on herb potatoes.",
+              2000
+            ],
+            [
+              "Lo Carb Breakfast",
+              "Chicken breast, spinach, and diced tomatoes in scrambled egg whites. Served with fresh fruit and homemade salsa.",
+              1800
+            ],
+            [
+              "Midtown Scramble",
+              "Scrambled eggs with ham, mushrooms, green onions, tomato, cheddar jack cheese, and sour cream on a bed of hashbrowns. Topped with hollandaise.",
+              2000
+            ],
+            [
+              "Popeye Omelette",
+              "Spinach, mushrooms, and bacon, topped with jack cheese, tomatoes, and sour cream.",
+              2000
+            ],
+            [
+              "Santa Cruz",
+              "Grilled salmon on a bed of herb potatoes, sautéed onions, and bell peppers, topped with eggs, hollandaise, fresh dill, and capers.",
+              2200
+            ],
+            [
+              "Santa Maria",
+              "Steak, bell peppers, and onions on a bed of herb potatoes, topped with 2 eggs, cheddar jack cheese, sour cream, pico, guacamole.",
+              2100
+            ],
+            [
+              "Shrimp & Crab Omelette",
+              "Sautéed shrimp and crab with cream cheese, green onions, topped with hollandaise sauce.",
+              2200
+            ],
+            [
+              "Veggie Hash",
+              "Avocado, spinach, mushrooms, bell peppers, and onions on a bed of herb potatoes, topped with 2 eggs.",
+              2000
+            ]
+          ]
+        },
+        {
+          "name": "Benedicts",
+          "items": [
+            [
+              "California Bene",
+              "On an English Muffin topped with hollandaise, bacon, roasted tomato, and avocado.",
+              2000
+            ],
+            [
+              "Classic Bene",
+              "On an English Muffin topped with hollandaise and poached eggs with Canadian bacon.",
+              1900
+            ],
+            [
+              "Midtown Duo",
+              "Can't decide? Choose two of the delicious benedicts!",
+              2600
+            ],
+            [
+              "New York Bene",
+              "On an Everything Bagel topped with cream cheese, lox, poached eggs, pickled red onion, fried capers, and fresh dill.",
+              2200
+            ],
+            [
+              "Surf and Turf Bene",
+              "",
+              2500
+            ],
+            [
+              "Carnitas Benedicts",
+              "Homemade carnitas on an English Muffin. Comes with avocado, sour cream, pico and jalapenos, queso fresco Includes poached eggs and potato choice.",
+              2300
+            ],
+            [
+              "Crab Cake Bene",
+              "On an English Muffin topped with hollandaise and poached eggs with avocado and homemade crab cakes.",
+              2200
+            ],
+            [
+              "Neptune Bene",
+              "Shrimp, crab, cream cheese, and green onions in scrambled eggs, on an English Muffin topped with hollandaise.",
+              2200
+            ],
+            [
+              "Veggie Bene",
+              "Roasted tomatoes, roasted red peppers, spinach, and avocado on an English Muffin with hollandaise and poached eggs.",
+              2000
+            ]
+          ]
+        },
+        {
+          "name": "Ranchero Breakfast",
+          "items": [
+            [
+              "Burrito",
+              "Chorizo, eggs, green onions and cheddar jack cheese inside a flour tortilla. Topped with sour cream, pico, guac and jalapenos. Served with potato choice and refried beans.",
+              2000
+            ],
+            [
+              "Enchiladas",
+              "Chorizo and cheddar jack cheese with scrambled eggs inside corn tortillas, topped with homemade enchilada sauce, topped with cheese, sour cream, guac, pico and jalapenos. Served with homemade refried beans and potatoes.",
+              2000
+            ],
+            [
+              "Mexican Scramble",
+              "Chorizo and green onions in scrambled eggs, topped with sour cream, guac, pico, and jalapenos.",
+              1900
+            ],
+            [
+              "Nachos",
+              "Homemade tortilla chips, topped with red sauce, scrambled eggs with green onions and chorizo, cheese, pico, guac, sour cream and jalapenos. Includes refried beans.",
+              2000
+            ],
+            [
+              "Red Chilaquiles",
+              "Braised Beef on Homemade Corn Chips, tossed in a red chili sauce. Topped with sour cream, guacamole, Pico de Gallo and jalapeños, and queso fresco. Served with potato choice and refried beans.",
+              2100
+            ],
+            [
+              "Steak Huevos Rancheros",
+              "Corn tortillas, red sauce, sliced steak, topped with eggs, pico, guac, sour cream and jalapenos.",
+              2200
+            ],
+            [
+              "Verde Chilaquiles",
+              "Braised Beef on homemade corn tortilla chips tossed in a chili Verde sauce, topped with eggs, cheese, sour cream, guacamole, Pico de Gallo, and jalapeños. Served with potato choice and homemade refried beans.",
+              2100
+            ]
+          ]
+        },
+        {
+          "name": "Sweets",
+          "items": [
+            [
+              "Midtown Trio",
+              "Can't decide? Get them all or 3! Mix and Match French Toast or Pancakes.",
+              2100
+            ],
+            [
+              "Banana Apricot French Toast",
+              "Topped with caramelized bananas, caramel, and powdered sugar.",
+              1800
+            ],
+            [
+              "Banana Pecan Coconut Waffle",
+              "",
+              1700
+            ],
+            [
+              "Blueberry Lemon Ricotta Pancakes",
+              "",
+              1500
+            ],
+            [
+              "Brioche French Toast",
+              "Dusted with powdered sugar, butter, and syrup on the side.",
+              1500
+            ],
+            [
+              "Buttermilk Pancakes",
+              "4 buttermilk pancakes topped with powdered sugar, butter, and syrup on the side.",
+              1200
+            ],
+            [
+              "California French Toast",
+              "",
+              1900
+            ],
+            [
+              "Chicken & Waffle",
+              "Crisp waffle with 4 pieces of bone-in chicken, topped with powdered sugar, gravy on the side.",
+              2000
+            ],
+            [
+              "Chocolate Chip Pancakes",
+              "3 chocolate chip pancakes, dusted with powdered sugar, topped with Nutella and chocolate sauce.",
+              1500
+            ],
+            [
+              "Blueberry Cream French Toast",
+              "Topped with cream cheese frosting, blueberry compote, fresh blueberries, and powdered sugar.",
+              1800
+            ],
+            [
+              "Tiramisu Pancakes",
+              "Espresso pancakes, marscapone cream, cocoa powder.",
+              1600
+            ],
+            [
+              "Cookie Butter Pancakes",
+              "Layered with Biscoff Spread and cookie crumbles.",
+              1600
+            ],
+            [
+              "Gluten-Free Blueberry Banana Pancakes",
+              "",
+              1600
+            ],
+            [
+              "Peach Cobbler Cakes",
+              "",
+              1500
+            ],
+            [
+              "Raspberry Cream Cheese French Toast",
+              "French toast stuffed with raspberry cream cheese, dusted with powdered sugar, and topped with raspberry sauce.",
+              1800
+            ],
+            [
+              "S'mores Pancakes",
+              "",
+              1600
+            ],
+            [
+              "Single Apricot French Toast",
+              "",
+              600
+            ],
+            [
+              "Single Cali French Toast",
+              "",
+              600
+            ],
+            [
+              "Single French Toast",
+              "",
+              400
+            ],
+            [
+              "Single Pancake",
+              "",
+              400
+            ],
+            [
+              "Single Raspberry French Toast",
+              "",
+              600
+            ],
+            [
+              "Special Single Pancake",
+              "",
+              600
+            ],
+            [
+              "Strawberry Banana Crepe",
+              "Bananas and Nutella in a homemade crepe.",
+              1600
+            ],
+            [
+              "Strawberry Waffle",
+              "Crisp waffle topped with fresh strawberries and raspberry drizzle.",
+              1700
+            ],
+            [
+              "Waffle",
+              "Crisp waffle dusted with powdered sugar, served with a side of fresh fruit.",
+              1700
+            ],
+            [
+              "Churro Waffle",
+              "Crisp waffle.",
+              1800
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches",
+          "items": [
+            [
+              "BLTA",
+              "On sourdough with bacon, lettuce, tomato, avocado, and mayo.",
+              1700
+            ],
+            [
+              "Chicken Club",
+              "Grilled chicken, Swiss cheese, bacon, mayo, lettuce, onion, and avocado on a French roll.",
+              1800
+            ],
+            [
+              "Club House Sandwich",
+              "Turkey, bacon, cheddar cheese, avocado, lettuce, and tomato on sourdough with mayo.",
+              1800
+            ],
+            [
+              "Short Rib French Dip",
+              "Short ribs topped with Swiss cheese and grilled onions on a sourdough roll, served with creamy horseradish and au jus on the side.",
+              2100
+            ],
+            [
+              "Grilled Cheese",
+              "",
+              1300
+            ],
+            [
+              "Tuna Melt",
+              "Tuna salad, bacon avocado cheddar on sourdough.",
+              1800
+            ],
+            [
+              "Spicy Crispy Chicken",
+              "Buttermilk fried chicken breast with coleslaw and chipotle aioli.",
+              1800
+            ],
+            [
+              "Ribeye Sandwich",
+              "Ribeye steak, garlic aioli, grilled sweet onions, Swiss cheese, and spicy chimichurri on a grilled sourdough roll.",
+              2400
+            ],
+            [
+              "The Breakfast Sandwich",
+              "On grilled brioche with ham, bacon, cheddar, eggs, lettuce, tomato, and onions.",
+              1800
+            ]
+          ]
+        },
+        {
+          "name": "Burgers",
+          "items": [
+            [
+              "Bacon Cheese Burger",
+              "",
+              1900
+            ],
+            [
+              "Texas Burger",
+              "Bacon, BBQ, cheddar, coleslaw, fried onion strings",
+              1900
+            ],
+            [
+              "Veggie Burger",
+              "Portabella mushroom, roasted red peppers, avocado, and sprouts with chipotle aioli",
+              1800
+            ],
+            [
+              "Jalapeno Patty Melt",
+              "1/2 lb Angus beef, swiss cheese, grilled onions, on rye.",
+              1800
+            ],
+            [
+              "Breakfast Burger",
+              "1/2 lb Angus Beef, cheddar, pepper bacon, hashbrowns, sriracha mayo, and sunny side up egg.",
+              2000
+            ]
+          ]
+        },
+        {
+          "name": "Salads",
+          "items": [
+            [
+              "Chicken Caesar",
+              "",
+              1700
+            ],
+            [
+              "Tossed Salad",
+              "",
+              1200
+            ],
+            [
+              "Beet Salad",
+              "",
+              1800
+            ],
+            [
+              "Cobb Salad",
+              "Chicken, Bacon, Avocado, Blue Cheese Crumbles, Tomato, and Egg.",
+              1800
+            ],
+            [
+              "Yogurt Bowl",
+              "Fresh Berries, Granola, Pumpkin Seeds, Walnuts, and Honey.",
+              1500
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "1 Egg",
+              "",
+              400
+            ],
+            [
+              "Two Eggs",
+              "",
+              600
+            ],
+            [
+              "Three Eggs",
+              "",
+              800
+            ],
+            [
+              "Avocado",
+              "",
+              300
+            ],
+            [
+              "Bacon",
+              "",
+              800
+            ],
+            [
+              "Sausage",
+              "",
+              800
+            ],
+            [
+              "Toast",
+              "",
+              300
+            ],
+            [
+              "Salsa",
+              "",
+              100
+            ],
+            [
+              "Jalapeño (Grilled)",
+              "",
+              100
+            ],
+            [
+              "Beans",
+              "",
+              300
+            ],
+            [
+              "Biscuits & Gravy",
+              "",
+              800
+            ],
+            [
+              "Chicken Apple Sausage",
+              "",
+              800
+            ],
+            [
+              "Canadian Bacon",
+              "",
+              700
+            ],
+            [
+              "Bacon Candy",
+              "",
+              800
+            ],
+            [
+              "Chamuco",
+              "",
+              600
+            ],
+            [
+              "Chicken Breast",
+              "",
+              900
+            ],
+            [
+              "Chile Verde Sauce",
+              "",
+              200
+            ],
+            [
+              "Cream Cheese",
+              "",
+              100
+            ],
+            [
+              "Fruit",
+              "",
+              600
+            ],
+            [
+              "Chimichurri",
+              "",
+              100
+            ],
+            [
+              "Coffee Cake",
+              "",
+              400
+            ],
+            [
+              "Chips",
+              "",
+              250
+            ],
+            [
+              "Chorizo",
+              "",
+              500
+            ],
+            [
+              "Club Fries",
+              "Garlic fries topped with parmesan.",
+              600
+            ],
+            [
+              "Coleslaw",
+              "",
+              300
+            ],
+            [
+              "Corned Beef Hash",
+              "",
+              900
+            ],
+            [
+              "Cottage Cheese",
+              "",
+              350
+            ],
+            [
+              "Country Fried Steak",
+              "",
+              1000
+            ],
+            [
+              "Crab Cakes (2)",
+              "",
+              750
+            ],
+            [
+              "French Fries",
+              "",
+              500
+            ],
+            [
+              "Fried Chicken",
+              "",
+              1000
+            ],
+            [
+              "Guacamole",
+              "",
+              250
+            ],
+            [
+              "Ham",
+              "",
+              700
+            ],
+            [
+              "Hamburger Steak",
+              "",
+              1000
+            ],
+            [
+              "Hash Browns",
+              "",
+              500
+            ],
+            [
+              "Herb Potatoes",
+              "",
+              500
+            ],
+            [
+              "Hollandaise",
+              "",
+              300
+            ],
+            [
+              "Hot Links",
+              "",
+              800
+            ],
+            [
+              "Italian Sausage",
+              "",
+              700
+            ],
+            [
+              "Jalapeño (Fresh)",
+              "",
+              100
+            ],
+            [
+              "Jalapeño (Pickled)",
+              "",
+              100
+            ],
+            [
+              "Kimchi Side",
+              "",
+              300
+            ],
+            [
+              "Linguica",
+              "",
+              700
+            ],
+            [
+              "Oatmeal",
+              "",
+              1200
+            ],
+            [
+              "Potato Salad",
+              "",
+              300
+            ],
+            [
+              "Rice",
+              "",
+              300
+            ],
+            [
+              "Salmon",
+              "",
+              1200
+            ],
+            [
+              "Sautéed Veggies",
+              "",
+              450
+            ],
+            [
+              "Side Gravy",
+              "",
+              300
+            ],
+            [
+              "Side Ground Beef",
+              "",
+              400
+            ],
+            [
+              "Side Lox (Smoked Salmon)",
+              "",
+              700
+            ],
+            [
+              "Side Macaroni Salad",
+              "",
+              300
+            ],
+            [
+              "Side Nutella",
+              "",
+              100
+            ],
+            [
+              "Side Pickle",
+              "",
+              100
+            ],
+            [
+              "Side Pico",
+              "",
+              100
+            ],
+            [
+              "Side Short Rib",
+              "",
+              1000
+            ],
+            [
+              "Side Carnitas",
+              "",
+              700
+            ],
+            [
+              "Side Shrimp",
+              "",
+              600
+            ],
+            [
+              "Side Yogurt",
+              "",
+              500
+            ],
+            [
+              "Sliced Tomatoes",
+              "",
+              250
+            ],
+            [
+              "Sour Cream",
+              "",
+              100
+            ],
+            [
+              "Steak Tri-Tip",
+              "",
+              1600
+            ],
+            [
+              "Chipotle Aioli",
+              "",
+              100
+            ],
+            [
+              "Side Soyrizio",
+              "",
+              500
+            ],
+            [
+              "Ice Cream",
+              "",
+              250
+            ],
+            [
+              "Red Sauce",
+              "",
+              200
+            ]
+          ]
+        },
+        {
+          "name": "Kids",
+          "items": [
+            [
+              "Mickey Mouse Pancake",
+              "",
+              1300
+            ],
+            [
+              "Dollar Pancakes",
+              "",
+              1300
+            ],
+            [
+              "Kid Bacon & Eggs",
+              "",
+              1300
+            ],
+            [
+              "Kid Sausage & Eggs",
+              "",
+              1300
+            ],
+            [
+              "Kid French Toast",
+              "",
+              1300
+            ],
+            [
+              "Kid Grilled Cheese",
+              "",
+              1300
+            ],
+            [
+              "Kid Chicken Tenders",
+              "",
+              1300
+            ],
+            [
+              "Kid Burger",
+              "",
+              1300
+            ],
+            [
+              "Cheese Quesadilla",
+              "",
+              1300
+            ],
+            [
+              "Kids Cheeseburger",
+              "",
+              1300
+            ],
+            [
+              "Kid Mac & Cheese",
+              "",
+              1300
+            ]
+          ]
+        },
+        {
+          "name": "Beverages",
+          "items": [
+            [
+              "Chocolate Milk",
+              "",
+              400
+            ],
+            [
+              "Hot Chocolate",
+              "",
+              400
+            ],
+            [
+              "Cold Brew",
+              "",
+              400
+            ],
+            [
+              "Juice",
+              "",
+              450
+            ],
+            [
+              "Orange Juice",
+              "",
+              600
+            ],
+            [
+              "Coffee",
+              "",
+              350
+            ],
+            [
+              "Hot Tea",
+              "",
+              350
+            ],
+            [
+              "Iced Tea",
+              "",
+              350
+            ],
+            [
+              "Milk",
+              "",
+              400
+            ],
+            [
+              "Soda",
+              "",
+              350
+            ],
+            [
+              "Red Bull",
+              "",
+              500
+            ]
+          ]
+        }
+      ],
+      "address": "1428 Haight Street, San Francisco, CA 94117",
+      "phone": "(415) 374-7513",
+      "siteNote": "Menu and prices from their own website, checked 21 October 2026. It is one menu for every Breakfast Club location, and the Haight Street room has not opened yet.",
+      "clip": {
+        "src": "/clips/the-breakfast-club-sf.mp4",
+        "poster": "/clips/the-breakfast-club-sf-poster.webp",
+        "href": "https://www.instagram.com/reel/DZ6Qh9uJB4j/",
+        "credit": "Posted by @thebreakfastclubsf",
+        "platform": "Instagram"
+      },
+      "quoteOnly": "Opening at 1428 Haight Street in fall 2026. These are the prices the Breakfast Club publishes for all its rooms; Haight Street's own are not out yet, so nothing can be ordered here until it opens."
+    },
+    "placements": [
+      "san-francisco-goods2-45",
+      "beasty-goods2-35"
+    ],
+    "glenn": "Glenn, 21 Oct 2026, 6:06 pm: “San Francisco • Eats”, “BEASTY • Eats”, “Clip this video plz” (with https://www.instagram.com/reel/DZ6Qh9uJB4j/). He did not type the name; it is read off their site and his screenshots.",
+    "flags": [
+      "NOT OPEN YET. Their site's San Francisco page (/location/san-francisco/) gives 1428 Haight Street, San Francisco, CA 94117 and, where the hours go, only “Coming Soon!”. Their Instagram bio says “Coming Soon - Fall 2026”. The reel's caption (23 Jun 2026) was tagged #SummerOpening, an earlier target the bio has since replaced. The tagline says opening, not open, as on Shattuck & Butter.",
+      "San Francisco is confirmed by first-party sources: the site's location page and its own structured data (1428 Haight Street, San Francisco 94117), the San Francisco choice on the site's Jobs form, and the Instagram bio (“Haight-Ashbury District”, same address). “Midtown” in the domain is the brand's name (The Breakfast Club at Midtown, logo “EST. 2015”), not a neighbourhood. The room is in the Haight-Ashbury, not any Midtown. Glenn's “San Francisco” is right.",
+      "This is one room of a multi-location brand. The site's location data lists San Jose, Lafayette, Walnut Creek, Castro Valley, Morgan Hill, Livermore, San Mateo, Mountain View, Campbell and Folsom as open, with San Francisco, Modesto, Reno and Sparks (NV) “Coming Soon!”. The visible Hours & Online Ordering page shows only Mountain View, Campbell, Santa Cruz (coming soon) and Folsom, and leaves San Francisco off.",
+      "MENU IS BRAND-WIDE, NOT SAN FRANCISCO'S. /menus/ is one menu with no location attached (every location's related-menus list is empty), so San Francisco's own prices are not published. 11 sections and 182 priced items, all whole dollars apart from a few .50s. Because they are not open, the coordinator may prefer contactOnly/quoteOnly (Hey Yogurt / Shattuck & Butter precedent) so nobody adds to a cart for a room that is not trading.",
+      "No orderUrl: the site's ordering links are Toast pages for Folsom, Mountain View and one more store. San Francisco has none.",
+      "Left off the menu: Corkage Fee $15 (alcohol, so it needs an age check) and T-Shirt $25 (merchandise that sits in their Sides tab). Their franchise page mentions a full bar (cocktails, mimosas, Bloody Marys), but none of it is on the menu page.",
+      "Item names and descriptions are kept as published, typos included: “Linguicia & Eggs” next to “Linguica”, “marscapone” and “Side Soyrizio”. Only whitespace was tidied.",
+      "Phone (415) 374-7513 comes only from the Call button on their Instagram profile (screenshot 1806-IMG_7551). The site gives no San Francisco phone (it is null in their location data), so the two sources do not conflict.",
+      "No hours, because the site says only “Coming Soon!” for San Francisco. No email either: the site has only a contact form.",
+      "The About page says “For over 30 years, The Breakfast Club has been serving…”, but the logo reads “EST. 2015”. The tagline uses neither.",
+      "The Instagram bio shows “www.bcmidtown.com and 1 more”. The second link is not in the screenshots and was not read.",
+      "Icon: the site's own HQ logo PNG (black ink on transparent), flattened onto white and cut with --square. I did not use Glenn's 1806-IMG_7554 because the roundel runs off both edges of the screen in that shot. Their Instagram picture is the same roundel inverted, white on black. color #ffffff.",
+      "Film: posted by their own San Francisco account @thebreakfastclubsf (the yt-dlp channel), caption “Let’s GO San Francisco!”. But the footage carries Instagram's “@BREAKFASTCLUBMIDTOWN” watermark and end card. It was first posted by the brand's main account, and it shows plates, drinks and a patio at an existing location, not the unopened Haight Street room. Credit is “Posted by @thebreakfastclubsf” with no `by`, since both accounts belong to the business.",
+      "Clip cut: make-clip.py with --start 0 --seconds 8, so 0s-8s of 12s. The last ~4 s (8.2s-12.3s) are Instagram's end card (the Instagram logo and handle over a dimmed frame), which is Meta UI. A default run would have kept the whole 12 s, end card included.",
+      "Soundtrack: Instagram's watermark names the music as “Drake · Shabang” with an E (explicit) badge, and a caption runs over every frame: “If he sent you this then you are literally his favorite girl in the whole world”. Worth a listen before it plays on a page.",
+      "Coordinator: quoteOnly, as Hey Yogurt was before it opened: ordering is live on BEASTY, and a priced menu would take orders for a room that is not trading.",
+      "Coordinator: the clip is cut silent (-an). Instagram tags its song, Drake's \"Shabang\", explicit, and nobody had listened to the eight seconds before it went on a public page."
+    ]
+  },
+  {
+    "id": "b_homethaicafe",
+    "name_exact": "Home Thai Cafe",
+    "checked_on": "2026-10-21",
+    "sources": [
+      "https://www.homethaimartinez.com/ (Home: about text, hours, address, phone)",
+      "https://www.homethaimartinez.com/blank-1 (About)",
+      "https://www.homethaimartinez.com/blank-2 (Contact: address, email, phone, hours)",
+      "https://www.homethaimartinez.com/order-pickup (Delivery page, images only)",
+      "https://order.toasttab.com/online/homethaicafe (their site's Menu and Order Online buttons; menu, prices and schedule read in a browser)",
+      "https://static.wixstatic.com/media/cb2414_816777f7f8f745bbbac0ca49670b2615~mv2.jpg (their wordmark, footer of their own site; the icon)",
+      "Instagram @homethai_martinez (Glenn's screenshot 1830-IMG_7567: bio, hours, phone, address, site link)",
+      "Glenn's screenshots 1830-IMG_7560, 1830-IMG_7561, 1830-IMG_7564 (their site, opened from Instagram)",
+      "https://www.instagram.com/reel/DeEM7DWvcEK/ (posted by @homethai_martinez, 4 Oct 2026)"
+    ],
+    "facts": {
+      "slug": "home-thai-cafe",
+      "name": "Home Thai Cafe",
+      "label": "Home Thai",
+      "cuisine": "Thai",
+      "color": "#ffffff",
+      "icon": "home-thai-cafe",
+      "site": "https://www.homethaimartinez.com/",
+      "tagline": "Thai curries, noodle soups, pad thai and wok dishes on Alhambra Ave in Martinez.",
+      "prep": 0,
+      "category": "Thai",
+      "items": [],
+      "sections": [
+        {
+          "name": "Specials",
+          "items": [
+            [
+              "Crispy Pork Belly",
+              "Crispy Pork Belly, Chinese Broccoli in Garlic-Soy Sauce. Served with rice",
+              2195
+            ],
+            [
+              "Paradise Chicken",
+              "Crispy Sliced Chicken, tomato, bell pepper, onion, pineapple and cashew nut in house Paradise Sauce. Served with rice.",
+              2195
+            ],
+            [
+              "Wild Salmon Green Curry",
+              "Salmon in green curry, bell pepper, basil, eggplant, broccoli, carrot, served with rice",
+              2495
+            ],
+            [
+              "Pad Thai Crab Meat",
+              "",
+              2295
+            ],
+            [
+              "Ginger Scallop",
+              "",
+              2495
+            ],
+            [
+              "Crispy Salmon Salad",
+              "",
+              2495
+            ],
+            [
+              "Tom Kha Pumpkin",
+              "Coconut milk soup, soft tofu and pumpkin",
+              1800
+            ],
+            [
+              "Crazy Seafood",
+              "Mixed seafood stir fried with special butter sauce, bell pepper and basil.",
+              2495
+            ],
+            [
+              "Crispy Chili Fish",
+              "",
+              2495
+            ],
+            [
+              "New york Steak Fried rice",
+              "",
+              2995
+            ],
+            [
+              "Garlic fillet fish",
+              "",
+              2495
+            ],
+            [
+              "Choo Chee Curry White fish",
+              "",
+              2495
+            ],
+            [
+              "Pineapple Curry chicken",
+              "Pineapple in red curry served with rice",
+              2195
+            ],
+            [
+              "pineapple curry shrimp",
+              "",
+              2495
+            ],
+            [
+              "Happy wings",
+              "Deep fried chicken wings served with super spicy home Thai dipping sauce",
+              1595
+            ],
+            [
+              "Calling 911 Seafood",
+              "Pad Cha Talay: Shrimps, Calamari, Scallops, Mussels with bell pepper, finger root, young green pepper corn, basil, kaffir leaves and bamboo shoot in garlic sauce. Served with rice.",
+              2495
+            ]
+          ]
+        },
+        {
+          "name": "Appetizers",
+          "items": [
+            [
+              "Happy wings",
+              "Deep fried chicken wings served with home Thai super spicy dipping sauce",
+              1595
+            ],
+            [
+              "Crispy Tofu",
+              "Deep fried tofu served with peanut-sweet&sour sauce.",
+              1195
+            ],
+            [
+              "Chicken Satay",
+              "Grilled marinated chicken breast served with cucumber salad and peanut sauce.",
+              1395
+            ],
+            [
+              "Crispy Calamari",
+              "Deep fried battered calamari served with creamy sweet & sour sauce.",
+              1495
+            ],
+            [
+              "Fresh Rolls Tofu",
+              "Rice Paper roll with mixed green salad and rice noodle served with peanut sauce.",
+              1395
+            ],
+            [
+              "Fresh Rolls Shrimp",
+              "Rice Paper roll with mixed green salad served with peanut sauce.",
+              1495
+            ],
+            [
+              "Veggie Roll",
+              "Deep fried wheat roll with silver noodle and mixed veggies served with sweet & sour sauce.",
+              1195
+            ],
+            [
+              "Pot Sticker",
+              "Chicken and Cabbage Dumpling served with house sweet soy sauce. You Choose Crispy Fried or Steamed?",
+              1295
+            ],
+            [
+              "Samosa",
+              "Puff pastry stuffed with potato, carrot and onion. Served with cucumber salad",
+              1395
+            ],
+            [
+              "Roti-Yellow Curry Sauce",
+              "Indian Pancake with Yellow Curry Sauce",
+              1395
+            ],
+            [
+              "Crab Rangoon.",
+              "Deep fried wonton with crab meat and cream cheese served with sweet & sour sauce.",
+              1395
+            ],
+            [
+              "Shrimp Roll",
+              "Fried wheat roll wrap shrimp served with sweet & sour sauce.",
+              1395
+            ],
+            [
+              "Home Thai Combo",
+              "",
+              2495
+            ],
+            [
+              "Chicken lettuce wraps",
+              "",
+              1695
+            ],
+            [
+              "Happy belly",
+              "",
+              1695
+            ]
+          ]
+        },
+        {
+          "name": "Salad",
+          "items": [
+            [
+              "Larb",
+              "Minced Chicken or Slice Pork with lime dressing, rice powder, mint, cilantro and onions",
+              1595
+            ],
+            [
+              "Papaya Salad Thai Style (Som-Tum Thai)",
+              "Shredded green papaya, green bean, tomato, garlic, fresh chili, peanut, shrimp with lime dressing",
+              1595
+            ],
+            [
+              "Papaya Salad Lao Style (Som-Tum Lao)",
+              "Shredded green papaya, green bean, tomato, garlic, fresh chili with fermented fish dressing",
+              1595
+            ],
+            [
+              "Home Thai Salad",
+              "Crispy Fried Chicken over mixed green, tomato, red onion, cucumber with honey cream dressing.",
+              1795
+            ],
+            [
+              "Seafood Salad",
+              "Shrimp, scallop, calamari, mussel with fresh chili, cilantro, green onion with chili lime dressing",
+              2295
+            ]
+          ]
+        },
+        {
+          "name": "Soup",
+          "items": [
+            [
+              "Tom Yum",
+              "Spicy & Sour broth with shrimp paste, lemon grass, galangal, mushroom, onion, tomato, and kaffir leaf",
+              1595
+            ],
+            [
+              "Tom Kha",
+              "Coconut broth with lemon grass, galangal, mushroom, onion, tomato, kaffir leaf and green onion.",
+              1595
+            ],
+            [
+              "Po Tak Seafood",
+              "Spicy & Sour broth with Shrimp, Calamari, Scallop, Mussel and fresh chili and Basil",
+              2295
+            ],
+            [
+              "Chicken Noodle Soup",
+              "Ground Chicken, Thin rice noodles, cabbage, bean sprout and green onion.",
+              1695
+            ],
+            [
+              "Beef Noodle Soup",
+              "Slice beef, Slow cooked beef, thin rice noodle, bean sprout, chinese broccoli and green onion",
+              1895
+            ]
+          ]
+        },
+        {
+          "name": "Curry",
+          "items": [
+            [
+              "Green Curry",
+              "Green Bean, Eggplant, Bamboo Shoots, Basil, Carrots and Bell Peppers (Rice not included)",
+              1595
+            ],
+            [
+              "Panang Curry",
+              "Kaffir lime leaves, Basil, Carrot and Bell Peppers (Rice not included)",
+              1595
+            ],
+            [
+              "Red Curry",
+              "Bamboo Shoots, Zucchini, Snow Peas, Basil, Carrots and Bell Peppers (Rice not included)",
+              1595
+            ],
+            [
+              "Yellow Curry",
+              "Potatoes, Carrots and Onions (Rice not included)",
+              1595
+            ],
+            [
+              "Pumpkin Curry",
+              "Pumpkin, bell pepper, basil in red curry (Rice not included)",
+              1695
+            ],
+            [
+              "Khao Soi Chicken",
+              "",
+              2195
+            ],
+            [
+              "Khao Soi Beef",
+              "Northern Thai curry Noodle, egg noodles in coconut milk curry broth, sliced beef top with crispy egg noodles and bean sprouts.",
+              2195
+            ]
+          ]
+        },
+        {
+          "name": "Grilled",
+          "items": [
+            [
+              "Grilled Chicken",
+              "Served with Sweet and Sour Sauce and rice",
+              1995
+            ],
+            [
+              "Grilled Pork",
+              "Served with Sweet and Sour Sauce and Side of rice",
+              1995
+            ],
+            [
+              "New York Steak with steam veggie",
+              "Grilled New York Steak served with stream veggies",
+              2995
+            ]
+          ]
+        },
+        {
+          "name": "Noodles and Fried Rice",
+          "items": [
+            [
+              "Pad Thai",
+              "Pan-Fried Thin Rice Noodles, Egg, Peanut, Tofu, Chives and Bean Sprouts",
+              1595
+            ],
+            [
+              "Pad Wood Sen",
+              "Silver Noodles, Egg, Green Onions, Mushrooms, Carrots, Broccoli and Onions, Sesame oil.",
+              1695
+            ],
+            [
+              "Pad See You",
+              "Pan-Fried Flat Rice Noodles, Egg, Broccoli and Carrots",
+              1595
+            ],
+            [
+              "Pad Kee Mow",
+              "Pan-Fried Rice Noodles, Onions, Broccoli, Carrots, Basil, Bamboo Shoots, Bell Peppers and Fresh Chili.",
+              1595
+            ],
+            [
+              "Fried Rice",
+              "Egg, Tomatoes, Onion and Green Onion",
+              1595
+            ],
+            [
+              "Fried Chicken Fried Rice",
+              "Fried Rice, Egg, Onion Top with Fried Chicken",
+              1795
+            ],
+            [
+              "BBQ Pork Fried Rice",
+              "Fried Rice, Egg, Onion Top with BBQ Pork",
+              1795
+            ],
+            [
+              "Crab Fried Rice",
+              "Crab Meat, Onion and Green Onions.",
+              2295
+            ],
+            [
+              "Green Curry Fried Rice",
+              "Fried Rice, Green Curry Paste, Green Bean, Carrots, Bamboo Shoots, Bell Peppers, Basil with Chicken and Shrimp",
+              2195
+            ],
+            [
+              "Hawaiian Fried Rice",
+              "Egg, Tomatoes, Onion and Green Onion, Cashew Nuts, Raisins, Pineapple, Curry Powder with Chicken and Shrimp",
+              2195
+            ],
+            [
+              "Kua Kai",
+              "Pan-Fried Rice Noodles, Egg, Bean Sprouts, Green Onions, Peanut with Chicken",
+              1595
+            ],
+            [
+              "Basil Fried Rice",
+              "fried rice, basil, onion, bell pepper",
+              1595
+            ],
+            [
+              "Fried chicken with garlic noodle",
+              "",
+              1995
+            ],
+            [
+              "Crabmeat Pad Thai",
+              "Rice noodles stir fried with tamarind sauce, crabmeat, egg, tofu, chives, bean sprouts and peanut",
+              2295
+            ]
+          ]
+        },
+        {
+          "name": "Wok",
+          "items": [
+            [
+              "Spicy Basil",
+              "Garlic, Bell Peppers, Basil and Fresh Chili (Rice not included)",
+              1595
+            ],
+            [
+              "Cashew Nut",
+              "Cashew Nut, Onions, Bell Peppers and Shrimp Paste (Rice not included)",
+              1595
+            ],
+            [
+              "Pa Ram",
+              "Steamed Broccoli, Carrots, Cabbage, Sugar Peas and Zucchini Served with Peanut Sauce (Rice not included)",
+              1595
+            ],
+            [
+              "Eggplant",
+              "Eggplant, Bell Peppers and Basil (Rice not included)",
+              1695
+            ],
+            [
+              "Fresh Ginger",
+              "Fresh Ginger, Carrots, Onions and Mushroom (Rice not included)",
+              1595
+            ],
+            [
+              "Mixed Veggies",
+              "Cabbage, Carrots, Zucchini, Sugar Peas, Bean Sprout, Broccoli with Garlic. Rice not included",
+              1595
+            ],
+            [
+              "Garlic Broccoli",
+              "Broccoli with Garlic. Rice not included",
+              1595
+            ],
+            [
+              "Calling 911",
+              "Galangal, baby corn peppers, basil, kaffir lime leaves, onion, finger roots with garlic Chili sauce (Rice not included)",
+              1595
+            ],
+            [
+              "Spicy Green Beans",
+              "Green Bean, Bell Peppers, Garlic and Red Chili Paste (Rice not included)",
+              1695
+            ],
+            [
+              "Garlic Green Beans",
+              "Green beans garlic oyster sauce (Rice not included)",
+              1595
+            ]
+          ]
+        },
+        {
+          "name": "Desserts",
+          "items": [
+            [
+              "Sticky Rice and Mango (Seasonal)",
+              "",
+              1300
+            ],
+            [
+              "Sticky Rice and Ice Cream",
+              "",
+              1300
+            ],
+            [
+              "Roti and Ice Cream",
+              "",
+              1300
+            ],
+            [
+              "Vanilla Ice Cream",
+              "",
+              600
+            ],
+            [
+              "sweet sticky rice",
+              "",
+              600
+            ]
+          ]
+        },
+        {
+          "name": "Drink",
+          "items": [
+            [
+              "Hot Tea",
+              "",
+              400
+            ],
+            [
+              "Thai Iced Tea",
+              "",
+              600
+            ],
+            [
+              "Thai Iced Coffee",
+              "",
+              600
+            ],
+            [
+              "Regular Iced Tea",
+              "",
+              600
+            ],
+            [
+              "Lemonade",
+              "",
+              600
+            ],
+            [
+              "Mint Lemonade",
+              "",
+              600
+            ],
+            [
+              "Mango lemonade",
+              "",
+              600
+            ],
+            [
+              "Strawberry Lemonade",
+              "",
+              600
+            ],
+            [
+              "Passion Fruit Lemoade",
+              "",
+              600
+            ],
+            [
+              "Thai Lemon ice tea",
+              "",
+              600
+            ],
+            [
+              "Shriley Temple",
+              "",
+              600
+            ],
+            [
+              "Coca-Cola",
+              "Can of coke",
+              400
+            ],
+            [
+              "D-Coke",
+              "Can",
+              400
+            ],
+            [
+              "Sprite",
+              "Can of Sprite",
+              400
+            ]
+          ]
+        },
+        {
+          "name": "Side",
+          "items": [
+            [
+              "Jasmine Rice",
+              "",
+              400
+            ],
+            [
+              "Brown Rice",
+              "",
+              400
+            ],
+            [
+              "Sticky Rice",
+              "",
+              400
+            ],
+            [
+              "Roti",
+              "",
+              400
+            ],
+            [
+              "Fried Egg",
+              "",
+              400
+            ],
+            [
+              "Cucumber Salad",
+              "",
+              500
+            ],
+            [
+              "Peanut Sauce",
+              "",
+              700
+            ],
+            [
+              "Steamed veggies",
+              "",
+              700
+            ],
+            [
+              "Side Curry Sauce",
+              "12 OZ",
+              1000
+            ],
+            [
+              "Steamed Thin Rice Noodle",
+              "",
+              400
+            ],
+            [
+              "Steamed Thick Rice Noodle",
+              "",
+              400
+            ],
+            [
+              "Fried Chicken",
+              "",
+              1000
+            ],
+            [
+              "Egg Fried Rice",
+              "",
+              1000
+            ]
+          ]
+        }
+      ],
+      "address": "6656 Alhambra Ave, Martinez, CA 94553",
+      "phone": "(925) 433-2925",
+      "email": "homethairestaurant@gmail.com",
+      "orderUrl": "https://order.toasttab.com/online/homethaicafe",
+      "siteNote": "Prices are from the online ordering page their own website links to.",
+      "clip": {
+        "src": "/clips/home-thai-cafe.mp4",
+        "poster": "/clips/home-thai-cafe-poster.webp",
+        "href": "https://www.instagram.com/reel/DeEM7DWvcEK/",
+        "credit": "Posted by @homethai_martinez",
+        "platform": "Instagram"
+      }
+    },
+    "placements": [
+      "martinez-goods-2",
+      "beasty-goods2-36"
+    ],
+    "glenn": "Glenn, 21 Oct 2026, 6:30 pm: \"Martinez • Eats\", \"BEASTY • Eats\"; 6:33 pm: \"Clip this video plz\", with https://www.instagram.com/reel/DeEM7DWvcEK/.",
+    "flags": [
+      "HOURS LEFT OUT: their own site gives two schedules. Home page: “Open 7 Days A week 11a.m. -3p.m. 4p.m.-8p.m.” Contact page: “Tuesday to Sunday 11a.m. - 3p.m. 4p.m.- 8p.m.” (closed Mondays by that one). Instagram bio and the Toast schedule both say every day, 11am–3pm and 4pm–8pm, so three of four sources say daily; if the coordinator settles it, the line would be “Daily 11am–3pm, 4pm–8pm”.",
+      "Name: their logo, site header, Toast page and Facebook link say “Home Thai Cafe”; the site's page titles say “Home Thai”, its footer says “©2023 By Home Thai Restaurant”, the email is homethairestaurant@, and the Instagram name is “Home thai Cafe,Martinez”. Used Home Thai Cafe (the logo).",
+      "Phone printed on the site as “(925) 4332925”; Instagram and Toast give 925 433 2925, so (925) 433-2925. No conflict.",
+      "Address agrees on the site, Instagram and Toast: 6656 Alhambra Ave, Martinez, CA 94553.",
+      "Email homethairestaurant@gmail.com is published on their own Contact page.",
+      "Menu: their site's Menu and Order Online buttons both go to Toast (order.toasttab.com/online/homethaicafe). The page loaded in a real browser with no challenge (plain curl gets a Cloudflare 403). The cookie banner was answered “Reject Non-Necessary Cookies”.",
+      "Toast said “Currently not accepting online orders” when read (evening, after their 8pm close), so item option sheets would not open. 72 of the 107 items have options on Toast (protein choice and the like); any upcharges for those options are NOT captured, so every price here is the listed base price.",
+      "Toast has a Special Menu (one section, “Specials”, 16 items) and a Main Menu (10 sections). Both kept, Specials first, as Toast orders them. Toast's “Featured Items” strip (Chicken Satay, Jasmine Rice, Pad Thai) repeats Main Menu items and is not a section, so left out. Its empty “Open Items” group left out.",
+      "“Happy wings” appears in both Specials and Appetizers at $15.95, as Toast publishes it.",
+      "Item names copied as published, typos included: “Crab Rangoon.” (trailing period), “Passion Fruit Lemoade”, “Shriley Temple”, “New york Steak Fried rice”, lowercase “pineapple curry shrimp” and “sweet sticky rice”. Descriptions are theirs with spacing around commas tidied and “??” made “?”.",
+      "Curry and Wok sections are headed “Rice Not Included” on Toast; most of those items also say so in their own descriptions, kept.",
+      "“Sticky Rice and Mango (Seasonal)” is marked seasonal by them.",
+      "No alcohol on the Toast menu, so nothing removed. The reel and Instagram advertise happy-hour beer ($5.49), house wine and margaritas ($7.95); none of that is on the menu here.",
+      "Toast footer: a 2.00% surcharge on credit card payments. Not carried into the record.",
+      "needsSite: false. homethaimartinez.com is their own Wix site (Home, About, Contact, Delivery pages), a real site.",
+      "Icon: their Instagram picture is a photo of a hand holding a phone showing their website, not a logo, so the icon is their script wordmark (“Home Thai Cafe” with “Make yourself at home” and a leaf sprig) taken full size from the footer of their own site, run through make-brand-icon.py --square, on its own white (#ffffff). It is a wide mark, so on a square tile it sits small. ALTERNATIVE: the Toast page carries a different logo of theirs (red and yellow sun with a black Thai roof, “HOME Thai Cafe” and their phone number), https://d2s742iet3d3t1.cloudfront.net/restaurant_service/restaurants/c852ea64-77bb-493a-b432-d4064d2aaad7/Restaurant/00dd7be2-f1f9-42c4-9659-546ddac1183b.jpg; bolder at tile size, but its gradient background cannot be squared cleanly and the site and Instagram use the script mark, so I did not use it.",
+      "Film: reel DeEM7DWvcEK is their own post (yt-dlp channel: homethai_martinez), a happy-hour promo filmed on their patio (dumplings, crab rangoon, fried tofu, spring rolls, with “Happy Hour”, “Bites $9.95” and “Beer $5.49” captions). Credit: “Posted by @homethai_martinez”, no `by`. It does not show their sign; the last seconds show the shop front next door (a salon window, “Cuts $22 & up”). The beer and wine are on screen for most of the reel (a Singha bottle, beer poured, a toast with beer and red wine at the end), so there is no alcohol-free window to cut. Clip 3s–27s of 27s; poster is the dumplings frame with “Happy Hour”.",
+      "Glenn's “Martinez • Eats” matches: they are in Martinez. No placements set (coordinator's job)."
+    ]
+  }
+]

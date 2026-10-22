@@ -185,3 +185,7 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `dope-pho.webp` | [Original artwork](https://dopepho.menu11.com/) | Their own bowl mark, whole disc, from their Instagram picture. |
 | `m-dumpling.webp` | [Original artwork](https://mdumplingsanramon.com/) | Their own round badge on its own cream. |
 | `pizza-casamia.webp` | [Original artwork](https://www.instagram.com/pizzacasamiasanjose/) | Their own wordmark, inside its ring, on its own white. |
+| `funky-elephant.webp` | [Original artwork](https://www.instagram.com/funky.elephant/) | Their own elephant head and script wordmark, from their Instagram picture, on its own white. |
+| `kemuri-japanese-baru.webp` | [Original artwork](https://order.toasttab.com/online/kemurirwc) | Their own kemuri / JAPANESE BARÚ wordmark, the one in their site's header, from the logo on their Toast ordering page, on its own white. |
+| `the-breakfast-club-sf.webp` | [Original artwork](https://www.bcmidtown.com/) | Their own rooster roundel, from the logo file on their site, black on white. |
+| `home-thai-cafe.webp` | [Original artwork](https://www.homethaimartinez.com/) | Their own script wordmark with its leaf sprig, from the footer of their own site, on its own white. Their Instagram picture is a photo of a phone, not a logo. |

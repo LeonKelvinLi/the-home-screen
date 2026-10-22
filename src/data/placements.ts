@@ -1600,4 +1600,19 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-jose-goods2-19': 'b_pizzacasamia',
   'beasty-goods2-32': 'b_pizzacasamia',
 
+  /* Batch 58, Glenn, 21 October 2026, 5:52-6:30 pm. BEASTY • Eats has no Thai,
+     izakaya or breakfast spot, so all four go to More eats in the order he sent them.
+     Funky Elephant: "Berkeley • Eats / San Francisco • Eats"; their San Francisco room
+     closed on 21 June (their own post), so Berkeley only, where the Asian spot is
+     Praaw Thai's. The Breakfast Club: San Francisco has no breakfast spot and the
+     room opens in fall 2026. Kemuri and Home Thai take their cities' open Asian spots. */
+  'berkeley-goods2-10': 'b_funkyelephant',
+  'beasty-goods2-33': 'b_funkyelephant',
+  'redwood-city-goods-2': 'b_kemurijapanesebaru',
+  'beasty-goods2-34': 'b_kemurijapanesebaru',
+  'san-francisco-goods2-45': 'b_thebreakfastclubsf',
+  'beasty-goods2-35': 'b_thebreakfastclubsf',
+  'martinez-goods-2': 'b_homethaicafe',
+  'beasty-goods2-36': 'b_homethaicafe',
+
 }

@@ -325,3 +325,12 @@ Not used: `DelACp9h8Xf` (sent as “Foodie” with One’s Cafe) reviews Big Tac
 |---|---|---|---|---|
 | `molinari-delicatessen.mp4` | Molinari Delicatessen, San Francisco | [DeIZ4S2qyuI](https://www.instagram.com/reel/DeIZ4S2qyuI/) | 13s-37s of 107s | Glenn, 19 Oct 2026: “Clip this video plz”; Filmed by @festusfeasts. |
 | `dope-pho.mp4` | Dope Pho, Fremont | [DY8MzCwBEp8](https://www.instagram.com/reel/DY8MzCwBEp8/) | 35s-59s of 59s | Glenn, 19 Oct 2026: “Clip this video plz”; Posted by @dope_pho. |
+
+## Batch 58 — 21 October 2026
+
+| File | Business/page | Original reel | Excerpt | Request & credit |
+|---|---|---|---|---|
+| `funky-elephant.mp4` | Funky Elephant, Berkeley | [C8BJwc2REwu](https://www.instagram.com/reel/C8BJwc2REwu/) | 4s-28s of 34s | Glenn, 21 Oct 2026: “Clip this video plz”; Filmed by @sophiaxbayarea, in June 2024 at their San Francisco room, which closed on 21 June 2026. |
+| `kemuri-japanese-baru.mp4` | Kemuri Japanese Barú, Redwood City | [Dep69EZBSlI](https://www.instagram.com/reel/Dep69EZBSlI/) | 7s-31s of 33s | Glenn, 21 Oct 2026: “Clip this video plz”; Posted by @kemurirwc. |
+| `the-breakfast-club-sf.mp4` | The Breakfast Club at Midtown, San Francisco | [DZ6Qh9uJB4j](https://www.instagram.com/reel/DZ6Qh9uJB4j/) | 0s-8s of 12s | Glenn, 21 Oct 2026: “Clip this video plz”; Posted by @thebreakfastclubsf. **Cut silent (`-an`) on purpose:** Instagram tags its song explicit and nobody had listened to it. The last 4 s are Instagram's end card. |
+| `home-thai-cafe.mp4` | Home Thai Cafe, Martinez | [DeEM7DWvcEK](https://www.instagram.com/reel/DeEM7DWvcEK/) | 3s-27s of 27s | Glenn, 21 Oct 2026: “Clip this video plz”; Posted by @homethai_martinez. Their happy-hour promo; beer is on screen. |

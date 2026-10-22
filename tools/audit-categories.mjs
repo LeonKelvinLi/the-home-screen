@@ -30,7 +30,8 @@ const freePort = () => new Promise((r) => { const s = createServer(); s.listen(0
 const port = await freePort()
 const LOG = `/tmp/audit-categories-${port}.log`
 const log = openSync(LOG, 'w')
-const srv = spawn('npx', ['tsx', 'server/index.ts'], { stdio: ['ignore', log, log], env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', RESEND_API_KEY: '', LEAD_EMAIL: '' } })
+/* node --import tsx, as the batch audits do: a bare 'npx' is npx.cmd on Windows and spawns ENOENT. */
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], { stdio: ['ignore', log, log], env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', RESEND_API_KEY: '', LEAD_EMAIL: '' } })
 const base = `http://localhost:${port}`
 let up = false
 for (let i = 0; i < 120 && !up; i++) { try { up = (await fetch(base + '/api/health')).ok } catch { await new Promise((r) => setTimeout(r, 250)) } }
@@ -121,7 +122,9 @@ await p.locator('.gate-scrim').first().click().catch(() => {})
 await p.waitForTimeout(400)
 await goDot(p, await dotOf('Eats'))
 const eats = await p.evaluate(() => [...(document.querySelector('.home-page:not([inert])')?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label')))
-step('BEASTY • Eats: one restaurant per cuisine, open ones named for theirs', eats.some((l) => /^Downtown BBQ/.test(l)) && eats.some((l) => /^Udon — spot available/.test(l)) && !eats.some((l) => /^Midnite Theories|^Jazz Braids|^Cravingz/.test(l)), eats.slice(0, 6).join(' | '))
+/* Udon's open spot went to Empire State Pizza on Glenn's word (2026-10-21, "the
+   open spots on BEASTY • Eats"); Jamaican is the one left open. */
+step('BEASTY • Eats: one restaurant per cuisine, open ones named for theirs', eats.some((l) => /^Downtown BBQ/.test(l)) && eats.some((l) => /^Jamaican food — spot available/.test(l)) && eats.some((l) => /^Empire State/.test(l)) && !eats.some((l) => /^Midnite Theories|^Jazz Braids|^Cravingz/.test(l)), eats.slice(0, 6).join(' | '))
 await goDot(p, await dotOf('Sweets'))
 const sweets = await p.evaluate(() => [...(document.querySelector('.home-page:not([inert])')?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label')))
 step('BEASTY • Sweets carries the dessert shops', sweets.some((l) => /^Meadowlark/.test(l)) && sweets.some((l) => /^Cravingz/.test(l)), sweets.slice(0, 6).join(' | '))
