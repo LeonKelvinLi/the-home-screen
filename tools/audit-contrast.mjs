@@ -11,6 +11,7 @@
 import { chromium } from 'playwright'
 import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
+import { VITE } from './bin.mjs'
 
 const freePort = () =>
   new Promise((r) => {
@@ -22,7 +23,7 @@ const freePort = () =>
   })
 
 const port = await freePort()
-const srv = spawn('npx', ['vite', 'preview', '--strictPort', '--port', String(port)], {
+const srv = spawn(process.execPath, [VITE, 'preview', '--strictPort', '--port', String(port)], {
   stdio: 'ignore',
 })
 const base = `http://localhost:${port}`

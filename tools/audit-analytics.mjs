@@ -21,7 +21,7 @@ const port = await freePort()
 const LOG = `/tmp/audit-intel-${port}.log`
 const SECRET = 'intel-audit-secret-' + port
 const WHSEC = 'whsec_intel_audit_' + port
-const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: ['ignore', openSync(LOG, 'w'), openSync(LOG, 'a')],
   env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', PASS_SECRET: SECRET, RESEND_API_KEY: '', LEAD_EMAIL: '', STRIPE_WEBHOOK_SECRET: WHSEC },
 })

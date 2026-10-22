@@ -13,6 +13,7 @@ import { createServer } from 'node:net'
 import { rmSync, readFileSync, openSync } from 'node:fs'
 import { chromium } from 'playwright'
 import { freshTestDb } from './pgtest.mjs'
+import { TSX } from './bin.mjs'
 
 const TESTDB = await freshTestDb('interval')
 const freePort = () => new Promise((r) => { const s = createServer(); s.listen(0, () => { const { port } = s.address(); s.close(() => r(port)) }) })
@@ -20,13 +21,13 @@ const port = await freePort()
 const LOG = '/tmp/audit-interval.log'
 try { rmSync(LOG, { force: true }) } catch {}
 const out = openSync(LOG, 'a')
-const srv = spawn('npx', ['tsx', 'server/index.ts'], { stdio: ['ignore', out, out], env: {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], { stdio: ['ignore', out, out], env: {
   ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, ALLOW_MOCK_PAYMENTS: '1', NODE_ENV: 'development',
 } })
 const B = `http://localhost:${port}`
 for (let i = 0; i < 80; i++) { try { if ((await fetch(B + '/api/health')).ok) break } catch { await new Promise((r) => setTimeout(r, 250)) } }
 
-const tiers = JSON.parse(execFileSync('npx', ['tsx', '-e', `
+const tiers = JSON.parse(execFileSync(process.execPath, [TSX, '-e', `
   import { TIERS } from './src/data/membership'
   process.stdout.write(JSON.stringify(TIERS.map(t => ({ id: t.id, monthly: t.monthly, yearly: t.yearly ?? null }))))
 `], { encoding: 'utf8' }))

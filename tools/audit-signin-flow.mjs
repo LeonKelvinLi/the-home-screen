@@ -29,7 +29,7 @@ const out = openSync(LOG, 'a')
 const TESTDB = await freshTestDb('flow')
 const fp = () => new Promise((r) => { const s = createServer(); s.listen(0, () => { const { port } = s.address(); s.close(() => r(port)) }) })
 const port = await fp()
-const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: ['ignore', out, out],
   env: {
     ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development',

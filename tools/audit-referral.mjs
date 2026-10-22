@@ -22,7 +22,7 @@ const port=await freePort()
 const DB='/tmp/audit-ref.db', LOG='/tmp/audit-ref.log'
 for (const f of [DB,DB+'-wal',DB+'-shm',LOG]) { try { rmSync(f,{force:true}) } catch {} }
 const out=openSync(LOG,'a')
-const srv=spawn('npx',['tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,
+const srv=spawn(process.execPath,['--import','tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,
   PORT:String(port), DATABASE_URL: TESTDB.url, ALLOW_MOCK_PAYMENTS:'1', NODE_ENV:'development'}})
 const base=`http://localhost:${port}`
 for(let i=0;i<80;i++){try{if((await fetch(base+'/api/health')).ok)break}catch{await new Promise(r=>setTimeout(r,250))}}

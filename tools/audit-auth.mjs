@@ -45,7 +45,7 @@ const port = await freePort()
 const TESTDB = await freshTestDb('auth')
 const LOG = `/tmp/audit-auth-${process.pid}.log`
 const fd = openSync(LOG, 'w')
-const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: ['ignore', fd, fd],
   env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', ALLOW_MOCK_PAYMENTS: '1' },
 })

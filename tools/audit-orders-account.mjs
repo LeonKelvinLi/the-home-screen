@@ -28,6 +28,7 @@ import { join } from 'node:path'
 import QRCode from 'qrcode'
 import { chromium } from 'playwright'
 import { freshTestDb } from './pgtest.mjs'
+import { TSX } from './bin.mjs'
 
 const TESTDB = await freshTestDb('orders_account')
 const freePort = () => new Promise((r) => { const s = createServer(); s.listen(0, () => { const { port } = s.address(); s.close(() => r(port)) }) })
@@ -36,7 +37,7 @@ const LOG = '/tmp/audit-orders-account.log'
 try { rmSync(LOG, { force: true }) } catch {}
 const out = openSync(LOG, 'a')
 const OPERATOR = 'op-orders-' + 'x'.repeat(24)
-const srv = spawn('npx', ['tsx', 'server/index.ts'], { stdio: ['ignore', out, out], env: {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], { stdio: ['ignore', out, out], env: {
   ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, ALLOW_MOCK_PAYMENTS: '1', NODE_ENV: 'development',
   PASS_SECRET: 'audit-orders-secret-that-is-long-enough', OPERATOR_TOKEN: OPERATOR, SIMULATE_KITCHEN: '0',
 } })
@@ -185,7 +186,7 @@ try {
   /* ---- the card itself -------------------------------------------------------- */
   const cardDir = mkdtempSync(join(tmpdir(), 'register-card-'))
   dirs.push(cardDir)
-  execFileSync('npx', ['tsx', '--tsconfig', 'tsconfig.app.json', 'tools/make-register-cards.ts', '--only', A.id, '--out', cardDir], { stdio: 'pipe' })
+  execFileSync(process.execPath, [TSX, '--tsconfig', 'tsconfig.app.json', 'tools/make-register-cards.ts', '--only', A.id, '--out', cardDir], { stdio: 'pipe' })
   const png = join(cardDir, `${A.id}.png`)
   const pdf = join(cardDir, `${A.id}.pdf`)
   check(existsSync(png) && existsSync(pdf) && existsSync(join(cardDir, 'all-cards.pdf')), 'the card tool writes a PNG, a PDF and the combined PDF')

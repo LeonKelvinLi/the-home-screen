@@ -24,7 +24,7 @@ const TESTDB = await freshTestDb('cityfriends')
 const freePort = () => new Promise((r) => { const s = createServer(); s.listen(0, () => { const { port } = s.address(); s.close(() => r(port)) }) })
 const port = await freePort()
 const LOG = `/tmp/audit-city-friends-${port}.log`
-const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: ['ignore', openSync(LOG, 'w'), openSync(LOG, 'a')],
   env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', RESEND_API_KEY: '', LEAD_EMAIL: '' },
 })

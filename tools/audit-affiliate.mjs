@@ -25,7 +25,7 @@ const freePort = () => new Promise((r) => { const s = createServer(); s.listen(0
 const port = await freePort()
 const LOG = `/tmp/audit-affiliate-${port}.log`
 const TOKEN = `op_${randomBytes(16).toString('hex')}`
-const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: ['ignore', openSync(LOG, 'w'), openSync(LOG, 'a')],
   env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', OPERATOR_TOKEN: TOKEN, RESEND_API_KEY: '', LEAD_EMAIL: '' },
 })

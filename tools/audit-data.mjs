@@ -9,7 +9,8 @@
   would fail the suite forever.
 */
 import { spawnSync } from 'node:child_process'
-const r = spawnSync('npx', ['tsx', '--tsconfig', 'tsconfig.app.json', 'tools/audit-data.ts'], { encoding: 'utf8' })
+import { TSX } from './bin.mjs'
+const r = spawnSync(process.execPath, [TSX, '--tsconfig', 'tsconfig.app.json', 'tools/audit-data.ts'], { encoding: 'utf8' })
 process.stdout.write(r.stdout)
 process.stderr.write(r.stderr)
 const m = r.stdout.match(/(\d+) error\(s\), (\d+) warning\(s\)/)

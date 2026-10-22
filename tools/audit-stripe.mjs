@@ -33,7 +33,7 @@ const LOG = '/tmp/audit-stripe.log'
 try { rmSync(LOG, { force: true }) } catch {}
 const out = openSync(LOG, 'a')
 
-const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: ['ignore', out, out],
   env: {
     ...process.env,

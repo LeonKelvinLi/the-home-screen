@@ -22,7 +22,7 @@ const port=await freePort()
 const DB='/tmp/audit-pay.db', LOG='/tmp/audit-pay.log', SECRET='whsec_audit'
 for (const f of [DB,DB+'-wal',DB+'-shm',LOG]) { try { rmSync(f,{force:true}) } catch {} }
 const out=openSync(LOG,'a')
-const srv=spawn('npx',['tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,
+const srv=spawn(process.execPath,['--import','tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,
   PORT:String(port), DATABASE_URL: TESTDB.url, ALLOW_MOCK_PAYMENTS:'1', NODE_ENV:'development',
   STRIPE_SECRET_KEY:'sk_test_audit', STRIPE_WEBHOOK_SECRET:SECRET,
   STRIPE_PAYMENT_LINK_PASS:'https://buy.stripe.com/auditpass',
@@ -123,7 +123,7 @@ const out2=openSync(LOG2,'a')
 const env2={...process.env, PORT:String(port2), DATABASE_URL: TESTDB1.url, NODE_ENV:'development'}
 delete env2.STRIPE_PAYMENT_LINK_PASS; delete env2.STRIPE_PAYMENT_LINK_DIAMOND
 delete env2.STRIPE_SECRET_KEY; delete env2.STRIPE_WEBHOOK_SECRET
-const srv2=spawn('npx',['tsx','server/index.ts'],{stdio:['ignore',out2,out2],env:env2})
+const srv2=spawn(process.execPath,['--import','tsx','server/index.ts'],{stdio:['ignore',out2,out2],env:env2})
 const B2=`http://localhost:${port2}`
 for(let i=0;i<80;i++){try{if((await fetch(B2+'/api/health')).ok)break}catch{await new Promise(r=>setTimeout(r,250))}}
 const post2=async(p,body,cookie)=>{

@@ -36,7 +36,7 @@ for base, _, names in os.walk(SRC):
     for n in names:
         if n.endswith((".ts", ".tsx")):
             p = os.path.join(base, n)
-            files[p] = open(p).read()
+            files[p] = open(p, encoding='utf-8').read()
 
 server = os.path.join(ROOT, "server")
 if os.path.isdir(server):
@@ -44,7 +44,7 @@ if os.path.isdir(server):
         for n in names:
             if n.endswith(".ts"):
                 p = os.path.join(base, n)
-                files[p] = open(p).read()
+                files[p] = open(p, encoding='utf-8').read()
 
 all_src = "\n".join(files.values())
 
@@ -128,7 +128,7 @@ for p, src in files.items():
 # ---- 5. CSS classes with no component ------------------------------------
 css_path = os.path.join(SRC, "styles.css")
 if os.path.exists(css_path):
-    css = open(css_path).read()
+    css = open(css_path, encoding='utf-8').read()
     declared = set(re.findall(r"\.([a-z][a-z0-9-]{2,})(?=[\s,:.{\[])", css))
     used = set()
     for src in files.values():
@@ -177,7 +177,7 @@ if os.path.exists(css_path):
             continue
         for m in re.finditer(r"=\s*(\d{2,3})\b", src):
             ts_nums[m.group(1)].append(rel(p))
-    css_nums = set(re.findall(r":\s*(\d{2,3})px", open(css_path).read()))
+    css_nums = set(re.findall(r":\s*(\d{2,3})px", open(css_path, encoding='utf-8').read()))
     shared = sorted(set(ts_nums) & css_nums, key=int)
     risky = [n for n in shared if int(n) >= 20 and len(set(ts_nums[n])) == 1]
     if risky:

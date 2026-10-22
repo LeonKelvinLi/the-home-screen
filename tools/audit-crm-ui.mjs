@@ -40,7 +40,7 @@ mkdirSync(SHOTS, { recursive: true })
 try { rmSync(LOG, { force: true }) } catch {}
 const out = openSync(LOG, 'a')
 const TOKEN = `op_${randomBytes(20).toString('hex')}`
-const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: ['ignore', out, out],
   env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', ALLOW_MOCK_PAYMENTS: '1', OPERATOR_TOKEN: TOKEN, PASS_SECRET: `ps_${randomBytes(16).toString('hex')}`, RESEND_API_KEY: '', LEAD_EMAIL: '' },
 })

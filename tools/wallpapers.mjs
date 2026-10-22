@@ -16,6 +16,7 @@ import { execFile } from 'node:child_process'
 import { mkdir, readdir, writeFile } from 'node:fs/promises'
 import { promisify } from 'node:util'
 import path from 'node:path'
+import { PYTHON } from './bin.mjs'
 
 const run = promisify(execFile)
 const ROOT = path.resolve(import.meta.dirname, '..')
@@ -159,7 +160,7 @@ async function finishEncode(slug, tmp) {
       the wrong one fails with ModuleNotFoundError halfway through a run, after
       the download and before anything is written.
     */
-    await run('/opt/homebrew/bin/python3', [
+    await run(PYTHON, [
       path.join(ROOT, 'tools/upscale.py'),
       `${tmp}.png`,
       `${tmp}.sr.png`,

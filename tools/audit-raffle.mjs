@@ -19,7 +19,7 @@ const port = await freePort()
 const LOG = '/tmp/audit-raffle.log'
 try { rmSync(LOG, { force: true }) } catch {}
 const out = openSync(LOG, 'a')
-const srv = spawn('npx', ['tsx', 'server/index.ts'], { stdio: ['ignore', out, out], env: {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], { stdio: ['ignore', out, out], env: {
   ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, ALLOW_MOCK_PAYMENTS: '1', NODE_ENV: 'development',
 } })
 const B = `http://localhost:${port}`

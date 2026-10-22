@@ -54,7 +54,7 @@ for (const file of ['src/data/localBrands.ts', 'src/data/roster.ts', 'src/data/b
 const TESTDB = await freshTestDb('instagram')
 const freePort = () => new Promise((r) => { const s = createServer(); s.listen(0, () => { const { port } = s.address(); s.close(() => r(port)) }) })
 const port = await freePort()
-const srv = spawn('npx', ['tsx', 'server/index.ts'], { stdio: 'ignore', env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development' } })
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], { stdio: 'ignore', env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development' } })
 const base = `http://localhost:${port}`
 for (let i = 0; i < 80; i++) { try { if ((await fetch(base + '/api/health')).ok) break } catch { await new Promise((r) => setTimeout(r, 250)) } }
 

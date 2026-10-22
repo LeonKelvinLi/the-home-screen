@@ -78,7 +78,7 @@ const port = await freePort()
   against it tests the thing that ships. Its own scratch database keeps the run
   out of any real data.
 */
-const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   env: {
     ...process.env,
     PORT: String(port),

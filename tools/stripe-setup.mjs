@@ -27,6 +27,7 @@
 */
 import { readFileSync, writeFileSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
+import { TSX } from './bin.mjs'
 
 const KEY = process.env.STRIPE_SECRET_KEY ?? process.env.STRIPE_TEST_KEY
 const WRITE = process.argv.includes('--write')
@@ -59,7 +60,7 @@ const api = async (path, params, method = 'POST') => {
   a price silently stops tracking the file it claims to come from.
 */
 const tiers = JSON.parse(
-  execFileSync('npx', ['tsx', '-e', `
+  execFileSync(process.execPath, [TSX, '-e', `
     import { TIERS } from './src/data/membership'
     process.stdout.write(JSON.stringify(TIERS.map(t => ({
       id: t.id, name: t.name, monthly: t.monthly, yearly: t.yearly ?? null, honours: t.honours,

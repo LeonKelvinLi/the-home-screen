@@ -22,7 +22,7 @@ const free = () => new Promise((r) => { const s = createServer(); s.listen(0, ()
 
 const port = await free()
 const TESTDB = await freshTestDb('signals')
-const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: 'ignore',
   env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', ALLOW_MOCK_PAYMENTS: '1' },
 })

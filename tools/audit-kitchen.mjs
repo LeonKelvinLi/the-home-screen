@@ -44,7 +44,7 @@ const SECRET = 'audit-kitchen-secret-that-is-long-enough'
 const boot = async (logFile, extra) => {
   const port = await freePort()
   const out = openSync(logFile, 'a')
-  const proc = spawn('npx', ['tsx', 'server/index.ts'], { stdio: ['ignore', out, out], env: {
+  const proc = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], { stdio: ['ignore', out, out], env: {
     ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, ALLOW_MOCK_PAYMENTS: '1',
     PASS_SECRET: SECRET, OPERATOR_TOKEN: OPERATOR, ...extra,
   } })

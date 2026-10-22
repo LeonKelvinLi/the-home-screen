@@ -27,6 +27,11 @@ cd "$(dirname "$0")/.."
 LOG=${LOG:-/tmp/audit-all.log}
 DIR=/tmp/audit-all.d
 J=${J:-6}
+# The Python with cv2 and Pillow: $PYTHON, else Homebrew's on a Mac (/usr/bin/python3
+# has neither), else whatever python3 or python is on PATH (Windows). tools/bin.mjs
+# makes the same choice for the node audits.
+PY=${PYTHON:-/opt/homebrew/bin/python3}
+[ -x "$PY" ] || PY=$(command -v python3 || command -v python)
 rm -rf "$DIR"; mkdir -p "$DIR"; : > "$LOG"
 
 echo "Building first — three audits serve dist/ and would test the last build."
@@ -62,8 +67,8 @@ fi
 
 JOBS=(
   "data node .verify/audit-data.mjs"
-  "code /opt/homebrew/bin/python3 tools/audit-code.py"
-  "icons /opt/homebrew/bin/python3 tools/audit-icons.py"
+  "code $PY tools/audit-code.py"
+  "icons $PY tools/audit-icons.py"
   "gate node tools/audit-gate.mjs"
   "otp node tools/audit-otp.mjs"
   # The properties either side of the code itself — a code going stale, a

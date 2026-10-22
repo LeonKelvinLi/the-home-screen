@@ -4,7 +4,8 @@
   A batch that forgets `npx tsx tools/added-on.ts` fails here, before deploy.
 */
 import { execFileSync } from 'node:child_process'
-const out = execFileSync('npx', ['tsx', '-e', `
+import { TSX } from './bin.mjs'
+const out = execFileSync(process.execPath, [TSX, '-e', `
 import { seatedBusinesses } from './server/crm/directory'
 import { ADDED_ON } from './src/data/addedOn'
 const missing = seatedBusinesses().filter((b) => !b.isCreator && !ADDED_ON[b.id]).map((b) => b.id)

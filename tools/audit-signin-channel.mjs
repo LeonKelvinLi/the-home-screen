@@ -76,7 +76,7 @@ for (const world of WORLDS) {
   const out = openSync(LOG, 'a')
   const TESTDB = await freshTestDb(`chan${world.wants}`)
   const port = await freePort()
-  const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+  const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
     stdio: ['ignore', out, out],
     env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', ...world.env },
   })

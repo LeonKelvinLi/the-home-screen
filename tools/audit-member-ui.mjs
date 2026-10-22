@@ -52,7 +52,7 @@ for (const f of ['/tmp/mui.db','/tmp/mui.db-wal','/tmp/mui.db-shm']) { try { rmS
 const LOG='/tmp/audit-mui.log'
 try { rmSync(LOG,{force:true}) } catch {}
 const out=(await import('node:fs')).openSync(LOG,'a')
-const srv=spawn('npx',['tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,PORT:String(port),DATABASE_URL: TESTDB.url,ALLOW_MOCK_PAYMENTS:'1',NODE_ENV:'development'}})
+const srv=spawn(process.execPath,['--import','tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,PORT:String(port),DATABASE_URL: TESTDB.url,ALLOW_MOCK_PAYMENTS:'1',NODE_ENV:'development'}})
 const base=`http://localhost:${port}`
 for(let i=0;i<80;i++){try{if((await fetch(base+'/api/health')).ok)break}catch{await new Promise(r=>setTimeout(r,250))}}
 const b=await chromium.launch()

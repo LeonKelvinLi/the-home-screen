@@ -46,6 +46,14 @@ later runs and page loads start timing out.
 `tools/audit-journey.mjs` is the one that tests the joins rather than a seam:
 one browser session, stranger to lapsed member, 22 steps in order.
 
+**On Windows too.** No audit launches anything through `npx` or Homebrew's
+path any more: a server under test is `node --import tsx server/index.ts`, and
+`vite preview`, one-off `tsx -e` runs and Python come from `tools/bin.mjs`
+(`VITE`, `TSX`, `PYTHON`). A bare `spawn('npx', …)` is ENOENT on Windows, so a
+new audit should copy one of these rather than reach for npx. Without Docker,
+PGlite stands in for the test Postgres:
+`npx -y -p @electric-sql/pglite-socket pglite-server -p 55432 -m 20`.
+
 ## Reading Glenn's thread
 
     python3 tools/thread-dump.py --since 2026-09-01 --his

@@ -20,7 +20,7 @@ for (const f of [DB,DB+'-wal',DB+'-shm',LOG]) { try { rmSync(f,{force:true}) } c
 const out=openSync(LOG,'a')
 /* Links configured, because the screen under test is the one that has to say
    so — with none set it would pass by saying nothing. */
-const srv=spawn('npx',['tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,
+const srv=spawn(process.execPath,['--import','tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,
   PORT:String(port), DATABASE_URL: TESTDB.url, NODE_ENV:'development',
   STRIPE_PAYMENT_LINK_PASS:'https://buy.stripe.com/loginpass',
   STRIPE_PAYMENT_LINK_DIAMOND:'https://buy.stripe.com/logindiamond'}})

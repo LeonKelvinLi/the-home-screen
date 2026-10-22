@@ -53,7 +53,7 @@ const out = openSync(LOG, 'a')
 const TESTDB = await freshTestDb('billing')
 const freePort = () => new Promise((r) => { const s = createServer(); s.listen(0, () => { const { port } = s.address(); s.close(() => r(port)) }) })
 const port = await freePort()
-const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: ['ignore', out, out],
   env: {
     ...process.env,

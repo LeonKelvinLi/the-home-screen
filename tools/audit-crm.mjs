@@ -18,6 +18,7 @@ import { createServer } from 'node:net'
 import { openSync, readFileSync, rmSync } from 'node:fs'
 import { randomBytes } from 'node:crypto'
 import { freshTestDb } from './pgtest.mjs'
+import { TSX } from './bin.mjs'
 
 const TESTDB = await freshTestDb('crm')
 const freePort = () => new Promise((r) => { const s = createServer(); s.listen(0, () => { const { port } = s.address(); s.close(() => r(port)) }) })
@@ -26,7 +27,7 @@ const LOG = `/tmp/audit-crm-${port}.log`
 try { rmSync(LOG, { force: true }) } catch {}
 const out = openSync(LOG, 'a')
 const TOKEN = `op_${randomBytes(20).toString('hex')}`
-const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: ['ignore', out, out],
   /* Member sign-in ON here, so the roles below (team, partner) are still
      proven; it is off by default, and the CRM-only service further down runs
@@ -213,7 +214,7 @@ const badPhone = await call('PATCH', `/api/crm/leads/${lost.id}`, { body: { phon
 check('something that is not a phone number is refused, not stored', badPhone.status === 400)
 {
   const { execFileSync } = await import('node:child_process')
-  execFileSync('npx', ['tsx', '-e', "import { syncSnapshots } from './server/crm/backfill'; syncSnapshots().then(() => process.exit(0), (e) => { console.error(e); process.exit(1) })"], { encoding: 'utf8', env: { ...process.env, DATABASE_URL: TESTDB.url } })
+  execFileSync(process.execPath, [TSX, '-e', "import { syncSnapshots } from './server/crm/backfill'; syncSnapshots().then(() => process.exit(0), (e) => { console.error(e); process.exit(1) })"], { encoding: 'utf8', env: { ...process.env, DATABASE_URL: TESTDB.url } })
   const kept = await call('GET', `/api/crm/leads/${lost.id}`, { j: admin })
   check('the listing refresh that runs at every boot leaves a found number alone', kept.body.lead.channels.phone === '5105550142' && kept.body.lead.found.phone === '5105550142')
 }
@@ -271,7 +272,7 @@ check('a request in the new boxes becomes a lead with its own phone and email', 
 check('in the city its address names, not the one its street is named for', nf?.lead?.city === 'Hayward', nf?.lead?.city)
 check('with the hours and the address at the top of its history', !!nf?.activities?.some((x) => (x.body ?? '').includes('Hours: Fri–Sun 5–10pm. Address: 9 San Pablo Ave, Hayward, CA 94541')))
 check('and every box of the request on the lead', nf?.application?.hours === 'Fri–Sun 5–10pm' && nf?.application?.address === '9 San Pablo Ave, Hayward, CA 94541' && nf?.application?.phone === '(510) 555-0144' && nf?.application?.email === 'tacos@new-form.invalid')
-const cityOf = (await import('node:child_process')).execFileSync('npx', ['tsx', '-e', "import { cityFromAddress } from './server/crm/city'; console.log(JSON.stringify(['1 Test Way, Hayward, CA', '123 San Pablo Ave, Oakland, CA 94612', 'South San Francisco, CA', '2 Audit Ave, San Leandro, California 94577-1234', 'Hayward', '5 Palmetto Ave, Pacifica, CA', 'Somewhere, NV', ''].map(cityFromAddress)))"], { encoding: 'utf8' }).trim().split('\n').pop()
+const cityOf = (await import('node:child_process')).execFileSync(process.execPath, [TSX, '-e', "import { cityFromAddress } from './server/crm/city'; console.log(JSON.stringify(['1 Test Way, Hayward, CA', '123 San Pablo Ave, Oakland, CA 94612', 'South San Francisco, CA', '2 Audit Ave, San Leandro, California 94577-1234', 'Hayward', '5 Palmetto Ave, Pacifica, CA', 'Somewhere, NV', ''].map(cityFromAddress)))"], { encoding: 'utf8' }).trim().split('\n').pop()
 check('an address gives its city, and only a city BEASTY has pages for', cityOf === '["Hayward","Oakland","South San Francisco","San Leandro","Hayward","Pacifica",null,null]', cityOf)
 
 /* ---- roles, enforced on the server ---- */
@@ -493,12 +494,12 @@ check('and nobody signed out can', anonQr.status === 401)
 
 /* ---- open mode: no key, everyone is Glenn, and never in production ---- */
 const { execFileSync } = await import('node:child_process')
-const guard = execFileSync('npx', ['tsx', '-e', "import { crmOpenMode } from './server/crm/open'; console.log(JSON.stringify([crmOpenMode({ CRM_OPEN: '1' }, false), crmOpenMode({ CRM_OPEN: '1' }, true), crmOpenMode({}, false)]))"], { encoding: 'utf8' }).trim().split('\n').pop()
+const guard = execFileSync(process.execPath, [TSX, '-e', "import { crmOpenMode } from './server/crm/open'; console.log(JSON.stringify([crmOpenMode({ CRM_OPEN: '1' }, false), crmOpenMode({ CRM_OPEN: '1' }, true), crmOpenMode({}, false)]))"], { encoding: 'utf8' }).trim().split('\n').pop()
 check('open mode is honoured outside production only', guard === '[true,false,false]', guard)
 const openPort = await freePort()
 const openDb = await freshTestDb('crmopen')
 const openLog = openSync(`/tmp/audit-crm-open-${openPort}.log`, 'a')
-const openSrv = spawn('npx', ['tsx', 'server/index.ts'], {
+const openSrv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: ['ignore', openLog, openLog],
   env: { ...process.env, PORT: String(openPort), DATABASE_URL: openDb.url, NODE_ENV: 'development', CRM_OPEN: '1', OPERATOR_TOKEN: TOKEN, PASS_SECRET: `ps_${randomBytes(16).toString('hex')}`, RESEND_API_KEY: '', LEAD_EMAIL: '' },
 })
@@ -543,7 +544,7 @@ check('and the same code still finishes joining on the site', viaSite.status ===
   const crmLogPath = `/tmp/audit-crm-only-${crmPort}.log`
   try { rmSync(crmLogPath, { force: true }) } catch {}
   const crmLog = openSync(crmLogPath, 'a')
-  const crmSrv = spawn('npx', ['tsx', 'server/index.ts'], {
+  const crmSrv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
     stdio: ['ignore', crmLog, crmLog],
     env: { ...process.env, PORT: String(crmPort), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', CRM_ONLY: '1', PUBLIC_URL: PUBLIC, OPERATOR_TOKEN: TOKEN, PASS_SECRET: `ps_${randomBytes(16).toString('hex')}`, RESEND_API_KEY: '', LEAD_EMAIL: '' },
   })
@@ -582,14 +583,14 @@ check('and the same code still finishes joining on the site', viaSite.status ===
 
   /* Both services deploy from the same push, so two boots can migrate at once. */
   const raceDb = await freshTestDb('crmrace')
-  const raced = (await import('node:child_process')).execFileSync('npx', ['tsx', '-e', "import { migrate, pool } from './server/db/schema'; Promise.all([migrate(), migrate()]).then(() => console.log('both finished'), (e) => console.log('FAILED: ' + e.message)).finally(() => pool.end())"], { env: { ...process.env, DATABASE_URL: raceDb.url }, encoding: 'utf8' }).trim().split('\n').pop()
+  const raced = (await import('node:child_process')).execFileSync(process.execPath, [TSX, '-e', "import { migrate, pool } from './server/db/schema'; Promise.all([migrate(), migrate()]).then(() => console.log('both finished'), (e) => console.log('FAILED: ' + e.message)).finally(() => pool.end())"], { env: { ...process.env, DATABASE_URL: raceDb.url }, encoding: 'utf8' }).trim().split('\n').pop()
   check('two boots at once both finish their migrations', raced === 'both finished', raced)
   try { await raceDb.drop?.() } catch {}
 
   /* The public service, told where the CRM now lives, sends /crm there. */
   const pubPort = await freePort()
   const pubLog = openSync(`/tmp/audit-crm-pub-${pubPort}.log`, 'a')
-  const pubSrv = spawn('npx', ['tsx', 'server/index.ts'], {
+  const pubSrv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
     stdio: ['ignore', pubLog, pubLog],
     env: { ...process.env, PORT: String(pubPort), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', CRM_URL: 'http://crm.example.invalid', OPERATOR_TOKEN: TOKEN, PASS_SECRET: `ps_${randomBytes(16).toString('hex')}`, RESEND_API_KEY: '', LEAD_EMAIL: '' },
   })

@@ -33,7 +33,7 @@ const HOOK = `whsec_${randomBytes(16).toString('hex')}`
 const freePort = () => new Promise((r) => { const s = createServer(); s.listen(0, () => { const { port } = s.address(); s.close(() => r(port)) }) })
 let port = await freePort()
 let LOG = `/tmp/audit-onboarding-${port}.log`
-let srv = spawn('npx', ['tsx', 'server/index.ts'], {
+let srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: ['ignore', openSync(LOG, 'w'), openSync(LOG, 'a')],
   env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', OPERATOR_TOKEN: TOKEN, RESEND_API_KEY: '', LEAD_EMAIL: '', AFFILIATE_PROVIDERS: 'mock', DOCUSEAL_WEBHOOK_SECRET: HOOK },
 })
@@ -349,7 +349,7 @@ srv.kill()
 await new Promise((r) => setTimeout(r, 800))
 port = await freePort()
 LOG = `/tmp/audit-onboarding-off-${port}.log`
-srv = spawn('npx', ['tsx', 'server/index.ts'], {
+srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   stdio: ['ignore', openSync(LOG, 'w'), openSync(LOG, 'a')],
   env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', OPERATOR_TOKEN: TOKEN, RESEND_API_KEY: '', LEAD_EMAIL: '', AFFILIATE_PROVIDERS: '', AFFILIATE_PAYOUTS: '', STRIPE_SECRET_KEY: '', DOCUSEAL_API_KEY: '', DOCUSEAL_WEBHOOK_SECRET: HOOK },
 })

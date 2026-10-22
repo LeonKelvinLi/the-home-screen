@@ -4,9 +4,10 @@
 import { chromium } from 'playwright'
 import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
+import { PYTHON, VITE } from './bin.mjs'
 const freePort=()=>new Promise(r=>{const s=createServer();s.listen(0,()=>{const{port}=s.address();s.close(()=>r(port))})})
 const port=await freePort()
-const srv=spawn('npx',['vite','preview','--strictPort','--port',String(port)],{stdio:'ignore'})
+const srv=spawn(process.execPath,[VITE,'preview','--strictPort','--port',String(port)],{stdio:'ignore'})
 const base=`http://localhost:${port}`
 for(let i=0;i<60;i++){try{if((await fetch(base)).ok)break}catch{await new Promise(r=>setTimeout(r,250))}}
 const b=await chromium.launch()
@@ -91,7 +92,7 @@ print(f'\\n{bad} brand(s) under 4.5:1 over their own film')
 sys.exit(1 if bad else 0)
 `
 try {
-  console.log(execFileSync('/opt/homebrew/bin/python3', ['-c', py, OUT], {encoding:'utf8'}))
+  console.log(execFileSync(PYTHON, ['-c', py, OUT], {encoding:'utf8'}))
 } catch (e) {
   console.log(e.stdout || String(e))
   process.exit(1)

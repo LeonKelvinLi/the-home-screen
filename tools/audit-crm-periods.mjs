@@ -6,6 +6,7 @@
       node tools/audit-crm-periods.mjs
 */
 import { spawnSync } from 'node:child_process'
+import { TSX } from './bin.mjs'
 
-const r = spawnSync('npx', ['tsx', 'tools/audit-crm-periods.ts'], { stdio: 'inherit' })
+const r = spawnSync(process.execPath, [TSX, 'tools/audit-crm-periods.ts'], { stdio: 'inherit' })
 process.exit(r.status ?? 1)
