@@ -17,13 +17,19 @@ matches rather than under-matches on purpose: a false "already listed" is one
 line to check by hand, a false "missing" wastes a research agent.
 
     python3 tools/gap-check.py
+    python3 tools/gap-check.py path/to/sms.db    # a phone backup, via iMazing
+
+A PHONE BACKUP ONLY SEES WHAT THE PHONE STILL HOLDS. Run against a short
+history it reports only that history's gaps; it cannot clear anything older.
 """
+from __future__ import annotations
+
 import os
 import re
-import sqlite3
 import sys
 
-CHAT = 2366
+from messages_db import glenn_chats, open_db
+
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 
 # Link shorteners, social profiles, map pins, and the tools we use ourselves.
@@ -86,23 +92,24 @@ SEED_FILES = ('localBrands.ts', 'brands.ts', 'roster.ts', 'placements.ts')
 norm = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
 
 
-def links() -> list[str]:
-    path = os.path.expanduser('~/Library/Messages/chat.db')
-    db = sqlite3.connect(f'file:{path}?mode=ro', uri=True)
+def links(path: str | None = None) -> list[str]:
+    db = open_db(path)
+    chats = glenn_chats(db)
+    marks = ','.join('?' * len(chats))
     blob = []
     for text, filename in db.execute(
-        """SELECT m.text, a.filename FROM message m
-           JOIN chat_message_join c ON c.message_id = m.ROWID
-           LEFT JOIN message_attachment_join maj ON maj.message_id = m.ROWID
-           LEFT JOIN attachment a ON a.ROWID = maj.attachment_id
-           WHERE c.chat_id = ?""", (CHAT,)):
+        f"""SELECT m.text, a.filename FROM message m
+            JOIN chat_message_join c ON c.message_id = m.ROWID
+            LEFT JOIN message_attachment_join maj ON maj.message_id = m.ROWID
+            LEFT JOIN attachment a ON a.ROWID = maj.attachment_id
+            WHERE c.chat_id IN ({marks})""", chats):
         blob.append((text or '') + ' ' + (filename or ''))
     # A link he sends as a rich preview has no `text` at all; the URL is inside
     # the archived NSAttributedString, which is where most of them live.
     for (body,) in db.execute(
-        """SELECT attributedBody FROM message m
-           JOIN chat_message_join c ON c.message_id = m.ROWID
-           WHERE c.chat_id = ? AND attributedBody IS NOT NULL""", (CHAT,)):
+        f"""SELECT attributedBody FROM message m
+            JOIN chat_message_join c ON c.message_id = m.ROWID
+            WHERE c.chat_id IN ({marks}) AND attributedBody IS NOT NULL""", chats):
         blob.append(body.decode('utf-8', 'ignore'))
     return re.findall(r'https?://[^\s\)\]"\'<>\x00-\x1f]+', ' '.join(blob))
 
@@ -143,7 +150,7 @@ def host_of(url: str) -> str:
 
 def raw_data() -> str:
     return ' '.join(
-        open(os.path.join(ROOT, 'src/data', n)).read()
+        open(os.path.join(ROOT, 'src/data', n), encoding='utf-8').read()
         for n in SEED_FILES
     ).lower()
 
@@ -156,7 +163,7 @@ def haystack() -> str:
     # text as `icon: '...'`, so the folder only ever added the unused ones.
     parts = []
     for name in SEED_FILES:
-        parts.append(open(os.path.join(ROOT, 'src/data', name)).read())
+        parts.append(open(os.path.join(ROOT, 'src/data', name), encoding='utf-8').read())
     return norm(' '.join(parts))
 
 
@@ -196,7 +203,7 @@ def listed(host: str, pool: str, raw: str) -> bool:
 def main() -> int:
     pool, raw = haystack(), raw_data()
     seen, hosts = set(), []
-    for url in links():
+    for url in links(sys.argv[1] if len(sys.argv) > 1 else None):
         h = host_of(url)
         if h in NOT_A_SITE or h.endswith(('.google.com', '.apple.com', '.icloud.com', '.gstatic.com')):
             continue

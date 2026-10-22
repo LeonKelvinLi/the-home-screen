@@ -3,31 +3,33 @@
 Glenn's thread, as text, so a batch of his asks can be re-read in one go.
 
 Reads the Messages database the same way tools/gap-check.py does — read-only,
-straight from ~/Library/Messages/chat.db — and prints one line per message
+from the Mac's ~/Library/Messages/chat.db or the iPhone's sms.db out of an
+iMazing backup (see tools/messages_db.py) — and prints one line per message
 with the date, who sent it and the text. Newer macOS keeps the text of most
 messages in a binary attributedBody rather than the text column; both are
-read.
+read. Attachments print as [file name], so a screenshot-only send still
+shows up as a line.
 
-NEEDS FULL DISK ACCESS. macOS refuses this file to any app without it, and
-the refusal reads as "unable to open database file" or "authorization
-denied", not as a permission prompt. Run it from a terminal that has been
-granted Full Disk Access (System Settings > Privacy & Security > Full Disk
-Access), or grant it to the app you are running it from.
+ON A MAC, NEEDS FULL DISK ACCESS. macOS refuses chat.db to any app without
+it, and the refusal reads as "unable to open database file" or
+"authorization denied", not as a permission prompt. Run it from a terminal
+that has been granted Full Disk Access (System Settings > Privacy & Security
+> Full Disk Access), or grant it to the app you are running it from.
 
     python3 tools/thread-dump.py                       # the whole thread
     python3 tools/thread-dump.py --since 2026-09-01    # from a date
     python3 tools/thread-dump.py --grep "supply|yearly|raffle|qr"
     python3 tools/thread-dump.py --his                 # only Glenn's messages
+    python3 tools/thread-dump.py --db path/to/sms.db   # a phone backup
     python3 tools/thread-dump.py > /tmp/thread.txt     # keep a copy to search
 """
 import argparse
 import datetime
-import os
 import re
-import sqlite3
 import sys
 
-CHAT = 2366  # the same conversation gap-check.py reads
+from messages_db import db_path, glenn_chats, open_db
+
 EPOCH = datetime.datetime(2001, 1, 1)
 
 
@@ -74,35 +76,48 @@ def main():
     ap.add_argument('--since', help='YYYY-MM-DD')
     ap.add_argument('--grep', help='case-insensitive regex on the text')
     ap.add_argument('--his', action='store_true', help="only Glenn's messages")
-    ap.add_argument('--chat', type=int, default=CHAT)
+    ap.add_argument('--chat', type=int, help="a chat ROWID; default: every chat with Glenn's handle")
+    ap.add_argument('--db', help='a chat.db or sms.db; default: see tools/messages_db.py')
     a = ap.parse_args()
 
-    path = os.path.expanduser('~/Library/Messages/chat.db')
+    path = db_path(a.db)
     try:
-        db = sqlite3.connect(f'file:{path}?mode=ro', uri=True)
-        db.execute('select 1 from message limit 1').fetchone()
+        db = open_db(a.db)
     except Exception as e:  # noqa: BLE001
         print(f'Cannot read {path}: {e}', file=sys.stderr)
-        print('This needs Full Disk Access — see the note at the top of this file.', file=sys.stderr)
+        print('On a Mac this needs Full Disk Access — see the note at the top of this file.', file=sys.stderr)
         return 2
+    chats = [a.chat] if a.chat else glenn_chats(db)
+    print(f'-- {path}, chat(s) {chats}', file=sys.stderr)
 
     since = EPOCH
     if a.since:
         since = datetime.datetime.strptime(a.since, '%Y-%m-%d')
     pattern = re.compile(a.grep, re.I) if a.grep else None
 
+    marks = ','.join('?' * len(chats))
+    files = {}
+    for mid, name in db.execute(
+        f"""select j.message_id, a.transfer_name from chat_message_join j
+            join message_attachment_join maj on maj.message_id = j.message_id
+            join attachment a on a.ROWID = maj.attachment_id
+            where j.chat_id in ({marks})""", chats):
+        files.setdefault(mid, []).append(f'[{name}]')
     rows = db.execute(
-        """select m.date, m.is_from_me, m.text, m.attributedBody from message m
-           join chat_message_join j on j.message_id = m.ROWID
-           where j.chat_id = ? order by m.date""",
-        (a.chat,),
+        f"""select m.ROWID, m.date, m.is_from_me, m.text, m.attributedBody from message m
+            join chat_message_join j on j.message_id = m.ROWID
+            where j.chat_id in ({marks}) order by m.date""",
+        chats,
     ).fetchall()
     n = 0
-    for date, from_me, text, body in rows:
-        t = text or decode_attributed(body)
+    for mid, date, from_me, text, body in rows:
+        # U+FFFC is the placeholder a message carries where its attachment sits.
+        t = ' '.join(filter(None, [(text or decode_attributed(body) or '').replace('￼', '').strip(),
+                                   *files.get(mid, [])]))
         if not t:
             continue
-        when = EPOCH + datetime.timedelta(seconds=date / 1e9)
+        # Local time, as the thread reads on the phone: Batch 57 is "his 7:04 pm send".
+        when = datetime.datetime.fromtimestamp(date / 1e9 + 978307200)
         if when < since:
             continue
         if a.his and from_me:

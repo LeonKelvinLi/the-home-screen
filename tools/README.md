@@ -55,6 +55,15 @@ Prints the iMessage conversation as text, the way `gap-check.py` reads it.
 Needs Full Disk Access for the terminal it runs from — without it macOS
 answers "unable to open database file", which is a permission, not a bug.
 
+**On Windows, through iMazing.** Plug the iPhone in and open iMazing's
+Messages view once; it caches a partial backup holding the phone's `sms.db`,
+and both scripts find the newest one there on their own
+(`tools/messages_db.py`). `--db path` (or `MESSAGES_DB`) points them at any
+other copy. Glenn's thread is found by his number, not by the Mac's chat 2366.
+Attachments print as `[IMG_7522.PNG]`; the files themselves are in the same
+backup under `MediaDomain`, `Library/SMS/Attachments/...` in `Manifest.db`.
+A phone holds only what it has synced, so check the first date printed.
+
 ## Checking what is actually live
 
     node tools/live-check.mjs "Send another code" "Sign in or join"
