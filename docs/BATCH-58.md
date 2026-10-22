@@ -32,3 +32,10 @@ BEASTY • Eats has no Thai, izakaya or breakfast spot, so all four take More ea
 - `tools/gap-check.py` against the phone: four business sites sent, none missing.
 
 Run on Windows. Docker Desktop was not running, so the audits used PGlite on the test port (`npx -p @electric-sql/pglite-socket pglite-server -p 55432 -m 20`). Most audits start their server with a bare `spawn('npx', …)`, which is ENOENT on Windows, and `audit-hero-ink` calls Homebrew's python3; those were run through a local preload that rewrites both, rather than edited. `audit-categories` now starts its server as `node --import tsx`, as the batch audits do.
+
+## Live
+
+Production release `d132ffd`, pushed at 8:49 pm on 21 October 2026; beastypages.com served it from 8:54 pm (`tools/live-check.mjs` found all four new pages in the bundle).
+- **`audit-batch58.mjs` passed against beastypages.com:** 32 checks, the same as on the local build, including Empire State on BEASTY • Eats and The Breakfast Club's price list taking no orders.
+- **The full `tools/live-verify.mjs` passed.**
+- Only the site was checked. There is no Render API key on this machine, so the CRM service's deploy was not confirmed from here.
