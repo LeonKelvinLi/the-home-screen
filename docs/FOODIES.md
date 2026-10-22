@@ -196,3 +196,18 @@ Secondary and unavailable links:
 |---|---|---|---|
 | 21 Oct 2026 | @sophiaxbayarea (Sophia) | Funky Elephant, at their San Francisco room before it closed — [C8BJwc2REwu](https://www.instagram.com/reel/C8BJwc2REwu/), sent as "Clip this video plz" | **Yes.** Credited film on Funky Elephant's page |
 | 21 Oct 2026 | @sophiaxbayarea (Sophia) | Narisawa, Minami-Aoyama, Tokyo: the "Bread of the Forest" course — [DPnNRYQjL2s](https://www.instagram.com/reel/DPnNRYQjL2s/), sent as "Foodie" the same minute | No, and not the Bay Area |
+
+### Batch 59 — 19 and 20 October 2026
+
+| Sent | Creator | What the reel shows | On BEASTY? |
+|---|---|---|---|
+| 20 Oct 2026 | @grubwitmike | Stan's Donut Shop, 2628 Homestead Rd, Santa Clara: the glazed, maple and Oreo cake donuts at 6:30 am — [DPSWoFEASXx](https://www.instagram.com/reel/DPSWoFEASXx/), sent as "Clip this video plz" with "Please update icon" | **Yes.** Credited film on Stan's Donut Shop's page |
+| 19 Oct 2026 | @jantrinanicole (Jantrina) | House of Wings California, 2941 Harbor St, Pittsburg: the soft opening, wings, sandwich and loaded fries — [DXlQA7ljkwk](https://www.instagram.com/reel/DXlQA7ljkwk/), sent as "Clip this video plz / House of Wings" | **Yes.** Credited film on House of Wings' page |
+| 20 Oct 2026 | @simply_dorothy_ (Dovy) | U:Dessert Story, 1849 Shattuck Ave, Berkeley: matcha lava cake, yuzu cheesecake, Volcano bingsu — [DciKBxnt2o-](https://www.instagram.com/reel/DciKBxnt2o-/), sent as "Clip this video plz / Foodie" | **Yes.** Credited film on U Dessert Story's page |
+| 20 Oct 2026 | @thealamedapulse (The Alameda Pulse) | Moxie Steak House, 1640 Park St, Alameda: Chef Donna Meadows, the New York strip and Dutchess potatoes — [DdAZBPgIoAt](https://www.instagram.com/reel/DdAZBPgIoAt/), sent as "Clip this video plz / Foodie" | **Yes.** Credited film on Moxie's page |
+| 19 Oct 2026 | @wthellydanyelly (Danielle) | Uncle Jay Burger House, 1990 Grant St, Concord: the Mountain Burger, bulgogi fries and garlic fries — [DerkBxotJGe](https://www.instagram.com/reel/DerkBxotJGe/) | Listed in OTHER_REVIEWS; she has no Foodies page yet |
+| 19 Oct 2026 | @takeoutwithtuck (The Honest Reviewer) | Wing Bros (@wingbroscal), "my favorite wing spot", with the rapper @10piecetone — [DYnTayxSVKT](https://www.instagram.com/reel/DYnTayxSVKT/) | **Yes, the business.** Wing Bros' page plays @justmostie's film; this one is listed as a review on his Foodies page |
+| 20 Oct 2026 | @tasha.malan (Tasha Malan) | That's My Jam (@thatsmyjamsf), San Francisco: brunch, biscuits and jams — [Ddjs4KSRHcV](https://www.instagram.com/reel/Ddjs4KSRHcV/) | Listed in OTHER_REVIEWS |
+| 20 Oct 2026 | @sierra.eats.8 (Sierra) | Smoking Pig BBQ (@smokingpigbbq): brisket, ribs and burnt ends — [DZwJUuPon0k](https://www.instagram.com/reel/DZwJUuPon0k/) | **Yes.** Smoking Pig BBQ went on BEASTY in this batch; credited film on its page |
+| 20 Oct 2026 | @itsslydiia (Lydia Pina Guerrero) | Laughing Monk NOPA, 1785 Fulton St, San Francisco: Chef Reina's Filipino dishes and vegan plates — [Defo2sWSjXA](https://www.instagram.com/reel/Defo2sWSjXA/) | **Yes.** Laughing Monk went on BEASTY in this batch; credited film on its page |
+| 22 Oct 2026 | @aztec.ed | Fresh Fuel Juicery, 26775 Hayward Blvd Unit D, Hayward: an acai bowl and a smoothie made at the counter, then a juice shot outside under their sign, "Late Night Fuel up spot" — [DeF5pXEh2C_](https://www.instagram.com/reel/DeF5pXEh2C_/), sent as "Clip this video plz" with "Foodie" | **Yes.** Credited film on Fresh Fuel Juicery's page |

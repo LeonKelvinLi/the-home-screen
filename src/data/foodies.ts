@@ -114,6 +114,10 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'asideofsweet', place: 'Britex Fabrics', city: 'San Francisco', reel: reel('Dd-TwU4vo9x') },
   /* Sent with "Foodie" on 2026-10-11, after the same creator's Fusion Dumpling film. */
   { by: 'andre___lucas', place: 'Rize Up Bakery', city: 'San Francisco', reel: reel('DeHpXeES1SE') },
+  /* Batch 59, Glenn's "Foodie" sends of 19 and 20 October. Tuck's is a second review: Wing Bros' page plays @justmostie's film. */
+  { by: 'wthellydanyelly', place: 'Uncle Jay Burger House', city: 'Concord', reel: reel('DerkBxotJGe') },
+  { by: 'takeoutwithtuck', place: 'Wing Bros', brand: 'b_wingbros', reel: reel('DYnTayxSVKT'), clip: true },
+  { by: 'tasha.malan', place: 'That’s My Jam', city: 'San Francisco', reel: reel('Ddjs4KSRHcV') },
 ]
 
 /*

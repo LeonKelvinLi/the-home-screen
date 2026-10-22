@@ -915,6 +915,15 @@ export const ROSTER_SEED: LocalSeed[] = [
      while this one sat a mile from it. Seated on both now. */
   seed('u-dessert-story', 'U Dessert Story', 'U Dessert', 'Dessert shop', '#20202A', {
     icon: 'u-dessert-story',
+    /* Batch 59. Glenn, 2026-10-20, 1:15 am: "Clip this video plz / Foodie". Filmed at the Berkeley shop on Shattuck; the one seed holds both cities, so San Francisco plays it too. */
+    clip: {
+      src: '/clips/u-dessert-story.mp4',
+      poster: '/clips/u-dessert-story-poster.webp',
+      href: 'https://www.instagram.com/reel/DciKBxnt2o-/',
+      credit: 'Filmed by @simply_dorothy_',
+      platform: 'Instagram',
+      by: 'simply_dorothy_',
+    },
     logoTemplate: 'monogram', logoInitials: 'U', logoFace: 'grotesk',
     site: 'https://www.udessertstory.com/',
     address: '3489 16th St, San Francisco',
@@ -1359,6 +1368,15 @@ export const ROSTER_SEED: LocalSeed[] = [
      the mark is cut from the share sheet he sent. Wings is goods category 9. */
   seed('house-of-wings', 'House of Wings California', 'House of Wings', 'Chicken wings', '#C8102E', {
     icon: 'house-of-wings',
+    /* Batch 59. Glenn, 2026-10-19, 10:22 pm: "Clip this video plz / House of Wings". Their soft opening at 2941 Harbor St, from 24s, past the expired "20% off" card. */
+    clip: {
+      src: '/clips/house-of-wings.mp4',
+      poster: '/clips/house-of-wings-poster.webp',
+      href: 'https://www.instagram.com/reel/DXlQA7ljkwk/',
+      credit: 'Filmed by @jantrinanicole',
+      platform: 'Instagram',
+      by: 'jantrinanicole',
+    },
     logoTemplate: 'monogram', logoInitials: 'HW', logoFace: 'condensed',
   }),
   /* Same sweep. Sent 2026-08-30 with "Just isolate the words for icon. Great
@@ -2080,6 +2098,15 @@ export const ROSTER_SEED: LocalSeed[] = [
      research/roster/batch16.json. ---- */
   seed('moxie-steak-house', 'Moxie Steak House', 'Moxie', 'Steakhouse', '#1F6F73', {
     icon: 'moxie-steak-house',
+    /* Batch 59. Glenn, 2026-10-20, 9:55 pm: "Clip this video plz / Foodie". Their executive chef, Donna Meadows, on the New York strip. */
+    clip: {
+      src: '/clips/moxie-steak-house.mp4',
+      poster: '/clips/moxie-steak-house-poster.webp',
+      href: 'https://www.instagram.com/reel/DdAZBPgIoAt/',
+      credit: 'Filmed by @thealamedapulse',
+      platform: 'Instagram',
+      by: 'thealamedapulse',
+    },
     logoTemplate: 'wordmark', logoLines: ['MOXIE'], logoFace: 'script',
     site: 'https://www.moxiealameda.com/',
     siteCta: 'See the menu',

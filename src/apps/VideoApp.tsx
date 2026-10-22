@@ -31,6 +31,14 @@ const SPEAKER_OFF = (
   </svg>
 )
 
+/*
+  The window's heading. Glenn, 2026-10-19, 8:16 pm, with a mock-up of this
+  screen headed "Explore hidden gems 💎": "What do you think bro? … Instead of
+  Watch". The button on the home screen and the app's name stay "Watch"; only
+  the heading the reels sit under changes.
+*/
+const HEADING = 'Explore hidden gems 💎'
+
 const SPEAKER_ON = (
   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
        strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -122,7 +130,7 @@ export function VideoApp({ api }: { api: ShellApi }) {
 
   if (!REELS.length) {
     return (
-      <AppChrome title="Watch" onBack={api.closeApp} tint="#0b0b0d">
+      <AppChrome title={HEADING} onBack={api.closeApp} tint="#0b0b0d">
         <div className="plain">
           <p>No clips yet. A business's video shows up here as soon as one is added to them.</p>
         </div>
@@ -131,7 +139,7 @@ export function VideoApp({ api }: { api: ShellApi }) {
   }
 
   return (
-    <AppChrome title="Watch" onBack={api.closeApp} tint="#0b0b0d">
+    <AppChrome title={HEADING} onBack={api.closeApp} tint="#0b0b0d">
       {/*
         The scroller is the pager. Scroll-snap does the paging natively, which
         is smoother than any handler and keeps a flung scroll landing on a clip

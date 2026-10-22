@@ -1615,4 +1615,36 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'martinez-goods-2': 'b_homethaicafe',
   'beasty-goods2-36': 'b_homethaicafe',
 
+  /* Batch 59, Glenn, 19 October 2026 8:56 pm to 20 October 10:31 pm, in the order he sent them.
+     BEASTY • Eats and Sweets already hold each kind these fit (BBQ is Downtown's, Pizza is
+     Kings', Burger is Chef Jeff's, Fried chicken is Nosso's, Ice cream is Cravingz'), so they
+     take More eats 37-44. BEASTY • Services is full, so Hama x Kono takes More services 32.
+     Broc Cellars is in Berkeley, not Oakland as he wrote. Bar/Lounge, Games, Food Trucks and
+     Cafe fill from the type line. San Francisco's yellow sheet is now full (46 and 47).
+     Mitchell's and The New H Lounge were sent for a BEASTY page only, so no city seat. */
+  'oakland-goods2-28': 'b_acrekitchenandbar',
+  'beasty-goods2-37': 'b_acrekitchenandbar',
+  'berkeley-goods2-11': 'b_broccellars',
+  'daly-city-services-12': 'b_hamafilmxkonokaraokeserramonte',
+  'beasty-services2-32': 'b_hamafilmxkonokaraokeserramonte',
+  'antioch-goods-8': 'b_wingbros',
+  'beasty-goods2-38': 'b_wingbros',
+  'beasty-goods2-39': 'b_mitchellsicecream',
+  'san-jose-goods2-20': 'b_smokingpigbbqsanjose',
+  'beasty-goods2-40': 'b_smokingpigbbqsanjose',
+  'san-francisco-goods2-46': 'b_outtasightpizza',
+  'beasty-goods2-41': 'b_outtasightpizza',
+  'san-mateo-services2-0': 'b_gamaride',
+  /* By hand: left to the type line, GAMA Ride (a newer seed) would have taken Games 6 and pushed High Scores Arcade to 7. */
+  'beasty-games-7': 'b_gamaride',
+  'walnut-creek-goods2-14': 'b_hickrypit',
+  'beasty-goods2-42': 'b_hickrypit',
+  'livermore-goods2-3': 'b_lenocturne',
+  'san-francisco-goods2-47': 'b_champagarden',
+  'beasty-goods2-43': 'b_champagarden',
+  'burlingame-goods2-2': 'b_pattysdiner',
+  'beasty-goods2-44': 'b_pattysdiner',
+  'san-francisco-goods-10': 'b_laughingmonknopa',
+  'san-jose-goods2-21': 'b_pinkelementcafe',
+
 }
