@@ -14,3 +14,7 @@ Glenn's 9:16 pm send of 22 October, Pezcow, and his 5:20 am send of 23 October, 
 - `npm run build`, the data audit (0 errors).
 - Seat diff: 3 additions (Food Trucks 8, More eats 47, Hercules More goods 0); nothing moved.
 - `tools/audit-batch62.mjs` (12 checks), `tools/audit-categories.mjs` and `tools/audit-batch60.mjs` pass on a local build.
+
+## Live
+
+Production release `3c805f0`, pushed at about 6:27 am on 23 October 2026, live by 6:35 am (`tools/live-check.mjs` found Powder Keg Pub and Bar/Lounge/Pub). `audit-batch62.mjs` passed against beastypages.com. The same deploy carried PR #8 (the affiliate money terms, merge `52b8643`, and the phone fix `eff5c07`): on beasty-crm.onrender.com the Money terms screens are in the bundle and `/api/crm/affiliate-terms` answers 401 signed out. The CRM screens were checked at iPhone size locally before the push; none was tried signed in on the live CRM.
