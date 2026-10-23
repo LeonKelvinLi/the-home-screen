@@ -54,3 +54,10 @@ In `src/data/foodies.ts`: Uncle Jay Burger House (@wthellydanyelly) and That's M
 - `tools/gap-check.py` against the Mac: 406 sites; the nine of these sent with a link are listed now, and the ten older "missing" ones are listed under their own domains (Un-Stripped, Souva, Katsu Factory, The Moon Nails, The Lions Mane, Penelope's, Precision Auto) or are not businesses (a Jotform, a volleyball camp page, leonbuilds.org).
 
 Not read: anything Glenn sent on 21 October before 5:18 pm or after 6:33 pm. Neither the phone's copy nor the Mac's had it.
+
+## Live
+
+Production release `491fc86`, pushed at 4:56 pm on 22 October 2026; beastypages.com served it from 5:01 pm (`tools/live-check.mjs` found the reels heading, Fresh Fuel Juicery and Champa Garden in the bundle).
+- **`audit-batch59.mjs` passed against beastypages.com:** 131 checks, the same as on the local build.
+- **The full `tools/live-verify.mjs` passed.**
+- Run on the Mac, Postgres in Docker for the local audits. Only the site was checked; the CRM service's deploy was not confirmed from here.
