@@ -40,6 +40,7 @@ import { requireCrm, type CrmDeps } from './crm/auth'
 import { makeProviders, mockControls, providerModes, ProviderOff, type PayoutState, type Providers } from './onboarding-providers'
 import { approvedManualTemplate, docusealLink, manualEvidence, type ManualEvidence } from './onboarding-manual'
 import { onboardingPrefill } from '../shared/onboarding-prefill'
+import { termsForApplication } from './affiliate-terms'
 
 
 /* ------------------------------------------------------------- profile ---- */
@@ -796,13 +797,16 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
         if (d?.provider_ref === submissionUrl.split('/').pop()) return { error: 'This request is already attached. Create a new request to replace it.', status: 409 }
         if (d?.affiliate_signed_at && b.replaceVerified !== true) return { error: 'Confirm that replacing this packet requires new signatures and review.', status: 409 }
         const now = Math.max(Date.now(), (d?.created_at ?? 0) + 1)
+        /* Which Schedule A figures this packet went out with (server/affiliate-terms.ts). */
+        const terms = await termsForApplication(a.id)
+        const snapshot = terms ? { version: terms.version, code: terms.code } : null
         if (d) await db.prepare("UPDATE onboarding_documents SET status = 'superseded', updated_at = ? WHERE id = ?").run(now, d.id)
         await db.prepare(`INSERT INTO onboarding_documents
           (id, application_id, category, template_version, provider, provider_ref, status,
-           affiliate_url, company_url, submission_url, manual_revision, created_at, updated_at)
-          VALUES (?, ?, 'affiliate_agreement', ?, 'manual', ?, 'pending_signature', ?, ?, ?, ?, ?, ?)`)
-          .run(newId('doc'), a.id, template, submissionUrl.split('/').pop(), affiliateUrl, companyUrl, submissionUrl, (d?.manual_revision ?? 0) + 1, now, now)
-        await event(a.id, req.crm!.actor, 'packet_linked', { templateVersion: template, replaced: !!d?.provider_ref })
+           affiliate_url, company_url, submission_url, manual_revision, terms_snapshot, created_at, updated_at)
+          VALUES (?, ?, 'affiliate_agreement', ?, 'manual', ?, 'pending_signature', ?, ?, ?, ?, ?, ?, ?)`)
+          .run(newId('doc'), a.id, template, submissionUrl.split('/').pop(), affiliateUrl, companyUrl, submissionUrl, (d?.manual_revision ?? 0) + 1, snapshot ? JSON.stringify(snapshot) : null, now, now)
+        await event(a.id, req.crm!.actor, 'packet_linked', { templateVersion: template, replaced: !!d?.provider_ref, ...(snapshot ? { termsCode: snapshot.code } : {}) })
         await db.prepare('UPDATE onboarding_applications SET updated_at = ? WHERE id = ?').run(now, a.id)
         return { application: a }
       })()
