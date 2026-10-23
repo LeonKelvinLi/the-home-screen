@@ -25,3 +25,10 @@ The icons are their own marks: Pho Now's chef-girl roundel cut from their Instag
 - `tools/audit-batch60.mjs`: 16 checks on a local build. Each page opens and keeps Home, its images load, Pho Now's film decodes with its credit, each sits on its seat's page, every menu item is there (87 and 53), both icons are served, Pho Now is on More eats and Vinnie's on Bar/Lounge. Bar/Lounge is not among Home's page dots, so the audit reaches it through Vinnie's own place button.
 - `tools/audit-categories.mjs` and `tools/audit-foodies.mjs` pass.
 - `tools/gap-check.py` against the Mac: 473 sites; phonownow.com and the Linktree are listed now, and the ten "missing" are the same older ten as in Batch 59.
+
+## Live
+
+Production release `ebf3b16`, pushed at 8:03 pm on 22 October 2026; beastypages.com served it from 8:08 pm (`tools/live-check.mjs` found "Communication Hill" and "Mt. Diablo St" in the bundle).
+- **`audit-batch60.mjs` passed against beastypages.com:** 16 checks, the same as on the local build.
+- **The full `tools/live-verify.mjs` passed.**
+- Run on the Mac, Postgres in Docker for the local audits. Only the site was checked; the CRM service's deploy was not confirmed from here.
