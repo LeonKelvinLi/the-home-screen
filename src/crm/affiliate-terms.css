@@ -321,9 +321,11 @@
   font-size: 12px;
   overflow-wrap: anywhere;
 }
+/* A note that wraps on a phone, so a soft corner rather than a pill: a pill's
+   round ends cut into the second and third lines. */
 .crm-terms-source.is-open {
-  padding: 2px 9px;
-  border-radius: 999px;
+  padding: 4px 10px;
+  border-radius: 10px;
   background: var(--yellow-soft);
   color: var(--ink);
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--red) 25%, transparent);
