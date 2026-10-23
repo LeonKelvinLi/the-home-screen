@@ -138,9 +138,16 @@ No paid DocuSeal API, no embedding, no API prefill.
 
    Template **6566603**
    ([BEASTY-Affiliate-Packet-with-Schedule-A-DRAFT](https://docuseal.com/templates/6566603/edit)),
-   a clone of 6402995 made on 22 Oct, still carries the **first, 17-field**
-   Schedule A. Leon judged that version too busy, so it must be swapped for
-   this page before anyone uses it. No request has been sent from it.
+   a clone of 6402995 made on 22 Oct, now carries this one-page Schedule A
+   (23 Oct). The first, 17-field version, which Leon judged too busy, was
+   removed with all its fields. The page was imported with **Keep**:
+   **Schedule A Changes** defaults to "None" and is Read-only and
+   Prefillable, not Required; **Schedule A Initials** is an Initials field for
+   the Affiliate, Required. The template was saved and checked after a reload.
+   It is still a draft: no request has been sent from it, it is not
+   `DOCUSEAL_MANUAL_TEMPLATE_ID`, and the original 6402995 is unchanged.
+   Removing a document in DocuSeal's editor opens a browser confirm dialog;
+   click OK in the browser itself.
 4. **One affiliate's own figures.** The CRM writes them as one line for the
    Changes field, e.g. "Commission: 12% (standard 10%); Redeemable from:
    150 points (standard 100 points). Code 1AB2C3D." The sender pastes it when
