@@ -6,6 +6,7 @@ import { dirname, join, sep } from 'node:path'
 import { db, migrate } from './db/schema'
 import { crmOnApplication, mountCrm } from './crm/routes'
 import { mountOnboarding } from './onboarding'
+import { mountAffiliateTerms } from './affiliate-terms'
 import { sendEmail as sendLeadEmail } from './email'
 import { bioOf, mountFriends, petsFor, profileExtras, waitingCount } from './friends'
 import { cleanCity, cleanState, placeLine } from '../src/data/usStates'
@@ -3652,6 +3653,8 @@ mountOnboarding(app, {
   crm: crmDeps,
   prod: PROD,
 })
+/* Schedule A, the agreement's money terms, filled in from the CRM (server/affiliate-terms.ts). */
+mountAffiliateTerms(app, { rateLimiter, crm: crmDeps })
 
 app.all('/api/*', (_req, res) => res.status(404).json({ error: 'Unknown endpoint.' }))
 

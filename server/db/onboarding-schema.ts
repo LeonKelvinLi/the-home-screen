@@ -78,4 +78,38 @@ CREATE TABLE IF NOT EXISTS onboarding_webhook_events (
   received_at  BIGINT NOT NULL,
   PRIMARY KEY (provider, event_key)
 );
+-- Schedule A, the affiliate money terms (server/affiliate-terms.ts). One
+-- working draft of the standard schedule, numbered versions once published,
+-- every change on the record, and per-affiliate changes on their application.
+CREATE TABLE IF NOT EXISTS affiliate_terms_versions (
+  number      INTEGER PRIMARY KEY,
+  terms       JSONB NOT NULL,
+  code        TEXT NOT NULL,
+  note        TEXT NOT NULL DEFAULT '',
+  created_by  TEXT NOT NULL,
+  created_at  BIGINT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS affiliate_terms_draft (
+  id            TEXT PRIMARY KEY,
+  terms         JSONB NOT NULL,
+  acknowledged  JSONB NOT NULL DEFAULT '{}'::jsonb,
+  revision      INTEGER NOT NULL DEFAULT 0,
+  updated_by    TEXT NOT NULL DEFAULT '',
+  updated_at    BIGINT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS affiliate_terms_events (
+  id          BIGSERIAL PRIMARY KEY,
+  scope       TEXT NOT NULL,
+  field       TEXT NOT NULL,
+  old_value   JSONB,
+  new_value   JSONB,
+  channel     TEXT NOT NULL DEFAULT 'tap',
+  actor       TEXT NOT NULL,
+  created_at  BIGINT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS affiliate_terms_events_scope ON affiliate_terms_events (scope, created_at);
+ALTER TABLE onboarding_applications ADD COLUMN IF NOT EXISTS terms_overrides JSONB NOT NULL DEFAULT '{}'::jsonb;
+ALTER TABLE onboarding_applications ADD COLUMN IF NOT EXISTS terms_acknowledged JSONB NOT NULL DEFAULT '{}'::jsonb;
+-- The Schedule A in force when a manual packet was attached: { version, code }.
+ALTER TABLE onboarding_documents ADD COLUMN IF NOT EXISTS terms_snapshot JSONB;
 `

@@ -1,0 +1,564 @@
+/*
+  Affiliate terms (src/crm/affiliate-terms.tsx): Schedule A, one chapter of
+  questions at a time, the review screen, and the per-affiliate panel. Only
+  the .crm colour variables, so dark mode follows crm.css.
+*/
+
+.crm-terms {
+  gap: 18px;
+}
+.crm-terms-status {
+  padding: 0 4px;
+  font-size: 15px;
+  color: var(--ink-2);
+}
+
+/* ------------------------------------------------------------- chapters */
+
+.crm-terms-chapters {
+  display: flex;
+  gap: 8px;
+  min-width: 0;
+  margin: 0 -2px;
+  padding: 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.crm-terms-chapters::-webkit-scrollbar {
+  display: none;
+}
+.crm-terms-chapters button {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 14px 0 6px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.crm-terms-chapters button > span {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--fill);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.crm-terms-chapters em {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--red-soft);
+  color: var(--red);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.crm-terms-chapters button.is-on {
+  background: var(--ink);
+  color: var(--inverse);
+}
+.crm-terms-chapters button.is-on > span {
+  background: var(--yellow);
+  color: #141416;
+}
+
+/* ------------------------------------------------------------ questions */
+
+.crm-terms-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 18px;
+  border-radius: 18px;
+  background: var(--card);
+  scroll-margin: 90px 0;
+}
+.crm-terms-card.is-talk {
+  box-shadow: inset 4px 0 0 var(--yellow);
+  padding-left: 22px;
+}
+.crm-terms-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.crm-terms-card-head h3 {
+  min-width: 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.crm-terms-lane {
+  flex: none;
+  margin-top: 1px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--fill);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: help;
+}
+.crm-terms-card.is-talk .crm-terms-lane {
+  background: var(--yellow-soft);
+  color: var(--ink);
+}
+.crm-terms-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+
+/* A figure with its $ / % / pts printed either side. */
+.crm-terms-num {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 240px;
+  min-width: 0;
+}
+.crm-terms-num > span {
+  flex: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.crm-terms-num input {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.crm-terms-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+.crm-terms-choices button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  max-width: 100%;
+  padding: 0 16px;
+  border: 1.5px solid var(--line-2);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+.crm-terms-choices button:hover {
+  background: var(--hover);
+}
+.crm-terms-choices button.is-on {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--inverse);
+}
+.crm-terms-choices button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+.crm-terms-choices button.is-on:disabled {
+  opacity: 0.8;
+}
+.crm-terms-choices.is-stacked {
+  flex-direction: column;
+}
+.crm-terms-choices.is-stacked button {
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 14px;
+  border-radius: 14px;
+  line-height: 1.35;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.crm-terms-talk {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.crm-terms-talk .crm-btn {
+  align-self: flex-start;
+}
+
+.crm-terms-mic {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.45;
+}
+.crm-terms-mic.is-on {
+  background: var(--red-fill);
+  opacity: 1;
+  animation: crm-terms-pulse 1.2s ease-out infinite;
+}
+@keyframes crm-terms-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 8px rgba(255, 59, 48, 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .crm-terms-mic.is-on {
+    animation: none;
+  }
+}
+
+/* "What does this mean?" */
+.crm-terms-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--blue);
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+.crm-terms-q {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+}
+.crm-terms-explain {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--fill);
+  color: var(--ink-2);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+.crm-terms-example b,
+.crm-terms-legal b {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.crm-terms-legal {
+  padding-left: 10px;
+  border-left: 3px solid var(--line-2);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.crm-terms-legal b {
+  font-family: var(--font);
+}
+
+.crm-terms-preview {
+  color: var(--muted);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.crm-terms-problem {
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.crm-terms-source {
+  min-width: 0;
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.crm-terms-source.is-open {
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--yellow-soft);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--red) 25%, transparent);
+}
+
+.crm-terms-next {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.crm-terms-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------------------------------------------------------------- review */
+
+.crm-terms-flag {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--card);
+  color: var(--ink);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+.crm-terms-flag p b {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.crm-terms-flag.is-hard {
+  background: var(--red-soft);
+}
+.crm-terms-flag.is-hard p b {
+  color: var(--red);
+}
+.crm-terms-flag.is-soft {
+  background: var(--yellow-soft);
+}
+.crm-terms-flag > .crm-btn {
+  align-self: flex-start;
+}
+.crm-terms-flag-fix {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.crm-row.crm-terms-jump {
+  width: 100%;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: var(--font);
+  text-align: left;
+  cursor: pointer;
+}
+.crm-row.crm-terms-jump:hover {
+  background: var(--hover);
+}
+.crm-row.crm-terms-jump > svg {
+  flex: none;
+  color: var(--muted);
+}
+
+/* Schedule A as it prints: numbered sections, label / figure / detail. */
+.crm-terms-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+  padding: 20px 18px;
+  border-radius: 18px;
+  background: var(--card);
+}
+.crm-terms-schedule h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid var(--yellow);
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+.crm-terms-schedule h3 > span {
+  flex: none;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.crm-terms-schedule dl {
+  margin: 4px 0 0;
+}
+.crm-terms-schedule dl > div {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 4px 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.crm-terms-schedule dl > div:last-child {
+  border-bottom: 0;
+}
+.crm-terms-schedule dt {
+  color: var(--muted);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.crm-terms-schedule dd {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  margin: 0;
+}
+.crm-terms-schedule dd b {
+  font-size: 16px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.crm-terms-schedule dd small {
+  color: var(--muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.crm-terms-schedule section > p {
+  margin-top: 10px;
+  color: var(--ink-2);
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* ------------------------------------------------ one affiliate's terms */
+
+.crm-terms-aff {
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+.crm-terms-aff b {
+  font-variant-numeric: tabular-nums;
+}
+.crm-aff-prefill.crm-terms-override,
+.crm-terms-aff ~ .crm-aff-prefill {
+  border-color: var(--line-2);
+  background: var(--card);
+}
+.crm-terms-aff ~ .crm-aff-prefill .crm-aff-prefill-row {
+  border-top-color: var(--line);
+}
+.crm-terms-override > .crm-terms-flag {
+  margin-top: 12px;
+  background: var(--fill);
+}
+.crm-terms-override > .crm-terms-flag.is-hard {
+  background: var(--red-soft);
+}
+.crm-terms-override > .crm-terms-flag.is-soft {
+  background: var(--yellow-soft);
+}
+.crm-terms-override > .crm-terms-actions,
+.crm-terms-override > .crm-error {
+  margin-top: 12px;
+}
+.crm-terms-override-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+.crm-terms-override-row:first-of-type {
+  margin-top: 12px;
+}
+.crm-terms-override-row > div:first-child {
+  min-width: 0;
+}
+.crm-terms-override-row > div:first-child b {
+  display: block;
+  font-size: 14px;
+}
+.crm-terms-override-row > div:first-child span {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+/* ----------------------------------------------------------------- phone */
+
+@media (max-width: 599px) {
+  .crm-terms-card {
+    padding: 16px;
+  }
+  .crm-terms-card.is-talk {
+    padding-left: 20px;
+  }
+  .crm-terms-card-head {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .crm-terms-num {
+    max-width: none;
+  }
+  .crm-terms-next .crm-btn {
+    flex: 1 1 auto;
+  }
+  .crm-terms-schedule {
+    padding: 18px 16px;
+  }
+  .crm-terms-schedule dl > div {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .crm-terms-actions .crm-btn {
+    white-space: normal;
+    text-align: center;
+  }
+}

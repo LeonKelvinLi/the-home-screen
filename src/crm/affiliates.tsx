@@ -19,6 +19,7 @@ import { api } from './api'
 import { Avatar, dateTime, Empty, Failure, Loading, PageTitle, Section, ago, personName, plural, useApi, useCrm } from './ui'
 import { Icon } from './icons'
 import { onboardingPrefill } from '../../shared/onboarding-prefill'
+import { AffiliateTermsPanel } from './affiliate-terms'
 import './affiliate-prefill.css'
 
 type EmailStatus = 'accepted' | 'failed' | 'not_configured'
@@ -143,6 +144,7 @@ const EVENT: Record<string, string> = {
   suspended: 'Paused',
   reinstated: 'Reinstated',
   admin_viewed: 'Opened by the team',
+  terms_changed: 'Money terms changed for them',
 }
 
 function StatusPill({ status }: { status: Status }) {
@@ -326,12 +328,17 @@ export function Affiliates() {
         title="Affiliates"
         sub="People who sign up to earn with BEASTY. Invite them here, see how far each one got, then countersign and approve."
         actions={
-          admin ? (
-            <button type="button" className={`crm-btn${inviting ? '' : ' is-primary'}`} onClick={() => setInviting((v) => !v)} aria-expanded={inviting}>
-              <Icon name={inviting ? 'x' : 'plus'} size={16} stroke={2.4} />
-              {inviting ? 'Close' : 'Invite someone'}
-            </button>
-          ) : undefined
+          <>
+            <a className="crm-btn" href="#/affiliate-terms">
+              Money terms
+            </a>
+            {admin && (
+              <button type="button" className={`crm-btn${inviting ? '' : ' is-primary'}`} onClick={() => setInviting((v) => !v)} aria-expanded={inviting}>
+                <Icon name={inviting ? 'x' : 'plus'} size={16} stroke={2.4} />
+                {inviting ? 'Close' : 'Invite someone'}
+              </button>
+            )}
+          </>
         }
       />
       {inviting && admin && <InviteForm onSent={reload} />}
@@ -701,6 +708,7 @@ export function AffiliateDetail({ id }: { id: string }) {
           </Section>
 
           {d.manualPacket && <ManualPacket d={d} packet={d.manualPacket} reload={reload} />}
+          <AffiliateTermsPanel id={d.id} admin={actor.role === 'admin'} />
 
           <Section title="Their details">
             {rows.length ? (
