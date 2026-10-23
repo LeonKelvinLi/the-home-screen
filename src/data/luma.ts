@@ -371,6 +371,7 @@ export const ICON_LUMA: Record<string, number> = {
   'mr-m-home-services': 0.9384,
   'mrcheeze408': 0.2055,
   'mrs-ramen': 0.684,
+  'my-o-my-berkeley': 0.5618,
   'myo-frozen-yogurt': 0.4539,
   'nail-edit-studio': 0.0201,
   'nana-casas-3': 0.2719,

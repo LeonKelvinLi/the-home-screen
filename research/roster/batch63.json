@@ -1,0 +1,316 @@
+[
+  {
+    "id": "b_myomyberkeley",
+    "name_exact": "My O My Berkeley",
+    "checked_on": "2026-10-23",
+    "sources": [
+      "Instagram @myomyeuclidberkeley (Glenn's screenshot 1023-0750 IMG_7723, and the profile read in a browser 2026-10-23: 'My O My Berkeley', 'Shawarma Done Right.', '100% Halal', '1866 Euclid Ave, Berkeley CA'; 45 posts, ~150 followers; no link in the bio and no Order/Call button; its own reel tile overlay 'MY O MY 1866 EUCLID AVE BERKELEY, CA 94709'; posts almost daily, most recent 22 Oct 2026 'From platters to wraps MY-O-My has it all', 15 Oct 'Poutine hits different')",
+      "Glenn's screenshot 1023-0750 IMG_7724 (a 'Crop' zoom of their Instagram picture: the green MY O MY / SHAWARMA DONE RIGHT / BERKELEY roundel with a shawarma spit, a wrap and the Campanile; the icon is cut from it)",
+      "https://order.online/store/my-o-my-24879974/ (their DoorDash Commerce Platform storefront, 'My-O-My (Euclid Ave)', business 'My-O-My', 1866 Euclid Avenue, Berkeley, CA; read in a browser 2026-10-23 with Pickup selected: Most Ordered, Platters, Apps & Sides, Bowls, Drinks, Wraps, Poutines, Salads, with prices, size and spice options; store phone +1 510-356-4460; 'The store's actual hours of operation' Mon-Fri 11 AM-11:30 PM, Sat-Sun 12 PM-11:30 PM; online ordering 11:00 AM-11:10 PM (Sat-Sun from 12). Nothing of theirs links it.)",
+      "https://myomyshawarma.com/ (GoDaddy domain registered 28 Mar 2023, the month the Euclid shop opened; only a GoDaddy parking '/lander' page; owner not confirmable; nothing taken from it)",
+      "Checked and NOT this shop: https://www.myomyrestaurant.com/ (registered 4 Aug 2026, 'Site by Morello Connolly') and Instagram @my.o.my.shawarma ('My-O-My', 'Canadian inspired Mediterranean food', 'Halal', '2431 Telegraph Ave, Berkeley, CA', 18 posts): both are the separate My-O-My at 2431 Telegraph Ave, Berkeley, CA 94720, (510) 529-4063, Mon-Sun 11 AM-2 AM, Snackpass/DoorDash/Grubhub. Its site lists only the Telegraph address and does not mention Euclid. Nothing taken from either for this page."
+    ],
+    "facts": {
+      "slug": "my-o-my-berkeley",
+      "name": "My O My Berkeley",
+      "label": "My O My",
+      "cuisine": "Halal shawarma",
+      "color": "#ffffff",
+      "icon": "my-o-my-berkeley",
+      "tagline": "Halal chicken and beef shawarma, falafel and Canadian-style poutine on Euclid Avenue in Berkeley: wraps, rice-and-fries bowls and big platters, with your pick of spice level.",
+      "prep": 0,
+      "category": "Shawarma",
+      "dietary": [
+        "Halal"
+      ],
+      "items": [],
+      "sections": [
+        {
+          "name": "Platters",
+          "items": [
+            [
+              "Chicken Platter",
+              "Shaved chicken shawarma with garlic sauce, sumac and green onion, over rice, fries or both, with a side salad",
+              2100
+            ],
+            [
+              "Beef Platter",
+              "Beef shawarma with garlic sauce, sumac and green onion, over rice, fries or both, with a side salad",
+              2520
+            ],
+            [
+              "Mixed Platter",
+              "Chicken and beef shawarma with garlic sauce, sumac and green onion, over rice, fries or both, with a side salad",
+              2340
+            ],
+            [
+              "Falafel Platter",
+              "Crispy falafel with garlic sauce, sumac and green onion, over rice, fries or both, with a side salad",
+              2100
+            ],
+            [
+              "Beef Donair (Gyro) Platter",
+              "Shaved beef gyro with garlic sauce, sumac and green onion, over rice, fries or both, with a side salad",
+              2100
+            ]
+          ]
+        },
+        {
+          "name": "Apps & Sides",
+          "items": [
+            [
+              "Fries",
+              "Halal fries, small, regular or large",
+              600
+            ],
+            [
+              "Turmeric Rice",
+              "",
+              600
+            ],
+            [
+              "Chili Fries",
+              "",
+              660
+            ],
+            [
+              "Chicken",
+              "Chicken shawarma on its own",
+              1440
+            ],
+            [
+              "Beef",
+              "Beef shawarma on its own",
+              1680
+            ],
+            [
+              "Falafel",
+              "",
+              150
+            ],
+            [
+              "Pita Bread",
+              "Fresh pita",
+              180
+            ],
+            [
+              "Tzatziki",
+              "A 2 oz side",
+              120
+            ],
+            [
+              "Hummus (2 oz)",
+              "Homemade, with green onion and black olive",
+              120
+            ],
+            [
+              "Side of Chicken",
+              "A single side of chicken shawarma",
+              499
+            ],
+            [
+              "Side of Beef",
+              "A side of beef shawarma",
+              649
+            ],
+            [
+              "Side of Garlic Sauce",
+              "",
+              120
+            ],
+            [
+              "Side of Hot Sauce",
+              "",
+              120
+            ],
+            [
+              "Side of Tahini",
+              "",
+              120
+            ]
+          ]
+        },
+        {
+          "name": "Bowls",
+          "items": [
+            [
+              "Chicken on the Rocks",
+              "Chicken shawarma with rice and garlic sauce",
+              1200
+            ],
+            [
+              "Chicken on the Stick",
+              "Chicken shawarma with fries and garlic sauce",
+              1200
+            ],
+            [
+              "Beef on the Sticks",
+              "Beef shawarma with fries and garlic sauce",
+              1440
+            ],
+            [
+              "Falafel on the Rocks",
+              "Crispy falafel with rice and garlic sauce",
+              1200
+            ],
+            [
+              "Falafel on the Sticks",
+              "Crispy falafel with fries and garlic sauce",
+              1200
+            ],
+            [
+              "Beef Half Half",
+              "Beef shawarma over half rice, half fries, with garlic sauce",
+              1560
+            ],
+            [
+              "Falafel Half Half",
+              "Homemade falafel with your choice of two sides",
+              1320
+            ],
+            [
+              "Beef on the Rocks",
+              "",
+              1440
+            ],
+            [
+              "Chicken Half Half",
+              "Chicken shawarma with half rice, half fries",
+              1320
+            ]
+          ]
+        },
+        {
+          "name": "Drinks",
+          "items": [
+            [
+              "Water",
+              "",
+              190
+            ],
+            [
+              "Juice",
+              "",
+              455
+            ],
+            [
+              "Soda Can",
+              "",
+              215
+            ],
+            [
+              "Soda Bottle",
+              "",
+              455
+            ]
+          ]
+        },
+        {
+          "name": "Wraps",
+          "items": [
+            [
+              "Chicken Shawarma Wrap",
+              "Marinated chicken shawarma off the spit with garlic sauce, your spice level and toppings",
+              1200
+            ],
+            [
+              "Beef Shawarma Wrap",
+              "",
+              1320
+            ],
+            [
+              "Mixed Wrap",
+              "",
+              1260
+            ],
+            [
+              "Beef Donair (Gyro) Wrap",
+              "",
+              1200
+            ],
+            [
+              "Falafel Wrap",
+              "",
+              1200
+            ]
+          ]
+        },
+        {
+          "name": "Poutines",
+          "items": [
+            [
+              "Original Poutine",
+              "Fries, cheese and gravy, the Canadian way",
+              960
+            ],
+            [
+              "Chicken Poutine",
+              "Fries, cheese and gravy with chicken shawarma",
+              1440
+            ],
+            [
+              "Beef Poutine",
+              "With beef shawarma; cheese curds or mozzarella, beef or vegetarian gravy",
+              1800
+            ]
+          ]
+        },
+        {
+          "name": "Salads",
+          "items": [
+            [
+              "Caesar Salad",
+              "Lettuce, parmesan, pita croutons, garlic dressing",
+              1080
+            ],
+            [
+              "Greek Salad",
+              "Lettuce, tomato, cucumber, red onion, black olives, parsley, feta, Greek dressing",
+              1080
+            ],
+            [
+              "Fatoush Salad",
+              "Lettuce, tomato, onion, cucumber, parsley, croutons, dried mint, sumac, spiced vinaigrette",
+              1080
+            ],
+            [
+              "Garden Salad",
+              "Lettuce, tomato, onion, cucumber, parsley, golden dressing",
+              1080
+            ]
+          ]
+        }
+      ],
+      "address": "1866 Euclid Ave, Berkeley, CA 94709",
+      "phone": "(510) 356-4460",
+      "hours": "Mon–Fri 11am–11:30pm, Sat–Sun 12–11:30pm",
+      "orderUrl": "https://order.online/store/my-o-my-24879974/",
+      "siteCta": "Order online",
+      "needsSite": true,
+      "siteNote": "They have no website of their own yet. Prices are from their online ordering page and are for the small size; bowls, wraps and poutines come bigger for more, and you choose the spice level, from No Hot to Hot Hot Hot. This is the Euclid Avenue shop; the My-O-My at 2431 Telegraph Ave is a separate page of its own."
+    },
+    "placements": [
+      "berkeley-goods2-12",
+      "beasty-goods2-48"
+    ],
+    "glenn": "Glenn, 23 Oct 2026, 7:50 am: screenshots 1023-0750 (IMG_7723 their Instagram @myomyeuclidberkeley, IMG_7724 a \"Crop\" zoom of their Instagram picture) and \"Berkeley • Eats / BEASTY • Eats / Halal / Needs website pilot\". No reel.",
+    "flags": [
+      "MENU: 7 sections, 44 items, from their DoorDash Commerce Platform storefront (order.online/store/my-o-my-24879974, 'My-O-My (Euclid Ave)'), in their section order and names. Their Instagram links nothing and has no Order button, so the storefront is NOT linked from anything of theirs; it is in their name at their address and is their own commission-free ordering page rather than the DoorDash marketplace (the Patty's Diner / Fresh Fuel Juicery precedent). DoorDash, Uber Eats, Postmates and Grubhub marketplace listings were not used.",
+      "PRICES are the base (small) size as the storefront shows them, e.g. Chicken on the Rocks small $12.00, regular +$2.40, large +$6.00; wraps regular, large +$3.60; poutines small, regular, large; toppings +$0.60, extra sauces +$1.20. Said once in siteNote. The prices end in odd cents ($12.00, $13.20, $14.40, $25.20), about 20% above the Telegraph shop's ($11.99, $12.99 ...); that is their storefront's own pricing and is used as published.",
+      "LEFT OUT: the 'Most Ordered' section (repeats); 'Fries Wrap Combo' ($7.20) and 'Salad Wrap Combo' ($6.00), which are add-ons to a wrap rather than dishes. No alcohol, gift cards or merchandise on the menu. Drinks (water, juice, soda) kept.",
+      "DESCRIPTIONS shortened from theirs; '670 cal.' dropped from the platters. Two descriptions are marked on the storefront 'Description generated by DoorDash using AI' (Fries, Beef Poutine) and were rewritten from those items' own options (sizes; cheese curds or mozzarella, beef or vegetarian gravy). Not every item's modal was opened, so other AI-marked descriptions are possible; the ones used are plain ingredient lists. Items with no description on the storefront have \"\". Typos fixed: 'Tumeric Rice' Turmeric Rice, 'like the do back home' (rewritten), 'Beef On The Rocks' cased like its neighbours. 'Fatoush' kept as they spell it. 'Chicken' and 'Beef' in Apps & Sides are the meat alone (small, regular +$6, large +$12 for chicken), distinct from 'Side of Chicken'/'Side of Beef'.",
+      "HOURS: only one source gives them, the storefront's 'store's actual hours of operation' (Mon-Fri 11am-11:30pm, Sat-Sun 12pm-11:30pm); online ordering stops at 11:10pm. Their Instagram gives none, so nothing disagrees. An old East Bay Magazine listing (not used) had different hours. Coordinator may drop `hours` if one ordering-page source is not enough.",
+      "PHONE (510) 356-4460 is the storefront's store phone (storePhoneNumber in its page data); not shown on their Instagram. The Telegraph shop's (510) 529-4063 is a different shop's number and is not used. No email published.",
+      "needsSite: true. No website: the Instagram bio links nothing; myomyshawarma.com is a GoDaddy parking page (registered 28 Mar 2023), ownership not confirmable. Glenn: 'Needs website pilot'. orderUrl is the storefront, siteCta 'Order online', no `site` (the Fresh Fuel pattern). If the coordinator rejects an unlinked storefront, fall back to items: [], a contactOnly sentence, site = their Instagram with siteCta 'See their Instagram'.",
+      "TWO MY-O-MYS IN BERKELEY, NOT A CHAIN ACROSS CITIES. (1) This one, 'My O My Berkeley', 1866 Euclid Ave (Northside), @myomyeuclidberkeley, green roundel logo, 'Shawarma Done Right'. (2) 'My-O-My', 2431 Telegraph Ave (Southside), @my.o.my.shawarma, red MY-O-MY logo, 'Canadian inspired Mediterranean food', its own site myomyrestaurant.com. Press (What Now SF, Feb 2023 and Sep 2025; not used for facts) says My-O-My took over D'Yar at 1866 Euclid in 2023 (owner Javed Ahmadi, also of Chopan Kabob in Concord, Sacramento and San Ramon) and in Sep 2025 was 'preparing to open' at 2431 Telegraph (co-owner Abdul Ahmadi). The Euclid shop is still open with its own new Instagram and its own storefront named 'My-O-My (Euclid Ave)'; the menus are the same concept (half-half bowls, donair, poutine, spice levels), so it is likely the same family, but their exact relationship is not stated anywhere first-party. The Telegraph site tells a two-brothers story (one runs restaurants around Toronto, names not given) and lists only Telegraph. No 'My O My' found in any other city; Chopan Kabob is a different name. Seat only this Euclid shop. NOTE categorySeats' family(): 'My O My Berkeley' and a future 'My-O-My' would be different family keys ('my-o-my-berkeley' vs 'my-o-my'), so if the Telegraph shop is ever added the coordinator should decide whether they count as one family.",
+      "NAME: Instagram name 'My O My Berkeley' (used, as Glenn wrote it); their logo says MY O MY / BERKELEY; their captions and storefront say 'My-O-My'. Label 'My O My' (7 chars). Slug my-o-my-berkeley, id b_myomyberkeley. If the coordinator prefers 'My-O-My', the icon file would need renaming.",
+      "TYPE LINE 'Halal shawarma' (their bio's 'Shawarma Done Right. 100% Halal'). Checked against every EATS_CATEGORIES test and every category page's test in categories.ts: it matches none, so it seats nothing by itself. dietary ['Halal'] is their own word ('100% Halal'); this app certifies nobody.",
+      "BEASTY • EATS KIND (Glenn: 'BEASTY • Eats'): no shawarma, halal or Middle Eastern kind exists. Nearest is Greek food (8; test /greek|gyro/, and they do sell a 'Beef Donair (Gyro)' wrap and platter, a Greek salad and tzatziki), but Greek is taken (computed seats today: Demitri's Taverna, b_demitristaverna), and shawarma is not Greek food. Mediterranean is only a city Goods kind. The only open BEASTY • Eats spot is 15 Jamaican, which does not fit. So: BEASTY More eats, next spot 48 (More eats is filled 0-47). Do not put 'gyro' in the type line to chase the Greek spot.",
+      "BERKELEY • EATS: city pages have Goods; Berkeley's Mediterranean spot (goods 10, berkeley-goods-9) is Mile Limit Berkeley's, so Berkeley's yellow sheet, next spot berkeley-goods2-12 (0-11 are filled).",
+      "Icon: cut from Glenn's zoomed screenshot of their Instagram picture (IMG_7724, disc ~1265 px across, the 'Crop' badge is outside the crop), the whole disc centred on white with a ~4% margin, 512x512 LANCZOS, WebP q90, at public/icons/my-o-my-berkeley.webp; color #ffffff. Slightly soft (an upscaled profile picture). The Telegraph shop's red MY-O-MY mark is a different logo and was not used.",
+      "NO CLIP: Glenn sent no reel; clip_credit and foodies_row are null. Their own reels (and creator films such as @aymibabyeats and @habibimocha on their grid) exist if he later asks for one.",
+      "Coordinator: Berkeley More goods 12 (Mediterranean is Mile Limit's) and BEASTY More eats 48 (no Eats kind fits halal shawarma; Greek is Demitri's, only Jamaican is open). needsSite outline for 'Needs website pilot'. Do not use myomyrestaurant.com or @my.o.my.shawarma: they are the Telegraph Ave My-O-My.",
+      "Coordinator: Berkeley’s Mediterranean spot is Mile Limit’s, so its yellow sheet (More goods 12). No BEASTY • Eats kind fits halal shawarma (Greek is Demitri’s; only Jamaican is open), so More eats 48. Not the Telegraph Ave My-O-My."
+    ]
+  }
+]

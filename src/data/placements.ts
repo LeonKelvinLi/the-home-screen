@@ -1665,4 +1665,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'hercules-goods2-0': 'b_powderkegpub',
   'beasty-goods2-47': 'b_powderkegpub',
 
+  /* Batch 63, Glenn, 23 October 2026, 7:50 am: My O My Berkeley (Euclid Ave), "Berkeley • Eats / BEASTY • Eats".
+     Berkeley's Mediterranean spot is Mile Limit's and no Eats kind fits halal shawarma. */
+  'berkeley-goods2-12': 'b_myomyberkeley',
+  'beasty-goods2-48': 'b_myomyberkeley',
+
 }

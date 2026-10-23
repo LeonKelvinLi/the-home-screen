@@ -30993,4 +30993,284 @@ export const LOCAL_SEED: LocalSeed[] = [
       "siteNote": "No reservations: the whole party must be there to be seated. Prime rib is Tuesdays only and dine-in only; Sunday brunch runs 10am–4pm. Prices are from the menus on their own website.",
       "siteCta": "See their menu"
   },
+  /* BATCH 63, 2026-10-23: Glenn, 7:50 am, My O My Berkeley, "Berkeley • Eats / BEASTY • Eats / Halal / Needs website pilot". Sources: research/roster/batch63.json. */
+  {
+      "slug": "my-o-my-berkeley",
+      "name": "My O My Berkeley",
+      "label": "My O My",
+      "cuisine": "Halal shawarma",
+      "color": "#ffffff",
+      "icon": "my-o-my-berkeley",
+      "tagline": "Halal chicken and beef shawarma, falafel and Canadian-style poutine on Euclid Avenue in Berkeley: wraps, rice-and-fries bowls and big platters, with your pick of spice level.",
+      "prep": 0,
+      "category": "Shawarma",
+      "dietary": [
+          "Halal"
+      ],
+      "items": [],
+      "sections": [
+          {
+              "name": "Platters",
+              "items": [
+                  [
+                      "Chicken Platter",
+                      "Shaved chicken shawarma with garlic sauce, sumac and green onion, over rice, fries or both, with a side salad",
+                      2100
+                  ],
+                  [
+                      "Beef Platter",
+                      "Beef shawarma with garlic sauce, sumac and green onion, over rice, fries or both, with a side salad",
+                      2520
+                  ],
+                  [
+                      "Mixed Platter",
+                      "Chicken and beef shawarma with garlic sauce, sumac and green onion, over rice, fries or both, with a side salad",
+                      2340
+                  ],
+                  [
+                      "Falafel Platter",
+                      "Crispy falafel with garlic sauce, sumac and green onion, over rice, fries or both, with a side salad",
+                      2100
+                  ],
+                  [
+                      "Beef Donair (Gyro) Platter",
+                      "Shaved beef gyro with garlic sauce, sumac and green onion, over rice, fries or both, with a side salad",
+                      2100
+                  ]
+              ]
+          },
+          {
+              "name": "Apps & Sides",
+              "items": [
+                  [
+                      "Fries",
+                      "Halal fries, small, regular or large",
+                      600
+                  ],
+                  [
+                      "Turmeric Rice",
+                      "",
+                      600
+                  ],
+                  [
+                      "Chili Fries",
+                      "",
+                      660
+                  ],
+                  [
+                      "Chicken",
+                      "Chicken shawarma on its own",
+                      1440
+                  ],
+                  [
+                      "Beef",
+                      "Beef shawarma on its own",
+                      1680
+                  ],
+                  [
+                      "Falafel",
+                      "",
+                      150
+                  ],
+                  [
+                      "Pita Bread",
+                      "Fresh pita",
+                      180
+                  ],
+                  [
+                      "Tzatziki",
+                      "A 2 oz side",
+                      120
+                  ],
+                  [
+                      "Hummus (2 oz)",
+                      "Homemade, with green onion and black olive",
+                      120
+                  ],
+                  [
+                      "Side of Chicken",
+                      "A single side of chicken shawarma",
+                      499
+                  ],
+                  [
+                      "Side of Beef",
+                      "A side of beef shawarma",
+                      649
+                  ],
+                  [
+                      "Side of Garlic Sauce",
+                      "",
+                      120
+                  ],
+                  [
+                      "Side of Hot Sauce",
+                      "",
+                      120
+                  ],
+                  [
+                      "Side of Tahini",
+                      "",
+                      120
+                  ]
+              ]
+          },
+          {
+              "name": "Bowls",
+              "items": [
+                  [
+                      "Chicken on the Rocks",
+                      "Chicken shawarma with rice and garlic sauce",
+                      1200
+                  ],
+                  [
+                      "Chicken on the Stick",
+                      "Chicken shawarma with fries and garlic sauce",
+                      1200
+                  ],
+                  [
+                      "Beef on the Sticks",
+                      "Beef shawarma with fries and garlic sauce",
+                      1440
+                  ],
+                  [
+                      "Falafel on the Rocks",
+                      "Crispy falafel with rice and garlic sauce",
+                      1200
+                  ],
+                  [
+                      "Falafel on the Sticks",
+                      "Crispy falafel with fries and garlic sauce",
+                      1200
+                  ],
+                  [
+                      "Beef Half Half",
+                      "Beef shawarma over half rice, half fries, with garlic sauce",
+                      1560
+                  ],
+                  [
+                      "Falafel Half Half",
+                      "Homemade falafel with your choice of two sides",
+                      1320
+                  ],
+                  [
+                      "Beef on the Rocks",
+                      "",
+                      1440
+                  ],
+                  [
+                      "Chicken Half Half",
+                      "Chicken shawarma with half rice, half fries",
+                      1320
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Water",
+                      "",
+                      190
+                  ],
+                  [
+                      "Juice",
+                      "",
+                      455
+                  ],
+                  [
+                      "Soda Can",
+                      "",
+                      215
+                  ],
+                  [
+                      "Soda Bottle",
+                      "",
+                      455
+                  ]
+              ]
+          },
+          {
+              "name": "Wraps",
+              "items": [
+                  [
+                      "Chicken Shawarma Wrap",
+                      "Marinated chicken shawarma off the spit with garlic sauce, your spice level and toppings",
+                      1200
+                  ],
+                  [
+                      "Beef Shawarma Wrap",
+                      "",
+                      1320
+                  ],
+                  [
+                      "Mixed Wrap",
+                      "",
+                      1260
+                  ],
+                  [
+                      "Beef Donair (Gyro) Wrap",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Falafel Wrap",
+                      "",
+                      1200
+                  ]
+              ]
+          },
+          {
+              "name": "Poutines",
+              "items": [
+                  [
+                      "Original Poutine",
+                      "Fries, cheese and gravy, the Canadian way",
+                      960
+                  ],
+                  [
+                      "Chicken Poutine",
+                      "Fries, cheese and gravy with chicken shawarma",
+                      1440
+                  ],
+                  [
+                      "Beef Poutine",
+                      "With beef shawarma; cheese curds or mozzarella, beef or vegetarian gravy",
+                      1800
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "Caesar Salad",
+                      "Lettuce, parmesan, pita croutons, garlic dressing",
+                      1080
+                  ],
+                  [
+                      "Greek Salad",
+                      "Lettuce, tomato, cucumber, red onion, black olives, parsley, feta, Greek dressing",
+                      1080
+                  ],
+                  [
+                      "Fatoush Salad",
+                      "Lettuce, tomato, onion, cucumber, parsley, croutons, dried mint, sumac, spiced vinaigrette",
+                      1080
+                  ],
+                  [
+                      "Garden Salad",
+                      "Lettuce, tomato, onion, cucumber, parsley, golden dressing",
+                      1080
+                  ]
+              ]
+          }
+      ],
+      "address": "1866 Euclid Ave, Berkeley, CA 94709",
+      "phone": "(510) 356-4460",
+      "hours": "Mon–Fri 11am–11:30pm, Sat–Sun 12–11:30pm",
+      "orderUrl": "https://order.online/store/my-o-my-24879974/",
+      "siteCta": "Order online",
+      "needsSite": true,
+      "siteNote": "They have no website of their own yet. Prices are from their online ordering page and are for the small size; bowls, wraps and poutines come bigger for more, and you choose the spice level, from No Hot to Hot Hot Hot. This is the Euclid Avenue shop; the My-O-My at 2431 Telegraph Ave is a separate page of its own."
+  },
 ]
