@@ -19,3 +19,7 @@ Twenty of its twenty-four spots filled on the day, all businesses already on BEA
 - `npm run build`, the data audit (0 errors; Breakfast/Diner 20 of 24).
 - Seat diff: 22 additions, the twenty Breakfast/Diner spots and Sugar Plum's two; nothing moved.
 - `tools/audit-batch61.mjs` (8 checks), `tools/audit-categories.mjs` (41 categories in Search) and `tools/audit-foodies.mjs` pass on a local build.
+
+## Live
+
+Production release `7f6129f`, pushed at 9:06 pm on 22 October 2026; beastypages.com served it from 9:11 pm (`tools/live-check.mjs` found Sugar Plum Coffee Shop and Breakfast/Diner in the bundle). `audit-batch61.mjs` passed against beastypages.com.
