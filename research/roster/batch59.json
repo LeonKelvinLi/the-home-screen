@@ -5413,12 +5413,12 @@
       "slug": "pattys-diner",
       "name": "Patty's Diner",
       "label": "Patty's Diner",
-      "cuisine": "American",
+      "cuisine": "American diner",
       "color": "#090907",
       "icon": "pattys-diner",
       "tagline": "Old-school comfort, new-school smash: smash burgers, hot dogs, loaded fries and Straus milkshakes in a retro diner on Broadway in Burlingame.",
       "prep": 0,
-      "category": "American",
+      "category": "American diner",
       "items": [],
       "sections": [
         {
@@ -5892,7 +5892,8 @@
       "Name: Instagram display name and Toast title are 'Patty’s Diner' (curly apostrophe); seed name uses a straight apostrophe. Toast's URL slug says 'Patty's Retro Diner'.",
       "City confirmed Burlingame (1184 Broadway, 94010) by their own Instagram bio and Toast.",
       "Clip: @itsslydiia's reel is entirely Patty's Diner (milkshakes, burgers, the checkerboard room, the storefront). make-clip picked 24s-48s of 48s; checked frame by frame (food table, diners drinking shakes, booths, neon wall, storefront). Creator, not the business: 'Filmed by @itsslydiia'. The reel caption mentions an Impossible Cheeseburger and Queso Popper Smash; neither is on the current Toast menu, so they are not added.",
-      "Icon: cut from Glenn's zoomed Instagram picture (IMG_7430); the black disc squared out onto its own black (#090907). The left-hand star is clipped in their own picture."
+      "Icon: cut from Glenn's zoomed Instagram picture (IMG_7430); the black disc squared out onto its own black (#090907). The left-hand star is clipped in their own picture.",
+      "Coordinator, 22 Oct 9 pm: type line \"American\" written \"American diner\" so it fills BEASTY • Breakfast/Diner, opened that evening."
     ]
   },
   {

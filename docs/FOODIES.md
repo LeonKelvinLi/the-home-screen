@@ -211,3 +211,9 @@ Secondary and unavailable links:
 | 20 Oct 2026 | @sierra.eats.8 (Sierra) | Smoking Pig BBQ (@smokingpigbbq): brisket, ribs and burnt ends — [DZwJUuPon0k](https://www.instagram.com/reel/DZwJUuPon0k/) | **Yes.** Smoking Pig BBQ went on BEASTY in this batch; credited film on its page |
 | 20 Oct 2026 | @itsslydiia (Lydia Pina Guerrero) | Laughing Monk NOPA, 1785 Fulton St, San Francisco: Chef Reina's Filipino dishes and vegan plates — [Defo2sWSjXA](https://www.instagram.com/reel/Defo2sWSjXA/) | **Yes.** Laughing Monk went on BEASTY in this batch; credited film on its page |
 | 22 Oct 2026 | @aztec.ed | Fresh Fuel Juicery, 26775 Hayward Blvd Unit D, Hayward: an acai bowl and a smoothie made at the counter, then a juice shot outside under their sign, "Late Night Fuel up spot" — [DeF5pXEh2C_](https://www.instagram.com/reel/DeF5pXEh2C_/), sent as "Clip this video plz" with "Foodie" | **Yes.** Credited film on Fresh Fuel Juicery's page |
+
+### Batch 61 — 22 October 2026
+
+| Sent | Creator | What the reel shows | On BEASTY? |
+|---|---|---|---|
+| 22 Oct 2026 | @festusfeasts (Festus Ezeli) | Sugar Plum Coffee Shop, 1815 Colfax St, Concord: the 1950s diner, its owner's story, blueberry waffles and a breakfast burrito — [DJ5rRTqxvmj](https://www.instagram.com/reel/DJ5rRTqxvmj/), sent as "Clip this video plz" (not as "Foodie") | **Yes.** Credited film on Sugar Plum Coffee Shop's page |

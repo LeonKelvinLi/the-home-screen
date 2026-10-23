@@ -362,3 +362,9 @@ Not used: `DelACp9h8Xf` (sent as “Foodie” with One’s Cafe) reviews Big Tac
 | `fresh-fuel-juicery.mp4` | Fresh Fuel Juicery, Hayward | [DeF5pXEh2C_](https://www.instagram.com/reel/DeF5pXEh2C_/) | 2s-26s of 33s | Glenn, 22 Oct 2026: “Clip this video plz” (also sent as “Foodie”); Filmed by @aztec.ed. Their acai bowl and a smoothie being made, the spread on a table inside, and the shop's lit sign. |
 | `kaleia-olivia.mp4` | Kaleia Olivia, dancer | [DeVblLMuNp-](https://www.instagram.com/reel/DeVblLMuNp-/) | 40s-64s of 80s | Glenn, 19 Oct 2026: “Clip this video plz”; Filmed by @shotbyry_510, dancer @ko_rising, turfing on a footbridge. **Cut silent (`-an`) on purpose:** the soundtrack is Mac Dre's 'Feelin Myself' (the caption names it), whose lyrics are not clean. |
 | `pho-now.mp4` | Pho Now, San Jose | [DayFVEbJF9D](https://www.instagram.com/reel/DayFVEbJF9D/) | 0s-21s of 21s | Glenn, 22 Oct 2026: “Clip this video plz”; Posted by @phonowsj, their own reel. The owner at the counter, their menu, a salted lemon soda poured into a Pho Now cup and a bowl of beef pho brought to the table. |
+
+## Batch 61 — 22 October 2026
+
+| File | Business/page | Original reel | Excerpt | Request & credit |
+|---|---|---|---|---|
+| `sugar-plum-coffee-shop.mp4` | Sugar Plum Coffee Shop, Concord | [DJ5rRTqxvmj](https://www.instagram.com/reel/DJ5rRTqxvmj/) | 0s-24s of 136s | Glenn, 22 Oct 2026: “Clip this video plz”; Filmed by @festusfeasts. The 'This Diner Has Been Open Since The 1950's' and 'Sugar Plum Coffee Shop, Concord, CA' titles over the diner's counter and dining room, the owner telling its story, then blueberry waffles, an avocado plate and a breakfast burrito brought to the table. |

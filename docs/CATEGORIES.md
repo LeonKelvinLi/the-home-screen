@@ -124,3 +124,5 @@ list in `tools/audit-categories.mjs` and `tools/live-verify.mjs` to match.
 Games was added on 16 October 2026, opened by Super Savage Games in spot 1. It covers video games, consoles, arcades and game shops, with its own controller glyph and wallpaper, and appears in More pages and Search. Existing businesses that match fill remaining spots automatically.
 
 Health/Beauty was added on 18 October 2026 ("New category Health/Beauty"), opened by Radiant Med Spas in Fremont. It covers med spas, day spas, aesthetics and wellness clinics, with its own heart-and-cross glyph and wallpaper, and appears in More pages and Search. Hair, nails and lashes stay on Salons.
+
+Breakfast/Diner was added on 22 October 2026 ("New category BEASTY • Breakfast/diner. Or just • diner"). It covers diners and breakfast and brunch rooms, by type line, with a sunny-side-up glyph and a wallpaper of eggs and a coffee cup, and appears in More pages and Search. Existing diners and breakfast places fill it automatically.

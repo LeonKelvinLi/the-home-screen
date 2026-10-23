@@ -118,6 +118,11 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'youth', heading: 'Youth', about: "Kids' clubs, classes, camps and play", wall: wall('youth'), test: /\byouth\b|\bkids?'?\b|children|tutor|summer camp|after[- ]?school|preschool/i, not: /kids? menu|kid-friendly|\bdogs?\b|\bpets?\b/i },
   /* "New category Health/Beauty" — Glenn, 2026-10-18, with Radiant Med Spas in Fremont.
      Med spas, aesthetics and wellness clinics. Hair, nails and lashes stay on Salons. */
+  /* "New category BEASTY • Breakfast/diner. Or just • diner" — Glenn, 2026-10-22, 8:56 pm.
+     His first wording, with Diner as the kind. Diners and breakfast and brunch rooms, by
+     their type line; `\bdiner\b` never matches "dinner". A breakfast burrito is a taco
+     shop's item, not a breakfast room. */
+  { kind: 'diner', heading: 'Breakfast/Diner', about: 'Diners, breakfast and brunch', wall: wall('diner'), test: /\bdiners?\b|breakfast|brunch|pancake house|waffle house/i, not: /burrito|bagel shop|donut|coffee cart/i },
   { kind: 'health', heading: 'Health/Beauty', about: 'Med spas, aesthetics and wellness', wall: wall('health'), test: /med ?spa|medical spa|day spa|aesthetic|botox|injectable|wellness|skin ?care|\biv (therapy|drip)|laser/i, not: /salon|barber|nails?\b|lash|tattoo/i },
 ]
 

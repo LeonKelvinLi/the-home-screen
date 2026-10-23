@@ -610,6 +610,21 @@ def m_health(rng):
     return composite(img, over, blur=3)
 
 
+def m_diner(rng):
+    img = gradient('#3a2414', '#1d1a2e')
+    over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(over)
+    # Fried eggs and a coffee cup, scattered: yolk discs inside soft whites.
+    for x, y, s in [(W * .3, H * .28, 1.1), (W * .72, H * .55, .85), (W * .34, H * .80, .7)]:
+        r = 130 * s
+        d.ellipse((x - r * 1.2, y - r, x + r * 1.1, y + r * .9), outline=rgba('#fde68a', .22), width=12)
+        d.ellipse((x - r * .38, y - r * .4, x + r * .38, y + r * .36), fill=rgba('#f59e0b', .3))
+    cx, cy, r = W * .74, H * .2, 110
+    d.rounded_rectangle((cx - r, cy - r * .6, cx + r * .7, cy + r), radius=28, outline=rgba('#fcd34d', .24), width=12)
+    d.arc((cx + r * .45, cy - r * .2, cx + r * 1.25, cy + r * .6), -90, 90, fill=rgba('#fcd34d', .24), width=12)
+    return composite(img, over, blur=3)
+
+
 def m_games(rng):
     img = gradient('#17213e', '#211139')
     over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
@@ -626,6 +641,7 @@ def m_games(rng):
 
 
 MOTIFS = {
+    "diner": m_diner,
     "health": m_health,
     "games": m_games,
     "tattoo": m_tattoo,

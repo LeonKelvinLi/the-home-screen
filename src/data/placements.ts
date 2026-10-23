@@ -1654,4 +1654,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-jose-goods2-22': 'b_phonow',
   'beasty-goods2-45': 'b_phonow',
 
+  /* Batch 61, Glenn, 22 October 2026, 8:52 pm: Sugar Plum Coffee Shop, "Concord • Eats / BEASTY • Eats".
+     No diner category on a city page and no breakfast kind on BEASTY • Eats; BEASTY • Breakfast/Diner fills from its type line. */
+  'concord-goods2-3': 'b_sugarplumcoffeeshop',
+  'beasty-goods2-46': 'b_sugarplumcoffeeshop',
+
 }

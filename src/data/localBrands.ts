@@ -27900,12 +27900,12 @@ export const LOCAL_SEED: LocalSeed[] = [
       "slug": "pattys-diner",
       "name": "Patty's Diner",
       "label": "Patty's Diner",
-      "cuisine": "American",
+      "cuisine": "American diner",
       "color": "#090907",
       "icon": "pattys-diner",
       "tagline": "Old-school comfort, new-school smash: smash burgers, hot dogs, loaded fries and Straus milkshakes in a retro diner on Broadway in Burlingame.",
       "prep": 0,
-      "category": "American",
+      "category": "American diner",
       "items": [],
       "sections": [
           {
@@ -29947,6 +29947,632 @@ export const LOCAL_SEED: LocalSeed[] = [
           "credit": "Filmed by @shotbyry_510",
           "platform": "Instagram",
           "by": "shotbyry_510"
+      }
+  },
+  /* BATCH 61, 2026-10-22: Glenn, 8:52 pm, Sugar Plum Coffee Shop, "Concord • Eats / BEASTY • Eats". Sources: research/roster/batch61.json. */
+  {
+      "slug": "sugar-plum-coffee-shop",
+      "name": "Sugar Plum Coffee Shop",
+      "label": "Sugar Plum",
+      "cuisine": "Breakfast & lunch diner",
+      "color": "#ffffff",
+      "icon": "sugar-plum-coffee-shop",
+      "site": "https://sugarplumcoffeeshop.com/",
+      "tagline": "A downtown Concord diner since 1959 on Colfax Street: omelets, pancakes, hand-grated hash browns and biscuits and gravy for breakfast, grilled burgers and sandwiches for lunch, with bottomless coffee.",
+      "prep": 0,
+      "category": "Breakfast & lunch diner",
+      "items": [],
+      "sections": [
+          {
+              "name": "Breakfast",
+              "items": [
+                  [
+                      "Breakfast Sandwich",
+                      "Two scrambled eggs, bacon or sausage and cheese (no hash browns)",
+                      1495
+                  ],
+                  [
+                      "Center Cut Pork Chop & Country Gravy",
+                      "Add a second pork chop",
+                      1725
+                  ],
+                  [
+                      "Chicken Fried Steak, Gravy, Eggs & Potatoes",
+                      "Everyone's favorite comfort classic",
+                      1695
+                  ],
+                  [
+                      "Corned Beef Hash & Eggs",
+                      "Corned beef, diced potatoes and eggs",
+                      1495
+                  ],
+                  [
+                      "Diced Ham Scramble",
+                      "Three scrambled eggs with diced ham",
+                      1595
+                  ],
+                  [
+                      "Ground Beef Steak",
+                      "1/2 lb Angus beef with onions and two eggs",
+                      1795
+                  ],
+                  [
+                      "Ham or Pastrami and Eggs",
+                      "Two eggs any style with a slice of ham or pastrami",
+                      1595
+                  ],
+                  [
+                      "Home Special",
+                      "Three eggs scrambled with spinach, mushrooms, onions and garlic",
+                      1495
+                  ],
+                  [
+                      "Joe's Special",
+                      "Three eggs scrambled with spinach, mushrooms, onions, ground beef and cheese",
+                      1595
+                  ],
+                  [
+                      "Jose's Breakfast Burrito",
+                      "Scrambled eggs, country potatoes, bacon, cheese, bell peppers and onions in a giant flour tortilla, with sour cream and salsa",
+                      1595
+                  ],
+                  [
+                      "New York Steak & Eggs",
+                      "NY steak with eggs, bread and a side",
+                      1895
+                  ],
+                  [
+                      "Sausage Breakfast",
+                      "Two eggs with Cajun hot link, linguica or local chicken apple sausage",
+                      1595
+                  ],
+                  [
+                      "Sugar Plum Classic Breakfast",
+                      "Two eggs with applewood-smoked bacon, Canadian bacon, patty or link sausage",
+                      1495
+                  ],
+                  [
+                      "2 Egg Breakfast",
+                      "Two eggs cooked your way",
+                      1150
+                  ]
+              ]
+          },
+          {
+              "name": "Burgers",
+              "items": [
+                  [
+                      "Bacon Cheeseburger",
+                      "Bacon and cheese, with a side",
+                      1695
+                  ],
+                  [
+                      "BBQ Cheeseburger",
+                      "Classic burger with BBQ sauce",
+                      1495
+                  ],
+                  [
+                      "California Burger",
+                      "Jack cheese and avocado",
+                      1595
+                  ],
+                  [
+                      "Deluxe Burger",
+                      "With French fries and a garden salad",
+                      1575
+                  ],
+                  [
+                      "Half Pound Burger",
+                      "On a sweet French roll",
+                      1575
+                  ],
+                  [
+                      "Mexi Burger",
+                      "Jack cheese, grilled onions, salsa and avocado",
+                      1695
+                  ],
+                  [
+                      "Mushroom Cheeseburger",
+                      "Swiss cheese and mushrooms",
+                      1495
+                  ],
+                  [
+                      "Classic Burger",
+                      "On a sweet French roll; add American, Swiss, Jack or cheddar",
+                      1295
+                  ],
+                  [
+                      "Turkey Burger",
+                      "Lean turkey patty, with a side",
+                      1395
+                  ]
+              ]
+          },
+          {
+              "name": "From The Griddle",
+              "items": [
+                  [
+                      "Belgian Waffles",
+                      "With whipped cream, spiced apples, blueberries, or bananas and nuts",
+                      995
+                  ],
+                  [
+                      "Buttermilk Pancakes",
+                      "Buttermilk or blueberry",
+                      895
+                  ],
+                  [
+                      "French Toast",
+                      "Two slices with butter and powdered sugar",
+                      895
+                  ],
+                  [
+                      "French Toast Special",
+                      "Two French toast, one egg and two bacon or sausage",
+                      1450
+                  ],
+                  [
+                      "Pancake Special",
+                      "Two buttermilk pancakes, one egg and two bacon or sausage",
+                      1450
+                  ]
+              ]
+          },
+          {
+              "name": "Kid's Menu",
+              "items": [
+                  [
+                      "Lil Chicken Tenders",
+                      "One all-white breast tender with French fries",
+                      695
+                  ],
+                  [
+                      "Classic Breakfast",
+                      "One egg any style, toast and two bacon or sausage",
+                      695
+                  ],
+                  [
+                      "Half Grilled Cheese",
+                      "American, Swiss, Jack or cheddar, with French fries",
+                      695
+                  ],
+                  [
+                      "Kids Drink",
+                      "",
+                      275
+                  ],
+                  [
+                      "Mom's Breakfast",
+                      "Three dollar cakes or one French toast, with two bacon or sausage",
+                      695
+                  ]
+              ]
+          },
+          {
+              "name": "Lunch Plates",
+              "items": [
+                  [
+                      "Pub House Fish & Chips",
+                      "White fish in a light batter",
+                      1595
+                  ],
+                  [
+                      "2 Chicken Breast Tenders",
+                      "All-white breast meat, with French fries",
+                      1350
+                  ],
+                  [
+                      "3 Chicken Breast Tenders",
+                      "With BBQ, ketchup or ranch and a side",
+                      1650
+                  ]
+              ]
+          },
+          {
+              "name": "Sandwiches",
+              "items": [
+                  [
+                      "Classic BLT",
+                      "Bacon, lettuce, tomato and mayo",
+                      1395
+                  ],
+                  [
+                      "Club Sandwich",
+                      "Triple-decker with turkey, bacon, lettuce, tomato and mayo",
+                      1595
+                  ],
+                  [
+                      "Fish Sandwich",
+                      "On a roll with lettuce, tomato, onion, pickle and mayo",
+                      1400
+                  ],
+                  [
+                      "Grilled Chicken Breast Sandwich",
+                      "Lettuce, tomato, onion, pickle and mayo",
+                      1400
+                  ],
+                  [
+                      "Grilled Ham & Cheese",
+                      "American, Swiss, Jack or cheddar",
+                      1295
+                  ],
+                  [
+                      "Ham or Turkey Sandwich",
+                      "Lettuce, tomato, onion, pickle and mayo",
+                      1395
+                  ],
+                  [
+                      "Hot Link Sausage",
+                      "Grilled bell peppers, onions and mayo on a roll",
+                      1475
+                  ],
+                  [
+                      "Hot Pastrami on Rye",
+                      "Lettuce, tomato, onion, pickle and mayo",
+                      1595
+                  ],
+                  [
+                      "Monterey Chicken Sandwich",
+                      "Bacon, Jack cheese, BBQ sauce, lettuce, tomato, onion, pickle and mayo",
+                      1595
+                  ],
+                  [
+                      "Patty Melt",
+                      "1/3 lb burger with Swiss and grilled onions on sourdough or rye",
+                      1495
+                  ],
+                  [
+                      "Philly Cheese Steak",
+                      "Onion, bell peppers, mushrooms and Jack cheese",
+                      1595
+                  ],
+                  [
+                      "Reuben Sandwich",
+                      "Pastrami, sauerkraut, Swiss and Thousand Island on rye",
+                      1495
+                  ],
+                  [
+                      "Tuna Melt",
+                      "American, Swiss, Jack or cheddar",
+                      1495
+                  ],
+                  [
+                      "Tuna or Egg Salad Sandwich",
+                      "Lettuce, tomato, pickle and mayo",
+                      1395
+                  ],
+                  [
+                      "1/2 lb French Dip",
+                      "Thin-sliced beef on a toasted French roll with au jus",
+                      1595
+                  ]
+              ]
+          },
+          {
+              "name": "Sides & Extras",
+              "items": [
+                  [
+                      "(4) Bacon",
+                      "Four bacon strips",
+                      695
+                  ],
+                  [
+                      "(4) Ham",
+                      "Four ham slices",
+                      695
+                  ],
+                  [
+                      "(4) Sausage",
+                      "Four sausages",
+                      695
+                  ],
+                  [
+                      "Avocado",
+                      "",
+                      225
+                  ],
+                  [
+                      "Biscuits & Gravy",
+                      "Gravy over fresh-baked biscuits",
+                      495
+                  ],
+                  [
+                      "Coleslaw",
+                      "",
+                      495
+                  ],
+                  [
+                      "Cottage Cheese",
+                      "",
+                      495
+                  ],
+                  [
+                      "Country Potatoes",
+                      "Diced",
+                      495
+                  ],
+                  [
+                      "Country Style Gravy",
+                      "",
+                      225
+                  ],
+                  [
+                      "Dressing",
+                      "",
+                      100
+                  ],
+                  [
+                      "French Fries",
+                      "",
+                      495
+                  ],
+                  [
+                      "Grilled Onions",
+                      "",
+                      125
+                  ],
+                  [
+                      "Hash Browns",
+                      "Crispy",
+                      495
+                  ],
+                  [
+                      "Homemade Salsa",
+                      "Tomatoes, onions, cilantro, jalapeños and lime",
+                      100
+                  ],
+                  [
+                      "Jalapenos",
+                      "",
+                      125
+                  ],
+                  [
+                      "Linguica",
+                      "Portuguese-style smoked sausage",
+                      750
+                  ],
+                  [
+                      "One Egg",
+                      "Cooked your way",
+                      225
+                  ],
+                  [
+                      "Potato Salad",
+                      "",
+                      495
+                  ],
+                  [
+                      "Seasonal Fresh Fruit",
+                      "",
+                      495
+                  ],
+                  [
+                      "Sour Cream",
+                      "",
+                      100
+                  ],
+                  [
+                      "Toast or English Muffin",
+                      "",
+                      225
+                  ]
+              ]
+          },
+          {
+              "name": "Soups & Salads",
+              "items": [
+                  [
+                      "Chef Salad",
+                      "Ham, turkey, two cheeses and hard-boiled egg",
+                      1695
+                  ],
+                  [
+                      "Clam Chowder",
+                      "",
+                      525
+                  ],
+                  [
+                      "Garden Plus Salad",
+                      "With tuna or egg salad",
+                      1495
+                  ],
+                  [
+                      "Garden Salad",
+                      "Ranch, Italian or Thousand Island",
+                      795
+                  ],
+                  [
+                      "Grilled Chicken Salad",
+                      "Grilled chicken on mixed greens",
+                      1595
+                  ],
+                  [
+                      "Homemade Soup of the Day",
+                      "",
+                      495
+                  ]
+              ]
+          },
+          {
+              "name": "Specialty/Healthy",
+              "items": [
+                  [
+                      "Cream of Wheat",
+                      "Brown sugar, butter, raisins or plain",
+                      695
+                  ],
+                  [
+                      "Famous Biscuits & Gravy",
+                      "Two buttermilk biscuits with country sausage gravy",
+                      995
+                  ],
+                  [
+                      "Grits",
+                      "Plain, cheddar or butter",
+                      695
+                  ],
+                  [
+                      "Oatmeal",
+                      "Brown sugar, butter, raisins or plain",
+                      695
+                  ],
+                  [
+                      "Biscuits & Gravy + 2 Eggs",
+                      "Two buttermilk biscuits with country sausage gravy and two eggs",
+                      1395
+                  ]
+              ]
+          },
+          {
+              "name": "Sweeties",
+              "items": [
+                  [
+                      "Soda Float",
+                      "",
+                      475
+                  ],
+                  [
+                      "Thick Malt",
+                      "",
+                      795
+                  ],
+                  [
+                      "Thick Milkshake",
+                      "",
+                      675
+                  ],
+                  [
+                      "Vanilla & Choc Syrup",
+                      "",
+                      325
+                  ],
+                  [
+                      "Vanilla Ice Cream",
+                      "",
+                      295
+                  ]
+              ]
+          },
+          {
+              "name": "Three Egg Omelets",
+              "items": [
+                  [
+                      "California Omelet",
+                      "Bacon, Jack cheese and avocado",
+                      1575
+                  ],
+                  [
+                      "Cheese Omelet",
+                      "American, Swiss, Jack or cheddar",
+                      1295
+                  ],
+                  [
+                      "Concord Omelet",
+                      "Bacon, Swiss cheese and mushrooms",
+                      1575
+                  ],
+                  [
+                      "Denver Omelet",
+                      "Ham, bell peppers and onions",
+                      1495
+                  ],
+                  [
+                      "Ham and Cheese Omelet",
+                      "American, Swiss, Jack or cheddar",
+                      1495
+                  ],
+                  [
+                      "Meat Lovers Omelet",
+                      "Bacon, ham, sausage and cheese",
+                      1775
+                  ],
+                  [
+                      "Spanish Omelet",
+                      "Cheese and homemade Spanish sauce",
+                      1495
+                  ],
+                  [
+                      "Vegetarian Omelet",
+                      "Cheese, zucchini, tomatoes, mushrooms and onions",
+                      1575
+                  ],
+                  [
+                      "Western Omelet",
+                      "Ham, cheese, tomatoes, bell peppers and onions",
+                      1575
+                  ]
+              ]
+          },
+          {
+              "name": "Beverages",
+              "items": [
+                  [
+                      "Coffee",
+                      "Regular or decaf",
+                      325
+                  ],
+                  [
+                      "Hot Chocolate",
+                      "Whipped cream optional",
+                      325
+                  ],
+                  [
+                      "Hot Tea",
+                      "",
+                      325
+                  ],
+                  [
+                      "Iced Tea",
+                      "Fresh brewed",
+                      325
+                  ],
+                  [
+                      "Lemonade",
+                      "",
+                      325
+                  ],
+                  [
+                      "Chocolate Milk",
+                      "",
+                      325
+                  ],
+                  [
+                      "Juice",
+                      "",
+                      250
+                  ],
+                  [
+                      "Soft Drinks",
+                      "",
+                      325
+                  ],
+                  [
+                      "Milk Large",
+                      "",
+                      350
+                  ],
+                  [
+                      "Milk Small",
+                      "",
+                      250
+                  ]
+              ]
+          }
+      ],
+      "address": "1815 Colfax St, Concord, CA 94520",
+      "phone": "(925) 689-1738",
+      "email": "claudia@sugarplumcoffeeshop.com",
+      "hours": "Mon & Wed–Sat 7am–1:30pm, Sun 7am–1pm, closed Tue",
+      "orderUrl": "https://online.skytab.com/s/sugarplumcoffeeshop",
+      "siteCta": "Order online",
+      "siteNote": "Breakfast and lunch only, closed Tuesdays. Prices are from the menu on their own website, which also takes online orders for takeout and delivery.",
+      "clip": {
+          "src": "/clips/sugar-plum-coffee-shop.mp4",
+          "poster": "/clips/sugar-plum-coffee-shop-poster.webp",
+          "href": "https://www.instagram.com/reel/DJ5rRTqxvmj/",
+          "credit": "Filmed by @festusfeasts",
+          "platform": "Instagram",
+          "by": "festusfeasts"
       }
   },
 ]
