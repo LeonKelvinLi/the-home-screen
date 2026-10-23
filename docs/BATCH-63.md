@@ -15,3 +15,7 @@ BEASTY's More eats had seated all forty-eight (Sugar Plum was 46, Powder Keg Pub
 - `npm run build`, the data audit (0 errors; it had refused spot 48 before the change).
 - Seat diff: 2 additions; nothing moved.
 - `tools/audit-batch63.mjs`, `tools/audit-categories.mjs` and `tools/audit-design.mjs` pass on a local build.
+
+## Live
+
+Production release `902c17b`, pushed at 8:47 am on 23 October 2026, live by 8:52 am. `audit-batch63.mjs` passed against beastypages.com.
