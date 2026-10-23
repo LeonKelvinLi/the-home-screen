@@ -9867,6 +9867,151 @@ textarea {
   z-index: 3;
 }
 
+/*
+  INSTAGRAM'S LAYOUT, 2026-10-22 (Leon: "like instagram"). The actions run down
+  the right-hand side above the caption, the business sits bottom-left behind
+  its own avatar with a pill to its page, the audio line carries a note, and a
+  thin line along the foot shows how far through the film is. Share moves from
+  the top corner into the rail; the speaker badge stays top-right, where
+  Instagram shows its mute state.
+*/
+.reel-rail {
+  position: absolute;
+  right: 10px;
+  bottom: 118px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.reel-rail .reel-share,
+.reel-like {
+  position: relative;
+  top: auto;
+  right: auto;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  color: #fff;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.55));
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.reel-rail .reel-share:active,
+.reel-like:active { transform: scale(0.9); background: none; }
+.reel-like.is-on { color: #ff3040; }
+.reel-like.is-on svg { animation: reel-like-pop 280ms ease; }
+
+@keyframes reel-like-pop {
+  0% { transform: scale(0.7); }
+  60% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+/* The double-tap heart: big, centred, gone in under a second. */
+.reel-burst {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  z-index: 2;
+  color: #fff;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.45));
+  animation: reel-burst 850ms ease both;
+}
+.reel-burst svg { width: 104px; height: 104px; }
+
+@keyframes reel-burst {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.4); }
+  20% { opacity: 1; transform: translate(-50%, -50%) scale(1.12); }
+  35% { transform: translate(-50%, -50%) scale(0.96); }
+  75% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -62%) scale(1); }
+}
+
+/* The caption leaves room for the rail. */
+.reel .reel-meta { right: 72px; bottom: 40px; }
+
+.reel-who {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+.reel-who .reel-name {
+  align-self: center;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.reel-who .reel-name::after { content: none; }
+
+.reel-avatar {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  overflow: hidden;
+  background: #111;
+  cursor: pointer;
+}
+.reel-avatar svg,
+.reel-avatar img { display: block; width: 100%; height: 100%; }
+
+.reel-visit {
+  flex: none;
+  padding: 4px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  background: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reel-note { margin-right: 6px; }
+
+.reel-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+}
+.reel-progress::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform-origin: left;
+  transform: scaleX(var(--reel-progress, 0));
+  background: #fff;
+  transition: transform 250ms linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reel-burst, .reel-like.is-on svg { animation: none; }
+  .reel-progress::after { transition: none; }
+}
+
 /* ---------- the sign-up gate ---------- */
 
 /*

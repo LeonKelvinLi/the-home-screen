@@ -13,6 +13,7 @@ exist because the fault they look for has shipped from this repo at least once.
     node   tools/audit-hero-ink.mjs                            # text over a business's own film
     node   tools/audit-reel-sound.mjs                          # the watch window actually has sound
     node   tools/audit-reel-share.mjs                          # share reaches the tap, and leaves the sound alone
+    node   tools/audit-reels-instagram.mjs                     # reels: Instagram layout, new order each opening, double-tap likes
     node   tools/audit-gate.mjs                                # six doors shut signed out, directory still open
     node   tools/audit-referral.mjs                            # a shared QR link credits the sharer
     node   tools/audit-member-ui.mjs                           # the QR is on the profile, a tier can be taken

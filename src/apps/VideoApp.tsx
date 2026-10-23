@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { REELS } from '../data/clips'
+import type { Reel } from '../data/clips'
+import { BrandLogo } from '../ios/BrandLogo'
 import type { ShellApi } from '../ios/Device'
 
 /**
@@ -47,13 +49,63 @@ const SPEAKER_ON = (
   </svg>
 )
 
-const SHARE_ICON = (
-  <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor"
-       strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M12 15V3M12 3 8 7M12 3l4 4" />
-    <path d="M4 13v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6" />
+const HEART = (filled: boolean) => (
+  <svg viewBox="0 0 24 24" width="28" height="28" fill={filled ? 'currentColor' : 'none'} stroke="currentColor"
+       strokeWidth="2" strokeLinejoin="round" aria-hidden="true">
+    <path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.9 1.3-1.8 2.9-2.9 4.9-2.9 3.5 0 5.7 3.4 4.4 6.8-1.8 4.6-9.3 9.2-9.3 9.2Z" />
   </svg>
 )
+
+const PLANE = (
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor"
+       strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M21.5 3 10.2 14.3M21.5 3l-7 18.3-4.3-7-7-4.3L21.5 3Z" />
+  </svg>
+)
+
+/*
+  A FRESH ORDER EVERY TIME THE WINDOW OPENS. Leon, 2026-10-22: "randomize the
+  video feed scroll". The feed had always opened on the same clip, newest
+  business first, so whoever was added last got every first view and the rest
+  waited further down than most people scroll. Fisher-Yates over a copy, once
+  per opening (a useState initialiser), so the order holds while somebody is
+  scrolling and changes the next time they come in.
+*/
+function shuffled(list: Reel[]): Reel[] {
+  const out = list.slice()
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[out[i], out[j]] = [out[j], out[i]]
+  }
+  return out
+}
+
+/*
+  LIKES ARE THIS PHONE'S OWN. The heart is Instagram's gesture, so it is here,
+  but there is no account behind it yet and no count: a number would have to be
+  made up, and a made-up number on a business's film is a claim about them.
+  What the heart does today is remember, on this device, which films somebody
+  liked. Storage can be missing or refuse (private mode), so every read and
+  write is guarded and the heart still works for the visit.
+*/
+const LIKES_KEY = 'beasty.reelLikes'
+function readLikes(): Set<string> {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(LIKES_KEY) ?? '[]') as string[])
+  } catch {
+    return new Set()
+  }
+}
+function writeLikes(likes: Set<string>) {
+  try {
+    localStorage.setItem(LIKES_KEY, JSON.stringify([...likes]))
+  } catch {
+    /* Not kept past this visit. */
+  }
+}
+
+/* Two taps inside this window are a like; one tap is the sound toggle. */
+const DOUBLE_TAP_MS = 260
 
 export function VideoApp({ api }: { api: ShellApi }) {
   const wrap = useRef<HTMLDivElement>(null)
@@ -71,6 +123,44 @@ export function VideoApp({ api }: { api: ShellApi }) {
   const [sound, setSound] = useState(false)
   /** Which reel just had its link copied, for the toast. Null when none. */
   const [shared, setShared] = useState<string | null>(null)
+  const [reels] = useState(() => shuffled(REELS))
+  const [likes, setLikes] = useState(readLikes)
+  /** The reel whose heart is bursting from a double tap, for the animation. */
+  const [burst, setBurst] = useState<string | null>(null)
+  const tapTimer = useRef<number | null>(null)
+
+  const like = (src: string, on?: boolean) =>
+    setLikes((prev) => {
+      const next = new Set(prev)
+      if (on ?? !next.has(src)) next.add(src)
+      else next.delete(src)
+      writeLikes(next)
+      return next
+    })
+
+  /*
+    ONE TAP IS SOUND, TWO ARE A LIKE, as on Instagram. The single tap waits out
+    the double-tap window before it toggles, so a like does not also flip the
+    sound on the way. A double tap only ever likes (never unlikes), which is
+    the platform's rule too; the heart in the rail is the way to take it back.
+  */
+  const tap = (src: string) => {
+    if (tapTimer.current !== null) {
+      window.clearTimeout(tapTimer.current)
+      tapTimer.current = null
+      like(src, true)
+      setBurst(src)
+      window.setTimeout(() => setBurst((b) => (b === src ? null : b)), 900)
+      return
+    }
+    tapTimer.current = window.setTimeout(() => {
+      tapTimer.current = null
+      setSound((on) => !on)
+    }, DOUBLE_TAP_MS)
+  }
+  useEffect(() => () => {
+    if (tapTimer.current !== null) window.clearTimeout(tapTimer.current)
+  }, [])
 
   useEffect(() => {
     const root = wrap.current
@@ -128,7 +218,7 @@ export function VideoApp({ api }: { api: ShellApi }) {
     }
   }, [sound, live])
 
-  if (!REELS.length) {
+  if (!reels.length) {
     return (
       <AppChrome title={HEADING} onBack={api.closeApp} tint="#0b0b0d">
         <div className="plain">
@@ -146,8 +236,8 @@ export function VideoApp({ api }: { api: ShellApi }) {
         rather than between two.
       */}
       <div className="reels" ref={wrap}>
-        {REELS.map((r, i) => (
-          <section className="reel" key={r.src} aria-label={`${r.name}, video ${i + 1} of ${REELS.length}`}>
+        {reels.map((r, i) => (
+          <section className="reel" key={r.src} aria-label={`${r.name}, video ${i + 1} of ${reels.length}`}>
             <video
               src={r.src}
               poster={r.poster}
@@ -156,16 +246,23 @@ export function VideoApp({ api }: { api: ShellApi }) {
               playsInline
               preload={i === 0 ? 'auto' : 'metadata'}
               autoPlay={i === 0}
+              /* Drives the progress line at the foot, as on Instagram. A CSS
+                 variable on the reel rather than state: four updates a second
+                 on every visible clip would re-render the whole feed. */
+              onTimeUpdate={(e) => {
+                const v = e.currentTarget
+                if (v.duration) v.parentElement?.style.setProperty('--reel-progress', String(v.currentTime / v.duration))
+              }}
             />
             {/*
               THE WHOLE FRAME IS THE BUTTON, which is what a thumb expects here
-              and what every app this one is imitating does. It sits above the
-              scrim and below the caption, so tapping the business's name still
-              opens their page rather than toggling the sound.
+              and what every app this one is imitating does: one tap for sound,
+              two for a like. It sits above the scrim and below the caption and
+              the rail, so their controls still do their own thing.
             */}
             <button
               className="reel-sound"
-              onClick={() => setSound((on) => !on)}
+              onClick={() => tap(r.src)}
               aria-pressed={sound}
               aria-label={sound ? `Mute ${r.name}` : `Play sound for ${r.name}`}
             >
@@ -173,55 +270,80 @@ export function VideoApp({ api }: { api: ShellApi }) {
                 {sound ? SPEAKER_ON : SPEAKER_OFF}
               </span>
             </button>
+            {burst === r.src && (
+              <span className="reel-burst" aria-hidden="true">
+                {HEART(true)}
+              </span>
+            )}
             {/* The scrim is a separate layer so the film is never dimmed toward
                 the page behind it — only toward black, predictably. */}
             <span className="reel-scrim" aria-hidden="true" />
             {/*
-              SHARE SENDS THEM TO THE BUSINESS, not to a video player.
+              THE RAIL, down the right-hand side where Instagram keeps it: like,
+              then share.
 
-              "Is it possible to add a share button to these all the video
-              pages?" — the link is the brand's own `?b=` deep link, which is
-              the one URL this app has that survives being pasted somewhere
-              else. A link to the video window alone would open a scroller at
-              whatever clip happened to be first; a link to the business opens
-              their page with their film playing on it, which is the thing
-              worth sending.
-
-              Same mechanism as the brand page's own share: Web Share gives the
-              real iOS sheet, clipboard is the desktop fallback.
+              SHARE SENDS THEM TO THE BUSINESS, not to a video player. "Is it
+              possible to add a share button to these all the video pages?" —
+              the link is the brand's own `?b=` deep link, which opens their
+              page with their film playing on it, the thing worth sending.
+              Web Share gives the real iOS sheet; clipboard is the fallback.
             */}
-            <button
-              className="reel-share"
-              onClick={async () => {
-                const url = `${location.origin}/?b=${encodeURIComponent(r.brandId)}`
-                try {
-                  if (navigator.share) await navigator.share({ title: r.name, url })
-                  else {
-                    await navigator.clipboard.writeText(url)
-                    setShared(r.src)
-                    window.setTimeout(() => setShared(null), 2000)
+            <div className="reel-rail">
+              <button
+                className={`reel-like${likes.has(r.src) ? ' is-on' : ''}`}
+                onClick={() => like(r.src)}
+                aria-pressed={likes.has(r.src)}
+                aria-label={likes.has(r.src) ? `Unlike ${r.name}` : `Like ${r.name}`}
+              >
+                {HEART(likes.has(r.src))}
+              </button>
+              <button
+                className="reel-share"
+                onClick={async () => {
+                  const url = `${location.origin}/?b=${encodeURIComponent(r.brandId)}`
+                  try {
+                    if (navigator.share) await navigator.share({ title: r.name, url })
+                    else {
+                      await navigator.clipboard.writeText(url)
+                      setShared(r.src)
+                      window.setTimeout(() => setShared(null), 2000)
+                    }
+                  } catch {
+                    /* Sheet dismissed. Not an error worth a message. */
                   }
-                } catch {
-                  /* Sheet dismissed. Not an error worth a message. */
-                }
-              }}
-              aria-label={`Share ${r.name}`}
-            >
-              {SHARE_ICON}
-            </button>
+                }}
+                aria-label={`Share ${r.name}`}
+              >
+                {PLANE}
+              </button>
+            </div>
             {shared === r.src && (
               <span className="reel-share-toast" role="status">
                 Link copied
               </span>
             )}
             <div className="reel-meta">
-              <button className="reel-name" onClick={() => api.openApp(r.brandId)}>
-                {r.name}
-              </button>
+              {/* Avatar, name, and a pill to their page: Instagram's
+                  profile-and-Follow row. There is nothing to follow yet, so
+                  the pill says what it does. */}
+              <div className="reel-who">
+                {r.logo && (
+                  <button className="reel-avatar" onClick={() => api.openApp(r.brandId)} aria-hidden="true" tabIndex={-1}>
+                    <BrandLogo logo={r.logo} size={34} masked={false} />
+                  </button>
+                )}
+                <button className="reel-name" onClick={() => api.openApp(r.brandId)}>
+                  {r.name}
+                </button>
+                <button className="reel-visit" onClick={() => api.openApp(r.brandId)} tabIndex={-1} aria-hidden="true">
+                  Visit
+                </button>
+              </div>
               <p className="reel-line">{r.line}</p>
               {/* A reviewer's credit opens their profile — the same protocol
-                  as on the business's page. */}
+                  as on the business's page. The note is Instagram's audio line. */}
               <p className="reel-credit">
+                <span className="reel-note" aria-hidden="true">♪</span>
                 {r.by ? (
                   <a href={`https://www.instagram.com/${r.by}/`} target="_blank" rel="noopener noreferrer">
                     {r.credit}
@@ -231,7 +353,8 @@ export function VideoApp({ api }: { api: ShellApi }) {
                 )}
               </p>
             </div>
-            {i === live && REELS.length > 1 && i === 0 && (
+            <span className="reel-progress" aria-hidden="true" />
+            {i === live && reels.length > 1 && i === 0 && (
               <span className="reel-hint" aria-hidden="true">
                 Scroll for more
               </span>

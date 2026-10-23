@@ -1,5 +1,5 @@
 /**
- * The reels the video window plays, newest first.
+ * The reels the video window plays. VideoApp shuffles them on every opening.
  *
  * Read from the BRANDS themselves rather than kept as a second list: a clip is
  * already a property of a business, and a separate list would be a second thing
@@ -10,6 +10,7 @@
  * business's own page instead, which is what that card is for.
  */
 import { BRANDS } from './brands'
+import type { Logo } from './brands'
 import { FOODIE_PAGES, OTHER_REVIEWS } from './foodies'
 
 export interface Reel {
@@ -24,6 +25,8 @@ export interface Reel {
   by?: string
   /** The original post, where there is one. */
   href?: string
+  /** The mark of whatever the name opens, for the avatar beside it. */
+  logo?: Logo
 }
 
 /* A business with several locations has one film on each page; it plays here once. */
@@ -37,6 +40,7 @@ const BUSINESS_REELS: Reel[] = BRANDS.filter((b) => b.clip?.src && !seen.has(b.c
   credit: b.clip!.credit,
   by: b.clip!.by,
   href: b.clip!.href,
+  logo: b.logo,
 }))
 
 /*
@@ -65,6 +69,7 @@ const REVIEW_REELS: Reel[] = OTHER_REVIEWS.flatMap((r) => {
     credit: `Filmed by ${who}`,
     by: r.by,
     href: r.reel,
+    logo: BRANDS.find((b) => b.id === opens)?.logo,
   }]
 })
 
