@@ -113,7 +113,9 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
      with a kitchen on Eats; a mobile bar is an Events business, not a Bar/Lounge.
      Youth leaves out dog daycare and kids' menus. */
   { kind: 'juice', heading: 'Juice', about: 'Juice bars, smoothies and açaí bowls', wall: wall('juice'), test: /\bjuices?\b|smoothie|a[cç]a[ií]\b|cold[- ]pressed/i, not: /juicy/i },
-  { kind: 'bars', heading: 'Bar/Lounge', about: 'Bars, lounges and taprooms', wall: wall('bars'), test: /\blounge\b|cocktail bar|sports bar|wine bar|\bbar ?& ?(grill|kitchen|restaurant)|brewpub|\bpub\b|tavern|speakeasy|hookah|nightclub|full bar|taproom|beer garden/i, not: /juice|smoothie|oyster|salad|mobile|nail|lash|brow|tea lounge|cigar/i },
+  /* Renamed Bar/Lounge/Pub on 2026-10-23, as Glenn wrote it twice with Powder Keg Pub. The kind
+     stays 'bars', so every seat id and the wallpaper carry on; the test already took pubs. */
+  { kind: 'bars', heading: 'Bar/Lounge/Pub', about: 'Bars, lounges, pubs and taprooms', wall: wall('bars'), test: /\blounge\b|cocktail bar|sports bar|wine bar|\bbar ?& ?(grill|kitchen|restaurant)|brewpub|\bpub\b|tavern|speakeasy|hookah|nightclub|full bar|taproom|beer garden/i, not: /juice|smoothie|oyster|salad|mobile|nail|lash|brow|tea lounge|cigar/i },
   { kind: 'events', heading: 'Events', about: 'Event rentals, mobile bars and planners', wall: wall('events'), test: /event (planning|planner|venue|rental|space)|events? (company|planner|venue|rentals?)|party rentals?|bounce house|mobile (cocktail )?bar|bartending|wedding planner|balloon|party entertain/i },
   { kind: 'youth', heading: 'Youth', about: "Kids' clubs, classes, camps and play", wall: wall('youth'), test: /\byouth\b|\bkids?'?\b|children|tutor|summer camp|after[- ]?school|preschool/i, not: /kids? menu|kid-friendly|\bdogs?\b|\bpets?\b/i },
   /* "New category Health/Beauty" — Glenn, 2026-10-18, with Radiant Med Spas in Fremont.

@@ -69,7 +69,7 @@ try{
     among Home's dots, so its own place button is the way there. */
  await open('b_vinniesbarandgrill');await p.locator('.nav-place').first().click();await p.waitForTimeout(800)
  const bars=await grid()
- check(`b_vinniesbarandgrill is on BEASTY • Bar/Lounge (${await where()}, ${bars.length} tiles)`,(await where())?.endsWith('BEASTY, Bar/Lounge')&&bars.length===24&&bars.some(l=>l.includes("Vinnie's")))
+ check(`b_vinniesbarandgrill is on BEASTY • Bar/Lounge (${await where()}, ${bars.length} tiles)`,(await where())?.endsWith('BEASTY, Bar/Lounge/Pub')&&bars.length===24&&bars.some(l=>l.includes("Vinnie's")))
 }catch(e){fails.push(e.message);console.log('FAIL',e.stack)}finally{await b.close();srv?.kill();await db?.drop()}
 if(fails.length){console.log(`FAIL: ${fails.length} batch 60 checks`);process.exit(1)}
 console.log('PASS: batch 60 business pages, icons, Pho Now’s film and credit, the San Jose seat, More eats and Bar/Lounge.')

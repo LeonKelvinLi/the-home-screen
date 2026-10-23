@@ -30575,4 +30575,422 @@ export const LOCAL_SEED: LocalSeed[] = [
           "by": "festusfeasts"
       }
   },
+  /* BATCH 62, 2026-10-22/23: Glenn, 22 Oct 9:16 pm Pezcow ("BEASTY • Food Truck"); 23 Oct 5:20 am Powder Keg Pub ("Hercules • Bar/Lounge/Pub / BEASTY • Bar/Lounge/Pub / BEASTY • Eats"). Sources: research/roster/batch62.json. */
+  {
+      "slug": "pezcow",
+      "name": "Pezcow",
+      "label": "Pezcow",
+      "cuisine": "Mexican seafood food truck",
+      "color": "#ffffff",
+      "icon": "pezcow",
+      "site": "http://www.pezcow.com/",
+      "tagline": "A family-owned food truck at Mitote Food Park in Santa Rosa with Mexican dishes from the land and sea: tacos piratas, fish tacos, coctel de camarón, ceviche and huachinango, plus tlayudas, machetes, memelitas and tacos al pastor.",
+      "prep": 0,
+      "category": "Food truck",
+      "items": [],
+      "contactOnly": "Mexican seafood and land dishes from their truck at Mitote Food Park: tacos piratas, fish tacos, coctel de camarón, ceviche, camarones a la diabla, quesadilla marina, tlayudas, machetes, tortas and tacos. Their menu is published without prices, so call the truck to order for pickup.",
+      "address": "Mitote Food Park, 665 Sebastopol Rd, Santa Rosa, CA 95407",
+      "phone": "(707) 727-3483",
+      "siteCta": "See their menu",
+      "siteNote": "Pickup orders by phone at the truck, (707) 727-3483. Pezcow also runs a restaurant in Windsor, at 8465 Old Redwood Hwy #510.",
+      "clip": {
+          "src": "/clips/pezcow.mp4",
+          "poster": "/clips/pezcow-poster.webp",
+          "href": "https://www.instagram.com/reel/DezpY7YPSuk/",
+          "credit": "Filmed by @brianthebarber",
+          "platform": "Instagram",
+          "by": "brianthebarber"
+      }
+  },
+  {
+      "slug": "powder-keg-pub",
+      "name": "Powder Keg Pub",
+      "label": "Powder Keg",
+      "cuisine": "Seafood pub",
+      "color": "#ffffff",
+      "icon": "powder-keg-pub",
+      "site": "https://www.powderkegpub.com/",
+      "tagline": "A casual pub on Railroad Avenue in old-town Hercules: fried oysters, garlic mussels, homemade clam chowder, beer-battered fish n' chips, crab melts and half-pound Angus burgers, prime rib on Tuesdays and brunch on Sundays.",
+      "prep": 0,
+      "category": "Seafood pub",
+      "items": [],
+      "sections": [
+          {
+              "name": "Starters & Things to Share",
+              "items": [
+                  [
+                      "Fried Oysters",
+                      "Fresh oysters breaded and fried, with homemade tartar sauce",
+                      1695
+                  ],
+                  [
+                      "Prawn Cocktail",
+                      "With spicy cocktail sauce",
+                      1595
+                  ],
+                  [
+                      "Clam Chowder (cup)",
+                      "Housemade New England style, with bacon crumbles",
+                      795
+                  ],
+                  [
+                      "Clam Chowder (bowl)",
+                      "Housemade New England style, with bacon crumbles",
+                      995
+                  ],
+                  [
+                      "Calamari",
+                      "Battered, fried to order, with housemade tartar sauce",
+                      1695
+                  ],
+                  [
+                      "Garlic Sautéed Mussels (single)",
+                      "Prince Edward Island mussels sautéed in butter and garlic",
+                      1595
+                  ],
+                  [
+                      "Garlic Sautéed Mussels (double)",
+                      "Prince Edward Island mussels sautéed in butter and garlic",
+                      2095
+                  ],
+                  [
+                      "Fried Chicken Wings",
+                      "6 pieces, with ranch dressing",
+                      1095
+                  ],
+                  [
+                      "Bleu Buffalo Wings",
+                      "9 housemade buffalo-sauced wings, bleu cheese crumbles",
+                      1595
+                  ],
+                  [
+                      "Gold Rush",
+                      "Golden fried garlic lime chicken breast nuggets, garlic lime aioli",
+                      1295
+                  ],
+                  [
+                      "Fish Tacos",
+                      "Two white corn tortillas, fried wild cod, 1000 Island, cabbage, pico de gallo",
+                      1395
+                  ],
+                  [
+                      "Avocado Tacos",
+                      "Golden fried avocado, 1000 Island, cabbage, pico de gallo",
+                      1095
+                  ],
+                  [
+                      "Beer Battered Fish n' Chips",
+                      "A classic, with tender wild cod",
+                      1995
+                  ],
+                  [
+                      "Shrimp n' Chips",
+                      "Fried breaded prawns with potato and sweet potato fries, housemade tartar sauce",
+                      2095
+                  ],
+                  [
+                      "Mac n' Cheese",
+                      "Creamy, topped with crunchy bread crumbs and bacon",
+                      1395
+                  ],
+                  [
+                      "Fried Mushrooms",
+                      "Beer battered, with ranch for dipping",
+                      1195
+                  ],
+                  [
+                      "Fried Zucchini",
+                      "Cut to order, breaded and deep fried, with ranch",
+                      1395
+                  ],
+                  [
+                      "Onion Rings",
+                      "Beer battered fresh cut onions, with ranch",
+                      1095
+                  ],
+                  [
+                      "PK Fries",
+                      "Fresh cut",
+                      795
+                  ],
+                  [
+                      "Garlic Fries",
+                      "",
+                      995
+                  ],
+                  [
+                      "Sweet Potato Fries",
+                      "",
+                      995
+                  ],
+                  [
+                      "Combo Fries",
+                      "",
+                      1295
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "Cobb Salad",
+                      "Organic spring mix, chicken, bacon, boiled egg, avocado, bleu cheese, tomatoes, red onions",
+                      1795
+                  ],
+                  [
+                      "Classic Caesar Salad",
+                      "Romaine, homemade Caesar dressing, parmesan, croutons and anchovy",
+                      1595
+                  ],
+                  [
+                      "Bleu Wedge",
+                      "Iceberg wedge, bleu cheese crumbles, bacon, tomatoes, bleu cheese dressing",
+                      1095
+                  ],
+                  [
+                      "Prawn Louie Salad",
+                      "Boiled egg, tomatoes and avocado with prawns",
+                      1995
+                  ],
+                  [
+                      "Dungeness Crab Louie Salad",
+                      "Boiled egg, tomatoes and avocado with Dungeness crab",
+                      2695
+                  ],
+                  [
+                      "Combo Louie Salad",
+                      "Boiled egg, tomatoes and avocado with prawns and Dungeness crab",
+                      2695
+                  ],
+                  [
+                      "Side Salad",
+                      "Organic spring greens, tomatoes, red onions and carrots",
+                      795
+                  ]
+              ]
+          },
+          {
+              "name": "Sandwiches",
+              "items": [
+                  [
+                      "Pepper Jack Grilled Cheese",
+                      "Pepper jack, sharp cheddar and American on grilled sourdough",
+                      1495
+                  ],
+                  [
+                      "Tuna Melt",
+                      "Skipjack tuna salad and American cheese on butter-grilled sourdough",
+                      1695
+                  ],
+                  [
+                      "Crab Melt",
+                      "Red rock crab salad and Swiss on butter-grilled sourdough",
+                      2195
+                  ],
+                  [
+                      "Dungeness Crab Roll",
+                      "Dungeness crab salad and avocado in a soft Hawaiian roll, with salad and fries",
+                      2695
+                  ],
+                  [
+                      "Grilled Salmon Sandwich",
+                      "Grilled salmon, dill sour cream, spinach and balsamic vinaigrette on a soft roll",
+                      1895
+                  ],
+                  [
+                      "Oyster Po' Boy",
+                      "Lightly breaded fried Pacific oysters, tomatoes and slaw on a soft roll",
+                      1995
+                  ],
+                  [
+                      "Sliders",
+                      "On Hawaiian rolls with mayo: Angus beef and cheese, or fish",
+                      1295
+                  ],
+                  [
+                      "Chicken Breast Club",
+                      "Double decker: grilled chicken breast, bacon, lettuce, tomato, avocado, mayo on sourdough",
+                      1895
+                  ],
+                  [
+                      "BLT and Avocado",
+                      "Bacon, lettuce, tomato, avocado and mayo on grilled sourdough",
+                      1595
+                  ],
+                  [
+                      "Fried Chicken Sandwich",
+                      "Crispy fried chicken breast, jalapeño lime sauce and slaw on a brioche bun",
+                      1795
+                  ],
+                  [
+                      "Veggie & Brie Sandwich",
+                      "Brie, grilled zucchini and red peppers, mushrooms, spinach, pesto aioli on a grilled roll",
+                      1795
+                  ],
+                  [
+                      "Impossible Philly Cheesesteak",
+                      "Plant-based 'meat', mushrooms, onions, peppers, Monterey jack and mayo",
+                      1895
+                  ]
+              ]
+          },
+          {
+              "name": "Burgers",
+              "items": [
+                  [
+                      "The Classic",
+                      "Half-pound Angus, lettuce, tomato, onion and mayo; cheese on request",
+                      1795
+                  ],
+                  [
+                      "Caliswag",
+                      "Avocado, caramelized onions, tomatoes, jack cheese, spring greens, mildly spiced aioli",
+                      1895
+                  ],
+                  [
+                      "The Railroad",
+                      "Bacon, sautéed mushrooms, bleu cheese crumbles, mild horseradish mayo",
+                      1995
+                  ],
+                  [
+                      "Cowboy Up",
+                      "Bacon, jalapeños, onion rings, pepper jack and housemade BBQ sauce",
+                      1895
+                  ],
+                  [
+                      "San Franciscan",
+                      "Patty melt on grilled sourdough, grilled onions, cheddar, tomatoes, 1000 Island",
+                      1795
+                  ],
+                  [
+                      "Impossible Burger",
+                      "Quarter-pound plant-based patty, lettuce, tomato, onion and mayo",
+                      1695
+                  ]
+              ]
+          },
+          {
+              "name": "Sunday Brunch",
+              "items": [
+                  [
+                      "Norwegian",
+                      "Crispy potato hashcake, cream cheese, smoked salmon, dressed greens, poached egg, capers",
+                      1895
+                  ],
+                  [
+                      "Chorizo Scramble",
+                      "Pork chorizo, tomatoes, onions, jalapeños, avocado, pepper jack, corn tortillas, potatoes",
+                      1495
+                  ],
+                  [
+                      "Farmhouse Scramble",
+                      "Spinach, tomatoes, onions, zucchini, mushrooms and jack, with potatoes and toast",
+                      1395
+                  ],
+                  [
+                      "Housemade Corned Beef",
+                      "Hand-pulled corned beef, onions and Monterey jack over potatoes, with toast",
+                      1695
+                  ],
+                  [
+                      "Sage Fried Chicken Breast and Gravy",
+                      "Over breakfast potatoes with country gravy, eggs and toast",
+                      1595
+                  ],
+                  [
+                      "Hangtown Fry",
+                      "Eggs scrambled with fried oysters, bacon, tomatoes and green onions, with potatoes and toast",
+                      1795
+                  ],
+                  [
+                      "Broken Egg Hangover Hash",
+                      "Bacon, chorizo, sausage, mushrooms, potatoes and parmesan under two over-easy eggs",
+                      1595
+                  ],
+                  [
+                      "The Basic",
+                      "Two eggs, bacon or sausage, breakfast potatoes and toast",
+                      1395
+                  ],
+                  [
+                      "Hungryman Basic",
+                      "Three eggs, bacon, sausage links, breakfast potatoes and toast",
+                      1695
+                  ],
+                  [
+                      "Chicken 'n Waffles",
+                      "Fried chicken wings over a housemade Belgian waffle, bacon syrup",
+                      1295
+                  ],
+                  [
+                      "Belgian Waffle",
+                      "Buttered, with powdered sugar",
+                      650
+                  ]
+              ]
+          },
+          {
+              "name": "Sunday Benedicts",
+              "items": [
+                  [
+                      "Prosciutto Benedict (half)",
+                      "With housemade Hollandaise and breakfast potatoes",
+                      895
+                  ],
+                  [
+                      "Prosciutto Benedict (full)",
+                      "With housemade Hollandaise and breakfast potatoes",
+                      1495
+                  ],
+                  [
+                      "Crab Cake and Avocado Benedict (half)",
+                      "With housemade Hollandaise and breakfast potatoes",
+                      1095
+                  ],
+                  [
+                      "Crab Cake and Avocado Benedict (full)",
+                      "With housemade Hollandaise and breakfast potatoes",
+                      1795
+                  ],
+                  [
+                      "Upstream Benedict (half)",
+                      "Smoked salmon, cream cheese and capers; housemade Hollandaise, breakfast potatoes",
+                      1095
+                  ],
+                  [
+                      "Upstream Benedict (full)",
+                      "Smoked salmon, cream cheese and capers; housemade Hollandaise, breakfast potatoes",
+                      1795
+                  ],
+                  [
+                      "Impossible Benedict (half)",
+                      "With housemade Hollandaise and breakfast potatoes",
+                      895
+                  ],
+                  [
+                      "Impossible Benedict (full)",
+                      "With housemade Hollandaise and breakfast potatoes",
+                      1495
+                  ],
+                  [
+                      "California Florentine Benedict (half)",
+                      "Spinach, tomato and avocado; housemade Hollandaise, breakfast potatoes",
+                      895
+                  ],
+                  [
+                      "California Florentine Benedict (full)",
+                      "Spinach, tomato and avocado; housemade Hollandaise, breakfast potatoes",
+                      1495
+                  ]
+              ]
+          }
+      ],
+      "address": "2132 Railroad Ave, Hercules, CA 94547",
+      "phone": "(510) 724-7300",
+      "email": "contactus@powderkegpub.com",
+      "hours": "Mon–Thu & Sat 12–7pm, Fri 12–8pm, Sun brunch 10am–4pm",
+      "siteNote": "No reservations: the whole party must be there to be seated. Prime rib is Tuesdays only and dine-in only; Sunday brunch runs 10am–4pm. Prices are from the menus on their own website.",
+      "siteCta": "See their menu"
+  },
 ]

@@ -1,0 +1,484 @@
+[
+  {
+    "id": "b_pezcow",
+    "name_exact": "Pezcow",
+    "checked_on": "2026-10-23",
+    "sources": [
+      "http://www.pezcow.com/ (their own site, linked from their Instagram bio; a one-page WordPress site by Watza Lab, page last modified 19 May 2026: 'Pezcow – Flavor from Mountain to Sea', 'Find a surprising bite in our restaurant in Windsor or at our food truck at Mitote Food Park in Santa Rosa'; food truck card: 'Open Wednesday-Sunday, 12-9 pm', 'Mitote Food Park, 665 Sebastopol Rd, Santa Rosa, CA 95407', 'For pickup AT MITOTE FOOD PARK call: (707) 727-3483'; 'MENU AT FOOD TRUCK' with dish names and no prices; a Contact section that instead says 'Open Thursday-Monday, 11 am-9 pm│Tuesday 4-9 pm', 'Mitote Food Park, 100 Sebastopol Rd, Santa Rosa, CA 95407', (707) 727-3483; footer 'MITOTE FODD PARK 665 Sebastopol Rd'; Windsor restaurant 8465 Old Redwood Hwy #510, Windsor, CA 95492, Tue-Sun 10am-9pm, pickup (707) 236-7342 / footer (707) 385-6465; links facebook.com/Pezcow-100354405247089 and instagram.com/pezcowfood; fetched 2026-10-23)",
+      "Instagram @pezcowfoodtruck (Glenn's screenshot 1022-2116 IMG_7700: 'Pezcow Food Truck', 'Family owned food truck serving Mexican specialties from the land & sea.', link www.pezcow.com, 80 posts, 1,199 followers; its Reels tab shows the 'We tried 5 food trucks in Santa Rosa' reel and their own reel 'Perfect day for a fish taco!' over the truck's chalkboard with 'PEZ (707)727-34-83')",
+      "Glenn's screenshot 1022-2116 IMG_7702 (pezcow.com opened from Instagram: the food-truck card, Wednesday-Sunday 12-9 pm, Mitote Food Park, 665 Sebastopol Rd, Santa Rosa, CA 95407, pickup (707) 727-3483)",
+      "Glenn's screenshot 1022-2116 IMG_7703 (their Instagram picture zoomed: the cyan PEZCOW roundel of two cow-mermaids on navy; the icon is cut from it)",
+      "https://www.instagram.com/reel/DezpY7YPSuk/ (the film; @brianthebarber (Brian Recosana), '5 Food Trucks! One Mexican Food Park', #mitotefoodpark #santarosa, posted 22 Oct 2026, 131 s; Pezcow is the third of five trucks, 71-95 s, introduced as 'next up Pezcow Food truck' with an @pezcowfoodtruck tag; it shows on Pezcow's own Reels tab)"
+    ],
+    "facts": {
+      "slug": "pezcow",
+      "name": "Pezcow",
+      "label": "Pezcow",
+      "cuisine": "Mexican seafood food truck",
+      "color": "#ffffff",
+      "icon": "pezcow",
+      "site": "http://www.pezcow.com/",
+      "tagline": "A family-owned food truck at Mitote Food Park in Santa Rosa with Mexican dishes from the land and sea: tacos piratas, fish tacos, coctel de camarón, ceviche and huachinango, plus tlayudas, machetes, memelitas and tacos al pastor.",
+      "prep": 0,
+      "category": "Food truck",
+      "items": [],
+      "contactOnly": "Mexican seafood and land dishes from their truck at Mitote Food Park: tacos piratas, fish tacos, coctel de camarón, ceviche, camarones a la diabla, quesadilla marina, tlayudas, machetes, tortas and tacos. Their menu is published without prices, so call the truck to order for pickup.",
+      "address": "Mitote Food Park, 665 Sebastopol Rd, Santa Rosa, CA 95407",
+      "phone": "(707) 727-3483",
+      "siteCta": "See their menu",
+      "siteNote": "Pickup orders by phone at the truck, (707) 727-3483. Pezcow also runs a restaurant in Windsor, at 8465 Old Redwood Hwy #510.",
+      "clip": {
+        "src": "/clips/pezcow.mp4",
+        "poster": "/clips/pezcow-poster.webp",
+        "href": "https://www.instagram.com/reel/DezpY7YPSuk/",
+        "credit": "Filmed by @brianthebarber",
+        "platform": "Instagram",
+        "by": "brianthebarber"
+      }
+    },
+    "placements": [],
+    "glenn": "Glenn, 22 Oct 2026, 9:16 pm: screenshots 1022-2116 (IG @pezcowfoodtruck, pezcow.com opened from it, their Instagram picture zoomed), the link http://www.pezcow.com/, \"BEASTY • Food Truck\"; and reel DezpY7YPSuk (@brianthebarber) with \"Clip this video plz\".",
+    "flags": [
+      "MENU: NO PRICES. pezcow.com's 'MENU AT FOOD TRUCK' lists names only: sea (Huachinango, Coctel de Camarón, Ceviche de Pescado o Mixto, Camarones a la Diabla, Quesadilla Marina, Tacos Piratas, Fish Tacos, Chalupas de Camarón, Bolsa de Mariscos, Calamari y Papas) and land (Machetes, Memelitas, Tlayudas, Torta Oaxaqueña, Burritos, Nachos, Papas fritas, Chips y Salsa, Torta Cubana, Enmolada, Tacos: Carnitas, Pollo, Asada, Al Pastor, Chorizo). So items: [] and a contactOnly sentence. The truck's chalkboard has prices, but it is seen only half-covered in the thumbnail of their own reel in Glenn's screenshot (e.g. Huachinango $29, Coctel de Camarón $16, Machetes $15, Memelitas $14, Tacos Piratas $5, Fish Tacos $5) and blurred in the creator's film, and the two boards do not show the same items, so no prices were taken from them. If the coordinator wants the dish names listed, the Hey Yogurt / quoteOnly pattern with a priceLabel would carry them without inventing prices.",
+      "HOURS OMITTED: their own site gives two schedules for the truck: the food-truck card (and Glenn's screenshot) 'Open Wednesday-Sunday, 12-9 pm'; the Contact section 'Open Thursday-Monday, 11 am-9 pm│Tuesday 4-9 pm'. They disagree, and the Instagram bio gives none.",
+      "ADDRESS: 665 Sebastopol Rd, Santa Rosa, CA 95407 is used: it is on the food-truck card (and Glenn's screenshot) and in the footer. The site's Contact section says '100 Sebastopol Rd'. Same food park, same ZIP; not checked against any other source per the first-party rule.",
+      "PHONE (707) 727-3483 is the truck's pickup line, the same in all three places on their site and on their chalkboard ('PEZ (707)727-34-83'). The Windsor restaurant's two numbers ((707) 236-7342 on its card, (707) 385-6465 in the footer) disagree and are left out.",
+      "NAME: Glenn wrote 'Pezcow'; their site is 'Pezcow'; this Instagram account is 'Pezcow Food Truck' (@pezcowfoodtruck), while the site links @pezcowfood. Name and label 'Pezcow', slug 'pezcow', id b_pezcow. If the coordinator prefers the truck's own name, 'Pezcow Food Truck' (slug pezcow-food-truck) would need the icon and clip files renamed.",
+      "TWO LOCATIONS: Pezcow is both a Windsor restaurant (8465 Old Redwood Hwy #510) and this truck at Mitote Food Park, Santa Rosa. Glenn sent the truck's Instagram and tagged 'BEASTY • Food Truck', so the page is the truck's (Santa Rosa address, truck phone); the Windsor restaurant is mentioned only in siteNote. The coordinator may drop that sentence or add a panel for it. Windsor is not a BEASTY city as far as seen.",
+      "TYPE LINE 'Mexican seafood food truck' matches BEASTY • Food Trucks' test (/food truck|taco truck|\\btruck\\b/i) and not its /brew|taproom|winery/ exclusion. Category 'Food truck', as Mi Jalisco Taquizas and the smoked-meats truck use.",
+      "needsSite: NOT set. pezcow.com is their own domain with an About, the truck's menu, hours, location and contact form (WordPress, not an ordering template), even if its hours and address disagree in places.",
+      "Clip: @brianthebarber's 131 s reel covers five Mitote Food Park trucks (Antojitos Victoria, Gio y los Magos, Pezcow, Merida Food Truck, Delicioso). make-clip run with --start 71.2 for 71.2-95.2 s; Pezcow's stretch runs from the cut at ~71.1 s to the wipe at ~95.7 s. Checked at 8 fps around both edges and 2 fps throughout: it opens on 'next up Pezcow Food truck' over the truck (no frame of the previous truck), and ends on his '9/10' before the wipe to Merida. Only Pezcow and its food shown. Captions include mild profanity ('holy shit that is really good', ~93 s), as in his other segments. 'Filmed by @brianthebarber' since it is his film, though it appears on Pezcow's Reels tab (likely a collab). Not sent as 'Foodie', but it is a creator's film, so a foodies_row is given; whether it goes in FOODIES.md is the coordinator's call.",
+      "Icon: cut from Glenn's zoomed screenshot of their Instagram picture (IMG_7703, the disc ~1270 px across), the whole disc centred on white with a ~4% margin, 512x512; color #ffffff. The source is an upscale of a small Instagram picture, so it is slightly soft. Their site's logo (logo_pezcow_500x340px_bco.png) is the same mark in white on transparent, without the navy disc, and was not used.",
+      "Seats left to the coordinator: Santa Rosa is a BEASTY city with a services page (Camacho's); no Santa Rosa eats or food-truck seat seen. BEASTY • Food Trucks fills from the type line.",
+      "Coordinator: sent for BEASTY • Food Truck only, which fills from the type line; no city seat."
+    ]
+  },
+  {
+    "id": "b_powderkegpub",
+    "name_exact": "Powder Keg Pub",
+    "checked_on": "2026-10-23",
+    "sources": [
+      "https://www.powderkegpub.com/ (their own site, linked from their Instagram bio; WordPress (Avada) built by Communications Team; home page: 'TUNA MELT? GARLIC MUSSELS? COME IN AND ENJOY A RELAXED ATMOSPHERE, FUN FOOD AND A WELL STOCKED BAR', 'casual and friendly pub', fresh and cooked oysters, homemade clam chowder; no reservations; email (Cloudflare-obfuscated, decoded) contactus@powderkegpub.com; CALL (510) 724-7300; 2132 Railroad Avenue, Hercules, California 94547; also still carries a 2020 'RESTAURANT COVID UPDATE' block with 'Temporary hours' Sunday 9am-3pm, Monday thru Saturday 12noon-7pm; fetched 2026-10-23)",
+      "https://www.powderkegpub.com/menu/ (their menu, page updated 2026-08-04: Starters & Things to Share, Salads, Sandwiches, Burgers with prices; Prime Rib Tuesday items without prices; 'Beginning April 1, 2025, we will no longer serve prime rib plates for take-out orders'; Dessert: 'Call us to find out if we have a special dessert today'; fetched 2026-10-23)",
+      "https://www.powderkegpub.com/sunday-brunch/ (their Sunday brunch menu, page updated 2025-07-28: 'every Sunday for our brunch menu from 10:00am to 4:00pm'; Breakfast Favorites and Breakfast Benedicts with prices, then repeats of main-menu items at lower prices; fetched 2026-10-23)",
+      "https://www.powderkegpub.com/hours/ (page updated 2025-12-28: 'CURRENT Monday thru Thursday 12noon – 7pm, Friday 12pm – 8pm, Saturday 12noon – 7pm, Sunday Brunch 10am – 4pm'; closed Independence Day, Thanksgiving, Black Friday, Dec 24 and 25; fetched 2026-10-23)",
+      "https://www.powderkegpub.com/happy-hour-bar-specials/ (drinks only: happy hour 3-6pm Mon-Fri and daily cocktail specials; nothing taken from it; fetched 2026-10-23)",
+      "Instagram @powderkegpub (Glenn's screenshot 1023-0520 IMG_7712: 'Powder Keg Pub', 270 posts, 820 followers, 2132 Railroad Ave, Hercules, California, link www.powderkegpub.com; no bio text or hours; grid shows an 'OPEN TODAY! Thank you for patience' post and a Facebook repost saying they would close a few days over Father's Day for an exhaust issue)",
+      "Glenn's screenshot 1023-0520 IMG_7715 (powderkegpub.com footer: EMAIL contactus@powderkegpub.com, CALL (510) 724-7300, FIND US 2132 Railroad Avenue, Hercules, California 94547)",
+      "Glenn's screenshot 1023-0520 IMG_7716 (zoomed Instagram picture: the Powder Keg / 100 / No 6 / Hercules roundel; the icon is cut from the same roundel on their site, https://www.powderkegpub.com/wp-content/uploads/2017/11/POWDER-KEG-PUB.png, 500x500)"
+    ],
+    "facts": {
+      "slug": "powder-keg-pub",
+      "name": "Powder Keg Pub",
+      "label": "Powder Keg",
+      "cuisine": "Seafood pub",
+      "color": "#ffffff",
+      "icon": "powder-keg-pub",
+      "site": "https://www.powderkegpub.com/",
+      "tagline": "A casual pub on Railroad Avenue in old-town Hercules: fried oysters, garlic mussels, homemade clam chowder, beer-battered fish n' chips, crab melts and half-pound Angus burgers, prime rib on Tuesdays and brunch on Sundays.",
+      "prep": 0,
+      "category": "Seafood pub",
+      "items": [],
+      "sections": [
+        {
+          "name": "Starters & Things to Share",
+          "items": [
+            [
+              "Fried Oysters",
+              "Fresh oysters breaded and fried, with homemade tartar sauce",
+              1695
+            ],
+            [
+              "Prawn Cocktail",
+              "With spicy cocktail sauce",
+              1595
+            ],
+            [
+              "Clam Chowder (cup)",
+              "Housemade New England style, with bacon crumbles",
+              795
+            ],
+            [
+              "Clam Chowder (bowl)",
+              "Housemade New England style, with bacon crumbles",
+              995
+            ],
+            [
+              "Calamari",
+              "Battered, fried to order, with housemade tartar sauce",
+              1695
+            ],
+            [
+              "Garlic Sautéed Mussels (single)",
+              "Prince Edward Island mussels sautéed in butter and garlic",
+              1595
+            ],
+            [
+              "Garlic Sautéed Mussels (double)",
+              "Prince Edward Island mussels sautéed in butter and garlic",
+              2095
+            ],
+            [
+              "Fried Chicken Wings",
+              "6 pieces, with ranch dressing",
+              1095
+            ],
+            [
+              "Bleu Buffalo Wings",
+              "9 housemade buffalo-sauced wings, bleu cheese crumbles",
+              1595
+            ],
+            [
+              "Gold Rush",
+              "Golden fried garlic lime chicken breast nuggets, garlic lime aioli",
+              1295
+            ],
+            [
+              "Fish Tacos",
+              "Two white corn tortillas, fried wild cod, 1000 Island, cabbage, pico de gallo",
+              1395
+            ],
+            [
+              "Avocado Tacos",
+              "Golden fried avocado, 1000 Island, cabbage, pico de gallo",
+              1095
+            ],
+            [
+              "Beer Battered Fish n' Chips",
+              "A classic, with tender wild cod",
+              1995
+            ],
+            [
+              "Shrimp n' Chips",
+              "Fried breaded prawns with potato and sweet potato fries, housemade tartar sauce",
+              2095
+            ],
+            [
+              "Mac n' Cheese",
+              "Creamy, topped with crunchy bread crumbs and bacon",
+              1395
+            ],
+            [
+              "Fried Mushrooms",
+              "Beer battered, with ranch for dipping",
+              1195
+            ],
+            [
+              "Fried Zucchini",
+              "Cut to order, breaded and deep fried, with ranch",
+              1395
+            ],
+            [
+              "Onion Rings",
+              "Beer battered fresh cut onions, with ranch",
+              1095
+            ],
+            [
+              "PK Fries",
+              "Fresh cut",
+              795
+            ],
+            [
+              "Garlic Fries",
+              "",
+              995
+            ],
+            [
+              "Sweet Potato Fries",
+              "",
+              995
+            ],
+            [
+              "Combo Fries",
+              "",
+              1295
+            ]
+          ]
+        },
+        {
+          "name": "Salads",
+          "items": [
+            [
+              "Cobb Salad",
+              "Organic spring mix, chicken, bacon, boiled egg, avocado, bleu cheese, tomatoes, red onions",
+              1795
+            ],
+            [
+              "Classic Caesar Salad",
+              "Romaine, homemade Caesar dressing, parmesan, croutons and anchovy",
+              1595
+            ],
+            [
+              "Bleu Wedge",
+              "Iceberg wedge, bleu cheese crumbles, bacon, tomatoes, bleu cheese dressing",
+              1095
+            ],
+            [
+              "Prawn Louie Salad",
+              "Boiled egg, tomatoes and avocado with prawns",
+              1995
+            ],
+            [
+              "Dungeness Crab Louie Salad",
+              "Boiled egg, tomatoes and avocado with Dungeness crab",
+              2695
+            ],
+            [
+              "Combo Louie Salad",
+              "Boiled egg, tomatoes and avocado with prawns and Dungeness crab",
+              2695
+            ],
+            [
+              "Side Salad",
+              "Organic spring greens, tomatoes, red onions and carrots",
+              795
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches",
+          "items": [
+            [
+              "Pepper Jack Grilled Cheese",
+              "Pepper jack, sharp cheddar and American on grilled sourdough",
+              1495
+            ],
+            [
+              "Tuna Melt",
+              "Skipjack tuna salad and American cheese on butter-grilled sourdough",
+              1695
+            ],
+            [
+              "Crab Melt",
+              "Red rock crab salad and Swiss on butter-grilled sourdough",
+              2195
+            ],
+            [
+              "Dungeness Crab Roll",
+              "Dungeness crab salad and avocado in a soft Hawaiian roll, with salad and fries",
+              2695
+            ],
+            [
+              "Grilled Salmon Sandwich",
+              "Grilled salmon, dill sour cream, spinach and balsamic vinaigrette on a soft roll",
+              1895
+            ],
+            [
+              "Oyster Po' Boy",
+              "Lightly breaded fried Pacific oysters, tomatoes and slaw on a soft roll",
+              1995
+            ],
+            [
+              "Sliders",
+              "On Hawaiian rolls with mayo: Angus beef and cheese, or fish",
+              1295
+            ],
+            [
+              "Chicken Breast Club",
+              "Double decker: grilled chicken breast, bacon, lettuce, tomato, avocado, mayo on sourdough",
+              1895
+            ],
+            [
+              "BLT and Avocado",
+              "Bacon, lettuce, tomato, avocado and mayo on grilled sourdough",
+              1595
+            ],
+            [
+              "Fried Chicken Sandwich",
+              "Crispy fried chicken breast, jalapeño lime sauce and slaw on a brioche bun",
+              1795
+            ],
+            [
+              "Veggie & Brie Sandwich",
+              "Brie, grilled zucchini and red peppers, mushrooms, spinach, pesto aioli on a grilled roll",
+              1795
+            ],
+            [
+              "Impossible Philly Cheesesteak",
+              "Plant-based 'meat', mushrooms, onions, peppers, Monterey jack and mayo",
+              1895
+            ]
+          ]
+        },
+        {
+          "name": "Burgers",
+          "items": [
+            [
+              "The Classic",
+              "Half-pound Angus, lettuce, tomato, onion and mayo; cheese on request",
+              1795
+            ],
+            [
+              "Caliswag",
+              "Avocado, caramelized onions, tomatoes, jack cheese, spring greens, mildly spiced aioli",
+              1895
+            ],
+            [
+              "The Railroad",
+              "Bacon, sautéed mushrooms, bleu cheese crumbles, mild horseradish mayo",
+              1995
+            ],
+            [
+              "Cowboy Up",
+              "Bacon, jalapeños, onion rings, pepper jack and housemade BBQ sauce",
+              1895
+            ],
+            [
+              "San Franciscan",
+              "Patty melt on grilled sourdough, grilled onions, cheddar, tomatoes, 1000 Island",
+              1795
+            ],
+            [
+              "Impossible Burger",
+              "Quarter-pound plant-based patty, lettuce, tomato, onion and mayo",
+              1695
+            ]
+          ]
+        },
+        {
+          "name": "Sunday Brunch",
+          "items": [
+            [
+              "Norwegian",
+              "Crispy potato hashcake, cream cheese, smoked salmon, dressed greens, poached egg, capers",
+              1895
+            ],
+            [
+              "Chorizo Scramble",
+              "Pork chorizo, tomatoes, onions, jalapeños, avocado, pepper jack, corn tortillas, potatoes",
+              1495
+            ],
+            [
+              "Farmhouse Scramble",
+              "Spinach, tomatoes, onions, zucchini, mushrooms and jack, with potatoes and toast",
+              1395
+            ],
+            [
+              "Housemade Corned Beef",
+              "Hand-pulled corned beef, onions and Monterey jack over potatoes, with toast",
+              1695
+            ],
+            [
+              "Sage Fried Chicken Breast and Gravy",
+              "Over breakfast potatoes with country gravy, eggs and toast",
+              1595
+            ],
+            [
+              "Hangtown Fry",
+              "Eggs scrambled with fried oysters, bacon, tomatoes and green onions, with potatoes and toast",
+              1795
+            ],
+            [
+              "Broken Egg Hangover Hash",
+              "Bacon, chorizo, sausage, mushrooms, potatoes and parmesan under two over-easy eggs",
+              1595
+            ],
+            [
+              "The Basic",
+              "Two eggs, bacon or sausage, breakfast potatoes and toast",
+              1395
+            ],
+            [
+              "Hungryman Basic",
+              "Three eggs, bacon, sausage links, breakfast potatoes and toast",
+              1695
+            ],
+            [
+              "Chicken 'n Waffles",
+              "Fried chicken wings over a housemade Belgian waffle, bacon syrup",
+              1295
+            ],
+            [
+              "Belgian Waffle",
+              "Buttered, with powdered sugar",
+              650
+            ]
+          ]
+        },
+        {
+          "name": "Sunday Benedicts",
+          "items": [
+            [
+              "Prosciutto Benedict (half)",
+              "With housemade Hollandaise and breakfast potatoes",
+              895
+            ],
+            [
+              "Prosciutto Benedict (full)",
+              "With housemade Hollandaise and breakfast potatoes",
+              1495
+            ],
+            [
+              "Crab Cake and Avocado Benedict (half)",
+              "With housemade Hollandaise and breakfast potatoes",
+              1095
+            ],
+            [
+              "Crab Cake and Avocado Benedict (full)",
+              "With housemade Hollandaise and breakfast potatoes",
+              1795
+            ],
+            [
+              "Upstream Benedict (half)",
+              "Smoked salmon, cream cheese and capers; housemade Hollandaise, breakfast potatoes",
+              1095
+            ],
+            [
+              "Upstream Benedict (full)",
+              "Smoked salmon, cream cheese and capers; housemade Hollandaise, breakfast potatoes",
+              1795
+            ],
+            [
+              "Impossible Benedict (half)",
+              "With housemade Hollandaise and breakfast potatoes",
+              895
+            ],
+            [
+              "Impossible Benedict (full)",
+              "With housemade Hollandaise and breakfast potatoes",
+              1495
+            ],
+            [
+              "California Florentine Benedict (half)",
+              "Spinach, tomato and avocado; housemade Hollandaise, breakfast potatoes",
+              895
+            ],
+            [
+              "California Florentine Benedict (full)",
+              "Spinach, tomato and avocado; housemade Hollandaise, breakfast potatoes",
+              1495
+            ]
+          ]
+        }
+      ],
+      "address": "2132 Railroad Ave, Hercules, CA 94547",
+      "phone": "(510) 724-7300",
+      "email": "contactus@powderkegpub.com",
+      "hours": "Mon–Thu & Sat 12–7pm, Fri 12–8pm, Sun brunch 10am–4pm",
+      "siteNote": "No reservations: the whole party must be there to be seated. Prime rib is Tuesdays only and dine-in only; Sunday brunch runs 10am–4pm. Prices are from the menus on their own website.",
+      "siteCta": "See their menu"
+    },
+    "placements": [
+      "hercules-goods2-0",
+      "beasty-goods2-47"
+    ],
+    "glenn": "Glenn, 23 Oct 2026, 5:20 am: screenshots 1023-0520 (IMG_7712 their Instagram @powderkegpub, IMG_7715 powderkegpub.com's contact footer, IMG_7716 a \"Crop\" zoom of their Instagram picture), the link https://www.powderkegpub.com/, and \"Hercules • Bar/Lounge/Pub / BEASTY • Bar/Lounge/Pub / BEASTY • Eats (add to home page) / I deliver to this restaurant so I will get a offer soon\". No reel.",
+    "flags": [
+      "MENU: 6 sections, 68 items. The main menu (/menu/, updated 4 Aug 2026) in their sections: Starters & Things to Share (22), Salads (7), Sandwiches (12), Burgers (6). Plus the brunch-only dishes from /sunday-brunch/ (updated 28 Jul 2025): Sunday Brunch = their 'Breakfast Favorites' (11) and Sunday Benedicts = their 'Breakfast Benedicts' (10, half and full orders as separate rows). Section names 'Sunday Brunch'/'Sunday Benedicts' are mine so the tabs say they are Sunday-only.",
+      "LEFT OUT: all drinks (the Bar Specials page is cocktails and beer only; no prices for soft drinks are published); the Tuesday prime rib plates (The Slab, Princess Cut, Butcher Block), Prime Rib Street Tacos and Prime Rib Cheesesteak, which have no price on the main menu; Dessert ('call us'); the Dungeness Caesar Salad on the brunch page (no price). The brunch page's repeats of main-menu dishes (wings, fried oysters, fish tacos, fish n' chips, fries, salads, sandwiches, two burgers) were NOT added: they show older, lower prices (e.g. Classic burger 15.95 vs 17.95, Fish n' Chips 18.95 vs 19.95) on a page last updated July 2025, so the 4 Aug 2026 main-menu prices stand. The brunch page also prices a 'Prime Rib French Dip (Tuesdays only)' at 16.95, a Tuesday dish on a Sunday menu with no price on the main menu; left out.",
+      "VARIANTS written as separate rows with their prices: Clam Chowder cup 7.95 / bowl 9.95; Garlic Sautéed Mussels single 15.95 / double 20.95; PK Fries fresh cut 7.95, garlic 9.95, sweet potato 9.95, combo 12.95; Louie Salad prawns 19.95, Dungeness crab 26.95, combo 26.95; Benedicts half/full. Add-ons ('add fries $2', 'prosciutto add $3', 'lettuce & tom add $.95', 'add cheese $1', split plate fee $7) not listed as items. Their 'BEER BATTERED' line is part of the Fish n' Chips name (one <h3>), not a section. Typos fixed: 'brioch' brioche, 'parmesian' parmesan, 'NORWEIGAN' Norwegian, 'An classic favorite' a classic.",
+      "HOURS: their /hours/ page ('CURRENT', updated 28 Dec 2025) says Mon-Thu 12-7, Fri 12-8, Sat 12-7, Sunday Brunch 10am-4pm, and the brunch page agrees on Sunday 10-4. BUT their home page still shows a May 2020 COVID block with 'Temporary hours' Sunday 9am-3pm, Monday thru Saturday 12noon-7pm. I kept the /hours/ page's hours (two pages agree, labelled CURRENT, the 2020 block is plainly a reopening notice for 17 May 2020). Strictly by the 'sources disagree, omit' rule, the coordinator may drop `hours`. Instagram shows no hours.",
+      "HOME PAGE IS STALE IN PLACES: besides the 2020 COVID block, it links a 2020 'Limited Menu' PDF and a /covid page on their old wpengine host. Not used. Menu page (Aug 2026) and Instagram activity show they are open; one Instagram post (Father's Day, from the grid) says they closed a few days for an exhaust repair and an 'OPEN TODAY!' post follows it.",
+      "needsSite: NOT set. powderkegpub.com is their own domain and their own WordPress site (menu, brunch, bar specials, hours, contact). No online ordering anywhere (no Toast/Square link; the 'Subscribe for Text Alerts' button goes to a txhd.io text-alert signup), so no orderUrl; siteCta 'See their menu'. Take-out exists (they say prime rib is no longer sold for take-out) but there is no ordering link to give.",
+      "TYPE LINE 'Seafood pub': matches BEASTY • Bar/Lounge's test (\\bpub\\b) and none of its excludes (I deliberately avoided 'oyster' and 'salad', which are in Bar/Lounge's `not` list; 'Oyster pub' would FAIL the test). Checked against every category regex in categories.ts: it lands on Bar/Lounge only. It matches no BEASTY • Eats kind by itself (Eats has no seafood kind). Their own words: 'casual and friendly pub', 'a well stocked bar'; the food leans seafood (oysters, chowder, mussels, fish n' chips, crab).",
+      "BEASTY • EATS KIND (Glenn: 'BEASTY • Eats (add to home page)'): no seafood kind exists in EATS_CATEGORIES. Best fits by menu: Burger (16; six half-pound Angus burgers) or Sandwiches (18; twelve sandwiches incl. tuna/crab melts, po' boy, crab roll). Both are taken in BEASTY_EATS_ROSTER (16 Chef Jeff's Smashburger, 18 The Local Petaluma). Open kinds are Chinese, Greek, Italian, French, Ramen, Jamaican, Steakhouse, Hot pot; the only stretch is Steakhouse (20), on the strength of Tuesday prime rib alone, which I would not claim. So: on Eats only as an 'open spot' placement by Glenn's say-so (the Empire State precedent, which took the Udon spot), or More eats. If the coordinator wants an auto-fit to Burger or Sandwiches, the type line would need 'burger'/'sandwich' in it (e.g. 'Seafood pub & burgers'), which would still pass Bar/Lounge.",
+      "HERCULES • BAR/LOUNGE/PUB: city pages have no Bar/Lounge kind in slots.ts (Hercules has one seat filled, hercules-goods-13 Hom Coffee). The coordinator decides the Hercules seat (likely the city's eats/goods list).",
+      "GLENN DELIVERS HERE: 'I deliver to this restaurant so I will get a offer soon' — no offer agreed; nothing written as an offer or a deal.",
+      "ICON: their own roundel from their website (2017 upload, 500x500 RGBA, transparent corners), composited on white, squared with a small white margin, 512x512 LANCZOS, WebP q90, at public/icons/powder-keg-pub.webp. Same mark as their Instagram picture (Glenn's IMG_7716). color #ffffff (the roundel itself is grey-silver).",
+      "NO CLIP: Glenn sent no reel and none was added. clip_credit and foodies_row are null.",
+      "PHONE and EMAIL from their website (all pages) and Glenn's screenshot of it; the Instagram Contact sheet was not in the screenshots.",
+      "LABEL 'Powder Keg' (10 chars) for the tile; the full name 'Powder Keg Pub' is 14 and would also fit if preferred.",
+      "Coordinator: Hercules has no pub category on its goods page, so its yellow sheet. \"BEASTY • Eats (add to home page)\": no open Eats kind fits a seafood pub (Burger is Chef Jeff’s, Sandwiches The Local’s, only Jamaican is open), so More eats 47. BEASTY • Bar/Lounge/Pub was full (24) after Vinnie’s on 22 Oct; Powder Keg passes its test and takes the next spot that opens. Hours kept from their hours page marked current; the home page’s 2020 “temporary hours” are stale. No offer is recorded: Glenn says one is coming."
+    ]
+  }
+]

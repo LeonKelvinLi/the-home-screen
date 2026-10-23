@@ -126,3 +126,5 @@ Games was added on 16 October 2026, opened by Super Savage Games in spot 1. It c
 Health/Beauty was added on 18 October 2026 ("New category Health/Beauty"), opened by Radiant Med Spas in Fremont. It covers med spas, day spas, aesthetics and wellness clinics, with its own heart-and-cross glyph and wallpaper, and appears in More pages and Search. Hair, nails and lashes stay on Salons.
 
 Breakfast/Diner was added on 22 October 2026 ("New category BEASTY • Breakfast/diner. Or just • diner"). It covers diners and breakfast and brunch rooms, by type line, with a sunny-side-up glyph and a wallpaper of eggs and a coffee cup, and appears in More pages and Search. Existing diners and breakfast places fill it automatically.
+
+Bar/Lounge became Bar/Lounge/Pub on 23 October 2026, Glenn's wording with Powder Keg Pub. The kind is still `bars`, so no seat id changed.

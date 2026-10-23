@@ -217,3 +217,9 @@ Secondary and unavailable links:
 | Sent | Creator | What the reel shows | On BEASTY? |
 |---|---|---|---|
 | 22 Oct 2026 | @festusfeasts (Festus Ezeli) | Sugar Plum Coffee Shop, 1815 Colfax St, Concord: the 1950s diner, its owner's story, blueberry waffles and a breakfast burrito — [DJ5rRTqxvmj](https://www.instagram.com/reel/DJ5rRTqxvmj/), sent as "Clip this video plz" (not as "Foodie") | **Yes.** Credited film on Sugar Plum Coffee Shop's page |
+
+### Batch 62 — 22 October 2026
+
+| Sent | Creator | What the reel shows | On BEASTY? |
+|---|---|---|---|
+| 22 Oct 2026 | @brianthebarber (Brian Recosana) | Five trucks at Mitote Food Park, Santa Rosa, Pezcow third (71-95 s): its seafood tostadas, ceviche and a shrimp-and-octopus taco, scored 9/10 — [DezpY7YPSuk](https://www.instagram.com/reel/DezpY7YPSuk/), sent as "Clip this video plz" (not as "Foodie") | **Yes.** Credited film on Pezcow's page (its own 24 s) |

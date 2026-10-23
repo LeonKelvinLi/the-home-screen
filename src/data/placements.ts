@@ -1659,4 +1659,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'concord-goods2-3': 'b_sugarplumcoffeeshop',
   'beasty-goods2-46': 'b_sugarplumcoffeeshop',
 
+  /* Batch 62, Glenn, 23 October 2026, 5:20 am: Powder Keg Pub, "Hercules • Bar/Lounge/Pub / BEASTY • Bar/Lounge/Pub /
+     BEASTY • Eats (add to home page)". No pub category on a city page, no Eats kind for a seafood pub, and Bar/Lounge/Pub
+     is full, so Hercules' yellow sheet and More eats. Pezcow fills Food Trucks from its type line. */
+  'hercules-goods2-0': 'b_powderkegpub',
+  'beasty-goods2-47': 'b_powderkegpub',
+
 }
