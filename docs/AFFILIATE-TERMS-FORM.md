@@ -189,3 +189,7 @@ node --import tsx tools/audit-affiliate-terms.ts --model   # model + PDF, no dat
 node --import tsx tools/audit-affiliate-terms.ts           # + API on a fresh local Postgres
 node --import tsx tools/build-affiliate-schedule-a.ts      # the DocuSeal pages
 ```
+
+## 23 October 2026, later: $99 in the DocuSeal draft
+
+The one-page Schedule A in draft template 6566603 was replaced with the $99 version (code 1GUTH3E: $99.00 initiation, $216.00 FIRST48, $9.00 per initiation), using DocuSeal's Replace on that document so the two fields kept their places. Saved; still no submissions, nothing sent, not the live template.
