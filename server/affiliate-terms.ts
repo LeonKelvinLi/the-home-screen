@@ -24,7 +24,8 @@ import {
   PER_AFFILIATE,
   RULES,
   agreementFields,
-  docusealValues,
+  scheduleChanges,
+  SCHEDULE_A_FIELDS,
   check,
   cleanOverrides,
   cleanTerms,
@@ -256,7 +257,7 @@ export function mountAffiliateTerms(app: Express, deps: { rateLimiter(perMinute:
       if (!v) return res.status(404).json({ error: 'No such version.' })
       const terms = cleanTerms(v.terms)
       return sendPdf(res, terms, {
-        heading: `Standard schedule, version ${v.number}`,
+        heading: `Standard terms, version ${v.number}`,
         subheading: `Published ${dateText(v.created_at)} by ${v.created_by}`,
         code: v.code,
       }, `BEASTY-Schedule-A-v${v.number}.pdf`)
@@ -266,7 +267,7 @@ export function mountAffiliateTerms(app: Express, deps: { rateLimiter(perMinute:
     const v = await latestVersion()
     const code = termsCode(d.terms)
     await sendPdf(res, d.terms, {
-      heading: v && v.code === code ? `Standard schedule, version ${v.number}` : `Standard schedule, working draft${v ? ` (after version ${v.number})` : ''}`,
+      heading: v && v.code === code ? `Standard terms, version ${v.number}` : `Standard terms, working draft${v ? ` (after version ${v.number})` : ''}`,
       subheading: d.updated_at ? `Last changed ${dateText(d.updated_at)} by ${d.updated_by}` : 'Defaults from the September thread',
       code,
       draft: c.blocked ? `Not final: ${c.flags.filter((f) => f.severity === 'hard').length + Object.keys(c.problems).length} to fix` : v && v.code === code ? undefined : 'Draft',
@@ -298,7 +299,7 @@ export function mountAffiliateTerms(app: Express, deps: { rateLimiter(perMinute:
       check: check(terms, a.terms_acknowledged),
       text: scheduleText(terms, { version, code, overrides, affiliate: legalName(a.profile) }),
       agreementFields: agreementFields(terms),
-      docusealFields: docusealValues(terms),
+      docusealFields: { [SCHEDULE_A_FIELDS.changes]: scheduleChanges(v.terms, overrides) },
       packet: doc?.terms_snapshot ?? null,
     }
   }
@@ -360,10 +361,11 @@ export function mountAffiliateTerms(app: Express, deps: { rateLimiter(perMinute:
     if (!s) return res.status(404).json({ error: 'No such application.' })
     if (!s.standard) return res.status(409).json({ error: 'Publish the standard schedule first.' })
     await sendPdf(res, s.terms!, {
-      heading: `For ${legalName(s.application.profile)} · ${s.version}`,
+      heading: `Terms for ${legalName(s.application.profile)} · ${s.version}`,
       subheading: `Standard version ${s.standard.number}, code ${s.standard.code}`,
       code: s.code!,
       overrides: s.overrides,
+      changes: scheduleChanges(s.standard.terms, s.overrides!),
       draft: s.check!.blocked ? 'Not final' : undefined,
     }, `BEASTY-Schedule-A-${s.code}.pdf`)
   }))

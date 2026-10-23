@@ -1171,77 +1171,93 @@ export function agreementFields(t: Terms): Record<string, string> {
   }
 }
 
-/* ------------------------------------------------- the DocuSeal Schedule A */
+/* ------------------------------------------------- the one-page Schedule A */
 
-export interface DocusealField {
-  /** The field's name in the PDF and in DocuSeal. Never rename one in use. */
-  name: string
-  label: string
-  value: (t: Terms, code: string) => string
-  multiline?: boolean
+/**
+ * The page as it prints, in DocuSeal and in the CRM's PDF (server/affiliate-terms-pdf.ts):
+ * a short fee table and a sentence each for commission, BARK, payment and
+ * qualifying referrals. The money terms are BEASTY's, so they print as text
+ * from the admin's figures; the affiliate fills in nothing here but initials.
+ */
+export interface CompactSchedule {
+  fees: { label: string; detail: string; amount: string }[]
+  commission: string
+  bark: string
+  barkFine: string
+  payment: string
+  qualifying: string
+}
+
+export function compactSchedule(t: Terms): CompactSchedule {
+  const d = derive(t)
+  const promoSpan = d.promoMonths === 12 ? 'the first year' : `the first ${d.promoMonths} months`
+  const fine = [
+    t.promoDays ? `On promotion days announced by BEASTY, points may be multiplied up to ${t.promoDayMultiplier}x.` : '',
+    t.bonusThreshold > 0
+      ? `An Affiliate who saves ${ptsText(t.bonusThreshold)} without redeeming receives ${ptsText(d.bonusPoints)} more${t.bonusRepeat === 'once' ? ', once' : ', each time'}.`
+      : '',
+  ]
+  return {
+    fees: [
+      { label: 'Initiation fee', detail: 'once', amount: usd(t.initiationFee) },
+      { label: 'Membership fee', detail: 'per month', amount: usd(t.monthlyFee) },
+      { label: 'Foundation contribution', detail: t.foundationApplies === 'every_payment' ? 'from each payment' : 'from the initiation', amount: usd(t.foundationAmount) },
+      {
+        label: `${t.promoCode} offer`,
+        detail: `${t.promoPaidMonths} months paid, ${t.promoFreeMonths} free; first ${t.promoCap} ${t.promoCapScope === 'per_city' ? 'per city' : 'overall'}; total for ${promoSpan}`,
+        amount: usd(d.promoYearPaid),
+      },
+    ],
+    commission:
+      `The Affiliate earns ${pctText(t.commissionRate)} of ${t.commissionBase === 'after_foundation' ? 'what BEASTY keeps after the Foundation contribution' : 'each payment'}: ` +
+      `${usd(d.commissionMonthly)} per member per month and ${usd(d.commissionInitiation)} per initiation, ${durationWords(t)}. ` +
+      `No commission is earned on months a business does not pay for.` +
+      (t.otherShareRate > 0 ? ` A further ${pctText(t.otherShareRate)} of the same amount is paid to ${t.otherShareLabel || 'another partner'}.` : ''),
+    bark: `${ptsText(t.pointsPerUser)} per qualifying referred user and ${ptsText(t.pointsPerBusiness)} per qualifying referred business. 1 point = ${usd(t.pointValue)}, redeemable from ${ptsText(t.minRedemption)}.`,
+    barkFine: fine.filter(Boolean).join(' '),
+    payment: `${joinLegal(t, ['payoutFrequency', 'payoutMethod'])} ${t.clawback}`.trim(),
+    qualifying: t.qualifying,
+  }
+}
+
+const SHORT: Partial<Record<TermId, string>> = {
+  commissionRate: 'Commission',
+  commissionDuration: 'Commission paid',
+  commissionMonths: 'Commission months',
+  pointsPerUser: 'Points per user',
+  pointsPerBusiness: 'Points per business',
+  minRedemption: 'Redeemable from',
+  bonusThreshold: 'Saved-points goal',
+  payoutFrequency: 'Payment',
+  payoutDays: 'Paid within',
+}
+
+function shortValue(id: TermId, t: Terms): string {
+  const v = t[id]
+  if (id === 'commissionRate') return pctText(t.commissionRate)
+  if (id === 'commissionDuration') return durationWords(t)
+  if (id === 'commissionMonths') return `${t.commissionMonths} paid months`
+  if (id === 'pointsPerUser' || id === 'pointsPerBusiness' || id === 'minRedemption' || id === 'bonusThreshold') return ptsText(v as number)
+  if (id === 'payoutDays') return `${t.payoutDays} days`
+  if (id === 'payoutFrequency') return t.payoutFrequency === 'on_request' ? 'on request' : t.payoutFrequency
+  return String(v)
 }
 
 /**
- * The Schedule A page of the DocuSeal packet (tools/build-affiliate-schedule-a.ts).
- * On the free plan these are sender fields: the template carries the standard
- * figures as defaults, and for an affiliate with their own terms the sender
- * pastes each value from the CRM before sending. DocuSeal cannot do the
- * arithmetic on the free plan, so every worked figure is its own field,
- * filled from here, never typed by hand.
+ * The one DocuSeal field BEASTY fills: what differs for this affiliate, in
+ * words, with their code. "None" on the standard schedule.
  */
-export const DOCUSEAL_FIELDS: DocusealField[] = [
-  { name: 'Schedule A Code', label: 'Schedule A code', value: (_t, code) => code },
-  { name: 'Initiation Fee', label: 'Initiation fee (once)', value: (t) => usd(t.initiationFee) },
-  { name: 'Monthly Fee', label: 'Membership fee', value: (t) => `${usd(t.monthlyFee)} per month` },
-  {
-    name: 'Foundation Contribution',
-    label: 'Foundation contribution',
-    value: (t) => `${usd(t.foundationAmount)} from ${t.foundationApplies === 'every_payment' ? 'the initiation and every monthly payment' : 'the initiation only'}`,
-  },
-  { name: 'Commission Rate', label: 'Commission rate', value: (t) => `${pctText(t.commissionRate)} ${baseWords(t)}` },
-  { name: 'Commission Term', label: 'Commission paid', value: (t) => durationWords(t) },
-  {
-    name: 'Commission Per Member',
-    label: 'Per member per month',
-    value: (t) => {
-      const d = derive(t)
-      return `${usd(d.commissionMonthly)} (${pctText(t.commissionRate)} of ${usd(d.baseMonthly)})`
-    },
-  },
-  {
-    name: 'Commission Per Initiation',
-    label: 'Per initiation',
-    value: (t) => {
-      const d = derive(t)
-      return `${usd(d.commissionInitiation)} (${pctText(t.commissionRate)} of ${usd(d.baseInitiation)})`
-    },
-  },
-  {
-    name: 'Promo Offer',
-    label: 'Introductory offer',
-    value: (t) => {
-      const d = derive(t)
-      return `${t.promoCode}: ${usd(t.initiationFee)} + ${t.promoPaidMonths} x ${usd(t.monthlyFee)} = ${usd(d.promoYearPaid)}, then ${t.promoFreeMonths} months free; first ${t.promoCap} ${t.promoCapScope === 'per_city' ? 'per city' : 'overall'}`
-    },
-  },
-  { name: 'Points Per User', label: 'BARK points per qualifying user', value: (t) => `${ptsText(t.pointsPerUser)} (${usd(derive(t).userReward)})` },
-  { name: 'Points Per Business', label: 'BARK points per qualifying business', value: (t) => `${ptsText(t.pointsPerBusiness)} (${usd(derive(t).businessReward)})` },
-  { name: 'Point Value', label: 'Value of one point', value: (t) => usd(t.pointValue) },
-  { name: 'Minimum Redemption', label: 'Redeemable from', value: (t) => `${ptsText(t.minRedemption)} (${usd(derive(t).minRedemptionValue)})` },
-  { name: 'Promotion Days', label: 'Promotion days', value: (t) => (t.promoDays ? `up to ${t.promoDayMultiplier}x on days BEASTY announces` : 'none') },
-  {
-    name: 'Savings Bonus',
-    label: 'Saved-points bonus',
-    value: (t) => {
-      const d = derive(t)
-      return t.bonusThreshold > 0 ? `at ${ptsText(t.bonusThreshold)}: +${ptsText(d.bonusPoints)} (${usd(d.bonusValue)}), ${t.bonusRepeat === 'once' ? 'once' : 'each time'}` : 'none'
-    },
-  },
-  { name: 'Payout Schedule', label: 'Payment', value: (t) => joinLegal(t, ['payoutFrequency', 'payoutMethod']), multiline: true },
-  { name: 'Special Terms', label: 'Terms agreed with this Affiliate (if any)', value: (t) => t.specialTerms || 'None', multiline: true },
-]
-
-export function docusealValues(t: Terms): Record<string, string> {
-  const code = termsCode(t)
-  return Object.fromEntries(DOCUSEAL_FIELDS.map((f) => [f.name, f.value(t, code)]))
+export function scheduleChanges(standard: Terms, overrides: Overrides): string {
+  const t = effectiveTerms(standard, overrides)
+  const lines = PER_AFFILIATE.filter((f) => f.id !== 'specialTerms' && f.id in overrides).map(
+    (f) => `${SHORT[f.id] ?? f.prompt}: ${shortValue(f.id, t)} (standard ${shortValue(f.id, standard)})`,
+  )
+  if (t.specialTerms.trim()) lines.push(t.specialTerms.trim())
+  return lines.length ? `${lines.map((l) => l.replace(/[.;\s]+$/, '')).join('; ')}. Code ${termsCode(t)}.` : 'None'
 }
+
+/** The page's only DocuSeal fields. Never rename one in use. */
+export const SCHEDULE_A_FIELDS = {
+  changes: 'Schedule A Changes',
+  initials: 'Schedule A Initials',
+} as const

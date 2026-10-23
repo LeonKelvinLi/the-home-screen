@@ -23,8 +23,9 @@ import {
   PUBLISHED_INITIATION,
   RULES,
   agreementFields,
-  DOCUSEAL_FIELDS,
-  docusealValues,
+  SCHEDULE_A_FIELDS,
+  compactSchedule,
+  scheduleChanges,
   check,
   cleanOverrides,
   cleanTerms,
@@ -145,10 +146,14 @@ ok('special terms print as their own section', schedule(eff, over).at(-1)!.text 
 const af = agreementFields(DEFAULT_TERMS)
 eq('the review agreement’s six reward fields are filled', Object.keys(af).sort(), ['Business reward', 'Minimum payout', 'Payout schedule', 'Point value', 'Reward basis', 'User reward'])
 ok('…with the figures', af['User reward'] === '3 points ($3.00)' && af['Minimum payout'] === '100 points ($100.00)')
-const ds = docusealValues(DEFAULT_TERMS)
-ok('the DocuSeal Schedule A fields have unique names', new Set(DOCUSEAL_FIELDS.map((f) => f.name)).size === DOCUSEAL_FIELDS.length)
-ok('…and carry the figures', ds['Commission Per Member'] === '$3.00 (10% of $30.00)' && ds['Points Per User'] === '3 points ($3.00)' && ds['Minimum Redemption'] === '100 points ($100.00)' && ds['Schedule A Code'] === code && ds['Promo Offer'].includes('$186.00'))
-ok('an affiliate’s override reaches their DocuSeal values', docusealValues(eff)['Commission Rate'].startsWith('12%') && docusealValues(eff)['Special Terms'] === 'Paid weekly in launch month.')
+const cs = compactSchedule(DEFAULT_TERMS)
+eq('the printed fee table is four rows', cs.fees.map((f) => [f.label, f.amount]), [['Initiation fee', '$69.00'], ['Membership fee', '$39.00'], ['Foundation contribution', '$9.00'], ['FIRST48 offer', '$186.00']])
+ok('commission is one sentence with both worked figures', cs.commission.startsWith('The Affiliate earns 10% of what BEASTY keeps after the Foundation contribution: $3.00 per member per month and $6.00 per initiation'))
+ok('BARK is one sentence', cs.bark === '3 points per qualifying referred user and 6 points per qualifying referred business. 1 point = $1.00, redeemable from 100 points.')
+ok('promotion days and the bonus are one fine-print line', cs.barkFine.includes('up to 3x') && cs.barkFine.includes('receives 300 points more, once'))
+eq('DocuSeal gets two fields only', Object.values(SCHEDULE_A_FIELDS), ['Schedule A Changes', 'Schedule A Initials'])
+eq('the standard schedule has no changes', scheduleChanges(DEFAULT_TERMS, {}), 'None')
+eq('an affiliate’s changes are written out with their code', scheduleChanges(DEFAULT_TERMS, over), `Commission: 12% (standard 10%); Paid weekly in launch month. Code ${termsCode(eff)}.`)
 ok('the PDF encoding keeps the schedule’s punctuation', winAnsi('’ “ ” — × ÷ · •') === '’ “ ” — × ÷ · •' && winAnsi('−$1 → ≤') === '-$1 -> <=')
 
 async function pdfText(bytes: Uint8Array) {
@@ -170,9 +175,10 @@ async function pdfText(bytes: Uint8Array) {
 const pdf = await schedulePdf(DEFAULT_TERMS, { heading: 'Standard schedule, version 1', subheading: 'Audit', code, openQuestions: ['How long commission lasts: not discussed.'] })
 const parsed = await pdfText(pdf)
 ok('the PDF opens', parsed.doc.getPageCount() >= 1 && Buffer.from(pdf.slice(0, 5)).toString() === '%PDF-')
-for (const needle of ['$69.00', '$39.00 / month', '$9.00', '10%', '$3.00', '$6.00', '100 points', 'FIRST48', '$186.00', '$15.50', `Code ${code}`, 'Not agreed with Glenn yet']) ok(`the PDF prints ${needle}`, parsed.out.includes(needle))
-const longPdf = await schedulePdf(T({ specialTerms: 'Long clause. '.repeat(400).trim() }), { heading: 'Overflow', subheading: 'Audit', code: 'X' })
-ok('a long clause runs onto further pages instead of off the page', (await PDFDocument.load(longPdf)).getPageCount() > 2)
+for (const needle of ['$69.00', '$39.00', '$9.00', '10%', '$3.00 per member', '$6.00 per initiation', '100 points', 'FIRST48 offer', '$186.00', `Code ${code}`, 'Not yet agreed with Glenn']) ok(`the PDF prints ${needle}`, parsed.out.includes(needle))
+ok('the standard schedule is one page', (await PDFDocument.load(await schedulePdf(DEFAULT_TERMS, { heading: 'Standard terms', subheading: 'Audit', code, fields: 'empty' }))).getPageCount() === 1)
+const longPdf = await schedulePdf(T({ qualifying: 'Long clause. '.repeat(400).trim() }), { heading: 'Overflow', subheading: 'Audit', code: 'X' })
+ok('a long clause runs onto further pages instead of off the page', (await PDFDocument.load(longPdf)).getPageCount() > 1)
 
 /* ---------------------------------------------------------------- API ---- */
 
@@ -261,7 +267,7 @@ try {
   r = await admin.call('POST', '/api/crm/affiliate-terms/publish', { revision: s.draft.revision, note: 'Audit' })
   ok('a clean schedule publishes as version 1', r.status === 200 && r.data.published.number === 1 && !r.data.unpublishedChanges && r.data.published.code === termsCode(DEFAULT_TERMS))
   ok('publishing the same figures twice is refused', (await admin.call('POST', '/api/crm/affiliate-terms/publish', { revision: r.data.draft.revision })).status === 409)
-  ok('version 1 prints as a PDF', (r = await admin.call('GET', '/api/crm/affiliate-terms/schedule.pdf?version=1')).status === 200 && (await pdfText(r.buf)).out.includes('Standard schedule, version 1'))
+  ok('version 1 prints as a PDF', (r = await admin.call('GET', '/api/crm/affiliate-terms/schedule.pdf?version=1')).status === 200 && (await pdfText(r.buf)).out.includes('Standard terms, version 1'))
   const hist = (await admin.call('GET', '/api/crm/affiliate-terms/history')).data.events
   ok('every change is on the record with old and new values and its channel', hist.some((e: any) => e.field === 'commissionRate' && e.old_value === 10 && e.new_value === 12) && hist.some((e: any) => e.field === 'pointsPerUser' && e.channel === 'talk') && hist.some((e: any) => e.field === 'published'))
 
@@ -285,9 +291,9 @@ try {
   ok('their code differs from the standard', r.data.code !== r.data.standard.code)
   ok('their schedule text names them', r.data.text.includes('Affiliate: Terms QA'))
   ok('…and stars them', r.data.text.includes('12% *') && r.data.text.includes('150 points *') && r.data.text.includes('First month paid weekly.'))
-  ok('their DocuSeal values follow their figures', r.data.docusealFields['Commission Rate'].startsWith('12%') && r.data.docusealFields['Schedule A Code'] === r.data.code)
+  ok('their DocuSeal changes line follows their figures', r.data.docusealFields['Schedule A Changes'].startsWith('Commission: 12% (standard 10%)') && r.data.docusealFields['Schedule A Changes'].includes(r.data.code))
   ok('the change is in their history', (await admin.call('GET', `/api/crm/onboarding/${appId}`)).data.events.some((e: any) => e.kind === 'terms_changed'))
-  ok('their Schedule A prints', (r = await admin.call('GET', `/api/crm/onboarding/${appId}/schedule.pdf`)).status === 200 && (await pdfText(r.buf)).out.includes('12% *'))
+  ok('their Schedule A prints their figures and their changes', (r = await admin.call('GET', `/api/crm/onboarding/${appId}/schedule.pdf`)).status === 200 && (await pdfText(r.buf)).out.includes('earns 12% of') && (await pdfText(r.buf)).out.includes('(standard 10%)'))
   r = await admin.call('PUT', path, { overrides: {} })
   ok('clearing overrides puts them back on the standard', r.status === 200 && r.data.code === r.data.standard.code)
 } finally {

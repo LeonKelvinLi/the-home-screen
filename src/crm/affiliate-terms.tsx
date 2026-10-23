@@ -662,7 +662,7 @@ export function AffiliateTermsPanel({ id, admin }: { id: string; admin: boolean 
             Copy code
           </button>
         </div>
-        <p className="crm-note is-quiet">On the free DocuSeal plan the packet’s Schedule A fields carry the standard figures. For an affiliate with their own terms, paste each value below into the field of the same name when creating their request.</p>
+        <p className="crm-note is-quiet">On the free DocuSeal plan the packet’s Schedule A prints the standard figures; anything different for this affiliate goes in its “Schedule A Changes” field, below.</p>
       </div>
 
       <details className="crm-aff-prefill crm-terms-override" open={Object.keys(data.overrides ?? {}).length > 0}>
@@ -724,8 +724,8 @@ export function AffiliateTermsPanel({ id, admin }: { id: string; admin: boolean 
       </details>
 
       <details className="crm-aff-prefill" open={Object.keys(data.overrides ?? {}).length > 0}>
-        <summary>DocuSeal Schedule A fields</summary>
-        <p className="crm-note is-quiet">Same names as the fields on the packet’s Schedule A pages. The template carries the standard values; paste these only for an affiliate with their own terms.</p>
+        <summary>DocuSeal Schedule A</summary>
+        <p className="crm-note is-quiet">The packet’s Schedule A prints the standard figures. Its one BEASTY field, “Schedule A Changes”, says “None” by default; paste this when creating the request for an affiliate with their own terms.</p>
         {Object.entries(data.docusealFields ?? {}).map(([name, value]) => (
           <div key={name} className="crm-aff-prefill-row">
             <div>

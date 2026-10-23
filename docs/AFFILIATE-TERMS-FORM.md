@@ -15,7 +15,7 @@ default an admin edits, and each field says where its default came from.
 | The interview | `src/crm/affiliate-terms.tsx`, CRM → Affiliates → **Money terms** (`#/affiliate-terms`) | One chapter at a time, every answer saved as it changes, live previews, review screen, publish. |
 | One affiliate | the **Money terms** section on an affiliate's CRM page | Their own figures (overrides), their PDF, copy buttons for the DocuSeal packet. |
 | Server | `server/affiliate-terms.ts`, `server/affiliate-terms-pdf.ts` | Draft, versions, history, overrides, Schedule A PDFs (pdf-lib). |
-| DocuSeal page | `tools/build-affiliate-schedule-a.ts` | The fillable Schedule A pages for the packet template, with defaults. |
+| DocuSeal page | `tools/build-affiliate-schedule-a.ts` | The one-page Schedule A for the packet template: printed terms, a Changes field BEASTY prefills, the Affiliate's initials. |
 | Audit | `tools/audit-affiliate-terms.ts` | The arithmetic, every rule, the PDF text, and the API on a throwaway database. |
 
 ## How it works like the TDS app
@@ -104,42 +104,48 @@ No paid DocuSeal API, no embedding, no API prefill.
 1. **The code.** Every set of figures has a 7-character code (`termsCode`, a
    hash of every field). It prints on every page and goes into the packet, so
    a signed copy can always be matched to its exact figures.
-2. **The Schedule A pages.** `node --import tsx tools/build-affiliate-schedule-a.ts`
-   (optionally `--terms version.json`) writes:
-   - `output/pdf/BEASTY-Affiliate-Schedule-A-Fillable-DRAFT.pdf`: two pages, 17 fillable fields with the values filled in, for review.
-   - `out/affiliate-forms/beasty-schedule-a-docuseal-import.pdf`: the same pages with **empty** fields, because DocuSeal's importer turns filled widgets into fixed page content.
-   - `out/affiliate-forms/schedule-a-fields.json`: field name → default.
+2. **One printed page.** `node --import tsx tools/build-affiliate-schedule-a.ts`
+   (optionally `--terms version.json`) renders Schedule A on one page, with the
+   same renderer as the CRM's PDF (`server/affiliate-terms-pdf.ts`):
+   - a four-row fee table, amounts right-aligned: initiation, membership fee,
+     the Foundation contribution, and FIRST48 with its first-year total;
+   - one sentence for commission ("10% of what BEASTY keeps after the
+     Foundation contribution: $3.00 per member per month and $6.00 per
+     initiation …");
+   - one sentence for BARK, with promotion days and the 300-point bonus as a
+     line of fine print;
+   - payment and adjustments, and qualifying referrals.
 
-   Page 1 holds the figures (fees, the $9, FIRST48, rate, per-member and
-   per-initiation commission, points, point value, minimum, promotion days,
-   bonus, payment, code). Page 2 holds the standard clauses and a
-   **Special Terms** box.
+   The money terms are BEASTY's, so they print as text. The page has **two
+   fields only**: **Schedule A Changes**, which BEASTY prefills ("None" on the
+   standard terms), and **Schedule A Initials** for the Affiliate. The design
+   is plain on purpose, like a contract schedule rather than a form: one
+   typeface (Helvetica, whose figures are tabular), hairline rules instead of
+   boxes, a single heading style, and BEASTY yellow once, under the title.
+
+   Outputs: `output/pdf/BEASTY-Affiliate-Schedule-A-DRAFT.pdf` (review),
+   `out/affiliate-forms/beasty-schedule-a-docuseal-import.pdf` (both fields
+   empty, because DocuSeal's importer turns filled widgets into fixed page
+   content) and `out/affiliate-forms/schedule-a-fields.json`.
 3. **Into the template (once per published version).** In Glenn's DocuSeal
-   account, add the import PDF to a copy of the packet template (6402995)
-   after the agreement pages, choose **Keep** on native-field import, and make
-   the 17 fields sender-filled (prepared by BEASTY, read-only to the
-   affiliate) with the defaults from `schedule-a-fields.json`. The free editor
-   supports defaults, so a standard affiliate's request needs no typing. When
-   Glenn approves, that template's ID becomes `DOCUSEAL_MANUAL_TEMPLATE_ID`,
-   as `docs/AFFILIATE-ONBOARDING.md` already describes.
+   account, add the import page after the agreement pages and choose **Keep**.
+   Set **Schedule A Changes** to default "None", Read-only and Prefillable.
+   Change **Schedule A Initials** to the Initials type, owned by the Affiliate
+   and required. When Glenn approves, that template's ID becomes
+   `DOCUSEAL_MANUAL_TEMPLATE_ID`, as `docs/AFFILIATE-ONBOARDING.md` already
+   describes. A new published version means re-rendering the page and
+   replacing it in the template.
 
-   **Done 22 Oct 2026 for the defaults (code `0Z94EU7`):** Glenn's account
-   now has template **6566603**,
-   [BEASTY-Affiliate-Packet-with-Schedule-A-DRAFT](https://docuseal.com/templates/6566603/edit).
-   It is a clone of 6402995 (left unchanged) with the two Schedule A pages
-   added after the packet. Native fields were kept, and all 17 fields have their
-   default from `schedule-a-fields.json`, **Read-only** on (the affiliate cannot
-   change them), **Prefillable** on (the sender can change them for one
-   affiliate) and Required off. The values were checked after a save and a
-   reload. It is a draft: no request has been sent from it, and it is not set
-   as `DOCUSEAL_MANUAL_TEMPLATE_ID`. When a new version is published with
-   different figures, rebuild with `--terms` and update the changed defaults
-   in this template.
-4. **One affiliate's own figures.** When creating their submission on the
-   dashboard, the sender pastes each value from the CRM. The field names in
-   the CRM are the field names in DocuSeal (`DOCUSEAL_FIELDS`). DocuSeal cannot
-   do the arithmetic on the free plan, so worked figures such as "$3.00 (10% of
-   $30.00)" are their own fields, always copied from the CRM and never typed.
+   Template **6566603**
+   ([BEASTY-Affiliate-Packet-with-Schedule-A-DRAFT](https://docuseal.com/templates/6566603/edit)),
+   a clone of 6402995 made on 22 Oct, still carries the **first, 17-field**
+   Schedule A. Leon judged that version too busy, so it must be swapped for
+   this page before anyone uses it. No request has been sent from it.
+4. **One affiliate's own figures.** The CRM writes them as one line for the
+   Changes field, e.g. "Commission: 12% (standard 10%); Redeemable from:
+   150 points (standard 100 points). Code 1AB2C3D." The sender pastes it when
+   creating that affiliate's request on the dashboard. Their own Schedule A
+   PDF from the CRM prints their figures in full.
 5. **Proof.** When an admin attaches the packet in the CRM, the document row
    records `terms_snapshot = { version, code }`. If the affiliate's terms
    change afterwards, their page says so: "The DocuSeal packet went out with
