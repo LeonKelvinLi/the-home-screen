@@ -6725,5 +6725,48 @@
       "Their 5th-anniversary '50% OFF SMOOTHIES, first 100 customers, October 23' post is on their grid (tomorrow); not used as an offer (nothing agreed with BEASTY).",
       "Coordinator: sent for BEASTY • Juice only, which fills from the type line; no city seat, as with Mitchell’s and The New H Lounge."
     ]
+  },
+  {
+    "id": "b_kaleiaolivia",
+    "name_exact": "Kaleia Olivia",
+    "checked_on": "2026-10-22",
+    "sources": [
+      "https://www.instagram.com/ko_rising/ (bio: Glenn's screenshot 1019-2128_IMG_7319: 'Dancer', 'YAY AREA', 'Turf, Street Styles, Choreo', 'Team: @aurajinrising', 'WOD Summit '26 Crew v Crew Battle', a youtu.be link and 3 more links)",
+      "Glenn's screenshot 1019-2128_IMG_7320 (her Instagram picture, opened; the icon is cut from it)",
+      "https://www.instagram.com/reel/DeVblLMuNp-/ (the film; posted by @shotbyry_510, 11 Oct 2026: 'Feelin Myself #macdre #bayarea #turfing, 🎥: @shotbyry_510, 💃🏻: @ko_rising')"
+    ],
+    "facts": {
+      "slug": "kaleia-olivia",
+      "name": "Kaleia Olivia",
+      "label": "Kaleia Olivia",
+      "cuisine": "Dancer: turf, street styles & choreo",
+      "tagline": "Yay Area dancer: turf, street styles and choreography.",
+      "color": "#eaedef",
+      "icon": "kaleia-olivia",
+      "prep": 0,
+      "category": "Dancers",
+      "items": [],
+      "contactOnly": "A Bay Area dancer in turf, street styles and choreography, on the team @aurajinrising and in the WOD Summit '26 crew-versus-crew battle. BEASTY has not spoken to her: this spot is held, not taken.",
+      "clip": {
+        "src": "/clips/kaleia-olivia.mp4",
+        "poster": "/clips/kaleia-olivia-poster.webp",
+        "href": "https://www.instagram.com/reel/DeVblLMuNp-/",
+        "credit": "Filmed by @shotbyry_510",
+        "platform": "Instagram",
+        "by": "shotbyry_510"
+      }
+    },
+    "placements": [],
+    "glenn": "Glenn, 19 Oct 2026, 9:28 pm: screenshots of her Instagram (@ko_rising) and her picture opened; \"BEASTY • Dancers\"; \"Clip this video plz\" with https://www.instagram.com/reel/DeVblLMuNp-/ (filmed by @shotbyry_510, her turfing to Mac Dre).",
+    "flags": [
+      "POSSIBLY A MINOR. Her picture and the reel show a young person who looks to be in her early-to-mid teens, and a comment on the reel reads 'Your parents raised you proper young life'. Nothing states her age. Recommend Leon or Glenn confirm her age and, if she is under 18, get a parent's or guardian's OK before her photo, name and film go on BEASTY. The page holds only what her public bio says: no city beyond 'Yay Area', no school, no phone, no email, no links.",
+      "Name: 'Kaleia Olivia' is her Instagram display name, used as she shows it. Handle @ko_rising.",
+      "Type line 'Dancer: turf, street styles & choreo' matches the Dancers test (/\\bdancers?\\b/) and nothing else. Precedents: Lil Hawaii ('Pro dancer'), Cheeenoh ('Dancer, artist and battle judge'): contactOnly, no address, no phone, no site, no Instagram button.",
+      "needsSite not set: an individual dancer, as with Lil Hawaii and Cheeenoh (neither carries needsSite). Her bio has a youtu.be link and three more links, not opened; none used.",
+      "Her bio's '...more' is truncated after 'WOD Summit '26 Crew v Crew Battle'; nothing past it is used. @aurajinrising is named in the contactOnly because her bio names it as her team; drop the handle if handles should not appear in text.",
+      "Icon is her photograph (her Instagram picture), as Cheeenoh's is his. If she is a minor, the coordinator may prefer to hold the icon.",
+      "FILM CUT SILENT. Filmed and posted by @shotbyry_510 (yt-dlp channel shotbyry_510), credited 'Filmed by @shotbyry_510', by: shotbyry_510; she is the only person in it. make-clip picked 40s-64s of 80s; the audio track was then removed (ffmpeg -c:v copy -an) because the song is Mac Dre's 'Feelin Myself' and she appears to be a minor; the Breakfast Club precedent. Re-run tools/make-clip.py on the reel if sound is wanted.",
+      "Coordinator: held from the 22 October release until Leon confirmed, the same evening, that she is an adult or her parent approved; then added. BEASTY • Dancers fills from the type line; no city seat."
+    ]
   }
 ]

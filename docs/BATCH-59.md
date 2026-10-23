@@ -41,15 +41,15 @@ Everything Glenn sent between Batch 57 (his 7:04 pm send of 19 October) and the 
 
 In `src/data/foodies.ts`: Uncle Jay Burger House (@wthellydanyelly) and That's My Jam (@tasha.malan) are not on BEASTY; @takeoutwithtuck's Wing Bros reel is a second review with its own copy, as Tuck has a page. Smoking Pig's and Laughing Monk's "Foodie" reels are the films on their pages. All are logged in `docs/FOODIES.md`.
 
-## Held back
+## Kaleia Olivia, added after a hold
 
-**Kaleia Olivia (@ko_rising), "BEASTY • Dancers"**, is researched and her icon and film are cut but she is **not added**. She appears to be in her early-to-mid teens and nothing states her age. Leon or Glenn should confirm it, and a parent's OK, before a minor's name, picture and film go up.
+**Kaleia Olivia (@ko_rising), "BEASTY • Dancers"** (19 October, 9:28 pm) was held out of the first release: she looked young and nothing stated her age. Leon confirmed the same evening that she is an adult or has a parent's OK, and she was added in a follow-up commit. Her page holds only what her public bio says (no address, phone or links); her own Instagram picture is the icon, as Cheeenoh's is. Dancers fills from her type line; no city seat. Film: @shotbyry_510, 40–64 s, **cut silent** because the soundtrack's lyrics are not clean.
 
 ## Verification
 
 - `npm run build` and the data audit (0 errors).
 - A before-and-after diff of every seat in the app: 31 additions and nothing moved: the 23 seats in the table, set by hand, and 8 on category pages that fill from type lines (Bar/Lounge 19–22, Cafe 17, Food Trucks 7, Juice 2, Photographers 6). No existing business moved.
-- `tools/audit-batch59.mjs`: 131 checks on a local build. Each new page, icon and film, its credit and city seat, every menu item, More eats, the four films added to listed pages, Stan's icon and the reels heading. A film low on a long page loads only once scrolled to, so the audit scrolls to it.
+- `tools/audit-batch59.mjs`: 137 checks on a local build (131 before Kaleia Olivia was added). Each new page, icon and film, its credit and city seat, every menu item, More eats, the four films added to listed pages, Stan's icon and the reels heading. A film low on a long page loads only once scrolled to, so the audit scrolls to it.
 - `tools/audit-categories.mjs` and `tools/audit-foodies.mjs` pass.
 - `tools/gap-check.py` against the Mac: 406 sites; the nine of these sent with a link are listed now, and the ten older "missing" ones are listed under their own domains (Un-Stripped, Souva, Katsu Factory, The Moon Nails, The Lions Mane, Penelope's, Precision Auto) or are not businesses (a Jotform, a volleyball camp page, leonbuilds.org).
 

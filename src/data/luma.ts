@@ -286,6 +286,7 @@ export const ICON_LUMA: Record<string, number> = {
   'k-on-the-go': 0.5909,
   'kabab-burger': 0.2511,
   'kaisen-don-mark': 0.8619,
+  'kaleia-olivia': 0.44,
   'kan-kiin-2': 0.068,
   'kan-kiin': 0.092,
   'karam-sf': 0.833,

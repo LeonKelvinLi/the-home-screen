@@ -29927,4 +29927,26 @@ export const LOCAL_SEED: LocalSeed[] = [
       "siteCta": "Visit their site",
       "siteNote": "21 and over, with a valid physical ID or passport. Prices are from the food menu on their own website, posted in July 2025, so some may have changed. Sandwiches and burgers come with a choice of potato or macaroni salad, fries, house chips, cottage cheese, side salad or pickle spears (+$1 for garlic, curly or steak fries or onion rings). Event tickets are on their Linktree."
   },
+  /* Batch 59, held then added 22 October 2026: Kaleia Olivia (@ko_rising), "BEASTY • Dancers", Glenn 19 October 9:28 pm. Leon confirmed she is an adult or has a parent's OK. */
+  {
+      "slug": "kaleia-olivia",
+      "name": "Kaleia Olivia",
+      "label": "Kaleia Olivia",
+      "cuisine": "Dancer: turf, street styles & choreo",
+      "tagline": "Yay Area dancer: turf, street styles and choreography.",
+      "color": "#eaedef",
+      "icon": "kaleia-olivia",
+      "prep": 0,
+      "category": "Dancers",
+      "items": [],
+      "contactOnly": "A Bay Area dancer in turf, street styles and choreography, on the team @aurajinrising and in the WOD Summit '26 crew-versus-crew battle. BEASTY has not spoken to her: this spot is held, not taken.",
+      "clip": {
+          "src": "/clips/kaleia-olivia.mp4",
+          "poster": "/clips/kaleia-olivia-poster.webp",
+          "href": "https://www.instagram.com/reel/DeVblLMuNp-/",
+          "credit": "Filmed by @shotbyry_510",
+          "platform": "Instagram",
+          "by": "shotbyry_510"
+      }
+  },
 ]
