@@ -406,7 +406,8 @@ export const PAGES: Record<PageKey, Page> = {
         ],
         facts: [
           '3 points for each new active user referred',
-          '6 points for each new active business referred',
+          /* 9 from 2026-10-23 (Leon), to match the $9.00 commission on a $99 initiation; it was 6. */
+          '9 points for each new active business referred',
           '1 point = $1',
           'No limit to the points you can earn',
           'Points are non-transferable',

@@ -175,7 +175,7 @@ also offers their values ("Values for the review agreement's reward fields").
 
 ## Questions for Glenn, in order
 
-1. ~~Is the commission on a $69 or a $99 initiation?~~ **$99**, Leon, 23 Oct. That makes the commission on an initiation $9.00 (10% of $90), while Glenn's BARK note pays 6 points ($6.00) per business, worked out from $69: the defaults now raise `business_points_vs_commission` for Glenn to settle (9 points, or keep 6).
+1. ~~Is the commission on a $69 or a $99 initiation?~~ **$99**, Leon, 23 Oct. That makes the commission on an initiation $9.00 (10% of $90), while Glenn's BARK note pays 6 points ($6.00) per business, worked out from $69: Leon settled it the same morning: **9 points per business**, so the defaults raise no question at all.
 2. Does the $9 come out of every payment, or only the activation?
 3. How long does an affiliate earn on one business?
 4. Payment: how often, and within how many days?
@@ -193,3 +193,7 @@ node --import tsx tools/build-affiliate-schedule-a.ts      # the DocuSeal pages
 ## 23 October 2026, later: $99 in the DocuSeal draft
 
 The one-page Schedule A in draft template 6566603 was replaced with the $99 version (code 1GUTH3E: $99.00 initiation, $216.00 FIRST48, $9.00 per initiation), using DocuSeal's Replace on that document so the two fields kept their places. Saved; still no submissions, nothing sent, not the live template.
+
+## 23 October 2026: 9 BARK points per business
+
+Leon: "Make BARK 9 points per referred business, to match the $9.00 commission." The default is 9 (it was Glenn's 6, worked out from $69), the Careers page (MAKE $) says 9, and the defaults now raise no soft question. Schedule A was regenerated and replaced in draft template 6566603 the same way as the $99 change.

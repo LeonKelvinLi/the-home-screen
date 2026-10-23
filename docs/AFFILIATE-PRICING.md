@@ -172,3 +172,5 @@ In code: `tier` on a seed (`src/data/brands.ts`), the rules in
 ## 23 October 2026: $99 initiation
 
 Leon: "$99 initiation". The affiliate terms form now uses the Members page's $99, not the FIRST48 note's $69. FIRST48 at $99 is $99 + 3 × $39 = $216 in year one, $18.00 a month. Commission on an initiation becomes 10% of ($99 − $9) = $9.00; Glenn's 6 BARK points per business were worked out from $69, so that one figure is his to settle (see `docs/AFFILIATE-TERMS-FORM.md`).
+
+Later the same morning, Leon: 9 BARK points per referred business, to match the $9.00 commission (10% of $99 − $9). The Careers page and the affiliate terms both say 9 now.

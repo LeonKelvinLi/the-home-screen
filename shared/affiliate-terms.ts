@@ -87,7 +87,8 @@ export const DEFAULT_TERMS: Terms = {
   otherShareRate: 0,
   otherShareLabel: '',
   pointsPerUser: 3,
-  pointsPerBusiness: 6,
+  /* Leon, 2026-10-23: 9, to match 10% of ($99 − $9). Glenn's 6 was 10% of ($69 − $9). */
+  pointsPerBusiness: 9,
   pointValue: 1,
   minRedemption: 100,
   promoDays: true,
@@ -469,7 +470,7 @@ export const FIELDS: TermField[] = [
     explain: 'The same 10% pays differently depending on what it is 10% of. Glenn’s own arithmetic for the BARK points takes it after the $9.',
     example: 'After: 10% of $30 = $3.00. Before: 10% of $39 = $3.90.',
     legal: () => '',
-    source: 'Glenn’s arithmetic: 3 points is 10% of ($39 − $9), 6 points is 10% of ($69 − $9).',
+    source: 'Glenn’s arithmetic: 3 points is 10% of ($39 − $9); per business, 10% of ($99 − $9) = 9 points (Leon, 23 Oct; it was 6, from $69).',
     settled: true,
     perAffiliate: false,
     preview: (t) => {
@@ -557,7 +558,7 @@ export const FIELDS: TermField[] = [
     max: 1000,
     explain: 'Credited when a referred user qualifies.',
     legal: (t) => `${ptsText(t.pointsPerUser)} for each qualifying referred user`,
-    source: 'Careers page (MAKE $) and the BARK note, 2 Sep.',
+    source: 'Leon, 23 Oct: 9, matching the $9.00 commission on a $99 initiation. Glenn’s BARK note of 2 Sep and the Careers page said 6.',
     settled: true,
     perAffiliate: true,
     preview: (t) => {
