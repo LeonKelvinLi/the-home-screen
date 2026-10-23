@@ -109,6 +109,7 @@ export const ICON_LUMA: Record<string, number> = {
   'calikid-burgers-pleasant-hill': 0.0686,
   'camachos-party-rentals': 0.3576,
   'cambodian-street-food': 0.3661,
+  'carabao': 0.0279,
   'carlyles-chicken-wings': 0.0068,
   'catch-sf': 0.0949,
   'champa-garden': 0.731,

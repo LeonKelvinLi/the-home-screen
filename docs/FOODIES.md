@@ -223,3 +223,9 @@ Secondary and unavailable links:
 | Sent | Creator | What the reel shows | On BEASTY? |
 |---|---|---|---|
 | 22 Oct 2026 | @brianthebarber (Brian Recosana) | Five trucks at Mitote Food Park, Santa Rosa, Pezcow third (71-95 s): its seafood tostadas, ceviche and a shrimp-and-octopus taco, scored 9/10 — [DezpY7YPSuk](https://www.instagram.com/reel/DezpY7YPSuk/), sent as "Clip this video plz" (not as "Foodie") | **Yes.** Credited film on Pezcow's page (its own 24 s) |
+
+### 23 October 2026
+
+| Sent | Creator | What the reel shows | On BEASTY? |
+|---|---|---|---|
+| 23 Oct 2026 | @thetastebud (Vince Vasquez) | Carabao, 145 C Gasser Dr, Napa: kare-kare, kinilaw, sisig, adobo deviled eggs, wagyu bolognese — [De1tDgtTaW2](https://www.instagram.com/reel/De1tDgtTaW2/), sent as “Clip this video plz” with “Please update icon” | **Yes.** Credited film on Carabao's page |

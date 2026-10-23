@@ -7450,7 +7450,10 @@ export const LOCAL_SEED: LocalSeed[] = [
     label: 'Carabao',
     cuisine: 'Filipino',
     tagline: 'Filipino cooking, twelve tables, Napa.',
-    color: '#14110E|#C6763B',
+    /* Glenn, 2026-10-23, 9:21 am: "Please update icon", with their own site's logo. The Vertical-Inverse
+       file from carabaonapa.com on the site's own brown. */
+    icon: 'carabao',
+    color: '#331F0B|#C6763B',
     prep: 0,
     category: 'Filipino food',
     phone: '(707) 699-1220',
@@ -7458,6 +7461,16 @@ export const LOCAL_SEED: LocalSeed[] = [
     email: 'contact@carabaonapa.com',
     instagram: 'carabaonapa',
     site: 'https://carabaonapa.com/',
+    /* The same send: "Clip this video plz", @thetastebud's visit. 7s to 31s, all Carabao, and clear of
+       the two shots of his children at the start and the end. */
+    clip: {
+      src: '/clips/carabao.mp4',
+      poster: '/clips/carabao-poster.webp',
+      href: 'https://www.instagram.com/reel/De1tDgtTaW2/',
+      credit: 'Filmed by @thetastebud',
+      platform: 'Instagram',
+      by: 'thetastebud',
+    },
     /*
       NO HOURS HERE, DELIBERATELY, and this is the one thing to ask them.
       Their site publishes two schedules at once: the footer on every page

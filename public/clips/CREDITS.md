@@ -374,3 +374,4 @@ Not used: `DelACp9h8Xf` (sent as “Foodie” with One’s Cafe) reviews Big Tac
 | File | Business/page | Original reel | Excerpt | Request & credit |
 |---|---|---|---|---|
 | `pezcow.mp4` | Pezcow, Santa Rosa | [DezpY7YPSuk](https://www.instagram.com/reel/DezpY7YPSuk/) | 71s-95s of 131s | Glenn, 22 Oct 2026: “Clip this video plz”; Filmed by @brianthebarber. The truck's own stretch of a five-truck Mitote Food Park reel: 'next up Pezcow Food truck' over the truck and its chalkboard menu, its seafood tostadas and an avocado-topped ceviche, then the creator eating a seafood taco ('I think this is my favorite', 'the shrimp and the octopus in here is hella flavorful') and his 9/10. |
+| `carabao.mp4` | Carabao, Napa | [De1tDgtTaW2](https://www.instagram.com/reel/De1tDgtTaW2/) | 7s-31s of 40s | Glenn, 23 Oct 2026: “Clip this video plz” (with “Please update icon”); Filmed by @thetastebud. All Carabao; the excerpt leaves out the two shots of his children. |
