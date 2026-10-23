@@ -33,7 +33,7 @@ default an admin edits, and each field says where its default came from.
 
 | Chapter | Field | Default | Source | Settled? | Per affiliate? |
 |---|---|---|---|---|---|
-| Prices | Initiation fee | $69 | FIRST48 proposal, 29 Aug | **No**: the Members page prints $99 | no |
+| Prices | Initiation fee | $99 | Leon, 23 Oct: "$99 initiation" (the Members page figure) | Yes | no |
 | | Monthly fee | $39 | 29 Aug; Biggie's Member, 3 Sep | yes | no |
 | Foundation | Amount | $9 | Glenn, 2 Sep | yes | no |
 | | Taken from | every payment | his "activation" vs the 3-point arithmetic | **No** | no |
@@ -56,9 +56,9 @@ default an admin edits, and each field says where its default came from.
 
 ### Live previews (all from the same `derive()`)
 
-- "10% of $30.00 = $3.00/member/month · 10% of $60.00 = $6.00 per initiation".
+- "10% of $30.00 = $3.00/member/month · 10% of $90.00 = $9.00 per initiation".
   With "before the $9" it reads "10% of $39.00 = $3.90/member/month".
-- FIRST48: "$69.00 + 3 × $39.00 = $186.00 paid", "Saves $351.00; $186.00 ÷ 12 = $15.50 a month", and the affiliate earns $15.00 on one offer business. No commission is earned on free months.
+- FIRST48: "$99.00 + 3 × $39.00 = $216.00 paid", "Saves $351.00; $216.00 ÷ 12 = $18.00 a month", and the affiliate earns $18.00 on one offer business. No commission is earned on free months. (Before 23 Oct the default was $69: $186.00, $15.50, $15.00.)
 - Points: "3 points × $1.00 = $3.00 · commission arithmetic gives $3.00".
 - Minimum: "$100.00, about 34 users or 17 businesses".
 - Bonus: "+300 points = $300.00 on top of the $300.00 saved".
@@ -77,7 +77,7 @@ Contradictions (`RULES`):
 | `user_points_over_net` / `business_points_over_net` | hard | A referral pays out more than BEASTY keeps after the $9. |
 | `other_share_unnamed` | hard | Another share is set but nobody is named. |
 | `user_points_vs_commission` / `business_points_vs_commission` | soft | The points do not equal the commission arithmetic (Glenn's 3 and 6 matched it exactly). |
-| `initiation_vs_members_page` | soft | The initiation is not the $99 the Members page prints (`src/data/affiliateTiers.ts`; the audit keeps the two in step). **This fires on the defaults on purpose**: it is the first question for Glenn. |
+| `initiation_vs_members_page` | soft | The initiation is not the $99 the Members page prints (`src/data/affiliateTiers.ts`; the audit keeps the two in step). **This fires on the defaults on purpose**: it is the first question for Glenn. | Since 23 Oct the default is $99, so it no longer fires on the defaults; `business_points_vs_commission` ($9.00 against 6 points) does instead.
 | `promo_not_a_year` | soft | Paid plus free months is not 12. |
 | `bonus_below_minimum` | soft | The bonus goal is below the redemption minimum. |
 | `promo_day_over_net` | soft | At the top multiplier a referral pays more than BEASTY keeps. |
@@ -175,7 +175,7 @@ also offers their values ("Values for the review agreement's reward fields").
 
 ## Questions for Glenn, in order
 
-1. Is the commission on a $69 or a $99 initiation?
+1. ~~Is the commission on a $69 or a $99 initiation?~~ **$99**, Leon, 23 Oct. That makes the commission on an initiation $9.00 (10% of $90), while Glenn's BARK note pays 6 points ($6.00) per business, worked out from $69: the defaults now raise `business_points_vs_commission` for Glenn to settle (9 points, or keep 6).
 2. Does the $9 come out of every payment, or only the activation?
 3. How long does an affiliate earn on one business?
 4. Payment: how often, and within how many days?

@@ -58,19 +58,19 @@ const soft = (t: Terms) => flagsFor(t).filter((f) => f.severity === 'soft').map(
 /* ---------------------------------------------- the agreed figures, checked */
 
 const d = derive(DEFAULT_TERMS)
-eq('defaults are the thread’s figures', [DEFAULT_TERMS.initiationFee, DEFAULT_TERMS.monthlyFee, DEFAULT_TERMS.foundationAmount, DEFAULT_TERMS.promoPaidMonths, DEFAULT_TERMS.promoFreeMonths, DEFAULT_TERMS.commissionRate, DEFAULT_TERMS.pointsPerUser, DEFAULT_TERMS.pointsPerBusiness, DEFAULT_TERMS.pointValue, DEFAULT_TERMS.minRedemption, DEFAULT_TERMS.promoDayMultiplier, DEFAULT_TERMS.bonusThreshold, DEFAULT_TERMS.bonusMultiplier], [69, 39, 9, 3, 9, 10, 3, 6, 1, 100, 3, 300, 2])
-eq('FIRST48: $69 + 3 × $39 = $186 paid', d.promoYearPaid, 186)
+eq('defaults are the thread’s figures', [DEFAULT_TERMS.initiationFee, DEFAULT_TERMS.monthlyFee, DEFAULT_TERMS.foundationAmount, DEFAULT_TERMS.promoPaidMonths, DEFAULT_TERMS.promoFreeMonths, DEFAULT_TERMS.commissionRate, DEFAULT_TERMS.pointsPerUser, DEFAULT_TERMS.pointsPerBusiness, DEFAULT_TERMS.pointValue, DEFAULT_TERMS.minRedemption, DEFAULT_TERMS.promoDayMultiplier, DEFAULT_TERMS.bonusThreshold, DEFAULT_TERMS.bonusMultiplier], [99, 39, 9, 3, 9, 10, 3, 6, 1, 100, 3, 300, 2])
+eq('FIRST48: $99 + 3 × $39 = $216 paid', d.promoYearPaid, 216)
 eq('FIRST48: nine free months save $351', d.promoSaving, 351)
-eq('FIRST48: $186 ÷ 12 = $15.50 a month', d.promoEffectiveMonthly, 15.5)
+eq('FIRST48: $216 ÷ 12 = $18.00 a month', d.promoEffectiveMonthly, 18)
 eq('10% of ($39 − $9) = $3.00, Glenn’s 3 points', [d.commissionMonthly, d.userReward], [3, 3])
-eq('10% of ($69 − $9) = $6.00, Glenn’s 6 points', [d.commissionInitiation, d.businessReward], [6, 6])
+eq('10% of ($99 − $9) = $9.00, against Glenn’s 6 points', [d.commissionInitiation, d.businessReward], [9, 6])
 eq('100 points redeem for $100', d.minRedemptionValue, 100)
 eq('saving 300 points and doubling pays 300 more ($300)', [d.bonusPoints, d.bonusValue], [300, 300])
-eq('a FIRST48 business earns its affiliate $6 + 3 × $3 = $15', d.promoCommission, 15)
+eq('a FIRST48 business earns its affiliate $9 + 3 × $3 = $18', d.promoCommission, 18)
 
 const gross = FIELDS.find((f) => f.id === 'commissionBase')!.preview!(T({ commissionBase: 'full_price' }))
 ok('before the $9 the preview reads “10% of $39.00 = $3.90/member/month”', gross === '10% of $39.00 = $3.90/member/month')
-ok('the rate preview names both payments', FIELDS.find((f) => f.id === 'commissionRate')!.preview!(DEFAULT_TERMS).includes('10% of $30.00 = $3.00/member/month · 10% of $60.00 = $6.00 per initiation'))
+ok('the rate preview names both payments', FIELDS.find((f) => f.id === 'commissionRate')!.preview!(DEFAULT_TERMS).includes('10% of $30.00 = $3.00/member/month · 10% of $90.00 = $9.00 per initiation'))
 eq('initiation-only $9 leaves the full $39 to share', derive(T({ foundationApplies: 'initiation_only' })).netMonthly, 39)
 
 const fee = AFFILIATE_FEES.lines[0].match(/\$(\d+) initiation/)
@@ -81,9 +81,9 @@ ok('the Members-page initiation the model compares against is still the one prin
 const c0 = check(DEFAULT_TERMS)
 ok('defaults have no field problems', Object.keys(c0.problems).length === 0)
 eq('defaults raise no hard flag', hard(DEFAULT_TERMS), [])
-eq('defaults raise exactly one soft flag: $69 against the Members page’s $99', soft(DEFAULT_TERMS), ['initiation_vs_members_page'])
+eq('defaults raise exactly one soft flag: $9.00 of commission against Glenn’s 6 points', soft(DEFAULT_TERMS), ['business_points_vs_commission'])
 ok('defaults are publishable', !c0.blocked)
-ok('unsettled terms are listed, settled ones are not', c0.unsettled.includes('commissionDuration') && c0.unsettled.includes('initiationFee') && !c0.unsettled.includes('commissionRate'))
+ok('unsettled terms are listed, settled ones are not', c0.unsettled.includes('commissionDuration') && !c0.unsettled.includes('initiationFee') && !c0.unsettled.includes('commissionRate'))
 
 ok('payout minimum below 100 points is refused', check(T({ minRedemption: 99 })).problems.minRedemption?.includes('100'))
 ok('payout minimum of exactly 100 is fine', !check(T({ minRedemption: 100 })).problems.minRedemption)
@@ -98,7 +98,7 @@ ok('shares over 100% of what is left after the $9 are a hard stop', hard(T({ com
 ok('shares at exactly 100% are allowed', !hard(T({ commissionRate: 60, otherShareRate: 40, otherShareLabel: 'Reviewer', pointsPerUser: 18, pointsPerBusiness: 36 })).includes('shares_over_net'))
 ok('a percentage of the full price can still eat past the $9', hard(T({ commissionRate: 80, commissionBase: 'full_price', otherShareRate: 0 })).includes('shares_over_net'))
 ok('a $9 larger than the payment is a hard stop', hard(T({ foundationAmount: 45 })).includes('foundation_over_payment'))
-ok('points worth more than BEASTY keeps are a hard stop', hard(T({ pointsPerUser: 31 })).includes('user_points_over_net') && hard(T({ pointsPerBusiness: 61 })).includes('business_points_over_net'))
+ok('points worth more than BEASTY keeps are a hard stop', hard(T({ pointsPerUser: 31 })).includes('user_points_over_net') && hard(T({ pointsPerBusiness: 91 })).includes('business_points_over_net'))
 ok('an unnamed other share is a hard stop', hard(T({ otherShareRate: 5 })).includes('other_share_unnamed'))
 ok('points that disagree with the commission arithmetic are asked about, not blocked', soft(T({ pointsPerUser: 5 })).includes('user_points_vs_commission') && !check(T({ pointsPerUser: 5 })).blocked)
 ok('a promo that is no longer a year is asked about', soft(T({ promoFreeMonths: 6 })).includes('promo_not_a_year'))
@@ -108,7 +108,7 @@ ok('every rule names real fields', RULES.every((r) => r.fields.every((id) => id 
 const flag = flagsFor(DEFAULT_TERMS)[0]
 const acked = { [flag.rule]: flag.signature }
 ok('an accepted soft flag stays accepted', flagsFor(DEFAULT_TERMS, acked).length === 0)
-ok('…until one of its figures changes', flagsFor(T({ initiationFee: 79 }), acked).some((f) => f.rule === flag.rule))
+ok('…until one of its figures changes', flagsFor(T({ pointsPerBusiness: 7 }), acked).some((f) => f.rule === flag.rule))
 ok('a hard flag cannot be accepted away', flagsFor(T({ foundationAmount: 45 }), { foundation_over_payment: 'anything' }).some((f) => f.rule === 'foundation_over_payment'))
 
 /* ------------------------------------------------------- cleaning, overrides */
@@ -140,15 +140,15 @@ ok('every number field has a range', FIELDS.filter((f) => ['money', 'percent', '
 
 const code = termsCode(DEFAULT_TERMS)
 const text = scheduleText(DEFAULT_TERMS, { version: 'standard v1', code })
-for (const needle of ['$69.00', '$39.00', '$9.00', '10%', '3 points', '6 points', '100 points', 'FIRST48', '$186.00', '$15.50', '$351.00', '3x', code]) ok(`the schedule text prints ${needle}`, text.includes(needle))
+for (const needle of ['$99.00', '$39.00', '$9.00', '10%', '3 points', '6 points', '100 points', 'FIRST48', '$216.00', '$18.00', '$351.00', '3x', code]) ok(`the schedule text prints ${needle}`, text.includes(needle))
 ok('an affiliate’s changed figures are starred and explained', scheduleText(eff, { version: 'v1', code: 'X', overrides: over }).includes('12% *') && scheduleText(eff, { version: 'v1', code: 'X', overrides: over }).includes('Agreed for this Affiliate'))
 ok('special terms print as their own section', schedule(eff, over).at(-1)!.text === 'Paid weekly in launch month.')
 const af = agreementFields(DEFAULT_TERMS)
 eq('the review agreement’s six reward fields are filled', Object.keys(af).sort(), ['Business reward', 'Minimum payout', 'Payout schedule', 'Point value', 'Reward basis', 'User reward'])
 ok('…with the figures', af['User reward'] === '3 points ($3.00)' && af['Minimum payout'] === '100 points ($100.00)')
 const cs = compactSchedule(DEFAULT_TERMS)
-eq('the printed fee table is four rows', cs.fees.map((f) => [f.label, f.amount]), [['Initiation fee', '$69.00'], ['Membership fee', '$39.00'], ['Foundation contribution', '$9.00'], ['FIRST48 offer', '$186.00']])
-ok('commission is one sentence with both worked figures', cs.commission.startsWith('The Affiliate earns 10% of what BEASTY keeps after the Foundation contribution: $3.00 per member per month and $6.00 per initiation'))
+eq('the printed fee table is four rows', cs.fees.map((f) => [f.label, f.amount]), [['Initiation fee', '$99.00'], ['Membership fee', '$39.00'], ['Foundation contribution', '$9.00'], ['FIRST48 offer', '$216.00']])
+ok('commission is one sentence with both worked figures', cs.commission.startsWith('The Affiliate earns 10% of what BEASTY keeps after the Foundation contribution: $3.00 per member per month and $9.00 per initiation'))
 ok('BARK is one sentence', cs.bark === '3 points per qualifying referred user and 6 points per qualifying referred business. 1 point = $1.00, redeemable from 100 points.')
 ok('promotion days and the bonus are one fine-print line', cs.barkFine.includes('up to 3x') && cs.barkFine.includes('receives 300 points more, once'))
 eq('DocuSeal gets two fields only', Object.values(SCHEDULE_A_FIELDS), ['Schedule A Changes', 'Schedule A Initials'])
@@ -175,7 +175,7 @@ async function pdfText(bytes: Uint8Array) {
 const pdf = await schedulePdf(DEFAULT_TERMS, { heading: 'Standard schedule, version 1', subheading: 'Audit', code, openQuestions: ['How long commission lasts: not discussed.'] })
 const parsed = await pdfText(pdf)
 ok('the PDF opens', parsed.doc.getPageCount() >= 1 && Buffer.from(pdf.slice(0, 5)).toString() === '%PDF-')
-for (const needle of ['$69.00', '$39.00', '$9.00', '10%', '$3.00 per member', '$6.00 per initiation', '100 points', 'FIRST48 offer', '$186.00', `Code ${code}`, 'Not yet agreed with Glenn']) ok(`the PDF prints ${needle}`, parsed.out.includes(needle))
+for (const needle of ['$99.00', '$39.00', '$9.00', '10%', '$3.00 per member', '$9.00 per initiation', '100 points', 'FIRST48 offer', '$216.00', `Code ${code}`, 'Not yet agreed with Glenn']) ok(`the PDF prints ${needle}`, parsed.out.includes(needle))
 ok('the standard schedule is one page', (await PDFDocument.load(await schedulePdf(DEFAULT_TERMS, { heading: 'Standard terms', subheading: 'Audit', code, fields: 'empty' }))).getPageCount() === 1)
 const longPdf = await schedulePdf(T({ qualifying: 'Long clause. '.repeat(400).trim() }), { heading: 'Overflow', subheading: 'Audit', code: 'X' })
 ok('a long clause runs onto further pages instead of off the page', (await PDFDocument.load(longPdf)).getPageCount() > 1)
@@ -262,7 +262,7 @@ try {
   ok('the draft PDF still opens, marked not final', (r = await admin.call('GET', '/api/crm/affiliate-terms/schedule.pdf')).status === 200 && r.type === 'application/pdf' && (await pdfText(r.buf)).out.includes('NOT FINAL'))
   s = (await admin.call('PUT', '/api/crm/affiliate-terms/draft', { revision: s.draft.revision, changes: { pointsPerUser: 3 }, channel: 'talk' })).data
   ok('a hard check cannot be accepted', (await admin.call('POST', '/api/crm/affiliate-terms/acknowledge', { rule: 'shares_over_net' })).status === 409)
-  s = (await admin.call('POST', '/api/crm/affiliate-terms/acknowledge', { rule: 'initiation_vs_members_page' })).data
+  s = (await admin.call('POST', '/api/crm/affiliate-terms/acknowledge', { rule: 'business_points_vs_commission' })).data
   ok('a soft check accepted at review stays accepted', s.check.flags.length === 0)
   r = await admin.call('POST', '/api/crm/affiliate-terms/publish', { revision: s.draft.revision, note: 'Audit' })
   ok('a clean schedule publishes as version 1', r.status === 200 && r.data.published.number === 1 && !r.data.unpublishedChanges && r.data.published.code === termsCode(DEFAULT_TERMS))

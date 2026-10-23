@@ -70,7 +70,8 @@ export type TermId = keyof Terms
 export const PUBLISHED_INITIATION = 99
 
 export const DEFAULT_TERMS: Terms = {
-  initiationFee: 69,
+  /* Leon, 2026-10-23: "$99 initiation" — the Members page figure, now the one the commission uses. */
+  initiationFee: 99,
   monthlyFee: 39,
   foundationAmount: 9,
   foundationApplies: 'every_payment',
@@ -289,10 +290,10 @@ export const FIELDS: TermField[] = [
     min: 0,
     max: 5000,
     explain: 'The one-time fee when a business takes a paid spot. The business-referral reward is worked out from it.',
-    example: 'Glenn’s FIRST48 arithmetic: $69 initiation + 3 × $39 = $186 for the first year.',
+    example: 'FIRST48 at $99: $99 initiation + 3 × $39 = $216 for the first year (Glenn’s 29 Aug arithmetic used $69: $186).',
     legal: (t) => `Each Member Business pays a one-time initiation fee of ${usd(t.initiationFee)}.`,
-    source: 'FIRST48 proposal, 29 Aug. The Members page has printed a $99 initiation since 3 Sep — confirm which one the commission uses.',
-    settled: false,
+    source: 'Agreed: Leon, 23 Oct, “$99 initiation”, the figure the Members page has printed since 3 Sep. Glenn’s FIRST48 note of 29 Aug used $69.',
+    settled: true,
     perAffiliate: false,
     preview: (t) => `A full year at list: ${usd(t.initiationFee)} + 12 × ${usd(t.monthlyFee)} = ${usd(derive(t).listYear)}`,
   },
@@ -345,7 +346,7 @@ export const FIELDS: TermField[] = [
     ],
     explain:
       'Glenn wrote “every membership activation”, which could mean once, when a business joins, or every time a business pays. It decides how much is left to share each month.',
-    example: 'Every payment: $9 of the $69 and $9 of each $39. Initiation only: $9 of the $69, and the full $39 each month.',
+    example: 'Every payment: $9 of the $99 and $9 of each $39. Initiation only: $9 of the $99, and the full $39 each month.',
     legal: (t) =>
       t.foundationApplies === 'every_payment'
         ? 'The Foundation contribution is taken from the initiation fee and from every monthly payment.'

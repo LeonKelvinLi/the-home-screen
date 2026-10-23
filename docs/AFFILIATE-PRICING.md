@@ -168,3 +168,7 @@ Tier 3 options":
 In code: `tier` on a seed (`src/data/brands.ts`), the rules in
 `src/apps/BrandApp.tsx`, the perk and `FREE_SPOT_MONTHS` in
 `src/data/affiliateTiers.ts`.
+
+## 23 October 2026: $99 initiation
+
+Leon: "$99 initiation". The affiliate terms form now uses the Members page's $99, not the FIRST48 note's $69. FIRST48 at $99 is $99 + 3 × $39 = $216 in year one, $18.00 a month. Commission on an initiation becomes 10% of ($99 − $9) = $9.00; Glenn's 6 BARK points per business were worked out from $69, so that one figure is his to settle (see `docs/AFFILIATE-TERMS-FORM.md`).
