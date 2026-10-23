@@ -122,6 +122,19 @@ No paid DocuSeal API, no embedding, no API prefill.
    supports defaults, so a standard affiliate's request needs no typing. When
    Glenn approves, that template's ID becomes `DOCUSEAL_MANUAL_TEMPLATE_ID`,
    as `docs/AFFILIATE-ONBOARDING.md` already describes.
+
+   **Done 22 Oct 2026 for the defaults (code `0Z94EU7`):** Glenn's account
+   now has template **6566603**,
+   [BEASTY-Affiliate-Packet-with-Schedule-A-DRAFT](https://docuseal.com/templates/6566603/edit).
+   It is a clone of 6402995 (left unchanged) with the two Schedule A pages
+   added after the packet. Native fields were kept, and all 17 fields have their
+   default from `schedule-a-fields.json`, **Read-only** on (the affiliate cannot
+   change them), **Prefillable** on (the sender can change them for one
+   affiliate) and Required off. The values were checked after a save and a
+   reload. It is a draft: no request has been sent from it, and it is not set
+   as `DOCUSEAL_MANUAL_TEMPLATE_ID`. When a new version is published with
+   different figures, rebuild with `--terms` and update the changed defaults
+   in this template.
 4. **One affiliate's own figures.** When creating their submission on the
    dashboard, the sender pastes each value from the CRM. The field names in
    the CRM are the field names in DocuSeal (`DOCUSEAL_FIELDS`). DocuSeal cannot
