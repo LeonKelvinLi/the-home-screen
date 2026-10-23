@@ -1,0 +1,880 @@
+[
+  {
+    "id": "b_phonow",
+    "name_exact": "Pho Now",
+    "checked_on": "2026-10-22",
+    "sources": [
+      "https://phonownow.com/ (their own site, linked from their Instagram bio: name, '505 W Capitol Expy, San Jose, CA 95136', phone 408-503-6868, 'Open Hours' Sunday-Thursday 10:00 AM-9:00 PM and Friday-Saturday 10:00 AM-10:00 PM, 'Home of the famous Pho Tai Lan!', 'Bringing Vietnamese comfort food to Communication Hills area', 'Order Online Now' buttons; read 2026-10-22)",
+      "https://order.blogicsystems.com/client/store/20201250/detail/20201250 (their 'Order Online Now' link: BLogic ordering page 'Pho NOW', full menu and prices, same address and phone; read in a browser 2026-10-22)",
+      "Instagram @phonowsj (Glenn's screenshot 1022-1858 IMG_7687: 'Pho Now SJ', 'Pho Restaurant', \"This is Pho Now, Not Pho Later\", 'San Jose's Famous Pho Tai Lan', 'Signature Beef Rib Pho', 'Communication Hills, San Jose', 'Open 7 Days All Week', link phonownow.com)",
+      "Glenn's screenshot 1022-1858 IMG_7688 (their Instagram picture opened from phonownow.com; the icon is cut from it) and IMG_7689 / IMG_7690 (their website's header and footer)",
+      "https://www.instagram.com/reel/DayFVEbJF9D/ (the film; their own reel, @phonowsj, 'Yes, we are fast as pho', posted 14 Jul 2026, pinned first on their profile)"
+    ],
+    "facts": {
+      "slug": "pho-now",
+      "name": "Pho Now",
+      "label": "Pho Now",
+      "cuisine": "Vietnamese pho",
+      "color": "#3d4450",
+      "icon": "pho-now",
+      "site": "https://phonownow.com/",
+      "tagline": "Home of the Pho Tai Lan, wok-seared beef in a long-simmered broth, plus beef rib pho, rice plates and vermicelli bowls on W Capitol Expressway by Communication Hill in San Jose.",
+      "prep": 0,
+      "category": "Vietnamese pho",
+      "items": [],
+      "sections": [
+        {
+          "name": "Drinks",
+          "items": [
+            [
+              "Vietnamese Iced Coffee",
+              "Cafe S\u1eefa \u0111\u00e1",
+              795
+            ],
+            [
+              "Green Thai Tea",
+              "Tr\u00e0 xanh Th\u00e1i",
+              795
+            ],
+            [
+              "Thai Tea",
+              "Tr\u00e0 Th\u00e1i",
+              795
+            ],
+            [
+              "Kumquat Iced Tea",
+              "Tr\u00e0 T\u1eafc",
+              795
+            ],
+            [
+              "Salted Plum Soda",
+              "Soda X\u00ed Mu\u1ed9i",
+              795
+            ],
+            [
+              "Salted Lemon Soda",
+              "Soda Chanh mu\u1ed1i",
+              795
+            ],
+            [
+              "Fresh Lemonade with Chia Seeds",
+              "\u0110\u00e1 chanh + H\u1ea1t Chia",
+              795
+            ],
+            [
+              "Fresh Lemon + Soda",
+              "Soda Chanh",
+              795
+            ],
+            [
+              "Coconut Juice + Chia",
+              "N\u01b0\u1edbc d\u1eeba + H\u1ea1t Chia",
+              750
+            ],
+            [
+              "Fresh Passion Fruit",
+              "Chanh D\u00e2y",
+              795
+            ],
+            [
+              "Coke",
+              "",
+              350
+            ],
+            [
+              "Diet Coke",
+              "",
+              350
+            ],
+            [
+              "Sprite",
+              "",
+              350
+            ]
+          ]
+        },
+        {
+          "name": "Appetizers",
+          "items": [
+            [
+              "Authentic Vietnamese Egg Rolls",
+              "Ch\u1ea3 gi\u00f2 Vietnam",
+              1195
+            ],
+            [
+              "Vegetarian Authentic Vietnamese Egg Rolls",
+              "Ch\u1ea3 gi\u00f2 chay Vietnam",
+              1195
+            ],
+            [
+              "Spring Rolls",
+              "G\u1ecfi cu\u1ed1n",
+              1195
+            ],
+            [
+              "Vegetarian Fresh Spring Rolls",
+              "G\u1ecfi cu\u1ed1n Chay",
+              1295
+            ],
+            [
+              "Grilled Pork Sausage Spring Rolls",
+              "Nem n\u01b0\u1edbng cu\u1ed1n",
+              1295
+            ],
+            [
+              "Garlic Fries",
+              "Khoai T\u00e2y Chi\u00ean T\u1ecfi",
+              895
+            ],
+            [
+              "Popcorn Chicken",
+              "G\u00e0 Popcorn Chi\u00ean Gi\u00f2n",
+              895
+            ],
+            [
+              "Fried Chicken Wings",
+              "C\u00e1nh g\u00e0 chi\u00ean",
+              995
+            ]
+          ]
+        },
+        {
+          "name": "Beef Ph\u1edf",
+          "items": [
+            [
+              "House Special Pho",
+              "Ph\u1edf \u0110\u1eb7c Bi\u1ec7t",
+              1995
+            ],
+            [
+              "Build-Your-Own Ph\u1edf",
+              "Ph\u1edf t\u1ef1 ch\u1ecdn",
+              2095
+            ],
+            [
+              "Beef Rib Pho",
+              "Ph\u1edf s\u01b0\u1eddn b\u00f2",
+              2195
+            ],
+            [
+              "Wok-Seared Beef Steak Pho",
+              "Ph\u1edf T\u00e1i L\u0103n",
+              1995
+            ],
+            [
+              "Rare Steak Pho",
+              "Ph\u1edf T\u00e1i",
+              1995
+            ],
+            [
+              "Rare Steak & Well-Done Brisket Pho",
+              "Ph\u1edf T\u00e1i Ch\u00edn",
+              1995
+            ],
+            [
+              "Rare Steak & Flank Pho",
+              "Ph\u1edf T\u00e1i N\u1ea1m",
+              1995
+            ],
+            [
+              "Rare Steak & Tendon Pho",
+              "Ph\u1edf T\u00e1i g\u00e2n",
+              1995
+            ],
+            [
+              "Rare Steak & Tripe Pho",
+              "Ph\u1edf T\u00e1i S\u00e1ch",
+              1995
+            ],
+            [
+              "Rare Steak & Beef Meatball Pho",
+              "Ph\u1edf T\u00e1i B\u00f2 Vi\u00ean",
+              1995
+            ],
+            [
+              "Well-Done Brisket Pho",
+              "Ph\u1edf Ch\u00edn",
+              1995
+            ],
+            [
+              "Beef Meatball Pho",
+              "Ph\u1edf B\u00f2 Vi\u00ean",
+              1995
+            ],
+            [
+              "Vegetable Pho (Broccoli & Carrot)",
+              "Broccoli & Carrot Ph\u1edf",
+              1995
+            ],
+            [
+              "Plain Ph\u1edf (No Meat)",
+              "Ph\u1edf Kh\u00f4ng Th\u1ecbt",
+              1595
+            ]
+          ]
+        },
+        {
+          "name": "Chicken Ph\u1edf",
+          "items": [
+            [
+              "Chicken Noodle Soup",
+              "Ph\u1edf G\u00e0",
+              1845
+            ],
+            [
+              "Chicken Pho with Broccoli & Carrot",
+              "Ph\u1edf G\u00e0 + Broccoli & Carrot",
+              1945
+            ],
+            [
+              "Shrimp & Broccoli Carrot Noodle Soup",
+              "Ph\u1edf T\u00f4m \u2013 Broccoli & Carrot",
+              1945
+            ],
+            [
+              "Chicken Broth Pho with Broccoli & Carrot (No Meat)",
+              "Ph\u1edf G\u00e0 \u2013 Broccoli & Carrot (Kh\u00f4ng Th\u1ecbt)",
+              1745
+            ],
+            [
+              "No Meat Chicken Broth Pho",
+              "Ph\u1edf G\u00e0 (Kh\u00f4ng Th\u1ecbt): clear chicken broth with rice noodles, served without meat",
+              1650
+            ]
+          ]
+        },
+        {
+          "name": "Garlic Noodles",
+          "items": [
+            [
+              "Garlic Noodle with Grilled Shrimps & Grilled Pork",
+              "M\u00ec T\u1ecfi + T\u00f4m N\u01b0\u1edbng Th\u1ecbt N\u01b0\u1edbng",
+              2045
+            ],
+            [
+              "Garlic Noodle with Grilled Shrimps",
+              "M\u00ec T\u1ecfi T\u00f4m N\u01b0\u1edbng",
+              1945
+            ],
+            [
+              "Garlic Noodle with Grilled Pork",
+              "M\u00ec T\u1ecfi Th\u1ecbt N\u01b0\u1edbng",
+              1945
+            ],
+            [
+              "Garlic Noodle with BBQ Short Ribs",
+              "M\u00ec T\u1ecfi S\u01b0\u1eddn b\u00f2 \u0111\u1ea1i h\u00e0n",
+              2045
+            ],
+            [
+              "Vegetarian Garlic Noodle",
+              "M\u00ec T\u1ecfi Chay",
+              1745
+            ],
+            [
+              "Extra Dish of Garlic Noodle",
+              "Extra D\u0129a M\u00ec T\u1ecfi",
+              945
+            ]
+          ]
+        },
+        {
+          "name": "Ph\u1edf Side Orders",
+          "items": [
+            [
+              "Pickled Onions",
+              "H\u00e0nh D\u1ea5m",
+              100
+            ],
+            [
+              "Ph\u1edf Noodle",
+              "Ph\u1ea7n B\u00e1nh Ph\u1edf",
+              750
+            ],
+            [
+              "Beef Rib",
+              "S\u01b0\u1eddn B\u00f2",
+              1245
+            ],
+            [
+              "Beef Ball",
+              "B\u00f2 Vi\u00ean",
+              1145
+            ],
+            [
+              "Wok-Seared Beef Steak",
+              "D\u0129a T\u00e1i L\u0103n",
+              1045
+            ],
+            [
+              "Rare Steak",
+              "D\u0129a T\u00e1i Ri\u00eang",
+              845
+            ],
+            [
+              "Tripe",
+              "S\u00e1ch",
+              845
+            ],
+            [
+              "Well-Done Flank",
+              "N\u1ea1m",
+              845
+            ],
+            [
+              "Fat Brisket",
+              "G\u1ea7u",
+              845
+            ],
+            [
+              "Well-Done Brisket",
+              "Ch\u00edn",
+              845
+            ],
+            [
+              "Tendon",
+              "G\u00e2n",
+              845
+            ],
+            [
+              "Broccoli",
+              "",
+              645
+            ],
+            [
+              "Carrot",
+              "",
+              645
+            ],
+            [
+              "Broccoli & Carrot",
+              "",
+              645
+            ],
+            [
+              "Steamed Rice",
+              "C\u01a1m",
+              445
+            ]
+          ]
+        },
+        {
+          "name": "Rice Plates",
+          "items": [
+            [
+              "Grilled Pork, Shrimps & Egg Rice Plate",
+              "C\u01a1m T\u00f4m Th\u1ecbt N\u01b0\u1edbng + Tr\u1ee9ng",
+              2145
+            ],
+            [
+              "Grilled Pork & Shrimps Rice Plate",
+              "C\u01a1m T\u00f4m Th\u1ecbt N\u01b0\u1edbng",
+              2045
+            ],
+            [
+              "Grilled Pork Rice Plate",
+              "C\u01a1m Th\u1ecbt N\u01b0\u1edbng",
+              1945
+            ],
+            [
+              "Grilled Pork & Egg Rice Plate",
+              "C\u01a1m th\u1ecbt n\u01b0\u1edbng + tr\u1ee9ng",
+              2045
+            ],
+            [
+              "Grilled Pork Chop, Shrimps & Egg Rice Plate",
+              "C\u01a1m T\u00f4m s\u01b0\u1eddn n\u01b0\u1edbng + tr\u1ee9ng",
+              2145
+            ],
+            [
+              "Grilled Pork Chop & Shrimps Rice Plate",
+              "C\u01a1m T\u00f4m S\u01b0\u1eddn n\u01b0\u1edbng",
+              2045
+            ],
+            [
+              "Grilled Pork Chop & Egg Rice Plate",
+              "C\u01a1m s\u01b0\u1eddn n\u01b0\u1edbng + tr\u1ee9ng",
+              1945
+            ],
+            [
+              "Grilled Pork Chop Rice Plate",
+              "C\u01a1m s\u01b0\u1eddn n\u01b0\u1edbng",
+              1945
+            ],
+            [
+              "Grilled Beef, Shrimp & Egg Rice Plate",
+              "C\u01a1m T\u00f4m n\u01b0\u1edbng, B\u00f2 n\u01b0\u1edbng + Tr\u1ee9ng",
+              2145
+            ],
+            [
+              "Grilled Beef & Shrimp Rice Plate",
+              "C\u01a1m T\u00f4m n\u01b0\u1edbng B\u00f2 n\u01b0\u1edbng",
+              2045
+            ],
+            [
+              "Grilled Beef Ribs Rice Plate",
+              "C\u01a1m S\u01b0\u1eddn B\u00f2 n\u01b0\u1edbng",
+              2045
+            ],
+            [
+              "Grilled Short Ribs Beef & Egg Rice Plate",
+              "C\u01a1m s\u01b0\u1eddn b\u00f2 \u0111\u1ea1i h\u00e0n n\u01b0\u1edbng + tr\u1ee9ng chi\u00ean",
+              2045
+            ],
+            [
+              "Grilled Short Ribs Beef & Shrimp Rice Plate",
+              "C\u01a1m S\u01b0\u1eddn B\u00f2 \u0110\u1ea1i H\u00e0n n\u01b0\u1edbng, T\u00f4m n\u01b0\u1edbng",
+              2045
+            ],
+            [
+              "Grilled Shrimps Rice Plate",
+              "C\u01a1m T\u00f4m N\u01b0\u1edbng",
+              2045
+            ],
+            [
+              "Vietnamese Shaken Beef Rice Plate",
+              "C\u01a1m B\u00f2 L\u00fac L\u1eafc",
+              2045
+            ],
+            [
+              "Vietnamese Shaken Beef & Egg Rice Plate",
+              "C\u01a1m B\u00f2 L\u00fac L\u1eafc + Tr\u1ee9ng",
+              2145
+            ],
+            [
+              "Shrimp & Egg Fried Rice",
+              "C\u01a1m chi\u00ean (T\u00f4m + Tr\u1ee9ng)",
+              2245
+            ]
+          ]
+        },
+        {
+          "name": "Vermicelli",
+          "items": [
+            [
+              "Grilled Pork, Shrimps & Egg Rolls Vermicelli",
+              "B\u00fan T\u00f4m Th\u1ecbt N\u01b0\u1edbng Ch\u1ea3 Gi\u00f2: grilled pork, shrimp and crispy egg rolls, with fresh herbs and house fish sauce",
+              2145
+            ],
+            [
+              "Grilled Pork & Egg Rolls Vermicelli",
+              "",
+              1945
+            ],
+            [
+              "Grilled Shrimp & Egg Roll Vermicelli",
+              "",
+              1945
+            ],
+            [
+              "Grilled Pork & Shrimps Vermicelli",
+              "",
+              2045
+            ],
+            [
+              "Grilled Shrimps Vermicelli",
+              "",
+              1945
+            ],
+            [
+              "Grilled Pork Vermicelli",
+              "",
+              1845
+            ],
+            [
+              "Egg Roll Vermicelli",
+              "",
+              1845
+            ],
+            [
+              "Vegetarian (Tofu) Vermicelli",
+              "",
+              1845
+            ],
+            [
+              "Lemongrass Beef Vermicelli",
+              "",
+              2045
+            ]
+          ]
+        }
+      ],
+      "address": "505 W Capitol Expy, San Jose, CA 95136",
+      "phone": "(408) 503-6868",
+      "hours": "Sun\u2013Thu 10am\u20139pm, Fri\u2013Sat 10am\u201310pm",
+      "orderUrl": "https://order.blogicsystems.com/client/store/20201250/detail/20201250",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from the online ordering page their own website links to. Their Pho Tai Lan is the Wok-Seared Beef Steak Pho.",
+      "clip": {
+        "src": "/clips/pho-now.mp4",
+        "poster": "/clips/pho-now-poster.webp",
+        "href": "https://www.instagram.com/reel/DayFVEbJF9D/",
+        "credit": "Posted by @phonowsj",
+        "platform": "Instagram"
+      }
+    },
+    "placements": [
+      "san-jose-goods2-22",
+      "beasty-goods2-45"
+    ],
+    "glenn": "Glenn, 22 Oct 2026, 6:58 pm: screenshots 1022-1858 (IG @phonowsj, their zoomed picture, phonownow.com header and footer), the link phonownow.com, \"San Jose \u2022 Eats\" / \"BEASTY \u2022 Eats\"; then 7:01 pm reel DayFVEbJF9D (@phonowsj) with \"Clip this video plz\".",
+    "flags": [
+      "MENU: 8 sections, 87 items, from their BLogic ordering page, which phonownow.com's 'Order Online Now' buttons open. The six dishes on the website itself carry no prices.",
+      "LEFT OUT: their 'VEGETERIAN' section, which repeats three items already in Appetizers and Garlic Noodle.",
+      "NAMES: their capitals set in title case; 'APPERTIZER' and 'VEGETERIAN' spelled Appetizers and Vegetarian; 'PICKLED ONION SLIDES' read as Pickled Onions (a side, $1); 'Steam Rice' as Steamed Rice; 'B6.' dropped from Grilled Pork Vermicelli; the ' - Side Order' suffix dropped inside the Ph\u1edf Side Orders section; section names Beef Ph\u1edf and Chicken Ph\u1edf for 'BEEF NOODLE SOUP' and 'CHICKEN NOODLE'. Their Vietnamese names are kept as each item's description.",
+      "HOURS from their website's 'Open Hours' table. The ordering page shows 10:00 AM-08:59 PM for today (Thursday), which is online ordering closing a minute before the kitchen; not a contradiction.",
+      "PHONE (408) 503-6868 is on the website, ordering page and Glenn's screenshot. No email published.",
+      "NAME: 'Pho Now' on their website, ordering page title 'Pho NOW', Instagram 'Pho Now SJ'. Used 'Pho Now'.",
+      "Coordinator: Glenn wrote \"San Jose \u2022 Eats / BEASTY \u2022 Eats\". San Jose's Asian food spot (Goods 3) is Kusan Uyghur's, and BEASTY \u2022 Eats' Pho spot (12) is Gao Viet Kitchen's, so San Jose More goods 22 and BEASTY More eats 45 (Pho Hanoi's San Jose precedent, More goods 10).",
+      "Clip: their own 21 s reel, posted 14 Jul 2026, runs whole: the owner at the counter under a 'When the pho shop takes their name seriously' caption, a hand on their printed menu, a salted lemon soda poured into a Pho Now cup, and a bowl of beef pho brought to the table. No alcohol. 'Posted by @phonowsj' (the GAMA Ride precedent for a business's own reel).",
+      "Icon: their chef-girl 'Pho NOW' roundel from Glenn's zoomed Instagram picture (IMG_7688), cut inside the disc by make-brand-icon.py --disc; its own slate #3d4450."
+    ]
+  },
+  {
+    "id": "b_vinniesbarandgrill",
+    "name_exact": "Vinnie's Bar & Grill",
+    "checked_on": "2026-10-22",
+    "sources": [
+      "https://linktr.ee/VinniesBarAndGrill (their Linktree, sent by Glenn: '@VinniesBarAndGrill Concord nightlife starts here! Live music, karaoke, Latin nights, country, comedy & dancing! 2045 Mt Diablo St, Concord, CA. 21+ | Valid ID required!'; links Instagram @thevinniesbar, Facebook Vinniesbarconcord, TikTok, Google Maps, Eventbrite tickets; website https://vinniesbar.com/; email Vinniesconcord@gmail.com)",
+      "https://vinniesbar.com/ (their own site: 'Welcome to Vinnie's Bar & Grill, open from 11am - 2am', breakfast, pub grub and drinks, pool tables, dart boards, backyard smoking patio and live music; '2045 Mt. Diablo Street between Salvio Street and Pacheco Street', one block from Todos Santos Park, a short walk from Concord BART; mailto vinniesconcord@gmail.com; read in a browser 2026-10-22)",
+      "https://vinniesbar.com/food-menu/ (their food menu page: four menu images uploaded July 2025, which the page fails to display (they point at its old staging host); the same files opened from https://vinniesbar.com/wp-content/uploads/2025/07/Screenshot-2025-07-14-at-4.59.47 PM.png, 5.00.08, 5.00.32 and 5.00.47; prices, 'OPEN EVERYDAY 11AM-2AM', 2045 Mount Diablo Street Concord CA 94520, 925-685-9515)",
+      "Instagram @thevinniesbar (Glenn's screenshot 1022-1925 IMG_7691: 'Vinnie's Bar and Grill', \"Concord's Home for Good Times!\", '21+ | Valid Physical ID or Passport', 2045 Mount Diablo St, Concord, California, linktr.ee/VinniesBarAndGrill)",
+      "Glenn's image 1022-1925 IMG_7693 (their Vinnie's Bar & Grill logo, 'POOL-DARTS LIVE MUSIC GOOD FOOD'; the icon is cut from it)"
+    ],
+    "facts": {
+      "slug": "vinnies-bar-and-grill",
+      "name": "Vinnie's Bar & Grill",
+      "label": "Vinnie's",
+      "cuisine": "Bar & grill",
+      "color": "#000000",
+      "icon": "vinnies-bar-and-grill",
+      "site": "https://vinniesbar.com/",
+      "tagline": "A downtown Concord bar and grill on Mt. Diablo Street: breakfast, burgers and pub grub from 11am to 2am, with pool, darts, a smoking patio and live music, karaoke and Latin nights. 21 and over.",
+      "prep": 0,
+      "category": "Bar & grill",
+      "items": [],
+      "sections": [
+        {
+          "name": "Starters",
+          "items": [
+            [
+              "Breaded Shrimp, Popcorn Shrimp or Calamari",
+              "With fries and cocktail sauce",
+              1350
+            ],
+            [
+              "Jalape\u00f1o Poppers",
+              "5 to 6 house-made poppers with sour cream",
+              1250
+            ],
+            [
+              "Deep Fried Mushrooms, Zucchini or Eggplant",
+              "About 10 pieces of fresh veggies, breaded and fried, with ranch",
+              1250
+            ],
+            [
+              "Onion Rings",
+              "A basket of battered onion rings with ranch",
+              1000
+            ],
+            [
+              "Cheese Sticks or Cheese Curds",
+              "6 pieces of breaded mozzarella with marinara",
+              1000
+            ],
+            [
+              "Taquitos",
+              "Deep-fried beef taquitos with sour cream and salsa",
+              1000
+            ],
+            [
+              "Fried Pickles",
+              "With ranch",
+              1000
+            ],
+            [
+              "French Fries or House Chips",
+              "+$1 for garlic, seasoned curly or steak fries",
+              650
+            ],
+            [
+              "Sampler Tray",
+              "Any three of the starters above on one tray, with a dip",
+              1350
+            ],
+            [
+              "Chicken Wings",
+              "Buffalo, Thai or naked with the sauce on the side",
+              1350
+            ],
+            [
+              "Chicken Strips",
+              "Battered and fried, with fries and a dip",
+              1350
+            ],
+            [
+              "Cheese Quesadilla",
+              "Large tortilla with melted cheese, sour cream and salsa; +$4 chicken breast",
+              1000
+            ],
+            [
+              "Beef Slider",
+              "Mini burger with lettuce and tomato; +$0.25 cheese, +$0.50 bacon",
+              375
+            ],
+            [
+              "Veggie Plate",
+              "Carrots, celery and bell pepper with ranch",
+              750
+            ],
+            [
+              "Chips & Salsa",
+              "House-made tortilla chips",
+              700
+            ],
+            [
+              "Potato Skins",
+              "4 skins with cheese, bacon, green onions and sour cream",
+              1100
+            ]
+          ]
+        },
+        {
+          "name": "Breakfast",
+          "items": [
+            [
+              "Country Fried Steak",
+              "Topped with country gravy, with 2 eggs, hash browns and toast",
+              1600
+            ],
+            [
+              "Breakfast Platter",
+              "3 eggs any style, toast, hash browns and bacon, ham, chorizo, lingui\u00e7a or breakfast sausage",
+              1250
+            ],
+            [
+              "Breakfast Burrito",
+              "3 scrambled eggs, hash browns and bacon, ham, lingui\u00e7a or sausage in a flour tortilla, with sour cream and salsa",
+              1250
+            ],
+            [
+              "Build-Your-Own Omelet",
+              "3 eggs with your choice of cheese, sour cream and salsa; +$2 meat or avocado, +$0.50 veggies",
+              1000
+            ],
+            [
+              "Biscuits & Gravy",
+              "2 biscuits in house-made sausage country gravy",
+              1000
+            ],
+            [
+              "Steak & Eggs",
+              "Steak to your liking, 2 eggs any style, hash browns and toast",
+              1800
+            ]
+          ]
+        },
+        {
+          "name": "Salads",
+          "items": [
+            [
+              "Caesar Salad",
+              "Romaine, parmesan and garlic croutons with house-made Caesar; +$4 chicken breast",
+              1100
+            ],
+            [
+              "Chicken Salad",
+              "Grilled, teriyaki or crispy chicken over lettuce with your choice of dressing",
+              1550
+            ],
+            [
+              "Taco Salad",
+              "Seasoned chicken or beef in a fried tortilla shell with lettuce, tomato, beans, sour cream and salsa; +$2 avocado",
+              1550
+            ],
+            [
+              "Greek Salad",
+              "Greek olives, feta, tomato, bacon and onions over baby spinach",
+              1550
+            ],
+            [
+              "Chef Salad",
+              "Romaine, turkey, ham, tomato, egg, shredded cheese and cucumber",
+              1650
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches & Burgers",
+          "items": [
+            [
+              "Grilled Cheese",
+              "On your choice of bread, with a side",
+              1000
+            ],
+            [
+              "Cheeseburger",
+              "1/3 lb with all the fixings and a side; +$1 mushrooms, +$2 avocado or bacon, +$3 extra patty",
+              1400
+            ],
+            [
+              "Veggie Burger",
+              "A black bean patty with all the fixings",
+              1250
+            ],
+            [
+              "BLT",
+              "Bacon, lettuce and tomato on your choice of bread, with a side",
+              1250
+            ],
+            [
+              "Patty Melt on Rye",
+              "1/3 lb patty with Swiss and grilled onion, with a side",
+              1350
+            ],
+            [
+              "Chicken Sandwich",
+              "Grilled or fried chicken breast with all the fixings and a side; +$1 pesto or buffalo, +$2 bacon",
+              1350
+            ],
+            [
+              "Bacon Bleu Cheese Burger",
+              "Point Reyes bleu cheese, all the fixings and a side",
+              1600
+            ],
+            [
+              "Ultimate Grilled Sandwich",
+              "Grilled cheese stacked with turkey, ham and bacon, with a side",
+              1550
+            ],
+            [
+              "Club Sandwich",
+              "Triple-decker with turkey, ham, bacon and your choice of cheese, with a side",
+              1550
+            ],
+            [
+              "French Dip",
+              "Thin-sliced roast beef on a French roll with au jus and a side",
+              1550
+            ],
+            [
+              "Western BBQ Bacon Cheeseburger",
+              "Bacon, onion rings, cheddar and BBQ sauce, with a side",
+              1600
+            ],
+            [
+              "Steak Sandwich",
+              "6 oz NY steak on a French roll with all the fixings and a side",
+              1800
+            ]
+          ]
+        },
+        {
+          "name": "Entr\u00e9es",
+          "items": [
+            [
+              "Fish Taco",
+              "Battered Atlantic cod in a corn tortilla with cabbage, pico de gallo and house sauce",
+              500
+            ],
+            [
+              "Fish and Chips",
+              "Battered Atlantic cod with tartar sauce, chips or fries and coleslaw; +$3 extra piece",
+              1500
+            ],
+            [
+              "Spaghetti with Meatballs",
+              "Red sauce, meatballs, parmesan and garlic bread; +$1 mushrooms",
+              1600
+            ],
+            [
+              "Steak Dinner",
+              "10 oz NY steak with a dinner salad and a side",
+              2400
+            ]
+          ]
+        },
+        {
+          "name": "Add-Ons",
+          "items": [
+            [
+              "Dinner Salad",
+              "A side salad",
+              500
+            ],
+            [
+              "Extra Chicken Breast",
+              "Added to any meal",
+              400
+            ],
+            [
+              "Avocado",
+              "Added to any meal",
+              200
+            ],
+            [
+              "Biscuit & Gravy",
+              "1 biscuit in house-made country gravy",
+              450
+            ],
+            [
+              "Hamburger Patty",
+              "An extra patty",
+              300
+            ],
+            [
+              "Bacon",
+              "An extra side",
+              200
+            ]
+          ]
+        },
+        {
+          "name": "Non-Alcoholic Drinks",
+          "items": [
+            [
+              "Fountain Soda",
+              "Coke, Diet Coke, Sprite or ginger ale",
+              300
+            ],
+            [
+              "Coffee",
+              "Fresh brewed, with cream and sugar",
+              300
+            ],
+            [
+              "Tea",
+              "Hot or iced",
+              300
+            ],
+            [
+              "Juice",
+              "Cranberry, orange, tomato, pineapple or grapefruit",
+              300
+            ]
+          ]
+        }
+      ],
+      "address": "2045 Mt. Diablo St, Concord, CA 94520",
+      "phone": "(925) 685-9515",
+      "email": "vinniesconcord@gmail.com",
+      "hours": "Daily 11am\u20132am",
+      "siteCta": "Visit their site",
+      "siteNote": "21 and over, with a valid physical ID or passport. Prices are from the food menu on their own website, posted in July 2025, so some may have changed. Sandwiches and burgers come with a choice of potato or macaroni salad, fries, house chips, cottage cheese, side salad or pickle spears (+$1 for garlic, curly or steak fries or onion rings). Event tickets are on their Linktree."
+    },
+    "placements": [],
+    "glenn": "Glenn, 22 Oct 2026, 7:25 pm: image 1022-1925 IMG_7693 (their logo) and screenshot IMG_7691 (IG @thevinniesbar), the link linktr.ee/VinniesBarAndGrill, \"BEASTY \u2022 Bar/Lounge\". No reel.",
+    "flags": [
+      "MENU: 7 sections, 53 items, from the four menu images on their own food-menu page. The page itself shows nothing (its images point at a staging host), so the files were opened from their uploads folder on vinniesbar.com. Uploaded 14 July 2025: prices may be old, said in siteNote.",
+      "LEFT OUT: 'Daily Special ???' (no price); bread, toppings, cheeses, dressings and sides lists (choices, not items; the sides are in siteNote); no alcohol, which their menu does not list. 'Biscuits & Gravy 4.5' under Add-Ons is one biscuit ('1 biscuits'), so it is named Biscuit & Gravy to tell it from the $10 breakfast plate.",
+      "NAMES: their capitals set in title case; 'Cheese Sticks/Cheese Curds' as 'Cheese Sticks or Cheese Curds'; 'Cheese Burger' as Cheeseburger; 'Spaghetti with Meat Balls' as Meatballs; 'Entrees' as Entr\u00e9es; 'N/A Drinks' as Non-Alcoholic Drinks. 'Served with side of fried' (their typo for fries) read as fries.",
+      "HOURS: their site 'open from 11am - 2am' and the menu 'OPEN EVERYDAY 11AM-2AM' agree.",
+      "PHONE (925) 685-9515 from their menu image; EMAIL vinniesconcord@gmail.com from their website and Linktree.",
+      "NAME: their site title 'Vinnies Bar & Grill', the logo \"Vinnie's Bar & Grill\", Instagram \"Vinnie's Bar and Grill\". Used \"Vinnie's Bar & Grill\", label \"Vinnie's\".",
+      "21+: the bar admits 21 and over only (Linktree, Instagram); said first in siteNote.",
+      "No film: Glenn sent no reel with it, as with The New H Lounge.",
+      "Coordinator: sent for BEASTY \u2022 Bar/Lounge only. Type line 'Bar & grill' passes the Bar/Lounge test (\\bbar ?& ?grill), so it fills spot 24 (seat 23), the page's last open spot; no city seat, as with The New H Lounge and Mitchell's.",
+      "Icon: their own Vinnie's Bar & Grill logo from Glenn's image IMG_7693, which is wider than tall; cut square around the logo and the black above and the red below extended by their own edge rows (76 px top, 62 px bottom of 1120) rather than cropping any of the logo. Color #000000."
+    ]
+  }
+]

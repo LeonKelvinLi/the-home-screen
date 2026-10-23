@@ -1647,4 +1647,11 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods-10': 'b_laughingmonknopa',
   'san-jose-goods2-21': 'b_pinkelementcafe',
 
+  /* Batch 60, Glenn, 22 October 2026, 6:58 pm: Pho Now, "San Jose • Eats / BEASTY • Eats". San Jose's
+     Asian food spot is Kusan Uyghur's and BEASTY • Eats' Pho spot is Gao Viet Kitchen's, so More goods
+     22 and More eats 45. Vinnie's Bar & Grill (7:25 pm, "BEASTY • Bar/Lounge" only) fills Bar/Lounge's
+     last open spot from its type line, and has no city seat. */
+  'san-jose-goods2-22': 'b_phonow',
+  'beasty-goods2-45': 'b_phonow',
+
 }

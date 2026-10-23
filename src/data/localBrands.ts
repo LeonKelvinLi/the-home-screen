@@ -29102,4 +29102,829 @@ export const LOCAL_SEED: LocalSeed[] = [
           "by": "aztec.ed"
       }
   },
+  /* BATCH 60, 2026-10-22: Glenn's sends of 22 October from 6:58 pm, read off the Mac's Messages. Sources: research/roster/batch60.json. */
+  {
+      "slug": "pho-now",
+      "name": "Pho Now",
+      "label": "Pho Now",
+      "cuisine": "Vietnamese pho",
+      "color": "#3d4450",
+      "icon": "pho-now",
+      "site": "https://phonownow.com/",
+      "tagline": "Home of the Pho Tai Lan, wok-seared beef in a long-simmered broth, plus beef rib pho, rice plates and vermicelli bowls on W Capitol Expressway by Communication Hill in San Jose.",
+      "prep": 0,
+      "category": "Vietnamese pho",
+      "items": [],
+      "sections": [
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Vietnamese Iced Coffee",
+                      "Cafe Sữa đá",
+                      795
+                  ],
+                  [
+                      "Green Thai Tea",
+                      "Trà xanh Thái",
+                      795
+                  ],
+                  [
+                      "Thai Tea",
+                      "Trà Thái",
+                      795
+                  ],
+                  [
+                      "Kumquat Iced Tea",
+                      "Trà Tắc",
+                      795
+                  ],
+                  [
+                      "Salted Plum Soda",
+                      "Soda Xí Muội",
+                      795
+                  ],
+                  [
+                      "Salted Lemon Soda",
+                      "Soda Chanh muối",
+                      795
+                  ],
+                  [
+                      "Fresh Lemonade with Chia Seeds",
+                      "Đá chanh + Hạt Chia",
+                      795
+                  ],
+                  [
+                      "Fresh Lemon + Soda",
+                      "Soda Chanh",
+                      795
+                  ],
+                  [
+                      "Coconut Juice + Chia",
+                      "Nước dừa + Hạt Chia",
+                      750
+                  ],
+                  [
+                      "Fresh Passion Fruit",
+                      "Chanh Dây",
+                      795
+                  ],
+                  [
+                      "Coke",
+                      "",
+                      350
+                  ],
+                  [
+                      "Diet Coke",
+                      "",
+                      350
+                  ],
+                  [
+                      "Sprite",
+                      "",
+                      350
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Authentic Vietnamese Egg Rolls",
+                      "Chả giò Vietnam",
+                      1195
+                  ],
+                  [
+                      "Vegetarian Authentic Vietnamese Egg Rolls",
+                      "Chả giò chay Vietnam",
+                      1195
+                  ],
+                  [
+                      "Spring Rolls",
+                      "Gỏi cuốn",
+                      1195
+                  ],
+                  [
+                      "Vegetarian Fresh Spring Rolls",
+                      "Gỏi cuốn Chay",
+                      1295
+                  ],
+                  [
+                      "Grilled Pork Sausage Spring Rolls",
+                      "Nem nướng cuốn",
+                      1295
+                  ],
+                  [
+                      "Garlic Fries",
+                      "Khoai Tây Chiên Tỏi",
+                      895
+                  ],
+                  [
+                      "Popcorn Chicken",
+                      "Gà Popcorn Chiên Giòn",
+                      895
+                  ],
+                  [
+                      "Fried Chicken Wings",
+                      "Cánh gà chiên",
+                      995
+                  ]
+              ]
+          },
+          {
+              "name": "Beef Phở",
+              "items": [
+                  [
+                      "House Special Pho",
+                      "Phở Đặc Biệt",
+                      1995
+                  ],
+                  [
+                      "Build-Your-Own Phở",
+                      "Phở tự chọn",
+                      2095
+                  ],
+                  [
+                      "Beef Rib Pho",
+                      "Phở sườn bò",
+                      2195
+                  ],
+                  [
+                      "Wok-Seared Beef Steak Pho",
+                      "Phở Tái Lăn",
+                      1995
+                  ],
+                  [
+                      "Rare Steak Pho",
+                      "Phở Tái",
+                      1995
+                  ],
+                  [
+                      "Rare Steak & Well-Done Brisket Pho",
+                      "Phở Tái Chín",
+                      1995
+                  ],
+                  [
+                      "Rare Steak & Flank Pho",
+                      "Phở Tái Nạm",
+                      1995
+                  ],
+                  [
+                      "Rare Steak & Tendon Pho",
+                      "Phở Tái gân",
+                      1995
+                  ],
+                  [
+                      "Rare Steak & Tripe Pho",
+                      "Phở Tái Sách",
+                      1995
+                  ],
+                  [
+                      "Rare Steak & Beef Meatball Pho",
+                      "Phở Tái Bò Viên",
+                      1995
+                  ],
+                  [
+                      "Well-Done Brisket Pho",
+                      "Phở Chín",
+                      1995
+                  ],
+                  [
+                      "Beef Meatball Pho",
+                      "Phở Bò Viên",
+                      1995
+                  ],
+                  [
+                      "Vegetable Pho (Broccoli & Carrot)",
+                      "Broccoli & Carrot Phở",
+                      1995
+                  ],
+                  [
+                      "Plain Phở (No Meat)",
+                      "Phở Không Thịt",
+                      1595
+                  ]
+              ]
+          },
+          {
+              "name": "Chicken Phở",
+              "items": [
+                  [
+                      "Chicken Noodle Soup",
+                      "Phở Gà",
+                      1845
+                  ],
+                  [
+                      "Chicken Pho with Broccoli & Carrot",
+                      "Phở Gà + Broccoli & Carrot",
+                      1945
+                  ],
+                  [
+                      "Shrimp & Broccoli Carrot Noodle Soup",
+                      "Phở Tôm – Broccoli & Carrot",
+                      1945
+                  ],
+                  [
+                      "Chicken Broth Pho with Broccoli & Carrot (No Meat)",
+                      "Phở Gà – Broccoli & Carrot (Không Thịt)",
+                      1745
+                  ],
+                  [
+                      "No Meat Chicken Broth Pho",
+                      "Phở Gà (Không Thịt): clear chicken broth with rice noodles, served without meat",
+                      1650
+                  ]
+              ]
+          },
+          {
+              "name": "Garlic Noodles",
+              "items": [
+                  [
+                      "Garlic Noodle with Grilled Shrimps & Grilled Pork",
+                      "Mì Tỏi + Tôm Nướng Thịt Nướng",
+                      2045
+                  ],
+                  [
+                      "Garlic Noodle with Grilled Shrimps",
+                      "Mì Tỏi Tôm Nướng",
+                      1945
+                  ],
+                  [
+                      "Garlic Noodle with Grilled Pork",
+                      "Mì Tỏi Thịt Nướng",
+                      1945
+                  ],
+                  [
+                      "Garlic Noodle with BBQ Short Ribs",
+                      "Mì Tỏi Sườn bò đại hàn",
+                      2045
+                  ],
+                  [
+                      "Vegetarian Garlic Noodle",
+                      "Mì Tỏi Chay",
+                      1745
+                  ],
+                  [
+                      "Extra Dish of Garlic Noodle",
+                      "Extra Dĩa Mì Tỏi",
+                      945
+                  ]
+              ]
+          },
+          {
+              "name": "Phở Side Orders",
+              "items": [
+                  [
+                      "Pickled Onions",
+                      "Hành Dấm",
+                      100
+                  ],
+                  [
+                      "Phở Noodle",
+                      "Phần Bánh Phở",
+                      750
+                  ],
+                  [
+                      "Beef Rib",
+                      "Sườn Bò",
+                      1245
+                  ],
+                  [
+                      "Beef Ball",
+                      "Bò Viên",
+                      1145
+                  ],
+                  [
+                      "Wok-Seared Beef Steak",
+                      "Dĩa Tái Lăn",
+                      1045
+                  ],
+                  [
+                      "Rare Steak",
+                      "Dĩa Tái Riêng",
+                      845
+                  ],
+                  [
+                      "Tripe",
+                      "Sách",
+                      845
+                  ],
+                  [
+                      "Well-Done Flank",
+                      "Nạm",
+                      845
+                  ],
+                  [
+                      "Fat Brisket",
+                      "Gầu",
+                      845
+                  ],
+                  [
+                      "Well-Done Brisket",
+                      "Chín",
+                      845
+                  ],
+                  [
+                      "Tendon",
+                      "Gân",
+                      845
+                  ],
+                  [
+                      "Broccoli",
+                      "",
+                      645
+                  ],
+                  [
+                      "Carrot",
+                      "",
+                      645
+                  ],
+                  [
+                      "Broccoli & Carrot",
+                      "",
+                      645
+                  ],
+                  [
+                      "Steamed Rice",
+                      "Cơm",
+                      445
+                  ]
+              ]
+          },
+          {
+              "name": "Rice Plates",
+              "items": [
+                  [
+                      "Grilled Pork, Shrimps & Egg Rice Plate",
+                      "Cơm Tôm Thịt Nướng + Trứng",
+                      2145
+                  ],
+                  [
+                      "Grilled Pork & Shrimps Rice Plate",
+                      "Cơm Tôm Thịt Nướng",
+                      2045
+                  ],
+                  [
+                      "Grilled Pork Rice Plate",
+                      "Cơm Thịt Nướng",
+                      1945
+                  ],
+                  [
+                      "Grilled Pork & Egg Rice Plate",
+                      "Cơm thịt nướng + trứng",
+                      2045
+                  ],
+                  [
+                      "Grilled Pork Chop, Shrimps & Egg Rice Plate",
+                      "Cơm Tôm sườn nướng + trứng",
+                      2145
+                  ],
+                  [
+                      "Grilled Pork Chop & Shrimps Rice Plate",
+                      "Cơm Tôm Sườn nướng",
+                      2045
+                  ],
+                  [
+                      "Grilled Pork Chop & Egg Rice Plate",
+                      "Cơm sườn nướng + trứng",
+                      1945
+                  ],
+                  [
+                      "Grilled Pork Chop Rice Plate",
+                      "Cơm sườn nướng",
+                      1945
+                  ],
+                  [
+                      "Grilled Beef, Shrimp & Egg Rice Plate",
+                      "Cơm Tôm nướng, Bò nướng + Trứng",
+                      2145
+                  ],
+                  [
+                      "Grilled Beef & Shrimp Rice Plate",
+                      "Cơm Tôm nướng Bò nướng",
+                      2045
+                  ],
+                  [
+                      "Grilled Beef Ribs Rice Plate",
+                      "Cơm Sườn Bò nướng",
+                      2045
+                  ],
+                  [
+                      "Grilled Short Ribs Beef & Egg Rice Plate",
+                      "Cơm sườn bò đại hàn nướng + trứng chiên",
+                      2045
+                  ],
+                  [
+                      "Grilled Short Ribs Beef & Shrimp Rice Plate",
+                      "Cơm Sườn Bò Đại Hàn nướng, Tôm nướng",
+                      2045
+                  ],
+                  [
+                      "Grilled Shrimps Rice Plate",
+                      "Cơm Tôm Nướng",
+                      2045
+                  ],
+                  [
+                      "Vietnamese Shaken Beef Rice Plate",
+                      "Cơm Bò Lúc Lắc",
+                      2045
+                  ],
+                  [
+                      "Vietnamese Shaken Beef & Egg Rice Plate",
+                      "Cơm Bò Lúc Lắc + Trứng",
+                      2145
+                  ],
+                  [
+                      "Shrimp & Egg Fried Rice",
+                      "Cơm chiên (Tôm + Trứng)",
+                      2245
+                  ]
+              ]
+          },
+          {
+              "name": "Vermicelli",
+              "items": [
+                  [
+                      "Grilled Pork, Shrimps & Egg Rolls Vermicelli",
+                      "Bún Tôm Thịt Nướng Chả Giò: grilled pork, shrimp and crispy egg rolls, with fresh herbs and house fish sauce",
+                      2145
+                  ],
+                  [
+                      "Grilled Pork & Egg Rolls Vermicelli",
+                      "",
+                      1945
+                  ],
+                  [
+                      "Grilled Shrimp & Egg Roll Vermicelli",
+                      "",
+                      1945
+                  ],
+                  [
+                      "Grilled Pork & Shrimps Vermicelli",
+                      "",
+                      2045
+                  ],
+                  [
+                      "Grilled Shrimps Vermicelli",
+                      "",
+                      1945
+                  ],
+                  [
+                      "Grilled Pork Vermicelli",
+                      "",
+                      1845
+                  ],
+                  [
+                      "Egg Roll Vermicelli",
+                      "",
+                      1845
+                  ],
+                  [
+                      "Vegetarian (Tofu) Vermicelli",
+                      "",
+                      1845
+                  ],
+                  [
+                      "Lemongrass Beef Vermicelli",
+                      "",
+                      2045
+                  ]
+              ]
+          }
+      ],
+      "address": "505 W Capitol Expy, San Jose, CA 95136",
+      "phone": "(408) 503-6868",
+      "hours": "Sun–Thu 10am–9pm, Fri–Sat 10am–10pm",
+      "orderUrl": "https://order.blogicsystems.com/client/store/20201250/detail/20201250",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from the online ordering page their own website links to. Their Pho Tai Lan is the Wok-Seared Beef Steak Pho.",
+      "clip": {
+          "src": "/clips/pho-now.mp4",
+          "poster": "/clips/pho-now-poster.webp",
+          "href": "https://www.instagram.com/reel/DayFVEbJF9D/",
+          "credit": "Posted by @phonowsj",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "vinnies-bar-and-grill",
+      "name": "Vinnie's Bar & Grill",
+      "label": "Vinnie's",
+      "cuisine": "Bar & grill",
+      "color": "#000000",
+      "icon": "vinnies-bar-and-grill",
+      "site": "https://vinniesbar.com/",
+      "tagline": "A downtown Concord bar and grill on Mt. Diablo Street: breakfast, burgers and pub grub from 11am to 2am, with pool, darts, a smoking patio and live music, karaoke and Latin nights. 21 and over.",
+      "prep": 0,
+      "category": "Bar & grill",
+      "items": [],
+      "sections": [
+          {
+              "name": "Starters",
+              "items": [
+                  [
+                      "Breaded Shrimp, Popcorn Shrimp or Calamari",
+                      "With fries and cocktail sauce",
+                      1350
+                  ],
+                  [
+                      "Jalapeño Poppers",
+                      "5 to 6 house-made poppers with sour cream",
+                      1250
+                  ],
+                  [
+                      "Deep Fried Mushrooms, Zucchini or Eggplant",
+                      "About 10 pieces of fresh veggies, breaded and fried, with ranch",
+                      1250
+                  ],
+                  [
+                      "Onion Rings",
+                      "A basket of battered onion rings with ranch",
+                      1000
+                  ],
+                  [
+                      "Cheese Sticks or Cheese Curds",
+                      "6 pieces of breaded mozzarella with marinara",
+                      1000
+                  ],
+                  [
+                      "Taquitos",
+                      "Deep-fried beef taquitos with sour cream and salsa",
+                      1000
+                  ],
+                  [
+                      "Fried Pickles",
+                      "With ranch",
+                      1000
+                  ],
+                  [
+                      "French Fries or House Chips",
+                      "+$1 for garlic, seasoned curly or steak fries",
+                      650
+                  ],
+                  [
+                      "Sampler Tray",
+                      "Any three of the starters above on one tray, with a dip",
+                      1350
+                  ],
+                  [
+                      "Chicken Wings",
+                      "Buffalo, Thai or naked with the sauce on the side",
+                      1350
+                  ],
+                  [
+                      "Chicken Strips",
+                      "Battered and fried, with fries and a dip",
+                      1350
+                  ],
+                  [
+                      "Cheese Quesadilla",
+                      "Large tortilla with melted cheese, sour cream and salsa; +$4 chicken breast",
+                      1000
+                  ],
+                  [
+                      "Beef Slider",
+                      "Mini burger with lettuce and tomato; +$0.25 cheese, +$0.50 bacon",
+                      375
+                  ],
+                  [
+                      "Veggie Plate",
+                      "Carrots, celery and bell pepper with ranch",
+                      750
+                  ],
+                  [
+                      "Chips & Salsa",
+                      "House-made tortilla chips",
+                      700
+                  ],
+                  [
+                      "Potato Skins",
+                      "4 skins with cheese, bacon, green onions and sour cream",
+                      1100
+                  ]
+              ]
+          },
+          {
+              "name": "Breakfast",
+              "items": [
+                  [
+                      "Country Fried Steak",
+                      "Topped with country gravy, with 2 eggs, hash browns and toast",
+                      1600
+                  ],
+                  [
+                      "Breakfast Platter",
+                      "3 eggs any style, toast, hash browns and bacon, ham, chorizo, linguiça or breakfast sausage",
+                      1250
+                  ],
+                  [
+                      "Breakfast Burrito",
+                      "3 scrambled eggs, hash browns and bacon, ham, linguiça or sausage in a flour tortilla, with sour cream and salsa",
+                      1250
+                  ],
+                  [
+                      "Build-Your-Own Omelet",
+                      "3 eggs with your choice of cheese, sour cream and salsa; +$2 meat or avocado, +$0.50 veggies",
+                      1000
+                  ],
+                  [
+                      "Biscuits & Gravy",
+                      "2 biscuits in house-made sausage country gravy",
+                      1000
+                  ],
+                  [
+                      "Steak & Eggs",
+                      "Steak to your liking, 2 eggs any style, hash browns and toast",
+                      1800
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "Caesar Salad",
+                      "Romaine, parmesan and garlic croutons with house-made Caesar; +$4 chicken breast",
+                      1100
+                  ],
+                  [
+                      "Chicken Salad",
+                      "Grilled, teriyaki or crispy chicken over lettuce with your choice of dressing",
+                      1550
+                  ],
+                  [
+                      "Taco Salad",
+                      "Seasoned chicken or beef in a fried tortilla shell with lettuce, tomato, beans, sour cream and salsa; +$2 avocado",
+                      1550
+                  ],
+                  [
+                      "Greek Salad",
+                      "Greek olives, feta, tomato, bacon and onions over baby spinach",
+                      1550
+                  ],
+                  [
+                      "Chef Salad",
+                      "Romaine, turkey, ham, tomato, egg, shredded cheese and cucumber",
+                      1650
+                  ]
+              ]
+          },
+          {
+              "name": "Sandwiches & Burgers",
+              "items": [
+                  [
+                      "Grilled Cheese",
+                      "On your choice of bread, with a side",
+                      1000
+                  ],
+                  [
+                      "Cheeseburger",
+                      "1/3 lb with all the fixings and a side; +$1 mushrooms, +$2 avocado or bacon, +$3 extra patty",
+                      1400
+                  ],
+                  [
+                      "Veggie Burger",
+                      "A black bean patty with all the fixings",
+                      1250
+                  ],
+                  [
+                      "BLT",
+                      "Bacon, lettuce and tomato on your choice of bread, with a side",
+                      1250
+                  ],
+                  [
+                      "Patty Melt on Rye",
+                      "1/3 lb patty with Swiss and grilled onion, with a side",
+                      1350
+                  ],
+                  [
+                      "Chicken Sandwich",
+                      "Grilled or fried chicken breast with all the fixings and a side; +$1 pesto or buffalo, +$2 bacon",
+                      1350
+                  ],
+                  [
+                      "Bacon Bleu Cheese Burger",
+                      "Point Reyes bleu cheese, all the fixings and a side",
+                      1600
+                  ],
+                  [
+                      "Ultimate Grilled Sandwich",
+                      "Grilled cheese stacked with turkey, ham and bacon, with a side",
+                      1550
+                  ],
+                  [
+                      "Club Sandwich",
+                      "Triple-decker with turkey, ham, bacon and your choice of cheese, with a side",
+                      1550
+                  ],
+                  [
+                      "French Dip",
+                      "Thin-sliced roast beef on a French roll with au jus and a side",
+                      1550
+                  ],
+                  [
+                      "Western BBQ Bacon Cheeseburger",
+                      "Bacon, onion rings, cheddar and BBQ sauce, with a side",
+                      1600
+                  ],
+                  [
+                      "Steak Sandwich",
+                      "6 oz NY steak on a French roll with all the fixings and a side",
+                      1800
+                  ]
+              ]
+          },
+          {
+              "name": "Entrées",
+              "items": [
+                  [
+                      "Fish Taco",
+                      "Battered Atlantic cod in a corn tortilla with cabbage, pico de gallo and house sauce",
+                      500
+                  ],
+                  [
+                      "Fish and Chips",
+                      "Battered Atlantic cod with tartar sauce, chips or fries and coleslaw; +$3 extra piece",
+                      1500
+                  ],
+                  [
+                      "Spaghetti with Meatballs",
+                      "Red sauce, meatballs, parmesan and garlic bread; +$1 mushrooms",
+                      1600
+                  ],
+                  [
+                      "Steak Dinner",
+                      "10 oz NY steak with a dinner salad and a side",
+                      2400
+                  ]
+              ]
+          },
+          {
+              "name": "Add-Ons",
+              "items": [
+                  [
+                      "Dinner Salad",
+                      "A side salad",
+                      500
+                  ],
+                  [
+                      "Extra Chicken Breast",
+                      "Added to any meal",
+                      400
+                  ],
+                  [
+                      "Avocado",
+                      "Added to any meal",
+                      200
+                  ],
+                  [
+                      "Biscuit & Gravy",
+                      "1 biscuit in house-made country gravy",
+                      450
+                  ],
+                  [
+                      "Hamburger Patty",
+                      "An extra patty",
+                      300
+                  ],
+                  [
+                      "Bacon",
+                      "An extra side",
+                      200
+                  ]
+              ]
+          },
+          {
+              "name": "Non-Alcoholic Drinks",
+              "items": [
+                  [
+                      "Fountain Soda",
+                      "Coke, Diet Coke, Sprite or ginger ale",
+                      300
+                  ],
+                  [
+                      "Coffee",
+                      "Fresh brewed, with cream and sugar",
+                      300
+                  ],
+                  [
+                      "Tea",
+                      "Hot or iced",
+                      300
+                  ],
+                  [
+                      "Juice",
+                      "Cranberry, orange, tomato, pineapple or grapefruit",
+                      300
+                  ]
+              ]
+          }
+      ],
+      "address": "2045 Mt. Diablo St, Concord, CA 94520",
+      "phone": "(925) 685-9515",
+      "email": "vinniesconcord@gmail.com",
+      "hours": "Daily 11am–2am",
+      "siteCta": "Visit their site",
+      "siteNote": "21 and over, with a valid physical ID or passport. Prices are from the food menu on their own website, posted in July 2025, so some may have changed. Sandwiches and burgers come with a choice of potato or macaroni salad, fries, house chips, cottage cheese, side salad or pickle spears (+$1 for garlic, curly or steak fries or onion rings). Event tickets are on their Linktree."
+  },
 ]
