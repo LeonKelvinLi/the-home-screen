@@ -197,3 +197,4 @@ The one-page Schedule A in draft template 6566603 was replaced with the $99 vers
 ## 23 October 2026: 9 BARK points per business
 
 Leon: "Make BARK 9 points per referred business, to match the $9.00 commission." The default is 9 (it was Glenn's 6, worked out from $69), the Careers page (MAKE $) says 9, and the defaults now raise no soft question. Schedule A was regenerated and replaced in draft template 6566603 the same way as the $99 change.
+Live: `df52c9c`, on beastypages.com by 9:42 am (the Careers page reads "9 points for each new active business referred"). The 9-point Schedule A (code 1YTTJSL) replaced the $99 one in draft template 6566603 and was saved; still no submissions, nothing sent.
