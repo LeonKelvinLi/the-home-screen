@@ -123,8 +123,9 @@ await p.waitForTimeout(400)
 await goDot(p, await dotOf('Eats'))
 const eats = await p.evaluate(() => [...(document.querySelector('.home-page:not([inert])')?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label')))
 /* Udon's open spot went to Empire State Pizza on Glenn's word (2026-10-21, "the
-   open spots on BEASTY • Eats"); Jamaican is the one left open. */
-step('BEASTY • Eats: one restaurant per cuisine, open ones named for theirs', eats.some((l) => /^Downtown BBQ/.test(l)) && eats.some((l) => /^Jamaican food — spot available/.test(l)) && eats.some((l) => /^Empire State/.test(l)) && !eats.some((l) => /^Midnite Theories|^Jazz Braids|^Cravingz/.test(l)), eats.slice(0, 6).join(' | '))
+   open spots on BEASTY • Eats"), and Jamaican's to The Yard (2026-10-24, "bump
+   them to BEASTY • Eats page in the empty spot"). */
+step('BEASTY • Eats: one restaurant per cuisine, open ones named for theirs', eats.some((l) => /^Downtown BBQ/.test(l)) && eats.some((l) => /^The Yard/.test(l)) && eats.some((l) => /^Empire State/.test(l)) && !eats.some((l) => /^Midnite Theories|^Jazz Braids|^Cravingz/.test(l)), eats.slice(0, 6).join(' | '))
 await goDot(p, await dotOf('Sweets'))
 const sweets = await p.evaluate(() => [...(document.querySelector('.home-page:not([inert])')?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label')))
 step('BEASTY • Sweets carries the dessert shops', sweets.some((l) => /^Meadowlark/.test(l)) && sweets.some((l) => /^Cravingz/.test(l)), sweets.slice(0, 6).join(' | '))
@@ -187,7 +188,7 @@ await openSearch()
 step('Search has a Categories button and a Cities button', (await p.locator('.search-drop-btn', { hasText: 'Categories' }).count()) === 1 && (await p.locator('.search-drop-btn', { hasText: 'Cities' }).count()) === 1)
 await p.locator('.search-drop-btn', { hasText: 'Categories' }).click()
 const cats = await p.locator('#search-drop-categories .search-brand strong').allTextContents()
-step('Categories lists every BEASTY page, including Games, Health/Beauty and Breakfast/Diner', cats.length === 41 && cats.includes('BEASTY • Games') && cats.includes('BEASTY • Health/Beauty') && cats.includes('BEASTY • Breakfast/Diner') && cats.every((c) => c.startsWith('BEASTY • ')), `${cats.length}: ${cats.slice(0, 6).join(', ')} …`)
+step('Categories lists every BEASTY page, including Games, Health/Beauty, Breakfast/Diner, FROYO and Catering', cats.length === 43 && cats.includes('BEASTY • Games') && cats.includes('BEASTY • Health/Beauty') && cats.includes('BEASTY • Breakfast/Diner') && cats.includes('BEASTY • FROYO') && cats.includes('BEASTY • Catering') && cats.every((c) => c.startsWith('BEASTY • ')), `${cats.length}: ${cats.slice(0, 6).join(', ')} …`)
 step('Search has a Share button', (await p.locator('.chrome-pill.is-share', { hasText: 'Share' }).count()) >= 1)
 step('A to Z', cats.every((c, i) => i === 0 || cats[i - 1].localeCompare(c) <= 0))
 const thumbs = await p.evaluate(() => [...document.querySelectorAll('#search-drop-categories .search-cat-thumb .cat-icon')].filter((t) => /url\(/.test(t.style.backgroundImage)).length)

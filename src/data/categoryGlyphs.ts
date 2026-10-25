@@ -15,6 +15,8 @@ export interface CategoryGlyph {
 const ring = (cx: number, cy: number, r: number) => `M${cx - r} ${cy}a${r} ${r} 0 1 0 ${2 * r} 0a${r} ${r} 0 1 0 ${-2 * r} 0`
 
 export const CATEGORY_GLYPHS: Record<string, CategoryGlyph> = {
+  froyo: { paths: ['M7 10h10l-1.6 10.5a1 1 0 0 1-1 .9H9.6a1 1 0 0 1-1-.9Z', 'M8 10c0-2 1.6-3 4-3s4 1 4 3', 'M10 7c0-1.6 1-2.6 2-3.6 1 1 2 2 2 3.6'] },
+  catering: { paths: ['M3 17h18', 'M5 17a7 7 0 0 1 14 0', 'M12 10V8', 'M10.5 8h3', 'M4 20h16'] },
   diner: { paths: ['M3 13a9 9 0 0 0 18 0Z', 'M2 13h20', 'M8 9c0-2 1.5-2 1.5-4', 'M12 9c0-2 1.5-2 1.5-4', 'M16 9c0-2 1.5-2 1.5-4'] },
   health: { paths: ['M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z', 'M12 9.5v5', 'M9.5 12h5'] },
   games: { paths: ['M7 7h10c3 0 5 4 5 9 0 3-3 4-5 1l-2-2H9l-2 2c-2 3-5 2-5-1 0-5 2-9 5-9Z', 'M7 9v5', 'M4.5 11.5h5'], dots: [[16, 10, 1], [19, 13, 1]] },

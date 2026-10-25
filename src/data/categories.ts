@@ -120,6 +120,12 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'youth', heading: 'Youth', about: "Kids' clubs, classes, camps and play", wall: wall('youth'), test: /\byouth\b|\bkids?'?\b|children|tutor|summer camp|after[- ]?school|preschool/i, not: /kids? menu|kid-friendly|\bdogs?\b|\bpets?\b/i },
   /* "New category Health/Beauty" — Glenn, 2026-10-18, with Radiant Med Spas in Fremont.
      Med spas, aesthetics and wellness clinics. Hair, nails and lashes stay on Salons. */
+  /* Glenn, 2026-10-23, 5:20 pm: "New category BEASTY • FROYO", with a reel of Yiaya in Palo Alto.
+     Frozen yogurt shops by their type line; a froyo shop can hold Sweets' Soft serve spot too. */
+  { kind: 'froyo', heading: 'FROYO', about: 'Frozen yogurt shops', wall: wall('froyo'), test: /frozen yogh?urt|froyo|fro-yo/i },
+  /* Glenn, 2026-10-24, 4:48 am: "New Category BEASTY • Catering", with Inda & Mely in San Bruno.
+     Caterers and restaurants that cater, by type line. Chefs keeps private and personal chefs. */
+  { kind: 'catering', heading: 'Catering', about: 'Caterers and restaurants that cater', wall: wall('catering'), test: /catering|caterer/i },
   /* "New category BEASTY • Breakfast/diner. Or just • diner" — Glenn, 2026-10-22, 8:56 pm.
      His first wording, with Diner as the kind. Diners and breakfast and brunch rooms, by
      their type line; `\bdiner\b` never matches "dinner". A breakfast burrito is a taco

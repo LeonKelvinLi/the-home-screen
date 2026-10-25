@@ -128,3 +128,5 @@ Health/Beauty was added on 18 October 2026 ("New category Health/Beauty"), opene
 Breakfast/Diner was added on 22 October 2026 ("New category BEASTY • Breakfast/diner. Or just • diner"). It covers diners and breakfast and brunch rooms, by type line, with a sunny-side-up glyph and a wallpaper of eggs and a coffee cup, and appears in More pages and Search. Existing diners and breakfast places fill it automatically.
 
 Bar/Lounge became Bar/Lounge/Pub on 23 October 2026, Glenn's wording with Powder Keg Pub. The kind is still `bars`, so no seat id changed.
+
+FROYO was added on 23 October 2026 ("New category BEASTY • FROYO", with a reel of Yiaya in Palo Alto): frozen yogurt shops by type line, with a cup-and-swirl glyph and wallpaper. Catering was added on 24 October 2026 ("New Category BEASTY • Catering", with Inda & Mely in San Bruno): caterers and restaurants that cater, by type line; Chefs keeps private and personal chefs and also tests catering, so a caterer can be on both. Both are in More pages and Search.

@@ -341,7 +341,9 @@ export function MembersApp({ api }: { api: ShellApi }) {
               */}
               <span className="members-plan-note">
                 <strong>
-                  ONLY ${fullyReferredPrice(t)} next month when you refer {t.discountCapReferrals}{' '}
+                  {fullyReferredPrice(t) === 0
+                    ? `FREE next month when you refer ${t.discountCapReferrals} `
+                    : `ONLY $${fullyReferredPrice(t)} next month when you refer ${t.discountCapReferrals} `}
                   new member sign-ups.
                 </strong>{' '}
                 ${DISCOUNT_PER_MILESTONE} credit for each {PER_MILESTONE_REFERRALS} new members

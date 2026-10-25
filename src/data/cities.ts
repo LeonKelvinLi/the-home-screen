@@ -337,4 +337,10 @@ export const CITY_PAGES = [
     wallpaper is the whole Bay from Landsat 8 — see public/wallpapers/CREDITS.md.
   */
   'Bay Area',
+  /*
+    2026-10-24: Spinning Dough, "Millbrae • Eats", opens Millbrae. No landmark
+    was sent, so it draws the neutral placeholder until a licensed photograph
+    lands — see public/wallpapers/CREDITS.md.
+  */
+  'Millbrae',
 ] as const

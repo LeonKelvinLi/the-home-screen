@@ -63,7 +63,8 @@ try{
  await open(data[0].id);await p.click('.nav-back');await p.waitForTimeout(900)
  const eats=await sheet('Eats')
  check('Empire State Pizza is on BEASTY • Eats',eats.some(l=>/^Empire State/.test(l)))
- check('Jamaican is still an open spot on BEASTY • Eats',eats.some(l=>/^Jamaican food — spot available/.test(l)))
+ /* Jamaican stayed open until The Yard took it on 2026-10-24. */
+ check('Jamaican is held, now by The Yard',eats.some(l=>/^Jamaican food — spot available/.test(l))||eats.some(l=>/^The Yard/.test(l)))
  const more=await sheet('More eats')
  for(const d of data.filter(d=>d.placements.some(s=>s.startsWith('beasty-goods2-'))))
   check(`${d.id} is on BEASTY • More eats`,more.some(l=>l.includes(d.facts.label)||l.includes(d.facts.name)))

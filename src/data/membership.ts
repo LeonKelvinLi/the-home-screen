@@ -107,7 +107,10 @@ export const TIERS: Tier[] = [
     nameLead: 'BIGGIE',
     nameTail: 'PASS',
     mark: 'ribbon',
-    monthly: 39,
+    /* $29.99 from 2026-10-23 (Leon: "change price to $29.99 for user instead
+       of 39.99"). It was Glenn's $39. The referral cap stays $30, so a member
+       who refers 9 pays nothing next month rather than being owed money. */
+    monthly: 29.99,
     honours: 'the Loyalty offer',
     discountCap: 30,
     discountCapReferrals: 9,
@@ -191,13 +194,19 @@ export const TIERS: Tier[] = [
  * them, and asserted below because a wrong number here is a wrong price on a
  * page that asks for money.
  */
-export const fullyReferredPrice = (t: Tier) => t.monthly - t.discountCap
+export const fullyReferredPrice = (t: Tier) => Math.max(0, Math.round((t.monthly - t.discountCap) * 100) / 100)
 
+/*
+  A full set of referrals can now cover the whole month: at $29.99 the $30 cap
+  makes 9 referrals a free month. The floor above is what stops that ever
+  reading as BEASTY owing the member money; the check below keeps the floor
+  honest, so a cap set far past the price is still caught.
+*/
 for (const t of TIERS) {
-  if (fullyReferredPrice(t) < 0) {
+  if (t.discountCap - t.monthly >= 1) {
     throw new Error(
-      `${t.name}: the referral cap ($${t.discountCap}) is more than a month costs ` +
-        `($${t.monthly}) — that would owe the member money`,
+      `${t.name}: the referral cap ($${t.discountCap}) is a dollar or more past what a month costs ` +
+        `($${t.monthly}) — fewer referrals would already make it free`,
     )
   }
 }

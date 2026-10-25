@@ -1670,4 +1670,44 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'berkeley-goods2-12': 'b_myomyberkeley',
   'beasty-goods2-48': 'b_myomyberkeley',
 
+  /* Batch 64, Glenn, 23 October 1:48 pm to 24 October 12:25 pm, in the order he sent them. A city's
+     open category spot where one fits, else its yellow sheet; BEASTY • Eats holds a business of every
+     kind these fit, so More eats 49-62. AYCE, Food Trucks, Cafe and Catering fill from type lines.
+     HwanYeong takes Brentwood's Boba spot, in the middle of the page, as Glenn asked. */
+  'san-francisco-goods2-48': 'b_therollsf',
+  'beasty-goods2-49': 'b_therollsf',
+  'berkeley-goods2-13': 'b_northbeachpizzaberkeley',
+  'beasty-goods2-50': 'b_northbeachpizzaberkeley',
+  'beasty-goods2-51': 'b_phohoa',
+  'concord-goods2-4': 'b_crabboilandthings',
+  'fairfield-goods-4': 'b_wasabiudonandkatsubar',
+  'beasty-goods2-52': 'b_wasabiudonandkatsubar',
+  'rohnert-park-goods-1': 'b_donjulioslatingrill',
+  'beasty-goods2-53': 'b_donjulioslatingrill',
+  'pleasant-hill-goods-9': 'b_gottaeattapita',
+  'beasty-goods2-54': 'b_gottaeattapita',
+  'oakland-goods2-29': 'b_elsazon',
+  'beasty-goods2-55': 'b_elsazon',
+  'san-francisco-goods2-49': 'b_montereypizzaandasianzap',
+  'beasty-goods2-56': 'b_montereypizzaandasianzap',
+  'san-bruno-goods-10': 'b_indaandmely',
+  'beasty-goods2-57': 'b_indaandmely',
+  'millbrae-goods-5': 'b_spinningdough',
+  'beasty-goods2-58': 'b_spinningdough',
+  'san-jose-goods2-23': 'b_phodaily',
+  'beasty-goods2-59': 'b_phodaily',
+  'concord-goods-13': 'b_mazehsandwichandcafe',
+  'berkeley-goods2-14': 'b_littleplearnthaikitchen',
+  'beasty-goods2-60': 'b_littleplearnthaikitchen',
+  'brentwood-goods-14': 'b_hwanyeong',
+  'beasty-goods2-61': 'b_hwanyeong',
+  'san-jose-goods2-24': 'b_izumirevolvingsushi',
+  'beasty-goods2-62': 'b_izumirevolvingsushi',
+  'newark-goods-10': 'b_timog',
+  /* By hand, so nobody already there moves: East Bay Buffet's type line now says
+     all-you-can-eat ("BEASTY • AYCE", 24 Oct), and Inda + Mely's says catering, which
+     Chefs also takes. Left to the type line, each would have pushed older seats along. */
+  'beasty-ayce-7': 'b_eastbaybuffet',
+  'beasty-cooks-10': 'b_indaandmely',
+
 }

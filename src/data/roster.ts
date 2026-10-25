@@ -1332,6 +1332,14 @@ export const ROSTER_SEED: LocalSeed[] = [
      "Just post this on the page for now." Italian is goods category 6. The
      mark is their own badge, cut from the screenshot of their site. */
   seed('empire-state-pizza', 'Empire State Pizza', 'Empire State', 'NYC-style pizza', '#1F5A3C', {
+    /* Glenn, 2026-10-23, 5:23 pm: "Clip this video plz". Their own 10 s reel, whole: 8 pizzas, 8 flavors. */
+    clip: {
+      src: '/clips/empire-state-pizza.mp4',
+      poster: '/clips/empire-state-pizza-poster.webp',
+      href: 'https://www.instagram.com/reel/DekrW5dh7Ss/',
+      credit: 'Posted by @empirestatepizza',
+      platform: 'Instagram',
+    },
     icon: 'empire-state-pizza',
     logoTemplate: 'monogram', logoInitials: 'ES', logoFace: 'condensed',
     site: 'https://www.empirestatepizzas.com/',
@@ -1787,7 +1795,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       'An online-only label — there is no shop to visit. Drops and sizing are on their own ' +
       'site and their Instagram.',
   }),
-  seed('house-of-silog', 'House of Silog', 'House of Silog', 'Filipino fusion', '#1C1C1E', {
+  seed('house-of-silog', 'House of Silog', 'House of Silog', 'Filipino fusion', '#000000', {
     icon: 'house-of-silog',
     logoTemplate: 'monogram', logoInitials: 'HS', logoFace: 'slab',
     /* No site of their own — he flagged it "Needs website". The ordering page
@@ -5242,7 +5250,11 @@ export const BEASTY_EATS_ROSTER: (string | null)[] = [
   'b_gaovietkitchen', //       12 Pho
   null, //                     13 Ramen
   'b_bulapies', //             14 Fijian food
-  null, //                     15 Jamaican food
+  /* "I like how this turned out. Can you bump them to BEASTY • Eats page in the
+     empty spot?" — Glenn, 2026-10-24, 8:04 pm, with The Yard's page. Jamaican
+     was the one spot nobody filled (the Empire State precedent): its tile shows
+     its own name, and a later Jamaican kitchen goes to More eats. */
+  'b_theyardbrentwood', //     15 Jamaican food (open spot)
   'b_chefjeffssmashburger', // 16 Burger
   'b_hotboyschicken', //       17 Chicken sandwich
   'b_thelocalpetaluma', //     18 Sandwiches (The Local's glow; Bread Winners to More eats)

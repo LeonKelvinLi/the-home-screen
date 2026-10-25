@@ -196,3 +196,7 @@ gallery, the dock 1/2/3 switch, the four dock buttons, and search. The first two
 flagship pages and all 48 businesses on them stay open to anyone.
 `tools/audit-gate.mjs` checks both halves — a gate that also shut the directory
 would pass a "is it locked" test and destroy the thing the app is for.
+
+## 24 October 2026: BIGGIE PASS $29.99
+
+Leon: "change price to $29.99 for user instead of 39.99". `monthly` is 29.99; with the $30 referral cap, 9 referrals make the next month free (the derived price floors at $0 and the plan says FREE). See docs/BATCH-64.md.

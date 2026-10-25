@@ -610,6 +610,32 @@ def m_health(rng):
     return composite(img, over, blur=3)
 
 
+def m_froyo(rng):
+    img = gradient('#2b1f3a', '#1b2a33')
+    over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(over)
+    # Cups with a swirl on top.
+    for x, y, s in [(W * .3, H * .3, 1.1), (W * .72, H * .56, .85), (W * .36, H * .82, .7)]:
+        r = 110 * s
+        d.polygon([(x - r, y), (x + r, y), (x + r * .7, y + r * 1.3), (x - r * .7, y + r * 1.3)], outline=rgba('#f9a8d4', .24), width=12)
+        for k, w in enumerate((1.0, .75, .5)):
+            d.ellipse((x - r * w, y - r * (.35 + .32 * k) - r * .18, x + r * w, y - r * (.35 + .32 * k) + r * .18), outline=rgba('#c4b5fd', .26), width=10)
+    return composite(img, over, blur=3)
+
+
+def m_catering(rng):
+    img = gradient('#2a2316', '#162229')
+    over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(over)
+    # Serving cloches on platters.
+    for x, y, s in [(W * .32, H * .32, 1.1), (W * .7, H * .58, .9), (W * .34, H * .82, .7)]:
+        r = 130 * s
+        d.arc((x - r, y - r, x + r, y + r), 180, 360, fill=rgba('#fcd34d', .24), width=12)
+        d.line((x - r * 1.25, y, x + r * 1.25, y), fill=rgba('#fcd34d', .24), width=12)
+        d.ellipse((x - 14 * s, y - r - 24 * s, x + 14 * s, y - r + 4 * s), outline=rgba('#e5e7eb', .26), width=8)
+    return composite(img, over, blur=3)
+
+
 def m_diner(rng):
     img = gradient('#3a2414', '#1d1a2e')
     over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
@@ -641,6 +667,8 @@ def m_games(rng):
 
 
 MOTIFS = {
+    "froyo": m_froyo,
+    "catering": m_catering,
     "diner": m_diner,
     "health": m_health,
     "games": m_games,

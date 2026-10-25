@@ -118,6 +118,11 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'wthellydanyelly', place: 'Uncle Jay Burger House', city: 'Concord', reel: reel('DerkBxotJGe') },
   { by: 'takeoutwithtuck', place: 'Wing Bros', brand: 'b_wingbros', reel: reel('DYnTayxSVKT'), clip: true },
   { by: 'tasha.malan', place: 'That’s My Jam', city: 'San Francisco', reel: reel('Ddjs4KSRHcV') },
+  /* Glenn's "Foodie" sends of 23 and 24 October: neither place is on BEASTY. Yiaya came with "New category BEASTY • FROYO". */
+  { by: 'camemzmin', place: 'Yiaya', city: 'Palo Alto', reel: reel('De1EEbdpP63') },
+  { by: 'venturewithkelly', place: 'Super Pan', city: 'San Francisco', reel: reel('DeXNrNVs0Oa') },
+  /* Glenn, 24 Oct 5:04 am, "Clip this video plz / 2nd video for their page": Spinning Dough's page plays the durian film, so this is a second review. */
+  { by: 'cookwithhenny', place: 'Spinning Dough', city: 'Millbrae', brand: 'b_spinningdough', reel: reel('DYGJe5pPj3q'), clip: true },
 ]
 
 /*
