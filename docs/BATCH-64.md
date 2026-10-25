@@ -48,3 +48,7 @@ Leon, 24 October: "change price to $29.99 for user instead of 39.99" (it was $39
 - `npm run build`; the data audit (0 errors).
 - Seat diff: 50 additions; the only other line is Ruay Mitr's new full name on its own seat. East Bay Buffet (AYCE 8) and Inda + Mely (Chefs 10) are seated by hand so nobody already there moves.
 - `tools/audit-batch64.mjs` (142 checks), `tools/audit-categories.mjs` (43 categories), `tools/audit-foodies.mjs`, `tools/audit-payments.mjs` and `tools/audit-stripe.mjs` pass on a local build.
+
+## Live
+
+Production release `3e1e9e7`, pushed at 8:36 pm on 24 October 2026, live by 8:41 pm. `audit-batch64.mjs` passed against beastypages.com: 142 checks, the same as locally, including The Yard on BEASTY • Eats and the $29.99 BIGGIE PASS.
