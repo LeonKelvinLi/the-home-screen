@@ -12,3 +12,7 @@ Glenn's sends of 12:10 pm and 2:05 pm on 25 October, read off the Mac's Messages
 - `npm run build`; the data audit (0 errors).
 - Seat diff against the last release: 3 additions (AYCE 10, Cafe 19, Berkeley More goods 16); nothing moved.
 - `tools/audit-batch67.mjs` (15 checks), `tools/audit-categories.mjs` and `tools/audit-foodies.mjs` pass on a local build.
+
+## Live
+
+Production release `fbf8211`, pushed at about 4:47 pm on 25 October 2026, live by 4:53 pm (`tools/live-check.mjs` found yume-mori and the buffet). `BASE=https://beastypages.com node tools/audit-batch67.mjs` passed all 15 checks against the live site.
