@@ -1737,4 +1737,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'oakland-goods2-33': 'b_lococos',
   'beasty-goods2-72': 'b_lococos',
 
+  /* Batch 66, Glenn, 25 October 11:06 am: Concord's open Sandwiches spot for a banh mi shop, and More eats 73. */
+  'concord-goods-6': 'b_spicyjoisbanhmiandlaostreetfood',
+  'beasty-goods2-73': 'b_spicyjoisbanhmiandlaostreetfood',
+
 }

@@ -547,6 +547,7 @@ export const ICON_LUMA: Record<string, number> = {
   'soulsip': 0.6414,
   'sourdough-eatery': 0.1614,
   'souva-mobile-pet-grooming': 0.1058,
+  'spicy-jois-banh-mi-and-lao-street-food': 0.79,
   'spinning-dough': 0.0838,
   'stans-donut-shop': 0.7855,
   'state-bird-provisions': 0.9037,

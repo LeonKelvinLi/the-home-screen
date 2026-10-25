@@ -41867,4 +41867,429 @@ export const LOCAL_SEED: LocalSeed[] = [
       "siteCta": "Order online",
       "siteNote": "Menu and prices are from the online ordering on their own website, which also sells Italian wines and imported pantry goods. Last seating and to-go orders at 9:15; no parties larger than six."
   },
+  /* BATCH 66, 2026-10-25: Glenn's send of 25 Oct 11:06 am. Sources: research/roster/batch66.json. */
+  {
+      "slug": "spicy-jois-banh-mi-and-lao-street-food",
+      "name": "Spicy Joi’s Banh Mi & Lao Street Food",
+      "label": "Spicy Joi’s",
+      "cuisine": "Lao street food & banh mi",
+      "tagline": "Chef Joi’s fast-casual Lao street food in the 99 Ranch plaza on Willow Pass Road, Concord: banh mi, Oua Lao sausage, handmade khaopiak, papaya salad and the King’s Platter.",
+      "color": "#ffffff",
+      "icon": "spicy-jois-banh-mi-and-lao-street-food",
+      "prep": 0,
+      "category": "Lao",
+      "items": [],
+      "sections": [
+          {
+              "name": "Banh Mi Sandwiches",
+              "items": [
+                  [
+                      "Khao Gee Pate (Original Cold Cut Banh Mi)",
+                      "Banh mi dac biet: pork patty, headcheese and ham with house-pickled daikon and carrots",
+                      1075
+                  ],
+                  [
+                      "BBQ Chicken Banh Mi",
+                      "Banh mi ga nuong sa, with pickled carrots, cilantro, cucumber and jalapeños",
+                      1075
+                  ],
+                  [
+                      "BBQ Pork Banh Mi",
+                      "Banh mi thit nuong sa",
+                      1075
+                  ],
+                  [
+                      "BBQ Tofu Banh Mi",
+                      "Banh mi tofu sa",
+                      1075
+                  ],
+                  [
+                      "Oua Lao Sausage Banh Mi",
+                      "Their Lao herb sausage on a baguette",
+                      1295
+                  ],
+                  [
+                      "The Bomb Mi",
+                      "Khao gee pate cold cuts with crispy pork belly glazed in house Jeow Som",
+                      1595
+                  ],
+                  [
+                      "The Crunch Mi",
+                      "Crispy pork belly glazed with house Jeow Som",
+                      1295
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizers / A La Carte",
+              "items": [
+                  [
+                      "Egg Rolls (veggie or pork)",
+                      "Handmade in house, with sweet and sour sauce",
+                      1195
+                  ],
+                  [
+                      "Fresh Spring Rolls",
+                      "BBQ chicken, BBQ pork, tofu, sausage or shrimp, with house peanut hoisin sauce",
+                      1495
+                  ],
+                  [
+                      "Lao Beef Meatballs",
+                      "Glazed with sweet and sour sauce",
+                      1295
+                  ],
+                  [
+                      "Lao Fried Chicken",
+                      "Six small wings and drumlets with sweet and sour sauce",
+                      1495
+                  ],
+                  [
+                      "Oua Lao Sausages",
+                      "Authentic Lao sausage full of herbs and spices: what Spicy Joi is known for",
+                      1295
+                  ],
+                  [
+                      "Crispy Pork Belly",
+                      "With sweet and sour dip, green onions and crispy garlic",
+                      1295
+                  ],
+                  [
+                      "Ping Moo (BBQ Pork)",
+                      "Sliced BBQ pork",
+                      1195
+                  ],
+                  [
+                      "Ping Gai (BBQ Chicken)",
+                      "Sliced BBQ chicken",
+                      1195
+                  ],
+                  [
+                      "Som Moo / Nam",
+                      "Handmade cured sour pork",
+                      1095
+                  ],
+                  [
+                      "Kip Moo (Sun-Dried Pork Rinds)",
+                      "Handmade chicharrones",
+                      1095
+                  ],
+                  [
+                      "Kaffir Garlic Fried Chicken Skin Chips",
+                      "Seasoned with herbs and spices",
+                      1095
+                  ],
+                  [
+                      "Spicy Kaffir Garlic Lao Peanuts",
+                      "",
+                      695
+                  ],
+                  [
+                      "Jeo Makphet or Jeo Som",
+                      "Roasted pepper sauce, or sweet and sour Lao lime sauce",
+                      350
+                  ],
+                  [
+                      "Rice",
+                      "Sticky or steamed",
+                      350
+                  ],
+                  [
+                      "Southeast Spice Sriracha Sauce",
+                      "Garlic-chili hot sauce",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Lao Street Food Combos",
+              "items": [
+                  [
+                      "Oua Lao Sausage Combo",
+                      "With sticky or steamed rice, veggies and roasted pepper or lime sauce",
+                      1795
+                  ],
+                  [
+                      "Ping Gai (BBQ Chicken) Combo",
+                      "With sticky or steamed rice, veggies and roasted pepper or lime sauce",
+                      1695
+                  ],
+                  [
+                      "Ping Moo (BBQ Pork) Combo",
+                      "With sticky or steamed rice, veggies and roasted pepper or lime sauce",
+                      1695
+                  ],
+                  [
+                      "Crispy Pork Belly Combo",
+                      "With sticky or steamed rice and sweet-sour or roasted pepper sauce",
+                      1795
+                  ],
+                  [
+                      "Lao Fried Chicken Combo",
+                      "Four wings or drumlets, sticky or steamed rice, veggies and house sauces",
+                      1695
+                  ]
+              ]
+          },
+          {
+              "name": "Authentic Lao Noodle Soup",
+              "items": [
+                  [
+                      "Khaopiak (Handmade Udon)",
+                      "Hand-rolled rice noodles in chicken broth with shredded chicken, scallions and herbs",
+                      1795
+                  ],
+                  [
+                      "Khaopoon (Chicken Curry)",
+                      "Chicken curry noodle soup with pork blood cubes and gizzards",
+                      1795
+                  ],
+                  [
+                      "Khaosoi (Minced Pork)",
+                      "Wide fresh noodles, minced pork, topped with crispy pork belly",
+                      1895
+                  ]
+              ]
+          },
+          {
+              "name": "Stir Fry",
+              "items": [
+                  [
+                      "Lao Pad Thai / Kua Mee Lao",
+                      "Wok-fried rice noodles, veggies and egg; chicken, pork or tofu",
+                      1695
+                  ],
+                  [
+                      "Kua Kee Mao (Drunken Noodle)",
+                      "Wok-fried flat rice noodles with egg, carrot and cabbage; chicken, pork or tofu",
+                      1695
+                  ],
+                  [
+                      "Kua Sa Ew (Soy Sauce Noodle)",
+                      "Wok-fried flat noodles with soy sauce and veggies",
+                      1795
+                  ],
+                  [
+                      "Kua Kapow (Basil Chicken)",
+                      "Ground chicken with onion, bell pepper and basil, topped with a fried egg, over rice",
+                      1795
+                  ],
+                  [
+                      "Lao Fried Rice",
+                      "Egg, carrot and peas; chicken, pork or tofu",
+                      1695
+                  ]
+              ]
+          },
+          {
+              "name": "Thum Thum (Mortar & Pestle)",
+              "items": [
+                  [
+                      "Papaya Salad / Thum Makhoung",
+                      "Green papaya, long bean, Thai eggplant, tomato, shrimp paste, padek, chilies and lime",
+                      1695
+                  ],
+                  [
+                      "Cucumber Salad / Thum Maktang",
+                      "Cucumber, tomato, shrimp paste, padek, chilies and lime",
+                      1795
+                  ],
+                  [
+                      "Thummua (Jungle Fever Lao Salad)",
+                      "Papaya, vermicelli, meatballs, pork patty, shrimp and veggies",
+                      2595
+                  ],
+                  [
+                      "Vermicelli Salad / Thum Khaopoon",
+                      "Vermicelli, pork patty, blanched veggies, tomato, shrimp paste, padek, chilies and lime",
+                      1695
+                  ],
+                  [
+                      "Wai Wai / Ramen Thum",
+                      "Spicy ramen noodle salad with pork patty and blanched veggies",
+                      1795
+                  ]
+              ]
+          },
+          {
+              "name": "Exotic Salads",
+              "items": [
+                  [
+                      "Vietnamese Vermicelli Noodle Salad",
+                      "Herbs and lettuce with fish sauce vinaigrette and peanuts; BBQ chicken, BBQ pork, tofu or shrimp",
+                      1695
+                  ],
+                  [
+                      "Laap Beef (Beef Salad)",
+                      "Skirt steak, tripe, herbs and onions in roasted rice, fish sauce and lime",
+                      2195
+                  ],
+                  [
+                      "Laap Gai (Chicken Salad)",
+                      "Minced chicken, herbs and onions in roasted rice, fish sauce and lime",
+                      1995
+                  ],
+                  [
+                      "Nam Khao (Crispy Coconut Rice)",
+                      "Crispy coconut rice and cured pork with peanuts, scallions and lime",
+                      1895
+                  ],
+                  [
+                      "Yum Moo Kop (Crispy Pork Belly Salad)",
+                      "Crispy pork belly tossed in Lao herbs and spices",
+                      2095
+                  ]
+              ]
+          },
+          {
+              "name": "Platters",
+              "items": [
+                  [
+                      "Bomb Platter (feeds 2)",
+                      "Sausages, pork patty, cured pork, pork rinds, boiled egg, papaya salad, vermicelli and rice",
+                      5995
+                  ],
+                  [
+                      "Ultimate Bomb Platter (feeds 2–4)",
+                      "Adds BBQ pork, BBQ chicken and crispy pork belly to the Bomb Platter",
+                      7995
+                  ],
+                  [
+                      "King's Platter (feeds 4–6)",
+                      "The Ultimate Bomb Platter plus fried chicken, double papaya salad and Kua Mee Lao",
+                      12995
+                  ]
+              ]
+          },
+          {
+              "name": "Lao Drinks",
+              "items": [
+                  [
+                      "Pakse Lao Iced Tea",
+                      "",
+                      695
+                  ],
+                  [
+                      "Paksong Lao Iced Coffee",
+                      "",
+                      695
+                  ],
+                  [
+                      "Butterfly Luang Blossom",
+                      "Butterfly pea flower lemonade tea, 20 oz",
+                      695
+                  ],
+                  [
+                      "Hibiscus Mekong Sunset",
+                      "Hibiscus tea lemonade",
+                      695
+                  ],
+                  [
+                      "Butterfly Hibiscus Laos Whisper",
+                      "Butterfly pea flower and hibiscus tea",
+                      695
+                  ],
+                  [
+                      "Vientiane Lao Ruby Passion Fruit",
+                      "",
+                      695
+                  ],
+                  [
+                      "Salavan Lychee Breeze",
+                      "",
+                      795
+                  ],
+                  [
+                      "Dok Champa Pretty Pink Guava",
+                      "",
+                      695
+                  ],
+                  [
+                      "Fresh Whole Young Coconut",
+                      "",
+                      895
+                  ],
+                  [
+                      "Canned Coconut Water",
+                      "",
+                      495
+                  ],
+                  [
+                      "Canned Soda",
+                      "",
+                      295
+                  ],
+                  [
+                      "Bottled Water",
+                      "",
+                      350
+                  ],
+                  [
+                      "Sparkling Water",
+                      "",
+                      395
+                  ],
+                  [
+                      "Hot Tea",
+                      "",
+                      395
+                  ],
+                  [
+                      "Hot Coffee",
+                      "",
+                      395
+                  ]
+              ]
+          },
+          {
+              "name": "Lao Exotic Desserts",
+              "items": [
+                  [
+                      "Pandan Khao Lodd Chong (Cendol)",
+                      "Hand-pushed pandan tapioca with palm sugar syrup and coconut milk",
+                      895
+                  ],
+                  [
+                      "Ram-Mit (Summer Delight)",
+                      "Cendol with jackfruit, shredded coconut, tapioca pearls and jello",
+                      995
+                  ],
+                  [
+                      "Taro / Corn Coconut Tapioca Pudding",
+                      "Corn, taro and tapioca pearls in coconut milk and palm sugar",
+                      795
+                  ],
+                  [
+                      "Mango Sticky Rice",
+                      "Pandan and butterfly pea flower sticky rice with coconut cream, mango and sesame",
+                      1395
+                  ],
+                  [
+                      "Heavenly Mango Sticky Rice",
+                      "With shredded coconut, tapioca pearls, pandan cendol and jackfruit",
+                      1995
+                  ],
+                  [
+                      "Kham Nom Dok Bua (Lotus Pandan Cookies)",
+                      "",
+                      700
+                  ]
+              ]
+          }
+      ],
+      "address": "1687 Willow Pass Rd, Concord, CA 94520",
+      "phone": "(925) 787-7508",
+      "email": "spicyjoibanhmi@gmail.com",
+      "hours": "Mon–Thu 11am–3pm, 4–8:30pm; Fri 11am–3pm, 4–9pm; Sat 11am–9pm; Sun 11am–8:30pm",
+      "site": "https://www.spicyjoibanhmi.com/",
+      "orderUrl": "https://order.online/business/~450111/",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from their own online ordering (order.online, linked as Order Delivery on their website), for pickup; party and catering trays are on it too. Delivery is also through DoorDash, Grubhub and Uber Eats.",
+      "clip": {
+          "src": "/clips/spicy-jois-banh-mi-and-lao-street-food.mp4",
+          "poster": "/clips/spicy-jois-banh-mi-and-lao-street-food-poster.webp",
+          "href": "https://www.instagram.com/reel/De5noCZJ8Ih/",
+          "credit": "Posted by @spicyjoibanhmixlaostreetfood",
+          "platform": "Instagram"
+      }
+  },
 ]
