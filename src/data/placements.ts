@@ -1741,4 +1741,12 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'concord-goods-6': 'b_spicyjoisbanhmiandlaostreetfood',
   'beasty-goods2-73': 'b_spicyjoisbanhmiandlaostreetfood',
 
+  /* Batch 67, Glenn, 25 October. Yume Mori: Berkeley's yellow sheet (its Coffee spot is taken) and
+     BEASTY • Cafe by hand, as a matcha cafe does not pass Cafe's coffee test. Favorite Indian
+     Restaurant ("Hayward • Eats / BEASTY • AYCE") runs an all-you-can-eat weekend buffet: AYCE by
+     hand, keeping its type line, so no older seat moves. */
+  'berkeley-goods2-16': 'b_yumemori',
+  'beasty-coffee-19': 'b_yumemori',
+  'beasty-ayce-10': 'b_favoriteindianrestaurant',
+
 }

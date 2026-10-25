@@ -430,3 +430,10 @@ Not used: `DelACp9h8Xf` (sent as “Foodie” with One’s Cafe) reviews Big Tac
 | File | Business/page | Original reel | Excerpt | Request & credit |
 |---|---|---|---|---|
 | `spicy-jois-banh-mi-and-lao-street-food.mp4` | Spicy Joi’s Banh Mi & Lao Street Food, Concord | [De5noCZJ8Ih](https://www.instagram.com/reel/De5noCZJ8Ih/) | 7s-31s of 32s | Glenn, 25 Oct 2026: “Clip this video plz”; Posted by @spicyjoibanhmixlaostreetfood, their own post. The King’s Platter carried across the Concord dining room past the mural and set down for a table of visitors from Sacramento. |
+
+## Batch 67 — 25 October 2026
+
+| File | Business/page | Original reel | Excerpt | Request & credit |
+|---|---|---|---|---|
+| `yume-mori.mp4` | Yume Mori, Berkeley | [DedXErOJkOp](https://www.instagram.com/reel/DedXErOJkOp/) | 5s-29s of 66s | Glenn, 25 Oct 2026: “Clip this video plz”; Filmed by @eatwithsie (Sienna). The 2319 Shattuck storefront, their menu wall of classics and specialties, the room and its ordering screen, then a layered mango matcha. |
+| `review-DVgoxRdgbdp.mp4` | Yume Mori (a Foodie review) | [DVgoxRdgbdp](https://www.instagram.com/reel/DVgoxRdgbdp/) | 0s-7s of 7s | Glenn, 25 Oct 2026: “Clip this video plz (2nd video) / Foodie also”; Filmed by @erinlovesfun. The whole reel: the 2319A door, lychee rose matcha at the counter, friends toasting, a matcha topped with flowers. A second film: the page plays @eatwithsie's. |

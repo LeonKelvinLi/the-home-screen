@@ -4256,7 +4256,8 @@ export const ROSTER_SEED: LocalSeed[] = [
     siteCta: 'See their menus',
   }),
   /* Favorite Indian Restaurant, "Hayward • Goods": Hayward's open Indian seat.
-     Their site sits behind a bot check, so the page is their Instagram's. */
+     Their site sat behind a bot check until 2026-10-25, when it loaded and gave
+     the menu (rosterResearch.ts); BEASTY • AYCE by hand for their buffet. */
   seed('favorite-indian-restaurant', 'Favorite Indian Restaurant', 'Favorite', 'Indian', '#5A3A22', {
     icon: 'favorite-indian-restaurant',
     logoTemplate: 'wordmark', logoLines: ['FAVORITE'], logoFace: 'slab',

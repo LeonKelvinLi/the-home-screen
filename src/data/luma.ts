@@ -661,6 +661,7 @@ export const ICON_LUMA: Record<string, number> = {
   'yogasix-brentwood': 0.5545,
   'yuanbao-jiaozi-burlingame': 0.9333,
   'yuanbao-jiaozi-san-francisco': 0.9333,
+  'yume-mori': 0.8525,
   'yummy-yummy-hibachi': 0.3465,
   'z-and-y-peking-duck': 0.8209,
   'zadna-grill': 0.2671,

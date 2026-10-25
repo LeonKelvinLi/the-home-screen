@@ -42292,4 +42292,30 @@ export const LOCAL_SEED: LocalSeed[] = [
           "platform": "Instagram"
       }
   },
+  /* BATCH 67, 2026-10-25: Glenn's send of 25 Oct 12:10 pm. Sources: research/roster/batch67.json. */
+  {
+      "slug": "yume-mori",
+      "name": "Yume Mori",
+      "label": "Yume Mori",
+      "cuisine": "Matcha cafe & crepes",
+      "tagline": "Matcha bar on Shattuck Avenue in downtown Berkeley: matcha and hojicha drinks made with your choice of matcha, plus crepes on weekends.",
+      "color": "#F5F7EF",
+      "icon": "yume-mori",
+      "prep": 0,
+      "category": "Cafe",
+      "items": [],
+      "address": "2319 Shattuck Ave, Berkeley, CA 94704",
+      "email": "yumemori.berkeley@gmail.com",
+      "hours": "Daily 10:30am–6pm; crepes Fri–Sun 12–5pm",
+      "needsSite": true,
+      "contactOnly": "Yume Mori publishes no menu or prices outside the shop; their drinks and crepes are ordered at the counter. Email yumemori.berkeley@gmail.com or visit 2319 Shattuck Ave.",
+      "clip": {
+          "src": "/clips/yume-mori.mp4",
+          "poster": "/clips/yume-mori-poster.webp",
+          "href": "https://www.instagram.com/reel/DedXErOJkOp/",
+          "credit": "Filmed by @eatwithsie",
+          "platform": "Instagram",
+          "by": "eatwithsie"
+      }
+  },
 ]

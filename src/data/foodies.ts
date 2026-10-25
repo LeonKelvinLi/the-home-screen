@@ -134,6 +134,8 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'mr.smackreviews', place: 'Dimond Halal Eatery', city: 'Oakland', brand: 'b_dimondhalaleatery', reel: reel('Dd-fvDmNwBY'), clip: true },
   { by: 'booziebrunch', place: 'Crazy Block Cheesecakes', city: 'Oakland', brand: 'b_crazyblockcheesecakes', reel: reel('DYAPtgxosEf'), clip: true },
   { by: 'bp__eats', place: 'Don Julio’s Latin Grill', city: 'Rohnert Park', brand: 'b_donjulioslatingrill', reel: reel('Dd7i6jHzCBv'), clip: true },
+  /* Batch 67: Glenn, 25 Oct 12:13 pm, "Clip this video plz (2nd video) / Foodie also". */
+  { by: 'erinlovesfun', place: 'Yume Mori', city: 'Berkeley', brand: 'b_yumemori', reel: reel('DVgoxRdgbdp'), clip: true },
 ]
 
 /*

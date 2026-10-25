@@ -6810,14 +6810,510 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: Because the site could not be read, its online-ordering link could not be found, so no menu, prices, address, phone, email or hours were collected. name_exact is the name given in the brief, not verified on the site.
      flag: No other sources used (no DoorDash/Uber Eats/Grubhub/Yelp/Google).
      flag: On review: filed as b_favoriteindianrestaurant (research id b_favoriteindia) to match its seed.
+     Re-read 2026-10-25 (Batch 67, Glenn: "Hayward • Eats / BEASTY • AYCE"): favoriteindia.com now loads.
+     Menu (86 items), hours and email from their own site and its online menu; the buffet from their
+     Buffet page. The earlier contact-only entry is replaced.
      flag: On review: address, phone and email from their own Instagram (Glenn's screenshots: "24052 Mission Blvd., Hayward, California", "+1 (510) 583-7550", Contact sheet customer@favoriteindia.com). Their site's bot check was not got around, so no menu, prices or hours are carried.
   */
   'favorite-indian-restaurant': {
-    address: "24052 Mission Blvd, Hayward, CA",
+    address: "24052 Mission Blvd, Hayward, CA 94544",
     phone: "(510) 583-7550",
-    email: "customer@favoriteindia.com",
+    email: "mail@favoriteindia.com",
     cuisine: "Indian",
-    contactOnly: "Authentic Indian cuisine in Hayward since 2009, in their own words. They take orders on their own site, where the menu and prices are.",
+    hours: "Daily 11am–2:30pm, 5–10pm",
+    sections: [
+      {
+        name: "All-You-Can-Eat Buffet",
+        items: [
+          [
+            "Saturday Lunch Buffet",
+            "30+ dishes, soft drinks and chai included; Saturday 11:30am–2:30pm; dine-in, adults",
+            1995
+          ],
+          [
+            "Weekend Dinner Buffet",
+            "30+ dishes, soft drinks and chai included; Friday and Saturday 5–9:30pm; dine-in, adults",
+            2495
+          ]
+        ]
+      },
+      {
+        name: "Appetizers",
+        items: [
+          [
+            "Vegetable Samosa",
+            "Pastry stuffed with potato and green peas",
+            595
+          ],
+          [
+            "Meat Samosa",
+            "Pastry with ground lamb and peas",
+            695
+          ],
+          [
+            "Assorted Veg. Pakora",
+            "Vegetables in chickpea batter, deep fried",
+            495
+          ],
+          [
+            "Spinach Pakora",
+            "",
+            595
+          ],
+          [
+            "Paneer Pakora",
+            "Indian cheese in chickpea batter",
+            595
+          ],
+          [
+            "Chicken Pakora",
+            "",
+            695
+          ],
+          [
+            "Chili Pakora",
+            "",
+            495
+          ],
+          [
+            "Fish Pakora",
+            "Delicately spiced fish fritters",
+            895
+          ],
+          [
+            "Pappadam",
+            "Thin crispy cracker",
+            200
+          ]
+        ]
+      },
+      {
+        name: "Tandoori",
+        items: [
+          [
+            "Chicken Tikka Kabab",
+            "Chicken breast marinated in yogurt and spices, roasted",
+            1695
+          ],
+          [
+            "Tandoori Chicken",
+            "Marinated in yogurt and spices, roasted; from",
+            1395
+          ],
+          [
+            "Seekh Kabab",
+            "Roasted spiced ground lamb",
+            1895
+          ],
+          [
+            "Lamb Kabab",
+            "Roasted marinated lamb cubes",
+            1995
+          ],
+          [
+            "Fish Kabab",
+            "Roasted marinated fish cubes",
+            1995
+          ],
+          [
+            "Shrimp Tandoori",
+            "Roasted marinated prawns",
+            1995
+          ],
+          [
+            "Tandoori Mixed Grill",
+            "Assorted tandoori specialties",
+            2095
+          ]
+        ]
+      },
+      {
+        name: "Naan & Breads",
+        items: [
+          [
+            "Naan",
+            "",
+            295
+          ],
+          [
+            "Onion Kulcha",
+            "Naan stuffed with onions",
+            395
+          ],
+          [
+            "Garlic Naan",
+            "",
+            395
+          ],
+          [
+            "Kabli Naan",
+            "Stuffed with cherries, raisins and nuts",
+            495
+          ],
+          [
+            "Paneer Naan",
+            "Stuffed with Indian cheese",
+            495
+          ],
+          [
+            "Chapati",
+            "Whole wheat bread",
+            395
+          ],
+          [
+            "Poori",
+            "Deep-fried whole wheat bread",
+            495
+          ],
+          [
+            "Keema Naan",
+            "Stuffed with minced lamb",
+            495
+          ],
+          [
+            "Chicken Naan",
+            "Stuffed with chopped tandoori chicken",
+            495
+          ],
+          [
+            "Favorite Bread Basket",
+            "Garlic naan, onion kulcha and naan",
+            1095
+          ],
+          [
+            "Aloo Paratha",
+            "Whole wheat flatbread stuffed with spiced potato",
+            495
+          ],
+          [
+            "Paratha",
+            "Flaky layered flatbread",
+            395
+          ],
+          [
+            "Bhatura",
+            "Fluffy deep-fried sourdough bread",
+            295
+          ],
+          [
+            "Aloo Naan",
+            "Stuffed with potatoes",
+            495
+          ]
+        ]
+      },
+      {
+        name: "Vegetarian",
+        items: [
+          [
+            "Paneer Tikka Masala",
+            "Homemade cheese in a creamy sauce",
+            1595
+          ],
+          [
+            "Shahi Paneer",
+            "Homemade cheese with onions and bell peppers in a creamy sauce",
+            1595
+          ],
+          [
+            "Dal Curry",
+            "Yellow lentil curry",
+            1595
+          ],
+          [
+            "Baingan Bharta",
+            "Tandoor eggplant in tomato sauce and cream",
+            1595
+          ],
+          [
+            "Malai Kofta",
+            "Cheese balls in a creamy sauce",
+            1595
+          ],
+          [
+            "Aloo Gobi",
+            "Potatoes and cauliflower with spices",
+            1595
+          ],
+          [
+            "Navratan Korma",
+            "Mushrooms and green peas with onions and tomatoes",
+            1595
+          ],
+          [
+            "Mushroom Matar",
+            "Green peas and mushroom in cream sauce",
+            1595
+          ],
+          [
+            "Bhindi Masala",
+            "Okra with onions and spices",
+            1595
+          ],
+          [
+            "Matar Paneer",
+            "Green peas with homemade cheese",
+            1595
+          ],
+          [
+            "Dal Makhani",
+            "Creamed lentils",
+            1595
+          ],
+          [
+            "Chana Masala",
+            "Garbanzo beans in spices",
+            1595
+          ],
+          [
+            "Saag Paneer",
+            "Spinach with homemade cheese",
+            1595
+          ]
+        ]
+      },
+      {
+        name: "Biryani",
+        items: [
+          [
+            "Vegetable Biryani",
+            "Saffron basmati rice with vegetables and nuts",
+            1495
+          ],
+          [
+            "Lamb Biryani",
+            "",
+            1695
+          ],
+          [
+            "Chicken Biryani",
+            "",
+            1595
+          ],
+          [
+            "Shrimp Biryani",
+            "",
+            1695
+          ],
+          [
+            "Favorite Biryani",
+            "Prawns, chicken and lamb with saffron rice and nuts",
+            1795
+          ]
+        ]
+      },
+      {
+        name: "Lamb & Goat",
+        items: [
+          [
+            "Karahi Lamb",
+            "With onions and bell peppers in a spicy sauce",
+            1795
+          ],
+          [
+            "Goat Curry",
+            "",
+            1795
+          ],
+          [
+            "Lamb Curry",
+            "",
+            1795
+          ],
+          [
+            "Lamb Korma",
+            "In a yogurt sauce",
+            1795
+          ],
+          [
+            "Lamb Saag",
+            "With spinach",
+            1795
+          ],
+          [
+            "Lamb Tikka Masala",
+            "Tandoor-roasted lamb in a creamy sauce",
+            1795
+          ],
+          [
+            "Lamb Vindaloo",
+            "Spicy sauce with potatoes",
+            1795
+          ]
+        ]
+      },
+      {
+        name: "Chicken",
+        items: [
+          [
+            "Karahi Chicken",
+            "With onions and bell peppers in a spicy sauce",
+            1695
+          ],
+          [
+            "Chicken Tikka Masala",
+            "Roasted chicken in a creamy tomato-butter sauce",
+            1695
+          ],
+          [
+            "Butter Chicken",
+            "Roasted chicken in tomato and butter",
+            1695
+          ],
+          [
+            "Chicken Curry",
+            "",
+            1695
+          ],
+          [
+            "Chicken Vindaloo",
+            "Hot spicy sauce with potatoes",
+            1695
+          ],
+          [
+            "Chicken Saagwala",
+            "With spiced creamed spinach",
+            1695
+          ],
+          [
+            "Chili Chicken",
+            "With onions and green chili",
+            1695
+          ],
+          [
+            "Chicken Korma",
+            "In a yogurt sauce",
+            1695
+          ]
+        ]
+      },
+      {
+        name: "Seafood",
+        items: [
+          [
+            "Prawn Curry",
+            "",
+            1895
+          ],
+          [
+            "Prawn Vindaloo",
+            "Spicy sauce with potatoes",
+            1895
+          ],
+          [
+            "Prawn Tikka Masala",
+            "In a creamy tomato-butter sauce",
+            1895
+          ],
+          [
+            "Saag Prawn",
+            "In spiced creamed spinach",
+            1895
+          ],
+          [
+            "Fish Curry",
+            "",
+            1895
+          ],
+          [
+            "Fish Masala",
+            "In a mild spicy sauce",
+            1895
+          ]
+        ]
+      },
+      {
+        name: "Desserts",
+        items: [
+          [
+            "Kheer",
+            "Rice pudding",
+            595
+          ],
+          [
+            "Gulab Jamun",
+            "Milk dumplings in aromatic syrup",
+            795
+          ],
+          [
+            "Rasmalai",
+            "Cheese dumplings in cardamom-saffron milk",
+            795
+          ],
+          [
+            "Carrot Halwa",
+            "",
+            695
+          ]
+        ]
+      },
+      {
+        name: "Sides",
+        items: [
+          [
+            "Raita",
+            "Yogurt and cucumber",
+            395
+          ],
+          [
+            "Mango Chutney",
+            "",
+            395
+          ],
+          [
+            "Basmati Rice",
+            "",
+            495
+          ]
+        ]
+      },
+      {
+        name: "Beverages",
+        items: [
+          [
+            "Mango Lassi",
+            "",
+            495
+          ],
+          [
+            "Sweet Lassi",
+            "",
+            395
+          ],
+          [
+            "Salt Lassi",
+            "",
+            395
+          ],
+          [
+            "Mango Juice",
+            "",
+            395
+          ],
+          [
+            "Soda, 16.9 oz bottle",
+            "",
+            395
+          ],
+          [
+            "Sparkling Water",
+            "",
+            395
+          ],
+          [
+            "Soda, 2 liter",
+            "",
+            495
+          ],
+          [
+            "Soda, 12 oz can",
+            "",
+            295
+          ]
+        ]
+      }
+    ],
+    siteNote: "Prices from their own online menu on their site, for pickup. The all-you-can-eat buffet is dine-in: Saturday lunch 11:30am–2:30pm ($19.95) and Friday and Saturday dinner 5–9:30pm ($24.95), with soft drinks and chai, vegetarian, vegan and Zabiha halal dishes."
   },
 
   /*

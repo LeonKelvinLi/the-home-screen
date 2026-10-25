@@ -1,0 +1,48 @@
+[
+  {
+    "id": "b_yumemori",
+    "name_exact": "Yume Mori",
+    "checked_on": "2026-10-25",
+    "sources": [
+      "Instagram @yumemori.matcha (Glenn's screenshots 1025-1210 IMG_8004 and IMG_8006): 'Yume Mori', Cafe, 'Thoughtfully crafted matcha and crepes / Open daily @10:30am-6pm / Crepes from Fri-Sun @12-5pm / yumemori.berkeley@gmail.com / 2319 Shattuck Ave, Berkeley, California'; no website link; Reviews and Menu highlights (not opened). The icon is their round wordmark from the Crop screenshot.",
+      "Reel DedXErOJkOp by @eatwithsie: 'Yume Mori @yumemori.matcha Berkeley, CA' ('not sure if they still have the mango matcha').",
+      "Reel DVgoxRdgbdp by @erinlovesfun: '@yumemori.matcha ~ 2319 Shattuck Ave., Berkeley, CA / daily 10:30am - 6pm'; four matcha choices, crepes Friday-Sunday.",
+      "A web search found no website of their own (only press and listings, which are not used)."
+    ],
+    "facts": {
+      "slug": "yume-mori",
+      "name": "Yume Mori",
+      "label": "Yume Mori",
+      "cuisine": "Matcha cafe & crepes",
+      "tagline": "Matcha bar on Shattuck Avenue in downtown Berkeley: matcha and hojicha drinks made with your choice of matcha, plus crepes on weekends.",
+      "color": "#F5F7EF",
+      "icon": "yume-mori",
+      "prep": 0,
+      "category": "Cafe",
+      "items": [],
+      "address": "2319 Shattuck Ave, Berkeley, CA 94704",
+      "email": "yumemori.berkeley@gmail.com",
+      "hours": "Daily 10:30am–6pm; crepes Fri–Sun 12–5pm",
+      "needsSite": true,
+      "contactOnly": "Yume Mori publishes no menu or prices outside the shop; their drinks and crepes are ordered at the counter. Email yumemori.berkeley@gmail.com or visit 2319 Shattuck Ave.",
+      "clip": {
+        "src": "/clips/yume-mori.mp4",
+        "poster": "/clips/yume-mori-poster.webp",
+        "href": "https://www.instagram.com/reel/DedXErOJkOp/",
+        "credit": "Filmed by @eatwithsie",
+        "platform": "Instagram",
+        "by": "eatwithsie"
+      }
+    },
+    "placements": [
+      "berkeley-goods2-16",
+      "beasty-coffee-19"
+    ],
+    "glenn": "25 Oct 2026, 12:10 pm: 'Berkeley • Goods / BEASTY • Cafe' with two screenshots; 12:11 reel DedXErOJkOp 'Clip this video plz'; 12:13 reel DVgoxRdgbdp 'Clip this video plz (2nd video) / Foodie also'.",
+    "flags": [
+      "No website and no published prices: needsSite, contact only. A screenshot of their Instagram Menu highlight would give the page a menu.",
+      "BEASTY • Cafe's test is coffee/espresso/roaster, which a matcha cafe does not pass, so it is hand-seated on Cafe 19; Berkeley's Coffee spot is taken, so its yellow sheet.",
+      "Film 5s-29s of 66s: the storefront, their menu wall, the room and the ordering screen, and a mango matcha (her caption is unsure it is still on the menu)."
+    ]
+  }
+]
