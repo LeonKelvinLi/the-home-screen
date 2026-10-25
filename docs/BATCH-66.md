@@ -13,3 +13,7 @@ Glenn's 11:06 am send of 25 October, Spicy Joi's Banh Mi & Lao Street Food, read
 - `npm run build`; the data audit (0 errors).
 - Seat diff against the last release: 2 additions (Concord Sandwiches 6, More eats 73); nothing moved.
 - `tools/audit-batch66.mjs` (15 checks) passes on a local build.
+
+## Live
+
+Production release `28616d9`, pushed at about 11:38 am on 25 October 2026, live by 11:43 am (`tools/live-check.mjs` found the page). `BASE=https://beastypages.com node tools/audit-batch66.mjs` passed all 15 checks against the live site.
