@@ -38,3 +38,7 @@ Glenn, 24 October 9:51 pm: "Clip this video plz (3rd) limit 3 per affiliate". He
 - `npm run build`; the data audit (0 errors).
 - Seat diff against the last release: 25 additions, nothing moved.
 - `tools/audit-batch65.mjs` (137 checks), `tools/audit-categories.mjs` and `tools/audit-foodies.mjs` pass on a local build.
+
+## Live
+
+Production release `c873786`, pushed at about 11:21 am on 25 October 2026, live by 11:26 am (`tools/live-check.mjs` found Lo Coco and fast-times-burgers). `BASE=https://beastypages.com node tools/audit-batch65.mjs` passed all 137 checks against the live site, including every second and third film decoding under its page.
