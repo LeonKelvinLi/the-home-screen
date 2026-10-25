@@ -1710,4 +1710,31 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-ayce-7': 'b_eastbaybuffet',
   'beasty-cooks-10': 'b_indaandmely',
 
+  /* Batch 65, Glenn, 24 October 9:32 pm to 25 October 10:20 am, in the order he sent them. A city's
+     open category spot where one fits, else its yellow sheet; More eats 63-72. Youth, Catering and
+     Food Trucks fill from type lines; Korean Papi's is
+     seated after LOL Catering on Catering and Chefs, so it moves nobody. Lo Coco's is on Piedmont Avenue in Oakland, so Oakland. */
+  'south-san-francisco-goods-9': 'b_sofragrill',
+  'beasty-goods2-63': 'b_sofragrill',
+  'beasty-goods2-64': 'b_flourandwaterpizzeria',
+  'concord-goods-15': 'b_devilandangeldesserts',
+  'berkeley-goods2-15': 'b_headsandtailsbarbecue',
+  'beasty-goods2-65': 'b_headsandtailsbarbecue',
+  'danville-goods-4': 'b_kibosushidanville',
+  'beasty-goods2-66': 'b_kibosushidanville',
+  'hayward-goods2-1': 'b_shellshockseafoodhouse',
+  'beasty-goods2-67': 'b_shellshockseafoodhouse',
+  'beasty-catering-7': 'b_koreanpapiskitchen',
+  'beasty-cooks-11': 'b_koreanpapiskitchen',
+  'oakland-goods2-30': 'b_agaveuptown',
+  'beasty-goods2-68': 'b_agaveuptown',
+  'san-francisco-goods2-50': 'b_oceansubs',
+  'beasty-goods2-69': 'b_oceansubs',
+  'oakland-goods2-31': 'b_dimondhalaleatery',
+  'beasty-goods2-70': 'b_dimondhalaleatery',
+  'oakland-goods2-32': 'b_fasttimesburgers',
+  'beasty-goods2-71': 'b_fasttimesburgers',
+  'oakland-goods2-33': 'b_lococos',
+  'beasty-goods2-72': 'b_lococos',
+
 }

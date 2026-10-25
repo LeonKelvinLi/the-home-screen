@@ -205,8 +205,9 @@ export const ONLINE_CATEGORIES: SlotCategory[] = [
    Seventy-two from 2026-10-23: BEASTY's More eats had seated all forty-eight
    (Sugar Plum, then Powder Keg Pub) when My O My Berkeley came in, and San
    Francisco's More goods was full the day before. Same reasoning, one more
-   page's worth; still no extra blank page anywhere. */
-export const OPEN_SPOTS: SlotCategory[] = Array.from({ length: 72 }, (_, i) => ({
+   page's worth; still no extra blank page anywhere. Ninety-six from
+   2026-10-25: Batch 65 brought ten more for More eats, which stood at 63. */
+export const OPEN_SPOTS: SlotCategory[] = Array.from({ length: 96 }, (_, i) => ({
   n: i + 1,
   name: 'Open spot',
   label: 'Available',

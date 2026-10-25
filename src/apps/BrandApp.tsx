@@ -1046,12 +1046,14 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           {/*
             BEASTY • FOODIES (Glenn, 2026-10-03). On a foodie's page, the places
             they reviewed; on a business's page, every foodie who reviewed it,
-            "on a list". One review alone is the film already at the top.
+            "on a list". One review alone is the film already at the top, unless
+            it is a second film (Glenn, 2026-10-24: "Clip this video plz (3rd)
+            limit 3 per affiliate") under the business's own.
           */}
           {foodie ? (
             <FoodieReviews title="Their reviews" reviews={reviewsBy(foodie)} side="place" api={api} here={brand.id} />
           ) : (
-            reviewsOf(brand.id).length >= 2 && (
+            reviewsOf(brand.id).some((r) => r.href !== brand.clip?.href) && (
               <FoodieReviews title="Foodie reviews" reviews={reviewsOf(brand.id)} side="foodie" api={api} here={brand.id} />
             )
           )}

@@ -123,6 +123,17 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'venturewithkelly', place: 'Super Pan', city: 'San Francisco', reel: reel('DeXNrNVs0Oa') },
   /* Glenn, 24 Oct 5:04 am, "Clip this video plz / 2nd video for their page": Spinning Dough's page plays the durian film, so this is a second review. */
   { by: 'cookwithhenny', place: 'Spinning Dough', city: 'Millbrae', brand: 'b_spinningdough', reel: reel('DYGJe5pPj3q'), clip: true },
+  /* Batch 65, 24 and 25 October: second and third films for a page (Glenn: "Clip this video plz (3rd) limit 3 per affiliate"), each played under the page's own film. */
+  { by: '_aemeriee.dance', place: 'Devil & Angel Desserts', city: 'Concord', brand: 'b_devilandangeldesserts', reel: reel('DN6sK0JElGo'), clip: true },
+  { by: 'festusfeasts', place: 'Heads & Tails Barbecue', city: 'Berkeley', brand: 'b_headsandtailsbarbecue', reel: reel('DUBxC2xEnTG'), clip: true },
+  { by: 'eatwithsie', place: 'Korean Papi’s Kitchen', city: 'San Francisco', brand: 'b_koreanpapiskitchen', reel: reel('De5RI99T-dW'), clip: true },
+  { by: 'festusfeasts', place: 'Korean Papi’s Kitchen', city: 'San Francisco', brand: 'b_koreanpapiskitchen', reel: reel('DR5QMgBkrUT'), clip: true },
+  { by: 'venturewithkelly', place: 'Ocean Subs', city: 'San Francisco', brand: 'b_oceansubs', reel: reel('DaEOA0WBDh9'), clip: true },
+  { by: 'imadoniseats', place: 'Ocean Subs', city: 'San Francisco', brand: 'b_oceansubs', reel: reel('DBzuzNdSpm0'), clip: true },
+  { by: 'greatonezfoodreview', place: 'Dimond Halal Eatery', city: 'Oakland', brand: 'b_dimondhalaleatery', reel: reel('DeckUbYSiRS'), clip: true },
+  { by: 'mr.smackreviews', place: 'Dimond Halal Eatery', city: 'Oakland', brand: 'b_dimondhalaleatery', reel: reel('Dd-fvDmNwBY'), clip: true },
+  { by: 'booziebrunch', place: 'Crazy Block Cheesecakes', city: 'Oakland', brand: 'b_crazyblockcheesecakes', reel: reel('DYAPtgxosEf'), clip: true },
+  { by: 'bp__eats', place: 'Don Julio’s Latin Grill', city: 'Rohnert Park', brand: 'b_donjulioslatingrill', reel: reel('Dd7i6jHzCBv'), clip: true },
 ]
 
 /*

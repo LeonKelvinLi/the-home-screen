@@ -35,6 +35,7 @@ import {
   INDIVIDUAL_SPOTS, BOUTIQUE_SPOTS, EATS_CATEGORIES, SWEETS_CATEGORIES,
 } from '../src/data/slots'
 import { BEASTY_EATS_ROSTER, BEASTY_SERVICES_ROSTER } from '../src/data/roster'
+import { OTHER_REVIEWS } from '../src/data/foodies'
 import { ALL_APPS, DOCK_SETS, APP_GROUPS } from '../src/apps/registry'
 
 type Finding = { level: 'ERROR' | 'WARN' | 'NOTE'; what: string }
@@ -341,6 +342,27 @@ for (const b of BRANDS) {
     if (b.quoteOnly || b.contactOnly || !b.menu.some((c) => c.items.length > 0)) continue
     if (!vendorIds.has(b.vendorId)) err(`${b.name}: orderable menu but no vendor ${b.vendorId} — its orders cannot be written`)
   }
+}
+
+/*
+  THREE FILMS A PAGE AT MOST. Glenn, 2026-10-24: "Clip this video plz (3rd)
+  limit 3 per affiliate". A page's films are its own (`clip`) and the second
+  reviews played under it (OTHER_REVIEWS with that brand and a cut copy), each
+  of which must exist on disk.
+*/
+{
+  const films = new Map<string, number>()
+  for (const b of BRANDS) if (b.clip?.src) films.set(b.id, 1)
+  for (const r of OTHER_REVIEWS) {
+    if (!r.clip) continue
+    const code = /\/reel\/([^/]+)\//.exec(r.reel)?.[1]
+    if (!code) { err(`OTHER_REVIEWS ${r.place}: clip: true but no reel code in ${r.reel}`); continue }
+    if (!existsSync(join(ROOT_DIR, 'public', 'clips', `review-${code}.mp4`))) err(`OTHER_REVIEWS ${r.place}: public/clips/review-${code}.mp4 is missing`)
+    if (!r.brand) continue
+    if (!brandById(r.brand)) err(`OTHER_REVIEWS ${r.place}: brand ${r.brand} does not exist`)
+    films.set(r.brand, (films.get(r.brand) ?? 0) + 1)
+  }
+  for (const [id, n] of films) if (n > 3) err(`${brandById(id)?.name ?? id}: ${n} films — Glenn's limit is 3 a page`)
 }
 
 for (const f of out) console.log(`${f.level.padEnd(5)} ${f.what}`)

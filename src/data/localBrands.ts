@@ -38472,4 +38472,3399 @@ export const LOCAL_SEED: LocalSeed[] = [
           "platform": "Instagram"
       }
   },
+  /* BATCH 65, 2026-10-25: Glenn's sends from 24 Oct 9:32 pm to 25 Oct 10:20 am. Sources: research/roster/batch65.json. */
+  {
+      "slug": "sofra-grill",
+      "name": "Sofra Grill",
+      "label": "Sofra Grill",
+      "cuisine": "Halal Mediterranean grill",
+      "tagline": "A Turkish and Mediterranean grill on Hazelwood Drive in South San Francisco: Adana kebab, beyti and mixed-grill skewers, shawarma, lahmacun and manaeesh flatbreads, mezze, kunafa, and their famous fresh-baked Sofra bread.",
+      "color": "#ffffff",
+      "icon": "sofra-grill",
+      "prep": 0,
+      "category": "Mediterranean",
+      "items": [],
+      "sections": [
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Hummus",
+                      "Creamy chickpeas with fresh lemon juice and garlic",
+                      995
+                  ],
+                  [
+                      "Muhammara",
+                      "Fire-roasted red pepper with walnuts, bread crumbs, spices and pomegranate molasses",
+                      995
+                  ],
+                  [
+                      "Baba Ganoush",
+                      "Smoked eggplant with roasted garlic, sesame sauce, lemon and fire-roasted sweet peppers",
+                      995
+                  ],
+                  [
+                      "Baked Feta",
+                      "Feta with roasted cherry tomatoes, kalamata olives, olive oil and Turkish chile flakes",
+                      1395
+                  ],
+                  [
+                      "Lebnah",
+                      "Yogurt cheese dip, zaatar and olive oil",
+                      995
+                  ],
+                  [
+                      "Feta & Olives",
+                      "Feta, toasted walnuts, grilled olives, arugula and fresh mint",
+                      1495
+                  ],
+                  [
+                      "Hummus w/ Steak",
+                      "Creamy hummus topped with thinly sliced lamb and steak and olive oil",
+                      1595
+                  ],
+                  [
+                      "Falafel",
+                      "Ground chickpeas with spices and toasted sesame seeds (6 pcs)",
+                      795
+                  ],
+                  [
+                      "Jajeek",
+                      "Yogurt with garlic, cucumber, fresh dill and mint",
+                      995
+                  ],
+                  [
+                      "Dolma",
+                      "Grape leaves stuffed with seasoned rice",
+                      995
+                  ],
+                  [
+                      "Mixed Pickles",
+                      "A variety of homemade pickles",
+                      995
+                  ],
+                  [
+                      "Garlic Parmesan Fries",
+                      "Fries topped with roasted garlic and parmesan",
+                      995
+                  ],
+                  [
+                      "Kibbeh",
+                      "Bulgur wheat stuffed with spiced ground beef",
+                      1295
+                  ],
+                  [
+                      "Mezza Platter",
+                      "Falafel, hummus, muhammara, baba ganoush, dolma and labneh",
+                      1995
+                  ],
+                  [
+                      "French Fries",
+                      "",
+                      695
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "Fattoush",
+                      "Romaine, feta, radish, cherry tomatoes, sumac, mint, cucumber, toasted pita chips, pomegranate molasses and olive oil",
+                      1295
+                  ],
+                  [
+                      "Greek",
+                      "Romaine, cherry tomatoes, cucumbers, red onions, olives and green peppers, topped with feta",
+                      1295
+                  ],
+                  [
+                      "Shirazi",
+                      "Finely chopped cucumbers, tomatoes, onions, mint and parsley with lemon juice and olive oil",
+                      1195
+                  ],
+                  [
+                      "Goat Cheese",
+                      "Romaine, cherry tomatoes, toasted walnuts, crisp apple and goat cheese with balsamic vinaigrette",
+                      1395
+                  ],
+                  [
+                      "Watermelon (Limited)",
+                      "Fresh basil, Persian cucumbers and feta, garnished with Tajín",
+                      1595
+                  ]
+              ]
+          },
+          {
+              "name": "Entrée",
+              "items": [
+                  [
+                      "Beyti",
+                      "Seasoned beef and lamb wrapped in flatbread with tomato sauce, served with yogurt and butter sauce",
+                      2295
+                  ],
+                  [
+                      "Tawa",
+                      "Eggplant stewed in tomato sauce with grilled onions, tomatoes, toasted almonds and sweet peppers",
+                      1795
+                  ],
+                  [
+                      "Falafel Plate",
+                      "With hummus, baba ganoush and salad",
+                      1795
+                  ],
+                  [
+                      "Chicken Skewers",
+                      "Grilled marinated chicken",
+                      1995
+                  ],
+                  [
+                      "Chicken Shawarma",
+                      "Marinated chicken",
+                      1895
+                  ],
+                  [
+                      "Steak Shawarma",
+                      "Marinated steak",
+                      1995
+                  ],
+                  [
+                      "Fasolya",
+                      "White bean and beef stew",
+                      1995
+                  ],
+                  [
+                      "Musakhan",
+                      "Roasted chicken baked with sumac onions, toasted almonds and fresh flatbread",
+                      1995
+                  ],
+                  [
+                      "Beef Skewers",
+                      "Grilled skewered marinated beef",
+                      2295
+                  ],
+                  [
+                      "Black Tiger Shrimp Skewers",
+                      "Grilled with garlic and butter",
+                      2295
+                  ],
+                  [
+                      "Salmon Skewers",
+                      "Marinated grilled salmon with Mediterranean herbs and garlic",
+                      2295
+                  ],
+                  [
+                      "Branzino",
+                      "Grilled fillet with Mediterranean herbs and garlic",
+                      2295
+                  ],
+                  [
+                      "Adana Kebab",
+                      "Skewered spicy minced lamb and beef with their signature seasoning",
+                      1995
+                  ],
+                  [
+                      "Kofte",
+                      "Chargrilled minced beef with spices",
+                      2295
+                  ],
+                  [
+                      "Mixed Grill",
+                      "Beef skewer, kofte, marinated steak, chicken shawarma, chicken skewer and Erbil kebab (serves two)",
+                      5995
+                  ],
+                  [
+                      "Mixed Seafood (Limited)",
+                      "Branzino, black tiger shrimp, Hokkaido scallop and salmon (serves two)",
+                      6995
+                  ],
+                  [
+                      "Lamb Shank (Limited)",
+                      "Braised lamb shank over rice, wrapped in homemade dough and baked",
+                      2595
+                  ],
+                  [
+                      "Lamb Chops (Limited)",
+                      "Marinated grilled lamb chops",
+                      2995
+                  ]
+              ]
+          },
+          {
+              "name": "Wraps",
+              "items": [
+                  [
+                      "Chicken Shawarma",
+                      "Marinated chicken",
+                      1195
+                  ],
+                  [
+                      "Steak Shawarma",
+                      "Marinated steak",
+                      1295
+                  ],
+                  [
+                      "Falafel",
+                      "Fried chickpeas with fresh herbs and hummus",
+                      1095
+                  ],
+                  [
+                      "Kofte",
+                      "Chargrilled minced beef with spices",
+                      1295
+                  ],
+                  [
+                      "Musakhan",
+                      "Roasted chicken baked with sumac onions",
+                      1195
+                  ],
+                  [
+                      "Adana Kebab",
+                      "Skewered spicy minced lamb and beef with their signature seasoning",
+                      1195
+                  ],
+                  [
+                      "Grilled Salmon",
+                      "With Mediterranean herbs and garlic",
+                      1495
+                  ]
+              ]
+          },
+          {
+              "name": "The Bakery",
+              "items": [
+                  [
+                      "Lahmacun",
+                      "Turkish pizza with minced beef and veggies",
+                      895
+                  ],
+                  [
+                      "Zaatar",
+                      "Flatbread with toasted sesame, dried sumac and herbs",
+                      695
+                  ],
+                  [
+                      "Zaatar & Cheese",
+                      "Zaatar with Sofra's special blend cheese",
+                      795
+                  ],
+                  [
+                      "Muhammara",
+                      "Fire-roasted red pepper and walnuts with cheese",
+                      895
+                  ],
+                  [
+                      "Kofte & Cheese",
+                      "Spiced ground beef and Sofra's special blend cheese",
+                      995
+                  ],
+                  [
+                      "Sujuk & Cheese",
+                      "Turkish sausage and Sofra's special blend cheese",
+                      1395
+                  ],
+                  [
+                      "Musakhan",
+                      "Roasted chicken baked with sumac onions",
+                      995
+                  ],
+                  [
+                      "Cheese",
+                      "Cheese flatbread",
+                      795
+                  ],
+                  [
+                      "SOFRA Bread",
+                      "Freshly baked with sesame and nigella seeds",
+                      395
+                  ]
+              ]
+          },
+          {
+              "name": "Dessert",
+              "items": [
+                  [
+                      "Kunafa",
+                      "With vanilla bean ice cream",
+                      995
+                  ],
+                  [
+                      "Homemade Baklava",
+                      "Layers of filo pastry with walnuts",
+                      795
+                  ],
+                  [
+                      "Baklava Ice Cream",
+                      "In-house only",
+                      1095
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Peet's Coffee",
+                      "12 oz $2.95, 16 oz $3.45",
+                      295,
+                      null,
+                      "from $2.95"
+                  ],
+                  [
+                      "Homemade Lemonade",
+                      "Flavors of the day",
+                      595
+                  ],
+                  [
+                      "Soda",
+                      "",
+                      295
+                  ],
+                  [
+                      "Ayran",
+                      "",
+                      495
+                  ],
+                  [
+                      "Tea",
+                      "",
+                      295
+                  ],
+                  [
+                      "Bottled Water",
+                      "",
+                      195
+                  ]
+              ]
+          },
+          {
+              "name": "Today's Special",
+              "items": [
+                  [
+                      "Soup of the Day",
+                      "",
+                      695
+                  ]
+              ]
+          }
+      ],
+      "address": "132 Hazelwood Dr, South San Francisco, CA 94080",
+      "phone": "(650) 763-1156",
+      "site": "https://sofragrills.com/",
+      "siteCta": "Open their menu",
+      "siteNote": "Prices are from the menu on their own website. Entrées come with rice and house salad; wraps come with tomatoes, Persian cucumbers, pickles, onions, garlic sauce and house sauce. Items marked Limited are not always on. They also cater, with trays that serve up to 10; call them for catering.",
+      "clip": {
+          "src": "/clips/sofra-grill.mp4",
+          "poster": "/clips/sofra-grill-poster.webp",
+          "href": "https://www.instagram.com/reel/C4LjabcROxT/",
+          "credit": "Filmed by @imadoniseats",
+          "platform": "Instagram",
+          "by": "imadoniseats"
+      }
+  },
+  {
+      "slug": "flour-and-water-pizzeria",
+      "name": "Flour + Water Pizzeria",
+      "label": "Flour + Water",
+      "cuisine": "Pizza",
+      "tagline": "Flour + Water's pizzeria on Columbus Avenue in North Beach, with counter-service Pizza Shops at Mission Rock and in uptown Oakland: red and white pies from Jimmy Nardello to Jersey carbonara, a gluten-free Sicilian square, starters, salads and soft serve.",
+      "color": "#9f5024",
+      "icon": "flour-and-water-pizzeria",
+      "prep": 0,
+      "category": "Pizza",
+      "items": [],
+      "sections": [
+          {
+              "name": "Starters",
+              "items": [
+                  [
+                      "Castelvetrano Olives",
+                      "",
+                      1100
+                  ],
+                  [
+                      "White Beans + Celery",
+                      "Black pepper, lemon oil and parmigiano",
+                      1200
+                  ],
+                  [
+                      "Heirloom Tomatoes",
+                      "Stracciatella, sherry vinaigrette, crispy potato",
+                      1800
+                  ],
+                  [
+                      "Tuna Crudo",
+                      "Zucchini alla scapece, tomato, mint, tonnato, pistachio",
+                      2000
+                  ],
+                  [
+                      "Prosciutto di Parma",
+                      "Fig, pecorino fresca and aceto balsamico",
+                      1800
+                  ],
+                  [
+                      "Calabrian Chicken Wings",
+                      "Choice of ranch or blue cheese",
+                      1800
+                  ],
+                  [
+                      "Ricotta Meatballs",
+                      "Beef, pork, marinara, parmigiano, basil",
+                      1900
+                  ],
+                  [
+                      "Corn Riblets",
+                      "Crema, ricotta salata, cilantro, chili",
+                      1500
+                  ],
+                  [
+                      "Mozz Sticks + Marinara",
+                      "",
+                      1200
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "Caesar",
+                      "Little gems, garlic croutons, parmigiano, black pepper",
+                      1600
+                  ],
+                  [
+                      "The Chop",
+                      "Market veggies, chickpeas, pepperoncini, salumi toscano, provolone, creamy Italian dressing",
+                      1600
+                  ]
+              ]
+          },
+          {
+              "name": "Red Pie",
+              "items": [
+                  [
+                      "Jimmy Nardello",
+                      "'Nduja, pickled peppers, chive, garlic, chili, oregano, lemon oil",
+                      2400
+                  ],
+                  [
+                      "Margherita",
+                      "Fresh mozz, basil, olive oil, parmigiano",
+                      1900
+                  ],
+                  [
+                      "Burrata",
+                      "Garlic, Sicilian dried tomatoes, oregano, basil, chili, lemon oil",
+                      2300
+                  ],
+                  [
+                      "Pepperoni",
+                      "Grated mozz, Mama Lil's peppers",
+                      2400
+                  ],
+                  [
+                      "Smoky Eggplant",
+                      "Eggplant, smoked mozz, oregano, taggiasca olive, chili",
+                      2300
+                  ],
+                  [
+                      "Vegan",
+                      "Mushroom, eggplant, taggiasca olive, Mama Lil's peppers, garlic, oregano, red onion, tofu “burrata”",
+                      2200
+                  ],
+                  [
+                      "Hawaiian",
+                      "Capicola, pineapple, pickled fresnos, chili crisp",
+                      2400
+                  ],
+                  [
+                      "Meatza",
+                      "Pepperoni, sausage, guanciale, red onion, garlic, pecorino fresca",
+                      2500
+                  ]
+              ]
+          },
+          {
+              "name": "White Pie",
+              "items": [
+                  [
+                      "Cacio e Pepe",
+                      "Fresh mozz, pecorino crema, fontina, garlic, black pepper",
+                      2300
+                  ],
+                  [
+                      "Pesto",
+                      "Basil pesto, fresh mozz, ricotta, garlic, lemon oil",
+                      2200
+                  ],
+                  [
+                      "The Conrad",
+                      "Taleggio, fresh mozz, mushrooms, kale, red onion, roasted garlic",
+                      2400
+                  ],
+                  [
+                      "Sausage",
+                      "Fennel pork sausage, crescenza, broccolini, red onion, garlic, chili",
+                      2400
+                  ],
+                  [
+                      "Jersey Carbonara",
+                      "Pork roll (Taylor ham), pecorino, jalapeño, two eggs, hot sauce",
+                      2500
+                  ]
+              ]
+          },
+          {
+              "name": "Dessert",
+              "items": [
+                  [
+                      "Soft Serve Ice Cream",
+                      "Vanilla, salted caramel or swirl",
+                      800
+                  ]
+              ]
+          }
+      ],
+      "address": "532 Columbus Ave, San Francisco, CA 94133",
+      "email": "info@fwpizzashop.com",
+      "hours": "Daily 11:30am–10pm",
+      "site": "https://www.fwpizzeria.com/",
+      "orderUrl": "https://order.online/business/flour--water-pizza-shop-11510644",
+      "siteCta": "Order pickup",
+      "siteNote": "Prices are from the North Beach Pizzeria's dine-in menu on their own website; SF adds a 6.5% charge, and any pie can be made gluten-free as a Sicilian square for $2 more. Pickup and delivery are from their Flour + Water Pizza Shops: North Beach (1533 Stockton St), Mission Rock (1090 Dr. Maya Angelou Lane) and uptown Oakland (271 24th St). The film is from the Oakland shop.",
+      "panels": [
+          {
+              "head": "Their Pizza Shops",
+              "body": [
+                  "North Beach: 1533 Stockton Street, San Francisco, CA 94133, 11:30am–10pm daily",
+                  "Mission Rock: 1090 Dr. Maya Angelou Lane, Suite 100, San Francisco, CA 94158, 11am–9pm daily",
+                  "Uptown Oakland: 271 24th Street, Oakland, CA 94612, 11:30am–9pm Sun–Thu, to 9:30pm Fri–Sat"
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/flour-and-water-pizzeria.mp4",
+          "poster": "/clips/flour-and-water-pizzeria-poster.webp",
+          "href": "https://www.instagram.com/reel/De5nT9kB_hd/",
+          "credit": "Filmed by @felicitythefoodie",
+          "platform": "Instagram",
+          "by": "felicitythefoodie"
+      }
+  },
+  {
+      "slug": "eat-learn-play",
+      "name": "Eat. Learn. Play.",
+      "label": "Eat Learn Play",
+      "cuisine": "Kids' nutrition, literacy and play foundation",
+      "tagline": "Stephen and Ayesha Curry's foundation for the kids of Oakland, launched in 2019 in their adopted hometown: nutritious meals, books and literacy tutoring, sports, and rebuilt schoolyards, cafeterias and libraries.",
+      "color": "#ffffff",
+      "icon": "eat-learn-play",
+      "prep": 0,
+      "category": "Youth",
+      "items": [],
+      "email": "info@eatlearnplay.org",
+      "site": "https://www.eatlearnplay.org/",
+      "siteCta": "Open their site",
+      "contactOnly": "A nonprofit foundation, not a shop, so there is nothing to order here. The foundation supports Oakland kids with nutritious meals, quality reading resources and chances to play and be active. To donate, volunteer at a schoolyard build or get in touch, open their website or email info@eatlearnplay.org.",
+      "clip": {
+          "src": "/clips/eat-learn-play.mp4",
+          "poster": "/clips/eat-learn-play-poster.webp",
+          "href": "https://www.instagram.com/reel/DOenlZXkk8f/",
+          "credit": "Posted by @eatlearnplay",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "devil-and-angel-desserts",
+      "name": "Devil & Angel Desserts",
+      "label": "Devil & Angel",
+      "cuisine": "Dessert shop",
+      "tagline": "A dessert shop at The Veranda in Concord: Dubai chewy cookies and Dubai chocolate strawberries, boba, soft serve, tanghulu and shaved ice.",
+      "color": "#000000",
+      "icon": "devil-and-angel-desserts",
+      "prep": 0,
+      "category": "Desserts",
+      "items": [],
+      "contactOnly": "They publish no prices for the Concord shop. Their menu is on the boards in store; ask at the counter or message them on Instagram (@devilnangel_theveranda).",
+      "address": "2025 Diamond Blvd F145, The Veranda, Concord, CA 94520",
+      "phone": "(925) 349-4412",
+      "hours": "Mon–Fri 11:30am–9pm, Sat–Sun 11:30am–9:30pm",
+      "site": "https://devilnangel.com/locations",
+      "siteCta": "Visit their site",
+      "siteNote": "The Concord shop of Devil & Angel, a dessert chain with shops in California, Idaho, Utah and Texas; it is in The Veranda shopping center. Products vary by branch: this one lists Dubai chewy cookies, boba, soft serve, tanghulu and shaved ice, and posts waffles and açaí bowls on its Instagram.",
+      "clip": {
+          "src": "/clips/devil-and-angel-desserts.mp4",
+          "poster": "/clips/devil-and-angel-desserts-poster.webp",
+          "href": "https://www.instagram.com/reel/DObfZ0AD0UQ/",
+          "credit": "Filmed by @trinhdoesthings",
+          "platform": "Instagram",
+          "by": "trinhdoesthings"
+      }
+  },
+  {
+      "slug": "heads-and-tails-barbecue",
+      "name": "Heads & Tails Barbecue",
+      "label": "Heads & Tails",
+      "cuisine": "Tex-Mex barbecue",
+      "tagline": "Family-owned Tex-Mex barbecue on San Pablo Avenue in Berkeley: brisket, pulled pork, ribs and burnt ends smoked daily, dino rib poutine and Frito pie, with every Warriors, Valkyries, Giants, 49ers and Sharks game on the screens.",
+      "color": "#ffffff",
+      "icon": "heads-and-tails-barbecue",
+      "prep": 0,
+      "category": "BBQ",
+      "items": [],
+      "sections": [
+          {
+              "name": "Starters",
+              "items": [
+                  [
+                      "Smoked Wings",
+                      "Eight smoked wings in chipotle BBQ or garlic pecorino, with house-made ranch; one flavor per order",
+                      1800
+                  ],
+                  [
+                      "Burnt Ends Snack",
+                      "6oz burnt ends glazed in their signature sweet barbecue sauce",
+                      1800
+                  ],
+                  [
+                      "Burnt Ends Large",
+                      "",
+                      3500
+                  ],
+                  [
+                      "Cornbread Fritters",
+                      "Mushroom, jalapeño and cheddar cornbread fritters with chipotle mayo",
+                      1500
+                  ],
+                  [
+                      "Texas Frito Pie",
+                      "Fritos, brisket chili, shredded cheddar, scallions, jalapeño",
+                      1200
+                  ],
+                  [
+                      "Fresh Fried Chicharonnes",
+                      "Fresh-fried pork skin in a spice mix, with lime",
+                      800
+                  ],
+                  [
+                      "Brisket Chili",
+                      "Topped with shredded cheese and scallions (no beans!)",
+                      960,
+                      null,
+                      "from $9.60"
+                  ],
+                  [
+                      "Trio Of Salsas",
+                      "Tortilla chips or chicharrones with warm queso, guacamole and salsa",
+                      1500,
+                      null,
+                      "from $15.00"
+                  ],
+                  [
+                      "Taco Salad",
+                      "Kale, tomato, corn, bell pepper, basil, pickled onion, queso fresco, fried pinto beans and chips, thyme-dill-lemon vinaigrette",
+                      1800
+                  ],
+                  [
+                      "Caesar Salad",
+                      "Little gems, fried capers, buttery croutons, pecorino, creamy Caesar dressing",
+                      1700
+                  ],
+                  [
+                      "Crispy Tacos",
+                      "Crunchy corn shells with your choice of meat, cheddar, shredded lettuce and salsa roja",
+                      1500,
+                      null,
+                      "from $15.00"
+                  ],
+                  [
+                      "Ox-Tail Poutine",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Dino Rib Poutine",
+                      "",
+                      1900
+                  ]
+              ]
+          },
+          {
+              "name": "Smoker Plates",
+              "items": [
+                  [
+                      "Pick One Meat",
+                      "One smoked meat with bread, pickles, sweet BBQ sauce and two 5oz sides",
+                      2600
+                  ],
+                  [
+                      "Pick Two Meat",
+                      "Two smoked meats with bread, pickles, sweet BBQ sauce and two 5oz sides",
+                      3600
+                  ],
+                  [
+                      "Pick Three Meat",
+                      "Three smoked meats with bread, pickles, sweet BBQ sauce and two 5oz sides",
+                      4600
+                  ],
+                  [
+                      "Smoked Chicken Plate",
+                      "Smoked bone-in chicken with two sides, pickles, house BBQ sauce and a roll",
+                      2100,
+                      null,
+                      "from $21.00"
+                  ],
+                  [
+                      "Fried Chicken Plate",
+                      "Two pieces of boneless buttermilk fried chicken with two sides, pickles, house BBQ sauce and bread",
+                      2600
+                  ],
+                  [
+                      "Pork Rib Plate",
+                      "3-4 St. Louis-style pork ribs with bread, two sides, pickles and sweet BBQ sauce",
+                      3000,
+                      null,
+                      "from $30.00"
+                  ],
+                  [
+                      "Sausage Plate",
+                      "Choice of sausage with two sides, pickles, onions and sweet BBQ sauce",
+                      2400
+                  ]
+              ]
+          },
+          {
+              "name": "Meats By The Lb",
+              "items": [
+                  [
+                      "Brisket",
+                      "Certified Angus choice beef brisket; ask for fatty or lean (not guaranteed)",
+                      1150,
+                      null,
+                      "from $11.50"
+                  ],
+                  [
+                      "Pulled Pork",
+                      "Dry-rubbed, smoked and shredded Berkshire pork shoulder",
+                      1050,
+                      null,
+                      "from $10.50"
+                  ],
+                  [
+                      "Pork Ribs",
+                      "Dry-rubbed Berkshire pork ribs: a third rack is 3-4 bones, half 6, full 11",
+                      2000,
+                      null,
+                      "from $20.00"
+                  ],
+                  [
+                      "Smoked Chicken Thigh & Leg",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Smoked Chicken Breast",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Half Chicken",
+                      "Mary's half chicken, dry-rubbed, smoked and basted with garlic butter",
+                      2200
+                  ],
+                  [
+                      "Pulled Chicken",
+                      "",
+                      1000,
+                      null,
+                      "from $10.00"
+                  ],
+                  [
+                      "Hot Link Each",
+                      "Bacon, pork and beef hot link",
+                      1000
+                  ],
+                  [
+                      "Bratwurst Each",
+                      "Cheddar and green chile pork sausage",
+                      1000
+                  ],
+                  [
+                      "Chicken Salad",
+                      "Smoked chicken salad with mayo, basil, celery and roasted poblano",
+                      1000,
+                      null,
+                      "from $10.00"
+                  ],
+                  [
+                      "Smoked Tri Tip (Only Thurs)",
+                      "Harris Ranch tri-tip rubbed with salt, pepper and garlic, smoked medium rare and sliced thin",
+                      1250,
+                      null,
+                      "from $12.50"
+                  ],
+                  [
+                      "Fried Chicken Thigh",
+                      "Buttermilk-brined boneless fried chicken thigh",
+                      1600
+                  ],
+                  [
+                      "Chicken Tinga",
+                      "Pulled smoked chicken stewed with chipotle, chile de árbol, tomato, onion, garlic and herbs",
+                      1000,
+                      null,
+                      "from $10.00"
+                  ]
+              ]
+          },
+          {
+              "name": "Sandwiches",
+              "items": [
+                  [
+                      "Sliced Brisket Sando",
+                      "Sliced brisket, sweet BBQ sauce, pickles and onions on a Martin's potato bun",
+                      2000
+                  ],
+                  [
+                      "Pulled Pork Sando",
+                      "Pulled pork, coleslaw, pickles, onions and Cali Gold sauce on a Martin's potato bun",
+                      1800
+                  ],
+                  [
+                      "Super Bird",
+                      "Buttermilk fried chicken thigh with chipotle aioli, coleslaw and pickles",
+                      2100
+                  ],
+                  [
+                      "Chicken Salad Sando",
+                      "Smoked chicken salad, roasted peppers, celery, basil, mayo, marinated tomato and little gem on Texas toast",
+                      1800
+                  ],
+                  [
+                      "Brisket Melt",
+                      "Chopped brisket, sweet onion jam, fontina, cheddar, roasted garlic mayo and chipotle BBQ sauce on Texas toast",
+                      2000
+                  ],
+                  [
+                      "Smoke Burger",
+                      "Half-pound smoked griddled burger, gruyère, pickles, onions, dijonnaise and smoky ketchup; cooked medium unless asked",
+                      2000
+                  ],
+                  [
+                      "Chicken Caesar Wrap",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Tri-Tip Philly Cheesesteak",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Brisket Sliders",
+                      "Chopped brisket, coleslaw and sweet BBQ sauce on a mini roll",
+                      1600,
+                      null,
+                      "from $16.00"
+                  ],
+                  [
+                      "Pulled Pork Queso Sliders",
+                      "Pulled pork, pickled jalapeño and queso on a mini bun",
+                      1500,
+                      null,
+                      "from $15.00"
+                  ],
+                  [
+                      "Chicken Salad Sliders",
+                      "Poblano-basil chicken salad, mayo, tomato, lettuce and crispy shallot",
+                      1500,
+                      null,
+                      "from $15.00"
+                  ],
+                  [
+                      "Tri Tip Sandwich",
+                      "Tri-tip on a roll with pickles, coleslaw and horseradish mayo",
+                      2000
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Plain Roll",
+                      "",
+                      150
+                  ],
+                  [
+                      "4pc Plain Rolls",
+                      "",
+                      600
+                  ],
+                  [
+                      "2oz Pickles & Onions",
+                      "",
+                      150
+                  ],
+                  [
+                      "5oz Pickles & Onions",
+                      "",
+                      350
+                  ],
+                  [
+                      "12oz Pickles & Onions",
+                      "",
+                      800
+                  ],
+                  [
+                      "Garlic Rolls",
+                      "Brioche pull-apart rolls brushed with garlic butter, pecorino, salt and pepper",
+                      360,
+                      null,
+                      "from $3.60"
+                  ],
+                  [
+                      "Housemade Pickles",
+                      "Cucumbers, onions and jalapeños, by the pound",
+                      700,
+                      null,
+                      "from $7.00"
+                  ],
+                  [
+                      "Coleslaw",
+                      "Cabbage and carrots in coleslaw dressing",
+                      700,
+                      null,
+                      "from $7.00"
+                  ],
+                  [
+                      "French Fries",
+                      "Tossed in smoked seasoning salt",
+                      900
+                  ],
+                  [
+                      "Potato Salad",
+                      "Deviled-egg-style red potato salad",
+                      900,
+                      null,
+                      "from $9.00"
+                  ],
+                  [
+                      "Pasta Salad",
+                      "",
+                      800,
+                      null,
+                      "from $8.00"
+                  ],
+                  [
+                      "Vaquero Beans",
+                      "Pinto beans cooked with bacon, brisket, sausage, vegetables and peppers",
+                      900,
+                      null,
+                      "from $9.00"
+                  ],
+                  [
+                      "Shells and Cheese",
+                      "Four-cheese mac with smoked gouda, cheddar and fontina under garlicky breadcrumbs",
+                      1100,
+                      null,
+                      "from $11.00"
+                  ],
+                  [
+                      "Arroz Verde",
+                      "Poblano-infused jasmine rice",
+                      800,
+                      null,
+                      "from $8.00"
+                  ],
+                  [
+                      "Tortilla Chips",
+                      "House-made corn tortilla chips with salt",
+                      700
+                  ],
+                  [
+                      "Side Corn Tortillas (3)",
+                      "",
+                      300
+                  ],
+                  [
+                      "Side Flour Tortilla (2)",
+                      "",
+                      300
+                  ],
+                  [
+                      "5oz Salsa Roja",
+                      "",
+                      600
+                  ],
+                  [
+                      "5oz Hot Honey",
+                      "",
+                      600
+                  ],
+                  [
+                      "5oz Guacamole",
+                      "",
+                      800
+                  ],
+                  [
+                      "5oz Crema",
+                      "",
+                      600
+                  ],
+                  [
+                      "5oz Queso",
+                      "",
+                      600
+                  ],
+                  [
+                      "5oz Chili",
+                      "",
+                      900
+                  ],
+                  [
+                      "Brussels Sprouts",
+                      "",
+                      900,
+                      null,
+                      "from $9.00"
+                  ],
+                  [
+                      "Side Garden Salad",
+                      "",
+                      700,
+                      null,
+                      "from $7.00"
+                  ],
+                  [
+                      "Hot Dog Bun",
+                      "",
+                      250
+                  ]
+              ]
+          },
+          {
+              "name": "Sauces",
+              "items": [
+                  [
+                      "12oz Cali Gold",
+                      "",
+                      1800
+                  ],
+                  [
+                      "12oz Chipotle BBQ Sauce",
+                      "",
+                      1800
+                  ],
+                  [
+                      "12oz Diablo Sauce",
+                      "",
+                      1800
+                  ],
+                  [
+                      "12oz Ranch",
+                      "",
+                      2000
+                  ],
+                  [
+                      "12oz Sweet BBQ Sauce",
+                      "",
+                      1800
+                  ],
+                  [
+                      "2oz Cali Gold",
+                      "",
+                      150
+                  ],
+                  [
+                      "2oz Chipotle BBQ Sauce",
+                      "",
+                      150
+                  ],
+                  [
+                      "2oz Diablo",
+                      "",
+                      150
+                  ],
+                  [
+                      "2oz Garlic Butter",
+                      "",
+                      150
+                  ],
+                  [
+                      "2oz Garlic Mayo",
+                      "",
+                      150
+                  ],
+                  [
+                      "2oz Queso",
+                      "",
+                      200
+                  ],
+                  [
+                      "2oz Ranch",
+                      "",
+                      200
+                  ],
+                  [
+                      "2oz Salsa Roja",
+                      "",
+                      150
+                  ],
+                  [
+                      "2oz Hot Honey",
+                      "",
+                      150
+                  ],
+                  [
+                      "2oz Smokey Ketchup",
+                      "",
+                      150
+                  ],
+                  [
+                      "2oz Sweet BBQ Sauce",
+                      "",
+                      150
+                  ]
+              ]
+          },
+          {
+              "name": "Sweets",
+              "items": [
+                  [
+                      "Chocolate Chess Pie Slice",
+                      "Fudgy chocolate pie",
+                      1000
+                  ],
+                  [
+                      "To Go Banana Pudding",
+                      "Banana pudding with Nilla wafers, whipped cream and honey",
+                      1000
+                  ],
+                  [
+                      "Banana Cream Pie",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Strawberry Cheesecake",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Lemon Pie",
+                      "",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Kids Menu",
+              "items": [
+                  [
+                      "Kids Quesadilla",
+                      "Flour tortilla quesadilla with shredded cheese",
+                      800
+                  ],
+                  [
+                      "Kids Grilled Cheese with Fries",
+                      "Texas toast with cheddar and fontina",
+                      1000
+                  ],
+                  [
+                      "Chicken Tenders with Fries",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Kids Burger with Fries",
+                      "Build your own; with no choices it is patty and bun",
+                      1300
+                  ],
+                  [
+                      "Kids Taco",
+                      "",
+                      300
+                  ]
+              ]
+          }
+      ],
+      "address": "2121 San Pablo Ave, Berkeley, CA 94702",
+      "phone": "(510) 380-7497",
+      "site": "https://headsandtailsbarbecue.com/",
+      "orderUrl": "https://headsandtailsbarbecue.com/order/heads-tails-barbecue-2121-san-pablo-avenue",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from the online menu on their own website, for pickup and delivery; paying by card adds 3%. Meats by the pound show the smallest size. The kitchen serves until 9 pm daily and the bar stays open to midnight on Fridays and Saturdays; smoked tri-tip is Thursdays only, and ribs and pies can sell out. Parking lot on Cowper St and San Pablo; catering is ordered from their site.",
+      "clip": {
+          "src": "/clips/heads-and-tails-barbecue.mp4",
+          "poster": "/clips/heads-and-tails-barbecue-poster.webp",
+          "href": "https://www.instagram.com/reel/DPC1u5EgXUe/",
+          "credit": "Filmed by @thesnacksensei",
+          "platform": "Instagram",
+          "by": "thesnacksensei"
+      }
+  },
+  {
+      "slug": "kibo-sushi-danville",
+      "name": "Kibo Sushi Danville",
+      "label": "Kibo Sushi",
+      "cuisine": "Sushi & Japanese",
+      "tagline": "Sushi on Hartz Avenue in downtown Danville: signature rolls named for the street and the town, nigiri, carpaccio and chirashi, plus teriyaki, katsu, udon and ramen.",
+      "color": "#e8d9b5",
+      "icon": "kibo-sushi-danville",
+      "prep": 0,
+      "category": "Sushi",
+      "items": [],
+      "sections": [
+          {
+              "name": "Small Plates",
+              "items": [
+                  [
+                      "Miso Soup",
+                      "",
+                      400
+                  ],
+                  [
+                      "Edamame",
+                      "",
+                      800
+                  ],
+                  [
+                      "Garlic Edamame",
+                      "",
+                      1400
+                  ],
+                  [
+                      "Side Salad",
+                      "",
+                      600
+                  ],
+                  [
+                      "Agedashi Tofu",
+                      "Fried tofu, sweet dashi, seaweed, bonito flakes",
+                      1300
+                  ],
+                  [
+                      "Avocado Fries",
+                      "Breaded avocado, unagi sauce",
+                      600
+                  ],
+                  [
+                      "Seaweed Salad",
+                      "Crunchy seaweed",
+                      1400
+                  ],
+                  [
+                      "Shishito Peppers",
+                      "Garlic lemon salt",
+                      1400
+                  ],
+                  [
+                      "Pork Belly Skewer",
+                      "Grilled, matcha salt",
+                      700
+                  ],
+                  [
+                      "Hamachi Kama",
+                      "Grilled yellowtail cheek, ponzu, Japanese spice, lemon",
+                      1700
+                  ],
+                  [
+                      "Soy Steamed Pork Belly",
+                      "Microgreens, red onion",
+                      1800
+                  ],
+                  [
+                      "Sake Clams",
+                      "Steamed clams, garlic, crushed pepper, butter, green onion",
+                      1400
+                  ],
+                  [
+                      "Brussels Sprouts",
+                      "Garlic butter, cranberry, soy sauce",
+                      1600
+                  ],
+                  [
+                      "Japanese Pickle Trio",
+                      "Cucumber, radish, eggplant",
+                      1100
+                  ],
+                  [
+                      "Popcorn Chicken",
+                      "Fried, curry salt, spicy mayo",
+                      1700
+                  ],
+                  [
+                      "Okonomiyaki",
+                      "Cabbage, carrot, bonito flakes, mayo, katsu sauce",
+                      1200
+                  ],
+                  [
+                      "Oyster Fry",
+                      "Panko-fried oysters, sweet katsu sauce (3 pcs)",
+                      900
+                  ],
+                  [
+                      "Tempura Mix",
+                      "Fried shrimp and fresh vegetables",
+                      1700
+                  ],
+                  [
+                      "Tempura Green Beans",
+                      "Fried (10 pcs)",
+                      800
+                  ],
+                  [
+                      "Tempura Unagi",
+                      "Fried freshwater eel (4 pcs)",
+                      1500
+                  ],
+                  [
+                      "Crispy Gyoza",
+                      "Fried pork and veggie dumplings",
+                      1200
+                  ],
+                  [
+                      "Tempura Veggie",
+                      "Fried fresh vegetables (8 pcs)",
+                      1200
+                  ],
+                  [
+                      "Kibo Poke",
+                      "Assorted fresh fish, crunchy seaweed, sesame oil, red onion, microgreens",
+                      2000
+                  ],
+                  [
+                      "Sunomono",
+                      "Cucumber, seaweed salad, sesame seeds, rice vinegar, lemon",
+                      1100
+                  ],
+                  [
+                      "Shrimp Lollipop",
+                      "Panko-fried white shrimp, unagi sauce",
+                      1500
+                  ],
+                  [
+                      "Sashimi Salad",
+                      "Assorted fresh fish (8 pcs), salad, cucumber, tomato, avocado",
+                      3000
+                  ],
+                  [
+                      "Sashimi Appetizer",
+                      "Chef's selection of fresh fish (10 pcs)",
+                      4000
+                  ]
+              ]
+          },
+          {
+              "name": "Large Plates",
+              "items": [
+                  [
+                      "Chicken Teriyaki",
+                      "Grilled, tsukemono, teriyaki sauce",
+                      2400
+                  ],
+                  [
+                      "Salmon Teriyaki",
+                      "Grilled Scottish salmon, caper tomato relish, tsukemono, teriyaki sauce",
+                      2600
+                  ],
+                  [
+                      "Tofu Teriyaki",
+                      "Grilled, tsukemono, teriyaki sauce",
+                      1800
+                  ],
+                  [
+                      "Chicken Katsu",
+                      "Chicken cutlet, tsukemono, sweet katsu sauce",
+                      2500
+                  ],
+                  [
+                      "Pork Belly Katsu",
+                      "Pork belly, tsukemono, sweet katsu sauce",
+                      2700
+                  ],
+                  [
+                      "Udon",
+                      "Fish cake, aburage, green onion, broccoli, onion; add chicken or tempura +$3",
+                      1600
+                  ],
+                  [
+                      "Yaki Udon",
+                      "Stir-fried with cabbage, carrot, yellow onion and broccoli; with pork, chicken or shrimp",
+                      2000
+                  ],
+                  [
+                      "Tonkotsu Ramen",
+                      "Chashu, bamboo shoot, black mushroom, pickled ginger, sesame seed",
+                      1800
+                  ],
+                  [
+                      "Shoyu Veggie Ramen",
+                      "Japanese vegetables, onion, pickled ginger, sesame seed",
+                      1700
+                  ]
+              ]
+          },
+          {
+              "name": "Nigiri",
+              "items": [
+                  [
+                      "Maguro (Tuna)",
+                      "",
+                      1100
+                  ],
+                  [
+                      "Sake (Salmon)",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Sake Belly (Salmon Belly)",
+                      "",
+                      1100
+                  ],
+                  [
+                      "Hamachi (Yellowtail)",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Hamachi Belly (Yellowtail Belly)",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Shiro Maguro (White Tuna)",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Hokkaido Hotate (Scallop)",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Ama Ebi (Sweet Shrimp)",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Tako (Octopus)",
+                      "",
+                      900
+                  ],
+                  [
+                      "Unagi (Freshwater Eel)",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Anago (Saltwater Eel)",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Tamago (Egg Omelet)",
+                      "",
+                      700
+                  ],
+                  [
+                      "Tobiko (Flying Fish Roe)",
+                      "",
+                      800
+                  ],
+                  [
+                      "Ikura (Salmon Roe)",
+                      "",
+                      1400
+                  ],
+                  [
+                      "Saba (Mackerel)",
+                      "",
+                      800
+                  ]
+              ]
+          },
+          {
+              "name": "Donburi",
+              "items": [
+                  [
+                      "Chirashi",
+                      "Assorted fresh fish over sushi rice",
+                      3300
+                  ],
+                  [
+                      "Donburi",
+                      "Your choice of one or two kinds of fish over rice",
+                      3500
+                  ]
+              ]
+          },
+          {
+              "name": "Sashimi",
+              "items": [
+                  [
+                      "Sashimi (4 pcs)",
+                      "One kind: tuna, salmon, hamachi and more",
+                      2000
+                  ],
+                  [
+                      "Sashimi (8 pcs)",
+                      "Two kinds",
+                      3800
+                  ],
+                  [
+                      "Sashimi (12 pcs)",
+                      "Three kinds",
+                      5400
+                  ]
+              ]
+          },
+          {
+              "name": "Carpaccio",
+              "items": [
+                  [
+                      "Pink Buri",
+                      "Hamachi, black tobiko, jalapeño, microgreens, wasabi ponzu",
+                      2500
+                  ],
+                  [
+                      "Truffle Albacore",
+                      "Truffle salt, red onion, cilantro olive oil, microgreens",
+                      2500
+                  ],
+                  [
+                      "Ponzu Scallops",
+                      "Japanese scallop, jalapeño, red onion, crushed red pepper",
+                      2000
+                  ]
+              ]
+          },
+          {
+              "name": "Rolls (real crab +$5)",
+              "items": [
+                  [
+                      "California",
+                      "Crab, avocado",
+                      800
+                  ],
+                  [
+                      "Rainbow",
+                      "Crab, avocado, fresh fish",
+                      2000
+                  ],
+                  [
+                      "Deep Fried California",
+                      "Crab, avocado, sweet mayo, unagi sauce",
+                      1400
+                  ],
+                  [
+                      "Spicy Salmon",
+                      "Salmon tartare, cucumber",
+                      1100
+                  ],
+                  [
+                      "Spicy Tuna",
+                      "Tuna tartare, cucumber",
+                      1200
+                  ],
+                  [
+                      "Spicy Yellowtail",
+                      "Hamachi tartare, cucumber",
+                      1200
+                  ],
+                  [
+                      "Hoka Salmon",
+                      "Crab, avocado, salmon, parmesan mayo, torched, tobiko, microgreens",
+                      1900
+                  ],
+                  [
+                      "Avokyu",
+                      "Avocado, cucumber",
+                      800
+                  ],
+                  [
+                      "Negihama",
+                      "Hamachi, green onion",
+                      800
+                  ],
+                  [
+                      "Dragon",
+                      "Crab, tempura shrimp, unagi, avocado, tobiko, unagi sauce",
+                      1900
+                  ],
+                  [
+                      "49ers",
+                      "Crab, avocado, salmon, lemon",
+                      1700
+                  ],
+                  [
+                      "Alaska",
+                      "Salmon, avocado, microgreens",
+                      1200
+                  ],
+                  [
+                      "Hamachi Addicts",
+                      "Hamachi and avocado, hamachi on top",
+                      1700
+                  ],
+                  [
+                      "Salmon Addicts",
+                      "Salmon and avocado, salmon on top",
+                      1700
+                  ],
+                  [
+                      "Tuna Addicts",
+                      "Tuna and avocado, tuna on top",
+                      1800
+                  ],
+                  [
+                      "Tempura Shrimp",
+                      "Tempura shrimp, avocado, greens, unagi sauce, sweet mayo",
+                      1100
+                  ],
+                  [
+                      "Spider",
+                      "Breaded soft-shell crab, avocado, cucumber, greens, unagi sauce, sweet mayo",
+                      1500
+                  ],
+                  [
+                      "Veggie Futomaki",
+                      "Avocado, cucumber, greens, gobo, inari",
+                      1000
+                  ],
+                  [
+                      "Kibo",
+                      "Tuna tartare, tempura shrimp, salmon, red onion, microgreens, black tobiko, spicy unagi sauce",
+                      2100
+                  ],
+                  [
+                      "Hartz",
+                      "Crab, tempura shrimp, tuna, crispy potato, microgreens, spicy unagi sauce",
+                      2100
+                  ],
+                  [
+                      "Butterfly",
+                      "Unagi, cucumber, avocado, tempura crunch, furikake, sweet mayo, unagi sauce",
+                      2100
+                  ],
+                  [
+                      "Danville",
+                      "Crab, tempura green beans, albacore, microgreens, jalapeño, sweet mayo, sriracha",
+                      2100
+                  ],
+                  [
+                      "Isabel",
+                      "Spicy salmon, cucumber, tempura shrimp, hamachi, kale crunch, pistachio, chia seed, coconut flake",
+                      2200
+                  ],
+                  [
+                      "Irene",
+                      "Deep fried: spicy tuna, jalapeño, mozzarella, microgreens, curry powder",
+                      2100
+                  ],
+                  [
+                      "Joy",
+                      "Crab, cucumber, tempura shrimp, tuna tartare, avocado, salmon, pistachio, chia seed, coconut flake",
+                      2200
+                  ],
+                  [
+                      "CEO",
+                      "Spicy salmon, tempura shrimp, cucumber, tuna, breaded albacore, red onion, microgreens",
+                      2300
+                  ],
+                  [
+                      "Something Different",
+                      "Real crab, avocado, jalapeño, hamachi, black tobiko, green onion, soy paper",
+                      2300
+                  ],
+                  [
+                      "I Don't Know",
+                      "Chef's inspiration",
+                      2600
+                  ]
+              ]
+          }
+      ],
+      "address": "125 Hartz Ave, Danville, CA 94526",
+      "phone": "(925) 362-3263",
+      "email": "kibosushidanville@gmail.com",
+      "hours": "Sun–Thu 5pm–9pm, Fri–Sat 5pm–9:30pm",
+      "site": "https://www.kibosushidanville.com/",
+      "orderUrl": "https://kibo-sushi-danville.square.site/",
+      "siteCta": "Order online",
+      "siteNote": "Menu and prices are from their own website; Udon and Yaki Udon prices are from the online ordering page it links to. They also cater, with whole bluefin tuna and salmon cutting shows and private sushi parties from $70 a person, and take reservations on their site."
+  },
+  {
+      "slug": "shell-shock-seafood-house",
+      "name": "Shell Shock Seafood House",
+      "label": "Shell Shock",
+      "cuisine": "Cajun seafood boil",
+      "tagline": "Cajun seafood boils on Hesperian Boulevard in Hayward: shrimp, crawfish, crab legs, lobster and Dungeness by the bag in their house sauce, plus combos, fried baskets and garlic noodles.",
+      "color": "#ffffff",
+      "icon": "shell-shock-seafood-house",
+      "prep": 0,
+      "category": "Seafood",
+      "items": [],
+      "sections": [
+          {
+              "name": "Soups",
+              "items": [
+                  [
+                      "Clam Chowder",
+                      "",
+                      795
+                  ],
+                  [
+                      "Gumbo with Rice",
+                      "",
+                      795
+                  ],
+                  [
+                      "Gumbo, No Rice",
+                      "",
+                      795
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Raw Oysters, Half Dozen",
+                      "",
+                      1895
+                  ],
+                  [
+                      "Raw Oysters, Dozen",
+                      "",
+                      2995
+                  ],
+                  [
+                      "Cajun Fries",
+                      "",
+                      795
+                  ],
+                  [
+                      "Lemon Pepper Fries",
+                      "",
+                      795
+                  ],
+                  [
+                      "Regular Fries",
+                      "",
+                      795
+                  ],
+                  [
+                      "Garlic Fries",
+                      "",
+                      895
+                  ],
+                  [
+                      "Garlic Cajun Fries",
+                      "",
+                      895
+                  ],
+                  [
+                      "Sweet Potato Fries",
+                      "",
+                      895
+                  ],
+                  [
+                      "Fried Onion Rings",
+                      "",
+                      895
+                  ],
+                  [
+                      "Garlic Bread",
+                      "6 pieces",
+                      895
+                  ],
+                  [
+                      "Cajun Edamame",
+                      "",
+                      895
+                  ],
+                  [
+                      "Hot Wings",
+                      "Lemon pepper or Cajun seasoning",
+                      1495
+                  ],
+                  [
+                      "Fried Calamari",
+                      "",
+                      1495
+                  ],
+                  [
+                      "Fried Oysters",
+                      "12 pieces",
+                      1995
+                  ],
+                  [
+                      "Garlic Noodle",
+                      "",
+                      1495
+                  ]
+              ]
+          },
+          {
+              "name": "À la Carte (Build Your Bag)",
+              "items": [
+                  [
+                      "Shrimp, Head On",
+                      "In your sauce (House Special, New Orleans Cajun, lemon pepper or garlic butter) and spice level",
+                      2095
+                  ],
+                  [
+                      "Shrimp, Head Off",
+                      "In your sauce (House Special, New Orleans Cajun, lemon pepper or garlic butter) and spice level",
+                      2295
+                  ],
+                  [
+                      "Crawfish",
+                      "In your sauce (House Special, New Orleans Cajun, lemon pepper or garlic butter) and spice level",
+                      2095
+                  ],
+                  [
+                      "Clams",
+                      "In your sauce (House Special, New Orleans Cajun, lemon pepper or garlic butter) and spice level",
+                      2095
+                  ],
+                  [
+                      "Mussels",
+                      "In your sauce (House Special, New Orleans Cajun, lemon pepper or garlic butter) and spice level",
+                      2095
+                  ],
+                  [
+                      "Snow Crab Legs (1 lb)",
+                      "In your sauce (House Special, New Orleans Cajun, lemon pepper or garlic butter) and spice level",
+                      5295
+                  ],
+                  [
+                      "King Crab Legs (1 lb)",
+                      "In your sauce (House Special, New Orleans Cajun, lemon pepper or garlic butter) and spice level",
+                      7995
+                  ],
+                  [
+                      "Whole Lobster (1.5–2 lb)",
+                      "In your sauce (House Special, New Orleans Cajun, lemon pepper or garlic butter) and spice level",
+                      5695
+                  ],
+                  [
+                      "Whole Dungeness Crab (1.5–2 lb)",
+                      "In your sauce (House Special, New Orleans Cajun, lemon pepper or garlic butter) and spice level",
+                      5695
+                  ]
+              ]
+          },
+          {
+              "name": "Combo Deals",
+              "items": [
+                  [
+                      "Combo #1",
+                      "Pick 3 of clams, mussels, crawfish or shrimp (1 lb each); with 2 corn, 2 potatoes and 4 pieces of sausage",
+                      6795
+                  ],
+                  [
+                      "Combo #2",
+                      "Dungeness crab or lobster (1.5–2 lb) plus 2 of clams, mussels, crawfish or shrimp (1 lb each); with 2 corn, 2 potatoes and 4 pieces of sausage",
+                      8995
+                  ],
+                  [
+                      "Combo #3",
+                      "Dungeness crab, lobster or 1 lb snow crab legs plus 3 of clams, mussels, crawfish or shrimp (1 lb each); with 2 corn, 2 potatoes and 4 pieces of sausage",
+                      10695
+                  ]
+              ]
+          },
+          {
+              "name": "Baskets",
+              "items": [
+                  [
+                      "Chicken Tender Basket",
+                      "With fries; sweet potato fries $1 more",
+                      1595
+                  ],
+                  [
+                      "Fried Shrimp Basket",
+                      "With fries; sweet potato fries $1 more",
+                      1795
+                  ],
+                  [
+                      "Fried Catfish Basket",
+                      "With fries; sweet potato fries $1 more",
+                      1795
+                  ],
+                  [
+                      "Fried Softshell Crab Basket",
+                      "With fries; sweet potato fries $1 more",
+                      1995
+                  ],
+                  [
+                      "Lobster Roll",
+                      "",
+                      3095
+                  ]
+              ]
+          },
+          {
+              "name": "Rice Bowls",
+              "items": [
+                  [
+                      "Blackened Catfish Rice Bowl",
+                      "",
+                      2095
+                  ],
+                  [
+                      "Salmon Rice Bowl",
+                      "",
+                      2295
+                  ],
+                  [
+                      "Shellfish Rice Bowl",
+                      "",
+                      2295
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Steamed Rice",
+                      "",
+                      375
+                  ],
+                  [
+                      "Corn on the Cob",
+                      "",
+                      225
+                  ],
+                  [
+                      "Potatoes",
+                      "3 pieces",
+                      455
+                  ],
+                  [
+                      "Sausage (1/2 lb)",
+                      "",
+                      895
+                  ],
+                  [
+                      "Sausage (1 lb)",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Extra Sauce",
+                      "Limit one per pound of seafood",
+                      595
+                  ],
+                  [
+                      "Boiled Eggs",
+                      "2 pieces",
+                      455
+                  ]
+              ]
+          },
+          {
+              "name": "Beverages",
+              "items": [
+                  [
+                      "Assorted Soda",
+                      "Coke, Diet Coke, Sprite, lemonade, orange or sweetened iced tea",
+                      375
+                  ],
+                  [
+                      "Strawberry Lemonade",
+                      "Refills $1",
+                      475
+                  ]
+              ]
+          },
+          {
+              "name": "Sweet Ending",
+              "items": [
+                  [
+                      "Macaron Ice Cream",
+                      "",
+                      625
+                  ]
+              ]
+          }
+      ],
+      "address": "20413 Hesperian Blvd, Hayward, CA 94541",
+      "phone": "(510) 200-7466",
+      "hours": "Sun–Thu 12pm–9pm, Fri–Sat 12pm–9:30pm",
+      "site": "https://shellshockseafoodhouse.com/",
+      "orderUrl": "https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=438a5783-3314-4cd3-b8df-7224c67fe2ed",
+      "siteCta": "Order online",
+      "siteNote": "Menu from their own website. Their menu lists the seafood by the bag at market price; the prices here are from the online ordering page their website links to, and change with the market.",
+      "clip": {
+          "src": "/clips/shell-shock-seafood-house.mp4",
+          "poster": "/clips/shell-shock-seafood-house-poster.webp",
+          "href": "https://www.instagram.com/reel/C4ZSLP3pPUO/",
+          "credit": "Filmed by @charweeezy",
+          "platform": "Instagram",
+          "by": "charweeezy"
+      }
+  },
+  {
+      "slug": "korean-papis-kitchen",
+      "name": "Korean Papi's Kitchen",
+      "label": "Korean Papi's",
+      "cuisine": "Korean-fusion food truck & catering",
+      "tagline": "Bay Area's #1 Korean-fusion cuisine from Chef Korean Papi: his tacos, burritos, burrito bowls, kimchi fried rice, cheesesteak and Q-dilla, from the truck on 4th Street in San Francisco and at your catering or private event.",
+      "color": "#000000",
+      "icon": "korean-papis-kitchen",
+      "prep": 0,
+      "category": "Food truck",
+      "items": [],
+      "contactOnly": "Their own website lists their menu with no prices; pre-orders and catering (at least 3-4 weeks ahead) go through the form on its Menu page, and delivery through their Uber Eats store, linked from their Instagram, where they also post the truck's schedule.",
+      "panels": [
+          {
+              "head": "Their menu",
+              "body": [
+                  "Korean Papi's Taco",
+                  "Korean Papi's Taco Trio",
+                  "Korean Papi's Burrito",
+                  "Korean Papi's Burrito Bowl",
+                  "Korean Papi's Kimchi Fried Rice",
+                  "Korean Papi's Cheesesteak",
+                  "Korean Papi's Q-Dilla",
+                  "Choose your protein for the tacos, burritos, bowls, quesadillas and fries; spicy level on request."
+              ]
+          }
+      ],
+      "address": "1379 4th St, San Francisco, CA 94158",
+      "email": "koreanpapiskitchen@gmail.com",
+      "hours": "Wed–Thu 2–7pm, Fri–Sun 12–7pm",
+      "site": "https://www.koreanpapiskitchen.com/",
+      "orderUrl": "https://www.ubereats.com/store/korean-papis-kitchen/PoV1N4xYSTef3dFDwHmXCQ",
+      "siteCta": "Pre-order & catering",
+      "siteNote": "The menu is from their own website, which publishes no prices; delivery is through their Uber Eats store. The address and hours are from their Instagram, which posts the truck's upcoming schedule; 1379 4th St is Spark Social SF, where the film was shot.",
+      "clip": {
+          "src": "/clips/korean-papis-kitchen.mp4",
+          "poster": "/clips/korean-papis-kitchen-poster.webp",
+          "href": "https://www.instagram.com/reel/DbJMF3FpSBS/",
+          "credit": "Filmed by @eatwithsie",
+          "platform": "Instagram",
+          "by": "eatwithsie"
+      }
+  },
+  {
+      "slug": "agave-uptown",
+      "name": "Agave Uptown",
+      "label": "Agave Uptown",
+      "cuisine": "Oaxacan",
+      "color": "#ffffff",
+      "icon": "agave-uptown",
+      "site": "https://agaveuptown.com/",
+      "tagline": "Oaxacan cooking on Franklin Street in Uptown Oakland from Executive Chef Octavio Diaz: mole negro made from 20-plus ingredients he brings from Oaxaca, tlayudas, molotes, memelitas and handmade corn tortillas.",
+      "prep": 0,
+      "category": "Mexican",
+      "items": [],
+      "sections": [
+          {
+              "name": "Sabor De Nuestras Casa",
+              "items": [
+                  [
+                      "Taste of Oaxaca",
+                      "Tasajo, 2 molotes, 2 memelitas, 2 enmoladas, cecina, carnitas, mole, black beans, rice and chef's choice salad. Serves 2",
+                      6100
+                  ],
+                  [
+                      "Tlayuda",
+                      "Organic Oaxacan corn tortilla, black beans, cabbage, quesillo, avocado, queso fresco; add any meat or veggies +$6, carne mixta +$10, chapulines +$5",
+                      1600
+                  ],
+                  [
+                      "Molcajete",
+                      "Prawns, steak and grilled chicken with three homemade salsas, quesillo, rice, beans and nopal",
+                      3000
+                  ],
+                  [
+                      "Coastal Bowl",
+                      "Grilled seabass, black beans, avocado, grilled seasonal vegetables, melted cheese",
+                      2000
+                  ],
+                  [
+                      "Cecina",
+                      "Adobo-marinated pork loin, black beans, rice, tortillas",
+                      2000
+                  ],
+                  [
+                      "Pollo Asado",
+                      "Rocky chicken breast, potatoes, poblano peppers and mushrooms, chef's salad, tortillas",
+                      2600
+                  ],
+                  [
+                      "Albondigas",
+                      "Beef meatballs, potatoes and zucchini in tomato salsa or mole rojo, handmade corn tortillas",
+                      2400
+                  ],
+                  [
+                      "Mole Chicken",
+                      "Their signature mole negro with Rocky chicken a la plancha, rice, beans, handmade corn tortillas",
+                      2700
+                  ],
+                  [
+                      "Trio de Mole",
+                      "Mole negro, mole rojo and mole verde with chicken, carnitas and salmon, handmade corn tortillas",
+                      2600
+                  ]
+              ]
+          },
+          {
+              "name": "Botanas",
+              "items": [
+                  [
+                      "Guacamole",
+                      "Avocado, cilantro, lime, serrano peppers",
+                      1200
+                  ],
+                  [
+                      "Molotes (1/2 dozen)",
+                      "Masa with chorizo, epazote and potato, black bean paste, cabbage, queso fresco, tomatillo salsa",
+                      900
+                  ],
+                  [
+                      "Molotes (1 dozen)",
+                      "Masa with chorizo, epazote and potato, black bean paste, cabbage, queso fresco, tomatillo salsa",
+                      1500
+                  ],
+                  [
+                      "Ceviche",
+                      "Seabass, onions, tomatoes, lime, cilantro, avocado, homemade chips",
+                      1900
+                  ],
+                  [
+                      "Empanada de Huitlacoche",
+                      "Fresh blue corn tortilla, quesillo, epazote, huitlacoche, serrano and onion; add chapulines +$5",
+                      1900
+                  ],
+                  [
+                      "Empanada Oaxaqueña",
+                      "Fresh tortilla, quesillo, epazote and mushrooms; add chicken or tasajo +$6, chapulines +$5",
+                      1200
+                  ],
+                  [
+                      "Memelitas",
+                      "Three sopes with beans, tomatillo salsa and queso fresco",
+                      1000
+                  ],
+                  [
+                      "Tostaditas de Chile Ajo",
+                      "Potato cooked in guajillo pepper and vinegar, cabbage, salsa verde, queso fresco",
+                      1100
+                  ]
+              ]
+          },
+          {
+              "name": "Tacos",
+              "items": [
+                  [
+                      "Two Tacos: Wild Salmon, Seabass or Shrimp",
+                      "Cabbage, mango, avocado sauce, onions, cilantro, with black beans and rice",
+                      1800
+                  ],
+                  [
+                      "Two Tacos: Chicken, Tasajo, Cecina or Carnitas",
+                      "Grilled onions, tomatillo salsa, with black beans and rice",
+                      1700
+                  ],
+                  [
+                      "3 Tacos de Chapulines",
+                      "Grasshopper, guacamole, quesillo",
+                      1700
+                  ],
+                  [
+                      "Giant Fish Taco",
+                      "10-inch fresh blue corn tortilla, black bean paste, Monterey Jack, cabbage, avocado, grilled seabass, side salad",
+                      1800
+                  ]
+              ]
+          },
+          {
+              "name": "Ensaladas",
+              "items": [
+                  [
+                      "Agave Salad",
+                      "Romaine, avocado, queso fresco, pumpkin seeds, grilled peppers, onions, cilantro, chipotle vinaigrette; add prawns, fish or salmon +$10, chicken or tasajo +$6",
+                      1500
+                  ],
+                  [
+                      "Caesar Salad",
+                      "Organic romaine hearts, pumpkin seeds, avocado, tomatoes, chapulín Caesar dressing; add prawns, fish or salmon +$10, chicken or tasajo +$6",
+                      1500
+                  ],
+                  [
+                      "Chef's Salad",
+                      "Mixed greens, spinach, pumpkin seeds, goat cheese, avocado, agave pecans, amaranth, tomatoes, green apple, dates, cilantro-lime dressing",
+                      1500
+                  ],
+                  [
+                      "Del Jardin",
+                      "Mixed greens, spinach, cabbage, tomatoes, carrot, black beans, avocado, roasted corn, cilantro-lime dressing",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "Sazón de Nuestras Raíces",
+              "items": [
+                  [
+                      "Enmoladas",
+                      "Two tortillas filled with braised chicken under their signature mole negro, queso fresco, rice, black beans",
+                      2100
+                  ],
+                  [
+                      "Enchiladas",
+                      "Two enchiladas with a choice of meat or grilled vegetables, red or green sauce, rice, black beans",
+                      2000
+                  ],
+                  [
+                      "Tasajo (Thin Cut Steak)",
+                      "Thin-cut grilled beef, onions, mushrooms, beans, rice, handmade tortillas",
+                      2100
+                  ],
+                  [
+                      "Carnitas",
+                      "Pork slow-cooked with oranges and spices, black beans, rice, handmade corn tortillas",
+                      2100
+                  ],
+                  [
+                      "Steak Ranchero (S)",
+                      "Tasajo in ranchero salsa with papas and serrano, rice, beans, handmade corn tortillas",
+                      2100
+                  ],
+                  [
+                      "Coloradito Chicken",
+                      "Grilled chicken in coloradito mole, pumpkin seeds, radish, white rice, black beans, handmade corn tortillas",
+                      1900
+                  ],
+                  [
+                      "Camarones con Mole",
+                      "Prawns in their signature mole negro, garbanzo, nopales, white rice, black beans, handmade corn tortillas",
+                      2800
+                  ]
+              ]
+          },
+          {
+              "name": "Vegetarian",
+              "items": [
+                  [
+                      "Verduras Bowl (V)",
+                      "Grilled seasonal vegetables, mole, white rice, black beans",
+                      2000
+                  ],
+                  [
+                      "Chile Relleno (V)",
+                      "Poblano filled with Monterey Jack, mole, avocado, queso fresco, rice, beans, handmade corn tortillas",
+                      2000
+                  ],
+                  [
+                      "Seasonal Wild Mushroom Tacos (V)",
+                      "Three tacos loaded with grilled mushrooms, mole, cabbage, queso fresco",
+                      1500
+                  ]
+              ]
+          }
+      ],
+      "address": "2135 Franklin St, Oakland, CA 94612",
+      "phone": "(510) 288-3668",
+      "email": "hola@agaveuptown.com",
+      "hours": "Mon–Thu 11am–9pm, Fri 11am–10pm, Sat 3–10pm, Sun 3–9pm",
+      "orderUrl": "https://order.toasttab.com/online/agave-uptown",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from the food menu on their own website; they take orders directly through their own online ordering, linked from it, and tables through OpenTable. They also cater and host parties."
+  },
+  {
+      "slug": "ocean-subs",
+      "name": "Ocean Subs",
+      "label": "Ocean Subs",
+      "cuisine": "Sandwich shop & deli",
+      "tagline": "A neighbourhood sub shop at 18 Ocean Ave in San Francisco's Excelsior, “Feeding the People, one sub at a time…”, with subs built to order and pickup ordering online.",
+      "color": "#ffffff",
+      "icon": "ocean-subs",
+      "prep": 0,
+      "category": "Sandwiches",
+      "items": [],
+      "contactOnly": "Their menu is on their Toast ordering page, which takes pickup orders only while they are open (their Instagram says Tuesday to Saturday) and showed no menu when this page was made, so nothing is listed here yet rather than prices copied from a delivery app.",
+      "address": "18 Ocean Ave, San Francisco, CA 94112",
+      "email": "oceansubssf@gmail.com",
+      "site": "https://order.toasttab.com/online/ocean-subs-18-ocean-avenue",
+      "orderUrl": "https://order.toasttab.com/online/ocean-subs-18-ocean-avenue",
+      "siteCta": "Order online for pickup",
+      "needsSite": true,
+      "siteNote": "Their only site is their Toast ordering page (pickup only); their Instagram says they are open Tuesday to Saturday.",
+      "clip": {
+          "src": "/clips/ocean-subs.mp4",
+          "poster": "/clips/ocean-subs-poster.webp",
+          "href": "https://www.instagram.com/reel/De5xBB8hH5T/",
+          "credit": "Filmed by @sherryeatworld",
+          "platform": "Instagram",
+          "by": "sherryeatworld"
+      }
+  },
+  {
+      "slug": "dimond-halal-eatery",
+      "name": "Dimond Halal Eatery",
+      "label": "Dimond Halal",
+      "cuisine": "Halal burgers, wings & steak hoagies",
+      "color": "#050405",
+      "icon": "dimond-halal-eatery",
+      "tagline": "A halal burger and wing shop on MacArthur Boulevard in Oakland's Dimond: smash burgers, wings, steak hoagies and more, with a pool table in the dining room.",
+      "prep": 0,
+      "category": "Burgers",
+      "items": [],
+      "address": "2129 MacArthur Blvd, Oakland, CA 94602",
+      "phone": "(510) 479-3237",
+      "hours": "Sun–Thu 10am–9pm, Fri–Sat 10am–10pm",
+      "needsSite": true,
+      "contactOnly": "A halal burger and wing shop on MacArthur Boulevard in Oakland: smash burgers, wings, steak hoagies and more. Their menu is posted only as pictures on their Instagram, with no menu or prices published online, so none are shown here. Call them or walk in.",
+      "siteCta": "Open their page",
+      "clip": {
+          "src": "/clips/dimond-halal-eatery.mp4",
+          "poster": "/clips/dimond-halal-eatery-poster.webp",
+          "href": "https://www.instagram.com/reel/DbrfgpuJGs-/",
+          "credit": "Filmed by @bayareamunchies510",
+          "platform": "Instagram",
+          "by": "bayareamunchies510"
+      }
+  },
+  {
+      "slug": "fast-times-burgers",
+      "name": "Fast Times Burgers",
+      "label": "Fast Times",
+      "cuisine": "Grass-fed smash burgers",
+      "color": "#ffffff",
+      "icon": "fast-times-burgers",
+      "site": "https://www.fasttimesburgers.com/",
+      "tagline": "100% grass-fed smash burgers on Martin's potato buns inside Prescott Market in West Oakland, with duck-fat fries, crispy chicken tenders and Straus organic milkshakes and soft serve. Born at the West Oakland Farmers Market in 2022; the Oakland Ballers' official smash burger.",
+      "prep": 0,
+      "category": "Burgers",
+      "items": [],
+      "sections": [
+          {
+              "name": "Combo Meals",
+              "items": [
+                  [
+                      "Classic Single Combo",
+                      "Grass-fed beef, American cheese, pickles, raw onions, ketchup and mustard on a Martin's potato bun. With duck-fat fries and a soda.",
+                      1550
+                  ],
+                  [
+                      "Classic Double Combo",
+                      "Two grass-fed patties, American cheese, pickles, raw onions, ketchup and mustard on a Martin's potato bun. With duck-fat fries and a soda.",
+                      1950
+                  ],
+                  [
+                      "Classic Triple Combo",
+                      "Three grass-fed patties, American cheese, pickles, raw onions, ketchup and mustard on a Martin's potato bun. With duck-fat fries and a soda.",
+                      2350
+                  ],
+                  [
+                      "Oklahoma Single Combo",
+                      "Grass-fed beef, American cheese, pickles, thin grilled onions and Smash Sauce on a Martin's potato bun. With duck-fat fries and a soda.",
+                      1550
+                  ],
+                  [
+                      "Oklahoma Double Combo",
+                      "Two grass-fed patties, American cheese, pickles, thin grilled onions and Smash Sauce on a Martin's potato bun. With duck-fat fries and a soda.",
+                      1950
+                  ],
+                  [
+                      "Oklahoma Triple Combo",
+                      "Three grass-fed patties, American cheese, pickles, thin grilled onions and Smash Sauce on a Martin's potato bun. With duck-fat fries and a soda.",
+                      2350
+                  ],
+                  [
+                      "All-American Single Combo",
+                      "Grass-fed beef, American cheese, pickles, raw onions, shredded lettuce, tomatoes and Smash Sauce on a Martin's potato bun. With duck-fat fries and a soda.",
+                      1650
+                  ],
+                  [
+                      "All-American Double Combo",
+                      "Two grass-fed patties, American cheese, pickles, raw onions, shredded lettuce, tomatoes and Smash Sauce on a Martin's potato bun. With duck-fat fries and a soda.",
+                      2050
+                  ],
+                  [
+                      "All-American Triple Combo",
+                      "Three grass-fed patties, American cheese, pickles, raw onions, shredded lettuce, tomatoes and Smash Sauce on a Martin's potato bun. With duck-fat fries and a soda.",
+                      2450
+                  ],
+                  [
+                      "Western Single Combo",
+                      "Grass-fed beef, Applewood bacon, onion rings, white American cheese, tomato, lettuce, pickles and BBQ sauce on a Martin's potato bun. With duck-fat fries and a soda.",
+                      1850
+                  ],
+                  [
+                      "Western Double Combo",
+                      "Two grass-fed patties, Applewood bacon, onion rings, white American cheese, tomato, lettuce, pickles and BBQ sauce on a Martin's potato bun. With duck-fat fries and a soda.",
+                      2250
+                  ],
+                  [
+                      "Western Triple Combo",
+                      "Three grass-fed patties, Applewood bacon, onion rings, white American cheese, tomato, lettuce, pickles and BBQ sauce on a Martin's potato bun. With duck-fat fries and a soda.",
+                      2650
+                  ],
+                  [
+                      "Vegetarian Combo - Single",
+                      "Jack & Annie's jackfruit patty, pickles, raw onions, lettuce, tomatoes and Smash Sauce on a Martin's potato bun. With duck-fat fries and a soda.",
+                      1650
+                  ],
+                  [
+                      "Vegetarian Combo - Double",
+                      "Two jackfruit patties: Jack & Annie's jackfruit patty, pickles, raw onions, lettuce, tomatoes and Smash Sauce on a Martin's potato bun. With duck-fat fries and a soda.",
+                      2050
+                  ],
+                  [
+                      "Vegetarian - Triple",
+                      "Three jackfruit patties: Jack & Annie's jackfruit patty, pickles, raw onions, lettuce, tomatoes and Smash Sauce on a Martin's potato bun. With duck-fat fries and a soda.",
+                      2450
+                  ],
+                  [
+                      "Classic Hot Dog Combo",
+                      "Casper's classic hot dog with fries and a soda",
+                      1350
+                  ],
+                  [
+                      "Gnarly Hot Dog Combo",
+                      "Mustard, Smash Sauce, grilled onions, aged cheddar and a pickle spear",
+                      950
+                  ],
+                  [
+                      "Chopped Cheese Combo",
+                      "Two chopped patties, American cheese, onions, lettuce, tomatoes, ketchup and mayo on a hoagie roll",
+                      1400
+                  ]
+              ]
+          },
+          {
+              "name": "Burgers",
+              "items": [
+                  [
+                      "All-American - Single",
+                      "100% grass-fed beef, American cheese, pickles, raw onions, shredded lettuce, tomatoes and Smash Sauce on a Martin's potato bun",
+                      1000
+                  ],
+                  [
+                      "All-American - Double",
+                      "100% grass-fed beef, American cheese, pickles, raw onions, shredded lettuce, tomatoes and Smash Sauce on a Martin's potato bun",
+                      1400
+                  ],
+                  [
+                      "All-American - Triple",
+                      "100% grass-fed beef, American cheese, pickles, raw onions, shredded lettuce, tomatoes and Smash Sauce on a Martin's potato bun",
+                      1800
+                  ],
+                  [
+                      "Classic - Single",
+                      "100% grass-fed beef, American cheese, pickles, raw onions, ketchup and mustard on a Martin's potato bun",
+                      900
+                  ],
+                  [
+                      "Classic - Double",
+                      "100% grass-fed beef, American cheese, pickles, raw onions, ketchup and mustard on a Martin's potato bun",
+                      1300
+                  ],
+                  [
+                      "Classic - Triple",
+                      "100% grass-fed beef, American cheese, pickles, raw onions, ketchup and mustard on a Martin's potato bun",
+                      1700
+                  ],
+                  [
+                      "Oklahoma - Single",
+                      "100% grass-fed beef, American cheese, pickles, thin grilled onions and Smash Sauce on a Martin's potato bun",
+                      900
+                  ],
+                  [
+                      "Oklahoma - Double",
+                      "100% grass-fed beef, American cheese, pickles, thin grilled onions and Smash Sauce on a Martin's potato bun",
+                      1300
+                  ],
+                  [
+                      "Oklahoma - Triple",
+                      "100% grass-fed beef, American cheese, pickles, thin grilled onions and Smash Sauce on a Martin's potato bun",
+                      1700
+                  ],
+                  [
+                      "Vegetarian - Single",
+                      "Jack & Annie's jackfruit patty, pickles, raw onions, lettuce, tomatoes and Smash Sauce on a Martin's potato bun",
+                      1100
+                  ],
+                  [
+                      "Vegetarian - Double",
+                      "Jack & Annie's jackfruit patty, pickles, raw onions, lettuce, tomatoes and Smash Sauce on a Martin's potato bun",
+                      1500
+                  ],
+                  [
+                      "Vegetarian - Triple",
+                      "Jack & Annie's jackfruit patty, pickles, raw onions, lettuce, tomatoes and Smash Sauce on a Martin's potato bun",
+                      1900
+                  ],
+                  [
+                      "Western Baller - Single",
+                      "100% grass-fed beef, Applewood bacon, onion rings, white American cheese, tomato, lettuce, pickles and BBQ sauce on a Martin's potato bun",
+                      1200
+                  ],
+                  [
+                      "Western Baller - Double",
+                      "100% grass-fed beef, Applewood bacon, onion rings, white American cheese, tomato, lettuce, pickles and BBQ sauce on a Martin's potato bun",
+                      1600
+                  ],
+                  [
+                      "Western Baller - Triple",
+                      "100% grass-fed beef, Applewood bacon, onion rings, white American cheese, tomato, lettuce, pickles and BBQ sauce on a Martin's potato bun",
+                      2000
+                  ],
+                  [
+                      "Chopped Cheese",
+                      "Two chopped patties, American cheese, onions, lettuce, tomatoes, ketchup and mayo on a hoagie roll",
+                      1400
+                  ]
+              ]
+          },
+          {
+              "name": "Hot Dogs",
+              "items": [
+                  [
+                      "Caspers Classic Hot Dog",
+                      "Ketchup, mustard, onion, tomato, pickle spear",
+                      750
+                  ],
+                  [
+                      "Caspers Gnarly Dog",
+                      "Mustard, Smash Sauce, grilled onions, aged cheddar and a pickle spear",
+                      950
+                  ]
+              ]
+          },
+          {
+              "name": "Chicken Tenders",
+              "items": [
+                  [
+                      "Chicken Tenders (3 pcs)",
+                      "Ranch-dipped, hand-breaded, fried crisp, cooked without seed oils",
+                      900
+                  ],
+                  [
+                      "Chicken Tenders (5 pcs)",
+                      "Ranch-dipped, hand-breaded, fried crisp, cooked without seed oils",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "KIDS Food",
+              "items": [
+                  [
+                      "KIDS Grilled Cheese",
+                      "Grilled American cheese on a toasted Martin's potato bun",
+                      600
+                  ],
+                  [
+                      "KIDS Grilled Cheese Combo",
+                      "Grilled cheese with fries and a drink",
+                      1000
+                  ],
+                  [
+                      "KIDS Rookie Combo",
+                      "Grass-fed beef and American cheese on a Martin's potato bun, with fries and a drink",
+                      1000
+                  ],
+                  [
+                      "KIDS Chicken Tenders (2 pcs) Combo",
+                      "Two tenders with fries and a drink",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "French Fries",
+                      "Shoestring fries flavoured with duck fat, sea salt",
+                      500
+                  ],
+                  [
+                      "Gnarly Fries",
+                      "Topped with grilled onions and 9-month-aged cheddar",
+                      700
+                  ],
+                  [
+                      "FrRings",
+                      "Fries and onion rings together",
+                      600
+                  ],
+                  [
+                      "Onion Rings",
+                      "Crispy and beer-battered",
+                      700
+                  ],
+                  [
+                      "Garlic Fries",
+                      "Sea salt, garlic butter and parsley",
+                      700
+                  ],
+                  [
+                      "Applewood Smoked Bacon",
+                      "",
+                      250
+                  ],
+                  [
+                      "Jalapenos",
+                      "",
+                      75
+                  ],
+                  [
+                      "Smash Sauce",
+                      "",
+                      75
+                  ],
+                  [
+                      "Homemade Herb Ranch",
+                      "",
+                      75
+                  ],
+                  [
+                      "Burger Patty",
+                      "",
+                      400
+                  ],
+                  [
+                      "BBQ Sauce",
+                      "",
+                      75
+                  ],
+                  [
+                      "Mayo",
+                      "",
+                      75
+                  ],
+                  [
+                      "Puppy Patty",
+                      "",
+                      400
+                  ],
+                  [
+                      "Honey Mustard",
+                      "",
+                      75
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Lev's Black Currant Kombucha",
+                      "",
+                      700
+                  ],
+                  [
+                      "Vanilla Float - Root Beer",
+                      "Straus organic vanilla soft serve",
+                      700
+                  ],
+                  [
+                      "Hangar 25 Cola",
+                      "Pure cane sugar cola made in small batches at the old Alameda Point Naval Base",
+                      350
+                  ],
+                  [
+                      "Old Fountain Cream Soda",
+                      "",
+                      350
+                  ],
+                  [
+                      "Cable Car Lemon Lime",
+                      "Meyer lemon flavour, real sugar",
+                      350
+                  ],
+                  [
+                      "Oaktown Root Beer",
+                      "Oakland's own craft root beer, cinnamon and vanilla",
+                      350
+                  ],
+                  [
+                      "Lemonade",
+                      "Meyer lemonade",
+                      350
+                  ],
+                  [
+                      "Soda Water",
+                      "Filtered carbonated water",
+                      350
+                  ],
+                  [
+                      "KIDS Organic Milk",
+                      "Straus organic milk",
+                      200
+                  ],
+                  [
+                      "Kids COLA",
+                      "",
+                      200
+                  ],
+                  [
+                      "Kids DIET COLA",
+                      "",
+                      200
+                  ],
+                  [
+                      "Kids CREAM SODA",
+                      "",
+                      200
+                  ],
+                  [
+                      "Kids LEMON LIME",
+                      "",
+                      200
+                  ],
+                  [
+                      "Kids LEMONADE",
+                      "",
+                      200
+                  ],
+                  [
+                      "Kids ROOT BEER",
+                      "",
+                      200
+                  ],
+                  [
+                      "Kids Vanilla Float - Root Beer",
+                      "",
+                      500
+                  ],
+                  [
+                      "Kids Vanilla Float - Cream Soda",
+                      "",
+                      500
+                  ]
+              ]
+          },
+          {
+              "name": "Soft Serve / Shakes",
+              "items": [
+                  [
+                      "OREO Shake - 16 oz",
+                      "Made with Straus organic soft serve",
+                      800
+                  ],
+                  [
+                      "Strawberry Shake - 16 oz",
+                      "Made with Straus organic soft serve",
+                      800
+                  ],
+                  [
+                      "Vanilla Shake - 16 oz",
+                      "Made with Straus organic soft serve",
+                      700
+                  ],
+                  [
+                      "Chocolate Shake - 16 oz",
+                      "Made with Straus organic soft serve",
+                      700
+                  ],
+                  [
+                      "Swirl Shake - 16 oz",
+                      "Made with Straus organic soft serve",
+                      700
+                  ],
+                  [
+                      "KIDS OREO Shake - 9 oz",
+                      "Made with Straus organic soft serve",
+                      600
+                  ],
+                  [
+                      "KIDS Strawberry Shake - 9 oz",
+                      "Made with Straus organic soft serve",
+                      600
+                  ],
+                  [
+                      "KIDS Vanilla - 9 oz",
+                      "Made with Straus organic soft serve",
+                      500
+                  ],
+                  [
+                      "KIDS Chocolate Shake - 9 oz",
+                      "Made with Straus organic soft serve",
+                      500
+                  ],
+                  [
+                      "KIDS Swirl Shake - 9 oz",
+                      "Made with Straus organic soft serve",
+                      500
+                  ],
+                  [
+                      "Soft Serve Cup - Vanilla",
+                      "Straus organic soft serve",
+                      600
+                  ],
+                  [
+                      "Soft Serve Cup - Chocolate",
+                      "Straus organic soft serve",
+                      600
+                  ],
+                  [
+                      "Soft Serve Cup - Swirl",
+                      "Straus organic soft serve",
+                      600
+                  ],
+                  [
+                      "KIDS Cup - Vanilla",
+                      "Straus organic soft serve",
+                      500
+                  ],
+                  [
+                      "KIDS Cup - Chocolate",
+                      "Straus organic soft serve",
+                      500
+                  ],
+                  [
+                      "KIDS Cup - Swirl",
+                      "Straus organic soft serve",
+                      500
+                  ],
+                  [
+                      "Soft Serve Cone - Vanilla",
+                      "Straus organic soft serve",
+                      600
+                  ],
+                  [
+                      "Soft Serve Cone - Chocolate",
+                      "Straus organic soft serve",
+                      600
+                  ],
+                  [
+                      "Soft Serve Cone - Swirl",
+                      "Straus organic soft serve",
+                      600
+                  ],
+                  [
+                      "KIDS Cone - Vanilla",
+                      "Straus organic soft serve",
+                      500
+                  ],
+                  [
+                      "KIDS Cone - Chocolate",
+                      "Straus organic soft serve",
+                      500
+                  ],
+                  [
+                      "KIDS Cone - Swirl",
+                      "Straus organic soft serve",
+                      500
+                  ]
+              ]
+          }
+      ],
+      "address": "Prescott Market, 1620 18th St, Ste F, Oakland, CA 94607",
+      "phone": "(510) 239-3004",
+      "email": "mendra@fasttimesburgers.com",
+      "hours": "Mon–Sat 11am–9pm, Sun 11am–8pm",
+      "orderUrl": "https://www.toasttab.com/local/order/fast-times-burgers/r-0175800a-faa9-4497-877f-1076f8fcc522",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from their own Toast online ordering, linked from their website, for pickup; their site's menu wall prints the same prices. Delivery is through Uber Eats. They are inside Prescott Market West Oakland.",
+      "clip": {
+        "src": "/clips/fast-times-burgers.mp4",
+        "poster": "/clips/fast-times-burgers-poster.webp",
+        "href": "https://www.instagram.com/reel/DbuI1kuxk1c/",
+        "credit": "Filmed by @bayareamunchies510",
+        "platform": "Instagram",
+        "by": "bayareamunchies510"
+      }
+  },
+  {
+      "slug": "lo-cocos",
+      "name": "Lo Coco's",
+      "label": "Lo Coco's",
+      "cuisine": "Handmade pasta & pizza",
+      "tagline": "Family-run Sicilian Italian on Piedmont Avenue: Giovanni Lo Coco's light, chewy pizza crust from 1966, two dozen numbered pizzas, handmade ravioli and tortelloni, and meatballs in their famous sugo.",
+      "color": "#000000",
+      "icon": "lo-cocos",
+      "prep": 0,
+      "category": "Italian",
+      "items": [],
+      "sections": [
+          {
+              "name": "Pizzas",
+              "items": [
+                  [
+                      "Alla Paesana (1)",
+                      "Plain cheese. Small $23, large $30",
+                      2300,
+                      null,
+                      "from $23"
+                  ],
+                  [
+                      "Napolitana (2)",
+                      "Fresh mushrooms. Small $25, large $32",
+                      2500,
+                      null,
+                      "from $25"
+                  ],
+                  [
+                      "Magic Mushrooms (2.5)",
+                      "White EVO base, two dollops of tomato sauce, premium white truffle oil, shaved Grana. Small $27, large $35",
+                      2700,
+                      null,
+                      "from $27"
+                  ],
+                  [
+                      "Siciliana (3)",
+                      "Sicilian Recca anchovies, green onions. Small $26, large $34",
+                      2600,
+                      null,
+                      "from $26"
+                  ],
+                  [
+                      "Piedmont Pizza (4)",
+                      "Meatball, green onions. Small $27, large $35",
+                      2700,
+                      null,
+                      "from $27"
+                  ],
+                  [
+                      "Basilico (5)",
+                      "White EVO base, basil, fior di latte mozzarella, red onion, shaved Grana. Small $27, large $35",
+                      2700,
+                      null,
+                      "from $27"
+                  ],
+                  [
+                      "Vegetarian (6)",
+                      "Sicilian artichoke hearts, mushrooms, green onions. Small $27, large $35",
+                      2700,
+                      null,
+                      "from $27"
+                  ],
+                  [
+                      "Sorrento (7)",
+                      "Tuscan salami, mushrooms, green onions. Small $27, large $35",
+                      2700,
+                      null,
+                      "from $27"
+                  ],
+                  [
+                      "Palermitana (8)",
+                      "Homemade sausage, mushrooms. Small $27, large $35",
+                      2700,
+                      null,
+                      "from $27"
+                  ],
+                  [
+                      "Vesuvio (9)",
+                      "Molinari pepperoni, green onions. Small $27, large $35",
+                      2700,
+                      null,
+                      "from $27"
+                  ],
+                  [
+                      "Marinara (10)",
+                      "Baby clams, parsley, oregano, lemon. Small $26, large $34",
+                      2600,
+                      null,
+                      "from $26"
+                  ],
+                  [
+                      "Combination (11)",
+                      "Mushrooms, Sicilian artichokes, Molinari pepperoni, Italian salami, green onions. Small $28, large $36",
+                      2800,
+                      null,
+                      "from $28"
+                  ],
+                  [
+                      "Lo Coco's Special (12)",
+                      "Sicilian Recca anchovies, Molinari pepperoni, green onions. Small $28, large $36",
+                      2800,
+                      null,
+                      "from $28"
+                  ],
+                  [
+                      "Jerry's Special (13)",
+                      "Housemade pesto. Small $26, large $34",
+                      2600,
+                      null,
+                      "from $26"
+                  ],
+                  [
+                      "Michelangelo (13.5)",
+                      "No. 13 plus mushrooms, Sicilian artichoke hearts, Kalamata olives, cherry tomatoes, basil, shaved Grana. Small $29, large $37",
+                      2900,
+                      null,
+                      "from $29"
+                  ],
+                  [
+                      "Gilberto's Special (14)",
+                      "All protein: homemade sausage, Molinari pepperoni, Italian salami. Small $28, large $36",
+                      2800,
+                      null,
+                      "from $28"
+                  ],
+                  [
+                      "Giovanni's Special (15)",
+                      "Sautéed eggplant, garlic, basil. Small $28, large $36",
+                      2800,
+                      null,
+                      "from $28"
+                  ],
+                  [
+                      "Maria & Suzanne's Special (16)",
+                      "Fresh sliced tomato, basil. Small $26, large $34",
+                      2600,
+                      null,
+                      "from $26"
+                  ],
+                  [
+                      "Porticello (18)",
+                      "Fresh red bell pepper, ricotta, green onions. Small $27, large $35",
+                      2700,
+                      null,
+                      "from $27"
+                  ],
+                  [
+                      "Paradiso (19)",
+                      "White EVO base, ricotta, mozzarella, cracked black pepper, shaved Grana. Small $26, large $34",
+                      2600,
+                      null,
+                      "from $26"
+                  ],
+                  [
+                      "Inferno (20)",
+                      "Premium chili EVO, ground dried chilies, Molinari pepperoni, garlic, red onions. Small $27, large $35",
+                      2700,
+                      null,
+                      "from $27"
+                  ],
+                  [
+                      "Alla Campagnola (21)",
+                      "White EVO base, ricotta, Kalamata olives, shaved Grana. Small $27, large $35",
+                      2700,
+                      null,
+                      "from $27"
+                  ],
+                  [
+                      "Tricolore (22)",
+                      "Their traditional Margherita: DOP San Marzano tomatoes, fior di latte mozzarella, basil, EVO. Small $26, large $34",
+                      2600,
+                      null,
+                      "from $26"
+                  ],
+                  [
+                      "Guido (22.5)",
+                      "No. 22 plus Parma prosciutto, fresh arugula, shaved Grana. Small $30, large $38",
+                      3000,
+                      null,
+                      "from $30"
+                  ],
+                  [
+                      "Pepperoni Pizza",
+                      "Their best pepperoni, never skimped on. Small $26, large $34",
+                      2600,
+                      null,
+                      "from $26"
+                  ],
+                  [
+                      "Weekly Special",
+                      "A rotating pizza designed by their staff, posted on their Instagram each Wednesday. Small $27, large $35",
+                      2700,
+                      null,
+                      "from $27"
+                  ]
+              ]
+          },
+          {
+              "name": "Pastas",
+              "items": [
+                  [
+                      "Fettuccine Alfredo",
+                      "Traditional Alfredo made to order with egg fettuccine",
+                      2200
+                  ],
+                  [
+                      "Fettuccine Campagnola",
+                      "Egg fettuccine in cream sauce with Parma prosciutto and green peas",
+                      2500
+                  ],
+                  [
+                      "Fettuccine Pesto",
+                      "Egg fettuccine with house-made pesto in a light cream sauce",
+                      2600
+                  ],
+                  [
+                      "Fettuccine Alaska",
+                      "Egg fettuccine in cream sauce with smoked salmon and cracked black pepper",
+                      2600
+                  ],
+                  [
+                      "Linguine with Clams",
+                      "The same Lo Coco's linguine for 40+ years: baby clams, white wine, garlic, lemon; or 'Prov' style with peperoncino and fresh tomatoes",
+                      2100,
+                      null,
+                      "from $21"
+                  ],
+                  [
+                      "Pappardelle Bolognese",
+                      "Egg pappardelle in Giovanni's traditional beef and pork sauce, a 4-5 hour ritual his son Francesco carries on",
+                      3200
+                  ],
+                  [
+                      "Pappardelle Porcini",
+                      "Egg pappardelle, light cream sauce, porcini from Umbria, cracked black pepper, white truffle EVO",
+                      3000
+                  ],
+                  [
+                      "Ravioli Pesto",
+                      "Homemade ricotta and pecorino ravioli in house-made pesto with a light cream sauce",
+                      2800
+                  ],
+                  [
+                      "Ravioli Sugo",
+                      "Homemade ricotta and pecorino ravioli in their famous sugo; regular, with meatballs or child's",
+                      1700,
+                      null,
+                      "from $17"
+                  ],
+                  [
+                      "Spaghetti Sugo",
+                      "Rummo durum wheat spaghetti in their famous sugo tomato sauce",
+                      1900
+                  ],
+                  [
+                      "Penne with Meatballs",
+                      "Rummo penne con sugo with two house-made 100% Angus beef meatballs",
+                      2700,
+                      null,
+                      "from $27"
+                  ],
+                  [
+                      "Tortelloni Panna",
+                      "Chicken and prosciutto tortelloni in their traditional panna cream sauce",
+                      2600
+                  ],
+                  [
+                      "Tortelloni Sugo",
+                      "Chicken and prosciutto tortelloni in their famous sugo",
+                      1800,
+                      null,
+                      "from $18"
+                  ],
+                  [
+                      "Tortelloni Gorgonzola",
+                      "Chicken and prosciutto tortelloni in gorgonzola sauce with cracked black pepper",
+                      2800
+                  ],
+                  [
+                      "Tortelloni Pesto",
+                      "Chicken and prosciutto tortelloni in house-made pesto with a light cream sauce",
+                      2800
+                  ],
+                  [
+                      "Spaghetti with Meatballs",
+                      "Rummo spaghetti con sugo with two house-made 100% Angus beef meatballs",
+                      2700,
+                      null,
+                      "from $27"
+                  ],
+                  [
+                      "Penne Sugo",
+                      "Rummo durum wheat penne in their famous sugo tomato sauce",
+                      1900
+                  ],
+                  [
+                      "Child's Penne",
+                      "With sugo, butter and cheese, olive oil, or meatballs",
+                      1000,
+                      null,
+                      "from $10"
+                  ],
+                  [
+                      "Child's Spaghetti",
+                      "With sugo, butter and cheese, olive oil, or meatballs",
+                      1000,
+                      null,
+                      "from $10"
+                  ],
+                  [
+                      "Penne Puttanesca",
+                      "Mom's dish: sautéed garlic, olives, capers, anchovies, peperoncino, San Marzano tomatoes",
+                      2400
+                  ],
+                  [
+                      "Penne Eggplant",
+                      "Made-to-order tomato sauce with sautéed garlic, eggplant, San Marzano tomatoes, basil",
+                      2400
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "Caprese",
+                      "Vine-ripe tomatoes, basil, fior di latte mozzarella, Kalamata olives",
+                      1700
+                  ],
+                  [
+                      "Chef's Salad",
+                      "Continental Vegetarian plus Molinari pepperoni and Italian salami",
+                      2000
+                  ],
+                  [
+                      "Continental Vegetarian",
+                      "Romaine, Roma tomatoes, mozzarella, mushrooms, Sicilian artichoke hearts, green onions, bell pepper, Sardinian pecorino",
+                      1800
+                  ],
+                  [
+                      "Green Salad",
+                      "Romaine, Roma tomatoes",
+                      1200
+                  ],
+                  [
+                      "Emancipata",
+                      "Romaine, Roma tomatoes, imported Danish blue cheese, toasted pecans, currants, Kalamata olives",
+                      2000
+                  ],
+                  [
+                      "Sportivo",
+                      "Arugula, Roma tomatoes, imported Danish blue cheese, pistachios, currants, Kalamata olives",
+                      1900
+                  ]
+              ]
+          },
+          {
+              "name": "Specials",
+              "items": [
+                  [
+                      "Eggplant Parmigiana",
+                      "Baked eggplant on crushed San Marzano tomatoes with basil, garlic, Grana and mozzarella",
+                      2500
+                  ],
+                  [
+                      "Cannelloni",
+                      "Two homemade crepes filled with ricotta, mozzarella, pecorino, scallions and a little pork, baked on San Marzano tomatoes",
+                      2500
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Prosciutto Burrata",
+                      "17-month Parma prosciutto, hand-tied burrata, organic arugula, shaved parm",
+                      2300
+                  ],
+                  [
+                      "Side of Meatballs",
+                      "Two homemade Lo Coco's meatballs in their famous sugo",
+                      1500
+                  ],
+                  [
+                      "Smoked Salmon",
+                      "A staple of every Lo Coco house party: EVO, herbs, black pepper, lemon",
+                      2600
+                  ]
+              ]
+          },
+          {
+              "name": "Catering",
+              "items": [
+                  [
+                      "6-Pack Meatballs",
+                      "Three sides of meatballs in one",
+                      3200
+                  ]
+              ]
+          },
+          {
+              "name": "Dessert",
+              "items": [
+                  [
+                      "Cannoli",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Gelato, Stracciatella",
+                      "Artisan gelato made by their friend Emilio in Berkeley",
+                      1300
+                  ],
+                  [
+                      "Gelato, Gianduia",
+                      "Artisan gelato made by their friend Emilio in Berkeley",
+                      1300
+                  ],
+                  [
+                      "Gelato, Espresso",
+                      "Artisan gelato made by their friend Emilio in Berkeley",
+                      1300
+                  ],
+                  [
+                      "Watermelon Sorbetto",
+                      "",
+                      1300
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Mole Cola",
+                      "The original Italian cola",
+                      600
+                  ],
+                  [
+                      "Mole Cola Zero Sugar",
+                      "",
+                      600
+                  ],
+                  [
+                      "Martinelli's Apple Juice",
+                      "",
+                      600
+                  ],
+                  [
+                      "Limonata",
+                      "Galvanina organic lemon soda",
+                      400
+                  ],
+                  [
+                      "Aranciata Rossa",
+                      "Galvanina organic blood orange soda",
+                      400
+                  ],
+                  [
+                      "Fiuggi Sparkling Water",
+                      "",
+                      600
+                  ]
+              ]
+          },
+          {
+              "name": "Bread",
+              "items": [
+                  [
+                      "Extra Bread",
+                      "Salads, appetizers and entrées already come with a piece; pizzas do not",
+                      400
+                  ]
+              ]
+          }
+      ],
+      "address": "4270 Piedmont Ave, Oakland, CA 94611",
+      "phone": "(510) 652-6222",
+      "email": "lococospmt@gmail.com",
+      "hours": "Wed–Sun 4:30pm–9:30pm; closed Mon–Tue",
+      "site": "https://www.lococospiedmont.com/",
+      "orderUrl": "https://www.lococospiedmont.com/s/order",
+      "siteCta": "Order online",
+      "siteNote": "Menu and prices are from the online ordering on their own website, which also sells Italian wines and imported pantry goods. Last seating and to-go orders at 9:15; no parties larger than six."
+  },
 ]
