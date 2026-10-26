@@ -11,3 +11,7 @@ Glenn's 2:21 pm send of 26 October, Simurgh Bakery & Cafe, read off the Mac's Me
 - `npm run build`; the data audit (0 errors).
 - Seat diff against the last release: 3 additions; nothing moved.
 - `tools/audit-batch69.mjs` (6 checks) passes on a local build.
+
+## Live
+
+Production release `2174abd`, live by 3:33 pm on 26 October 2026. `BASE=https://beastypages.com node tools/audit-batch69.mjs` passed all 6 checks against the live site.
