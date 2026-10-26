@@ -214,3 +214,5 @@ Leon asked Glenn the open questions; his answers (one message, revised by him a 
 The Careers page (MAKE $) now reads 10 points a month per member and per business, and cash-outs from 100 in steps of 50. `tools/audit-affiliate-terms.ts` passes 140 checks. Still to do with Glenn: the upgrade and cancel-membership buttons need live Stripe keys (Leon asked him for them); the DocuSeal draft's Schedule A is regenerated below.
 
 Live: `a5d0cbe` and `b0896ee` (the fee table says who pays each fee), on beastypages.com and beasty-crm.onrender.com by 4:42 pm. The new Schedule A (code 0LBTQXK) replaced the 9-point one in draft template 6566603 with DocuSeal's Replace; the page is longer now, so the Schedule A Changes field was moved under heading 6 and the Initials field onto its line, and the template was saved and checked after a reload. Still no submissions, nothing sent, not the live template.
+
+Later the same evening: Glenn made the upgrade monthly ($60 a month). Schedule A now reads "per month, paid by the Affiliate; earns no one points"; replaced again in draft 6566603 and saved (fields unmoved, code 0LBTQXK). Live: `95e1d51`.
