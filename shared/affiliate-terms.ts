@@ -27,6 +27,8 @@ export type CapScope = 'per_city' | 'overall'
 export type BonusRepeat = 'once' | 'each_time'
 export type PayoutFrequency = 'monthly' | 'quarterly' | 'on_request'
 export type PayoutMethod = 'direct_deposit' | 'check'
+/** Glenn, 2026-10-26: a referral is worth set points each month for a set number of months. The percentage is the older model, kept for one affiliate's own terms. */
+export type RewardKind = 'monthly_points' | 'percent'
 
 export interface Terms {
   initiationFee: number
@@ -38,6 +40,7 @@ export interface Terms {
   promoFreeMonths: number
   promoCap: number
   promoCapScope: CapScope
+  rewardKind: RewardKind
   commissionRate: number
   commissionBase: CommissionBase
   commissionDuration: CommissionDuration
@@ -45,9 +48,13 @@ export interface Terms {
   otherShareRate: number
   otherShareLabel: string
   pointsPerUser: number
+  userMonthsBiggie: number
+  userMonthsBeasty: number
   pointsPerBusiness: number
+  businessMonths: number
   pointValue: number
   minRedemption: number
+  redemptionStep: number
   promoDays: boolean
   promoDayMultiplier: number
   promoDaysWhen: string
@@ -59,6 +66,8 @@ export interface Terms {
   payoutDays: number
   payoutMethod: PayoutMethod
   clawback: string
+  recruiterFee: number
+  pauseCancel: string
   /** Only ever set for one affiliate, on their CRM page. */
   specialTerms: string
 }
@@ -78,32 +87,51 @@ export const DEFAULT_TERMS: Terms = {
   promoCode: 'FIRST48',
   promoPaidMonths: 3,
   promoFreeMonths: 9,
-  promoCap: 48,
+  /* Glenn, 2026-10-26: "Eats • Sweets • Goods • Services has now replaced the first 48. So technically
+     there are 96 spots for each city to fill before the yellow pages are filled." */
+  promoCap: 96,
   promoCapScope: 'per_city',
+  rewardKind: 'monthly_points',
   commissionRate: 10,
   commissionBase: 'after_foundation',
   commissionDuration: 'while_active',
   commissionMonths: 12,
   otherShareRate: 0,
   otherShareLabel: '',
-  pointsPerUser: 3,
-  /* Leon, 2026-10-23: 9, to match 10% of ($99 − $9). Glenn's 6 was 10% of ($69 − $9). */
-  pointsPerBusiness: 9,
+  /* Glenn, 2026-10-26: a user is "$20 or $30 & get credited in 2 or 3 month duration just like any
+     other user would … Since the membership fee is now 29 and 39": 10 points a month, for 2 months on
+     the $29 pass and 3 on the $39 one. A business: "$60 & get credited in a six month duration".
+     Until then it was 3 points a user and 9 a business (Leon, 23 Oct), from 10% of each payment. */
+  pointsPerUser: 10,
+  userMonthsBiggie: 2,
+  userMonthsBeasty: 3,
+  pointsPerBusiness: 10,
+  businessMonths: 6,
   pointValue: 1,
   minRedemption: 100,
+  /* Glenn, 2026-10-26: "cash out when they like but only $50 increments". */
+  redemptionStep: 50,
   promoDays: true,
   promoDayMultiplier: 3,
   promoDaysWhen: 'Slow days and holidays that BEASTY announces in the app at least 3 days ahead. Each promotion day says whether it is double (2x) or triple (3x).',
-  bonusThreshold: 300,
+  /* Glenn, 2026-10-26, of the 300-point saved bonus: "For now we can drop that, but we can have promotional
+     campaigns where they double or triple their points on different occasions" — the promotion days above. */
+  bonusThreshold: 0,
   bonusMultiplier: 2,
   bonusRepeat: 'once',
   qualifying:
     'A referred user counts when they make a new BEASTY account with the affiliate’s code and become active (like, save or share a business, order, use their pass, or bring a friend). A referred business counts when it pays its initiation fee after opening the affiliate’s business link. The first code or link wins; nobody earns for themselves.',
-  payoutFrequency: 'monthly',
+  /* Glenn, 2026-10-26: "request to cash out a payment once they reach $100 … save their commission for as long as they like". */
+  payoutFrequency: 'on_request',
   payoutDays: 15,
   payoutMethod: 'direct_deposit',
   clawback:
     'If a payment is refunded or charged back within 60 days, the points it earned are removed. If they were already paid out, they come off the next statement. A points balance never goes below zero because of this.',
+  /* Glenn, 2026-10-26: "We still have to discuss how much to upgrade to become a recruiter. $60? they
+     can cancel any time or pause their recruitment status." The figure is his question, not settled. */
+  recruiterFee: 60,
+  pauseCancel:
+    'The Affiliate may pause or cancel their recruiter status at any time from their Account page. While paused, new referrals are not credited; points already credited stay, and months still owed on earlier referrals keep being credited. On cancelling, no further points are credited and the Affiliate may cash out their balance under the terms above.',
   specialTerms: '',
 }
 
@@ -203,8 +231,13 @@ export interface Derived {
   /** Points the commission arithmetic implies, at the point value. */
   impliedPointsUser: number
   impliedPointsBusiness: number
+  /** Per month in the monthly-points model, once in the percentage one. */
   userReward: number
   businessReward: number
+  /** What one referral earns in all: user on each pass, and business. */
+  userTotalBiggie: number
+  userTotalBeasty: number
+  businessTotal: number
   minRedemptionValue: number
   usersToMinimum: number
   businessesToMinimum: number
@@ -238,6 +271,12 @@ export function derive(t: Terms): Derived {
   const promoYearPaid = cents(t.initiationFee + t.promoPaidMonths * t.monthlyFee)
   const paidCommissionMonths = t.commissionDuration === 'first_months' ? Math.min(t.promoPaidMonths, t.commissionMonths) : t.promoPaidMonths
   const bonusPoints = t.bonusThreshold * (t.bonusMultiplier - 1)
+  const monthly = t.rewardKind === 'monthly_points'
+  const userReward = cents(t.pointsPerUser * t.pointValue)
+  const businessReward = cents(t.pointsPerBusiness * t.pointValue)
+  const userTotalBiggie = monthly ? cents(userReward * t.userMonthsBiggie) : userReward
+  const userTotalBeasty = monthly ? cents(userReward * t.userMonthsBeasty) : userReward
+  const businessTotal = monthly ? cents(businessReward * t.businessMonths) : businessReward
   return {
     foundationOnMonthly,
     foundationOnInitiation,
@@ -253,17 +292,20 @@ export function derive(t: Terms): Derived {
     sharesOfNetInitiation: share(commissionInitiation + otherInitiation, netInitiation),
     impliedPointsUser: t.pointValue > 0 ? cents(commissionMonthly / t.pointValue) : 0,
     impliedPointsBusiness: t.pointValue > 0 ? cents(commissionInitiation / t.pointValue) : 0,
-    userReward: cents(t.pointsPerUser * t.pointValue),
-    businessReward: cents(t.pointsPerBusiness * t.pointValue),
+    userReward,
+    businessReward,
+    userTotalBiggie,
+    userTotalBeasty,
+    businessTotal,
     minRedemptionValue: cents(t.minRedemption * t.pointValue),
-    usersToMinimum: t.pointsPerUser > 0 ? Math.ceil(t.minRedemption / t.pointsPerUser) : Infinity,
-    businessesToMinimum: t.pointsPerBusiness > 0 ? Math.ceil(t.minRedemption / t.pointsPerBusiness) : Infinity,
+    usersToMinimum: userTotalBiggie > 0 ? Math.ceil((t.minRedemption * t.pointValue) / userTotalBiggie) : Infinity,
+    businessesToMinimum: businessTotal > 0 ? Math.ceil((t.minRedemption * t.pointValue) / businessTotal) : Infinity,
     promoYearPaid,
     promoSaving: cents(t.promoFreeMonths * t.monthlyFee),
     promoEffectiveMonthly: promoMonths > 0 ? cents(promoYearPaid / promoMonths) : 0,
     promoMonths,
     promoFoundation: cents(foundationOnInitiation + t.promoPaidMonths * foundationOnMonthly),
-    promoCommission: cents(commissionInitiation + paidCommissionMonths * commissionMonthly),
+    promoCommission: monthly ? cents(Math.min(t.promoPaidMonths, t.businessMonths) * businessReward) : cents(commissionInitiation + paidCommissionMonths * commissionMonthly),
     listYear: cents(t.initiationFee + 12 * t.monthlyFee),
     bonusPoints,
     bonusValue: cents(bonusPoints * t.pointValue),
@@ -312,6 +354,22 @@ export const FIELDS: TermField[] = [
     legal: (t) => `Each Member Business pays a membership fee of ${usd(t.monthlyFee)} per month.`,
     source: 'FIRST48 proposal, 29 Aug; Glenn’s BEASTY Tiers note, 3 Sep (Biggie’s Member, $39 per month).',
     settled: true,
+    perAffiliate: false,
+  },
+  {
+    id: 'recruiterFee',
+    chapter: 'prices',
+    prompt: 'What a member pays to upgrade to recruiter',
+    kind: 'money',
+    lane: 'tap',
+    why: 'precision',
+    min: 0,
+    max: 5000,
+    explain: 'The upgrade that lets a member earn BARK points as a recruiter. Glenn floated $60; whether it is once or monthly is still open. 0 means the upgrade is free.',
+    example: 'At $60, one referred business (10 points a month for 6 months) pays it back.',
+    legal: (t) => (t.recruiterFee > 0 ? `A member becomes an Affiliate by upgrading to recruiter status for ${usd(t.recruiterFee)}.` : 'Upgrading to recruiter status is free.'),
+    source: 'Glenn, 26 Oct: “We still have to discuss how much to upgrade to become a recruiter. $60?”',
+    settled: false,
     perAffiliate: false,
   },
   {
@@ -415,7 +473,7 @@ export const FIELDS: TermField[] = [
     max: 10000,
     explain: 'The offer closes after this many businesses.',
     legal: (t) => `The offer is limited to the first ${t.promoCap} businesses ${t.promoCapScope === 'per_city' ? 'in each city' : 'across all cities'}.`,
-    source: 'Glenn, 29 Aug: “the first 48 for each city”.',
+    source: 'Glenn, 26 Oct: “Eats • Sweets • Goods • Services has now replaced the first 48. So technically there are 96 spots for each city to fill before the yellow pages are filled.” It was 48 (29 Aug).',
     settled: true,
     perAffiliate: false,
   },
@@ -430,11 +488,29 @@ export const FIELDS: TermField[] = [
       { id: 'per_city', label: 'Per city' },
       { id: 'overall', label: 'Across all cities' },
     ],
-    explain: '“The first 48 for each city” is 48 times the number of cities.',
+    explain: 'Each city’s Eats, Sweets, Goods and Services pages: 96 spots per city before its yellow pages.',
     legal: () => '',
-    source: 'His words say per city; AFFILIATE-PRICING.md lists it as not settled.',
-    settled: false,
+    source: 'Glenn, 26 Oct: “96 spots for each city”.',
+    settled: true,
     perAffiliate: false,
+  },
+  {
+    id: 'rewardKind',
+    chapter: 'commission',
+    prompt: 'How is a referral paid?',
+    kind: 'choice',
+    lane: 'talk',
+    why: 'comprehension',
+    options: [
+      { id: 'monthly_points', label: 'Set points each month, for a set number of months' },
+      { id: 'percent', label: 'A percentage of each payment' },
+    ],
+    explain: 'Glenn’s model since 26 October: each referral is credited a set number of points a month for a set number of months, so an affiliate knows what one is worth. The percentage was the earlier model.',
+    example: 'A business: 10 points a month for 6 months = $60. A user: 10 points a month for 2 or 3 months = $20 or $30.',
+    legal: () => '',
+    source: 'Glenn, 26 Oct: “$60 & get credited in a six month duration” per business; “$20 or $30 & get credited in 2 or 3 month duration” per user.',
+    settled: true,
+    perAffiliate: true,
   },
   {
     id: 'commissionRate',
@@ -447,10 +523,11 @@ export const FIELDS: TermField[] = [
     max: 100,
     explain: 'The affiliate’s share of each eligible payment from someone they referred.',
     example: '10% of ($39 − $9) = $3.00 a month — the 3 BARK points.',
-    legal: (t) => `The Affiliate earns ${pctText(t.commissionRate)} of each eligible payment ${baseWords(t)}, ${durationWords(t)}.`,
-    source: 'Glenn, early Sep: “It was always initially 10%”.',
+    legal: (t) => (t.rewardKind === 'percent' ? `The Affiliate earns ${pctText(t.commissionRate)} of each eligible payment ${baseWords(t)}, ${durationWords(t)}.` : ''),
+    source: 'Glenn, early Sep: “It was always initially 10%”. Replaced by set monthly points on 26 Oct.',
     settled: true,
     perAffiliate: true,
+    shownWhen: (t) => t.rewardKind === 'percent',
     preview: (t) => {
       const d = derive(t)
       return `${pctText(t.commissionRate)} of ${usd(d.baseMonthly)} = ${usd(d.commissionMonthly)}/member/month · ${pctText(t.commissionRate)} of ${usd(d.baseInitiation)} = ${usd(d.commissionInitiation)} per initiation`
@@ -473,6 +550,7 @@ export const FIELDS: TermField[] = [
     source: 'Glenn’s arithmetic: 3 points is 10% of ($39 − $9); per business, 10% of ($99 − $9) = 9 points (Leon, 23 Oct; it was 6, from $69).',
     settled: true,
     perAffiliate: false,
+    shownWhen: (t) => t.rewardKind === 'percent',
     preview: (t) => {
       const d = derive(t)
       return `${pctText(t.commissionRate)} of ${usd(d.baseMonthly)} = ${usd(d.commissionMonthly)}/member/month`
@@ -495,6 +573,7 @@ export const FIELDS: TermField[] = [
     source: 'Not discussed in the thread.',
     settled: false,
     perAffiliate: true,
+    shownWhen: (t) => t.rewardKind === 'percent',
   },
   {
     id: 'commissionMonths',
@@ -510,7 +589,7 @@ export const FIELDS: TermField[] = [
     source: 'No figure in the thread.',
     settled: false,
     perAffiliate: true,
-    shownWhen: (t) => t.commissionDuration === 'first_months',
+    shownWhen: (t) => t.rewardKind === 'percent' && t.commissionDuration === 'first_months',
     preview: (t) => `Up to ${t.commissionMonths} × ${usd(derive(t).commissionMonthly)} = ${usd(t.commissionMonths * derive(t).commissionMonthly)} per business`,
   },
   {
@@ -556,15 +635,52 @@ export const FIELDS: TermField[] = [
     why: 'precision',
     min: 0,
     max: 1000,
-    explain: 'Credited when a referred user qualifies.',
-    legal: (t) => `${ptsText(t.pointsPerUser)} for each qualifying referred user`,
-    source: 'Leon, 23 Oct: 9, matching the $9.00 commission on a $99 initiation. Glenn’s BARK note of 2 Sep and the Careers page said 6.',
+    explain: 'In Glenn’s monthly model, credited each month the referred member pays, for the months below. Otherwise credited once, when a referred user qualifies.',
+    legal: (t) =>
+      t.rewardKind === 'monthly_points'
+        ? `The Affiliate is credited ${ptsText(t.pointsPerUser)} a month for each qualifying referred user while they pay: for ${t.userMonthsBiggie} months on a BIGGIE PASS (${usd(derive(t).userTotalBiggie)}) and ${t.userMonthsBeasty} months on a BEASTY PASS (${usd(derive(t).userTotalBeasty)}),`
+        : `${ptsText(t.pointsPerUser)} for each qualifying referred user`,
+    source: 'Glenn, 26 Oct: “$20 or $30 & get credited in 2 or 3 month duration … Since the membership fee is now 29 and 39”: 10 points a month. It was 3 points, once.',
     settled: true,
     perAffiliate: true,
     preview: (t) => {
       const d = derive(t)
-      return `${ptsText(t.pointsPerUser)} × ${usd(t.pointValue)} = ${usd(d.userReward)} · commission arithmetic gives ${usd(d.commissionMonthly)}`
+      return t.rewardKind === 'monthly_points'
+        ? `${ptsText(t.pointsPerUser)} × ${t.userMonthsBiggie} months = ${usd(d.userTotalBiggie)} (BIGGIE PASS) · × ${t.userMonthsBeasty} = ${usd(d.userTotalBeasty)} (BEASTY PASS)`
+        : `${ptsText(t.pointsPerUser)} × ${usd(t.pointValue)} = ${usd(d.userReward)} · commission arithmetic gives ${usd(d.commissionMonthly)}`
     },
+  },
+  {
+    id: 'userMonthsBiggie',
+    chapter: 'bark',
+    prompt: 'Months credited for a BIGGIE PASS member',
+    kind: 'count',
+    lane: 'tap',
+    why: 'precision',
+    min: 1,
+    max: 24,
+    explain: 'The $29 pass: Glenn’s $20, at 10 points a month.',
+    legal: () => '',
+    source: 'Glenn, 26 Oct: “$20 or $30 & get credited in 2 or 3 month duration”.',
+    settled: true,
+    perAffiliate: true,
+    shownWhen: (t) => t.rewardKind === 'monthly_points',
+  },
+  {
+    id: 'userMonthsBeasty',
+    chapter: 'bark',
+    prompt: 'Months credited for a BEASTY PASS member',
+    kind: 'count',
+    lane: 'tap',
+    why: 'precision',
+    min: 1,
+    max: 24,
+    explain: 'The $39 pass in Glenn’s note (the Members page still prints $59): his $30, at 10 points a month.',
+    legal: () => '',
+    source: 'Glenn, 26 Oct: “$20 or $30 & get credited in 2 or 3 month duration”.',
+    settled: true,
+    perAffiliate: true,
+    shownWhen: (t) => t.rewardKind === 'monthly_points',
   },
   {
     id: 'pointsPerBusiness',
@@ -575,15 +691,36 @@ export const FIELDS: TermField[] = [
     why: 'precision',
     min: 0,
     max: 1000,
-    explain: 'Credited when a referred business qualifies.',
-    legal: (t) => `and ${ptsText(t.pointsPerBusiness)} for each qualifying referred business.`,
-    source: 'Careers page (MAKE $) and the BARK note, 2 Sep.',
+    explain: 'In Glenn’s monthly model, credited each month the referred business pays, for the months below. Otherwise credited once, when a referred business qualifies.',
+    legal: (t) =>
+      t.rewardKind === 'monthly_points'
+        ? `and ${ptsText(t.pointsPerBusiness)} a month for each qualifying referred business for its first ${t.businessMonths} paid months (${usd(derive(t).businessTotal)}).`
+        : `and ${ptsText(t.pointsPerBusiness)} for each qualifying referred business.`,
+    source: 'Glenn, 26 Oct: “$60 & get credited in a six month duration”. It was 9 points, once (Leon, 23 Oct).',
     settled: true,
     perAffiliate: true,
     preview: (t) => {
       const d = derive(t)
-      return `${ptsText(t.pointsPerBusiness)} × ${usd(t.pointValue)} = ${usd(d.businessReward)} · commission arithmetic gives ${usd(d.commissionInitiation)}`
+      return t.rewardKind === 'monthly_points'
+        ? `${ptsText(t.pointsPerBusiness)} × ${t.businessMonths} months = ${usd(d.businessTotal)} per business`
+        : `${ptsText(t.pointsPerBusiness)} × ${usd(t.pointValue)} = ${usd(d.businessReward)} · commission arithmetic gives ${usd(d.commissionInitiation)}`
     },
+  },
+  {
+    id: 'businessMonths',
+    chapter: 'bark',
+    prompt: 'Months credited for a business',
+    kind: 'count',
+    lane: 'tap',
+    why: 'precision',
+    min: 1,
+    max: 60,
+    explain: 'Counted in months the business actually pays; free offer months do not count.',
+    legal: () => '',
+    source: 'Glenn, 26 Oct: “a six month duration”.',
+    settled: true,
+    perAffiliate: true,
+    shownWhen: (t) => t.rewardKind === 'monthly_points',
   },
   {
     id: 'pointValue',
@@ -610,14 +747,29 @@ export const FIELDS: TermField[] = [
     min: 100,
     max: 100000,
     explain: 'Below this, points wait. The published minimum is 100, and the form will not go lower.',
-    legal: (t) => `Points may be redeemed once the balance reaches ${ptsText(t.minRedemption)}.`,
-    source: 'Careers page: redeemable from 100.',
+    legal: (t) => `Points may be redeemed once the balance reaches ${ptsText(t.minRedemption)}, in steps of ${ptsText(t.redemptionStep)}. Points do not expire while the Affiliate is a member; they may be saved as long as the Affiliate likes.`,
+    source: 'Careers page: redeemable from 100. Glenn, 26 Oct: “once they reach $100 … save their commission for as long as they like … only $50 increments”.',
     settled: true,
     perAffiliate: true,
     preview: (t) => {
       const d = derive(t)
       return `${usd(d.minRedemptionValue)} — about ${d.usersToMinimum} users or ${d.businessesToMinimum} businesses`
     },
+  },
+  {
+    id: 'redemptionStep',
+    chapter: 'bark',
+    prompt: 'Cash-out steps',
+    kind: 'points',
+    lane: 'tap',
+    why: 'precision',
+    min: 1,
+    max: 10000,
+    explain: 'A cash-out is a multiple of this many points.',
+    legal: () => '',
+    source: 'Glenn, 26 Oct: “cash out when they like but only $50 increments”.',
+    settled: true,
+    perAffiliate: false,
   },
   {
     id: 'promoDays',
@@ -628,7 +780,7 @@ export const FIELDS: TermField[] = [
     why: 'gate',
     explain: 'Days when each referral earns a multiple of its usual points.',
     legal: (t) => (t.promoDays ? 'On promotion days announced by BEASTY, points earned are multiplied as announced, up to the maximum below.' : 'There are no promotion-day multipliers.'),
-    source: 'Settled in the thread, not yet on any page.',
+    source: 'Settled in the thread; Glenn again on 26 Oct, in place of the saved-points bonus.',
     settled: true,
     perAffiliate: false,
   },
@@ -678,7 +830,7 @@ export const FIELDS: TermField[] = [
     max: 100000,
     explain: 'An affiliate who saves this many points without redeeming gets the bonus. 0 turns the bonus off.',
     legal: (t) => (t.bonusThreshold > 0 ? `An Affiliate whose unredeemed balance reaches ${ptsText(t.bonusThreshold)}` : 'There is no saved-points bonus.'),
-    source: 'Glenn: “if they managed to save 300 points, we would double it”.',
+    source: 'Glenn, early Sep: “if they managed to save 300 points, we would double it”. Dropped 26 Oct: “For now we can drop that, but we can have promotional campaigns where they double or triple their points on different occasions”.',
     settled: true,
     perAffiliate: true,
   },
@@ -747,13 +899,13 @@ export const FIELDS: TermField[] = [
       { id: 'quarterly', label: 'Quarterly' },
       { id: 'on_request', label: 'When the affiliate asks' },
     ],
-    explain: 'Glenn pays affiliates himself from the signed packet, so this is how often he sits down to do it.',
+    explain: 'Glenn pays affiliates himself from the signed packet. Since 26 October an affiliate asks to cash out, any time from the minimum.',
     legal: (t) =>
       t.payoutFrequency === 'on_request'
         ? `Redeemed points are paid within ${t.payoutDays} days of the Affiliate’s request`
         : `Redeemed points are paid ${t.payoutFrequency}, within ${t.payoutDays} days after the end of each ${t.payoutFrequency === 'monthly' ? 'month' : 'quarter'}`,
-    source: 'Not said in the thread.',
-    settled: false,
+    source: 'Glenn, 26 Oct: “Users and/or affiliates can request to cash out a payment once they reach $100 in commissions”.',
+    settled: true,
     perAffiliate: true,
   },
   {
@@ -786,6 +938,20 @@ export const FIELDS: TermField[] = [
     legal: (t) => (t.payoutMethod === 'direct_deposit' ? 'by direct deposit to the account in the Affiliate’s signed authorization.' : 'by check to the address in the Affiliate’s signed forms.'),
     source: 'The packet (template 6402995) carries a direct-deposit page.',
     settled: true,
+    perAffiliate: false,
+  },
+  {
+    id: 'pauseCancel',
+    chapter: 'payout',
+    prompt: 'What happens when a recruiter pauses or cancels?',
+    kind: 'longtext',
+    lane: 'talk',
+    why: 'narrative',
+    explain: 'Glenn: they can cancel any time or pause their recruitment status. The clause says what happens to points already earned and to months still owed.',
+    example: '“Pause stops new referrals counting; what you already earned stays. Cancel, and you can still cash out what you have.”',
+    legal: (t) => t.pauseCancel,
+    source: 'Glenn, 26 Oct: “they can cancel any time or pause their recruitment status”. The wording is a draft.',
+    settled: false,
     perAffiliate: false,
   },
   {
@@ -895,8 +1061,8 @@ export const RULES: Rule[] = [
   {
     id: 'shares_over_net',
     severity: 'hard',
-    fields: ['commissionRate', 'otherShareRate', 'commissionBase', 'foundationAmount'],
-    when: (_t, d) => d.sharesOfNetMonthly > 100 + 1e-9 || d.sharesOfNetInitiation > 100 + 1e-9,
+    fields: ['commissionRate', 'otherShareRate', 'commissionBase', 'foundationAmount', 'rewardKind'],
+    when: (t, d) => t.rewardKind === 'percent' && d.sharesOfNetMonthly > 100 + 1e-9 || d.sharesOfNetInitiation > 100 + 1e-9,
     prompt: (t, d) =>
       `The shares add up to more than what is left after the foundation’s ${usd(t.foundationAmount)}: ${usd(d.commissionMonthly + d.otherMonthly)} of ${usd(d.netMonthly)} a month (${pctText(cents(d.sharesOfNetMonthly))}). BEASTY would pay out more than it keeps. Lower a rate.`,
   },
@@ -918,23 +1084,26 @@ export const RULES: Rule[] = [
   {
     id: 'business_points_over_net',
     severity: 'hard',
-    fields: ['pointsPerBusiness', 'pointValue', 'initiationFee'],
-    when: (_t, d) => d.businessReward > d.netInitiation && d.netInitiation >= 0,
-    prompt: (t, d) => `${ptsText(t.pointsPerBusiness)} per business is ${usd(d.businessReward)}, more than the ${usd(d.netInitiation)} of the initiation BEASTY keeps after the foundation.`,
+    fields: ['pointsPerBusiness', 'pointValue', 'initiationFee', 'rewardKind'],
+    when: (t, d) => (t.rewardKind === 'monthly_points' ? d.businessReward > d.netMonthly && d.netMonthly >= 0 : d.businessReward > d.netInitiation && d.netInitiation >= 0),
+    prompt: (t, d) =>
+      t.rewardKind === 'monthly_points'
+        ? `${ptsText(t.pointsPerBusiness)} a month per business is ${usd(d.businessReward)}, more than the ${usd(d.netMonthly)} a month BEASTY keeps after the foundation.`
+        : `${ptsText(t.pointsPerBusiness)} per business is ${usd(d.businessReward)}, more than the ${usd(d.netInitiation)} of the initiation BEASTY keeps after the foundation.`,
   },
   {
     id: 'user_points_vs_commission',
     severity: 'soft',
-    fields: ['pointsPerUser', 'commissionRate', 'commissionBase', 'pointValue'],
-    when: (_t, d) => !near(d.userReward, d.commissionMonthly),
+    fields: ['pointsPerUser', 'commissionRate', 'commissionBase', 'pointValue', 'rewardKind'],
+    when: (t, d) => t.rewardKind === 'percent' && !near(d.userReward, d.commissionMonthly),
     prompt: (t, d) =>
       `The commission arithmetic gives ${usd(d.commissionMonthly)} per user (${pctText(t.commissionRate)} of ${usd(d.baseMonthly)}), but ${ptsText(t.pointsPerUser)} pays ${usd(d.userReward)}. Glenn’s 3 points matched it exactly. Which is right?`,
   },
   {
     id: 'business_points_vs_commission',
     severity: 'soft',
-    fields: ['pointsPerBusiness', 'commissionRate', 'commissionBase', 'pointValue'],
-    when: (_t, d) => !near(d.businessReward, d.commissionInitiation),
+    fields: ['pointsPerBusiness', 'commissionRate', 'commissionBase', 'pointValue', 'rewardKind'],
+    when: (t, d) => t.rewardKind === 'percent' && !near(d.businessReward, d.commissionInitiation),
     prompt: (t, d) =>
       `The commission arithmetic gives ${usd(d.commissionInitiation)} per business (${pctText(t.commissionRate)} of ${usd(d.baseInitiation)}), but ${ptsText(t.pointsPerBusiness)} pays ${usd(d.businessReward)}. Which is right?`,
   },
@@ -944,7 +1113,7 @@ export const RULES: Rule[] = [
     fields: ['initiationFee'],
     when: (t) => t.initiationFee !== PUBLISHED_INITIATION,
     prompt: (t) =>
-      `The Members page prints a ${usd(PUBLISHED_INITIATION)} initiation for both paid tiers (Glenn’s note of 3 Sep), and this schedule uses ${usd(t.initiationFee)} — the FIRST48 figure. Glenn’s 6 points was worked out from $69. Is the commission on ${usd(t.initiationFee)}?`,
+      `The Members page prints a ${usd(PUBLISHED_INITIATION)} initiation for both paid tiers (Glenn’s note of 3 Sep), and this schedule uses ${usd(t.initiationFee)}. Which is right?`,
   },
   {
     id: 'promo_not_a_year',
@@ -952,6 +1121,13 @@ export const RULES: Rule[] = [
     fields: ['promoPaidMonths', 'promoFreeMonths'],
     when: (t) => t.promoPaidMonths + t.promoFreeMonths !== 12,
     prompt: (t, d) => `FIRST48 now covers ${d.promoMonths} months (${t.promoPaidMonths} paid + ${t.promoFreeMonths} free), not a year, so “${usd(d.promoEffectiveMonthly)} a month for the first year” no longer holds.`,
+  },
+  {
+    id: 'cashout_step_vs_minimum',
+    severity: 'soft',
+    fields: ['minRedemption', 'redemptionStep'],
+    when: (t) => t.redemptionStep > 0 && t.minRedemption % t.redemptionStep !== 0,
+    prompt: (t) => `Cash-outs are in steps of ${ptsText(t.redemptionStep)}, but the minimum is ${ptsText(t.minRedemption)}, which is not a whole number of steps.`,
   },
   {
     id: 'bonus_below_minimum',
@@ -1085,8 +1261,9 @@ export function schedule(t: Terms, overrides: Overrides = {}): ScheduleSection[]
           detail: t.foundationApplies === 'every_payment' ? 'from the initiation and every monthly payment' : 'from the initiation only',
         },
         { label: 'Left after the Foundation', value: `${usd(d.netMonthly)} / month`, detail: `${usd(d.netInitiation)} of the initiation` },
+        { label: 'Recruiter upgrade', value: t.recruiterFee > 0 ? usd(t.recruiterFee) : 'free' },
       ],
-      text: joinLegal(t, ['initiationFee', 'monthlyFee', 'foundationAmount', 'foundationApplies']),
+      text: joinLegal(t, ['initiationFee', 'monthlyFee', 'foundationAmount', 'foundationApplies', 'recruiterFee']),
     },
     {
       title: `${t.promoCode || 'Introductory'} offer`,
@@ -1099,7 +1276,17 @@ export function schedule(t: Terms, overrides: Overrides = {}): ScheduleSection[]
       ],
       text: joinLegal(t, ['promoCode', 'promoPaidMonths', 'promoFreeMonths', 'promoCap']),
     },
-    {
+    t.rewardKind === 'monthly_points'
+      ? {
+          title: 'What a referral earns',
+          rows: [
+            { label: 'Per referred business', value: mark('pointsPerBusiness', `${ptsText(t.pointsPerBusiness)} / month`), detail: mark('businessMonths', `${t.businessMonths} paid months = ${usd(d.businessTotal)}`) },
+            { label: 'Per BIGGIE PASS member', value: mark('pointsPerUser', `${ptsText(t.pointsPerUser)} / month`), detail: mark('userMonthsBiggie', `${t.userMonthsBiggie} months = ${usd(d.userTotalBiggie)}`) },
+            { label: 'Per BEASTY PASS member', value: mark('pointsPerUser', `${ptsText(t.pointsPerUser)} / month`), detail: mark('userMonthsBeasty', `${t.userMonthsBeasty} months = ${usd(d.userTotalBeasty)}`) },
+          ],
+          text: 'Points are credited for each month the referred member or business pays, for the months shown; nothing is credited for a month that is not paid.',
+        }
+      : {
       title: 'Commission',
       rows: [
         { label: 'Rate', value: mark('commissionRate', pctText(t.commissionRate)), detail: baseWords(t) },
@@ -1112,20 +1299,24 @@ export function schedule(t: Terms, overrides: Overrides = {}): ScheduleSection[]
         ...(t.otherShareRate > 0 ? [{ label: `Share to ${t.otherShareLabel || 'another partner'}`, value: pctText(t.otherShareRate), detail: `${usd(d.otherMonthly)} / month` }] : []),
       ],
       text: joinLegal(t, ['commissionRate', 'otherShareRate']),
-    },
+        },
     {
       title: 'BARK points',
       rows: [
-        { label: 'Per qualifying user', value: mark('pointsPerUser', ptsText(t.pointsPerUser)), detail: usd(d.userReward) },
-        { label: 'Per qualifying business', value: mark('pointsPerBusiness', ptsText(t.pointsPerBusiness)), detail: usd(d.businessReward) },
+        ...(t.rewardKind === 'percent'
+          ? [
+              { label: 'Per qualifying user', value: mark('pointsPerUser', ptsText(t.pointsPerUser)), detail: usd(d.userReward) },
+              { label: 'Per qualifying business', value: mark('pointsPerBusiness', ptsText(t.pointsPerBusiness)), detail: usd(d.businessReward) },
+            ]
+          : []),
         { label: 'Value of a point', value: usd(t.pointValue) },
-        { label: 'Redeemable from', value: mark('minRedemption', ptsText(t.minRedemption)), detail: usd(d.minRedemptionValue) },
+        { label: 'Redeemable from', value: mark('minRedemption', ptsText(t.minRedemption)), detail: `${usd(d.minRedemptionValue)}, in steps of ${ptsText(t.redemptionStep)}` },
         ...(t.promoDays ? [{ label: 'Promotion days', value: `up to ${t.promoDayMultiplier}x`, detail: 'as announced by BEASTY' }] : []),
         ...(t.bonusThreshold > 0
           ? [{ label: 'Saved-points bonus', value: mark('bonusThreshold', `at ${ptsText(t.bonusThreshold)}`), detail: `+${ptsText(d.bonusPoints)} (${usd(d.bonusValue)}), ${t.bonusRepeat === 'once' ? 'once' : 'each time'}` }]
           : []),
       ],
-      text: joinLegal(t, ['pointsPerUser', 'pointsPerBusiness', 'pointValue', 'minRedemption', 'promoDays', 'promoDayMultiplier', 'promoDaysWhen', 'bonusThreshold', 'bonusMultiplier', 'bonusRepeat']),
+      text: joinLegal(t, ['pointsPerUser', 'pointsPerBusiness', 'pointValue', 'minRedemption', 'redemptionStep', 'promoDays', 'promoDayMultiplier', 'promoDaysWhen', 'bonusThreshold', 'bonusMultiplier', 'bonusRepeat']),
     },
     {
       title: 'Qualifying referrals',
@@ -1138,7 +1329,7 @@ export function schedule(t: Terms, overrides: Overrides = {}): ScheduleSection[]
         { label: 'Paid', value: mark('payoutFrequency', t.payoutFrequency === 'on_request' ? 'on request' : t.payoutFrequency), detail: mark('payoutDays', `within ${t.payoutDays} days`) },
         { label: 'Method', value: t.payoutMethod === 'direct_deposit' ? 'direct deposit' : 'check' },
       ],
-      text: `${joinLegal(t, ['payoutFrequency', 'payoutMethod'])} ${t.clawback}`.trim(),
+      text: `${joinLegal(t, ['payoutFrequency', 'payoutMethod'])} ${t.pauseCancel} ${t.clawback}`.trim(),
     },
   ]
   if (t.specialTerms.trim()) sections.push({ title: 'Terms agreed with this Affiliate', rows: [], text: t.specialTerms })
@@ -1166,7 +1357,10 @@ export function agreementFields(t: Terms): Record<string, string> {
   return {
     'User reward': `${ptsText(t.pointsPerUser)} (${usd(d.userReward)})`,
     'Business reward': `${ptsText(t.pointsPerBusiness)} (${usd(d.businessReward)})`,
-    'Reward basis': `${pctText(t.commissionRate)} of each eligible payment ${baseWords(t)}, ${durationWords(t)}. ${usd(t.foundationAmount)} Foundation contribution first.`,
+    'Reward basis':
+      t.rewardKind === 'monthly_points'
+        ? `${ptsText(t.pointsPerBusiness)} a month per business for ${t.businessMonths} paid months; ${ptsText(t.pointsPerUser)} a month per member for ${t.userMonthsBiggie} (BIGGIE PASS) or ${t.userMonthsBeasty} (BEASTY PASS) months.`
+        : `${pctText(t.commissionRate)} of each eligible payment ${baseWords(t)}, ${durationWords(t)}. ${usd(t.foundationAmount)} Foundation contribution first.`,
     'Point value': `${usd(t.pointValue)} per point`,
     'Minimum payout': `${ptsText(t.minRedemption)} (${usd(d.minRedemptionValue)})`,
     'Payout schedule': joinLegal(t, ['payoutFrequency', 'payoutMethod']),
@@ -1204,20 +1398,25 @@ export function compactSchedule(t: Terms): CompactSchedule {
       { label: 'Initiation fee', detail: 'once', amount: usd(t.initiationFee) },
       { label: 'Membership fee', detail: 'per month', amount: usd(t.monthlyFee) },
       { label: 'Foundation contribution', detail: t.foundationApplies === 'every_payment' ? 'from each payment' : 'from the initiation', amount: usd(t.foundationAmount) },
+      ...(t.recruiterFee > 0 ? [{ label: 'Recruiter upgrade', detail: 'to earn BARK points', amount: usd(t.recruiterFee) }] : []),
       {
         label: `${t.promoCode} offer`,
         detail: `${t.promoPaidMonths} months paid, ${t.promoFreeMonths} free; first ${t.promoCap} ${t.promoCapScope === 'per_city' ? 'per city' : 'overall'}; total for ${promoSpan}`,
         amount: usd(d.promoYearPaid),
       },
     ],
-    commission:
+    commission: t.rewardKind === 'monthly_points'
+      ? `For each referred business the Affiliate is credited ${ptsText(t.pointsPerBusiness)} a month for its first ${t.businessMonths} paid months (${usd(d.businessTotal)}); for each referred member, ${ptsText(t.pointsPerUser)} a month for ${t.userMonthsBiggie} months on a BIGGIE PASS (${usd(d.userTotalBiggie)}) or ${t.userMonthsBeasty} on a BEASTY PASS (${usd(d.userTotalBeasty)}). Nothing is credited for a month that is not paid.`
+      :
       `The Affiliate earns ${pctText(t.commissionRate)} of ${t.commissionBase === 'after_foundation' ? 'what BEASTY keeps after the Foundation contribution' : 'each payment'}: ` +
       `${usd(d.commissionMonthly)} per member per month and ${usd(d.commissionInitiation)} per initiation, ${durationWords(t)}. ` +
       `No commission is earned on months a business does not pay for.` +
       (t.otherShareRate > 0 ? ` A further ${pctText(t.otherShareRate)} of the same amount is paid to ${t.otherShareLabel || 'another partner'}.` : ''),
-    bark: `${ptsText(t.pointsPerUser)} per qualifying referred user and ${ptsText(t.pointsPerBusiness)} per qualifying referred business. 1 point = ${usd(t.pointValue)}, redeemable from ${ptsText(t.minRedemption)}.`,
+    bark:
+      (t.rewardKind === 'percent' ? `${ptsText(t.pointsPerUser)} per qualifying referred user and ${ptsText(t.pointsPerBusiness)} per qualifying referred business. ` : '') +
+      `1 point = ${usd(t.pointValue)}. Cash out any time from ${ptsText(t.minRedemption)}, in steps of ${ptsText(t.redemptionStep)}; points may be saved as long as the Affiliate likes.`,
     barkFine: fine.filter(Boolean).join(' '),
-    payment: `${joinLegal(t, ['payoutFrequency', 'payoutMethod'])} ${t.clawback}`.trim(),
+    payment: `${joinLegal(t, ['payoutFrequency', 'payoutMethod'])} ${t.pauseCancel} ${t.clawback}`.trim(),
     qualifying: t.qualifying,
   }
 }
@@ -1226,6 +1425,10 @@ const SHORT: Partial<Record<TermId, string>> = {
   commissionRate: 'Commission',
   commissionDuration: 'Commission paid',
   commissionMonths: 'Commission months',
+  rewardKind: 'Paid as',
+  userMonthsBiggie: 'Months per BIGGIE PASS member',
+  userMonthsBeasty: 'Months per BEASTY PASS member',
+  businessMonths: 'Months per business',
   pointsPerUser: 'Points per user',
   pointsPerBusiness: 'Points per business',
   minRedemption: 'Redeemable from',
@@ -1239,6 +1442,8 @@ function shortValue(id: TermId, t: Terms): string {
   if (id === 'commissionRate') return pctText(t.commissionRate)
   if (id === 'commissionDuration') return durationWords(t)
   if (id === 'commissionMonths') return `${t.commissionMonths} paid months`
+  if (id === 'rewardKind') return t.rewardKind === 'monthly_points' ? 'points each month' : 'a percentage'
+  if (id === 'userMonthsBiggie' || id === 'userMonthsBeasty' || id === 'businessMonths') return `${v} months`
   if (id === 'pointsPerUser' || id === 'pointsPerBusiness' || id === 'minRedemption' || id === 'bonusThreshold') return ptsText(v as number)
   if (id === 'payoutDays') return `${t.payoutDays} days`
   if (id === 'payoutFrequency') return t.payoutFrequency === 'on_request' ? 'on request' : t.payoutFrequency

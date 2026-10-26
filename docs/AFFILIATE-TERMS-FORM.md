@@ -175,12 +175,13 @@ also offers their values ("Values for the review agreement's reward fields").
 
 ## Questions for Glenn, in order
 
-1. ~~Is the commission on a $69 or a $99 initiation?~~ **$99**, Leon, 23 Oct. That makes the commission on an initiation $9.00 (10% of $90), while Glenn's BARK note pays 6 points ($6.00) per business, worked out from $69: Leon settled it the same morning: **9 points per business**, so the defaults raise no question at all.
-2. Does the $9 come out of every payment, or only the activation?
-3. How long does an affiliate earn on one business?
-4. Payment: how often, and within how many days?
-5. Is the 300-point bonus paid once, or every time?
-6. Is the FIRST48 cap 48 per city, or 48 overall?
+1. ~~Is the commission on a $69 or a $99 initiation?~~ **$99**, Leon, 23 Oct.
+2. Does the $9 come out of every payment, or only the activation? (Not asked on 26 Oct; still open.)
+3. ~~How long does an affiliate earn on one business?~~ **Answered 26 Oct**: set points each month, below.
+4. ~~Payment: how often, and within how many days?~~ **On request**, from $100, in $50 steps (26 Oct). Within how many days of a request is still open (draft: 15).
+5. ~~Is the 300-point bonus paid once, or every time?~~ **Dropped** (26 Oct), for double- and triple-point promotion days.
+6. ~~Is the FIRST48 cap 48 per city, or 48 overall?~~ **96 per city** (26 Oct). Whether the code keeps the name FIRST48 is open.
+7. **New, from Glenn:** what does a member pay to upgrade to recruiter? He floated **$60**, and whether that is once or monthly is open. Recruiters can pause or cancel any time; the clause for what happens to points then is a draft.
 
 ## Running it
 
@@ -198,3 +199,16 @@ The one-page Schedule A in draft template 6566603 was replaced with the $99 vers
 
 Leon: "Make BARK 9 points per referred business, to match the $9.00 commission." The default is 9 (it was Glenn's 6, worked out from $69), the Careers page (MAKE $) says 9, and the defaults now raise no soft question. Schedule A was regenerated and replaced in draft template 6566603 the same way as the $99 change.
 Live: `df52c9c`, on beastypages.com by 9:42 am (the Careers page reads "9 points for each new active business referred"). The 9-point Schedule A (code 1YTTJSL) replaced the $99 one in draft template 6566603 and was saved; still no submissions, nothing sent.
+
+## 26 October 2026: Glenn's answers
+
+Leon asked Glenn the open questions; his answers (one message, revised by him a few minutes later) and follow-ups:
+
+- **A referral is set points each month.** A business: "$60 & get credited in a six month duration" = 10 points a month for its first 6 paid months. A member: "$20 or $30 & get credited in 2 or 3 month duration just like any other user would … Since the membership fee is now 29 and 39" = 10 points a month, 2 months on a BIGGIE PASS and 3 on a BEASTY PASS. The model's `rewardKind` is `monthly_points`; the percentage questions are kept, hidden, for one affiliate's own terms.
+- **Cash out on request** "once they reach $100 … save their commission for as long as they like … only $50 increments": `payoutFrequency` on request, `minRedemption` 100, new `redemptionStep` 50.
+- **The 300-point saved bonus is dropped** ("For now we can drop that, but we can have promotional campaigns where they double or triple their points"): `bonusThreshold` 0; promotion days stay.
+- **96 spots per city** ("Eats • Sweets • Goods • Services has now replaced the first 48"): `promoCap` 96, per city.
+- **Recruiter upgrade**, new and unsettled: `recruiterFee` 60 ("$60?") and a draft `pauseCancel` clause ("they can cancel any time or pause their recruitment status").
+- **BEASTY PASS is $39.99** (Leon: "change the $59"), see docs/MEMBERSHIP.md.
+
+The Careers page (MAKE $) now reads 10 points a month per member and per business, and cash-outs from 100 in steps of 50. `tools/audit-affiliate-terms.ts` passes 140 checks. Still to do with Glenn: the upgrade and cancel-membership buttons need live Stripe keys (Leon asked him for them); the DocuSeal draft's Schedule A is regenerated below.

@@ -398,20 +398,22 @@ export const PAGES: Record<PageKey, Page> = {
       {
         head: 'BARK points system',
         body: [
-          'Rewards may be redeemed once you accumulate at least 100 points. Eligible rewards may be paid in approved increments according to the program\u2019s current payout terms, and any remaining eligible points will be paid out when the program officially ends, subject to the program terms.',
+          'Rewards may be redeemed once you accumulate at least 100 points, in increments of 50 points, whenever you ask. Eligible rewards are paid according to the program\u2019s current payout terms, and any remaining eligible points will be paid out when the program officially ends, subject to the program terms.',
           'Eligible rewards may be paid by direct deposit or, where available and legally permitted, converted into XRP for digital payment.',
           'To participate in BARK, individuals must meet the program\u2019s eligibility requirements, become a BEASTY Member, and complete the required tax documentation.',
           'BARK is a limited promotional program and may be modified or discontinued in accordance with its official terms.',
           'By growing an ecosystem that connects small businesses with their customers and communities, BEASTY aims to create value for participating members while also supporting the mission of Biggie\u2019s Foundation.',
         ],
         facts: [
-          '3 points for each new active user referred',
-          /* 9 from 2026-10-23 (Leon), to match the $9.00 commission on a $99 initiation; it was 6. */
-          '9 points for each new active business referred',
+          /* Glenn, 2026-10-26: 10 points a month per referral, for 2 or 3 months per member
+             (BIGGIE or BEASTY PASS) and 6 per business; cash out from 100 in steps of 50.
+             It was 3 per user and 9 per business, once (shared/affiliate-terms.ts). */
+          '10 points a month for each new member you refer: 2 months on a BIGGIE PASS, 3 on a BEASTY PASS',
+          '10 points a month for each new business you refer, for its first 6 paid months ($60)',
           '1 point = $1',
           'No limit to the points you can earn',
           'Points are non-transferable',
-          'Redeemable from 100 points',
+          'Cash out from 100 points, in steps of 50; save them as long as you like',
         ],
       },
       {

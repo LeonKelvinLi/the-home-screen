@@ -20,6 +20,9 @@
  *   $39 - (9 / 3) x $10 = $9    exactly the number he wrote on the BIGGIE card
  *   $59 - (12 / 3) x $10 = $19  exactly the number he wrote on the BEASTY card
  *
+ * (Both prices have since moved: BIGGIE PASS to $29.99 on 23 October and BEASTY PASS to
+ * $39.99 on 26 October, so a full set of referrals now makes either month free.)
+ *
  * So `monthly` stays his real price and the discounted figure is DERIVED below
  * rather than typed, because two numbers that must agree and are entered twice
  * are two numbers that will disagree.
@@ -138,7 +141,10 @@ export const TIERS: Tier[] = [
     nameLead: 'BEASTY',
     nameTail: 'PASS',
     mark: 'gem',
-    monthly: 59,
+    /* $39.99 from 2026-10-26 (Glenn: "Since the membership fee is now 29 and 39"; Leon: "change
+       the $59"), as BIGGIE PASS went from his $29 to $29.99. It was his $59. The referral cap stays
+       $40, so a member who refers 12 pays nothing next month. */
+    monthly: 39.99,
     honours: 'both the Loyalty and Welcome offers',
     discountCap: 40,
     discountCapReferrals: 12,

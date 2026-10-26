@@ -14,7 +14,7 @@ out in two different currencies.
 | Discount arithmetic | **working** |
 | Email codes (OTP) | **live** — sent through Resend from the verified beastypages.com domain since 2026-08-29 |
 | Sign-in on a second device | **working** |
-| Taking $39 or $59 | **wired** — needs Stripe keys, see below |
+| Taking $29.99 or $39.99 | **wired** — needs Stripe keys, see below |
 | Reissuing a login code | **working** — the code step can send another, on a 30s cooldown |
 | The pass on the member card | **working** — a signed QR that rotates every minute and scans once; see below |
 | A member's page from Contacts | **working** — what they starred and liked, nothing private |
@@ -200,3 +200,7 @@ would pass a "is it locked" test and destroy the thing the app is for.
 ## 24 October 2026: BIGGIE PASS $29.99
 
 Leon: "change price to $29.99 for user instead of 39.99". `monthly` is 29.99; with the $30 referral cap, 9 referrals make the next month free (the derived price floors at $0 and the plan says FREE). See docs/BATCH-64.md.
+
+## 26 October 2026: BEASTY PASS $39.99
+
+Glenn: "Since the membership fee is now 29 and 39"; Leon: "change the $59". `monthly` is 39.99, as BIGGIE PASS went from his $29 to $29.99. With the $40 referral cap, 12 referrals make the next month free. The Stripe price in docs/STRIPE.md is still $59.00 and has to be recreated at $39.99 when the live links are made.

@@ -14,7 +14,7 @@ mode, so that activating the account is the only step left.
 | | |
 |---|---|
 | BIGGIE PASS | `prod_VAGrFU4rVSnJiJ` · `price_1U9wK4LnwdL8dIyO0CNFX24T` · $39.00/month |
-| BEASTY PASS | `prod_VAGrb6kicD6H5E` · `price_1U9wK5LnwdL8dIyOeC8H8tJJ` · $59.00/month |
+| BEASTY PASS | `prod_VAGrb6kicD6H5E` · `price_1U9wK5LnwdL8dIyOeC8H8tJJ` · $59.00/month — **recreate at $39.99** (26 Oct) |
 | Payment link, pass | `https://buy.stripe.com/test_cNiaEYbeSbuscvvcWe9Zm00` |
 | Payment link, diamond | `https://buy.stripe.com/test_3cIfZigzcbus0MNg8q9Zm01` |
 | Webhook | `we_1U9wKRLnwdL8dIyOYfDkXQm9` → `https://beastypages.com/api/stripe/webhook` |

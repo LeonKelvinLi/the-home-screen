@@ -81,7 +81,7 @@ const OFFER_PARTNER = WITH_OFFERS[0]?.name ?? ''
  * A perk: its point, always readable, and his full sentence one tap away.
  *
  * The two plans only mean something side by side — the whole difference
- * between $39 and $59 is in these lists — and four long sentences under each
+ * between $29.99 and $39.99 is in these lists — and four long sentences under each
  * price pushed the second plan off the bottom of the phone. Now every point on
  * both cards is on screen at once and you open the one you want explained.
  *
@@ -283,7 +283,7 @@ export function MembersApp({ api }: { api: ShellApi }) {
           what it costs, what it gets me, what it gets me back.
 
           The perks are per tier rather than one shared list, because the whole
-          difference between $39 and $59 lives in them.
+          difference between $29.99 and $39.99 lives in them.
         */}
         {/*
           MONTHLY / YEARLY — only once a tier carries a yearly price. Leon asked
