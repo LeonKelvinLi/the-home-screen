@@ -71,3 +71,7 @@ Nomads' hours were customer-support hours for an online shop (dropped); Bollywoo
 - `npx tsc`, `npm run build`, the data audit (0 errors; the new warnings are real 45–99¢ add-ons such as extra sauce).
 - Seat diff: no seat changed.
 - `tools/audit-online-fills.mjs` (308 checks): every filled page shows all its items, its price note and its hours, and a free page holds its menu back; `tools/audit-categories.mjs` passes.
+
+## Live
+
+Production release `7cb64e7`, pushed at about 6:00 pm on 25 October 2026, live by 6:07 pm. `BASE=https://beastypages.com node tools/audit-online-fills.mjs` passed all 308 checks against the live site.
