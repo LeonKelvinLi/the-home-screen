@@ -181,7 +181,7 @@ also offers their values ("Values for the review agreement's reward fields").
 4. ~~Payment: how often, and within how many days?~~ **On request**, from $100, in $50 steps (26 Oct). Within how many days of a request is still open (draft: 15).
 5. ~~Is the 300-point bonus paid once, or every time?~~ **Dropped** (26 Oct), for double- and triple-point promotion days.
 6. ~~Is the FIRST48 cap 48 per city, or 48 overall?~~ **96 per city** (26 Oct). Whether the code keeps the name FIRST48 is open.
-7. **New, from Glenn:** what does a member pay to upgrade to recruiter? He floated **$60**, and whether that is once or monthly is open. Recruiters can pause or cancel any time; the clause for what happens to points then is a draft.
+7. **New, from Glenn:** the recruiter upgrade. **$60 a month** ("the user would pay an additional $60 each month to become a recruiter … That $60 will weed out the real hustlers"). Leon raised that recruiters paying to recruit recruiters can read as a pyramid scheme in California; the draft says no one is ever credited points for a recruiter's upgrade. Not settled. Recruiters can pause or cancel any time; the clause for what happens to points then is a draft.
 
 ## Running it
 
