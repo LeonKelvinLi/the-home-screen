@@ -130,3 +130,5 @@ Breakfast/Diner was added on 22 October 2026 ("New category BEASTY • Breakfast
 Bar/Lounge became Bar/Lounge/Pub on 23 October 2026, Glenn's wording with Powder Keg Pub. The kind is still `bars`, so no seat id changed.
 
 FROYO was added on 23 October 2026 ("New category BEASTY • FROYO", with a reel of Yiaya in Palo Alto): frozen yogurt shops by type line, with a cup-and-swirl glyph and wallpaper. Catering was added on 24 October 2026 ("New Category BEASTY • Catering", with Inda & Mely in San Bruno): caterers and restaurants that cater, by type line; Chefs keeps private and personal chefs and also tests catering, so a caterer can be on both. Both are in More pages and Search.
+
+Steakhouse was added on 26 October 2026 ("New category / BEASTY • Steakhouse", with Bourbon Steak, Harris' and Blind Butcher in San Francisco): steakhouses and chophouses by type line, with a steak glyph and a wallpaper of grilled cuts. Existing steakhouses fill it automatically. It is in More pages and Search.

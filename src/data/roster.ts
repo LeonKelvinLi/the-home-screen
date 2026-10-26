@@ -191,7 +191,9 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'glyph-word', logoGlyph: 'burger', logoLines: ['SMASH'],
   }),
   seed('meadowlark-dairy', 'Meadowlark Dairy', 'Meadowlark', 'Drive-thru dairy', '#1F5FA6', {
-    icon: 'meadowlark-dairy',
+    /* Their own badge since 2026-10-26 (Glenn: "Please update icon"); a new file name so no
+       phone keeps the old tile from its cache, as with Harumi. */
+    icon: 'meadowlark-dairy-2',
     /* The badge carries their NAME, not the date. 1919 is real and on their own
        site, but a mark reading only "EST. 1919" states a fact about them while
        the page underneath says we are claiming nothing about them. */
@@ -199,6 +201,8 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://meadowlarkdairy.com/',
     phone: '(925) 846-2261',
     address: '57 W Neal St, Pleasanton',
+    /* Glenn, 2026-10-26: "Clip this video plz / For Pleasanton location". Two more films are in OTHER_REVIEWS. */
+    clip: {src: '/clips/meadowlark-dairy.mp4', poster: '/clips/meadowlark-dairy-poster.webp', href: 'https://www.instagram.com/reel/C8vSXSDPZGq/', credit: 'Filmed by @grubwitmike', platform: 'Instagram', by: 'grubwitmike'},
   }),
   seed('harumi-ayce', 'Harumi', 'Harumi', 'All-you-can-eat', '#8E1119', {
     /* His own 'x Biggie' sheet, quoted rather than paraphrased — the
@@ -3878,6 +3882,8 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://wagyumastershabu.com/project/wagyu-master-san-jose/',
     orderUrl: 'https://pos.chowbus.com/online-ordering/store/WAGYU-MASTER-SUKIYAKI-SAN-JOSE/23506',
     tier: 1,
+    /* Glenn, 2026-10-26: "Please add Wagyu Master to BEASTY • AYCE", with three reels; the first was their Arizona shop, so this San Jose one leads. */
+    clip: {src: '/clips/wagyu-master-san-jose.mp4', poster: '/clips/wagyu-master-san-jose-poster.webp', href: 'https://www.instagram.com/reel/Dd3_6PuPZ5b/', credit: 'Filmed by @areweeatingyet', platform: 'Instagram', by: 'areweeatingyet'},
   }),
   /* 2026-09-29 and 30: Glenn's links from Tuesday and Wednesday morning. */
   /* King Katsu Land, "Newark • Goods": "Clip this video and give their page the
@@ -4206,6 +4212,8 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.gldbeancafe.com/',
     siteCta: 'See their menu',
     tier: 1,
+    /* Glenn, 2026-10-26: "Clip this video plz / for Goldbean coffee"; both reels are the Durant Ave shop. */
+    clip: {src: '/clips/gold-bean-durant.mp4', poster: '/clips/gold-bean-durant-poster.webp', href: 'https://www.instagram.com/reel/De9ozyhB0gx/', credit: 'Filmed by @arianasade', platform: 'Instagram', by: 'arianasade'},
   }),
   seed('gold-bean-hearst', 'Gold Bean', 'Gold Bean', 'Coffee shop', '#111111', {
     icon: 'gold-bean',

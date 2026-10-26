@@ -1749,4 +1749,29 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-coffee-19': 'b_yumemori',
   'beasty-ayce-10': 'b_favoriteindianrestaurant',
 
+  /* Batch 68, Glenn, 26 October 5:12 am to 10:18 am. A city's open spot where one fits, else its
+     yellow sheet; More eats 74-77 for those sent to BEASTY • Eats. AYCE, Catering and the new
+     Steakhouse fill from type lines. West Coast Sips and Clean Sips are drink carts, not trucks, so
+     BEASTY • Food Trucks takes them by hand, as Glenn asked; Wagyu Master joins AYCE by hand. */
+  'fairfield-services2-1': 'b_westcoastsips',
+  'beasty-catering-8': 'b_westcoastsips', //      after LOL Catering (6) and Korean Papi's (7), so neither moves
+  'beasty-catering-9': 'b_cleansipsmocktails',
+  'beasty-cooks-12': 'b_westcoastsips', //        Chefs takes catering too; after LOL Catering (5)
+  'beasty-cooks-13': 'b_cleansipsmocktails',
+  'beasty-foodtrucks-13': 'b_westcoastsips',
+  'beasty-foodtrucks-14': 'b_cleansipsmocktails',
+  'beasty-ayce-12': 'b_wagyumastersanjose',
+  'livermore-goods2-4': 'b_meadowlarkdairylivermore',
+  'san-francisco-goods2-51': 'b_maggieandmacs',
+  'beasty-goods2-74': 'b_maggieandmacs',
+  'pleasanton-goods-2': 'b_chubbycattlebbqpleasanton',
+  'san-francisco-goods2-52': 'b_lamarcebicheria',
+  'beasty-goods2-75': 'b_lamarcebicheria',
+  'san-francisco-goods2-53': 'b_bourbonsteaksanfrancisco',
+  'beasty-goods2-76': 'b_bourbonsteaksanfrancisco',
+  'san-francisco-goods2-54': 'b_theeighthrule',
+  'beasty-goods2-77': 'b_theeighthrule',
+  'san-francisco-goods2-55': 'b_harrisrestaurant',
+  'san-francisco-goods2-56': 'b_blindbutcher',
+
 }

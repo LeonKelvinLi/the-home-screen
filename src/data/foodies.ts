@@ -136,6 +136,19 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'bp__eats', place: 'Don Julio’s Latin Grill', city: 'Rohnert Park', brand: 'b_donjulioslatingrill', reel: reel('Dd7i6jHzCBv'), clip: true },
   /* Batch 67: Glenn, 25 Oct 12:13 pm, "Clip this video plz (2nd video) / Foodie also". */
   { by: 'erinlovesfun', place: 'Yume Mori', city: 'Berkeley', brand: 'b_yumemori', reel: reel('DVgoxRdgbdp'), clip: true },
+  /* Batch 68, 26 October: second and third films for a page. */
+  { by: 'westcoastsips707', place: 'West Coast Sips', city: 'Fairfield', brand: 'b_westcoastsips', reel: reel('DaWytebp89X'), clip: true },
+  { by: 'eighty6ix_', place: 'Meadowlark Dairy Livermore', city: 'Livermore', brand: 'b_meadowlarkdairylivermore', reel: reel('De8Vue6v7mj'), clip: true },
+  { by: 'lovelivermore', place: 'Meadowlark Dairy Livermore', city: 'Livermore', brand: 'b_meadowlarkdairylivermore', reel: reel('DT356WhgcFT'), clip: true },
+  { by: 'bayarea.foodie.adventures', place: 'Chubby Cattle BBQ', city: 'Pleasanton', brand: 'b_chubbycattlebbqpleasanton', reel: reel('DesxHR2pcRs'), clip: true },
+  { by: 'celineeats', place: 'Bourbon Steak San Francisco', city: 'San Francisco', brand: 'b_bourbonsteaksanfrancisco', reel: reel('De8FsQPCn0O'), clip: true },
+  { by: 'explorewithtaka', place: 'Bourbon Steak San Francisco', city: 'San Francisco', brand: 'b_bourbonsteaksanfrancisco', reel: reel('DeaZOeNPwdn'), clip: true },
+  { by: 'yourglobalfoodiebff', place: 'Harris’ Restaurant', city: 'San Francisco', brand: 'b_harrisrestaurant', reel: reel('DSYs6AgD3Ks'), clip: true },
+  { by: 'thehautesheet', place: 'Blind Butcher', city: 'San Francisco', brand: 'b_blindbutcher', reel: reel('DdXobJ8JpiU'), clip: true },
+  { by: 'humminglion', place: 'Meadowlark Dairy', city: 'Pleasanton', brand: 'b_meadowlarkdairy', reel: reel('DO1dIS1gTTz'), clip: true },
+  { by: 'siliconvalley.foodies', place: 'Meadowlark Dairy', city: 'Pleasanton', brand: 'b_meadowlarkdairy', reel: reel('DNE34tbROif'), clip: true },
+  { by: 'wagyumastersukiyaki', place: 'Wagyu Master', city: 'San Jose', brand: 'b_wagyumastersanjose', reel: reel('DeVbmGxFHUx'), clip: true },
+  { by: '_whatarethechances_', place: 'Gold Bean', city: 'Berkeley', brand: 'b_goldbeandurant', reel: reel('Ddk28qRIsGZ'), clip: true },
 ]
 
 /*

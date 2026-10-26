@@ -42318,4 +42318,2632 @@ export const LOCAL_SEED: LocalSeed[] = [
           "by": "eatwithsie"
       }
   },
+  /* BATCH 68, 2026-10-26: Glenn's sends of 26 Oct 5:12 am to 10:18 am. Sources: research/roster/batch68.json. */
+  {
+      "slug": "west-coast-sips",
+      "name": "West Coast Sips",
+      "label": "W.C. Sips",
+      "cuisine": "Dirty sodas & mobile drink catering",
+      "tagline": "Fairfield's mobile beverage bar: dirty sodas, dirty energy drinks and a fall menu in 24 oz cups, delivered on weekends or poured on site at private parties and brand events around the Bay Area.",
+      "color": "#000000",
+      "icon": "west-coast-sips",
+      "prep": 0,
+      "category": "Drinks",
+      "items": [],
+      "sections": [
+          {
+              "name": "Fall Menu",
+              "items": [
+                  [
+                      "Pumpkin Coast",
+                      "Dr Pepper, pumpkin pie and vanilla syrups, pumpkin cold foam",
+                      600
+                  ],
+                  [
+                      "Autumn Crisp",
+                      "Sprite, apple and caramel syrups, caramel cold foam",
+                      600
+                  ],
+                  [
+                      "Golden Leaves",
+                      "Orange Fanta, vanilla and maple syrups, sweet cream",
+                      600
+                  ],
+                  [
+                      "Autumn Dew",
+                      "Mt Dew, green apple and caramel syrups, sweet cream",
+                      600
+                  ],
+                  [
+                      "Cozy Campfire",
+                      "Red Bull, cherry and toasted marshmallow syrups, sweet cream",
+                      700
+                  ],
+                  [
+                      "Caramel Apple",
+                      "Alani Witches' Brew, caramel and green apple syrups, sweet cream",
+                      700
+                  ]
+              ]
+          },
+          {
+              "name": "Dirty Sodas",
+              "items": [
+                  [
+                      "The Cali Classic",
+                      "Dr Pepper, cherry and vanilla syrups, sweet cream",
+                      600
+                  ],
+                  [
+                      "Pacific Breeze",
+                      "Sprite, blue raspberry and pineapple syrups, coconut cream",
+                      600
+                  ],
+                  [
+                      "The Golden State",
+                      "Mt Dew, passion fruit and mango syrups, sweet cream",
+                      600
+                  ],
+                  [
+                      "SoCal Sunset",
+                      "Orange Fanta, strawberry syrup, cotton candy cold foam",
+                      600
+                  ],
+                  [
+                      "NorCal Fog",
+                      "Root beer, vanilla and coconut syrups, sweet cream",
+                      600
+                  ]
+              ]
+          },
+          {
+              "name": "Dirty Energy Drinks",
+              "items": [
+                  [
+                      "Blue Wave Rush",
+                      "Breezeberry Alani Nu, blue raspberry syrup, sweet cream",
+                      700
+                  ],
+                  [
+                      "Beach, Please",
+                      "Orange Kiss Alani Nu, strawberry and peach syrups, strawberry cold foam",
+                      700
+                  ],
+                  [
+                      "The Boardwalk",
+                      "Cotton Candy Alani Nu, strawberry syrup, sweet cream",
+                      700
+                  ],
+                  [
+                      "Cali Dreamin'",
+                      "Watermelon Wave Alani Nu, strawberry and cherry syrups, sweet cream",
+                      700
+                  ],
+                  [
+                      "The Malibu",
+                      "Strawberry Sunrise Alani Nu, pineapple and coconut syrups, sweet cream",
+                      700
+                  ]
+              ]
+          },
+          {
+              "name": "Craft Your Own Drink",
+              "items": [
+                  [
+                      "Craft Your Own Drink",
+                      "Pick a soda or Alani Nu base, up to 2 syrups and a cream or cold foam; flat rate, 24 oz",
+                      800
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "Their menu card",
+              "photos": [
+                  {
+                      "src": "west-coast-sips-menu.webp",
+                      "alt": "West Coast Sips menu card: Dirty Sodas $6.00 (24oz), Dirty Energy Drinks $7.00 (24oz) and Craft Your Own Drink, flat rate $8.00 (24oz), under their Golden Gate sunset logo.",
+                      "caption": "From their Instagram Menu highlight, July 2026. The fall drinks are on their website."
+                  }
+              ],
+              "body": [
+                  "Allergen warning on their card: all sweet cream and cold foam toppings contain milk."
+              ]
+          }
+      ],
+      "email": "westcoastsips707@gmail.com",
+      "hours": "Delivery Sat–Sun and alternate Fridays, 8am–2pm; order ahead anytime",
+      "site": "https://westcoastsips.com/",
+      "orderUrl": "https://westcoastsips.com/order",
+      "siteNote": "The menu and delivery days are from their own website, which takes delivery orders to homes and businesses; drinks are 24 oz on their menu card. Private events, parties and brand events are booked through their Instagram or by email, from a $200 minimum (their GigSalad profile). They are mobile from Fairfield and publish no street address.",
+      "clip": {
+          "src": "/clips/west-coast-sips.mp4",
+          "poster": "/clips/west-coast-sips-poster.webp",
+          "href": "https://www.instagram.com/reel/Da_JqXJP0WW/",
+          "credit": "Posted by @westcoastsips707",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "meadowlark-dairy-livermore",
+      "name": "Meadowlark Dairy Livermore",
+      "label": "Meadowlark",
+      "cuisine": "Soft serve & dairy",
+      "tagline": "The 1919 Pleasanton dairy's second shop, a walk-up on Second Street in downtown Livermore with outdoor seating: soft-serve frostys made in-house, vanilla and chocolate always on with orange, strawberry and pineapple (all three vegan) and a flavor of the day, plus slushies, diablos and milk to take home.",
+      "color": "#FFFFFF",
+      "icon": "meadowlark-dairy-livermore",
+      "prep": 0,
+      "category": "Soft serve",
+      "items": [],
+      "address": "2287 Second Street, Livermore, CA 94550",
+      "phone": "(925) 846-8777",
+      "email": "orders@meadowlarkdairy.com",
+      "hours": "Daily 8am–9pm",
+      "instagram": "meadowlarkdairylivermore",
+      "site": "https://meadowlarkdairy.com/",
+      "siteCta": "Visit their site",
+      "siteNote": "Their site covers both shops; the Pleasanton original drive-thru is at 57 W. Neal Street. The flavor of the day is posted each morning on Instagram.",
+      "contactOnly": "Meadowlark publishes no prices for its soft serve. Vanilla and chocolate are always on, with orange, strawberry and pineapple (all vegan) and a rotating flavor of the day posted each morning on @meadowlarkdairylivermore. Call (925) 846-8777 or walk up at 2287 Second Street.",
+      "clip": {
+          "src": "/clips/meadowlark-dairy-livermore.mp4",
+          "poster": "/clips/meadowlark-dairy-livermore-poster.webp",
+          "href": "https://www.instagram.com/reel/DY4sErlvjJe/",
+          "credit": "Filmed by @truly_athi",
+          "platform": "Instagram",
+          "by": "truly_athi"
+      }
+  },
+  {
+      "slug": "maggie-and-macs",
+      "name": "Maggie & Mac's",
+      "label": "Maggie & Mac's",
+      "cuisine": "Neighborhood restaurant",
+      "tagline": "A family-friendly neighborhood restaurant on 9th Avenue in the Inner Sunset: smash burgers, French dips, pizzas, Mom's meatloaf and chicken pot pie, weekend brunch and a kids' menu.",
+      "color": "#254f32",
+      "icon": "maggie-and-macs",
+      "prep": 0,
+      "category": "American",
+      "items": [],
+      "sections": [
+          {
+              "name": "For the Table",
+              "items": [
+                  [
+                      "Sally's Onion Strings",
+                      "Served with arbol dipping sauce",
+                      1300
+                  ],
+                  [
+                      "Chicken Wings",
+                      "Signature blend of BBQ and buffalo sauce",
+                      1800
+                  ],
+                  [
+                      "Shishito Peppers",
+                      "Sesame oil, garlic lemon aioli",
+                      1500
+                  ],
+                  [
+                      "'Loaded' Mac & Cheese",
+                      "Elbow pasta, jalapeño, crispy bacon, green onion, panko",
+                      2000
+                  ],
+                  [
+                      "Poke Tostada",
+                      "Ahi, avocado, pickled onion, jalapeño, wasabi cream",
+                      2300
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "Goldielocks Caesar",
+                      "Lemon and anchovy dressing; add roasted chicken thigh $8",
+                      1800
+                  ],
+                  [
+                      "Tuna Tataki",
+                      "Sesame-crusted ahi, toasted edamame, crispy wontons, soy glaze",
+                      2500
+                  ],
+                  [
+                      "Italian Chop",
+                      "Hot coppa, salami, fresh mozz, artichoke hearts, green olive, fresno chile, croutons",
+                      2300
+                  ],
+                  [
+                      "Roasted Beet",
+                      "Red and gold beets, frisée, goat cheese, toasted pine nuts, orange-honey glaze",
+                      2000
+                  ]
+              ]
+          },
+          {
+              "name": "Pizzas",
+              "items": [
+                  [
+                      "The Hot One",
+                      "Spicy marinara, hot coppa, salami, pepperoni, pickled fresno, hot honey",
+                      2200
+                  ],
+                  [
+                      "Pig & Fig",
+                      "Gorgonzola, fresh mozz, prosciutto, marinated fig, arugula, balsamic glaze",
+                      2200
+                  ],
+                  [
+                      "Salad 'Za",
+                      "Pesto, artichoke hearts, green olive, arugula, olive oil",
+                      2100
+                  ],
+                  [
+                      "Margherita",
+                      "Fresh mozz, roma tomato, torn basil, olive oil",
+                      2100
+                  ],
+                  [
+                      "Surf & Turf",
+                      "Béchamel, oregano, fresh mozz, garlic shrimp, pancetta",
+                      2200
+                  ]
+              ]
+          },
+          {
+              "name": "Sandwiches",
+              "items": [
+                  [
+                      "The French Dip",
+                      "Sliced tri-tip, provolone, au jus, sourdough baguette",
+                      2200
+                  ],
+                  [
+                      "Caprese",
+                      "Fresh mozzarella, tomato, arugula, cilantro pesto, filone bun",
+                      1900
+                  ],
+                  [
+                      "M&M Smash Burger",
+                      "Chuck-brisket, grilled onions, American cheese, pickles, M&M sauce, potato bun",
+                      2100
+                  ]
+              ]
+          },
+          {
+              "name": "Our Family Staples",
+              "items": [
+                  [
+                      "French Onion",
+                      "48-hour reduction under a cheese blanket, topped with croutons",
+                      1800
+                  ],
+                  [
+                      "Steak Frites",
+                      "Hanger steak, crispy garlic fries, roasted asparagus, chimichurri",
+                      3200
+                  ],
+                  [
+                      "Fish Tacos",
+                      "Pacific rock snapper, pico de gallo, serrano-cilantro slaw, habanero salsa",
+                      2400
+                  ],
+                  [
+                      "Mom's Meatloaf",
+                      "Bacon-wrapped, garlic mashed potato, roasted asparagus, pan gravy",
+                      2600
+                  ],
+                  [
+                      "Chicken Pot Pie",
+                      "Roasted chicken, mirepoix, cream, puff pastry, side of house salad",
+                      2800
+                  ],
+                  [
+                      "Fettuccine Carbonara",
+                      "Pancetta, egg yolk, black pepper, parmesan, parsley crisps",
+                      2200
+                  ]
+              ]
+          },
+          {
+              "name": "Brunch",
+              "items": [
+                  [
+                      "Crab Cake Benedict",
+                      "Dungeness crab, avocado, poached egg, hollandaise, breakfast potatoes",
+                      2800
+                  ],
+                  [
+                      "French Toast",
+                      "Brioche, Grand Marnier orange marmalade, powdered sugar, maple syrup",
+                      2100
+                  ],
+                  [
+                      "Egg White Scramble",
+                      "Mushroom, asparagus, cherry tomato, romano, bell pepper, house salad",
+                      2200
+                  ],
+                  [
+                      "M&M Breakfast Sando",
+                      "Croissant, black forest ham, scrambled egg, swiss, mixed berries",
+                      2100
+                  ]
+              ]
+          },
+          {
+              "name": "Kid's Menu",
+              "items": [
+                  [
+                      "Grilled Cheese Burger",
+                      "American cheese, toasted sourdough",
+                      1200
+                  ],
+                  [
+                      "Maggie's Chicken Strips",
+                      "With ranch dressing",
+                      1100
+                  ],
+                  [
+                      "Lil' Pasta",
+                      "Classic cheese and butter",
+                      900
+                  ],
+                  [
+                      "Cheesin' Pizza",
+                      "Mozzarella and marinara, 8 slices",
+                      1300
+                  ],
+                  [
+                      "Mac's Mac & Cheese",
+                      "Elbow pasta, béchamel, toasted breadcrumbs",
+                      1100
+                  ],
+                  [
+                      "Mini Meatloaf",
+                      "Bacon-wrapped, garlic mashed potato, asparagus, mushroom gravy",
+                      1300
+                  ],
+                  [
+                      "Roasted Broccolini",
+                      "Butter, garlic, olive oil",
+                      900
+                  ]
+              ]
+          },
+          {
+              "name": "Desserts",
+              "items": [
+                  [
+                      "Key Lime Pie",
+                      "Toasted almond, cream, lime",
+                      1200
+                  ],
+                  [
+                      "Chocolate Torte",
+                      "Mixed berries, mint",
+                      1000
+                  ],
+                  [
+                      "Cornbread Cookies",
+                      "Cornmeal, honey, sugar, lime",
+                      1100
+                  ]
+              ]
+          },
+          {
+              "name": "Alcohol-Free Cocktails",
+              "items": [
+                  [
+                      "Pink Lady",
+                      "Apple juice, lemon, grenadine, egg white, maraschino cherry",
+                      1200
+                  ],
+                  [
+                      "Hellman's Helper",
+                      "Pineapple juice, lime, ginger beer, mint",
+                      1200
+                  ],
+                  [
+                      "Kick Back",
+                      "Lemon, coconut water, maple syrup, thyme",
+                      1200
+                  ]
+              ]
+          }
+      ],
+      "address": "1326 9th Avenue, San Francisco, CA 94122",
+      "email": "hello@maggieandmacs.com",
+      "hours": "Tue–Thu 12–9pm, Fri 12–9:30pm, Sat 11am–9:30pm, Sun 11am–9pm; closed Mon",
+      "site": "https://www.maggieandmacs.com/",
+      "siteNote": "Menu and prices are from their own website. Brunch is Saturday and Sunday, 11am–3pm; add bacon ($2) or avocado ($3) to a sandwich. No reservations, all tables are first come, first served; for a group of 15 or more, email hello@maggieandmacs.com. Hours are the kitchen's; the bar's last call is an hour after the kitchen closes.",
+      "siteCta": "Open their menu"
+  },
+  {
+      "slug": "chubby-cattle-bbq-pleasanton",
+      "name": "Chubby Cattle BBQ",
+      "label": "Chubby Cattle",
+      "cuisine": "AYCE Japanese wagyu BBQ",
+      "tagline": "Their first Bay Area shop: all-you-can-eat Japanese wagyu barbecue in Silver, Gold and Diamond tiers, with sushi and a self-serve station.",
+      "color": "#FFFFFF",
+      "icon": "chubby-cattle-bbq-pleasanton",
+      "prep": 0,
+      "category": "Japanese BBQ",
+      "items": [],
+      "sections": [
+          {
+              "name": "All-you-can-eat (per person)",
+              "items": [
+                  [
+                      "Silver Tier",
+                      "Member price $49.99. Unlimited full-blood thick-cut wagyu short rib, wagyu brisket, top blade, knuckle, steak and finger meat, miso wagyu chuck eye, M8-9 wagyu otoro, wagyu skirt steak, wagyu cubes, thin-sliced beef tongue, pork belly, Iberico pork and chicken cartilage, plus the items for all tiers.",
+                      5800
+                  ],
+                  [
+                      "Gold Tier",
+                      "Member price $65. Everything in Silver, plus one special meat per person (A5 Miyazaki wagyu short rib, A5 wagyu otoro thick cut, A5 Miyazaki ribeye, A5 finger meat or full-blood wagyu steak), one special dish (A5 wagyu foie gras nigiri or A5 wagyu uni caviar nigiri), unlimited A5 brisket, A5 knuckle, beef tongue platter, tender meats and lamb chop, and scallop.",
+                      7800
+                  ],
+                  [
+                      "Diamond Tier",
+                      "Member price $75. Everything in Gold and Silver, plus two special meats per person (the Gold choices and A5 striploin 2oz) and two special dishes.",
+                      8800
+                  ]
+              ]
+          },
+          {
+              "name": "To-go: Wagyu Rice Boxes",
+              "items": [
+                  [
+                      "Japanese Curry Wagyu Rice Bowl",
+                      "Wagyu over rice with Japanese curry sauce.",
+                      1499
+                  ],
+                  [
+                      "Wagyu Mapo Tofu Rice Bowl",
+                      "Wagyu over rice with a miso-style sauce.",
+                      1499
+                  ],
+                  [
+                      "Wagyu Juicy Slider",
+                      "Wagyu patty with fresh toppings and their sauce.",
+                      799
+                  ]
+              ]
+          },
+          {
+              "name": "To-go: Fried Bites & Appetizers",
+              "items": [
+                  [
+                      "Takoyaki",
+                      "Octopus balls with savory sauce and bonito.",
+                      999
+                  ],
+                  [
+                      "Japanese Karaage Chicken",
+                      "Japanese fried chicken.",
+                      899
+                  ],
+                  [
+                      "Orleans Crispy Chicken Cartilage",
+                      "Orleans-style spiced.",
+                      699
+                  ],
+                  [
+                      "Tempura Shrimp",
+                      "",
+                      999
+                  ],
+                  [
+                      "Truffle Fries",
+                      "",
+                      599
+                  ],
+                  [
+                      "Crispy Calamari",
+                      "",
+                      999
+                  ],
+                  [
+                      "Crispy Tofu Bites",
+                      "",
+                      799
+                  ]
+              ]
+          },
+          {
+              "name": "To-go: Sushi",
+              "items": [
+                  [
+                      "Salmon Sushi (2 pcs)",
+                      "",
+                      1099
+                  ],
+                  [
+                      "Yellowtail Sushi (2 pcs)",
+                      "",
+                      899
+                  ],
+                  [
+                      "Seared Wagyu Sushi (2 pcs)",
+                      "",
+                      999
+                  ],
+                  [
+                      "Classic Sushi Platter (8 pcs)",
+                      "Two each of salmon, yellowtail, tuna and seared wagyu.",
+                      2199
+                  ]
+              ]
+          },
+          {
+              "name": "To-go: Cold Dishes & Sides",
+              "items": [
+                  [
+                      "Seaweed & Kimchi Combo",
+                      "",
+                      899
+                  ],
+                  [
+                      "Seaweed, Kimchi & Spicy Clam Combo",
+                      "A three-item side combo.",
+                      799
+                  ],
+                  [
+                      "Japanese Octopus Salad",
+                      "",
+                      699
+                  ],
+                  [
+                      "Korean Seasoned Scallions",
+                      "",
+                      699
+                  ]
+              ]
+          },
+          {
+              "name": "To-go: Poke Bowls",
+              "items": [
+                  [
+                      "Fresh Salmon Poke Bowl",
+                      "Salmon with rice, greens and poke toppings.",
+                      2099
+                  ],
+                  [
+                      "Yellowtail Poke Bowl",
+                      "",
+                      2199
+                  ],
+                  [
+                      "Salmon & Yellowtail Combo Poke Bowl",
+                      "",
+                      2199
+                  ]
+              ]
+          },
+          {
+              "name": "To-go: Bento Boxes",
+              "items": [
+                  [
+                      "Japanese Onion Wagyu Bowl",
+                      "Wagyu with sweet onions.",
+                      1599
+                  ],
+                  [
+                      "Japanese Curry Wagyu & Onion Wagyu Bowl",
+                      "",
+                      1799
+                  ],
+                  [
+                      "Grilled Eel & Wagyu Combo Bowl",
+                      "Soy-glazed eel with onion wagyu.",
+                      2099
+                  ]
+              ]
+          },
+          {
+              "name": "To-go: Soup, Dessert & Drinks",
+              "items": [
+                  [
+                      "Creamy Tom Yum Soup",
+                      "Thai-style, with seafood.",
+                      1999
+                  ],
+                  [
+                      "Portuguese Egg Tart",
+                      "",
+                      699
+                  ],
+                  [
+                      "Pepsi",
+                      "",
+                      299
+                  ],
+                  [
+                      "Pepsi Zero",
+                      "",
+                      299
+                  ],
+                  [
+                      "Moshi Sparkling Yuzu",
+                      "355 ml can.",
+                      399
+                  ]
+              ]
+          }
+      ],
+      "address": "2693 Stoneridge Dr #106, Pleasanton, CA 94588",
+      "phone": "(925) 892-3356",
+      "hours": "Sun–Thu 11:30am–10pm; Fri–Sat 11:30am–11pm (kitchen last call 9:30pm / 10:30pm)",
+      "site": "https://www.chubbycattle.com/project/chubby-cattle-pleasanton/",
+      "orderUrl": "https://pos.chowbus.com/online-ordering/store/Chubby-Cattle-Pleasanton/22243",
+      "siteCta": "Open their page",
+      "siteNote": "Their first Bay Area shop, in the Pacific Pearl centre on Stoneridge Drive. All-you-can-eat prices are per person from the menu on their own site; the tiers share seafood, sushi, hot dishes and a self-serve station. 90-minute seating (last call at 70); 18% gratuity for 6 or more; under 100 cm eat free, 100–130 cm half price; seniors 65+ 20% off; leftovers add 20%. To-go prices are from their own Chowbus pickup page.",
+      "clip": {
+          "src": "/clips/chubby-cattle-bbq-pleasanton.mp4",
+          "poster": "/clips/chubby-cattle-bbq-pleasanton-poster.webp",
+          "href": "https://www.instagram.com/reel/DevfMX2isDa/",
+          "credit": "Filmed by @createwithcv",
+          "platform": "Instagram",
+          "by": "createwithcv"
+      }
+  },
+  {
+      "slug": "la-mar-cebicheria",
+      "name": "La Mar Cebichería",
+      "label": "La Mar",
+      "cuisine": "Peruvian cebichería",
+      "tagline": "Gastón Acurio's Peruvian cebichería on Pier 1½ of the Embarcadero, with Bay Bridge views: cebiches and tiraditos from their cebiche bar, causas, nigiri, anticuchos and lomo saltado, and seafood from a charcoal-fired oven.",
+      "color": "#13385d",
+      "icon": "la-mar-cebicheria",
+      "prep": 0,
+      "category": "Peruvian",
+      "items": [],
+      "sections": [
+          {
+              "name": "Cebiches",
+              "items": [
+                  [
+                      "Clásico",
+                      "Catch of the day, classic leche de tigre, choclo, habanero, sweet potato",
+                      3200
+                  ],
+                  [
+                      "Limeño",
+                      "Catch of the day, shrimp, calamari, octopus, rocoto leche de tigre, cancha",
+                      3100
+                  ],
+                  [
+                      "Victoriano",
+                      "Local halibut, sweet potato, sunchoke leche de tigre, choclo, artichoke chips",
+                      3200
+                  ],
+                  [
+                      "Nikkei",
+                      "Ahi tuna, cucumber, chili oil, rocoto, tamarind leche de tigre",
+                      3300
+                  ],
+                  [
+                      "Quemado",
+                      "Wild salmon, avocado, eggplant, leche de tigre, blue corn tortilla",
+                      3000
+                  ],
+                  [
+                      "Veggie",
+                      "Roasted seasonal roots, avocado, artichoke confit, artichoke chips",
+                      2600
+                  ],
+                  [
+                      "Leche de Tigre",
+                      "Chopped seafood, onion, choclo, cancha, rocoto leche de tigre, jumbo prawn",
+                      2400
+                  ]
+              ]
+          },
+          {
+              "name": "Featured",
+              "items": [
+                  [
+                      "Cebiche Tasting",
+                      "Their most popular cebiches: Quemado, Nikkei and Victoriano",
+                      6900
+                  ],
+                  [
+                      "Gran Bandeja Cebichera",
+                      "Cebiche Clásico, Causa California, nigiri, jumbo prawns, tiradito and octopus",
+                      13900
+                  ],
+                  [
+                      "Golden Osetra Caviar",
+                      "Tsar Nicolai, California, 1 oz",
+                      19900
+                  ]
+              ]
+          },
+          {
+              "name": "Tiraditos",
+              "items": [
+                  [
+                      "Criollo",
+                      "Kanpachi, ají amarillo sauce, chalaca, choclo",
+                      2800
+                  ],
+                  [
+                      "Laqueado",
+                      "Torched ahi tuna, passion fruit sauce, pickled vegetables, nikkei aioli",
+                      3100
+                  ],
+                  [
+                      "Curado",
+                      "Cured and torched salmon belly, cilantro-jalapeño sauce, yuca and quinoa chips",
+                      2900
+                  ],
+                  [
+                      "Olivo",
+                      "Spanish octopus, purple potato and camu camu sauce, avocado, black olive, octopus chicharrón",
+                      3600
+                  ],
+                  [
+                      "El Trio",
+                      "Their three most popular tiraditos: Olivo, Criollo and Curado",
+                      6900
+                  ]
+              ]
+          },
+          {
+              "name": "Causas",
+              "items": [
+                  [
+                      "California",
+                      "Dungeness crab, purple potato, avocado, quail egg, creamy ají amarillo",
+                      3600
+                  ],
+                  [
+                      "Vegana",
+                      "Asparagus, purple potato, onion escabeche, avocado, chimichurri, ají amarillo aioli",
+                      1800
+                  ],
+                  [
+                      "Limeña",
+                      "Chicken salad, Idaho potato, ají amarillo aioli",
+                      1900
+                  ]
+              ]
+          },
+          {
+              "name": "Nigiri",
+              "items": [
+                  [
+                      "Nigiri Saltado",
+                      "Akaushi wagyu skirt steak, quail egg, chalaca, lomo saltado gravy (2 pieces)",
+                      1900
+                  ],
+                  [
+                      "Nigiri Criollo",
+                      "Ahi tuna, ají amarillo sauce, chalaca (2 pieces)",
+                      1800
+                  ],
+                  [
+                      "Nigiri Chifa",
+                      "Kanpachi, pachikay sauce, pickled vegetables, fried garlic (2 pieces)",
+                      1800
+                  ],
+                  [
+                      "Nigiri Anticuchero",
+                      "Salmon belly, anticuchera sauce, jalapeño-cilantro sauce (2 pieces)",
+                      1800
+                  ],
+                  [
+                      "Nigiri Vegan",
+                      "Roasted tomato, basil cream, pine nuts, balsamic reduction (2 pieces)",
+                      1700
+                  ],
+                  [
+                      "Nigiri Tasting",
+                      "Two of each of their nigiri",
+                      5900
+                  ]
+              ]
+          },
+          {
+              "name": "Anticuchos & Piqueos",
+              "items": [
+                  [
+                      "Tacos La Mar, Crab",
+                      "Yellow corn tortilla, avocado, chalaca, radish, Peruvian sauce",
+                      3400
+                  ],
+                  [
+                      "Tacos La Mar, Tuna",
+                      "Yellow corn tortilla, avocado, chalaca, radish, Peruvian sauce",
+                      3100
+                  ],
+                  [
+                      "Croquetas Chifa",
+                      "Rock shrimp in squid ink tempura, pickled vegetables, tártara chifa sauce",
+                      3300
+                  ],
+                  [
+                      "Chicharrón de Calamares",
+                      "Crispy fried squid, fried yuca, chalaca, tartar sauce",
+                      2900
+                  ],
+                  [
+                      "Pulpo Anticuchero",
+                      "Grilled Spanish octopus, anticuchera sauce, oyster mushroom and fava bean kapchi",
+                      3800
+                  ],
+                  [
+                      "Anticuchos, Chicken",
+                      "Anticuchera sauce, potato, choclo, Peruvian sauces",
+                      1800
+                  ],
+                  [
+                      "Anticuchos, Beef Heart",
+                      "Anticuchera sauce, potato, choclo, Peruvian sauces",
+                      2400
+                  ],
+                  [
+                      "Conchas Pachikay",
+                      "Three grilled jumbo diver scallops, pachikay sauce",
+                      3900
+                  ],
+                  [
+                      "Empanada, Beef",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Empanada, Mushroom",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Empanada, Chicken",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Empanada, Corn",
+                      "",
+                      1700
+                  ],
+                  [
+                      "Empanada Sampler",
+                      "A tasting of four empanadas",
+                      3400
+                  ]
+              ]
+          },
+          {
+              "name": "Vegetarian",
+              "items": [
+                  [
+                      "Veggie Saltado",
+                      "Wok-fried portobello, tomato, red onion, cilantro, jalapeño, mushroom-soy sauce, fries and rice",
+                      3300
+                  ],
+                  [
+                      "Quinoa Caprese",
+                      "Peruvian red quinoa, ají amarillo dressing, burrata, heirloom tomatoes",
+                      2800
+                  ],
+                  [
+                      "Coliflor Entero",
+                      "Grilled whole cauliflower, eggplant purée, fried garlic, sweet pepper leche de tigre",
+                      2900
+                  ],
+                  [
+                      "Berenjena Criolla",
+                      "Fried eggplant, lima bean purée, mango and ají amarillo chutney, herb salad",
+                      3200
+                  ],
+                  [
+                      "Quinoa Chaufa",
+                      "Wok-fried quinoa, seasonal vegetables, nikkei aioli, fried egg, pickled vegetables",
+                      2900
+                  ]
+              ]
+          },
+          {
+              "name": "From the Hot Kitchen",
+              "items": [
+                  [
+                      "El Achupado",
+                      "Bucatini, scallops, octopus, shrimp, chupe sauce, Dungeness crab, huacatay sauce",
+                      5100
+                  ],
+                  [
+                      "Salmon Nikkei",
+                      "Grilled salmon, seasonal vegetables, mushrooms, ají panca and coconut milk",
+                      4300
+                  ],
+                  [
+                      "Arroz Norteño",
+                      "Wok-fried shrimp and rice with ají amarillo, chicha de jora, jumbo prawns, radish salad",
+                      4900
+                  ],
+                  [
+                      "Cod Criollo",
+                      "Baked local cod glazed with miso and ají panca, quinoa tamal, sautéed bok choy",
+                      5200
+                  ],
+                  [
+                      "Churrasco Marino",
+                      "Grilled Alaskan halibut, sweet pepper chimichurri, black rice",
+                      5100
+                  ],
+                  [
+                      "Chaufa Aeropuerto",
+                      "Fried rice, wagyu skirt steak, seasonal vegetables under a shrimp omelet",
+                      4200
+                  ],
+                  [
+                      "Lomo Saltado",
+                      "Wok stir-fried beef tenderloin, tomato, red onion, cilantro, jalapeño, fries and rice",
+                      4800
+                  ],
+                  [
+                      "Lomo Saltado, Fish",
+                      "The lomo saltado made with fish",
+                      4700
+                  ],
+                  [
+                      "Lomo Saltado, Chicken",
+                      "The lomo saltado made with chicken",
+                      3400
+                  ]
+              ]
+          },
+          {
+              "name": "Large Format",
+              "items": [
+                  [
+                      "Planchaza La Mar",
+                      "Prawns, octopus, squid, catch of the day, anticuchera sauce, potatoes, chimichurri",
+                      9900
+                  ],
+                  [
+                      "Arroz La Mar",
+                      "Arborio rice in beef tendon broth with ají and chicha de jora, wagyu culotte, scallops",
+                      14900
+                  ],
+                  [
+                      "Parrilla Anticuchera",
+                      "16 oz American wagyu flat iron, huancaína hash browns, greens, chimichurri",
+                      12900
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Fried Rice",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Arroz con Choclo",
+                      "",
+                      800
+                  ],
+                  [
+                      "Quinoa Chaufa (side)",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Plancha Veggie",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Yuca Frita",
+                      "",
+                      900
+                  ],
+                  [
+                      "Fried Potatoes",
+                      "",
+                      900
+                  ],
+                  [
+                      "Plantain Chips",
+                      "",
+                      1100
+                  ]
+              ]
+          },
+          {
+              "name": "Tasting Menu",
+              "items": [
+                  [
+                      "Experiencia La Mar",
+                      "A journey through Peru, per person: causa and caviar, cebiche, tiradito, nigiri, pulpo, halibut, lomito saltado, chocolate dessert",
+                      14500
+                  ]
+              ]
+          },
+          {
+              "name": "Desserts",
+              "items": [
+                  [
+                      "Tapioca Tropical",
+                      "Coconut tapioca, mango-mint chalaca, coconut chips, avocado ice cream, raspberry",
+                      1300
+                  ],
+                  [
+                      "Tres Leches de Coco",
+                      "Brown-butter sponge, Italian meringue, manjar blanco ice cream, candied coconut",
+                      1500
+                  ],
+                  [
+                      "Choco-Maracuyá",
+                      "Passion fruit cheesecake, chocolate mousse, berry coulis, almond crumble",
+                      1500
+                  ],
+                  [
+                      "Chocolate Cake",
+                      "Peruvian chocolate cake, dulce de leche, vanilla ice cream",
+                      1500
+                  ],
+                  [
+                      "Suspiro Loco",
+                      "Manjar de yemas foam, vanilla ice cream, almond crumble, strawberries, cotton candy",
+                      1500
+                  ],
+                  [
+                      "Seasonal Fruit Sorbet",
+                      "Exotic house-made fruit sorbets",
+                      1200
+                  ],
+                  [
+                      "Cacao y Lúcuma",
+                      "Chocolate mousse, lúcuma ice cream, caramelized grains",
+                      1600
+                  ]
+              ]
+          },
+          {
+              "name": "Zero Proof",
+              "items": [
+                  [
+                      "Inca Kola",
+                      "Lemon verbena soda",
+                      600
+                  ],
+                  [
+                      "Chicha Morada",
+                      "Purple corn, pineapple, cinnamon, clove",
+                      800
+                  ],
+                  [
+                      "Butterfly Pea",
+                      "Seedlip Garden, butterfly pea and ginger water, lime, agave, ginger beer, mint",
+                      1200
+                  ],
+                  [
+                      "Rainforest",
+                      "Camu camu, simple syrup",
+                      1200
+                  ],
+                  [
+                      "Metropolitan Spritz",
+                      "Cranberry, passion fruit, lime, soda",
+                      1000
+                  ],
+                  [
+                      "Guayaba Healing",
+                      "Guava nectar, lime, tonic, Tajín",
+                      1200
+                  ]
+              ]
+          },
+          {
+              "name": "Coffee & Tea",
+              "items": [
+                  [
+                      "Coffee",
+                      "",
+                      400
+                  ],
+                  [
+                      "Decaf Coffee",
+                      "",
+                      400
+                  ],
+                  [
+                      "Cappuccino",
+                      "",
+                      800
+                  ],
+                  [
+                      "Americano",
+                      "Single",
+                      600
+                  ],
+                  [
+                      "Macchiato",
+                      "Single",
+                      700
+                  ],
+                  [
+                      "Espresso",
+                      "Single",
+                      400
+                  ],
+                  [
+                      "Latte",
+                      "Single",
+                      600
+                  ],
+                  [
+                      "Ryokucha Green Tea",
+                      "Full-bodied Japanese green tea",
+                      800
+                  ],
+                  [
+                      "Turmeric Spice Herbal Tea",
+                      "With ginger and citrus",
+                      1000
+                  ],
+                  [
+                      "Blood Orange Pu'erh Tea",
+                      "Mellow and woodsy, with ginger",
+                      800
+                  ],
+                  [
+                      "California Persian Black Tea",
+                      "Black tea and rose petals",
+                      800
+                  ],
+                  [
+                      "Iron Goddess of Mercy Oolong",
+                      "Dark, rich and sweet",
+                      800
+                  ],
+                  [
+                      "Chamomile Blossom Herbal Tea",
+                      "Croatian chamomile buds",
+                      800
+                  ],
+                  [
+                      "Downy Sprout White Tea",
+                      "Sweet, nutty and vegetal",
+                      1000
+                  ],
+                  [
+                      "Moorish Mint Green Tea",
+                      "",
+                      800
+                  ]
+              ]
+          }
+      ],
+      "address": "Pier 1½, The Embarcadero, San Francisco, CA 94111",
+      "phone": "(415) 397-8880",
+      "hours": "Lunch daily 11:30am–2:30pm; dinner Sun–Thu 5–9pm, Fri–Sat 5–9:30pm; happy hour Mon–Fri 3–5pm",
+      "site": "https://lamarcebicheria.com/san-francisco/",
+      "siteNote": "Prices are from the dinner, dessert and drinks menus on their own website; the lunch and happy hour menus differ. Market-price whole fish and large-format catch are ordered at the table. Tables are booked through OpenTable from their site, and they host private events in their Cebiche Lounge, Waterfront Patio and Bar. They do not validate parking; it is a short walk from Embarcadero BART or the F line.",
+      "siteCta": "Open their site",
+      "clip": {
+          "src": "/clips/la-mar-cebicheria.mp4",
+          "poster": "/clips/la-mar-cebicheria-poster.webp",
+          "href": "https://www.instagram.com/reel/DbE2Qmzt9UF/",
+          "credit": "Filmed by @festusfeasts",
+          "platform": "Instagram",
+          "by": "festusfeasts"
+      }
+  },
+  {
+      "slug": "clean-sips-mocktails",
+      "name": "Clean Sips Mocktails",
+      "label": "Clean Sips",
+      "cuisine": "Mobile mocktail cart & event catering",
+      "tagline": "An alcohol-free mocktail cart from South San Jose, run by Asmaa and Hiba: house-made syrups and garnished mocktails poured at weddings, showers, iftars and parties across the Bay Area, plus canned Mini Sips and gallon Party Sips to go.",
+      "color": "#FAF6F0",
+      "icon": "clean-sips-mocktails",
+      "prep": 0,
+      "category": "Drinks",
+      "items": [],
+      "sections": [
+          {
+              "name": "Mini Sips: Specialty",
+              "items": [
+                  [
+                      "Aloha Breeze",
+                      "Canned mocktail",
+                      700
+                  ],
+                  [
+                      "Crisp Orchard",
+                      "Canned mocktail",
+                      700
+                  ],
+                  [
+                      "Lemon Blueberry",
+                      "Canned mocktail",
+                      700
+                  ],
+                  [
+                      "Lychee Rose",
+                      "Canned mocktail",
+                      700
+                  ],
+                  [
+                      "Mango Dragonfruit",
+                      "Canned mocktail",
+                      700
+                  ],
+                  [
+                      "Pineapple Paradise",
+                      "Canned mocktail",
+                      700
+                  ],
+                  [
+                      "Pomegranate Bliss",
+                      "Canned mocktail",
+                      700
+                  ],
+                  [
+                      "Strawberry Spark",
+                      "Canned mocktail",
+                      700
+                  ],
+                  [
+                      "Summer Orange Spritz",
+                      "Canned mocktail",
+                      700
+                  ],
+                  [
+                      "Watermelon Whirl",
+                      "Canned mocktail",
+                      700
+                  ]
+              ]
+          },
+          {
+              "name": "Mini Sips: Mojitos",
+              "items": [
+                  [
+                      "Lavender Mojito",
+                      "Canned alcohol-free mojito",
+                      700
+                  ],
+                  [
+                      "Mango Mojito",
+                      "Canned alcohol-free mojito",
+                      700
+                  ],
+                  [
+                      "Passion Fruit Mojito",
+                      "Canned alcohol-free mojito",
+                      700
+                  ],
+                  [
+                      "Peach Mojito",
+                      "Canned alcohol-free mojito",
+                      700
+                  ],
+                  [
+                      "Pomegranate Mojito",
+                      "Canned alcohol-free mojito",
+                      700
+                  ],
+                  [
+                      "Raspberry Mojito",
+                      "Canned alcohol-free mojito",
+                      700
+                  ],
+                  [
+                      "Rose Mojito",
+                      "Canned alcohol-free mojito",
+                      700
+                  ],
+                  [
+                      "Strawberry Mojito",
+                      "Canned alcohol-free mojito",
+                      700
+                  ]
+              ]
+          },
+          {
+              "name": "Party Sips",
+              "items": [
+                  [
+                      "Party Sips gallon bag",
+                      "Any flavour, ready to pour, with a dispenser, cups and toppers; up to 50 cups",
+                      12000
+                  ]
+              ]
+          }
+      ],
+      "phone": "(408) 673-1797",
+      "email": "hello@cleansipsmocktails.com",
+      "site": "https://cleansipsmocktails.com/",
+      "siteCta": "Get a quote",
+      "siteNote": "Their cart is full service and quoted on their website (50-guest minimum, 2 to 6 hours, a 50% deposit holds the date). Mini Sips cans have a 20-can minimum with at least 5 per flavour; cans and Party Sips are invoiced, for pickup in South San Jose or local delivery at extra charge. Everything they make is alcohol-free.",
+      "clip": {
+          "src": "/clips/clean-sips-mocktails.mp4",
+          "poster": "/clips/clean-sips-mocktails-poster.webp",
+          "href": "https://www.instagram.com/reel/DObjbUTAZoF/",
+          "credit": "Posted by @cleansipsmocktails",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "bourbon-steak-san-francisco",
+      "name": "Bourbon Steak San Francisco",
+      "label": "Bourbon Steak",
+      "cuisine": "Modern American steakhouse",
+      "tagline": "Chef Michael Mina's modern American steakhouse inside The Westin St. Francis on Union Square: prime and wagyu steaks, a salt-baked, bourbon-flamed wagyu tomahawk, Maine lobster pot pie, caviar, shellfish and sashimi, and the Bourbon Lounge's bone marrow burger.",
+      "color": "#06272E",
+      "icon": "bourbon-steak-san-francisco",
+      "prep": 0,
+      "category": "Steakhouse",
+      "items": [],
+      "sections": [
+          {
+              "name": "Shellfish",
+              "items": [
+                  [
+                      "Oysters on the Half Shell",
+                      "Champagne mignonette",
+                      2600
+                  ],
+                  [
+                      "Shrimp Cocktail",
+                      "Gin-spiked cocktail horseradish",
+                      3200
+                  ],
+                  [
+                      "Half Maine Lobster",
+                      "Espelette dijonnaise",
+                      4800
+                  ],
+                  [
+                      "Shellfish Cold Platter",
+                      "4 West Coast oysters, 4 Oishii shrimp cocktail, half Maine lobster, sashimi trio and PNW escabeche; serves 2–3",
+                      14500
+                  ],
+                  [
+                      "Michael Mina's Hot Shellfish “Fondue”",
+                      "Seasonal shellfish and crustaceans with roasted garlic butter and lemon, corn fondue for dipping; serves up to 2–3",
+                      22500
+                  ]
+              ]
+          },
+          {
+              "name": "Sashimi",
+              "items": [
+                  [
+                      "Ora King Salmon Sashimi",
+                      "With coconut-lime, yuzu-tamari and pomegranate-orange sauces",
+                      2100
+                  ],
+                  [
+                      "Ahi Tuna Sashimi",
+                      "With coconut-lime, yuzu-tamari and pomegranate-orange sauces",
+                      2300
+                  ],
+                  [
+                      "Diver Scallop Sashimi",
+                      "With coconut-lime, yuzu-tamari and pomegranate-orange sauces",
+                      2500
+                  ],
+                  [
+                      "Kona Kampachi Sashimi",
+                      "With coconut-lime, yuzu-tamari and pomegranate-orange sauces",
+                      2600
+                  ]
+              ]
+          },
+          {
+              "name": "Caviar",
+              "items": [
+                  [
+                      "Caviar Trio",
+                      "Parfait, “twinkee” and tuna toro",
+                      11500
+                  ],
+                  [
+                      "Caviar Parfait",
+                      "Smoked salmon, egg, crème fraîche, shallot potato cake",
+                      5500
+                  ],
+                  [
+                      "Caviar “Twinkee”",
+                      "Red onion, egg, chive, yuzu crème fraîche",
+                      5500
+                  ],
+                  [
+                      "Caviar & Tuna Toro",
+                      "Fresh wasabi, tamari, 23k gold",
+                      5500
+                  ],
+                  [
+                      "Caviar Service: White Sturgeon",
+                      "Traditional, with buttermilk chive pancake and garnishes",
+                      16500,
+                      null,
+                      "$165 per oz"
+                  ],
+                  [
+                      "Caviar Service: Imperial Osetra",
+                      "Traditional, with buttermilk chive pancake and garnishes",
+                      23500,
+                      null,
+                      "$235 per oz"
+                  ]
+              ]
+          },
+          {
+              "name": "Soups & Salads",
+              "items": [
+                  [
+                      "Black Truffle Bread",
+                      "Truffle butter, chives, Maldon sea salt",
+                      500
+                  ],
+                  [
+                      "Onion Soup Gratin",
+                      "Trio of cheeses, garlic baguette",
+                      1800
+                  ],
+                  [
+                      "Maine Lobster & Melons",
+                      "Cucumber, espelette, ginger aguachile",
+                      3000
+                  ],
+                  [
+                      "Petite Romaine Caesar",
+                      "Garlic streusel, vacche rosse parmesan, creamy caper dressing",
+                      2000
+                  ],
+                  [
+                      "The Wedge",
+                      "Nueske's bacon, egg, red onion, tomato, Point Reyes blue cheese, buttermilk ranch",
+                      2100
+                  ],
+                  [
+                      "Burrata & Farmers Market Tomatoes",
+                      "Basil-stuffed burrata, pita croutons, balsamic reduction",
+                      2700
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Michael Mina's Tuna Tartare",
+                      "Quail egg, pine nuts, mint, Asian pear, garlic, habanero-sesame oil",
+                      3100
+                  ],
+                  [
+                      "Bacon-Wrapped Scallops",
+                      "Cherries, marcona almond, madeira emulsion",
+                      3200
+                  ],
+                  [
+                      "Maryland Style Crab Cake",
+                      "Old Bay breadcrumbs, brown butter",
+                      3100
+                  ],
+                  [
+                      "Steak Tartare “Pizza”",
+                      "Sun-dried tomatoes, capers, parmesan, Calabrian chili, lemon oil",
+                      2900
+                  ],
+                  [
+                      "Morel Agnolotti",
+                      "Brentwood corn pudding, saba, summer truffle",
+                      3100
+                  ]
+              ]
+          },
+          {
+              "name": "Steaks & Chops",
+              "items": [
+                  [
+                      "8 oz Center Cut Filet Mignon",
+                      "Greater Omaha",
+                      7000
+                  ],
+                  [
+                      "14 oz New York Strip",
+                      "Brandt Farm prime",
+                      8400
+                  ],
+                  [
+                      "24 oz Bone-In Ribeye",
+                      "Brandt Farm prime",
+                      10700
+                  ],
+                  [
+                      "6 oz A5 Japanese Wagyu Rib Cap",
+                      "Sendai prefecture",
+                      17500
+                  ],
+                  [
+                      "10 oz Wagyu New York Strip",
+                      "Sakura Ranch, USA",
+                      11000
+                  ],
+                  [
+                      "16 oz Boneless Wagyu Ribeye",
+                      "Masami Cattle Ranch, USA",
+                      13900
+                  ]
+              ]
+          },
+          {
+              "name": "Bourbon Steak Signatures",
+              "items": [
+                  [
+                      "Maine Lobster Pot Pie",
+                      "Wild mushrooms, market vegetables, fingerling potatoes, black truffles, brandied lobster cream",
+                      12500
+                  ],
+                  [
+                      "40 oz Salt-Baked & Bourbon-Flamed Australian Wagyu Tomahawk",
+                      "Fondant potatoes, chimichurri",
+                      37500
+                  ]
+              ]
+          },
+          {
+              "name": "Market Fish",
+              "items": [
+                  [
+                      "Dover Sole",
+                      "Caviar butter sauce",
+                      9500
+                  ],
+                  [
+                      "Mediterranean Branzino",
+                      "Oregano-caper vinaigrette",
+                      4900
+                  ],
+                  [
+                      "Ora King Salmon",
+                      "Saffron-tomato vinaigrette",
+                      4400
+                  ],
+                  [
+                      "Kona Kampachi",
+                      "Ginger-garlic soy sauce",
+                      5200
+                  ]
+              ]
+          },
+          {
+              "name": "Entrées",
+              "items": [
+                  [
+                      "New Zealand Lumina Farms Lamb Chops",
+                      "Ratatouille cannelloni, charred eggplant purée",
+                      7500
+                  ],
+                  [
+                      "Red Wine Braised Wagyu Short Rib",
+                      "Heirloom carrots, English peas, pommes duchesse",
+                      6800
+                  ],
+                  [
+                      "Dungeness Crab Spaghetti",
+                      "Blistered cherry tomato, white wine, chili flakes",
+                      7500
+                  ],
+                  [
+                      "Mary's Free Range Brick Chicken",
+                      "Sweet and spicy peppers, fennel, crispy rosemary potatoes",
+                      4200
+                  ]
+              ]
+          },
+          {
+              "name": "Accompaniments",
+              "items": [
+                  [
+                      "Diver Scallops",
+                      "",
+                      2800
+                  ],
+                  [
+                      "Grilled Shrimp",
+                      "",
+                      2400
+                  ],
+                  [
+                      "Half Maine Lobster (add-on)",
+                      "",
+                      4800
+                  ],
+                  [
+                      "Béarnaise",
+                      "",
+                      500
+                  ],
+                  [
+                      "Chimichurri",
+                      "",
+                      400
+                  ],
+                  [
+                      "Horseradish Crust",
+                      "",
+                      600
+                  ],
+                  [
+                      "Bourbon Steak Sauce",
+                      "",
+                      500
+                  ],
+                  [
+                      "Black Truffle Butter",
+                      "",
+                      800
+                  ],
+                  [
+                      "Red Wine Demi",
+                      "",
+                      500
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Caviar Salt-Baked Potato",
+                      "House-churned butter, whipped buttermilk",
+                      16500
+                  ],
+                  [
+                      "Potatoes Trio",
+                      "Classic, lobster, horseradish",
+                      1700
+                  ],
+                  [
+                      "Champagne-Battered Onion Rings",
+                      "Srirancha",
+                      1600
+                  ],
+                  [
+                      "Black Truffle Macaroni Gratinée",
+                      "",
+                      2400
+                  ],
+                  [
+                      "Jalapeño Creamed Corn",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Stir-Fried Asparagus",
+                      "A nod to SF Chinatown",
+                      1600
+                  ],
+                  [
+                      "Creamed Spinach “Pop Tart”",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Baked Potato",
+                      "All the fixin's",
+                      1600
+                  ]
+              ]
+          },
+          {
+              "name": "Lounge",
+              "items": [
+                  [
+                      "The BBB",
+                      "Bourbon Steak bone marrow burger: sesame challah bun, Gentleman's Cut steak sauce, pickles, gruyère and cheddar, bone marrow flambéed tableside",
+                      3500
+                  ],
+                  [
+                      "Truffle Popcorn",
+                      "Truffle butter, chive, sea salt",
+                      900
+                  ],
+                  [
+                      "Duck Fat Fry Trio",
+                      "Paprika & bourbon BBQ, herb-garlic ketchup, double truffle",
+                      1200
+                  ],
+                  [
+                      "Champagne-Battered Onion Rings",
+                      "Sriracha dipping sauce",
+                      1600
+                  ],
+                  [
+                      "Ahi Tuna Cigars",
+                      "Sriracha aioli, scallions, yuzu ponzu",
+                      2200
+                  ],
+                  [
+                      "PNW Escabeche",
+                      "Celery, bell pepper, lime vinaigrette",
+                      1900
+                  ],
+                  [
+                      "Sesame Shrimp Toast",
+                      "Brioche, toasted sesame",
+                      2400
+                  ],
+                  [
+                      "House-Made Fried Chicken Bites",
+                      "Lemon pepper, ranch crème fraîche; add caviar $35 per person",
+                      2200
+                  ],
+                  [
+                      "Hand-Cut Steak Tartare “Pizza”",
+                      "Sun-dried tomatoes, capers, Calabrian chili",
+                      2900
+                  ],
+                  [
+                      "Fried Fishwich",
+                      "Dill tartar sauce, Kaluga caviar",
+                      3500
+                  ],
+                  [
+                      "Wagyu Skewer",
+                      "Caramelized onions, horseradish cream, pita bread",
+                      3100
+                  ]
+              ]
+          },
+          {
+              "name": "Dessert",
+              "items": [
+                  [
+                      "Warm Beignets & Dipping Custards",
+                      "Macallan 12 butterscotch pudding, crème brûlée with raspberries, milk chocolate pot de crème",
+                      2600
+                  ],
+                  [
+                      "Banana Tart Tatin",
+                      "Citrus caramel, Tahitian vanilla ice cream",
+                      1800
+                  ],
+                  [
+                      "Bruléed Basque Cheesecake",
+                      "Roasted strawberry, turbinado sugar crunch",
+                      1700
+                  ],
+                  [
+                      "Michael's Root Beer Float",
+                      "Sassafras ice cream, root beer sorbet, walnut chip cookies, 24k gold",
+                      1600
+                  ],
+                  [
+                      "Black Forest Chocolate Tart",
+                      "Preserved cherries, vanilla bean whip",
+                      1700
+                  ],
+                  [
+                      "Creamsicle Shaved Ice",
+                      "Coconut cream, mango ice, lychee, persimmon, citrus lace",
+                      1500
+                  ]
+              ]
+          }
+      ],
+      "address": "335 Powell St, San Francisco, CA 94102",
+      "phone": "(415) 770-0291",
+      "hours": "Dinner Sun–Thu 5–9pm, Fri–Sat 5–10pm; Bourbon Lounge daily from 4pm",
+      "site": "https://theminagroup.com/restaurants/bourbon-steak-san-francisco/",
+      "siteCta": "See their menus",
+      "siteNote": "Prices are from the Dinner, Lounge and Dessert menus on Michael Mina's own site; drinks are left out. Bourbon Steak is inside The Westin St. Francis on Union Square, with the Bourbon Lounge at its heart and DJ sets Friday and Saturday 8:30–11:30pm. A pre-theater menu runs daily 5–6pm at $89 a person. Tables are booked on SevenRooms through their site; a 20% gratuity is added for parties of six or more.",
+      "clip": {
+          "src": "/clips/bourbon-steak-san-francisco.mp4",
+          "poster": "/clips/bourbon-steak-san-francisco-poster.webp",
+          "href": "https://www.instagram.com/reel/DUtdoDXktzc/",
+          "credit": "Posted by @chefmichaelmina",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "the-eighth-rule",
+      "name": "The Eighth Rule",
+      "label": "The 8th Rule",
+      "cuisine": "Bourbon bar",
+      "tagline": "Stephen Curry's 40-seat bourbon bar, made with Chef Michael Mina, inside The Westin St. Francis on Union Square: bar bites like Stephen's lemon-pepper chicken bites, wagyu skewers and sesame lobster toast, and a tasting menu of small plates at $15 a guest.",
+      "color": "#062630",
+      "icon": "the-eighth-rule",
+      "prep": 0,
+      "category": "Bar",
+      "items": [],
+      "sections": [
+          {
+              "name": "Bites",
+              "items": [
+                  [
+                      "Stephen's Chicken Bites",
+                      "Lemon pepper, ranch crème fraîche; add caviar +$35",
+                      2200
+                  ],
+                  [
+                      "Wagyu Skewer",
+                      "Caramelized onions, pita bread, horseradish cream",
+                      3100
+                  ],
+                  [
+                      "Sesame Lobster Toast",
+                      "Jalapeño, avocado, cilantro",
+                      2400
+                  ],
+                  [
+                      "Steak Tartare “Pizza”",
+                      "Sun-dried tomatoes, capers, parmesan, Calabrian chili, lemon oil",
+                      2900
+                  ],
+                  [
+                      "Duck Fat Fry Trio",
+                      "Paprika & bourbon BBQ, herb-garlic ketchup, truffle aioli",
+                      1200
+                  ],
+                  [
+                      "Roasted Mixed Nuts",
+                      "Cajun spice",
+                      1200
+                  ],
+                  [
+                      "Chips & Dip",
+                      "Salt & pepper potato chips, French onion dip",
+                      1000
+                  ],
+                  [
+                      "Truffle Popcorn",
+                      "Truffle butter, chives, sea salt",
+                      900
+                  ]
+              ]
+          },
+          {
+              "name": "Tasting: Cold Small Plates",
+              "items": [
+                  [
+                      "Trio of Sashimi",
+                      "Chef's selection, fresh wasabi, truffle ponzu",
+                      1500,
+                      null,
+                      "$15 per guest"
+                  ],
+                  [
+                      "Maine Lobster & Melons",
+                      "Cucumber, ginger aguachile",
+                      1500,
+                      null,
+                      "$15 per guest"
+                  ],
+                  [
+                      "Caviar Parfait",
+                      "Smoked salmon, egg mimosa, crème fraîche; $15 plus a $40 caviar supplement",
+                      5500,
+                      null,
+                      "$55 per guest"
+                  ],
+                  [
+                      "Wagyu Steak Tartare",
+                      "Crispy brik crackers, parmesan, sunny-side-up egg, caper aioli",
+                      1500,
+                      null,
+                      "$15 per guest"
+                  ],
+                  [
+                      "Burrata Cheese",
+                      "Market stone fruit, saba, pita croutons",
+                      1500,
+                      null,
+                      "$15 per guest"
+                  ]
+              ]
+          },
+          {
+              "name": "Tasting: Hot Small Plates",
+              "items": [
+                  [
+                      "Bacon Wrapped Scallop",
+                      "Cherry, marcona almond, madeira emulsion",
+                      1500,
+                      null,
+                      "$15 per guest"
+                  ],
+                  [
+                      "Braised Wagyu Short Rib",
+                      "Heirloom carrots, English peas, pommes duchesse",
+                      1500,
+                      null,
+                      "$15 per guest"
+                  ],
+                  [
+                      "Caviar Fishwich",
+                      "Milk bread, dill tartar sauce; $15 plus a $20 caviar supplement",
+                      3500,
+                      null,
+                      "$35 per guest"
+                  ],
+                  [
+                      "Morel Agnolotti",
+                      "Corn pudding, charred corn, summer truffle",
+                      1500,
+                      null,
+                      "$15 per guest"
+                  ],
+                  [
+                      "Steak au Poivre",
+                      "Bloomsdale spinach, peppercorn sauce",
+                      1500,
+                      null,
+                      "$15 per guest"
+                  ]
+              ]
+          },
+          {
+              "name": "Tasting: Something Sweet",
+              "items": [
+                  [
+                      "Creamsicle Shaved Ice",
+                      "Lychee, raspberry, coconut whip",
+                      1500,
+                      null,
+                      "$15 per guest"
+                  ],
+                  [
+                      "Black Forest Chocolate Tart",
+                      "Preserved cherries, vanilla bean whip",
+                      1500,
+                      null,
+                      "$15 per guest"
+                  ],
+                  [
+                      "The Sweet Gentlemen",
+                      "Bourbon butterscotch custard, frosted pecans, fortune cookie crunch",
+                      1500,
+                      null,
+                      "$15 per guest"
+                  ]
+              ]
+          }
+      ],
+      "address": "335 Powell St, San Francisco, CA 94102",
+      "phone": "(415) 967-5197",
+      "hours": "Daily 5pm–12am; bites until 10pm",
+      "site": "https://the8thrule.com/",
+      "siteCta": "See their menu",
+      "siteNote": "Prices are from the menu on their own website; drinks are left out. The Eighth Rule is a 40-seat bourbon bar inside The Westin St. Francis, next to Bourbon Steak; bites are served until 10pm. On the tasting menu, pick any small plate for the table and they prepare a taste for each guest, $15 per item per guest. Tables are booked on SevenRooms through their site.",
+      "clip": {
+          "src": "/clips/the-eighth-rule.mp4",
+          "poster": "/clips/the-eighth-rule-poster.webp",
+          "href": "https://www.instagram.com/reel/DWz-3YfgIB8/",
+          "credit": "Filmed by @festusfeasts",
+          "platform": "Instagram",
+          "by": "festusfeasts"
+      }
+  },
+  {
+      "slug": "harris-restaurant",
+      "name": "Harris' Restaurant",
+      "label": "Harris'",
+      "cuisine": "Classic San Francisco steakhouse",
+      "tagline": "The San Francisco Steakhouse, at Van Ness and Pacific since 1984: dry-aged Midwestern Angus steaks cut by their own butcher, prime rib, authentic A5 Miyazaki Wagyu, classic sides and Baked Alaska, with live jazz in the Pacific Bar & Piano Lounge.",
+      "color": "#161310",
+      "icon": "harris-restaurant",
+      "prep": 0,
+      "category": "Steakhouse",
+      "items": [],
+      "sections": [
+          {
+              "name": "Beginnings",
+              "items": [
+                  [
+                      "Half Dozen Fresh Oysters",
+                      "On the half shell, with two sauces",
+                      3000
+                  ],
+                  [
+                      "Smoked Salmon",
+                      "With dill cream cheese and toast points",
+                      2900
+                  ],
+                  [
+                      "Prawn Cocktail",
+                      "",
+                      3100
+                  ],
+                  [
+                      "Steamed Clams Marinière",
+                      "",
+                      2800
+                  ],
+                  [
+                      "Dungeness Crab Cakes",
+                      "With beurre blanc",
+                      3200
+                  ],
+                  [
+                      "Harris' Steak Tartare",
+                      "",
+                      3400
+                  ],
+                  [
+                      "Veal Sweetbreads",
+                      "Sautéed, with a shiitake-sherry cream sauce",
+                      3100
+                  ],
+                  [
+                      "Deep Fried Onion Rings or Fried Mushrooms",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Seared & Sliced Japanese A5 Wagyu Ribeye",
+                      "6 oz",
+                      13900
+                  ]
+              ]
+          },
+          {
+              "name": "Soups and Salads",
+              "items": [
+                  [
+                      "Traditional Onion Soup",
+                      "Topped with crispy fried onions",
+                      1700
+                  ],
+                  [
+                      "Soup of the Day",
+                      "",
+                      1700
+                  ],
+                  [
+                      "Harris' Caesar Salad",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Iceberg Wedge Salad",
+                      "With blue cheese or ranch dressing",
+                      1800
+                  ],
+                  [
+                      "Baby Spinach Salad",
+                      "Applewood smoked bacon, candied pecans, apples, soy vinaigrette",
+                      1900
+                  ],
+                  [
+                      "Mixed Field Greens",
+                      "With balsamic vinaigrette",
+                      1700
+                  ]
+              ]
+          },
+          {
+              "name": "On the Side",
+              "items": [
+                  [
+                      "Creamed Spinach",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Spinach",
+                      "Steamed or sautéed",
+                      1300
+                  ],
+                  [
+                      "Broccoli",
+                      "Steamed or sautéed",
+                      1200
+                  ],
+                  [
+                      "Sautéed Asparagus",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Caramelized Onions",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Sautéed Button Mushrooms",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Classic Béarnaise Sauce",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Brandy Sauce",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Truffle Madeira Sauce",
+                      "",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Aged Beef & Entrées",
+              "items": [
+                  [
+                      "Filet Mignon",
+                      "12 oz",
+                      8300
+                  ],
+                  [
+                      "Petite Filet Mignon",
+                      "8 oz",
+                      6900
+                  ],
+                  [
+                      "The Porterhouse Steak",
+                      "24 oz",
+                      10500
+                  ],
+                  [
+                      "The Harris Steak",
+                      "16 oz thick bone-in New York",
+                      9100
+                  ],
+                  [
+                      "The 49er Cut",
+                      "16 oz generous boneless New York",
+                      9100
+                  ],
+                  [
+                      "Petite Boneless New York",
+                      "12 oz",
+                      7600
+                  ],
+                  [
+                      "Bone-In Ribeye Steak",
+                      "20 oz",
+                      8700
+                  ]
+              ]
+          },
+          {
+              "name": "Wagyu",
+              "items": [
+                  [
+                      "Authentic A5 Japanese Miyazaki Wagyu Ribeye",
+                      "13 oz",
+                      28900
+                  ],
+                  [
+                      "American Wagyu Ribeye",
+                      "16 oz",
+                      14300
+                  ],
+                  [
+                      "American Wagyu New York",
+                      "13 oz",
+                      13900
+                  ]
+              ]
+          },
+          {
+              "name": "Roast Prime Rib",
+              "items": [
+                  [
+                      "Prime Rib, Regular Cut",
+                      "14 oz, with creamed spinach and a potato; English style or end cuts on request",
+                      7100
+                  ],
+                  [
+                      "The Executive Cut on the Bone",
+                      "22 oz, with creamed spinach and a potato",
+                      8300
+                  ]
+              ]
+          },
+          {
+              "name": "The Classics",
+              "items": [
+                  [
+                      "Steak Diane",
+                      "Filet mignon paillard, grilled, with a cognac and shallot demi-glace",
+                      6900
+                  ],
+                  [
+                      "Pepper Steak",
+                      "Cracked-pepper boneless New York with a brandy, cream and peppercorn sauce",
+                      7900
+                  ],
+                  [
+                      "American Lamb Chops",
+                      "Three grilled Colorado chops cut from the rack",
+                      8200
+                  ],
+                  [
+                      "Pan Roasted Breast of Chicken",
+                      "With a sherry glaze",
+                      4500
+                  ]
+              ]
+          },
+          {
+              "name": "Seafood",
+              "items": [
+                  [
+                      "Fresh Salmon Fillet",
+                      "With rice and champagne sauce",
+                      4900
+                  ]
+              ]
+          },
+          {
+              "name": "Sweet Endings",
+              "items": [
+                  [
+                      "Baked Alaska",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Carrot Cake",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Chocolate Bread Pudding",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Crème Brûlée",
+                      "",
+                      1700
+                  ],
+                  [
+                      "Harris' Cheesecake",
+                      "With the chef's choice of seasonal toppings",
+                      1500
+                  ],
+                  [
+                      "Trio of Sorbet or Ice Cream",
+                      "",
+                      1300
+                  ]
+              ]
+          }
+      ],
+      "address": "2100 Van Ness Ave, San Francisco, CA 94109",
+      "phone": "(415) 673-1888",
+      "email": "info@harrisrestaurant.com",
+      "hours": "Tue–Thu & Sun 5–9pm; Fri–Sat 5–10pm; closed Mon. Butcher counter Tue–Sun 5–8pm",
+      "site": "https://www.harrisrestaurant.com/",
+      "orderUrl": "https://www.toasttab.com/harris-2100-van-ness-avenue/v3",
+      "siteCta": "Order pickup",
+      "siteNote": "Prices are from the dinner menu on their own website. Steaks and entrées come with sautéed seasonal vegetables and a baked or evening potato; prime rib comes with creamed spinach. The Maine lobster dishes are market price, so ask them. Their butcher counter sells the same dry-aged steaks to cook at home (Tue–Sun 5–8pm, or online through Toast), and they also deliver through DoorDash and Uber Eats. Reservations through OpenTable from their site.",
+      "clip": {
+          "src": "/clips/harris-restaurant.mp4",
+          "poster": "/clips/harris-restaurant-poster.webp",
+          "href": "https://www.instagram.com/reel/DYGUBaxBlR_/",
+          "credit": "Filmed by @smackinfood",
+          "platform": "Instagram",
+          "by": "smackinfood"
+      }
+  },
+  {
+      "slug": "blind-butcher",
+      "name": "Blind Butcher",
+      "label": "Blind Butcher",
+      "cuisine": "Modern Americana steakhouse",
+      "tagline": "Chef-owner Coskun Abik's steakhouse on 18th Street in the Castro since 2019: house-cut prime ribeye, filet mignon and rack of lamb, the Butcher's Board for three or more, truffle lobster mac & cheese, and weekend brunch.",
+      "color": "#1A1917",
+      "icon": "blind-butcher",
+      "prep": 0,
+      "category": "Steakhouse",
+      "items": [],
+      "sections": [
+          {
+              "name": "Featured",
+              "items": [
+                  [
+                      "Butcher's Wagyu Beef Burger",
+                      "Bourbon-caramelized onions, melted cheese, horseradish aioli, ciabatta, truffle fries",
+                      3100
+                  ],
+                  [
+                      "Truffle Lobster Mac & Cheese",
+                      "",
+                      3500
+                  ],
+                  [
+                      "Butcher's Board",
+                      "Serves 3+: prime ribeye, filet mignon, rack of lamb, truffle lobster mac & cheese, octopus, crispy calamari, Campari tomatoes, shishito, creamy mushrooms, toasted ciabatta, butcher's potatoes",
+                      36500
+                  ]
+              ]
+          },
+          {
+              "name": "Small Bites",
+              "items": [
+                  [
+                      "Blue Point Oysters",
+                      "Half-dozen, served raw",
+                      2800
+                  ],
+                  [
+                      "Castelvetrano Olives",
+                      "Zesty orange, olive oil, rosemary",
+                      1100
+                  ],
+                  [
+                      "Truffle French Fries",
+                      "Parmesan, za'atar, Spanish paprika",
+                      1300
+                  ],
+                  [
+                      "Mashed Potatoes",
+                      "Butter, garlic, paprika, parmigiano, olive oil",
+                      1300
+                  ],
+                  [
+                      "Creamy Mushrooms",
+                      "Shallots, kasseri, marash, cream sauce",
+                      1300
+                  ],
+                  [
+                      "Brussels Sprouts",
+                      "Reduced pomegranate vinaigrette",
+                      1300
+                  ],
+                  [
+                      "Shishito Peppers",
+                      "Sea salt flakes, Greek yogurt",
+                      1200
+                  ],
+                  [
+                      "Butcher's Potatoes",
+                      "Whole, butter-roasted, rosemary, herbs, Spanish paprika",
+                      1300
+                  ],
+                  [
+                      "Pistachio Goat Cheese",
+                      "Roasted Oregon hazelnuts, honey, caramelized onions, dried fig",
+                      1400
+                  ],
+                  [
+                      "Octopodaki",
+                      "Grilled octopus, lemon, oregano, marash, kale, red cabbage, chickpea",
+                      2500
+                  ],
+                  [
+                      "Crispy Calamari",
+                      "Fried, paprika, horseradish aioli",
+                      2200
+                  ],
+                  [
+                      "Wagyu Beef Meatballs",
+                      "Mashed potatoes, shaved parmigiano, marinara, crostini",
+                      2200
+                  ],
+                  [
+                      "Lamb Lollipops",
+                      "Arugula, cherry tomatoes, oregano, lemon, Greek yogurt",
+                      2400
+                  ],
+                  [
+                      "Grilled Prosciutto Burrata",
+                      "Arugula, Campari tomatoes, crostini, olive oil",
+                      2200
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "Caesar",
+                      "Romaine hearts, parmesan, anchovies, baguette croutons, Caesar dressing",
+                      1700
+                  ],
+                  [
+                      "Roka",
+                      "Arugula, seasonal fruits, goat cheese, dried fig, roasted walnuts, balsamic vinaigrette",
+                      1700
+                  ],
+                  [
+                      "Kale Picnic",
+                      "Dried apricots, goat cheese, apples, dates, toasted hazelnut, lemon vinaigrette",
+                      1700
+                  ]
+              ]
+          },
+          {
+              "name": "Big Bites",
+              "items": [
+                  [
+                      "Burrata Ravioli",
+                      "Crispy prosciutto, arugula, Campari tomatoes, creamy blue cheese sauce",
+                      3200
+                  ],
+                  [
+                      "Bucatini Wagyu Beef Meatballs",
+                      "Parmigiano, basil, Campari tomatoes, aleppo, creamy pomodoro sauce",
+                      3400
+                  ],
+                  [
+                      "Prime Beef Stroganoff",
+                      "Rigatoni, mushrooms, shallots, parmigiano romano, cream sauce",
+                      3100
+                  ],
+                  [
+                      "Rosemary Chicken",
+                      "Half chicken, partly boneless, baby carrots, roasted mild red pepper sauce, mashed potatoes",
+                      3200
+                  ],
+                  [
+                      "Salmon Provençal",
+                      "Baked Alaskan salmon, fennel, leeks, spinach, sundried tomatoes, gigantes plaki, dill mustard",
+                      3400
+                  ],
+                  [
+                      "Branzino",
+                      "Whole grilled Mediterranean white fish, kimchi, shishito peppers, lemon",
+                      4400
+                  ]
+              ]
+          },
+          {
+              "name": "House Cuts & Marinated Meats",
+              "items": [
+                  [
+                      "16 oz Prime Ribeye Steak",
+                      "Rosemary-oregano marinade, chimichurri, shishito, butcher's potatoes, cipollini onions",
+                      7600
+                  ],
+                  [
+                      "Filet Mignon",
+                      "House center-cut, rosemary-thyme marinated, shishito, butcher's potatoes, cipollini onions",
+                      5400
+                  ],
+                  [
+                      "Rack of Lamb",
+                      "House-butchered, rosemary-thyme marinated, whole grain mustard, shishito, butcher's potatoes",
+                      5100
+                  ],
+                  [
+                      "Braised Short Ribs",
+                      "Bone marrow jus reduction, shishito, cipollini onions, mashed potatoes",
+                      4600
+                  ],
+                  [
+                      "Pork Loin Chop",
+                      "Seared, sweet port sauce, shishito, cipollini onions, baby carrots, butcher's potatoes",
+                      3900
+                  ]
+              ]
+          },
+          {
+              "name": "Brunch Classics",
+              "items": [
+                  [
+                      "Lumberjack Mac & Cheese",
+                      "Diced chicken apple sausage, butcher's potatoes, 2 eggs any style",
+                      2700
+                  ],
+                  [
+                      "Steak & Eggs",
+                      "House-butchered 4 oz petite filet mignon, butcher's potatoes, 2 eggs any style",
+                      3900
+                  ],
+                  [
+                      "Butcher's Pancake Slam",
+                      "Bacon, chicken apple sausage, seasonal fruits, 2 buttermilk pancakes, 2 eggs any style",
+                      2800
+                  ],
+                  [
+                      "Cast Iron Jack",
+                      "Prime meats, melted cheese, onions, bell peppers, butcher's potatoes, 2 eggs any style",
+                      2900
+                  ],
+                  [
+                      "The Hangover",
+                      "2 grilled chicken apple sausages, peppers, onions, tomatoes, butcher's potatoes, 2 eggs",
+                      2600
+                  ],
+                  [
+                      "Butcher's Benedict",
+                      "Sliced prime ribeye, hollandaise, caramelized onions, melted cheese, butcher's potatoes",
+                      2800
+                  ],
+                  [
+                      "Florentine Benedict",
+                      "Hollandaise, mixed greens, butcher's potatoes",
+                      2400
+                  ],
+                  [
+                      "Chicken Apple Sausage Scramble",
+                      "Melted cheese, mushrooms, spinach, mixed greens, butcher's potatoes",
+                      2600
+                  ],
+                  [
+                      "Veggie Delight",
+                      "Peppers, arugula, carrots, brussels sprouts, onions, potatoes, Greek yogurt, 2 eggs",
+                      2400
+                  ],
+                  [
+                      "Protein Bowl",
+                      "4 oz wagyu patty, seasonal vegetables, butcher's potatoes, 2 eggs any style",
+                      2800
+                  ],
+                  [
+                      "Mushroom & Cheese Omelette",
+                      "Mixed mushrooms, 3-cheese melt, mixed greens, butcher's potatoes",
+                      2400
+                  ],
+                  [
+                      "Meat & Cheese Omelette",
+                      "Prime meats, onions, mixed greens, butcher's potatoes",
+                      2600
+                  ]
+              ]
+          },
+          {
+              "name": "Brunch Sandwiches & Sides",
+              "items": [
+                  [
+                      "Butcher's Wagyu Burger (brunch)",
+                      "Bourbon caramelized onions, melted cheese, horseradish aioli, ciabatta, fries",
+                      3100
+                  ],
+                  [
+                      "Butcher's Sliders",
+                      "Wagyu beef, melted cheese, bourbon caramelized onions, horseradish aioli; with salad and fries",
+                      2500
+                  ],
+                  [
+                      "Grilled Chicken Pesto Sandwich",
+                      "Melted cheese, caramelized onions, aioli, lettuce, tomatoes, ciabatta; with salad and fries",
+                      2700
+                  ],
+                  [
+                      "Butcher's Chimichurri Cheese Steak",
+                      "Sliced prime beef, bacon, melted cheese, caramelized onions, chimichurri, ciabatta; with salad and fries",
+                      2800
+                  ],
+                  [
+                      "Truffle French Fries (brunch)",
+                      "Seasoned, parmesan",
+                      1300
+                  ],
+                  [
+                      "Side",
+                      "Chicken apple sausage, smoked bacon, butcher's potatoes, toasted ciabatta, buttered muffin, fruit, mixed greens or seasonal vegetables",
+                      700
+                  ]
+              ]
+          }
+      ],
+      "address": "4058 18th St, San Francisco, CA 94114",
+      "phone": "(415) 529-2478",
+      "email": "blindbutchersf@gmail.com",
+      "hours": "Mon–Fri 5–10pm; Sat–Sun 11am–10pm (brunch weekends)",
+      "site": "https://blindbutcher.com/san-francisco/",
+      "siteCta": "Visit their site",
+      "siteNote": "Prices are from the San Francisco dinner and brunch menus on their own website; brunch is on Saturdays and Sundays. Brunch sandwiches come with salad and fries. Parties of 6 or more get a 20% gratuity, and a 5% San Francisco health-care surcharge is added to the bill. Book a table through OpenTable from their site. They also have a Los Angeles restaurant on Melrose Ave; this page is the San Francisco one.",
+      "clip": {
+          "src": "/clips/blind-butcher.mp4",
+          "poster": "/clips/blind-butcher-poster.webp",
+          "href": "https://www.instagram.com/reel/DZaNr5eC9KV/",
+          "credit": "Filmed by @jetsetjanine",
+          "platform": "Instagram",
+          "by": "jetsetjanine"
+      }
+  },
 ]

@@ -636,6 +636,20 @@ def m_catering(rng):
     return composite(img, over, blur=3)
 
 
+def m_steakhouse(rng):
+    img = gradient('#2e1512', '#171b22')
+    over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(over)
+    # Cuts of steak with a grill mark, and a knife beside each.
+    for x, y, s in [(W * .32, H * .3, 1.1), (W * .7, H * .56, .9), (W * .36, H * .82, .7)]:
+        r = 120 * s
+        d.ellipse((x - r * 1.2, y - r * .8, x + r * 1.2, y + r * .8), outline=rgba('#f87171', .24), width=12)
+        for k in (-1, 0, 1):
+            d.line((x - r * .6 + k * r * .45, y - r * .45, x - r * .1 + k * r * .45, y + r * .45), fill=rgba('#fcd34d', .2), width=9)
+        d.line((x + r * 1.45, y - r * .9, x + r * 1.45, y + r * .9), fill=rgba('#e5e7eb', .24), width=10)
+    return composite(img, over, blur=3)
+
+
 def m_diner(rng):
     img = gradient('#3a2414', '#1d1a2e')
     over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
@@ -669,6 +683,7 @@ def m_games(rng):
 MOTIFS = {
     "froyo": m_froyo,
     "catering": m_catering,
+    "steakhouse": m_steakhouse,
     "diner": m_diner,
     "health": m_health,
     "games": m_games,

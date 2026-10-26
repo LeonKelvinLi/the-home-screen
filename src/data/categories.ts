@@ -126,6 +126,9 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   /* Glenn, 2026-10-24, 4:48 am: "New Category BEASTY • Catering", with Inda & Mely in San Bruno.
      Caterers and restaurants that cater, by type line. Chefs keeps private and personal chefs. */
   { kind: 'catering', heading: 'Catering', about: 'Caterers and restaurants that cater', wall: wall('catering'), test: /catering|caterer/i },
+  /* Glenn, 2026-10-26, 7:48 am: "New category / BEASTY • Steakhouse", between Bourbon Steak and
+     Harris' and Blind Butcher in San Francisco. Steakhouses and chophouses by their type line. */
+  { kind: 'steakhouse', heading: 'Steakhouse', about: 'Steakhouses and chophouses', wall: wall('steakhouse'), test: /steak ?house|chop ?house/i },
   /* "New category BEASTY • Breakfast/diner. Or just • diner" — Glenn, 2026-10-22, 8:56 pm.
      His first wording, with Diner as the kind. Diners and breakfast and brunch rooms, by
      their type line; `\bdiner\b` never matches "dinner". A breakfast burrito is a taco

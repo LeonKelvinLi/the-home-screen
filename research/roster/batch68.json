@@ -1,0 +1,2954 @@
+[
+  {
+    "id": "b_westcoastsips",
+    "name_exact": "West Coast Sips",
+    "checked_on": "2026-10-26",
+    "sources": [
+      "Instagram @westcoastsips707 (Glenn's screenshot 1026-0512 IMG_8020): 'West Coast Sips 707', 'Mobile Beverage Bar | Bay Area / Dirty Sodas • Energy • Mocktails / Private Events • Parties • Brand Events / Now booking', link westcoastsips.com; highlights Booking, Payment, Ordering, Menu. IMG_8021: their Email button opens westcoastsips707@gmail.com. IMG_8022: Crop of their round logo ('DIRTY DRINKS + CALI VIBES', 'FAIRFIELD, CA – EST. 2026').",
+      "Their Menu highlight story (Glenn's screenshot 1026-0520 IMG_8023, dated July 4): 'Our current menu': Dirty Sodas $6.00 (24oz), five drinks; Dirty Energy Drinks $7.00 (24oz), five drinks; Craft Your Own Drink, flat rate $8.00 (24oz), base + up to 2 syrups + topping; 'Allergen Warning: All sweet cream and cold foam toppings contain milk.'",
+      "Their website westcoastsips.com (a JS app; read in the browser and from its own /api/menu, 2026-10-26): Menu page 'The Lineup' = Fall Menu (6 drinks, $6 or $7), Dirty Sodas (same 5 as the story, $6), Dirty Energy Drinks (same 5, $7); the API also carries the Craft Your Own options at $8. Every story drink and price matches the website. Order page: delivery ordering with Stripe checkout, 'ALTERNATING FRI · SAT & SUN · ORDER AHEAD ANYTIME', 'DELIVERY HOURS: 8 AM–2 PM EVERY HOUR … FRIDAYS ALTERNATE; SATURDAYS AND SUNDAYS ARE ALWAYS AVAILABLE'. Footer '© 2026 FAIRFIELD, CA. @WestCoastSips707'. No street address or phone anywhere.",
+      "Their GigSalad profile (gigsalad.com/west_coast_sips_fairfield, their own words, read 2026-10-26): 'West Coast Sips is a mobile beverage catering experience bringing fun, customized drinks to events throughout the Bay Area'; 'on-site beverage catering experience for private parties, corporate events…'; Fairfield, CA, travels 20 mi; 'A $200 minimum booking applies to private events'; event packages are 16 oz drinks. No reviews yet. Used only for the type line and the event minimum.",
+      "Reels Da_JqXJP0WW (19 Jul 2026) and DaWytebp89X (4 Jul 2026), both posted by @westcoastsips707 (channel 'westcoastsips707' in info.json); the second caption: 'If you're in or near the 707 area be sure to grab you a drink! DM us your order or visit our website.'"
+    ],
+    "facts": {
+      "slug": "west-coast-sips",
+      "name": "West Coast Sips",
+      "label": "W.C. Sips",
+      "cuisine": "Dirty sodas & mobile drink catering",
+      "tagline": "Fairfield's mobile beverage bar: dirty sodas, dirty energy drinks and a fall menu in 24 oz cups, delivered on weekends or poured on site at private parties and brand events around the Bay Area.",
+      "color": "#000000",
+      "icon": "west-coast-sips",
+      "prep": 0,
+      "category": "Drinks",
+      "items": [],
+      "sections": [
+        {
+          "name": "Fall Menu",
+          "items": [
+            [
+              "Pumpkin Coast",
+              "Dr Pepper, pumpkin pie and vanilla syrups, pumpkin cold foam",
+              600
+            ],
+            [
+              "Autumn Crisp",
+              "Sprite, apple and caramel syrups, caramel cold foam",
+              600
+            ],
+            [
+              "Golden Leaves",
+              "Orange Fanta, vanilla and maple syrups, sweet cream",
+              600
+            ],
+            [
+              "Autumn Dew",
+              "Mt Dew, green apple and caramel syrups, sweet cream",
+              600
+            ],
+            [
+              "Cozy Campfire",
+              "Red Bull, cherry and toasted marshmallow syrups, sweet cream",
+              700
+            ],
+            [
+              "Caramel Apple",
+              "Alani Witches' Brew, caramel and green apple syrups, sweet cream",
+              700
+            ]
+          ]
+        },
+        {
+          "name": "Dirty Sodas",
+          "items": [
+            [
+              "The Cali Classic",
+              "Dr Pepper, cherry and vanilla syrups, sweet cream",
+              600
+            ],
+            [
+              "Pacific Breeze",
+              "Sprite, blue raspberry and pineapple syrups, coconut cream",
+              600
+            ],
+            [
+              "The Golden State",
+              "Mt Dew, passion fruit and mango syrups, sweet cream",
+              600
+            ],
+            [
+              "SoCal Sunset",
+              "Orange Fanta, strawberry syrup, cotton candy cold foam",
+              600
+            ],
+            [
+              "NorCal Fog",
+              "Root beer, vanilla and coconut syrups, sweet cream",
+              600
+            ]
+          ]
+        },
+        {
+          "name": "Dirty Energy Drinks",
+          "items": [
+            [
+              "Blue Wave Rush",
+              "Breezeberry Alani Nu, blue raspberry syrup, sweet cream",
+              700
+            ],
+            [
+              "Beach, Please",
+              "Orange Kiss Alani Nu, strawberry and peach syrups, strawberry cold foam",
+              700
+            ],
+            [
+              "The Boardwalk",
+              "Cotton Candy Alani Nu, strawberry syrup, sweet cream",
+              700
+            ],
+            [
+              "Cali Dreamin'",
+              "Watermelon Wave Alani Nu, strawberry and cherry syrups, sweet cream",
+              700
+            ],
+            [
+              "The Malibu",
+              "Strawberry Sunrise Alani Nu, pineapple and coconut syrups, sweet cream",
+              700
+            ]
+          ]
+        },
+        {
+          "name": "Craft Your Own Drink",
+          "items": [
+            [
+              "Craft Your Own Drink",
+              "Pick a soda or Alani Nu base, up to 2 syrups and a cream or cold foam; flat rate, 24 oz",
+              800
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "Their menu card",
+          "photos": [
+            {
+              "src": "west-coast-sips-menu.webp",
+              "alt": "West Coast Sips menu card: Dirty Sodas $6.00 (24oz), Dirty Energy Drinks $7.00 (24oz) and Craft Your Own Drink, flat rate $8.00 (24oz), under their Golden Gate sunset logo.",
+              "caption": "From their Instagram Menu highlight, July 2026. The fall drinks are on their website."
+            }
+          ],
+          "body": [
+            "Allergen warning on their card: all sweet cream and cold foam toppings contain milk."
+          ]
+        }
+      ],
+      "email": "westcoastsips707@gmail.com",
+      "hours": "Delivery Sat–Sun and alternate Fridays, 8am–2pm; order ahead anytime",
+      "site": "https://westcoastsips.com/",
+      "orderUrl": "https://westcoastsips.com/order",
+      "siteNote": "The menu and delivery days are from their own website, which takes delivery orders to homes and businesses; drinks are 24 oz on their menu card. Private events, parties and brand events are booked through their Instagram or by email, from a $200 minimum (their GigSalad profile). They are mobile from Fairfield and publish no street address.",
+      "clip": {
+        "src": "/clips/west-coast-sips.mp4",
+        "poster": "/clips/west-coast-sips-poster.webp",
+        "href": "https://www.instagram.com/reel/Da_JqXJP0WW/",
+        "credit": "Posted by @westcoastsips707",
+        "platform": "Instagram"
+      }
+    },
+    "placements": [
+      "fairfield-services2-1"
+    ],
+    "glenn": "26 Oct 2026, 5:12 am: 'West Coast Sips 707', https://westcoastsips.com/menu, 'Fairfield • Services / BEASTY • Food Truck / BEASTY • Catering' with screenshots IMG_8020-8022; 5:19 reels Da_JqXJP0WW and DaWytebp89X, 'Clip this video plz' each; 5:20 'Crop this for their page plz' with IMG_8023 (their Menu story).",
+    "flags": [
+      "NAME: their Instagram display name is 'West Coast Sips 707' (707 is the area code; their handle is @westcoastsips707), but their website, logo, menu card and GigSalad all say 'West Coast Sips', so name/slug are 'West Coast Sips' / west-coast-sips (matches the menu path in the brief). Label 'W.C. Sips' is their website's own nav mark ('W.C. SIPS'); 'West Coast Sips' is 15 chars.",
+      "TYPE LINE 'Dirty sodas & mobile drink catering' passes the Catering test (/catering|caterer/i) on their own words: their GigSalad profile calls them 'a mobile beverage catering experience' and 'on-site beverage catering'. NOTE /catering/ also matches the Chefs (cooks) test in categories.ts; coordinator to decide.",
+      "FOOD TRUCK NOT SUPPORTED: nothing of theirs mentions a truck, trailer or cart. Instagram says 'Mobile Beverage Bar', the website does delivery, GigSalad describes an on-site 'beverage station'; the reels are shot on a kitchen counter. So the type line deliberately does not pass /food truck|taco truck|\\btruck\\b/i; Glenn's 'BEASTY • Food Truck' tag is left for the coordinator (hand-seat or skip).",
+      "CITY: Fairfield is confirmed by their logo, menu card, website footer and GigSalad. No storefront and no street address, so no address field (as Poura on Wheels); 'Fairfield • Services' is a city Services seat, which suits a mobile drinks business.",
+      "MENU: transcribed from their website (its /api/menu feed, checked against the rendered Menu page) and cross-checked with Glenn's July 4 menu story: all 10 story drinks and the $6/$7/$8 prices match exactly; the website adds a Fall Menu (Pumpkin Coast, Autumn Crisp, Golden Leaves, Autumn Dew at $6; Cozy Campfire, Caramel Apple at $7), which is seasonal and may rotate off. Craft Your Own is one $8 item; their feed lists Peach and Pineapple syrups as currently unavailable, left out of the description. '24 oz' is from the story card; their GigSalad event packages are 16 oz.",
+      "MENU CARD CROP: saved as /Users/leonkelvinli/Desktop/dev/the-home-screen/public/menus/west-coast-sips.webp (900x1070 WebP q90; new folder public/menus), cut from IMG_8023 rows 573-2143, full width: the card from its dark outer frame above 'DIRTY DRINKS + CALI VIBES' down to the 'Follow us on social media @WestCoastSips707' line just under the allergen warning, no phone chrome, no 'Our current menu' sticker. The 'Follow us' line sits inside the card frame, so it is kept.",
+      "PANEL PATH (needs a coordinator decision): BrandPanel.photos can show an image, but BrandApp.tsx renders it as `/food/${ph.src}`, so a file in /menus is not reachable by basename. The panel uses src '../menus/west-coast-sips.webp', which the browser normalises to /menus/west-coast-sips.webp and works with no code change; if that is too clever, either copy the file to public/food/west-coast-sips-menu.webp and use that basename, or give panel photos a full-path option. I edited no source file.",
+      "HOURS are their delivery window from their own Order page ('8 AM–2 PM … Fridays alternate; Saturdays and Sundays are always available', 'order ahead anytime'), not opening hours of a shop. The same line also says 'MONDAY, AUGUST 24 AVAILABLE', a stale one-off left out. Drop the hours line if delivery windows should not stand as hours.",
+      "needsSite NOT set: westcoastsips.com is their own domain with their own menu and Stripe checkout. It is a fresh Replit build (page title 'West Coast Sips — Alt Design', placeholder meta description), so it may still change.",
+      "No phone published (Instagram shows only Email/Message).",
+      "PAGE FILM Da_JqXJP0WW (the first reel Glenn sent) is only 12 s, so it runs whole (make-clip: 0s-12s of 12s). The drink shown is their 'Double Rainbro Rebel', labelled on screen in the last 2 s; the caption calls it a limited-time special in July and compares it to Dutch Bros' drink of that name. It is not on their current menu. The label is a drink name, not a dated promo, and the Dutch Bros reference is only in the caption, but if that is too close to an expired special, swap: make DaWytebp89X the page film (cut it as west-coast-sips at 24 s) and drop the second film. Red Bull cans are on screen (the drink base).",
+      "SECOND FILM DaWytebp89X (49 s, their own post): make-clip review-DaWytebp89X --seconds 15 chose 32s-47s: a blue and a pink dirty soda stirred and lidded, then six cups in a row. Checked at 2 fps: only their cups, no text on screen, no alcohol. It is their own post, so other_reviews 'by' is their own handle and there is no Foodies row.",
+      "Their Instagram grid has a post 'We're officially at PLB!' showing their Ube Fizz Dirty Soda ('limited time only') at a restaurant's drink counter (Filipino menu boards: lumpia, sinigang wings). PLB could not be identified by search; not used on the page.",
+      "Glenn's 0512 Instagram screenshot shows him following them; the email screenshot is only the mailto. Nothing was sent."
+    ]
+  },
+  {
+    "id": "b_meadowlarkdairylivermore",
+    "name_exact": "Meadowlark Dairy Livermore",
+    "checked_on": "2026-10-26",
+    "sources": [
+      "Instagram @meadowlarkdairylivermore (Glenn's screenshot 1026-0534 IMG_8026): 'Meadowlark Dairy Livermore', 102 posts, 12.5K followers; bio '2287 Second st, Livermore COWifornia / Pleasanton location @meadowlarkdairy / Truck - @meadowlarkdairytruck / Open daily from 8:00 AM - 9:00 PM'; link meadowlark.aidaform.com/livermore-loca... Its profile picture is the walking-cow 'MEADOWLARK DAIRY / LIVERMORE, COWIFORNIA' mark (also read from instagram.com/meadowlarkdairylivermore og:image, 2026-10-26: '13K Followers, 124 Following, 103 Posts').",
+      "Glenn's screenshot 1026-0534 IMG_8027: the bio link opens 'Meadowlark Dairy Livermore Job Application' on meadowlark.aidaform.com (an AidaForm job form, not a website), headed by the same MEADOWLARK DAIRY / LIVERMORE, COWIFORNIA mark; the icon is cut from this header.",
+      "https://www.meadowlarkdairy.com/ (their own Shopify site, covering both shops; read 2026-10-26): 'Two shops. One family. Both shops are open every day of the week. Roll through the Pleasanton drive-thru, or pull up a seat in downtown Livermore.' Livermore card: 'Now open / Livermore / Walk-up · Outdoor seating / 2287 Second Street, Livermore, CA 94550 / Open daily, 8am – 9pm / (925) 846-8777'. FAQ: 'Vanilla and chocolate are always on, along with orange, strawberry, and pineapple — all three vegan. The special flavor rotates daily — we post it every morning on Instagram.'; 'A $3.75 token good for any size frosty, slushie, or diablo.'; 'Both shops are open every day, 8am to 9pm.' 'At the window': soft serve frostys made in-house, slushies & diablos, drive-thru groceries (milk, eggs, bread), party ice & dry ice. Footer links to @meadowlarkdairylivermore and 'Apply — Livermore'.",
+      "https://www.meadowlarkdairy.com/pages/contact (orders@meadowlarkdairy.com, the site's one email) and /pages/about-us ('opening a second shop in downtown Livermore'; Diablo Magazine 'Covered the Livermore expansion — Meadowlark's first new shop in over a century').",
+      "https://www.meadowlarkdairy.com/collections/all (their store: Frosty Token $3.75, two $35 hats; no soft-serve menu or prices).",
+      "Web search 2026-10-26 (DoorDash / Uber Eats / Grubhub): no delivery-app store for the Livermore shop; press (Independent News, Patch, Diablo Magazine) says it opened in December 2025. Not used for facts beyond 'open'.",
+      "Reel DY4sErlvjJe by @truly_athi (28 May 2026): '📍Meadowlark Dairy 2287 Second Street, Livermore, CA 94550 / 🕘 Hours: 8AM to 8PM daily / Small cone: $3.50 | Medium: $4.00'; the Second Street storefront, their 'Greetings LIVERMORE from Cowifornia' mural.",
+      "Reel De8Vue6v7mj by @eighty6ix_ (26 Oct 2026): 'Livermore, CA - @meadowlarkdairylivermore'; inside the shop (milk fridges, grocery shelves, mural), the MEADOWLARK DAIRY building and patio, 'This is their second location / And Livermore', the seasonal pumpkin spice with maple.",
+      "Reel DT356WhgcFT by @lovelivermore (24 Jan 2026): '@meadowlarkdairylivermore’s menu, Livermore’s newest (and already beloved) local gem'; the 2287 door with the LIVERMORE, COWIFORNIA mark, counter, soft-serve machine, MILK sign."
+    ],
+    "facts": {
+      "slug": "meadowlark-dairy-livermore",
+      "name": "Meadowlark Dairy Livermore",
+      "label": "Meadowlark",
+      "cuisine": "Soft serve & dairy",
+      "tagline": "The 1919 Pleasanton dairy's second shop, a walk-up on Second Street in downtown Livermore with outdoor seating: soft-serve frostys made in-house, vanilla and chocolate always on with orange, strawberry and pineapple (all three vegan) and a flavor of the day, plus slushies, diablos and milk to take home.",
+      "color": "#FFFFFF",
+      "icon": "meadowlark-dairy-livermore",
+      "prep": 0,
+      "category": "Soft serve",
+      "items": [],
+      "address": "2287 Second Street, Livermore, CA 94550",
+      "phone": "(925) 846-8777",
+      "email": "orders@meadowlarkdairy.com",
+      "hours": "Daily 8am–9pm",
+      "instagram": "meadowlarkdairylivermore",
+      "site": "https://meadowlarkdairy.com/",
+      "siteCta": "Visit their site",
+      "siteNote": "Their site covers both shops; the Pleasanton original drive-thru is at 57 W. Neal Street. The flavor of the day is posted each morning on Instagram.",
+      "contactOnly": "Meadowlark publishes no prices for its soft serve. Vanilla and chocolate are always on, with orange, strawberry and pineapple (all vegan) and a rotating flavor of the day posted each morning on @meadowlarkdairylivermore. Call (925) 846-8777 or walk up at 2287 Second Street.",
+      "clip": {
+        "src": "/clips/meadowlark-dairy-livermore.mp4",
+        "poster": "/clips/meadowlark-dairy-livermore-poster.webp",
+        "href": "https://www.instagram.com/reel/DY4sErlvjJe/",
+        "credit": "Filmed by @truly_athi",
+        "platform": "Instagram",
+        "by": "truly_athi"
+      }
+    },
+    "placements": [
+      "livermore-goods2-4"
+    ],
+    "glenn": "26 Oct 2026, 5:34 am: 'BEASTY • Sweets / Livermore • Goods', 'For Livermore location', 'For Pleasanton location' with screenshots IMG_8026 (their Instagram) and IMG_8027 (the bio link, a job form); 5:29 am reel De8Vue6v7mj 'Clip this video plz'; 5:37 am reel DY4sErlvjJe 'Clip this video plz / For Livermore location'; 5:51 am reel DT356WhgcFT 'Clip this video plz'.",
+    "flags": [
+      "A SECOND SHOP OF A BUSINESS ALREADY LISTED. Meadowlark Dairy (Pleasanton, b_meadowlarkdairy) is on BEASTY • Sweets (Soft serve). This is its own page for the Livermore shop, as asked: slug meadowlark-dairy-livermore, id b_meadowlarkdairylivermore. Open and in Livermore: their site lists it 'Now open' at 2287 Second Street, Livermore 94550; press dates the opening to December 2025.",
+      "SEATS (placements left [] for the coordinator): Glenn wrote 'BEASTY • Sweets / Livermore • Goods'. BEASTY • Sweets' Soft serve spot is already the Pleasanton shop (BEASTY_SWEETS_ROSTER 17), so Livermore cannot take the same spot there; it fits a Sweets yellow sheet, or the coordinator may read 'BEASTY • Sweets' as just confirming the brand's page. Livermore • Goods is a straightforward seat.",
+      "TYPE LINE 'Soft serve & dairy' (my choice): passes the Sweets Soft serve test (/soft[- ]?serve/), and fits a walk-up shop (their site: 'Walk-up · Outdoor seating', no drive-thru here), unlike the Pleasanton seed's 'Drive-thru dairy'. Alternatives: 'Soft-serve dairy' (the Pleasanton research line) or 'Walk-up soft serve'. category 'Soft serve'.",
+      "LABEL 'Meadowlark' is the same as the Pleasanton tile's. If both ever sit on one page, 'Meadowlark LV' or 'Meadowlark Liv' (14) would tell them apart; coordinator's call.",
+      "ICON: NOT the same mark as the Pleasanton update. The cow-in-sunglasses badge Glenn sent at 5:32 is @meadowlarkdairy's (Pleasanton, 'Meadowlark Drive-Thru Dairy') profile picture; @meadowlarkdairylivermore uses its own walking-cow 'MEADOWLARK DAIRY / LIVERMORE, COWIFORNIA' mark (checked against both accounts' current pictures, 2026-10-26). So the Livermore page gets its own mark, cut from the large print of it on their Livermore job-application page (IMG_8027). If the coordinator would rather show one brand mark on both pages, copy public/icons/meadowlark-dairy.webp (the sunglasses badge) instead. The website's header logo is a third variant (est. 1919 / COWIFORNIA).",
+      "SITE: meadowlarkdairy.com is their own site and has a Livermore card with this shop's address, hours and phone, so needsSite is NOT set. The Instagram bio link (meadowlark.aidaform.com) is only a job-application form.",
+      "NO MENU: their site and store publish no soft-serve prices (only the $3.75 Frosty Token, a token for any size frosty, slushie or diablo, left out as gift-card-like; their site does not say whether tokens are good at Livermore), and no DoorDash, Uber Eats or Grubhub store was found for Livermore. So items [] and contactOnly naming their own always-on flavors. @truly_athi's caption gives 'Small cone: $3.50 | Medium: $4.00' (May 2026), and menu boards are visible in the Pleasanton reels; neither is their own published source, so not used.",
+      "HOURS 'Daily 8am–9pm': their Instagram bio and their site agree. @truly_athi's May 2026 caption and a real-estate blog said 8am–8pm, older; not used.",
+      "EMAIL orders@meadowlarkdairy.com is the site's one address for both shops (also on the Pleasanton page); drop it if a Livermore-only email is wanted.",
+      "PAGE FILM is DY4sErlvjJe (Glenn: 'For Livermore location'), whole, but it is only 6.6 s long. Her on-screen overlay 'Newly Opened $3 Softserve Spot' (first 3 s) is not an expiring promo, but '$3' is below her own caption's $3.50 small cone, and 'Newly Opened' is ageing. Its last 2.5 s are the downtown fountain and a street mural near the shop (no other business). If a longer page film is wanted, @eighty6ix_'s De8Vue6v7mj could lead instead (cut 1s-18s to stay clear of the 'Damn' caption at 19 s).",
+      "FILMS: three, the limit. De8Vue6v7mj (Glenn's first send, 5:29, no shop named) shows the Livermore shop ('This is their second location / And Livermore', 'LIVERMORE, CA' on screen, @meadowlarkdairylivermore in the caption); its 'seasonal' pumpkin spice with maple is a seasonal flavor, not a dated promo. DT356WhgcFT is Livermore (the 2287 door and MILK sign, @meadowlarkdairylivermore). Neither @humminglion's nor @siliconvalley.foodies' reel shows Livermore (both are Pleasanton), so no reel was left over for this page.",
+      "@lovelivermore is a Livermore community account (it promotes its own newsletter in the caption, not shown in the film), credited 'Filmed by' like a creator. Profanity checked on screen only: none in the three excerpts; audio not transcribed."
+    ]
+  },
+  {
+    "id": "b_maggieandmacs",
+    "name_exact": "Maggie & Mac's",
+    "checked_on": "2026-10-26",
+    "sources": [
+      "https://www.maggieandmacs.com/ (the link Glenn sent; their own website at their own domain, built on BentoBox; read 2026-10-26: 'Belong Here / A neighborhood place with soul — built for those growing up and those who already have.', 'Maggie & Mac's is designed to feel warm, grounded, and rooted in the rhythm of Inner Sunset... weeknight burgers, Saturday cocktails, and Sunday hangs'; header logo file 37586primary-logo.png, the oval wordmark the icon is made from)",
+      "https://www.maggieandmacs.com/menu/ (their menu, read 2026-10-26: tabs Food, Drinks, For the Kiddos, Brunch; Food sections For the Table, Salads, Pizzas, Sandwiches ('Add bacon: 2, avocado 3'), Our Family Staples, Desserts; Drinks: Cocktails, Alcohol Free Cocktails, Wine by The Glass (no prices, 'changes weekly'), Draft Beer; Kid's Menu; Brunch 'offered Saturday & Sunday, 11am-3pm', Our Family Breakfast Staples; every dish priced in whole dollars)",
+      "https://www.maggieandmacs.com/location/maggie-and-macs/ ('SERVED WITH SOUL / Now Open!'; '1326 9th Avenue, San Francisco, CA 94122'; 'Monday - CLOSED / Tuesday - Thursday: 12pm - 9:00pm / Friday: 12pm - 9:30pm / Saturday: 11am - 9:30pm / Sunday: 11am - 9:00pm'; 'these are kitchen hours of operation, last call for the bar takes place one hour after the kitchen closes'; 'We do not take reservations, all tables are on a first-come first-served basis. If you have a group of 15 and more please email us'; hello@maggieandmacs.com). Glenn's screenshot IMG_8030 shows the same page.",
+      "Instagram @maggieandmacs_sf (Glenn's screenshot 1026-0600 IMG_8028: 'Maggie & Mac's', Restaurant, 'Hours of Operation / Tuesday-Friday | 12pm-9:30pm / Saturday-Sunday | 11am-9:30pm', '1326 9th Avenue, San Francisco, California', www.maggieandmacs.com; 31 posts, 1,516 followers; picture an orange script 'm' on cream)",
+      "Glenn's screenshots IMG_8029 and IMG_8032 (the Crop screenshot of their website header: the cream oval 'Maggie & Mac's' wordmark with an orange ring, on their dark green)",
+      "Web search 2026-10-26 (press, not used for facts on the page; only to confirm open and in the city): SF Standard 5 Jun 2026 on its opening as the second restaurant of Scott and Caitlyn Morton (owners of Momo's), in the former Social Kitchen & Brewery, named for their daughters Margaret and Mackenzie; Richmond Sunset News 14 Jul 2026 review 'Maggie & Mac's opens'. A Pearl listing gives (415) 702-9953, not on any page of theirs, so not used."
+    ],
+    "facts": {
+      "slug": "maggie-and-macs",
+      "name": "Maggie & Mac's",
+      "label": "Maggie & Mac's",
+      "cuisine": "Neighborhood restaurant",
+      "tagline": "A family-friendly neighborhood restaurant on 9th Avenue in the Inner Sunset: smash burgers, French dips, pizzas, Mom's meatloaf and chicken pot pie, weekend brunch and a kids' menu.",
+      "color": "#254f32",
+      "icon": "maggie-and-macs",
+      "prep": 0,
+      "category": "American",
+      "items": [],
+      "sections": [
+        {
+          "name": "For the Table",
+          "items": [
+            [
+              "Sally's Onion Strings",
+              "Served with arbol dipping sauce",
+              1300
+            ],
+            [
+              "Chicken Wings",
+              "Signature blend of BBQ and buffalo sauce",
+              1800
+            ],
+            [
+              "Shishito Peppers",
+              "Sesame oil, garlic lemon aioli",
+              1500
+            ],
+            [
+              "'Loaded' Mac & Cheese",
+              "Elbow pasta, jalapeño, crispy bacon, green onion, panko",
+              2000
+            ],
+            [
+              "Poke Tostada",
+              "Ahi, avocado, pickled onion, jalapeño, wasabi cream",
+              2300
+            ]
+          ]
+        },
+        {
+          "name": "Salads",
+          "items": [
+            [
+              "Goldielocks Caesar",
+              "Lemon and anchovy dressing; add roasted chicken thigh $8",
+              1800
+            ],
+            [
+              "Tuna Tataki",
+              "Sesame-crusted ahi, toasted edamame, crispy wontons, soy glaze",
+              2500
+            ],
+            [
+              "Italian Chop",
+              "Hot coppa, salami, fresh mozz, artichoke hearts, green olive, fresno chile, croutons",
+              2300
+            ],
+            [
+              "Roasted Beet",
+              "Red and gold beets, frisée, goat cheese, toasted pine nuts, orange-honey glaze",
+              2000
+            ]
+          ]
+        },
+        {
+          "name": "Pizzas",
+          "items": [
+            [
+              "The Hot One",
+              "Spicy marinara, hot coppa, salami, pepperoni, pickled fresno, hot honey",
+              2200
+            ],
+            [
+              "Pig & Fig",
+              "Gorgonzola, fresh mozz, prosciutto, marinated fig, arugula, balsamic glaze",
+              2200
+            ],
+            [
+              "Salad 'Za",
+              "Pesto, artichoke hearts, green olive, arugula, olive oil",
+              2100
+            ],
+            [
+              "Margherita",
+              "Fresh mozz, roma tomato, torn basil, olive oil",
+              2100
+            ],
+            [
+              "Surf & Turf",
+              "Béchamel, oregano, fresh mozz, garlic shrimp, pancetta",
+              2200
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches",
+          "items": [
+            [
+              "The French Dip",
+              "Sliced tri-tip, provolone, au jus, sourdough baguette",
+              2200
+            ],
+            [
+              "Caprese",
+              "Fresh mozzarella, tomato, arugula, cilantro pesto, filone bun",
+              1900
+            ],
+            [
+              "M&M Smash Burger",
+              "Chuck-brisket, grilled onions, American cheese, pickles, M&M sauce, potato bun",
+              2100
+            ]
+          ]
+        },
+        {
+          "name": "Our Family Staples",
+          "items": [
+            [
+              "French Onion",
+              "48-hour reduction under a cheese blanket, topped with croutons",
+              1800
+            ],
+            [
+              "Steak Frites",
+              "Hanger steak, crispy garlic fries, roasted asparagus, chimichurri",
+              3200
+            ],
+            [
+              "Fish Tacos",
+              "Pacific rock snapper, pico de gallo, serrano-cilantro slaw, habanero salsa",
+              2400
+            ],
+            [
+              "Mom's Meatloaf",
+              "Bacon-wrapped, garlic mashed potato, roasted asparagus, pan gravy",
+              2600
+            ],
+            [
+              "Chicken Pot Pie",
+              "Roasted chicken, mirepoix, cream, puff pastry, side of house salad",
+              2800
+            ],
+            [
+              "Fettuccine Carbonara",
+              "Pancetta, egg yolk, black pepper, parmesan, parsley crisps",
+              2200
+            ]
+          ]
+        },
+        {
+          "name": "Brunch",
+          "items": [
+            [
+              "Crab Cake Benedict",
+              "Dungeness crab, avocado, poached egg, hollandaise, breakfast potatoes",
+              2800
+            ],
+            [
+              "French Toast",
+              "Brioche, Grand Marnier orange marmalade, powdered sugar, maple syrup",
+              2100
+            ],
+            [
+              "Egg White Scramble",
+              "Mushroom, asparagus, cherry tomato, romano, bell pepper, house salad",
+              2200
+            ],
+            [
+              "M&M Breakfast Sando",
+              "Croissant, black forest ham, scrambled egg, swiss, mixed berries",
+              2100
+            ]
+          ]
+        },
+        {
+          "name": "Kid's Menu",
+          "items": [
+            [
+              "Grilled Cheese Burger",
+              "American cheese, toasted sourdough",
+              1200
+            ],
+            [
+              "Maggie's Chicken Strips",
+              "With ranch dressing",
+              1100
+            ],
+            [
+              "Lil' Pasta",
+              "Classic cheese and butter",
+              900
+            ],
+            [
+              "Cheesin' Pizza",
+              "Mozzarella and marinara, 8 slices",
+              1300
+            ],
+            [
+              "Mac's Mac & Cheese",
+              "Elbow pasta, béchamel, toasted breadcrumbs",
+              1100
+            ],
+            [
+              "Mini Meatloaf",
+              "Bacon-wrapped, garlic mashed potato, asparagus, mushroom gravy",
+              1300
+            ],
+            [
+              "Roasted Broccolini",
+              "Butter, garlic, olive oil",
+              900
+            ]
+          ]
+        },
+        {
+          "name": "Desserts",
+          "items": [
+            [
+              "Key Lime Pie",
+              "Toasted almond, cream, lime",
+              1200
+            ],
+            [
+              "Chocolate Torte",
+              "Mixed berries, mint",
+              1000
+            ],
+            [
+              "Cornbread Cookies",
+              "Cornmeal, honey, sugar, lime",
+              1100
+            ]
+          ]
+        },
+        {
+          "name": "Alcohol-Free Cocktails",
+          "items": [
+            [
+              "Pink Lady",
+              "Apple juice, lemon, grenadine, egg white, maraschino cherry",
+              1200
+            ],
+            [
+              "Hellman's Helper",
+              "Pineapple juice, lime, ginger beer, mint",
+              1200
+            ],
+            [
+              "Kick Back",
+              "Lemon, coconut water, maple syrup, thyme",
+              1200
+            ]
+          ]
+        }
+      ],
+      "address": "1326 9th Avenue, San Francisco, CA 94122",
+      "email": "hello@maggieandmacs.com",
+      "hours": "Tue–Thu 12–9pm, Fri 12–9:30pm, Sat 11am–9:30pm, Sun 11am–9pm; closed Mon",
+      "site": "https://www.maggieandmacs.com/",
+      "siteNote": "Menu and prices are from their own website. Brunch is Saturday and Sunday, 11am–3pm; add bacon ($2) or avocado ($3) to a sandwich. No reservations, all tables are first come, first served; for a group of 15 or more, email hello@maggieandmacs.com. Hours are the kitchen's; the bar's last call is an hour after the kitchen closes.",
+      "siteCta": "Open their menu"
+    },
+    "placements": [
+      "san-francisco-goods2-51",
+      "beasty-goods2-74"
+    ],
+    "glenn": "Glenn, 26 Oct 2026, 6:00 am: screenshots 1026-0600 (IMG_8028 their Instagram @maggieandmacs_sf, IMG_8029 and IMG_8032 their website and its logo, IMG_8030 its Hours & Location page), the link https://www.maggieandmacs.com/ and \"San Francisco • Eats / BEASTY • Eats\". No reel.",
+    "flags": [
+      "HOURS DISAGREE: their website's Hours & Location page (Tue–Thu 12–9pm, Fri 12–9:30pm, Sat 11am–9:30pm, Sun 11am–9pm, Mon closed; 'kitchen hours') and their Instagram bio (Tue–Fri 12–9:30pm, Sat–Sun 11am–9:30pm) differ on Tue–Thu and Sun closing by 30 minutes. I used the website, which is more detailed, says Monday closed outright and is the page Glenn screenshotted (IMG_8030). Under the strict LocalSeed rule (two schedules that disagree → no hours) the coordinator may drop `hours`.",
+      "MENU: 9 sections, 40 items, all from their own menu page, whole-dollar prices, in their order. Brunch is their Brunch tab ('Our Family Breakfast Staples'), Kid's Menu is their 'For the Kiddos' tab; Roasted Broccolini ($9) sits at the end of the Kid's Menu on their page and is kept there. LEFT OUT: Cocktails (9, all $14), Draft Beer (6, $7), Wine by the Glass (no list, no price) as alcohol; modifiers 'add roasted chicken thigh: 8' (kept inside the Caesar's description) and 'Add bacon: 2, avocado 3' (in siteNote). Descriptions shortened; the Roasted Beet's 'detroit dark red, touchstone gold' became 'red and gold beets'.",
+      "NO PHONE: none on their website or Instagram; a third-party listing (Pearl) gives (415) 702-9953, not used. Email hello@maggieandmacs.com from their own site.",
+      "NO ONLINE ORDERING on their site (no Toast/DoorDash link; their Instagram grid has an Uber Eats post, not followed). No orderUrl; siteCta 'Open their menu'.",
+      "OPEN AND IN THE CITY: their site says 'Now Open!'; SF Standard (June 2026) and Richmond Sunset News (14 Jul 2026) report it open at 1326 9th Ave, Inner Sunset, San Francisco, the former Social Kitchen & Brewery. City confirmed.",
+      "TYPE LINE/CATEGORY: they publish no cuisine label beyond Instagram's 'Restaurant'; their own words are 'a neighborhood place' with burgers, pizzas and 'family staples'. cuisine 'Neighborhood restaurant', category 'American' (a new category value; the coordinator may prefer 'Burgers' or 'Brunch'). Label 'Maggie & Mac's' (14).",
+      "ICON: their oval 'Maggie & Mac's' wordmark (green script, orange '&' and ring, on cream), their website's header logo file 37586primary-logo.png (1601x909 transparent PNG), 460 px wide, centred on their site green #254f32 (the most used colour in their site stylesheet; the same green behind the logo in Glenn's Crop screenshot IMG_8032), 512x512 LANCZOS WebP q90, public/icons/maggie-and-macs.webp. Their Instagram picture is a different mark, a lone orange script 'm' on cream; the coordinator can swap to that ('m' favicon file 38194favicon.png, same site) if the tile should match Instagram.",
+      "NAME/SLUG: 'Maggie & Mac's' (site, logo, Instagram). Slug maggie-and-macs, id b_maggieandmacs ('&' spelled 'and')."
+    ]
+  },
+  {
+    "id": "b_chubbycattlebbqpleasanton",
+    "name_exact": "Chubby Cattle BBQ",
+    "checked_on": "2026-10-26",
+    "sources": [
+      "Instagram @chubbycattlebbqbayarea (Glenn's screenshot 1026-0634 IMG_8033): 'Chubby Cattle BBQ | Bay Area', category 'Barbecue Restaurant', bio 'Premium AYCE Japanese BBQ Experience / Pleasanton / SOON Santa Clara | Great Mall / Created by @joinchubbyclub / 2693 Stoneridge Dr #106, Pleasanton, CA', link 'linktr.ee/chubbycattlebbq... and 1 more'; 155 posts, 8,618 followers.",
+      "Glenn's screenshot IMG_8034 ('Crop'): their Chubby Cattle 牛武士 burst logo on white, opened full size. The icon is cut from it.",
+      "Glenn's screenshots IMG_8035 and IMG_8036: chubbycattle.com's Pleasanton page (address, 925-892-3356, Call Us / Order Online / Join Waitlist; hours).",
+      "https://www.chubbycattle.com/project/chubby-cattle-pleasanton/ (the Chubby Group's own site, read 2026-10-26 in the browser; curl gets a Cloudflare block): 'CHUBBY CATTLE BBQ PLEASANTON / 2693 STONERIDGE DR #106, PLEASANTON, CA 94588 / 925-892-3356'; 'Welcome to Chubby Cattle BBQ Pleasanton, our first location in the Bay Area! Enjoy a premium all-you-can-eat dining experience with three menu tiers: Silver, Gold, and Diamond ... U.S. and Australian Wagyu, Japanese A5 Wagyu, and exclusive ranch-raised cuts, all freshly sliced in-house ... fresh sushi, sashimi, and a self-serve station with unlimited milk tea, juice, coffee, soft serve, seasonal fruits, and more'; 'Hours of Operation / Open 7 Days / Sun–Thur: 11:30 AM – 10 PM / Fri & Sat: 11:30 AM – 11 PM / Kitchen Last call 9:30 PM (Sun – Thur), 10:30 PM (Fri & Sat)'. Order Online links pos.chowbus.com store 22243; Join Waitlist is a Google waitlist; Follow on Instagram links @chubbycattlebbqbayarea.",
+      "The Pleasanton page's menu image (wp-content/uploads/2026/01/CCPL-Menu.png, 'ULTIMATE WAGYU EXPERIENCE', 'PREMIUM WAGYU AYCE'): Silver $58 (member $49.99), Gold $78 (member $65), Diamond $88 (member $75) per person, each tier's meats, 'ALL-YOU-CAN-EAT ITEMS FOR ALL TIERS' (seafood, sushi, signature dishes, grilling foil, self-service station) and the house rules (last call at 70 minutes, 90-minute limit, 110 for parties of 6+ at one grill; 18% gratuity for 6+; under 100 cm free, 100–130 cm half price; seniors 65+ 20% off; leftovers 20% of the bill).",
+      "https://pos.chowbus.com/online-ordering/store/Chubby-Cattle-Pleasanton/22243 (their Order Online link; server-rendered, read with curl 2026-10-26): 'Chubby Cattle BBQ (Pleasanton, CA), 2693 Stoneridge Drive #106', +1 (925) 892-3356, a pickup menu (Wagyu Rice Box, Fried Bites & Appetizers, Sushi, Cold Dishes & Sides, Salads & Light Bites, Drinks, Bento Box, Soup, Dessert). Each item shows a lower (points/discount) price and a regular price; the regular price is used.",
+      "KRON4 (via chubbycattle.com/fast-rising-la-based-kbbq-chain-opening-first-bay-area-locations/) and a web search: Pleasanton is the first of three Bay Area shops (Milpitas and Santa Clara coming soon), in the Pacific Pearl centre. Used only for the open/city check.",
+      "Reel DevfMX2isDa (@createwithcv, 21 Oct 2026): '[INVITE] ... 2693 Stoneridge Dr Unit 106 Pleasanton ... silver $58 (member $49.99), gold $78 (member $65), diamond $88 (member $75)'; the storefront with unit number 106 on screen.",
+      "Reel DesxHR2pcRs (@bayarea.foodie.adventures, 20 Oct 2026): 'FIRST Bay Area location'; on screen 'chubby cattle bbq pleasanton, ca'.",
+      "Reel DdaFOCUs2cx (@lynniethefoodie, 17 Sep 2026): '[bay | la]', tags @chubbycattlebbq and @chubbycattlebbqbayarea; gold $78, diamond $88, 'platinum ($99pp)'. Compared with chubbycattle.com's Little Tokyo menu (CCLT1-scaled.png), which has a Platinum $99 tier that Pleasanton's menu does not."
+    ],
+    "facts": {
+      "slug": "chubby-cattle-bbq-pleasanton",
+      "name": "Chubby Cattle BBQ",
+      "label": "Chubby Cattle",
+      "cuisine": "AYCE Japanese wagyu BBQ",
+      "tagline": "Their first Bay Area shop: all-you-can-eat Japanese wagyu barbecue in Silver, Gold and Diamond tiers, with sushi and a self-serve station.",
+      "color": "#FFFFFF",
+      "icon": "chubby-cattle-bbq-pleasanton",
+      "prep": 0,
+      "category": "Japanese BBQ",
+      "items": [],
+      "sections": [
+        {
+          "name": "All-you-can-eat (per person)",
+          "items": [
+            [
+              "Silver Tier",
+              "Member price $49.99. Unlimited full-blood thick-cut wagyu short rib, wagyu brisket, top blade, knuckle, steak and finger meat, miso wagyu chuck eye, M8-9 wagyu otoro, wagyu skirt steak, wagyu cubes, thin-sliced beef tongue, pork belly, Iberico pork and chicken cartilage, plus the items for all tiers.",
+              5800
+            ],
+            [
+              "Gold Tier",
+              "Member price $65. Everything in Silver, plus one special meat per person (A5 Miyazaki wagyu short rib, A5 wagyu otoro thick cut, A5 Miyazaki ribeye, A5 finger meat or full-blood wagyu steak), one special dish (A5 wagyu foie gras nigiri or A5 wagyu uni caviar nigiri), unlimited A5 brisket, A5 knuckle, beef tongue platter, tender meats and lamb chop, and scallop.",
+              7800
+            ],
+            [
+              "Diamond Tier",
+              "Member price $75. Everything in Gold and Silver, plus two special meats per person (the Gold choices and A5 striploin 2oz) and two special dishes.",
+              8800
+            ]
+          ]
+        },
+        {
+          "name": "To-go: Wagyu Rice Boxes",
+          "items": [
+            [
+              "Japanese Curry Wagyu Rice Bowl",
+              "Wagyu over rice with Japanese curry sauce.",
+              1499
+            ],
+            [
+              "Wagyu Mapo Tofu Rice Bowl",
+              "Wagyu over rice with a miso-style sauce.",
+              1499
+            ],
+            [
+              "Wagyu Juicy Slider",
+              "Wagyu patty with fresh toppings and their sauce.",
+              799
+            ]
+          ]
+        },
+        {
+          "name": "To-go: Fried Bites & Appetizers",
+          "items": [
+            [
+              "Takoyaki",
+              "Octopus balls with savory sauce and bonito.",
+              999
+            ],
+            [
+              "Japanese Karaage Chicken",
+              "Japanese fried chicken.",
+              899
+            ],
+            [
+              "Orleans Crispy Chicken Cartilage",
+              "Orleans-style spiced.",
+              699
+            ],
+            [
+              "Tempura Shrimp",
+              "",
+              999
+            ],
+            [
+              "Truffle Fries",
+              "",
+              599
+            ],
+            [
+              "Crispy Calamari",
+              "",
+              999
+            ],
+            [
+              "Crispy Tofu Bites",
+              "",
+              799
+            ]
+          ]
+        },
+        {
+          "name": "To-go: Sushi",
+          "items": [
+            [
+              "Salmon Sushi (2 pcs)",
+              "",
+              1099
+            ],
+            [
+              "Yellowtail Sushi (2 pcs)",
+              "",
+              899
+            ],
+            [
+              "Seared Wagyu Sushi (2 pcs)",
+              "",
+              999
+            ],
+            [
+              "Classic Sushi Platter (8 pcs)",
+              "Two each of salmon, yellowtail, tuna and seared wagyu.",
+              2199
+            ]
+          ]
+        },
+        {
+          "name": "To-go: Cold Dishes & Sides",
+          "items": [
+            [
+              "Seaweed & Kimchi Combo",
+              "",
+              899
+            ],
+            [
+              "Seaweed, Kimchi & Spicy Clam Combo",
+              "A three-item side combo.",
+              799
+            ],
+            [
+              "Japanese Octopus Salad",
+              "",
+              699
+            ],
+            [
+              "Korean Seasoned Scallions",
+              "",
+              699
+            ]
+          ]
+        },
+        {
+          "name": "To-go: Poke Bowls",
+          "items": [
+            [
+              "Fresh Salmon Poke Bowl",
+              "Salmon with rice, greens and poke toppings.",
+              2099
+            ],
+            [
+              "Yellowtail Poke Bowl",
+              "",
+              2199
+            ],
+            [
+              "Salmon & Yellowtail Combo Poke Bowl",
+              "",
+              2199
+            ]
+          ]
+        },
+        {
+          "name": "To-go: Bento Boxes",
+          "items": [
+            [
+              "Japanese Onion Wagyu Bowl",
+              "Wagyu with sweet onions.",
+              1599
+            ],
+            [
+              "Japanese Curry Wagyu & Onion Wagyu Bowl",
+              "",
+              1799
+            ],
+            [
+              "Grilled Eel & Wagyu Combo Bowl",
+              "Soy-glazed eel with onion wagyu.",
+              2099
+            ]
+          ]
+        },
+        {
+          "name": "To-go: Soup, Dessert & Drinks",
+          "items": [
+            [
+              "Creamy Tom Yum Soup",
+              "Thai-style, with seafood.",
+              1999
+            ],
+            [
+              "Portuguese Egg Tart",
+              "",
+              699
+            ],
+            [
+              "Pepsi",
+              "",
+              299
+            ],
+            [
+              "Pepsi Zero",
+              "",
+              299
+            ],
+            [
+              "Moshi Sparkling Yuzu",
+              "355 ml can.",
+              399
+            ]
+          ]
+        }
+      ],
+      "address": "2693 Stoneridge Dr #106, Pleasanton, CA 94588",
+      "phone": "(925) 892-3356",
+      "hours": "Sun–Thu 11:30am–10pm; Fri–Sat 11:30am–11pm (kitchen last call 9:30pm / 10:30pm)",
+      "site": "https://www.chubbycattle.com/project/chubby-cattle-pleasanton/",
+      "orderUrl": "https://pos.chowbus.com/online-ordering/store/Chubby-Cattle-Pleasanton/22243",
+      "siteCta": "Open their page",
+      "siteNote": "Their first Bay Area shop, in the Pacific Pearl centre on Stoneridge Drive. All-you-can-eat prices are per person from the menu on their own site; the tiers share seafood, sushi, hot dishes and a self-serve station. 90-minute seating (last call at 70); 18% gratuity for 6 or more; under 100 cm eat free, 100–130 cm half price; seniors 65+ 20% off; leftovers add 20%. To-go prices are from their own Chowbus pickup page.",
+      "clip": {
+        "src": "/clips/chubby-cattle-bbq-pleasanton.mp4",
+        "poster": "/clips/chubby-cattle-bbq-pleasanton-poster.webp",
+        "href": "https://www.instagram.com/reel/DevfMX2isDa/",
+        "credit": "Filmed by @createwithcv",
+        "platform": "Instagram",
+        "by": "createwithcv"
+      }
+    },
+    "placements": [
+      "pleasanton-goods-2"
+    ],
+    "glenn": "26 Oct 2026, 6:34 am: https://linktr.ee/chubbycattlebbqbayarea with 'Pleasanton • Eats / BEASTY • AYCE' and screenshots 1026-0634 (IMG_8033 their Instagram, IMG_8034 the logo 'Crop', IMG_8035–8036 chubbycattle.com's Pleasanton page); 6:34 reel DevfMX2isDa (@createwithcv) 'Clip this video plz / Foodie'; 6:38 reel DesxHR2pcRs (@bayarea.foodie.adventures) '2nd'; 6:43 reel DdaFOCUs2cx (@lynniethefoodie) '3rd / Foodie'.",
+    "flags": [
+      "AYCE TEST: type line 'AYCE Japanese wagyu BBQ' passes /\\bayce\\b|all[- ]you[- ]can[- ]eat/i. Their own sources: Instagram bio 'Premium AYCE Japanese BBQ Experience'; their site 'a premium all-you-can-eat dining experience with three menu tiers'; their menu 'PREMIUM WAGYU AYCE' and 'ALL-YOU-CAN-EAT ITEMS FOR ALL TIERS'.",
+      "NOT needsSite: Glenn sent a Linktree, but the chain's own site has a Pleasanton store page (address, phone, hours, menu, ordering), so site = https://www.chubbycattle.com/project/chubby-cattle-pleasanton/. The site is behind Cloudflare for curl; it loads in a browser.",
+      "IT IS A CHAIN SHOP (Chubby Group: 13+ Chubby Cattle shops; Milpitas and Santa Clara/Great Mall are 'coming soon'). Name 'Chubby Cattle BBQ' as the Pleasanton page and Instagram give it; slug chubby-cattle-bbq-pleasanton so a later Milpitas or Santa Clara page has room; id b_chubbycattlebbqpleasanton.",
+      "THE 3RD REEL WAS NOT CUT. @lynniethefoodie's DdaFOCUs2cx ('[bay | la]') does not show the Pleasanton shop in any stretch: her room is dark with red-lit slatted booths, a 'Wagyu Butcher House' counter, a 'Marbling Distribution' cow wall and a hand-held dark ordering tablet, where Pleasanton (in @createwithcv's and @bayarea.foodie.adventures' reels) is a bright Showa-street room with lanterns and wall-mounted yellow 'Special Meats' screens; and her caption prices a Platinum $99 tier, which chubbycattle.com's Little Tokyo menu has and Pleasanton's menu does not. The rest is close-ups of meat that cannot be placed. So the page has two films. Ask Glenn for another Pleasanton reel if he wants a third.",
+      "Page film 6s-30s of 34s: starts after the storefront (1 s) and two 'Chubby Club Plus' membership signs ($68/year, 'instant savings', 4–5 s) to keep a price promotion off the page. The 25–27 s captions say 'it's a little pricey, but you can easily get your money's worth'.",
+      "Second film is @bayarea.foodie.adventures' whole 15 s reel; its on-screen 'from only $58/pp' is their standing Silver price on their own menu, not a dated deal.",
+      "Hours: their site (and Glenn's screenshot) say 11:30am; a cached search snippet of the same page said 12pm, so the live page wins. Chowbus shows pickup hours 11:30am–8:30pm daily, which are ordering windows and not used.",
+      "Menu: the three AYCE tiers are from the Pleasanton menu image on their own site (regular price as cents, member price in the description). The tiers' shared items (seafood, sushi, signature dishes, self-service station) are named in siteNote rather than listed as $0 items. 'To-go' sections are from their Chowbus pickup page, at the regular (higher) price; Chowbus names were lowercase and are capitalized; 'seaweed+kimchi+combo' is renamed from its own description ('A Three-Item Side Combo With Seaweed, Kimchi, And Spicy Clams'); 'moshi sparkling yuzu & white each drink 355 ml' is listed as Moshi Sparkling Yuzu (the second flavour word is cut off on their page; a non-alcoholic soda). Drop the To-go sections if the page should show only dine-in. No alcohol on either menu.",
+      "Category 'Japanese BBQ' is my pick; Glenn filed it under Eats. Type line could also be 'AYCE wagyu BBQ & sushi' to match Wagyu Grill's.",
+      "No email published for Pleasanton (Little Tokyo's store policy prints littletokyo@chubbycattle.com; nothing for Pleasanton)."
+    ]
+  },
+  {
+    "id": "b_lamarcebicheria",
+    "name_exact": "La Mar Cebichería",
+    "checked_on": "2026-10-26",
+    "sources": [
+      "https://lamarcebicheria.com/san-francisco/events/ (the link Glenn sent, their private events page for the SF location; read 2026-10-26: Cebiche Lounge, Waterfront Patio and Bar event spaces, Tripleseat inquiry form, an event menu PDF; not used for the page)",
+      "https://lamarcebicheria.com/san-francisco/ (their own site for the San Francisco restaurant, at their own domain, 'Acurio International & Acurio Restaurantes'; read 2026-10-26: 'Located at Pier 1 1/2, La Mar San Francisco stands as a culinary gem along the city's iconic Embarcadero waterfront, with unique views of the Bay Bridge and Treasure Island'; 'Our menu features unique flavors and presentations, served from our trademark cebiche bar or cooked in a charcoal-fired oven'; 'Lunch: Everyday, 11:30am - 2:30pm / Dinner: Sunday - Thursday, 5pm - 9:00pm / Friday - Saturday, 5pm - 9:30pm / Happy Hour: Monday - Friday, 3pm - 5pm'; 'PIER 1 1/2 The Embarcadero N San Francisco, CA 94111'; 'Teléfono 415-397-8880'; reservations on OpenTable; 'We do not validate parking. La Mar is a brief walk up the Embarcadero from Embarcadero Bart Station, or take the F train.'; events listed through 'La Mar Uncorked' 14 Oct 2026, so open)",
+      "https://lamarcebicheria.com/San-Francisco/menu/ (their SF menu, rendered in the browser 2026-10-26 from their Tripadvisor/SinglePlatform menu feed: Dinner, Lunch, Dessert, Cocktails, Wines & Spirits and Happy Hour menus; the Dinner Menu (Cebiches, Featured Items, Tiraditos, Causas, Nigiri, Anticuchos & Piqueos, Vegetarian, De Nuestra Cocina Caliente, Large Format, Sides, Experiencia La Mar, Whole Fish Experience), the Dessert Menu (Desserts & Digestifs, Coffee, Tea) and the Cocktails menu's Zero Proof section were read and used; the Lunch and Happy Hour menus were not read)",
+      "https://lamarcebicheria.com/icons/icon-512x512.png (their site's 512x512 app icon: white 'la mar' wordmark on a navy disc; the icon is made from it)",
+      "Instagram @lamarsf (Glenn's screenshot 1026-0718 IMG_8041: 'La Mar Cocina Peruana San Francisco', Peruvian Restaurant, 'San Francisco's premier Peruvian restaurant / Executive Chef @lopezsabinov / Lunch • Happy Hour • Dinner / Reservations at the link below', 'Pier 1 ½, The Embarcadero, San Francisco, California', linktr.ee/lamarsf; 2,330 posts, 70.8K followers; highlights include PASSPORT TO PERU; pinned posts 'La Mar Uncorked' and 'La Mar x SF Restaurant Week October 16-25')",
+      "Glenn's screenshot 1026-0718 IMG_8042 (lamarcebicheria.com opened from Instagram: the white 'la mar' wordmark on navy)",
+      "https://www.instagram.com/reel/DbE2Qmzt9UF/ (the film; @festusfeasts (Festus Ezeli), 22 Jul 2026, 114 s: 'La Mar isn't your average Peruvian spot, it's family style, seafood-heavy...', 'Still thinking about that shrimp with the creamy sauce and ginger-topped roll', '📍 La Mar, Embarcadero, SF'; on-screen title 'You NEED to visit this Seafood spot in the Bay Area / 📍 La Mar, Embarcadero, San Francisco'; later the chef and a manager speak about the restaurant)",
+      "https://www.instagram.com/reel/Dajl4orSwQW/ (@snackateriansf (Tati), 9 Jul 2026, 27 s: 'SF's Passport to Peru is back!!', 'From July 6–26... submit your completed passport at @lamarsf', 20 participating restaurants; not cut, see flags)",
+      "https://www.instagram.com/reel/DaQgy6ApsEq/ (@felicitythefoodie (Felicity), 1 Jul 2026, 43 s: 'Save this post for the celebration from July 6-26!', 'Led by one of my all-time favorite restaurants in the City, @lamarsf, Passport to Peru'; not cut, see flags)"
+    ],
+    "facts": {
+      "slug": "la-mar-cebicheria",
+      "name": "La Mar Cebichería",
+      "label": "La Mar",
+      "cuisine": "Peruvian cebichería",
+      "tagline": "Gastón Acurio's Peruvian cebichería on Pier 1½ of the Embarcadero, with Bay Bridge views: cebiches and tiraditos from their cebiche bar, causas, nigiri, anticuchos and lomo saltado, and seafood from a charcoal-fired oven.",
+      "color": "#13385d",
+      "icon": "la-mar-cebicheria",
+      "prep": 0,
+      "category": "Peruvian",
+      "items": [],
+      "sections": [
+        {
+          "name": "Cebiches",
+          "items": [
+            [
+              "Clásico",
+              "Catch of the day, classic leche de tigre, choclo, habanero, sweet potato",
+              3200
+            ],
+            [
+              "Limeño",
+              "Catch of the day, shrimp, calamari, octopus, rocoto leche de tigre, cancha",
+              3100
+            ],
+            [
+              "Victoriano",
+              "Local halibut, sweet potato, sunchoke leche de tigre, choclo, artichoke chips",
+              3200
+            ],
+            [
+              "Nikkei",
+              "Ahi tuna, cucumber, chili oil, rocoto, tamarind leche de tigre",
+              3300
+            ],
+            [
+              "Quemado",
+              "Wild salmon, avocado, eggplant, leche de tigre, blue corn tortilla",
+              3000
+            ],
+            [
+              "Veggie",
+              "Roasted seasonal roots, avocado, artichoke confit, artichoke chips",
+              2600
+            ],
+            [
+              "Leche de Tigre",
+              "Chopped seafood, onion, choclo, cancha, rocoto leche de tigre, jumbo prawn",
+              2400
+            ]
+          ]
+        },
+        {
+          "name": "Featured",
+          "items": [
+            [
+              "Cebiche Tasting",
+              "Their most popular cebiches: Quemado, Nikkei and Victoriano",
+              6900
+            ],
+            [
+              "Gran Bandeja Cebichera",
+              "Cebiche Clásico, Causa California, nigiri, jumbo prawns, tiradito and octopus",
+              13900
+            ],
+            [
+              "Golden Osetra Caviar",
+              "Tsar Nicolai, California, 1 oz",
+              19900
+            ]
+          ]
+        },
+        {
+          "name": "Tiraditos",
+          "items": [
+            [
+              "Criollo",
+              "Kanpachi, ají amarillo sauce, chalaca, choclo",
+              2800
+            ],
+            [
+              "Laqueado",
+              "Torched ahi tuna, passion fruit sauce, pickled vegetables, nikkei aioli",
+              3100
+            ],
+            [
+              "Curado",
+              "Cured and torched salmon belly, cilantro-jalapeño sauce, yuca and quinoa chips",
+              2900
+            ],
+            [
+              "Olivo",
+              "Spanish octopus, purple potato and camu camu sauce, avocado, black olive, octopus chicharrón",
+              3600
+            ],
+            [
+              "El Trio",
+              "Their three most popular tiraditos: Olivo, Criollo and Curado",
+              6900
+            ]
+          ]
+        },
+        {
+          "name": "Causas",
+          "items": [
+            [
+              "California",
+              "Dungeness crab, purple potato, avocado, quail egg, creamy ají amarillo",
+              3600
+            ],
+            [
+              "Vegana",
+              "Asparagus, purple potato, onion escabeche, avocado, chimichurri, ají amarillo aioli",
+              1800
+            ],
+            [
+              "Limeña",
+              "Chicken salad, Idaho potato, ají amarillo aioli",
+              1900
+            ]
+          ]
+        },
+        {
+          "name": "Nigiri",
+          "items": [
+            [
+              "Nigiri Saltado",
+              "Akaushi wagyu skirt steak, quail egg, chalaca, lomo saltado gravy (2 pieces)",
+              1900
+            ],
+            [
+              "Nigiri Criollo",
+              "Ahi tuna, ají amarillo sauce, chalaca (2 pieces)",
+              1800
+            ],
+            [
+              "Nigiri Chifa",
+              "Kanpachi, pachikay sauce, pickled vegetables, fried garlic (2 pieces)",
+              1800
+            ],
+            [
+              "Nigiri Anticuchero",
+              "Salmon belly, anticuchera sauce, jalapeño-cilantro sauce (2 pieces)",
+              1800
+            ],
+            [
+              "Nigiri Vegan",
+              "Roasted tomato, basil cream, pine nuts, balsamic reduction (2 pieces)",
+              1700
+            ],
+            [
+              "Nigiri Tasting",
+              "Two of each of their nigiri",
+              5900
+            ]
+          ]
+        },
+        {
+          "name": "Anticuchos & Piqueos",
+          "items": [
+            [
+              "Tacos La Mar, Crab",
+              "Yellow corn tortilla, avocado, chalaca, radish, Peruvian sauce",
+              3400
+            ],
+            [
+              "Tacos La Mar, Tuna",
+              "Yellow corn tortilla, avocado, chalaca, radish, Peruvian sauce",
+              3100
+            ],
+            [
+              "Croquetas Chifa",
+              "Rock shrimp in squid ink tempura, pickled vegetables, tártara chifa sauce",
+              3300
+            ],
+            [
+              "Chicharrón de Calamares",
+              "Crispy fried squid, fried yuca, chalaca, tartar sauce",
+              2900
+            ],
+            [
+              "Pulpo Anticuchero",
+              "Grilled Spanish octopus, anticuchera sauce, oyster mushroom and fava bean kapchi",
+              3800
+            ],
+            [
+              "Anticuchos, Chicken",
+              "Anticuchera sauce, potato, choclo, Peruvian sauces",
+              1800
+            ],
+            [
+              "Anticuchos, Beef Heart",
+              "Anticuchera sauce, potato, choclo, Peruvian sauces",
+              2400
+            ],
+            [
+              "Conchas Pachikay",
+              "Three grilled jumbo diver scallops, pachikay sauce",
+              3900
+            ],
+            [
+              "Empanada, Beef",
+              "",
+              1900
+            ],
+            [
+              "Empanada, Mushroom",
+              "",
+              1800
+            ],
+            [
+              "Empanada, Chicken",
+              "",
+              1800
+            ],
+            [
+              "Empanada, Corn",
+              "",
+              1700
+            ],
+            [
+              "Empanada Sampler",
+              "A tasting of four empanadas",
+              3400
+            ]
+          ]
+        },
+        {
+          "name": "Vegetarian",
+          "items": [
+            [
+              "Veggie Saltado",
+              "Wok-fried portobello, tomato, red onion, cilantro, jalapeño, mushroom-soy sauce, fries and rice",
+              3300
+            ],
+            [
+              "Quinoa Caprese",
+              "Peruvian red quinoa, ají amarillo dressing, burrata, heirloom tomatoes",
+              2800
+            ],
+            [
+              "Coliflor Entero",
+              "Grilled whole cauliflower, eggplant purée, fried garlic, sweet pepper leche de tigre",
+              2900
+            ],
+            [
+              "Berenjena Criolla",
+              "Fried eggplant, lima bean purée, mango and ají amarillo chutney, herb salad",
+              3200
+            ],
+            [
+              "Quinoa Chaufa",
+              "Wok-fried quinoa, seasonal vegetables, nikkei aioli, fried egg, pickled vegetables",
+              2900
+            ]
+          ]
+        },
+        {
+          "name": "From the Hot Kitchen",
+          "items": [
+            [
+              "El Achupado",
+              "Bucatini, scallops, octopus, shrimp, chupe sauce, Dungeness crab, huacatay sauce",
+              5100
+            ],
+            [
+              "Salmon Nikkei",
+              "Grilled salmon, seasonal vegetables, mushrooms, ají panca and coconut milk",
+              4300
+            ],
+            [
+              "Arroz Norteño",
+              "Wok-fried shrimp and rice with ají amarillo, chicha de jora, jumbo prawns, radish salad",
+              4900
+            ],
+            [
+              "Cod Criollo",
+              "Baked local cod glazed with miso and ají panca, quinoa tamal, sautéed bok choy",
+              5200
+            ],
+            [
+              "Churrasco Marino",
+              "Grilled Alaskan halibut, sweet pepper chimichurri, black rice",
+              5100
+            ],
+            [
+              "Chaufa Aeropuerto",
+              "Fried rice, wagyu skirt steak, seasonal vegetables under a shrimp omelet",
+              4200
+            ],
+            [
+              "Lomo Saltado",
+              "Wok stir-fried beef tenderloin, tomato, red onion, cilantro, jalapeño, fries and rice",
+              4800
+            ],
+            [
+              "Lomo Saltado, Fish",
+              "The lomo saltado made with fish",
+              4700
+            ],
+            [
+              "Lomo Saltado, Chicken",
+              "The lomo saltado made with chicken",
+              3400
+            ]
+          ]
+        },
+        {
+          "name": "Large Format",
+          "items": [
+            [
+              "Planchaza La Mar",
+              "Prawns, octopus, squid, catch of the day, anticuchera sauce, potatoes, chimichurri",
+              9900
+            ],
+            [
+              "Arroz La Mar",
+              "Arborio rice in beef tendon broth with ají and chicha de jora, wagyu culotte, scallops",
+              14900
+            ],
+            [
+              "Parrilla Anticuchera",
+              "16 oz American wagyu flat iron, huancaína hash browns, greens, chimichurri",
+              12900
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "Fried Rice",
+              "",
+              1200
+            ],
+            [
+              "Arroz con Choclo",
+              "",
+              800
+            ],
+            [
+              "Quinoa Chaufa (side)",
+              "",
+              1200
+            ],
+            [
+              "Plancha Veggie",
+              "",
+              1200
+            ],
+            [
+              "Yuca Frita",
+              "",
+              900
+            ],
+            [
+              "Fried Potatoes",
+              "",
+              900
+            ],
+            [
+              "Plantain Chips",
+              "",
+              1100
+            ]
+          ]
+        },
+        {
+          "name": "Tasting Menu",
+          "items": [
+            [
+              "Experiencia La Mar",
+              "A journey through Peru, per person: causa and caviar, cebiche, tiradito, nigiri, pulpo, halibut, lomito saltado, chocolate dessert",
+              14500
+            ]
+          ]
+        },
+        {
+          "name": "Desserts",
+          "items": [
+            [
+              "Tapioca Tropical",
+              "Coconut tapioca, mango-mint chalaca, coconut chips, avocado ice cream, raspberry",
+              1300
+            ],
+            [
+              "Tres Leches de Coco",
+              "Brown-butter sponge, Italian meringue, manjar blanco ice cream, candied coconut",
+              1500
+            ],
+            [
+              "Choco-Maracuyá",
+              "Passion fruit cheesecake, chocolate mousse, berry coulis, almond crumble",
+              1500
+            ],
+            [
+              "Chocolate Cake",
+              "Peruvian chocolate cake, dulce de leche, vanilla ice cream",
+              1500
+            ],
+            [
+              "Suspiro Loco",
+              "Manjar de yemas foam, vanilla ice cream, almond crumble, strawberries, cotton candy",
+              1500
+            ],
+            [
+              "Seasonal Fruit Sorbet",
+              "Exotic house-made fruit sorbets",
+              1200
+            ],
+            [
+              "Cacao y Lúcuma",
+              "Chocolate mousse, lúcuma ice cream, caramelized grains",
+              1600
+            ]
+          ]
+        },
+        {
+          "name": "Zero Proof",
+          "items": [
+            [
+              "Inca Kola",
+              "Lemon verbena soda",
+              600
+            ],
+            [
+              "Chicha Morada",
+              "Purple corn, pineapple, cinnamon, clove",
+              800
+            ],
+            [
+              "Butterfly Pea",
+              "Seedlip Garden, butterfly pea and ginger water, lime, agave, ginger beer, mint",
+              1200
+            ],
+            [
+              "Rainforest",
+              "Camu camu, simple syrup",
+              1200
+            ],
+            [
+              "Metropolitan Spritz",
+              "Cranberry, passion fruit, lime, soda",
+              1000
+            ],
+            [
+              "Guayaba Healing",
+              "Guava nectar, lime, tonic, Tajín",
+              1200
+            ]
+          ]
+        },
+        {
+          "name": "Coffee & Tea",
+          "items": [
+            [
+              "Coffee",
+              "",
+              400
+            ],
+            [
+              "Decaf Coffee",
+              "",
+              400
+            ],
+            [
+              "Cappuccino",
+              "",
+              800
+            ],
+            [
+              "Americano",
+              "Single",
+              600
+            ],
+            [
+              "Macchiato",
+              "Single",
+              700
+            ],
+            [
+              "Espresso",
+              "Single",
+              400
+            ],
+            [
+              "Latte",
+              "Single",
+              600
+            ],
+            [
+              "Ryokucha Green Tea",
+              "Full-bodied Japanese green tea",
+              800
+            ],
+            [
+              "Turmeric Spice Herbal Tea",
+              "With ginger and citrus",
+              1000
+            ],
+            [
+              "Blood Orange Pu'erh Tea",
+              "Mellow and woodsy, with ginger",
+              800
+            ],
+            [
+              "California Persian Black Tea",
+              "Black tea and rose petals",
+              800
+            ],
+            [
+              "Iron Goddess of Mercy Oolong",
+              "Dark, rich and sweet",
+              800
+            ],
+            [
+              "Chamomile Blossom Herbal Tea",
+              "Croatian chamomile buds",
+              800
+            ],
+            [
+              "Downy Sprout White Tea",
+              "Sweet, nutty and vegetal",
+              1000
+            ],
+            [
+              "Moorish Mint Green Tea",
+              "",
+              800
+            ]
+          ]
+        }
+      ],
+      "address": "Pier 1½, The Embarcadero, San Francisco, CA 94111",
+      "phone": "(415) 397-8880",
+      "hours": "Lunch daily 11:30am–2:30pm; dinner Sun–Thu 5–9pm, Fri–Sat 5–9:30pm; happy hour Mon–Fri 3–5pm",
+      "site": "https://lamarcebicheria.com/san-francisco/",
+      "siteNote": "Prices are from the dinner, dessert and drinks menus on their own website; the lunch and happy hour menus differ. Market-price whole fish and large-format catch are ordered at the table. Tables are booked through OpenTable from their site, and they host private events in their Cebiche Lounge, Waterfront Patio and Bar. They do not validate parking; it is a short walk from Embarcadero BART or the F line.",
+      "siteCta": "Open their site",
+      "clip": {
+        "src": "/clips/la-mar-cebicheria.mp4",
+        "poster": "/clips/la-mar-cebicheria-poster.webp",
+        "href": "https://www.instagram.com/reel/DbE2Qmzt9UF/",
+        "credit": "Filmed by @festusfeasts",
+        "platform": "Instagram",
+        "by": "festusfeasts"
+      }
+    },
+    "placements": [
+      "san-francisco-goods2-52",
+      "beasty-goods2-75"
+    ],
+    "glenn": "Glenn, 26 Oct 2026, 7:18 am: screenshots 1026-0718 (IMG_8041 their Instagram @lamarsf, IMG_8042 their website's 'la mar' wordmark), the link https://lamarcebicheria.com/san-francisco/events/ and \"San Francisco • Eats / BEASTY • Eats\"; 7:20 reel DbE2Qmzt9UF (@festusfeasts) \"Clip this video plz\"; 7:21 reel Dajl4orSwQW (@snackateriansf) \"Clip this video plz 2nd / Foodie\"; 7:21 reel DaQgy6ApsEq (@felicitythefoodie) \"Clip this video plz 3rd\".",
+    "flags": [
+      "SECOND AND THIRD FILMS NOT CUT (Glenn asked for both): Dajl4orSwQW (@snackateriansf, 27 s) and DaQgy6ApsEq (@felicitythefoodie, 43 s) are both promos for SF's multi-restaurant 'Passport to Peru' (6–26 July 2026), checked at 1 fps. Neither has a 15 s stretch that is only La Mar and free of the dated event: @snackateriansf's burned-in captions run the whole reel ('PASSPORT TO PERU / SF / BAY AREA' title 0–1 s, 'Hosted by San Francisco's La Mar' 6–7 s, 'this is the third year in a row' 8–11 s, 'from July 6th through July 26th' 12–14 s, 'Collect those Passport to Peru stamps to win' 17–18 s, 'who doesn't want to win a trip to Lima, Peru?!' 22–23 s), and the food cuts between participating restaurants (a 'BROS VIBES' neon sign at 4 s is another restaurant; a wine glass is in the hands at 6–7 s). @felicitythefoodie's opens on a 'PASSPORT TO PERU / win a trip to Peru!' card (4–5 s), says 'from July 6 to 26' (8–9 s), cuts between rooms (the waterfront patio at 10–11, 18–19 and 27–29 s and a 'la mar' cup at 7–8 s look like La Mar, but an indoor room with a hanging-plant ceiling at 0, 3, 17, 23–24 and 35–42 s is not), and closes 'I recommend Limon, Casa Sofia, and La Mar'. The event ended 26 July. The page has one film; no other_reviews.",
+      "FILM: DbE2Qmzt9UF (@festusfeasts), make-clip --start 0 --seconds 24 (prints 0s-24s of 114s, 3.2 MB), checked at 2 fps: their chef holding up a whole fish under his title card 'You NEED to visit this Seafood spot in the Bay Area / 📍 La Mar, Embarcadero, San Francisco' (0–6 s), the sushi-style roll and a cebiche, a whole fried fish, then his guest at the table ('You live in Santa Cruz and you drove down to the city') and the spread: black-squid-ink bites, causa, nigiri, a clay-pot rice ('We are Peruvian... influenced by many cultures, Japanese, Chinese, Italian'). Only La Mar; no dates or promos on screen; no profanity in his captions. Purple drinks with lime are on the table in the background (likely chicha morada, which they serve, but not certain); a blue Saratoga water bottle. Festus's later minutes (a manager and the chef talking, 27–84 s) are left out; at 52–53 s a poster in the room reads 'ONE DAY...' and is not in the excerpt.",
+      "MENU: 14 sections, 90 items, from their own SF menu page (dinner, dessert, cocktails menus), in their order; section 'De Nuestra Cocina Caliente' renamed 'From the Hot Kitchen' and 'Featured Items' 'Featured'. Names title-cased; nigiri names prefixed 'Nigiri' (their section says '2 pieces per order'); Tacos La Mar, Anticuchos, Empanadas and Lomo Saltado split into one row per priced option. Their Lomo Saltado lists 'Order $48 / Fish $47 / Chicken $34'; 'Order' is read as the beef tenderloin version (the dish's description) and the other two as 'Lomo Saltado, Fish/Chicken'. Coffee rows use the single-shot price (doubles: Americano $7.50, Macchiato $8, Espresso $7, Latte $8). Allergen notes and suggested dessert wine pairings dropped. KEPT the Golden Osetra caviar ($199 for 1 oz; the coordinator may drop it). LEFT OUT: Colita, Collar & Belly (MP) and the Whole Fish Experience (Kampachi, Halibut, 'market price') have no price; 'Additional sauces $2' (modifier); Experiencia La Mar's '+$99 wine pairing'; all cocktails, Low Proof, beer (incl. Athletic Brewing non-alcoholic IPA), NON 1 Brut Rosé (an alcohol-free wine alternative, left out as wine-styled), wines, ports, madeiras and spirits. Lunch and Happy Hour menus not read.",
+      "HOURS: their SF page's single schedule, shortened: 'Lunch daily 11:30am–2:30pm; dinner Sun–Thu 5–9pm, Fri–Sat 5–9:30pm; happy hour Mon–Fri 3–5pm' (92 chars).",
+      "OPEN AND IN THE CITY: their site lists SF events through 14 Oct 2026 and their Instagram pins 'La Mar x SF Restaurant Week October 16–25'. Pier 1½, The Embarcadero, San Francisco 94111. City confirmed. The Lima original and a Bellevue, WA location are on the same site; this page is San Francisco only.",
+      "NAME: Glenn's text says 'La Mar Cebichería'; their Instagram name is 'La Mar Cocina Peruana San Francisco' and their site calls it 'La Mar San Francisco' under the lamarcebicheria.com domain. name 'La Mar Cebichería' (as Glenn sent and the domain), label 'La Mar'; the coordinator may prefer 'La Mar Cocina Peruana'. Slug la-mar-cebicheria, id b_lamarcebicheria. Gastón Acurio in the tagline is from Festus's reel (a manager: 'started by Gastón Acurio') and the site footer ('Acurio International & Acurio Restaurantes'); Executive Chef @lopezsabinov per their Instagram (not on the page).",
+      "NO ONLINE ORDERING: their site offers OpenTable reservations, gift cards on Toast (findcard only) and event inquiries, no takeout ordering. No orderUrl; siteCta 'Open their site'. Not needsSite (a full website at their own domain; Glenn's link is its events page).",
+      "ICON: their site's 512x512 app icon (white 'la mar' on a navy disc, transparent corners), corners filled with the disc's own navy #13385d so the tile is a full square, WebP q90, public/icons/la-mar-cebicheria.webp; color #13385d. Same mark as their Instagram picture and Glenn's IMG_8042.",
+      "Festus already has a Foodies page (src/data/foodies.ts); this is his La Mar film, sent as 'Clip this video plz' (not 'Foodie'). @snackateriansf was sent as 'Foodie' but her reel is not used; the coordinator can still list her in FOODIES.md as not on BEASTY."
+    ]
+  },
+  {
+    "id": "b_cleansipsmocktails",
+    "name_exact": "Clean Sips Mocktails",
+    "checked_on": "2026-10-26",
+    "sources": [
+      "Instagram @cleansipsmocktails (Glenn's screenshot 1026-0724 IMG_8044): 'Clean Sips Mocktails', 'Crafted with Intention, Sipped with Pleasure / Mobile Cart / Mixing Clean Ingredients & Bold Flavor / Bay Area, CA', link cleansipsmocktails.com; highlights events, sips, mini sips, caught…, team.",
+      "Their website cleansipsmocktails.com (Glenn's screenshots IMG_8043 and IMG_8045; read in full 2026-10-26, home page and /party-sips): 'Bay Area mobile mocktail cart'; 'Handcrafted non-alcoholic cocktails for weddings, showers, corporate events, iftars, and private parties across the Bay Area'; 'Clean Sips brings the full bar experience to your event, minus the alcohol. We handle setup, service, and cleanup'; cart quoted online (50-guest minimum, 2-6 hours, 1-3 flavours, 50% deposit holds the date); Mini Sips canned mocktails '$7 per can · 20-can minimum · 5-can minimum per flavor', pickup in South San Jose or local delivery for a charge; Party Sips gallon bags '$120', each 'enough for 3 dispenser refills and up to 50 cups', with dispenser, cups and toppers; 18 flavours (10 Specialty, 8 Mojitos). FAQ: 'The whole Bay Area, from South San Jose'; 'Clean Sips is an entirely alcohol-free business'. Footer: (408) 673-1797, hello@cleansipsmocktails.com, 'Serving the Bay Area from South San Jose'. Founders signed 'Asmaa & Hiba'.",
+      "Reel DObjbUTAZoF (10 Sep 2025), posted by @cleansipsmocktails (channel in info.json): 'we're Clean Sips! … our mocktail cart … DM us for more info'.",
+      "A web search found no other first-party profile and no press; no hours are published anywhere of theirs."
+    ],
+    "facts": {
+      "slug": "clean-sips-mocktails",
+      "name": "Clean Sips Mocktails",
+      "label": "Clean Sips",
+      "cuisine": "Mobile mocktail cart & event catering",
+      "tagline": "An alcohol-free mocktail cart from South San Jose, run by Asmaa and Hiba: house-made syrups and garnished mocktails poured at weddings, showers, iftars and parties across the Bay Area, plus canned Mini Sips and gallon Party Sips to go.",
+      "color": "#FAF6F0",
+      "icon": "clean-sips-mocktails",
+      "prep": 0,
+      "category": "Drinks",
+      "items": [],
+      "sections": [
+        {
+          "name": "Mini Sips: Specialty",
+          "items": [
+            [
+              "Aloha Breeze",
+              "Canned mocktail",
+              700
+            ],
+            [
+              "Crisp Orchard",
+              "Canned mocktail",
+              700
+            ],
+            [
+              "Lemon Blueberry",
+              "Canned mocktail",
+              700
+            ],
+            [
+              "Lychee Rose",
+              "Canned mocktail",
+              700
+            ],
+            [
+              "Mango Dragonfruit",
+              "Canned mocktail",
+              700
+            ],
+            [
+              "Pineapple Paradise",
+              "Canned mocktail",
+              700
+            ],
+            [
+              "Pomegranate Bliss",
+              "Canned mocktail",
+              700
+            ],
+            [
+              "Strawberry Spark",
+              "Canned mocktail",
+              700
+            ],
+            [
+              "Summer Orange Spritz",
+              "Canned mocktail",
+              700
+            ],
+            [
+              "Watermelon Whirl",
+              "Canned mocktail",
+              700
+            ]
+          ]
+        },
+        {
+          "name": "Mini Sips: Mojitos",
+          "items": [
+            [
+              "Lavender Mojito",
+              "Canned alcohol-free mojito",
+              700
+            ],
+            [
+              "Mango Mojito",
+              "Canned alcohol-free mojito",
+              700
+            ],
+            [
+              "Passion Fruit Mojito",
+              "Canned alcohol-free mojito",
+              700
+            ],
+            [
+              "Peach Mojito",
+              "Canned alcohol-free mojito",
+              700
+            ],
+            [
+              "Pomegranate Mojito",
+              "Canned alcohol-free mojito",
+              700
+            ],
+            [
+              "Raspberry Mojito",
+              "Canned alcohol-free mojito",
+              700
+            ],
+            [
+              "Rose Mojito",
+              "Canned alcohol-free mojito",
+              700
+            ],
+            [
+              "Strawberry Mojito",
+              "Canned alcohol-free mojito",
+              700
+            ]
+          ]
+        },
+        {
+          "name": "Party Sips",
+          "items": [
+            [
+              "Party Sips gallon bag",
+              "Any flavour, ready to pour, with a dispenser, cups and toppers; up to 50 cups",
+              12000
+            ]
+          ]
+        }
+      ],
+      "phone": "(408) 673-1797",
+      "email": "hello@cleansipsmocktails.com",
+      "site": "https://cleansipsmocktails.com/",
+      "siteCta": "Get a quote",
+      "siteNote": "Their cart is full service and quoted on their website (50-guest minimum, 2 to 6 hours, a 50% deposit holds the date). Mini Sips cans have a 20-can minimum with at least 5 per flavour; cans and Party Sips are invoiced, for pickup in South San Jose or local delivery at extra charge. Everything they make is alcohol-free.",
+      "clip": {
+        "src": "/clips/clean-sips-mocktails.mp4",
+        "poster": "/clips/clean-sips-mocktails-poster.webp",
+        "href": "https://www.instagram.com/reel/DObjbUTAZoF/",
+        "credit": "Posted by @cleansipsmocktails",
+        "platform": "Instagram"
+      }
+    },
+    "placements": [],
+    "glenn": "26 Oct 2026, 7:24 am: 'Clean Sips Mocktails', https://cleansipsmocktails.com, 'BEASTY • Catering / BEASTY • Food Truck' with screenshots IMG_8043-8045; reel DObjbUTAZoF 'Clip this video plz'.",
+    "flags": [
+      "TYPE LINE 'Mobile mocktail cart & event catering' passes the Catering test. JUDGEMENT CALL: they never use the word 'catering'; their own words are 'full-service mobile mocktail cart', 'the full bar experience to your event … We handle setup, service, and cleanup', and 'What's included: the cart, your menu, every ingredient … cups, straws, napkins, ice, and our team on site', which is drink catering in substance. If the coordinator wants the word itself in their sources, use 'Mobile mocktail cart' and hand-seat Catering or skip it. /catering/ also matches the Chefs (cooks) test.",
+      "FOOD TRUCK NOT SUPPORTED: it is a cart (Instagram 'Mobile Cart', website 'mobile mocktail cart', the white Clean Sips bar on wheels in the film), not a truck or trailer, so the type line does not pass the Food Trucks test. Glenn's 'BEASTY • Food Truck' tag left for the coordinator.",
+      "CITY from their own sources: San Jose ('Serving the Bay Area from South San Jose'; pickup in South San Jose; travel quoted from ZIP 95123 in their site's code). Instagram says only 'Bay Area, CA'. Glenn gave no city tag, so no city seat is proposed; San Jose would be the city if one is wanted. No street address is published (pickup point given only as South San Jose), so no address field.",
+      "MENU: from their own website. Mini Sips cans $7 each, the 18 flavours in their own two groups (Specialty 10, Mojitos 8); the site gives no flavour descriptions, so each says only 'Canned mocktail'. The mojitos are alcohol-free: their FAQ says 'Clean Sips is an entirely alcohol-free business', so nothing was left out for alcohol. Party Sips is one item at $120 a gallon bag (any of the same 18 flavours). The cart itself is quoted (an instant estimate after a date and five questions), so it has no item; it is described in siteNote with siteCta 'Get a quote'. Minimums (20 cans, 5 per flavour) are in siteNote; the app does not enforce them.",
+      "No hours published anywhere of theirs (events by booking); hours left out.",
+      "No orderUrl: their site's order forms send details and they reply with an invoice; nothing is paid online. needsSite NOT set: cleansipsmocktails.com is their own site on their own domain.",
+      "ICON: their logo.png (700x435, transparent) cropped to the wordmark, scaled to 460 px wide and centred on #FAF6F0 (the background of their own favicon), 512x512 WebP q90. The logo's alpha carries a faint paper texture, which shows as a slight grain on the cream; left as their artwork.",
+      "PAGE FILM DObjbUTAZoF (43 s, their own post): make-clip --start 4 --seconds 24 (4s-28s of 43s). The reel's burned-in subtitles (founders introducing themselves) run only at 0-4 s and 33-43 s, so the excerpt starts after them and ends before them. Checked at 2 fps: pouring, garnishing, the founders and guests, the Clean Sips cart and the row of drinks. No text overlays, nothing dated, no alcohol (the clear bottle is Trader Joe's sparkling lime water). An 'aerie' shop sign and an umbrella with part of another stall's name are in the background, scenery only. The cart's small menu board (~5 s) is unreadable at this size.",
+      "Their Instagram has 3,128 followers and 91 posts; Glenn's screenshot shows 'Follow' (not yet followed). Nothing was sent."
+    ]
+  },
+  {
+    "id": "b_bourbonsteaksanfrancisco",
+    "name_exact": "Bourbon Steak San Francisco",
+    "checked_on": "2026-10-26",
+    "sources": [
+      "https://theminagroup.com/restaurants/bourbon-steak-san-francisco/ (the restaurant's page on Michael Mina's own MINA Group site; www.michaelmina.net now redirects to theminagroup.com, and michaelmina.net/restaurants/bourbon-steak-san-francisco/ itself returns 404; read 2026-10-26: 'Bourbon Steak San Francisco reimagines Chef Michael Mina’s acclaimed steakhouse with modern flair, seasonal California ingredients, refined seafood, and signature tableside presentations. Located at The Westin St. Francis in Union Square, the restaurant features Bourbon Lounge at its heart'; 'The Westin St. Francis 335 Powell St San Francisco, CA Tel: (415) 770-0291'; Hours 'DINNER Mon—Thurs, Sun: 5PM—9PM Fri—Sat: 5PM—10PM LOUNGE Mon—Thurs, Sun: 4PM—Close Fri—Sat: 4PM—Close'; menus Dinner, Dessert, Beverage, Wine List, Bar/Lounge, Kid's Menu, Private Dining, Pre-Theatre, Thanksgiving 2026)",
+      "https://theminagroup.com/brands/ (MINA Group brand list: 'Bourbon Steak: A modern American steakhouse celebrating prime cuts, fresh seafood, and expertly crafted cocktails')",
+      "https://mx.michaelmina.net/recipe-exchange/download/?file_id=38080&nodl=true (their Dinner menu PDF, linked from that page; read 2026-10-26: Shellfish a la carte, Shellfish cold platter, Sashimi, Caviar Bites, Caviar Service, Black Truffle Bread, Soups & Salads, Appetizers, Michael Mina's Hot Shellfish 'Fondue', Market Fish, Steaks & Chops, Accompaniments, Bourbon Steak Signatures, Entrées, Sides; all priced)",
+      "https://mx.michaelmina.net/recipe-exchange/download/?file_id=38058&nodl=true (their Bar/Lounge menu PDF: Lounge food page with The BBB bone marrow burger; second page cocktails and dessert wines, left out)",
+      "https://mx.michaelmina.net/recipe-exchange/download/?file_id=37618&nodl=true (their Dessert menu PDF: six desserts; second page bourbon, whisky, liqueurs and dessert wine, left out)",
+      "https://mx.michaelmina.net/recipe-exchange/download/?file_id=38079&nodl=true (their Pre-Theatre menu: 'Available 5-6 PM | 89 PER PERSON', three courses with supplements; summarised in siteNote, not itemised)",
+      "https://www.bourbonsteak.com/location/san-francisco/ (Bourbon Steak's own brand site, San Francisco page: same hours, address and (415) 770-0291; 'WEEKEND DJ SETS Join us every Friday and Saturday from 8:30–11:30 PM'; 'join us daily from 5-6 PM for our pre-theatre two course menu'; reservations on SevenRooms (sevenrooms.com/explore/bourbonsteaksanfrancisco); Thanksgiving 2026 buffet promo)",
+      "https://linktr.ee/bourbonsteaksf (the link Glenn sent and their Instagram bio link: 'Prime cuts. Inventive cocktails. Refined hospitality reimagined by Chef Michael Mina.'; links Thanksgiving Dinner, Reservations (SevenRooms), Private Events (Tripleseat), Chef Michael Mina, Our Story, Press; joined Linktree June 2025)",
+      "Instagram @bourbonsteaksf (Glenn's screenshot 1026-0742 IMG_8046: 'Bourbon Steak San Francisco', 166 posts, 15.6K followers, 'Prime cuts. Inventive cocktails. Refined hospitality reimagined by @ChefMichaelMina.', linktr.ee/bourbonsteaksf; highlights Events, Drink, Eat, Story, Press)",
+      "Glenn's screenshot 1026-0742 IMG_8047 (their Instagram picture opened full size: the gold steer over a dotted line on dark teal; the icon is cut from it)",
+      "Glenn's screenshot 1026-0742 IMG_8049 (Apple Maps 'Bourbon Steak': Sun–Thu 4:00–9:00 PM, Fri–Sat 4:00–10:00 PM, +1 (415) 770-0291, bourbonsteak.com, 335 Powell St, San Francisco, CA 94102)",
+      "https://www.instagram.com/reel/DUtdoDXktzc/ (the page film; @chefmichaelmina (Michael Mina), 13 Feb 2026, 58 s: 'Bourbon Steak San Francisco x Roc Nation Super Bowl LX pre party. @rocnation @westinstfr @bourbonsteaksf')",
+      "https://www.instagram.com/reel/De8FsQPCn0O/ (second review; @celineeats, 26 Oct 2026, 63 s: 'The best date night activity in SF - pre show dinner and then catch a show!!', '📍@bourbonsteaksf', #unionsquaresf #ohmaryplay #preshowdinner)",
+      "https://www.instagram.com/reel/DeaZOeNPwdn/ (second review; @explorewithtaka (Taka Iida), 12 Oct 2026, 41 s: '@bourbonsteaksf has a new weekend rhythm. Live DJ sets every Friday and Saturday, 8:30 to 11:30')",
+      "News check: KTVU and NBC Sports Bay Area reported Michael Mina reopening at the Westin St. Francis with Bourbon Steak alongside Stephen Curry's The Eighth Rule (not used for facts)."
+    ],
+    "facts": {
+      "slug": "bourbon-steak-san-francisco",
+      "name": "Bourbon Steak San Francisco",
+      "label": "Bourbon Steak",
+      "cuisine": "Modern American steakhouse",
+      "tagline": "Chef Michael Mina's modern American steakhouse inside The Westin St. Francis on Union Square: prime and wagyu steaks, a salt-baked, bourbon-flamed wagyu tomahawk, Maine lobster pot pie, caviar, shellfish and sashimi, and the Bourbon Lounge's bone marrow burger.",
+      "color": "#06272E",
+      "icon": "bourbon-steak-san-francisco",
+      "prep": 0,
+      "category": "Steakhouse",
+      "items": [],
+      "sections": [
+        {
+          "name": "Shellfish",
+          "items": [
+            [
+              "Oysters on the Half Shell",
+              "Champagne mignonette",
+              2600
+            ],
+            [
+              "Shrimp Cocktail",
+              "Gin-spiked cocktail horseradish",
+              3200
+            ],
+            [
+              "Half Maine Lobster",
+              "Espelette dijonnaise",
+              4800
+            ],
+            [
+              "Shellfish Cold Platter",
+              "4 West Coast oysters, 4 Oishii shrimp cocktail, half Maine lobster, sashimi trio and PNW escabeche; serves 2–3",
+              14500
+            ],
+            [
+              "Michael Mina's Hot Shellfish “Fondue”",
+              "Seasonal shellfish and crustaceans with roasted garlic butter and lemon, corn fondue for dipping; serves up to 2–3",
+              22500
+            ]
+          ]
+        },
+        {
+          "name": "Sashimi",
+          "items": [
+            [
+              "Ora King Salmon Sashimi",
+              "With coconut-lime, yuzu-tamari and pomegranate-orange sauces",
+              2100
+            ],
+            [
+              "Ahi Tuna Sashimi",
+              "With coconut-lime, yuzu-tamari and pomegranate-orange sauces",
+              2300
+            ],
+            [
+              "Diver Scallop Sashimi",
+              "With coconut-lime, yuzu-tamari and pomegranate-orange sauces",
+              2500
+            ],
+            [
+              "Kona Kampachi Sashimi",
+              "With coconut-lime, yuzu-tamari and pomegranate-orange sauces",
+              2600
+            ]
+          ]
+        },
+        {
+          "name": "Caviar",
+          "items": [
+            [
+              "Caviar Trio",
+              "Parfait, “twinkee” and tuna toro",
+              11500
+            ],
+            [
+              "Caviar Parfait",
+              "Smoked salmon, egg, crème fraîche, shallot potato cake",
+              5500
+            ],
+            [
+              "Caviar “Twinkee”",
+              "Red onion, egg, chive, yuzu crème fraîche",
+              5500
+            ],
+            [
+              "Caviar & Tuna Toro",
+              "Fresh wasabi, tamari, 23k gold",
+              5500
+            ],
+            [
+              "Caviar Service: White Sturgeon",
+              "Traditional, with buttermilk chive pancake and garnishes",
+              16500,
+              null,
+              "$165 per oz"
+            ],
+            [
+              "Caviar Service: Imperial Osetra",
+              "Traditional, with buttermilk chive pancake and garnishes",
+              23500,
+              null,
+              "$235 per oz"
+            ]
+          ]
+        },
+        {
+          "name": "Soups & Salads",
+          "items": [
+            [
+              "Black Truffle Bread",
+              "Truffle butter, chives, Maldon sea salt",
+              500
+            ],
+            [
+              "Onion Soup Gratin",
+              "Trio of cheeses, garlic baguette",
+              1800
+            ],
+            [
+              "Maine Lobster & Melons",
+              "Cucumber, espelette, ginger aguachile",
+              3000
+            ],
+            [
+              "Petite Romaine Caesar",
+              "Garlic streusel, vacche rosse parmesan, creamy caper dressing",
+              2000
+            ],
+            [
+              "The Wedge",
+              "Nueske's bacon, egg, red onion, tomato, Point Reyes blue cheese, buttermilk ranch",
+              2100
+            ],
+            [
+              "Burrata & Farmers Market Tomatoes",
+              "Basil-stuffed burrata, pita croutons, balsamic reduction",
+              2700
+            ]
+          ]
+        },
+        {
+          "name": "Appetizers",
+          "items": [
+            [
+              "Michael Mina's Tuna Tartare",
+              "Quail egg, pine nuts, mint, Asian pear, garlic, habanero-sesame oil",
+              3100
+            ],
+            [
+              "Bacon-Wrapped Scallops",
+              "Cherries, marcona almond, madeira emulsion",
+              3200
+            ],
+            [
+              "Maryland Style Crab Cake",
+              "Old Bay breadcrumbs, brown butter",
+              3100
+            ],
+            [
+              "Steak Tartare “Pizza”",
+              "Sun-dried tomatoes, capers, parmesan, Calabrian chili, lemon oil",
+              2900
+            ],
+            [
+              "Morel Agnolotti",
+              "Brentwood corn pudding, saba, summer truffle",
+              3100
+            ]
+          ]
+        },
+        {
+          "name": "Steaks & Chops",
+          "items": [
+            [
+              "8 oz Center Cut Filet Mignon",
+              "Greater Omaha",
+              7000
+            ],
+            [
+              "14 oz New York Strip",
+              "Brandt Farm prime",
+              8400
+            ],
+            [
+              "24 oz Bone-In Ribeye",
+              "Brandt Farm prime",
+              10700
+            ],
+            [
+              "6 oz A5 Japanese Wagyu Rib Cap",
+              "Sendai prefecture",
+              17500
+            ],
+            [
+              "10 oz Wagyu New York Strip",
+              "Sakura Ranch, USA",
+              11000
+            ],
+            [
+              "16 oz Boneless Wagyu Ribeye",
+              "Masami Cattle Ranch, USA",
+              13900
+            ]
+          ]
+        },
+        {
+          "name": "Bourbon Steak Signatures",
+          "items": [
+            [
+              "Maine Lobster Pot Pie",
+              "Wild mushrooms, market vegetables, fingerling potatoes, black truffles, brandied lobster cream",
+              12500
+            ],
+            [
+              "40 oz Salt-Baked & Bourbon-Flamed Australian Wagyu Tomahawk",
+              "Fondant potatoes, chimichurri",
+              37500
+            ]
+          ]
+        },
+        {
+          "name": "Market Fish",
+          "items": [
+            [
+              "Dover Sole",
+              "Caviar butter sauce",
+              9500
+            ],
+            [
+              "Mediterranean Branzino",
+              "Oregano-caper vinaigrette",
+              4900
+            ],
+            [
+              "Ora King Salmon",
+              "Saffron-tomato vinaigrette",
+              4400
+            ],
+            [
+              "Kona Kampachi",
+              "Ginger-garlic soy sauce",
+              5200
+            ]
+          ]
+        },
+        {
+          "name": "Entrées",
+          "items": [
+            [
+              "New Zealand Lumina Farms Lamb Chops",
+              "Ratatouille cannelloni, charred eggplant purée",
+              7500
+            ],
+            [
+              "Red Wine Braised Wagyu Short Rib",
+              "Heirloom carrots, English peas, pommes duchesse",
+              6800
+            ],
+            [
+              "Dungeness Crab Spaghetti",
+              "Blistered cherry tomato, white wine, chili flakes",
+              7500
+            ],
+            [
+              "Mary's Free Range Brick Chicken",
+              "Sweet and spicy peppers, fennel, crispy rosemary potatoes",
+              4200
+            ]
+          ]
+        },
+        {
+          "name": "Accompaniments",
+          "items": [
+            [
+              "Diver Scallops",
+              "",
+              2800
+            ],
+            [
+              "Grilled Shrimp",
+              "",
+              2400
+            ],
+            [
+              "Half Maine Lobster (add-on)",
+              "",
+              4800
+            ],
+            [
+              "Béarnaise",
+              "",
+              500
+            ],
+            [
+              "Chimichurri",
+              "",
+              400
+            ],
+            [
+              "Horseradish Crust",
+              "",
+              600
+            ],
+            [
+              "Bourbon Steak Sauce",
+              "",
+              500
+            ],
+            [
+              "Black Truffle Butter",
+              "",
+              800
+            ],
+            [
+              "Red Wine Demi",
+              "",
+              500
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "Caviar Salt-Baked Potato",
+              "House-churned butter, whipped buttermilk",
+              16500
+            ],
+            [
+              "Potatoes Trio",
+              "Classic, lobster, horseradish",
+              1700
+            ],
+            [
+              "Champagne-Battered Onion Rings",
+              "Srirancha",
+              1600
+            ],
+            [
+              "Black Truffle Macaroni Gratinée",
+              "",
+              2400
+            ],
+            [
+              "Jalapeño Creamed Corn",
+              "",
+              1500
+            ],
+            [
+              "Stir-Fried Asparagus",
+              "A nod to SF Chinatown",
+              1600
+            ],
+            [
+              "Creamed Spinach “Pop Tart”",
+              "",
+              1800
+            ],
+            [
+              "Baked Potato",
+              "All the fixin's",
+              1600
+            ]
+          ]
+        },
+        {
+          "name": "Lounge",
+          "items": [
+            [
+              "The BBB",
+              "Bourbon Steak bone marrow burger: sesame challah bun, Gentleman's Cut steak sauce, pickles, gruyère and cheddar, bone marrow flambéed tableside",
+              3500
+            ],
+            [
+              "Truffle Popcorn",
+              "Truffle butter, chive, sea salt",
+              900
+            ],
+            [
+              "Duck Fat Fry Trio",
+              "Paprika & bourbon BBQ, herb-garlic ketchup, double truffle",
+              1200
+            ],
+            [
+              "Champagne-Battered Onion Rings",
+              "Sriracha dipping sauce",
+              1600
+            ],
+            [
+              "Ahi Tuna Cigars",
+              "Sriracha aioli, scallions, yuzu ponzu",
+              2200
+            ],
+            [
+              "PNW Escabeche",
+              "Celery, bell pepper, lime vinaigrette",
+              1900
+            ],
+            [
+              "Sesame Shrimp Toast",
+              "Brioche, toasted sesame",
+              2400
+            ],
+            [
+              "House-Made Fried Chicken Bites",
+              "Lemon pepper, ranch crème fraîche; add caviar $35 per person",
+              2200
+            ],
+            [
+              "Hand-Cut Steak Tartare “Pizza”",
+              "Sun-dried tomatoes, capers, Calabrian chili",
+              2900
+            ],
+            [
+              "Fried Fishwich",
+              "Dill tartar sauce, Kaluga caviar",
+              3500
+            ],
+            [
+              "Wagyu Skewer",
+              "Caramelized onions, horseradish cream, pita bread",
+              3100
+            ]
+          ]
+        },
+        {
+          "name": "Dessert",
+          "items": [
+            [
+              "Warm Beignets & Dipping Custards",
+              "Macallan 12 butterscotch pudding, crème brûlée with raspberries, milk chocolate pot de crème",
+              2600
+            ],
+            [
+              "Banana Tart Tatin",
+              "Citrus caramel, Tahitian vanilla ice cream",
+              1800
+            ],
+            [
+              "Bruléed Basque Cheesecake",
+              "Roasted strawberry, turbinado sugar crunch",
+              1700
+            ],
+            [
+              "Michael's Root Beer Float",
+              "Sassafras ice cream, root beer sorbet, walnut chip cookies, 24k gold",
+              1600
+            ],
+            [
+              "Black Forest Chocolate Tart",
+              "Preserved cherries, vanilla bean whip",
+              1700
+            ],
+            [
+              "Creamsicle Shaved Ice",
+              "Coconut cream, mango ice, lychee, persimmon, citrus lace",
+              1500
+            ]
+          ]
+        }
+      ],
+      "address": "335 Powell St, San Francisco, CA 94102",
+      "phone": "(415) 770-0291",
+      "hours": "Dinner Sun–Thu 5–9pm, Fri–Sat 5–10pm; Bourbon Lounge daily from 4pm",
+      "site": "https://theminagroup.com/restaurants/bourbon-steak-san-francisco/",
+      "siteCta": "See their menus",
+      "siteNote": "Prices are from the Dinner, Lounge and Dessert menus on Michael Mina's own site; drinks are left out. Bourbon Steak is inside The Westin St. Francis on Union Square, with the Bourbon Lounge at its heart and DJ sets Friday and Saturday 8:30–11:30pm. A pre-theater menu runs daily 5–6pm at $89 a person. Tables are booked on SevenRooms through their site; a 20% gratuity is added for parties of six or more.",
+      "clip": {
+        "src": "/clips/bourbon-steak-san-francisco.mp4",
+        "poster": "/clips/bourbon-steak-san-francisco-poster.webp",
+        "href": "https://www.instagram.com/reel/DUtdoDXktzc/",
+        "credit": "Posted by @chefmichaelmina",
+        "platform": "Instagram"
+      }
+    },
+    "placements": [
+      "san-francisco-goods2-53",
+      "beasty-goods2-76"
+    ],
+    "glenn": "Glenn, 26 Oct 2026, 7:42 am: screenshots 1026-0742 (IMG_8046 their Instagram @bourbonsteaksf, IMG_8047 its picture full size, IMG_8049 Apple Maps), the link https://linktr.ee/bourbonsteaksf and \"San Francisco • Eats / BEASTY • Eats\"; 7:42 reel De8FsQPCn0O (@celineeats) \"Clip this video plz\"; 7:42 reel DeaZOeNPwdn (@explorewithtaka) \"2nd / Foodie\"; 7:43 reel DUtdoDXktzc (@chefmichaelmina) \"Clip this video plz but make it the 1st top one\". 7:48 am: new category \"BEASTY • Steakhouse\".",
+    "flags": [
+      "PAGE FILM is DUtdoDXktzc as Glenn asked ('make it the 1st top one'). It is a party reel (Super Bowl LX pre-party with Roc Nation, Feb 2026) and has NO continuous 24 s of restaurant, chef and food only. Cut 0s-22s of 58s (22 s, ended early on purpose: 22-23 s is a bartender pouring a cocktail). Kept: Chef Michael Mina greeting at the door (0-3 s), the dining room and bar (3-5 s), guests posing (5-7 s), the BOURBON STEAK SAN FRANCISCO steer card (7 s), the sushi, crudo and dessert spread and a sushi chef at the boat (7.5-11 s), and a chef presenting a dish at the end (20-22 s). STILL ON SCREEN: the Armand de Brignac (Ace of Spades champagne) spade logo lit behind Mina and behind the posing guests and at the bar (0-7 s, again 11-12 s); a server carrying a tray of champagne flutes (3-4 s); 11-20 s is the party itself (guests dancing, Fat Joe, E-40 and others, some holding drinks). No Super Bowl, Roc Nation or sponsor text on screen in the excerpt (the Cash App/Visa/NYX walls are at 38-50 s, left out). No captions. The 'Super Bowl LX' wording is only in his caption, not on screen.",
+      "RECOMMENDATION: @celineeats' reel (De8FsQPCn0O) is a much cleaner page film (food, the room, the Westin St. Francis canopy); if the coordinator or Glenn prefers it, cut it at 24 s and move the Mina reel to a review. Kept as Glenn ordered.",
+      "Credit 'Posted by @chefmichaelmina' (no `by`): Michael Mina is the restaurant's chef and founder, his own account, posting with @bourbonsteaksf tagged; treated like a business's own post. If the coordinator treats only @bourbonsteaksf as 'their own', switch to 'Filmed by @chefmichaelmina'.",
+      "SECOND REVIEWS (15 s each, in other_reviews): @celineeats De8FsQPCn0O 20s-35s of 63s: steak tartare 'pizza', burrata, the pre-theater menu's morel agnolotti, short rib and whipped potatoes, Dungeness crab spaghetti; her word-by-word captions ('intermission', 'optional', 'agnolotti', 'mandatory', 'trio', 'mashed', 'spinach', 'tart'); left out her '$89 pre theater menu' title card (0-9 s), the wine glasses and red wine pour (8-15 s) and the Curran Theatre 'Oh, Mary!' playbill at the end (56-63 s, dated show). @explorewithtaka DeaZOeNPwdn 24s-39s of 41s: the servers' station, steak tartare and appetizers, a server bourbon-flaming the salt-baked wagyu tomahawk tableside and showing it, a ribeye, then Taka at the table; captions 'We ordered a few appetizers and a ribeye', 'The table next to us got the salt-baked and bourbon-flamed Australian Wagyu tomahawk', 'Send this to the friend who always says / Let's do something this weekend'. A red cocktail and a beer glass sit at the edge of frame (not the focus); left out his 'DJ RESIDENCY AT BOURBON LOUNGE' title, the DJ and the bartender shots (0-23 s).",
+      "Glenn wrote 'Foodie' on @explorewithtaka's reel: he is not in src/data/foodies.ts; foodies_row written for him. @celineeats is already a Foodie (foodies.ts).",
+      "MENU: 13 sections, 76 items, from their own Dinner, Bar/Lounge and Dessert PDFs on the MINA Group page, in their section names (Black Truffle Bread put at the top of Soups & Salads; the Hot Shellfish 'Fondue' into Shellfish; the Caviar Salt-Baked Potato into Sides). Left out: all cocktails, wine, whisky, liqueurs and dessert wine; the Kid's Menu, Private Dining and Thanksgiving 2026 menus; Pre-Theatre ($89 prix fixe) summarised in siteNote. Caviar service is per ounce: cents = one ounce with priceLabel '$165 per oz' / '$235 per oz'. Sashimi items renamed '… Sashimi' to tell them apart from the Market Fish of the same names; 'Half Maine Lobster (add-on)' likewise in Accompaniments. 'apple pear' written Asian pear. Dishes cooked with spirits (bourbon-flamed tomahawk, brandied lobster cream, Macallan butterscotch pudding, champagne-battered onion rings, bourbon BBQ) are food and kept.",
+      "TYPE LINE 'Modern American steakhouse': their own words ('A modern American steakhouse' on the MINA Group brand list; 'a modern reimagining of the classic American steakhouse' and 'Chef Michael Mina’s acclaimed steakhouse' on the restaurant page). Passes BEASTY • Steakhouse's /steak ?house|chophouse/i. category 'Steakhouse'. Glenn tagged San Francisco • Eats / BEASTY • Eats; his 7:48 note names Bourbon Steak in the new Steakhouse category, so coordinator: seat on BEASTY • Steakhouse too (or instead of Eats).",
+      "SITE: Glenn asked for the michaelmina.net restaurant page. michaelmina.net now redirects to theminagroup.com, and the old /restaurants/bourbon-steak-san-francisco/ path 404s, so site = https://theminagroup.com/restaurants/bourbon-steak-san-francisco/ (Michael Mina's MINA Group, same page). Alternative own page: https://www.bourbonsteak.com/location/san-francisco/. needsSite NOT set (a real restaurant page); the Linktree is only their Instagram bio link. No orderUrl (no takeout or delivery ordering on their pages; reservations only, SevenRooms), so siteCta 'See their menus'.",
+      "HOURS from their own page (dinner and lounge both published, consistent across theminagroup.com and bourbonsteak.com). Apple Maps (Glenn's IMG_8049) says 4–9 / 4–10pm, i.e. the lounge opening with dinner closing; not used. Lounge closing time is 'Close'.",
+      "OPEN and in San Francisco: Glenn's Apple Maps screenshot, their live site with a Thanksgiving 2026 menu, and reels from 12 and 26 Oct 2026. No email published (contact forms only). Name: Instagram 'Bourbon Steak San Francisco', site 'Bourbon Steak – San Francisco'; label 'Bourbon Steak'. It is one of 12 Bourbon Steaks; the page is the San Francisco one only.",
+      "ICON: their gold steer on dark teal, their Instagram picture from Glenn's full-size screenshot IMG_8047, cropped square inside the rounded tile (1120 px), 512x512 LANCZOS WebP q90, public/icons/bourbon-steak-san-francisco.webp; color #06272E. The wordmark BOURBON STEAK is not in the Instagram picture (their site logo bourbonsteak-logo.png has it) and is left out."
+    ]
+  },
+  {
+    "id": "b_theeighthrule",
+    "name_exact": "The Eighth Rule",
+    "checked_on": "2026-10-26",
+    "sources": [
+      "https://the8thrule.com/ (their own website, the link Glenn sent; read 2026-10-26: 'The Eighth Rule | The Westin St. Francis | San Francisco'; 'Created by Stephen Curry in partnership with Chef Michael Mina, this 40-seat bourbon bar inside The Westin St. Francis is designed for those who appreciate the ritual of a great drink'; 'From rare small-batch selections to the smooth complexity of Gentleman’s Cut'; 'Located at The Westin St. Francis 335 Powell Street San Francisco, CA 94102 (415) 967-5197 HOURS Daily: 5 PM–12 AM'; Reservations on SevenRooms (sevenrooms.com/explore/8thrule); events via MINA Group Tripleseat; footer '© 2026 The MINA GROUP'; Instagram link instagram.com/the8thrule)",
+      "https://mx.michaelmina.net/recipe-exchange/download/?file_id=38189&nodl=true (their menu PDF, the site's MENU button and the MINA Group page's 'Bar Dinner'; read 2026-10-26: their story page, Cocktail Creations, The Back Bar, BITES 'Available until 10 PM', 'ONE OF A KIND EIGHTH RULE TASTING EXPERIENCE: Select Any Item For The Table / We Will Prepare An Individual Taste For Each Guest / 15 Per Item Per Guest' (Cold Small Plates, Hot Small Plates, Something Sweet), The Wine List, Beer, Gentleman's Cut Experience)",
+      "https://mx.michaelmina.net/recipe-exchange/download/?file_id=38139&nodl=true (an older version linked as 'VIEW MENU' on the MINA Group page: the same bites plus Spicy Tuna Cigars, which the current menu no longer lists; not used)",
+      "https://theminagroup.com/restaurants/the-eighth-rule-san-francisco/ ('Introducing The Eighth Rule, a bourbon bar by Stephen Curry designed as an intimate space to gather, connect, and savor exceptional libations. Bourbon has seven rules—here, guests create their own Eighth Rule'; 'The Westin St Francis 335 Powell Street San Francisco, CA Tel: (415) 967-5197'; 'Hours Daily: 5PM – 12AM'; menus Bar Dinner and Private Dining)",
+      "https://theminagroup.com/brands/ ('The Eighth Rule, Stephen Curry’s first bourbon bar with MINA Group, offers rare spirits, craft cocktails, and Gentleman’s Cut in an intimate 40-seat Union Square setting.' Listed under San Francisco and Charlotte)",
+      "Glenn's screenshot 1026-0747 IMG_8052 (Apple Maps 'The Eighth Rule': Upscale; Sun–Mon 4:00–10:00 PM, Tue–Sat 4:00–11:00 PM; +1 (415) 967-5197; the8thrule.com; 335 Powell St, San Francisco, CA 94102)",
+      "Glenn's screenshot 1026-0747 IMG_8053 (a zoomed 'Crop' of their Instagram the8thrule: the cream serif 8 on a dark teal disc; bio cut off at 'Bourbon ma… ours. By @stephe… @westinstfr…'). The icon is cut from it.",
+      "https://www.instagram.com/reel/DWz-3YfgIB8/ (the film; @festusfeasts (Festus Ezeli), 7 Apr 2026, 156 s: 'I asked Stephen Curry where he’d take me in the Bay… From to his new spot at 8th Rule in Union Square… to Bourbon Steak by Michael Mina.'; on screen 'Eighth Rule, Union Square, San Francisco' at 14 s; The Eighth Rule part runs about 14-80 s, then 'We are at Bourbon Steakhouse' from about 82 s)",
+      "News: KTVU ('Stephen Curry, Michael Mina light up Union Square with new restaurant, bar'), NBC Sports Bay Area and Black Enterprise report Curry opening The Eighth Rule with Mina's Bourbon Steak at the Westin St. Francis (not used for facts)."
+    ],
+    "facts": {
+      "slug": "the-eighth-rule",
+      "name": "The Eighth Rule",
+      "label": "The 8th Rule",
+      "cuisine": "Bourbon bar",
+      "tagline": "Stephen Curry's 40-seat bourbon bar, made with Chef Michael Mina, inside The Westin St. Francis on Union Square: bar bites like Stephen's lemon-pepper chicken bites, wagyu skewers and sesame lobster toast, and a tasting menu of small plates at $15 a guest.",
+      "color": "#062630",
+      "icon": "the-eighth-rule",
+      "prep": 0,
+      "category": "Bar",
+      "items": [],
+      "sections": [
+        {
+          "name": "Bites",
+          "items": [
+            [
+              "Stephen's Chicken Bites",
+              "Lemon pepper, ranch crème fraîche; add caviar +$35",
+              2200
+            ],
+            [
+              "Wagyu Skewer",
+              "Caramelized onions, pita bread, horseradish cream",
+              3100
+            ],
+            [
+              "Sesame Lobster Toast",
+              "Jalapeño, avocado, cilantro",
+              2400
+            ],
+            [
+              "Steak Tartare “Pizza”",
+              "Sun-dried tomatoes, capers, parmesan, Calabrian chili, lemon oil",
+              2900
+            ],
+            [
+              "Duck Fat Fry Trio",
+              "Paprika & bourbon BBQ, herb-garlic ketchup, truffle aioli",
+              1200
+            ],
+            [
+              "Roasted Mixed Nuts",
+              "Cajun spice",
+              1200
+            ],
+            [
+              "Chips & Dip",
+              "Salt & pepper potato chips, French onion dip",
+              1000
+            ],
+            [
+              "Truffle Popcorn",
+              "Truffle butter, chives, sea salt",
+              900
+            ]
+          ]
+        },
+        {
+          "name": "Tasting: Cold Small Plates",
+          "items": [
+            [
+              "Trio of Sashimi",
+              "Chef's selection, fresh wasabi, truffle ponzu",
+              1500,
+              null,
+              "$15 per guest"
+            ],
+            [
+              "Maine Lobster & Melons",
+              "Cucumber, ginger aguachile",
+              1500,
+              null,
+              "$15 per guest"
+            ],
+            [
+              "Caviar Parfait",
+              "Smoked salmon, egg mimosa, crème fraîche; $15 plus a $40 caviar supplement",
+              5500,
+              null,
+              "$55 per guest"
+            ],
+            [
+              "Wagyu Steak Tartare",
+              "Crispy brik crackers, parmesan, sunny-side-up egg, caper aioli",
+              1500,
+              null,
+              "$15 per guest"
+            ],
+            [
+              "Burrata Cheese",
+              "Market stone fruit, saba, pita croutons",
+              1500,
+              null,
+              "$15 per guest"
+            ]
+          ]
+        },
+        {
+          "name": "Tasting: Hot Small Plates",
+          "items": [
+            [
+              "Bacon Wrapped Scallop",
+              "Cherry, marcona almond, madeira emulsion",
+              1500,
+              null,
+              "$15 per guest"
+            ],
+            [
+              "Braised Wagyu Short Rib",
+              "Heirloom carrots, English peas, pommes duchesse",
+              1500,
+              null,
+              "$15 per guest"
+            ],
+            [
+              "Caviar Fishwich",
+              "Milk bread, dill tartar sauce; $15 plus a $20 caviar supplement",
+              3500,
+              null,
+              "$35 per guest"
+            ],
+            [
+              "Morel Agnolotti",
+              "Corn pudding, charred corn, summer truffle",
+              1500,
+              null,
+              "$15 per guest"
+            ],
+            [
+              "Steak au Poivre",
+              "Bloomsdale spinach, peppercorn sauce",
+              1500,
+              null,
+              "$15 per guest"
+            ]
+          ]
+        },
+        {
+          "name": "Tasting: Something Sweet",
+          "items": [
+            [
+              "Creamsicle Shaved Ice",
+              "Lychee, raspberry, coconut whip",
+              1500,
+              null,
+              "$15 per guest"
+            ],
+            [
+              "Black Forest Chocolate Tart",
+              "Preserved cherries, vanilla bean whip",
+              1500,
+              null,
+              "$15 per guest"
+            ],
+            [
+              "The Sweet Gentlemen",
+              "Bourbon butterscotch custard, frosted pecans, fortune cookie crunch",
+              1500,
+              null,
+              "$15 per guest"
+            ]
+          ]
+        }
+      ],
+      "address": "335 Powell St, San Francisco, CA 94102",
+      "phone": "(415) 967-5197",
+      "hours": "Daily 5pm–12am; bites until 10pm",
+      "site": "https://the8thrule.com/",
+      "siteCta": "See their menu",
+      "siteNote": "Prices are from the menu on their own website; drinks are left out. The Eighth Rule is a 40-seat bourbon bar inside The Westin St. Francis, next to Bourbon Steak; bites are served until 10pm. On the tasting menu, pick any small plate for the table and they prepare a taste for each guest, $15 per item per guest. Tables are booked on SevenRooms through their site.",
+      "clip": {
+        "src": "/clips/the-eighth-rule.mp4",
+        "poster": "/clips/the-eighth-rule-poster.webp",
+        "href": "https://www.instagram.com/reel/DWz-3YfgIB8/",
+        "credit": "Filmed by @festusfeasts",
+        "platform": "Instagram",
+        "by": "festusfeasts"
+      }
+    },
+    "placements": [
+      "san-francisco-goods2-54",
+      "beasty-goods2-77"
+    ],
+    "glenn": "Glenn, 26 Oct 2026, 7:47 am: screenshots 1026-0747 (IMG_8052 Apple Maps, IMG_8053 a crop of their Instagram picture and bio), the link https://the8thrule.com/ and \"BEASTY • Eats / San Francisco • Eats\"; then reel DWz-3YfgIB8 (@festusfeasts) \"Clip this video plz\".",
+    "flags": [
+      "WHAT IT IS: Stephen Curry's bourbon bar, 'Created by Stephen Curry in partnership with Chef Michael Mina', run by the MINA Group, 40 seats, inside The Westin St. Francis at 335 Powell St (the same hotel and street address as Bourbon Steak, its neighbour). NOT a restaurant or steakhouse: their own sources call it a 'bourbon bar' every time. Type line 'Bourbon bar', which does NOT pass BEASTY • Steakhouse's test (correctly). category 'Bar'.",
+      "IT IS A BAR: the business is built around bourbon (Gentleman's Cut is Curry's own bourbon brand), and the tile, name and tagline say so. Glenn tagged it BEASTY • Eats and San Francisco • Eats; it does serve a real food menu (bites and a small-plates tasting menu), which is what the page lists. Coordinator/Leon: decide whether a bourbon bar belongs on Eats; probably 21+ (not stated on their pages, so not written).",
+      "MENU: 4 sections, 21 items, the food on their current menu PDF (the8thrule.com MENU = MINA Group 'Bar Dinner', file 38189): Bites (8, priced) and the 'One of a Kind Eighth Rule Tasting Experience' (13, '$15 per item per guest'). Tasting items carry 1500 cents with priceLabel '$15 per guest'; Caviar Parfait '+40' and Caviar Fishwich '+20' are written as the per-guest totals ($55 and $35) with the supplement in the description. Left out: every cocktail, the Gentleman's Cut Experience, the back bar, wine and beer, AND the three non-alcoholic drinks (Test Kitchen NA cocktail $16, Lyre's NA bourbon $14, Clausthaler NA beer $10), as imitations of alcohol on a bar menu; coordinator may add Test Kitchen back. 'Eigth' and 'Experince' are their typos in the heading; 'Preserve Cherries' written 'Preserved cherries'. Bites order put Stephen's Chicken Bites first; otherwise their order.",
+      "HOURS from their own site and MINA Group page, which agree: 'Daily: 5 PM–12 AM'; bites 'Available until 10 PM' (menu). Apple Maps (Glenn's IMG_8052) says Sun–Mon 4–10pm, Tue–Sat 4–11pm and the opening-week press said 4pm–midnight; not used.",
+      "NAME: their site, MINA Group, Apple Maps and Instagram all write 'The Eighth Rule' (domain and handle the8thrule; Glenn and Festus wrote '8th Rule'). name 'The Eighth Rule', slug the-eighth-rule, id b_theeighthrule; tile label 'The 8th Rule' (their 8 mark and domain). Coordinator may prefer label 'Eighth Rule'. MINA Group also lists a Charlotte location; this page is San Francisco only.",
+      "Glenn said three screenshots; only two (IMG_8052, IMG_8053) are in att/ and view/ for 1026-0747. The bio in IMG_8053 is cut off at the right edge, so not quoted in full.",
+      "FILM: @festusfeasts, 7 Apr 2026, 156 s. His reel covers BOTH places: Steph Curry's intro in a car (0-13 s), The Eighth Rule (about 14-80 s: cocktails being made, Festus at the bar) and then Bourbon Steak (from about 82 s: Michael Mina, the chef, caviar, desserts). Cut 38s-62s (24 s) from the Eighth Rule part, checked at 2 fps: the caviar parfait on its glass plates ('This is one of Chef Mina's signature dishes', 'It's a layered selection of all the traditional accoutrements for caviar service so crispy', 'shallot potato cake, smoked salmon, herb creme fresh, and of course the beautiful Sturgeon caviar on top', 'Oh this is amazing', 'A little seafood parfait'), a server setting down the next plate, then Stephen's chicken bites with caviar ('This is Steph Curry's And one of the undercover chicken tenders', 'Oh yes Steph', 'Creme Fresh, ranch and caviar'). Only this business; no dated event or promo; no profanity. Two cocktail coupes stand blurred behind the chicken bites (20-22 s), not the focus. Left out: Curry himself (0-13 s), the cocktail-making and Gentleman's Cut barrel (14-36 s), and all of the Bourbon Steak half. Note: his Bourbon Steak half (from ~82 s) could also serve as a further Bourbon Steak review if Glenn wants (that page already has three films).",
+      "Credit 'Filmed by @festusfeasts' (Festus Ezeli, already a Foodie).",
+      "No email published (forms only). No orderUrl (reservations only, SevenRooms; no takeout). needsSite NOT set: the8thrule.com is their own site. OPEN: site live with 2026 copyright, reel April 2026, Apple Maps listing.",
+      "ICON: their cream serif 8 on its dark teal disc, from Glenn's zoomed screenshot IMG_8053, cut as the square inside the disc (730 px) and centred with an even margin of the same teal, 512x512 LANCZOS WebP q90, public/icons/the-eighth-rule.webp; color #062630. Their menu also has a THE EIGHTH RULE wordmark with eight dots, not used."
+    ]
+  },
+  {
+    "id": "b_harrisrestaurant",
+    "name_exact": "Harris' Restaurant",
+    "checked_on": "2026-10-26",
+    "sources": [
+      "https://www.harrisrestaurant.com/ (their own website, Squarespace at their own domain; the link Glenn sent; read 2026-10-26: title 'Harris' Restaurant — The San Francisco Steakhouse', 'Opened in 1984', 'mind-blowing Midwestern Angus beef', 'nightly jazz', 'authentic A5 Wagyu'; footer 'HARRIS' RESTAURANT, 2100 Van Ness Avenue, San Francisco, CA 94109, Phone: (415) 673-1888, info@harrisrestaurant.com', hours 'Tuesday-Thursday: 5pm - 9pm / Friday-Saturday: 5pm - 10pm / Sunday: 5pm - 9pm / Monday: Closed')",
+      "https://www.harrisrestaurant.com/menu (their dinner menu, read 2026-10-26: Beginnings, Soups and Salads, On the Side, Award Winning Mid-Western Aged Beef & Entrees ('Entrées include Sautéed Seasonal Vegetables and a Choice of a Baked Potato or Evening Potato'), Wagyu, Roast Prime Rib of Beef, The Classics, Seafood, Sweet Endings; all priced except two Maine lobster dishes marked A.Q.)",
+      "https://www.harrisrestaurant.com/order-online ('Order Harris' online for TAKE-OUT or DELIVERY', links to Toast https://www.toasttab.com/harris-2100-van-ness-avenue/v3, DoorDash and Uber Eats); /butcher-shop (dry-aged beef for carryout, 'online butcher shop' on the same Toast page); /bar-piano-lounge (Pacific Bar & Piano Lounge, live jazz Tue-Sun); /history (opened 1984 by Ann Lee Harris in the old Grison's Steakhouse at Van Ness and Pacific; Chef Michael Buhagiar sole owner since 2018, run with his family); /wine not used (alcohol)",
+      "https://images.squarespace-cdn.com/content/v1/5925e36486e6c0afde519968/1502483282594-V607I5EZJS66S7NGUF3C/logo_LG.png (their header logo, 350x150 transparent; the icon is made from it)",
+      "Instagram @harrisrestaurantsf (Glenn's screenshot 1026-0753 IMG_8054: 'Harris' Restaurant SF', 'The San Francisco Steakhouse.', 'Hours of Operation: Tues-Thurs & Sun 5-9pm. Fri & Sat 5-10pm. Butcher Counter: Tues-Sun 5-8pm.', '2100 Van Ness Ave, San Francisco, California', harrisrestaurant.com and 2 more; 334 posts, 4,205 followers)",
+      "Glenn's screenshots 1026-0753 IMG_8055 (harrisrestaurant.com header: the Harris' / The San Francisco Steakhouse logo on dark brown) and IMG_8056 (the site's contact and hours block, same as above)",
+      "https://www.instagram.com/reel/DYGUBaxBlR_/ (the page film; @smackinfood (Nisa), 9 May 2026, 52 s: '@harrisrestaurantsf will always be one of my favorite steakhouses in the city', oysters, Caesar, creamed spinach, truffle Madeira sauce, wagyu duo, 16 oz American wagyu ribeye, 22 oz prime rib, carrot cake, strawberry shortcake)",
+      "https://www.instagram.com/reel/DSYs6AgD3Ks/ (2nd; @yourglobalfoodiebff (Tony Nguyen), 18 Dec 2025, 91 s: 'Harris' Restaurant, 2100 Van Ness AVE, San Francisco', prime rib, dry-aged three weeks and butchered in-house, the A5 Miyazaki ribeye)",
+      "https://www.instagram.com/reel/C2Sh1Iwxe7B/ (3rd; @taratastessf (Tara), 19 Jan 2024, 13 s, #hosted with @wagyuofjapan: the A5 Japanese Wagyu ribeye 'from the historic Harris restaurant in San Francisco')"
+    ],
+    "facts": {
+      "slug": "harris-restaurant",
+      "name": "Harris' Restaurant",
+      "label": "Harris'",
+      "cuisine": "Classic San Francisco steakhouse",
+      "tagline": "The San Francisco Steakhouse, at Van Ness and Pacific since 1984: dry-aged Midwestern Angus steaks cut by their own butcher, prime rib, authentic A5 Miyazaki Wagyu, classic sides and Baked Alaska, with live jazz in the Pacific Bar & Piano Lounge.",
+      "color": "#161310",
+      "icon": "harris-restaurant",
+      "prep": 0,
+      "category": "Steakhouse",
+      "items": [],
+      "sections": [
+        {
+          "name": "Beginnings",
+          "items": [
+            [
+              "Half Dozen Fresh Oysters",
+              "On the half shell, with two sauces",
+              3000
+            ],
+            [
+              "Smoked Salmon",
+              "With dill cream cheese and toast points",
+              2900
+            ],
+            [
+              "Prawn Cocktail",
+              "",
+              3100
+            ],
+            [
+              "Steamed Clams Marinière",
+              "",
+              2800
+            ],
+            [
+              "Dungeness Crab Cakes",
+              "With beurre blanc",
+              3200
+            ],
+            [
+              "Harris' Steak Tartare",
+              "",
+              3400
+            ],
+            [
+              "Veal Sweetbreads",
+              "Sautéed, with a shiitake-sherry cream sauce",
+              3100
+            ],
+            [
+              "Deep Fried Onion Rings or Fried Mushrooms",
+              "",
+              1600
+            ],
+            [
+              "Seared & Sliced Japanese A5 Wagyu Ribeye",
+              "6 oz",
+              13900
+            ]
+          ]
+        },
+        {
+          "name": "Soups and Salads",
+          "items": [
+            [
+              "Traditional Onion Soup",
+              "Topped with crispy fried onions",
+              1700
+            ],
+            [
+              "Soup of the Day",
+              "",
+              1700
+            ],
+            [
+              "Harris' Caesar Salad",
+              "",
+              1900
+            ],
+            [
+              "Iceberg Wedge Salad",
+              "With blue cheese or ranch dressing",
+              1800
+            ],
+            [
+              "Baby Spinach Salad",
+              "Applewood smoked bacon, candied pecans, apples, soy vinaigrette",
+              1900
+            ],
+            [
+              "Mixed Field Greens",
+              "With balsamic vinaigrette",
+              1700
+            ]
+          ]
+        },
+        {
+          "name": "On the Side",
+          "items": [
+            [
+              "Creamed Spinach",
+              "",
+              1500
+            ],
+            [
+              "Spinach",
+              "Steamed or sautéed",
+              1300
+            ],
+            [
+              "Broccoli",
+              "Steamed or sautéed",
+              1200
+            ],
+            [
+              "Sautéed Asparagus",
+              "",
+              1500
+            ],
+            [
+              "Caramelized Onions",
+              "",
+              1200
+            ],
+            [
+              "Sautéed Button Mushrooms",
+              "",
+              1300
+            ],
+            [
+              "Classic Béarnaise Sauce",
+              "",
+              1000
+            ],
+            [
+              "Brandy Sauce",
+              "",
+              1000
+            ],
+            [
+              "Truffle Madeira Sauce",
+              "",
+              1000
+            ]
+          ]
+        },
+        {
+          "name": "Aged Beef & Entrées",
+          "items": [
+            [
+              "Filet Mignon",
+              "12 oz",
+              8300
+            ],
+            [
+              "Petite Filet Mignon",
+              "8 oz",
+              6900
+            ],
+            [
+              "The Porterhouse Steak",
+              "24 oz",
+              10500
+            ],
+            [
+              "The Harris Steak",
+              "16 oz thick bone-in New York",
+              9100
+            ],
+            [
+              "The 49er Cut",
+              "16 oz generous boneless New York",
+              9100
+            ],
+            [
+              "Petite Boneless New York",
+              "12 oz",
+              7600
+            ],
+            [
+              "Bone-In Ribeye Steak",
+              "20 oz",
+              8700
+            ]
+          ]
+        },
+        {
+          "name": "Wagyu",
+          "items": [
+            [
+              "Authentic A5 Japanese Miyazaki Wagyu Ribeye",
+              "13 oz",
+              28900
+            ],
+            [
+              "American Wagyu Ribeye",
+              "16 oz",
+              14300
+            ],
+            [
+              "American Wagyu New York",
+              "13 oz",
+              13900
+            ]
+          ]
+        },
+        {
+          "name": "Roast Prime Rib",
+          "items": [
+            [
+              "Prime Rib, Regular Cut",
+              "14 oz, with creamed spinach and a potato; English style or end cuts on request",
+              7100
+            ],
+            [
+              "The Executive Cut on the Bone",
+              "22 oz, with creamed spinach and a potato",
+              8300
+            ]
+          ]
+        },
+        {
+          "name": "The Classics",
+          "items": [
+            [
+              "Steak Diane",
+              "Filet mignon paillard, grilled, with a cognac and shallot demi-glace",
+              6900
+            ],
+            [
+              "Pepper Steak",
+              "Cracked-pepper boneless New York with a brandy, cream and peppercorn sauce",
+              7900
+            ],
+            [
+              "American Lamb Chops",
+              "Three grilled Colorado chops cut from the rack",
+              8200
+            ],
+            [
+              "Pan Roasted Breast of Chicken",
+              "With a sherry glaze",
+              4500
+            ]
+          ]
+        },
+        {
+          "name": "Seafood",
+          "items": [
+            [
+              "Fresh Salmon Fillet",
+              "With rice and champagne sauce",
+              4900
+            ]
+          ]
+        },
+        {
+          "name": "Sweet Endings",
+          "items": [
+            [
+              "Baked Alaska",
+              "",
+              1900
+            ],
+            [
+              "Carrot Cake",
+              "",
+              1800
+            ],
+            [
+              "Chocolate Bread Pudding",
+              "",
+              1800
+            ],
+            [
+              "Crème Brûlée",
+              "",
+              1700
+            ],
+            [
+              "Harris' Cheesecake",
+              "With the chef's choice of seasonal toppings",
+              1500
+            ],
+            [
+              "Trio of Sorbet or Ice Cream",
+              "",
+              1300
+            ]
+          ]
+        }
+      ],
+      "address": "2100 Van Ness Ave, San Francisco, CA 94109",
+      "phone": "(415) 673-1888",
+      "email": "info@harrisrestaurant.com",
+      "hours": "Tue–Thu & Sun 5–9pm; Fri–Sat 5–10pm; closed Mon. Butcher counter Tue–Sun 5–8pm",
+      "site": "https://www.harrisrestaurant.com/",
+      "orderUrl": "https://www.toasttab.com/harris-2100-van-ness-avenue/v3",
+      "siteCta": "Order pickup",
+      "siteNote": "Prices are from the dinner menu on their own website. Steaks and entrées come with sautéed seasonal vegetables and a baked or evening potato; prime rib comes with creamed spinach. The Maine lobster dishes are market price, so ask them. Their butcher counter sells the same dry-aged steaks to cook at home (Tue–Sun 5–8pm, or online through Toast), and they also deliver through DoorDash and Uber Eats. Reservations through OpenTable from their site.",
+      "clip": {
+        "src": "/clips/harris-restaurant.mp4",
+        "poster": "/clips/harris-restaurant-poster.webp",
+        "href": "https://www.instagram.com/reel/DYGUBaxBlR_/",
+        "credit": "Filmed by @smackinfood",
+        "platform": "Instagram",
+        "by": "smackinfood"
+      }
+    },
+    "placements": [
+      "san-francisco-goods2-55"
+    ],
+    "glenn": "26 Oct 2026, 7:53 am: 'San Francisco • Eats / BEASTY • Steakhouse' with https://www.harrisrestaurant.com/ and three screenshots (1026-0753 IMG_8054 their Instagram, IMG_8055 the site's logo, IMG_8056 the site's address and hours); 7:54 reel DYGUBaxBlR_ (@smackinfood) 'Clip this video plz / Foodie'; 7:54 reel DSYs6AgD3Ks (@yourglobalfoodiebff) '2nd'; 7:57 reel C2Sh1Iwxe7B (@taratastessf, A5 Japanese Wagyu) '3rd'.",
+    "flags": [
+      "TYPE LINE 'Classic San Francisco steakhouse' passes the new BEASTY • Steakhouse test (/steak ?house|chophouse/i); their own site title, logo and Instagram bio all say 'The San Francisco Steakhouse'. category 'Steakhouse'.",
+      "MENU: their website's dinner menu, 47 priced items in their own sections. Left out: the two Maine lobster dishes priced 'A.Q.' (Petite Filet with Steamed Whole Maine Lobster, Steamed Whole Maine Lobster with Clams; no price, mentioned in siteNote), the two $3 add-ons (bacon on the wedge, crumbled blue cheese), the whole /wine page, and gift certificates. Section 'Award Winning Mid-Western Aged Beef & Entrees' shortened to 'Aged Beef & Entrées' and 'Roast Prime Rib of Beef' to 'Roast Prime Rib'. The Toast pickup menu was not compared item by item.",
+      "HOURS: website footer and Instagram bio agree (Tue–Thu & Sun 5–9, Fri–Sat 5–10, Mon closed); the butcher counter's Tue–Sun 5–8pm is from the bio only.",
+      "ORDER: orderUrl is their own Toast page (linked from their site's Order Online page as 'Order Pickup'); siteCta 'Order pickup'. Not needsSite: a full website at their own domain.",
+      "PRICE NOTE: Tony's December 2025 caption says the A5 ribeye was $285; the site now says $289. The page uses the site's price; his excerpt does not show a price.",
+      "PAGE FILM DYGUBaxBlR_ (@smackinfood, Glenn's 'Clip this video plz / Foodie'): 0s-24s of 52s, picked by hand from the start: her steak plates and the 22 oz prime rib, their Harris' menu cover, the dining room with its chandeliers and palms, the butcher case and dry-aging window, the jazz trio, oysters, the Caesar, then the wagyu duo. Her spoken subtitles only; no price, promo or profanity. No drink is the subject (water bottle and empty stemware on the table); the later carrot cake and dessert are left out.",
+      "SECOND REVIEW DSYs6AgD3Ks (@yourglobalfoodiebff): cut --start 6 --seconds 15, 6s-21s of 91s: Tony at their Harris' front doors, the white-tablecloth booth, banquettes and brass chandeliers, the jazz musicians, then the dry-aging case and the prime rib. Their Christmas tree and garlands are up (filmed December 2025), seasonal but not a dated promo. Wine and cocktails left out: his Old Fashioned, the martini pour and the Manhattan toast (about 58-67 s) are well past the excerpt.",
+      "THIRD REVIEW C2Sh1Iwxe7B (@taratastessf) IS ONLY 4.9 s, ON PURPOSE. The whole reel is 12.7 s and from 5.4 s it is a martini pour and a cocktail toast under 'WE LOVED THE CLASSIC COCKTAILS', a caption that stays up to 8.4 s; at 5.0 s a printed hosted menu card shows 'Welcome @taratastessf / January 16th, 2024' (a dated event). Cut 0s-4.9s: the A5 wagyu ribeye cut open ('This is the best Japanese wagyu that I've ever had'), her at their front door and the leather banquettes ('It's from the historic Harris restaurant in San Francisco'). If 4.9 s is too short for a review card, drop this one (coordinator's call). Her post was #hosted (with @wagyuofjapan), and she tagged @harrisrestaurants by mistake and @harrisrestaurantsf correctly.",
+      "Coordinator: OTHER_REVIEWS lines: { by: 'yourglobalfoodiebff', place: \"Harris' Restaurant\", city: 'San Francisco', brand: 'b_harrisrestaurant', reel: reel('DSYs6AgD3Ks'), clip: true }, and { by: 'taratastessf', place: \"Harris' Restaurant\", city: 'San Francisco', brand: 'b_harrisrestaurant', reel: reel('C2Sh1Iwxe7B'), clip: true }. @smackinfood and @yourglobalfoodiebff already have films on BEASTY (House of Raha; Spinning Dough); @taratastessf is new.",
+      "SEATING: Glenn tags 'San Francisco • Eats' and 'BEASTY • Steakhouse'. CATEGORIES.md already names Harris' among the first Steakhouse entries."
+    ]
+  },
+  {
+    "id": "b_blindbutcher",
+    "name_exact": "Blind Butcher",
+    "checked_on": "2026-10-26",
+    "sources": [
+      "https://blindbutcher.com/san-francisco/ (their own website's San Francisco page, WordPress at their own domain; the link Glenn sent; read 2026-10-26: 'A San Francisco Classic Americana.', '(415) 529 – 2478', 'MONDAYS to FRIDAYS 5pm -10pm / SATURDAYS & SUNDAYS 11am -10pm', Menu: Brunch and Dinner 'VIEW HERE', 'Reserve a Table' to opentable.com/r/blind-butcher-san-francisco; no street address printed on the page)",
+      "https://blindbutcher.com/bb_dinner_2026_modern/ (the SF page's Dinner link, a two-page PDF 'BY CHEF-OWNER COSKUN ABIK': Featured, Butcher's Board 365 'Serves 3+', Small Bites, Salads '17 EACH', Big Bites, House Cuts & Marinated Meats; page 2 cocktails and wine, not used)",
+      "https://blindbutcher.com/bb_brunch_2026_modern/ (the SF page's Brunch link, PDF: Featured, Bottomless Mimosas (not used), Classics, Sandwiches 'SERVED WITH SALAD & FRIES', Sides; footer '5% San Francisco Mandate Surcharge ... San Francisco Health Care Security Ordinance', which ties it to the SF restaurant; page 2 drinks, not used)",
+      "https://blindbutcher.com/los-angeles/ (read only to keep it apart: 7505 Melrose Ave, (213) 947-1191, Tue–Sat 5–10pm, separate menus final-menu-food / final-menu-drink; nothing from it is used)",
+      "https://blindbutcher.com/wp-content/uploads/2026/07/blind-butcher-new-logo-transperent-1.png (their Blind Butcher / Restaurant & Bar / Est. 2019 crest, 1024x1024 transparent, the logo on their site and menus; the icon is made from it)",
+      "Instagram @blindbutcher (Glenn's screenshot 1026-0801 IMG_8057: 'Blind Butcher', Steakhouse, 'Modern Americana Steakhouse', 'Blind Butcher SF 4058 A 18th street SF CA 94114.', 'Blind Butcher LA 7505 Melrose Avenue LA CA 90046', 'by @chef_coskun_abik', www.blindbutcher.com; 308 posts, 18.6K followers). IMG_8058: its Email button opens a message to blindbutchersf@gmail.com.",
+      "Glenn's screenshots 1026-0801 IMG_8061 (blindbutcher.com preview: the crest, 'A San Francisco Classic Americana. Now in Los Angeles.') and IMG_8062 (Apple Maps 'Blind Butcher': 4058 18th St, San Francisco, CA 94114, +1 (415) 529-2478, blindbutcher.com; Sat & Sun 11am–3pm and 5–10pm, Mon–Fri 5–10pm)",
+      "Web search (OpenTable, Hoodline 2019): opened 2019 by chef Coskun Abik in the Castro's former Beso space; the address is written 4058, 4058A or '4058 18th St A' depending on the listing.",
+      "https://www.instagram.com/reel/DZaNr5eC9KV/ (the page film; @jetsetjanine (Janine Lee), 10 Jun 2026, 24 s, hosted: 'this hidden gem in the Castro', 'famous butcher board', Chef Coskun Abik)",
+      "https://www.instagram.com/reel/DdXobJ8JpiU/ (2nd; @thehautesheet (The HauteSheet with Tara Polley), 17 Sep 2026, 58 s: an interview with Festus Ezeli (@fezzyfel / @festusfeasts) at '@blindbutcher SF')",
+      "https://www.instagram.com/reel/DZQJsLPB1UZ/ (3rd; @staycation.sfbayarea (Jax), 6 Jun 2026, 14 s: 'the Viral $365 Butcher Board' at @blindbutchersf for her friend @rsvpwithdanii's birthday)"
+    ],
+    "facts": {
+      "slug": "blind-butcher",
+      "name": "Blind Butcher",
+      "label": "Blind Butcher",
+      "cuisine": "Modern Americana steakhouse",
+      "tagline": "Chef-owner Coskun Abik's steakhouse on 18th Street in the Castro since 2019: house-cut prime ribeye, filet mignon and rack of lamb, the Butcher's Board for three or more, truffle lobster mac & cheese, and weekend brunch.",
+      "color": "#1A1917",
+      "icon": "blind-butcher",
+      "prep": 0,
+      "category": "Steakhouse",
+      "items": [],
+      "sections": [
+        {
+          "name": "Featured",
+          "items": [
+            [
+              "Butcher's Wagyu Beef Burger",
+              "Bourbon-caramelized onions, melted cheese, horseradish aioli, ciabatta, truffle fries",
+              3100
+            ],
+            [
+              "Truffle Lobster Mac & Cheese",
+              "",
+              3500
+            ],
+            [
+              "Butcher's Board",
+              "Serves 3+: prime ribeye, filet mignon, rack of lamb, truffle lobster mac & cheese, octopus, crispy calamari, Campari tomatoes, shishito, creamy mushrooms, toasted ciabatta, butcher's potatoes",
+              36500
+            ]
+          ]
+        },
+        {
+          "name": "Small Bites",
+          "items": [
+            [
+              "Blue Point Oysters",
+              "Half-dozen, served raw",
+              2800
+            ],
+            [
+              "Castelvetrano Olives",
+              "Zesty orange, olive oil, rosemary",
+              1100
+            ],
+            [
+              "Truffle French Fries",
+              "Parmesan, za'atar, Spanish paprika",
+              1300
+            ],
+            [
+              "Mashed Potatoes",
+              "Butter, garlic, paprika, parmigiano, olive oil",
+              1300
+            ],
+            [
+              "Creamy Mushrooms",
+              "Shallots, kasseri, marash, cream sauce",
+              1300
+            ],
+            [
+              "Brussels Sprouts",
+              "Reduced pomegranate vinaigrette",
+              1300
+            ],
+            [
+              "Shishito Peppers",
+              "Sea salt flakes, Greek yogurt",
+              1200
+            ],
+            [
+              "Butcher's Potatoes",
+              "Whole, butter-roasted, rosemary, herbs, Spanish paprika",
+              1300
+            ],
+            [
+              "Pistachio Goat Cheese",
+              "Roasted Oregon hazelnuts, honey, caramelized onions, dried fig",
+              1400
+            ],
+            [
+              "Octopodaki",
+              "Grilled octopus, lemon, oregano, marash, kale, red cabbage, chickpea",
+              2500
+            ],
+            [
+              "Crispy Calamari",
+              "Fried, paprika, horseradish aioli",
+              2200
+            ],
+            [
+              "Wagyu Beef Meatballs",
+              "Mashed potatoes, shaved parmigiano, marinara, crostini",
+              2200
+            ],
+            [
+              "Lamb Lollipops",
+              "Arugula, cherry tomatoes, oregano, lemon, Greek yogurt",
+              2400
+            ],
+            [
+              "Grilled Prosciutto Burrata",
+              "Arugula, Campari tomatoes, crostini, olive oil",
+              2200
+            ]
+          ]
+        },
+        {
+          "name": "Salads",
+          "items": [
+            [
+              "Caesar",
+              "Romaine hearts, parmesan, anchovies, baguette croutons, Caesar dressing",
+              1700
+            ],
+            [
+              "Roka",
+              "Arugula, seasonal fruits, goat cheese, dried fig, roasted walnuts, balsamic vinaigrette",
+              1700
+            ],
+            [
+              "Kale Picnic",
+              "Dried apricots, goat cheese, apples, dates, toasted hazelnut, lemon vinaigrette",
+              1700
+            ]
+          ]
+        },
+        {
+          "name": "Big Bites",
+          "items": [
+            [
+              "Burrata Ravioli",
+              "Crispy prosciutto, arugula, Campari tomatoes, creamy blue cheese sauce",
+              3200
+            ],
+            [
+              "Bucatini Wagyu Beef Meatballs",
+              "Parmigiano, basil, Campari tomatoes, aleppo, creamy pomodoro sauce",
+              3400
+            ],
+            [
+              "Prime Beef Stroganoff",
+              "Rigatoni, mushrooms, shallots, parmigiano romano, cream sauce",
+              3100
+            ],
+            [
+              "Rosemary Chicken",
+              "Half chicken, partly boneless, baby carrots, roasted mild red pepper sauce, mashed potatoes",
+              3200
+            ],
+            [
+              "Salmon Provençal",
+              "Baked Alaskan salmon, fennel, leeks, spinach, sundried tomatoes, gigantes plaki, dill mustard",
+              3400
+            ],
+            [
+              "Branzino",
+              "Whole grilled Mediterranean white fish, kimchi, shishito peppers, lemon",
+              4400
+            ]
+          ]
+        },
+        {
+          "name": "House Cuts & Marinated Meats",
+          "items": [
+            [
+              "16 oz Prime Ribeye Steak",
+              "Rosemary-oregano marinade, chimichurri, shishito, butcher's potatoes, cipollini onions",
+              7600
+            ],
+            [
+              "Filet Mignon",
+              "House center-cut, rosemary-thyme marinated, shishito, butcher's potatoes, cipollini onions",
+              5400
+            ],
+            [
+              "Rack of Lamb",
+              "House-butchered, rosemary-thyme marinated, whole grain mustard, shishito, butcher's potatoes",
+              5100
+            ],
+            [
+              "Braised Short Ribs",
+              "Bone marrow jus reduction, shishito, cipollini onions, mashed potatoes",
+              4600
+            ],
+            [
+              "Pork Loin Chop",
+              "Seared, sweet port sauce, shishito, cipollini onions, baby carrots, butcher's potatoes",
+              3900
+            ]
+          ]
+        },
+        {
+          "name": "Brunch Classics",
+          "items": [
+            [
+              "Lumberjack Mac & Cheese",
+              "Diced chicken apple sausage, butcher's potatoes, 2 eggs any style",
+              2700
+            ],
+            [
+              "Steak & Eggs",
+              "House-butchered 4 oz petite filet mignon, butcher's potatoes, 2 eggs any style",
+              3900
+            ],
+            [
+              "Butcher's Pancake Slam",
+              "Bacon, chicken apple sausage, seasonal fruits, 2 buttermilk pancakes, 2 eggs any style",
+              2800
+            ],
+            [
+              "Cast Iron Jack",
+              "Prime meats, melted cheese, onions, bell peppers, butcher's potatoes, 2 eggs any style",
+              2900
+            ],
+            [
+              "The Hangover",
+              "2 grilled chicken apple sausages, peppers, onions, tomatoes, butcher's potatoes, 2 eggs",
+              2600
+            ],
+            [
+              "Butcher's Benedict",
+              "Sliced prime ribeye, hollandaise, caramelized onions, melted cheese, butcher's potatoes",
+              2800
+            ],
+            [
+              "Florentine Benedict",
+              "Hollandaise, mixed greens, butcher's potatoes",
+              2400
+            ],
+            [
+              "Chicken Apple Sausage Scramble",
+              "Melted cheese, mushrooms, spinach, mixed greens, butcher's potatoes",
+              2600
+            ],
+            [
+              "Veggie Delight",
+              "Peppers, arugula, carrots, brussels sprouts, onions, potatoes, Greek yogurt, 2 eggs",
+              2400
+            ],
+            [
+              "Protein Bowl",
+              "4 oz wagyu patty, seasonal vegetables, butcher's potatoes, 2 eggs any style",
+              2800
+            ],
+            [
+              "Mushroom & Cheese Omelette",
+              "Mixed mushrooms, 3-cheese melt, mixed greens, butcher's potatoes",
+              2400
+            ],
+            [
+              "Meat & Cheese Omelette",
+              "Prime meats, onions, mixed greens, butcher's potatoes",
+              2600
+            ]
+          ]
+        },
+        {
+          "name": "Brunch Sandwiches & Sides",
+          "items": [
+            [
+              "Butcher's Wagyu Burger (brunch)",
+              "Bourbon caramelized onions, melted cheese, horseradish aioli, ciabatta, fries",
+              3100
+            ],
+            [
+              "Butcher's Sliders",
+              "Wagyu beef, melted cheese, bourbon caramelized onions, horseradish aioli; with salad and fries",
+              2500
+            ],
+            [
+              "Grilled Chicken Pesto Sandwich",
+              "Melted cheese, caramelized onions, aioli, lettuce, tomatoes, ciabatta; with salad and fries",
+              2700
+            ],
+            [
+              "Butcher's Chimichurri Cheese Steak",
+              "Sliced prime beef, bacon, melted cheese, caramelized onions, chimichurri, ciabatta; with salad and fries",
+              2800
+            ],
+            [
+              "Truffle French Fries (brunch)",
+              "Seasoned, parmesan",
+              1300
+            ],
+            [
+              "Side",
+              "Chicken apple sausage, smoked bacon, butcher's potatoes, toasted ciabatta, buttered muffin, fruit, mixed greens or seasonal vegetables",
+              700
+            ]
+          ]
+        }
+      ],
+      "address": "4058 18th St, San Francisco, CA 94114",
+      "phone": "(415) 529-2478",
+      "email": "blindbutchersf@gmail.com",
+      "hours": "Mon–Fri 5–10pm; Sat–Sun 11am–10pm (brunch weekends)",
+      "site": "https://blindbutcher.com/san-francisco/",
+      "siteCta": "Visit their site",
+      "siteNote": "Prices are from the San Francisco dinner and brunch menus on their own website; brunch is on Saturdays and Sundays. Brunch sandwiches come with salad and fries. Parties of 6 or more get a 20% gratuity, and a 5% San Francisco health-care surcharge is added to the bill. Book a table through OpenTable from their site. They also have a Los Angeles restaurant on Melrose Ave; this page is the San Francisco one.",
+      "clip": {
+        "src": "/clips/blind-butcher.mp4",
+        "poster": "/clips/blind-butcher-poster.webp",
+        "href": "https://www.instagram.com/reel/DZaNr5eC9KV/",
+        "credit": "Filmed by @jetsetjanine",
+        "platform": "Instagram",
+        "by": "jetsetjanine"
+      }
+    },
+    "placements": [
+      "san-francisco-goods2-56"
+    ],
+    "glenn": "26 Oct 2026, 8:01 am: 'San Francisco • Eats / BEASTY • Steakhouse' ('Foodie') with https://blindbutcher.com/san-francisco/ and four screenshots (1026-0801 IMG_8057 their Instagram, IMG_8058 its email, IMG_8061 the site preview, IMG_8062 Apple Maps); 8:01 reel DZaNr5eC9KV (@jetsetjanine) 'Clip this video plz'; 8:03 reel DdXobJ8JpiU (@thehautesheet, with @fezzyfel) '2nd'; 8:04 reel DZQJsLPB1UZ (@staycation.sfbayarea, the $365 Butcher Board) '3rd / Foodie'.",
+    "flags": [
+      "TYPE LINE 'Modern Americana steakhouse' (their Instagram bio and category: 'Modern Americana Steakhouse', 'Steakhouse') passes the new BEASTY • Steakhouse test; category 'Steakhouse'.",
+      "SAN FRANCISCO ONLY. The brand also has Blind Butcher LA (7505 Melrose Ave, its own phone, hours and menus). Everything here is the SF restaurant: the SF page's hours and phone, the two menus linked from the SF page (the brunch PDF carries the San Francisco health-care surcharge), the SF address. site is the SF page, not the brand home page. slug/id are the plain name (blind-butcher / b_blindbutcher); if an LA page is ever added, it would take a city suffix.",
+      "ADDRESS: '4058 18th St, San Francisco, CA 94114' as Apple Maps gives it; their Instagram bio writes '4058 A 18th street', and listings vary (4058, 4058A, 4058 18th St A). Their SF web page prints no address. Coordinator may prefer '4058A 18th St'.",
+      "HOURS from their SF web page (Mon–Fri 5–10pm, Sat–Sun 11am–10pm). Apple Maps (Glenn's IMG_8062) splits weekends into 11am–3pm and 5–10pm, so there may be a break between brunch and dinner; OpenTable's search snippet differs again. The site's line is used, with '(brunch weekends)'.",
+      "MENU: 49 priced items: the dinner PDF (Featured, the Butcher's Board at $365, Small Bites, Salads at $17 each, Big Bites, House Cuts) and the brunch PDF (Classics, Sandwiches & Sides) as two 'Brunch' sections. The burger and truffle fries appear on both menus at the same price, so the brunch copies carry '(brunch)' in their names; the brunch 'Sides 7' line is one 'Side' item at $7. Left out: Bottomless Mimosas ($19), all cocktails, rosé, sparkling, white and red wine. 'campari' on their menu is Campari tomatoes, written out so it does not read as the liqueur; 'Butcher's Board' items are their own list. Brunch's two featured items are merged: Lumberjack Mac & Cheese is in Brunch Classics.",
+      "EMAIL blindbutchersf@gmail.com is the address their Instagram Email button opens (Glenn's IMG_8058); it is not printed on their site. Glenn's own address shows in that screenshot's From line and is not used. No orderUrl: their site has OpenTable reservations only, no ordering link.",
+      "Not needsSite: a real website at their own domain with a San Francisco page. Their site's favicon files are named 'ChatGPT-Image...'; the crest used for the icon is a separate file and the same crest printed on both menus.",
+      "PAGE FILM DZaNr5eC9KV (@jetsetjanine, 'Clip this video plz'): cut --start 0 --seconds 20.8, 0s-21s of 24s: '$365 Viral Butcher Board' over the board, the birthday table in the red booth, their storefront on 18th St ('from Blind Butcher, and it did not disappoint'), the prime rib steak, filet mignon, truffle lobster mac & cheese and lamb ('the ultimate bucket-list meal for meat lovers'). **Ends at 20.8 s on purpose:** from 21.25 s a guest raises a cocktail at the table, then a whip-pan and the 'Stay tuned' end card. The $365 in her title is the board's current menu price, not a promo.",
+      "SECOND REVIEW DdXobJ8JpiU (@thehautesheet) IS 8.9 s, ON PURPOSE: cut --start 4.5 --seconds 8.9 (4.5s-13.4s of 58s): Festus Ezeli under their red awnings on 18th St ('On the street to high-five him over his latest review'), Tara Polley introducing 'their favorite restaurant', the Blind Butcher storefront, the dining room and the show's title over their menu and table setting. The reel shows no food at all; the rest is the interview at a table set with red and white wine glasses, a back-bar shot of gin bottles (14-16 s) and a screenshot of Festus's Facebook post dated 14 April 2026 (3 s). It is a talk-show promo more than a review; coordinator may prefer to drop it.",
+      "FESTUS: Glenn wrote @fezzyfel (Festus Ezeli's personal handle); his food account @festusfeasts already has a Foodies page. The film is credited to @thehautesheet (its maker, by: 'thehautesheet'); coordinator's call whether it also counts on Festus's page.",
+      "THIRD REVIEW DZQJsLPB1UZ (@staycation.sfbayarea, '3rd / Foodie') IS ONLY 2.95 s: the whole reel is 13.6 s and its middle is her espresso martini (2.8-6.8 s, 'I always have to get my Espresso Martini w/ Mezcal') and a cocktail toast (10-11.6 s, 'Sexy birthday dinner for my bestie'). Cut 7.0s-9.95s: their BLIND BUTCHER sign and open front, the three friends with the Butcher's Board in the red booth, the birthday dessert tray with a candle. The other clean stretches are 0-2.8 s (the board) and 11.6-13.6 s (the friends outside the front). If 3 s is too short, drop it (coordinator's call). Her friends are the same birthday party as in Janine's film.",
+      "Coordinator: OTHER_REVIEWS lines: { by: 'thehautesheet', place: 'Blind Butcher', city: 'San Francisco', brand: 'b_blindbutcher', reel: reel('DdXobJ8JpiU'), clip: true }, and { by: 'staycation.sfbayarea', place: 'Blind Butcher', city: 'San Francisco', brand: 'b_blindbutcher', reel: reel('DZQJsLPB1UZ'), clip: true }. None of @jetsetjanine, @thehautesheet or @staycation.sfbayarea is on BEASTY yet.",
+      "SEATING: Glenn tags 'San Francisco • Eats' and 'BEASTY • Steakhouse'. CATEGORIES.md already names Blind Butcher among the first Steakhouse entries."
+    ]
+  }
+]
