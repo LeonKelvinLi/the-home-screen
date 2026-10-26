@@ -1395,10 +1395,10 @@ export function compactSchedule(t: Terms): CompactSchedule {
   ]
   return {
     fees: [
-      { label: 'Initiation fee', detail: 'once', amount: usd(t.initiationFee) },
-      { label: 'Membership fee', detail: 'per month', amount: usd(t.monthlyFee) },
+      { label: 'Initiation fee', detail: 'paid once by a Member Business', amount: usd(t.initiationFee) },
+      { label: 'Membership fee', detail: 'per month, by a Member Business', amount: usd(t.monthlyFee) },
       { label: 'Foundation contribution', detail: t.foundationApplies === 'every_payment' ? 'from each payment' : 'from the initiation', amount: usd(t.foundationAmount) },
-      ...(t.recruiterFee > 0 ? [{ label: 'Recruiter upgrade', detail: 'to earn BARK points', amount: usd(t.recruiterFee) }] : []),
+      ...(t.recruiterFee > 0 ? [{ label: 'Recruiter upgrade', detail: 'paid by the Affiliate, to earn BARK points', amount: usd(t.recruiterFee) }] : []),
       {
         label: `${t.promoCode} offer`,
         detail: `${t.promoPaidMonths} months paid, ${t.promoFreeMonths} free; first ${t.promoCap} ${t.promoCapScope === 'per_city' ? 'per city' : 'overall'}; total for ${promoSpan}`,

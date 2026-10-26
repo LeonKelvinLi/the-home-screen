@@ -127,7 +127,7 @@ export async function schedulePdf(terms: Terms, meta: ScheduleMeta): Promise<Uin
   hair(y)
 
   /* 1. Fees: label and detail left, amount right-aligned. */
-  heading('Fees paid by a Member Business')
+  heading('Fees')
   for (const f of c.fees) {
     const detail = wrap(f.detail, body, 9, 250)
     room(detail.length * 12 + 8)
