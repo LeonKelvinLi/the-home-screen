@@ -541,6 +541,7 @@ export const ICON_LUMA: Record<string, number> = {
   'show-banga-2': 0.149,
   'sia-collective': 0.8334,
   'sidewalk-juice': 0.8917,
+  'simurgh-bakery': 0.073,
   'sin-city-pits': 0.8952,
   'sinmex-auto-body': 0.9008,
   'sips-bottle-emporium': 0.0752,

@@ -44946,4 +44946,551 @@ export const LOCAL_SEED: LocalSeed[] = [
           "by": "jetsetjanine"
       }
   },
+  /* BATCH 69, 2026-10-26: Glenn's send of 26 Oct 2:21 pm. Sources: research/roster/batch69.json. */
+  {
+      "slug": "simurgh-bakery",
+      "name": "Simurgh Bakery & Cafe",
+      "label": "Simurgh",
+      "cuisine": "Turkish & Balkan bakery, breakfast & brunch",
+      "tagline": "Made-from-scratch Turkish and Balkan bakery and café on San Pablo Avenue in Emeryville: simit, börek and baklava, Turkish breakfast, shakshuka, kebabs and pide.",
+      "color": "#243237",
+      "icon": "simurgh-bakery",
+      "prep": 0,
+      "category": "Bakery",
+      "items": [],
+      "sections": [
+          {
+              "name": "Breakfast & Brunch",
+              "items": [
+                  [
+                      "Stuffed Simit Bread",
+                      "From. This Turkish-style sesame bagel, or “simit,” in an oval shape is generously stuffed with savory beef…",
+                      700
+                  ],
+                  [
+                      "Breakfast Simit Sandwich",
+                      "Turkish sesame bagel with feta cheese/cream cheese/labneh cheese, hard-boiled eggs, tomatoes, and…",
+                      1200
+                  ],
+                  [
+                      "Spinach Feta Börek- Savory Phyllo Pastry",
+                      "Our spinach and feta b örek is made with delicate, house-made phyllo dough, filled with a savory blend…",
+                      900
+                  ],
+                  [
+                      "Simit",
+                      "Indulge in the traditional Turkish bagel, Simit, known for its deliciously chewy texture - a perfect…",
+                      350
+                  ],
+                  [
+                      "Shakshuka Nest",
+                      "Inspired by the Georgian khachapuri, this baked bread boat cradles a rich shakshuka made with tomatoes…",
+                      2300
+                  ],
+                  [
+                      "Shakshuka/Menemen",
+                      "Mediterranean breakfast eggs with tomatoes, green peppers, and olive oil. Served with puffy pide bread.",
+                      1600
+                  ],
+                  [
+                      "Poğaça-Morning Cheese Pastry",
+                      "Our pogacha is a soft, buttery pastry perfect for starting the day. Made with rich butter and eggs and…",
+                      450
+                  ],
+                  [
+                      "Cheese Börek- Savory Phyllo Pastry",
+                      "Our cheese börek is made with delicate, house-made phyllo dough, filled with a savory blend of feta…",
+                      900
+                  ],
+                  [
+                      "Turkish Breakfast",
+                      "Two fried eggs with sujuk/beef pepperoni, tomatoes, cucumber, feta cheese, kashkaval cheese, jam, black…",
+                      2400
+                  ],
+                  [
+                      "Bourek with ground beef",
+                      "A traditional Balkan dish featuring flaky phyllo dough filled with seasoned ground beef, perfect for…",
+                      1000
+                  ],
+                  [
+                      "Turkish poached eggs/Chilburr",
+                      "Poached eggs nestled over a creamy, tangy layer of our house-made labneh, finished with a drizzle of…",
+                      1700
+                  ],
+                  [
+                      "Kale Mushroom Börek- Savory Phyllo Pastry",
+                      "Our kale mushroom börek is made with delicate, house-made phyllo dough, filled with a savory blend of…",
+                      900
+                  ],
+                  [
+                      "Californian Breakfast",
+                      "Folded Omelet with grilled vegetables (zucchini, red pepper, green pepper, tomatoes, and onions)…",
+                      1900
+                  ]
+              ]
+          },
+          {
+              "name": "Soups, Salads & Dolma",
+              "items": [
+                  [
+                      "Red Lentil Soup",
+                      "Our Turkish lentil soup is a warm and comforting classic, made with red lentils, carrots, onions, and…",
+                      700
+                  ],
+                  [
+                      "Turkish Shepherd Salad",
+                      "Tomatoes, cucumber, red onions, parsley, and mint, olive oil, pomegranate molasses, and lemon juice.",
+                      1100
+                  ],
+                  [
+                      "Grape leave dolma",
+                      "Californian grape leaves rolled with a savory mix of rice, onions, pine nuts, olive oil, pomegranate…",
+                      800
+                  ],
+                  [
+                      "Baby Arugula Salad",
+                      "Baby Arugula, feta cheese/goat cheese, walnuts, and tomato, dressed with a lemon vinaigrette or…",
+                      1200
+                  ],
+                  [
+                      "White Bean Salad",
+                      "Italian butter beans, hard-boiled egg, tomatoes, lettuce, parsley, onions, onion, olive oil, and tahini…",
+                      1200
+                  ],
+                  [
+                      "Eggplant dolma (2pcs)",
+                      "Two tender roasted eggplants stuffed with seasoned rice, fresh herbs, and olive oil. A classic Turkish…",
+                      700
+                  ]
+              ]
+          },
+          {
+              "name": "Lunch Plates & Sandwiches",
+              "items": [
+                  [
+                      "Cevapi Rice Bowl",
+                      "Rice pilaf topped with Balkan-style kebabs, radish, cucumber, tomatoes, red cabbage, ajvar sauce, and…",
+                      1900
+                  ],
+                  [
+                      "Chicken Pesto Sandwich",
+                      "Grilled chicken breast served in a pide bread with sumac onion salad, tomatoes, and pesto sauce. Served…",
+                      2000
+                  ],
+                  [
+                      "Chicken Pide Sandwich",
+                      "Grilled chicken in freshly made fluffy pide bread with house-made ajvar sauce and house-made labneh . A…",
+                      1900
+                  ],
+                  [
+                      "Balkan Kebab/Cevapi Sandwich",
+                      "Balkan-style kofte kebabs (5 pieces) in a pide bread with ajvar (roasted red pepper-eggplant) sauce…",
+                      1900
+                  ],
+                  [
+                      "Chicken Rice Bowl",
+                      "Rice Pilaf topped with grilled chicken, radish, cucumber, tomatoes, red cabbage, ajvar sauce and labneh…",
+                      1900
+                  ],
+                  [
+                      "Istanbul Plate",
+                      "Assorted kofte kebabs served with oven-baked potatoes, slices of pide bread, grilled shishito peppers…",
+                      2200
+                  ],
+                  [
+                      "Sabich Sandwich",
+                      "Fried eggplant, hard-boiled eggs, Turkish shepherd salad, served in a pide bread with ajvar (roasted…",
+                      1900
+                  ],
+                  [
+                      "Simurgh Cali Döner",
+                      "From. Three fresh mini pides filled with your choice of meat option: beef & lamb steak or grilled chicken…",
+                      2200
+                  ],
+                  [
+                      "Turkish Sampler/Meze Platter",
+                      "Assorted Mezze Platter featuring dolma, sun-dried eggplant dolma, meatless bulgur balls, b örek/savory…",
+                      2800
+                  ],
+                  [
+                      "Grilled Halloumi Sandwich",
+                      "Grilled Halloumi cheese served in a pide bread with spring mix, red onion salad, tomatoes, and pesto…",
+                      1900
+                  ],
+                  [
+                      "Simurgh Kebab",
+                      "Balkan-style kebabs over freshly-made pide pieces topped with ajvar sauce with a side of house-made…",
+                      2000
+                  ],
+                  [
+                      "Khachapuri",
+                      "Open-faced pide bread filled with feta and Monterey Jack cheese and garnished with egg yolk on top.…",
+                      2200
+                  ],
+                  [
+                      "Grilled Veggie Sandwich",
+                      "Grilled zucchini, eggplant, red peppers, green pepper, red onions in a pide bread with sumac onion…",
+                      1800
+                  ],
+                  [
+                      "Flat bread/lahmajun",
+                      "From. Flatbread topped with housemade ground beef and vegetables. Served with arugula and red onion salad.",
+                      1600
+                  ],
+                  [
+                      "Beef Brisket Patty/Pljeskavica",
+                      "Balkan-style burger stuffed with jack cheese served in a pide bread with sumac onion salad, tomatoes…",
+                      2200
+                  ],
+                  [
+                      "Veggie Rice Bowl",
+                      "Pilaf topped with grilled vegetables (eggplant, zucchini, red pepper, green pepper, and red onions)…",
+                      1800
+                  ],
+                  [
+                      "Bulgur Kofte Wrap",
+                      "Meatless bulgur kofte wrapped in freshly made lavash bread with lettuce, red cabbage, mint, parsley, and…",
+                      1400
+                  ]
+              ]
+          },
+          {
+              "name": "Kids Menu",
+              "items": [
+                  [
+                      "Kids Chicken Rice Pilaf Bowl",
+                      "A kid-sized portion of tender grilled chicken served over fluffy Turkish rice pilaf. A wholesome…",
+                      1100
+                  ],
+                  [
+                      "Kids California",
+                      "Potato, eggs, half strawberry, ketchup, and slice of pide",
+                      1000
+                  ],
+                  [
+                      "Kids Lentil Soup &Cevapi",
+                      "A nourishing kids meal featuring warm Turkish red lentil soup paired with Balkan cevapi sausage.…",
+                      1200
+                  ],
+                  [
+                      "Kids Fruit& Eggs",
+                      "Blueberries &strawberry, half pide slice/half simit, eggs",
+                      1000
+                  ],
+                  [
+                      "Kids Cevapi Rice Pilaf Bowl",
+                      "A kid-sized portion of Balkan cevapi sausage served over fluffy Turkish rice pilaf. A fun, flavorful…",
+                      1100
+                  ]
+              ]
+          },
+          {
+              "name": "Desserts",
+              "items": [
+                  [
+                      "Honey Cake",
+                      "From. Our Honey Cake (Medovik) is a classic Russian-style layered cake made with housemade graham-style…",
+                      800
+                  ],
+                  [
+                      "Baklava Pairs- Turkish Phyllo Desserts",
+                      "From. Indulge in the perfect pairing with our Baklava Pairs — handcrafted with fresh filo dough, generously…",
+                      700
+                  ],
+                  [
+                      "Rice Pudding",
+                      "Creamy Turkish rice pudding (sütlaç) — lightly sweetened, silky smooth, and baked to a golden finish. A…",
+                      550
+                  ],
+                  [
+                      "Sesame Tahini Cookies",
+                      "Nutty, rich sesame tahini cookies with a delicate crumble and deep roasted sesame flavor. A Middle…",
+                      700
+                  ],
+                  [
+                      "Chocolate Chunk Cookie",
+                      "Chunky, crispy, and chewy — made with premium Belgian Callebaut chocolate.",
+                      500
+                  ],
+                  [
+                      "Almond Walnut Baklava Croissant",
+                      "The Almond Walnut Baklava Croissant features layers of fresh phyllo dough filled with a blend of almonds…",
+                      650
+                  ],
+                  [
+                      "Coconut Baklava Rolls w/ walnuts & apricots",
+                      "Coconut Baklava Rolls combine a crispy, flaky texture with a rich coconut filling, offering a unique…",
+                      700
+                  ],
+                  [
+                      "Chocolate Hazelnut Simit Scone",
+                      "Our famous Chocolate Hazelnut Scone is unlike anything you’ve tasted before. Buttery and flaky on the…",
+                      700
+                  ],
+                  [
+                      "Halva Cookie",
+                      "Buttery halva sesame cookie filled with tahini halva. Soft inside, nutty outside, perfectly sweet.",
+                      550
+                  ],
+                  [
+                      "Cinnamon Walnut Cookie",
+                      "Warm, spiced, and deeply comforting — our Cinnamon Walnut Cookie is a bite-sized treat that feels like a…",
+                      195
+                  ],
+                  [
+                      "Chocolate Walnut Tahini Cookie",
+                      "A rich, indulgent cookie packed with dark chocolate, crunchy walnuts, and creamy tahini. Made with…",
+                      500
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Vanilla Latte",
+                      "Espresso from Olympus Coffee, a woman-owned roastery, blended with steamed milk and French vanilla for a…",
+                      600
+                  ],
+                  [
+                      "Turkish Tea Latte",
+                      "A cozy Simurgh Bakery original — bold authentic Turkish çay brewed strong with premium Ahmad Tea and…",
+                      550
+                  ],
+                  [
+                      "Turkish Coffee Latte",
+                      "A unique Simurgh Bakery original — bold authentic Turkish coffee blended with creamy steamed milk. The…",
+                      600
+                  ],
+                  [
+                      "Salam Cola Diet",
+                      "Salam Cola Diet — a light, refreshing imported halal diet cola with all the bold flavor and none of the…",
+                      400
+                  ],
+                  [
+                      "Fresh Orange Juice (12 oz)",
+                      "Freshly squeezed orange juice in a 12oz serving — pure, bright, and made to order at Simurgh Bakery in…",
+                      650
+                  ],
+                  [
+                      "Drip Coffee",
+                      "Freshly brewed from Olympus Coffee beans, roasted by a woman-owned roastery. A smooth, balanced cup with…",
+                      350
+                  ],
+                  [
+                      "Yogurt drink-plain",
+                      "Refreshing plain ayran — a classic Turkish yogurt drink made with strained yogurt, water, and a pinch of…",
+                      500
+                  ],
+                  [
+                      "Turkish Coffee",
+                      "Authentic Turkish coffee (Türk kahvesi) brewed to order at Simurgh Bakery in Emeryville. Rich, aromatic…",
+                      550
+                  ],
+                  [
+                      "Palestine Orange Soda",
+                      "Palestine Orange Soda — a vibrant, citrusy imported sparkling drink with a cause behind every sip.…",
+                      400
+                  ],
+                  [
+                      "Lemonade",
+                      "Freshly made with real lemon and mint",
+                      450
+                  ],
+                  [
+                      "Latte",
+                      "Espresso made with beans from Olympus Coffee, a woman-owned roastery, blended with silky steamed milk…",
+                      550
+                  ],
+                  [
+                      "Salam Cola",
+                      "Salam Cola — a refreshing, bold imported halal cola with a smooth finish. A great alternative to…",
+                      400
+                  ],
+                  [
+                      "Perrier sparkling water",
+                      "Crisp, refreshing Perrier sparkling mineral water. The perfect palate cleanser between bites or a light…",
+                      400
+                  ],
+                  [
+                      "Palestine Cola",
+                      "Palestine Cola — a bold, refreshing imported cola with a smooth finish and a cause behind every sip.…",
+                      400
+                  ],
+                  [
+                      "Mocha",
+                      "Rich espresso from Olympus Coffee, a woman-owned roastery, blended with velvety steamed milk and real…",
+                      600
+                  ],
+                  [
+                      "Hot Tea",
+                      "A warm, soothing cup of hot tea served fresh at Simurgh Bakery in Emeryville. The perfect companion to a…",
+                      300
+                  ],
+                  [
+                      "Hibiscus Tea",
+                      "Traditional cold bazaar drink made with hibiscus, tamarind, rose hip, and variety of dried herbs and…",
+                      450
+                  ],
+                  [
+                      "Cappuccino",
+                      "A rich espresso from Olympus Coffee topped with equal parts steamed milk and velvety foam — bold…",
+                      600
+                  ],
+                  [
+                      "White chocolate mocha",
+                      "Smooth espresso from Olympus Coffee, a woman-owned roastery, combined with creamy steamed milk and rich…",
+                      600
+                  ],
+                  [
+                      "Turkish Tea",
+                      "Our signature Turkish tea (çay), brewed in a traditional double teapot using premium Ahmad Tea — a…",
+                      400
+                  ],
+                  [
+                      "Şalgam (Pickled Beet Juice)",
+                      "Şalgam is a bold, tangy Turkish fermented drink made from pickled turnips and beets. Deeply savory…",
+                      450
+                  ],
+                  [
+                      "Pumpkin Spice Latte",
+                      "Warm, cozy, and perfectly spiced — our Pumpkin Spice Latte is made with fresh espresso, steamed milk…",
+                      600
+                  ],
+                  [
+                      "Matcha Latte",
+                      "Organic Japanese matcha whisked with creamy steamed milk for a smooth, earthy, and gently uplifting…",
+                      600
+                  ],
+                  [
+                      "Hot Chocolate",
+                      "Rich, velvety hot chocolate made with premium chocolate and steamed milk. A cozy, indulgent treat served…",
+                      600
+                  ],
+                  [
+                      "Espresso",
+                      "A bold, aromatic shot brewed from Olympus Coffee beans — roasted by a woman-owned roastery for a smooth…",
+                      350
+                  ],
+                  [
+                      "Didi",
+                      "From. Didi is a beloved Turkish iced tea — light, refreshing, and subtly sweet. A popular imported drink…",
+                      450
+                  ],
+                  [
+                      "Chai Tea Latte",
+                      "Warm, spiced chai tea latte made with a bold blend of black tea and aromatic spices, finished with…",
+                      600
+                  ],
+                  [
+                      "Americano",
+                      "Brewed with beans sourced from Olympus Coffee, a proudly woman-owned roastery. Each cup reflects their…",
+                      400
+                  ]
+              ]
+          },
+          {
+              "name": "Grab & Go",
+              "items": [
+                  [
+                      "Baklava Gift Boxes",
+                      "From. Craving baklava? Pick your favorite and dig in. Our handcrafted baklava boxes are perfect for everyday…",
+                      800
+                  ],
+                  [
+                      "Puffy Pide Bags (4 pc)",
+                      "From. Take home 4 freshly baked puffy Turkish pide breads — soft and pillowy inside with a golden crust. Baked…",
+                      500
+                  ],
+                  [
+                      "Puffy Pide",
+                      "Our puffy pide, inspired by lepinja, the traditional Balkan bread and Turkish Ramadan bread, is a light…",
+                      350
+                  ],
+                  [
+                      "Labneh-8oz",
+                      "Thick, creamy house-made labneh — strained yogurt cheese with a tangy, velvety texture. A Middle Eastern…",
+                      800
+                  ],
+                  [
+                      "Eggplant Dolma package",
+                      "Take home a package of our housemade eggplant dolma — tender roasted eggplants stuffed with seasoned…",
+                      1400
+                  ],
+                  [
+                      "Grape Leave Dolma package",
+                      "Take home a package of our house-made grape leaf dolma — tender vine leaves stuffed with seasoned rice…",
+                      1400
+                  ],
+                  [
+                      "Turkish Delights (200g)",
+                      "Authentic Turkish delights (lokum) in a 200g pack — soft, chewy, and dusted with powdered sugar. A…",
+                      950
+                  ],
+                  [
+                      "Pistachio Almond Cookie Pack",
+                      "Crisp, nutty, and delicately sweet—our gluten-free Pistachio Almond Cookies are made with premium…",
+                      900
+                  ],
+                  [
+                      "Dubai chocolate (60gr)-small",
+                      "Rich, indulgent chocolate bites layered with pistachio and kadaif, inspired by Middle Eastern flavors.",
+                      1100
+                  ],
+                  [
+                      "Bulgur Kofte-package",
+                      "Take home a package of our house-made bulgur kofte — savory Turkish bulgur patties seasoned with fresh…",
+                      1200
+                  ],
+                  [
+                      "Simit Bags (5 pcs)",
+                      "Take home a bag of 5 freshly baked simit — authentic Turkish sesame bagels with a crispy crust and soft…",
+                      1500
+                  ],
+                  [
+                      "Pistachio Matcha Madeleine – 8pc Package",
+                      "Meet your new favorite treat — our Pistachio Matcha Madeleine, where the earthy elegance of Japanese…",
+                      1400
+                  ],
+                  [
+                      "Black olives with chili and olive oil (8oz)",
+                      "Bold, briny black olives marinated with chili flakes and premium olive oil. A vibrant Mediterranean…",
+                      950
+                  ],
+                  [
+                      "Mixed Berry Jam (7oz)",
+                      "Made in-house in small batches with mixed berries, gently cooked to bring out their natural sweetness…",
+                      925
+                  ],
+                  [
+                      "Kaimak - Turkish Breakfast Clotted Cream",
+                      "Rich, silky, and deeply indulgent — our Kaimak is a traditional Turkish clotted cream cheese made…",
+                      1200
+                  ],
+                  [
+                      "Cheese Börek (9inch)- Savory Phyllo Pastry",
+                      "Our cheese Börek is made with delicate, house-made phyllo dough, filled with a savory blend of feta…",
+                      2900
+                  ],
+                  [
+                      "Yogurt-16oz jar",
+                      "Rich, creamy housemade Turkish-style yogurt in a generous 16oz jar. Made fresh with whole milk — thick…",
+                      600
+                  ],
+                  [
+                      "Ajvar sauce jars (9 oz)",
+                      "Experience the delicious flavor of Ajvar ( roasted red pepper and eggplant sauce) in a convenient 9 oz…",
+                      900
+                  ]
+              ]
+          }
+      ],
+      "address": "4125 San Pablo Ave, Emeryville, CA 94608",
+      "phone": "(510) 596-5685",
+      "hours": "Daily 8am–4pm",
+      "site": "https://simurghbakery.com/",
+      "orderUrl": "https://simurghbakery.com/collections/breakfast-menu",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from their own online menu (their Shopify store), for pickup. Party trays, catering and nationwide baklava gifts are on their site too."
+  },
 ]

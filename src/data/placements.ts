@@ -1774,4 +1774,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods2-55': 'b_harrisrestaurant',
   'san-francisco-goods2-56': 'b_blindbutcher',
 
+  /* Batch 69, Glenn, 26 October 2:21 pm: Simurgh, Turkish and Balkan, on Emeryville's open
+     Mediterranean spot (its Bakery spot is taken); Breakfast/Diner fills from its type line. */
+  'emeryville-goods-9': 'b_simurghbakery',
+
 }
