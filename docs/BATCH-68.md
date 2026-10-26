@@ -30,3 +30,7 @@ Glenn, 7:48 am: "New category / BEASTY • Steakhouse". Steakhouses and chophous
 - `npx tsc`, `npm run build`, the data audit (0 errors).
 - Seat diff against the last release: 29 additions, nothing moved.
 - `tools/audit-batch68.mjs` (126 checks), `tools/audit-categories.mjs` (now 44 categories, Steakhouse among them) and `tools/audit-foodies.mjs` pass on a local build.
+
+## Live
+
+Production release `99b6b07`, pushed at about 10:54 am on 26 October 2026, live by 11:00 am (`tools/live-check.mjs` found the Steakhouse category and West Coast Sips). `BASE=https://beastypages.com node tools/audit-batch68.mjs` passed all 126 checks against the live site.
