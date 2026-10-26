@@ -1,0 +1,4057 @@
+{
+ "smash-burgers-bros": {
+  "name": "Smash Burgers Bros",
+  "filled": [],
+  "items": 0,
+  "sources": [],
+  "flags": [
+   "No address, site or phone on BEASTY, and no Bay Area business by this name could be identified online (only Smash Bros Burger in Merced/Turlock and a Smash Bros in Lancaster, unconfirmed as the same business); need a location from Leon/Glenn."
+  ]
+ },
+ "harumi-ayce": {
+  "name": "Harumi",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.google.com/maps/place/Harumi+Sushi+%26+Hibachi (4713 Livermore Outlets Dr, (925) 667-4714) — weekly hours, read 2026-10-25"
+  ],
+  "flags": [
+   "Hours from one source only (Google Maps).",
+   "No priced menu found: no own website, and no Uber Eats/DoorDash store could be found for the Livermore location (only an unrelated Harumi in Phoenix). Web search budget ran out before further searching."
+  ]
+ },
+ "lucky-three-seven": {
+  "name": "Lucky Three Seven",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.berkeleyside.org/?p=499012 — dishes and hours (Tue–Sun 11am–9pm, closed Mon), no prices, read via search 2026-10-25",
+   "https://www.theinfatuation.com/san-francisco/reviews/lucky-three-seven — dishes only, no prices, read via search 2026-10-25"
+  ],
+  "flags": [
+   "No priced menu found: no own website or delivery-app store located; press coverage names dishes (G-Fire wings, lumpia, adobo, tocino, kare-kare) but no prices. Sources disagree on payment (cash/Zelle/Venmo vs cash only)."
+  ]
+ },
+ "bou-cajun": {
+  "name": "Boudreaux Cajun Steak House",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.boucajun.com/ — home page says the restaurant is under construction and not open to the public; food truck and catering only, read 2026-10-25",
+   "https://www.boucajun.com/gumbo-orders — no prices, read 2026-10-25"
+  ],
+  "flags": [
+   "Their own site says the Fairfield restaurant is under construction and not open to the public; they run a food truck and catering. No priced menu published (call/text to order)."
+  ]
+ },
+ "x-noodle-dumpling": {
+  "name": "X Noodles & Dumplings",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 75,
+  "sources": [
+   "https://www.ubereats.com/store/x-noodles-%26-dumplings-brentwood/uQSAWIhRWliEneMZzCyfVw — full menu with prices (JSON-LD) and hours, 1185 2nd Street Brentwood, read 2026-10-25",
+   "Google Maps listing X NOODLES & DUMPLINGS, 1185 2nd St G, Brentwood — daily 11am–8:45pm, read 2026-10-25"
+  ],
+  "flags": [
+   "ezCater lists weekday hours 11:30am–8pm for catering delivery; Google Maps and Uber Eats agree on 11am–8:45pm."
+  ]
+ },
+ "mimis-chocolates": {
+  "name": "Mimi’s Chocolates",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://mimischocolates.com/ — hours (JSON-LD and footer): Mon–Fri 12–7pm, Sat 1–8pm, Sun closed, read 2026-10-25",
+   "Google Maps listing Mimi's Chocolates, 6601 Dublin Blvd Ste N — Tue–Fri 12–7pm, Sat 1–8pm, Sun and Mon closed, read 2026-10-25"
+  ],
+  "flags": [
+   "Sources disagree on Monday: their website says open 12–7pm, Google Maps says closed. Used their website; worth confirming with the shop."
+  ]
+ },
+ "maymays-cravings": {
+  "name": "Maymay’s Cravings",
+  "filled": [
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 56,
+  "sources": [
+   "https://order.online/store/35787203 — Maymay's Cravings Asian Snack bar, 1349 Locust St, Walnut Creek; full menu with prices; online ordering hours 12pm–7:10pm, read 2026-10-25"
+  ],
+  "flags": []
+ },
+ "banh-mi-xpress": {
+  "name": "Banh Mi Xpress",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google Maps listing Banh Mi Xpress, 951 Alamo Dr, Vacaville, (707) 305-5128 — daily 8:30am–6:30pm, read 2026-10-25",
+   "https://www.banhmixpress.net/menu — says \"banh mi served from 7:30am to 6pm\", no days given, read 2026-10-25"
+  ],
+  "flags": [
+   "Their own menu page says banh mi are served 7:30am–6pm (no days listed), which differs from Google Maps (daily 8:30am–6:30pm). Google reviews mention a soft opening, so hours may still be settling; worth confirming."
+  ]
+ },
+ "benicia-grill": {
+  "name": "Benicia Grill",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 152,
+  "sources": [
+   "https://www.doordash.com/store/benicia-grill-benicia-260425/615305/ — full menu with prices, 4760 E 2nd St Benicia, read 2026-10-25",
+   "http://www.benicia-grill.com/menu.pdf — dishes match, no prices printed, read 2026-10-25"
+  ],
+  "flags": []
+ },
+ "lavanta": {
+  "name": "Lavanta",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.eatlavanta.com/ — brunch Fri–Sun 9am–2pm; dining Sun–Thu 11am–10pm, Fri–Sat 11am–11pm, read 2026-10-25"
+  ],
+  "flags": [
+   "Hours from one source only (their own website)."
+  ]
+ },
+ "u-dessert-story": {
+  "name": "U Dessert Story",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 88,
+  "sources": [
+   "https://www.doordash.com/store/u-:dessert-story-san-francisco-416800/96303548/ — full menu with prices, 3489 16th St SF, read 2026-10-25",
+   "https://www.udessertstory.com/ — sample dishes only, no prices, read 2026-10-25"
+  ],
+  "flags": [
+   "Left out the two $747.50 wedding cakes and the retail mochi waffle mixes."
+  ]
+ },
+ "the-farmacy": {
+  "name": "The Farmacy",
+  "filled": [
+   "address",
+   "hours",
+   "orderUrl",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.farmacysf.com/ — footer: 1 S Park St, San Francisco, CA 94107, (669) 303-6972, Mon–Fri 11:30am–7pm, Sat–Sun closed, read 2026-10-25"
+  ],
+  "flags": [
+   "Hours from one source only (their own website). BEASTY had no address; added theirs."
+  ]
+ },
+ "sandwich-monkey": {
+  "name": "The Sandwich Monkey",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://thesandwichmonkey.com/ — hours (JSON-LD): Mon–Fri 10am–4pm, Sat–Sun 10:30am–4pm (Saturday close typed as 04:00), read 2026-10-25",
+   "Google Maps listing The Sandwich Monkey, 3 Plaza View Ln — daily 10am–4pm, read 2026-10-25"
+  ],
+  "flags": [
+   "Google Maps shows a 10am weekend opening vs 10:30am on their own site; both say open daily, closing 4pm."
+  ]
+ },
+ "senor-sisig": {
+  "name": "Señor Sisig",
+  "filled": [
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 53,
+  "sources": [
+   "https://order.online/store/senor-sisig-sf-mission-1005568 — 990 Valencia Street store, full menu with prices, read 2026-10-25",
+   "https://www.senorsisig.com/locations/ — 990 Valencia St, Mon–Sun 11am–9pm, links to that ordering page, read 2026-10-25"
+  ],
+  "flags": [
+   "Left out the bag fee and the 15th Anniversary bobblehead (merchandise)."
+  ]
+ },
+ "jolly-cafe": {
+  "name": "Jolly Cafe",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 92,
+  "sources": [
+   "https://www.doordash.com/store/jolly-cafe-oakland-40461003/94579446/ — full menu with prices, 1004 Webster St Oakland, read 2026-10-25",
+   "Google Maps listing Jolly Cafe, 1004 Webster St, Oakland, (510) 454-9899 — daily 10am–6pm, read 2026-10-25",
+   "https://www.yelp.com/biz/jolly-cafe-oakland — weekday hours 10am–6pm (via search snippet), read 2026-10-25"
+  ],
+  "flags": [
+   "Yelp snippet showed weekdays only; weekend hours (10am–6pm) are from Google Maps alone. A Yelp snippet quoted the BM1 sandwich at $9.50 in store vs $12.35 on DoorDash."
+  ]
+ },
+ "donut-farm": {
+  "name": "Donut Farm",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 2,
+  "sources": [
+   "https://www.doordash.com/store/pepples-donut-farm-berkeley-93518/1738669/ — Pepples Donut Farm, 3278 Adeline St Berkeley; half dozen $21, dozen $38, read 2026-10-25",
+   "https://donutfarmberkeley.com/ — flavors and brunch dishes, no prices; Thu–Sun 7:30am–3pm, read 2026-10-25"
+  ],
+  "flags": [
+   "Only two priced items exist online (half dozen and dozen boxes); no per-donut or brunch prices published."
+  ]
+ },
+ "milky-flakes": {
+  "name": "Milky Flakes",
+  "filled": [
+   "email",
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.milkyflakes.com/ — \"Every day, 11am to 10pm. Friday and Saturday to 11pm\", email, flavors (no prices), read 2026-10-25",
+   "Google Maps listing Milky Flakes, 1399 N Main St, Walnut Creek, (925) 440-0569 — same hours, read 2026-10-25",
+   "https://www.ubereats.com/store/milky-flakes/MUR9AGKDRMyQ7YfllbWt_Q — closed on Uber Eats since Jun 10, 2026, no menu, read 2026-10-25"
+  ],
+  "flags": [
+   "No priced menu online: their site lists flavors without prices and their Uber Eats store is closed."
+  ]
+ },
+ "bober-tea": {
+  "name": "Bober Tea & Mochi",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 64,
+  "sources": [
+   "https://www.doordash.com/store/bober-tea-&-mochi-martinez-35599311/77727561/ — full menu with prices, 1029 Arnold Dr Martinez, read 2026-10-25",
+   "https://boberteaus.com/Menu — no prices, read 2026-10-25"
+  ],
+  "flags": []
+ },
+ "chutneys": {
+  "name": "Chutneys",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 46,
+  "sources": [
+   "https://www.doordash.com/store/chutneys-brentwood-43392381/112261749/ — full menu with prices, 2505 Sand Creek Rd Ste 112 Brentwood; ordering 11am–2:40pm and 5–8:40pm, read 2026-10-25"
+  ],
+  "flags": []
+ },
+ "french-spot": {
+  "name": "The French Spot",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.thefrenchspotsf.com/menu — item list without prices, read 2026-10-25",
+   "https://order.online/business/the-french-spot-11720011 — only the SF (1042 Larkin St) store is orderable, read 2026-10-25"
+  ],
+  "flags": [
+   "No priced menu for the Concord store (785 Oak Grove Rd): their menu page has no prices and their online ordering only carries the San Francisco Larkin St store. Their site gives Concord hours: Mon, Wed–Fri 7:30am–2:30pm, Sat–Sun 8am–2:30pm, closed Tue."
+  ]
+ },
+ "santa-clara-super-kitchen": {
+  "name": "Santa Clara Super Kitchen",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://santaclarasuperkitchen.com/ — corporate halal catering, custom menus via tasting/quote, no prices or hours, read 2026-10-25"
+  ],
+  "flags": [
+   "Catering-only (corporate tastings, custom quotes); no prices or opening hours published."
+  ]
+ },
+ "banh-mi-oven": {
+  "name": "Banh Mi Oven",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://banhmioven.us/ — domain does not resolve (NXDOMAIN), checked 2026-10-25"
+  ],
+  "flags": [
+   "Their website domain no longer resolves and BEASTY has no address or phone, so the business could not be identified or confirmed open; possibly closed."
+  ]
+ },
+ "ruben-hibachi-grill": {
+  "name": "Ruben Hibachi Grill",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 52,
+  "sources": [
+   "https://www.doordash.com/store/rubenhibchigrill-san-lorenzo-44744433/109287358/ — full menu with prices, 575 Paseo Grande San Lorenzo, ordering 12–9:40pm, read 2026-10-25"
+  ],
+  "flags": []
+ },
+ "tonys-style": {
+  "name": "Tony's Style",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 7,
+  "sources": [
+   "https://www.ubereats.com/store/tonys-style-5333-adeline-st/ct2p56f7U8m3Fq7IONVXcw — menu and prices (JSON-LD; address 938 Crawfish, Albany 94706), date 2026-10-25",
+   "https://www.mapquest.com (Tony's Style, 938 San Pablo Ave, Albany) — hours Wed 5–11pm, Thu 6–11pm, Fri–Sat 5–11pm, Sun–Tue closed, date 2026-10-25",
+   "https://m.yelp.com/biz/tonys-style-albany — Google snippet: opens 5pm Wed/Fri/Sat, 6pm Thu, closed Mon/Tue/Sun, date 2026-10-25"
+  ],
+  "flags": [
+   "Their Instagram says hours are posted on their story daily, so hours can vary.",
+   "Google image results show an Instagram post where Tony announces 'taking a break from the shop' (date unknown) — may be on hiatus; worth a check.",
+   "Uber Eats store is oddly named '(5333 Adeline St)' but its address is 938 Crawfish, Albany (the shared space at 938 San Pablo)."
+  ]
+ },
+ "caitlyns-sweets": {
+  "name": "Caitlyn's Sweets",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.mapquest.com (Caitlyn's Sweets, San Jose, CA 95121) — hours Daily 9am–6pm, made-to-order bakery, date 2026-10-25",
+   "https://www.instagram.com/caitlyn_sweets/ — Google snippet: custom cakes, DM for orders, Bay Area pickup + delivery, date 2026-10-25"
+  ],
+  "flags": [
+   "No menu: custom cakes are quoted per order via Instagram DM; no published prices found.",
+   "Hours from a single listing (MapQuest, which pulls Yelp data); for a made-to-order baker these are likely pickup/contact hours."
+  ]
+ },
+ "pijja-paradise-pittsburg": {
+  "name": "Pijja Paradise",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://pittsburgpijjaparadise.menufy.com/ — openingHoursSpecification for 2961 Railroad Ave, date 2026-10-25",
+   "https://pijjaparadise.menufy.com/ — confirms Pittsburg location address and phone, date 2026-10-25",
+   "Google search result snippets (Yelp: Mon–Tue 9:30am–11:30pm; Google panel: Sun 10am–11pm), date 2026-10-25"
+  ],
+  "flags": [
+   "Hours disagree across sources: Menufy ordering page (used) vs Yelp (9:30am–11:30pm) vs Google panel (Sun 10am–11pm). Menufy hours may be online-ordering hours."
+  ]
+ },
+ "pho-nation-sf": {
+  "name": "Pho Nation SF",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "phone",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 69,
+  "sources": [
+   "https://www.ubereats.com/store/pho-nation-sf/65OKMlGSRKSRUUZ4a_MmtQ — menu, prices, address, phone, hours (JSON-LD), date 2026-10-25",
+   "https://www.doordash.com/store/pho-nation-san-francisco-1203978/ — hours 10am–7:45pm via search snippet, date 2026-10-25"
+  ],
+  "flags": [
+   "Hours come from delivery-app listings (Uber Eats + DoorDash agree), not Yelp/Google.",
+   "A FoodBoss listing shows Golden Saigon at the same address (likely the former tenant)."
+  ]
+ },
+ "gourmet-burritos": {
+  "name": "Gourmet Burritos",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "Google search for (707) 399-3600 — Yelp lists A & A Gas / Chevron, 1009 Oliver Rd, Fairfield (burrito counter inside), date 2026-10-25",
+   "Google search for Gourmet Burritos Fairfield on DoorDash/Uber Eats/Grubhub — no matching store, date 2026-10-25"
+  ],
+  "flags": [
+   "No menu found: it is a burrito counter inside the A & A Gas/Chevron at 1009 Oliver Rd with no website or delivery-app store; Yelp only has photos/reviews, no priced menu."
+  ]
+ },
+ "house-of-wings": {
+  "name": "House of Wings California",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 74,
+  "sources": [
+   "https://www.doordash.com/store/california-house-of-wings-pittsburg-42781963/106468546/ — full menu with prices (JSON-LD), address 2941 Harbor St, date 2026-10-25",
+   "Google results: Yelp/Grubhub/MapQuest confirm House of Wings California at 2941 Harbor St; Instagram bio 'Open 11am-10pm Daily', date 2026-10-25"
+  ],
+  "flags": [
+   "Left out catering-size items: 100-piece bone-in ($174.99) and bone-out ($144.99) wing trays and the Full Crew Box ($155); 'Wings Box' section duplicated 'Lov'n the Crew'."
+  ]
+ },
+ "tastin-peachy": {
+  "name": "Tastin Peachy",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://tastinpeachy.com/ — catering site with only a contact form, no menu/prices/hours, date 2026-10-25",
+   "Google results for Tastin Peachy (Instagram @tastinpeachy) — catering, Thanksgiving preorders with 50% deposit, pop-up plate sales; no price list or hours, date 2026-10-25"
+  ],
+  "flags": [
+   "No fill: catering-only cook (Bay Area/Antioch); orders and pop-up plates are announced on Instagram, with no published menu prices or regular hours."
+  ]
+ },
+ "mrs-ramen": {
+  "name": "Mrs. Ramen Concord",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.ubereats.com/store/mrs-pho/91Wz09PkUzOooGbbjV-59Q — still listed as 'Mrs. Pho' (2045 Diamond Blvd), 11-item pho menu, phone +1 925-375-1422, date 2026-10-25",
+   "https://www.doordash.com/store/mrs.-pho-concord-24801892/20921147/ — 'Mrs. pho', only 3 pho/gyoza items, date 2026-10-25",
+   "Google results: Yelp/MapQuest 'Mrs. Pho, recently renamed Mrs. Ramen'; Instagram posts ~5 months ago announcing the rebrand to a K-pop inspired ramen menu, date 2026-10-25"
+  ],
+  "flags": [
+   "No fill: the only priced menus online (Uber Eats, DoorDash) are the old Mrs. Pho pho menu from before the rebrand to Mrs. Ramen (ramen + Cajun seafood boil); no current Mrs. Ramen menu or reliable hours found.",
+   "Old Mrs. Pho store pages could be used if Leon is OK with a pre-rebrand menu: https://www.ubereats.com/store/mrs-pho/91Wz09PkUzOooGbbjV-59Q"
+  ]
+ },
+ "rocket-mc-tow": {
+  "name": "Rocket MC Tow",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.rocketmctow.com/ — services list, 'Get A Free Quote', 15% senior and military discount; no price list, date 2026-10-25",
+   "Google snippets: Yelp (Rocket Motorcycle Towing and Transport) Mon–Sun open 24 hours; Yahoo Local open 24 hours; Instagram 'Emergency Towing 24 HR', date 2026-10-25"
+  ],
+  "flags": [
+   "Not a food business: no menu — towing is priced by free quote only (site mentions 15% senior and military discount).",
+   "Facebook lists them as Oakley CA (mobile service across the Bay Area)."
+  ]
+ },
+ "chiquo-and-eva": {
+  "name": "Chiquo & Eva’s",
+  "filled": [
+   "address",
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.chiquoandeva.com/ — '321 First Street, Benicia, CA 94510 — Hours Friday to Sunday 5:00 pm to 9:00 pm'; update says a brick-and-mortar lease was signed with a soft opening targeted for November 13, date 2026-10-25",
+   "Google snippets: Yelp lists 321 First St, Benicia, Mon–Tue closed; MapQuest shows only Sat open this week (Sun closed); Giftly 'Saturday 5PM–8:30PM', date 2026-10-25"
+  ],
+  "flags": [
+   "Hours vary by source: own site says Fri–Sun 5–9pm (used); MapQuest/Yelp data suggest Sunday may be closed. Brick-and-mortar soft opening targeted for Nov 13, so hours may change soon.",
+   "Older listings place them at 3419 Broadway, American Canyon (their site title still says so)."
+  ]
+ },
+ "cajun-crack-n": {
+  "name": "Cajun Crack N",
+  "filled": [
+   "address",
+   "hours",
+   "orderUrl",
+   "phone",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 43,
+  "sources": [
+   "https://cajuncracknca.com/concord — own Concord menu (item names, combo contents, no prices), date 2026-10-25",
+   "https://www.doordash.com/store/24646509 — Cajun Crack'n, 1975 Diamond Blvd, Concord; menu prices (JSON-LD), date 2026-10-25",
+   "https://www.visitconcordca.com/directory/cajun-crackn-concord/ — hours Sun–Thu 11:30am–9pm, Fri–Sat 12–10pm, phone (925) 408-8555, date 2026-10-25",
+   "https://www.willowsshopping.com/stores/cajun-crackn-concord/ — same hours, date 2026-10-25"
+  ],
+  "flags": [
+   "Seafood by the pound ('The Boiling') is market-priced; DoorDash shows a $18 base, listed as 'From'."
+  ]
+ },
+ "breaktime-tea": {
+  "name": "Breaktime Tea",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "phone",
+   "sections",
+   "siteNote"
+  ],
+  "items": 102,
+  "sources": [
+   "https://order.online/store/breaktime-tea---concord-concord-24472557/ — full menu with prices, online ordering hours 11:30am–9:45pm, date 2026-10-25",
+   "Google Business panel for Breaktime Tea - Concord — Sun 11am–10pm, Mon–Thu 12–10pm, Fri 12–11pm, Sat 11am–11pm, date 2026-10-25",
+   "Google snippets: Yelp (790 Oak Grove Rd Ste C1, (925) 822-3059), Apple Maps Sun–Thu 12–10pm, date 2026-10-25"
+  ],
+  "flags": [
+   "Hours disagree across listings (Yelp shows 11:30am or 12pm opens, Yellow Pages later hours); used the Google Business hours, which partly agree with Apple Maps (12–10pm weekdays)."
+  ]
+ },
+ "cafe-noir-oak": {
+  "name": "Cafe Noir",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.cafenoiroak.com/ — 'Hours of Operation' block: Mon 9am–3:30pm; Tue–Fri 9am–3:30pm, dinner 4:30–8pm; Sat 9am–4pm, dinner 5–8pm; Sun 9am–4pm, dinner 5–7:30pm; address 1620 18th St Oakland, date 2026-10-25"
+  ],
+  "flags": [
+   "Their site now says 'Heirlume. New name, same noir experience' — the restaurant appears to have been renamed Heirlume; BEASTY still calls it Cafe Noir."
+  ]
+ },
+ "las-lomas-rib-palace": {
+  "name": "Las Lomas Rib Palace",
+  "filled": [
+   "address",
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.instagram.com/laslomasribpalace/ — Google snippet of bio: 'Authentic Peruvian Cuisine & BBQ Pork Ribs Open Saturdays Only-Pre Order 30 mins before Antioch, Ca', date 2026-10-25",
+   "Instagram posts (Google snippets): 'open today from 9am-5pm Antioch, Ca 94509', 'This Saturday 9am-5pm', date 2026-10-25"
+  ],
+  "flags": [
+   "No menu: Instagram posts list a rotating lineup (Lomo Saltado, Ceviche Mixto, Arroz con Pollo, Chicharrón Colorado, ribs) but never prices.",
+   "Hours from their own Instagram only (no Yelp/Google listing found); one post ~2 months ago mentioned staying open till 8pm with delivery, so hours may vary."
+  ]
+ },
+ "macs-old-house": {
+  "name": "Mac’s Old House",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 40,
+  "sources": [
+   "https://www.doordash.com/store/mac's-old-house-antioch-51643849/ — menu with prices (JSON-LD), address 3100 E 18th St, date 2026-10-25",
+   "Google results: KRON4/SFGATE (closed June 22, 2025), Mercury News Dec 2025 (reopening under new owners), Facebook posts (reopened Aug 5, 2026; Lunch 11–3, Dinner 4–10; 'now open for lunch & dinner ... added new items'), date 2026-10-25",
+   "https://www.macsoldhouse.com/ — Squarespace 'Website Expired', date 2026-10-25"
+  ],
+  "flags": [
+   "Reopened Aug 2026 under new owners after closing June 2025; their old website has expired.",
+   "DoorDash menu has no dinner entrées (prime rib, steaks) — the in-house dinner menu isn't published online."
+  ]
+ },
+ "sweet-pipers": {
+  "name": "Sweet Pipers",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google Business panel for Sweet Pipers, Pinole — Wed 10am–3pm, Thu 10am–4pm, other days closed, date 2026-10-25",
+   "https://www.yelp.com/biz/sweet-pipers-pinole — Google snippet: 2352-A San Pablo Av, (510) 398-9544, Mon–Tue closed, Wed 10am–3pm, date 2026-10-25",
+   "Facebook posts (Google snippets): Buko Ube Pie pre-orders, Easter/Christmas pre-order menus, no prices visible, date 2026-10-25"
+  ],
+  "flags": [
+   "No menu: no priced menu found online (Facebook pre-order posts show items like Buko Ube Pie, Yema tarts, Ube butter mochi, but prices aren't visible).",
+   "Storefront hours are only two days a week, and a May 2026 Facebook result is titled 'Lease for sale in Pinole, CA bakery location' — worth checking whether the shop is winding down."
+  ]
+ },
+ "suptea-lab": {
+  "name": "SupTea Lab",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google Business panel for SupTea Lab, 3349 Grand Ave, Oakland — Mon closed, Tue–Sun 11am–8pm, date 2026-10-25",
+   "https://www.instagram.com/suptealaboakland/ — Google snippet of bio: 'Tues-Sun 11am-8pm', date 2026-10-25",
+   "https://www.yelp.com/biz/suptea-lab-oakland — Google snippet: (510) 817-4738, Mon closed, Tue–Wed 11am–8pm, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "stella-pastry": {
+  "name": "Stella Pastry & Cafe",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "phone",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 24,
+  "sources": [
+   "https://www.ubereats.com/store/stella-pastry-%26-cafe/BRxiJkueRpywb71ec6kLVw — menu and prices (JSON-LD), 446 Columbus Ave, phone, date 2026-10-25",
+   "Google Business panel for Stella Pastry & Cafe — Mon–Wed 7:30am–8pm, Thu to 9pm, Fri–Sat to 11pm, Sun to 10pm, date 2026-10-25",
+   "https://www.yelp.com/biz/stella-pastry-and-cafe-san-francisco — Google snippet: Mon 7:30am–8pm, Tue 7:30am…, date 2026-10-25"
+  ],
+  "flags": [
+   "Uber Eats store only carries pastries and whole cakes; no coffee/cafe drinks listed."
+  ]
+ },
+ "scoop-n-chill": {
+  "name": "Scoop N Chill",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "phone",
+   "sections",
+   "siteNote"
+  ],
+  "items": 92,
+  "sources": [
+   "https://order.snackpass.co/scoopnchill — full menu with prices, 2122 Shattuck Ave, Berkeley, date 2026-10-25",
+   "Google Business panel for Scoop N Chill — Sun–Thu 2–10pm, Fri–Sat 2pm–12am, date 2026-10-25",
+   "Google snippets: Yelp (Mon–Tue 2–10pm), Apple Maps (Fri–Sat 2pm–12am, phone +1 510-934-7045), date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "emys-cannoli": {
+  "name": "Emy’s Cannoli",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "http://emyscannoli.com/ — mobile catering cart; offerings Gourmet Mini Cannoli, Traditional Tiramisu, Homemade Lasagna; contact form only, no prices or hours, date 2026-10-25"
+  ],
+  "flags": [
+   "No fill: event catering (mobile cannoli cart) booked through a contact form; no published prices or regular hours."
+  ]
+ },
+ "kusan-uyghur-cuisine-san-jose": {
+  "name": "Kusan Uyghur Cuisine",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google Business panel for Kusan Uyghur Cuisine, 1516 N 4th St, San Jose — Mon–Fri 10:30am–2:30pm, 5–9pm; Sat–Sun 10:30am–3pm, 5–9pm, date 2026-10-25",
+   "https://www.yelp.com/biz/kusan-uyghur-cuisine-silk-road-grill-and-noodles-san-jose — Google snippet: (650) 899-0210, Mon 10:30am–2:30pm…, date 2026-10-25",
+   "https://kusanbazaar.com/ — blocked by a bot check for curl; Google snippet confirms the San Jose location, date 2026-10-25"
+  ],
+  "flags": [
+   "Google also lists separate shorter service hours (10:30am–2pm/2:30pm & 5–8:30pm), likely for pickup/delivery; used the main dining hours."
+  ]
+ },
+ "parada-new-peru": {
+  "name": "Parada New Peru",
+  "filled": [
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 75,
+  "sources": [
+   "https://order.toasttab.com/online/parada-wc-7001-sunne-ln-suite-116 — full online menu with prices, date 2026-10-25",
+   "https://paradakitchen.com/menus/dinner — own site (could not load: expired TLS certificate); Google snippet confirms 7001 Sunne Lane, 925-448-8118, date 2026-10-25"
+  ],
+  "flags": [
+   "Toast online menu; whole/half rotisserie chicken and corn empanadas were marked out of stock at the time.",
+   "Their own website paradakitchen.com has an expired TLS certificate."
+  ]
+ },
+ "7-mile-house": {
+  "name": "7 Mile House",
+  "filled": [
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 121,
+  "sources": [
+   "https://order.toasttab.com/online/7-mile-house-sports-bar-grill — full online menu with prices (FOOD, BEVERAGES, FAHM specials), date 2026-10-25",
+   "https://7milehouse.com/menu — menu is image-only; confirms 2800 Bayshore Blvd, 415-467-2343 and hours, date 2026-10-25"
+  ],
+  "flags": [
+   "Left out the full cocktail, beer, wine and spirits lists.",
+   "Toast showed the 'FOOD(sun)' menu (today is Sunday); a few desserts were marked out of stock. 'FAHM Specials' are October-only (Filipino American History Month)."
+  ]
+ },
+ "belly": {
+  "name": "Belly",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.toasttab.com/local/order/belly — 'All hours' list for 5634 College Avenue, date 2026-10-25",
+   "https://www.ubereats.com/store/belly-college-avenue/0r4R9jStUqiV7YwZsHlVtg — same hours (via search snippet), date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "wow-mia-pizza": {
+  "name": "Wow Mia Pizza",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://wowmiapizza.com/contact/ — 'Sunday - Thursday: 11:00 AM - 9:00 PM, Monday - Closed, Friday - Saturday: 11:00 AM - 10:00 PM', date 2026-10-25",
+   "https://wowmiapizza.com/ — lunch buffet Tue–Fri 11:30am–1:30pm, happy hour Tue–Thu 2–5pm, date 2026-10-25"
+  ],
+  "flags": [
+   "Only their own site lists hours; no second source found. Their SpotOn online ordering page currently says 'Online ordering not available'."
+  ]
+ },
+ "street-social": {
+  "name": "Street Social",
+  "filled": [
+   "hours",
+   "sections",
+   "siteNote"
+  ],
+  "items": 14,
+  "sources": [
+   "https://www.streetsocial.social/ — weekly menu images 'THE MENU Thursday & Friday, updated 10.22.26' and Neighborhood Night $45, date 2026-10-25",
+   "https://www.streetsocial.social/contact-1 — 'Hours: Tuesday - Saturday 5:30 - 9ish', Tuesday fried chicken night until sold out, date 2026-10-25"
+  ],
+  "flags": [
+   "Menu changes weekly ('ever changing with the seasons'); prices are from the 10.22.26 menu. Tuesday fried-chicken night menu has no posted prices, so it is left out."
+  ]
+ },
+ "alive-kitchen": {
+  "name": "Alive Kitchen",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://eatalivekitchen.com/ — 'Orders close every Thursday at 6 PM', 'Delivery: Sunday & Monday, 2–6 PM', 'Concord area pickup', date 2026-10-25",
+   "https://eatalivekitchen.com/menu — online ordering page with prices, date 2026-10-25"
+  ],
+  "flags": [
+   "Not a walk-in restaurant: meal-prep delivery/pickup only (Concord, Walnut Creek, Lafayette, Pleasant Hill, Napa). Pickup address is given only after checkout, so no address added."
+  ]
+ },
+ "baithak": {
+  "name": "Baithak",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://baithak.us/ — footer 'Open Daily: 11:00 AM – 10:00 PM', date 2026-10-25",
+   "https://www.opentable.ca/r/baithak-dublin and https://ww1.aaa.com/tripcanvas/restaurant/baithak-AA96695 — daily 11am–10pm (via search), date 2026-10-25",
+   "https://baithak.us/contact-us/ — 'Opening Hours' block says Mon–Thu 11am–9pm, Fri–Sat 11am–10pm, Sun 11am–9pm, date 2026-10-25"
+  ],
+  "flags": [
+   "Baithak's own site disagrees with itself: footer says daily 11am–10pm, contact page says Mon–Thu & Sun 11am–9pm, Fri–Sat 11am–10pm. Used the daily 11am–10pm that OpenTable/AAA also show; worth confirming by phone."
+  ]
+ },
+ "pi-wings": {
+  "name": "P.I. Wings",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 21,
+  "sources": [
+   "https://www.eatpiwings.com/ — menu board image (flavors, wing boxes, extras, tacos, boba) without prices, date 2026-10-25",
+   "https://www.doordash.com/store/pi-wings-daly-city-39037001/89593546/ — menu with prices (JSON-LD), date 2026-10-25",
+   "https://www.instagram.com/eatpiwings (via Google snippet) — 'Wednesday - Sunday 12pm - 8pm, 1900 Sullivan Ave Daly City (outside of Seton Medical Center)', date 2026-10-25"
+  ],
+  "flags": [
+   "Food truck parked outside Seton Medical Center (1900 Sullivan Ave). Their Instagram says Wed–Sun 12–8pm; Google shows Wed–Fri only. Hours not filled since only the menu was needed."
+  ]
+ },
+ "pizza-ponte": {
+  "name": "Pizza Ponte",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 25,
+  "sources": [
+   "https://pizzaponte.toast.site/order/pizza-ponte — full menu with prices and 'All hours' (daily 11:00AM–12:00AM), date 2026-10-25",
+   "https://www.ubereats.com/store/pizza-ponte-oakland/gPSC9r4bU0mDi09Wip2MeA — same menu; lists shorter delivery hours (Sun 11:45am–10pm, Mon–Thu 11am–10pm, Fri–Sat 11am–12am), date 2026-10-25"
+  ],
+  "flags": [
+   "Hours differ by platform: Toast says daily 11am–12am, Uber Eats delivery window is shorter; used Toast (their own ordering page)."
+  ]
+ },
+ "mexihibachi": {
+  "name": "MexiHibachi",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 64,
+  "sources": [
+   "https://www.ubereats.com/store/mexihibachi-pinole-pinole/V7nVQd2RViSK3TNBX_RpJA — full menu with prices (JSON-LD), delivery hours Wed–Sun only, date 2026-10-25",
+   "https://mexihibachi.com/ — weekly hours: Mon–Tue closed, Wed–Thu 12–9pm, Fri–Sat 12–10pm, Sun 12–8pm, date 2026-10-25"
+  ],
+  "flags": [
+   "Their site says 'Please check on Google for our most updated hours'."
+  ]
+ },
+ "harborview-sf": {
+  "name": "Harborview Restaurant & Bar",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.harborviewsf.com/location/harborview-restaurant-bar/ — lunch Tue–Fri 11:30am–2pm, Sat–Sun 10:30am–2:30pm; dinner Tue–Sun 5–9pm, closed Mon, date 2026-10-25",
+   "https://travelsort.com/harborview-dim-sum-review-san-francisco/ — same hours (via search), date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "mar-y-mar": {
+  "name": "Mar Y Mar",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "phone",
+   "sections",
+   "siteNote"
+  ],
+  "items": 147,
+  "sources": [
+   "https://marymar.menufy.com/order — full online menu with prices, date 2026-10-25",
+   "https://marymar.menufy.com/ — business hours Mon–Thu 9am–9pm, Fri–Sat 9am–10pm, Sun 9am–9pm; phone (650) 225-0516, date 2026-10-25",
+   "https://www.google.com/search?q=Mar+Y+Mar+602+San+Mateo+Ave+San+Bruno — Google hours table matches; Yelp snippet lists (650) 225-0516, date 2026-10-25"
+  ],
+  "flags": [
+   "Left out alcohol (shots, mimosas, cocktails, cubetazo, micheladas/clamato preparado), the 'Fight Night' cover charge, and small add-ons (extra salsa, single tortillas, etc.)."
+  ]
+ },
+ "tacos-mi-reynita-fremont": {
+  "name": "Tacos Mi Reynita",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.google.com/search?q=Tacos+Mi+Reynita+39161+Farwell+Drive+Fremont+hours — Google listing (Sunday 1–10 PM) and Yelp snippet 'Mon - Closed, Tue - 1:00 pm - 10:00 pm, Wed - 1:00 pm…', date 2026-10-25",
+   "Apple Maps (via Google snippet) — Tue–Sat 1:00PM–10:00PM; YupUp — 'open Tuesday through Sunday from 1:00 PM to 10:00 PM', date 2026-10-25",
+   "https://tacosmireynita.toast.site/ — lists the Fremont store (39161 Farwell Drive, (510) 542-7320) with an order link; its Toast hours read 8AM–3:59AM daily, which looks like an ordering placeholder, date 2026-10-25"
+  ],
+  "flags": [
+   "Toast ordering page shows 8am–3:59am daily for all four locations (looks like a placeholder), so it was not used for hours. The Fremont order link on their Toast site carries a 'hayward-821-sycamore' slug but is the one listed under the Fremont address.",
+   "A toast.app snippet for 'Tacos mi Reynita- Freemont' showed Tue–Fri 9am–9:30pm; Google, Yelp, Apple Maps, YupUp and Facebook all say 1–10pm, so 1–10pm was used."
+  ]
+ },
+ "balompie": {
+  "name": "Balompié Sports Bar & Grill",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 132,
+  "sources": [
+   "https://balompiesportsbarandgrill.com/menu — full online menu with prices, date 2026-10-25",
+   "https://balompiesportsbarandgrill.com/ — 'See hours': Sun 9–8, Mon–Tue closed, Wed–Fri 10–8, Sat 9–8, date 2026-10-25",
+   "https://www.berkeleyside.org/2026/10/07/ (via Google snippet) — 'Hours: Wednesday to Friday, 10 a.m. to 8 p.m. …', date 2026-10-25"
+  ],
+  "flags": [
+   "Left out catering trays and small extras (32/24 oz sides, extra salsa/curtido bags, add-ons); bar drinks are not on the online menu."
+  ]
+ },
+ "brazuca-acai": {
+  "name": "Brazuca Açaí",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 12,
+  "sources": [
+   "https://www.ubereats.com/store/brazuca-acai/m9BN2P4HWrOuiUwGjeCb3w — menu with prices (JSON-LD), address 4500 Barrett Avenue, date 2026-10-25"
+  ],
+  "flags": [
+   "Uber Eats shows only the core menu (12 items); burgers and other items mentioned in a 2023 Richmond Standard article are not listed there."
+  ]
+ },
+ "taj-mahal-livermore": {
+  "name": "Taj Mahal",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://tajmahalflavorsofindia.com/ — 'Opening hours' Tue–Sun lunch and dinner, Monday closed, date 2026-10-25",
+   "https://www.google.com/search?q=Taj+Mahal+Flavors+of+India+4705+Livermore+Outlets+Dr+hours — Google hours table, same except Fri–Sat dinner 6–10:30pm, date 2026-10-25"
+  ],
+  "flags": [
+   "Fri–Sat closing differs: own site 11pm, Google 10:30pm; used own site. Older AAA/OpenTable listings show different (daily) hours."
+  ]
+ },
+ "thirstea-san-leandro": {
+  "name": "ThirsTea",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.google.com/search?q=ThirsTea+1383+MacArthur+Blvd+San+Leandro+hours — Google business hours table, date 2026-10-25",
+   "Uber Eats store 'thirstea-san-leandro' (via Google snippet) — 'Sunday - Wednesday: 11:00 AM – 9:30 PM. Thursday - Saturday …', date 2026-10-25",
+   "https://thirstea.com/locations/ — San Leandro, 1383 MacArthur Blvd, (510) 567-3014, no hours, date 2026-10-25"
+  ],
+  "flags": [
+   "Store opened around Sept 19, 2026; hours may still settle.",
+   "Coordinator: {\"set\": {\"siteNote\": \"Hours are from the Google listing for ThirsTea San Leandro (1383 MacArthur Blvd); their Uber Eats store shows the same Sun–Wed hours. Their own site lists the store without hours.\"}}"
+  ]
+ },
+ "z-and-y-peking-duck": {
+  "name": "Z & Y Peking Duck",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://zandypekingduck.com/ — FAQ 'What are your hours? Monday-Sunday: 11am-9pm. Closed Wednesdays.', date 2026-10-25",
+   "https://www.google.com/search?q=Z+%26+Y+Peking+Duck+606+Jackson+St+San+Francisco+hours — Google hours table: 11 AM–9 PM, Wednesday closed, date 2026-10-25"
+  ],
+  "flags": [
+   "Yelp/OpenTable/Time Out show a split schedule (lunch 11:30am–3pm, dinner 4:30–9pm); own site and Google say 11am–9pm straight."
+  ]
+ },
+ "cal-burger": {
+  "name": "Cal Burger & More",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.google.com/search?q=Cal+Burger+%26+More+1805+Euclid+Ave+Berkeley — Google hours table (Sun 1–6, Mon closed, Tue–Fri 11–8, Sat 1–6) and Yelp snippet with (510) 634-7127, date 2026-10-25",
+   "https://www.instagram.com/calburger.gocrazy (via Google snippet) — 'Tue-Fri 11am-8pm Sat & Sun 1-6pm', date 2026-10-25",
+   "https://calbgocrazy.com/ — says 'Tue–Fri 11:00 AM – 8:00 PM, Sat–Mon Closed' and phone 510-634-7127, date 2026-10-25"
+  ],
+  "flags": [
+   "Their own site says closed Sat–Mon, but it looks unfinished (it still shows the note 'Swap in your real phone number'); used Google + Instagram, which agree on Sat–Sun 1–6pm."
+  ]
+ },
+ "roast-eatery-co": {
+  "name": "Roast Eatery Co.",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "phone",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 16,
+  "sources": [
+   "https://www.doordash.com/store/roast-eatery-co.-brentwood-31851921/58144747/ — menu with prices (JSON-LD), date 2026-10-25",
+   "https://www.google.com/search?q=Roast+Eatery+Co+Brentwood+CA — Google hours table (Sun 11–6, Mon closed, Tue–Sat 11–6:30) and Yelp snippet '3120 Balfour Rd, Ste A … (925) 626-8196, Mon - Closed, Tue - 11:00 am - 6:30 pm', date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "dumont-livermore": {
+  "name": "Dumont Creamery & Cafe",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://dumont.us/pages/livermore-ca — store hours Mon–Thu & Sun 11 AM–10 PM, Fri 11 AM–11 PM, Sat 10 AM–11 PM; phone +1 925-315-5675, date 2026-10-25",
+   "https://www.google.com/search?q=Dumont+Creamery+2375+Railroad+Ave+Livermore — Google hours table matches, date 2026-10-25",
+   "https://www.doordash.com/store/dumont-creamery-&-cafe-livermore-51931475/ — 'Temporarily closed', lists only one item (Milk Shake $9.95), date 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: dumont.us has flavor pages without prices, and the Livermore DoorDash store lists only a milkshake. An Uber Eats store exists per Google snippets but I could not locate its URL after the web-search budget ran out.",
+   "Opened Sept 18, 2026; the Livermore Chamber lists a different phone, (219) 241-2692."
+  ]
+ },
+ "real-cutie-pies": {
+  "name": "Real Cutie Pies",
+  "filled": [
+   "email"
+  ],
+  "items": 0,
+  "sources": [
+   "https://realcutiepies.com/ — weekly flavor lineup (Oct 20–24: Peach Cobbler, Banana Pudding, Blueberry Cobbler, PB&J, Hella Biscoff, S'mores) and full flavor rotation, no prices; order email cutiepiesorders@gmail.com, date 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: their site lists dessert-cup flavors but no prices, and no delivery-app store was found before the web-search budget ran out. Only the order email was added."
+  ]
+ },
+ "whack-donuts": {
+  "name": "Whack Donuts!",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.whackdonuts.net/ — 'Tues - Fri 9am-2pm, Sat 730am-1230pm, Sun & Mon Closed', 4 Embarcadero Ctr ste 4507; also sold at Ritual Coffee Roasters, 1026 Valencia St (Fri–Sun), date 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: their site has no menu or prices (flavors rotate monthly) and no delivery-app store was found before the web-search budget ran out. Hours have only one source (their own site)."
+  ]
+ },
+ "mochica-sf": {
+  "name": "Mochica Kitchen & Bar",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 83,
+  "sources": [
+   "https://order.toasttab.com/online/mochica-1469-18th-street — full menu with prices; ordering hours Sun 11am–8:45pm, Mon closed, Tue–Thu 12–8:45pm, Fri–Sat 10:30am–9:30pm, date 2026-10-25",
+   "https://mochicasf.com/ — 'Dine in and take out: Tuesday-Thursday 4pm-9pm, Friday-Saturday 10am-10pm, Sunday 10am-9pm', date 2026-10-25",
+   "https://mochicasf.com/dinner/ and /brunch/ — older menus with lower prices (e.g. Lomo Saltado $28 vs $33 on Toast), date 2026-10-25"
+  ],
+  "flags": [
+   "Used Toast prices (current, e.g. Restaurant Week 2026 items) rather than the website menus, which show older lower prices. Left out alcohol and Restaurant Week set menus.",
+   "Hours: website dine-in hours used; Toast online-ordering hours differ (e.g. Tue–Thu from 12pm). Monday closed per both.",
+   "mochicasf.com/dessert/ contains injected spam text (a pharmacy ad) — the site looks compromised; worth telling the owner."
+  ]
+ },
+ "taqueria-azteca-dublin": {
+  "name": "Taqueria Azteca",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 148,
+  "sources": [
+   "https://order.online/business/41541/store/taqueria-azteca-dublin-64789 — full menu with prices for 7115-7155 Amador Plaza Rd; online ordering hours 8:00 AM–9:55 PM, date 2026-10-25",
+   "https://www.yelp.com/biz/taqueria-azteca-dublin-2 — hours table Mon–Thu 8am–9pm, Fri–Sat 8am–12am, Sun 8am–10pm, 7155 Amador Plaza Rd, date 2026-10-25"
+  ],
+  "flags": [
+   "Hours have one source (Yelp); their own online ordering runs 8am–9:55pm daily. Left out beer/micheladas, catering/event meals, salsa bar, duplicate items and minor extras (single egg, cheese/sour cream cups)."
+  ]
+ },
+ "la-chicharronada-colombiana": {
+  "name": "La Chicharronada Colombiana",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.google.com/maps/place/La+Chicharronada+Colombiana (280 Hegenberger Rd) — listing exists, no full hours table shown — 2026-10-25",
+   "http://lachicharronadacolombiana.com/ — placeholder page (\"Online ordering setup in progress\"), no menu — 2026-10-25"
+  ],
+  "flags": [
+   "No menu or full weekly hours found online; their website is an unfinished ordering placeholder and no delivery-app store was found.",
+   "Google Maps lists phone (408) 439-1663, which differs from BEASTY (408) 509-4458; worth checking.",
+   "Google showed \"Closes 6 PM · Opens 9 AM Tue\" only, not enough for a full hours line."
+  ]
+ },
+ "goldpie-pizza": {
+  "name": "Goldpie Pizza",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.kqed.org/arts/13990167/goldpie-pizza-pop-up-richmond-weed-dispensary-east-bay-7-stars — whole pies only, $15–$20; pepperoni, sausage, Brooklyn white pie; Sun & Mon 11:30am–7:30pm; call/text 510-529-5007 — 2026-10-25"
+  ],
+  "flags": [
+   "Menu is one range item only; no itemized menu published. Pop-up schedule (Sun & Mon) may change.",
+   "Coordinator: {\"drop\": [\"sections\", \"pricesEstimated\", \"siteNote\"]}"
+  ]
+ },
+ "tada-ramen": {
+  "name": "Tada Ramen & Yakitori",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "phone",
+   "sections",
+   "siteNote"
+  ],
+  "items": 80,
+  "sources": [
+   "https://www.toasttab.com/local/order/tadaramen — full menu with prices, weekly hours, tel 510-844-4995, address 3415 Grand Ave — 2026-10-25"
+  ],
+  "flags": [
+   "TadaMen and Hiyashi Chuka were marked out of stock on Toast."
+  ]
+ },
+ "bar-sprezzatura": {
+  "name": "Bar Sprezzatura",
+  "filled": [
+   "hours",
+   "sections",
+   "siteNote"
+  ],
+  "items": 52,
+  "sources": [
+   "https://www.barsprezzatura.com/locations/san-francisco — hours and links to Lunch/Dinner menus — 2026-10-25",
+   "https://mx.michaelmina.net/recipe-exchange/download/?file_id=37288&nodl=true — lunch menu PDF — 2026-10-25",
+   "https://mx.michaelmina.net/recipe-exchange/download/?file_id=38000&nodl=true — dinner menu PDF — 2026-10-25",
+   "https://downtownsf.org/go/bar-sprezzatura — hours agree — 2026-10-25"
+  ],
+  "flags": [
+   "Lunch and dinner menus merged; items marked (lunch)/(dinner) where only on one. Alcohol (cocktails, wine, spirits) left out. A surcharge is added to all sales."
+  ]
+ },
+ "poor-house-bistro": {
+  "name": "Poor House Bistro",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 45,
+  "sources": [
+   "https://poorhousebistro.com/wp-content/uploads/2025/12/PHB-Menu-11-25_8.5x14.pdf — full menu with prices — 2026-10-25",
+   "https://poorhousebistro.com/contacts/ — address 317 W St John St, regular hours — 2026-10-25",
+   "https://poorhousebistro.com/ — header hours agree — 2026-10-25"
+  ],
+  "flags": [
+   "Site says they also open some Mondays/Tuesdays for Sharks games and events."
+  ]
+ },
+ "sakana-sushi-albany": {
+  "name": "Sakana Sushi & Roll",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.ordersakana.com/albany/order — Hours table for 1105 Solano Ave — 2026-10-25"
+  ],
+  "flags": [
+   "Single source (their ordering page); these may be ordering hours."
+  ]
+ },
+ "mimosas-willow-glen": {
+  "name": "Mimosas of Willow Glen",
+  "filled": [
+   "email",
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 96,
+  "sources": [
+   "https://mimosasofwillowglen.com/san-jose-mimosas-of-willow-glen-l-l-c-food-menu — full food menu with prices — 2026-10-25",
+   "https://mimosasofwillowglen.com/ — footer hours \"Sun, Mon, Tue, Thur, Fri, Sat 8:00 AM - 9:00 PM\" — 2026-10-25",
+   "https://tablejourney.com/united-states/san-jose/brunch/ — lists 8:00–21:00 on similar days — 2026-10-25"
+  ],
+  "flags": [
+   "SJtoday lists shorter brunch hours (7:30am–2/3pm); site hours used. Site also lists email kimberlin1113@gmail.com.",
+   "Chile Verde Omelette had no price and was left out. Drinks menu (mostly alcohol) not included."
+  ]
+ },
+ "cajun-bowl-san-bruno": {
+  "name": "Cajun Bowl",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 41,
+  "sources": [
+   "https://www.cajunbowlcalifornia.com/_files/ugd/2549c4_a88673e135c9467993c180daca447647.pdf — San Bruno menu PDF (linked on /sanbruno) — 2026-10-25",
+   "https://www.google.com/maps/place/CAJUN+BOWL+SAN+BRUNO — Daily 11 AM–9 PM, 1230 El Camino Real D, (650) 636-4550 — 2026-10-25",
+   "https://www.ubereats.com/store/cajun-bowl-san-bruno/2gZ6T1keQEe9JHMWdYkGFQ — delivery hours start 11am (consistent) — 2026-10-25"
+  ],
+  "flags": [
+   "Seafood boil prices are market price and may change. Combos summarized as one \"From\" item; beer/soju/wine left out."
+  ]
+ },
+ "cajun-bowl-san-mateo": {
+  "name": "Cajun Bowl",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 45,
+  "sources": [
+   "https://www.cajunbowlcalifornia.com/_files/ugd/2549c4_73dcece511ad4bbfab97110e716f8fa2.pdf — San Mateo menu PDF — 2026-10-25",
+   "https://www.cajunbowlcalifornia.com/_files/ugd/2549c4_4cea1317ac43424ab93dc65bcfa71195.pdf — all-you-can-eat PDF (linked on /sanmateo) — 2026-10-25",
+   "https://www.google.com/maps/place/Cajun+Bowl+San+Mateo — hours, 168 E 4th Ave, (650) 445-7248 — 2026-10-25"
+  ],
+  "flags": [
+   "Hours from one source (Google Maps). Seafood boil prices are market price. Combos summarized as one \"From\" item; alcohol left out."
+  ]
+ },
+ "sanaa-cafe": {
+  "name": "Sana'a Cafe",
+  "filled": [
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 143,
+  "sources": [
+   "https://www.toasttab.com/local/order/sana-a-cafe-sunnyvale-1146-4th-st — Toast page titled \"Sana'a Cafe - San Rafael\", location 1146 4th St, San Rafael; full menu with prices — 2026-10-25"
+  ],
+  "flags": [
+   "Toast URL slug says \"sunnyvale\" but the page and address are San Rafael. Toast lists phone (510) 590-7869, different from BEASTY; not changed."
+  ]
+ },
+ "alma-dessert": {
+  "name": "Alma Dessert",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.almadessert.com/ (Square Online store-location data for 165 S Murphy Ave Ste D) — business and pickup hours — 2026-10-25"
+  ],
+  "flags": [
+   "Single source (their Square store settings)."
+  ]
+ },
+ "brezo-albany": {
+  "name": "Brezo Restaurant",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.brezorestaurant.com/home-9-2-2-1 — opening hours in footer; menus on site list dishes without prices — 2026-10-25",
+   "https://www.brezorestaurant.com/ — \"Online Orders\" says Coming Soon — 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: their site menus have almost no prices and online ordering is \"coming soon\"."
+  ]
+ },
+ "tacos-walnut-creek": {
+  "name": "Tacos Walnut Creek",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 76,
+  "sources": [
+   "https://www.ubereats.com/store/tacos-walnut-creek/lIe-RPreVqqZ1DiaFQT2fA — full menu with prices, 1690 Locust St — 2026-10-25",
+   "https://tacoswalnutcreek.com/ — links to the Uber Eats store; own pickup ordering widget not readable — 2026-10-25"
+  ],
+  "flags": []
+ },
+ "yummy-yummy-hibachi-san-leandro": {
+  "name": "Yummy Yummy Hibachi",
+  "filled": [
+   "hours",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 52,
+  "sources": [
+   "https://www.ubereats.com/store/yummy-yummy-hibachi-san-leandro/r939a5f5UuG8H0bdQEs_Gw — menu with prices and hours, 1780 E 14th St, +1 510-488-8738 — 2026-10-25"
+  ],
+  "flags": [
+   "Hours are Uber Eats delivery hours only (one source)."
+  ]
+ },
+ "yummy-yummy-hibachi-73rd": {
+  "name": "Yummy Yummy Hibachi",
+  "filled": [
+   "hours",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 52,
+  "sources": [
+   "https://www.ubereats.com/store/yummy-yummy-hibachi-oakland/KCjEktu5UqagZp3FdwN9-Q — menu with prices and hours, 2322 73rd Ave, +1 510-626-6724 — 2026-10-25"
+  ],
+  "flags": [
+   "Hours are Uber Eats delivery hours only and look irregular (no Tue/Thu); low confidence."
+  ]
+ },
+ "yummy-yummy-hibachi-piedmont": {
+  "name": "Yummy Yummy Hibachi",
+  "filled": [
+   "hours",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 115,
+  "sources": [
+   "https://www.ubereats.com/store/yummy-yummy-hibachi-piedmont/sT9OWDKAWHq2Hk5HxDvvYA — menu with prices and hours, 3920 Piedmont Ave, +1 510-907-3904 — 2026-10-25"
+  ],
+  "flags": [
+   "Hours are Uber Eats delivery hours only (one source). This location also lists sushi."
+  ]
+ },
+ "toast-in-town": {
+  "name": "Toast In Town",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 89,
+  "sources": [
+   "https://toastintown.com/order/toastintown — full menu with prices — 2026-10-25",
+   "https://www.toasttab.com/local/order/toastintown — weekly hours, 1100 Foster Square Ln Ste 145 — 2026-10-25"
+  ],
+  "flags": [
+   "Hours from one source (Toast)."
+  ]
+ },
+ "kitava-sf": {
+  "name": "Kitava",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 62,
+  "sources": [
+   "https://www.kitava.com/kitava-mission-district-menus/ — location menu with prices — 2026-10-25",
+   "https://www.kitava.com/location/kitava-mission-district/ — hours for 2011 Mission St — 2026-10-25"
+  ],
+  "flags": [
+   "Build-your-own bowl options had no listed base price and were left out."
+  ]
+ },
+ "kitava-oakland": {
+  "name": "Kitava",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 71,
+  "sources": [
+   "https://www.kitava.com/kitava-oakland-menus/ — location menu with prices — 2026-10-25",
+   "https://www.kitava.com/location/kitava-oakland-temescal/ — hours for 375 40th St — 2026-10-25"
+  ],
+  "flags": [
+   "Build-your-own bowl options had no listed base price and were left out."
+  ]
+ },
+ "kitava-albany": {
+  "name": "Kitava",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 59,
+  "sources": [
+   "https://www.kitava.com/kitava-albany-menus/ — location menu with prices — 2026-10-25",
+   "https://www.kitava.com/location/kitava-albany/ — hours for 1187 Solano Ave — 2026-10-25"
+  ],
+  "flags": [
+   "Build-your-own bowl options had no listed base price and were left out."
+  ]
+ },
+ "kitava-walnut-creek": {
+  "name": "Kitava",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 59,
+  "sources": [
+   "https://www.kitava.com/kitava-walnut-creek-menus/ — location menu with prices — 2026-10-25",
+   "https://www.kitava.com/location/kitava-walnut-creek/ — hours for 1699 N California Blvd — 2026-10-25"
+  ],
+  "flags": [
+   "Build-your-own bowl options had no listed base price and were left out."
+  ]
+ },
+ "pampas-vacaville": {
+  "name": "PAMPAS Brazilian Steakhouse",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 32,
+  "sources": [
+   "https://www.pampasbraziliansteakhouse.com/grill — rodízio pricing and hours — 2026-10-25",
+   "https://www.pampasbraziliansteakhouse.com/specials — Tuesday couples night $110 — 2026-10-25",
+   "https://www.toasttab.com/local/order/pampas-brazilian-steakhouse-vacaville — takeout menu with prices — 2026-10-25"
+  ],
+  "flags": [
+   "Toast online-ordering hours differ (takeout Tue–Sat 5–8pm, Sun 5–7pm); website dining hours used. Merchandise left out."
+  ]
+ },
+ "drip-dessert-house": {
+  "name": "Drip Dessert House",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://dripdesserthouse.square.site/ (Square store-location data for 5632 Thornton Ave, Newark) — business hours — 2026-10-25"
+  ],
+  "flags": [
+   "Single source (their Square store settings); the store's pickup-hours setting shows 9am–9pm daily, which looks like a default."
+  ]
+ },
+ "holbrook-house": {
+  "name": "The Holbrook House",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.holbrookhousesf.com/hours/ — Regular Operating Hours, 2026-10-25",
+   "https://www.holbrookhousesf.com/menus/ — Breakfast, Lunch & Bar, Cocktails, Evening menus with no prices, 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: their BentoBox menus list dishes but no prices; their Toast page (toasttab.com/holbrook-house-1-sansome-street) is behind a Cloudflare check and no delivery-app store could be read.",
+   "Their Hours page notes private-event closures: open until 2pm only on Fri Oct 23 and Thu Oct 29; all Saturdays in October are private-event bookings."
+  ]
+ },
+ "seoul-to-tokyo-kitchen": {
+  "name": "Seoul to Tokyo Kitchen",
+  "filled": [
+   "sections",
+   "siteNote"
+  ],
+  "items": 58,
+  "sources": [
+   "https://seoultotokyokitchen.com/ — 'Explore Our Menu' links the Canva design, 2026-10-25",
+   "https://www.canva.com/design/DAG5MRx7gFQ/hQioGDaU9z6WJbhAjYVsRw/view — menu text and prices extracted from the page's embedded design data, 2026-10-25",
+   "https://page-service.doordash.com/store/40101289/ — their DoorDash store (checked only; not used), 2026-10-25"
+  ],
+  "flags": [
+   "Prices come from the design's text layer: names and prices were paired by their row position on the page; the udon, ramen and ox bone soup names/prices were paired by element grouping (all three are $19).",
+   "Sake, wine, beer, soju, makgeolli and Asahi 0.0 left out.",
+   "Their DoorDash store (store 40101289, the 'Order Online' link on their site) shows different, mostly higher prices (e.g. Tteok-bokki $16, K-Chicken Wings $13); it was not used. orderUrl not set because earlier research chose not to link DoorDash."
+  ]
+ },
+ "hl-peninsula-south-sf": {
+  "name": "HL Peninsula Restaurant",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 124,
+  "sources": [
+   "https://www.hlpeninsula.com/southsf — location page with its dim sum menu pictures, 2026-10-25",
+   "https://images.squarespace-cdn.com/content/v1/6784ac9dac78477121630cd6/ea494122-f6c2-4ada-ad0d-f17abfd5af0a/0001.jpg — dim sum menu picture, read by eye, 2026-10-25",
+   "https://images.squarespace-cdn.com/content/v1/6784ac9dac78477121630cd6/2fc72de3-deb7-44f3-b331-90e541a95503/0002.jpg — dim sum menu picture, read by eye, 2026-10-25"
+  ],
+  "flags": [
+   "Prices read by eye from their dim sum menu pictures (menu 2024-09 Ver 21). Dim sum items are priced by size letter; this menu's key is S $5.75 M $7.05 L $8.05 X $9.05 DX $10.05 TX $11.05 Q $13.75, applied to each item.",
+   "Earlier review chose not to carry picture-read prices for HL Peninsula; reconsider now that Leon asked for menus.",
+   "Only the dim sum (day) menu is transcribed; their separate dinner and banquet set menus (also pictures) are not. Teas (priced per person) left out.",
+   "A 16% service charge is added to every bill (printed on the menu).",
+   "The South SF menu picture is low resolution (1280px); a few 'Special Recommendation'/'Seafood' lines that were not clearly legible were left out.",
+   "Coordinator: {\"set\": {\"pricesEstimated\": \"Prices were read from photos of their own menu; worth confirming with the shop.\"}}"
+  ]
+ },
+ "hl-peninsula-pearl": {
+  "name": "HL Peninsula Pearl",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 135,
+  "sources": [
+   "https://www.hlpeninsula.com/pearl — location page with its dim sum menu pictures, 2026-10-25",
+   "https://images.squarespace-cdn.com/content/v1/6784ac9dac78477121630cd6/4831e927-4637-4a68-80de-04a7a1d069a8/131742703964_.pic_hd.jpg — dim sum menu picture, read by eye, 2026-10-25",
+   "https://images.squarespace-cdn.com/content/v1/6784ac9dac78477121630cd6/e04c3578-3b55-4b37-ae68-41854abf2ae3/141742703967_.pic_hd.jpg — dim sum menu picture, read by eye, 2026-10-25"
+  ],
+  "flags": [
+   "Prices read by eye from their dim sum menu pictures (menu 2024-11 Ver 19). Dim sum items are priced by size letter; this menu's key is S $5.75 M $7.05 L $8.05 X $9.05 DX $10.05 TX $11.05 Q $13.75, applied to each item.",
+   "Earlier review chose not to carry picture-read prices for HL Peninsula; reconsider now that Leon asked for menus.",
+   "Only the dim sum (day) menu is transcribed; their separate dinner and banquet set menus (also pictures) are not. Teas (priced per person) left out.",
+   "A 16% service charge is added to every bill (printed on the menu).",
+   "Pearl's 'House Special Crispy BBQ Pork' reads $38 here (South SF shows $22 for the same dish); kept as printed. 'Steam Surf Clam with Vermicelli' is $12.75 each.",
+   "Coordinator: {\"set\": {\"pricesEstimated\": \"Prices were read from photos of their own menu; worth confirming with the shop.\"}}"
+  ]
+ },
+ "hl-peninsula-castro-valley": {
+  "name": "HL Peninsula Restaurant",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 150,
+  "sources": [
+   "https://www.hlpeninsula.com/castrovalley — location page with its dim sum menu pictures, 2026-10-25",
+   "https://images.squarespace-cdn.com/content/v1/6784ac9dac78477121630cd6/1b2e8633-4220-4f2d-bc35-abe0d0c2fec0/Image_20261009051719_14_52.jpg — dim sum menu picture, read by eye, 2026-10-25",
+   "https://images.squarespace-cdn.com/content/v1/6784ac9dac78477121630cd6/d7ba1ed4-99e2-49f5-94e4-428a1bc662df/Image_20261015115536_25_52.jpg — dim sum menu picture, read by eye, 2026-10-25"
+  ],
+  "flags": [
+   "Prices read by eye from their dim sum menu pictures (menu 2026-09 Ver 6). Dim sum items are priced by size letter; this menu's key is S $5.80 M $7.10 L $8.10 X $9.10 DX $10.10 TX $11.10 Q $13.95, applied to each item.",
+   "Earlier review chose not to carry picture-read prices for HL Peninsula; reconsider now that Leon asked for menus.",
+   "Only the dim sum (day) menu is transcribed; their separate dinner and banquet set menus (also pictures) are not. Teas (priced per person) left out.",
+   "A 16% service charge is added to every bill (printed on the menu).",
+   "Castro Valley's own site links its 'DIM SUM' tile to the South SF page, but its location page shows its own Sept 2026 dim sum menu (different prices), which is what is used. Also lists a takeout-only pre-order 'Magnificent Tianjin Twisted Sweet Sesame Dough $18.88' (left out).",
+   "Coordinator: {\"set\": {\"pricesEstimated\": \"Prices were read from photos of their own menu; worth confirming with the shop.\"}}"
+  ]
+ },
+ "hl-peninsula-garden": {
+  "name": "HL Peninsula Garden",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 122,
+  "sources": [
+   "https://www.hlpeninsula.com/garden — location page with its dim sum menu pictures, 2026-10-25",
+   "https://images.squarespace-cdn.com/content/v1/6784ac9dac78477121630cd6/0c6ce71d-9c50-4e0a-8802-b18a30ac737d/341742704920_.pic_hd.jpg — dim sum menu picture, read by eye, 2026-10-25",
+   "https://images.squarespace-cdn.com/content/v1/6784ac9dac78477121630cd6/659b30d4-b149-4614-aa92-7c274f91e7ca/331742704916_.pic.jpg — dim sum menu picture, read by eye, 2026-10-25"
+  ],
+  "flags": [
+   "Prices read by eye from their dim sum menu pictures (menu undated). Dim sum items are priced by size letter; this menu's key is S $5.50 M $6.80 L $7.80 X $8.80 DX $9.80 TX $11.28 Q $13.28 A $14.28, applied to each item.",
+   "Earlier review chose not to carry picture-read prices for HL Peninsula; reconsider now that Leon asked for menus.",
+   "Only the dim sum (day) menu is transcribed; their separate dinner and banquet set menus (also pictures) are not. Teas (priced per person) left out.",
+   "A 16% service charge is added to every bill (printed on the menu).",
+   "The Garden's menu prints sizes S/M/L/X/DX/TX/Q plus 'A $14.28'; no Garden-specific hours or version date on the picture. Its page also has a hotpot menu (not transcribed).",
+   "Coordinator: {\"set\": {\"pricesEstimated\": \"Prices were read from photos of their own menu; worth confirming with the shop.\"}}"
+  ]
+ },
+ "hl-peninsula-milpitas": {
+  "name": "HL Peninsula Restaurant",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 133,
+  "sources": [
+   "https://www.hlpeninsula.com/milpitas — location page with its dim sum menu pictures, 2026-10-25",
+   "https://images.squarespace-cdn.com/content/v1/6784ac9dac78477121630cd6/b3b0c555-936b-4fa6-a4a8-f12778e5de74/461759268385_.pic.jpg — dim sum menu picture, read by eye, 2026-10-25",
+   "https://images.squarespace-cdn.com/content/v1/6784ac9dac78477121630cd6/fc0b1f3c-49ec-47bb-ba0e-cc33efaf1829/471759268389_.pic.jpg — dim sum menu picture, read by eye, 2026-10-25",
+   "https://page-service.doordash.com/store/24592286/ — their DoorDash store at 136 Ranch Drive (cross-check only), 2026-10-25"
+  ],
+  "flags": [
+   "Prices read by eye from their dim sum menu pictures (menu 2025-08 Ver 13). Dim sum items are priced by size letter; this menu's key is S $5.95 M $7.25 L $8.25 X $9.25 DX $10.25 TX $11.25 Q $13.95, applied to each item.",
+   "Earlier review chose not to carry picture-read prices for HL Peninsula; reconsider now that Leon asked for menus.",
+   "Only the dim sum (day) menu is transcribed; their separate dinner and banquet set menus (also pictures) are not. Teas (priced per person) left out.",
+   "A 16% service charge is added to every bill (printed on the menu).",
+   "Cross-check: their DoorDash store (136 Ranch Dr) lists the same dishes at higher delivery prices (e.g. Shrimp Dumpling $9.49 vs L $8.25 on the menu).",
+   "Coordinator: {\"set\": {\"pricesEstimated\": \"Prices were read from photos of their own menu; worth confirming with the shop.\"}}"
+  ]
+ },
+ "the-halal-cartel": {
+  "name": "The Halal Cartel",
+  "filled": [
+   "phone"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.restaurantji.com/ca/santa-clara/the-halal-cartel-/ — 2120 Walsh Avenue, Santa Clara, (510) 557-0338, website thehalalcartel.com, 2026-10-25",
+   "https://thehalalcartel.com/ — Cloudflare 'Just a moment' check, not readable by curl or WebFetch, 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: they now appear to have a website (thehalalcartel.com, per Restaurantji) but it sits behind a Cloudflare bot check, and no delivery-app store with prices could be found or read.",
+   "Phone is from Restaurantji only (a listing site); verify before showing. Restaurantji hours (Mon–Thu 11am–11pm, Fri 11am–12am, Sat 12pm–12am, Sun 12–9pm) differ from BEASTY's 'Daily 11am–11pm' from their bio; not changed (hours not in need)."
+  ]
+ },
+ "the-cozy-oven": {
+  "name": "The Cozy Oven",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "web search for 'The Cozy Oven' / thecozyoven.co — only unrelated bakeries and a Wix template, 2026-10-25"
+  ],
+  "flags": [
+   "No fill: custom-cake maker with no website, address or published prices; their bio says DM for menu and order form. Quote-only, so nothing to add."
+  ]
+ },
+ "penelopes-coffee-berkeley": {
+  "name": "Penelope's Coffee & Tea",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://penelopescoffee.square.site/app/store/api/v28/editor/users/145468814/sites/491433324515310855/store-locations — Square business hours and online pickup hours per store (their own ordering site, linked as 'Order Online' from penelopescoffee.com), 2026-10-25"
+  ],
+  "flags": [
+   "Their Square business hours show Wed 7am–2pm and no Thursday at this store (looks like a leftover holiday edit); their own pickup hours run the full day Wed and Thu, so the regular daily pattern is used.",
+   "Only one source: no listing site with Berkeley hours could be read (Yelp blocked)."
+  ]
+ },
+ "penelopes-coffee-sf": {
+  "name": "Penelope's Coffee & Tea",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://penelopescoffee.square.site/app/store/api/v28/editor/users/145468814/sites/491433324515310855/store-locations — Square business hours and online pickup hours per store (their own ordering site, linked as 'Order Online' from penelopescoffee.com), 2026-10-25",
+   "https://downtownsf.org/go/penelopes-coffee-and-tea — 'Weekdays: 7:00 AM - 4:30 PM', 2026-10-25"
+  ],
+  "flags": [
+   "Their Square business hours show Wed 7am–2pm and no Thursday at this store (looks like a leftover holiday edit); their own pickup hours run the full day Wed and Thu, so the regular daily pattern is used.",
+   "Downtown SF lists weekdays only (7am–4:30pm); Square gives the same hours Sat–Sun. Online pickup there is 6:30am–3:45pm weekdays, 7am–3:45pm weekends."
+  ]
+ },
+ "penelopes-coffee-foster-city": {
+  "name": "Penelope's Coffee & Tea",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://penelopescoffee.square.site/app/store/api/v28/editor/users/145468814/sites/491433324515310855/store-locations — Square business hours and online pickup hours per store (their own ordering site, linked as 'Order Online' from penelopescoffee.com), 2026-10-25",
+   "https://atmosfy.io/location/foster-city/penelope-s-coffee-and-tea — Mon–Sun 07:00 AM – 04:30 PM, 2026-10-25"
+  ],
+  "flags": [
+   "Their Square business hours show Wed 7am–2pm and no Thursday at this store (looks like a leftover holiday edit); their own pickup hours run the full day Wed and Thu, so the regular daily pattern is used."
+  ]
+ },
+ "penelopes-coffee-san-mateo": {
+  "name": "Penelope's Coffee & Tea",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://penelopescoffee.square.site/app/store/api/v28/editor/users/145468814/sites/491433324515310855/store-locations — Square business hours and online pickup hours per store (their own ordering site, linked as 'Order Online' from penelopescoffee.com), 2026-10-25"
+  ],
+  "flags": [
+   "Their Square business hours show Wed 7am–2pm and no Thursday at this store (looks like a leftover holiday edit); their own pickup hours run the full day Wed and Thu, so the regular daily pattern is used.",
+   "Only one source (their Square site). Online pickup there runs Mon–Fri 6am–5:30pm, Sat–Sun 7am–5:30pm."
+  ]
+ },
+ "penelopes-coffee-daly-city": {
+  "name": "Penelope's Coffee & Tea",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://penelopescoffee.square.site/app/store/api/v28/editor/users/145468814/sites/491433324515310855/store-locations — Square business hours and online pickup hours per store (their own ordering site, linked as 'Order Online' from penelopescoffee.com), 2026-10-25"
+  ],
+  "flags": [
+   "Only one source (their Square site, store created June 2026). Online pickup there runs Mon–Fri 6am–5:30pm, Sat–Sun 7am–5:30pm."
+  ]
+ },
+ "cheries-southern-kitchen": {
+  "name": "Cherie's Southern Kitchen",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://cheriesouthernkitchen.com/ — 'Open Wed-Sat: 12-3pm, 4-8pm Sun: 12-3pm, 4-7pm Or, until Sold Out!!', 2026-10-25",
+   "https://www.restaurantji.com/ca/dublin/cheries-southern-kitchen-/ — Mon–Tue closed, Wed–Sat 12–3PM 4–8PM, Sun 12–3PM 4–7PM, 2026-10-25"
+  ],
+  "flags": [
+   "A search summary of Yelp gave Sunday as 11am–5pm; their own site and Restaurantji both say Sun 12–3pm & 4–7pm, used here.",
+   "Their site also carries a stale banner ('We'll be open August 9th from 11AM to 5PM ... 2nd Sunday Menu'), so some Sundays may differ."
+  ]
+ },
+ "four-chairs": {
+  "name": "Four Chairs",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.fourchairssf.com/ — LOCATION HOURS Mon–Fri 10.00 am–2.30 pm, Sat–Sun 9 am–3 pm, 2026-10-25",
+   "https://www.restaurantji.com/ca/san-francisco/four-chairs-/ — same hours, 2026-10-25",
+   "https://www.yelp.com/biz/four-chairs-san-francisco — same hours per search summary (page itself blocked), 2026-10-25"
+  ],
+  "flags": []
+ },
+ "little-sheep-newark": {
+  "name": "Little Sheep",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "web search 'Little Sheep hot pot yakitori Newpark Mall Newark CA' — no listing for this shop, 2026-10-25",
+   "https://www.restaurantji.com/ca/newark/little-sheep-/ — 404, 2026-10-25"
+  ],
+  "flags": [
+   "No fill: no website, ordering page or delivery-app store found for this Newark shop; the Little Sheep chain sites don't list it. Yelp exists per earlier research but couldn't be read (bot check), and the web-search budget ran out before DoorDash/Uber Eats could be searched for it."
+  ]
+ },
+ "bollywood-pizza-livermore": {
+  "name": "Bollywood Pizza",
+  "filled": [
+   "address",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 46,
+  "sources": [
+   "https://bollywoodpizza.com/menu-4/ — SF-store prices (data-pSf) for every item, 2026-10-25",
+   "https://bollywoodpizza.com/livermore/ — opening Sat 31 Oct 10am at 1524 N Vasco Rd; 'The Livermore menu matches our San Francisco store', 2026-10-25",
+   "https://bollywoodpizza.com/locations/ — 'Every store opens at 10AM and runs past 3AM, seven days a week', 2026-10-25"
+  ],
+  "flags": [
+   "Not open yet: opens Saturday 31 October (50% off all day that day). Livermore's own closing time is not posted; SF closes 4am, Sacramento 3:15am.",
+   "BEASTY's address is 'Livermore, CA (coming soon)'; their site gives 1524 N Vasco Rd, Livermore, CA 94551, included as address.",
+   "Pizza prices are as shown on their menu page with no size named; the store offers 10/12/14/18-inch pizzas, so these are presumably the smallest size.",
+   "Halal pizzas, Achari Gobhi, Achari Wings and Limca/Thums Up/Nimbu Pani are SF-only items, kept because Livermore matches SF.",
+   "Coordinator: {\"drop\": [\"hours\"], \"set\": {\"pricesEstimated\": \"Their site says the Livermore menu matches San Francisco, so these are the San Francisco prices; Livermore opens October 31.\"}}"
+  ]
+ },
+ "myo-frozen-yogurt-walnut-creek": {
+  "name": "MYO Pure Frozen Yogurt",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.restaurantji.com/ca/walnut-creek/myo-frozen-yogurt-/ — Mon–Thu & Sun 12–9PM, Fri–Sat 12–10PM, 2026-10-25",
+   "https://www.yelp.com/biz/myo-frozen-yogurt-walnut-creek — same hours per search summary (Oct 2026), 2026-10-25",
+   "https://www.myofrozenyogurt.com/contact-us — contact block Sun–Thu 11am–9:30pm, Fri–Sat 11am–10pm; footer 'Daily 12:00PM-9:00PM', 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: self-serve frozen yogurt; their site lists flavors and 50+ toppings but no prices.",
+   "Their own site still disagrees with itself (contact block 11am–9:30/10pm vs footer daily 12–9pm). MapQuest says 10:30am–10:30pm daily. The two listing sites that agree (Yelp, Restaurantji) were used."
+  ]
+ },
+ "abve-the-basics": {
+  "name": "ABVE the Basics",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.abvethebasics.com/ — Cloudflare 'Just a moment' check, not readable, 2026-10-25",
+   "Thumbtack / WeddingWire listings (via search) — 'Contact for price', flat-top taco bar catering, 2026-10-25"
+  ],
+  "flags": [
+   "No fill: catering-only business with quote pricing ('DM or Visit Our Website for a Quote'; Thumbtack says contact for price) and no storefront hours. Their site is behind a Cloudflare bot check."
+  ]
+ },
+ "cravingz": {
+  "name": "Cravingz",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.ubereats.com/store/cravingz/qhasuXQzUDWxD9mMgfBiug — their Uber Eats store exists (found by search) but returns 403/Cloudflare to curl and WebFetch, 2026-10-25",
+   "https://www.yelp.com/biz/cravingz-redwood-city — via search summary only: 826 Main St, (408) 320-6012, closed Mon–Tue, closing times 8:30–10:30pm by day, 2026-10-25"
+  ],
+  "flags": [
+   "No fill: their only own link is a Square gift-card page. Their Uber Eats store would have the menu but could not be read without a browser (built-in browser pane unavailable this run). Retry Uber Eats in a browser: ubereats.com/store/cravingz/qhasuXQzUDWxD9mMgfBiug.",
+   "Hours not filled: Yelp snapshots disagree (older: daily except Mon 2–10pm; newer: closed Mon–Tue, noon/4pm to 8:30–10:30pm), and Uber Eats shows 2–9:40pm delivery. Yelp lists phone (408) 320-6012 — single listing source, not filled."
+  ]
+ },
+ "the-breeze-cafe": {
+  "name": "The Breeze Café",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.restaurantji.com/ca/newark/the-breeze-cafe-/ — Mon–Thu 7AM–2:30PM, Fri–Sun 7AM–3PM, 2026-10-25",
+   "https://www.yelp.com/biz/the-breeze-cafe-newark — same hours per search summary (page itself blocked), 2026-10-25"
+  ],
+  "flags": [
+   "Their Toast ordering page (per earlier research) gives 7am–2:30pm every day — that is ordering hours; their Instagram bio, Yelp and Restaurantji all say Fri–Sun until 3pm."
+  ]
+ },
+ "macs-by-icky": {
+  "name": "Macs by Icky",
+  "filled": [
+   "hours",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 35,
+  "sources": [
+   "https://macsbyicky.store/cdn/shop/files/2025_MBI_MENU_14_x_11_in_-_1.jpg — in-store drinks menu picture, read by eye, 2026-10-25",
+   "https://macsbyicky.store/cdn/shop/files/2025_MBI_MENU_14_x_11_in_-_2.png — in-store food & lemonade menu picture, read by eye, 2026-10-25",
+   "https://www.restaurantji.com/ca/union-city/macs-by-icky-/ — Mon 7AM–1PM, Tue closed, Wed–Fri 7AM–6PM, Sat–Sun 8AM–6PM, 2026-10-25",
+   "https://www.yelp.com/biz/macs-by-icky-union-city-3 — same hours per search summary (Oct 2026), 2026-10-25",
+   "https://page-service.doordash.com/store/macs-by-icky-union-city-29810589/ — their DoorDash store (checked, not used for prices), 2026-10-25"
+  ],
+  "flags": [
+   "Prices read by eye from their menu pictures (large, clearly legible). Earlier review chose not to carry picture-read prices for this shop; reconsider now that Leon asked for menus.",
+   "Drinks marked '$6 | $7' don't name the two sizes, so the lower price is used with 'From'.",
+   "Add-ons not listed as items (espresso shot +.75, drizzles +.50, soft tops +$1/$1.50, syrups +.50, milk options +.50/.75, soft-serve toppings +.75).",
+   "Cookies (e.g. Ube Crinkle) and Muddy Mix are on DoorDash but not on the in-store menu; left out. DoorDash prices run about $1–2 higher than the in-store menu.",
+   "DoorDash's menu hours are 8am–5:40pm (delivery window).",
+   "Coordinator: {\"set\": {\"pricesEstimated\": \"Prices were read from photos of their own menu; worth confirming with the shop.\"}}"
+  ]
+ },
+ "the-une": {
+  "name": "The Une",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 22,
+  "sources": [
+   "https://www.ubereats.com/store/the-une-union-city/PyOFYzCMXhSorqUENby1AQ — Uber Eats store menu & prices (read via r.jina.ai reader), 2026-10-25"
+  ],
+  "flags": [
+   "Uber Eats menu is bagels, toasts, sandwiches, wraps and two rice bowls; no noodle soup listed, so the BEASTY cuisine line \"Rice plates & noodle soup\" may be off.",
+   "Uber Eats shows short hours (Mon 12:15–5:30pm)."
+  ]
+ },
+ "the-yakitori-bar": {
+  "name": "The Yakitori Bar",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 40,
+  "sources": [
+   "https://theyakitoribar.us/our-menu/ — menu images page-1/2/3 (uploaded 2021-08), 2026-10-25",
+   "https://theyakitoribar.us/ — address 46260 Warm Springs Blvd Unit 529, hours Tue–Sun 5pm–12am, Mon closed, 2026-10-25"
+  ],
+  "flags": [
+   "Menu images were uploaded in Aug 2021; no current delivery-app menu was found to confirm prices."
+  ]
+ },
+ "gold-bean-pleasanton": {
+  "name": "Gold Bean",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.gldbeancafe.com/ — lists only Berkeley (2503 Hearst Ave) and San Leandro locations, \"Check Google for our hours\", drink names without prices, 2026-10-25",
+   "WebSearch \"Gold Bean coffee Pleasanton Main Street opening\" — no report of a Pleasanton opening, 2026-10-25"
+  ],
+  "flags": [
+   "Pleasanton (440 Main St) store is not on their site and no sign it has opened; their own menu has no prices. Left empty."
+  ]
+ },
+ "paleta-planeta": {
+  "name": "Paleta Planeta",
+  "filled": [
+   "email",
+   "sections",
+   "siteNote"
+  ],
+  "items": 167,
+  "sources": [
+   "https://www.paletaplaneta.com/ — Square Online store catalog (cdn5.editmysite.com products API, 173 products) and location block 150 East Santa Clara St, (408)647-5847, info@paletaplaneta.com, 2026-10-25"
+  ],
+  "flags": [
+   "Ice cream is sold in sizes; listed at the lowest (single) price, marked \"From\". Merchandise (hats, shirts, totes, pins) left out.",
+   "167 flavors listed (slightly over the ~150 cap); all are food, kept as one flavor list."
+  ]
+ },
+ "maza-san-jose": {
+  "name": "Maza",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.maza-restaurant-bar.com/ — \"Hours Monday - Friday 2pm - 10pm, Saturday - Sunday 11am to 10pm\", 782 North 13th St, (669) 235-6776, 2026-10-25",
+   "https://atmosfy.io/location/san-jose/el-mazatleco-marisqueria-y-taqueria — lists daily 11am–9pm for 782 N 13th St (likely mixed with another listing), 2026-10-25"
+  ],
+  "flags": [
+   "A third-party listing (Atmosfy) shows daily 11am–9pm; used the restaurant's own site instead."
+  ]
+ },
+ "divino-ristorante": {
+  "name": "Divino Ristorante",
+  "filled": [
+   "email",
+   "hours",
+   "sections",
+   "siteNote"
+  ],
+  "items": 35,
+  "sources": [
+   "https://drive.google.com/file/d/12_uArx82zM4zWKlgy2IcOaaOEzfdAQc5/view — dinner menu image linked from divinoristorante.com/menu, with \"Sun–Thu 4:30–8:30 PM, Fri–Sat 4:30–9:00\", 2026-10-25",
+   "https://www.canva.com/design/DAGxyGlOcuU/yI4FFklW7U-KROzn34l78g/view — \"LUNCH DIVINO AGO25\" menu linked from divinoristorante.com/menu, \"Mon–Fri 11:30–2 pm\" (read via r.jina.ai), 2026-10-25",
+   "https://divinoristorante.com/contact-us-1 — email belmont@divinoristorante.com, 2026-10-25",
+   "https://www.opentable.com/r/divino-belmont — lists lunch Mon–Fri 11:30am–2pm (dinner times differ), 2026-10-25"
+  ],
+  "flags": [
+   "OpenTable shows older dinner times (5–9:30pm); used the times printed on their current dinner menu. Lunch section lists only lunch-only dishes; lunch prices for shared pastas are lower than dinner."
+  ]
+ },
+ "port-of-peri-peri-fremont": {
+  "name": "The Port of Peri Peri",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 59,
+  "sources": [
+   "https://www.grubhub.com/restaurant/1711276 — Grubhub store \"The Port Of Peri Peri (Fremont)\", 3283 Walnut Ave, menu & prices via Grubhub API, 2026-10-25"
+  ],
+  "flags": [
+   "Catering trays, dips and canned drinks left out."
+  ]
+ },
+ "yayoi-palo-alto": {
+  "name": "YAYOI Palo Alto",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yayoi-us.com/find-us — business hours per location, 2026-10-25",
+   "https://www.yayoi-us.com/togo — Toast online-order link, 2026-10-25",
+   "https://atmosfy.io/location/palo-alto/yayoi-palo-alto — lists lunch 11am–2pm & dinner 5–9pm (differs), 2026-10-25"
+  ],
+  "flags": [
+   "Atmosfy shows a split lunch/dinner schedule; used YAYOI's own site."
+  ]
+ },
+ "yayoi-cupertino": {
+  "name": "YAYOI Cupertino",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yayoi-us.com/find-us — business hours per location, 2026-10-25",
+   "https://www.yayoi-us.com/togo — Toast online-order link, 2026-10-25",
+   "https://atmosfy.io/location/sunnyvale/yayoi-cupertino — Mon–Thu & Sun 11:30am–8pm, Fri–Sat to 9pm (agrees), 2026-10-25"
+  ],
+  "flags": []
+ },
+ "yayoi-san-mateo": {
+  "name": "YAYOI Hillsdale",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yayoi-us.com/find-us — business hours per location, 2026-10-25",
+   "https://www.yayoi-us.com/togo — Toast online-order link, 2026-10-25",
+   "https://atmosfy.io/listing/59596/california/san-mateo/yayoi-hillsdale — Mon–Sun 11:30am–8pm (agrees), 2026-10-25"
+  ],
+  "flags": []
+ },
+ "tacos-papo": {
+  "name": "Tacos Papo",
+  "filled": [
+   "email",
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://tacospapo.com/contact.html — \"Hours 8am - 9pm Monday - Sunday\", 2617 Decoto Rd, 510.431.5202, 2026-10-25"
+  ],
+  "flags": [
+   "Only their own site checked for hours."
+  ]
+ },
+ "k-on-the-go-union-city": {
+  "name": "K On The Go",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 88,
+  "sources": [
+   "https://www.grubhub.com/restaurant/11714560 — Grubhub store \"K On the Go\", 31877 Alvarado Blvd, menu & prices via Grubhub API, 2026-10-25",
+   "https://order.online/store/k-on-the-go-alvarado-blvd-29577580 — search snippet shows matching drink prices (Peach Lychee Tea $7.50, Thai Green Milk Tea $6.50), 2026-10-25"
+  ],
+  "flags": [
+   "High-tea service (Calendly reservations) is not on Grubhub; menu covers drinks, breakfast and desserts only."
+  ]
+ },
+ "san-honore-panaderia": {
+  "name": "San Honoré Panaderia",
+  "filled": [
+   "hours",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 40,
+  "sources": [
+   "https://www.grubhub.com/restaurant/12927624 — Grubhub store \"San Honore Panaderia\", 4122 Dyer Street, Union City, menu, prices and ordering hours via Grubhub API, 2026-10-25"
+  ],
+  "flags": [
+   "Grubhub lists 4122 Dyer St; BEASTY has 4128 Dyer St (same name, same block — likely the same shop).",
+   "Hours are Grubhub online-ordering hours only (one source); no Yelp/Google check was possible."
+  ]
+ },
+ "honey-pot-gelato": {
+  "name": "Honey Pot Gelato",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "WebSearch \"Honey Pot Gelato\" Petaluma / Sonoma Mountain Pkwy, Uber Eats, Grubhub search near Petaluma — no listing found, 2026-10-25"
+  ],
+  "flags": [
+   "No website, delivery store or menu found online for Honey Pot Gelato at 701 Sonoma Mountain Pkwy."
+  ]
+ },
+ "havana-walnut-creek": {
+  "name": "Havana",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.havanarestaurant.net/location/havana/ — dinner Mon 4–10, Tue–Thu 4–9, Fri 4–10, Sat 10am–10pm, Sun 10am–9pm; brunch Sat & Sun 10am–2:30pm, 2026-10-25",
+   "https://www.toasttab.com/local/order/havana-walnut-creek — search snippet: weekdays 4–9pm, Fri to 10pm, weekends from 10am (mostly agrees), 2026-10-25"
+  ],
+  "flags": [
+   "OpenTable lists an older schedule with weekday lunch; used their own site."
+  ]
+ },
+ "lita-walnut-creek": {
+  "name": "LITA",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 58,
+  "sources": [
+   "https://www.grubhub.com/restaurant/lita-1602-bonanza-street-walnut-creek/13974904 — Grubhub store (linked from litawalnutcreek.com), menu & prices via Grubhub API, 2026-10-25",
+   "https://www.litawalnutcreek.com/ — lunch/dinner menus without prices (item descriptions), 2026-10-25"
+  ],
+  "flags": [
+   "Their own site menu has no prices; prices are Grubhub delivery prices."
+  ]
+ },
+ "rob-bens-restaurant": {
+  "name": "Rob Ben's Restaurant & Lounge",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://robbensrestaurant.com/ — Mon closed; Tue 9–1:30; Wed–Sat breakfast 9–1:30, Wed–Fri happy hour 12:30–3:30, Wed–Sat dinner 3:30–8; Sun dinner 12:30–6, 2026-10-25"
+  ],
+  "flags": [
+   "Only their own site checked; Wed–Fri assumed continuous because happy hour covers 12:30–3:30pm."
+  ]
+ },
+ "brundo-spices": {
+  "name": "Brundo Spice Company",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.brundo.com/pages/faq-and-contact and /pages/about-us — online shop and wholesale only, no storefront or hours, 2026-10-25",
+   "https://www.eastbaymag.com/?p=10625 — older listing at 5849 San Pablo Ave, Oakland, 510.601.7999, no hours, 2026-10-25"
+  ],
+  "flags": [
+   "Brundo now sells online/wholesale; no published shop hours found."
+  ]
+ },
+ "hinodeya-ramen-berkeley": {
+  "name": "HINODEYA Ramen & Bar",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://hinodeyaramen.com/berkeley1 — 2309 Telegraph Ave, Sunday–Saturday 10:00 AM – 10:00 PM (read via WebFetch), 2026-10-25"
+  ],
+  "flags": [
+   "Only their own site had Berkeley hours; no second source found."
+  ]
+ },
+ "yuanbao-jiaozi-san-francisco": {
+  "name": "Yuanbao Jiaozi",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.grubhub.com/restaurant/7313088 — Grubhub store at 2110 Irving St: open 11am–9pm, Tuesday closed; menu shows only soda, 2026-10-25",
+   "https://foodle.pro/restaurants/san-francisco/yuanbao-jiaozi — 11:00–21:00 on open days, 2026-10-25",
+   "https://atmosfy.io/location/san-francisco/yuanbao-jiaozi — 11am–3:30pm & 5–10:30pm, Tue closed (differs), 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: their SF site (yuanbaojiaozisf.com) is behind a bot check and Grubhub shows no menu; no Uber Eats/DoorDash store found.",
+   "Atmosfy shows a split 11–3:30 / 5–10:30 schedule; used Grubhub + Foodle."
+  ]
+ },
+ "yuanbao-jiaozi-burlingame": {
+  "name": "Yuanbao Jiaozi",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://yuanbaojiaozitogo.com/ — \"Business Hour: 11AM-3PM 5PM-9PM\", 1841 El Camino Real, 2026-10-25",
+   "https://www.grubhub.com/restaurant/7313096 — Grubhub store at 1841 El Camino Real: every day 11am–3pm & 5–9pm, 2026-10-25"
+  ],
+  "flags": []
+ },
+ "pineapple-king-bakery-san-francisco": {
+  "name": "Pineapple King Bakery",
+  "filled": [
+   "email",
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.pineapplekingbakery.com/contact-us.html — SF store hours Mon–Fri 8–6, Sat–Sun 8–6:30; info@pineapplekingbakery.com, 2026-10-25",
+   "https://frankiapp.com/business/pineapple-king-bakery-34381.md — 8am–6pm weekdays, to 6:30pm weekends (agrees), 2026-10-25"
+  ],
+  "flags": [
+   "A map widget on the same contact page says \"open daily 7:30AM to 8:00PM\" (looks stale); used the store-hours list."
+  ]
+ },
+ "rg-lounge": {
+  "name": "R&G Lounge",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.rnglounge.com/ — \"Business Hours Sunday-Thursday 11:00 - 8:45pm, Friday - Saturday 11:00 - 9:15pm\", 2026-10-25"
+  ],
+  "flags": [
+   "Only their own site checked."
+  ]
+ },
+ "tempura-kaneko-hannosuke": {
+  "name": "Tempura Kaneko Hannosuke",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/hannosuke-san-jose-4 (via Google result snippet) — hours Mon–Sun 11am–1:30pm, 5–9pm, phone (408) 320-1867, 2026-10-25",
+   "https://wheretoapp.io (Hannosuke Tempura, Tendon, Udon, 4320 Moorpark Ave) — same hours, 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: no San Jose store on Uber Eats/DoorDash/Toast (the Hannosuke Toast/Uber Eats stores are the LA Mitsuwa location); own site tempura-kaneko-hannosuke.com is the corporate site with no menu.",
+   "Some posts (Instagram, Roadtrippers) say 'open daily 11 AM–9 PM' with no break; Yelp/WhereTo show a 1:30–5pm break."
+  ]
+ },
+ "master-oh": {
+  "name": "Master Oh",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://master-oh.com/ — Hours block for 1484 Halford Ave, 2026-10-25"
+  ],
+  "flags": []
+ },
+ "sourdough-eatery": {
+  "name": "Sourdough Eatery",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://sourdougheatery.com/menubig.html — menu image lists 20 numbered sandwiches but no prices, 2026-10-25",
+   "Google Business listing (848 N First St) — Mon–Fri 11am–2pm, no online ordering link, 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: their own menu (image) has no prices and they are on no delivery app (DoorDash 'California Sourdough Eatery' is a different shop at 1150 Murphy Ave). Phone/fax orders before 11am per their menu."
+  ]
+ },
+ "golden-donkatsu-dublin": {
+  "name": "Golden Donkatsu",
+  "filled": [
+   "hours",
+   "phone",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 36,
+  "sources": [
+   "https://www.ubereats.com/store/golden-wang-donkatsu-dublin/Uq19KiPdUHSzTw2XMbRuug — JSON-LD menu (36 items), address 7222 Regional Street Dublin, phone +19252488915, 2026-10-25",
+   "Google Business listing 'Golden Wang Donkatsu Dublin', 7222 Regional St — hours, 2026-10-25"
+  ],
+  "flags": [
+   "Google and Uber Eats name it 'Golden Wang Donkatsu' (DoorDash: 'Golden Donkatsu'); same address. Uber Eats delivery hours (Mon–Thu 11:30–2:30, 5–8:45; Fri–Sat 11–8:45; Sun 11–8:45) roughly match Google."
+  ]
+ },
+ "katsu-factory": {
+  "name": "Katsu Factory",
+  "filled": [
+   "hours",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 145,
+  "sources": [
+   "https://www.doordash.com/store/katsu-factory-satomi-2-fremont-40538521/ — full menu (Sashimi and Nigiri sections left out to stay under ~150 items), 2026-10-25",
+   "Google Business listing Katsu Factory, 5022 Mowry Ave, (510) 505-0360 — hours, 2026-10-25",
+   "https://www.yelp.com/biz/katsu-factory-fremont-2 (search snippet) — 11:30am–2:30pm, 5–9pm, 2026-10-25"
+  ],
+  "flags": [
+   "Katsu Factory shares the kitchen/menu with Satomi Sushi 2 (same phone); menu includes the sushi side. Left out Sashimi (15) and Nigiri (29) sections for size."
+  ]
+ },
+ "wadaya-fremont": {
+  "name": "Wadaya",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://wadaya.co/locations — Fremont, 34460 Fremont Blvd # F, Location Hours, 2026-10-25"
+  ],
+  "flags": []
+ },
+ "handels-brentwood": {
+  "name": "Handel's Homemade Ice Cream",
+  "filled": [
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 13,
+  "sources": [
+   "https://order.online/store/handel-s-homemade-ice-cream-brentwood-42728995 — online ordering menu for 2455 Sand Creek Rd, 2026-10-25",
+   "https://handelsicecream.com/store/brentwood/ — Pickup link to this order.online store, 2026-10-25"
+  ],
+  "flags": [
+   "Online menu is short (no shakes/sundaes listed online); in-store menu is larger."
+  ]
+ },
+ "handels-walnut-creek": {
+  "name": "Handel's Homemade Ice Cream",
+  "filled": [
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 12,
+  "sources": [
+   "https://order.online/store/handel's-homemade-ice-cream-walnut-creek-28066905/ — online ordering menu for 1273 Locust Street, 2026-10-25",
+   "https://handelsicecream.com/store/walnut-creek/ — Pickup link to this order.online store, 2026-10-25"
+  ],
+  "flags": [
+   "Online menu is short (no shakes/sundaes listed online); in-store menu is larger."
+  ]
+ },
+ "handels-livermore": {
+  "name": "Handel's Homemade Ice Cream",
+  "filled": [
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 18,
+  "sources": [
+   "https://order.online/store/handel-s-homemade-ice-cream-1st-st-48498588 — online ordering menu for 1912 1st St, 2026-10-25",
+   "https://handelsicecream.com/store/livermore/ — Pickup link to this order.online store, 2026-10-25"
+  ],
+  "flags": [
+   "Online menu is short (no shakes/sundaes listed online); in-store menu is larger."
+  ]
+ },
+ "johns-ice-cream": {
+  "name": "John's Ice Cream",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 16,
+  "sources": [
+   "https://order.online/store/john's-ice-cream-brentwood-23916540 — menu, 6660 Lone Tree Way, ordering 12–9:40pm, 2026-10-25",
+   "Google Business listing John's Ice Cream, 6660 Lone Tree Wy — daily 12–10pm, 2026-10-25",
+   "https://johnsicecream.shop/ — Mon–Sun 12–10pm, 2026-10-25"
+  ],
+  "flags": [
+   "Google and johnsicecream.shop list phone (925) 515-5656; BEASTY has (925) 262-7041 — not changed, worth checking."
+  ]
+ },
+ "the-burger-spot-co": {
+  "name": "The Burger Spot Co.",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.theburgerspotco.com/ — Hours section, 2026-10-25"
+  ],
+  "flags": [
+   "No phone number found on their site."
+  ]
+ },
+ "buds-burgers": {
+  "name": "Buds Burgers",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google Business listing Bud's Burgers, 3849 Sonoma Blvd — hours, phone, 2026-10-25",
+   "https://www.yelp.com/biz/buds-burgers-vallejo-2 (search summary) — 10:30am–7:30pm, Sun 10:30am–6:30pm, (707) 642-3252, 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: no priced menu reachable (own site blocked by Cloudflare check; Uber Eats 'Bud's Burgers' is a Northridge store)."
+  ]
+ },
+ "shibam-coffee-newark": {
+  "name": "Shibam Coffee Co.",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 49,
+  "sources": [
+   "https://www.doordash.com/store/shibam-coffee-newark-newark-50157811/ — full menu, 2026-10-25"
+  ],
+  "flags": [
+   "DoorDash lists drinks only (no desserts/pastries online)."
+  ]
+ },
+ "rye-cookin": {
+  "name": "Rye Cookin",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.ryecookin.com/ and /pages/contact — Shopify shop, no address or hours, 2026-10-25"
+  ],
+  "flags": [
+   "No hours: online shop/food creator with no storefront hours published."
+  ]
+ },
+ "nomads": {
+  "name": "Nomads",
+  "filled": [
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://eatnomads.com — 'Need Help? contact@eatnomads.com Mon–Fri, 9am–5pm CT', 2026-10-25"
+  ],
+  "flags": [
+   "These are support hours for an online jerky shop, not store hours — drop if BEASTY should only show opening hours.",
+   "Coordinator: {\"drop\": [\"hours\"]}"
+  ]
+ },
+ "ginza-sushi": {
+  "name": "Ginza Sushi",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google Business listing Ginza Sushi, 3153 Meridian Ave — hours, 2026-10-25",
+   "https://order.toasttab.com/online/ginzasushisj — ordering hours Mon–Fri 11am–1:45pm, 5–8:45pm; Sat–Sun 12–8:45pm, 2026-10-25",
+   "https://sushimakesuhappy.com/ — 'We close between 2:30-5pm Mon-Fri', 2026-10-25"
+  ],
+  "flags": [
+   "Their own site says the midday break is 2:30–5pm; Google says lunch ends 2pm (Toast ordering stops 1:45pm). Saturday opening 11am (Google, site JSON-LD) vs 12pm on Toast."
+  ]
+ },
+ "kiyomi-ca-phe": {
+  "name": "Kiyomi Cà Phê",
+  "filled": [
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 12,
+  "sources": [
+   "https://order.online/store/51474249 — Kiyomi Ca Phe, 1439 Taraval St, 12 items, 2026-10-25"
+  ],
+  "flags": []
+ },
+ "vostok-shawarma": {
+  "name": "Vostok gyro & shawarma",
+  "filled": [
+   "address",
+   "hours",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 20,
+  "sources": [
+   "https://www.doordash.com/store/vostok-gyro-and-shawarma-halal-santa-clara-36809341/ — menu, 36 Washington St, 2026-10-25",
+   "Google Business listing Vostok Gyro & Shawarma Halal, (408) 690-6916 — daily 12–11pm, 2026-10-25",
+   "https://www.yelp.com/biz/vostok-santa-clara-3 (search snippet) — 12–11pm, 2026-10-25"
+  ],
+  "flags": [
+   "Added address (BEASTY had none); phone matches."
+  ]
+ },
+ "sidewalk-juice": {
+  "name": "Sidewalk Juice",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google Business listing Sidewalk Juice- Haight Street — daily 9am–6pm, (415) 529-6305, 2026-10-25",
+   "https://order.sidewalkjuice.com/locations/san-francisco-sidewalk-juice-haight — daily 9am–5:45pm ordering hours, 2026-10-25",
+   "https://sidewalkjuice.com/san-francisco/ — older hours Mon–Sat 7am–7pm, Sun 8am–6pm, 2026-10-25"
+  ],
+  "flags": [
+   "sidewalkjuice.com/san-francisco still shows Mon–Sat 7am–7pm, Sun 8am–6pm; Google and their ordering site agree on 9am–6pm."
+  ]
+ },
+ "grind-cafe-707": {
+  "name": "The Grind Café",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 100,
+  "sources": [
+   "https://order.online/store/the-grind-cafe-922253 — menu, 402 Tuolumne Street (catering and merch left out), 2026-10-25",
+   "Google Business listing The Grind Cafe LLC — hours, 2026-10-25",
+   "https://www.mapquest.com (The Grind Cafe, 402 Tuolumne St) — Mon–Fri 7am–2pm, Sat 8am–1pm, Sun closed, 2026-10-25"
+  ],
+  "flags": []
+ },
+ "the-yard-brentwood": {
+  "name": "The Yard",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://brentwoodyard.com — 'Open Thursday - Monday 11:30 am - 8:30 pm, Closed Tuesday & Wednesday', 2026-10-25"
+  ],
+  "flags": []
+ },
+ "jonnys-italian-ice": {
+  "name": "Jonny's Italian Ice",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google Business listing Jonny's Italian Ice & Cream, 1323 Sunnyvale Saratoga Rd — hours, 2026-10-25",
+   "https://www.mapquest.com (Jonny's Italian Ice, 94087) — Sun 12pm–12am, Mon–Thu 12–11pm, 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: jonnysitalianice.com is 'Launching Soon'; only prices found were in a food-blogger Instagram post (not used)."
+  ]
+ },
+ "tequilas-taqueria": {
+  "name": "Tequila's Taquería",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://tequilastaqueria.net/ — JSON-LD for 160 S Livermore Ave (phone (925) 371-1191), 2026-10-25"
+  ],
+  "flags": []
+ },
+ "jojos-hot-chicken": {
+  "name": "Jojo's Hot Chicken",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.jojoshotchicken.com/visit-us — Branham location weekly hours, 2026-10-25",
+   "Google results: Yelp/Snapchat show Mon–Thu 11am–11pm for 1601 Branham Ln, 2026-10-25"
+  ],
+  "flags": [
+   "Yelp shows Sunday later than the 8pm on their own site; used their own site."
+  ]
+ },
+ "lumpia-company": {
+  "name": "The Lumpia Company",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://thelumpiacompany.com — Hours block, 2026-10-25"
+  ],
+  "flags": []
+ },
+ "bread-winners": {
+  "name": "Bread Winners",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google results: Instagram @breadwinnersoak 'Open Monday–Saturday 11AM–4PM, Closed Sundays', 2026-10-25",
+   "Google results: Yelp, MapQuest, Visit Oakland list Mon–Sat 11am–4pm, 2026-10-25",
+   "Google result: swansmarket.com/tenant/bread-winners-oakland — 917 Washington St, 510.907.3183, 2026-10-25"
+  ],
+  "flags": [
+   "Apple Maps shows 11am–7pm; went with the four sources that agree on 11am–4pm."
+  ]
+ },
+ "rains-plates": {
+  "name": "Rain's Plates",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "Google results: Instagram @rains_plates posts pop-up days at 1401 Macdonald Ave, Richmond, '11am until sold out', 2026-10-25"
+  ],
+  "flags": [
+   "Pop-up/catering cook with no regular hours; schedule is announced day by day on Instagram."
+  ]
+ },
+ "paulo-sausage": {
+  "name": "Paulo Sausage Co",
+  "filled": [
+   "email",
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.paulosausageco.com — 'Find Us: Brentwood Farmer's Market - Every Saturday; Martinez Farmer's Market - Every Sunday', 2026-10-25",
+   "Google results: PCFMA / Brentwood FM Instagram — Saturdays 8am–12pm year-round, 2026-10-25",
+   "Google results: PCFMA / downtownmartinez.org — Martinez market Sundays 9am–1pm year-round, 2026-10-25"
+  ],
+  "flags": [
+   "No menu prices published (site lists Pork/Chicken Sausage with no prices); menu not filled.",
+   "Their Pittsburg storefront (2951 Harbor St) is marked closed on Yelp and in Facebook posts; the farmers-market stalls are still listed on their site."
+  ]
+ },
+ "pippal": {
+  "name": "Pippāl",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.pippaldublin.com/reservations — Hours and phone, 2026-10-25",
+   "Google result: Yelp lists Mon 11:30am–2pm, 5–10pm, 2026-10-25"
+  ],
+  "flags": []
+ },
+ "glasshouzz": {
+  "name": "Glasshouzz",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google results: Yelp and OpenTable list Daily 10:30am–9:30pm, phone (925) 800-5984, 2026-10-25",
+   "https://glasshouzz.toast.site — All hours: Sun–Wed 10:30AM–9:30PM (Thu–Sat entries look misconfigured), 2026-10-25"
+  ],
+  "flags": [
+   "Toast site shows odd Thu–Sat closing times (9:30AM / 2:59AM) and MapQuest shows Wed closed; used the Yelp/OpenTable daily hours."
+  ]
+ },
+ "rico-rico-taco": {
+  "name": "Rico Rico Taco",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.ricoricotaco.com/ — Hours block, 2026-10-25"
+  ],
+  "flags": []
+ },
+ "stans-donut-shop": {
+  "name": "Stan’s Donut Shop",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.stansdonutshop.com/menus — 'operating hours 6am - 2:30pm', 2026-10-25",
+   "Google results: Yelp Mon/Tue 6am–2:30pm, Google Sunday 6am–2:30pm, 2026-10-25"
+  ],
+  "flags": [
+   "Closed on major holidays (Labor Day, Thanksgiving, Black Friday, Christmas, New Year's Day) per their site."
+  ]
+ },
+ "khaki": {
+  "name": "Khaki",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.wearekhaki.com/ — Operating Hours block, 2026-10-25"
+  ],
+  "flags": []
+ },
+ "cambodian-street-food": {
+  "name": "Cambodian Street Food",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google result: Instagram @cambodianstreetfood bio 'Mon-Sat 11-7pm Sun 11-5pm Closed Tues', 2026-10-25",
+   "Google results: Yelp (Mon 11am–7pm, Tue closed, phone (510) 842-3134) and @bayarea_fooddreamz post, 2026-10-25"
+  ],
+  "flags": [
+   "Menu not filled: no own site, Uber Eats, DoorDash or Grubhub store found (cash/Venmo/Zelle, phone orders)."
+  ]
+ },
+ "ofies-kitchen": {
+  "name": "Ofie’s Kitchen",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://ofieskitchen.com/menu/ — menu images marked 'no-price', no hours, 2026-10-25",
+   "Google results: Instagram/Facebook show rotating truck stops (breweries, markets), 2026-10-25"
+  ],
+  "flags": [
+   "Roaming food truck with no fixed hours, and its published menu has no prices; nothing reliable to fill."
+  ]
+ },
+ "papi-clarys-kitchen": {
+  "name": "Papi Clary's Kitchen",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 20,
+  "sources": [
+   "https://papiclaryskitchen.square.site/ — full item list with prices, pickup at 2186 Solano Way, 2026-10-25",
+   "Google results: Instagram @papiclaryskitchen 'MON/TUESDAY CLOSED, Wed-Saturday 11am-9:30pm, Sunday 11am-6pm'; Yelp and Yellow Pages agree, 2026-10-25"
+  ],
+  "flags": [
+   "Square menu is birria and spicy chicken, not Filipino dishes as BEASTY's cuisine says; may be worth a look.",
+   "Left out the free 4 oz consome ($0.01)."
+  ]
+ },
+ "hey-yogurt": {
+  "name": "Hey Yogurt",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google Maps place page for Hey Yogurt, 310 S San Mateo Dr — weekly hours, 2026-10-25",
+   "Google results: Yelp (Mon/Tue 12–9pm) and MapQuest (Sun 11am–9pm, Mon 12–9pm), 2026-10-25"
+  ],
+  "flags": []
+ },
+ "oasis-wine-lounge": {
+  "name": "Oasis Wine Lounge",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://oasiswinelounge.com/ — 'Hours 7 days a week 11:30am-9:00pm', 2026-10-25",
+   "Google result: OpenTable 'Daily 11:30 am–9:00 pm', 2026-10-25",
+   "https://www.pleasantonweekly.com (Oct 5, 2026) — closing about two weeks from Oct 15 to move to the Pleasanton Hotel, 2026-10-25"
+  ],
+  "flags": [
+   "Moving: their site and Yelp now give 855 Main St, Suite 101 (Pleasanton Hotel) instead of BEASTY's 780 Main St; may be temporarily closed during the move from Oct 15. Address not changed."
+  ]
+ },
+ "milk-cloud-bakery": {
+  "name": "Milk Cloud Bakery",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google result: Instagram @milkcloudbakery 'Thu & Sat: 10am-2:30pm', 2026-10-25",
+   "Google result: frankiapp.com (updated Sep 26, 2026) Thu and Sat 10am–2:30pm, 2026-10-25",
+   "https://milkcloudbakery.com/ — 'Our hours are currently rotating!', 2026-10-25"
+  ],
+  "flags": [
+   "Soft-opening style schedule; may change often."
+  ]
+ },
+ "phosho-dough": {
+  "name": "Phosho Dough",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google result: Instagram @phoshodough 'Mon-Sat 11am-7pm', 2026-10-25",
+   "Google results: Yelp (Mon/Tue 11am–7pm, phone (510) 788-5755) and MapQuest (Sun closed), 2026-10-25"
+  ],
+  "flags": [
+   "Their square.site page returns 404 now."
+  ]
+ },
+ "karam-sf": {
+  "name": "Karam Mediterranean Cuisine",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.karam-sf.com/ — 'Wednesday-Monday: 12AM-10PM, Tuesday: CLOSED', 2026-10-25",
+   "Google results: Yelp (Mon 12–10pm, Tue closed, phone (415) 374-7142) and Toast '12PM - 10PM', 2026-10-25"
+  ],
+  "flags": []
+ },
+ "kings-wc-pizza": {
+  "name": "Kings West Coast Pizzeria",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google result: kingswcpizza.com 'Sunday 11:00 AM - 10:00 PM; Monday 11:00 AM - 10:00 PM ...', 2026-10-25",
+   "Google Maps place page — every day 11 AM to 10 PM; Yelp and MapQuest agree, 2026-10-25"
+  ],
+  "flags": []
+ },
+ "olesia-cake-studio": {
+  "name": "Olesia Cake Studio",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.olesiacake.com/workshop — classes booked by date, 2026-10-25"
+  ],
+  "flags": [
+   "Cake-decorating class studio run by booked sessions; no regular opening hours published."
+  ]
+ },
+ "traballos-backyard-bbq": {
+  "name": "Traballo’s Backyard BBQ",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google results: Instagram @backyardbbq707 and traballosbbq.framer.website 'Hrs: Tuesday - Saturday 6am - 4pm', 2026-10-25",
+   "Google results: Yelp (Mon closed, Tue 6am–4pm) and MapQuest (Sun/Mon closed), 2026-10-25"
+  ],
+  "flags": []
+ },
+ "eat-with-sie": {
+  "name": "Eat With Sie",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://linktr.ee/eatwithsie — creator link page, 2026-10-25"
+  ],
+  "flags": [
+   "Food and lifestyle creator, not a food business; no menu or hours exist."
+  ]
+ },
+ "rockin-crawfish": {
+  "name": "Rockin’ Crawfish",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "Google result: Instagram @therockincrawfishsp 'SUN - THURS 12-8:30PM FRI - SAT 12-9:30 PM', phone 510-230-4874, 2026-10-25",
+   "Google results: Yelp (Mon 12–8:30pm) and Grubhub (pickup 12–8:30pm), 2026-10-25"
+  ],
+  "flags": []
+ },
+ "dough-burger": {
+  "name": "Dough Burger",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.doughburger.com/ — 'Where to Find Us' San Jose Location hours, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "asian-box": {
+  "name": "Asian Box",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.asianbox.com/locations/ — Chestnut Street, 2031 Chestnut St hours, date 2026-10-25"
+  ],
+  "flags": [
+   "Restaurantji lists Mon–Sat 10:30am–9:30pm, Sun 10:30am–8:30pm; used the restaurant's own site instead."
+  ]
+ },
+ "state-bird-provisions": {
+  "name": "State Bird Provisions",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.statebirdsf.com — HOURS block (also lists upcoming closure dates Nov 3, 6, 17, 21, 26 etc.), date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "jackies-place": {
+  "name": "Jackie's Place",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://maps.apple.com/place?place-id=IEDF946A92E3EBE40 — 840 N 1st St listed 'Temporarily Closed', date 2026-10-25",
+   "https://www.restaurantji.com/ca/san-jose/jackies-place-/ — 'Jackie's Place - North' marked TEMPORARILY CLOSED, date 2026-10-25",
+   "https://www.jackiesplacesj.com/ — online ordering now points to the 321 South First Street location, date 2026-10-25"
+  ],
+  "flags": [
+   "840 N First St location shows as temporarily closed on Apple Maps and Restaurantji; the website's order link goes to the 321 S First St location. Normal hours when open (Apple/Yelp): Wed–Sat 11am–9pm, Sun 11am–7pm, closed Mon–Tue. Not filled; Leon should confirm status/address."
+  ]
+ },
+ "citybachi": {
+  "name": "CityBachi",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.citybachi.com/ — restaurant location block, 4080 Railroad Ave, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "home-of-chicken-and-waffles": {
+  "name": "Home of Chicken and Waffles",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://localnewsmatters.org/2026/09/01/home-of-chicken-and-waffles-oakland-closes/ — last day Aug 31, 2026, date 2026-10-25",
+   "https://www.ktvu.com/news/home-chicken-waffles-oakland-closure-monday — 'permanently closes doors', date 2026-10-25"
+  ],
+  "flags": [
+   "PERMANENTLY CLOSED: Oakland (247 4th St) location's last day was Aug 31, 2026 (Local News Matters, KTVU). Consider removing from BEASTY."
+  ]
+ },
+ "underdogs-cantina": {
+  "name": "Underdogs Cantina",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://underdogscantina.com/ — 'Our Hours' block, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "biryaniz": {
+  "name": "Biryaniz",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.biryaniz.com/ — 'Opening Hours' block, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "the-sweet-spot": {
+  "name": "The Sweet Spot",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://thesweetspotwc.square.site/ — square_business_hours data, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "gyro-king": {
+  "name": "Gyro King",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.gyrokingca.com/ — 'Location & Hours: Pickup & Delivery', date 2026-10-25"
+  ],
+  "flags": [
+   "Third-party listings vary (AAA/OpenTable: Mon 10:30am–7pm, Tue–Sat to 8pm, Sun 11am–7pm); used the restaurant's own site."
+  ]
+ },
+ "tay-ho": {
+  "name": "Tây Hồ",
+  "filled": [
+   "address",
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.aaa.com/tripcanvas/restaurant/tay-ho-restaurant-oakland-AA92851 — address, phone, hours, date 2026-10-25",
+   "https://joinpearl.co/restaurants/oakland/tay-ho-oakland-restaurant-and-bar — Tue–Sat lunch 11–3, dinner 5:30–9, closed Sun–Mon, date 2026-10-25"
+  ],
+  "flags": [
+   "Own site blocked by Cloudflare; Tablejourney lists Tue–Sun 11am–9pm (outlier)."
+  ]
+ },
+ "pamilya": {
+  "name": "Pamilya",
+  "filled": [
+   "address",
+   "email",
+   "hours",
+   "orderUrl",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://pamilyakitchen.com/ — footer hours, Google Maps link with 756 Woodside Rd, Toast order link, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "alora-social": {
+  "name": "Alora Social",
+  "filled": [
+   "address",
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.opentable.com/r/alora-social-san-ramon — hours (via search snippet), date 2026-10-25",
+   "https://ww1.aaa.com/tripcanvas/restaurant/alora-social-AA78784 — same hours, date 2026-10-25"
+  ],
+  "flags": [
+   "Bishop Ranch directory shows a 4pm break between lunch and dinner; own site blocked by Cloudflare."
+  ]
+ },
+ "carabao": {
+  "name": "Carabao",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://carabaonapa.com/ — hours block, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "delah-coffee": {
+  "name": "Delah Coffee House",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://delahcoffee.com/locations/ — Oakland Location hours, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "eat-more-pho": {
+  "name": "Eat More Pho",
+  "filled": [
+   "hours",
+   "phone",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 27,
+  "sources": [
+   "https://postmates.com/store/eat-more-pho-1066-e-el-camino-real/3N5l8x9KQ_mixi-hiOHmwg — menu items/prices (Uber Eats/Postmates store), date 2026-10-25",
+   "https://maps.apple.com/place?place-id=I6DB891648964CC30 — every day 10am–12am, phone, date 2026-10-25",
+   "https://www.yelp.com/biz/eat-more-pho-sunnyvale — Mon–Sun 10am–12am (via search snippet), date 2026-10-25"
+  ],
+  "flags": [
+   "Menu is partial (27 items): Toast page blocked by Cloudflare and the delivery page only rendered the first sections; vegetarian, sides, drinks and coffee sections are incomplete."
+  ]
+ },
+ "sanaa-cafe-hayward": {
+  "name": "Sana'a Cafe",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "phone",
+   "sections",
+   "siteNote"
+  ],
+  "items": 89,
+  "sources": [
+   "https://thesanaacafe.com/menu — menu data (products/prices), date 2026-10-25",
+   "https://thesanaacafe.com/locations — Hayward Whipple, 2472 Whipple Rd: openingHoursSpecification + phone, date 2026-10-25"
+  ],
+  "flags": [
+   "Menu on thesanaacafe.com is the same for every location (no per-store menu found); left out the 16oz water bottle and the $74.99 milk cake tray."
+  ]
+ },
+ "sea-wagyu-house": {
+  "name": "Sea Wagyu House",
+  "filled": [
+   "sections",
+   "siteNote"
+  ],
+  "items": 30,
+  "sources": [
+   "https://seawagyuhousemilpitas.kwickmenu.com/ — Diamond/Gold/Silver charges (adult & kids 3–10), soft drinks; 503 E Calaveras Blvd, date 2026-10-25",
+   "https://www.seawagyuhouse.com/menu — tier contents, date 2026-10-25"
+  ],
+  "flags": [
+   "Restaurant is all-you-can-eat; individual dishes have no prices, so the menu is the three tiers plus soft drinks. Kids under 3ft price not shown."
+  ]
+ },
+ "shattuck-and-butter": {
+  "name": "Shattuck & Butter",
+  "filled": [
+   "email",
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://shattuckandbutter.com/ — 'Hours (from launch) Daily 7:00a – 3:00p', 'Opening Oct ’26 soft launch coming', date 2026-10-25"
+  ],
+  "flags": [
+   "Not open yet (soft launch Oct 2026); no menu or prices published, so menu not filled."
+  ]
+ },
+ "kickin-flavors-fremont": {
+  "name": "Kickin Flavors",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://pos.chowbus.com/online-ordering/store/Kickin-Flavors/22024 — Store Info hours, date 2026-10-25",
+   "https://maps.apple.com/place?place-id=ICCD489C01BF8162 — same hours, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "kickin-flavors-milpitas": {
+  "name": "Kickin Flavors",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://pos.chowbus.com/online-ordering/store/Kickin-Flavors-Great-Mall/22638 — Store Info hours, date 2026-10-25"
+  ],
+  "flags": [
+   "Only source is their own ordering page (may reflect order cutoff rather than kiosk close); no Yelp/Apple listing for the Great Mall kiosk found."
+  ]
+ },
+ "da-good-vibes": {
+  "name": "Da Good Vibes",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://maps.apple.com/place?place-id=IA9C98739F1A851A7 — weekly hours, phone, date 2026-10-25",
+   "https://www.yelp.com/biz/da-good-vibes-union-city-2 — same hours incl. Sun 11am–4pm (via search snippet), date 2026-10-25"
+  ],
+  "flags": [
+   "Older listings (Yahoo Local, Yelp Apr 2026) show Sunday closed."
+  ]
+ },
+ "cafe-napolina": {
+  "name": "Cafe Napolina",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.restaurantji.com/ca/concord/cafe-napolina-/ — Mon–Sun 11AM–9:45PM, date 2026-10-25",
+   "https://slicelife.com/restaurants/ca/concord/94520/cafe-napolina/menu — pickup/delivery daily 11am–9:30pm, date 2026-10-25"
+  ],
+  "flags": [
+   "napolinaonline.com blocked by Cloudflare; Slice ordering closes 9:30pm."
+  ]
+ },
+ "ocean-oyster-bar-redwood-city": {
+  "name": "Ocean Oyster Bar & Grill",
+  "filled": [
+   "hours",
+   "sections",
+   "siteNote"
+  ],
+  "items": 97,
+  "sources": [
+   "https://oceanoysterbargrill.com/our-menu-redwood-city/ — full Redwood City menu with prices, 2026-10-25",
+   "https://www.yelp.com/biz/ocean-oyster-bar-and-grill-redwood-city — hours (only source found; own site lists none), 2026-10-25"
+  ],
+  "flags": [
+   "Hours from Yelp only; their site publishes no hours.",
+   "Left out market-price items (lobster tail, king crab legs) and Oyster Shooters (contain vodka)."
+  ]
+ },
+ "dinos-greek-food-truck": {
+  "name": "Dino’s Greek Food Truck",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.dinosgreekfoodtruck.com/ — 'Truck Schedule' links to an AddEvent calendar, 2026-10-25",
+   "https://www.addevent.com/calendar/ay429931 — Food Truck Schedule calendar shows no upcoming events, 2026-10-25",
+   "https://www.yelp.com/biz/dinos-greek-food-truck-santa-rosa — lists 9am–12am daily except Tue (looks like a placeholder for a roaming truck), 2026-10-25"
+  ],
+  "flags": [
+   "Food truck with rotating Sonoma County locations; no fixed hours published and its schedule calendar is empty. Yelp's 9am–midnight hours don't look reliable, so no hours filled."
+  ]
+ },
+ "rise-pizzeria": {
+  "name": "Rise Pizzeria",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.risepizzeria.com/location/hours-and-location/ — daily hours for 1451 Burlingame Ave, 2026-10-25"
+  ],
+  "flags": [
+   "Their site's Toast links use the slug 'rise-pizzeria-2-n-b-st' (same URL BEASTY already has), so the orderUrl is theirs despite the B St slug."
+  ]
+ },
+ "romana-pizzeria": {
+  "name": "Romana Pizzeria",
+  "filled": [
+   "email",
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://romanadanville.com/ — 'Hours of Operation' block and footer email, 2026-10-25"
+  ],
+  "flags": [
+   "Their page's structured data lists Tue until 10pm while the visible hours say Mon–Thu 11am–9pm; used the visible hours."
+  ]
+ },
+ "addis-oakland": {
+  "name": "Addis Restaurant",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/addis-ethiopian-restaurant-oakland — 11:30am–10pm every day, 2026-10-25",
+   "https://www.addisoakland.com/contact-us — no hours on their site, 2026-10-25"
+  ],
+  "flags": [
+   "Hours from Yelp only (no second source found)."
+  ]
+ },
+ "merkado-sf": {
+  "name": "Merkado",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.merkadosf.com/location/merkado/ — lunch Tue–Fri 11:30am–3pm, dinner Tue–Sat 4–9pm, 2026-10-25"
+  ],
+  "flags": []
+ },
+ "endless-summer-sweets": {
+  "name": "Endless Summer Sweets",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.endlesssummersweets.com/ — 'Opening Hours: Open Everyday 12:00 pm – 10:00 pm', 2026-10-25"
+  ],
+  "flags": []
+ },
+ "cafe-carrusel": {
+  "name": "Café Carrusel",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 138,
+  "sources": [
+   "https://www.toasttab.com/local/order/cafe-carrusel — Café Carrusel online ordering menu with prices; shows 7AM–10PM, 2026-10-25",
+   "https://www.sonomamag.com/inside-carrusel-santa-rosas-over-the-top-pink-bruncheria/ — 'Open from 7 a.m. to 10 p.m. daily', 630 Third St., 707-655-8365, 2026-10-25",
+   "https://www.yelp.com/biz/cafe-carrusel-santa-rosa — lists 8am–8pm (9pm Fri–Sat), 2026-10-25"
+  ],
+  "flags": [
+   "Toast's record is named 'La Fondita Downtown' (same owners, same 630 3rd St space) but the page header is Café Carrusel.",
+   "Yelp hours (8am–8pm, Fri–Sat to 9pm) disagree with Toast + Sonoma Mag (7am–10pm daily); used the two that agree.",
+   "Left out bar, beer, sides/add-ons and kids' drinks sections. Toast shows no item descriptions."
+  ]
+ },
+ "supreme-crab-ayce": {
+  "name": "Supreme Crab AYCE",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.supremecrabayce.com/locations — San Jose (625 Coleman Ave): Mon–Fri lunch 12–3:30pm, dinner 5–11pm; Sat, Sun, holidays 12–11pm, 2026-10-25"
+  ],
+  "flags": [
+   "Their page marks San Jose as 'Soft Opening', so hours may change."
+  ]
+ },
+ "nawah-market": {
+  "name": "Nawah Market & Deli",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/nawah-market-and-deli-oakland — confirms 5489 Foothill Blvd; has a Yelp menu at yelp.com/menu/nawah-market-and-deli-oakland, 2026-10-25",
+   "https://www.doordash.com/search/store/nawah%20market/ — no DoorDash store found, 2026-10-25"
+  ],
+  "flags": [
+   "No website, online ordering or delivery-app store found; the only priced menu is Yelp's, which isn't an allowed menu source. Web search budget ran out before Uber Eats/Grubhub could be checked."
+  ]
+ },
+ "stefanos-solar-pizza-petaluma": {
+  "name": "Stefano's Solar Pizza",
+  "filled": [
+   "email",
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.stefanossolarpizza.com/ — footer 'BUSINESS HOURS: Sunday - Thursday: 11am to 9pm, Friday - Saturday: 11am to 9:30pm', 2026-10-25"
+  ],
+  "flags": [
+   "The site gives one set of hours for all six locations, not per store."
+  ]
+ },
+ "stefanos-solar-pizza-san-rafael": {
+  "name": "Stefano's Solar Pizza",
+  "filled": [
+   "email",
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.stefanossolarpizza.com/ — footer 'BUSINESS HOURS: Sunday - Thursday: 11am to 9pm, Friday - Saturday: 11am to 9:30pm', 2026-10-25"
+  ],
+  "flags": [
+   "The site gives one set of hours for all six locations, not per store; 424 Las Gallinas Ave is listed there as 'Terra Linda'."
+  ]
+ },
+ "manakish-oven": {
+  "name": "Manakish Oven & Grill",
+  "filled": [
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 91,
+  "sources": [
+   "https://manakishoven.com/menu/walnut-creek — Walnut Creek (2905 N Main St) online ordering menu with prices, 2026-10-25"
+  ],
+  "flags": [
+   "They also have a San Jose location (670 Stockton Ave); the Walnut Creek menu was used.",
+   "Left out 'Most ordered', 'Manakish Pass Members' duplicates and a retail olive oil."
+  ]
+ },
+ "dolores-deluxe": {
+  "name": "Dolores Deluxe",
+  "filled": [
+   "hours",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 16,
+  "sources": [
+   "https://www.doloresdeluxe.com/ — 'we're open 7:30am - 7pm seven days a week'; lunch specials 10:30am–4pm daily, 2026-10-25",
+   "https://www.doloresdeluxe.com/todays-menu — menu board images (Lunch, dated Oct 24 2026; All-Day Menu), 2026-10-25"
+  ],
+  "flags": [
+   "Menu is read from their daily menu-board images and rotates; seasonal sandos change often.",
+   "Coordinator: {\"set\": {\"pricesEstimated\": \"From their October 24, 2026 lunch board, which changes often.\"}}"
+  ]
+ },
+ "frymazing": {
+  "name": "Frymazing",
+  "filled": [
+   "orderUrl",
+   "sections",
+   "siteNote"
+  ],
+  "items": 54,
+  "sources": [
+   "https://frymazing.com/menu — online ordering menu with prices (4455 Central Way Suite D, Fairfield), 2026-10-25"
+  ],
+  "flags": []
+ },
+ "wtf-antioch": {
+  "name": "Whiskey Tango Foxtrot — Antioch",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 130,
+  "sources": [
+   "https://wtfrestaurantbargrill.com/ — links to order.online/business/~13030306, 2026-10-25",
+   "https://order.online/business/13030306/store/antioch-whiskey-tango-foxtrot-restaurant-bar-grill-antioch-33928521 — all-day menu with prices, 2737 Hillcrest Ave, 2026-10-25"
+  ],
+  "flags": [
+   "Online menu is all-day only; the breakfast items featured on their site (benedicts, breakfast burrito) are not on it.",
+   "Left out 'Most Ordered' and 'Sides and ala Carte'."
+  ]
+ },
+ "wtf-oakley": {
+  "name": "Whiskey Tango Foxtrot — Oakley",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 128,
+  "sources": [
+   "https://wtfrestaurantbargrill.com/ — links to the Oakley order.online store, 2026-10-25",
+   "https://order.online/business/13030306/store/oakley-whiskey-tango-foxtrot-restaurant-bar-grill-bridgehead-rd-oakley-30211748 — all-day menu with prices, 6346 Bridgehead Rd, 2026-10-25"
+  ],
+  "flags": [
+   "Oakley prices run about 5% above Antioch's.",
+   "Online menu is all-day only; breakfast items aren't on it. Left out 'Most Ordered' and 'Sides and ala Carte'."
+  ]
+ },
+ "lucys-crepes": {
+  "name": "Lucy’s Crepes",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 52,
+  "sources": [
+   "https://www.lucyscrepes.com/menu — full menu image and 'Protein-Packed Crepes' image with prices, 2026-10-25",
+   "https://www.lucyscrepes.com/ — hours Tue 10–5, Wed–Fri 10–9, Sat 9–8, Sun 9–5, closed Mon (not needed), 2026-10-25"
+  ],
+  "flags": [
+   "Add-ons ($3 each) and salmon/egg toast add-ons left out.",
+   "Coordinator: {\"set\": {\"pricesEstimated\": \"Prices were read from photos of their own menu; worth confirming with the shop.\"}}"
+  ]
+ },
+ "hironori-santa-clara": {
+  "name": "HiroNori Craft Ramen — Santa Clara",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/hironori-craft-ramen-santa-clara — Mon–Thu 11am–9pm, Fri–Sun 11am–10pm, 2026-10-25",
+   "https://foodle.pro/restaurants/santa-clara/hironori-craft-ramen-2 — Mon–Thu 11:00–21:00, Fri–Sun 11:00–22:00 (via search snippet), 2026-10-25"
+  ],
+  "flags": [
+   "Santa Clara is reservations-only for dine-in per their site. OpenTable and HappyCow list slightly different hours."
+  ]
+ },
+ "titos-barrio-chino": {
+  "name": "Titos Barrio Chino",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/barrio-chino-oakland — Barrio Chino, 5333 Adeline St, Oakland: hours and phone, 2026-10-25",
+   "https://oakland.picnicfood.com/s/barrio-chino/5333-adeline-st-oakland/55a88d54-2413-4650-b3a2-aa57af13fe0d — page rendered empty, 2026-10-25"
+  ],
+  "flags": [
+   "Hours from Yelp only, and an Uber Eats listing (via search snippet) showed different weekday pickup windows; treat as tentative.",
+   "Yelp lists it as 'Barrio Chino' (no 'Titos'); same address and Chinese-Latin concept."
+  ]
+ },
+ "slicehouse-brentwood": {
+  "name": "Slice House by Tony Gemignani — Brentwood",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://slicehouse.com/menu — brand menu without prices, 2026-10-25",
+   "https://order.thanx.com/slicehouse — online ordering needs an address to pick a store, 2026-10-25"
+  ],
+  "flags": [
+   "No priced menu reachable: slicehouse.com has no prices, Thanx ordering requires entering an address, and the web search budget ran out before a Brentwood delivery-app store could be found."
+  ]
+ },
+ "baekjeong-san-jose": {
+  "name": "Baekjeong Korean BBQ — San Jose",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.baekjeongkbbq.com/our-menu/ — item names only, no prices, 2026-10-25",
+   "https://www.baekjeongkbbq.com/locations-2/ — San Jose: Sun–Thu 11am–10pm, Fri–Sat 11am–12am; takeout via UberEats, Grubhub, DoorDash, Postmates, 2026-10-25",
+   "https://www.yelp.com/menu/baekjeong-san-jose-santa-clara — Yelp has a priced menu (e.g. Seafood Pancake $27.60), 2026-10-25"
+  ],
+  "flags": [
+   "Their own menu has no prices; the delivery-app store couldn't be located (web search budget ran out). Yelp's priced menu isn't an allowed menu source. Hours on their site if wanted: Sun–Thu 11am–10pm, Fri–Sat 11am–12am.",
+   "Coordinator: {\"set\": {\"hours\": \"Sun–Thu 11am–10pm, Fri–Sat 11am–12am\", \"siteNote\": \"Hours from their own website.\"}}"
+  ]
+ },
+ "cheesecake-lab-sf": {
+  "name": "The Cheesecake Lab SF",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/search?find_desc=The+Cheesecake+Lab&find_loc=23588+Connecticut+St%2C+Hayward%2C+CA — no listing, 2026-10-25"
+  ],
+  "flags": [
+   "Instagram-only dessert maker selling at Japantown Farmers Market; no published prices or own hours found."
+  ]
+ },
+ "soulsip": {
+  "name": "Soulsip",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 35,
+  "sources": [
+   "https://www.doordash.com/store/51904369/ — Soulsip, 2002 Alum Rock Ave, San Jose; full drink menu with prices, date 2026-10-25",
+   "https://www.yelp.com/biz/soulsip-san-jose-3 — confirms address and links the DoorDash store; Yelp hours daily 7am–12am, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "cuppayo-danville": {
+  "name": "Cuppa Yo Danville",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.cuppayo.com/danvilleca — address, phone, hours 'Daily 12pm–9pm', no prices, date 2026-10-25",
+   "https://www.cuppayo.com/faq — no prices, date 2026-10-25",
+   "https://www.yelp.com/biz/cuppa-yo-danville — no menu or delivery store linked, date 2026-10-25"
+  ],
+  "flags": [
+   "No published prices: self-serve froyo sold by weight and no delivery-app store found. Own site lists hours as Daily 12pm–9pm if needed."
+  ]
+ },
+ "bakefections": {
+  "name": "Bakefections",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/bakefections-south-san-francisco — Bakefections, custom cakes, South San Francisco; hours Mon–Fri 8am–5pm, Sat–Sun 8am–2pm, date 2026-10-25",
+   "https://docs.google.com/forms/d/e/1FAIpQLSeFLlcU7-b8bP8UXesXZSa8VgXpgFldKt6AnNX8G4jlteO_fQ/viewform — order form requires Google sign-in; not read, date 2026-10-25"
+  ],
+  "flags": [
+   "Hours from Yelp only (one source).",
+   "Yelp lists phone (650) 201-4052, which differs from BEASTY's (650) 532-0159; same name and city, but confirm it is the same baker.",
+   "No menu: custom cakes, quote-only, no prices published."
+  ]
+ },
+ "dope-pho": {
+  "name": "Dope Pho",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://dopepho.menu11.com/fremont/order — own ordering page: every day 11:00 AM–9:30 PM with break 2:30–4:00 PM, date 2026-10-25",
+   "https://www.ubereats.com/store/dope-pho/dZMgh3VyVr2Ciwm-oRu1Jw — Uber Eats lists daily 9am–11:59pm (delivery hours, different phone +1 510-386-9277), date 2026-10-25"
+  ],
+  "flags": [
+   "Uber Eats and Roadtrippers list much later hours (to midnight); own ordering page may reflect pickup-ordering hours. Used own page."
+  ]
+ },
+ "pizza-casamia": {
+  "name": "Pizza Casamia",
+  "filled": [
+   "hours",
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 53,
+  "sources": [
+   "https://order.online/store/pizza-casamia-san-jose-981762 — full menu with prices and store's actual hours (DoorDash data), date 2026-10-25",
+   "https://www.pizzacasamia.com/ — own site is a JS ordering app needing a store pick; not readable, date 2026-10-25"
+  ],
+  "flags": [
+   "Pizza and flatbread prices are 'from' (smallest size)."
+  ]
+ },
+ "the-breakfast-club-sf": {
+  "name": "The Breakfast Club at Midtown",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.bcmidtown.com/hours-and-online-ordering/ — San Francisco, 1428 Haight Street listed as 'Coming Soon!' with no hours, date 2026-10-25"
+  ],
+  "flags": [
+   "Not open yet: the chain's own site lists the Haight Street location as Coming Soon (other locations run 7am–3pm daily). No hours to add until it opens."
+  ]
+ },
+ "birria-lokaa": {
+  "name": "Birria Lokaa",
+  "filled": [
+   "phone"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/birria-lokaa-concord — 1390 Monument Blvd, Concord; phone (925) 948-6037; hours Wed & Fri 11am–2pm, 5–8pm, Thu 5–9pm, Sun 10:30am–2pm; no menu or ordering link, date 2026-10-25"
+  ],
+  "flags": [
+   "Menu not found: no website, no delivery-app store and no priced menu online (web search budget ran out before a wider search). Phone added from Yelp."
+  ]
+ },
+ "champa-garden": {
+  "name": "Champa Garden",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.champagardensf.com/ — own site: Sun–Thu 11 AM–3 PM, 5–9 PM; Fri–Sat 11 AM–3 PM, 5–9:30 PM; 613 Faxon Ave, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "pattys-diner": {
+  "name": "Patty's Diner",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.toasttab.com/local/order/patty-s-retro-diner-1184-broadway — Toast page, 1184 Broadway Burlingame: Sun 9–8:30, Mon 11:15–8:30, Tue closed, Wed–Sat 9–8:30, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "pink-element-cafe": {
+  "name": "Pink Element Cafe",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://thepinklab.co/pinkelementcafe — 'cafe hours Monday to Friday 7:00AM–8:00pm, weekends 9:00am–7:00pm', San Jose at 269 Bassett St, date 2026-10-25",
+   "https://www.pinkelementcafe.com/ — Square ordering site shows Pink Lab San Jose gym hours (Mon–Fri 6:30am–10:30pm, Sat–Sun 9am–2pm) and next-day pickup 7:00 AM–2:45 PM, date 2026-10-25"
+  ],
+  "flags": [
+   "The Square ordering site shows different (gym/pickup) hours; used the cafe hours stated on the Pink Lab cafe page."
+  ]
+ },
+ "fresh-fuel-juicery": {
+  "name": "Fresh Fuel Juicery",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://order.online/store/fresh-fuel-2548947 — 'The store's actual hours of operation': Mon–Thu & Sun 9 AM–7:30 PM, Fri–Sat 9 AM–11:30 PM; online ordering to 7:10 PM, date 2026-10-25"
+  ],
+  "flags": [
+   "One source only (their order.online page); late Fri–Sat closing is unusual for a juice bar, worth confirming."
+  ]
+ },
+ "pezcow": {
+  "name": "Pezcow",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "http://www.pezcow.com/ — own site lists food-truck dishes (Huachinango, Coctel de Camarón, Tacos Piratas, etc.) with no prices; Mitote truck hours given two ways, date 2026-10-25",
+   "https://www.yelp.com/search?find_desc=Pezcow&find_loc=Santa+Rosa+CA — only the Windsor restaurant is listed, not the Mitote truck, date 2026-10-25"
+  ],
+  "flags": [
+   "No menu: no prices published anywhere found.",
+   "Hours not filled: own site conflicts — one block says Mitote truck 'Wednesday–Sunday, 12–9 pm', the Contact block says 'Thursday–Monday 11am–9pm, Tuesday 4–9pm'."
+  ]
+ },
+ "wasabi-udon-and-katsu-bar": {
+  "name": "Wasabi Udon & Katsu Bar",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://wasabifairfield.com/ — 1500 Oliver Rd #L, Fairfield: Monday~Friday 11am–2:30pm, 4:30–10pm; Saturday 11am–10pm; Sunday 11am–9pm, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "el-sazon": {
+  "name": "El Sazon",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/el-sazon-oakland-oakland — 810 81st Ave: Mon–Fri 11am–4pm, Sat 11am–3pm, Sun closed, date 2026-10-25",
+   "https://elsazonoakland.toast.site/ — own Toast site lists every day 8:00AM–3:59AM, date 2026-10-25",
+   "https://atmosfy.io/listing/581115/california/oakland/el-saz-n-oakland — Mon–Fri 9am–4pm, Sat 9am–5pm, Sun closed (via search snippet), date 2026-10-25"
+  ],
+  "flags": [
+   "Sources disagree: Toast site says daily 8am–3:59am (likely ordering window), Atmosfy says Mon–Fri 9–4, Sat 9–5. Yelp and Atmosfy agree on closed Sunday and 4pm weekday close."
+  ]
+ },
+ "pho-daily": {
+  "name": "Pho Daily",
+  "filled": [
+   "phone"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/pho-daily-san-jose — 1739 Berryessa Rd Ste A, San Jose; phone (669) 267-9999; hours Mon & Wed–Thu & Sun 7am–7pm, Fri–Sat 7am–8pm, Tue closed; no menu or ordering link, date 2026-10-25"
+  ],
+  "flags": [
+   "Menu not found: no website, no delivery-app store and no priced menu linked (web search budget ran out before a wider search). Phone added from Yelp."
+  ]
+ },
+ "slanging-dough-pizza": {
+  "name": "Slanging Dough Pizza",
+  "filled": [
+   "hours",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://slangingdoughpizza.com/find-us — Wed Saratoga Farmers Market 2–6pm (12770 Saratoga Ave), Thu Livermore Downtown Farmers Market 4–8pm (Carnegie Park, 2155 Third St), Sat Willow Glen Farmers Market 9am–1pm, date 2026-10-25",
+   "https://slangingdoughpizza.com/menu — six 12-inch pizzas listed with no prices, date 2026-10-25",
+   "https://www.yelp.com/biz/slanging-dough-livermore — phone (510) 709-9341; lists fixed hours Tue–Sun 11am–8/9/10pm, Mon closed, date 2026-10-25"
+  ],
+  "flags": [
+   "No menu: own menu has no prices.",
+   "Own site shows only farmers-market stops (none at 174 S L St); Yelp shows fixed Tue–Sun hours instead. BEASTY address may need a check."
+  ]
+ },
+ "mini-pirate-donuts": {
+  "name": "Mini Pirate Donuts",
+  "filled": [
+   "email",
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.minipiratedonuts.com/ — pop-up schedule (week of 9/21/26): School St & Harbor, Pittsburg Mon/Wed/Fri 7AM–3:30PM, Tue/Thu 7AM–2:30PM, Sat at Antioch events; contact minipiratedonuts@gmail.com, date 2026-10-25"
+  ],
+  "flags": [
+   "Truck schedule is posted weekly and the one shown is for the week of 9/21/26; may change."
+  ]
+ },
+ "hwanyeong": {
+  "name": "HwanYeong",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 105,
+  "sources": [
+   "https://www.doordash.com/store/35213369/ — Hwan Yeong Korean Kitchen & Boba Tea, 41 Sand Creek Rd C, Brentwood; full menu with prices, date 2026-10-25",
+   "https://www.yelp.com/biz/hwan-yeong-korean-kitchen-and-boba-tea-brentwood — confirms address/phone (925) 420-3818 and links the DoorDash store, date 2026-10-25",
+   "https://www.hwanyeong.co/ — own site returned a Cloudflare block, date 2026-10-25"
+  ],
+  "flags": [
+   "Soft drinks (Coke, Sprite, etc.) collapsed into one line; item codes like A2/HS11 dropped from names."
+  ]
+ },
+ "izumi-revolving-sushi": {
+  "name": "Izumi Revolving Sushi",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/izumi-revolving-sushi-san-jose-2 — 925 Blossom Hill Rd; no website or delivery store linked, date 2026-10-25",
+   "https://www.yelp.com/menu/izumi-revolving-sushi-san-jose-2 — Yelp-hosted menu with ~118 priced items (e.g. Salmon nigiri $5.90, Edamame $3.90), date 2026-10-25"
+  ],
+  "flags": [
+   "Not filled: no own site or delivery-app store found; the only priced menu is Yelp's user-maintained one (marked 'may not be up to date'), which the brief does not allow as a menu source. Leon could approve using it."
+  ]
+ },
+ "timog": {
+  "name": "Timog",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/timog-newark — 39055 Cedar Blvd, Newark: Mon–Tue closed; Wed, Thu, Sun 11–3, 5–8; Fri–Sat 11–3, 5–10, date 2026-10-25",
+   "https://www.timog-us.com/ — Square site, no hours shown, date 2026-10-25"
+  ],
+  "flags": [
+   "Hours from Yelp only (one source)."
+  ]
+ },
+ "sofra-grill": {
+  "name": "Sofra Grill",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/sofra-grill-south-san-francisco — 132 Hazelwood Dr: Mon closed, Tue–Sun 11am–9pm, date 2026-10-25",
+   "https://sofragrills.com/contact/ — address and phone only, no hours, date 2026-10-25"
+  ],
+  "flags": [
+   "Hours from Yelp only (one source)."
+  ]
+ },
+ "devil-and-angel-desserts": {
+  "name": "Devil & Angel Desserts",
+  "filled": [
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 22,
+  "sources": [
+   "https://www.doordash.com/store/24173981/ — 'Devil and Angel Creamery (Concord)', 2025 Diamond Blvd F145; boba, refresher and smoothie menu with prices, date 2026-10-25",
+   "https://www.yelp.com/menu/devil-and-angel-desserts-concord — same drinks listed at higher prices ($8.75/$7.85), marked 'may not be up to date', date 2026-10-25",
+   "https://devilnangel.com/menu — own menu pages are images with no prices, date 2026-10-25"
+  ],
+  "flags": [
+   "Only drinks are priced online; soft serve, taiyaki, shaved ice, corn dogs and croffles have no published prices. Yelp lists the same drinks at higher prices, so counter prices may differ."
+  ]
+ },
+ "heads-and-tails-barbecue": {
+  "name": "Heads & Tails Barbecue",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://headsandtailsbarbecue.com/ — Location and Hours: Sun 10AM–9PM, Mon–Wed 11:30AM–9PM, Thu 11:30AM–10PM, Fri 11:30AM–12AM, Sat 10AM–12AM; kitchen until 9 pm daily, date 2026-10-25"
+  ],
+  "flags": []
+ },
+ "korean-papis-kitchen": {
+  "name": "Korean Papi's Kitchen",
+  "filled": [
+   "phone",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 10,
+  "sources": [
+   "https://www.ubereats.com/store/korean-papis-kitchen/PoV1N4xYSTef3dFDwHmXCQ — Uber Eats store JSON-LD: menu, prices, phone +1 628-284-7343, 2026-10-25",
+   "https://www.koreanpapiskitchen.com/menu — own site menu board image (7 dish names, no prices; pre-orders/catering via form), 2026-10-25"
+  ],
+  "flags": [
+   "Own site says they currently take pre-orders & catering (3–4 weeks ahead) and post truck schedules on IG; Uber Eats store hours: Tue 2:30–8pm, Wed 2–8pm, Thu–Sat 12–8pm, Sun 12–5pm (not filled, hours not in need)."
+  ]
+ },
+ "ocean-subs": {
+  "name": "Ocean Subs",
+  "filled": [
+   "hours",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 8,
+  "sources": [
+   "https://order.toasttab.com/online/ocean-subs-18-ocean-avenue — own Toast page: 'Menu items unavailable', not accepting online orders; ordering hours Tue–Sat 11am–4pm, closed Sun–Mon, 2026-10-25",
+   "https://www.yelp.com/biz/ocean-subs-san-francisco — claimed Yelp listing: hours Tue–Sat 10am–4pm, Sun & Mon closed, 2026-10-25",
+   "findit.city listing (via search) — Tue–Sat 10:00–16:00, closed Sun–Mon, 2026-10-25",
+   "https://www.yelp.com/menu/ocean-subs-san-francisco — Yelp menu: 8 subs with prices (Chips/Drinks sections listed without items), 2026-10-25",
+   "https://www.theinfatuation.com/san-francisco/reviews/ocean-subs — confirms Original, Atomic, Tuna, Veggie subs + build-your-own, 2026-10-25"
+  ],
+  "flags": [
+   "Menu source is Yelp's menu page (not one of the preferred sources) because their Toast menu would not load; review before publishing.",
+   "Toast's online-ordering hours start at 11am vs 10am on Yelp/findit; used the 10am store hours.",
+   "Infatuation mentions a Tuna Sub that is not on the Yelp menu."
+  ]
+ },
+ "dimond-halal-eatery": {
+  "name": "Dimond Halal Eatery",
+  "filled": [
+   "orderUrl",
+   "pricesEstimated",
+   "sections",
+   "siteNote"
+  ],
+  "items": 10,
+  "sources": [
+   "https://www.doordash.com/store/dimond-halal-eatery-oakland-32576649/ — DoorDash store JSON-LD: 10 items with prices, store hours 10am–9:40pm, 2026-10-25",
+   "https://www.ubereats.com/store/dimond-halal-eatery/oaQstIriW762w-rvXb0GjA — Uber Eats: 7 burger/wing items, same prices; hours Sun–Thu 10am–9pm, Fri–Sat 10am–10pm, 2026-10-25",
+   "Google Maps 'Dimond Halal Eatery', 2129 MacArthur Blvd — open, phone (510) 479-3237, updated by business 12 weeks ago, 2026-10-25"
+  ],
+  "flags": [
+   "Same storefront was formerly Mohka Kitchen (Iraqi/Jordanian); reviews mention lamb bamia/shawarma that are not on the current delivery menus."
+  ]
+ },
+ "yume-mori": {
+  "name": "Yume Mori",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/yume-mori-matcha-berkeley — claimed Yelp listing: daily 10:30am–6pm, drink names only (no priced menu), 2026-10-25",
+   "https://www.theinfatuation.com/san-francisco/reviews/yume-mori and KQED matcha guide (via search) — describe drinks/crepes, no price list, 2026-10-25"
+  ],
+  "flags": [
+   "No priced menu found: not on Uber Eats/DoorDash; their Snackpass ordering page sits behind a bot checkpoint; Instagram requires login. Only scattered review prices (e.g. matcha latte $6.80–$6.95), not enough for a menu."
+  ]
+ },
+ "intl-kitchen": {
+  "name": "INTL Kitchen",
+  "filled": [
+   "address",
+   "hours",
+   "orderUrl",
+   "phone",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://intlkitchen.com/ — own site (Toast-built): 'All hours' Sun–Sat 11:00AM–11:00PM, (408) 248-8868, 344 South Main Street, Milpitas, CA 95035, 2026-10-25",
+   "frankiapp.com listing (via search) — older/unclaimed hours Mon–Thu 11am–9:30pm, Fri–Sun 11am–10pm, 2026-10-25"
+  ],
+  "flags": [
+   "BEASTY had no address; added the one from their own site. A third-party listing shows shorter hours; used their own site's."
+  ]
+ },
+ "house-of-raha": {
+  "name": "House of Raha",
+  "filled": [
+   "hours",
+   "phone",
+   "sections",
+   "siteNote"
+  ],
+  "items": 48,
+  "sources": [
+   "https://www.opentable.com/r/house-of-raha-fremont — OpenTable: 4137 Bay St, Fremont; hours; (510) 771-9747; menu 'Powered by Toast', last updated 9/13/2026, 2026-10-25"
+  ],
+  "flags": [
+   "Hours from OpenTable only (one source); web search budget ran out before a second check.",
+   "OpenTable labels the menu 'Old Menu' though dated 9/13/2026; prices may have moved.",
+   "Their website on OpenTable is instagram.com/houseofrahaofficial."
+  ]
+ },
+ "crushed-lemonade": {
+  "name": "Crushed Handcrafted Lemonade",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.instagram.com/crushed_bayarea/ — login wall, could not read, 2026-10-25"
+  ],
+  "flags": [
+   "No website or published price list; pop-up locations change daily and are posted on Instagram (login required). Nothing reliable to fill."
+  ]
+ },
+ "bloomzephyr": {
+  "name": "BloomZephyr",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.instagram.com/bloom_zephyr/ — login wall, could not read, 2026-10-25"
+  ],
+  "flags": [
+   "Cottage-food marshmallow bouquets taken by DM; no published prices or hours found. Not a restaurant."
+  ]
+ },
+ "affinage-boards": {
+  "name": "Affinage Boards",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/affinage-boards-south-san-francisco — claimed Yelp listing: Mon–Fri 10am–5pm, Sat 8am–3pm, Sun 9am–2pm, 2026-10-25",
+   "https://www.affinageboards.com/ — own site: 'call 650-741-1087 to place your order before 2PM' for same-day delivery; no hours posted, 2026-10-25"
+  ],
+  "flags": [
+   "Hours from one source (Yelp). Delivery-only business (no storefront); hours are when they take orders/deliver."
+  ]
+ },
+ "fruits-byheart": {
+  "name": "Fruits Byheart",
+  "filled": [],
+  "items": 0,
+  "sources": [
+   "https://www.instagram.com/fruitsbyheart/ — login wall, could not read, 2026-10-25"
+  ],
+  "flags": [
+   "Event fruit displays by DM enquiry; fruitsbyheart.com does not resolve and no prices or hours are published. Not a restaurant."
+  ]
+ },
+ "kung-fu-mala": {
+  "name": "Kung Fu Mala",
+  "filled": [
+   "hours",
+   "siteNote"
+  ],
+  "items": 0,
+  "sources": [
+   "https://www.yelp.com/biz/kung-fu-mala-oakland — claimed Yelp: Mon–Sun 11:30 AM–12:00 AM, 4419 Telegraph Ave, (510) 817-4665, 2026-10-25",
+   "Google Maps 'KungFu Mala 쿵푸마라 功夫麻辣', 4419 Telegraph Ave — Sun–Wed shown 11:30 AM–12 AM, 'Open · Closes 12 AM', 2026-10-25"
+  ],
+  "flags": [
+   "An older Atmosfy listing shows Pixiu Mala Hong Tang at the same address with shorter hours; that appears to be a previous business."
+  ]
+ },
+ "tue-twaydabae": {
+  "name": "Tuệ",
+  "filled": [],
+  "items": 0,
+  "sources": [],
+  "flags": [
+   "Home cook / recipe creator on Instagram (@twaydabae); no shop, menu, prices or hours exist to find. Nothing to fill."
+  ]
+ }
+}

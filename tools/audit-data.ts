@@ -34,8 +34,10 @@ import {
   ONLINE_CATEGORIES,
   INDIVIDUAL_SPOTS, BOUTIQUE_SPOTS, EATS_CATEGORIES, SWEETS_CATEGORIES,
 } from '../src/data/slots'
-import { BEASTY_EATS_ROSTER, BEASTY_SERVICES_ROSTER } from '../src/data/roster'
+import { BEASTY_EATS_ROSTER, BEASTY_SERVICES_ROSTER, ROSTER_SEED } from '../src/data/roster'
 import { OTHER_REVIEWS } from '../src/data/foodies'
+import { ONLINE_FILLS } from '../src/data/onlineFills'
+import { LOCAL_SEED } from '../src/data/localBrands'
 import { ALL_APPS, DOCK_SETS, APP_GROUPS } from '../src/apps/registry'
 
 type Finding = { level: 'ERROR' | 'WARN' | 'NOTE'; what: string }
@@ -363,6 +365,15 @@ for (const b of BRANDS) {
     films.set(r.brand, (films.get(r.brand) ?? 0) + 1)
   }
   for (const [id, n] of films) if (n > 3) err(`${brandById(id)?.name ?? id}: ${n} films — Glenn's limit is 3 a page`)
+}
+
+/* A FILL FROM A SEARCH LANDS ON A REAL PAGE (onlineFills.ts), and an estimated menu says so. */
+{
+  const slugs = new Set([...ROSTER_SEED, ...LOCAL_SEED].map((s) => s.slug))
+  for (const [slug, f] of Object.entries(ONLINE_FILLS)) {
+    if (!slugs.has(slug)) err(`ONLINE_FILLS ${slug}: no seed has this slug`)
+    if (f.hours && f.hours.length >= 120) err(`ONLINE_FILLS ${slug}: hours line is ${f.hours.length} characters`)
+  }
 }
 
 for (const f of out) console.log(`${f.level.padEnd(5)} ${f.what}`)

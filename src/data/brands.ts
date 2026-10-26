@@ -3,6 +3,7 @@ import { LOCAL_SEED } from './localBrands'
 import type { BrandPanel } from './localBrands'
 import { ROSTER_SEED } from './roster'
 import { FOODIE_SEED } from './foodies'
+import { withFill } from './onlineFills'
 
 /**
  * Catalogue ported from the operator's existing hub at goodneighborbuilder.com.
@@ -1262,8 +1263,8 @@ export const BRANDS: Brand[] = [
     differs from a researched one by `rosterOnly` and by nothing else.
   */
   ...[
-    ...ROSTER_SEED.map((s) => [s, true] as const),
-    ...LOCAL_SEED.map((s) => [s, false] as const),
+    ...ROSTER_SEED.map((s) => [withFill(s), true] as const),
+    ...LOCAL_SEED.map((s) => [withFill(s), false] as const),
     /* BEASTY • Foodies, the reviewers' own pages (foodies.ts). */
     ...FOODIE_SEED.map((s) => [s, false] as const),
   ].map(([s, rosterOnly]) => ({
@@ -1304,7 +1305,7 @@ export const BRANDS: Brand[] = [
  * and (before the server caught async errors) took the service down. A brand
  * and its vendor are one business, so one list makes both.
  */
-export const VENDORS: Vendor[] = [...ROSTER_SEED, ...LOCAL_SEED, ...SEED].map((s) => ({
+export const VENDORS: Vendor[] = [...ROSTER_SEED.map(withFill), ...LOCAL_SEED.map(withFill), ...SEED].map((s) => ({
   id: `v_${s.slug.replace(/-/g, '')}`,
   name: s.name,
   stripeAccountId: null,
