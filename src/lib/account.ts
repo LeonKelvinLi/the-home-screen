@@ -45,6 +45,12 @@ export interface Account {
   rewards: Rewards
   /** Whether the server has a Payment Link to send anybody to. */
   paymentsConfigured: boolean
+  /** The $60-a-month recruiter upgrade: none, pending (chosen, not paid), active, paused or cancelled. */
+  recruiterStatus?: 'none' | 'pending' | 'active' | 'paused' | 'cancelled'
+  /** Whether the recruiter checkout exists yet. */
+  recruiterConfigured?: boolean
+  /** Stripe's page for switching passes, cancelling or changing the card. Null until configured. */
+  manageLink?: string | null
   /** month or year — how the chosen tier is billed. Month until a yearly price exists. */
   tierInterval: 'month' | 'year'
   /** How often the pass on the member card rotates, so the card can count down. */
@@ -335,6 +341,9 @@ export interface TierResult {
   account: Account
   paymentLink: string | null
   paymentsConfigured: boolean
+  /** Set when the member already pays for the other pass: the switch happens on Stripe's page. */
+  manageLink?: string | null
+  switching?: boolean
 }
 
 /**
@@ -358,7 +367,30 @@ export async function chooseTier(
     })
     if (!r.ok) return drainNull(r)
     const b = await r.json()
-    return { account: b as Account, paymentLink: b.paymentLink, paymentsConfigured: b.paymentsConfigured }
+    return { account: b as Account, paymentLink: b.paymentLink ?? null, paymentsConfigured: b.paymentsConfigured, manageLink: b.manageLink, switching: !!b.switching }
+  } catch {
+    return null
+  }
+}
+
+/** Ask for the recruiter checkout. The account comes back pending; only Stripe makes it active. */
+export async function becomeRecruiter(): Promise<{ account: Account; paymentLink: string | null } | null> {
+  try {
+    const r = await fetch('/api/members/recruiter', { method: 'POST', headers: json, credentials: 'same-origin', body: '{}' })
+    if (!r.ok) return drainNull(r)
+    const b = await r.json()
+    return { account: b as Account, paymentLink: b.paymentLink ?? null }
+  } catch {
+    return null
+  }
+}
+
+/** Pause or resume recruiting. Billing is untouched: that is Stripe's manage page. */
+export async function setRecruiterPaused(paused: boolean): Promise<Account | null> {
+  try {
+    const r = await fetch('/api/members/recruiter/pause', { method: 'POST', headers: json, credentials: 'same-origin', body: JSON.stringify({ paused }) })
+    if (!r.ok) return drainNull(r)
+    return (await r.json()) as Account
   } catch {
     return null
   }

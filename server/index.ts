@@ -2092,6 +2092,8 @@ interface MemberRow {
   tier_status: string
   tier_since: number | null
   tier_interval: string
+  recruiter_status?: string
+  stripe_customer?: string | null
   city?: string | null
   state?: string | null
   created_at: number
@@ -2190,12 +2192,20 @@ function paymentLinkFor(
   /* One link per tier per interval. The yearly ones exist only once a tier
      carries a yearly price and tools/stripe-setup.mjs has made them. */
   const key =
-    tierId === 'pass' ? 'STRIPE_PAYMENT_LINK_PASS' : tierId === 'diamond' ? 'STRIPE_PAYMENT_LINK_DIAMOND' : null
+    tierId === 'pass'
+      ? 'STRIPE_PAYMENT_LINK_PASS'
+      : tierId === 'diamond'
+        ? 'STRIPE_PAYMENT_LINK_DIAMOND'
+        : tierId === 'recruiter'
+          ? 'STRIPE_PAYMENT_LINK_RECRUITER'
+          : null
   const base = key ? process.env[interval === 'year' ? `${key}_YEARLY` : key] : undefined
   if (!base) return null
   try {
     const u = new URL(base)
-    u.searchParams.set('client_reference_id', member.id)
+    /* The recruiter upgrade is its own subscription, so its checkout says so in the one field
+       Stripe hands back: `rc_` + the member id. The webhook reads the prefix. */
+    u.searchParams.set('client_reference_id', tierId === 'recruiter' ? `${RECRUITER_REF}${member.id}` : member.id)
     /*
       ONLY WHEN THERE IS ONE. Since sign-in moved to SMS a member can have no
       email at all, and `searchParams.set` would have written the string "null"
@@ -2217,6 +2227,48 @@ function paymentLinkFor(
 /** Whether a checkout can be opened at all. Both tiers need their own link. */
 const paymentsLive = () =>
   !!process.env.STRIPE_PAYMENT_LINK_PASS || !!process.env.STRIPE_PAYMENT_LINK_DIAMOND
+
+/** The prefix on a recruiter checkout's client_reference_id. */
+const RECRUITER_REF = 'rc_'
+
+/**
+ * WHERE A PAYING MEMBER MANAGES WHAT THEY PAY FOR: Stripe's customer portal, through its no-code
+ * login link (STRIPE_PORTAL_URL). They prove their email to Stripe there, then switch between the
+ * passes (prorated), cancel at the end of the period, or change their card. Prefilling the email
+ * they already proved here saves a step; the portal still sends Stripe's own code.
+ */
+function manageLinkFor(member: { email: string | null }): string | null {
+  const base = process.env.STRIPE_PORTAL_URL
+  if (!base) return null
+  try {
+    const u = new URL(base)
+    if (member.email) u.searchParams.set('prefilled_email', member.email)
+    return u.toString()
+  } catch {
+    return null
+  }
+}
+
+/** A Stripe price id to the tier it pays for, from the environment (not secrets). */
+function tierOfPrice(price: string | undefined): 'pass' | 'diamond' | 'recruiter' | null {
+  if (!price) return null
+  if (price === process.env.STRIPE_PRICE_PASS) return 'pass'
+  if (price === process.env.STRIPE_PRICE_DIAMOND) return 'diamond'
+  if (price === process.env.STRIPE_PRICE_RECRUITER) return 'recruiter'
+  return null
+}
+
+/** The price a subscription or invoice event is for, wherever that API version keeps it. */
+function priceOfEvent(obj: Record<string, unknown>): string | undefined {
+  const pick = (v: unknown): string | undefined => (typeof v === 'string' ? v : undefined)
+  const items = (obj.items as { data?: { price?: { id?: unknown } }[] } | undefined)?.data
+  const lines = (obj.lines as { data?: { price?: { id?: unknown } }[] } | undefined)?.data
+  return (
+    pick(items?.[0]?.price?.id) ??
+    pick((obj.plan as { id?: unknown } | undefined)?.id) ??
+    pick(lines?.[0]?.price?.id)
+  )
+}
 
 /* ---------- the pass: a QR that changes every minute ---------- */
 
@@ -2320,6 +2372,10 @@ async function memberPayload(m: MemberRow) {
     tier: m.tier,
     tierStatus: m.tier_status,
     tierInterval: m.tier_interval === 'year' ? 'year' : 'month',
+    /* Recruiter status, and whether its checkout and the manage page exist yet. */
+    recruiterStatus: m.recruiter_status ?? 'none',
+    recruiterConfigured: !!process.env.STRIPE_PAYMENT_LINK_RECRUITER,
+    manageLink: manageLinkFor(m),
     referrals,
     raffleTickets: { total: tickets.total ?? 0, unused: tickets.unused ?? 0 },
     rewards,
@@ -3254,6 +3310,20 @@ app.post('/api/members/tier', rateLimiter(12, 6), async (req, res) => {
     return res.status(400).json({ error: `${tier.name} has no yearly price yet.` })
   }
 
+  /*
+    A SWITCH IS NOT A SECOND SUBSCRIPTION. A member already paying for one pass who taps the other
+    used to be sent to a fresh checkout — a second subscription on top of the first. While a pass
+    is active the switch happens in Stripe's portal, which moves the one subscription (prorated),
+    and the webhook updates the tier when Stripe confirms it. Nothing changes here until then.
+  */
+  if (m.tier_status === 'active' && m.tier !== tier.id && m.tier !== 'free') {
+    const manageLink = manageLinkFor(m)
+    if (manageLink) {
+      await track('membership_switch_opened', { memberId: m.id, metadata: { from: m.tier, to: tier.id } })
+      return res.json({ ...(await memberPayload(m)), manageLink, switching: true })
+    }
+  }
+
   await db
     .prepare('UPDATE members SET tier = ?, tier_status = ?, tier_since = ?, tier_interval = ? WHERE id = ?')
     .run(tier.id, 'pending', Date.now(), interval, m.id)
@@ -3264,6 +3334,43 @@ app.post('/api/members/tier', rateLimiter(12, 6), async (req, res) => {
     ...(await memberPayload(row)),
     paymentLink: paymentLinkFor(tier.id, interval, { id: m.id, email: row.email }),
   })
+})
+
+/**
+ * BECOME A RECRUITER: the $60-a-month upgrade (Glenn, 2026-10-26). Records the wish as pending and
+ * hands back its checkout; only the webhook makes it active. Already active or paused: nothing to buy.
+ */
+app.post('/api/members/recruiter', rateLimiter(12, 6), async (req, res) => {
+  const m = await memberFromRequest(req)
+  if (!m) return res.status(401).json({ error: 'Not signed in.' })
+  const status = m.recruiter_status ?? 'none'
+  if (status === 'active' || status === 'paused') {
+    return res.json({ ...(await memberPayload(m)), paymentLink: null })
+  }
+  const paymentLink = paymentLinkFor('recruiter', 'month', { id: m.id, email: m.email })
+  if (!paymentLink) return res.status(503).json({ error: 'Recruiter sign-up is not open yet.' })
+  await db.prepare("UPDATE members SET recruiter_status = 'pending' WHERE id = ?").run(m.id)
+  await track('recruiter_chosen', { memberId: m.id })
+  const row = (await db.prepare('SELECT * FROM members WHERE id = ?').get(m.id)) as MemberRow
+  res.json({ ...(await memberPayload(row)), paymentLink })
+})
+
+/**
+ * PAUSE OR RESUME RECRUITING ("they can cancel any time or pause their recruitment status").
+ * A paused recruiter's new referrals are not credited; what they already earned stays. Billing is
+ * Stripe's: cancelling the $60 is in the manage page, and this says so on the screen.
+ */
+app.post('/api/members/recruiter/pause', rateLimiter(20, 10), async (req, res) => {
+  const m = await memberFromRequest(req)
+  if (!m) return res.status(401).json({ error: 'Not signed in.' })
+  if (!isObj(req.body) || typeof req.body.paused !== 'boolean') return res.status(400).json({ error: 'paused must be true or false.' })
+  const status = m.recruiter_status ?? 'none'
+  if (status !== 'active' && status !== 'paused') return res.status(409).json({ error: 'Only an active recruiter can pause.' })
+  const next = req.body.paused ? 'paused' : 'active'
+  await db.prepare('UPDATE members SET recruiter_status = ? WHERE id = ?').run(next, m.id)
+  await track(req.body.paused ? 'recruiter_paused' : 'recruiter_resumed', { memberId: m.id })
+  const row = (await db.prepare('SELECT * FROM members WHERE id = ?').get(m.id)) as MemberRow
+  res.json(await memberPayload(row))
 })
 
 
@@ -3505,7 +3612,9 @@ if (process.env.STRIPE_WEBHOOK_SECRET) {
       try {
         const { default: Stripe } = await import('stripe')
         /* Never used to call Stripe. See the note above the mount. */
-        const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? 'sk_unused_webhook_verification_only')
+        /* `||`, not `??`: an empty STRIPE_SECRET_KEY in the environment made the SDK throw and every
+           webhook bounce as a bad signature. */
+        const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_unused_webhook_verification_only')
         event = stripe.webhooks.constructEvent(
           req.body as Buffer,
           req.get('stripe-signature') ?? '',
@@ -3526,7 +3635,16 @@ if (process.env.STRIPE_WEBHOOK_SECRET) {
         membership that stays 'active' after the money stops is the app telling
         an affiliate to honour an offer nobody is paying for.
       */
-      if (event.type === 'checkout.session.completed' && memberId) {
+      if (event.type === 'checkout.session.completed' && memberId.startsWith(RECRUITER_REF)) {
+        /* The recruiter upgrade: its own subscription and customer (see /api/members/recruiter). */
+        const id = memberId.slice(RECRUITER_REF.length)
+        const customer = typeof obj.customer === 'string' ? obj.customer : null
+        await db.prepare(
+          "UPDATE members SET recruiter_status = 'active', recruiter_since = ?, recruiter_customer = COALESCE(?, recruiter_customer) WHERE id = ?",
+        ).run(Date.now(), customer, id)
+        await track('recruiter_activated', { memberId: id, entityType: 'stripe_event', entityId: String(event.id ?? ''), source: 'server' })
+        console.log('recruiter active:', id)
+      } else if (event.type === 'checkout.session.completed' && memberId) {
         /*
           THE CUSTOMER ID IS STORED HERE OR THE LAPSE PATH IS DEAD. Subscription
           events carry no client_reference_id — that belongs to the checkout
@@ -3544,24 +3662,49 @@ if (process.env.STRIPE_WEBHOOK_SECRET) {
         console.log('membership active:', memberId)
       } else if (
         event.type === 'customer.subscription.deleted' ||
+        event.type === 'customer.subscription.updated' ||
         event.type === 'invoice.payment_failed'
       ) {
         /*
           These events carry no client_reference_id — it belongs to the checkout
           session, not the subscription. The customer id is the durable link, so
-          it is stored on activation and matched here.
+          it is stored on activation and matched here. The PRICE says which
+          subscription it is: a pass or the recruiter upgrade, so cancelling one
+          never stops the other even if Stripe kept one customer for both.
         */
         const customer = typeof obj.customer === 'string' ? obj.customer : ''
-        if (customer) {
+        const kind = tierOfPrice(priceOfEvent(obj))
+        const subStatus = typeof obj.status === 'string' ? obj.status : ''
+        const stopping =
+          event.type === 'customer.subscription.deleted' ||
+          event.type === 'invoice.payment_failed' ||
+          (event.type === 'customer.subscription.updated' && ['canceled', 'unpaid', 'incomplete_expired'].includes(subStatus))
+        if (customer && kind === 'recruiter') {
+          if (stopping) {
+            await db.prepare("UPDATE members SET recruiter_status = 'cancelled' WHERE recruiter_customer = ? AND recruiter_status IN ('active','paused')").run(customer)
+            console.log('recruiter stopped:', customer)
+          }
+        } else if (customer && event.type === 'customer.subscription.updated' && !stopping) {
+          /* A switch made in the portal: the one subscription now pays for the other pass. */
+          if (kind === 'pass' || kind === 'diamond') {
+            const moved = await db
+              .prepare("SELECT id, tier FROM members WHERE stripe_customer = ? AND tier_status = 'active'")
+              .all<{ id: string; tier: string }>(customer)
+            await db.prepare("UPDATE members SET tier = ? WHERE stripe_customer = ? AND tier_status = 'active'").run(kind, customer)
+            for (const m of moved) {
+              if (m.tier !== kind) await track('membership_switched', { memberId: m.id, entityType: 'stripe_event', entityId: String(event.id ?? ''), source: 'server', metadata: { from: m.tier, to: kind } })
+            }
+          }
+        } else if (customer && stopping) {
           /* Only a membership that was running can stop: a second failed
              invoice on an already-lapsed one is not a second lapse. */
-          const stopping = await db
+          const stoppingRows = await db
             .prepare("SELECT id FROM members WHERE stripe_customer = ? AND tier_status = 'active'")
             .all<{ id: string }>(customer)
           await db.prepare("UPDATE members SET tier_status = 'lapsed' WHERE stripe_customer = ?").run(
             customer,
           )
-          for (const m of stopping) {
+          for (const m of stoppingRows) {
             await track('membership_lapsed', { memberId: m.id, entityType: 'stripe_event', entityId: String(event.id ?? ''), source: 'server', metadata: { why: event.type === 'invoice.payment_failed' ? 'payment_failed' : 'cancelled' } })
           }
           console.log('membership lapsed:', customer)

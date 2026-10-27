@@ -598,6 +598,14 @@ ON CONFLICT DO NOTHING;
    fields, the referring host, the landing path. Null for everyone who signed
    up before this was kept, which the screen shows as "Unknown". */
 ALTER TABLE members ADD COLUMN IF NOT EXISTS signup_attribution JSONB;
+
+/* THE RECRUITER UPGRADE (Glenn, 2026-10-26: "the user would pay an additional $60 each month to
+   become a recruiter … they can cancel any time or pause their recruitment status"). Its own
+   Stripe subscription, so its own customer: a pass and the upgrade are paid and cancelled apart.
+   none | pending | active | paused | cancelled. */
+ALTER TABLE members ADD COLUMN IF NOT EXISTS recruiter_status TEXT NOT NULL DEFAULT 'none';
+ALTER TABLE members ADD COLUMN IF NOT EXISTS recruiter_since BIGINT;
+ALTER TABLE members ADD COLUMN IF NOT EXISTS recruiter_customer TEXT;
 ALTER TABLE login_codes ADD COLUMN IF NOT EXISTS pending_attribution JSONB;
 CREATE INDEX IF NOT EXISTS idx_members_created ON members(created_at);
 

@@ -1,5 +1,28 @@
 # Stripe: what is built, and what only Glenn can do
 
+## Live, 26 October 2026
+
+Leon: "done stripe is set create all and make membership work". Built in Glenn's live Stripe account **Beastyh2oco** (`acct_1LIyv8BsUW5lMOxS`, public name BEASTY H2O Company), driven in Chrome; none of it needed a secret key.
+
+| | Product · price | Payment link |
+|---|---|---|
+| BIGGIE PASS, $29.99/month (`tier_id=pass`) | `prod_VVzdAtvKPT4O56` · `price_1UUxefBsUW5lMOxSW11iZqtY` | `https://buy.stripe.com/28EeVc63E1XT7yV8lQbsc00` |
+| BEASTY PASS, $39.99/month (`tier_id=diamond`) | `prod_VVzeq9js2r1rRf` · `price_1UUxfbBsUW5lMOxSSUjMBcSW` | `https://buy.stripe.com/dRmeVc2RsgSN3iF7hMbsc01` |
+| BEASTY Recruiter, $60/month (`tier_id=recruiter`) | `prod_VVzfGLUnoEAZNG` · `price_1UUxfwBsUW5lMOxS4gf63veg` | `https://buy.stripe.com/fZu00i9fQcCxdXj8lQbsc02` |
+
+Every link allows promotion codes and returns to `https://beastypages.com/?joined=1` (the recruiter link to `?recruiter=1`).
+
+- **Customer portal** (`bpc_1UUxk6BsUW5lMOxSyedou8N1`), login link `https://billing.stripe.com/p/login/28EeVc63E1XT7yV8lQbsc00`: cancel at the end of the period (with a reason), update the card, switch between BIGGIE PASS and BEASTY PASS with proration, return to beastypages.com. It is account-wide, so Glenn's water-business customers could also use it to manage their subscriptions.
+- **Webhook** `beastypages-memberships` (`we_1UUxmiBsUW5lMOxS2wGdyBVI`) → `https://beastypages.com/api/stripe/webhook`: `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_failed`.
+- **Render** (`the-home-screen`) needs `STRIPE_PAYMENT_LINK_PASS`, `STRIPE_PAYMENT_LINK_DIAMOND`, `STRIPE_PAYMENT_LINK_RECRUITER`, `STRIPE_PORTAL_URL`, `STRIPE_PRICE_PASS`, `STRIPE_PRICE_DIAMOND`, `STRIPE_PRICE_RECRUITER` (none secret) and **`STRIPE_WEBHOOK_SECRET`, which only a person copies** from the webhook's "Signing secret" (Reveal) into Render. Without it the site cannot mark anyone paid.
+
+What the app does with them (`tools/audit-membership-manage.mjs`, local, no key needed):
+- A member paying for one pass who taps the other is sent to the portal to switch, never to a second checkout; `customer.subscription.updated` moves their tier.
+- The recruiter upgrade is its own subscription: `client_reference_id=rc_<member>`, pending until paid, Pause/Resume on the Members page (new referrals stop counting; the $60 continues until cancelled in the portal), and its cancellation never touches the pass, nor the pass's the upgrade.
+- An empty `STRIPE_SECRET_KEY` in the environment used to make every webhook fail; fixed.
+
+The test-mode objects below (the August account) are history.
+
 **The account cannot take money yet, and no code change will fix that.**
 `acct_1U9vyKLnwdL8dIyO`, display name BEASTY, US/USD. The API reports
 `charges_enabled: false`, `payouts_enabled: false`, `details_submitted: false`

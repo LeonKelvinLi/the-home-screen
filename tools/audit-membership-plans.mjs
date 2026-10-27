@@ -97,7 +97,7 @@ await p.waitForFunction(() => {
 }, null, { timeout: 15000, polling: 250 }).catch(() => {})
 
 const shape = await p.evaluate(() => {
-  const plans = [...document.querySelectorAll('.members-plan')]
+  const plans = [...document.querySelectorAll('.members-plans .members-plan')]
   const scroller = document.querySelector('.members')?.parentElement ?? document.scrollingElement
   return {
     plans: plans.length,
@@ -153,13 +153,13 @@ const opened = await p.evaluate(() => ({
   bodies: document.querySelectorAll('.members-perk-body').length,
   expanded: [...document.querySelectorAll('.members-perk-head')].filter((h) => h.getAttribute('aria-expanded') === 'true').length,
   text: document.querySelector('.members-perk-body')?.textContent?.trim() ?? null,
-  onSecondCard: [...document.querySelectorAll('.members-plan')][1]?.querySelectorAll('.members-perk-body').length ?? -1,
+  onSecondCard: [...document.querySelectorAll('.members-plans .members-plan')][1]?.querySelectorAll('.members-perk-body').length ?? -1,
 }))
 console.log('after one tap :', JSON.stringify({ ...opened, text: (opened.text ?? '').slice(0, 48) + '…' }))
 
 /* Two rows at once — somebody comparing the cards reads across them, so
    opening the second must not shut the first. */
-await p.evaluate(() => { const h = [...document.querySelectorAll('.members-plan')][1]?.querySelector('.members-perk-head'); h?.click() })
+await p.evaluate(() => { const h = [...document.querySelectorAll('.members-plans .members-plan')][1]?.querySelector('.members-perk-head'); h?.click() })
 await p.waitForTimeout(250)
 const both = await p.evaluate(() => document.querySelectorAll('.members-perk-body').length)
 console.log('both cards    :', both + ' open')
@@ -211,7 +211,7 @@ if (bad.length) fails.push('failed requests: ' + [...new Set(bad)].join(', '))
   MAKE $ page ... when they press TAP HERE?").
 */
 const earn = await p.evaluate(async () => {
-  const card = [...document.querySelectorAll('.members-plan')].find((c) => /BEASTY\s*PASS/.test(c.querySelector('.members-plan-name')?.textContent || ''))
+  const card = [...document.querySelectorAll('.members-plans .members-plan')].find((c) => /BEASTY\s*PASS/.test(c.querySelector('.members-plan-name')?.textContent || ''))
   const head = [...(card?.querySelectorAll('.members-perk-head') ?? [])].find((h) => /Eligible to earn money/.test(h.textContent || ''))
   head?.click()
   await new Promise((r) => setTimeout(r, 250))
@@ -224,7 +224,7 @@ if (earn.text !== 'TAP HERE' || earn.href !== '/money') fails.push(`TAP HERE sho
 
 /* His markup of 2026-09-24: the row in yellow capitals, TAP HERE yellow. */
 const look = await p.evaluate(() => {
-  const card = [...document.querySelectorAll('.members-plan')].find((c) => /BEASTY\s*PASS/.test(c.querySelector('.members-plan-name')?.textContent || ''))
+  const card = [...document.querySelectorAll('.members-plans .members-plan')].find((c) => /BEASTY\s*PASS/.test(c.querySelector('.members-plan-name')?.textContent || ''))
   const label = [...(card?.querySelectorAll('.members-perk-label') ?? [])].find((l) => /Eligible to earn money/i.test(l.textContent || ''))
   const a = card?.querySelector('.members-perk-link')
   const cs = label && getComputedStyle(label)

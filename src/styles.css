@@ -10394,6 +10394,19 @@ textarea {
 
 .members-signedout { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
 
+
+/* The recruiter upgrade sits under the two passes, as its own card. */
+.members-recruiter { margin-top: 16px; }
+.members-manage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
 /*
   The code box. Wide-spaced and centred, because six digits copied off an email
   get checked digit by digit — and 22px keeps it well clear of the 16px floor
@@ -10552,6 +10565,16 @@ textarea {
 .members-pending.is-active {
   color: #0b5c2e;
   font-weight: 700;
+}
+/* On the dark BEASTY PASS card the light-yellow note and dark green text both vanished. */
+.members-plan.is-best .members-pending {
+  background: rgba(246, 216, 0, 0.14);
+  color: #f6d800;
+}
+.members-plan.is-best .members-pending.is-active { color: #7ee2a8; }
+.members-plan.is-best .members-manage {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
 }
 .members-pending a {
   color: inherit;

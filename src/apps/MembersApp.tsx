@@ -4,7 +4,7 @@ import { AppChrome } from './AppChrome'
 import { ShareMark } from './dialer/glyphs'
 import { SHARE_MEMBERS, shareOrCopy, shareUrl } from '../lib/share'
 import { useGate } from '../lib/gate'
-import { chooseTier } from '../lib/account'
+import { becomeRecruiter, chooseTier, setRecruiterPaused } from '../lib/account'
 import {
   MEMBERSHIP,
   TIERS,
@@ -369,6 +369,8 @@ export function MembersApp({ api }: { api: ShellApi }) {
           referrals is 10 tickets. Save them and enter any monthly raffle.
         </p>
 
+        <RecruiterCard />
+
         {/*
           Count the businesses that have AGREED an offer, not the ones listed.
 
@@ -546,6 +548,8 @@ function ChooseTier({
   const pending = mine && account.tierStatus === 'pending'
   const active = mine && account.tierStatus === 'active'
   const lapsed = mine && account.tierStatus === 'lapsed'
+  /* Paying for the OTHER pass: this button switches, on Stripe's page, rather than buying twice. */
+  const switching = !mine && account.tierStatus === 'active' && account.tier !== 'free'
 
   async function choose() {
     if (busy) return
@@ -557,6 +561,15 @@ function ChooseTier({
       return
     }
     setAccount(r.account)
+    if (r.switching && r.manageLink) {
+      const w = window.open(r.manageLink, '_blank', 'noopener')
+      setLink(w ? null : r.manageLink)
+      setNote(
+        `Stripe\u2019s page is open in another tab. Sign in with your email, choose \u201cUpdate subscription\u201d and pick ${name}. ` +
+          'You only pay the difference for the rest of this month. This page changes once Stripe confirms it.',
+      )
+      return
+    }
     if (r.paymentLink) {
       /*
         Their own tab, and the app keeps the session they just proved.
@@ -584,11 +597,13 @@ function ChooseTier({
 
   const label = active
     ? `${name} active`
-    : lapsed
-      ? `Restart ${name}`
-      : mine
-        ? `${name} chosen`
-        : `Choose ${name}`
+    : switching
+      ? `Switch to ${name}`
+      : lapsed
+        ? `Restart ${name}`
+        : pending
+          ? `Finish checkout for ${name}`
+          : `Choose ${name}`
 
   return (
     <>
@@ -605,8 +620,12 @@ function ChooseTier({
         "chosen, not yet paid" — including a membership Stripe had confirmed,
         which told a paying member their payment had not landed.
       */}
-      {active && !note && (
-        <p className="members-pending is-active">Paid and active. Thank you.</p>
+      {active && !note && <p className="members-pending is-active">Paid and active. Thank you.</p>}
+      {/* One plain button for everything Stripe holds: the other pass, cancelling, the card. */}
+      {active && account.manageLink && (
+        <a className="btn-secondary members-manage" href={account.manageLink} target="_blank" rel="noopener noreferrer">
+          Change pass or cancel
+        </a>
       )}
       {lapsed && !note && (
         <p className="members-pending">
@@ -625,6 +644,112 @@ function ChooseTier({
           the one thing a popup blocker cannot stop. */}
       {link && (
         <p className="members-pending">
+          Your browser blocked the new tab.{' '}
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            {switching ? 'Open Stripe' : 'Open checkout'}
+          </a>
+          .
+        </p>
+      )}
+    </>
+  )
+}
+
+/**
+ * THE RECRUITER UPGRADE, Glenn's of 2026-10-26: "$60 each month to become a recruiter … they can
+ * cancel any time or pause their recruitment status. We also have to create that upgrade and cancel
+ * membership button." One card, one obvious button per state, and the money said plainly: pausing
+ * stops new referrals counting; only cancelling on Stripe's page stops the $60.
+ */
+function RecruiterCard() {
+  const { account, setAccount } = useGate()
+  const [busy, setBusy] = useState(false)
+  const [note, setNote] = useState<string | null>(null)
+  const [link, setLink] = useState<string | null>(null)
+  const status = account?.recruiterStatus ?? 'none'
+
+  async function start() {
+    if (busy) return
+    setBusy(true)
+    const r = await becomeRecruiter()
+    setBusy(false)
+    if (!r) return setNote('Could not do that just now. Try again in a moment.')
+    setAccount(r.account)
+    if (r.paymentLink) {
+      const w = window.open(r.paymentLink, '_blank', 'noopener')
+      setLink(w ? null : r.paymentLink)
+      setNote(w ? 'Checkout is open in another tab. Come back here when Stripe is done and this card will catch up on its own.' : null)
+    }
+  }
+  async function pause(paused: boolean) {
+    if (busy) return
+    setBusy(true)
+    const a = await setRecruiterPaused(paused)
+    setBusy(false)
+    if (!a) return setNote('Could not do that just now. Try again in a moment.')
+    setAccount(a)
+    setNote(null)
+  }
+
+  return (
+    <div className="members-plan members-recruiter">
+      <span className="members-plan-name">BEASTY Recruiter</span>
+      <span className="members-plan-price">
+        $60<em>/month</em>
+      </span>
+      <span className="members-plan-note">
+        Earn BARK points for the people and businesses you bring to BEASTY: 10 points a month for each
+        new member (2 months on a BIGGIE PASS, 3 on a BEASTY PASS) and 10 a month for each new business,
+        for its first 6 paid months. 1 point is $1. Cash out from 100 points, in steps of 50.
+      </span>
+      {!account ? (
+        <p className="members-signedout">Sign up free first, then become a recruiter.</p>
+      ) : status === 'active' || status === 'paused' ? (
+        <>
+          <p className={`members-pending${status === 'active' ? ' is-active' : ''}`}>
+            {status === 'active'
+              ? 'You are a recruiter. New referrals count.'
+              : 'Recruiting is paused. New referrals do not count until you resume; what you earned stays. Your $60 a month continues until you cancel it.'}
+          </p>
+          {/* Resuming is the thing to do from a pause, so it leads; pausing is not pushed. */}
+          <button
+            className={`${status === 'paused' ? 'btn-primary members-choose' : 'btn-secondary members-manage'}`}
+            onClick={() => pause(status === 'active')}
+            disabled={busy}
+          >
+            {busy ? 'One moment\u2026' : status === 'active' ? 'Pause recruiting' : 'Resume recruiting'}
+          </button>
+          {account.manageLink && (
+            <a className="btn-secondary members-manage" href={account.manageLink} target="_blank" rel="noopener noreferrer">
+              Cancel or change card
+            </a>
+          )}
+        </>
+      ) : (
+        <>
+          <button
+            className="btn-primary members-choose"
+            onClick={start}
+            disabled={busy || !account.recruiterConfigured}
+            aria-live="polite"
+          >
+            {busy
+              ? 'One moment\u2026'
+              : !account.recruiterConfigured
+                ? 'Recruiter sign-up opens soon'
+                : status === 'pending'
+                  ? 'Finish recruiter checkout'
+                  : status === 'cancelled'
+                    ? 'Become a recruiter again'
+                    : 'Become a recruiter'}
+          </button>
+          {status === 'pending' && !note && <p className="members-pending">Chosen, not yet paid. Nothing is charged until you finish checkout.</p>}
+          {status === 'cancelled' && !note && <p className="members-pending">Your recruiter upgrade was cancelled. Points you earned stay yours to cash out.</p>}
+        </>
+      )}
+      {note && <p className="members-pending">{note}</p>}
+      {link && (
+        <p className="members-pending">
           Your browser blocked the checkout tab.{' '}
           <a href={link} target="_blank" rel="noopener noreferrer">
             Open checkout
@@ -632,6 +757,6 @@ function ChooseTier({
           .
         </p>
       )}
-    </>
+    </div>
   )
 }
