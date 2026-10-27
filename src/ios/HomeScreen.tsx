@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import type { CSSProperties } from 'react'
 import { AddToHomeCoach } from './AddToHomeCoach'
 import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
@@ -1041,8 +1042,25 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     discovery. Never while the first-visit bubble is up, and never for
     automated browsers, whose checks need the home screen to stay put.
     It replaces the reels bubble, which he asked to delete in the same note.
+
+    AND THEY ASK FIRST. Glenn, 2026-10-27: "before it plays the video reels, a
+    text bubble pops up saying 'Explore hidden gems 💎' as it's loading to
+    soften the delay & maybe have a button for Cancel", because "when people
+    visit the page again, they can choose not to watch a video and go straight
+    to exploring." The three quiet seconds now bring up that bubble over the
+    Watch button; it counts down REELS_ASK_MS and then opens the reels. Cancel,
+    or touching the home screen anywhere else, keeps them on the home screen
+    for the rest of the visit; Watch now opens them at once.
   */
   const IDLE_REELS_MS = 3000
+  const REELS_ASK_MS = 3000
+  const [reelsAsk, setReelsAsk] = useState<{ arrow: number } | null>(null)
+  const openReels = () => {
+    setReelsAsk(null)
+    const el = watchRef.current
+    const rect = el && rectInScreen(el)
+    if (rect) onOpen(WATCH_APP.id, rect)
+  }
   useEffect(() => {
     if (hidden || receding || inert || hint || !account) return
     if (typeof navigator !== 'undefined' && navigator.webdriver) return
@@ -1056,14 +1074,19 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
       window.clearTimeout(t)
       t = window.setTimeout(() => {
         const el = watchRef.current
-        const rect = el && rectInScreen(el)
-        if (!rect) return
+        const row = el?.closest('.spotlight-row')
+        if (!el || !row || !rectInScreen(el)) return
         try {
           sessionStorage.setItem('fb.idleReels.v1', '1')
         } catch {
           /* it may happen again this visit; harmless */
         }
-        onOpen(WATCH_APP.id, rect)
+        /* Once a visit: from here the bubble, not the quiet, decides. */
+        EVENTS.forEach((e) => window.removeEventListener(e, arm, { capture: true }))
+        /* The bubble's point sits on the Watch button, wherever the row puts it. */
+        const b = el.getBoundingClientRect()
+        const r = row.getBoundingClientRect()
+        setReelsAsk({ arrow: b.left + b.width / 2 - (r.left + r.width / 2) })
       }, IDLE_REELS_MS)
     }
     const EVENTS = ['pointerdown', 'pointermove', 'keydown', 'wheel', 'touchstart', 'scroll'] as const
@@ -1075,6 +1098,27 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hidden, receding, inert, hint, account])
+
+  /* The bubble's countdown. Leaving the home screen, or touching it anywhere
+     but the bubble, is the visitor choosing to explore. */
+  useEffect(() => {
+    if (!reelsAsk) return
+    if (hidden || receding || inert) {
+      setReelsAsk(null)
+      return
+    }
+    const t = window.setTimeout(openReels, REELS_ASK_MS)
+    const stay = (e: Event) => {
+      if (!(e.target instanceof Element && e.target.closest('.reels-ask'))) setReelsAsk(null)
+    }
+    const EVENTS = ['pointerdown', 'keydown', 'wheel'] as const
+    EVENTS.forEach((e) => window.addEventListener(e, stay, { passive: true, capture: true }))
+    return () => {
+      window.clearTimeout(t)
+      EVENTS.forEach((e) => window.removeEventListener(e, stay, { capture: true }))
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [reelsAsk, hidden, receding, inert])
   const badgeFor = (appId: string) => {
     if (appId === 'sys.cart') return cart.count
     /* Friend requests waiting for an answer (apps/Friends.tsx). */
@@ -1328,6 +1372,24 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
 
       {/* iOS 16+ puts a Spotlight pill between the dots and the dock. */}
       <div className="spotlight-row">
+        {reelsAsk && !hidden && !receding && !inert && (
+          <div
+            className="home-hint reels-ask"
+            role="status"
+            style={{ '--reels-ask-arrow': `${reelsAsk.arrow}px`, '--reels-ask-ms': `${REELS_ASK_MS}ms` } as CSSProperties}
+          >
+            <strong>Explore hidden gems 💎</strong>
+            <span className="reels-ask-bar" aria-hidden="true" />
+            <div className="reels-ask-actions">
+              <button type="button" className="reels-ask-cancel" onClick={() => setReelsAsk(null)}>
+                Cancel
+              </button>
+              <button type="button" className="reels-ask-go" onClick={openReels}>
+                Watch now
+              </button>
+            </div>
+          </div>
+        )}
         {hint && !hidden && !receding && !inert && (
           <div className="home-hint" role="note" onClick={dismissHint}>
             <p>

@@ -13038,6 +13038,80 @@ span.top3-add {
 }
 
 /*
+  THE REELS ASK FIRST (ios/HomeScreen.tsx). Glenn, 2026-10-27: a bubble saying
+  "Explore hidden gems 💎" before the reels start by themselves, with Cancel.
+  The first-visit bubble's yellow and ink, smaller, its point moved onto the
+  Watch button, and a line that runs out when the reels open.
+*/
+.home-hint.reels-ask {
+  width: 248px;
+  padding: 14px 14px 12px;
+  cursor: default;
+  text-align: center;
+}
+
+.home-hint.reels-ask::after {
+  left: calc(50% + var(--reels-ask-arrow, 0px));
+}
+
+.home-hint.reels-ask strong {
+  font-size: 19px;
+  letter-spacing: 0.01em;
+}
+
+.reels-ask-bar {
+  display: block;
+  height: 3px;
+  margin: 10px 2px 12px;
+  border-radius: 2px;
+  background: rgba(20, 20, 22, 0.16);
+  overflow: hidden;
+}
+
+.reels-ask-bar::before {
+  content: '';
+  display: block;
+  height: 100%;
+  background: #141416;
+  transform-origin: left center;
+  animation: reels-ask-run var(--reels-ask-ms, 3000ms) linear both;
+}
+
+@keyframes reels-ask-run {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.reels-ask-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.reels-ask-actions button {
+  min-height: 40px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.reels-ask-cancel {
+  border: 1.5px solid #141416;
+  background: transparent;
+  color: #141416;
+}
+
+.reels-ask-go {
+  border: 0;
+  background: #141416;
+  color: #f6d800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reels-ask-bar::before { animation: none; transform: scaleX(1); opacity: 0.35; }
+}
+
+/*
   PROFILE, SLIMMED (Glenn's mockup, 2026-09-27): Edit profile small under the
   picture, the count beside the name, the member's own line in quotes under
   it, and Share as the arrow in the bar.
