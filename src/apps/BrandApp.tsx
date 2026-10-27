@@ -701,6 +701,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           */}
           {tier >= 2 && brand.photos?.length ? (
             <div className="brand-photos">
+              {brand.photosTitle && <h3 className="brand-photos-title">{brand.photosTitle}</h3>}
               <ul
                 className="brand-photos-track"
                 aria-label={`${brand.photos.length} pictures from ${brand.name}. Swipe sideways for the next.`}

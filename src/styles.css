@@ -11276,6 +11276,13 @@ a.members-choose { display: flex; align-items: center; justify-content: center; 
   margin: 14px 0 0;
 }
 
+/* A title over the strip when the pictures are one thing, such as a trainer's VIP clients. */
+.brand-photos-title {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
 /*
   A picture per screen, snapped, no scrollbar: the gesture Glenn was
   describing is the one Instagram taught everybody. The hint under it is

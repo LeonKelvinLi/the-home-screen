@@ -1783,4 +1783,11 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'oakland-goods2-34': 'b_innenaskitchen',
   'beasty-goods2-78': 'b_innenaskitchen',
 
+  /* Batch 71, Glenn, 27 October 7:23 and 7:29 am. Cali K9: San Jose has no dog-trainer spot on its
+     Services sheet (Grooming is taken), so More services; BEASTY • Pets fills from its type line.
+     Legend Hotpot & Grill: Newark's Asian and Korean spots are taken, so More goods; BEASTY • AYCE
+     fills from its type line. */
+  'san-jose-services2-4': 'b_calik9',
+  'newark-goods2-3': 'b_legendhotpotgrill',
+
 }

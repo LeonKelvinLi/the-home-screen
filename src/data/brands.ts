@@ -158,6 +158,8 @@ export interface Brand {
   photo?: { src: string; credit: string; alt: string }
   /** Several, swiped through. See LocalSeed.photos. */
   photos?: { src: string; credit: string; alt: string }[]
+  /** A heading over those pictures, when they are something in particular: "VIP clients". */
+  photosTitle?: string
   /** A real ordering link (Toast, their own checkout), where one exists. */
   orderUrl?: string
   phone?: string
@@ -463,6 +465,8 @@ interface Seed {
    * City Pits). Their own posts, ours to serve, same rule as `photo`.
    */
   photos?: { src: string; credit: string; alt: string }[]
+  /** A heading over them (Glenn, 27 Oct, for Cali K9: "a gallery of clients"). */
+  photosTitle?: string
   /*
     A STREET ADDRESS AND A PHONE, which Brand has carried all along and Seed
     could not set. It came up when he asked to "update page with address and
@@ -1159,6 +1163,7 @@ const fromSeed = (s: Seed): Brand => ({
   clip: s.clip,
   photo: s.photo,
   photos: s.photos,
+  photosTitle: s.photosTitle,
   // "This week's favourites" is a food line. A service catalogue is not a
   // rotating special, and nothing about it changes weekly.
   //

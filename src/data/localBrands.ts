@@ -255,6 +255,8 @@ export interface LocalSeed {
   photo?: { src: string; credit: string; alt: string }
   /** Several, one at a time, swiped — see Brand.photos. */
   photos?: { src: string; credit: string; alt: string }[]
+  /** A heading over them — see Brand.photosTitle. */
+  photosTitle?: string
 }
 
 /**
@@ -45512,5 +45514,202 @@ export const LOCAL_SEED: LocalSeed[] = [
       "needsSite": true,
       "contactOnly": "Cambodian kathiew noodle soup on Fruitvale Avenue in Oakland, open Friday to Sunday. They publish no menu or prices online, only their Instagram, so none are shown here. Call them or walk in.",
       "siteCta": "Open their page"
+  },
+  /* BATCH 71, 2026-10-27: Glenn's sends of 27 Oct 7:21-7:32 am. Sources: research/roster/batch71.json. */
+  {
+      "slug": "cali-k9",
+      "name": "Cali K9",
+      "label": "Cali K9",
+      "cuisine": "Dog training & behavior",
+      "tagline": "Jas Leverette's dog training and behavior company, as seen on Netflix's Canine Intervention: evaluations, in-person training, board and train, and an online academy.",
+      "color": "#112C80",
+      "icon": "cali-k9",
+      "prep": 0,
+      "category": "Dog training",
+      "items": [],
+      "phone": "(510) 890-0298",
+      "email": "Training@calik9.com",
+      "site": "https://calik9.com/",
+      "siteCta": "Book an evaluation",
+      "orderUrl": "https://calik9.com/evaluation-with-behavior-specialist",
+      "instagram": "calik9",
+      "contactOnly": "Cali K9 trains dogs and fixes behavior in the Bay Area, Los Angeles, Miami and New York, and online. It starts with a 30-minute phone evaluation with Jas or Jay about your dog's behavior and history, which ends with a recommended program. Training programs are not priced on their site: call (510) 890-0298, email Training@calik9.com (they answer within 24 hours) or book an evaluation on calik9.com.",
+      "clip": {
+          "src": "/clips/cali-k9.mp4",
+          "poster": "/clips/cali-k9-poster.webp",
+          "href": "https://www.instagram.com/calik9/",
+          "credit": "Posted by @calik9",
+          "platform": "Instagram"
+      },
+      "photosTitle": "VIP clients",
+      "photos": [
+          {
+              "src": "/photos/cali-k9-client-1.webp",
+              "credit": "From @calik9's VIP Clients highlight",
+              "alt": "Cali K9's trainer with a client holding a puppy."
+          },
+          {
+              "src": "/photos/cali-k9-client-2.webp",
+              "credit": "From @calik9's VIP Clients highlight",
+              "alt": "Cali K9's trainer with a client and a dog at night, beside a trailer."
+          },
+          {
+              "src": "/photos/cali-k9-client-3.webp",
+              "credit": "From @calik9's VIP Clients highlight",
+              "alt": "Cali K9's trainer with a client and two dogs outside, next to the Cali K9 van."
+          },
+          {
+              "src": "/photos/cali-k9-client-4.webp",
+              "credit": "From @calik9's VIP Clients highlight",
+              "alt": "Cali K9's trainer shaking hands with a client indoors."
+          },
+          {
+              "src": "/photos/cali-k9-client-5.webp",
+              "credit": "From @calik9's VIP Clients highlight",
+              "alt": "Cali K9's trainer with a client and a dog in a doorway."
+          }
+      ]
+  },
+  {
+      "slug": "legend-hotpot-grill",
+      "name": "Legend Hotpot & Grill",
+      "label": "Legend Hotpot",
+      "cuisine": "AYCE hot pot & Korean BBQ",
+      "tagline": "All-you-can-eat hot pot and Korean BBQ on Newark Boulevard: a conveyor belt of meats, seafood and vegetables, a build-your-own sauce bar, and appetizers and desserts included.",
+      "color": "#9C7A3C",
+      "icon": "legend-hotpot-grill",
+      "prep": 0,
+      "category": "Hot pot",
+      "items": [],
+      "sections": [
+          {
+              "name": "Takeout Hot Pots",
+              "items": [
+                  [
+                      "Seafood Pot",
+                      "Shrimp, carved squid, octopus, snakehead, clam, crab, crab stick, fish ball, crawfish, mussel, tofu, cabbage, mushrooms, vermicelli.",
+                      2199
+                  ],
+                  [
+                      "Vegetarian Pot",
+                      "Cabbage, spinach, vermicelli, mushrooms, tofu, winter bamboo, seaweed knot, black fungus, corn, pumpkin, wax gourd, lotus root, bean curd, baby corn, taro.",
+                      1899
+                  ],
+                  [
+                      "Meat Pot",
+                      "",
+                      1999
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Spicy Cucumber and Fungus",
+                      "8 oz cup.",
+                      499
+                  ],
+                  [
+                      "Seaweed Salad",
+                      "8 oz cup.",
+                      499
+                  ],
+                  [
+                      "Garlic Pig Ear",
+                      "8 oz cup.",
+                      499
+                  ],
+                  [
+                      "Chicken Feet with Thai Style",
+                      "8 oz cup.",
+                      499
+                  ],
+                  [
+                      "Lotus with Special Spicy Sauce",
+                      "8 oz cup.",
+                      499
+                  ],
+                  [
+                      "Fried Sesame Ball (10)",
+                      "8 oz cup.",
+                      499
+                  ],
+                  [
+                      "Crayfish with Garlic Sauce (1 lb)",
+                      "",
+                      1299
+                  ],
+                  [
+                      "Crayfish with Special Spicy Sauce (1 lb)",
+                      "",
+                      1299
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Iced Lemon Tea",
+                      "",
+                      354
+                  ],
+                  [
+                      "Less Sugar Green Tea",
+                      "",
+                      354
+                  ],
+                  [
+                      "Ice Sugar Sydney",
+                      "",
+                      350
+                  ],
+                  [
+                      "Honey Grapefruit",
+                      "",
+                      350
+                  ],
+                  [
+                      "Plum Juice",
+                      "",
+                      350
+                  ],
+                  [
+                      "Arctic Ocean Soda",
+                      "",
+                      354
+                  ],
+                  [
+                      "Pulsating",
+                      "",
+                      450
+                  ],
+                  [
+                      "Genki Forest Grape",
+                      "Genki Forest soda (grape, white peach).",
+                      450
+                  ]
+              ]
+          }
+      ],
+      "address": "35233 Newark Blvd, Ste A, Newark, CA 94560",
+      "email": "cktianshi521@gmail.com",
+      "hours": "Mon–Fri 11:30am–9pm, Sat–Sun noon–9:10pm",
+      "instagram": "legend_hotpot_grill",
+      "needsSite": true,
+      "orderUrl": "https://www.ubereats.com/store/legend-hotpot/ya53AjppRgSnoZ9Gy6WoXw",
+      "siteCta": "Order on Uber Eats",
+      "pricesEstimated": "Prices are from their Uber Eats store; delivery apps often charge more than the counter.",
+      "quoteOnly": "All you can eat in the restaurant, at a price they do not publish online. These are their Uber Eats takeout prices, so nothing is ordered here: order on Uber Eats or walk in.",
+      "siteNote": "Takeout menu and hours as listed on their Uber Eats store. The all-you-can-eat hot pot and BBQ is in the restaurant only.",
+      "clip": {
+          "src": "/clips/legend-hotpot-grill.mp4",
+          "poster": "/clips/legend-hotpot-grill-poster.webp",
+          "href": "https://www.instagram.com/reel/DUaFKh6jpBf/",
+          "credit": "Filmed by @drooling.bae",
+          "platform": "Instagram",
+          "by": "drooling.bae"
+      }
   },
 ]

@@ -808,4 +808,6 @@ export const ADDED_ON: Record<string, string> = {
   b_blindbutcher: '2026-10-26',
   b_simurghbakery: '2026-10-26',
   b_innenaskitchen: '2026-10-27',
+  b_calik9: '2026-10-27',
+  b_legendhotpotgrill: '2026-10-27',
 }

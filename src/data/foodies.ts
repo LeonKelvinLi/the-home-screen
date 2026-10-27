@@ -149,6 +149,8 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'siliconvalley.foodies', place: 'Meadowlark Dairy', city: 'Pleasanton', brand: 'b_meadowlarkdairy', reel: reel('DNE34tbROif'), clip: true },
   { by: 'wagyumastersukiyaki', place: 'Wagyu Master', city: 'San Jose', brand: 'b_wagyumastersanjose', reel: reel('DeVbmGxFHUx'), clip: true },
   { by: '_whatarethechances_', place: 'Gold Bean', city: 'Berkeley', brand: 'b_goldbeandurant', reel: reel('Ddk28qRIsGZ'), clip: true },
+  { by: 'bestbayareafood', place: 'Legend Hotpot & Grill', city: 'Newark', brand: 'b_legendhotpotgrill', reel: reel('De2J1F7PYQR'), clip: true },
+  { by: 'victoria.pham17', place: 'Legend Hotpot & Grill', city: 'Newark', brand: 'b_legendhotpotgrill', reel: reel('DeruAsHMWIZ'), clip: true },
 ]
 
 /*
