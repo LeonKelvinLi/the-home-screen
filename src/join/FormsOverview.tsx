@@ -20,22 +20,21 @@ const DOCUMENTS = [
 ] as const
 
 function packetStatus(a: AgreementProgress) {
-  if (a.affiliateSigned) return ['Signed', 'Your signature has been recorded.']
-  if (a.mode === 'manual' && a.reviewRequested) return ['In review', 'BEASTY is checking the packet you reported completing.']
-  if (a.status === 'declined') return ['Declined', 'You declined to sign this request.']
-  if (a.status === 'expired') return ['Expired', 'Your signing link needs to be replaced.']
-  if (!a.available) return ['Being finalized', 'You can submit your application details while BEASTY finalizes the packet.']
-  if (a.mode === 'manual' && a.status === 'requested') return ['Preparing', 'BEASTY will email you when your private packet is ready.']
-  if (a.linkReady) return ['Ready to sign', 'Open your private packet, check the details, upload your ID and sign.']
-  return ['Not started', 'Request your packet when your application details are complete.']
+  if (a.affiliateSigned) return 'Signed'
+  if (a.mode === 'manual' && a.reviewRequested) return 'In review'
+  if (a.status === 'declined') return 'Declined'
+  if (a.status === 'expired') return 'Expired'
+  if (!a.available) return 'Being finalized'
+  if (a.mode === 'manual' && a.status === 'requested') return 'Preparing'
+  if (a.linkReady) return 'Ready to sign'
+  return 'Not started'
 }
 
 export function FormsOverview({ forms, agreement, action }: { forms: boolean; agreement: AgreementProgress; action: ReactNode }) {
-  const [status, description] = packetStatus(agreement)
+  const status = packetStatus(agreement)
   return <div className="onb-documents">
     <div className="onb-document-intro">
       <h2>{forms ? 'Your onboarding packet' : 'Your prepared agreement'}</h2>
-      <p>BEASTY prepares the program terms and disclosures. You review the documents, confirm your information and sign.</p>
     </div>
     <div className="onb-document-grid">
       <section className="onb-document-contents" aria-label="Documents to complete">
@@ -55,13 +54,12 @@ export function FormsOverview({ forms, agreement, action }: { forms: boolean; ag
     <section className="onb-signing-progress" aria-labelledby="onb-signing-progress-title">
       <h3 id="onb-signing-progress-title">Signing progress</h3>
       <ol>
-        <li><span className="onb-progress-number" aria-hidden="true">1</span><div><b>Your documents and signature</b><p>{description}</p></div><span className="onb-tag" data-tone={agreement.affiliateSigned ? 'good' : ['declined', 'expired'].includes(agreement.status) ? 'bad' : undefined}>{status}</span></li>
-        <li><span className="onb-progress-number" aria-hidden="true">2</span><div><b>BEASTY’s countersignature</b><p>{agreement.countersigned ? 'BEASTY’s signature has been checked.' : 'BEASTY reviews the packet and signs after you.'}</p></div><span className="onb-tag" data-tone={agreement.countersigned ? 'good' : undefined}>{agreement.countersigned ? 'Complete' : 'After you'}</span></li>
+        <li><span className="onb-progress-number" aria-hidden="true">1</span><div><b>Your documents and signature</b></div><span className="onb-tag" data-tone={agreement.affiliateSigned ? 'good' : ['declined', 'expired'].includes(agreement.status) ? 'bad' : undefined}>{status}</span></li>
+        <li><span className="onb-progress-number" aria-hidden="true">2</span><div><b>BEASTY’s countersignature</b></div><span className="onb-tag" data-tone={agreement.countersigned ? 'good' : undefined}>{agreement.countersigned ? 'Complete' : 'After you'}</span></li>
       </ol>
     </section>
     <section className="onb-disclosures" aria-labelledby="onb-disclosures-title">
       <h3 id="onb-disclosures-title">Before you sign</h3>
-      <p>The packet includes these written disclosures. Read them with the final agreement; you do not need to write disclosure text.</p>
       {(forms ? disclosures : disclosures.filter((_, i) => [0, 5, 6, 7].includes(i))).map(item => <details key={item.title}><summary>{item.title}</summary><p>{item.text}</p></details>)}
     </section>
   </div>

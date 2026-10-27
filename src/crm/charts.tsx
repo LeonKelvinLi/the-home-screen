@@ -22,14 +22,13 @@ export interface TableView {
 }
 
 /** A chart's frame: what it shows, over what time, and a switch to a table. */
-export function ChartCard({ title, sub, table, children, busy = false }: { title: string; sub: string; table: TableView; children: ReactNode; busy?: boolean }) {
+export function ChartCard({ title, table, children, busy = false }: { title: string; table: TableView; children: ReactNode; busy?: boolean }) {
   const [rows, setRows] = useState(false)
   return (
     <section className={`crm-card-chart${busy ? ' is-busy' : ''}`} aria-busy={busy}>
       <header>
         <div>
           <h3>{title}</h3>
-          <p>{sub}</p>
         </div>
         <button type="button" className="crm-chart-switch" onClick={() => setRows((v) => !v)}>
           {rows ? 'Chart' : 'Table'}

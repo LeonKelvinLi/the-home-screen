@@ -69,7 +69,6 @@ export function AffiliateApp({ api }: { api: ShellApi }) {
           ) : (
             <div className="aff-empty-page">
               <h2>Your affiliate dashboard</h2>
-              <p>Sign in to see the people and businesses you have brought to BEASTY and how your links are doing.</p>
               <button className="btn-primary" onClick={() => api.openApp('sys.account')}>
                 Sign in
               </button>
@@ -201,9 +200,6 @@ function Dashboard({
           ))}
         </div>
         <Columns buckets={w.series} metric={metric} title={m.title} />
-        {win !== 'all' && w.since < data.program.clicksCountedFrom && metric === 'clicks' && (
-          <p className="aff-note">Clicks are counted from {dateOf(data.program.clicksCountedFrom)}.</p>
-        )}
       </section>
 
       {/* ---- share ---- */}
@@ -213,10 +209,7 @@ function Dashboard({
       <section className="aff-section">
         <h3 className="prof-h">Businesses you referred</h3>
         {data.businesses.length === 0 ? (
-          <p className="aff-empty">
-            None yet. Send a business your business link: when they ask for a spot through it, they show up here and you can
-            follow them to Live.
-          </p>
+          <p className="aff-empty">None yet.</p>
         ) : (
           <ul className="aff-list">
             {data.businesses.map((b, i) => (
@@ -242,9 +235,7 @@ function Dashboard({
       <section className="aff-section">
         <h3 className="prof-h">People you brought</h3>
         {data.users.length === 0 ? (
-          <p className="aff-empty">
-            Nobody yet. Anyone who makes an account from your friend link or your QR code shows up here, first initial only.
-          </p>
+          <p className="aff-empty">Nobody yet.</p>
         ) : (
           <ul className="aff-list">
             {data.users.map((u, i) => (
@@ -276,9 +267,9 @@ function Dashboard({
           <div className="aff-reward">
             <span className="aff-reward-n">${data.rewards.discountDollars}</span>
             <span className="aff-reward-l">off your membership</span>
-            <span className="aff-reward-s">
-              {data.program.tierName ? `up to $${data.program.discountCap} on ${data.program.tierName}` : 'counts once you take a membership'}
-            </span>
+            {data.program.tierName && (
+              <span className="aff-reward-s">{`up to $${data.program.discountCap} on ${data.program.tierName}`}</span>
+            )}
           </div>
         </div>
         {/* Glenn, 2026-09-30: $9 of every paying member's and business's monthly fee goes to the foundation. */}
@@ -295,15 +286,9 @@ function Dashboard({
               </>
             )}
           </p>
-          <p className="earn-foundation-how">
-            {money(data.foundation.perMonthCents)} a month from every member you bring who takes a membership ({data.foundation.payingMembers}{' '}
-            now) and every business you bring on a monthly plan ({data.foundation.payingBusinesses} now).
-          </p>
         </div>
         <p className="aff-note">
-          {data.rewards.toNextTicket} more {data.rewards.toNextTicket === 1 ? 'person' : 'people'} for your next raffle ticket. Every{' '}
-          {data.program.perTicket} people who join with your link earn a ticket and ${data.program.discountPerMilestone} off a membership.
-          {' '}Recruiters also earn BARK points, at the top of this page.
+          {data.rewards.toNextTicket} more {data.rewards.toNextTicket === 1 ? 'person' : 'people'} for your next raffle ticket.
         </p>
       </section>
 
@@ -311,7 +296,7 @@ function Dashboard({
       <section className="aff-section">
         <h3 className="prof-h">Recent activity</h3>
         {data.activity.length === 0 ? (
-          <p className="aff-empty">Nothing yet. Your first click, sign-up or business will show up here.</p>
+          <p className="aff-empty">Nothing yet.</p>
         ) : (
           <ol className="aff-feed">
             {data.activity.map((a, i) => (
@@ -406,12 +391,12 @@ function Dashboard({
 */
 const PAPERWORK: Record<Bark['paperwork'], string> = {
   none: 'Your paperwork opens once your recruiter upgrade is paid.',
-  in_progress: 'Cash-outs open once BEASTY approves your signed paperwork. Finish it to get paid.',
-  changes_requested: 'BEASTY asked for a change to your paperwork. Fix it to get paid.',
-  submitted: 'Your paperwork is with BEASTY for review. Cash-outs open once it is approved.',
+  in_progress: 'Cash-outs open once BEASTY approves your signed paperwork.',
+  changes_requested: 'BEASTY asked for a change to your paperwork.',
+  submitted: 'Your paperwork is with BEASTY for review.',
   approved: '',
-  rejected: 'Cash-outs are closed on your account. Message BEASTY if you think that is a mistake.',
-  suspended: 'Cash-outs are paused on your account. Message BEASTY.',
+  rejected: 'Cash-outs are closed on your account.',
+  suspended: 'Cash-outs are paused on your account.',
 }
 
 function BarkPoints({ api }: { api: ShellApi }) {
@@ -453,13 +438,11 @@ function BarkPoints({ api }: { api: ShellApi }) {
           <h3>BARK points</h3>
           <span className="aff-card-sub">1 point = $1</span>
         </div>
-        <p className="aff-bark-line">
-          {bark.recruiter === 'pending'
-            ? 'Your recruiter checkout is waiting. Once it is paid, every month a person or business you bring pays earns you points.'
-            : bark.recruiter === 'cancelled'
-              ? 'Your recruiter upgrade has ended. Start it again to earn points for the people and businesses you bring.'
-              : 'Become a BEASTY Recruiter ($60 a month) to earn points each month a person or business you bring pays. Cash them out from 100 points.'}
-        </p>
+        {(bark.recruiter === 'pending' || bark.recruiter === 'cancelled') && (
+          <p className="aff-bark-line">
+            {bark.recruiter === 'pending' ? 'Your recruiter checkout is waiting.' : 'Your recruiter upgrade has ended.'}
+          </p>
+        )}
         <button className="btn-primary" onClick={() => api.openApp('sys.members')}>
           {bark.recruiter === 'pending' ? 'Finish the checkout' : bark.recruiter === 'cancelled' ? 'Become a recruiter again' : 'Become a recruiter'}
         </button>
@@ -486,15 +469,9 @@ function BarkPoints({ api }: { api: ShellApi }) {
         </span>
       </div>
 
-      {bark.recruiter === 'paused' && (
-        <p className="aff-bark-line">Paused: people and businesses you bring now do not count until you resume. Months still owed keep coming.</p>
-      )}
-      {bark.recruiter === 'cancelled' && <p className="aff-bark-line">Your recruiter upgrade has ended, so nothing more is credited. What you earned is yours to cash out.</p>}
-
       {bark.openCashout ? (
         <p className="aff-bark-line is-good">
-          You asked for {bark.openCashout.points} points ({money(bark.openCashout.cents)}) on {dateOf(bark.openCashout.requestedAt)}. BEASTY pays it by
-          direct deposit within {bark.payoutDays} days.
+          You asked for {bark.openCashout.points} points ({money(bark.openCashout.cents)}) on {dateOf(bark.openCashout.requestedAt)}.
         </p>
       ) : bark.paperwork !== 'approved' ? (
         <div className="aff-bark-next">
@@ -695,13 +672,8 @@ function Share({ data }: { data: Affiliate }) {
     if (r === 'failed') tell('Sharing did not work: use Copy')
   }
   const links = [
-    { key: 'user' as const, title: 'Friend link', blurb: 'For people. Anyone who joins through it counts as yours.', url: data.affiliate.links.user },
-    {
-      key: 'business' as const,
-      title: 'Business link',
-      blurb: 'For businesses. It opens the page where they ask for a spot, and credits you.',
-      url: data.affiliate.links.business,
-    },
+    { key: 'user' as const, title: 'Friend link', url: data.affiliate.links.user },
+    { key: 'business' as const, title: 'Business link', url: data.affiliate.links.business },
   ]
   return (
     <section className="aff-section">
@@ -728,7 +700,6 @@ function Share({ data }: { data: Affiliate }) {
           {links.map((l) => (
             <div key={l.key} className="aff-link">
               <span className="aff-link-title">{l.title}</span>
-              <span className="aff-link-blurb">{l.blurb}</span>
               <span className="aff-link-url">{l.url.replace(/^https?:\/\//, '')}</span>
               <div className="aff-link-actions">
                 <button className="btn-secondary" onClick={() => void copy(l.url)}>

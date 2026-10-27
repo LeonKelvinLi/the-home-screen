@@ -324,7 +324,7 @@ await page.locator('.aff-bark').screenshot({ path: '.verify/bark-card-cashout.pn
 await page.getByRole('button', { name: 'Cash out 100 points' }).click()
 await page.waitForTimeout(800)
 text = await page.locator('.aff-bark').innerText().catch(() => '')
-check('…and tapping it asks, saying when BEASTY pays', /You asked for 100 points/.test(text) && /within 15 days/.test(text))
+check('…and tapping it records the ask', /You asked for 100 points/.test(text))
 await page.locator('.aff-bark').screenshot({ path: '.verify/bark-card-asked.png' }).catch(() => {})
 
 page = await phone(nobody)

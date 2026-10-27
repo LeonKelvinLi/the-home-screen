@@ -263,18 +263,10 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
       <JoinHead step={step} />
       {step === 'details' ? (
         <form className="join" key="details" onSubmit={askForCode}>
-          <p className="join-lead">
-            Free, and it opens the whole directory — every city, the reels, the gallery and search.
-            <strong> Already a member? This is also how you sign in.</strong>{' '}
-            {byText ? 'We text you' : 'We email you'} a six-digit code either way; there is no
-            password.
-          </p>
-
           {/* Said where it matters. A referred sign-up is the referrer's credit. */}
           {ref && (
             <p className="join-ref" role="status">
-              You were invited with code <strong>{ref}</strong>. Signing up credits whoever shared
-              it.
+              You were invited with code <strong>{ref}</strong>.
             </p>
           )}
 
@@ -296,9 +288,6 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
               have typed addresses into. An existing member's stored name is
               never overwritten by what is typed here.
             */}
-            <small className="join-hint">
-              Asked of everyone. If you are already a member, yours stays as it is.
-            </small>
           </label>
 
           {/*
@@ -322,18 +311,18 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
               enterKeyHint="next"
               required={byText}
             />
-            <small className="join-hint">
-              {byText
-                ? /*
+            {byText && (
+              <small className="join-hint">
+                {/*
                     THE DISCLAIMER GLENN ASKED FOR, 2026-09-02: "you have to
                     include a disclaimer that we reserve the right to send
                     them promotional texts". It is also the opt-in wording the
                     carrier registration wants, so it is stated here, where the
                     number is typed, and nowhere looser.
-                  */
-                  'We text you a six-digit code. Standard message rates apply. By continuing you agree that BEASTY may also text you offers and news now and then; reply STOP to opt out.'
-                : 'Kept on your account. The code goes to your email.'}
-            </small>
+                  */}
+                We text you a six-digit code. Standard message rates apply. By continuing you agree that BEASTY may also text you offers and news now and then; reply STOP to opt out.
+              </small>
+            )}
           </label>
 
           <div className="join-row">
@@ -360,9 +349,7 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
               </select>
             </label>
           </div>
-          <small className="join-hint join-row-hint">
-            Shown beside your name on Contacts, so people near you can find you. Just the town, never a street.
-          </small>
+          <small className="join-hint join-row-hint">Shown beside your name on Contacts.</small>
 
           <label className="join-field">
             <span>
@@ -395,9 +382,6 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
               inputMode="email"
               required={!byText}
             />
-            {!byText && (
-              <small className="join-hint">We email you a six-digit code. No password.</small>
-            )}
           </label>
 
           {error && (
@@ -409,11 +393,6 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
           <button className="btn-primary" type="submit" disabled={!ready || busy}>
             {busy ? 'Sending your code…' : 'Send me a code'}
           </button>
-
-          <p className="join-fine">
-            We email a six-digit code to check the address is yours. It is also how you sign back
-            in on another phone.
-          </p>
         </form>
       ) : (
         /*

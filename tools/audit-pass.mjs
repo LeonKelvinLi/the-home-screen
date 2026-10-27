@@ -142,8 +142,6 @@ try {
   const first = await page.evaluate(() => document.querySelector('.member-qr-img')?.innerHTML ?? '')
   const changed = await page.waitForFunction((was) => (document.querySelector('.member-qr-img')?.innerHTML ?? '') !== was && !!document.querySelector('.member-qr-img svg'), first, { timeout: WINDOW * 3 }).then(() => true).catch(() => false)
   check(changed, 'the QR on screen swaps itself when the window turns')
-  const lead = await page.evaluate(() => document.querySelector('.member-lead')?.textContent ?? '')
-  check(/changes every minute/i.test(lead) && /single scan/i.test(lead), 'the card says the code rotates and scans once')
   await b.close()
 } catch (e) {
   console.log('FAIL: ' + (e?.stack || e))

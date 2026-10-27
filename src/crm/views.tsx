@@ -158,7 +158,7 @@ export function Pipeline() {
   const open = summary.data?.stages.filter((s) => BOARD.includes(s.stage) && s.stage !== 'won').reduce((n, s) => n + s.valueCents, 0) ?? 0
   return (
     <div className="crm-view is-wide">
-      <PageTitle title="Board" sub={`Drag a business to move it; every move goes in its story. ${money(open)} in open quotes.`} />
+      <PageTitle title="Board" sub={`${money(open)} in open quotes.`} />
       <div className="crm-board">
         {BOARD.map((s) => (
           <Column key={`${s}-${bump}`} stage={s} summary={summary.data?.stages.find((x) => x.stage === s)} dragging={dragging} onDrag={setDragging} onMove={move} />
@@ -274,7 +274,7 @@ export function Businesses() {
   )
   return (
     <div className="crm-view">
-      <PageTitle title="Grouped businesses" sub="Every location of the same business together. Open one to see each location." />
+      <PageTitle title="Grouped businesses" />
       <label className="crm-find">
         <Icon name="search" size={17} stroke={2} />
         <input
@@ -372,22 +372,19 @@ export function Followups({ view }: { view: string }) {
   )
   return (
     <div className="crm-view">
-      <PageTitle title="Reminders" sub="Every business being worked should have a next time someone gets in touch." />
+      <PageTitle title="Reminders" />
       <Segmented value={view} options={FU_VIEWS} onChange={(v) => go(`followups?view=${v}`)} label="Which reminders" />
       {error && <Failure error={error} retry={reload} />}
       {!data ? (
         <Loading />
       ) : data.kind === 'leads' ? (
         data.leads.length ? (
-          <>
-            <p className="crm-note">Businesses being worked with nothing scheduled. The warm ones come first: an interested business with no reminder goes cold.</p>
-            <LeadRows
-              leads={data.leads
-                .slice()
-                .sort((a, b) => Number(['interested', 'meeting', 'proposal_sent'].includes(b.stage)) - Number(['interested', 'meeting', 'proposal_sent'].includes(a.stage)))}
-              why={(l) => `${stageName(l.stage)}. ${placeLine(l.category, l.city)}`}
-            />
-          </>
+          <LeadRows
+            leads={data.leads
+              .slice()
+              .sort((a, b) => Number(['interested', 'meeting', 'proposal_sent'].includes(b.stage)) - Number(['interested', 'meeting', 'proposal_sent'].includes(a.stage)))}
+            why={(l) => `${stageName(l.stage)}. ${placeLine(l.category, l.city)}`}
+          />
         ) : (
           <Empty icon="checkCircle">Every business being worked has a reminder.</Empty>
         )
@@ -520,7 +517,7 @@ export function Revenue() {
   const { data, error, reload } = useApi<RevenueData>(`/api/crm/revenue?period=${period}`)
   return (
     <div className="crm-view">
-      <PageTitle title="Money" sub="What BEASTY earned, as each sale was made: changing a price later never rewrites a sale." />
+      <PageTitle title="Money" />
       <div className="crm-toolbar">
         <MoneyTabs on="revenue" />
         <PeriodPicker value={period} onChange={setPeriod} />
@@ -532,8 +529,8 @@ export function Revenue() {
         <>
           <div className="crm-glance is-row">
             <Stat label="Earned" value={money(data.oneTimeCents)} sub={plural(data.dealsWon, 'sale', 'sales')} />
-            <Stat label="Monthly plans" value={money(data.mrrCents)} sub="coming in every month" />
-            <Stat label="A year of plans" value={money(data.arrCents)} sub="monthly plans for twelve months" />
+            <Stat label="Monthly plans" value={money(data.mrrCents)} />
+            <Stat label="A year of plans" value={money(data.arrCents)} />
             <Stat label="Open quotes" value={money(data.pipelineCents)} sub={`across ${plural(data.openLeads, 'business', 'businesses')}`} />
           </div>
           <Section title="By month">
@@ -542,7 +539,7 @@ export function Revenue() {
                 <MonthChart rows={data.byMonth} period={period} />
               </div>
             ) : (
-              <Empty icon="chart">No sales yet. The months fill in as businesses say yes.</Empty>
+              <Empty icon="chart">No sales yet.</Empty>
             )}
           </Section>
           <div className="crm-two">
@@ -669,14 +666,14 @@ export function Analytics() {
   const top = data.funnel[0]?.count || 1
   return (
     <div className="crm-view">
-      <PageTitle title="How it's going" sub="How far businesses get, counted from every move ever made, and how long each step takes." />
+      <PageTitle title="How it's going" />
       <div className="crm-toolbar">
         <MoneyTabs on="analytics" />
       </div>
       <div className="crm-glance is-row">
         <Stat label="First hello" value={durationLabel(data.avgMsToFirstContact)} sub={`on average, from ${plural(data.firstContactSample, 'business', 'businesses')}`} />
         <Stat label="To a yes" value={durationLabel(data.avgMsToClose)} sub={`on average, from ${plural(data.closeSample, 'sale', 'sales')}`} />
-        <Stat label="New, last 30 days" value={data.last30.newLeads} sub="added by hand or sent in" />
+        <Stat label="New, last 30 days" value={data.last30.newLeads} />
         <Stat label="Sales, last 30 days" value={data.last30.won} sub={money(data.last30.wonCents)} />
       </div>
       <Section title="How far businesses get">

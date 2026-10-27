@@ -194,13 +194,8 @@ function Message({ title, children }: { title: string; children: React.ReactNode
 
 /* -------------------------------------------------------------- welcome ---- */
 
-const PAD: [string, string][] = [
-  ['Your information', 'Name, contact details and how you’ll share BEASTY.'],
-  ['Get paid', 'Verify your identity, add tax details and a bank account with Stripe.'],
-  ['Forms & agreement', 'Your W-9, where to send your pay, a photo of your ID, and the affiliate agreement, signed in one go.'],
-  ['Review & submit', 'Check everything and send it to BEASTY.'],
-]
-const PAD_WITH_STRIPE: Record<number, [string, string]> = { 2: ['Agreement', 'Read and sign the BEASTY affiliate agreement.'] }
+const PAD = ['Your information', 'Get paid', 'Forms & agreement', 'Review & submit']
+const PAD_WITH_STRIPE: Record<number, string> = { 2: 'Agreement' }
 
 function Welcome({ name, payouts, onStart }: { name: string; payouts: boolean; onStart: () => void }) {
   const first = name.trim().split(/\s+/)[0]
@@ -213,17 +208,15 @@ function Welcome({ name, payouts, onStart }: { name: string; payouts: boolean; o
           <div>
             {first && <p className="onb-hello">Hi {first},</p>}
             <h1>Join the BEASTY affiliate program</h1>
-            <p className="onb-lede">Share BEASTY with your people and get paid for the members and businesses you bring in. {COUNT[steps.length]} steps, about ten minutes, and you can stop and pick it up later.</p>
           </div>
           <ol className="onb-pad" aria-label={`The ${COUNT[steps.length].toLowerCase()} steps`}>
-            {steps.map(([t, d], i) => (
+            {steps.map((t, i) => (
               <li key={t}>
                 <span className="onb-key" aria-hidden="true">
                   {i + 1}
                 </span>
                 <div>
                   <b>{t}</b>
-                  <span>{d}</span>
                 </div>
               </li>
             ))}
@@ -233,7 +226,6 @@ function Welcome({ name, payouts, onStart }: { name: string; payouts: boolean; o
           <button className="onb-btn onb-btn-primary" onClick={onStart}>
             Get started
           </button>
-          <span className="onb-quiet">Your progress saves as you go.</span>
         </div>
         <div className="onb-trust">
           <Lock />
@@ -291,9 +283,7 @@ function SignIn({ defaultName, onSignedIn }: { defaultName: string; onSignedIn: 
       head={
         <>
           <h1 className="onb-title">{sent ? 'Enter your code' : 'Sign in'}</h1>
-          <p className="onb-lede">
-            {sent ? `We sent a 6-digit code to ${dest}.` : 'Use your BEASTY account if you have one. If you don’t, this makes one; there’s no password, just a code.'}
-          </p>
+          {sent && <p className="onb-lede">We sent a 6-digit code to {dest}.</p>}
         </>
       }
     >
@@ -463,19 +453,12 @@ function ManualForms({ bundle, reload, beforeAction }: { bundle: Bundle; reload:
   const shared = !!(a.formsLink || (a.formsLinkOn && !a.linkReady))
   const email = String(bundle.profile.email || '')
   return <div className="onb-manual">
-    <p className="onb-copy">{a.affiliateSigned
-      ? a.countersigned ? 'BEASTY checked your forms and both signatures in DocuSeal.' : 'BEASTY checked your signed forms. Your packet is waiting for BEASTY’s countersignature.'
-      : a.reviewRequested ? 'You reported finishing your packet. BEASTY will check the forms, ID upload and signature in DocuSeal.'
-      : shared ? `Your forms are on DocuSeal: the W-9, direct deposit form, a photo of your ID and the agreement, all in one go (about 10 minutes). We emailed you this link too. ${email ? `Use ${email} when DocuSeal asks for your email. ` : ''}When you have signed, come back here and tap I finished.`
-      : a.linkReady ? 'Your private packet is ready. Fill it in and upload your ID on DocuSeal. After signing, return to this page and request review.'
-      : a.status === 'requested' ? 'BEASTY has your request and will prepare your private packet once the agreement is finalized. We will email you when it is ready. You can send your application details now.'
-      : 'Request your forms and BEASTY will prepare your private DocuSeal packet. You can send your application details while it is being prepared.'}</p>
+    {!a.affiliateSigned && !a.reviewRequested && shared && email && <p className="onb-copy">Use {email} when DocuSeal asks for your email.</p>}
     {!a.affiliateSigned && (a.linkReady || a.status === 'not_started' || shared) && <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy || (!shared && !bundle.steps.profile.complete)} onClick={()=>void run('open')}>
       {busy ? 'Opening…' : a.linkReady || shared ? 'Open my forms in DocuSeal' : 'Request my forms'}
     </button>}
     {a.linkReady && !a.affiliateSigned && !a.reviewRequested && <button className="onb-btn onb-btn-block" disabled={busy} onClick={()=>void run('review')}>I finished, check my forms</button>}
     <button className="onb-link" disabled={busy} onClick={()=>void run('refresh')}>Refresh forms status</button>
-    {!a.affiliateSigned && <p className="onb-quiet">Requesting review does not mark the packet as signed. BEASTY checks it in DocuSeal first.</p>}
     {error && <p className="onb-err" role="alert">{error}</p>}
   </div>
 }
@@ -572,7 +555,6 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
     s === 'complete' ? ['Done', 'good'] : s === 'pending' ? ['Stripe is checking', 'warn'] : [p.started ? 'Still needed' : 'Not started', '']
   /* A step BEASTY has not switched on yet does not hold the application back (server/onboarding.ts). */
   const canSubmit = profileDone && (p.complete || !p.available) && (a.affiliateSigned || !a.available || a.mode === 'manual')
-  const later = [!a.affiliateSigned && (!a.available || a.mode === 'manual') && (forms ? 'your forms and agreement' : 'the agreement')].filter(Boolean) as string[]
   const copy = (i: number) => copyOf(i, forms)
 
   const prev = order[order.indexOf(step) - 1]
@@ -591,7 +573,6 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
       <h1 className="onb-title" id={`s${step}`}>
         {copy(step).title}
       </h1>
-      <p className="onb-lede">{copy(step).lede}</p>
       <nav className="onb-keys" aria-label="Steps">
         <ol>
           {order.map((i, k) => (
@@ -608,7 +589,6 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
           ))}
         </ol>
       </nav>
-      <p className="onb-head-note">Saved as you go. Close this page any time and come back to beastypages.com/join.</p>
     </>
   )
 
@@ -675,7 +655,7 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
           {show('kind') && <p className="onb-err">{show('kind')}</p>}
           {profile.kind === 'business' && (
             <div className="onb-fields" style={{ marginTop: 16 }}>
-              <Field id="p-businessName" label="Business legal name" error={show('businessName')} hint={forms ? 'As registered. Complete your tax classification and applicable SSN or EIN on the W-9.' : 'As registered. Complete your tax details with Stripe in the next step.'}>
+              <Field id="p-businessName" label="Business legal name" error={show('businessName')} hint="As registered.">
                 <input {...input('businessName', { autoComplete: 'organization' })} />
               </Field>
             </div>
@@ -748,9 +728,9 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
         <ul className="onb-rows">
           {(
             [
-              ['Identity check', 'Your legal name, date of birth and, if Stripe asks, a photo of your ID.', p.identity],
-              ['Tax details', p_kind(bundle) === 'business' ? 'Your business’s EIN, for your 1099.' : 'Your Social Security number, for your 1099.', p.tax],
-              ['Bank account', p.bankLast4 ? `Account ending ${p.bankLast4}.` : 'Where your commissions are deposited.', p.bank],
+              ['Identity check', '', p.identity],
+              ['Tax details', '', p.tax],
+              ['Bank account', p.bankLast4 ? `Account ending ${p.bankLast4}.` : '', p.bank],
             ] as [string, string, Tri][]
           ).map(([t, d, st]) => {
             const [label, tone] = tri(st)
@@ -758,7 +738,7 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
               <li key={t}>
                 <div className="onb-row-text">
                   <b>{t}</b>
-                  <span>{d}</span>
+                  {d && <span>{d}</span>}
                 </div>
                 <span className="onb-tag" data-tone={(p.available && tone) || undefined}>
                   {p.available ? label : 'Opens soon'}
@@ -773,13 +753,10 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
               <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy} onClick={() => void openProvider('/api/onboarding/me/payouts/link')}>
                 {busy ? 'Opening Stripe…' : p.started ? 'Continue with Stripe' : 'Set up payouts with Stripe'}
               </button>
-              <p className="onb-quiet" style={{ marginTop: 10 }}>
-                You’ll leave BEASTY for Stripe’s secure page, then come straight back here.
-              </p>
             </>
           ) : !p.available ? (
             <div className="onb-note" role="status">
-              <b>Payout setup opens soon.</b> BEASTY is finishing its Stripe setup. You can send your application without it and finish this step when it opens.
+              <b>Payout setup opens soon.</b>
             </div>
           ) : null}
         </div>
@@ -815,25 +792,15 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
               <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy || !profileDone} onClick={() => void openProvider('/api/onboarding/me/agreement/sign')}>
                 {busy ? 'Opening…' : forms ? 'Fill in and sign' : 'Review and sign'}
               </button>
-              <p className="onb-quiet" style={{ marginTop: 10 }}>
-                {!profileDone
-                  ? `Finish your information first; the ${forms ? 'forms are' : 'agreement is'} filled in from it.`
-                  : forms
-                    ? 'The packet opens on DocuSeal, our e-signature service, with your name and address already filled in. You’ll come back here after signing.'
-                    : 'The agreement opens on DocuSeal, our e-signature service, already filled in with your details. You’ll come back here after signing.'}
-              </p>
+              {!profileDone && (
+                <p className="onb-quiet" style={{ marginTop: 10 }}>
+                  Finish your information first.
+                </p>
+              )}
             </>
           ) : !a.available ? (
             <div className="onb-note" role="status">
-              {forms ? (
-                <>
-                  <b>The forms are being finalized.</b> You can send your application now and fill them in here when they’re ready.
-                </>
-              ) : (
-                <>
-                  <b>The agreement is being finalized.</b> You can send your application without it and sign here when it’s ready.
-                </>
-              )}
+              <b>{forms ? 'The forms are being finalized.' : 'The agreement is being finalized.'}</b>
             </div>
           ) : null}
         </>} />
@@ -862,7 +829,7 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
             [
               ['Your information', profileDone, true, 0, profileDone ? 'Complete' : 'Needs a few details'],
               ...(forms ? [] : [['Payout setup', p.complete, p.available, 1, p.complete ? `Complete${p.bankLast4 ? `, bank ending ${p.bankLast4}` : ''}` : 'Not finished']]),
-              [forms ? 'Forms & agreement' : 'Affiliate agreement', a.affiliateSigned, a.available, 2, a.affiliateSigned ? 'Signed' : a.mode === 'manual' ? a.reviewRequested ? 'Waiting for BEASTY’s review' : a.linkReady || a.formsLinkOn ? 'Ready in DocuSeal' : 'BEASTY will prepare your packet' : a.available ? 'Not signed yet' : `Opens soon. You’ll ${forms ? 'fill them in' : 'sign it'} after you send this.`],
+              [forms ? 'Forms & agreement' : 'Affiliate agreement', a.affiliateSigned, a.available, 2, a.affiliateSigned ? 'Signed' : a.mode === 'manual' ? a.reviewRequested ? 'Waiting for BEASTY’s review' : a.linkReady || a.formsLinkOn ? 'Ready in DocuSeal' : 'BEASTY will prepare your packet' : a.available ? 'Not signed yet' : 'Opens soon'],
             ] as [string, boolean, boolean, number, string][]
           ).map(([t, ok, open, n, d]) => (
             <li key={t}>
@@ -884,11 +851,6 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
             </li>
           ))}
         </ul>
-        {canSubmit && later.length > 0 && (
-          <p className="onb-quiet" style={{ marginTop: 16 }}>
-            {a.mode === 'manual' ? a.formsLinkOn ? 'You can send your details now and sign your forms on DocuSeal before or after; then tap I finished on this page.' : 'You can send your details now. Complete the forms on DocuSeal and request review when BEASTY prepares your packet.' : <>BEASTY gets your application now; {later.join(' and ')} open{later.length > 1 || forms ? '' : 's'} soon and you’ll finish {later.length > 1 || forms ? 'them' : 'it'} from this page.</>}
-          </p>
-        )}
         {!canSubmit && (
           <p className="onb-quiet" style={{ marginTop: 16 }}>
             Submit opens once every part above that’s open is done.
@@ -930,38 +892,29 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
 }
 
 const TITLES = ['Your information', 'Get paid', 'Your forms and agreement', 'You’re almost there'] as const
-const LEDES = [
-  'Use your legal name, the one on your ID. It goes on your forms and your agreement.',
-  'BEASTY pays affiliates through Stripe. Stripe checks who you are, takes your tax details for your 1099, and adds the bank account your commissions go to.',
-  'One secure packet on DocuSeal: your W-9, where to deposit your pay, a photo of your ID, and the affiliate agreement. BEASTY countersigns after you.',
-  'Check each part, then send your application to BEASTY.',
-] as const
 const SHORT = ['Details', 'Get paid', 'Forms', 'Review'] as const
 /* With Stripe on, the tax, bank and ID details went to Stripe in step 1, so step 2 is the agreement alone. */
-const WITH_STRIPE: Record<number, [string, string, string]> = {
-  0: ['Your information', 'Use your legal name, the one on your ID. It goes on your agreement and your tax form.', 'Details'],
-  2: ['Your affiliate agreement', 'Read the terms of the partnership and sign. BEASTY countersigns after you, and the signed copy appears on your dashboard.', 'Agreement'],
+const WITH_STRIPE: Record<number, [string, string]> = {
+  2: ['Your affiliate agreement', 'Agreement'],
 }
-function copyOf(i: number, forms: boolean): { title: string; lede: string; short: string } {
-  const [title, lede, short] = (!forms && WITH_STRIPE[i]) || [TITLES[i], LEDES[i], SHORT[i]]
-  return { title, lede, short }
+function copyOf(i: number, forms: boolean): { title: string; short: string } {
+  const [title, short] = (!forms && WITH_STRIPE[i]) || [TITLES[i], SHORT[i]]
+  return { title, short }
 }
-
-const p_kind = (b: Bundle) => b.profile.kind ?? 'individual'
 
 /* ------------------------------------------------------------ dashboard ---- */
 
-const STATUS_COPY: Record<Bundle['status'], [string, string, string]> = {
-  in_progress: ['In progress', '', ''],
-  changes_requested: ['Action needed', 'warn', ''],
-  submitted: ['Under review', 'warn', 'Thanks for applying. BEASTY has your application and will email you when it’s reviewed.'],
-  approved: ['Approved', 'good', 'You’re a BEASTY affiliate. Share your code and link from the Earn tab in the BEASTY app.'],
-  rejected: ['Not approved', 'bad', 'BEASTY isn’t able to approve your application right now.'],
-  suspended: ['Paused', 'bad', 'Your affiliate account is paused. Message BEASTY if you have questions.'],
+const STATUS_COPY: Record<Bundle['status'], [string, string]> = {
+  in_progress: ['In progress', ''],
+  changes_requested: ['Action needed', 'warn'],
+  submitted: ['Under review', 'warn'],
+  approved: ['Approved', 'good'],
+  rejected: ['Not approved', 'bad'],
+  suspended: ['Paused', 'bad'],
 }
 
 function Dashboard({ bundle, reload }: { bundle: Bundle; reload: (refresh?: boolean) => Promise<void> }) {
-  const [label, , copy] = STATUS_COPY[bundle.status]
+  const [label] = STATUS_COPY[bundle.status]
   const pr = bundle.profile
   const p = bundle.steps.payouts
   const a = bundle.steps.agreement
@@ -992,7 +945,6 @@ function Dashboard({ bundle, reload }: { bundle: Bundle; reload: (refresh?: bool
         <div className="onb-status">
           <p className="onb-kicker">{bundle.status === 'approved' ? `Welcome to BEASTY${first ? `, ${first}` : ''}` : `${first ? `${first}, your` : 'Your'} application`}</p>
           <h1 className="onb-title">{label}</h1>
-          {copy && <p className="onb-lede">{copy}</p>}
         </div>
       }
     >
@@ -1011,7 +963,6 @@ function Dashboard({ bundle, reload }: { bundle: Bundle; reload: (refresh?: bool
               <li>
                 <div className="onb-row-text">
                   <b>Payout setup</b>
-                  <span>Add your identity, tax details and bank account with Stripe.</span>
                 </div>
                 <button className="onb-btn onb-btn-primary" style={{ minHeight: 44, padding: '0 18px' }} disabled={busy} onClick={() => void open('/api/onboarding/me/payouts/link')}>
                   {p.started ? 'Continue' : 'Set up'}
@@ -1022,7 +973,6 @@ function Dashboard({ bundle, reload }: { bundle: Bundle; reload: (refresh?: bool
               <li>
                 <div className="onb-row-text">
                   <b>{forms ? 'Forms & agreement' : 'Affiliate agreement'}</b>
-                  <span>{!a.available ? 'Opens soon. BEASTY will let you know.' : forms ? 'Fill in your W-9, direct deposit and ID, and sign, on DocuSeal.' : 'Read and sign it on DocuSeal, filled in with your details.'}</span>
                 </div>
                 {a.mode === 'manual' ? <span className="onb-tag">{a.reviewRequested ? 'In review' : a.linkReady || a.formsLinkOn ? 'Ready' : 'Preparing'}</span> : a.available && bundle.status === 'submitted' ? (
                   <button className="onb-btn onb-btn-primary" style={{ minHeight: 44, padding: '0 18px' }} disabled={busy} onClick={() => void open('/api/onboarding/me/agreement/sign')}>
@@ -1068,7 +1018,6 @@ function Dashboard({ bundle, reload }: { bundle: Bundle; reload: (refresh?: bool
             <li>
               <div className="onb-row-text">
                 <b>Tax form (W-9)</b>
-                <span>In your signed packet, for your 1099.</span>
               </div>
               <span className="onb-tag" data-tone={a.affiliateSigned ? 'good' : undefined}>
                 {a.affiliateSigned ? 'Complete' : 'Not yet'}
@@ -1078,7 +1027,6 @@ function Dashboard({ bundle, reload }: { bundle: Bundle; reload: (refresh?: bool
             <li>
               <div className="onb-row-text">
                 <b>Tax details</b>
-                <span>Held by Stripe, which files your 1099.</span>
               </div>
               <span className="onb-tag" data-tone={p.tax === 'complete' ? 'good' : undefined}>
                 {p.tax === 'complete' ? 'Complete' : 'Not yet'}
@@ -1104,7 +1052,7 @@ function Dashboard({ bundle, reload }: { bundle: Bundle; reload: (refresh?: bool
 
       <div className="onb-section">
         <h3>Commissions</h3>
-        <p className="onb-copy">Commission payments aren’t switched on yet. When they are, what you’ve earned and when it’s paid will show here.</p>
+        <p className="onb-copy">Commission payments aren’t switched on yet.</p>
       </div>
 
       <div className="onb-section" style={{ paddingBottom: 40 }}>
@@ -1129,9 +1077,6 @@ function Dashboard({ bundle, reload }: { bundle: Bundle; reload: (refresh?: bool
             <dd>{pr.phone}</dd>
           </div>
         </dl>
-        <p className="onb-quiet" style={{ marginTop: 14 }}>
-          Need to change something? Message BEASTY and we’ll update it with you.
-        </p>
       </div>
     </Page>
   )
@@ -1157,11 +1102,6 @@ function StandIn({ kind, onDone }: { kind: 'payouts' | 'sign'; onDone: () => voi
       <div className="onb-standin">
         <span className="onb-test">Test mode</span>
         <h2>{kind === 'payouts' ? 'Stripe’s payout setup would open here' : 'DocuSeal’s signing page would open here'}</h2>
-        <p className="onb-copy">
-          {kind === 'payouts'
-            ? 'On the live site this is Stripe’s own page, where the affiliate enters their SSN, bank account and ID. In test mode nothing is collected; finishing marks the test account as set up.'
-            : 'On the live site this is the DocuSeal agreement, filled in with the affiliate’s details. In test mode nothing is signed for real; finishing marks the test agreement as signed by the affiliate.'}
-        </p>
         {err && <p className="onb-err">{err}</p>}
         <button className="onb-btn onb-btn-primary" disabled={busy} onClick={() => void finish()}>
           {kind === 'payouts' ? 'Finish test payout setup' : 'Sign test agreement'}

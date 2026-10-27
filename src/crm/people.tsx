@@ -100,7 +100,6 @@ export function Referrers() {
     <div className="crm-view">
       <PageTitle
         title="People"
-        sub="Who sends businesses to BEASTY, and how far those businesses get. A business counts for whoever sent it first."
         actions={
           <>
             <a className="crm-btn" href="#/affiliates">
@@ -208,9 +207,6 @@ export function ReferrerDetail({ id }: { id: string }) {
         <Section title="Their link">
           <div className="crm-panel">
             <CopyLink slug={p.slug} />
-            <p className="crm-note">
-              Anyone who opens this link and then asks for a spot on BEASTY within 90 days counts as sent by {p.name}. Add <code>?via=qr</code> when it is printed, or <code>?c=name</code> for a campaign.
-            </p>
             <Qr personId={p.id} slug={p.slug} />
           </div>
         </Section>
@@ -278,7 +274,7 @@ export function PartnerHome({ personId }: { personId: string | null }) {
   const p = data.person
   return (
     <div className="crm-view">
-      <PageTitle title={`Hi ${p.name.split(' ')[0]}`} sub="The businesses you send to BEASTY, and how they are doing." />
+      <PageTitle title={`Hi ${p.name.split(' ')[0]}`} />
       <div className="crm-glance is-row">
         <Stat label="Businesses you sent" value={p.leads} />
         <Stat label="Reached" value={p.contacted} />
@@ -288,10 +284,7 @@ export function PartnerHome({ personId }: { personId: string | null }) {
       <Section title="Your link">
         <div className="crm-panel">
           <CopyLink slug={p.slug} />
-          <p className="crm-note">
-            Share it with a business. When they ask for a spot on BEASTY after opening it, they count as yours.
-            {p.visits ? ` ${plural(p.visits, 'visit', 'visits')} so far.` : ''}
-          </p>
+          {p.visits > 0 && <p className="crm-note">{plural(p.visits, 'visit', 'visits')} so far.</p>}
           {personId && <Qr personId={personId} slug={p.slug} />}
         </div>
       </Section>
@@ -310,7 +303,7 @@ export function PartnerHome({ personId }: { personId: string | null }) {
             ))}
           </ul>
         ) : (
-          <Empty icon="share">None yet. Share your link to get started.</Empty>
+          <Empty icon="share">None yet.</Empty>
         )}
       </Section>
     </div>
@@ -324,7 +317,7 @@ export function Settings() {
   if (actor.role !== 'admin') return <Failure error="Settings are for admins." />
   return (
     <div className="crm-view">
-      <PageTitle title="Settings" sub="Who can use the CRM, the prices a quote starts from, and bringing BEASTY's listings in." />
+      <PageTitle title="Settings" />
       <PeopleSettings />
       <OfferSettings />
       <ImportSettings />
@@ -355,7 +348,6 @@ function PeopleSettings() {
         ) : undefined
       }
     >
-      <p className="crm-note">To let someone sign in, add the email of their BEASTY account and give them a role. They then open /crm while signed in to BEASTY.</p>
       {adding && (
         <PersonForm
           onDone={() => {
@@ -518,7 +510,6 @@ function OfferSettings() {
         ) : undefined
       }
     >
-      <p className="crm-note">What a quote starts from. A quote keeps the name and prices it was made with, so changing a price here never changes what an earlier customer paid.</p>
       {adding && (
         <OfferForm
           onDone={() => {
@@ -630,7 +621,6 @@ function OfferForm({ offer, onDone, onCancel }: { offer?: Offer; onDone: () => v
           </label>
         )}
       </div>
-      {offer && <p className="crm-note">Quotes already made keep the name and prices they were made with.</p>}
       {error && <div className="crm-error">{error}</div>}
       <div className="crm-row-btns">
         <button type="submit" className="crm-btn is-dark" disabled={busy}>
@@ -684,9 +674,6 @@ function ImportSettings() {
   return (
     <Section title="Bring in BEASTY's listings">
       <div className="crm-panel">
-        <p className="crm-note">
-          Adds every listed business whose listing shows no real website (none, Instagram only, a Linktree, an ordering page…), and everyone who asked for a spot. It only adds: a business already here is left alone, and people on the Individuals sheet are listed for someone to decide.
-        </p>
         <div className="crm-row-btns">
           <button type="button" className="crm-btn" disabled={busy} onClick={() => void go(true)}>
             <Icon name="search" size={16} />

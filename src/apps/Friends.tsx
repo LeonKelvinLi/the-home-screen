@@ -262,14 +262,11 @@ export function MyFriendsSection({ api }: { api: ShellApi }) {
           emptyLabel={friends.length > top.length ? 'Pick a friend for this spot' : 'Find friends in Contacts'}
         />
         {friends.length === 0 && data && (
-          <p className="prof-empty">
-            No friends yet. Open someone in Contacts and tap Add friend; once they accept, they can go in your Top 3.
-          </p>
+          <p className="prof-empty">No friends yet.</p>
         )}
 
         {sheet === 'edit' && (
           <div className="prof-picker top3-picker">
-            <p className="friend-note">Tap friends in the order you want them, #1 first.</p>
             {friends.map((f) => {
               const at = pick.indexOf(f.id)
               return (

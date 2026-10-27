@@ -267,9 +267,6 @@ export type GateKey = keyof typeof GATED
 
 export const MEMBERSHIP = {
   name: 'Become a Member',
-  lead:
-    'One membership, honoured at every participating BEASTY Affiliates. ' +
-    'Sign up is free to explore hidden gems in the whole directory.',
   /*
     A CHARITY CLAIM, and it is the operator's to substantiate. The brief says
     proceeds go to "Biggie's Purple Ribbon Foundation*" — with an asterisk whose
@@ -287,6 +284,5 @@ export const MEMBERSHIP = {
     name: "Biggie's Purple Ribbon Foundation",
     claim:
       "Proceeds from your sign-up go towards Biggie's Purple Ribbon Foundation: $9 from every membership activation.",
-    needsDetail: true,
   },
 } as const

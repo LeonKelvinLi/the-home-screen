@@ -97,10 +97,6 @@ function GetInTouch() {
           enterKeyHint="send"
           required
         />
-        <small className="join-hint">
-          Leon calls or texts you back at your convenience. The number is used for that and
-          nothing else.
-        </small>
       </label>
       <button type="submit" className="btn-primary" disabled={!ready || sending}>
         {sending ? 'Sending…' : 'Send'}
@@ -246,8 +242,7 @@ export function DesignsApp({ api }: { api: ShellApi }) {
             </svg>
           </span>
           <p className="designs-lead">
-            Websites, apps and online ordering for local businesses. Built by the same person who
-            built this home screen.
+            Websites, apps and online ordering for local businesses.
           </p>
         </div>
 
@@ -283,14 +278,7 @@ export function DesignsApp({ api }: { api: ShellApi }) {
           as a sale, and this is a membership perk.
         */}
         <p className="designs-offer">
-          <strong>Half off all of it</strong> for BEASTY Affiliates. Every price above is the
-          standard rate; members pay 50%.
-        </p>
-
-        <p className="designs-note">
-          Fixed quote before anything starts, and nothing is charged through this app. If your job
-          does not look like one of these, say so and it gets priced on its own. No design is out of
-          reach or too crazy — look at the website you are on.
+          <strong>Half off all of it</strong> for BEASTY Affiliates.
         </p>
 
         <h2 className="designs-h">Work</h2>
@@ -319,23 +307,13 @@ export function DesignsApp({ api }: { api: ShellApi }) {
           than quoting a second set that could drift from the first.
         */}
         <div className="designs-plan">
-          <p className="designs-plan-lead">
-            A spot on a city page is held through a BEASTY affiliate membership: a free tier,
-            Biggie&rsquo;s Member and BEASTY Member. The tiers, what each includes and what they
-            cost are on the Members page.
-          </p>
           <button type="button" className="btn-primary" onClick={() => api.openApp('sys.members')}>
             See the membership tiers
           </button>
-          <p className="designs-plan-foot">
-            Nothing is charged through this app. A design quote here is separate from the
-            membership.
-          </p>
         </div>
 
         <h2 className="designs-h">Start</h2>
         <div className="brand-contact">
-          <p>A first conversation costs nothing and usually settles the scope in one call.</p>
           <GetInTouch />
           {/* designs@beastypages.com on his ask: "change your email address here". */}
           <a className="btn-secondary" href="mailto:designs@beastypages.com">
@@ -350,11 +328,6 @@ export function DesignsApp({ api }: { api: ShellApi }) {
             See the full portfolio
           </a>
         </div>
-
-        <p className="brand-foot">
-          BEASTY Designs is the design and software side of BEASTY. Prices above are fixed
-          tiers; anything custom is quoted on its own.
-        </p>
       </div>
     </AppChrome>
   )

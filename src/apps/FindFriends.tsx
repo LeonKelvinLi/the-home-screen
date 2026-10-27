@@ -4,7 +4,6 @@ import { FriendFace } from './FriendFace'
 import { Gem } from './MembersApp'
 import { useGate } from '../lib/gate'
 import { fetchSuggested, sendFriendRequest, type Suggested } from '../lib/friends'
-import { POINTS_PER_REFERRAL } from '../data/membership'
 import type { ShellApi } from '../ios/Device'
 
 /*
@@ -84,7 +83,6 @@ export function FindFriendsApp({ api }: { api: ShellApi }) {
     return (
       <AppChrome title="Find friends" onBack={api.closeApp}>
         <div className="ff">
-          <p className="ff-lead">Sign in to find people you know on BEASTY and earn points together.</p>
           <button className="btn-primary" onClick={() => api.openApp('sys.join')}>
             Sign in or join free
           </button>
@@ -99,8 +97,7 @@ export function FindFriendsApp({ api }: { api: ShellApi }) {
         <div className="ff ff-done">
           <p className="ff-title">Requests sent</p>
           <p className="ff-lead">
-            {sent === 1 ? 'One friend request is' : `${sent} friend requests are`} on the way. When they say yes, you
-            will see what they star and like, and they can put you in their Top 3.
+            {sent === 1 ? 'One friend request is' : `${sent} friend requests are`} on the way.
           </p>
           <button className="btn-primary" onClick={api.closeApp}>
             Done
@@ -114,10 +111,6 @@ export function FindFriendsApp({ api }: { api: ShellApi }) {
     <AppChrome title="Find friends" onBack={api.closeApp}>
       <div className="ff">
         <h2 className="ff-title">Earn points with people you trust</h2>
-        <p className="ff-lead">
-          Add friends to see what they star and like. Every member who joins with your code earns you{' '}
-          {POINTS_PER_REFERRAL} <Gem size={14} /> points.
-        </p>
         {data && data !== 'error' && (
           <p className="ff-mine">
             <Gem size={16} /> You have <strong>{pts(data.myPoints)}</strong>

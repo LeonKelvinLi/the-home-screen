@@ -145,7 +145,7 @@ step('the rest of its twenty-four are open spots for Tattoo', tattoo.icons.lengt
 await shot(p, '1-tattoo')
 await p.locator('.home-page:not([inert]) .home-grid button[aria-label^="Tattoo — spot available"]').first().click()
 await p.waitForTimeout(1200)
-step('an open spot opens Reserve a Spot', await p.locator('.reserve-lead').count() > 0)
+step('an open spot opens Reserve a Spot', await p.locator('.ios-section-header', { hasText: 'What you get' }).count() > 0)
 await p.goto(`${base}/?b=b_zadnagrill`, { waitUntil: 'domcontentloaded' })
 await p.waitForSelector('.nav-place', { timeout: 20000 }).catch(() => {})
 

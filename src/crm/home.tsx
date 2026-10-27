@@ -205,7 +205,6 @@ export function Home() {
   const reached = perKey(h.leads.reachedSeries)
   const cashBy = new Map(h.money.series.map((x) => [x.bucket, x]))
   const cash = keys.map((k) => ({ label: bucketName(k, h.unit), values: [cashBy.get(k)?.onceCents ?? 0, cashBy.get(k)?.plansCents ?? 0] }))
-  const per = h.unit === 'day' ? 'per day' : h.unit === 'week' ? 'per week' : 'per month'
   const steps = STEP_BARS.map((b) => ({ label: b.label, shade: b.shade, value: h.stages.filter((x) => b.stages.includes(x.stage)).reduce((n, x) => n + x.count, 0) }))
   const sources = h.sources.map((x) => ({ label: x.label, value: x.count }))
   const cities = namedAndRest(h.cities, 'Everywhere else', 'No city listed', (l) => !l || l === 'BEASTY pages')
@@ -225,17 +224,12 @@ export function Home() {
       <JumpTo admin={actor.role === 'admin'} />
 
       <section className="crm-block" aria-labelledby="now-h">
-        <BlockHead id="now-h" title="Right now" scope={`as of ${asOf}`} note="Totals so far. The period picked above does not change them." />
+        <BlockHead id="now-h" title="Right now" scope={`as of ${asOf}`} />
         <div className="crm-kpi-row">
-          <StatTile
-            label="Users"
-            scope="All time"
-            value={count(h.users.total)}
-            note={h.users.first ? `people with a BEASTY account, since ${day(h.users.first)}` : 'nobody has signed up yet'}
-          />
-          <StatTile label="Leads" scope="All time" value={count(h.leads.total)} note={`businesses to sell a website to, out of ${count(h.listed.total)} on BEASTY`} />
-          <StatTile label="Customers" scope="All time" value={count(h.leads.customers)} note={h.leads.total ? `${pct(h.leads.customers / h.leads.total)} of all leads said yes` : 'no leads yet'} />
-          <StatTile label="Monthly plans" scope="Right now" value={`${money(h.money.mrrCents)}/mo`} note={`${money(h.money.mrrCents * 12)} a year, from the plans running now`} />
+          <StatTile label="Users" scope="All time" value={count(h.users.total)} note={h.users.first ? `since ${day(h.users.first)}` : undefined} />
+          <StatTile label="Leads" scope="All time" value={count(h.leads.total)} note={`out of ${count(h.listed.total)} on BEASTY`} />
+          <StatTile label="Customers" scope="All time" value={count(h.leads.customers)} note={h.leads.total ? `${pct(h.leads.customers / h.leads.total)} of all leads said yes` : undefined} />
+          <StatTile label="Monthly plans" scope="Right now" value={`${money(h.money.mrrCents)}/mo`} note={`${money(h.money.mrrCents * 12)} a year`} />
         </div>
         <div className="crm-needs" aria-labelledby="needs-h">
           <h3 id="needs-h">Needs you today</h3>
@@ -259,14 +253,13 @@ export function Home() {
       <ButtonsBlock query={query} scope={scope} />
 
       <section className={`crm-block${busy ? ' is-busy' : ''}`} aria-labelledby="leads-h">
-        <BlockHead id="leads-h" title="Leads and money" scope={`${scope.title}, ${scope.range}`} note="Leads are businesses the team is selling a website to. They are not users." />
+        <BlockHead id="leads-h" title="Leads and money" scope={`${scope.title}, ${scope.range}`} />
         <div className="crm-kpi-row">
           <StatTile
             label="Leads added"
             scope={scope.title}
             value={count(h.leads.added)}
             change={compare(h.leads.added, h.leads.addedBefore, scope.vs)}
-            note="businesses added to the book"
             trend={added.map((x) => x.value)}
           />
           <StatTile
@@ -274,10 +267,9 @@ export function Home() {
             scope={scope.title}
             value={count(h.leads.reachedInPeriod)}
             change={compare(h.leads.reachedInPeriod, h.leads.reachedBefore, scope.vs)}
-            note="leads called, texted or messaged"
             trend={reached.map((x) => x.value)}
           />
-          <StatTile label="New customers" scope={scope.title} value={count(h.leads.customersInPeriod)} note="leads that said yes" />
+          <StatTile label="New customers" scope={scope.title} value={count(h.leads.customersInPeriod)} />
           <StatTile
             label="Earned"
             scope={scope.title}
@@ -291,14 +283,12 @@ export function Home() {
         <div className="crm-dash-row">
           <ChartCard
             title="Where leads came from"
-            sub={`${plural(h.leads.added, 'lead', 'leads')} added ${scope.phrase}, by where they came from.`}
             table={{ head: ['Where from', 'Leads', 'Share'], rows: sources.map((x) => [x.label, x.value, h.leads.added ? pct(x.value / h.leads.added) : '—']) }}
           >
             <HBars rows={sources} total={h.leads.added} empty={`No leads were added ${scope.phrase}.`} />
           </ChartCard>
           <ChartCard
             title="Where those leads are now"
-            sub={`The same ${plural(h.leads.added, 'lead', 'leads')}, by the step each is on today.`}
             table={{ head: ['Step', 'Leads', 'Share'], rows: steps.map((x) => [x.label, x.value, h.leads.added ? pct(x.value / h.leads.added) : '—']) }}
           >
             <HBars rows={steps} total={h.leads.added} all empty={`No leads were added ${scope.phrase}.`} />
@@ -309,7 +299,6 @@ export function Home() {
             This one is what he adds: every business put on BEASTY, by the day it went up. */}
         <ChartCard
           title="Businesses added to BEASTY"
-          sub={`Every business put on BEASTY ${per}, ${scope.phrase}, website or not: ${count(h.listed.added)} in all. The ones without a website also become leads, below.`}
           table={{ head: [h.unit === 'day' ? 'Day' : h.unit === 'week' ? 'Week of' : 'Month', 'Businesses added'], rows: listedAdded.map((x) => [x.label, x.value]) }}
         >
           <Line points={listedAdded} color="var(--viz-1)" unit="businesses" name="Added" empty={`No businesses were added ${scope.phrase}.`} />
@@ -318,12 +307,11 @@ export function Home() {
         <div className="crm-dash-row">
           <ChartCard
             title="Leads added"
-            sub={`New leads ${per}, ${scope.phrase}. A business from BEASTY's listings counts on the day it went onto BEASTY.`}
             table={{ head: [h.unit === 'day' ? 'Day' : h.unit === 'week' ? 'Week of' : 'Month', 'Leads added'], rows: added.map((x) => [x.label, x.value]) }}
           >
             <Line points={added} color="var(--viz-1)" unit="leads" empty={`No leads were added ${scope.phrase}.`} />
           </ChartCard>
-          <ChartCard title="Top cities" sub={`Leads added ${scope.phrase}, by city.`} table={{ head: ['City', 'Leads'], rows: cities.map((x) => [x.label, x.value]) }}>
+          <ChartCard title="Top cities" table={{ head: ['City', 'Leads'], rows: cities.map((x) => [x.label, x.value]) }}>
             <HBars rows={cities} total={h.leads.added} empty={`No leads were added ${scope.phrase}.`} />
           </ChartCard>
         </div>
@@ -333,16 +321,14 @@ export function Home() {
             <header>
               <div>
                 <h3 id="money-h">Money earned</h3>
-                <p>Website sales and new monthly plans, {scope.phrase}.</p>
               </div>
             </header>
-            <p className="crm-chart-empty">No sales and no new monthly plans {scope.phrase}. Money shows here, day by day, from the first sale.</p>
+            <p className="crm-chart-empty">No sales and no new monthly plans {scope.phrase}.</p>
           </section>
         ) : (
           <div className="crm-dash-row">
             <ChartCard
               title="Money earned"
-              sub={`Website sales and new monthly plans ${per}, ${scope.phrase}, on the day each was sold.`}
               table={{ head: [h.unit === 'day' ? 'Day' : h.unit === 'week' ? 'Week of' : 'Month', 'Sales', 'New monthly plans'], rows: cash.map((x) => [x.label, money(x.values[0]), money(x.values[1])]) }}
             >
               <StackedColumns
@@ -355,7 +341,7 @@ export function Home() {
                 empty={`No sales ${scope.phrase}.`}
               />
             </ChartCard>
-            <ChartCard title="What sold" sub={`Money from each price, ${scope.phrase}.`} table={{ head: ['Price', 'Earned', 'Sales'], rows: h.money.sold.map((x) => [x.label, money(x.cents), x.count]) }}>
+            <ChartCard title="What sold" table={{ head: ['Price', 'Earned', 'Sales'], rows: h.money.sold.map((x) => [x.label, money(x.cents), x.count]) }}>
               <HBars rows={sold} format={money} empty={`No sales ${scope.phrase}.`} />
             </ChartCard>
           </div>
@@ -474,11 +460,7 @@ function ButtonsBlock({ query, scope }: { query: string; scope: Scope }) {
         id="buttons-h"
         title="Home-screen buttons"
         scope={`${scope.title}, ${scope.range}`}
-        note={
-          b.data?.countingSince
-            ? `Counted since ${new Date(b.data.countingSince).toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}. The team's own phones are left out.`
-            : 'Counting starts with the next visit. The team\u2019s own phones are left out.'
-        }
+        note={b.data?.countingSince ? `Counted since ${new Date(b.data.countingSince).toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}.` : undefined}
       />
       {b.error ? (
         <Failure error={b.error} retry={b.reload} />
@@ -486,7 +468,6 @@ function ButtonsBlock({ query, scope }: { query: string; scope: Scope }) {
         <div className="crm-dash-row">
           <ChartCard
             title="Times opened"
-            sub={`${plural(total, 'open', 'opens')} ${scope.phrase}, by button.`}
             table={{ head: ['Button', 'Opens', 'People'], rows: rows.map((r) => [r.label, r.value, r.people]) }}
           >
             <HBars rows={rows} total={total} empty={`Nobody opened these ${scope.phrase}.`} />

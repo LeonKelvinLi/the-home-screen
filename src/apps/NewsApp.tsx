@@ -31,16 +31,10 @@ export function NewsApp({ api }: { api: ShellApi }) {
   return (
     <AppChrome title="News" onBack={api.closeApp} tint="#141416">
       <div className="news">
-        <p className="news-intro">
-          What is happening across the directory — new affiliates, events, sales and openings.
-          Anyone can read it; BEASTY affiliates post it.
-        </p>
-
         <button className="news-calendar" onClick={() => api.openApp('sys.calendar')}>
           <CalendarGlyph />
           <span>
             <strong>Open the calendar</strong>
-            <small>Everything with a date on it, in one month view</small>
           </span>
           <Chevron />
         </button>
@@ -48,7 +42,7 @@ export function NewsApp({ api }: { api: ShellApi }) {
         <Feed items={live} now={now} api={api} />
 
         {live.length === 0 && (
-          <p className="news-empty">Nothing in the last thirty days. Check the archive below.</p>
+          <p className="news-empty">Nothing in the last thirty days.</p>
         )}
 
         {archive.length > 0 && (
@@ -63,11 +57,6 @@ export function NewsApp({ api }: { api: ShellApi }) {
             {showArchive && <Feed items={archive} now={now} api={api} archived />}
           </>
         )}
-
-        <p className="brand-foot">
-          Posts drop off the front page after thirty days and stay in the archive. Everything here
-          has already been announced by the business it is about.
-        </p>
       </div>
     </AppChrome>
   )

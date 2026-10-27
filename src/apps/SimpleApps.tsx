@@ -77,39 +77,17 @@ export function RewardsApp({ api }: { api: ShellApi }) {
                 </li>
               ))}
             </ul>
-            <p className="plain-note">
-              Every ticket is yours alone: numbered, kept on your account, and good for any monthly
-              raffle. Draws are announced in News.
-            </p>
           </section>
         )}
         {account ? (
-          <p>
-            {referrals === 0
-              ? 'Share your code and you earn a raffle ticket for every three people who join. There is no limit.'
-              : `${referrals} ${referrals === 1 ? 'person has' : 'people have'} joined on your code, which is ${tickets} ${tickets === 1 ? 'ticket' : 'tickets'}${unused ? `, ${unused} still unused` : ''}. One ticket for every three, with no limit.`}
-          </p>
+          referrals > 0 && (
+            <p>
+              {`${referrals} ${referrals === 1 ? 'person has' : 'people have'} joined on your code, which is ${tickets} ${tickets === 1 ? 'ticket' : 'tickets'}${unused ? `, ${unused} still unused` : ''}.`}
+            </p>
+          )
         ) : (
-          <p>Sign in to see your tickets. One for every three people who join on your code.</p>
+          <p>Sign in to see your tickets.</p>
         )}
-        {/*
-          THIS PROGRAMME DOES NOT EXIST YET.
-
-          The screen used to state an earn rate ("one point per dollar"), a
-          redemption rule ("points come off the total at checkout") and a
-          balance. There is no points field in the data model, no accrual
-          anywhere in the cart, and no redemption line in the checkout totals —
-          so all three were descriptions of software nobody has written, sitting
-          over a permanent zero. Describe the intent, and say it is the intent.
-        */}
-        <p>
-          The idea is one balance across every kitchen on this home screen — earn on any order,
-          spend on any other. That is the part a single-restaurant app cannot do.
-        </p>
-        <p className="plain-note">
-          It is not built yet. Nothing is earning, this balance will stay at zero, and no rate or
-          redemption has been set. Ordering is unaffected.
-        </p>
       </div>
     </AppChrome>
   )
@@ -147,7 +125,6 @@ export function HelpApp({ api }: { api: ShellApi }) {
           <button className="install-row" onClick={() => setGuide(true)}>
             <span className="install-row-text">
               <strong>Add BEASTY to your home screen</strong>
-              <em>Three taps. It opens full screen, like an app.</em>
             </span>
             <span className="install-row-go" aria-hidden="true">
               ›
@@ -198,7 +175,7 @@ function AddToHomeScreen() {
       <ul className="plain-list">
         <li>
           <strong>iPhone</strong>
-          Share, then “Add to Home Screen”. It then opens without a browser bar.
+          Share, then “Add to Home Screen”.
         </li>
         <li>
           <strong>Android</strong>
@@ -245,8 +222,7 @@ export function AccountApp({ api }: { api: ShellApi }) {
             {account.name} — {account.phone ?? account.email}
           </p>
           <p>
-            Your referral code is <strong>{account.referralCode}</strong>. Your profile has the QR
-            and what it has earned.
+            Your referral code is <strong>{account.referralCode}</strong>.
           </p>
           <button className="btn-secondary" onClick={signOut}>
             Sign out on this device
@@ -261,20 +237,9 @@ export function AccountApp({ api }: { api: ShellApi }) {
     <AppChrome title="Account" onBack={api.closeApp} tint="#3F4A5A">
       <div className="plain">
         <h3>Signed out</h3>
-        <p>
-          {/* Orders stay on the device that placed them: nothing ties an order
-              to a member yet, so "sign in to keep them across phones" was a
-              promise the server could not keep. Say what signing in does. */}
-          Orders placed on this device stay on this device. Sign in to open the whole directory
-          and to start earning rewards.
-        </p>
         <button className="btn-primary" onClick={() => api.openApp('sys.join')}>
           Sign in or sign up
         </button>
-        <p className="plain-fine">
-          We email you a six-digit code. No password, and it works on a phone you have never
-          opened this on.
-        </p>
 
         <AddToHomeScreen />
       </div>
@@ -292,10 +257,6 @@ export function ContactApp({ api }: { api: ShellApi }) {
     <AppChrome title="Contact" onBack={api.closeApp} tint="#1FAF54">
       <div className="plain">
         <h3>Get in touch</h3>
-        <p>
-          For anything about a live order — a missing item, a wrong item, a refund — contact the
-          platform rather than the individual kitchen.
-        </p>
         <ul className="plain-list">
           <li>
             <strong>Phone</strong>
@@ -305,14 +266,7 @@ export function ContactApp({ api }: { api: ShellApi }) {
             <strong>Hours</strong>
             Not published yet.
           </li>
-          <li>
-            <strong>Pickup</strong>
-            Your order screen lists each kitchen, with an address where they publish one.
-          </li>
         </ul>
-        <p className="plain-note">
-          The owner needs to supply a phone number before this goes live.
-        </p>
       </div>
     </AppChrome>
   )
@@ -334,14 +288,7 @@ export function SupplyApp({ api }: { api: ShellApi }) {
   return (
     <AppChrome title="BEASTY Supply Co" onBack={api.closeApp} tint="#111111">
       <div className="plain">
-        <p>
-          BEASTY Supply Co is the operator&rsquo;s own shop &mdash; merch and supplies, run on
-          Shopify, separate from the kitchens and services on the home screen.
-        </p>
-        <p className="plain-note">
-          The store link has not been published yet, so there is nothing to open from here. Every
-          other tile in this dock set works.
-        </p>
+        <p className="plain-note">The store link has not been published yet.</p>
       </div>
     </AppChrome>
   )

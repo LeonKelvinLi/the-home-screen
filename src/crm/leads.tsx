@@ -110,11 +110,7 @@ export function Leads({ params, selected }: { params: URLSearchParams; selected?
 
   return (
     <div className={`crm-view crm-list-view${pane ? ' is-pane' : ''}`}>
-      <PageTitle
-        title="Businesses"
-        count={data?.total ?? null}
-        sub={pane ? undefined : 'Every business BEASTY is working with, and what happens next with each.'}
-      />
+      <PageTitle title="Businesses" count={data?.total ?? null} />
       {creating && <NewLead onClose={() => setCreating(false)} />}
 
       <form className="crm-find-bar" onSubmit={submitSearch}>
@@ -183,7 +179,7 @@ export function Leads({ params, selected }: { params: URLSearchParams; selected?
       ) : data.leads.length === 0 ? (
         <div className="crm-empty">
           <Icon name="search" size={20} />
-          <span>No businesses match. {active.length || params.get('q') || step ? 'Try removing a filter.' : ''}</span>
+          <span>No businesses match.</span>
         </div>
       ) : (
         <>
@@ -361,7 +357,6 @@ export function NewLead({ onClose, initial = {} }: { onClose: () => void; initia
             {busy ? 'Adding…' : 'Add'}
           </button>
         </div>
-        <p className="crm-note">Already on BEASTY? Search for it first: every listed business without a real website is already here.</p>
         <div className="crm-form">
           <label className="crm-field is-wide">
             <span>Business name</span>

@@ -90,11 +90,6 @@ export function OrdersApp({ api }: { api: ShellApi }) {
         <div className="empty">
           <div className="empty-mark">🧾</div>
           <h2>No orders yet</h2>
-          <p>
-            {signedIn
-              ? 'Orders you place while signed in show here on every phone you use.'
-              : 'Your past and active orders live here.'}
-          </p>
           <button className="btn-secondary" onClick={api.closeApp}>
             Browse kitchens
           </button>

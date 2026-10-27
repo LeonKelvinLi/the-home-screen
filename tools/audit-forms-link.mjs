@@ -166,7 +166,7 @@ await page.waitForTimeout(1500)
 await page.locator('.onb-keys button[aria-label*="forms" i]').first().click().catch(() => {})
 await page.waitForTimeout(800)
 let text = await page.locator('body').innerText()
-check('/join says the forms are on DocuSeal and which email to use', /Your forms are on DocuSeal/.test(text) && text.includes(bob.email))
+check('/join says which email to use on DocuSeal', /DocuSeal/.test(text) && text.includes(bob.email))
 const openBtn = page.getByRole('button', { name: 'Open my forms in DocuSeal' })
 check('…with the button open though his details are not finished', (await openBtn.count()) === 1 && (await openBtn.isEnabled()))
 await page.screenshot({ path: '.verify/forms-link-join.png' })
@@ -187,7 +187,10 @@ await page.locator('.crm-aff-manual').first().screenshot({ path: '.verify/forms-
 /* ---- 4. "I finished", then the CRM ---- */
 const review = await ana.call('/api/onboarding/me/agreement/review', {})
 check('"I finished" puts her packet in review without marking it signed', review.status === 200 && review.body?.steps?.agreement?.reviewRequested === true && !review.body.steps.agreement.affiliateSigned)
-check('…and tells the team', to(LEAD).some((m) => /ready for review/.test(m.subject ?? '')))
+/* The server sends the notice without waiting on it, so give the stand-in a moment to receive it. */
+let told = false
+for (let i = 0; i < 40 && !told; i++) { told = to(LEAD).some((m) => /ready for review/.test(m.subject ?? '')); if (!told) await new Promise((r) => setTimeout(r, 100)) }
+check('…and tells the team', told)
 let detail = (await admin.call(`/api/crm/onboarding/${anaApp}`)).body
 check('the CRM record knows it was the forms link, and when', detail?.manualPacket?.formsLink === true && typeof detail.manualPacket.formsLinkSentAt === 'number')
 const attach = (id, body) => admin.call(`/api/crm/onboarding/${id}/packet/submission`, body)

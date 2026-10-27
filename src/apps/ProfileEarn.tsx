@@ -32,10 +32,6 @@ export function ProfileEarn({ api }: { api: ShellApi }) {
     return (
       <div className="earn-out">
         <h2 className="prof-h">Earn with BEASTY</h2>
-        <p>
-          Every member gets their own link and QR code. Sign in to see yours, the people and businesses you bring, and what they
-          earn you.
-        </p>
         <button className="btn-primary" onClick={() => api.openApp('sys.account')}>
           Sign in
         </button>
@@ -82,13 +78,6 @@ export function ProfileEarn({ api }: { api: ShellApi }) {
                 Raising <b>$0 a month</b> so far
               </>
             )}
-          </p>
-          <p className="earn-foundation-how">
-            {money(f.perMonthCents)} a month from every member you bring who takes a membership, and every business you bring on a
-            monthly plan
-            {f.payingMembers + f.payingBusinesses > 0
-              ? `: ${f.payingMembers} ${f.payingMembers === 1 ? 'member' : 'members'} and ${f.payingBusinesses} ${f.payingBusinesses === 1 ? 'business' : 'businesses'} now.`
-              : '.'}
           </p>
         </section>
       )}

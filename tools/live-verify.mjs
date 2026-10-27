@@ -525,7 +525,7 @@ await p.waitForSelector('.join', { timeout: 20000 }).catch(() => {})
 const form = await p.evaluate(() => ({
   tel: document.querySelector('.join input[type=tel]')?.required ?? null,
   email: document.querySelector('.join input[type=email]')?.required ?? null,
-  lead: document.querySelector('.join-lead')?.textContent?.replace(/\s+/g, ' ').trim().slice(0, 90) ?? '',
+  lead: [...document.querySelectorAll('.join-lead, .join-hint')].map((n) => n.textContent).join(' ').replace(/\s+/g, ' ').trim().slice(0, 200),
 }))
 console.log('join form     :', JSON.stringify(form))
 if (form.tel === null) fails.push('the sign-in form did not render')
@@ -581,13 +581,13 @@ for (const s of [
      link, Janelle's mailbox, and Leon's line under his title. */
   'contacts-letter', 'BEASTY contacts', 'janellenicole@beastypages.com', 'CTO/Co-Founder', '& growing', 'the-beaudega-by-maine', 'is-sweep',
   /* 2026-09-22, 9:15 pm: Reserve a Spot in his words, with his boxes. */
-  'Business information', 'List your hours', 'Business description', 'Add a web link and/or IG handle',
-  'BEASTY Affiliate Member', 'Affiliate tiers', 'Get in touch', 'Referral Klub (BARK)',
+  'Business information', 'List your hours', 'Business description',
+  'BEASTY Affiliate Member', 'Get in touch', 'Referral Klub (BARK)',
   'sin-city-pits-breeder', 'brand-photos-track',
   /* The four reels the sweep found never attached. */
   'DaBs4utDZXb', 'DYI6AJgIFII', 'DYlU7BcoAMi', 'DcHlbGcBBX2',
   /* The Contacts list reads real members (2026-09-02). */
-  'api/members/directory', 'members so far',
+  'api/members/directory',
   'san-lorenzo', 'Initiation and annual fees', 'point-richmond', 'hercules',
   'is-glow', 'icon-glow',
   /* The screens that were showing account data without reading the account. */
@@ -595,7 +595,7 @@ for (const s of [
   /* 2026-09-06: the rotating pass on the member card, a member's page from
      Contacts, the numbered tickets on Rewards, and the yearly switch's style
      (the switch itself stays hidden until a yearly price exists). */
-  'api/members/pass', 'Refreshes in', 'single scan', 'api/members/', '/profile', 'Nothing liked yet',
+  'api/members/pass', 'Refreshes in', 'api/members/', '/profile', 'Nothing liked yet',
   'api/members/tickets', 'ticket-stub', 'members-interval',
   /* 2026-09-30: the BEASTY category pages and Search's Categories and Cities drop-downs. */
   'search-drop-categories', 'search-drop-cities', 'search-cat-thumb', 'category_opened', '/wallpapers/cat-', 'Barbers, cuts and shaves',

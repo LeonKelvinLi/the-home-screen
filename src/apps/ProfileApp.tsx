@@ -438,9 +438,7 @@ export function ProfileApp({ api }: { api: ShellApi }) {
           <section className="prof-drop">
             <h2 className="prof-h">Places visited</h2>
             {visited.length === 0 ? (
-              <p className="prof-empty">
-                No check-ins yet. Scanning a business&rsquo;s code on a visit is what fills this in.
-              </p>
+              <p className="prof-empty">No check-ins yet.</p>
             ) : (
               <div className="prof-chiprow">
                 {visited.map((b) => (
@@ -546,11 +544,6 @@ export function ProfileApp({ api }: { api: ShellApi }) {
                   </button>
                 )
               })}
-              {favs.length === 0 && recents.length === 0 && (
-                <p className="prof-empty">
-                  Star a business, or open one, and it becomes pickable here.
-                </p>
-              )}
             </div>
           )}
         </section>
@@ -591,11 +584,6 @@ export function ProfileApp({ api }: { api: ShellApi }) {
               )
             })}
           </div>
-          {favs.length === 0 && (
-            <p className="prof-empty">
-              The star on a business&rsquo;s page puts it here.
-            </p>
-          )}
         </section>
 
         {/* Recent, as a drop-down rather than a permanent list. */}
@@ -657,7 +645,7 @@ export function ProfileApp({ api }: { api: ShellApi }) {
         <p className="prof-fineprint">
           {account
             ? 'Other members can open you from Contacts and see your name, the month you joined, the pet you built, how many friends you have, your Top 3, and the businesses you have starred or liked. A photo and the places you have visited stay on this phone and are sent nowhere.'
-            : 'This profile is on this phone only. You are not signed in, so nothing here has been sent anywhere and nobody else can see it.'}
+            : 'This profile is on this phone only.'}
         </p>
         </>
         )}

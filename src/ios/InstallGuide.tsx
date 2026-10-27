@@ -51,7 +51,10 @@ export function InstallGuide({ onClose }: { onClose: () => void }) {
     <div className="ig-scrim" onClick={onClose} role="dialog" aria-modal="true" aria-label="How to install">
       <div className="ig" onClick={(e) => e.stopPropagation()}>
         <h2 className="ig-title">Keep BEASTY on your home screen</h2>
-        <p className="ig-sub">Three taps, and it opens like an app — full screen, no address bar.</p>
+        <p className="ig-sub">
+          Tap the {dots ? <strong>•••</strong> : <strong>share</strong>} button
+          {dots ? ' in the address bar' : ' at the bottom'}
+        </p>
 
         {/*
           A drawn phone rather than a screenshot. A screenshot of Safari ages the
@@ -100,25 +103,6 @@ export function InstallGuide({ onClose }: { onClose: () => void }) {
             </div>
           </div>
         </div>
-
-        <ol className="ig-steps">
-          <li className={step === 0 ? 'is-on' : ''}>
-            Tap the {dots ? <strong>•••</strong> : <strong>share</strong>} button
-            {dots ? ' in the address bar' : ' at the bottom'}
-            {/*
-              Both are named, always. Whichever one this phone actually has, the
-              other sentence is the one that rescues somebody the detection got
-              wrong — and it costs six words.
-            */}
-            <em>{dots ? ' — or the share arrow, on older iPhones' : ' — or ••• in the address bar, if you see that instead'}</em>
-          </li>
-          <li className={step === 1 ? 'is-on' : ''}>
-            Scroll down and choose <strong>Add to Home Screen</strong>
-          </li>
-          <li className={step === 2 ? 'is-on' : ''}>
-            Tap <strong>Add</strong>. The icon appears with your other apps.
-          </li>
-        </ol>
 
         <button className="ig-done" onClick={onClose}>
           Got it

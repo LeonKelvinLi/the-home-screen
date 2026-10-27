@@ -189,9 +189,6 @@ function GatePrompt({
       <button className="gate-scrim" onClick={onClose} aria-label="Not now" />
       <div className="gate-card">
         <p className="gate-what">{what}</p>
-        <p className="gate-lead">
-          Free, and it opens the whole directory — every city, the reels, the gallery and search.
-        </p>
         {/*
           ONE BUTTON, NAMED FOR BOTH THINGS IT DOES.
 
@@ -209,9 +206,6 @@ function GatePrompt({
         <button className="btn-primary" onClick={onJoin}>
           Sign in or sign up free
         </button>
-        <p className="gate-fine">
-          Already a member? Same button. We email you a six-digit code; there is no password.
-        </p>
         <button className="gate-later" onClick={onClose}>
           Keep looking around
         </button>

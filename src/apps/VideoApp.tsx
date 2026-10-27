@@ -282,7 +282,7 @@ export function VideoApp({ api }: { api: ShellApi }) {
     return (
       <AppChrome title={HEADING} onBack={api.closeApp} tint="#0b0b0d">
         <div className="plain">
-          <p>No clips yet. A business's video shows up here as soon as one is added to them.</p>
+          <p>No clips yet.</p>
         </div>
       </AppChrome>
     )
@@ -376,7 +376,7 @@ export function VideoApp({ api }: { api: ShellApi }) {
                   <div className="reel-who">
                     {r.logo && (
                       <button className="reel-avatar" onClick={() => api.openApp(r.brandId)} aria-hidden="true" tabIndex={-1}>
-                        <BrandLogo logo={r.logo} size={34} masked={false} />
+                        <BrandLogo logo={r.logo} size={40} masked={false} />
                       </button>
                     )}
                     <button className="reel-name" onClick={() => api.openApp(r.brandId)}>
@@ -401,11 +401,6 @@ export function VideoApp({ api }: { api: ShellApi }) {
                   </p>
                 </div>
                 <span className="reel-progress" aria-hidden="true" />
-                {i === live && reels.length > 1 && i === 0 && (
-                  <span className="reel-hint" aria-hidden="true">
-                    Scroll for more
-                  </span>
-                )}
               </>
             )}
           </section>

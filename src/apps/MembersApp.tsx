@@ -13,7 +13,7 @@ import {
   DISCOUNT_PER_MILESTONE,
 } from '../data/membership'
 import { LISTED_KITCHENS } from '../data/brands'
-import { AFFILIATE_INTRO, AFFILIATE_TIERS, AFFILIATE_CLOSE, AFFILIATE_FEES } from '../data/affiliateTiers'
+import { AFFILIATE_TIERS, AFFILIATE_FEES } from '../data/affiliateTiers'
 import type { Perk } from '../data/membership'
 import type { ShellApi } from '../ios/Device'
 
@@ -75,7 +75,6 @@ const WITH_OFFERS = LISTED_KITCHENS.filter(
   (b) => !b.offers?.mock && (b.offers?.welcome || b.offers?.loyalty),
 )
 const OFFER_COUNT = WITH_OFFERS.length
-const OFFER_PARTNER = WITH_OFFERS[0]?.name ?? ''
 
 /**
  * A perk: its point, always readable, and his full sentence one tap away.
@@ -163,12 +162,10 @@ function PerkRow({ perk }: { perk: Perk }) {
  */
 function SideHead({
   label,
-  sub,
   open,
   onClick,
 }: {
   label: string
-  sub: string
   open: boolean
   onClick: () => void
 }) {
@@ -179,10 +176,7 @@ function SideHead({
       aria-expanded={open}
       onClick={onClick}
     >
-      <span className="members-side-text">
-        {label}
-        <span className="members-side-sub">{sub}</span>
-      </span>
+      <span className="members-side-text">{label}</span>
       <svg viewBox="0 0 24 24" aria-hidden="true" className="members-side-chev">
         <path
           d="M7 10l5 5 5-5"
@@ -252,7 +246,6 @@ export function MembersApp({ api }: { api: ShellApi }) {
           <span className="members-gem">
             <Gem size={44} />
           </span>
-          <p className="members-lead">{m.lead}</p>
           {said && (
             <p className="members-said" role="status">
               {said}
@@ -263,13 +256,11 @@ export function MembersApp({ api }: { api: ShellApi }) {
         <div className="members-sides" role="group" aria-label="Membership for">
           <SideHead
             label="User"
-            sub="Passes for customers"
             open={side.user}
             onClick={() => toggle('user')}
           />
           <SideHead
             label="Business"
-            sub="Affiliate tiers"
             open={side.business}
             onClick={() => toggle('business')}
           />
@@ -325,9 +316,6 @@ export function MembersApp({ api }: { api: ShellApi }) {
                 ${billing === 'year' && t.yearly ? t.yearly : t.monthly}
                 <em>{billing === 'year' && t.yearly ? '/year' : '/month'}</em>
               </span>
-              <span className="members-plan-note">
-                Honours {t.honours} at any affiliate, with no limit each month.
-              </span>
               {/*
                 HIS REVISION OF 2026-08-27, near enough word for word:
 
@@ -364,11 +352,6 @@ export function MembersApp({ api }: { api: ShellApi }) {
           reward with no ceiling and it is easy to miss that beside a capped
           discount, so it gets its own line in his own numbers.
         */}
-        <p className="members-note">
-          Raffle tickets have no limit: one for every {PER_MILESTONE_REFERRALS} sign-ups, so 30
-          referrals is 10 tickets. Save them and enter any monthly raffle.
-        </p>
-
         <RecruiterCard />
 
         {/*
@@ -379,13 +362,7 @@ export function MembersApp({ api }: { api: ShellApi }) {
           and none of the others have agreed one. "Good at 10 businesses" sold a
           membership against nine promises nobody had made.
         */}
-        <p className="members-note">
-          {OFFER_COUNT === 0
-            ? 'No business has agreed an offer yet. This is what the programme will look like once they do.'
-            : OFFER_COUNT === 1
-              ? `Good at ${OFFER_PARTNER} today, with more partners being signed up.`
-              : `Good at ${OFFER_COUNT} businesses today, and at every one that joins after.`}
-        </p>
+        {OFFER_COUNT === 0 && <p className="members-note">No business has agreed an offer yet.</p>}
         </>
         )}
 
@@ -398,11 +375,6 @@ export function MembersApp({ api }: { api: ShellApi }) {
             Shown as the operator's statement and flagged, not printed as though
             the app had checked it. See data/membership.ts.
           */}
-          {m.charity.needsDetail && (
-            <p className="members-charity-flag">
-              Needs the foundation&rsquo;s registration before this goes in front of customers.
-            </p>
-          )}
         </div>
 
         <MembersFooterCta api={api} />
@@ -426,8 +398,6 @@ export function MembersApp({ api }: { api: ShellApi }) {
  * this reads it. Signed out it says neither thing, because it does not know.
  */
 function MembersFooterCta({ api }: { api: ShellApi }) {
-  const { account } = useGate()
-  const live = account && account.paymentsConfigured
   return (
     <div className="members-cta">
       {/* Reachable whatever the payment state — it is a preview of the card,
@@ -435,13 +405,6 @@ function MembersFooterCta({ api }: { api: ShellApi }) {
       <button className="btn-primary" onClick={() => api.openApp('sys.membercard')}>
         See the member card
       </button>
-      <p className="members-cta-note">
-        {live
-          ? 'Checkout is Stripe. Your card details are entered on Stripe\u2019s own page and never reach this app. A membership starts when Stripe confirms the payment, not when you tap.'
-          : account
-            ? 'Card payments are not connected yet, so nothing can be charged and no membership can start. Choosing a tier records it and the operator will be in touch.'
-            : 'Sign up free first. Every term above is shown again, and confirmed, before any money moves.'}
-      </p>
     </div>
   )
 }
@@ -463,11 +426,6 @@ function MembersFooterCta({ api }: { api: ShellApi }) {
 function BusinessTiers({ api }: { api: ShellApi }) {
   return (
     <div className="members-biz">
-      {AFFILIATE_INTRO.map((line) => (
-        <p key={line} className="members-biz-intro">
-          {line}
-        </p>
-      ))}
       {AFFILIATE_TIERS.map((t) => (
         <div key={t.id} className={`members-biz-plan${t.id === 'beasty' ? ' is-best' : ''}`}>
           <span className="members-biz-tier">Tier {t.n}</span>
@@ -480,7 +438,6 @@ function BusinessTiers({ api }: { api: ShellApi }) {
             {t.price}
             {t.priceNote && <em>{t.priceNote}</em>}
           </span>
-          <span className="members-biz-lead">{t.lead}</span>
           <ul className="members-plan-perks">
             {t.perks.map((perk) => (
               <PerkRow key={perk.label} perk={perk} />
@@ -496,17 +453,11 @@ function BusinessTiers({ api }: { api: ShellApi }) {
             <li key={l}>{l}</li>
           ))}
         </ul>
-        <p>{AFFILIATE_FEES.note}</p>
       </div>
-      <p className="members-biz-close">{AFFILIATE_CLOSE}</p>
       <div className="members-biz-cta">
         <button className="btn-primary" onClick={() => api.openApp('slot.join')}>
           Reserve a spot
         </button>
-        <p className="members-biz-cta-note">
-          Tier 1 begins with a reserved spot, which is free. Tier 2 and Tier 3 are arranged with
-          the operator once your spot is confirmed. Nothing is charged through this app.
-        </p>
       </div>
     </div>
   )
@@ -696,11 +647,6 @@ function RecruiterCard() {
       <span className="members-plan-name">BEASTY Recruiter</span>
       <span className="members-plan-price">
         $60<em>/month</em>
-      </span>
-      <span className="members-plan-note">
-        Earn BARK points for the people and businesses you bring to BEASTY: 10 points a month for each
-        new member (2 months on a BIGGIE PASS, 3 on a BEASTY PASS) and 10 a month for each new business,
-        for its first 6 paid months. 1 point is $1. Cash out from 100 points, in steps of 50.
       </span>
       {!account ? (
         <p className="members-signedout">Sign up free first, then become a recruiter.</p>

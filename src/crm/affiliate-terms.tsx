@@ -204,10 +204,7 @@ function Question({
           {!confirmed && <span className="crm-terms-dot" title="Needs your OK" />}
           {f.prompt}
         </h3>
-        <p className="crm-terms-hint">
-          {f.explain}
-          {f.example && <span className="crm-terms-eg"> For example: {f.example}</span>}
-        </p>
+        {f.explain && <p className="crm-terms-hint">{f.explain}</p>}
         <Wording f={f} terms={terms} />
       </div>
       <div className="crm-terms-answer">
@@ -405,7 +402,6 @@ export function AffiliateTerms() {
       </a>
       <PageTitle
         title="Money terms"
-        sub="What affiliates pay and earn. Check each answer: it saves as you go, and nothing is official until you publish on the last step."
         actions={
           <a className="crm-btn" href="/api/crm/affiliate-terms/schedule.pdf" target="_blank" rel="noreferrer">
             <Icon name="file" size={16} />
@@ -443,7 +439,6 @@ export function AffiliateTerms() {
       </nav>
       <header className="crm-terms-step">
         <h2>{CHAPTERS[idx].title}</h2>
-        <p>{CHAPTERS[idx].blurb}</p>
       </header>
 
       {chapter !== 'review' ? (
@@ -502,18 +497,12 @@ export function AffiliateTerms() {
             )}
           </Section>
           <Section title={local.unsettled.length ? `Still needs your OK (${local.unsettled.length})` : 'Every answer is checked'}>
-            <p className="crm-note is-quiet">
-              {local.unsettled.length
-                ? 'Nobody has agreed these yet. Tap one to go to it, then change it or tap Looks right. You can publish without them, but the PDF lists them as not yet agreed.'
-                : 'Every answer has been agreed or checked.'}
-            </p>
             <ul className="crm-group">
               {local.unsettled.map((id) => (
                 <li key={id}>
                   <button type="button" className="crm-row crm-terms-jump" onClick={() => jump(id)}>
                     <span className="crm-row-text">
                       <strong>{FIELDS_BY_ID[id].prompt}</strong>
-                      <span>{FIELDS_BY_ID[id].source}</span>
                     </span>
                     <Icon name="chevronRight" size={18} />
                   </button>
@@ -531,7 +520,7 @@ export function AffiliateTerms() {
             }
           >
             <ScheduleView terms={terms} />
-            <p className="crm-note is-quiet">Code {state.draft.code}. The code changes whenever a figure does; it prints on every page and goes into the DocuSeal packet.</p>
+            <p className="crm-note is-quiet">Code {state.draft.code}.</p>
           </Section>
           {admin && (
             <Section title="Publish">
@@ -556,13 +545,9 @@ export function AffiliateTerms() {
                   </button>
                 )}
               </div>
-              <p className="crm-note is-quiet">
-                {local.blocked
-                  ? 'Fix what has to be fixed first.'
-                  : !state.unpublishedChanges
-                    ? 'Nothing new to publish.'
-                    : 'Publishing makes these the standard terms for new affiliates. It sends nothing to anyone: the packet is updated by hand in DocuSeal.'}
-              </p>
+              {(local.blocked || !state.unpublishedChanges) && (
+                <p className="crm-note is-quiet">{local.blocked ? 'Fix what has to be fixed first.' : 'Nothing new to publish.'}</p>
+              )}
             </Section>
           )}
           {state.versions.length > 0 && (
@@ -612,7 +597,7 @@ export function AffiliateTermsPanel({ id, admin }: { id: string; admin: boolean 
     return (
       <Section title="Money terms">
         <p className="crm-note">
-          No standard schedule is published yet. <a href="#/affiliate-terms">Fill in and publish the affiliate terms</a> first; this affiliate starts on them and any change for them is made here.
+          No standard schedule is published yet. <a href="#/affiliate-terms">Fill in and publish the affiliate terms</a>.
         </p>
       </Section>
     )
@@ -656,7 +641,7 @@ export function AffiliateTermsPanel({ id, admin }: { id: string; admin: boolean 
               : `Matches the DocuSeal packet attached for them (code ${data.packet.code}).`}
           </p>
         ) : (
-          <p className="crm-quiet">No packet attached yet. When one is, the CRM records which code it went out with.</p>
+          <p className="crm-quiet">No packet attached yet.</p>
         )}
         <div className="crm-terms-actions">
           <a className="crm-btn" href={`/api/crm/onboarding/${encodeURIComponent(id)}/schedule.pdf`} target="_blank" rel="noreferrer">
@@ -672,12 +657,10 @@ export function AffiliateTermsPanel({ id, admin }: { id: string; admin: boolean 
             Copy code
           </button>
         </div>
-        <p className="crm-note is-quiet">On the free DocuSeal plan the packet’s Schedule A prints the standard figures; anything different for this affiliate goes in its “Schedule A Changes” field, below.</p>
       </div>
 
       <details className="crm-aff-prefill crm-terms-override" open={Object.keys(data.overrides ?? {}).length > 0}>
         <summary>Change terms for this affiliate only</summary>
-        <p className="crm-note is-quiet">Leave a box empty to use the standard figure. Fees, the foundation’s share and FIRST48 are the same for everyone.</p>
         {PER_AFFILIATE.filter((f) => isShown(f, terms) || f.id === 'commissionMonths').map((f) => {
           const own = (draft ?? {})[f.id]
           const value = own === undefined ? (f.kind === 'longtext' || f.kind === 'choice' ? undefined : undefined) : own
@@ -735,7 +718,6 @@ export function AffiliateTermsPanel({ id, admin }: { id: string; admin: boolean 
 
       <details className="crm-aff-prefill" open={Object.keys(data.overrides ?? {}).length > 0}>
         <summary>DocuSeal Schedule A</summary>
-        <p className="crm-note is-quiet">The packet’s Schedule A prints the standard figures. Its one BEASTY field, “Schedule A Changes”, says “None” by default; paste this when creating the request for an affiliate with their own terms.</p>
         {Object.entries(data.docusealFields ?? {}).map(([name, value]) => (
           <div key={name} className="crm-aff-prefill-row">
             <div>

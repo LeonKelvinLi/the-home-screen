@@ -158,18 +158,17 @@ export interface Option<V extends string = string> {
 export interface Chapter {
   id: string
   title: string
-  blurb: string
   minutes: number
 }
 
 export const CHAPTERS: Chapter[] = [
-  { id: 'prices', title: 'What a business pays', blurb: 'What a business pays to join, and every month after.', minutes: 0.5 },
-  { id: 'foundation', title: 'The foundation’s $9', blurb: 'What comes off the top before anyone is paid.', minutes: 1 },
-  { id: 'promo', title: 'FIRST48', blurb: 'The founding-business offer.', minutes: 1 },
-  { id: 'commission', title: 'Commission', blurb: 'How a referral is paid.', minutes: 1.5 },
-  { id: 'bark', title: 'BARK points', blurb: 'What each referral earns, and cashing out.', minutes: 2 },
-  { id: 'payout', title: 'Getting paid', blurb: 'When affiliates get paid, and what takes points back.', minutes: 2.5 },
-  { id: 'review', title: 'Review', blurb: 'Check everything once more, then publish.', minutes: 1 },
+  { id: 'prices', title: 'What a business pays', minutes: 0.5 },
+  { id: 'foundation', title: 'The foundation’s $9', minutes: 1 },
+  { id: 'promo', title: 'FIRST48', minutes: 1 },
+  { id: 'commission', title: 'Commission', minutes: 1.5 },
+  { id: 'bark', title: 'BARK points', minutes: 2 },
+  { id: 'payout', title: 'Getting paid', minutes: 2.5 },
+  { id: 'review', title: 'Review', minutes: 1 },
 ]
 
 export interface TermField {
@@ -185,8 +184,7 @@ export interface TermField {
   places?: number
   options?: Option[]
   /** "What does this mean?": plain English, then an example, then the contract wording. */
-  explain: string
-  example?: string
+  explain?: string
   /** The sentence that prints in Schedule A, with this field's current value. */
   legal: (t: Terms) => string
   /** Where the default came from. */
@@ -333,7 +331,6 @@ export const FIELDS: TermField[] = [
     min: 0,
     max: 5000,
     explain: 'The one-time fee a business pays to join.',
-    example: 'With FIRST48: $99 to join plus 3 months at $39 is $216 for the first year.',
     legal: (t) => `Each Member Business pays a one-time initiation fee of ${usd(t.initiationFee)}.`,
     source: 'Leon, 23 Oct: “$99 initiation”, the figure the Members page has printed since 3 Sep. Glenn’s FIRST48 note of 29 Aug used $69.',
     settled: true,
@@ -364,8 +361,7 @@ export const FIELDS: TermField[] = [
     why: 'precision',
     min: 0,
     max: 5000,
-    explain: 'What a member pays each month, on top of their pass, to earn BARK points. It earns no one points. Set it to 0 to make it free.',
-    example: 'At $60 a month, one business they bring (10 points a month) covers a sixth of it.',
+    explain: 'What a member pays each month, on top of their pass, to earn BARK points.',
     legal: (t) => (t.recruiterFee > 0 ? `A member becomes an Affiliate by upgrading to recruiter status for ${usd(t.recruiterFee)} a month, and may pause or cancel it at any time. No points are credited for any member’s recruiter upgrade.` : 'Upgrading to recruiter status is free.'),
     source: 'Glenn, 26 Oct: “We still have to discuss how much to upgrade to become a recruiter. $60?” then “the user would pay an additional $60 each month to become a recruiter … That $60 will weed out the real hustlers”. Leon raised that paid recruiting recruiters can look like a pyramid scheme in California; not settled.',
     settled: false,
@@ -380,8 +376,7 @@ export const FIELDS: TermField[] = [
     why: 'precision',
     min: 0,
     max: 1000,
-    explain: 'Goes to Biggie’s Purple Ribbon Foundation before anything is shared out. No one earns points or commission on it.',
-    example: '$39 − $9 leaves $30.',
+    explain: 'Goes to Biggie’s Purple Ribbon Foundation before anything is shared out.',
     legal: (t) => `${usd(t.foundationAmount)} of each payment is contributed to the BEASTY Foundation before any commission is calculated (the “Foundation contribution”).`,
     source: 'Glenn, 2 Sep: “$9 from every membership activation is deducted for the foundation”.',
     settled: true,
@@ -402,9 +397,6 @@ export const FIELDS: TermField[] = [
       { id: 'every_payment', label: 'Every payment — the initiation and each month' },
       { id: 'initiation_only', label: 'Only the initiation (the activation)' },
     ],
-    explain:
-      'Your note says “every membership activation”. Does the $9 come out once, when a business joins, or every time it pays?',
-    example: 'Every payment: $9 of the $99 and $9 of each $39. Only the initiation: $9 of the $99, and nothing from the monthly fee.',
     legal: (t) =>
       t.foundationApplies === 'every_payment'
         ? 'The Foundation contribution is taken from the initiation fee and from every monthly payment.'
@@ -451,7 +443,7 @@ export const FIELDS: TermField[] = [
     why: 'precision',
     min: 0,
     max: 24,
-    explain: 'Months the business pays nothing. No points and no foundation money come from them.',
+    explain: 'Months the business pays nothing.',
     legal: (t) => `and then receives ${t.promoFreeMonths} months free. No commission is earned on free months.`,
     source: 'Glenn, 29 Aug.',
     settled: true,
@@ -487,7 +479,6 @@ export const FIELDS: TermField[] = [
       { id: 'per_city', label: 'Per city' },
       { id: 'overall', label: 'Across all cities' },
     ],
-    explain: 'Eats, Sweets, Goods and Services in each city: 96 spots per city.',
     legal: () => '',
     source: 'Glenn, 26 Oct: “96 spots for each city”.',
     settled: true,
@@ -504,8 +495,6 @@ export const FIELDS: TermField[] = [
       { id: 'monthly_points', label: 'Set points each month, for a set number of months' },
       { id: 'percent', label: 'A percentage of each payment' },
     ],
-    explain: 'Since 26 October each referral earns a set number of points a month, for a set number of months, so an affiliate knows what it is worth. The other option is a percentage of each payment.',
-    example: 'A business: 10 points a month for 6 months = $60. A user: 10 points a month for 2 or 3 months = $20 or $30.',
     legal: () => '',
     source: 'Glenn, 26 Oct: “$60 & get credited in a six month duration” per business; “$20 or $30 & get credited in 2 or 3 month duration” per user.',
     settled: true,
@@ -521,7 +510,6 @@ export const FIELDS: TermField[] = [
     min: 0,
     max: 100,
     explain: 'The affiliate’s share of each payment from someone they brought.',
-    example: '10% of ($39 − $9) = $3.00 a month — the 3 BARK points.',
     legal: (t) => (t.rewardKind === 'percent' ? `The Affiliate earns ${pctText(t.commissionRate)} of each eligible payment ${baseWords(t)}, ${durationWords(t)}.` : ''),
     source: 'Glenn, early Sep: “It was always initially 10%”. Replaced by set monthly points on 26 Oct.',
     settled: true,
@@ -543,8 +531,6 @@ export const FIELDS: TermField[] = [
       { id: 'after_foundation', label: 'After — a share of what is left' },
       { id: 'full_price', label: 'Before — a share of the full price' },
     ],
-    explain: 'The same 10% pays differently depending on whether the $9 comes off first.',
-    example: 'After: 10% of $30 = $3.00. Before: 10% of $39 = $3.90.',
     legal: () => '',
     source: 'Glenn’s arithmetic: 3 points is 10% of ($39 − $9); per business, 10% of ($99 − $9) = 9 points (Leon, 23 Oct; it was 6, from $69).',
     settled: true,
@@ -566,8 +552,6 @@ export const FIELDS: TermField[] = [
       { id: 'while_active', label: 'As long as the business keeps paying' },
       { id: 'first_months', label: 'A set number of months' },
     ],
-    explain: 'Over time this is the biggest number in the programme, and it has not been decided yet.',
-    example: 'At $3 a month, one business kept for three years pays the affiliate $108.',
     legal: () => '',
     source: 'Not discussed yet.',
     settled: false,
@@ -600,7 +584,7 @@ export const FIELDS: TermField[] = [
     why: 'precision',
     min: 0,
     max: 100,
-    explain: 'Anyone else paid out of the same money, like a food reviewer or a recruiting partner. Leave it at 0% if there is no one.',
+    explain: 'Anyone else paid out of the same money, like a food reviewer or a recruiting partner.',
     legal: (t) => (t.otherShareRate > 0 ? `A further ${pctText(t.otherShareRate)} of the same amount is paid to ${t.otherShareLabel || 'another partner'}.` : ''),
     source: 'An idea from the chat (a food-review add-on). No figure yet.',
     settled: false,
@@ -617,7 +601,6 @@ export const FIELDS: TermField[] = [
     kind: 'text',
     lane: 'tap',
     why: 'precision',
-    explain: 'Shown on the schedule so the affiliate knows that share is not theirs.',
     legal: () => '',
     source: '',
     settled: false,
@@ -713,7 +696,7 @@ export const FIELDS: TermField[] = [
     why: 'precision',
     min: 1,
     max: 60,
-    explain: 'Only months the business actually pays count. Free offer months do not.',
+    explain: 'Only months the business actually pays count.',
     legal: () => '',
     source: 'Glenn, 26 Oct: “a six month duration”.',
     settled: true,
@@ -744,7 +727,7 @@ export const FIELDS: TermField[] = [
     why: 'precision',
     min: 100,
     max: 100000,
-    explain: 'Points wait until there are at least this many. The site already promises 100, so it cannot go lower.',
+    explain: 'Points wait until there are at least this many.',
     legal: (t) => `Points may be redeemed once the balance reaches ${ptsText(t.minRedemption)}, in steps of ${ptsText(t.redemptionStep)}. Points do not expire while the Affiliate is a member; they may be saved as long as the Affiliate likes.`,
     source: 'Careers page: redeemable from 100. Glenn, 26 Oct: “once they reach $100 … save their commission for as long as they like … only $50 increments”.',
     settled: true,
@@ -809,8 +792,7 @@ export const FIELDS: TermField[] = [
     kind: 'longtext',
     lane: 'talk',
     why: 'narrative',
-    explain: 'Say how affiliates find out about a promotion day, so nobody can claim any day was one.',
-    example: '“Slow Tuesdays and public holidays. We post it in the app the Friday before.”',
+    explain: 'Say how affiliates find out about a promotion day.',
     legal: (t) => t.promoDaysWhen,
     source: 'From the chat: “on slow days and holidays”. The words are a first draft: change them to what you want.',
     settled: false,
@@ -826,7 +808,7 @@ export const FIELDS: TermField[] = [
     why: 'precision',
     min: 0,
     max: 100000,
-    explain: 'An affiliate who saves this many points without cashing out gets a bonus. 0 turns it off; you dropped it on 26 October for promotion days.',
+    explain: 'An affiliate who saves this many points without cashing out gets a bonus.',
     legal: (t) => (t.bonusThreshold > 0 ? `An Affiliate whose unredeemed balance reaches ${ptsText(t.bonusThreshold)}` : 'There is no saved-points bonus.'),
     source: 'Glenn, early Sep: “if they managed to save 300 points, we would double it”. Dropped 26 Oct: “For now we can drop that, but we can have promotional campaigns where they double or triple their points on different occasions”.',
     settled: true,
@@ -842,7 +824,6 @@ export const FIELDS: TermField[] = [
     min: 1,
     max: 10,
     explain: '“Double it” is 2: the saved points are matched once more.',
-    example: 'Save 300 points ($300) and receive 300 more: $600 in all.',
     legal: (t) => (t.bonusThreshold > 0 ? `receives a further ${ptsText(t.bonusThreshold * (t.bonusMultiplier - 1))} (the balance at the goal multiplied by ${t.bonusMultiplier}).` : ''),
     source: 'Glenn, early Sep.',
     settled: true,
@@ -864,7 +845,6 @@ export const FIELDS: TermField[] = [
       { id: 'once', label: 'Once per affiliate' },
       { id: 'each_time', label: 'Every time the balance reaches it' },
     ],
-    explain: 'Every time could pay the bonus again after each cash-out.',
     legal: (t) => (t.bonusThreshold > 0 ? (t.bonusRepeat === 'once' ? 'The bonus is paid once per Affiliate.' : 'The bonus is paid each time the balance reaches the goal.') : ''),
     source: 'Not discussed yet.',
     settled: false,
@@ -878,8 +858,6 @@ export const FIELDS: TermField[] = [
     kind: 'longtext',
     lane: 'talk',
     why: 'narrative',
-    explain: 'Decides whether a referral earns anything at all.',
-    example: '“A user counts once they have liked or saved a business. A business counts once it has paid.”',
     legal: (t) => t.qualifying,
     source: 'A first draft, written from how the affiliate dashboard counts. Not agreed yet.',
     settled: false,
@@ -897,7 +875,6 @@ export const FIELDS: TermField[] = [
       { id: 'quarterly', label: 'Quarterly' },
       { id: 'on_request', label: 'When the affiliate asks' },
     ],
-    explain: 'You pay affiliates yourself from their signed forms. Since 26 October they ask to cash out whenever they have the minimum.',
     legal: (t) =>
       t.payoutFrequency === 'on_request'
         ? `Redeemed points are paid within ${t.payoutDays} days of the Affiliate’s request`
@@ -915,7 +892,7 @@ export const FIELDS: TermField[] = [
     why: 'precision',
     min: 1,
     max: 90,
-    explain: 'How long BEASTY has to pay a cash-out. Affiliates can hold you to it.',
+    explain: 'How long BEASTY has to pay a cash-out.',
     legal: () => '',
     source: 'Not discussed yet.',
     settled: false,
@@ -932,7 +909,6 @@ export const FIELDS: TermField[] = [
       { id: 'direct_deposit', label: 'Direct deposit to the account in the signed packet' },
       { id: 'check', label: 'Check to the address in the signed packet' },
     ],
-    explain: 'Their sign-up forms already collect bank details for direct deposit.',
     legal: (t) => (t.payoutMethod === 'direct_deposit' ? 'by direct deposit to the account in the Affiliate’s signed authorization.' : 'by check to the address in the Affiliate’s signed forms.'),
     source: 'The sign-up forms include a direct-deposit page.',
     settled: true,
@@ -945,8 +921,7 @@ export const FIELDS: TermField[] = [
     kind: 'longtext',
     lane: 'talk',
     why: 'narrative',
-    explain: 'Recruiters can pause or cancel any time. This says what happens to points they have earned and months still owed.',
-    example: '“Pause stops new referrals counting; what you already earned stays. Cancel, and you can still cash out what you have.”',
+    explain: 'This says what happens to points they have earned and months still owed.',
     legal: (t) => t.pauseCancel,
     source: 'Glenn, 26 Oct: “they can cancel any time or pause their recruitment status”. The words are a first draft.',
     settled: false,
@@ -959,8 +934,6 @@ export const FIELDS: TermField[] = [
     kind: 'longtext',
     lane: 'talk',
     why: 'narrative',
-    explain: 'If someone gets their money back, the points from that payment should not stand. This says how they are taken back.',
-    example: '“If they get a refund within two months, the points come off. If we already paid, it comes off next time.”',
     legal: (t) => t.clawback,
     source: 'A first draft. Not discussed yet.',
     settled: false,

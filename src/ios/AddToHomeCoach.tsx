@@ -135,8 +135,7 @@ export function AddToHomeCoach() {
         >
           <img className="a2hs-icon" src="/apple-touch-icon.png" alt="" />
           <p className="a2hs-text">
-            Keep BEASTY on your home screen. <strong>Tap to see how</strong> — three taps and it
-            opens like an app.
+            Keep BEASTY on your home screen. <strong>Tap to see how</strong>
           </p>
           {/* stopPropagation, or closing the bubble would bubble up to the card
               behind it and open the guide — the one control whose whole job is

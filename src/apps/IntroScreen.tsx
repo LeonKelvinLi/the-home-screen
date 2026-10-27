@@ -1024,16 +1024,7 @@ function BrandRow({
 function FavoritesPanel({ onOpen }: { onOpen: (brandId: string) => void }) {
   const [ids, setIds] = useState(() => favorites())
   if (ids.length === 0) {
-    return (
-      <>
-        <p>No favourites yet.</p>
-        <p className="dialer-panel-quiet">
-          Open a business, and if it was worth going back to, tap its star — on the Recent tab or
-          on the business itself. Kept on this phone only, so it will not follow you to another
-          one.
-        </p>
-      </>
-    )
+    return <p>No favourites yet.</p>
   }
   return (
     <>
@@ -1053,17 +1044,11 @@ function FavoritesPanel({ onOpen }: { onOpen: (brandId: string) => void }) {
  * as they do for any other arrival. Anything that is not a BEASTY code is
  * refused on screen and never followed.
  */
-function ScanPanel({ copy }: { copy: string[] }) {
+function ScanPanel() {
   const [on, setOn] = useState(false)
   const [refused, setRefused] = useState(false)
   return (
     <>
-      {/* Read before the tap; once the camera is on, the panel is the camera,
-          or the square and its off button sit below the fold on a phone. */}
-      {!on &&
-        copy.map((p) => (
-          <p key={p}>{p}</p>
-        ))}
       {on ? (
         <>
           <QrScanner
@@ -1107,15 +1092,7 @@ function RecentPanel({ onOpen }: { onOpen: (brandId: string) => void }) {
   const visits = recentVisits()
 
   if (visits.length === 0) {
-    return (
-      <>
-        <p>Nothing here yet.</p>
-        <p className="dialer-panel-quiet">
-          The businesses you open show up here, newest first, so you can get back to one without
-          hunting the grid for it. Kept on this phone only — nothing is sent anywhere.
-        </p>
-      </>
-    )
+    return <p>Nothing here yet.</p>
   }
 
   /* One heading per day, in order, rather than a heading on every row. */
@@ -1304,7 +1281,7 @@ function Panel({
     ) : page === 'favorites' ? (
       <FavoritesPanel onOpen={onOpenBrand} />
     ) : page === 'camera' ? (
-      <ScanPanel copy={PAGES.camera.body} />
+      <ScanPanel />
     ) : null
 
   // Contacts is the one page with no written copy: the operator has not
@@ -1330,10 +1307,7 @@ function Panel({
             </p>
           ))
         ) : (
-          <p>
-            The phone line and email are not connected yet. Every business on the home screen
-            lists its own number.
-          </p>
+          <p>The phone line and email are not connected yet.</p>
         )}
         <button className="dialer-panel-action" onClick={onShare}>
           Share BEASTY
@@ -1347,13 +1321,6 @@ function Panel({
         <PanelSections
           sections={PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].sections}
         />
-        {/* Shown, not hidden in a comment. A page that needs the operator's
-            detail before it is true says so where he will see it. */}
-        {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].needsGlenn && (
-          <p className="dialer-panel-flag">
-            {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].needsGlenn}
-          </p>
-        )}
         {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].signoff && (
           <p className="panel-signoff">
             {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].signoff}

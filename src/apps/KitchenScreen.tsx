@@ -388,10 +388,7 @@ export default function KitchenScreen() {
               {signedOut}
             </p>
           )}
-          <p>
-            Open the kitchen link BEASTY sent you on this device, or paste the link or key below. It is
-            kept on this device only.
-          </p>
+          <p>Paste the link or key below.</p>
           <form
             onSubmit={(e) => {
               e.preventDefault()
@@ -606,11 +603,7 @@ export default function KitchenScreen() {
                   {pass.honours ? 'Valid pass' : 'No paid membership'}
                 </h2>
                 <p className="kitchen-pass-name">{pass.name}</p>
-                <p>
-                  {pass.honours
-                    ? `Honour ${pass.honours}. This code is now used and cannot be scanned again.`
-                    : 'They are a BEASTY member, but no paid membership is active on their account, so there is no member offer to honour.'}
-                </p>
+                {pass.honours && <p>{`Honour ${pass.honours}.`}</p>}
                 <button onClick={() => setPass(null)}>Done</button>
               </>
             ) : (

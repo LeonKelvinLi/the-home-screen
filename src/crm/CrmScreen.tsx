@@ -368,7 +368,7 @@ function SplitDetail({ id, total }: { id: string | null; total?: number }) {
       ) : (
         <div className="crm-split-empty">
           <Icon name="store" size={30} />
-          <p>Pick a business to see where it is and what happens next.</p>
+          <p>Pick a business.</p>
           {total != null && <span>{total} businesses in the book</span>}
         </div>
       )}
@@ -579,7 +579,6 @@ function SignIn({ member, memberSignin, onDone }: { member: { name: string } | n
         <div className="crm-signin-card">
           <Brand />
           <h1>The BEASTY book</h1>
-          <p>Sign in with the operator key.</p>
           <KeyForm onDone={onDone} />
           <a className="crm-link" href={site.origin}>
             Go to beastypages.com
@@ -687,7 +686,6 @@ function CodeForm({ onDone }: { onDone: () => void }) {
   }
   return (
     <form className="crm-signin-step" onSubmit={send}>
-      <p>Team members and referral partners: sign in with your BEASTY account. We will send you a code.</p>
       <label className="crm-field">
         <span>{byPhone ? 'Mobile number' : 'Email'}</span>
         <input

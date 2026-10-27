@@ -9961,8 +9961,9 @@ textarea {
 
 .reel-avatar {
   flex: none;
-  width: 34px;
-  height: 34px;
+  /* 40, not 34: a thumb's target (tools/audit-ux.mjs), still Instagram's small round avatar. */
+  width: 40px;
+  height: 40px;
   padding: 0;
   border: 1.5px solid rgba(255, 255, 255, 0.9);
   border-radius: 50%;

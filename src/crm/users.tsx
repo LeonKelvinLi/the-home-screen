@@ -67,7 +67,7 @@ const clock = (t: number) => new Date(t).toLocaleTimeString('en-US', { timeZone:
 const upper = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 
 /** A section's heading, with the days it covers beside it. */
-export function BlockHead({ id, title, scope, note, children }: { id: string; title: string; scope?: string; note?: ReactNode; children?: ReactNode }) {
+export function BlockHead({ id, title, scope, note }: { id: string; title: string; scope?: string; note?: ReactNode }) {
   return (
     <header className="crm-block-head">
       <div>
@@ -77,7 +77,6 @@ export function BlockHead({ id, title, scope, note, children }: { id: string; ti
         </h2>
         {note && <p>{note}</p>}
       </div>
-      {children}
     </header>
   )
 }
@@ -103,12 +102,6 @@ export function UsersBlock({ u, scope, busy }: { u: UsersData; scope: Scope; bus
   const was = by(u.prevSeries)
   const signups = keys.map((k) => ({ label: bucketName(k, scope.unit), value: now.get(k) ?? 0 }))
   const before = prevKeys.map((k) => ({ label: bucketName(k, scope.unit), value: was.get(k) ?? 0 }))
-  const per = scope.unit === 'day' ? 'per day' : scope.unit === 'week' ? 'per week (Monday to Sunday)' : 'per month'
-  const activeNote = !u.active
-    ? `Counted from ${tracked}, when tracking began. These days came before it.`
-    : u.active.whole
-      ? 'did something meaningful on BEASTY'
-      : `since tracking began ${tracked}`
   const sources = u.sources.map((s) => ({ label: s.label, value: s.count, muted: s.key === 'unknown' }))
 
   return (
@@ -117,15 +110,8 @@ export function UsersBlock({ u, scope, busy }: { u: UsersData; scope: Scope; bus
         id="users-h"
         title="Users"
         scope={`${scope.title}, ${scope.range}`}
-        note={
-          <>
-            People with a BEASTY account. Leads are businesses, counted under Leads.{' '}
-            {u.leftOut > 0 && `${plural(u.leftOut, 'test account is', 'test accounts are')} left out.`}
-          </>
-        }
-      >
-        <Definitions activation={u.activation} tracked={tracked} />
-      </BlockHead>
+        note={u.leftOut > 0 ? `${plural(u.leftOut, 'test account is', 'test accounts are')} left out.` : undefined}
+      />
 
       <div className={`crm-kpi-row${busy ? ' is-busy' : ''}`}>
         <StatTile
@@ -133,7 +119,6 @@ export function UsersBlock({ u, scope, busy }: { u: UsersData; scope: Scope; bus
           scope={scope.title}
           value={count(u.added)}
           change={compare(u.added, u.addedBefore, scope.vs)}
-          note="accounts created"
           trend={signups.map((x) => x.value)}
         />
         <StatTile
@@ -142,7 +127,7 @@ export function UsersBlock({ u, scope, busy }: { u: UsersData; scope: Scope; bus
           value={u.active ? count(u.active.n) : 'Not tracked'}
           pending={!u.active}
           change={u.active?.whole && u.activeBefore ? compare(u.active.n, u.activeBefore.n, scope.vs) : null}
-          note={activeNote}
+          note={u.active && !u.active.whole ? `since tracking began ${tracked}` : undefined}
         />
         <StatTile
           label="Returning users"
@@ -150,25 +135,19 @@ export function UsersBlock({ u, scope, busy }: { u: UsersData; scope: Scope; bus
           value={u.active && scope.key !== 'all' ? count(u.active.returning) : u.active ? '—' : 'Not tracked'}
           pending={!u.active || scope.key === 'all'}
           change={u.active?.whole && u.activeBefore ? compare(u.active.returning, u.activeBefore.returning, scope.vs) : null}
-          note={!u.active ? 'active, and signed up before these days' : scope.key === 'all' ? 'all time has no before to come back from' : `active, and signed up before ${day(scope.since)}`}
         />
         <StatTile
           label="Activated"
           scope={scope.title}
           value={u.activated.signedUp ? pct(u.activated.n / u.activated.signedUp) : '—'}
           pending={!u.activated.signedUp}
-          note={
-            u.activated.signedUp
-              ? `${count(u.activated.n)} of the ${count(u.activated.signedUp)} who signed up reached activation (see What these mean)`
-              : 'nobody signed up in these days'
-          }
+          note={u.activated.signedUp ? `${count(u.activated.n)} of the ${count(u.activated.signedUp)} who signed up` : undefined}
         />
       </div>
 
       <div className="crm-dash-row is-main-side">
         <ChartCard
           title="New sign-ups"
-          sub={`Accounts created ${per}, ${scope.phrase}.${before.length ? ` The dashed line is ${scope.vs}.` : ''}`}
           table={{
             head: [scope.unit === 'day' ? 'Day' : scope.unit === 'week' ? 'Week of' : 'Month', 'Sign-ups', ...(before.length ? [upper(scope.vs)] : [])],
             rows: signups.map((x, i) => [x.label, x.value, ...(before.length ? [before[i] ? `${before[i].label}: ${before[i].value}` : '—'] : [])]),
@@ -180,14 +159,13 @@ export function UsersBlock({ u, scope, busy }: { u: UsersData; scope: Scope; bus
             unit="new sign-ups"
             name={scope.title}
             compare={before.length ? { label: upper(scope.vs), points: before } : undefined}
-            empty={`No sign-ups ${scope.phrase}. New users appear here when they create an account.`}
+            empty={`No sign-ups ${scope.phrase}.`}
           />
         </ChartCard>
         <section className="crm-card-chart crm-growth" aria-labelledby="growth-h">
           <header>
             <div>
               <h3 id="growth-h">How the total grew</h3>
-              <p>Accounts, not counting test ones.</p>
             </div>
           </header>
           <dl>
@@ -204,7 +182,6 @@ export function UsersBlock({ u, scope, busy }: { u: UsersData; scope: Scope; bus
               <dd>{count(u.growth.atEnd)}</dd>
             </div>
           </dl>
-          <p className="crm-fine">Accounts are never deleted, so nothing is taken away.</p>
           {u.latest && (
             <p className="crm-fine">
               Latest sign-up: {day(u.latest)}, {clock(u.latest)} Pacific.
@@ -216,19 +193,17 @@ export function UsersBlock({ u, scope, busy }: { u: UsersData; scope: Scope; bus
       <div className="crm-dash-row">
         <ChartCard
           title="Where users came from"
-          sub={`The ${plural(u.added, 'sign-up', 'sign-ups')} ${scope.phrase}, by what brought them. Unknown means they signed up before sources were kept, from ${tracked} on.`}
           table={{ head: ['Source', 'Sign-ups', 'Share'], rows: sources.map((s) => [s.label, s.value, u.added ? pct(s.value / u.added) : '—']) }}
         >
           <HBars rows={sources} total={u.added} empty={`No sign-ups ${scope.phrase}.`} />
         </ChartCard>
-        <Funnel f={u.funnel} tracked={tracked} scope={scope} />
+        <Funnel f={u.funnel} />
       </div>
 
       {u.homes && u.homes.length > 0 && (
         <div className="crm-dash-row">
           <ChartCard
             title="Where members live"
-            sub={`Every member, by the city and state they gave. Asked at sign-up from 19 October 2026; earlier members add it on Profile or when they next sign in.`}
             table={{ head: ['City', 'Members', 'Share'], rows: u.homes.map((h) => [h.label, h.count, u.total ? pct(h.count / u.total) : '—']) }}
           >
             <HBars
@@ -242,59 +217,28 @@ export function UsersBlock({ u, scope, busy }: { u: UsersData; scope: Scope; bus
 
       <Cohorts admin={admin} tracked={tracked} />
 
-      {admin ? <RecentSignups scope={scope} /> : <p className="crm-fine">Only an admin can see who signed up.</p>}
+      {admin && <RecentSignups scope={scope} />}
 
-      <Engagement e={u.engagement} tracked={tracked} activation={u.activation} />
+      <Engagement e={u.engagement} />
     </section>
-  )
-}
-
-/** What every word means, one tap away. */
-function Definitions({ activation, tracked }: { activation: string; tracked: string }) {
-  return (
-    <details className="crm-define">
-      <summary>What these mean</summary>
-      <dl>
-        <dt>Users</dt>
-        <dd>People with a BEASTY account. Test accounts are left out.</dd>
-        <dt>New sign-ups</dt>
-        <dd>Accounts created in the days shown, Pacific time.</dd>
-        <dt>Active users</dt>
-        <dd>
-          People who did something meaningful in those days: signed in, looked at a business, liked, saved or shared one, ordered, opened or used their pass,
-          brought a friend or chose a membership. Just opening the app does not count. Tracked since {tracked}.
-        </dd>
-        <dt>Returning users</dt>
-        <dd>Active users who signed up before those days began.</dd>
-        <dt>Activated</dt>
-        <dd>Somebody who {activation}, at any time since signing up.</dd>
-        <dt>Coming back</dt>
-        <dd>
-          Of everybody who signed up in the same week (Monday to Sunday) or month, the share who did something meaningful in
-          each later week or month on BEASTY. Other tools call these groups cohorts and this number retention.
-        </dd>
-      </dl>
-    </details>
   )
 }
 
 /* --------------------------------------------------------------- funnel */
 
-function Funnel({ f, tracked, scope }: { f: UsersData['funnel']; tracked: string; scope: Scope }) {
+function Funnel({ f }: { f: UsersData['funnel'] }) {
   const top = f ? Math.max(...f.steps.map((s) => s.count), 1) : 1
-  const since = f ? (f.since > scope.since ? `since ${day(f.since)}, when tracking began` : scope.phrase) : ''
   return (
     <section className="crm-card-chart crm-funnel" aria-labelledby="funnel-h">
       <header>
         <div>
           <h3 id="funnel-h">Sign-up funnel</h3>
-          <p>{f ? `Each step counts people ${since}.` : `Not tracked for these days. Tracking began ${tracked}.`}</p>
         </div>
       </header>
       {!f ? (
-        <Waiting>Visits and sign-up steps are counted from {tracked} on. Pick a period that includes it.</Waiting>
+        <Waiting>Not tracked for these days.</Waiting>
       ) : !f.steps.some((s) => s.count) ? (
-        <Waiting>Nothing yet: tracking began {tracked}. Visitors, sign-up requests and new accounts show here as they happen.</Waiting>
+        <Waiting>Nothing yet.</Waiting>
       ) : (
         <ol>
           {f.steps.map((s, i) => (
@@ -315,19 +259,16 @@ function Funnel({ f, tracked, scope }: { f: UsersData['funnel']; tracked: string
 
 /* ------------------------------------------------------------ engagement */
 
-function Engagement({ e, tracked, activation }: { e: UsersData['engagement']; tracked: string; activation: string }) {
+function Engagement({ e }: { e: UsersData['engagement'] }) {
   return (
     <section className="crm-card-chart" aria-labelledby="eng-h">
       <header>
         <div>
           <h3 id="eng-h">What users did</h3>
-          <p>
-            {e ? `How many people did each thing, and how many times, since ${day(e.since)}.` : `Tracked since ${tracked}.`} Activated means they {activation}.
-          </p>
         </div>
       </header>
       {!e || !e.rows.length ? (
-        <Waiting>Nothing tracked yet. From {tracked}, every time a member looks at a business, likes, saves or shares one, orders, or uses their pass, it is counted here.</Waiting>
+        <Waiting>Nothing tracked yet.</Waiting>
       ) : (
         <table className="crm-chart-table crm-engage">
           <thead>
@@ -374,7 +315,6 @@ function Cohorts({ admin, tracked }: { admin: boolean; tracked: string }) {
   const [unit, setUnit] = useState<'week' | 'month'>('week')
   const [open, setOpen] = useState<string | null>(null)
   const { data, error, reload } = useApi<CohortData>(`/api/crm/users/cohorts?unit=${unit}`)
-  const measured = data?.rows.some((r) => r.cells.some((c) => c.k > 0 && c.state === 'ok'))
   const word = unit === 'week' ? 'Week' : 'Month'
   return (
     <section className="crm-card-chart crm-cohorts is-wrap" aria-labelledby="cohort-h">
@@ -383,10 +323,6 @@ function Cohorts({ admin, tracked }: { admin: boolean; tracked: string }) {
           {/* Plain words, not "cohorts": Glenn, 2026-09-23, "I just had to google
               that word". */}
           <h3 id="cohort-h">Do they come back?</h3>
-          <p>
-            Everyone, grouped by the {unit} they signed up{unit === 'week' ? ' (Monday to Sunday)' : ''}. Each column after that is one more {unit} on BEASTY: the share who did
-            something meaningful in it. All sign-ups, not only the period above.
-          </p>
         </div>
         <div className="crm-seg" role="tablist" aria-label="Group sign-ups by">
           {(['week', 'month'] as const).map((k) => (
@@ -400,14 +336,9 @@ function Cohorts({ admin, tracked }: { admin: boolean; tracked: string }) {
       {!data ? (
         <Loading />
       ) : !data.rows.length ? (
-        <p className="crm-chart-empty">No sign-ups yet. This fills in when people create accounts.</p>
+        <p className="crm-chart-empty">No sign-ups yet.</p>
       ) : (
         <>
-          {!measured && (
-            <Waiting>
-              These fill in as {unit}s pass. A cell gets its number once that {unit} is over for everyone in its row, counting from {tracked}, when tracking began.
-            </Waiting>
-          )}
           <div className="crm-cohort-wrap">
             <table className="crm-cohort-table">
               <thead>
@@ -462,7 +393,6 @@ function Cohorts({ admin, tracked }: { admin: boolean; tracked: string }) {
             <span>
               <i className="is-waiting" /> blank: not over yet
             </span>
-            {admin && <span>Pick a row to see who is in it.</span>}
           </p>
           {admin && open && <CohortPeople cohort={open} unit={data.unit} onClose={() => setOpen(null)} />}
         </>
@@ -704,7 +634,6 @@ function RecentSignups({ scope }: { scope: Scope }) {
       <header>
         <div>
           <h3 id="signups-h">Recent sign-ups</h3>
-          <p>Newest first. Times are Pacific. A dash under Last active means nothing tracked since they signed up. Only admins see this list.</p>
         </div>
       </header>
       <div className="crm-filters" role="search">

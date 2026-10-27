@@ -137,11 +137,6 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
     return (
       <AppChrome title="Member card" onBack={api.closeApp} className="is-beasty">
         <div className="member-card">
-          <p className="member-lead">
-            Your card is two letters and four numbers — your initials and the last four digits of
-            your phone. A shop can scan it, or read it off the screen if the camera will not play.
-          </p>
-
           <input
             className="co-input"
             placeholder="Your initials"
@@ -179,9 +174,7 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
           {/* Signed in there IS an account, and saying otherwise was true only
               before sign-in shipped. Each branch says what is actually so. */}
           <p className="member-fineprint">
-            {account
-              ? 'Your card carries your own referral code, and the numbers on it come from your account. The scan buttons below are a simulation: there is no business-facing app yet, so nothing has been scanned by a shop.'
-              : 'This is a working preview. The card is made on this phone and stays on it — nothing is sent anywhere, no account is created, and this code is a name badge rather than a password. Nothing that costs money is ever authorised by it.'}
+            The card is made on this phone and stays on it — nothing is sent anywhere and no account is created.
           </p>
         </div>
       </AppChrome>
@@ -236,12 +229,6 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
             </>
           )}
         </div>
-
-        <p className="member-lead">
-          {account
-            ? 'Show this at the counter. It changes every minute and each one is good for a single scan, so a screenshot cannot be used by anyone else.'
-            : 'Show this when you arrive. One point a day per business — scanning the same shop twice in an afternoon does not count twice.'}
-        </p>
 
         {/*
           THE TILL, SIMULATED.
@@ -322,11 +309,6 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
         >
           Forget this card
         </button>
-
-        <p className="member-fineprint">
-          Points are counted on this phone only and are not worth anything yet — no rate has been
-          set and nothing can be redeemed. When a shop can really scan this, that is what changes.
-        </p>
         </>
         )}
 
@@ -334,7 +316,7 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
           <p className="member-fineprint">
             {account.tierStatus === 'active'
               ? 'A shop that scans this sees your first name and what your membership honours, and nothing else.'
-              : 'A shop that scans this sees your first name. Offers are honoured once a membership is paid and active.'}
+              : 'A shop that scans this sees your first name.'}
           </p>
         )}
 

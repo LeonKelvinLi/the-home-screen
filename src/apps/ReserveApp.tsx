@@ -114,10 +114,7 @@ export function ReserveApp({ api, seat }: { api: ShellApi; seat?: string }) {
             lands in a server log nobody reads. Saved is something we know;
             delivered is not, so only claim the first.
           */}
-          <p className="confirm-sub">
-            Your details are saved. Nothing is committed yet — a slot is confirmed only once the
-            operator replies to you directly.
-          </p>
+          <p className="confirm-sub">Your details are saved.</p>
           <button className="btn-secondary" onClick={api.closeApp}>
             Back to home
           </button>
@@ -137,11 +134,6 @@ export function ReserveApp({ api, seat }: { api: ShellApi; seat?: string }) {
         </button>
       }
     >
-      <p className="reserve-lead">
-        Put your business on this home screen. One tap from a customer's phone, alongside{' '}
-        {KITCHEN_COUNT} other local businesses.
-      </p>
-
       {/*
         Proof before pitch — but NOT "their real logos", which this comment used
         to say and which was never true of all of them. Several of these twelve
@@ -175,34 +167,28 @@ export function ReserveApp({ api, seat }: { api: ShellApi; seat?: string }) {
           icon="bag.fill"
           iconBg="#007AFF"
           label="Your own icon"
-          detail="Your logo and name opening straight into your page"
           chevron={false}
         />
         <ListRow
           icon="info.circle.fill"
           iconBg="#32ADE6"
           label="Business information"
-          detail="List your hours, address and contacts"
           chevron={false}
         />
         <ListRow
           icon="star.fill"
           iconBg="#FF9500"
           label="Business description"
-          detail="Describe what goods or services your business provides. Add a web link and/or IG handle"
           chevron={false}
         />
       </ListSection>
 
-      <ListSection
-        header="Availability"
-        footer={`Goods and services pages for each of ${CITY_PAGES.length} cities, and the yellow BEASTY pages behind them for everyone after the first twenty-four. There is no queue and no cap.`}
-      >
+      <ListSection header="Availability">
         <ListRow label="Businesses on the platform" value={String(KITCHEN_COUNT)} chevron={false} />
         <ListRow label="Open slots" value="Room available" chevron={false} />
       </ListSection>
 
-      <ListSection header="Your details" footer="Name and a way to reach you are enough to start.">
+      <ListSection header="Your details">
         <input
           className="co-input"
           placeholder="Business name"

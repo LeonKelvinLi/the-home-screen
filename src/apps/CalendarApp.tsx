@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { upcoming } from '../data/news'
 import { AppChrome } from './AppChrome'
-import { LISTED_KITCHENS, brandById } from '../data/brands'
+import { brandById } from '../data/brands'
 import { listEvents } from '../lib/api'
 import type { PartnerEvent } from '../lib/api'
 import type { ShellApi } from '../ios/Device'
@@ -170,17 +170,6 @@ export function CalendarApp({ api }: { api: ShellApi }) {
                 businesses have nothing on. They may well have — there is simply
                 no way for them to tell us yet.
               */}
-              {reachable ? (
-                <p className="cal-empty-note">
-                  This is where the {LISTED_KITCHENS.length} businesses on the home screen post a
-                  special, a pop-up or a one-day menu. Nothing has been posted for this day.
-                </p>
-              ) : (
-                <p className="cal-empty-note">
-                  The connection failed, so this month could not be checked. It does not mean the
-                  businesses have nothing on.
-                </p>
-              )}
             </div>
           )}
         </div>

@@ -218,7 +218,7 @@ function NextCard({
   const { meta } = useCrm()
   const { lead, deals } = detail
   const hasOpen = deals.some((d) => d.status === 'open')
-  const n = nextFor(lead.stage, lead.channels, hasOpen)
+  const n = nextFor(lead.stage)
   const [to, setTo] = useState(lead.stage)
   const [note, setNote] = useState('')
   const { busy, error, run } = useAction(onDone)
@@ -236,7 +236,6 @@ function NextCard({
           <StagePill stage={lead.stage} />
         </div>
         <h2>{stepOf(lead.stage) === null ? n.title : `Next: ${n.title.charAt(0).toLowerCase()}${n.title.slice(1)}`}</h2>
-        <p>{n.body}</p>
         <div className="crm-next-acts">
           {n.addInfo && !adding && (
             <button type="button" className="crm-btn is-primary" onClick={() => setAdding(true)}>
@@ -314,7 +313,6 @@ function FoundForm({ lead, onDone, onClose }: { lead: Detail['lead']; onDone: ()
           <input type="email" value={listed.email || f.email} disabled={!!listed.email} onChange={(e) => setF({ ...f, email: e.target.value })} />
         </label>
       </div>
-      <p className="crm-note">Saved here for the team. Their BEASTY page stays as it is{listed.phone || listed.email || listed.instagram ? ', and what it already lists is greyed out' : ''}.</p>
       <div className="crm-row-btns">
         <button type="submit" className="crm-btn is-primary" disabled={busy || (!f.phone.trim() && !f.instagram.trim() && !f.email.trim() && !lead.found.phone && !lead.found.email && !lead.found.instagram)}>
           {busy ? 'Saving…' : 'Save'}
@@ -498,7 +496,7 @@ function Reminders({ id, items, onDone }: { id: string; items: Detail['followups
         </ul>
       )}
       <form className="crm-panel crm-fu-form" onSubmit={schedule}>
-        {!open.length && <p className="crm-note">No reminder yet. Every business being worked should have one.</p>}
+        {!open.length && <p className="crm-note">No reminder yet.</p>}
         <div className="crm-kinds is-when">
           {presets().map(([label, t]) => (
             <button type="button" key={label} className={due === toLocalInput(t) ? 'is-on' : undefined} onClick={() => setDue(toLocalInput(t))}>
@@ -618,14 +616,14 @@ function Quote({ id, deals, onDone }: { id: string; deals: Detail['deals']; onDo
         ) : undefined
       }
     >
-      {!deals.length && !adding && <p className="crm-note is-quiet">No quote yet. Add one when they are ready for a price.</p>}
+      {!deals.length && !adding && <p className="crm-note is-quiet">No quote yet.</p>}
       {deals.map((d) => (
         <DealCard key={d.id} d={d} onDone={onDone} />
       ))}
       {adding && (
         <form className="crm-panel crm-deal-form" onSubmit={create}>
           {!offers.length ? (
-            <p className="crm-note">No prices are set up. An admin can add them in Settings.</p>
+            <p className="crm-note">No prices are set up.</p>
           ) : (
             <>
               <div className="crm-offers" role="radiogroup" aria-label="What you are quoting">
@@ -649,7 +647,6 @@ function Quote({ id, deals, onDone }: { id: string; deals: Detail['deals']; onDo
                   <input inputMode="decimal" value={monthly} onChange={(e) => setMonthly(e.target.value.replace(/[^0-9.]/g, ''))} />
                 </label>
               </div>
-              <p className="crm-note">The quote keeps these prices even if the price list changes later.</p>
               <div className="crm-row-btns">
                 <button type="submit" className="crm-btn is-dark" disabled={busy || !offerId}>
                   {busy ? 'Saving…' : 'Save quote'}
@@ -867,14 +864,13 @@ function PeopleCard({ detail, onDone }: { detail: Detail; onDone: () => void }) 
           </label>
         )}
       </div>
-      <p className="crm-note is-quiet">The owner runs the business. Sent by is whoever brought them to BEASTY. Handled by is who on the team follows up.</p>
       <Err error={error} />
     </Section>
   )
 }
 
 function SentBy({ detail, onDone, canChange }: { detail: Detail; onDone: () => void; canChange: boolean }) {
-  const { meta, actor } = useCrm()
+  const { meta } = useCrm()
   const { lead } = detail
   /* A Glenn default is a placeholder: anyone can set the real sender once. */
   const locked = !!(lead.referrer || lead.sourceType) && !lead.referralDefault
@@ -959,7 +955,6 @@ function SentBy({ detail, onDone, canChange }: { detail: Detail; onDone: () => v
               </label>
             )}
           </div>
-          {locked && actor.role === 'admin' && <p className="crm-note">The first person credited keeps the credit unless an admin changes it with a reason.</p>}
           <div className="crm-row-btns">
             <button type="submit" className="crm-btn is-dark" disabled={busy || (!referrerId && !sourceType) || (locked && reason.trim().length < 3)}>
               {busy ? 'Saving…' : 'Save'}
@@ -1110,7 +1105,7 @@ function OnBeasty({ detail }: { detail: Detail }) {
             )}
           </>
         ) : (
-          <p className="crm-note">Not on BEASTY yet. The contacts above are the ones saved here.</p>
+          <p className="crm-note">Not on BEASTY yet.</p>
         )}
         {a && (
           <div className="crm-application">

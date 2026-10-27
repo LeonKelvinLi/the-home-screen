@@ -34,8 +34,6 @@ interface Page {
   title: string
   /** Paragraphs. Two to four — this is read on a phone. */
   body: string[]
-  /** What the operator still has to supply. Absent means nothing is missing. */
-  needsGlenn?: string
   /**
    * Collapsed chapters, shown under `body` as tap-to-open rows.
    *
@@ -92,10 +90,7 @@ export const PAGES: Record<PageKey, Page> = {
   */
   camera: {
     title: 'Scan',
-    body: [
-      'Point the camera at a BEASTY code — on a partner’s counter, on a flyer, on somebody else’s screen — and it opens that business straight away. No app to install and nothing to type.',
-      'The camera only runs after you tap to start it and only while this screen is open. Nothing is recorded and no picture leaves the phone: the code is read on the phone, and the camera turns off when you close this.',
-    ],
+    body: [],
   },
 
   /*
@@ -110,8 +105,6 @@ export const PAGES: Record<PageKey, Page> = {
       'The supply side of the business — goods rather than the kitchens on the home screen.',
       'There is nothing to show here yet. Glenn is adding a contact for it, and until he does this page has no way to reach anyone and nothing to order.',
     ],
-    needsGlenn:
-      'What Supply covers and a way to reach it — a phone, an email or a form. Nothing here can be written until one of those exists.',
   },
 
   /*
@@ -130,8 +123,6 @@ export const PAGES: Record<PageKey, Page> = {
       'This is where customers say what they thought — of a kitchen, of an order, of the whole thing. Like a voicemail, left for whoever comes next.',
       'There are none yet. Nobody has left one, so there is nothing here to read, and nothing has been written in to fill the space. When a review appears on this page it will be because a customer left it.',
     ],
-    needsGlenn:
-      'How a customer leaves one, and whether reviews are attached to a business or to BEASTY as a whole — there is no way to submit one yet.',
   },
 
   /*
@@ -196,7 +187,7 @@ export const PAGES: Record<PageKey, Page> = {
           coming rather than pretending to be finished.
         */
         body: [],
-        pending: 'Glenn is writing this chapter. It goes in as soon as he sends it.',
+        pending: 'Glenn is writing this chapter.',
       },
       {
         head: 'The Blessing',
@@ -281,8 +272,6 @@ export const PAGES: Record<PageKey, Page> = {
       'What Glenn has stated is the intention: proceeds from BEASTY membership sign-ups are meant to go toward the foundation. No membership has been sold. Card payments are not connected to this app, so nothing has been charged and no money has reached the foundation or anywhere else.',
       'The rest is not written yet — what the foundation supports, how it is set up, and how much of a payment would reach it. Those are Glenn’s to state, and none of them belong on this page until he does. If the foundation is the reason you were going to join, wait for this page to fill in.',
     ],
-    needsGlenn:
-      'The foundation’s legal name and registration, the cause it supports, and what share of each membership payment reaches it — none of the three can be printed until he supplies it.',
   },
 
   /*
@@ -322,8 +311,6 @@ export const PAGES: Record<PageKey, Page> = {
       'The support that is worth something is free anyway. Order from the businesses on the home screen — they set their own prices and you pick up from them directly. Send Glenn a business worth adding. Share the link; the front screen has a button that does it.',
       'When there is somewhere for money to go, this page will say who receives it and what it pays for, in plain terms, before it asks anyone for anything.',
     ],
-    needsGlenn:
-      'Where a donation would actually go — the foundation or BEASTY itself — plus an account able to receive it, before this page can ask for money.',
   },
 
   /*

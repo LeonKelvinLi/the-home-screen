@@ -146,10 +146,9 @@ ok('the code changes with any figure', termsCode(DEFAULT_TERMS) !== termsCode(T(
 
 ok('every chapter but review has questions', CHAPTERS.filter((c) => c.id !== 'review').every((c) => FIELDS.some((f) => f.chapter === c.id)))
 ok('every question belongs to a chapter', FIELDS.every((f) => CHAPTERS.some((c) => c.id === f.chapter)))
-ok('every question explains itself and says where its default came from', FIELDS.every((f) => f.explain && (f.source || f.id === 'otherShareLabel')))
+ok('every question says where its default came from', FIELDS.every((f) => f.source || f.id === 'otherShareLabel'))
 ok('figures are tapped, never dictated', FIELDS.filter((f) => ['money', 'percent', 'count', 'points'].includes(f.kind)).every((f) => f.lane === 'tap'))
 ok('clauses are talked through', FIELDS.filter((f) => f.kind === 'longtext').every((f) => f.lane === 'talk'))
-ok('every talked-through question carries an example', FIELDS.filter((f) => f.lane === 'talk').every((f) => f.example))
 ok('every number field has a range', FIELDS.filter((f) => ['money', 'percent', 'count', 'points', 'multiplier'].includes(f.kind)).every((f) => f.min !== undefined && f.max !== undefined))
 
 /* -------------------------------------------------- what prints, and where */

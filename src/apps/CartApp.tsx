@@ -48,7 +48,6 @@ function CartRoot({ api, onCheckout }: { api: ShellApi; onCheckout: () => void }
         <div className="empty">
           <div className="empty-mark">🛍</div>
           <h2>Your cart is empty</h2>
-          <p>Add something from any kitchen. They all check out together.</p>
           <button className="btn-secondary" onClick={api.closeApp}>
             Browse kitchens
           </button>
@@ -92,7 +91,6 @@ function CartRoot({ api, onCheckout }: { api: ShellApi; onCheckout: () => void }
               supplied, and no kitchen has seen this order yet. BrandApp hedges
               it; the screens where someone decides when to leave did not. */}
           Usually ready in about <strong>{cart.etaMinutes} min</strong>
-          {cart.brandCount > 1 && ' — kitchens cook in parallel'}
         </p>
 
         {t.byVendor.map((group) => {
@@ -162,7 +160,6 @@ function CartRoot({ api, onCheckout }: { api: ShellApi; onCheckout: () => void }
               </button>
             ))}
           </div>
-          <p className="tip-note">Split between kitchens by order value.</p>
         </section>
 
         <section className="totals">

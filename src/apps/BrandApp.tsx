@@ -21,14 +21,7 @@ import type { BrandPanel } from '../data/localBrands'
 import { money, useCart } from '../store/cart'
 import type { ShellApi } from '../ios/Device'
 
-/** What a kitchen, a café or a bar sells — pages where "consultation" is the wrong word.
-    "bar" is bounded on both sides so CycleBar, a cycling studio, is not a bar. */
-const FOOD_RX =
-  /coffee|caf[eé]|\btea\b|boba|chicken|wing|burger|pizza|taco|taquer|thai|ramen|pho\b|sushi|bakery|bake|pastr|dessert|ice cream|grill|kitchen|restaurant|\bfood|bbq|barbecue|brunch|breakfast|lunch|dinner|deli|sandwich|catering|winery|\bwine|beer|brew|\bbar\b|lounge|juice|smoothie|yogurt|cookie|donut|pie\b|noodle|dumpling|seafood|steak|meat|butcher|market|grocer|vietnam|indian|greek|persian|mediterranean|hot pot|californian|chinese|cantonese|japanese|korean|mexican|italian|filipino|peruvian|distiller|bottle shop|charcuterie|grazing/i
-/* What an online shop sells: goods posted from their own store, not booked. */
-const SHOP_RX = /jumpsuit|swimwear|life jacket|supplement|dog bed|boots|camera|drying bag|backpack|travel bottle|clothing|streetwear|pet goods|apparel/i
 import { Gem } from './MembersApp'
-import { FREE_SPOT_MONTHS } from '../data/affiliateTiers'
 
 /** One restaurant's menu — the screen an icon tap actually lands on. */
 /**
@@ -517,7 +510,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           {!brand.address && /\bmobile\b/i.test(brand.cuisine) && (
             <p className="brand-mobile">
               <span className="brand-mobile-dot" aria-hidden="true" />
-              Mobile — they come to you, so there is no shop to visit.
+              Mobile — they come to you
             </p>
           )}
 
@@ -618,7 +611,6 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                   </span>
                   <span className="brand-city-text">
                     <strong>More in {c}</strong>
-                    <em>Go to the {c} page</em>
                   </span>
                   <svg className="brand-city-chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="m9 5 7 7-7 7" />
@@ -717,7 +709,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               </ul>
               {brand.photos.length > 1 && (
                 <p className="brand-photos-hint">
-                  {brand.photos.length} pictures. Swipe for the next.
+                  {brand.photos.length} pictures
                 </p>
               )}
             </div>
@@ -813,8 +805,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               */}
               {brand.offers.mock && (
                 <p className="brand-offer-mock">
-                  Example only — {brand.name} has not agreed these. This is what an offer would
-                  look like here.
+                  Example only — {brand.name} has not agreed these.
                 </p>
               )}
               {brand.offers.welcome && (
@@ -974,26 +965,6 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           {tier >= 2 && (brand.contactOnly || brand.quoteOnly) && (
             <div className="brand-contact">
               {brand.contactOnly && <p>{brand.contactOnly}</p>}
-              {/*
-                THE LINE ABOVE THE CALL BUTTON depends on what they sell. A
-                kitchen is called to order from; an online shop is bought from
-                on its own store; everything else is booked or asked.
-
-                It said "Start with a free consultation" for everything that was
-                not food, which on 2026-09-14 put that line on Greek, Indian,
-                Persian and Vietnamese restaurants, on online shops and on
-                rappers — and a free consultation is a promise about a
-                business's terms that almost none of them has made.
-              */}
-              {brand.quoteOnly && (
-                <p>
-                  {FOOD_RX.test(`${brand.cuisine} ${brand.name}`)
-                    ? 'Call or message them to order or ask.'
-                    : SHOP_RX.test(`${brand.cuisine} ${brand.name}`)
-                      ? 'Buy from their own store.'
-                      : 'Call or message them to book or ask.'}
-                </p>
-              )}
               {brand.phone && (
                 <a className="btn-primary" href={`tel:${brand.phone.replace(/[^0-9+]/g, '')}`} onClick={out('call')}>
                   Call {brand.phone}
@@ -1029,11 +1000,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                   {brand.siteCta ?? 'Open their page'}
                 </a>
               )}
-              <p className="brand-free-note">
-                Listed free as a BEASTY Affiliate. A free spot is held for {FREE_SPOT_MONTHS} months. The
-                full page — a bio, featured items, the menu, a video and member offers — comes with
-                membership.
-              </p>
+              <p className="brand-free-note">Listed free as a BEASTY Affiliate.</p>
               {/* btn-primary, not the offers block's white-on-dark pill, which
                   is invisible on this white card. */}
               <button className="btn-primary" onClick={() => api.openApp('sys.members')}>
@@ -1107,23 +1074,6 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               </a>
             </p>
           ) : null}
-
-          {/* Do not claim the kitchen set these prices on the brands whose own
-              data says they came off a delivery platform with a markup. */}
-          <p className="brand-foot">
-            {brand.name} is operated independently.{' '}
-            {/* Four of these are not kitchens and have no prices at all — a dog
-                walker, a garage, a print shop and an iOS app. "Prices set by the
-                kitchen" sat two sentences under "there is nothing to order
-                here". */}
-            {brand.contactOnly || tier === 1
-              ? 'Contact them directly.'
-              : brand.quoteOnly
-                ? 'Ranges are indicative; the quote is what counts.'
-                : brand.pricesEstimated || brand.needsOwnerReview
-                  ? 'Prices here still need confirming with them.'
-                  : 'Prices set by the kitchen.'}
-          </p>
         </div>
       </AppChrome>
 

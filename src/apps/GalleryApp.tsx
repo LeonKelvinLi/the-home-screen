@@ -53,17 +53,6 @@ export function GalleryApp({ api }: { api: ShellApi }) {
           </section>
         ))}
 
-        {/*
-          SAYS WHAT IS MISSING AND WHY. An almost-empty gallery with no
-          explanation reads as broken; this one is short because Instagram would
-          not hand the pictures over, which is a fact worth printing rather than
-          hiding behind a spinner.
-        */}
-        <p className="gal-note">
-          Twenty-nine posts from @beasty_pages, with the captions as written, and affiliates&rsquo;
-          own posts as Glenn adds them. Instagram does not let these update themselves, so newer
-          ones are added by hand.
-        </p>
         <a className="gal-link" href="https://www.instagram.com/beasty_pages/" target="_blank" rel="noreferrer">
           See them all on Instagram
         </a>

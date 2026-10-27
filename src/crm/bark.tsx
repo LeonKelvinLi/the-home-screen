@@ -72,9 +72,8 @@ export function BarkPanel({ id, admin }: { id: string; admin: boolean }) {
           <span className={`crm-bark-status is-${d.recruiter}`}>{RECRUITER[d.recruiter]}</span>
         </div>
         <p className="crm-note is-quiet">
-          {b.earned} earned · {b.cashedOut} cashed out{b.owed > 0 ? ` · ${b.owed} taken back after they were paid, off the next cash-out` : ''}
-          {d.recruiterSince ? ` · recruiting since ${dateTime(d.recruiterSince)}` : ''}. Cash-outs need this packet approved
-          {d.paperwork === 'approved' ? ' (it is).' : '.'}
+          {b.earned} earned · {b.cashedOut} cashed out{b.owed > 0 ? ` · ${b.owed} taken back` : ''}
+          {d.recruiterSince ? ` · recruiting since ${dateTime(d.recruiterSince)}` : ''}
         </p>
 
         {open.map((c) => (
@@ -83,8 +82,7 @@ export function BarkPanel({ id, admin }: { id: string; admin: boolean }) {
               <b>
                 Cash-out asked for: {c.points} points, {usd(c.cents)}
               </b>{' '}
-              on {dateTime(c.requestedAt)} ({ago(c.requestedAt)}). Pay it by direct deposit to the account on their signed packet within {d.payoutDays}{' '}
-              days, then mark it paid.
+              on {dateTime(c.requestedAt)} ({ago(c.requestedAt)}).
             </p>
             {admin && (
               <>
@@ -179,7 +177,7 @@ export function BarkPanel({ id, admin }: { id: string; admin: boolean }) {
             ))}
           </ul>
         ) : (
-          <Empty icon="clock">No points yet. They are credited each month a person or business they brought while recruiting pays.</Empty>
+          <Empty icon="clock">No points yet.</Empty>
         )}
 
         {done.length > 0 && (

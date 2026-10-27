@@ -101,8 +101,7 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
           {/* Never let a local-only order look like a real one. */}
           {order.local ? (
             <p className="local-notice">
-              <strong>Saved on this device only.</strong> No kitchen has received this order —
-              ordering goes live once the backend is connected.
+              <strong>Saved on this device only.</strong> No kitchen has received this order.
             </p>
           ) : !PAYMENTS_LIVE ? (
             /*
@@ -114,8 +113,8 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
               <strong>Nothing has been charged.</strong>{' '}
               {order.tickets.every((tk) => tk.kitchenLive)
                 ? order.tickets.length === 1
-                  ? 'The kitchen has your order on its own screen. Track order follows it as they work.'
-                  : 'Every kitchen on this order has it on its own screen. Track order follows each one as they work.'
+                  ? 'The kitchen has your order on its own screen.'
+                  : 'Every kitchen on this order has it on its own screen.'
                 : order.tickets.some((tk) => tk.kitchenLive)
                   ? 'Some of these kitchens have your order on their own screen and some are not connected yet. Call the ones that are not before you travel.'
                   : 'Your order is recorded, but no kitchen display is connected yet — call the kitchen to confirm before you travel.'}
@@ -171,31 +170,21 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
         <section className="co-block">
           <h3>{delivering ? 'Deliver to' : 'Pickup from'}</h3>
           {delivering ? (
-            <>
-              <input
-                className="co-input"
-                placeholder="Street address, unit"
-          aria-label="Street address, unit"
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
-                autoComplete="street-address"
-                maxLength={160}
-              />
-              <p className="co-hint">
-                Each kitchen delivers from its own address. Confirm they reach you before
-                ordering.
-              </p>
-            </>
+            <input
+              className="co-input"
+              placeholder="Street address, unit"
+              aria-label="Street address, unit"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              autoComplete="street-address"
+              maxLength={160}
+            />
           ) : (
             <div className="co-address">
               <strong>Collect from each kitchen</strong>
               {/* "lists the address for each" was not true: 17 of 32 brands
                   carry neither an address nor a phone, so an order spanning
                   two kitchens could show one and nothing for the other. */}
-              <span>
-                These are separate businesses in different cities, not one building. Your order
-                screen lists an address where the business publishes one.
-              </span>
             </div>
           )}
         </section>
@@ -221,7 +210,6 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
             autoComplete="tel"
             maxLength={30}
           />
-          <p className="co-hint">So the kitchen can reach you about your order.</p>
         </section>
 
         <section className="co-block">

@@ -155,7 +155,7 @@ try {
     await p.waitForTimeout(260)
   }
   /* The window opens with an animation, slower on a busy machine. */
-  const opened = await p.waitForSelector('.reserve-lead', { timeout: 20000 }).then(() => true).catch(() => false)
+  const opened = await p.waitForSelector('.ios-section-header >> text=What you get', { timeout: 20000 }).then(() => true).catch(() => false)
   check('an empty spot opens Reserve a Spot', !!tapped && opened, tapped ?? 'no empty spot on the home screen')
 
   const shown = await p.evaluate(() => {
@@ -170,10 +170,11 @@ try {
       text: document.body.innerText,
     }
   })
+  /* Labels only since Leon's 27 October "no need for a product" cut of the explanations. */
   const WANT_ROWS = [
-    ['Your own icon', 'Your logo and name opening straight into your page'],
-    ['Business information', 'List your hours, address and contacts'],
-    ['Business description', 'Describe what goods or services your business provides. Add a web link and/or IG handle'],
+    ['Your own icon', ''],
+    ['Business information', ''],
+    ['Business description', ''],
   ]
   check('What you get is in his words', JSON.stringify(shown.rows) === JSON.stringify(WANT_ROWS), JSON.stringify(shown.rows))
   check('Business information wears the info mark on its lighter blue', shown.infoTile === 'rgb(50, 173, 230)', shown.infoTile)

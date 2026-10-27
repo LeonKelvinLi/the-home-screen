@@ -80,7 +80,6 @@ export function CollabForm() {
         void submit()
       }}
     >
-      <p className="collab-form-lead">Interested? Leave your details and we will reach out.</p>
       <label className="join-field">
         <span>Name</span>
         <input

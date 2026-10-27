@@ -212,7 +212,6 @@ export function SearchApp({ api }: { api: ShellApi }) {
       </span>
       <span>
         <strong>{c}</strong>
-        <em>Go to the {c} page</em>
       </span>
       <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
     </button>
@@ -426,7 +425,6 @@ export function SearchApp({ api }: { api: ShellApi }) {
             {count === 0 && (
               <div className="empty">
                 <h2>Nothing for “{q}”</h2>
-                <p>Try a dish, a business name, a category or a city.</p>
               </div>
             )}
           </>

@@ -170,8 +170,7 @@ function progressLine(a: AppRow, payoutsOn: boolean) {
 
 function ProviderNote({ providers }: { providers: ListData['providers'] }) {
   if (providers.payouts === 'mock' || providers.signing === 'mock')
-    return <p className="crm-aff-notice is-test">Test mode. Payouts and signing are pretend here, so nobody is paid and nothing is legally signed.</p>
-  if (providers.signing === 'manual') return <p className="crm-aff-notice">Free DocuSeal handoff: create each applicant’s packet in DocuSeal, attach their private signing link here, then check the documents and signatures before approval.</p>
+    return <p className="crm-aff-notice is-test">Test mode. Payouts and signing are pretend here.</p>
   const off: string[] = []
   /* Payouts off is the plan for now, not something waiting: Glenn pays from the forms. */
   if (providers.signing === 'off') off.push('the forms and agreement open once the DocuSeal packet is set up')
@@ -204,7 +203,6 @@ function LinkBox({ link, emailStatus, onDone }: { link: string; emailStatus?: Em
           Done
         </button>
       </div>
-      <span className="crm-quiet">The link works once, for 14 days. Text it if the email doesn't arrive.</span>
     </div>
   )
 }
@@ -332,7 +330,6 @@ export function Affiliates() {
     <div className="crm-view">
       <PageTitle
         title="Affiliates"
-        sub="People who earn with BEASTY. Paying the recruiter upgrade opens their paperwork; you can also invite someone. See how far each one got, then countersign and approve."
         actions={
           <>
             <a className="crm-btn" href="#/affiliate-terms">
@@ -390,7 +387,7 @@ export function Affiliates() {
               ))}
             </ul>
           ) : (
-            <Empty icon="users">{data.total ? 'Nobody matches that.' : admin ? 'No applications yet. Invite someone to start.' : 'No applications yet.'}</Empty>
+            <Empty icon="users">{data.total ? 'Nobody matches that.' : 'No applications yet.'}</Empty>
           )}
           <InviteList invites={data.invites} admin={admin} reload={reload} />
         </>
@@ -412,7 +409,7 @@ function StepRow({ done, title, children }: { done: boolean; title: string; chil
           {title}
           <span className="crm-sr">{done ? ' (done)' : ' (not done)'}</span>
         </strong>
-        <span>{children}</span>
+        {children && <span>{children}</span>}
       </span>
     </li>
   )
@@ -466,10 +463,8 @@ function ManualPacket({ d, packet, reload }: { d: Detail; packet: NonNullable<De
 
   return <Section title="DocuSeal packet">
     <div className="crm-aff-manual">
-      <p className="crm-note">DocuSeal stores the documents. This record shows what an admin has checked; it does not automatically detect signatures.</p>
       {!packet.formsLink && <details className="crm-aff-prefill">
         <summary>Prepare saved details for this applicant</summary>
-        <p className="crm-note">Use the approved template’s sender fields to prepare this applicant’s name and address before sending. Keep taxpayer details editable for the applicant to confirm. Tax classification, taxpayer number, bank details, ID and signatures must come from the applicant.</p>
         {['ID Legal Name', 'Affiliate Legal Name', 'Taxpayer Legal Name', 'Business Name', 'Street Address', 'City State ZIP'].filter(name => prefill[name]).map(name => <div className="crm-aff-prefill-row" key={name}>
           <div><b>{name}</b><span>{prefill[name]}</span></div>
           <button className="crm-btn" disabled={busy} onClick={() => void copyPrefill(name, prefill[name])}>Copy {name.toLowerCase()}</button>
@@ -480,9 +475,7 @@ function ManualPacket({ d, packet, reload }: { d: Detail; packet: NonNullable<De
         void save('/packet/submission', { submissionUrl: found })
       }}>
         <p className="crm-note">
-          {packet.formsLinkSentAt ? `${dateTime(packet.formsLinkSentAt)}: ` : ''}BEASTY’s shared DocuSeal forms link went to <strong>{String(d.profile.email || 'them')}</strong>, who signs everything there. {packet.submissionUrl
-            ? 'Their submission is attached below.'
-            : <>Once they have signed, find their submission in DocuSeal (Submissions, search <strong>{String(d.profile.email || 'their email')}</strong>) and paste its address here.</>}
+          {packet.formsLinkSentAt ? `${dateTime(packet.formsLinkSentAt)}: ` : ''}BEASTY’s shared DocuSeal forms link went to <strong>{String(d.profile.email || 'them')}</strong>.
         </p>
         <label className="crm-field"><span>{packet.submissionUrl ? 'A different submission (only if the one below is wrong)' : 'Their DocuSeal submission address'}</span><input type="url" required value={found} onChange={e=>setFound(e.target.value)} placeholder="https://docuseal.com/submissions/…" /></label>
         <button className="crm-btn is-dark" disabled={busy || !found.trim()}>{packet.submissionUrl ? 'Replace submission' : 'Attach their submission'}</button>
@@ -493,7 +486,6 @@ function ManualPacket({ d, packet, reload }: { d: Detail; packet: NonNullable<De
             e.preventDefault()
             void save('/packet', { submissionUrl, affiliateUrl, companyUrl, templateVersion: packet.approvedTemplateUrl!.split('/').pop(), termsApproved: confirmed, recipientConfirmed: confirmed, replaceVerified })
           }}>
-            <p className="crm-note">Create a separate request for <strong>{String(d.profile.legalFirst || '')} {String(d.profile.legalLast || '')}</strong>, <strong>{String(d.profile.email || '')}</strong>. Use Affiliate and BEASTY roles, with separate signing links. Copy the request dashboard URL and each signer’s private link below.</p>
             <label className="crm-field"><span>DocuSeal request dashboard URL</span><input type="url" required value={submissionUrl} onChange={e=>setSubmissionUrl(e.target.value)} placeholder="https://docuseal.com/submissions/…" /></label>
             <label className="crm-field"><span>Affiliate’s private signing link</span><input type="url" required value={affiliateUrl} onChange={e=>setAffiliateUrl(e.target.value)} placeholder="https://docuseal.com/s/…" /></label>
             <label className="crm-field"><span>BEASTY’s private signing link (optional)</span><input type="url" value={companyUrl} onChange={e=>setCompanyUrl(e.target.value)} placeholder="https://docuseal.com/s/…" /></label>
@@ -505,7 +497,6 @@ function ManualPacket({ d, packet, reload }: { d: Detail; packet: NonNullable<De
       )}
       {packet.submissionUrl && <>
         <a className="crm-btn" href={packet.submissionUrl} target="_blank" rel="noopener noreferrer">Open this request in DocuSeal</a>
-        <p className="crm-note">Check the documents and audit trail there before recording the review below. An ID upload alone does not verify someone’s identity.</p>
         {REVIEW_CHECKS.map(([key,label])=><label className="crm-aff-check" key={key}>
           <input type="checkbox" checked={!!checks[key]} disabled={closed || busy || (key==='companySigned' && !!packet.evidence.companySigned)} onChange={e=>setChecks({...checks,[key as ReviewKey]:e.target.checked})} />
           <span>{label}</span>
@@ -559,12 +550,12 @@ function Decide({ d, reload }: { d: Detail; reload: () => void }) {
       <>
         <p className="crm-note">
           {signed
-            ? `${name} finished every step. Approve to make them an affiliate, or ask for a change.`
+            ? `${name} finished every step.`
             : d.countersignAvailable
-              ? `${name} signed the agreement. Countersign it, then approve.`
+              ? `${name} signed the agreement.`
               : !d.steps.agreement.available
-                ? `${name} sent in their details. The forms and agreement open once the DocuSeal packet is set up; they fill them in then, and you approve after it is signed by both.`
-                : `${name} sent it in. The agreement still needs both signatures before you can approve.`}
+                ? `${name} sent in their details.`
+                : `${name} sent it in.`}
         </p>
         {d.countersignAvailable && (
           <button type="button" className="crm-btn is-dark is-block" disabled={!!busy} onClick={countersign}>
@@ -593,7 +584,7 @@ function Decide({ d, reload }: { d: Detail; reload: () => void }) {
   } else if (d.status === 'changes_requested') {
     body = (
       <>
-        <p className="crm-note">You asked {name} to change something. They can edit and send it in again.</p>
+        <p className="crm-note">You asked {name} to change something.</p>
         {d.decisionNote && <blockquote className="crm-aff-quote">{d.decisionNote}</blockquote>}
         <label className="crm-field">
           <span>Note (needed to turn it down)</span>
@@ -632,7 +623,7 @@ function Decide({ d, reload }: { d: Detail; reload: () => void }) {
   } else {
     body = (
       <>
-        <p className="crm-note">{name} is still filling it in. You can act once they send it in.</p>
+        <p className="crm-note">{name} is still filling it in.</p>
         {d.countersignAvailable && (
           <button type="button" className="crm-btn is-dark is-block" disabled={!!busy} onClick={countersign}>
             <Icon name="pencil" size={16} />
@@ -706,7 +697,7 @@ export function AffiliateDetail({ id }: { id: string }) {
           <Section title="Steps">
             <ul className="crm-group crm-aff-steps">
               <StepRow done={s.profile.complete} title="Their details">
-                {s.profile.complete ? 'Name, contact, address and how they will promote BEASTY.' : `Still missing: ${Object.keys(s.profile.problems).length} ${Object.keys(s.profile.problems).length === 1 ? 'field' : 'fields'}.`}
+                {s.profile.complete ? null : `Still missing: ${Object.keys(s.profile.problems).length} ${Object.keys(s.profile.problems).length === 1 ? 'field' : 'fields'}.`}
               </StepRow>
               {s.payouts.available && (
               <StepRow done={s.payouts.complete} title="Payouts with Stripe">
@@ -721,9 +712,6 @@ export function AffiliateDetail({ id }: { id: string }) {
                 {!s.agreement.available ? 'Opens once the DocuSeal packet is set up.' : `${AGREEMENT[s.agreement.status] ?? s.agreement.status}${s.agreement.completedAt ? `, ${dateTime(s.agreement.completedAt)}` : ''}.`}
               </StepRow>
             </ul>
-            {s.agreement.status === 'completed' && (
-              <p className="crm-note is-quiet">{d.testMode ? 'Test mode: there is no real signed copy.' : 'The signed copy is in DocuSeal, with both signatures and its audit trail.'}</p>
-            )}
           </Section>
 
           {d.manualPacket && <ManualPacket d={d} packet={d.manualPacket} reload={reload} />}
@@ -745,16 +733,11 @@ export function AffiliateDetail({ id }: { id: string }) {
             ) : (
               <Empty icon="user">Nothing filled in yet.</Empty>
             )}
-            <p className="crm-note is-quiet">
-              {s.payouts.available
-                ? 'Social Security number, bank account and ID photo go straight to Stripe; BEASTY never sees or keeps them.'
-                : 'Social Security number, bank account and ID photo are on the W-9, direct deposit form and ID in their DocuSeal packet, not in the CRM. Open the signed packet in DocuSeal to pay them.'}
-            </p>
           </Section>
         </div>
 
         <div className="crm-aff-side">
-          {actor.role === 'admin' ? <Decide d={d} reload={reload} /> : <p className="crm-note is-quiet">Only an admin can countersign or approve.</p>}
+          {actor.role === 'admin' && <Decide d={d} reload={reload} />}
           <Section title="History">
             <ol className="crm-timeline">
               {events.map((e, i) => (
@@ -773,7 +756,7 @@ export function AffiliateDetail({ id }: { id: string }) {
           </Section>
         </div>
       </div>
-      <p className="crm-note is-quiet">{plural(d.events.length, 'thing', 'things')} on the record. Every view by the team is logged too.</p>
+      <p className="crm-note is-quiet">{plural(d.events.length, 'thing', 'things')} on the record.</p>
     </div>
   )
 }

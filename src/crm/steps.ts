@@ -6,8 +6,6 @@
   send a quote, customer), a plain name for where a business is, and one
   thing to do next. This file turns a stage into those. Pure data, no React.
 */
-import type { Channels } from './api'
-
 export const STEPS = ['Find info', 'Say hello', 'Talk', 'Quote', 'Customer'] as const
 
 /** Which of the five steps a stage is on; null once it has closed. */
@@ -95,7 +93,6 @@ export interface Move {
 
 export interface Next {
   title: string
-  body: string
   /** Offer the ways to reach them as the main action. */
   reach: boolean
   /** Buttons that move the business on, in the order they are likely. */
@@ -106,17 +103,13 @@ export interface Next {
   quote?: boolean
 }
 
-const howToReach = (c: Channels) =>
-  c.phone ? 'They have a phone number.' : c.instagram ? 'They are on Instagram.' : c.email ? 'They have an email address.' : ''
-
 /** What to do next with a business, and the buttons to do it. */
-export function nextFor(stage: string, channels: Channels, hasOpenQuote: boolean): Next {
+export function nextFor(stage: string): Next {
   switch (stage) {
     case 'new_lead':
     case 'need_contact_info':
       return {
         title: 'Find their phone or Instagram',
-        body: 'Nobody can reach them yet. Look them up, add what you find, and they move on to Say hello.',
         reach: false,
         moves: [],
         addInfo: true,
@@ -124,14 +117,12 @@ export function nextFor(stage: string, channels: Channels, hasOpenQuote: boolean
     case 'ready_to_contact':
       return {
         title: 'Say hello',
-        body: `${howToReach(channels)} Reach out, then write down what happened below.`.trim(),
         reach: true,
         moves: [{ to: 'contacted', label: 'I reached out' }],
       }
     case 'contacted':
       return {
         title: 'Wait to hear back',
-        body: 'Give them a couple of days. If nothing comes back, try again another way.',
         reach: true,
         moves: [
           { to: 'replied', label: 'They replied' },
@@ -141,7 +132,6 @@ export function nextFor(stage: string, channels: Channels, hasOpenQuote: boolean
     case 'replied':
       return {
         title: 'Ask if they want a website',
-        body: 'They answered. Find out whether a website would help them.',
         reach: true,
         moves: [
           { to: 'interested', label: "They're interested" },
@@ -151,7 +141,6 @@ export function nextFor(stage: string, channels: Channels, hasOpenQuote: boolean
     case 'interested':
       return {
         title: 'Send them a quote',
-        body: 'They want to hear more. Pick a price below and send it, or set a meeting first.',
         reach: true,
         moves: [
           { to: 'proposal_sent', label: 'Quote sent' },
@@ -162,7 +151,6 @@ export function nextFor(stage: string, channels: Channels, hasOpenQuote: boolean
     case 'meeting':
       return {
         title: 'Meet, then send the quote',
-        body: 'Write down how the meeting went, then send the price.',
         reach: true,
         moves: [{ to: 'proposal_sent', label: 'Quote sent' }],
         quote: true,
@@ -170,23 +158,19 @@ export function nextFor(stage: string, channels: Channels, hasOpenQuote: boolean
     case 'proposal_sent':
       return {
         title: 'Ask if they are ready',
-        body: hasOpenQuote
-          ? 'The quote is with them. When they say yes, mark it sold below.'
-          : 'The quote is with them. Add it below, so the sale counts when they say yes.',
         reach: true,
         moves: [{ to: 'closed_lost', label: 'They said no' }],
         quote: true,
       }
     case 'won':
-      return { title: 'Start their website', body: 'They said yes. Get their site started.', reach: true, moves: [{ to: 'onboarding', label: 'Started' }] }
+      return { title: 'Start their website', reach: true, moves: [{ to: 'onboarding', label: 'Started' }] }
     case 'onboarding':
-      return { title: 'Finish their website', body: 'When their site is live, mark them as a live customer.', reach: true, moves: [{ to: 'active_customer', label: 'Their site is live' }] }
+      return { title: 'Finish their website', reach: true, moves: [{ to: 'active_customer', label: 'Their site is live' }] }
     case 'active_customer':
-      return { title: 'Keep in touch', body: 'A live customer. Check in now and then.', reach: true, moves: [] }
+      return { title: 'Keep in touch', reach: true, moves: [] }
     default:
       return {
         title: `Closed: ${stageName(stage).toLowerCase()}`,
-        body: 'Nothing to do unless something changes.',
         reach: false,
         moves: [{ to: 'ready_to_contact', label: 'Try again' }],
       }

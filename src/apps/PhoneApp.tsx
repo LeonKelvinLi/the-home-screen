@@ -322,7 +322,6 @@ export function PhoneApp({ api }: { api: ShellApi }) {
             className="keypad-call"
             disabled
             aria-label="Call — number not published yet"
-            title="The commissary number has not been published yet"
           >
             <Symbol name="phone.fill" size={30} color="#fff" />
           </button>
@@ -339,7 +338,7 @@ export function PhoneApp({ api }: { api: ShellApi }) {
           </span>
         </div>
 
-        <p className="keypad-note">Calling is not connected yet — no number has been published.</p>
+        <p className="keypad-note">Calling is not connected yet.</p>
         {tabBar}
       </div>
     )
@@ -350,7 +349,6 @@ export function PhoneApp({ api }: { api: ShellApi }) {
     const loaded = prof && prof !== 'loading' ? prof : null
     const favs = (loaded?.favourites ?? []).map((id) => brandById(id)).filter(Boolean)
     const liked = (loaded?.likes ?? []).map((id) => brandById(id)).filter(Boolean)
-    const who = open.row.me ? 'you' : 'they'
     return (
       <NavScreen title={open.row.name} onBack={() => setOpen(null)} backTitle="Contacts" footer={tabBar}>
         <div className="prof member-page">
@@ -449,12 +447,6 @@ export function PhoneApp({ api }: { api: ShellApi }) {
                   </div>
                 )}
               </section>
-
-              <p className="prof-fineprint">
-                {open.row.me ? 'Your' : 'Their'} friends and Top 3, what {who} starred and liked on business
-                pages, and when {who} joined. Nothing else — no number, no address, no handle. Every
-                business here is real and opens.
-              </p>
             </>
           )}
         </div>
@@ -506,7 +498,7 @@ export function PhoneApp({ api }: { api: ShellApi }) {
             <OwnersDrop onDial={(o) => setDial({ name: o.name, phone: o.phone })} />
           </div>
         ) : (
-          <ListSection footer="The phone line and email are not connected yet. Every kitchen below can still be opened.">
+          <ListSection>
             <ListRow label="Phone" value="Not connected yet" chevron={false} />
           </ListSection>
         )}
@@ -573,11 +565,6 @@ export function PhoneApp({ api }: { api: ShellApi }) {
                 ))}
               </LetterGroup>
             ))}
-            <p className="ios-section-footer">
-              {dir.count === 1 ? '1 member so far.' : `${dir.count} members so far.`} Everyone who signs
-              up appears here the moment they do. Tap a set of letters to see its names, and open one
-              to see what they have starred and liked.
-            </p>
           </>
         ) : (
           <div className="contacts-join">
@@ -586,10 +573,6 @@ export function PhoneApp({ api }: { api: ShellApi }) {
                 <strong>{count}</strong> {count === 1 ? 'member' : 'members'} &amp; growing
               </p>
             )}
-            <p className="contacts-join-copy">
-              Sign in to see who else is on BEASTY and what they have starred and liked. It is free,
-              and your own name joins the list the moment you do.
-            </p>
             <button className="btn-primary" onClick={() => api.openApp('sys.join')}>
               Sign in or join free
             </button>
@@ -614,7 +597,7 @@ export function PhoneApp({ api }: { api: ShellApi }) {
     ).slice(0, 6)
     return (
       <NavScreen title="Favourites" onBack={api.closeApp} backTitle="Home" footer={tabBar}>
-        <ListSection footer="The first few businesses on the home screen, not a curated list. Tap one to open its menu.">
+        <ListSection>
           {favourites.map((b) => (
             <ListRow
               key={b.id}
@@ -645,7 +628,6 @@ export function PhoneApp({ api }: { api: ShellApi }) {
       <div className="phone-empty">
         <Symbol name={empty.icon} size={44} color="rgba(60,60,67,0.25)" />
         <p>{empty.line}</p>
-        <p className="phone-empty-sub">Calling is not connected yet.</p>
       </div>
     </NavScreen>
   )

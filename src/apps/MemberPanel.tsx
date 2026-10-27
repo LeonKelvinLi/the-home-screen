@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useGate } from '../lib/gate'
 import { shareLink } from '../lib/account'
-import { tierById, PER_MILESTONE_REFERRALS, DISCOUNT_PER_MILESTONE } from '../data/membership'
+import { tierById } from '../data/membership'
 
 /**
  * The member's own panel: their QR, their code, and what their referrals have
@@ -59,11 +59,6 @@ export function MemberPanel({ businessLink }: { businessLink?: string } = {}) {
         />
         <div className="mp-qr-side">
           <span className="mp-code">{account.referralCode}</span>
-          <p className="mp-lead">
-            {qr === 'business'
-              ? 'A business that asks for a spot through this counts as yours.'
-              : 'Anyone who signs up through this counts as your referral.'}
-          </p>
           <button className="btn-secondary" onClick={() => void share('friend')}>
             {copied === 'friend' ? 'Link copied' : 'Share friend link'}
           </button>
@@ -107,9 +102,7 @@ export function MemberPanel({ businessLink }: { businessLink?: string } = {}) {
         count is a scoreboard nobody acts on.
       */}
       <p className="mp-next">
-        {rewards.toNextTicket === PER_MILESTONE_REFERRALS && referrals === 0
-          ? `Your first ${PER_MILESTONE_REFERRALS} sign-ups earn a raffle ticket.`
-          : `${rewards.toNextTicket} more ${rewards.toNextTicket === 1 ? 'sign-up' : 'sign-ups'} for your next raffle ticket.`}
+        {`${rewards.toNextTicket} more ${rewards.toNextTicket === 1 ? 'sign-up' : 'sign-ups'} for your next raffle ticket.`}
       </p>
 
       {/*
@@ -118,18 +111,7 @@ export function MemberPanel({ businessLink }: { businessLink?: string } = {}) {
         standing small print nobody reads.
       */}
       {rewards.discountCapped && tier && (
-        <p className="mp-note">
-          Your discount is at its ${tier.discountCap} maximum. Raffle tickets keep coming — one
-          for every {PER_MILESTONE_REFERRALS} sign-ups, with no limit.
-        </p>
-      )}
-
-      {!tier && referrals > 0 && (
-        <p className="mp-note">
-          Referral credit comes off a membership fee, so ${DISCOUNT_PER_MILESTONE} per{' '}
-          {PER_MILESTONE_REFERRALS} sign-ups starts counting once you take a membership. Your
-          raffle tickets are yours either way.
-        </p>
+        <p className="mp-note">Your discount is at its ${tier.discountCap} maximum.</p>
       )}
     </section>
   )

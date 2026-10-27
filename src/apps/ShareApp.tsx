@@ -44,8 +44,6 @@ export function ShareApp({ api }: { api: ShellApi }) {
   return (
     <AppChrome title="Share & Scan" onBack={api.closeApp} className="is-beasty">
       <div className="share">
-        <p className="share-lead">Point a phone camera at this to open BEASTY.</p>
-
         {/*
           White card, and a generous margin around the code.
 
@@ -76,11 +74,6 @@ export function ShareApp({ api }: { api: ShellApi }) {
             {copied ? 'Link copied' : 'Share link'}
           </button>
         </div>
-
-        <p className="brand-foot">
-          Anyone who scans this lands on the same home screen you are looking at. No app to
-          install.
-        </p>
       </div>
     </AppChrome>
   )
