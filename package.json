@@ -43,6 +43,6 @@
     "pdfjs-dist": "^4.10.38",
     "playwright": "^1.62.1",
     "typescript": "^5.7.3",
-    "vite": "^6.0.7"
+    "vite": "^6.4.5"
   }
 }
