@@ -18,9 +18,9 @@ import {
   FIELDS,
   FIELDS_BY_ID,
   PER_AFFILIATE,
-  RATIONALE,
   SPECIAL_TERMS_FIELD,
   check,
+  isConfirmed,
   effectiveTerms,
   cleanOverrides,
   isShown,
@@ -139,7 +139,7 @@ function Dictate({ onText }: { onText: (t: string) => void }) {
   return (
     <button type="button" className={`crm-btn${on ? ' is-dark' : ''}`} onClick={toggle} aria-pressed={on}>
       <span className={`crm-terms-mic${on ? ' is-on' : ''}`} aria-hidden />
-      {on ? 'Stop' : 'Say it'}
+      {on ? 'Stop listening' : 'Speak instead of typing'}
     </button>
   )
 }
@@ -167,11 +167,11 @@ function Explain({ f, terms, open: startOpen }: { f: TermField; terms: Terms; op
       {wording &&
         (legal ? (
           <p className="crm-terms-legal">
-            <b>What prints in Schedule A</b> {wording}
+            <b>How it reads in the contract</b> {wording}
           </p>
         ) : (
           <button type="button" className="crm-terms-link" onClick={() => setLegal(true)}>
-            Show the agreement’s wording
+            Show how it reads in the contract
           </button>
         ))}
       {!startOpen && (
@@ -216,15 +216,34 @@ function Control({ f, value, onChange, disabled, placeholder }: { f: TermField; 
   return <NumberInput f={f} value={value as number | undefined} disabled={disabled} placeholder={placeholder} onChange={(v) => onChange(v)} />
 }
 
-function Question({ f, terms, problem, onChange, disabled }: { f: TermField; terms: Terms; problem?: string; onChange: (v: Terms[TermId] | undefined, channel?: 'tap' | 'talk') => void; disabled?: boolean }) {
+/*
+  ONE QUESTION. Glenn fills this in himself, so the card says only what he needs: the question, what it
+  means (open for the clauses, a tap away for the figures), the answer, and whether it still needs his
+  OK. "Looks right" confirms an answer nobody had agreed; changing it confirms it too.
+*/
+function Question({
+  f,
+  terms,
+  problem,
+  onChange,
+  disabled,
+  confirmed,
+  onConfirm,
+}: {
+  f: TermField
+  terms: Terms
+  problem?: string
+  onChange: (v: Terms[TermId] | undefined, channel?: 'tap' | 'talk') => void
+  disabled?: boolean
+  confirmed: boolean
+  onConfirm?: () => void
+}) {
   const preview = f.preview && !problem ? f.preview(terms) : ''
   return (
-    <div className={`crm-terms-card${f.lane === 'talk' ? ' is-talk' : ''}`} id={`term-${f.id}`}>
+    <div className={`crm-terms-card${confirmed ? '' : ' is-unchecked'}`} id={`term-${f.id}`}>
       <div className="crm-terms-card-head">
         <h3>{f.prompt}</h3>
-        <span className="crm-terms-lane" title={RATIONALE[f.why]}>
-          {f.lane === 'talk' ? 'Talk it through' : 'Tap'}
-        </span>
+        <span className={`crm-terms-state${confirmed ? ' is-ok' : ''}`}>{confirmed ? (f.settled ? 'Agreed' : 'Checked') : 'Needs your OK'}</span>
       </div>
       {f.lane === 'talk' && <Explain f={f} terms={terms} open />}
       <Control f={f} value={terms[f.id]} onChange={onChange} disabled={disabled} />
@@ -232,8 +251,14 @@ function Question({ f, terms, problem, onChange, disabled }: { f: TermField; ter
       {preview && <p className="crm-terms-preview">{preview}</p>}
       <div className="crm-terms-foot">
         {f.lane === 'tap' && <Explain f={f} terms={terms} open={false} />}
-        <span className={`crm-terms-source${f.settled ? '' : ' is-open'}`}>{f.settled ? 'Agreed' : 'Not settled'}{f.source ? `: ${f.source}` : ''}</span>
+        {!confirmed && onConfirm && (
+          <button type="button" className="crm-btn crm-terms-ok" onClick={onConfirm} disabled={!!problem}>
+            <Icon name="check" size={16} stroke={2.6} />
+            Looks right
+          </button>
+        )}
       </div>
+      {f.source && <p className="crm-terms-source">{f.source}</p>}
     </div>
   )
 }
@@ -414,18 +439,19 @@ export function AffiliateTerms() {
         Affiliates
       </a>
       <PageTitle
-        title="Affiliate terms"
-        sub="Schedule A: the commission and fee figures printed into the affiliate agreement. Every figure is a default until Glenn agrees it."
+        title="Affiliate money terms"
+        sub="What affiliates pay and earn, as it prints on Schedule A of their agreement. Go through each answer: change it if it is wrong, or tap Looks right. Answers save as you go. Nothing is official until you press Publish on the last page."
         actions={
           <a className="crm-btn" href="/api/crm/affiliate-terms/schedule.pdf" target="_blank" rel="noreferrer">
             <Icon name="file" size={16} />
-            Open filled PDF
+            See it as a PDF
           </a>
         }
       />
       <p className="crm-terms-status">
-        {state.published ? `Version ${state.published.number} published ${dateTime(state.published.createdAt)}.` : 'Nothing published yet.'}{' '}
-        {state.unpublishedChanges ? 'The draft below has changes that are not published.' : 'The draft matches it.'}{' '}
+        {state.published ? `Version ${state.published.number} published ${dateTime(state.published.createdAt)}.` : 'Not published yet.'}{' '}
+        {state.published && (state.unpublishedChanges ? 'Some answers below have changed since then and are not published.' : 'The answers below match it.')}{' '}
+        {local.unsettled.length > 0 && `${local.unsettled.length} ${local.unsettled.length === 1 ? 'answer needs' : 'answers need'} your OK.`}{' '}
         <span className="crm-quiet">{unsaved ? 'Saving…' : state.draft.updatedAt ? `Saved ${dateTime(state.draft.updatedAt)}.` : ''}</span>
       </p>
       {!admin && <p className="crm-aff-notice">Only an admin can change the terms.</p>}
@@ -454,7 +480,16 @@ export function AffiliateTerms() {
       {chapter !== 'review' ? (
         <>
           {questions.map((f) => (
-            <Question key={f.id} f={f} terms={terms} problem={local.problems[f.id]} disabled={!admin} onChange={(v, ch) => change(f.id, v, ch)} />
+            <Question
+              key={f.id}
+              f={f}
+              terms={terms}
+              problem={local.problems[f.id]}
+              disabled={!admin}
+              onChange={(v, ch) => change(f.id, v, ch)}
+              confirmed={isConfirmed(f, terms, state.draft.acknowledged)}
+              onConfirm={admin && !unsaved ? () => void act('/api/crm/affiliate-terms/confirm', { field: f.id }) : undefined}
+            />
           ))}
           <div className="crm-terms-next">
             {idx > 0 && (
@@ -495,8 +530,12 @@ export function AffiliateTerms() {
               ))
             )}
           </Section>
-          <Section title={`Not settled with Glenn (${local.unsettled.length})`}>
-            <p className="crm-note is-quiet">These are defaults nobody has agreed yet. They can be published, but Glenn should see each one. His draft of 21 October has not reached the Mac.</p>
+          <Section title={local.unsettled.length ? `Still needs your OK (${local.unsettled.length})` : 'Every answer is checked'}>
+            <p className="crm-note is-quiet">
+              {local.unsettled.length
+                ? 'Nobody has agreed these yet. Tap one to go to it, then change it or tap Looks right. You can publish without them, but the PDF lists them as not yet agreed.'
+                : 'Every answer has been agreed or checked.'}
+            </p>
             <ul className="crm-group">
               {local.unsettled.map((id) => (
                 <li key={id}>

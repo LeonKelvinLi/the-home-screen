@@ -335,7 +335,7 @@ export const FIELDS: TermField[] = [
     explain: 'The one-time fee when a business takes a paid spot. The business-referral reward is worked out from it.',
     example: 'FIRST48 at $99: $99 initiation + 3 × $39 = $216 for the first year (Glenn’s 29 Aug arithmetic used $69: $186).',
     legal: (t) => `Each Member Business pays a one-time initiation fee of ${usd(t.initiationFee)}.`,
-    source: 'Agreed: Leon, 23 Oct, “$99 initiation”, the figure the Members page has printed since 3 Sep. Glenn’s FIRST48 note of 29 Aug used $69.',
+    source: 'Leon, 23 Oct: “$99 initiation”, the figure the Members page has printed since 3 Sep. Glenn’s FIRST48 note of 29 Aug used $69.',
     settled: true,
     perAffiliate: false,
     preview: (t) => `A full year at list: ${usd(t.initiationFee)} + 12 × ${usd(t.monthlyFee)} = ${usd(derive(t).listYear)}`,
@@ -410,7 +410,7 @@ export const FIELDS: TermField[] = [
       t.foundationApplies === 'every_payment'
         ? 'The Foundation contribution is taken from the initiation fee and from every monthly payment.'
         : 'The Foundation contribution is taken from the initiation fee only; monthly payments carry none.',
-    source: 'His words say “activation”; the arithmetic for 3 points (10% of $39 − $9) assumes every month.',
+    source: 'Glenn’s note says “activation”, but the old 3-point figure took $9 off every month.',
     settled: false,
     perAffiliate: false,
   },
@@ -570,7 +570,7 @@ export const FIELDS: TermField[] = [
     explain: 'Recurring commission is the single biggest number in the programme over time. The thread never said how long it lasts.',
     example: 'At $3 a month, one business kept for three years pays the affiliate $108.',
     legal: () => '',
-    source: 'Not discussed in the thread.',
+    source: 'Not discussed yet.',
     settled: false,
     perAffiliate: true,
     shownWhen: (t) => t.rewardKind === 'percent',
@@ -586,7 +586,7 @@ export const FIELDS: TermField[] = [
     max: 120,
     explain: 'Counted in months the business actually pays; free months do not count.',
     legal: () => '',
-    source: 'No figure in the thread.',
+    source: 'No figure agreed yet.',
     settled: false,
     perAffiliate: true,
     shownWhen: (t) => t.rewardKind === 'percent' && t.commissionDuration === 'first_months',
@@ -604,7 +604,7 @@ export const FIELDS: TermField[] = [
     explain: 'A food reviewer, a recruiting partner — anyone else whose cut comes out of the same money. Leave it at 0% if there is no one.',
     example: 'Glenn on food reviews: “so then their girl makes her money from that recruitment as well”.',
     legal: (t) => (t.otherShareRate > 0 ? `A further ${pctText(t.otherShareRate)} of the same amount is paid to ${t.otherShareLabel || 'another partner'}.` : ''),
-    source: 'An idea in the thread (food-review add-on); no figure.',
+    source: 'An idea from the chat (a food-review add-on). No figure yet.',
     settled: false,
     perAffiliate: false,
     preview: (t) => {
@@ -780,7 +780,7 @@ export const FIELDS: TermField[] = [
     why: 'gate',
     explain: 'Days when each referral earns a multiple of its usual points.',
     legal: (t) => (t.promoDays ? 'On promotion days announced by BEASTY, points earned are multiplied as announced, up to the maximum below.' : 'There are no promotion-day multipliers.'),
-    source: 'Settled in the thread; Glenn again on 26 Oct, in place of the saved-points bonus.',
+    source: 'Agreed in the chat; Glenn again on 26 Oct, in place of the saved-points bonus.',
     settled: true,
     perAffiliate: false,
   },
@@ -795,7 +795,7 @@ export const FIELDS: TermField[] = [
     max: 10,
     explain: 'Double is 2, triple is 3.',
     legal: (t) => `The maximum multiplier is ${t.promoDayMultiplier}x.`,
-    source: 'Thread: “double- or triple-point days”.',
+    source: 'From the chat: “double- or triple-point days”.',
     settled: true,
     perAffiliate: false,
     shownWhen: (t) => t.promoDays,
@@ -814,7 +814,7 @@ export const FIELDS: TermField[] = [
     explain: 'The contract has to say how a promotion day is announced, or an affiliate can claim any day was one.',
     example: '“Slow Tuesdays and public holidays. We post it in the app the Friday before.”',
     legal: (t) => t.promoDaysWhen,
-    source: 'Thread: “on slow days and holidays”. The wording is a draft.',
+    source: 'From the chat: “on slow days and holidays”. The words are a first draft: change them to what you want.',
     settled: false,
     perAffiliate: false,
     shownWhen: (t) => t.promoDays,
@@ -868,7 +868,7 @@ export const FIELDS: TermField[] = [
     ],
     explain: 'Every time could pay the bonus again after each redemption.',
     legal: (t) => (t.bonusThreshold > 0 ? (t.bonusRepeat === 'once' ? 'The bonus is paid once per Affiliate.' : 'The bonus is paid each time the balance reaches the goal.') : ''),
-    source: 'Not said in the thread.',
+    source: 'Not discussed yet.',
     settled: false,
     perAffiliate: false,
     shownWhen: (t) => t.bonusThreshold > 0,
@@ -883,7 +883,7 @@ export const FIELDS: TermField[] = [
     explain: 'The rule that decides whether a referral earns anything. The dashboard already has definitions for “active” and “signed” (docs/AFFILIATE.md); the draft below uses them.',
     example: '“A user counts once they have liked or saved a business. A business counts once it has paid.”',
     legal: (t) => t.qualifying,
-    source: 'Draft wording from the dashboard’s definitions; not agreed.',
+    source: 'A first draft, written from how the affiliate dashboard counts. Not agreed yet.',
     settled: false,
     perAffiliate: false,
   },
@@ -919,7 +919,7 @@ export const FIELDS: TermField[] = [
     max: 90,
     explain: 'The deadline the affiliate can hold BEASTY to.',
     legal: () => '',
-    source: 'Not said in the thread.',
+    source: 'Not discussed yet.',
     settled: false,
     perAffiliate: true,
   },
@@ -936,7 +936,7 @@ export const FIELDS: TermField[] = [
     ],
     explain: 'The DocuSeal packet already collects a direct-deposit authorization.',
     legal: (t) => (t.payoutMethod === 'direct_deposit' ? 'by direct deposit to the account in the Affiliate’s signed authorization.' : 'by check to the address in the Affiliate’s signed forms.'),
-    source: 'The packet (template 6402995) carries a direct-deposit page.',
+    source: 'The sign-up forms include a direct-deposit page.',
     settled: true,
     perAffiliate: false,
   },
@@ -950,7 +950,7 @@ export const FIELDS: TermField[] = [
     explain: 'Glenn: they can cancel any time or pause their recruitment status. The clause says what happens to points already earned and to months still owed.',
     example: '“Pause stops new referrals counting; what you already earned stays. Cancel, and you can still cash out what you have.”',
     legal: (t) => t.pauseCancel,
-    source: 'Glenn, 26 Oct: “they can cancel any time or pause their recruitment status”. The wording is a draft.',
+    source: 'Glenn, 26 Oct: “they can cancel any time or pause their recruitment status”. The words are a first draft.',
     settled: false,
     perAffiliate: false,
   },
@@ -964,7 +964,7 @@ export const FIELDS: TermField[] = [
     explain: 'If a business gets its money back, the affiliate’s points for that payment should not stand. The clause says how they are taken back and when.',
     example: '“If they get a refund within two months, the points come off. If we already paid, it comes off next time.”',
     legal: (t) => t.clawback,
-    source: 'Draft wording; not discussed.',
+    source: 'A first draft. Not discussed yet.',
     settled: false,
     perAffiliate: false,
   },
@@ -1182,6 +1182,15 @@ export interface Check {
   unsettled: TermId[]
 }
 
+/*
+  CHECKED BY GLENN. A default nobody agreed in the chat counts as checked once someone with the CRM key
+  taps "Looks right" on it, or changes it themselves, and only for the value they saw: change it again
+  and it needs checking again. Stored in the draft's acknowledged map beside the accepted contradictions.
+*/
+export const confirmKey = (id: TermId) => `field:${id}`
+export const isConfirmed = (f: TermField, t: Terms, acknowledged: Record<string, string> = {}) =>
+  f.settled || acknowledged[confirmKey(f.id)] === JSON.stringify(t[f.id])
+
 export function check(t: Terms, acknowledged: Record<string, string> = {}): Check {
   const problems = fieldProblems(t)
   const flags = flagsFor(t, acknowledged)
@@ -1189,7 +1198,7 @@ export function check(t: Terms, acknowledged: Record<string, string> = {}): Chec
     problems,
     flags,
     blocked: Object.keys(problems).length > 0 || flags.some((f) => f.severity === 'hard'),
-    unsettled: FIELDS.filter((f) => !f.settled && isShown(f, t)).map((f) => f.id),
+    unsettled: FIELDS.filter((f) => !isConfirmed(f, t, acknowledged) && isShown(f, t)).map((f) => f.id),
   }
 }
 

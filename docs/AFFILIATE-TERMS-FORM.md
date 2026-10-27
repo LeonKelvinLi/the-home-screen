@@ -231,3 +231,12 @@ Packet page 13 ("Schedule A & signatures") no longer quotes the old 3-point and 
 `tools/audit-affiliate-terms.ts` now reads PDF text with pdf.js (`pdfjs-dist`, a dev dependency): embedded fonts store glyph ids, so the old latin1 read found nothing. 140 checks pass.
 
 DocuSeal draft 6566603: both documents were replaced with DocuSeal's Replace. On Schedule A the Changes and Initials fields were moved into the new boxes; the packet's fields were unchanged (pages 1–12 are the same build, W-9 Rev. March 2024) and pages 1, 2 and 13 were checked in the editor. Saved and checked after a reload. Still no submissions, nothing sent, not the live template. Live: `002c3bc`.
+
+## Plainer wording for Glenn (26 October 2026)
+
+Leon, sending Glenn the Money terms link: "improve wording and UI like what this means". Glenn fills this in himself, so the screen now speaks to him:
+
+- Each card shows **Needs your OK**, **Checked** or **Agreed** instead of the "Tap" / "Talk it through" labels, and an unchecked card has a yellow edge.
+- **Looks right** confirms an answer nobody had agreed (`POST /api/crm/affiliate-terms/confirm`). Changing an answer confirms it too. Either way it holds only for that value, stored as `field:<id>` in the draft's `acknowledged` map. The review page's "Still needs your OK" list and the PDF's "not yet agreed" list both shrink as he goes.
+- "Say it" is now "Speak instead of typing". "Show the agreement's wording" is now "Show how it reads in the contract". The where-it-came-from notes say "From the chat" and "Not discussed yet" instead of "Thread:" and "not said in the thread". The page explains that answers save as you go and nothing is official until Publish.
+- The stale "His draft of 21 October has not reached the Mac" line is gone.

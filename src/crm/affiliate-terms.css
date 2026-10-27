@@ -92,7 +92,8 @@
   background: var(--card);
   scroll-margin: 90px 0;
 }
-.crm-terms-card.is-talk {
+/* A yellow edge marks an answer that still needs Glenn's OK, the same as the pill. */
+.crm-terms-card.is-unchecked {
   box-shadow: inset 4px 0 0 var(--yellow);
   padding-left: 22px;
 }
@@ -109,21 +110,23 @@
   line-height: 1.3;
   overflow-wrap: anywhere;
 }
-.crm-terms-lane {
+.crm-terms-state {
   flex: none;
   margin-top: 1px;
-  padding: 3px 9px;
+  padding: 3px 10px;
   border-radius: 999px;
-  background: var(--fill);
-  color: var(--muted);
+  background: var(--yellow-soft);
+  color: var(--ink);
   font-size: 12px;
   font-weight: 700;
   white-space: nowrap;
-  cursor: help;
 }
-.crm-terms-card.is-talk .crm-terms-lane {
-  background: var(--yellow-soft);
-  color: var(--ink);
+.crm-terms-state.is-ok {
+  background: var(--green-soft);
+  color: var(--green);
+}
+.crm-terms-ok {
+  margin-left: auto;
 }
 .crm-terms-foot {
   display: flex;
@@ -318,17 +321,9 @@
 .crm-terms-source {
   min-width: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 12.5px;
+  line-height: 1.4;
   overflow-wrap: anywhere;
-}
-/* A note that wraps on a phone, so a soft corner rather than a pill: a pill's
-   round ends cut into the second and third lines. */
-.crm-terms-source.is-open {
-  padding: 4px 10px;
-  border-radius: 10px;
-  background: var(--yellow-soft);
-  color: var(--ink);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--red) 25%, transparent);
 }
 
 .crm-terms-next {
@@ -540,7 +535,7 @@
   .crm-terms-card {
     padding: 16px;
   }
-  .crm-terms-card.is-talk {
+  .crm-terms-card.is-unchecked {
     padding-left: 20px;
   }
   .crm-terms-card-head {

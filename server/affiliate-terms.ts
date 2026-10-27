@@ -27,6 +27,7 @@ import {
   scheduleChanges,
   SCHEDULE_A_FIELDS,
   check,
+  confirmKey,
   cleanOverrides,
   cleanTerms,
   coerce,
@@ -88,8 +89,8 @@ const legalName = (p: AppTermsRow['profile']) =>
 
 const dateText = (t: number) => new Date(t).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'America/Los_Angeles' })
 
-function openQuestions(t: Terms): string[] {
-  return check(t).unsettled.map((id) => `${FIELDS_BY_ID[id].prompt}: ${FIELDS_BY_ID[id].source}`)
+function openQuestions(t: Terms, acknowledged: Record<string, string> = {}): string[] {
+  return check(t, acknowledged).unsettled.map((id) => `${FIELDS_BY_ID[id].prompt}: ${FIELDS_BY_ID[id].source}`)
 }
 
 export function mountAffiliateTerms(app: Express, deps: { rateLimiter(perMinute: number, burst: number): (req: Request, res: Response, next: NextFunction) => void; crm: CrmDeps }) {
@@ -164,9 +165,12 @@ export function mountAffiliateTerms(app: Express, deps: { rateLimiter(perMinute:
       if (d!.revision !== b.revision) return { conflict: true }
       const before = cleanTerms(d!.terms)
       const after = cleanTerms(changes, before)
+      /* Whoever changes an answer has decided it: it counts as checked, at its new value. */
+      const acknowledged = { ...(d!.acknowledged ?? {}) }
+      for (const id of ids) acknowledged[confirmKey(id)] = JSON.stringify(after[id])
       await db
-        .prepare('UPDATE affiliate_terms_draft SET terms = ?, revision = revision + 1, updated_by = ?, updated_at = ? WHERE id = ?')
-        .run(JSON.stringify(after), req.crm!.actor, Date.now(), DRAFT)
+        .prepare('UPDATE affiliate_terms_draft SET terms = ?, acknowledged = ?, revision = revision + 1, updated_by = ?, updated_at = ? WHERE id = ?')
+        .run(JSON.stringify(after), JSON.stringify(acknowledged), req.crm!.actor, Date.now(), DRAFT)
       await logChanges(DRAFT, before, after, ids, channel, req.crm!.actor)
       return { conflict: false }
     })()
@@ -177,6 +181,22 @@ export function mountAffiliateTerms(app: Express, deps: { rateLimiter(perMinute:
 
   /* "Both are right, leave them" — soft flags only, and only for the figures
      it was raised on: change one of them and the question comes back. */
+  /* "Looks right" on one answer nobody had agreed: checked, at the value on screen. */
+  app.post('/api/crm/affiliate-terms/confirm', write, admin, asyncH(async (req, res) => {
+    const f = FIELDS_BY_ID[String((req.body ?? {}).field ?? '') as TermId]
+    if (!f) return res.status(400).json({ error: 'Unknown term.' })
+    const d = await draftRow()
+    const acknowledged = { ...d.acknowledged, [confirmKey(f.id)]: JSON.stringify(d.terms[f.id]) }
+    await db
+      .prepare(`INSERT INTO affiliate_terms_draft (id, terms, acknowledged, revision, updated_by, updated_at) VALUES (?, ?, ?, 1, ?, ?)
+                ON CONFLICT (id) DO UPDATE SET acknowledged = EXCLUDED.acknowledged, revision = affiliate_terms_draft.revision + 1, updated_by = EXCLUDED.updated_by, updated_at = EXCLUDED.updated_at`)
+      .run(DRAFT, JSON.stringify(d.terms), JSON.stringify(acknowledged), req.crm!.actor, Date.now())
+    await db
+      .prepare('INSERT INTO affiliate_terms_events (scope, field, old_value, new_value, channel, actor, created_at) VALUES (?, ?, NULL, ?, ?, ?, ?)')
+      .run(DRAFT, `confirm:${f.id}`, JSON.stringify(d.terms[f.id]), 'tap', req.crm!.actor, Date.now())
+    res.json(await standardState())
+  }))
+
   app.post('/api/crm/affiliate-terms/acknowledge', write, admin, asyncH(async (req, res) => {
     const rule = RULES.find((r) => r.id === String((req.body ?? {}).rule ?? ''))
     if (!rule) return res.status(400).json({ error: 'Unknown check.' })
@@ -271,7 +291,7 @@ export function mountAffiliateTerms(app: Express, deps: { rateLimiter(perMinute:
       subheading: d.updated_at ? `Last changed ${dateText(d.updated_at)} by ${d.updated_by}` : 'Defaults from the September thread',
       code,
       draft: c.blocked ? `Not final: ${c.flags.filter((f) => f.severity === 'hard').length + Object.keys(c.problems).length} to fix` : v && v.code === code ? undefined : 'Draft',
-      openQuestions: openQuestions(d.terms),
+      openQuestions: openQuestions(d.terms, d.acknowledged),
     }, 'BEASTY-Schedule-A-draft.pdf')
   }))
 
