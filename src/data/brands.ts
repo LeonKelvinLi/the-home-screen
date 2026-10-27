@@ -828,6 +828,15 @@ const SEED: Seed[] = [
     address: '1900 Irving Street, San Francisco, CA 94122',
     phone: '(415) 610-4631',
     instagram: 'gaovietkitchen',
+    /* Glenn, 2026-10-27 8:39-8:44 am: "Clip this video plz for Gao", "2nd", "as 1st video". The
+       page's film is Mr. Gao's own beef-rib pho reel; @allie.eats's Outer Sunset crawl is the second. */
+    clip: {
+      src: '/clips/gao-viet-kitchen.mp4',
+      poster: '/clips/gao-viet-kitchen-poster.webp',
+      href: 'https://www.instagram.com/reel/DQzrjKrkuTe/',
+      credit: 'Posted by @mr.gaoviet',
+      platform: 'Instagram',
+    },
     items: [
       ['Bánh Hỏi Sharing Set', 'Woven vermicelli platters with herbs, lettuce, pickles and fish sauce', 5000],
       ['Wrap & Roll', 'Build-your-own fresh rolls: BBQ shrimp, grilled beef, nem nướng, crispy egg roll', 4200],

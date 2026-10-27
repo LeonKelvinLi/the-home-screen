@@ -266,3 +266,8 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `innenas-kitchen.webp` | [Original artwork](https://www.instagram.com/innenaskitchen/) | Their own neon “InnenasKitchen” sign, from Glenn’s photo of their banner: “Innenas” set over “Kitchen” to fit a square, as Glenn asked, on the wall’s own colour. |
 | `cali-k9.webp` | [Original artwork](https://calik9.com/) | Their own Cali K9 mark (a dog leaping over California) set over their CALI K9 wordmark, cut from their site's header in Glenn's screenshot. |
 | `legend-hotpot-grill.webp` | [Original artwork](https://www.instagram.com/legend_hotpot_grill/) | Their own 传奇火锅 LEGEND HOT POT logo, their Instagram picture. |
+| `daly-buffet.webp` | [Original artwork](https://dalybuffet.com/) | Their own DALy “Seafood / BBQ / Sushi Buffet” logo, their website's logo file, on white. |
+| `sake2me-ayce-sushi.webp` | [Original artwork](https://www.instagram.com/sake2me_fremont/) | Their own SAKE 2 ME “All you can eat sushi restaurant” mark, their Instagram picture from Glenn's screenshot. |
+| `fusion-buffet-concord.webp` | [Original artwork](https://www.instagram.com/fusionbuffetconcord/) | Their own red Fusion Buffet script, their Instagram picture from Glenn's screenshot. |
+| `kakuna-sushi.webp` | [Original artwork](https://www.instagram.com/kakunasushi/) | Their own Kakuna Sushi mark (a sushi roll in a bowl over the red name), their Instagram picture from Glenn's screenshot. |
+| `jay-the-cheesecake-queen.webp` | [Original artwork](https://www.instagram.com/jaythecheesecakequeen/) | Their own pink “Jay The Cheesecake Queen” disc, their Instagram picture from Glenn's screenshot, without Instagram's frame. |

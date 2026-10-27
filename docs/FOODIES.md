@@ -320,3 +320,11 @@ Secondary and unavailable links:
 | 27 Oct 2026 | @drooling.bae (Drooling Bay Area Eats) | Legend Hotpot & Grill, 35233 Newark Blvd, Newark: “AYCE done right”, the conveyor belt, appetizers, the build-your-own sauce station, hot pot and KBBQ at once, desserts — [DUaFKh6jpBf](https://www.instagram.com/reel/DUaFKh6jpBf/), sent as “Clip this video plz / Foodie” | **Yes.** Legend's page film, whole (0–23 s) |
 | 27 Oct 2026 | @bestbayareafood (already listed) | Legend Hotpot & Grill: “the best deal for both” hot pot and KBBQ, the two of them at the table, noodles, the grill, a claw machine, the address card — [De2J1F7PYQR](https://www.instagram.com/reel/De2J1F7PYQR/), “2nd” | **Yes.** A second review on Legend's page (4–19 s) |
 | 27 Oct 2026 | @victoria.pham17 (Victoria Pham, already listed) | Legend Hotpot & Grill: the award plaque, the revolving belt, her sauce recipe, wagyu, and a mixed verdict (few meat options, salty marinade, service) — [DeruAsHMWIZ](https://www.instagram.com/reel/DeruAsHMWIZ/), “3rd” | **Yes.** A third review on Legend's page (8–22 s, before her criticisms) |
+
+### Batch 72 — 27 October 2026
+
+| Sent | Creator | What the reel shows | On BEASTY? |
+|---|---|---|---|
+| 27 Oct 2026 | @allie.eats (Allie Tong, already listed) | Gao Viet Kitchen, 1900 Irving St, San Francisco: the second half of her Outer Sunset crawl with @festusfeasts, the room, the beef rib pho, the lobster, the staff — [DdX5Vztgv0A](https://www.instagram.com/reel/DdX5Vztgv0A/), sent as “Clip this video plz for Gao” | **Yes.** A second film on Gao Viet Kitchen's page (41–56 s, the Gao half only; the bakery half is Pineapple King's film) |
+| 27 Oct 2026 | @mr.gaoviet (Viet Linh Nguyen, “Mr. Gao”) | Gao Viet Kitchen: “BEAUTY vs. The PHOZILLA”, the giant beef rib pho — [DQzrjKrkuTe](https://www.instagram.com/reel/DQzrjKrkuTe/), sent as “Clip this video plz 2nd”, then “as 1st video” | **Yes.** Gao Viet Kitchen's page film (7–31 s) |
+| 27 Oct 2026 | @mayakay.official (Maya, already listed) | Nawah Market & Deli, Foothill Blvd, Oakland: the famous chopped cheese, a burger, loaded fries and wings — [DfAZqKEM2fX](https://www.instagram.com/reel/DfAZqKEM2fX/), sent as “Clip this video plz / Foodie” | **Yes.** Nawah Market's page film (1–25 s) |

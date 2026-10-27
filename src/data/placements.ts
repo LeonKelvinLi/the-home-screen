@@ -1789,5 +1789,17 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      fills from its type line. */
   'san-jose-services2-4': 'b_calik9',
   'newark-goods2-3': 'b_legendhotpotgrill',
+  /* Batch 72, Glenn, 27 October 7:44 am-9:01 am, four all-you-can-eat places. Each city's Sushi spot was
+     open, so the three buffets that serve sushi take it: Daly Buffet (seafood, BBQ and sushi), Sake2Me
+     (AYCE sushi; Fremont's first) and Fusion Buffet (sushi, Mongolian BBQ, seafood). Kakuna, also AYCE
+     sushi in Fremont, came after Sake2Me, so Fremont's More goods. BEASTY • AYCE fills from their type lines. */
+  'daly-city-goods-4': 'b_dalybuffet',
+  'fremont-goods-4': 'b_sake2meaycesushi',
+  'concord-goods-4': 'b_fusionbuffetconcord',
+  'fremont-goods2-8': 'b_kakunasushi',
+  /* Jay The Cheesecake Queen, 10:53 am, "BEASTY • Sweets": a wholesale no-bake cheesecake bakery sold in 25+
+     neighborhood stores. Sweets' Cheesecake spot is Basq Haus's, so BEASTY's More eats, as Crazy Block and
+     The Cheesecake Lab before it. */
+  'beasty-goods2-79': 'b_jaythecheesecakequeen',
 
 }

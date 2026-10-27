@@ -151,6 +151,8 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: '_whatarethechances_', place: 'Gold Bean', city: 'Berkeley', brand: 'b_goldbeandurant', reel: reel('Ddk28qRIsGZ'), clip: true },
   { by: 'bestbayareafood', place: 'Legend Hotpot & Grill', city: 'Newark', brand: 'b_legendhotpotgrill', reel: reel('De2J1F7PYQR'), clip: true },
   { by: 'victoria.pham17', place: 'Legend Hotpot & Grill', city: 'Newark', brand: 'b_legendhotpotgrill', reel: reel('DeruAsHMWIZ'), clip: true },
+  /* Batch 72, Glenn, 27 Oct 8:41 am: the Gao Viet Kitchen half of @allie.eats's Outer Sunset crawl (with @festusfeasts), its second film. */
+  { by: 'allie.eats', place: 'Gao Viet Kitchen', city: 'San Francisco', brand: 'b_gaovietkitchen', reel: reel('DdX5Vztgv0A'), clip: true },
 ]
 
 /*

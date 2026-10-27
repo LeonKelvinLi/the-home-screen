@@ -14523,6 +14523,15 @@ export const LOCAL_SEED: LocalSeed[] = [
     address: "5489 Foothill Blvd, Oakland, CA",
     phone: "(510) 500-3090",
     hours: "Mon-Sun 11am-9pm",
+    /* Glenn, 2026-10-27 10:50 am: "Clip this video plz / Foodie", @mayakay.official's chopped cheese, burgers and wings. */
+    clip: {
+      src: "/clips/nawah-market.mp4",
+      poster: "/clips/nawah-market-poster.webp",
+      href: "https://www.instagram.com/reel/DfAZqKEM2fX/",
+      credit: "Filmed by @mayakay.official",
+      platform: "Instagram",
+      by: "mayakay.official",
+    },
     contactOnly: "A market and deli on Foothill Boulevard, cooking to order every day from 11am to 9pm. They publish no menu or prices online; call (510) 500-3090 to place your order.",
     items: [],
   },
@@ -45710,6 +45719,1638 @@ export const LOCAL_SEED: LocalSeed[] = [
           "credit": "Filmed by @drooling.bae",
           "platform": "Instagram",
           "by": "drooling.bae"
+      }
+  },
+  /* BATCH 72, 2026-10-27: Glenn's sends of 27 Oct 7:44 am-10:53 am. Sources: research/roster/batch72.json. */
+  {
+      "slug": "daly-buffet",
+      "name": "Daly Buffet",
+      "label": "Daly Buffet",
+      "cuisine": "AYCE seafood, BBQ & sushi buffet",
+      "tagline": "A family-friendly all-you-can-eat seafood, BBQ and sushi buffet on Junipero Serra Boulevard: crab legs, crawfish, sashimi, a grill and a hot pot bar.",
+      "color": "#E8821E",
+      "icon": "daly-buffet",
+      "prep": 0,
+      "category": "Buffet",
+      "items": [],
+      "sections": [
+          {
+              "name": "Buffet",
+              "items": [
+                  [
+                      "Weekday lunch",
+                      "Adults, Monday to Friday 11am–2:30pm.",
+                      2699
+                  ],
+                  [
+                      "Weekday dinner",
+                      "Adults, Monday to Friday from 4pm.",
+                      3999
+                  ],
+                  [
+                      "Weekends and holidays",
+                      "Adults, all day.",
+                      4199
+                  ],
+                  [
+                      "Kids 7–10, weekday lunch",
+                      "",
+                      1799
+                  ],
+                  [
+                      "Kids 4–6, weekday lunch",
+                      "",
+                      1099
+                  ],
+                  [
+                      "Kids 7–10, weekday dinner",
+                      "",
+                      2299
+                  ],
+                  [
+                      "Kids 4–6, weekday dinner",
+                      "",
+                      1699
+                  ],
+                  [
+                      "Kids 7–10, weekends and holidays",
+                      "",
+                      2499
+                  ],
+                  [
+                      "Kids 4–6, weekends and holidays",
+                      "",
+                      1899
+                  ]
+              ]
+          },
+          {
+              "name": "To go",
+              "items": [
+                  [
+                      "Lunch box",
+                      "The buffet to go, one box. No crab, oysters, sashimi, sushi, malatang or BBQ.",
+                      2099
+                  ],
+                  [
+                      "Dinner box",
+                      "The buffet to go, one box. No crab, oysters, sashimi, sushi, malatang or BBQ.",
+                      2699
+                  ],
+                  [
+                      "Nigiri",
+                      "Per piece.",
+                      200
+                  ],
+                  [
+                      "Sushi roll, regular",
+                      "Per piece.",
+                      100
+                  ],
+                  [
+                      "Sushi roll, seafood",
+                      "Per piece.",
+                      200
+                  ],
+                  [
+                      "Sashimi",
+                      "Per pound.",
+                      2099
+                  ],
+                  [
+                      "Malatang",
+                      "Per pound.",
+                      1299
+                  ],
+                  [
+                      "BBQ",
+                      "Per pound.",
+                      1899
+                  ]
+              ]
+          }
+      ],
+      "address": "1901 Junipero Serra Blvd A, Daly City, CA 94014",
+      "phone": "(415) 347-7195",
+      "site": "https://dalybuffet.com/",
+      "siteCta": "Open their site",
+      "instagram": "daly_buffet",
+      "pricesEstimated": "Prices are from a diner's photo of their printed price board (9 August 2026), which matches Google's menu; their own site and Instagram publish none.",
+      "quoteOnly": "All you can eat in the restaurant. These are the prices on their printed board, so nothing is ordered here: walk in, or call for takeout.",
+      "siteNote": "Seniors over 65 get 10% off with ID, and a birthday guest eats free with four adults. Snow crab to go is at market price.",
+      "clip": {
+          "src": "/clips/daly-buffet.mp4",
+          "poster": "/clips/daly-buffet-poster.webp",
+          "href": "https://www.instagram.com/reel/Dex2dAxDPal/",
+          "credit": "Posted by @daly_buffet",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "sake2me-ayce-sushi",
+      "name": "Sake2Me AYCE Sushi",
+      "label": "Sake2Me",
+      "cuisine": "AYCE sushi",
+      "tagline": "Premium all-you-can-eat sushi in Pacific Commons: Regular or Premium courses of nigiri, rolls and hot appetizers, ordered to the table.",
+      "color": "#1A1A1A",
+      "icon": "sake2me-ayce-sushi",
+      "prep": 0,
+      "category": "Sushi",
+      "items": [],
+      "sections": [
+          {
+              "name": "All you can eat",
+              "items": [
+                  [
+                      "Regular, weekday lunch",
+                      "Black-text items and rolls. Monday to Friday until 2pm, not holidays.",
+                      2799
+                  ],
+                  [
+                      "Premium, weekday lunch",
+                      "Every item, with nigiri and the premium appetizers. Monday to Friday until 2pm.",
+                      3495
+                  ],
+                  [
+                      "Regular, dinner, weekends and holidays",
+                      "Black-text items and rolls.",
+                      3495
+                  ],
+                  [
+                      "Premium, dinner, weekends and holidays",
+                      "Every item, with nigiri and the premium appetizers.",
+                      3995
+                  ],
+                  [
+                      "Kids 4–9, Regular",
+                      "With an all-you-can-eat party.",
+                      1695
+                  ],
+                  [
+                      "Kids 4–9, Premium",
+                      "With an all-you-can-eat party.",
+                      2195
+                  ]
+              ]
+          },
+          {
+              "name": "Lunch special",
+              "items": [
+                  [
+                      "Lunch special",
+                      "Two rolls and one appetizer, Monday to Friday 11:30am–3pm, not holidays. Not all-you-can-eat.",
+                      1995
+                  ]
+              ]
+          }
+      ],
+      "address": "43337 Christy St #3032, Fremont, CA 94538",
+      "phone": "(510) 573-6023",
+      "hours": "Sun–Thu 11:30am–10pm, Fri–Sat 11:30am–10:30pm",
+      "instagram": "sake2me_fremont",
+      "needsSite": true,
+      "quoteOnly": "All you can eat at the table, so nothing is ordered here: walk in, or call (510) 573-6023.",
+      "menuNote": "Adult prices from their Instagram and their own Yelp updates; kids' prices from diners' photos of the printed menu.",
+      "siteNote": "The whole table picks the same course; 120 minutes a table, last call 30 minutes before closing. Leftovers are charged at menu price, and parties of six or more pay an 18% gratuity. Under 4 eat free."
+  },
+  {
+      "slug": "fusion-buffet-concord",
+      "name": "Fusion Buffet",
+      "label": "Fusion Buffet",
+      "cuisine": "AYCE sushi, Mongolian BBQ & seafood buffet",
+      "tagline": "An all-you-can-eat buffet inside Sunvalley Mall: over 60 dishes of sushi, Mongolian BBQ and seafood, with snow crab legs and oysters at dinner and on weekends. Beer and wine.",
+      "color": "#C8102E",
+      "icon": "fusion-buffet-concord",
+      "prep": 0,
+      "category": "Buffet",
+      "items": [],
+      "sections": [
+          {
+              "name": "Buffet",
+              "items": [
+                  [
+                      "Weekday lunch",
+                      "Adults, Monday to Friday 11am–3:15pm.",
+                      2199
+                  ],
+                  [
+                      "Weekday dinner",
+                      "Adults, Monday to Friday 3:30pm–9pm.",
+                      3099
+                  ],
+                  [
+                      "Weekends and holidays",
+                      "Adults, all day.",
+                      3099
+                  ],
+                  [
+                      "Kids 4–5 ft, lunch",
+                      "Under 12.",
+                      1099
+                  ],
+                  [
+                      "Kids 4–5 ft, dinner",
+                      "Under 12.",
+                      1599
+                  ],
+                  [
+                      "Kids 3–4 ft, lunch",
+                      "Under 12.",
+                      799
+                  ],
+                  [
+                      "Kids 3–4 ft, dinner",
+                      "Under 12.",
+                      1099
+                  ]
+              ]
+          },
+          {
+              "name": "Takeout",
+              "items": [
+                  [
+                      "Lunch takeout",
+                      "Per pound.",
+                      899
+                  ],
+                  [
+                      "Dinner takeout",
+                      "Per pound.",
+                      1099
+                  ],
+                  [
+                      "All seafood",
+                      "Per pound.",
+                      1999
+                  ],
+                  [
+                      "Rice and soup to go",
+                      "",
+                      300
+                  ]
+              ]
+          }
+      ],
+      "address": "486 Sun Valley Mall, Concord, CA 94520",
+      "phone": "(925) 925-9501",
+      "email": "fusionbuffetconcord@gmail.com",
+      "hours": "Daily 11am–9pm",
+      "instagram": "fusionbuffetconcord",
+      "needsSite": true,
+      "quoteOnly": "All you can eat in the restaurant. These are their own posted prices, so nothing is ordered here: walk in, or call (925) 925-9501 for takeout.",
+      "menuNote": "Prices from their Instagram price board of 11 May 2026.",
+      "siteNote": "Kids under 3 ft eat free, seniors over 65 get 10% off, and a birthday guest eats free with six paying adults. 90 minutes a table; parties of eight or more pay a 10% cleaning charge. Snow crab legs, oysters and the seafood boil are dinner and weekends only."
+  },
+  {
+      "slug": "kakuna-sushi",
+      "name": "Kakuna Sushi",
+      "label": "Kakuna Sushi",
+      "cuisine": "Sushi rolls & AYCE sushi",
+      "tagline": "Creative sushi rolls, fresh sushi and ramen from a Bay Area group of five shops, with all-you-can-eat sushi at four of them. Come hungry, leave happy.",
+      "color": "#2E7D32",
+      "icon": "kakuna-sushi",
+      "prep": 0,
+      "category": "Sushi",
+      "items": [],
+      "sections": [
+          {
+              "name": "Hot Appetizer",
+              "items": [
+                  [
+                      "Edamame Sea Salt",
+                      "Whole boiled immature soybeans with sprinkle of salt, rich in fiber, antioxidans, and vitamin K",
+                      595
+                  ],
+                  [
+                      "Edamame Spicy Garlic",
+                      "Whole boiled immature soybeans with spicy garlic added, rich in fiber, antioxidans, and vitamin K",
+                      695
+                  ],
+                  [
+                      "Vegetable Tempura Appetizer",
+                      "1pc of Broccoli Tempura, 4pcs of Sweet Potato Tempura",
+                      595
+                  ],
+                  [
+                      "Broccoli Tempura Appetizer",
+                      "5pcs of Broccoli Tempura",
+                      595
+                  ],
+                  [
+                      "Shrimp Tempura Appetizer",
+                      "4pcs of Shrimp Tempura",
+                      795
+                  ],
+                  [
+                      "Sweet Potato Tempura Appetizer",
+                      "5pcs of Sweet Potato Tempura",
+                      549
+                  ],
+                  [
+                      "Mix Tempura Appetizer",
+                      "Broccoli Tempura, Sweet Potato Tempura, Shrimp Tempura",
+                      995
+                  ],
+                  [
+                      "Jalapeno Bomb",
+                      "Baked jalapeno stuffed with spicy tuna and cream cheese Sauce: Spicy Mayo, Unagi",
+                      795
+                  ],
+                  [
+                      "Ika Sugatayaki",
+                      "Grilled Squid Sauce: Kakuna's Mayo Sauce",
+                      1395
+                  ],
+                  [
+                      "Soft Shell Crab",
+                      "Deep fried soft shell crab in oil serve with house made fish sauce",
+                      999
+                  ],
+                  [
+                      "Baked Mussel",
+                      "Baked mussel with layer of cream cheese",
+                      1099
+                  ],
+                  [
+                      "Pork Belly Bao",
+                      "A fluffy bao bun stuffed with marinated grilled pork belly, with special house sauce",
+                      395
+                  ],
+                  [
+                      "Spam Musubi",
+                      "Just a simple grilled spam musubi with teriyaki sauce wrapped in seaweed leaf",
+                      349
+                  ],
+                  [
+                      "Takoyaki",
+                      "Crispy fried tempura batter stuffed with diced octopus, and layer of bonito flakes, and sprinkle of scallions Sauce: Spicy Mayo, Eel Sauce",
+                      499
+                  ],
+                  [
+                      "Deep Fried Calamari",
+                      "The appetizers consisting of lightly battered rings of fried calamari Sauce: Sweet Chilli",
+                      995
+                  ],
+                  [
+                      "Gyoza",
+                      "6pcs of crescent-shaped chicken dumplings with special house sauce",
+                      499
+                  ]
+              ]
+          },
+          {
+              "name": "Cold Appetizer",
+              "items": [
+                  [
+                      "Seaweed Salad",
+                      "Undaria pinnatifida, very high in fiber and very nutritious, one of our quick and popular appetizer",
+                      499
+                  ],
+                  [
+                      "Sunomono",
+                      "Japanese style thinly sliced pickled cucumbers with seaweed salad",
+                      599
+                  ],
+                  [
+                      "Poke Salad",
+                      "Cucumber, Seaweed Salad, Seafood Mixed, Sesame Oil, Mango, Jalapeno, Cilantro, Onion, Spicy Sauce",
+                      1699
+                  ],
+                  [
+                      "Sashimi Salad",
+                      "Lettuce, Cucumber, Seaweed Salad, Mixed Cubed Fish, Avocado, Ponzu, Tobiko, Green Onion, Kizami Wasabi",
+                      1699
+                  ],
+                  [
+                      "Japanese Nachos",
+                      "Kakuna's special: Assorted fish with special sauce mixed with avocado, with the crispy wonton chips creat an unique dish of fusion",
+                      1699
+                  ],
+                  [
+                      "Carpaccio",
+                      "Choice of hamachi, salmon, albacore, tuna (+$2), or mixed (+$2). Ingredients: Olive oil, tomato, sea salt, garlic, basil, fried garlic. One of our best seller.",
+                      1799
+                  ],
+                  [
+                      "Pepperfin",
+                      "Choice of hamachi, salmon, albacore, tuna (+$2), or mixed (+$2) Onion, Jalapeno, Ponzu, Fried Onion, Cilantro",
+                      1799
+                  ]
+              ]
+          },
+          {
+              "name": "Bento",
+              "items": [
+                  [
+                      "Chicken Teriyaki Bento",
+                      "A Japanese style box served with miso soup, side salad & rice, 2pcs of gyoza and orange -Main ingredient: GRILLED CHICKEN top with teriyaki sauce",
+                      1399
+                  ],
+                  [
+                      "Chicken Katsu Bento",
+                      "A Japanese style box served with miso soup, side salad & rice, 2pcs of gyoza and orange -Main ingredient: DEEP FRIED CHICKEN with katsu sauce on the side",
+                      1399
+                  ],
+                  [
+                      "Spicy Chicken Bento",
+                      "A Japanese style box served with miso soup, side salad & rice, 2pcs of gyoza and orange -Main ingredient: STIR FRY CHICKEN and onion with house special siracha",
+                      1499
+                  ],
+                  [
+                      "Saba Shioyaki Bento",
+                      "A Japanese style box served with miso soup, side salad & rice, 2pcs of gyoza and orange -Main ingredient: a whole GRILLED MACKEREL and special sauce on the side",
+                      1399
+                  ],
+                  [
+                      "Salmon Kama Bento",
+                      "A Japanese style box served with miso soup, side salad & rice, 2pcs of gyoza and orange -Main ingredient: GRILLED SALMON COLLAR with special sauce",
+                      1499
+                  ],
+                  [
+                      "B B Q Pork Belly Bento",
+                      "A Japanese style box served with miso soup, side salad & rice, 2pcs of gyoza and orange -Main ingredient: BBQ PORK BELLY that marinated",
+                      1499
+                  ],
+                  [
+                      "Bulgogi Bento",
+                      "A Japanese style box served with miso soup, side salad & rice, 2pcs of gyoza and orange -Main ingredient: STIR FRY BEEF slices with onion",
+                      1499
+                  ],
+                  [
+                      "Salmon Teriyaki Bento",
+                      "A Japanese style box served with miso soup, side salad & rice, 2pcs of gyoza and orange -Main ingredient: GRILLED SALMON with teriyaki sauce on top",
+                      1599
+                  ],
+                  [
+                      "Beef Teriyaki Bento",
+                      "A Japanese style box served with miso soup, side salad & rice, 2pcs of gyoza and orange -Main ingredient: MARINATED GRILLED STEAK",
+                      1699
+                  ],
+                  [
+                      "Short Rib Bento",
+                      "A Japanese style box served with miso soup, side salad & rice, 2pcs of gyoza and orange -Main ingredient: Korean style marinated SHORT RIBS",
+                      1799
+                  ]
+              ]
+          },
+          {
+              "name": "Ramen / Noodles",
+              "items": [
+                  [
+                      "Pork Belly Ramen",
+                      "Japanese style creamy thin noodle soup, with chicken & pork bones broth -Ingredients: Grilled Pork Belly, Scallions, Bamboo shoot, Corn, Sprouts, Egg, Sesame seeds, Seaweed leaf, Cabbage",
+                      1499
+                  ],
+                  [
+                      "Chicken Ramen",
+                      "Japanese style creamy thin noodle soup, with chicken & pork bones broth - Ingredients: Grilled Chicken Strips, Scallions, Bamboo shoot, Corn, Sprouts, Egg, Sesame seeds, Seaweed leaf, Cabbage.",
+                      1499
+                  ],
+                  [
+                      "Yaki Udon",
+                      "Japanese stir fry Udon noodles with onion, cabbage, carrot, lectuce, and sprinkle of scallions",
+                      1499
+                  ],
+                  [
+                      "Udon Soup",
+                      "Japanese style udon noodle soup, with cabbage, carrot, onion, and scallions",
+                      1499
+                  ]
+              ]
+          },
+          {
+              "name": "Donburi",
+              "items": [
+                  [
+                      "Chirashi",
+                      "Chirashizushi is seasoned sushi rice topped with chef's choice of various kinds of fish, tamago, ebi, and unagi",
+                      2599
+                  ],
+                  [
+                      "Deluxe Chirashi",
+                      "It's also the Chirashi. However; The \"colors\" of various kinds of fish increased, more pieces in one bowl",
+                      3599
+                  ],
+                  [
+                      "Poke Don",
+                      "Donburi (bowl of rice) with various fishes, cucumber, red-onion, seaweed salad, crab salad, spicy tuna, with spicy sauce",
+                      1699
+                  ],
+                  [
+                      "Sake Don",
+                      "Donburi (bowl of rice) with 9pcs of salmon, seaweed, and pickled radish",
+                      1999
+                  ],
+                  [
+                      "Seared Sake Don",
+                      "Donburi (bowl of rice) with seared pieces of salmon, seaweed, and pickled-radish",
+                      2099
+                  ],
+                  [
+                      "Unagi Don",
+                      "Donburi (bowl of rice) with 8pcs of eel, seaweed, pickled-radish, top up with sprinkled of bonito flakes",
+                      1999
+                  ]
+              ]
+          },
+          {
+              "name": "Sushi Combo",
+              "items": [
+                  [
+                      "Nigiri Moriawase",
+                      "9pcs of various kinds of fish choice by chef -Salmon, Tuna, Albacore, Escolar, Yellowtail, Salmon Belly, Ebi, Unagi",
+                      2399
+                  ],
+                  [
+                      "Nigiri Combo",
+                      "6pcs of many kinds of fish choice by chef; with California Roll on the side",
+                      1899
+                  ],
+                  [
+                      "Sashimi Moriawase",
+                      "15pcs (3 each) from 5 kinds of chef's choice of fish, top up with marinated / fresh wasabi",
+                      3699
+                  ],
+                  [
+                      "Sashimi Deluxe",
+                      "22pcs (4 each) from 5 kinds of chef's choice of fish, and 2pcs of fresh scallops top up with marinated / fresh wasabi",
+                      4599
+                  ],
+                  [
+                      "Aburi Nigiri",
+                      "6pcs of Chef's choice torched nigiri *No Customize",
+                      1899
+                  ],
+                  [
+                      "Salmon Nigiri Combo",
+                      "6pcs of Salmon Nigiri and a side of California Roll",
+                      2099
+                  ],
+                  [
+                      "Salmon Lovers",
+                      "10pcs of Salmon Sashimi, instead of indiviually order, you may save more now",
+                      2499
+                  ],
+                  [
+                      "Albacore Lovers",
+                      "10pcs of Albacore Sashimi",
+                      2399
+                  ],
+                  [
+                      "Escolar Lovers",
+                      "10pcs of Escolar Sashimi",
+                      2399
+                  ],
+                  [
+                      "Hamachi Lovers",
+                      "10pcs of Yellowtail aka Hamachi Sashimi",
+                      2699
+                  ]
+              ]
+          },
+          {
+              "name": "Nigiri",
+              "items": [
+                  [
+                      "Tuna Nigiri",
+                      "1piece",
+                      349
+                  ],
+                  [
+                      "Salmon Nigiri",
+                      "1piece",
+                      299
+                  ],
+                  [
+                      "Hamachi Nigiri",
+                      "1piece of yellowtail",
+                      299
+                  ],
+                  [
+                      "Unagi Nigiri",
+                      "1piece of eel",
+                      299
+                  ],
+                  [
+                      "Scallop Nigiri",
+                      "1piece",
+                      349
+                  ],
+                  [
+                      "Escolar Nigiri",
+                      "1piece",
+                      299
+                  ],
+                  [
+                      "Albacore Nigiri",
+                      "1piece",
+                      299
+                  ],
+                  [
+                      "Saba Nigiri",
+                      "1piece of mackerel.",
+                      299
+                  ],
+                  [
+                      "Inari Nigiri",
+                      "1piece of tofu skin",
+                      250
+                  ],
+                  [
+                      "Tamago Nigiri",
+                      "1piece of japanese omelet.",
+                      250
+                  ],
+                  [
+                      "Spicy Scallop Nigiri",
+                      "1piece",
+                      399
+                  ],
+                  [
+                      "Tobiko Nigiri",
+                      "1piece of flying fish roe.",
+                      299
+                  ],
+                  [
+                      "Ebi Nigiri",
+                      "1piece of sweet shrimp.",
+                      299
+                  ],
+                  [
+                      "Ika Nigiri",
+                      "1piece of squid game.",
+                      299
+                  ],
+                  [
+                      "Smoked Salmon Nigiri",
+                      "1piece",
+                      299
+                  ],
+                  [
+                      "Salmon Belly Nigiri",
+                      "1piece",
+                      349
+                  ],
+                  [
+                      "Toro Nigiri (2pieces)",
+                      "2 pieces of Tuna Belly.",
+                      1299
+                  ],
+                  [
+                      "Kani Nigiri",
+                      "1piece of real crab meat",
+                      299
+                  ],
+                  [
+                      "HERRING NIGIRI",
+                      "SINGLE PIECE OF HERRING NIGIRI",
+                      299
+                  ]
+              ]
+          },
+          {
+              "name": "Sashimi",
+              "items": [
+                  [
+                      "Tuna Sashimi",
+                      "1slice",
+                      349
+                  ],
+                  [
+                      "Salmon Sashimi",
+                      "1slice",
+                      299
+                  ],
+                  [
+                      "Hamachi Sashimi",
+                      "1slice of yellowtail.",
+                      299
+                  ],
+                  [
+                      "Unagi Sashimi",
+                      "1slice of eel.",
+                      299
+                  ],
+                  [
+                      "Scallop Sashimi",
+                      "1slice",
+                      399
+                  ],
+                  [
+                      "Escolar Sashimi",
+                      "1slice",
+                      299
+                  ],
+                  [
+                      "Albacore Sashimi",
+                      "1pc",
+                      265
+                  ],
+                  [
+                      "Saba Sashimi",
+                      "1slice of mackerel",
+                      299
+                  ],
+                  [
+                      "Inari Sashimi",
+                      "1slice of tofu skin.",
+                      250
+                  ],
+                  [
+                      "Tamago Sashimi",
+                      "1 piece of japanese omelet.",
+                      250
+                  ],
+                  [
+                      "Spicy Scallop Sashimi",
+                      "1slice",
+                      399
+                  ],
+                  [
+                      "Tobiko Sashimi",
+                      "1 piece of flying fish roe",
+                      299
+                  ],
+                  [
+                      "Ebi Sashimi",
+                      "1 piece of sweet shrimp.",
+                      299
+                  ],
+                  [
+                      "Ika Sashimi",
+                      "1slice of squid",
+                      299
+                  ],
+                  [
+                      "Smoked Salmon Sashimi",
+                      "1pc",
+                      299
+                  ],
+                  [
+                      "Salmon Belly Sashimi",
+                      "1slice",
+                      349
+                  ],
+                  [
+                      "Toro Sashimi",
+                      "2 slices of tuna belly.",
+                      1299
+                  ],
+                  [
+                      "Kani Sashimi",
+                      "1 piece of real crab",
+                      299
+                  ],
+                  [
+                      "HERRING SASHIMI",
+                      "SINGLE SLICE OF HERRING ATTACHED FISH ROE",
+                      299
+                  ]
+              ]
+          },
+          {
+              "name": "Maki Rolls",
+              "items": [
+                  [
+                      "Spicy Tuna Roll",
+                      "- Ingredients: Spicy Tuna, cucumber.",
+                      599
+                  ],
+                  [
+                      "Spicy Salmon Roll",
+                      "- Ingredients: Spicy salmon; cucumber.",
+                      699
+                  ],
+                  [
+                      "Spicy Scallops Roll",
+                      "- Ingredients: Scallops, tobiko, scallions.",
+                      799
+                  ],
+                  [
+                      "Tekka (Maki)",
+                      "- Ingredients: Tuna",
+                      699
+                  ],
+                  [
+                      "Negihama (Maki)",
+                      "- Ingredients: Yellowtail, scallions.",
+                      599
+                  ],
+                  [
+                      "Saba (Maki)",
+                      "- Ingredients: Mackerel, ginger, scallions.",
+                      599
+                  ],
+                  [
+                      "Yellowtail Roll",
+                      "- Ingredients: Yellowtail, Jalapeno, Avocado.",
+                      699
+                  ],
+                  [
+                      "NY Roll",
+                      "- Ingredients: Shrimp, Avocado, Cucumber.",
+                      599
+                  ],
+                  [
+                      "Salmon Avocado Roll",
+                      "- Ingredients: Salmon, Avocado.",
+                      799
+                  ],
+                  [
+                      "Philly Roll",
+                      "- Ingredients: Salmon, Avocado, Cream Cheese.",
+                      799
+                  ],
+                  [
+                      "California Roll",
+                      "- Ingredients: Imitation crab, Avocado.",
+                      599
+                  ],
+                  [
+                      "Eel, Avocado, Cucumber Roll",
+                      "- Ingredients: Eel, Avocado, Cucumber.",
+                      699
+                  ],
+                  [
+                      "Shrimp Tempura Roll",
+                      "- Ingredients: Shrimp Tempura, Cucumber.",
+                      699
+                  ],
+                  [
+                      "Spider Roll",
+                      "- Ingredients: Crab, Soft shell crab, Avocado, Cucumber.",
+                      1099
+                  ],
+                  [
+                      "Chicken Roll",
+                      "- Ingredients: Chicken Teriyaki.",
+                      599
+                  ],
+                  [
+                      "Crunch Roll",
+                      "- Outside: Imitation crab, Cucumber. - Inside: Tempura flakes, Spicy mayo, Eel sauce.",
+                      699
+                  ],
+                  [
+                      "Shrimp & Unagi Roll",
+                      "- Ingredients: Shrimp, Eel, Cucumber.",
+                      799
+                  ],
+                  [
+                      "Salmon Skin Roll",
+                      "- Ingredients: salmon skin, Cucumber, Scallion, Eel sauce",
+                      699
+                  ]
+              ]
+          },
+          {
+              "name": "Vegetarian Rolls",
+              "items": [
+                  [
+                      "Avocado & Cucumber",
+                      "- Ingredients: Rice, Seaweed, Avocado, Cucumber.",
+                      699
+                  ],
+                  [
+                      "Cucumber Roll",
+                      "- Ingredients: Rice, Seaweed, Cucumber",
+                      499
+                  ],
+                  [
+                      "Avocado Roll",
+                      "- Ingredients: Rice, Seaweed, Avocado.",
+                      699
+                  ],
+                  [
+                      "Asparagus Roll",
+                      "- Ingredients: Rice, Seaweed, Asparagus",
+                      499
+                  ],
+                  [
+                      "Weed Eater",
+                      "Outside: seaweed salad, avocado sauce Inside: Cucumber, Avocado, Oshinko",
+                      1199
+                  ],
+                  [
+                      "Veggie Tempura Roll",
+                      "- Ingredients: Rice, Seaweed, 4 kinds of vegetable tempura.",
+                      999
+                  ],
+                  [
+                      "Futomaki",
+                      "- Ingredients: Rice, Seaweed, Inari, Oshinko, Avocado, Cucumber.",
+                      699
+                  ],
+                  [
+                      "Spicy Soy",
+                      "- Outside: Jalapeno, Mac nuts - Inside: Soy wrap, asparagus, Avocado, Cucumber, Creamcheese, Tofu skin.",
+                      1499
+                  ],
+                  [
+                      "Vegetarian Mango",
+                      "- Outside: Avocado, Jalapeno, Mac nuts. - Inside: Asparagus, Cream Cheese, Mango.",
+                      1499
+                  ],
+                  [
+                      "Zesty",
+                      "- Outside: Avocado, Red Onion, Ponzu, Siracha - Inside: Cucumber, Oshinko, Mango, Lemon.",
+                      1399
+                  ],
+                  [
+                      "Potato Head",
+                      "- Outside: Avocado, Potato flakes, special Sauce. - Inside: Sweet Potato Tempura, Cream Cheese.",
+                      1199
+                  ],
+                  [
+                      "Herbivore",
+                      "- Outside: Avocado, house sauce - Inside: Mango, Cucumber, Oshinko.",
+                      1399
+                  ],
+                  [
+                      "Vegetarian Krunch",
+                      "Deep Fried Roll: - Outside: Scallions, Sweet Soy Sauce - Inside: Cheese, Avocado, Jalapeno, Tofu skin, Cucumber.",
+                      899
+                  ],
+                  [
+                      "Sweetheart",
+                      "- Outside: Sweet Soy Sauce - Inside: Sweet Potato, tofu skin, Avocado",
+                      899
+                  ],
+                  [
+                      "Mango Roll",
+                      "- Outside: Rice, Seaweed. - Inside: Mango, Avocado, Oshinko.",
+                      799
+                  ]
+              ]
+          },
+          {
+              "name": "Deep Fried Rolls",
+              "items": [
+                  [
+                      "Golden Cali",
+                      "Deep Fried Roll: - Outside: Spicy Mayo, Eel Sauce - Inside: Imitation Crab, Avocado.",
+                      799
+                  ],
+                  [
+                      "Golden Philly",
+                      "- Outside: Spicy Mayo, Eel Sauce - Inside: Salmon, Avocado, Cream Cheese",
+                      899
+                  ],
+                  [
+                      "Triple Tail",
+                      "- Outside: Tobiko, Scallions, Spicy Mayo, Eel Sauce - Inside: Salmon, Tuna, Yellowtail, Avocado, Creamcheese",
+                      999
+                  ],
+                  [
+                      "Hot Mess",
+                      "- Outside: Tuna, Tobiko, Jalapeno, Scallions, Unagi Sauce, Cajun Sauce. - Inside: Imitation Crab, Spicy Tuna.",
+                      1199
+                  ],
+                  [
+                      "Samurai",
+                      "- Outside: Spicy Mayo, Eel Sauce, Scallions - Inside: Shrimp Tempura, Imitation Crab, Avocado.",
+                      950
+                  ],
+                  [
+                      "Ninja",
+                      "- Outside: Cajun Mayo, Eel Sauce, Scallions - Inside: Imitation Crab, Avocado, Jalapeno, Cream Cheese.",
+                      799
+                  ],
+                  [
+                      "Warriors",
+                      "- Outside: Spicy Mayo, Eel Sauce, Scallions - Inside: Cream Cheese, Salmon, Spicy Imitation Crab, Smoked Salmon, Avocado.",
+                      1099
+                  ],
+                  [
+                      "Sharks",
+                      "- Ouside: Fried Onion, Spicy Mayo, Siracha - Inside: Imitation Crab, Spicy Tuna",
+                      799
+                  ]
+              ]
+          },
+          {
+              "name": "Baked Rolls",
+              "items": [
+                  [
+                      "Lion King",
+                      "- Outside: Salmon, Scallions, Tobiko - Inside: Imitation Crab, Avocado.",
+                      1299
+                  ],
+                  [
+                      "Cheesus",
+                      "- Outside: Mozzarella Cheese, Hot Cheetos, Eel Sauce, Spicy Mayo - Inside: Spicy Tuna, Cream Cheese, Imitation Crab, Avocado, Hot Cheetos, Unagi.",
+                      1499
+                  ],
+                  [
+                      "Volcano",
+                      "- Outside: Salmon, Scallion, Tobiko - Inside: Shrimp Tempura, Imitation Crab, Avocado.",
+                      1399
+                  ],
+                  [
+                      "SIMBA",
+                      "- OUTSIDE: SALMON, SCALLIONS, TOBIKO, CHEESE SAUCE, EEL SAUCE, CHILI SAUCE - INSIDE: SPICY TUNA, DEEP FRIED ONION, IMITATION CRAB",
+                      1399
+                  ],
+                  [
+                      "Ichiban",
+                      "- Outside: Spicy Scallops, Green Onions, Tobiko, Spicy Mayo - Inside: Avocado, Shrimp Tempura, Imitation Crab.",
+                      1599
+                  ],
+                  [
+                      "Kamikaze",
+                      "- Outside: Escolar, Jalapeno, Siracha, Eel Sauce, Scallion. - Inside: Spicy Tuna, Shrimp Tempura.",
+                      1599
+                  ],
+                  [
+                      "The Bay",
+                      "- Outside: Scallops, Jalapeno, Tobiko, Scallion - Inside: Imitation Crab, Avocado.",
+                      1499
+                  ],
+                  [
+                      "Ragin Cajun",
+                      "- Outside: Mixed of seafood, Cajun Sauce - Inside: Deep Fried Shrimp, Imitation Crab, Mozzarella Cheese.",
+                      1599
+                  ]
+              ]
+          },
+          {
+              "name": "Signature Rolls - Raw",
+              "items": [
+                  [
+                      "Sumo",
+                      "- Outside: Spicy Mayo, Eel Sauce, Tobiko, Scallion - Inside: Tuna, Salmon, Hamachi, Ebi, Unagi.",
+                      1099
+                  ],
+                  [
+                      "Kakuna",
+                      "- Outside: (all seared) Salmon, Spicy Mayo, Miso Sauce, Eel Sauce, Scallion, Tobiko - Inside: Imitation Crab, Spicy Tuna, Onion.",
+                      1499
+                  ],
+                  [
+                      "Phoenix",
+                      "- Outside: Spicy Tuna, Spicy Mayo, Eel Sauce, Tempura Flakes - Inside: Imitation Crab, Avocado, Shrimp Tempura.",
+                      1199
+                  ],
+                  [
+                      "Hokkaido",
+                      "- Outside: Spicy Scallop, Tobiko, Scallion - Inside: Salmon, Avocado",
+                      1499
+                  ],
+                  [
+                      "Crunchy Mango",
+                      "- Outside: Salmon, Avocado, Spicy Mayo, Eel Sauce, Tempura Flakes. - Inside: Spicy Imitation Crab, Mango.",
+                      1399
+                  ],
+                  [
+                      "49ers",
+                      "- Outside: Salmon, Scallops, lemon slices, spicy mayo, tobiko - Inside: Imitation Crab, Avocado.",
+                      1599
+                  ],
+                  [
+                      "Butterface",
+                      "- Outside: (all seared) Salmon, Escolar, Lemon, Scallion, Spicy Mayo - Inside: Imitation Crab, Cream Cheese, Avocado.",
+                      1399
+                  ],
+                  [
+                      "Citrus",
+                      "- Outside: Yellowtail, Avocado Sauce, Lemon, Tobiko, Ponzu sauce - Inside: Salmon, Cucumber, Oshinko.",
+                      1499
+                  ],
+                  [
+                      "Lemon Salmon",
+                      "- Outside: Salmon, Lemon Slices - Inside: Imitation Crab, Mango",
+                      1399
+                  ],
+                  [
+                      "Fireball",
+                      "- Outside: Tuna, Unagi, Salmon, Albacore (all seared) jalapeno, tobiko, Scallion, Spicy mayo, Eel Sauce, Hot Sauce. - Inside: Spicy Tuna, Imitation Crab, Shrimp Tempura.",
+                      1599
+                  ],
+                  [
+                      "Spitfire",
+                      "- Outside: Albacore, Escolar, Chili Sauce, Jalapeno, Fried Garlic, Scallions - Inside: Spicy Tuna, Imitation Crab, Onion.",
+                      1299
+                  ],
+                  [
+                      "Oishii",
+                      "- Outside: Salmon, Lemon sliced, Jalapeno, Onion, Ponzu Sauce, Siracha - Inside: Yellowtail, Avocado",
+                      1499
+                  ],
+                  [
+                      "Gaijin",
+                      "- Outside: Seared Salmon, Cilantro, fried garlic, House Sauce. - Inside: Yellowtail, Tuna, Avocado.",
+                      1499
+                  ],
+                  [
+                      "Saigon Summer",
+                      "This roll has no rice wrapped - Ingredients: Rice paper, Salmon, Avocado, Cucumber, Sweet Shrimp, Spicy Tuna, Sweet Chili, Miso sauce.",
+                      1499
+                  ],
+                  [
+                      "Orange Blossom",
+                      "- Outside: Salmon, Scallions, Tobiko - Inside: Salmon, Avocado.",
+                      1399
+                  ],
+                  [
+                      "Cherry Blossom",
+                      "- Outside: Tuna, Tobiko - Inside: Salmon, Avocado",
+                      1399
+                  ],
+                  [
+                      "Skittles",
+                      "- Outside: Salmon, Albacore, Unagi, Avocado, Spicy Mayo, Eel Sauce, Tobiko, Scallions - Inside: Imitation Crab, Shrimp Tempura.",
+                      1499
+                  ],
+                  [
+                      "Nutcracker",
+                      "- Outside: Salmon, Unagi, Albacore, Avocado, Pesto Mayo, Eel Sauce, Mac Nuts - Inside: Imitation Crab, Soft shell crab.",
+                      1699
+                  ],
+                  [
+                      "Splash Brothers",
+                      "- Outside: Escolar, Tuna, fried garlic, Cajun sauce, Eel sauce, Scallion, Tobiko. - Inside: Spicy Tuna, Shrimp Tempura",
+                      1399
+                  ],
+                  [
+                      "Chainsmoker",
+                      "- Outside: Unagi, Smoked Salmon (all seared), Sweet Potato chips, Bacon - Inside: Imitation Crab, Cream Cheese, Shrimp Tempura.",
+                      1599
+                  ],
+                  [
+                      "Godzilla",
+                      "- Outside: Spicy Tuna, Unagi, Miso Sauce, Eel Sauce, Wonton chips - Inside: Shrimp Tempura, Imitation Crab.",
+                      1399
+                  ],
+                  [
+                      "Mango Chili",
+                      "- Outside: Mango, Jalapeno, Tajin seasoning, Honey, Mac nuts - Inside: Salmon, Sweet Shrimps, Avocado.",
+                      1699
+                  ],
+                  [
+                      "Grimmer",
+                      "- Outside: Salmon, Tuna, Yellowtail, Pesto mayo, Eel Sauce, Tempura flakes",
+                      1499
+                  ],
+                  [
+                      "Mt. Fuji",
+                      "- Roll: Imitation Crab, Spicy Tuna, Shrimp Tempura - Poke: Avocado, Scallions, Mixed of Fish, onion (all stir fry)",
+                      1599
+                  ],
+                  [
+                      "Rainbow",
+                      "- Outside: \"Colors\" of fish - Inside: Imitation Crab, Avocado",
+                      1399
+                  ],
+                  [
+                      "Charizard",
+                      "- Outside: Tuna, Unagi, Albacore, Salmon (all seared), Miso sauce, Spicy Mayo, Eel Sauce, Hot Cheetos. - Inside: Soy paper wrapped, Spicy Tuna, Real crab.",
+                      1799
+                  ],
+                  [
+                      "Sunshine",
+                      "- Outside: Hamachi, Cilantro, fried garlic, house sauce. - Inside: Hamachi, Avocado.",
+                      1599
+                  ],
+                  [
+                      "Aloha",
+                      "- Roll: Deep fried California Roll - Poke: Mixed of fish.",
+                      1699
+                  ],
+                  [
+                      "Surf and Turf",
+                      "- Outside: Sliced rare steak, Pesto mayo, Eel Sauce, fried garlic, Siracha, scallion. - Inside: Shrimp Tempura, Imitation Crab, Asparagus, onion.",
+                      1599
+                  ],
+                  [
+                      "Kb 8/24",
+                      "- Roll: Spicy Tuna, Imitation Crab, Shrimp Tempura, Salmon, Yellowtail - Poke: Mixed fish, onion",
+                      1799
+                  ],
+                  [
+                      "Gilroy Garlic",
+                      "- Outside: Albacore, Avocado, Cajun Mayo, Jalapeno, Eel Sauce, fried garlic, Siracha - Inside: Spicy Tua, Imitation Crab, Onion.",
+                      1399
+                  ],
+                  [
+                      "High Roller",
+                      "- Outside: Tuna, Salmon, Escolar, Yellowtail, House Sauce, Cilantro - Inside: Lobster Tempura, Spicy Tuna, Imitation Crab, Avocado.",
+                      1899
+                  ],
+                  [
+                      "Dynamite",
+                      "- Outside: Escolar, Jalapeno, Tobiko, Spicy Mayo (all seared), Sweet Chili, Siracha, Scallion - Inside: Imitation Crab, Avocado, Soft Shell Crab.",
+                      1699
+                  ],
+                  [
+                      "Mukbang",
+                      "- Roll: Spicy Tuna, Imitation Crab, Shrimp Tempura, Avocado. - Poke: Mixed tempura fish, cucumber.",
+                      1999
+                  ],
+                  [
+                      "Hellapeno",
+                      "- Outside: Spicy Tuna, Yellowtail, Jalapeno, Tobiko, Pesto Mayo, Eel Sauce, Scalion - Inside: Unagi, Avocado, Cucumber.",
+                      1399
+                  ],
+                  [
+                      "Boujee",
+                      "- Outside: Salmon, Spicy Mayo (all seared), Lobster Tempura - Inside: Shrimp Tempura, Real Crab, Spicy Tuna.",
+                      1999
+                  ]
+              ]
+          },
+          {
+              "name": "Signature Rolls - Non Raw",
+              "items": [
+                  [
+                      "Super Crunch",
+                      "- Outside: Tempura Flakes - Inside: Imitation Crab, Shrimp Tempura, Spicy Mayo, Eel Sauce, Avo",
+                      1099
+                  ],
+                  [
+                      "Caterpillar",
+                      "- Outside: Avocado, Furitake - Inside: Imitation Crab, Shrimp Tempura.",
+                      1199
+                  ],
+                  [
+                      "Bang-Bang Shrimp",
+                      "- Outside: Imitation Crab, Sweet Shrimp, Miso/Unagi Sauce, Scallions. - Inside: Cream Cheese, Shrimp Tempura, Cucumber, Imitation Crab.",
+                      1399
+                  ],
+                  [
+                      "Dragon",
+                      "- Outside: Unagi, Avocado, Eel Sauce, Furitake - Inside: Imitation Crab, Shrimp Tempura.",
+                      1399
+                  ],
+                  [
+                      "Ohlone",
+                      "- Outside: Sweet Shrimp, Avocado, Miso sauce, Eel Sauce, Wonton chips - Inside: Spicy Imitation Crab, Unagi.",
+                      1399
+                  ],
+                  [
+                      "Black Mamba",
+                      "- Outside: Unagi, Avocado, Mac Nuts - Inside: Imitation Crab, Soft Shell Crab.",
+                      1699
+                  ],
+                  [
+                      "Super Cali",
+                      "- Outside: Unagi, Avocado, Eel Sauce, Miso Sauce, Chips - Inside: Imitation Crab, Avocado.",
+                      1299
+                  ],
+                  [
+                      "Bubble",
+                      "- Outside: Scallops Tempura, Miso Sauce, Eel Sauce, scallion. - Inside: Imitation Crab, Avocado.",
+                      1599
+                  ],
+                  [
+                      "Umami",
+                      "- Outside: Imitation Crab, Unagi, Bonito flakes - Inside: Salmon Skin, Cucumber.",
+                      1299
+                  ],
+                  [
+                      "Capn Crunch",
+                      "- Outside: Tempura Flakes - Inside: Unagi, Spicy Imitation Crab, Avocado.",
+                      1099
+                  ],
+                  [
+                      "Krispy Kreme",
+                      "- Outside: Sweet Shrimp, Unagi, Avocado, Spicy Mayo sauce, Eel Sauce, Sweet Potato chips - Inside: Cream Cheese, Tempura fishes.",
+                      1399
+                  ],
+                  [
+                      "O. M. G",
+                      "- Outside: Shrimp Tempura Sphere, Avocado, Scallion - Inside: Crab, Shrimp Tempura, Eel Sauce, Spicy Mayo sauce.",
+                      1799
+                  ],
+                  [
+                      "Lobster Monster",
+                      "- Outside: Imitation Crab, Sweet Shrimp, Pesto Mayo sauce, Eel Sauce, Arare, scallions. - Inside: Tempura Lobster, Avocado, Asparagus.",
+                      1799
+                  ],
+                  [
+                      "Fish and Chips",
+                      "- Outside: Tempura Escolar, Miso sauce, Eel sauce, Wonton chips, Honey. - Inside: Imitation Crab, Avocado.",
+                      1199
+                  ]
+              ]
+          },
+          {
+              "name": "No Rice Rolls",
+              "items": [
+                  [
+                      "Fresca",
+                      "- Cucumber wrapped outside with core of Salmon, Tuna, Yellowtail, Oshinko, Avocado with Ponzu sauce, added sprinkle of onion and cilantro in the end.",
+                      1799
+                  ],
+                  [
+                      "Saigon Summer",
+                      "- Basically a Sushi Spring Roll. Salmon, Sweet Shrimp, Avocado, Spicy Tuna wrapped in rice paper served with sweet chili sauce, miso sauce, and honey.",
+                      1499
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Side of Steamed Rice",
+                      "",
+                      200
+                  ],
+                  [
+                      "Side of Sushi Rice",
+                      "",
+                      200
+                  ],
+                  [
+                      "Side Miso Soup",
+                      "",
+                      200
+                  ],
+                  [
+                      "Side Salad",
+                      "",
+                      300
+                  ],
+                  [
+                      "Side of Avocado",
+                      "",
+                      300
+                  ],
+                  [
+                      "Side Kizami Wasabi",
+                      "",
+                      200
+                  ],
+                  [
+                      "Side of Sauce",
+                      "",
+                      75
+                  ]
+              ]
+          },
+          {
+              "name": "Beverage",
+              "items": [
+                  [
+                      "Coke",
+                      "",
+                      300
+                  ],
+                  [
+                      "Diet Coke",
+                      "",
+                      300
+                  ],
+                  [
+                      "Sprite",
+                      "",
+                      300
+                  ],
+                  [
+                      "Bottled Water",
+                      "",
+                      200
+                  ],
+                  [
+                      "APPLE JUICE",
+                      "",
+                      300
+                  ]
+              ]
+          },
+          {
+              "name": "Tray",
+              "items": [
+                  [
+                      "Tray #101",
+                      "- Raw: Gaijin, Sumo, Golden Philly, Godzilla - Cooked: Lion King *No Customize",
+                      6400
+                  ],
+                  [
+                      "Tray #102",
+                      "- Raw: Kakuna - Cooked: Lion King, Dragon, Bang-Bang Shrimp, Weed Eater *No Customize",
+                      6400
+                  ],
+                  [
+                      "Tray #103",
+                      "- Raw: Gaijin, Kakuna, Sumo - Cooked: Lion King, Super Cali *No Customize",
+                      6800
+                  ],
+                  [
+                      "Tray #104",
+                      "- Cooked: Golden Cali, Caterpillar, Spider, Lion King, The Bay *No Customize",
+                      6400
+                  ],
+                  [
+                      "Tray #105",
+                      "- Raw: Kakuna, Hellapeno, Triple Tails - Cooked: Golden Cali, Lion King *No Customize",
+                      6400
+                  ],
+                  [
+                      "Tray #106",
+                      "- Raw: Skittles, California Salmon - Cooked: Shrimp Tempura Roll, Golden Cali, Lion King *No Customize",
+                      6400
+                  ],
+                  [
+                      "Tray #107",
+                      "- Cooked: Dragon, Lion king, Shrimp Tempura Roll, Super Cali, Samurai *No Customize",
+                      6400
+                  ],
+                  [
+                      "Tray #108",
+                      "- Raw: Kakuna - Cooked: Lion King, Dragon, Shrimp Tempura, Golden Cali *No Customize",
+                      6400
+                  ],
+                  [
+                      "Tray #109",
+                      "- Raw: Kakuna - Cooked: Lion King, Caterpillar, Fish & Chips, Samurai *No Customize",
+                      6400
+                  ],
+                  [
+                      "Tray #111",
+                      "- Cooked: Spider, Super Cali, Super Crunch, Bang-Bang Shrimp, Lion King *No Customize",
+                      6400
+                  ],
+                  [
+                      "Tray #112",
+                      "- Cooked: Dragon, Caterpillar, Samurai, Bang-Bang Shrimp, Shrimp Tempura Roll *No Customize",
+                      6400
+                  ],
+                  [
+                      "Tray #113",
+                      "- Cooked: 2 Lion King, 2 Shrimp Tempura Roll, 2 Dragon, 2 Caterpillar *No Customize",
+                      9000
+                  ],
+                  [
+                      "Tray #114",
+                      "- Cooked: Lion King, Dragon, California, Caterpillar, Shrimp Tempura Roll *No Customize",
+                      5500
+                  ],
+                  [
+                      "Tray #115",
+                      "- Raw: Crunchy Mango, Godzilla - Cooked: Lion King, Dragon, Golden Cali *No Customize",
+                      6400
+                  ],
+                  [
+                      "Tray #116",
+                      "- Raw: 2 Godzilla - Cooked: 2 Bang-Bang Shrimp, 2 Lion King, 2 Shrimp Tempura Roll *No Customzie",
+                      9500
+                  ],
+                  [
+                      "Tray #117",
+                      "- Raw: 2 Crunchy Mango, 2 Kakuna - Cooked: 2 Shrimp Tempura Roll, 2 Dragon *No Customize",
+                      10000
+                  ],
+                  [
+                      "Tray #118",
+                      "- Raw: 2 Boujee, 2 Orange Blossom, 2 Kakuna - Cooked: 2 Lion King *No Customize",
+                      11200
+                  ],
+                  [
+                      "Tray #119",
+                      "- Raw: Skittles - Cooked: Lion King, Dragon, Bang-Bang Shrimp, Super Crunch *No Customize",
+                      6500
+                  ],
+                  [
+                      "Tray #120",
+                      "",
+                      10000
+                  ],
+                  [
+                      "Tray California",
+                      "- Just a tray with tons of california",
+                      3400
+                  ],
+                  [
+                      "Tray #98",
+                      "- Raw: Kakuna, Kb 8/24, Godzilla, Triple Tail - Cooked: Lion King *No Customize",
+                      7200
+                  ],
+                  [
+                      "Tray #99",
+                      "- Raw: Kb 8/24, Gilroy Garlic, Triple Tail, Sumo - Cooked: Lion King *No Customize",
+                      7200
+                  ],
+                  [
+                      "Tray Chicken Yaki Udon",
+                      "- A cattering tray of stir-fry chicken udon noodle, a dish that cannot be missed in any party",
+                      6700
+                  ],
+                  [
+                      "Tray Beef Yaki Udon",
+                      "",
+                      6700
+                  ],
+                  [
+                      "Tray Salmon Sashimi (40pcs)",
+                      "- A huge tray with 40 pieces of salmon sashimi",
+                      10500
+                  ],
+                  [
+                      "Tray Sashimi Mix",
+                      "- A huge tray with 40 pieces of assorted sashimi",
+                      10500
+                  ],
+                  [
+                      "Tray Combo",
+                      "- Lion king, Kakuna, Fish & Chips, 20pcs Sashimi *No Customize",
+                      9500
+                  ]
+              ]
+          }
+      ],
+      "address": "43472 Grimmer Blvd, Fremont, CA 94538",
+      "phone": "(510) 252-1289",
+      "site": "https://kakuna.menu11.com/",
+      "siteCta": "Order from Fremont",
+      "orderUrl": "https://kakuna.menu11.com/grimmer/order",
+      "instagram": "kakunasushi",
+      "menuNote": "Prices from their Fremont online ordering menu; the other shops may differ a little.",
+      "panels": [
+          {
+              "head": "Their shops",
+              "body": [
+                  "Fremont: 43472 Grimmer Blvd, Fremont, CA 94538, (510) 252-1289",
+                  "Milpitas: 75 S Abbott Ave, Milpitas, CA 95035, (408) 824-5978",
+                  "San Jose (Meridian): 4632 Meridian Ave, San Jose, CA 95124, (669) 275-2933",
+                  "San Leandro: 1376 E 14th St, San Leandro, CA 94577, (510) 626-4579",
+                  "San Jose (McKee): 3095 McKee Rd, San Jose, CA 95127, (408) 708-7781"
+              ],
+              "links": [
+                  {
+                      "label": "Order from Fremont",
+                      "href": "https://kakuna.menu11.com/grimmer/order"
+                  },
+                  {
+                      "label": "Order from Milpitas",
+                      "href": "https://kakuna.menu11.com/milpitas/order"
+                  },
+                  {
+                      "label": "Order from Meridian",
+                      "href": "https://kakuna.menu11.com/meridian/order"
+                  },
+                  {
+                      "label": "Order from San Leandro",
+                      "href": "https://kakuna.menu11.com/sanleandro/order"
+                  },
+                  {
+                      "label": "Order from McKee",
+                      "href": "https://kakuna.menu11.com/sanjose/order"
+                  }
+              ]
+          },
+          {
+              "head": "All you can eat",
+              "body": [
+                  "All-you-can-eat sushi, Regular or Premium, at Fremont, Milpitas, Meridian and San Leandro, as their own posts and the order sheet in the shops say.",
+                  "They publish no all-you-can-eat prices or hours online, and it is not on their ordering site: call the shop before you go."
+              ]
+          }
+      ]
+  },
+  {
+      "slug": "jay-the-cheesecake-queen",
+      "name": "Jay The Cheesecake Queen",
+      "label": "Cheesecake Queen",
+      "cuisine": "No-bake cheesecakes",
+      "tagline": "No-bake, egg-free cheesecakes in creative flavors, sold as 4-pack variety platters in neighborhood stores from Sacramento to the Bay Area, Stockton, Lodi and Modesto.",
+      "color": "#E0559A",
+      "icon": "jay-the-cheesecake-queen",
+      "prep": 0,
+      "category": "Cheesecake",
+      "items": [],
+      "phone": "(916) 573-9545",
+      "email": "order@jaythecheesecakequeen.com",
+      "site": "https://www.jaythecheesecakequeen.com/",
+      "siteCta": "Find a store",
+      "orderUrl": "https://maps.app.goo.gl/ebbUwqDypXHsK5hj7",
+      "instagram": "jaythecheesecakequeen",
+      "contactOnly": "A Sacramento wholesale bakery: their cheesecakes are sold in neighborhood stores, not online. Since July 2026 they take store orders only, so there are no direct orders or full-size cheesecakes for now, and they publish no prices for the 4-packs and cups in stores. Look for the Cheesecake Variety Platter (Red Velvet, Cookies N Cream, Strawberry Crunch, Biscoff) at the stores below, or call (916) 573-9545 about stocking them.",
+      "panels": [
+          {
+              "head": "Where to find them",
+              "body": [
+                  "Oakland: Nawah Market, 5475 Foothill Blvd; Motion Market, 2580 San Pablo Ave",
+                  "San Jose: 408 Eazy Mart, 3281 S White Rd",
+                  "Vallejo: Meadows store, 5182 Sonoma Blvd",
+                  "Sacramento and nearby: 14 stores, and their café counter at Metro Cafe 2890, 2890 Gateway Oaks Dr",
+                  "Stockton, Lodi, Modesto, Clarksburg, Citrus Heights and West Sacramento: 8 more",
+                  "Stores rotate and are restocked every two to three weeks."
+              ],
+              "links": [
+                  {
+                      "label": "All their stores on Google Maps",
+                      "href": "https://maps.app.goo.gl/ebbUwqDypXHsK5hj7"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/jay-the-cheesecake-queen.mp4",
+          "poster": "/clips/jay-the-cheesecake-queen-poster.webp",
+          "href": "https://www.instagram.com/reel/DeGEiCAAeGD/",
+          "credit": "Posted by @jaythecheesecakequeen",
+          "platform": "Instagram"
       }
   },
 ]
