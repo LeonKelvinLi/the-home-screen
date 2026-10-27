@@ -1261,7 +1261,7 @@ export function schedule(t: Terms, overrides: Overrides = {}): ScheduleSection[]
           detail: t.foundationApplies === 'every_payment' ? 'from the initiation and every monthly payment' : 'from the initiation only',
         },
         { label: 'Left after the Foundation', value: `${usd(d.netMonthly)} / month`, detail: `${usd(d.netInitiation)} of the initiation` },
-        { label: 'Recruiter upgrade', value: t.recruiterFee > 0 ? `${usd(t.recruiterFee)} / month` : 'free', detail: 'earns no one points' },
+        { label: 'Recruiter upgrade', value: t.recruiterFee > 0 ? `${usd(t.recruiterFee)} / month` : 'free', detail: 'earns no points for anyone' },
       ],
       text: joinLegal(t, ['initiationFee', 'monthlyFee', 'foundationAmount', 'foundationApplies', 'recruiterFee']),
     },
@@ -1398,7 +1398,7 @@ export function compactSchedule(t: Terms): CompactSchedule {
       { label: 'Initiation fee', detail: 'paid once by a Member Business', amount: usd(t.initiationFee) },
       { label: 'Membership fee', detail: 'per month, by a Member Business', amount: usd(t.monthlyFee) },
       { label: 'Foundation contribution', detail: t.foundationApplies === 'every_payment' ? 'from each payment' : 'from the initiation', amount: usd(t.foundationAmount) },
-      ...(t.recruiterFee > 0 ? [{ label: 'Recruiter upgrade', detail: 'per month, paid by the Affiliate; earns no one points', amount: usd(t.recruiterFee) }] : []),
+      ...(t.recruiterFee > 0 ? [{ label: 'Recruiter upgrade', detail: 'per month, paid by the Affiliate; earns no points for anyone', amount: usd(t.recruiterFee) }] : []),
       {
         label: `${t.promoCode} offer`,
         detail: `${t.promoPaidMonths} months paid, ${t.promoFreeMonths} free; first ${t.promoCap} ${t.promoCapScope === 'per_city' ? 'per city' : 'overall'}; total for ${promoSpan}`,

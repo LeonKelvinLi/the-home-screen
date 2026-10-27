@@ -22,10 +22,10 @@ defaults = {
     'Company representative': 'Glenn Malicdem',
     'Company notices email': 'glenn@beastypages.com',
     'Agreement version': 'Review draft 2026-10-13',
-    'User reward': 'Published BARK reference: 3 points',
-    'Business reward': 'Published BARK reference: 6 points',
-    'Point value': 'Published reference: USD 1 per point',
-    'Minimum payout': 'Published reference: 100 points',
+    'User reward': '10 points a month: 2 months on a BIGGIE PASS, 3 on a BEASTY PASS',
+    'Business reward': '10 points a month for its first 6 paid months',
+    'Point value': 'USD 1 per point',
+    'Minimum payout': '100 points, in steps of 50',
 }
 
 

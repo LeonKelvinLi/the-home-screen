@@ -14,7 +14,8 @@ import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import { mkdirSync, openSync, readFileSync } from 'node:fs'
 import { randomBytes } from 'node:crypto'
-import { PDFDocument, PDFArray, PDFRawStream, decodePDFRawStream, PDFName } from 'pdf-lib'
+import { PDFDocument } from 'pdf-lib'
+import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs'
 import {
   CHAPTERS,
   DEFAULT_TERMS,
@@ -173,19 +174,17 @@ eq('the standard schedule has no changes', scheduleChanges(DEFAULT_TERMS, {}), '
 eq('an affiliate’s changes are written out with their code', scheduleChanges(DEFAULT_TERMS, over), `Points per business: 12 points (standard 10 points); Paid weekly in launch month. Code ${termsCode(eff)}.`)
 ok('the PDF encoding keeps the schedule’s punctuation', winAnsi('’ “ ” — × ÷ · •') === '’ “ ” — × ÷ · •' && winAnsi('−$1 → ≤') === '-$1 -> <=')
 
+// Schedule A embeds Inter and Oswald as subset fonts, so its text is glyph ids, not latin1 bytes: read it the way a viewer does.
 async function pdfText(bytes: Uint8Array) {
   const doc = await PDFDocument.load(bytes)
+  const pdf = await getDocument({ data: new Uint8Array(bytes), useSystemFonts: false, isEvalSupported: false }).promise
   let out = ''
-  for (const page of doc.getPages()) {
-    const contents = page.node.get(PDFName.of('Contents'))
-    const refs = contents instanceof PDFArray ? contents.asArray() : [contents]
-    for (const ref of refs) {
-      const stream = doc.context.lookup(ref)
-      if (!(stream instanceof PDFRawStream)) continue
-      const raw = Buffer.from(decodePDFRawStream(stream).decode()).toString('latin1')
-      for (const m of raw.matchAll(/<([0-9A-Fa-f]*)> Tj/g)) out += Buffer.from(m[1], 'hex').toString('latin1') + '\n'
-    }
+  for (let n = 1; n <= pdf.numPages; n++) {
+    const { items } = await (await pdf.getPage(n)).getTextContent()
+    for (const it of items) if ('str' in it) out += it.str + (it.hasEOL ? '\n' : '')
+    out += '\n'
   }
+  await pdf.destroy()
   return { doc, out }
 }
 

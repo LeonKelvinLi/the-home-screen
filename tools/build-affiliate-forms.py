@@ -139,9 +139,9 @@ assert y>55, f'Agreement text overflows: {y}'
 c.showPage();head(c,'Schedule A & signatures','BEASTY completes this schedule before sending the finalized agreement. Applicants review the terms and sign.',True,page=13)
 y=617
 for number,(title,text) in enumerate([
-('Published BARK reference (confirm for this agreement)','The project notes and Careers page describe 3 points per referred user, 6 per referred business, $1 per point and redemption from 100 points. These reference figures are not sufficient to define an eligible referral or the payment date. Glenn must confirm whether this agreement uses these figures or a separate commission schedule.'),
-('Required final terms','[CONFIRM: reward amount or rate for each qualifying user and business; whether one-time or recurring; qualifying purchase or activation; attribution window and conflict rules; treatment of refunds and chargebacks; minimum redemption; payout frequency and deadline; final payment on termination; lawful taxes and deductions].'),
-('Excluded until expressly agreed','No promotional multiplier, goal bonus, guaranteed earnings, automated payout, exclusivity, arbitration, indemnity or broad liability waiver is added by this draft.')],1):
+('The attached Schedule A','The fees, what each referral earns, BARK points, cash-outs, payment and qualifying referrals are set out in Schedule A, the Commission and fee schedule attached to this agreement. Its code identifies the version signed; the Schedule A Changes box lists anything agreed for this Affiliate only.'),
+('Still to confirm before this is final','[CONFIRM: BEASTY legal entity and address; governing law and venue; the recruiter upgrade fee and how it is billed; how many days BEASTY has to pay a cash-out request; review of this agreement by counsel].'),
+('Excluded until expressly agreed','No saved-points bonus, guaranteed earnings, automated payout, exclusivity, arbitration, indemnity or broad liability waiver is added by this draft. Promotion-day multipliers apply only as Schedule A states.')],1):
  section(c,number,title,y);y=paragraph(c,text,44,y-20,524,9.5,leading=13.1)-9
 assert y>350, f'Schedule A overlaps signing fields: {y}'
 section(c,4,'Affiliate',338)
