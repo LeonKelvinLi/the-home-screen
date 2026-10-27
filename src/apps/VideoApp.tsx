@@ -24,6 +24,9 @@ import type { ShellApi } from '../ios/Device'
  * ONLY THE VISIBLE ONE PLAYS. An IntersectionObserver starts the clip that is
  * on screen and pauses the rest, which is what keeps a long list cheap and what
  * makes "autoplay when open" true rather than aspirational.
+ *
+ * AND ONLY ITS NEIGHBOURS EXIST. See NEAR below: the feed is 281 films long, and
+ * a phone cannot hold 281 video players at once.
  */
 const SPEAKER_OFF = (
   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
@@ -104,6 +107,59 @@ function writeLikes(likes: Set<string>) {
   }
 }
 
+/*
+  ONLY THE CLIPS AROUND THE ONE ON SCREEN ARE BUILT. Leon, 2026-10-27: "it goes
+  to black screen then a problem repeatedly occured" on his iPhone, the moment
+  the reels opened by themselves after entering; Glenn, the same afternoon: "the
+  bit of a delay is it because of the number of video reels it is loading up?"
+  It was. Every reel had its own <video>, poster and logo from the moment the
+  window opened, 281 of each by Batch 72, and iOS Safari ends a page that asks
+  for that many players. Now a reel has its film, rail and caption only while it
+  is within one behind or two ahead of the one playing; the rest are empty
+  frames of the same height, so the scroller and its snapping are unchanged and
+  the next clip is already loaded when the thumb gets there.
+*/
+const NEAR_BEHIND = 1
+const NEAR_AHEAD = 2
+
+/*
+  A FILM THAT LEAVES THE WINDOW LETS GO OF ITS PLAYER. Removing a <video> from
+  the page does not free its decoder until the browser gets round to collecting
+  it; emptying the source first does, at once.
+*/
+function ReelVideo({ src, poster, index, live, onProgress }: {
+  src: string
+  poster?: string
+  index: number
+  live: boolean
+  onProgress: (v: HTMLVideoElement) => void
+}) {
+  const ref = useRef<HTMLVideoElement>(null)
+  useEffect(() => {
+    const v = ref.current
+    return () => {
+      if (!v) return
+      v.pause()
+      v.removeAttribute('src')
+      v.load()
+    }
+  }, [])
+  return (
+    <video
+      ref={ref}
+      data-i={index}
+      src={src}
+      poster={poster}
+      muted
+      loop
+      playsInline
+      preload={live ? 'auto' : 'metadata'}
+      autoPlay={live}
+      onTimeUpdate={(e) => onProgress(e.currentTarget)}
+    />
+  )
+}
+
 /* Two taps inside this window are a like; one tap is the sound toggle. */
 const DOUBLE_TAP_MS = 260
 
@@ -169,22 +225,13 @@ export function VideoApp({ api }: { api: ShellApi }) {
     /*
       A high threshold on purpose. At 0.5 two clips can both qualify mid-scroll
       and the pair fight over which is playing; at 0.8 exactly one ever wins.
+      The observer only says which reel is on screen; the effect below plays
+      it, because the film it would play may not be built until `live` moves.
     */
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
-          const v = e.target.querySelector('video')
-          if (!v) continue
-          if (e.isIntersecting) {
-            setLive(items.indexOf(e.target as HTMLElement))
-            void v.play().catch(() => {
-              /* A browser that refuses autoplay leaves the poster up rather
-                 than throwing — the tap-to-play control below still works. */
-            })
-          } else {
-            v.pause()
-            v.currentTime = 0
-          }
+          if (e.isIntersecting) setLive(items.indexOf(e.target as HTMLElement))
         }
       },
       { threshold: 0.8 },
@@ -194,29 +241,42 @@ export function VideoApp({ api }: { api: ShellApi }) {
   }, [])
 
   /*
-    Applied in an effect rather than as a `muted` prop.
+    The one on screen plays and the rest rest, rewound for when they come back.
 
-    React sets `muted` as a PROPERTY on first mount and then leaves it alone —
-    it is one of the attributes it does not reliably re-apply — so a re-render
-    with muted={false} can leave a video silently muted. Writing it to every
-    element directly is the version that actually works.
+    `muted` is applied here rather than as a prop. React sets `muted` as a
+    PROPERTY on first mount and then leaves it alone — it is one of the
+    attributes it does not reliably re-apply — so a re-render with
+    muted={false} can leave a video silently muted. Writing it to every element
+    directly is the version that actually works.
 
-    If a browser refuses to play unmuted, the clip drops back to silent instead
-    of freezing on a paused frame.
+    A browser that refuses autoplay leaves the poster up rather than throwing,
+    and a tap still plays it. One that refuses to play with sound gets the clip
+    back silent instead of frozen on a paused frame.
   */
   useEffect(() => {
     const root = wrap.current
     if (!root) return
-    for (const v of root.querySelectorAll('video')) {
+    for (const v of root.querySelectorAll<HTMLVideoElement>('video')) {
       v.muted = !sound
-      if (!v.paused) {
+      if (Number(v.dataset.i) === live) {
         void v.play().catch(() => {
+          if (v.muted) return
           v.muted = true
           setSound(false)
         })
+      } else if (!v.paused || v.currentTime > 0) {
+        v.pause()
+        v.currentTime = 0
       }
     }
   }, [sound, live])
+
+  /* Drives the progress line at the foot, as on Instagram. A CSS variable on
+     the reel rather than state: four updates a second on every visible clip
+     would re-render the whole feed. */
+  const progress = (v: HTMLVideoElement) => {
+    if (v.duration) v.parentElement?.style.setProperty('--reel-progress', String(v.currentTime / v.duration))
+  }
 
   if (!reels.length) {
     return (
@@ -238,126 +298,115 @@ export function VideoApp({ api }: { api: ShellApi }) {
       <div className="reels" ref={wrap}>
         {reels.map((r, i) => (
           <section className="reel" key={r.src} aria-label={`${r.name}, video ${i + 1} of ${reels.length}`}>
-            <video
-              src={r.src}
-              poster={r.poster}
-              muted
-              loop
-              playsInline
-              preload={i === 0 ? 'auto' : 'metadata'}
-              autoPlay={i === 0}
-              /* Drives the progress line at the foot, as on Instagram. A CSS
-                 variable on the reel rather than state: four updates a second
-                 on every visible clip would re-render the whole feed. */
-              onTimeUpdate={(e) => {
-                const v = e.currentTarget
-                if (v.duration) v.parentElement?.style.setProperty('--reel-progress', String(v.currentTime / v.duration))
-              }}
-            />
-            {/*
-              THE WHOLE FRAME IS THE BUTTON, which is what a thumb expects here
-              and what every app this one is imitating does: one tap for sound,
-              two for a like. It sits above the scrim and below the caption and
-              the rail, so their controls still do their own thing.
-            */}
-            <button
-              className="reel-sound"
-              onClick={() => tap(r.src)}
-              aria-pressed={sound}
-              aria-label={sound ? `Mute ${r.name}` : `Play sound for ${r.name}`}
-            >
-              <span className="reel-sound-badge" aria-hidden="true">
-                {sound ? SPEAKER_ON : SPEAKER_OFF}
-              </span>
-            </button>
-            {burst === r.src && (
-              <span className="reel-burst" aria-hidden="true">
-                {HEART(true)}
-              </span>
-            )}
-            {/* The scrim is a separate layer so the film is never dimmed toward
-                the page behind it — only toward black, predictably. */}
-            <span className="reel-scrim" aria-hidden="true" />
-            {/*
-              THE RAIL, down the right-hand side where Instagram keeps it: like,
-              then share.
+            {i >= live - NEAR_BEHIND && i <= live + NEAR_AHEAD && (
+              <>
+                <ReelVideo src={r.src} poster={r.poster} index={i} live={i === live} onProgress={progress} />
+                {/*
+                  THE WHOLE FRAME IS THE BUTTON, which is what a thumb expects here
+                  and what every app this one is imitating does: one tap for sound,
+                  two for a like. It sits above the scrim and below the caption and
+                  the rail, so their controls still do their own thing.
+                */}
+                <button
+                  className="reel-sound"
+                  onClick={() => tap(r.src)}
+                  aria-pressed={sound}
+                  aria-label={sound ? `Mute ${r.name}` : `Play sound for ${r.name}`}
+                >
+                  <span className="reel-sound-badge" aria-hidden="true">
+                    {sound ? SPEAKER_ON : SPEAKER_OFF}
+                  </span>
+                </button>
+                {burst === r.src && (
+                  <span className="reel-burst" aria-hidden="true">
+                    {HEART(true)}
+                  </span>
+                )}
+                {/* The scrim is a separate layer so the film is never dimmed toward
+                    the page behind it — only toward black, predictably. */}
+                <span className="reel-scrim" aria-hidden="true" />
+                {/*
+                  THE RAIL, down the right-hand side where Instagram keeps it: like,
+                  then share.
 
-              SHARE SENDS THEM TO THE BUSINESS, not to a video player. "Is it
-              possible to add a share button to these all the video pages?" —
-              the link is the brand's own `?b=` deep link, which opens their
-              page with their film playing on it, the thing worth sending.
-              Web Share gives the real iOS sheet; clipboard is the fallback.
-            */}
-            <div className="reel-rail">
-              <button
-                className={`reel-like${likes.has(r.src) ? ' is-on' : ''}`}
-                onClick={() => like(r.src)}
-                aria-pressed={likes.has(r.src)}
-                aria-label={likes.has(r.src) ? `Unlike ${r.name}` : `Like ${r.name}`}
-              >
-                {HEART(likes.has(r.src))}
-              </button>
-              <button
-                className="reel-share"
-                onClick={async () => {
-                  const url = `${location.origin}/?b=${encodeURIComponent(r.brandId)}`
-                  try {
-                    if (navigator.share) await navigator.share({ title: r.name, url })
-                    else {
-                      await navigator.clipboard.writeText(url)
-                      setShared(r.src)
-                      window.setTimeout(() => setShared(null), 2000)
-                    }
-                  } catch {
-                    /* Sheet dismissed. Not an error worth a message. */
-                  }
-                }}
-                aria-label={`Share ${r.name}`}
-              >
-                {PLANE}
-              </button>
-            </div>
-            {shared === r.src && (
-              <span className="reel-share-toast" role="status">
-                Link copied
-              </span>
-            )}
-            <div className="reel-meta">
-              {/* Avatar, name, and a pill to their page: Instagram's
-                  profile-and-Follow row. There is nothing to follow yet, so
-                  the pill says what it does. */}
-              <div className="reel-who">
-                {r.logo && (
-                  <button className="reel-avatar" onClick={() => api.openApp(r.brandId)} aria-hidden="true" tabIndex={-1}>
-                    <BrandLogo logo={r.logo} size={34} masked={false} />
+                  SHARE SENDS THEM TO THE BUSINESS, not to a video player. "Is it
+                  possible to add a share button to these all the video pages?" —
+                  the link is the brand's own `?b=` deep link, which opens their
+                  page with their film playing on it, the thing worth sending.
+                  Web Share gives the real iOS sheet; clipboard is the fallback.
+                */}
+                <div className="reel-rail">
+                  <button
+                    className={`reel-like${likes.has(r.src) ? ' is-on' : ''}`}
+                    onClick={() => like(r.src)}
+                    aria-pressed={likes.has(r.src)}
+                    aria-label={likes.has(r.src) ? `Unlike ${r.name}` : `Like ${r.name}`}
+                  >
+                    {HEART(likes.has(r.src))}
                   </button>
+                  <button
+                    className="reel-share"
+                    onClick={async () => {
+                      const url = `${location.origin}/?b=${encodeURIComponent(r.brandId)}`
+                      try {
+                        if (navigator.share) await navigator.share({ title: r.name, url })
+                        else {
+                          await navigator.clipboard.writeText(url)
+                          setShared(r.src)
+                          window.setTimeout(() => setShared(null), 2000)
+                        }
+                      } catch {
+                        /* Sheet dismissed. Not an error worth a message. */
+                      }
+                    }}
+                    aria-label={`Share ${r.name}`}
+                  >
+                    {PLANE}
+                  </button>
+                </div>
+                {shared === r.src && (
+                  <span className="reel-share-toast" role="status">
+                    Link copied
+                  </span>
                 )}
-                <button className="reel-name" onClick={() => api.openApp(r.brandId)}>
-                  {r.name}
-                </button>
-                <button className="reel-visit" onClick={() => api.openApp(r.brandId)} tabIndex={-1} aria-hidden="true">
-                  Visit
-                </button>
-              </div>
-              <p className="reel-line">{r.line}</p>
-              {/* A reviewer's credit opens their profile — the same protocol
-                  as on the business's page. The note is Instagram's audio line. */}
-              <p className="reel-credit">
-                <span className="reel-note" aria-hidden="true">♪</span>
-                {r.by ? (
-                  <a href={`https://www.instagram.com/${r.by}/`} target="_blank" rel="noopener noreferrer">
-                    {r.credit}
-                  </a>
-                ) : (
-                  r.credit
+                <div className="reel-meta">
+                  {/* Avatar, name, and a pill to their page: Instagram's
+                      profile-and-Follow row. There is nothing to follow yet, so
+                      the pill says what it does. */}
+                  <div className="reel-who">
+                    {r.logo && (
+                      <button className="reel-avatar" onClick={() => api.openApp(r.brandId)} aria-hidden="true" tabIndex={-1}>
+                        <BrandLogo logo={r.logo} size={34} masked={false} />
+                      </button>
+                    )}
+                    <button className="reel-name" onClick={() => api.openApp(r.brandId)}>
+                      {r.name}
+                    </button>
+                    <button className="reel-visit" onClick={() => api.openApp(r.brandId)} tabIndex={-1} aria-hidden="true">
+                      Visit
+                    </button>
+                  </div>
+                  <p className="reel-line">{r.line}</p>
+                  {/* A reviewer's credit opens their profile — the same protocol
+                      as on the business's page. The note is Instagram's audio line. */}
+                  <p className="reel-credit">
+                    <span className="reel-note" aria-hidden="true">♪</span>
+                    {r.by ? (
+                      <a href={`https://www.instagram.com/${r.by}/`} target="_blank" rel="noopener noreferrer">
+                        {r.credit}
+                      </a>
+                    ) : (
+                      r.credit
+                    )}
+                  </p>
+                </div>
+                <span className="reel-progress" aria-hidden="true" />
+                {i === live && reels.length > 1 && i === 0 && (
+                  <span className="reel-hint" aria-hidden="true">
+                    Scroll for more
+                  </span>
                 )}
-              </p>
-            </div>
-            <span className="reel-progress" aria-hidden="true" />
-            {i === live && reels.length > 1 && i === 0 && (
-              <span className="reel-hint" aria-hidden="true">
-                Scroll for more
-              </span>
+              </>
             )}
           </section>
         ))}
