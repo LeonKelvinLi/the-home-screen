@@ -7,6 +7,9 @@ import {
   WINDOW_TABS,
   dateOf,
   fetchAffiliate,
+  fetchBark,
+  requestCashout,
+  type Bark,
   money,
   pct,
   when,
@@ -83,7 +86,7 @@ export function AffiliateApp({ api }: { api: ShellApi }) {
         ) : !data ? (
           <Skeleton />
         ) : (
-          <Dashboard data={data} win={win} setWin={setWin} metric={metric} setMetric={setMetric} />
+          <Dashboard data={data} win={win} setWin={setWin} metric={metric} setMetric={setMetric} api={api} />
         )}
       </div>
     </AppChrome>
@@ -111,12 +114,14 @@ function Dashboard({
   setWin,
   metric,
   setMetric,
+  api,
 }: {
   data: Affiliate
   win: WindowKey
   setWin: (w: WindowKey) => void
   metric: Metric
   setMetric: (m: Metric) => void
+  api: ShellApi
 }) {
   const w = data.windows[win]
   const life = data.lifetime
@@ -155,6 +160,9 @@ function Dashboard({
           </span>
         </div>
       </header>
+
+      {/* ---- BARK points: what recruiting has earned, and cashing it out ---- */}
+      <BarkPoints api={api} />
 
       {/* ---- performance ---- */}
       <div className="aff-seg" role="tablist" aria-label="Time range">
@@ -220,7 +228,7 @@ function Dashboard({
                   </span>
                   <span className="aff-row-sub">
                     {b.page}
-                    {b.listing ? ` · ${b.listing}` : ''} · Reward: {b.reward}
+                    {b.listing ? ` · ${b.listing}` : ''}
                   </span>
                 </div>
                 <span className={`aff-chip aff-chip-${b.bucket}`}>{b.status}</span>
@@ -272,15 +280,6 @@ function Dashboard({
               {data.program.tierName ? `up to $${data.program.discountCap} on ${data.program.tierName}` : 'counts once you take a membership'}
             </span>
           </div>
-          <div className="aff-reward">
-            <span className="aff-reward-n">{money(data.rewards.cash.earnedCents + data.rewards.cash.paidCents)}</span>
-            <span className="aff-reward-l">cash rewards</span>
-            <span className="aff-reward-s">
-              {data.program.cashRewards
-                ? `${money(data.rewards.cash.pendingCents)} pending · ${money(data.rewards.cash.paidCents)} paid`
-                : 'Not switched on yet'}
-            </span>
-          </div>
         </div>
         {/* Glenn, 2026-09-30: $9 of every paying member's and business's monthly fee goes to the foundation. */}
         <div className="earn-foundation aff-foundation">
@@ -304,7 +303,7 @@ function Dashboard({
         <p className="aff-note">
           {data.rewards.toNextTicket} more {data.rewards.toNextTicket === 1 ? 'person' : 'people'} for your next raffle ticket. Every{' '}
           {data.program.perTicket} people who join with your link earn a ticket and ${data.program.discountPerMilestone} off a membership.
-          {!data.program.cashRewards && ' Cash rewards for businesses are not being paid yet; when they start, they will show here.'}
+          {' '}Recruiters also earn BARK points, at the top of this page.
         </p>
       </section>
 
@@ -359,8 +358,8 @@ function Dashboard({
           <div>
             <dt>How you earn</dt>
             <dd>
-              1 raffle ticket and ${data.program.discountPerMilestone} off per {data.program.perTicket} people who join. Business rewards: not
-              paying yet.
+              1 raffle ticket and ${data.program.discountPerMilestone} off per {data.program.perTicket} people who join. As a recruiter, BARK
+              points for each month a person or business you bring pays.
             </dd>
           </div>
         </dl>
@@ -386,12 +385,179 @@ function Dashboard({
             in 90 days wins). <b>Signed</b> means it became a BEASTY customer.
           </li>
           <li>
+            <b>BARK points:</b> while you are a recruiter, each month a person or business you brought pays earns you points, for the
+            number of months in your Schedule A. Only people and businesses you bring while recruiting count; a pause stops new ones, not
+            the months still owed. 1 point is $1, cashed out once BEASTY approves your signed paperwork.
+          </li>
+          <li>
             <b>Conversions:</b> people who became active plus businesses that signed. <b>Sign-up rate:</b> new accounts ÷ clicks on your
             friend link.
           </li>
         </ul>
       </details>
     </>
+  )
+}
+
+/*
+  BARK POINTS. Leon, 2026-10-26: "paying the $60 opens the /join paperwork, points credit monthly while
+  recruiting is active, and cash-outs only after Glenn approves the packet." One card that says where the
+  member stands and the one thing to do next: become a recruiter, finish the paperwork, or cash out.
+*/
+const PAPERWORK: Record<Bark['paperwork'], string> = {
+  none: 'Your paperwork opens once your recruiter upgrade is paid.',
+  in_progress: 'Cash-outs open once BEASTY approves your signed paperwork. Finish it to get paid.',
+  changes_requested: 'BEASTY asked for a change to your paperwork. Fix it to get paid.',
+  submitted: 'Your paperwork is with BEASTY for review. Cash-outs open once it is approved.',
+  approved: '',
+  rejected: 'Cash-outs are closed on your account. Message BEASTY if you think that is a mistake.',
+  suspended: 'Cash-outs are paused on your account. Message BEASTY.',
+}
+
+function BarkPoints({ api }: { api: ShellApi }) {
+  const [bark, setBark] = useState<Bark | null>(null)
+  const [failed, setFailed] = useState(false)
+  const [amount, setAmount] = useState<number | null>(null)
+  const [busy, setBusy] = useState(false)
+  const [said, setSaid] = useState<string | null>(null)
+  useEffect(() => {
+    fetchBark().then(setBark).catch(() => setFailed(true))
+  }, [])
+  if (failed) return null
+  if (!bark) return <div className="aff-sk aff-bark-sk" aria-hidden="true" />
+
+  const b = bark.balance
+  const dollars = (points: number) => money(Math.round(points * bark.pointValue * 100))
+  const recruiting = bark.recruiter === 'active' || bark.recruiter === 'paused'
+  const pick = amount != null && bark.choices.includes(amount) ? amount : bark.choices[bark.choices.length - 1] ?? null
+
+  async function cashOut() {
+    if (pick == null || busy) return
+    setBusy(true)
+    setSaid(null)
+    try {
+      /* The card's own "You asked for…" line confirms it; only a refusal needs saying here. */
+      setBark(await requestCashout(pick))
+    } catch (e) {
+      setSaid((e as Error).message)
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  /* Not a recruiter and nothing earned: the card is the way in. */
+  if (!recruiting && b.earned === 0 && bark.cashouts.length === 0) {
+    return (
+      <section className="aff-card aff-bark is-invite">
+        <div className="aff-card-head">
+          <h3>BARK points</h3>
+          <span className="aff-card-sub">1 point = $1</span>
+        </div>
+        <p className="aff-bark-line">
+          {bark.recruiter === 'pending'
+            ? 'Your recruiter checkout is waiting. Once it is paid, every month a person or business you bring pays earns you points.'
+            : bark.recruiter === 'cancelled'
+              ? 'Your recruiter upgrade has ended. Start it again to earn points for the people and businesses you bring.'
+              : 'Become a BEASTY Recruiter ($60 a month) to earn points each month a person or business you bring pays. Cash them out from 100 points.'}
+        </p>
+        <button className="btn-primary" onClick={() => api.openApp('sys.members')}>
+          {bark.recruiter === 'pending' ? 'Finish the checkout' : bark.recruiter === 'cancelled' ? 'Become a recruiter again' : 'Become a recruiter'}
+        </button>
+      </section>
+    )
+  }
+
+  const toGo = Math.max(0, bark.minRedemption - b.available)
+  return (
+    <section className="aff-card aff-bark">
+      <div className="aff-card-head">
+        <h3>BARK points</h3>
+        <span className="aff-card-sub">
+          {bark.recruiter === 'active' ? 'Recruiting' : bark.recruiter === 'paused' ? 'Recruiting paused' : 'Not recruiting'}
+        </span>
+      </div>
+      <div className="aff-bark-balance">
+        <span className="aff-bark-n">{b.available}</span>
+        <span className="aff-bark-l">
+          points to cash out · <b>{dollars(b.available)}</b>
+        </span>
+        <span className="aff-bark-s">
+          {b.earned} earned · {b.cashedOut} cashed out{b.owed > 0 ? ` · ${b.owed} taken back after a refund, off your next cash-out` : ''}
+        </span>
+      </div>
+
+      {bark.recruiter === 'paused' && (
+        <p className="aff-bark-line">Paused: people and businesses you bring now do not count until you resume. Months still owed keep coming.</p>
+      )}
+      {bark.recruiter === 'cancelled' && <p className="aff-bark-line">Your recruiter upgrade has ended, so nothing more is credited. What you earned is yours to cash out.</p>}
+
+      {bark.openCashout ? (
+        <p className="aff-bark-line is-good">
+          You asked for {bark.openCashout.points} points ({money(bark.openCashout.cents)}) on {dateOf(bark.openCashout.requestedAt)}. BEASTY pays it by
+          direct deposit within {bark.payoutDays} days.
+        </p>
+      ) : bark.paperwork !== 'approved' ? (
+        <div className="aff-bark-next">
+          <p className="aff-bark-line">{PAPERWORK[bark.paperwork]}</p>
+          {(bark.paperwork === 'in_progress' || bark.paperwork === 'changes_requested') && (
+            <a className="btn-primary" href="/join">
+              Finish your paperwork
+            </a>
+          )}
+        </div>
+      ) : bark.choices.length ? (
+        <div className="aff-bark-cash">
+          <label className="aff-bark-pick">
+            <span>Cash out</span>
+            <select value={pick ?? ''} onChange={(e) => setAmount(Number(e.target.value))} disabled={busy}>
+              {bark.choices.map((p) => (
+                <option key={p} value={p}>
+                  {p} points ({dollars(p)})
+                </option>
+              ))}
+            </select>
+          </label>
+          <button className="btn-primary" onClick={() => void cashOut()} disabled={busy || pick == null}>
+            {busy ? 'One moment…' : `Cash out ${pick} points`}
+          </button>
+        </div>
+      ) : (
+        <p className="aff-bark-line">
+          Cash out from {bark.minRedemption} points, in steps of {bark.redemptionStep}: {toGo} to go.
+        </p>
+      )}
+      {said && (
+        <p className="aff-bark-line" role="alert">
+          {said}
+        </p>
+      )}
+
+      {bark.ledger.length > 0 && (
+        <ul className="aff-list aff-bark-ledger">
+          {bark.ledger.slice(0, 8).map((r) => (
+            <li key={r.id} className={`aff-row${r.status === 'void' ? ' is-void' : ''}`}>
+              <div className="aff-row-main">
+                <span className="aff-row-title">{r.text}</span>
+                <span className="aff-row-sub">
+                  {dateOf(r.at)}
+                  {r.status === 'void' ? ` · removed: ${r.voidNote || 'refunded'}` : ''}
+                </span>
+              </div>
+              <span className="aff-bark-plus">+{r.points}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      {bark.cashouts.filter((c) => c.status !== 'requested').length > 0 && (
+        <p className="aff-note">
+          {bark.cashouts
+            .filter((c) => c.status !== 'requested')
+            .slice(0, 3)
+            .map((c) => `${c.points} points ${c.status === 'paid' ? `paid ${dateOf(c.decidedAt ?? c.requestedAt)}` : `declined${c.note ? `: ${c.note}` : ''}`}`)
+            .join(' · ')}
+        </p>
+      )}
+    </section>
   )
 }
 

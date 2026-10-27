@@ -5,7 +5,8 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import { db, migrate } from './db/schema'
 import { crmOnApplication, mountCrm } from './crm/routes'
-import { mountOnboarding } from './onboarding'
+import { mountOnboarding, openRecruiterApplication } from './onboarding'
+import { creditPaidInvoice, creditWaiting, recordRecruiter, voidForCharge, mountBark } from './bark'
 import { mountAffiliateTerms } from './affiliate-terms'
 import { sendEmail as sendLeadEmail } from './email'
 import { bioOf, mountFriends, petsFor, profileExtras, waitingCount } from './friends'
@@ -2262,11 +2263,13 @@ function tierOfPrice(price: string | undefined): 'pass' | 'diamond' | 'recruiter
 function priceOfEvent(obj: Record<string, unknown>): string | undefined {
   const pick = (v: unknown): string | undefined => (typeof v === 'string' ? v : undefined)
   const items = (obj.items as { data?: { price?: { id?: unknown } }[] } | undefined)?.data
-  const lines = (obj.lines as { data?: { price?: { id?: unknown } }[] } | undefined)?.data
+  const lines = (obj.lines as { data?: { price?: { id?: unknown }; pricing?: { price_details?: { price?: unknown } } }[] } | undefined)?.data
   return (
     pick(items?.[0]?.price?.id) ??
     pick((obj.plan as { id?: unknown } | undefined)?.id) ??
-    pick(lines?.[0]?.price?.id)
+    pick(lines?.[0]?.price?.id) ??
+    /* API 2025-03-31 and later keep an invoice line's price here. */
+    pick(lines?.[0]?.pricing?.price_details?.price)
   )
 }
 
@@ -2375,6 +2378,9 @@ async function memberPayload(m: MemberRow) {
     /* Recruiter status, and whether its checkout and the manage page exist yet. */
     recruiterStatus: m.recruiter_status ?? 'none',
     recruiterConfigured: !!process.env.STRIPE_PAYMENT_LINK_RECRUITER,
+    /* Their /join paperwork: 'none' until the $60 is paid opens it (server/onboarding.ts). */
+    paperworkStatus:
+      (await db.prepare('SELECT status FROM onboarding_applications WHERE member_id = ?').get<{ status: string }>(m.id))?.status ?? 'none',
     manageLink: manageLinkFor(m),
     referrals,
     raffleTickets: { total: tickets.total ?? 0, unused: tickets.unused ?? 0 },
@@ -3368,6 +3374,7 @@ app.post('/api/members/recruiter/pause', rateLimiter(20, 10), async (req, res) =
   if (status !== 'active' && status !== 'paused') return res.status(409).json({ error: 'Only an active recruiter can pause.' })
   const next = req.body.paused ? 'paused' : 'active'
   await db.prepare('UPDATE members SET recruiter_status = ? WHERE id = ?').run(next, m.id)
+  await recordRecruiter(m.id, next)
   await track(req.body.paused ? 'recruiter_paused' : 'recruiter_resumed', { memberId: m.id })
   const row = (await db.prepare('SELECT * FROM members WHERE id = ?').get(m.id)) as MemberRow
   res.json(await memberPayload(row))
@@ -3639,11 +3646,44 @@ if (process.env.STRIPE_WEBHOOK_SECRET) {
         /* The recruiter upgrade: its own subscription and customer (see /api/members/recruiter). */
         const id = memberId.slice(RECRUITER_REF.length)
         const customer = typeof obj.customer === 'string' ? obj.customer : null
+        const was = await db.prepare('SELECT recruiter_status FROM members WHERE id = ?').get<{ recruiter_status: string }>(id)
         await db.prepare(
           "UPDATE members SET recruiter_status = 'active', recruiter_since = ?, recruiter_customer = COALESCE(?, recruiter_customer) WHERE id = ?",
         ).run(Date.now(), customer, id)
+        if (was && was.recruiter_status !== 'active') {
+          await recordRecruiter(id, 'active')
+          /* Paying is the invitation: their /join paperwork opens now (server/onboarding.ts). */
+          await openRecruiterApplication(id)
+        }
         await track('recruiter_activated', { memberId: id, entityType: 'stripe_event', entityId: String(event.id ?? ''), source: 'server' })
         console.log('recruiter active:', id)
+      } else if (event.type === 'invoice.paid') {
+        /*
+          A PAID MONTH. If it is a referred member's pass, their referrer may be owed this month's
+          BARK points (server/bark.ts says when). The recruiter's own $60 earns nobody points.
+        */
+        const transitions = (obj.status_transitions ?? {}) as { paid_at?: unknown }
+        const result = await creditPaidInvoice({
+          invoiceId: typeof obj.id === 'string' ? obj.id : '',
+          customer: typeof obj.customer === 'string' ? obj.customer : '',
+          tier: tierOfPrice(priceOfEvent(obj)),
+          amountPaid: Number(obj.amount_paid ?? 0),
+          billingReason: typeof obj.billing_reason === 'string' ? obj.billing_reason : '',
+          paidAt: typeof transitions.paid_at === 'number' ? transitions.paid_at * 1000 : Date.now(),
+          paymentIntent: typeof obj.payment_intent === 'string' ? obj.payment_intent : null,
+        })
+        if (result.credited) {
+          await track('bark_points_credited', { memberId: result.memberId, entityType: 'stripe_event', entityId: String(event.id ?? ''), source: 'server', metadata: { points: result.points, month: result.month } })
+          console.log('bark points:', result.memberId, result.points)
+        }
+      } else if ((event.type === 'charge.refunded' && obj.refunded === true) || event.type === 'charge.dispute.created') {
+        /* Schedule A: a refund or chargeback within 60 days takes back the points that payment earned. */
+        const voided = await voidForCharge({
+          invoiceId: typeof obj.invoice === 'string' ? obj.invoice : null,
+          paymentIntent: typeof obj.payment_intent === 'string' ? obj.payment_intent : null,
+          why: event.type === 'charge.refunded' ? 'Payment refunded' : 'Payment disputed',
+        })
+        if (voided) console.log('bark points voided:', voided)
       } else if (event.type === 'checkout.session.completed' && memberId) {
         /*
           THE CUSTOMER ID IS STORED HERE OR THE LAPSE PATH IS DEAD. Subscription
@@ -3660,6 +3700,12 @@ if (process.env.STRIPE_WEBHOOK_SECRET) {
         ).run(Date.now(), customer, memberId)
         await track('membership_activated', { memberId, entityType: 'stripe_event', entityId: String(event.id ?? ''), source: 'server' })
         console.log('membership active:', memberId)
+        /* Their first invoice may have come first and be waiting for this link (server/bark.ts). */
+        if (customer) {
+          for (const r of await creditWaiting(customer)) {
+            if (r.credited) await track('bark_points_credited', { memberId: r.memberId, entityType: 'stripe_event', entityId: String(event.id ?? ''), source: 'server', metadata: { points: r.points, month: r.month } })
+          }
+        }
       } else if (
         event.type === 'customer.subscription.deleted' ||
         event.type === 'customer.subscription.updated' ||
@@ -3681,7 +3727,11 @@ if (process.env.STRIPE_WEBHOOK_SECRET) {
           (event.type === 'customer.subscription.updated' && ['canceled', 'unpaid', 'incomplete_expired'].includes(subStatus))
         if (customer && kind === 'recruiter') {
           if (stopping) {
+            const ending = await db
+              .prepare("SELECT id FROM members WHERE recruiter_customer = ? AND recruiter_status IN ('active','paused')")
+              .all<{ id: string }>(customer)
             await db.prepare("UPDATE members SET recruiter_status = 'cancelled' WHERE recruiter_customer = ? AND recruiter_status IN ('active','paused')").run(customer)
+            for (const r of ending) await recordRecruiter(r.id, 'cancelled')
             console.log('recruiter stopped:', customer)
           }
         } else if (customer && event.type === 'customer.subscription.updated' && !stopping) {
@@ -3798,6 +3848,8 @@ mountOnboarding(app, {
 })
 /* Schedule A, the agreement's money terms, filled in from the CRM (server/affiliate-terms.ts). */
 mountAffiliateTerms(app, { rateLimiter, crm: crmDeps })
+/* BARK points: monthly credits for recruiters, cash-outs once their packet is approved (server/bark.ts). */
+mountBark(app, { memberFromRequest, rateLimiter, crm: crmDeps, sendEmail: sendLeadEmail, leadEmail: process.env.LEAD_EMAIL })
 
 app.all('/api/*', (_req, res) => res.status(404).json({ error: 'Unknown endpoint.' }))
 

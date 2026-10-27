@@ -165,6 +165,32 @@ async function event(applicationId: string | null, actor: string, kind: string, 
     .run(applicationId, inviteId, actor, kind, JSON.stringify(detail), Date.now())
 }
 
+/**
+ * PAYING FOR THE RECRUITER UPGRADE IS THE INVITATION (Leon, 2026-10-26: "paying the $60 opens the
+ * /join paperwork"). Makes their application from what the member record already knows, so /join
+ * opens on step 1 instead of "by invitation". An application they already have (an earlier invite,
+ * a second payment) is kept as it is. Returns its id, or null for no such member.
+ */
+export async function openRecruiterApplication(memberId: string, actor = 'stripe'): Promise<string | null> {
+  const existing = await db.prepare('SELECT id FROM onboarding_applications WHERE member_id = ?').get<{ id: string }>(memberId)
+  if (existing) return existing.id
+  const m = await db.prepare('SELECT name, email, phone FROM members WHERE id = ?').get<{ name: string | null; email: string | null; phone: string | null }>(memberId)
+  if (!m) return null
+  const [first, ...rest] = (m.name || '').trim().split(/\s+/)
+  const profile: Profile = { email: m.email ?? '', phone: m.phone ?? '', legalFirst: first ?? '', legalLast: rest.join(' ') }
+  const id = newId('app')
+  const now = Date.now()
+  const r = await db
+    .prepare(
+      `INSERT INTO onboarding_applications (id, member_id, invite_id, status, revision, profile, created_at, updated_at)
+       VALUES (?, ?, NULL, 'in_progress', 0, ?, ?, ?) ON CONFLICT (member_id) DO NOTHING`,
+    )
+    .run(id, memberId, JSON.stringify(cleanProfile(profile)), now, now)
+  if (!(r.changes ?? 0)) return (await db.prepare('SELECT id FROM onboarding_applications WHERE member_id = ?').get<{ id: string }>(memberId))?.id ?? null
+  await event(id, actor, 'opened_by_recruiter')
+  return id
+}
+
 function maskEmail(e: string): string {
   const [u, d] = e.split('@')
   if (!d) return ''
@@ -404,6 +430,15 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     const m = await member(req, res)
     if (!m) return
     let a = await appOf(m.id)
+    if (!a) {
+      /* A recruiter whose paperwork was not opened by the webhook (paid before this shipped, or the
+         event is still on its way) gets it here rather than "by invitation". */
+      const r = await db.prepare('SELECT recruiter_status FROM members WHERE id = ?').get<{ recruiter_status: string }>(m.id)
+      if (r?.recruiter_status === 'active' || r?.recruiter_status === 'paused') {
+        await openRecruiterApplication(m.id, `member:${m.id}`)
+        a = await appOf(m.id)
+      }
+    }
     if (!a) return res.status(404).json({ state: 'none' })
     a = await refreshPayouts(a, req.query.refresh === '1')
     const d = await refreshDoc((await latestDoc(a.id)) ?? null, req.query.refresh === '1')

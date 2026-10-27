@@ -30,7 +30,8 @@ const RESERVE = 'slot.join'
 /* MAKE $ (key 9) opens the panel keyed `careers` — "Make some money with
    BEASTY", his instructions for bringing a business in. */
 const LINKED_PANEL: Record<string, PanelPage | undefined> = { '/collab': 'collabs', '/money': 'careers' }
-const LINKED_APP: Record<string, string | undefined> = { '/members': 'sys.members', '/contacts': 'sys.phone', '/search': 'sys.search' }
+/* /affiliate: the Affiliate dashboard, where a recruiter's BARK points and cash-outs are (server/bark.ts). */
+const LINKED_APP: Record<string, string | undefined> = { '/members': 'sys.members', '/contacts': 'sys.phone', '/search': 'sys.search', '/affiliate': 'sys.affiliate' }
 const path = () =>
   typeof window === 'undefined' ? '' : window.location.pathname.replace(/\/+$/, '') || '/'
 

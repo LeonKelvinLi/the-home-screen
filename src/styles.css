@@ -10382,6 +10382,8 @@ textarea {
 /* ---------- choosing a membership ---------- */
 
 .members-choose { margin-top: 10px; width: 100%; }
+/* The paperwork step is a link to /join dressed as the card's button: no underline, its text centred. */
+a.members-choose { display: flex; align-items: center; justify-content: center; text-align: center; text-decoration: none; }
 
 .members-pending {
   margin: 8px 0 0;
@@ -13300,6 +13302,41 @@ span.top3-add {
 .aff-reward-n { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
 .aff-reward-l { font-size: 12.5px; font-weight: 600; }
 .aff-reward-s { font-size: 11.5px; line-height: 1.3; color: var(--tertiary); }
+
+/* BARK points (AffiliateApp BarkPoints): the balance, the one next step, and the latest credits. */
+.aff-bark { gap: 12px; }
+.aff-bark.is-invite { background: #141416; border-color: #141416; color: #fff; }
+.aff-bark.is-invite .aff-card-sub { color: rgba(255, 255, 255, 0.72); }
+.aff-bark.is-invite .aff-bark-line { color: rgba(255, 255, 255, 0.86); }
+.aff-bark.is-invite .btn-primary { background: #f6d800; color: #141416; }
+.aff-bark-sk { height: 132px; border-radius: var(--radius); }
+.aff-bark-balance { display: flex; flex-direction: column; gap: 2px; }
+.aff-bark-n { font-size: 34px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+.aff-bark-l { font-size: 14px; color: var(--muted); }
+.aff-bark-l b { color: var(--ink); }
+.aff-bark-s { font-size: 12.5px; line-height: 1.35; color: var(--tertiary); }
+.aff-bark-line { margin: 0; font-size: 13.5px; line-height: 1.45; color: var(--muted); }
+.aff-bark-line.is-good { color: var(--green-text, #1f7a34); font-weight: 600; }
+.aff-bark-next { display: flex; flex-direction: column; gap: 10px; }
+.aff-bark-next .btn-primary { text-align: center; text-decoration: none; }
+.aff-bark-cash { display: flex; flex-direction: column; gap: 10px; }
+.aff-bark-pick { display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; font-weight: 600; color: var(--muted); }
+.aff-bark-pick select {
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.aff-bark-ledger .aff-row { padding: 10px 12px; }
+.aff-bark-ledger .aff-row-title { font-size: 14px; }
+.aff-bark-plus { flex: 0 0 auto; font-size: 15px; font-weight: 700; color: var(--green-text, #1f7a34); }
+.aff-bark-ledger .is-void .aff-row-title,
+.aff-bark-ledger .is-void .aff-bark-plus { color: var(--tertiary); text-decoration: line-through; }
 
 .aff-feed { list-style: none; margin: 0; padding: 0; }
 .aff-feed-item { display: grid; grid-template-columns: 10px 1fr auto; align-items: baseline; gap: 10px; padding: 9px 0; }

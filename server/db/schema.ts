@@ -840,6 +840,78 @@ CREATE TABLE IF NOT EXISTS affiliate_rewards (
 CREATE INDEX IF NOT EXISTS idx_affrewards_member ON affiliate_rewards(member_id, created_at);
 
 /*
+  BARK POINTS (server/bark.ts). Leon, 2026-10-26: "points credit monthly while recruiting is active,
+  and cash-outs only after Glenn approves the packet."
+
+  recruiter_history: every change of a member's recruiter status, so a referral can be checked
+  against whether its referrer was recruiting at the time. Recruiters from before this table get
+  one row from recruiter_since (and a pause from now, if paused).
+*/
+CREATE TABLE IF NOT EXISTS recruiter_history (
+  id        BIGSERIAL PRIMARY KEY,
+  member_id TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  status    TEXT NOT NULL,
+  at        BIGINT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_rechist_member ON recruiter_history(member_id, at);
+INSERT INTO recruiter_history (member_id, status, at)
+SELECT m.id, s.status, s.at FROM members m
+CROSS JOIN LATERAL (VALUES
+  ('active', COALESCE(m.recruiter_since, 0)),
+  ('paused', CASE WHEN m.recruiter_status = 'paused' THEN (EXTRACT(EPOCH FROM now()) * 1000)::bigint END)
+) AS s(status, at)
+WHERE m.recruiter_status IN ('active','paused') AND s.at IS NOT NULL
+  AND NOT EXISTS (SELECT 1 FROM recruiter_history h WHERE h.member_id = m.id);
+
+/* One row per paid month of one referral: month 1, 2, 3… of a referred member's pass (source_id the
+   member) or a referred business (source_id its CRM deal). payment_ref is the Stripe invoice, so a
+   retried webhook credits nothing twice; a refund or dispute within 60 days voids the row. */
+CREATE TABLE IF NOT EXISTS bark_points (
+  id             TEXT PRIMARY KEY,
+  member_id      TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  source_kind    TEXT NOT NULL CHECK (source_kind IN ('user','business')),
+  source_id      TEXT NOT NULL,
+  month          INTEGER NOT NULL CHECK (month >= 1),
+  points         INTEGER NOT NULL CHECK (points > 0),
+  payment_ref    TEXT,
+  payment_intent TEXT,
+  status         TEXT NOT NULL DEFAULT 'earned' CHECK (status IN ('earned','void')),
+  note           TEXT,
+  paid_at        BIGINT NOT NULL,
+  created_at     BIGINT NOT NULL,
+  voided_at      BIGINT,
+  voided_by      TEXT,
+  void_note      TEXT,
+  UNIQUE (source_kind, source_id, month)
+);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_bark_payment ON bark_points(payment_ref) WHERE payment_ref IS NOT NULL;
+CREATE INDEX IF NOT EXISTS idx_bark_member ON bark_points(member_id, created_at);
+CREATE INDEX IF NOT EXISTS idx_bark_intent ON bark_points(payment_intent) WHERE payment_intent IS NOT NULL;
+
+/* A cash-out request: one open at a time per member, paid by the team by direct deposit. */
+CREATE TABLE IF NOT EXISTS bark_cashouts (
+  id           TEXT PRIMARY KEY,
+  member_id    TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  points       INTEGER NOT NULL CHECK (points > 0),
+  cents        INTEGER NOT NULL CHECK (cents > 0),
+  status       TEXT NOT NULL CHECK (status IN ('requested','paid','declined')),
+  requested_at BIGINT NOT NULL,
+  decided_at   BIGINT,
+  decided_by   TEXT,
+  note         TEXT
+);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_cashout_open ON bark_cashouts(member_id) WHERE status = 'requested';
+
+/* A pass's paid invoice that arrived before the checkout linking its customer to a member. */
+CREATE TABLE IF NOT EXISTS bark_waiting_invoices (
+  invoice_id TEXT PRIMARY KEY,
+  customer   TEXT NOT NULL,
+  invoice    JSONB NOT NULL,
+  created_at BIGINT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_bark_waiting_customer ON bark_waiting_invoices(customer);
+
+/*
   WHERE A MEMBER LIVES, city and state. Glenn, 2026-10-19: "add City and State
   when people sign up to appear here. That way people can befriend people in
   their same city if they want to. It is also good to add to our analytics."

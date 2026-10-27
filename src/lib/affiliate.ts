@@ -107,6 +107,55 @@ export async function fetchAffiliate(): Promise<Affiliate> {
   return data
 }
 
+/*
+  BARK POINTS (server/bark.ts): what a recruiter has earned, and cashing it out once their signed
+  packet is approved. The server decides every number and every allowed amount.
+*/
+export interface BarkCashout {
+  id: string
+  points: number
+  cents: number
+  status: 'requested' | 'paid' | 'declined'
+  requestedAt: number
+  decidedAt: number | null
+  note: string
+}
+
+export interface Bark {
+  recruiter: 'none' | 'pending' | 'active' | 'paused' | 'cancelled'
+  recruiterSince: number | null
+  paperwork: 'none' | 'in_progress' | 'submitted' | 'changes_requested' | 'approved' | 'rejected' | 'suspended'
+  balance: { earned: number; cashedOut: number; available: number; owed: number }
+  pointValue: number
+  minRedemption: number
+  redemptionStep: number
+  payoutDays: number
+  /** The amounts they may ask for now; empty when they cannot cash out. */
+  choices: number[]
+  openCashout: BarkCashout | null
+  cashouts: BarkCashout[]
+  ledger: { id: string; at: number; points: number; status: 'earned' | 'void'; text: string; voidNote: string }[]
+}
+
+export async function fetchBark(): Promise<Bark> {
+  const r = await fetch('/api/affiliate/bark', { credentials: 'same-origin', cache: 'no-store' })
+  const data = (await r.json().catch(() => ({}))) as Bark & { error?: string }
+  if (!r.ok) throw new Error(data.error || 'Your points did not load. Try again.')
+  return data
+}
+
+export async function requestCashout(points: number): Promise<Bark> {
+  const r = await fetch('/api/affiliate/cashout', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ points }),
+  })
+  const data = (await r.json().catch(() => ({}))) as Bark & { error?: string }
+  if (!r.ok) throw new Error(data.error || 'That did not go through. Try again.')
+  return data
+}
+
 const SENT_KEY = 'fb.refclick.v1'
 
 /**

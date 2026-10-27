@@ -4163,3 +4163,23 @@ a.crm-row:hover,
     align-items: stretch;
   }
 }
+
+/* BARK points on an affiliate's page and the cash-outs due on the list (src/crm/bark.tsx). */
+.crm-bark { display: flex; flex-direction: column; gap: 10px; }
+.crm-bark-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.crm-bark-n { font-size: 26px; letter-spacing: -0.02em; }
+.crm-bark-usd { font-weight: 700; }
+.crm-bark-status { padding: 3px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; background: rgba(120, 120, 128, 0.14); }
+.crm-bark-status.is-active { background: rgba(52, 199, 89, 0.18); color: #146c2e; }
+.crm-bark-status.is-paused, .crm-bark-status.is-pending { background: rgba(255, 149, 0, 0.16); color: #8a4d00; }
+.crm-bark-cashout { display: flex; flex-direction: column; gap: 8px; padding: 12px; border-radius: 12px; background: rgba(246, 216, 0, 0.16); }
+.crm-bark-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.crm-bark-h { margin: 6px 0 0; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted, #6b6b70); }
+.crm-bark-list { list-style: none; margin: 0; padding: 0; }
+.crm-bark-list li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 0; }
+.crm-bark-list li + li { border-top: 1px solid rgba(60, 60, 67, 0.12); }
+.crm-bark-list li.is-void strong { text-decoration: line-through; opacity: 0.6; }
+.crm-bark-what { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.crm-bark-what small { color: var(--muted, #6b6b70); }
+.crm-bark-due { margin-bottom: 12px; border-left: 4px solid #f6d800; }
+.crm-bark-due ul { margin: 6px 0 0; padding-left: 18px; }

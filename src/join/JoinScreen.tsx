@@ -1264,8 +1264,9 @@ export default function JoinScreen() {
   if (phase.k === 'signin') return <SignIn defaultName={phase.name} onSignedIn={() => void afterSignIn()} />
   if (phase.k === 'no-app')
     return (
-      <Message title="Affiliate sign-ups are by invitation">
-        BEASTY invites affiliates personally. If you’d like to join, message BEASTY and ask for your invite link; it brings you straight back here.
+      <Message title="Become a recruiter first">
+        Your affiliate paperwork opens here once you are a BEASTY Recruiter ($60 a month). Go to Members on beastypages.com and choose
+        Become a recruiter; when the payment goes through, come back here. If BEASTY sent you an invite link, open that instead.
       </Message>
     )
 

@@ -47,6 +47,8 @@ export interface Account {
   paymentsConfigured: boolean
   /** The $60-a-month recruiter upgrade: none, pending (chosen, not paid), active, paused or cancelled. */
   recruiterStatus?: 'none' | 'pending' | 'active' | 'paused' | 'cancelled'
+  /** Their /join paperwork, opened by paying for the recruiter upgrade. */
+  paperworkStatus?: 'none' | 'in_progress' | 'submitted' | 'changes_requested' | 'approved' | 'rejected' | 'suspended'
   /** Whether the recruiter checkout exists yet. */
   recruiterConfigured?: boolean
   /** Stripe's page for switching passes, cancelling or changing the card. Null until configured. */

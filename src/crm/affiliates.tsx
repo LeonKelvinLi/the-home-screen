@@ -20,6 +20,7 @@ import { Avatar, dateTime, Empty, Failure, Loading, PageTitle, Section, ago, per
 import { Icon } from './icons'
 import { onboardingPrefill } from '../../shared/onboarding-prefill'
 import { AffiliateTermsPanel } from './affiliate-terms'
+import { BarkPanel, OpenCashouts } from './bark'
 import './affiliate-prefill.css'
 
 type EmailStatus = 'accepted' | 'failed' | 'not_configured'
@@ -124,6 +125,7 @@ const EVENT: Record<string, string> = {
   invite_resent: 'Invite sent again',
   invite_revoked: 'Invite cancelled',
   started: 'Opened their invite and started',
+  opened_by_recruiter: 'Paid the recruiter upgrade, which opened their paperwork',
   profile_completed: 'Finished their details',
   payouts_started: 'Started payout setup with Stripe',
   payouts_completed: 'Stripe finished their payout setup',
@@ -326,7 +328,7 @@ export function Affiliates() {
     <div className="crm-view">
       <PageTitle
         title="Affiliates"
-        sub="People who sign up to earn with BEASTY. Invite them here, see how far each one got, then countersign and approve."
+        sub="People who earn with BEASTY. Paying the recruiter upgrade opens their paperwork; you can also invite someone. See how far each one got, then countersign and approve."
         actions={
           <>
             <a className="crm-btn" href="#/affiliate-terms">
@@ -343,6 +345,7 @@ export function Affiliates() {
       />
       {inviting && admin && <InviteForm onSent={reload} />}
       {data && <ProviderNote providers={data.providers} />}
+      <OpenCashouts />
       <div className="crm-chips" role="tablist" aria-label="Show">
         {FILTERS.map(([k, label]) => {
           const n = k ? data?.counts[k] ?? 0 : data?.total ?? 0
@@ -709,6 +712,7 @@ export function AffiliateDetail({ id }: { id: string }) {
 
           {d.manualPacket && <ManualPacket d={d} packet={d.manualPacket} reload={reload} />}
           <AffiliateTermsPanel id={d.id} admin={actor.role === 'admin'} />
+          <BarkPanel id={d.id} admin={actor.role === 'admin'} />
 
           <Section title="Their details">
             {rows.length ? (

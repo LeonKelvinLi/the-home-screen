@@ -430,7 +430,8 @@ export async function affiliateStats(m: MemberLite, origin: string, now = Date.n
       bucket: s.bucket,
       page: live ? 'Live on BEASTY' : 'No page yet',
       listing: paid ? 'Paid' : live ? (brand?.tier === 1 ? 'Free listing' : 'Full page') : null,
-      reward: 'Not paying yet',
+      /* BARK points (server/bark.ts): credited per paid month, and only to a recruiter. */
+      reward: 'BARK points each month it pays, if you were recruiting when it asked',
     }
   })
 

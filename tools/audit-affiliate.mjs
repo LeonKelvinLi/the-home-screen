@@ -155,7 +155,7 @@ d = await me(phoneA)
 const biz = d.businesses[0]
 step('the business is hers, received and waiting', d.lifetime.businesses === 1 && biz?.name === 'Affiliate Test Tacos' && biz.city === 'Oakland' && biz.status === 'Received' && biz.bucket === 'pending', JSON.stringify(biz))
 step('its click counts as a business click', d.windows['7d'].clicks.business === 1 && d.lifetime.clicks === 3, `${d.windows['7d'].clicks.business} / ${d.lifetime.clicks}`)
-step('its reward says it is not paying yet', biz?.reward === 'Not paying yet')
+step('its reward says how BARK points are earned', /BARK points each month it pays/.test(biz?.reward ?? ''))
 
 /* BEASTY signs it (what the CRM's Won does). */
 const opp = (await q("SELECT o.id FROM crm_opportunities o JOIN crm_people p ON p.id = o.referrer_id WHERE p.member_id = $1", [A.id]))[0]

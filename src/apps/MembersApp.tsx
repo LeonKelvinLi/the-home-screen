@@ -711,6 +711,18 @@ function RecruiterCard() {
               ? 'You are a recruiter. New referrals count.'
               : 'Recruiting is paused. New referrals do not count until you resume; what you earned stays. Your $60 a month continues until you cancel it.'}
           </p>
+          {/* Paying opened their /join paperwork; cash-outs wait on it being approved. */}
+          {account.paperworkStatus === 'approved' ? (
+            <p className="members-pending is-active">Paperwork approved: cash out from your Affiliate dashboard.</p>
+          ) : account.paperworkStatus === 'submitted' ? (
+            <p className="members-pending">Your paperwork is with BEASTY for review. Cash-outs open once it is approved.</p>
+          ) : account.paperworkStatus === 'rejected' || account.paperworkStatus === 'suspended' ? (
+            <p className="members-pending">Cash-outs are closed on your account. Message BEASTY.</p>
+          ) : (
+            <a className="btn-primary members-choose" href="/join">
+              {account.paperworkStatus === 'changes_requested' ? 'Fix your paperwork' : 'Do your paperwork to get paid'}
+            </a>
+          )}
           {/* Resuming is the thing to do from a pause, so it leads; pausing is not pushed. */}
           <button
             className={`${status === 'paused' ? 'btn-primary members-choose' : 'btn-secondary members-manage'}`}

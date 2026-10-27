@@ -70,6 +70,9 @@ export const EVENTS = {
   recruiter_activated: { actor: 'member', label: 'Recruiter upgrade paid', once: 'day-entity' },
   recruiter_paused: { actor: 'member', label: 'Paused recruiting' },
   recruiter_resumed: { actor: 'member', label: 'Resumed recruiting' },
+  /* BARK points (server/bark.ts): a referral's paid month credited, and a cash-out asked for. */
+  bark_points_credited: { actor: 'member', label: 'Earned BARK points for a referral' },
+  bark_cashout_requested: { actor: 'member', label: 'Asked to cash out BARK points' },
   /* Friends, the MySpace way (server/friends.ts). */
   friend_requested: { actor: 'member', label: 'Sent a friend request', meaningful: true },
   friend_accepted: { actor: 'member', label: 'Accepted a friend request', meaningful: true },

@@ -13,7 +13,7 @@ Leon: "done stripe is set create all and make membership work". Built in Glenn's
 Every link allows promotion codes and returns to `https://beastypages.com/?joined=1` (the recruiter link to `?recruiter=1`).
 
 - **Customer portal** (`bpc_1UUxk6BsUW5lMOxSyedou8N1`), login link `https://billing.stripe.com/p/login/28EeVc63E1XT7yV8lQbsc00`: cancel at the end of the period (with a reason), update the card, switch between BIGGIE PASS and BEASTY PASS with proration, return to beastypages.com. It is account-wide, so Glenn's water-business customers could also use it to manage their subscriptions.
-- **Webhook** `beastypages-memberships` (`we_1UUxmiBsUW5lMOxS2wGdyBVI`) → `https://beastypages.com/api/stripe/webhook`: `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_failed`.
+- **Webhook** `beastypages-memberships` (`we_1UUxmiBsUW5lMOxS2wGdyBVI`) → `https://beastypages.com/api/stripe/webhook`, API version 2020-08-27: `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_failed`, and since 26 October for BARK points (docs/BARK-POINTS.md) `invoice.paid`, `charge.refunded`, `charge.dispute.created`.
 - **Render** (`the-home-screen`) needs `STRIPE_PAYMENT_LINK_PASS`, `STRIPE_PAYMENT_LINK_DIAMOND`, `STRIPE_PAYMENT_LINK_RECRUITER`, `STRIPE_PORTAL_URL`, `STRIPE_PRICE_PASS`, `STRIPE_PRICE_DIAMOND`, `STRIPE_PRICE_RECRUITER` (none secret) and **`STRIPE_WEBHOOK_SECRET`, which only a person copies** from the webhook's "Signing secret" (Reveal) into Render. Without it the site cannot mark anyone paid.
 
 What the app does with them (`tools/audit-membership-manage.mjs`, local, no key needed):
@@ -52,9 +52,11 @@ Both links redirect to `https://beastypages.com/?joined=1` on completion and
 accept promotion codes — the promo field is what FIRST48 would use if he ever
 runs it on memberships. See `docs/AFFILIATE-PRICING.md`.
 
-The webhook subscribes to exactly the three events the server acts on:
-`checkout.session.completed`, `customer.subscription.deleted`,
-`invoice.payment_failed`.
+The webhook subscribes to exactly the events the server acts on:
+`checkout.session.completed`, `customer.subscription.updated`,
+`customer.subscription.deleted`, `invoice.payment_failed`, and for BARK points
+`invoice.paid`, `charge.refunded` and `charge.dispute.created`
+(docs/BARK-POINTS.md).
 
 ## Proven, not assumed
 
