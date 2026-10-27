@@ -23,3 +23,7 @@ Nawah's own page gives 5489 Foothill Blvd; Jay's store list and reel say 5475. L
 - `npm run build`; the data audit (0 errors).
 - Seat diff against the last release: 9 additions, nothing moved.
 - `tools/audit-batch72.mjs`, `tools/audit-categories.mjs` and `tools/audit-foodies.mjs` pass on a local build.
+
+## Live
+
+Production release `c0f253e`, pushed at about 11:17 am on 27 October 2026, live by 11:26 am (the Kakuna Sushi icon served as an image). `BASE=https://beastypages.com node tools/audit-batch72.mjs` passed all 51 checks against the live site: every page, menu, city seat, icon, BEASTY • AYCE and More eats spot, and the Daly Buffet, Jay, Gao (both) and Nawah films decoding.
