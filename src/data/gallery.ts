@@ -34,6 +34,48 @@ const post = (code: string) => `https://www.instagram.com/p/${code}/`
 
 export const GALLERY: GalleryShot[] = [
   /*
+    AN AFFILIATE'S PICTURES, like Sin City Pits' below. Glenn, 2026-10-27: "Can you crop these pictures and
+    add to a gallery of clients?" for Cali K9, then Leon: "put in the gallery section of the website where a
+    lot of images are there". Their own VIP Clients story highlight (dated January 16, 2022 there), cropped
+    out of Glenn's screenshots with Instagram's badges painted out, the same squares as on their page. Dated
+    the day he sent them, as Sin City's flyer is. The clients are not named.
+  */
+  {
+    src: '/gallery/2026-10-27-cali-k9-vip-1.webp',
+    taken: '2026-10-27',
+    alt: "Cali K9's trainer with a client holding a puppy.",
+    caption: "Cali K9's VIP clients and their dogs, from their Instagram. Dog training and behavior, as seen on Netflix's Canine Intervention.",
+    href: 'https://www.instagram.com/calik9/',
+  },
+  {
+    src: '/gallery/2026-10-27-cali-k9-vip-2.webp',
+    taken: '2026-10-27',
+    alt: "Cali K9's trainer with a client and a dog at night, beside a trailer.",
+    caption: "Cali K9's VIP clients.",
+    href: 'https://www.instagram.com/calik9/',
+  },
+  {
+    src: '/gallery/2026-10-27-cali-k9-vip-3.webp',
+    taken: '2026-10-27',
+    alt: "Cali K9's trainer with a client and two dogs outside, next to the Cali K9 van.",
+    caption: "Cali K9's VIP clients.",
+    href: 'https://www.instagram.com/calik9/',
+  },
+  {
+    src: '/gallery/2026-10-27-cali-k9-vip-4.webp',
+    taken: '2026-10-27',
+    alt: "Cali K9's trainer shaking hands with a client indoors.",
+    caption: "Cali K9's VIP clients.",
+    href: 'https://www.instagram.com/calik9/',
+  },
+  {
+    src: '/gallery/2026-10-27-cali-k9-vip-5.webp',
+    taken: '2026-10-27',
+    alt: "Cali K9's trainer with a client and a dog in a doorway.",
+    caption: "Cali K9's VIP clients.",
+    href: 'https://www.instagram.com/calik9/',
+  },
+  /*
     NOT HIS POST — an affiliate's, and the first one. Glenn, 2026-09-02:
     "can you post this on Sin City Pits page? Also, the gallery. I'm starting
     to contact a lot of the affiliates on the pages to get in a legit offer to

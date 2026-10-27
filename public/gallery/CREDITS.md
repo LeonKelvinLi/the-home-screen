@@ -1,5 +1,7 @@
 # Gallery provenance
 
+**2026-10-27: Cali K9's VIP clients.** `2026-10-27-cali-k9-vip-1.webp` to `-5.webp` are Cali K9's own pictures from their Instagram "VIP Clients" highlight, cropped out of the five screenshots Glenn sent ("Can you crop these pictures and add to a gallery of clients?"); Instagram's mute and multi-photo badges were painted out, and the three portrait pictures sit whole on a blurred copy of themselves so the square tiles cut nobody off. The same squares are the gallery on their brand page. They link to @calik9.
+
 **2026-09-02: the first affiliate post.** `2026-09-02-sin-city-pits-breeder.webp`
 is Sin City Pits' own flyer, cropped out of the screenshot Glenn sent with
 "post this on Sin City Pits page? Also, the gallery." It is theirs, not his,
