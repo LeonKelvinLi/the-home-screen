@@ -140,7 +140,7 @@ c.showPage();head(c,'Schedule A & signatures','BEASTY completes this schedule be
 y=617
 for number,(title,text) in enumerate([
 ('The attached Schedule A','The fees, what each referral earns, BARK points, cash-outs, payment and qualifying referrals are set out in Schedule A, the Commission and fee schedule attached to this agreement. Its code identifies the version signed; the Schedule A Changes box lists anything agreed for this Affiliate only.'),
-('Still to confirm before this is final','[CONFIRM: BEASTY legal entity and address; governing law and venue; the recruiter upgrade fee and how it is billed; how many days BEASTY has to pay a cash-out request; review of this agreement by counsel].'),
+('Still to confirm before this is final','[CONFIRM: BEASTY legal entity and address; governing law and venue; how many days BEASTY has to pay a cash-out request; review of this agreement by counsel].'),
 ('Excluded until expressly agreed','No saved-points bonus, guaranteed earnings, automated payout, exclusivity, arbitration, indemnity or broad liability waiver is added by this draft. Promotion-day multipliers apply only as Schedule A states.')],1):
  section(c,number,title,y);y=paragraph(c,text,44,y-20,524,9.5,leading=13.1)-9
 assert y>350, f'Schedule A overlaps signing fields: {y}'

@@ -216,3 +216,18 @@ The Careers page (MAKE $) now reads 10 points a month per member and per busines
 Live: `a5d0cbe` and `b0896ee` (the fee table says who pays each fee), on beastypages.com and beasty-crm.onrender.com by 4:42 pm. The new Schedule A (code 0LBTQXK) replaced the 9-point one in draft template 6566603 with DocuSeal's Replace; the page is longer now, so the Schedule A Changes field was moved under heading 6 and the Initials field onto its line, and the template was saved and checked after a reload. Still no submissions, nothing sent, not the live template.
 
 Later the same evening: Glenn made the upgrade monthly ($60 a month). Schedule A now reads "per month, paid by the Affiliate; earns no one points"; replaced again in draft 6566603 and saved (fields unmoved, code 0LBTQXK). Live: `95e1d51`.
+
+## Schedule A in the packet's design (26 October 2026)
+
+Leon: "improve font and layotu for those documents use design skill". Schedule A was the one page of the packet set in Helvetica with plain rules, so it read as a different document from the twelve pages before it. `server/affiliate-terms-pdf.ts` now draws it the way `tools/build-affiliate-forms.py` draws the packet:
+
+- **Type.** Inter (regular, medium, bold) and Oswald for the BEASTY wordmark, embedded as subsets from `server/fonts/` with `@pdf-lib/fontkit`. They are the same cuts the packet uses (`out/affiliate-forms/fonts`, cut from `public/fonts`) and cover all of Latin-1; every printed string still passes through `winAnsi`.
+- **Layout.** The packet's colours (ink #20252B, muted #59616A, rules #D3D8DC, yellow #F6D800), its masthead with the yellow tick under the rule, numbered sections with a yellow bar and a hairline, a ruled fee table with the amounts right-aligned in bold, boxed fields for the changes and the initials, and the packet's footer ("Schedule A · code · 01 / 01"). A draft carries a red bordered "NOT FINAL" box where the code would be.
+- **Still one page** for the standard terms; a long clause runs onto further pages with the masthead and footer repeated. The two DocuSeal fields keep their names.
+- "earns no one points" now reads "earns no points for anyone".
+
+Packet page 13 ("Schedule A & signatures") no longer quotes the old 3-point and 6-point figures. It points at the attached Schedule A, lists only what is still to confirm (legal entity and address, governing law and venue, days to pay a cash-out, counsel review; the recruiter fee is settled at $60 a month through Stripe), and keeps the exclusions. The signing block is pinned at a fixed height, so its fields did not move.
+
+`tools/audit-affiliate-terms.ts` now reads PDF text with pdf.js (`pdfjs-dist`, a dev dependency): embedded fonts store glyph ids, so the old latin1 read found nothing. 140 checks pass.
+
+DocuSeal draft 6566603: both documents were replaced with DocuSeal's Replace. On Schedule A the Changes and Initials fields were moved into the new boxes; the packet's fields were unchanged (pages 1–12 are the same build, W-9 Rev. March 2024) and pages 1, 2 and 13 were checked in the editor. Saved and checked after a reload. Still no submissions, nothing sent, not the live template. Live: `002c3bc`.
