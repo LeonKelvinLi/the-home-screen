@@ -1778,4 +1778,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      Mediterranean spot (its Bakery spot is taken); Breakfast/Diner fills from its type line. */
   'emeryville-goods-9': 'b_simurghbakery',
 
+  /* Batch 70, Glenn, 26 October 10:13 pm: Innena's Kitchen, Cambodian kathiew noodle soup on
+     Fruitvale Ave. Oakland's Asian spot is Cambodian Street Food's, so More eats in both. */
+  'oakland-goods2-34': 'b_innenaskitchen',
+  'beasty-goods2-78': 'b_innenaskitchen',
+
 }

@@ -289,6 +289,7 @@ export const ICON_LUMA: Record<string, number> = {
   'impower-sports': 0.0709,
   'inda-and-mely': 0.8226,
   'ink-from-tatooine': 0.0327,
+  'innenas-kitchen': 0.0363,
   'intl-kitchen': 0.8958,
   'isla-filipino-2': 0.0429,
   'isla-filipino-3': 0.5383,

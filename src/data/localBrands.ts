@@ -45493,4 +45493,24 @@ export const LOCAL_SEED: LocalSeed[] = [
       "siteCta": "Order online",
       "siteNote": "Prices are from their own online menu (their Shopify store), for pickup. Party trays, catering and nationwide baklava gifts are on their site too."
   },
+  /* BATCH 70, 2026-10-27: Glenn's send of 26 Oct 10:13 pm. Sources: research/roster/batch70.json. */
+  {
+      "slug": "innenas-kitchen",
+      "name": "Innena's Kitchen",
+      "label": "Innena's",
+      "cuisine": "Cambodian kathiew noodle soup",
+      "color": "#241C1D",
+      "icon": "innenas-kitchen",
+      "tagline": "Cambodian kathiew noodle soup with a twist of Nena's flavor, on Fruitvale Avenue in Oakland: a home kitchen that went viral and opened its own storefront.",
+      "prep": 0,
+      "category": "Cambodian",
+      "items": [],
+      "address": "954 Fruitvale Ave, Oakland, CA 94601",
+      "phone": "(510) 988-7913",
+      "hours": "Fri 11am–8pm, Sat–Sun 9am–8pm (closed 3–4pm)",
+      "instagram": "innenaskitchen",
+      "needsSite": true,
+      "contactOnly": "Cambodian kathiew noodle soup on Fruitvale Avenue in Oakland, open Friday to Sunday. They publish no menu or prices online, only their Instagram, so none are shown here. Call them or walk in.",
+      "siteCta": "Open their page"
+  },
 ]

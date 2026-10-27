@@ -1,0 +1,45 @@
+[
+  {
+    "id": "b_innenaskitchen",
+    "name_exact": "Innena's Kitchen",
+    "checked_on": "2026-10-27",
+    "sources": [
+      "Instagram @innenaskitchen (Glenn's screenshot IMG_8125, 26 Oct 2026 10:13 pm): name 'Nara Kaen', 'Personal blog', 'Kathiew and so much more...', '954 Fruitvale Ave Oakland open Fri 11-8pm Sat&Sun 9am-8pm (close for lunch 3-4pm)', '510-988-7913', links to an NBC Bay Area video and Facebook 'Innenaskitchen'; 1,791 posts, 6,340 followers. No website.",
+      "Their neon banner (Glenn's IMG_8124): 'InnenasKitchen', 'Authentic Cambodian \"Kathiew\" noodle soup with a twist of Nena's flavor.'",
+      "https://www.nbcbayarea.com/video/news/local/a-bay-area-food-spot-goes-viral/4084098/ (NBC Bay Area, 'A Bay Area food spot goes viral'): Innena's Kitchen began in a home kitchen and opened a storefront; owner Nara Neak. Spelling 'Innena's Kitchen' taken from here.",
+      "Searched 2026-10-27 for a menu or prices (web, delivery apps): none found; only TikToks (@bayareamunchies510) and roundups. So items: [] and contactOnly."
+    ],
+    "facts": {
+      "slug": "innenas-kitchen",
+      "name": "Innena's Kitchen",
+      "label": "Innena's",
+      "cuisine": "Cambodian kathiew noodle soup",
+      "color": "#241C1D",
+      "icon": "innenas-kitchen",
+      "tagline": "Cambodian kathiew noodle soup with a twist of Nena's flavor, on Fruitvale Avenue in Oakland: a home kitchen that went viral and opened its own storefront.",
+      "prep": 0,
+      "category": "Cambodian",
+      "items": [],
+      "address": "954 Fruitvale Ave, Oakland, CA 94601",
+      "phone": "(510) 988-7913",
+      "hours": "Fri 11am–8pm, Sat–Sun 9am–8pm (closed 3–4pm)",
+      "instagram": "innenaskitchen",
+      "needsSite": true,
+      "contactOnly": "Cambodian kathiew noodle soup on Fruitvale Avenue in Oakland, open Friday to Sunday. They publish no menu or prices online, only their Instagram, so none are shown here. Call them or walk in.",
+      "siteCta": "Open their page"
+    },
+    "placements": [
+      "oakland-goods2-34",
+      "beasty-goods2-78"
+    ],
+    "glenn": "Glenn, 26 Oct 2026, 10:13 pm: \"Can you islolate “Innenas” & “Kitchen” and put them on top of each other to better fit the icon. Oakland • Eats / BEASTY • Eats\" with IMG_8124 (their neon banner) and IMG_8125 (their Instagram). No reel.",
+    "flags": [
+      "NO PRICES: no website, ordering page or delivery-app menu found; contact only.",
+      "needsSite: Instagram is their only page (as Ocean Subs, whose only site was Toast).",
+      "HOURS from their Instagram bio: 'open Fri 11-8pm Sat&Sun 9am-8pm (close for lunch 3-4pm)'. The lunch close is printed after the weekend hours; kept in the same place.",
+      "NAME: Glenn and their sign write 'Innenas'; NBC Bay Area writes 'Innena's Kitchen' (Nena's kitchen). The Instagram name reads 'Nara Kaen', NBC 'Nara Neak'; no owner name is printed on the page.",
+      "SEATS: Oakland has no open Asian or noodle spot (Asian food is Cambodian Street Food's), so Oakland More goods 34; BEASTY • Eats is More eats 78. No category page matches a noodle-soup type line.",
+      "ICON (as Glenn asked): cut from IMG_8124, 'Innenas' stacked over 'Kitchen'. The neon was separated from the wall (wall inpainted under the glow, light = image minus wall), split between the two words at the tube that joins the s to the K (dropped), and added back on the wall's own colour #241C1D, 1024 px then 512 px, WebP q90. Every lit pixel is theirs; nothing was redrawn."
+    ]
+  }
+]
