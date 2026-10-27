@@ -133,6 +133,19 @@ DocuSeal's [free plan and API pricing](https://www.docuseal.com/pricing) differ:
 manual dashboard requests and uploads are supported free; production API and
 embedding require Pro. A sandbox API is not a free production substitute.
 
+### The shared forms link (live since 26 October 2026)
+
+Leon, 26 October: "https://docuseal.com/d/PEgA3FohHQ4VMz also make this built in inside beasty for affiliates link so they get this link on their email when they want to sign up and sign all docs".
+
+That address is DocuSeal's shared link for the packet template (6566603): whoever opens it fills in and signs the whole packet (W-9, direct deposit, ID photo, agreement and Schedule A). In manual mode it replaces steps 2 and 5 above: no one prepares a private request for each applicant.
+
+- **When it is sent.** `issueFormsLink` (`server/onboarding.ts`) runs when a member pays the $60 recruiter upgrade (their application opens; see docs/BARK-POINTS.md) and when someone redeems one of Glenn's invites. It points their packet at the link with `?email=` and their address. DocuSeal opens it with that email filled in, so their submission can be found by it. It emails them once: "Sign your BEASTY affiliate forms", with the link, which email to use, to come back to `/join` and tap "I finished", and never to email their SSN or bank details. CRM history: "Emailed their DocuSeal forms link".
+- **On /join.** Step 2 says the forms are on DocuSeal and which email to use. "Open my forms in DocuSeal" works before their details are finished, since nothing is filled in from them. After signing they tap "I finished, check my forms", which emails `LEAD_EMAIL` as before.
+- **In the CRM.** The packet panel says when and to which email the link went. Once they have signed, the admin finds their submission in DocuSeal (Submissions, search their email) and pastes its address (`https://docuseal.com/submissions/<number>`). One submission belongs to one application. Then "Record DocuSeal review", countersign (the button opens their submission) and approve, as before.
+- **Settings.** `DOCUSEAL_FORMS_LINK` replaces the link, and `off` brings back the per-applicant requests. It needs no API key and works on the free plan, and nothing has to be set on Render for the built-in link.
+- **Until Glenn answers**, the packet in template 6566603 still prints "REVIEW DRAFT", "Review only - not for applicant signing" and the [CONFIRM] list. Anyone who signs before then signs a draft-labelled packet. Replacing the documents in DocuSeal keeps the same link.
+- Proof: `tools/audit-forms-link.mjs` (33 checks, local Resend stand-in through `RESEND_API_URL`, which is ignored in production). `tools/audit-onboarding-manual.mjs` runs with the link off and still covers the per-applicant flow.
+
 ### DocuSeal API (optional paid path; not selected)
 
 1. Create a DocuSeal account (cloud, or self-hosted and set `DOCUSEAL_URL`).

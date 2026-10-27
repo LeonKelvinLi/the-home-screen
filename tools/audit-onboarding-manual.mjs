@@ -19,7 +19,7 @@ const server = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
   detached: true, stdio: ['ignore', openSync(log, 'w'), openSync(log, 'a')],
   env: { ...process.env, PORT: String(port), DATABASE_URL: testdb.url,
     NODE_ENV: 'development', OPERATOR_TOKEN: operator, RESEND_API_KEY: '',
-    LEAD_EMAIL: '', AFFILIATE_PROVIDERS: '', AFFILIATE_SIGNING: 'manual',
+    LEAD_EMAIL: '', AFFILIATE_PROVIDERS: '', AFFILIATE_SIGNING: 'manual', DOCUSEAL_FORMS_LINK: 'off',
     AFFILIATE_PAYOUTS: '', DOCUSEAL_API_KEY: '', DOCUSEAL_AFFILIATE_TEMPLATE_ID: '',
     DOCUSEAL_MANUAL_TEMPLATE_ID: '7777777', CRM_MEMBER_SIGNIN: '1' },
 })

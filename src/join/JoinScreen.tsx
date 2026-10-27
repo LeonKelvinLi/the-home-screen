@@ -69,7 +69,7 @@ interface Bundle {
   steps: {
     profile: { complete: boolean; problems: Record<string, string> }
     payouts: { available: boolean; started: boolean; complete: boolean; identity: Tri; tax: Tri; bank: 'needed' | 'complete'; bankLast4: string | null }
-    agreement: { available: boolean; mode: 'off' | 'mock' | 'live' | 'manual'; status: string; linkReady: boolean; reviewRequested: boolean; affiliateSigned: boolean; countersigned: boolean; completedAt: number | null }
+    agreement: { available: boolean; mode: 'off' | 'mock' | 'live' | 'manual'; status: string; linkReady: boolean; reviewRequested: boolean; affiliateSigned: boolean; countersigned: boolean; completedAt: number | null; formsLink?: boolean; formsLinkOn?: boolean }
   }
   submittedAt: number | null
   decidedAt: number | null
@@ -458,17 +458,22 @@ function ManualForms({ bundle, reload, beforeAction }: { bundle: Bundle; reload:
       setError(e instanceof Error ? e.message : 'Couldn’t reach BEASTY. Try again.')
     } finally { setBusy(false) }
   }
+  /* Leon, 2026-10-26: affiliates get BEASTY's shared DocuSeal link (by email too) and sign everything
+     there, with no packet prepared for them by hand first (server/onboarding.ts issueFormsLink). */
+  const shared = !!(a.formsLink || (a.formsLinkOn && !a.linkReady))
+  const email = String(bundle.profile.email || '')
   return <div className="onb-manual">
     <p className="onb-copy">{a.affiliateSigned
       ? a.countersigned ? 'BEASTY checked your forms and both signatures in DocuSeal.' : 'BEASTY checked your signed forms. Your packet is waiting for BEASTY’s countersignature.'
       : a.reviewRequested ? 'You reported finishing your packet. BEASTY will check the forms, ID upload and signature in DocuSeal.'
+      : shared ? `Your forms are on DocuSeal: the W-9, direct deposit form, a photo of your ID and the agreement, all in one go (about 10 minutes). We emailed you this link too. ${email ? `Use ${email} when DocuSeal asks for your email. ` : ''}When you have signed, come back here and tap I finished.`
       : a.linkReady ? 'Your private packet is ready. Fill it in and upload your ID on DocuSeal. After signing, return to this page and request review.'
       : a.status === 'requested' ? 'BEASTY has your request and will prepare your private packet once the agreement is finalized. We will email you when it is ready. You can send your application details now.'
       : 'Request your forms and BEASTY will prepare your private DocuSeal packet. You can send your application details while it is being prepared.'}</p>
-    {!a.affiliateSigned && (a.linkReady || a.status === 'not_started') && <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy || !bundle.steps.profile.complete} onClick={()=>void run('open')}>
-      {busy ? 'Opening…' : a.linkReady ? 'Open forms in DocuSeal' : 'Request my forms'}
+    {!a.affiliateSigned && (a.linkReady || a.status === 'not_started' || shared) && <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy || (!shared && !bundle.steps.profile.complete)} onClick={()=>void run('open')}>
+      {busy ? 'Opening…' : a.linkReady || shared ? 'Open my forms in DocuSeal' : 'Request my forms'}
     </button>}
-    {a.linkReady && !a.affiliateSigned && !a.reviewRequested && <button className="onb-btn onb-btn-block" disabled={busy} onClick={()=>void run('review')}>I finished — request review</button>}
+    {a.linkReady && !a.affiliateSigned && !a.reviewRequested && <button className="onb-btn onb-btn-block" disabled={busy} onClick={()=>void run('review')}>I finished, check my forms</button>}
     <button className="onb-link" disabled={busy} onClick={()=>void run('refresh')}>Refresh forms status</button>
     {!a.affiliateSigned && <p className="onb-quiet">Requesting review does not mark the packet as signed. BEASTY checks it in DocuSeal first.</p>}
     {error && <p className="onb-err" role="alert">{error}</p>}
@@ -857,7 +862,7 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
             [
               ['Your information', profileDone, true, 0, profileDone ? 'Complete' : 'Needs a few details'],
               ...(forms ? [] : [['Payout setup', p.complete, p.available, 1, p.complete ? `Complete${p.bankLast4 ? `, bank ending ${p.bankLast4}` : ''}` : 'Not finished']]),
-              [forms ? 'Forms & agreement' : 'Affiliate agreement', a.affiliateSigned, a.available, 2, a.affiliateSigned ? 'Signed' : a.mode === 'manual' ? a.reviewRequested ? 'Waiting for BEASTY’s review' : a.linkReady ? 'Ready in DocuSeal' : 'BEASTY will prepare your packet' : a.available ? 'Not signed yet' : `Opens soon. You’ll ${forms ? 'fill them in' : 'sign it'} after you send this.`],
+              [forms ? 'Forms & agreement' : 'Affiliate agreement', a.affiliateSigned, a.available, 2, a.affiliateSigned ? 'Signed' : a.mode === 'manual' ? a.reviewRequested ? 'Waiting for BEASTY’s review' : a.linkReady || a.formsLinkOn ? 'Ready in DocuSeal' : 'BEASTY will prepare your packet' : a.available ? 'Not signed yet' : `Opens soon. You’ll ${forms ? 'fill them in' : 'sign it'} after you send this.`],
             ] as [string, boolean, boolean, number, string][]
           ).map(([t, ok, open, n, d]) => (
             <li key={t}>
@@ -881,7 +886,7 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
         </ul>
         {canSubmit && later.length > 0 && (
           <p className="onb-quiet" style={{ marginTop: 16 }}>
-            {a.mode === 'manual' ? 'You can send your details now. Complete the forms on DocuSeal and request review when BEASTY prepares your packet.' : <>BEASTY gets your application now; {later.join(' and ')} open{later.length > 1 || forms ? '' : 's'} soon and you’ll finish {later.length > 1 || forms ? 'them' : 'it'} from this page.</>}
+            {a.mode === 'manual' ? a.formsLinkOn ? 'You can send your details now and sign your forms on DocuSeal before or after; then tap I finished on this page.' : 'You can send your details now. Complete the forms on DocuSeal and request review when BEASTY prepares your packet.' : <>BEASTY gets your application now; {later.join(' and ')} open{later.length > 1 || forms ? '' : 's'} soon and you’ll finish {later.length > 1 || forms ? 'them' : 'it'} from this page.</>}
           </p>
         )}
         {!canSubmit && (
@@ -1019,7 +1024,7 @@ function Dashboard({ bundle, reload }: { bundle: Bundle; reload: (refresh?: bool
                   <b>{forms ? 'Forms & agreement' : 'Affiliate agreement'}</b>
                   <span>{!a.available ? 'Opens soon. BEASTY will let you know.' : forms ? 'Fill in your W-9, direct deposit and ID, and sign, on DocuSeal.' : 'Read and sign it on DocuSeal, filled in with your details.'}</span>
                 </div>
-                {a.mode === 'manual' ? <span className="onb-tag">{a.reviewRequested ? 'In review' : a.linkReady ? 'Ready' : 'Preparing'}</span> : a.available && bundle.status === 'submitted' ? (
+                {a.mode === 'manual' ? <span className="onb-tag">{a.reviewRequested ? 'In review' : a.linkReady || a.formsLinkOn ? 'Ready' : 'Preparing'}</span> : a.available && bundle.status === 'submitted' ? (
                   <button className="onb-btn onb-btn-primary" style={{ minHeight: 44, padding: '0 18px' }} disabled={busy} onClick={() => void open('/api/onboarding/me/agreement/sign')}>
                     {forms ? 'Fill in' : 'Sign'}
                   </button>

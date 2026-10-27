@@ -1,4 +1,32 @@
 /* Free dashboard handoff. These URLs are never fetched by the BEASTY server. */
+
+/*
+  THE AFFILIATE FORMS LINK. Leon, 2026-10-26: "https://docuseal.com/d/PEgA3FohHQ4VMz also make this built in
+  inside beasty for affiliates link so they get this link on their email when they want to sign up and sign
+  all docs". DocuSeal's shared link for the packet template (6566603): anyone with it fills in and signs the
+  whole packet, with no request made for them by hand first. DOCUSEAL_FORMS_LINK replaces it; "off" turns it
+  off and puts the old flow back (BEASTY attaches a private request per applicant).
+*/
+const DEFAULT_FORMS_LINK = 'https://docuseal.com/d/PEgA3FohHQ4VMz'
+
+export function formsLink(): string | null {
+  const raw = (process.env.DOCUSEAL_FORMS_LINK || DEFAULT_FORMS_LINK).trim()
+  if (raw === 'off') return null
+  try {
+    const url = new URL(raw)
+    return url.origin === 'https://docuseal.com' && /^\/d\/[A-Za-z0-9_-]{6,100}$/.test(url.pathname) && !url.search ? url.href : null
+  } catch {
+    return null
+  }
+}
+
+/** Their own copy of the link: DocuSeal opens it with their email filled in, so their submission is findable by it. */
+export function formsLinkFor(email: string): string | null {
+  const link = formsLink()
+  if (!link) return null
+  return email ? `${link}?email=${encodeURIComponent(email)}` : link
+}
+
 export function approvedManualTemplate(): string | null {
   const id = (process.env.DOCUSEAL_MANUAL_TEMPLATE_ID ?? '').trim()
   return /^\d{1,15}$/.test(id) ? id : null

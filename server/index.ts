@@ -2619,7 +2619,9 @@ async function sendLoginCode(email: string, code: string, purpose: string): Prom
     return false
   }
   try {
-    const r = await fetch('https://api.resend.com/emails', {
+    /* The audits' local stand-in (server/email.ts); never in production. */
+    const endpoint = !PROD && process.env.RESEND_API_URL ? process.env.RESEND_API_URL : 'https://api.resend.com/emails'
+    const r = await fetch(endpoint, {
       method: 'POST',
       headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json' },
       body: JSON.stringify({ from, to: [email], subject, text }),

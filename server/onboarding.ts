@@ -38,7 +38,7 @@ import { createHash, randomBytes, timingSafeEqual } from 'node:crypto'
 import { db } from './db/schema'
 import { requireCrm, type CrmDeps } from './crm/auth'
 import { makeProviders, mockControls, providerModes, ProviderOff, type PayoutState, type Providers } from './onboarding-providers'
-import { approvedManualTemplate, docusealLink, manualEvidence, type ManualEvidence } from './onboarding-manual'
+import { approvedManualTemplate, docusealLink, formsLink, formsLinkFor, manualEvidence, type ManualEvidence } from './onboarding-manual'
 import { onboardingPrefill } from '../shared/onboarding-prefill'
 import { termsForApplication } from './affiliate-terms'
 
@@ -165,6 +165,72 @@ async function event(applicationId: string | null, actor: string, kind: string, 
     .run(applicationId, inviteId, actor, kind, JSON.stringify(detail), Date.now())
 }
 
+/*
+  Set by mountOnboarding: how signing runs here, and how to email, for the helpers below. They also run
+  from the Stripe webhook (openRecruiterApplication), outside any request to this module's routes.
+*/
+const runtime: { signing: string; sendEmail: OnboardingDeps['sendEmail'] | null; site: string } = { signing: 'off', sendEmail: null, site: '' }
+
+/** The email with their forms link: what it is, which email to use, and what happens after. */
+export function formsEmail(name: string, link: string, site: string) {
+  return {
+    subject: 'Sign your BEASTY affiliate forms',
+    text:
+      `Hi ${name || 'there'},\n\n` +
+      `Your BEASTY affiliate forms are ready to fill in and sign on DocuSeal: your W-9, direct deposit form, a photo of your ID and the affiliate agreement with its Schedule A. It takes about 10 minutes.\n\n` +
+      `${link}\n\n` +
+      `Use this email address when DocuSeal asks for one, so BEASTY can match your forms to your account.\n\n` +
+      `When you have signed, go to ${site || 'https://beastypages.com'}/join and tap "I finished". BEASTY checks your forms and countersigns, and then you can cash out your BARK points.\n\n` +
+      `Never email your Social Security number, bank details or ID photo: they go only into DocuSeal.\n\nBEASTY Pages`,
+  }
+}
+
+/**
+ * THEIR FORMS, THROUGH THE SHARED DOCUSEAL LINK (onboarding-manual.ts formsLink). Points their packet at the
+ * link with their email filled in, and emails it to them, once per application. A private request BEASTY
+ * attached by hand is left as it is. Returns their link, or null when signing is not the manual kind or the
+ * link is switched off.
+ */
+export async function issueFormsLink(applicationId: string, actor: string, opts: { email?: boolean } = {}): Promise<string | null> {
+  if (runtime.signing !== 'manual' || !formsLink()) return null
+  const out = await db.transaction(async () => {
+    const a = await db.prepare('SELECT * FROM onboarding_applications WHERE id = ? FOR UPDATE').get<AppRow>(applicationId)
+    if (!a) return null
+    const m = await db.prepare('SELECT email FROM members WHERE id = ?').get<{ email: string | null }>(a.member_id)
+    const email = (a.profile.email || m?.email || '').trim()
+    const d = await db
+      .prepare('SELECT * FROM onboarding_documents WHERE application_id = ? ORDER BY created_at DESC LIMIT 1')
+      .get<DocRow>(a.id)
+    if (d && d.provider !== 'manual') return null
+    if (d?.affiliate_url) return { link: d.affiliate_url, a, fresh: false }
+    const link = formsLinkFor(email)!
+    const terms = await termsForApplication(a.id)
+    const snapshot = terms ? JSON.stringify({ version: terms.version, code: terms.code }) : null
+    const now = Date.now()
+    if (d) {
+      await db
+        .prepare("UPDATE onboarding_documents SET affiliate_url = ?, status = 'pending_signature', template_version = 'forms_link', terms_snapshot = COALESCE(?, terms_snapshot), updated_at = ? WHERE id = ?")
+        .run(link, snapshot, now, d.id)
+    } else {
+      await db
+        .prepare(`INSERT INTO onboarding_documents (id, application_id, category, template_version, provider, provider_ref, status, affiliate_url, terms_snapshot, created_at, updated_at)
+                  VALUES (?, ?, 'affiliate_agreement', 'forms_link', 'manual', '', 'pending_signature', ?, ?, ?, ?)`)
+        .run(newId('doc'), a.id, link, snapshot, now, now)
+    }
+    await db.prepare('UPDATE onboarding_applications SET updated_at = ? WHERE id = ?').run(now, a.id)
+    await event(a.id, actor, 'forms_link_sent', { email: maskEmail(email), ...(terms ? { termsCode: terms.code } : {}) })
+    return { link, a, fresh: true }
+  })()
+  if (!out) return null
+  if (out.fresh && opts.email !== false && runtime.sendEmail) {
+    const p = out.a.profile
+    const m = await db.prepare('SELECT email FROM members WHERE id = ?').get<{ email: string | null }>(out.a.member_id)
+    const e = formsEmail(String(p.preferredName || p.legalFirst || ''), out.link, runtime.site)
+    void runtime.sendEmail(p.email || m?.email || undefined, e.subject, e.text)
+  }
+  return out.link
+}
+
 /**
  * PAYING FOR THE RECRUITER UPGRADE IS THE INVITATION (Leon, 2026-10-26: "paying the $60 opens the
  * /join paperwork"). Makes their application from what the member record already knows, so /join
@@ -173,7 +239,11 @@ async function event(applicationId: string | null, actor: string, kind: string, 
  */
 export async function openRecruiterApplication(memberId: string, actor = 'stripe'): Promise<string | null> {
   const existing = await db.prepare('SELECT id FROM onboarding_applications WHERE member_id = ?').get<{ id: string }>(memberId)
-  if (existing) return existing.id
+  if (existing) {
+    /* Invited before, with no forms yet: paying sends them their forms link all the same. */
+    await issueFormsLink(existing.id, actor)
+    return existing.id
+  }
   const m = await db.prepare('SELECT name, email, phone FROM members WHERE id = ?').get<{ name: string | null; email: string | null; phone: string | null }>(memberId)
   if (!m) return null
   const [first, ...rest] = (m.name || '').trim().split(/\s+/)
@@ -188,6 +258,8 @@ export async function openRecruiterApplication(memberId: string, actor = 'stripe
     .run(id, memberId, JSON.stringify(cleanProfile(profile)), now, now)
   if (!(r.changes ?? 0)) return (await db.prepare('SELECT id FROM onboarding_applications WHERE member_id = ?').get<{ id: string }>(memberId))?.id ?? null
   await event(id, actor, 'opened_by_recruiter')
+  /* Their forms link, by email, straight away: "so they get this link on their email when they want to sign up". */
+  await issueFormsLink(id, actor)
   return id
 }
 
@@ -218,6 +290,9 @@ function stepsOf(app: AppRow, doc: DocRow | null, modes: { payouts: string; sign
       available: modes.signing !== 'off',
       mode: modes.signing,
       linkReady: !!doc?.affiliate_url,
+      /* Signed through the shared DocuSeal link rather than a private request made by hand. */
+      formsLink: doc?.template_version === 'forms_link',
+      formsLinkOn: modes.signing === 'manual' && !!formsLink(),
       reviewRequested: !!doc?.review_requested_at,
       status: doc?.status ?? 'not_started',
       affiliateSigned: signed,
@@ -243,6 +318,9 @@ export interface OnboardingDeps {
 
 export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: Providers = makeProviders(deps.prod)) {
   const modes = providerModes(deps.prod)
+  runtime.signing = providers.signing
+  runtime.sendEmail = deps.sendEmail
+  runtime.site = deps.publicUrl
   console.log(`onboarding: payouts ${providers.payouts}, signing ${providers.signing}${modes.refusedMock ? ' (AFFILIATE_PROVIDERS=mock ignored in production)' : ''}`)
   const read = deps.rateLimiter(240, 60)
   const write = deps.rateLimiter(60, 20)
@@ -420,6 +498,8 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
       throw err
     }
     await event(appId, `member:${m.id}`, 'started', {}, inv.id)
+    /* An invited affiliate gets their forms link by email too. */
+    await issueFormsLink(appId, `member:${m.id}`)
     const a = (await appOf(m.id))!
     res.status(201).json(bundle(a, await latestDoc(a.id)))
   }))
@@ -507,6 +587,13 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     if (!a) return res.status(404).json({ error: 'No application yet.' })
     /* Submitted is allowed: an affiliate who sent their application before signing opened signs afterwards. */
     if (a.status !== 'in_progress' && a.status !== 'changes_requested' && a.status !== 'submitted') return res.status(409).json({ error: 'Your application is closed.' })
+    /* The shared forms link fills nothing in from their details, so it never waits on them. */
+    if (providers.signing === 'manual' && formsLink()) {
+      const d = await latestDoc(a.id)
+      if (d?.affiliate_signed_at) return res.status(409).json({ error: 'Your signature has already been verified.' })
+      const url = await issueFormsLink(a.id, `member:${m.id}`, { email: false })
+      if (url) return res.json({ url })
+    }
     if (Object.keys(profileProblems(a.profile)).length) return res.status(409).json({ error: 'Finish your information first; the agreement is filled in from it.' })
     let doc = await refreshDoc((await latestDoc(a.id)) ?? null, true)
     if (providers.signing === 'manual') {
@@ -744,6 +831,9 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
         verifiedBy: d?.verified_by ?? null,
         checkedAt: d?.checked_at ?? null,
         approvedTemplateUrl: approvedManualTemplate() ? `https://docuseal.com/templates/${approvedManualTemplate()}` : null,
+        /* Signed through the shared forms link: when it was sent, and the address DocuSeal opened it with. */
+        formsLink: d?.template_version === 'forms_link',
+        formsLinkSentAt: d?.template_version === 'forms_link' ? d.created_at : null,
       } : null,
       countersignAvailable: !!d && d.status === 'pending_countersignature' && (providers.signing === 'mock' || !!d.company_url || !!d.submission_url),
     })
@@ -854,6 +944,39 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     const emailStatus = await deps.sendEmail(a.profile.email, 'Your BEASTY forms are ready',
       `Hi ${a.profile.preferredName || a.profile.legalFirst || ''},\n\nYour forms are ready. Open ${site(req)}/join, complete your W-9 and bank form, upload your ID on DocuSeal and sign the agreement. Then return to BEASTY and request review.\n\nDo not email taxpayer numbers, bank details or ID photos.\n\nBEASTY Pages`)
     res.json({ ok: true, emailStatus })
+  }))
+
+  /* A packet signed through the shared forms link: DocuSeal made its request when they pressed Start, so the
+     admin finds it (Submissions, by their email) and pastes its address here. Review then goes on as usual. */
+  app.post('/api/crm/onboarding/:id/packet/submission', crmWrite, admin, asyncH(async (req, res) => {
+    if (providers.signing !== 'manual') return res.status(409).json({ error: 'Manual signing is not enabled.' })
+    const b = (req.body ?? {}) as Record<string, unknown>
+    const submissionUrl = docusealLink(b.submissionUrl, 'submission')
+    if (!submissionUrl) return res.status(400).json({ error: 'Paste the submission’s DocuSeal address, https://docuseal.com/submissions/<number>.' })
+    if (!Number.isInteger(b.revision)) return res.status(400).json({ error: 'Missing packet revision. Refresh the record.' })
+    let outcome
+    try {
+      outcome = await db.transaction(async () => {
+        const a = await db.prepare('SELECT * FROM onboarding_applications WHERE id = ? FOR UPDATE').get<AppRow>(String(req.params.id))
+        if (!a) return { error: 'No such application.', status: 404 }
+        if (!['in_progress', 'submitted', 'changes_requested'].includes(a.status)) return { error: 'This application is closed.', status: 409 }
+        const d = await latestDoc(a.id)
+        if (d?.provider !== 'manual' || d.template_version !== 'forms_link') return { error: 'This packet is not signed through the forms link.', status: 409 }
+        if (d.manual_revision !== b.revision) return { error: 'The packet changed elsewhere. Refresh before saving.', status: 409 }
+        if (d.affiliate_signed_at) return { error: 'This packet is already checked. Replace it to attach another submission.', status: 409 }
+        const now = Date.now()
+        await db.prepare('UPDATE onboarding_documents SET submission_url = ?, provider_ref = ?, manual_revision = manual_revision + 1, updated_at = ? WHERE id = ?')
+          .run(submissionUrl, submissionUrl.split('/').pop(), now, d.id)
+        await event(a.id, req.crm!.actor, 'packet_linked', { formsLink: true, replaced: !!d.submission_url })
+        await db.prepare('UPDATE onboarding_applications SET updated_at = ? WHERE id = ?').run(now, a.id)
+        return { ok: true }
+      })()
+    } catch (err) {
+      if ((err as { code?: string }).code === '23505') return res.status(409).json({ error: 'That DocuSeal submission is already attached to another application.' })
+      throw err
+    }
+    if (outcome.error) return res.status(outcome.status!).json({ error: outcome.error })
+    res.json({ ok: true })
   }))
 
   app.post('/api/crm/onboarding/:id/packet/verify', crmWrite, admin, asyncH(async (req, res) => {

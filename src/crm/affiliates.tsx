@@ -84,6 +84,9 @@ interface Detail {
     affiliateUrl: string
     companyUrl: string
     approvedTemplateUrl: string | null
+    /** Signed through BEASTY's shared DocuSeal forms link, emailed to them (server/onboarding.ts issueFormsLink). */
+    formsLink?: boolean
+    formsLinkSentAt?: number | null
     verifiedBy: string | null
     checkedAt: number | null
     evidence: Partial<Record<'affiliateSigned' | 'companySigned' | 'taxComplete' | 'bankComplete' | 'idUploaded' | 'auditReviewed', boolean>>
@@ -125,6 +128,7 @@ const EVENT: Record<string, string> = {
   invite_resent: 'Invite sent again',
   invite_revoked: 'Invite cancelled',
   started: 'Opened their invite and started',
+  forms_link_sent: 'Emailed their DocuSeal forms link',
   opened_by_recruiter: 'Paid the recruiter upgrade, which opened their paperwork',
   profile_completed: 'Finished their details',
   payouts_started: 'Started payout setup with Stripe',
@@ -433,6 +437,7 @@ function ManualPacket({ d, packet, reload }: { d: Detail; packet: NonNullable<De
   const [confirmed, setConfirmed] = useState(false)
   const [replaceVerified, setReplaceVerified] = useState(false)
   const [checks, setChecks] = useState(packet.evidence)
+  const [found, setFound] = useState('')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
   const [notice, setNotice] = useState('')
@@ -445,7 +450,7 @@ function ManualPacket({ d, packet, reload }: { d: Detail; packet: NonNullable<De
   }
   useEffect(() => {
     setSubmissionUrl(packet.submissionUrl); setAffiliateUrl(packet.affiliateUrl); setCompanyUrl(packet.companyUrl)
-    setConfirmed(false); setReplaceVerified(false); setChecks(packet.evidence)
+    setConfirmed(false); setReplaceVerified(false); setChecks(packet.evidence); setFound('')
   }, [packet.revision, packet.submissionUrl, packet.affiliateUrl, packet.companyUrl, packet.evidence])
 
   const save = async (path: string, body: Record<string, unknown>) => {
@@ -462,15 +467,26 @@ function ManualPacket({ d, packet, reload }: { d: Detail; packet: NonNullable<De
   return <Section title="DocuSeal packet">
     <div className="crm-aff-manual">
       <p className="crm-note">DocuSeal stores the documents. This record shows what an admin has checked; it does not automatically detect signatures.</p>
-      <details className="crm-aff-prefill">
+      {!packet.formsLink && <details className="crm-aff-prefill">
         <summary>Prepare saved details for this applicant</summary>
         <p className="crm-note">Use the approved template’s sender fields to prepare this applicant’s name and address before sending. Keep taxpayer details editable for the applicant to confirm. Tax classification, taxpayer number, bank details, ID and signatures must come from the applicant.</p>
         {['ID Legal Name', 'Affiliate Legal Name', 'Taxpayer Legal Name', 'Business Name', 'Street Address', 'City State ZIP'].filter(name => prefill[name]).map(name => <div className="crm-aff-prefill-row" key={name}>
           <div><b>{name}</b><span>{prefill[name]}</span></div>
           <button className="crm-btn" disabled={busy} onClick={() => void copyPrefill(name, prefill[name])}>Copy {name.toLowerCase()}</button>
         </div>)}
-      </details>
-      {!packet.approvedTemplateUrl ? <p className="crm-aff-notice">The agreement needs Glenn and Leon’s approved terms. Signing links stay locked until the approved template is configured.</p> : (
+      </details>}
+      {packet.formsLink ? (!closed && !d.steps.agreement.affiliateSigned && <form className="crm-aff-manual" onSubmit={(e) => {
+        e.preventDefault()
+        void save('/packet/submission', { submissionUrl: found })
+      }}>
+        <p className="crm-note">
+          {packet.formsLinkSentAt ? `${dateTime(packet.formsLinkSentAt)}: ` : ''}BEASTY’s shared DocuSeal forms link went to <strong>{String(d.profile.email || 'them')}</strong>, who signs everything there. {packet.submissionUrl
+            ? 'Their submission is attached below.'
+            : <>Once they have signed, find their submission in DocuSeal (Submissions, search <strong>{String(d.profile.email || 'their email')}</strong>) and paste its address here.</>}
+        </p>
+        <label className="crm-field"><span>{packet.submissionUrl ? 'A different submission (only if the one below is wrong)' : 'Their DocuSeal submission address'}</span><input type="url" required value={found} onChange={e=>setFound(e.target.value)} placeholder="https://docuseal.com/submissions/…" /></label>
+        <button className="crm-btn is-dark" disabled={busy || !found.trim()}>{packet.submissionUrl ? 'Replace submission' : 'Attach their submission'}</button>
+      </form>) : !packet.approvedTemplateUrl ? <p className="crm-aff-notice">The agreement needs Glenn and Leon’s approved terms. Signing links stay locked until the approved template is configured.</p> : (
         <>
           <a className="crm-btn" href={packet.approvedTemplateUrl} target="_blank" rel="noopener noreferrer">Open approved template in DocuSeal</a>
           {!closed && <form className="crm-aff-manual" onSubmit={(e) => {
