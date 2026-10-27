@@ -110,83 +110,26 @@ function NumberInput({ f, value, onChange, disabled, placeholder }: { f: TermFie
   )
 }
 
-type SpeechCtor = new () => { lang: string; continuous: boolean; interimResults: boolean; start(): void; stop(): void; onresult: (e: { resultIndex: number; results: ArrayLike<ArrayLike<{ transcript: string }> & { isFinal: boolean }> }) => void; onend: () => void; onerror: () => void }
-const Speech = (window as unknown as { SpeechRecognition?: SpeechCtor; webkitSpeechRecognition?: SpeechCtor }).SpeechRecognition ??
-  (window as unknown as { webkitSpeechRecognition?: SpeechCtor }).webkitSpeechRecognition
-
-/** Say the clause instead of typing it. The browser's own dictation: free, and
- *  only offered where the browser has it. The words land in the box to tidy. */
-function Dictate({ onText }: { onText: (t: string) => void }) {
-  const [on, setOn] = useState(false)
-  const rec = useRef<InstanceType<SpeechCtor> | null>(null)
-  useEffect(() => () => rec.current?.stop(), [])
-  if (!Speech) return null
-  const toggle = () => {
-    if (on) return rec.current?.stop()
-    const r = new Speech()
-    r.lang = 'en-US'
-    r.continuous = true
-    r.interimResults = false
-    r.onresult = (e) => {
-      for (let i = e.resultIndex; i < e.results.length; i++) if (e.results[i].isFinal) onText(e.results[i][0].transcript.trim())
-    }
-    r.onend = () => setOn(false)
-    r.onerror = () => setOn(false)
-    rec.current = r
-    r.start()
-    setOn(true)
-  }
-  return (
-    <button type="button" className={`crm-btn${on ? ' is-dark' : ''}`} onClick={toggle} aria-pressed={on}>
-      <span className={`crm-terms-mic${on ? ' is-on' : ''}`} aria-hidden />
-      {on ? 'Stop listening' : 'Speak instead of typing'}
-    </button>
-  )
-}
-
-/** "What does this mean?": plain English, an example, then the exact words that print. */
-function Explain({ f, terms, open: startOpen }: { f: TermField; terms: Terms; open: boolean }) {
-  const [open, setOpen] = useState(startOpen)
-  const [legal, setLegal] = useState(false)
+/** The exact sentence that prints in Schedule A, a tap away: most people never need it. */
+function Wording({ f, terms }: { f: TermField; terms: Terms }) {
+  const [open, setOpen] = useState(false)
   const wording = f.legal(terms)
-  if (!open)
-    return (
-      <button type="button" className="crm-terms-link" onClick={() => setOpen(true)}>
-        <span className="crm-terms-q" aria-hidden>?</span>
-        What does this mean?
-      </button>
-    )
+  /* A written clause already is the contract's wording: showing it twice says nothing. */
+  if (!wording || f.kind === 'longtext') return null
   return (
-    <div className="crm-terms-explain">
-      <p>{f.explain}</p>
-      {f.example && (
-        <p className="crm-terms-example">
-          <b>For example</b> {f.example}
-        </p>
-      )}
-      {wording &&
-        (legal ? (
-          <p className="crm-terms-legal">
-            <b>How it reads in the contract</b> {wording}
-          </p>
-        ) : (
-          <button type="button" className="crm-terms-link" onClick={() => setLegal(true)}>
-            Show how it reads in the contract
-          </button>
-        ))}
-      {!startOpen && (
-        <button type="button" className="crm-terms-link" onClick={() => setOpen(false)}>
-          Close
-        </button>
-      )}
-    </div>
+    <>
+      <button type="button" className="crm-terms-quiet" aria-expanded={open} onClick={() => setOpen((v) => !v)}>
+        {open ? 'Hide contract wording' : 'Contract wording'}
+      </button>
+      {open && <blockquote className="crm-terms-legal">{wording}</blockquote>}
+    </>
   )
 }
 
 function Control({ f, value, onChange, disabled, placeholder }: { f: TermField; value: Terms[TermId] | undefined; onChange: (v: Terms[TermId] | undefined, channel?: 'tap' | 'talk') => void; disabled?: boolean; placeholder?: string }) {
   if (f.kind === 'choice')
     return (
-      <div className={`crm-terms-choices${f.lane === 'talk' ? ' is-stacked' : ''}`} role="radiogroup" aria-label={f.prompt}>
+      <div className={`crm-terms-choices${wide(f) ? ' is-stacked' : (f.options ?? []).length > 2 ? ' is-many' : ''}`} role="radiogroup" aria-label={f.prompt}>
         {f.options!.map((o) => (
           <button type="button" key={o.id} role="radio" aria-checked={value === o.id} className={value === o.id ? 'is-on' : undefined} disabled={disabled} onClick={() => onChange(o.id as Terms[TermId])}>
             {o.label}
@@ -205,21 +148,36 @@ function Control({ f, value, onChange, disabled, placeholder }: { f: TermField; 
       </div>
     )
   if (f.kind === 'text')
-    return <input type="text" value={String(value ?? '')} disabled={disabled} placeholder={placeholder} aria-label={f.prompt} maxLength={80} onChange={(e) => onChange(e.target.value)} />
+    return <input type="text" className="crm-terms-text" value={String(value ?? '')} disabled={disabled} placeholder={placeholder} aria-label={f.prompt} maxLength={80} onChange={(e) => onChange(e.target.value)} />
   if (f.kind === 'longtext')
-    return (
-      <div className="crm-terms-talk">
-        <textarea rows={5} value={String(value ?? '')} disabled={disabled} placeholder={placeholder} aria-label={f.prompt} maxLength={1200} onChange={(e) => onChange(e.target.value, 'tap')} />
-        {!disabled && <Dictate onText={(t) => onChange(`${String(value ?? '').trim()} ${t}`.trim(), 'talk')} />}
-      </div>
-    )
+    return <AutoText value={String(value ?? '')} disabled={disabled} placeholder={placeholder} label={f.prompt} onChange={(v) => onChange(v, 'tap')} />
   return <NumberInput f={f} value={value as number | undefined} disabled={disabled} placeholder={placeholder} onChange={(v) => onChange(v)} />
 }
 
+/** A clause: grows with what is written instead of opening as a large empty box. */
+function AutoText({ value, onChange, disabled, placeholder, label }: { value: string; onChange: (v: string) => void; disabled?: boolean; placeholder?: string; label: string }) {
+  const ref = useRef<HTMLTextAreaElement>(null)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    el.style.height = 'auto'
+    el.style.height = `${el.scrollHeight + 2}px`
+  }, [value])
+  return <textarea ref={ref} className="crm-terms-clause" rows={2} value={value} disabled={disabled} placeholder={placeholder} aria-label={label} maxLength={1200} onChange={(e) => onChange(e.target.value)} />
+}
+
+/** Clauses and long choices take the full width under their question; figures sit beside it. */
+const wide = (f: TermField) => {
+  if (f.kind === 'longtext') return true
+  if (f.kind !== 'choice') return false
+  const labels = (f.options ?? []).map((o) => o.label.length)
+  return labels.some((n) => n > 30) || labels.reduce((a, n) => a + n, 0) > 48
+}
+
 /*
-  ONE QUESTION. Glenn fills this in himself, so the card says only what he needs: the question, what it
-  means (open for the clauses, a tap away for the figures), the answer, and whether it still needs his
-  OK. "Looks right" confirms an answer nobody had agreed; changing it confirms it too.
+  ONE QUESTION, as a row in its chapter's list. Glenn fills this in himself, so it says only what he needs:
+  the question, what it means, an example, the answer, and, if nobody has agreed it yet, a yellow dot and a
+  Confirm. Changing the answer confirms it too. The contract's exact sentence is one tap away.
 */
 function Question({
   f,
@@ -240,25 +198,31 @@ function Question({
 }) {
   const preview = f.preview && !problem ? f.preview(terms) : ''
   return (
-    <div className={`crm-terms-card${confirmed ? '' : ' is-unchecked'}`} id={`term-${f.id}`}>
-      <div className="crm-terms-card-head">
-        <h3>{f.prompt}</h3>
-        <span className={`crm-terms-state${confirmed ? ' is-ok' : ''}`}>{confirmed ? (f.settled ? 'Agreed' : 'Checked') : 'Needs your OK'}</span>
+    <div className={`crm-terms-row${wide(f) ? ' is-wide' : ''}${confirmed ? '' : ' is-open'}`} id={`term-${f.id}`}>
+      <div className="crm-terms-label">
+        <h3>
+          {!confirmed && <span className="crm-terms-dot" title="Needs your OK" />}
+          {f.prompt}
+        </h3>
+        <p className="crm-terms-hint">
+          {f.explain}
+          {f.example && <span className="crm-terms-eg"> For example: {f.example}</span>}
+        </p>
+        <Wording f={f} terms={terms} />
       </div>
-      {f.lane === 'talk' && <Explain f={f} terms={terms} open />}
-      <Control f={f} value={terms[f.id]} onChange={onChange} disabled={disabled} />
-      {problem && <p className="crm-terms-problem" role="alert">{problem}</p>}
-      {preview && <p className="crm-terms-preview">{preview}</p>}
-      <div className="crm-terms-foot">
-        {f.lane === 'tap' && <Explain f={f} terms={terms} open={false} />}
-        {!confirmed && onConfirm && (
-          <button type="button" className="crm-btn crm-terms-ok" onClick={onConfirm} disabled={!!problem}>
-            <Icon name="check" size={16} stroke={2.6} />
-            Looks right
+      <div className="crm-terms-answer">
+        <Control f={f} value={terms[f.id]} onChange={onChange} disabled={disabled} />
+        {problem && <p className="crm-terms-problem" role="alert">{problem}</p>}
+        {preview && <p className="crm-terms-preview">{preview}</p>}
+        {!confirmed && onConfirm ? (
+          <button type="button" className="crm-terms-confirm" onClick={onConfirm} disabled={!!problem}>
+            <Icon name="check" size={15} stroke={2.6} />
+            Confirm
           </button>
-        )}
+        ) : !confirmed ? (
+          <span className="crm-terms-state">Needs your OK</span>
+        ) : null}
       </div>
-      {f.source && <p className="crm-terms-source">{f.source}</p>}
     </div>
   )
 }
@@ -417,7 +381,8 @@ export function AffiliateTerms() {
 
   const local = check(terms, state.draft.acknowledged)
   const idx = CHAPTERS.findIndex((c) => c.id === chapter)
-  const left = CHAPTERS.slice(idx).reduce((n, c) => n + c.minutes, 0)
+  const shown = FIELDS.filter((f) => isShown(f, terms)).length
+  const openIn = (id: string) => local.unsettled.filter((x) => FIELDS_BY_ID[x].chapter === id).length
   const questions = FIELDS.filter((f) => f.chapter === chapter && isShown(f, terms))
   const hard = local.flags.filter((f) => f.severity === 'hard')
   const soft = local.flags.filter((f) => f.severity === 'soft')
@@ -439,21 +404,25 @@ export function AffiliateTerms() {
         Affiliates
       </a>
       <PageTitle
-        title="Affiliate money terms"
-        sub="What affiliates pay and earn, as it prints on Schedule A of their agreement. Go through each answer: change it if it is wrong, or tap Looks right. Answers save as you go. Nothing is official until you press Publish on the last page."
+        title="Money terms"
+        sub="What affiliates pay and earn. Check each answer: it saves as you go, and nothing is official until you publish on the last step."
         actions={
           <a className="crm-btn" href="/api/crm/affiliate-terms/schedule.pdf" target="_blank" rel="noreferrer">
             <Icon name="file" size={16} />
-            See it as a PDF
+            PDF
           </a>
         }
       />
-      <p className="crm-terms-status">
-        {state.published ? `Version ${state.published.number} published ${dateTime(state.published.createdAt)}.` : 'Not published yet.'}{' '}
-        {state.published && (state.unpublishedChanges ? 'Some answers below have changed since then and are not published.' : 'The answers below match it.')}{' '}
-        {local.unsettled.length > 0 && `${local.unsettled.length} ${local.unsettled.length === 1 ? 'answer needs' : 'answers need'} your OK.`}{' '}
-        <span className="crm-quiet">{unsaved ? 'Saving…' : state.draft.updatedAt ? `Saved ${dateTime(state.draft.updatedAt)}.` : ''}</span>
-      </p>
+      <div className="crm-terms-progress">
+        <div className="crm-terms-bar" aria-hidden>
+          <span style={{ width: `${shown ? Math.round(((shown - local.unsettled.length) / shown) * 100) : 100}%` }} />
+        </div>
+        <p>
+          <b>{local.unsettled.length ? `${local.unsettled.length} to confirm` : 'Everything confirmed'}</b>
+          <span>{state.published ? `Version ${state.published.number} published ${dateTime(state.published.createdAt)}${state.unpublishedChanges ? ', with changes since' : ''}` : 'Not published yet'}</span>
+          <span className="crm-terms-saved">{unsaved ? 'Saving…' : state.draft.updatedAt ? `Saved ${dateTime(state.draft.updatedAt)}` : ''}</span>
+        </p>
+      </div>
       {!admin && <p className="crm-aff-notice">Only an admin can change the terms.</p>}
       {notice && (
         <p className="crm-aff-notice" role="status">
@@ -461,24 +430,25 @@ export function AffiliateTerms() {
         </p>
       )}
 
-      <nav className="crm-terms-chapters" aria-label="Chapters">
-        {CHAPTERS.map((c, i) => {
-          const n = c.id === 'review' ? hard.length + soft.length + problems.length : 0
+      <nav className="crm-terms-chapters" aria-label="Steps">
+        {CHAPTERS.map((c) => {
+          const n = c.id === 'review' ? hard.length + soft.length + problems.length : openIn(c.id)
           return (
             <button type="button" key={c.id} className={c.id === chapter ? 'is-on' : undefined} aria-current={c.id === chapter ? 'step' : undefined} onClick={() => go(c.id)}>
-              <span>{i + 1}</span>
               {c.title}
-              {n > 0 && <em>{n}</em>}
+              {n > 0 && <em className={c.id === 'review' ? 'is-red' : undefined} aria-label={`${n} to check`}>{n}</em>}
             </button>
           )
         })}
       </nav>
-      <p className="crm-note is-quiet">
-        {CHAPTERS[idx].blurb} Chapter {idx + 1} of {CHAPTERS.length}, about {Math.max(1, Math.round(left))} min left.
-      </p>
+      <header className="crm-terms-step">
+        <h2>{CHAPTERS[idx].title}</h2>
+        <p>{CHAPTERS[idx].blurb}</p>
+      </header>
 
       {chapter !== 'review' ? (
         <>
+          <div className="crm-terms-list">
           {questions.map((f) => (
             <Question
               key={f.id}
@@ -491,6 +461,7 @@ export function AffiliateTerms() {
               onConfirm={admin && !unsaved ? () => void act('/api/crm/affiliate-terms/confirm', { field: f.id }) : undefined}
             />
           ))}
+          </div>
           <div className="crm-terms-next">
             {idx > 0 && (
               <button type="button" className="crm-btn" onClick={() => go(CHAPTERS[idx - 1].id)}>

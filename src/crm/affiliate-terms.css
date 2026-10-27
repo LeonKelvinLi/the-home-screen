@@ -7,20 +7,53 @@
 .crm-terms {
   gap: 18px;
 }
-.crm-terms-status {
-  padding: 0 4px;
+
+/* --------------------------------------------------------------- progress */
+
+.crm-terms-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 2px;
+}
+.crm-terms-bar {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--fill);
+}
+.crm-terms-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--ink);
+  transition: width 0.3s ease;
+}
+.crm-terms-progress p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.crm-terms-progress b {
+  color: var(--ink);
   font-size: 15px;
-  color: var(--ink-2);
+}
+.crm-terms-saved {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
 }
 
-/* ------------------------------------------------------------- chapters */
+/* ----------------------------------------------------------------- steps */
 
+/* Plain tabs on a hairline: the step you are on is underlined, a yellow count says what is left in each. */
 .crm-terms-chapters {
   display: flex;
-  gap: 8px;
+  gap: 22px;
   min-width: 0;
-  margin: 0 -2px;
-  padding: 2px;
+  border-bottom: 1px solid var(--line);
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
@@ -32,297 +65,304 @@
   flex: none;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  min-height: 40px;
-  padding: 0 14px 0 6px;
+  gap: 7px;
+  min-height: 44px;
+  margin-bottom: -1px;
+  padding: 0;
   border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.crm-terms-chapters button:hover {
+  color: var(--ink);
+}
+.crm-terms-chapters button.is-on {
+  border-bottom-color: var(--ink);
+  color: var(--ink);
+}
+.crm-terms-chapters em {
+  min-width: 19px;
+  height: 19px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--yellow);
+  color: #141416;
+  font-size: 11.5px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.crm-terms-chapters em.is-red {
+  background: var(--red-soft);
+  color: var(--red);
+}
+
+.crm-terms-step {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 2px 0;
+}
+.crm-terms-step h2 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.crm-terms-step p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* ------------------------------------------------------------- questions */
+
+/* One white list per step; each question a row on a hairline, the answer beside it. */
+.crm-terms-list {
+  padding: 0 22px;
+  border-radius: 18px;
+  background: var(--card);
+}
+.crm-terms-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+  grid-template-areas: 'label answer';
+  column-gap: 40px;
+  row-gap: 14px;
+  padding: 22px 0;
+  scroll-margin: 90px 0;
+}
+.crm-terms-row + .crm-terms-row {
+  border-top: 1px solid var(--line);
+}
+.crm-terms-row.is-wide {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: 'label' 'answer';
+}
+.crm-terms-label {
+  grid-area: label;
+  min-width: 0;
+}
+.crm-terms-label h3 {
+  position: relative;
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+/* Needs Glenn's OK: one small mark, not a badge. */
+.crm-terms-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--yellow);
+  box-shadow: 0 0 0 3px var(--yellow-soft);
+  /* Hung in the margin so the question lines up with its help text. */
+  position: absolute;
+  top: 0.5em;
+  left: -16px;
+}
+.crm-terms-hint {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.crm-terms-eg {
+  color: var(--ink-2);
+}
+.crm-terms-answer {
+  grid-area: answer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.crm-terms-row:not(.is-wide) .crm-terms-answer {
+  align-items: flex-end;
+}
+.crm-terms-row:not(.is-wide) .crm-terms-preview,
+.crm-terms-row:not(.is-wide) .crm-terms-problem {
+  text-align: right;
+}
+.crm .crm-terms-quiet {
+  min-height: 0;
+  margin-top: 6px;
+  padding: 2px 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--line-2);
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.crm .crm-terms-quiet:hover {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
+.crm .crm-terms-confirm {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  margin-top: 4px;
+  padding: 0 14px;
+  border: 1px solid var(--line-2);
   border-radius: 999px;
   background: var(--card);
   color: var(--ink);
   font-family: var(--font);
   font-size: 14px;
   font-weight: 600;
-  white-space: nowrap;
   cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
 }
-.crm-terms-chapters button > span {
-  display: inline-grid;
-  place-items: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 999px;
-  background: var(--fill);
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-}
-.crm-terms-chapters em {
-  min-width: 20px;
-  height: 20px;
-  padding: 0 6px;
-  border-radius: 999px;
-  background: var(--red-soft);
-  color: var(--red);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 20px;
-  text-align: center;
-  font-variant-numeric: tabular-nums;
-}
-.crm-terms-chapters button.is-on {
-  background: var(--ink);
-  color: var(--inverse);
-}
-.crm-terms-chapters button.is-on > span {
-  background: var(--yellow);
-  color: #141416;
-}
-
-/* ------------------------------------------------------------ questions */
-
-.crm-terms-card {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  min-width: 0;
-  padding: 18px;
-  border-radius: 18px;
-  background: var(--card);
-  scroll-margin: 90px 0;
-}
-/* A yellow edge marks an answer that still needs Glenn's OK, the same as the pill. */
-.crm-terms-card.is-unchecked {
-  box-shadow: inset 4px 0 0 var(--yellow);
-  padding-left: 22px;
-}
-.crm-terms-card-head {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-}
-.crm-terms-card-head h3 {
-  min-width: 0;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.3;
-  overflow-wrap: anywhere;
-}
-.crm-terms-state {
-  flex: none;
-  margin-top: 1px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  background: var(--yellow-soft);
-  color: var(--ink);
-  font-size: 12px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.crm-terms-state.is-ok {
-  background: var(--green-soft);
-  color: var(--green);
-}
-.crm-terms-ok {
-  margin-left: auto;
-}
-.crm-terms-foot {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4px 12px;
-}
-
-/* A figure with its $ / % / pts printed either side. */
-.crm-terms-num {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  max-width: 240px;
-  min-width: 0;
-}
-.crm-terms-num > span {
-  flex: none;
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--ink-2);
-}
-.crm-terms-num input {
-  flex: 1 1 auto;
-  min-width: 0;
-  font-variant-numeric: tabular-nums;
-}
-
-.crm-terms-choices {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  min-width: 0;
-}
-.crm-terms-choices button {
-  display: inline-flex;
-  align-items: center;
-  min-height: 42px;
-  max-width: 100%;
-  padding: 0 16px;
-  border: 1.5px solid var(--line-2);
-  border-radius: 999px;
-  background: var(--card);
-  color: var(--ink);
-  font-family: var(--font);
-  font-size: 15px;
-  font-weight: 600;
-  text-align: left;
-  cursor: pointer;
-  transition: background 0.12s, border-color 0.12s;
-}
-.crm-terms-choices button:hover {
-  background: var(--hover);
-}
-.crm-terms-choices button.is-on {
+.crm .crm-terms-confirm:hover:not(:disabled) {
   border-color: var(--ink);
   background: var(--ink);
   color: var(--inverse);
 }
+.crm .crm-terms-confirm:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.crm-terms-row.is-wide .crm-terms-confirm {
+  align-self: flex-end;
+}
+.crm-terms-state {
+  color: var(--muted);
+  font-size: 13px;
+}
+.crm-terms-legal {
+  margin: 8px 0 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--yellow);
+  border-radius: 0 10px 10px 0;
+  background: var(--paper);
+  color: var(--ink-2);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+/* A figure with its $ / % / pts either side, sized to the figure rather than the row. */
+.crm-terms-num {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 180px;
+  min-width: 0;
+}
+.crm-terms-num > span {
+  flex: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.crm .crm-terms-num input {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 42px;
+  font-weight: 600;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.crm .crm-terms-text {
+  min-height: 42px;
+}
+.crm .crm-terms-clause {
+  min-height: 0;
+  padding: 12px 14px;
+  resize: none;
+  overflow: hidden;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Two or three short answers: a segmented control. */
+.crm-terms-choices {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  max-width: 100%;
+  padding: 3px;
+  border-radius: 12px;
+  background: var(--fill);
+}
+.crm-terms-choices button {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 9px;
+  background: none;
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.crm-terms-choices button:hover:not(:disabled) {
+  color: var(--ink);
+}
+.crm-terms-choices button.is-on {
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
 .crm-terms-choices button:disabled {
   cursor: default;
-  opacity: 0.55;
 }
-.crm-terms-choices button.is-on:disabled {
-  opacity: 0.8;
-}
+/* Longer answers: a list to pick one from. */
 .crm-terms-choices.is-stacked {
+  display: flex;
   flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  background: none;
 }
 .crm-terms-choices.is-stacked button {
   width: 100%;
   min-height: 48px;
   padding: 11px 14px;
-  border-radius: 14px;
+  border: 1.5px solid var(--line-2);
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--ink);
+  font-size: 15px;
   line-height: 1.35;
+  text-align: left;
   white-space: normal;
   overflow-wrap: anywhere;
 }
-
-.crm-terms-talk {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  min-width: 0;
-}
-.crm-terms-talk .crm-btn {
-  align-self: flex-start;
-}
-
-.crm-terms-mic {
-  flex: none;
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: currentColor;
-  opacity: 0.45;
-}
-.crm-terms-mic.is-on {
-  background: var(--red-fill);
-  opacity: 1;
-  animation: crm-terms-pulse 1.2s ease-out infinite;
-}
-@keyframes crm-terms-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.6);
-  }
-  100% {
-    box-shadow: 0 0 0 8px rgba(255, 59, 48, 0);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .crm-terms-mic.is-on {
-    animation: none;
-  }
-}
-
-/* "What does this mean?" */
-.crm-terms-link {
-  display: inline-flex;
-  align-items: center;
-  align-self: flex-start;
-  gap: 6px;
-  min-height: 36px;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--blue);
-  font-family: var(--font);
-  font-size: 14px;
-  font-weight: 600;
-  text-align: left;
-  cursor: pointer;
-}
-.crm-terms-q {
-  display: inline-grid;
-  place-items: center;
-  flex: none;
-  width: 18px;
-  height: 18px;
-  border: 1.5px solid currentColor;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 800;
-  line-height: 1;
-}
-.crm-terms-explain {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-width: 0;
-  padding: 12px 14px;
-  border-radius: 14px;
-  background: var(--fill);
-  color: var(--ink-2);
-  font-size: 15px;
-  overflow-wrap: anywhere;
-}
-.crm-terms-example b,
-.crm-terms-legal b {
-  display: block;
-  margin-bottom: 2px;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.crm-terms-legal {
-  padding-left: 10px;
-  border-left: 3px solid var(--line-2);
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 14px;
-  line-height: 1.5;
-}
-.crm-terms-legal b {
-  font-family: var(--font);
+.crm-terms-choices.is-stacked button.is-on {
+  border-color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--ink);
 }
 
 .crm-terms-preview {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
   font-variant-numeric: tabular-nums;
   overflow-wrap: anywhere;
 }
 .crm-terms-problem {
   color: var(--red);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
-  overflow-wrap: anywhere;
-}
-.crm-terms-source {
-  min-width: 0;
-  color: var(--muted);
-  font-size: 12.5px;
-  line-height: 1.4;
   overflow-wrap: anywhere;
 }
 
@@ -532,18 +572,45 @@
 /* ----------------------------------------------------------------- phone */
 
 @media (max-width: 599px) {
-  .crm-terms-card {
-    padding: 16px;
+  .crm-terms-list {
+    padding: 0 16px 0 20px;
   }
-  .crm-terms-card.is-unchecked {
-    padding-left: 20px;
+  .crm-terms-dot {
+    left: -13px;
   }
-  .crm-terms-card-head {
+  .crm-terms-row {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'label' 'answer';
+    row-gap: 12px;
+    padding: 18px 0;
+  }
+  .crm .crm-terms-confirm {
+    align-self: flex-start;
+  }
+  /* Three or more short answers stack on a phone rather than wrap unevenly. */
+  .crm-terms-choices.is-many {
+    display: flex;
     flex-direction: column;
-    gap: 6px;
+    width: 100%;
+  }
+  .crm-terms-choices.is-many button {
+    text-align: left;
+  }
+  .crm-terms-row:not(.is-wide) .crm-terms-answer {
+    align-items: stretch;
+  }
+  .crm-terms-row:not(.is-wide) .crm-terms-preview,
+  .crm-terms-row:not(.is-wide) .crm-terms-problem {
+    text-align: left;
   }
   .crm-terms-num {
-    max-width: none;
+    max-width: 200px;
+  }
+  .crm .crm-terms-num input {
+    text-align: left;
+  }
+  .crm-terms-saved {
+    margin-left: 0;
   }
   .crm-terms-next .crm-btn {
     flex: 1 1 auto;
