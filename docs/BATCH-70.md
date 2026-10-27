@@ -13,3 +13,7 @@ Glenn's 10:13 pm send of 26 October, Innena's Kitchen, read off the Mac's Messag
 - `npm run build`; the data audit (0 errors).
 - Seat diff against the last release: 2 additions; nothing moved.
 - `tools/audit-batch70.mjs` (9 checks) passes on a local build.
+
+## Live
+
+Production release `0e8f0f8`, live by 4:38 am on 27 October 2026. `BASE=https://beastypages.com node tools/audit-batch70.mjs` passed all 9 checks against the live site.
