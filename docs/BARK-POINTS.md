@@ -20,6 +20,10 @@ Leon, 26 October 2026: "paying the $60 opens the /join paperwork, points credit 
 - **Members** (`src/apps/MembersApp.tsx`, `RecruiterCard`): the paperwork step under the recruiter status.
 - **CRM** (`src/crm/bark.tsx`): on an affiliate's page, their balance, open cash-out (Mark paid / Decline), businesses with "Paid month N", and every credit with Remove. On the Affiliates list, the cash-outs still to pay.
 
+## Stripe
+
+The webhook `beastypages-memberships` has listened to `invoice.paid`, `charge.refunded` and `charge.dispute.created` since 26 October 2026, about 6:30 pm, along with its four membership events (seven in all, checked in the dashboard after saving). Adding them did not change the signing secret. Live: `f608b5a`.
+
 ## Proof
 
 `tools/audit-bark.mjs`: 70 checks against a local server with signed local webhooks and made-up prices, no Stripe key, no real money, including the phone and CRM screens (`.verify/bark-*.png`). `audit-membership-manage.mjs`, `audit-affiliate.mjs` and `audit-affiliate-terms.ts` (140) still pass. `audit-onboarding.mjs` times out at the test-mode signing step, on the last pushed commit too, so that failure predates this.
