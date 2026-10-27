@@ -16,3 +16,7 @@ Instagram stories need a login, so yt-dlp could not get it. In Leon's signed-in 
 - `npm run build`; the data audit (0 errors).
 - Seat diff against the last release: 3 additions (San Jose More services 4, Newark More goods 3, AYCE 13); nothing moved.
 - `tools/audit-batch71.mjs` (25 checks) passes on a local build.
+
+## Live
+
+Production release `1e000b8`, live by 7:59 am on 27 October 2026. `BASE=https://beastypages.com node tools/audit-batch71.mjs` passed all 25 checks against the live site.
