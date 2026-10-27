@@ -21,6 +21,8 @@ What the app does with them (`tools/audit-membership-manage.mjs`, local, no key 
 - The recruiter upgrade is its own subscription: `client_reference_id=rc_<member>`, pending until paid, Pause/Resume on the Members page (new referrals stop counting; the $60 continues until cancelled in the portal), and its cancellation never touches the pass, nor the pass's the upgrade.
 - An empty `STRIPE_SECRET_KEY` in the environment used to make every webhook fail; fixed.
 
+**Wired, 26 October 5:29 pm.** Render has all eight values (Leon pasted the signing secret himself); the old `STRIPE_PAYMENT_LINK_PASS`/`_DIAMOND`, which pointed at the August BEASTY account's links, were replaced. `https://beastypages.com/api/stripe/webhook` is mounted and refuses an unsigned post ("Bad signature"). Stripe has no test event in live mode, so the first real checkout is the proof that the secret matches: its delivery shows in the webhook's "Event deliveries" tab. The three checkout pages were opened (not paid) and show $29.99, $39.99 and $60.00 a month with a promo-code field.
+
 The test-mode objects below (the August account) are history.
 
 **The account cannot take money yet, and no code change will fix that.**
