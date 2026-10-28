@@ -9379,6 +9379,22 @@ textarea {
 }
 
 /*
+  THE FIRST REEL'S CAPTION AND RAIL, ON IPHONE. Glenn, 27 Oct: "Slight glitch
+  with the 1st reel. It only shows the share tab. Every reel after that is
+  fine." The first film starts while the window is still zooming open, and iOS
+  Safari then draws the scrim, caption and rail under the film's own layer;
+  reels that start later are drawn correctly. Each overlay gets a layer of its
+  own, so it sits above the film from the first frame (seen in the iOS
+  Simulator: missing before, present after).
+*/
+.reel-scrim,
+.reel-meta,
+.reel-rail,
+.reel-progress {
+  transform: translateZ(0);
+}
+
+/*
   A scrim only at the foot, where the text is. A full-height wash would dim the
   thing somebody opened this to watch.
 */
