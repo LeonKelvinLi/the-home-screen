@@ -542,3 +542,21 @@ Not used: `DelACp9h8Xf` (sent as “Foodie” with One’s Cafe) reviews Big Tac
 | `review-DdQBcwLT8Iy.mp4` | Hotpot Bay, San Francisco | [DdQBcwLT8Iy](https://www.instagram.com/reel/DdQBcwLT8Iy/) | 0s–15s | Glenn, 29 Oct 2026: Clip this video plz / Mediocre; filmed by @martiwantsmore. Original post 13 Sep 2026 (Pacific). |
 | `review-DZbrqbWT98E.mp4` | Hotpot Bay, San Francisco | [DZbrqbWT98E](https://www.instagram.com/reel/DZbrqbWT98E/) | 0s–15s | Glenn, 29 Oct 2026: Clip this video plz / Newbie; filmed by @dchangshangry. Original post 10 Jun 2026 (Pacific). |
 | `review-DXr9m1JEt1A.mp4` | Hotpot Bay, San Francisco | [DXr9m1JEt1A](https://www.instagram.com/reel/DXr9m1JEt1A/) | 10s–25s | Glenn, 29 Oct 2026: Clip this video plz / Heavy Hitter; filmed by @foodandsachi. Excludes later $19.99 offer and review screenshot. Original post 28 Apr 2026 (Pacific). |
+
+<!-- Batch 77, Glenn 29 October 2026 -->
+| `urban-matcha-castro-valley.mp4` | [@urbanmatcha.castrovalley](https://www.instagram.com/reel/DdzzWXtiYsE/) | 27 Sep 2026 | 0–10.82s; Glenn’s Batch 77 Watch/review request. |
+| `review-DcUGJ9NPYjO.mp4` | [@byhillaryn](https://www.instagram.com/reel/DcUGJ9NPYjO/) | 21 Aug 2026 | 0–15s; Glenn’s Batch 77 Watch/review request. |
+| `review-DaqhXYDh5xl.mp4` | [@eatwithsie](https://www.instagram.com/reel/DaqhXYDh5xl/) | 11 Jul 2026 | 0–15s; Glenn’s Batch 77 Watch/review request. |
+| `review-DfFqZBQCj1S.mp4` | [@mukbangyourmama](https://www.instagram.com/reel/DfFqZBQCj1S/) | 29 Oct 2026 | 0–15s; Glenn’s Batch 77 Watch/review request. |
+| `tleafgreen-san-jose.mp4` | [@tleafgreensj](https://www.instagram.com/reel/De3VXvPT9m8/); ends before the dated promotion graphic | 23 Oct 2026 | 0–18s; Glenn’s Batch 77 Watch/review request. |
+| `review-DeahroUhP1L.mp4` | [@aly_eats_cali](https://www.instagram.com/reel/DeahroUhP1L/) | 12 Oct 2026 | 0–15s; Glenn’s Batch 77 Watch/review request. |
+| `review-De059eHyBFq.mp4` | [@feed_happiness_](https://www.instagram.com/reel/De059eHyBFq/) | 22 Oct 2026 | 0–15s; Glenn’s Batch 77 Watch/review request. |
+| `review-DbekpvnJljy.mp4` | [@bestbayareafood](https://www.instagram.com/reel/DbekpvnJljy/) | 31 Jul 2026 | 0–15s; Glenn’s Batch 77 Watch/review request. |
+| `raizes-do-brasil.mp4` | [@raizesdobrasilus](https://www.instagram.com/p/DeznhqSAX8j/) | 22 Oct 2026 | 0–24s; Glenn’s Batch 77 Watch/review request. |
+| `house-of-prime-rib.mp4` | [@your_travel_daddy](https://www.instagram.com/reel/DeeoxAoOLeK/) | 14 Oct 2026 | 0–17.58s; Glenn’s Batch 77 Watch/review request. |
+| `review-C3Gtd_CvrpR.mp4` | [@jacksdiningroom](https://www.instagram.com/reel/C3Gtd_CvrpR/) | 08 Feb 2024 | 0–15s; Glenn’s Batch 77 Watch/review request. |
+| `review-DEeM01jxsBT.mp4` | [@thesnacksensei](https://www.instagram.com/reel/DEeM01jxsBT/) | 05 Jan 2025 | 0–15s; Glenn’s Batch 77 Watch/review request. |
+| `review-Db1zs7kNPv_.mp4` | [@thesauceboss_](https://www.instagram.com/reel/Db1zs7kNPv_/) | 09 Aug 2026 | 28–43s; Glenn’s Batch 77 Watch/review request. |
+| `laughing-monk-nopa-b77.mp4` | [@startingfiresevrywhere](https://www.instagram.com/reel/Def_2PqRcyz/) | 14 Oct 2026 | 0–24s; Glenn’s Batch 77 Watch/review request. |
+| `review-DfFq35OzQqk.mp4` | [@thelaughingmonksf](https://www.instagram.com/reel/DfFq35OzQqk/); review by TikTok @bsgmoments, reposted by the restaurant | 29 Oct 2026 | 0–15s; Glenn’s Batch 77 Watch/review request. |
+| `review-Defo2sWSjXA.mp4` | [@itsslydiia](https://www.instagram.com/reel/Defo2sWSjXA/) | Retained from original Laughing Monk main | Same original excerpt, copied without recutting for Batch 77. |

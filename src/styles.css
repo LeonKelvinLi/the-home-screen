@@ -13804,6 +13804,12 @@ span.top3-add {
   gap: 8px;
   margin-top: 10px;
 }
+.foodie-review-credit {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
 
 .foodie-review-links a,
 .foodie-review-links button {

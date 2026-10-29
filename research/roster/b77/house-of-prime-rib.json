@@ -1,0 +1,55 @@
+{
+  "id": "b_houseofprimerib",
+  "name_exact": "House of Prime Rib",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://houseofprimerib.net/",
+    "https://www.opentable.com/restaurant/profile/1779",
+    "Glenn IMG_8478 mark, IMG_8479 public Instagram contact, IMG_8480 Apple Maps, IMG_8481 own Instagram bio"
+  ],
+  "facts": {
+    "slug": "house-of-prime-rib",
+    "name": "House of Prime Rib",
+    "label": "House of Prime Rib",
+    "cuisine": "Prime rib steakhouse",
+    "color": "#efefef",
+    "icon": "house-of-prime-rib",
+    "prep": 0,
+    "category": "Prime rib steakhouse",
+    "items": [],
+    "tagline": "Prime rib carved tableside from stainless-steel carts in an English-style dining room on Van Ness Avenue.",
+    "site": "https://houseofprimerib.net/",
+    "address": "1906 Van Ness Ave, San Francisco, CA 94109",
+    "phone": "(415) 885-4605",
+    "email": "houseofprimerib@aol.com",
+    "hours": "Mon–Fri 5–10pm; Sat–Sun 4–10pm",
+    "contactOnly": "Their own site describes the cuts and included sides without publishing dinner prices. Reserve a table or call for current prices.",
+    "siteCta": "Reserve a table",
+    "orderUrl": "https://www.opentable.com/house-of-prime-rib-restaurant",
+    "panels": [
+      {
+        "head": "Cuts & included sides",
+        "body": [
+          "Their dinner menu offers the City Cut, House of Prime Rib Cut, English Cut and King Henry VIII Cut, plus a children’s prime rib dinner for ages eight and under and the day’s fresh fish. Ask the restaurant for current prices.",
+          "Prime rib dinners include their salad bowl, mashed potatoes or a baked potato, Yorkshire pudding, creamed spinach and fresh cream of horseradish sauce."
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/house-of-prime-rib.mp4",
+      "poster": "/clips/house-of-prime-rib-poster.webp",
+      "href": "https://www.instagram.com/reel/DeeoxAoOLeK/",
+      "credit": "Filmed by @your_travel_daddy",
+      "platform": "Instagram",
+      "by": "your_travel_daddy"
+    }
+  },
+  "placements": [
+    "san-francisco-goods2-63",
+    "beasty-steakhouse-10"
+  ],
+  "flags": [
+    "Six requested films; Watch plus three Heavy Hitters published. Newbie and Mediocre kept as source links under current four-film cap.",
+    "No prices inferred from reviewers or OpenTable’s historical menu."
+  ]
+}

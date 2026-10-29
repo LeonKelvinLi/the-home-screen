@@ -1857,4 +1857,19 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-steakhouse-9': 'b_theseabyash',
   'san-francisco-goods2-62': 'b_hotpotbay',
 
+  /* Batch 77. Vegan begins with Glenn’s Laughing Monk request and Chef Reina;
+     the restaurant has vegan and non-vegan food, rather than an all-vegan claim. */
+  'castro-valley-goods2-0': 'b_urbanmatchacastrovalley',
+  'beasty-coffee-23': 'b_urbanmatchacastrovalley',
+  'san-jose-goods2-26': 'b_tleafgreensanjose',
+  'beasty-goods2-89': 'b_tleafgreensanjose',
+  'richmond-goods2-3': 'b_raizesdobrasil',
+  'beasty-goods2-90': 'b_raizesdobrasil',
+  'beasty-diner-22': 'b_raizesdobrasil',
+  'san-francisco-goods2-63': 'b_houseofprimerib',
+  'beasty-steakhouse-10': 'b_houseofprimerib',
+  'beasty-cooks-15': 'b_chefreina',
+  'beasty-vegan-0': 'b_laughingmonknopa',
+  'beasty-vegan-1': 'b_chefreina',
+
 }

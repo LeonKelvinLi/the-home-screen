@@ -145,6 +145,9 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
      shop's item, not a breakfast room. */
   { kind: 'diner', heading: 'Breakfast/Diner', about: 'Diners, breakfast and brunch', wall: wall('diner'), test: /\bdiners?\b|breakfast|brunch|pancake house|waffle house/i, not: /burrito|bagel shop|donut|coffee cart/i },
   { kind: 'health', heading: 'Health/Beauty', about: 'Med spas, aesthetics and wellness', wall: wall('health'), test: /med ?spa|medical spa|day spa|aesthetic|botox|injectable|wellness|skin ?care|\biv (therapy|drip)|laser/i, not: /salon|barber|nails?\b|lash|tattoo/i },
+  /* Glenn, 29 Oct 3:46 pm: BEASTY • Vegan, with Laughing Monk’s vegan food.
+     Its mixed menu is seated by hand; type-based fills use vegan/plant-based businesses. */
+  { kind: 'vegan', heading: 'Vegan', about: 'Vegan food and plant-based chefs', wall: wall('vegan'), test: /\bvegan\b|plant[- ]based/i },
 ]
 
 /** Every category page holds his twenty-four. */

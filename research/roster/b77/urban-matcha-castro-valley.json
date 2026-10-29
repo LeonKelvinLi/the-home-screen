@@ -1,0 +1,52 @@
+{
+  "id": "b_urbanmatchacastrovalley",
+  "name_exact": "Urban Matcha — Castro Valley",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "Glenn IMG_8465 (own Instagram bio), IMG_8466 (own mark), IMG_8467 (Apple Maps public phone/address/hours)",
+    "https://www.instagram.com/urbanmatcha.castrovalley/ (bio, posts, Drinks highlight); no own price list/link found.",
+    "https://www.urbanmatchastore.com/ lists Las Vegas locations: not a Castro Valley menu."
+  ],
+  "facts": {
+    "slug": "urban-matcha-castro-valley",
+    "name": "Urban Matcha — Castro Valley",
+    "label": "Urban Matcha",
+    "cuisine": "Matcha cafe",
+    "color": "#9ca48d",
+    "icon": "urban-matcha-castro-valley",
+    "prep": 0,
+    "category": "Matcha cafe",
+    "items": [],
+    "tagline": "Uji matcha drinks and soft serve at the Castro Valley cafe.",
+    "site": "https://www.instagram.com/urbanmatcha.castrovalley/",
+    "needsSite": true,
+    "address": "3311 Castro Valley Blvd, Castro Valley, CA 94546",
+    "phone": "(510) 274-5001",
+    "contactOnly": "Their Castro Valley Instagram shows drinks and desserts but no complete priced menu. Ask the cafe for the current menu.",
+    "siteCta": "See their Instagram",
+    "siteNote": "See the Castro Valley cafe’s own Instagram for current drinks and desserts, or call for its menu.",
+    "panels": [
+      {
+        "head": "Drinks & desserts",
+        "body": [
+          "Their own Castro Valley posts show hot matcha latte, coconut water with matcha or ube cloud, Sea Salt Double Matcha and matcha soft serve. Ask the shop for availability and current prices."
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/urban-matcha-castro-valley.mp4",
+      "poster": "/clips/urban-matcha-castro-valley-poster.webp",
+      "href": "https://www.instagram.com/reel/DdzzWXtiYsE/",
+      "credit": "Posted by @urbanmatcha.castrovalley",
+      "platform": "Instagram"
+    }
+  },
+  "placements": [
+    "castro-valley-goods2-0",
+    "beasty-coffee-23"
+  ],
+  "flags": [
+    "Complete priced menu held. No Castro Valley prices copied from Las Vegas or third-party delivery.",
+    "Hours held: Glenn’s Maps screenshot differs from current third-party listings; own profile publishes no schedule. Public phone from Glenn’s map screenshot."
+  ]
+}

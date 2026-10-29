@@ -234,6 +234,34 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'dchangshangry', place: 'Hotpot Bay', city: 'San Francisco', brand: 'b_hotpotbay', reel: reel('DZbrqbWT98E'), clip: true },
   { by: 'foodandsachi', place: 'Hotpot Bay', city: 'San Francisco', brand: 'b_hotpotbay', reel: reel('DXr9m1JEt1A'), clip: true },
 
+  /* Batch 77: Glenn’s tags kept as provenance; they are not public ratings. */
+  // Newbie / Foodie
+  {"by": "byhillaryn", "place": "Urban Matcha — Castro Valley", "city": "Castro Valley", "brand": "b_urbanmatchacastrovalley", "reel": "https://www.instagram.com/reel/DcUGJ9NPYjO/", "clip": true},
+  // Heavy Hitter
+  {"by": "eatwithsie", "place": "Urban Matcha — Castro Valley", "city": "Castro Valley", "brand": "b_urbanmatchacastrovalley", "reel": "https://www.instagram.com/reel/DaqhXYDh5xl/", "clip": true},
+  // Mediocre
+  {"by": "mukbangyourmama", "place": "Urban Matcha — Castro Valley", "city": "Castro Valley", "brand": "b_urbanmatchacastrovalley", "reel": "https://www.instagram.com/reel/DfFqZBQCj1S/", "clip": true},
+  // Newbie
+  {"by": "aly_eats_cali", "place": "TLeafGreen — San Jose", "city": "San Jose", "brand": "b_tleafgreensanjose", "reel": "https://www.instagram.com/reel/DeahroUhP1L/", "clip": true},
+  // Heavy Hitter
+  {"by": "feed_happiness_", "place": "TLeafGreen — San Jose", "city": "San Jose", "brand": "b_tleafgreensanjose", "reel": "https://www.instagram.com/reel/De059eHyBFq/", "clip": true},
+  // Mediocre
+  {"by": "bestbayareafood", "place": "TLeafGreen — San Jose", "city": "San Jose", "brand": "b_tleafgreensanjose", "reel": "https://www.instagram.com/reel/DbekpvnJljy/", "clip": true},
+  // Newbie; source only, four-film cap
+  {"by": "bayarea_fooddreamz", "place": "House of Prime Rib", "city": "San Francisco", "brand": "b_houseofprimerib", "reel": "https://www.instagram.com/reel/DfGBxqWyt_w/"},
+  // Heavy Hitter
+  {"by": "jacksdiningroom", "place": "House of Prime Rib", "city": "San Francisco", "brand": "b_houseofprimerib", "reel": "https://www.instagram.com/reel/C3Gtd_CvrpR/", "clip": true},
+  // Mediocre; source only, four-film cap
+  {"by": "bayarea.foodies", "place": "House of Prime Rib", "city": "San Francisco", "brand": "b_houseofprimerib", "reel": "https://www.instagram.com/reel/CwwEcLKJJ9J/"},
+  // Heavy Hitter #2
+  {"by": "thesnacksensei", "place": "House of Prime Rib", "city": "San Francisco", "brand": "b_houseofprimerib", "reel": "https://www.instagram.com/reel/DEeM01jxsBT/", "clip": true},
+  // Heavy Hitter #3
+  {"by": "thesauceboss_", "place": "House of Prime Rib", "city": "San Francisco", "brand": "b_houseofprimerib", "reel": "https://www.instagram.com/reel/Db1zs7kNPv_/", "clip": true},
+  // Original main retained
+  {"by": "itsslydiia", "place": "Laughing Monk NOPA", "city": "San Francisco", "brand": "b_laughingmonknopa", "reel": "https://www.instagram.com/reel/Defo2sWSjXA/", "clip": true},
+  // Newbie; TikTok @bsgmoments repost
+  {"by": "thelaughingmonksf", "place": "Laughing Monk NOPA", "city": "San Francisco", "brand": "b_laughingmonknopa", "reel": "https://www.instagram.com/reel/DfFq35OzQqk/", "clip": true, "credit": "Review by @bsgmoments (TikTok); posted by @thelaughingmonksf"},
+
 ]
 
 /*

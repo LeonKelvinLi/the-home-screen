@@ -1,0 +1,665 @@
+{
+  "id": "b_tleafgreensanjose",
+  "name_exact": "TLeafGreen — San Jose",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://www.tleafgreen.com/",
+    "https://www.tleafgreen.com/%E5%89%AF%E6%9C%AC-store-map-address",
+    "https://pos.chowbus.com/online-ordering/store/TLeafGreen/22963 (Chrome DOM; 88 distinct rows after excluding points duplicates and duplicate samosa; published + prices kept as floors)",
+    "Glenn IMG_8471/8473 contact screenshot, IMG_8472 mark"
+  ],
+  "facts": {
+    "slug": "tleafgreen-san-jose",
+    "name": "TLeafGreen — San Jose",
+    "label": "TLeafGreen",
+    "cuisine": "Burmese kitchen",
+    "color": "#80a923",
+    "icon": "tleafgreen-san-jose",
+    "prep": 0,
+    "category": "Burmese kitchen",
+    "items": [],
+    "tagline": "Burmese tea-leaf salad, fresh bowls and build-your-own plates on Almaden Expressway in South San Jose.",
+    "site": "https://www.tleafgreen.com/",
+    "address": "5353 Almaden Expy #40A, San Jose, CA 95118",
+    "phone": "(408) 389-6388",
+    "email": "sanjose@tleafgreen.com",
+    "sections": [
+      {
+        "name": "Bowls",
+        "items": [
+          [
+            "Mint Jalapeño Chicken",
+            "Minced chicken, sambal chili, mint, garlic, ginger, jalapeños, cilantro, soy sauce, fennel and mustard seed",
+            690,
+            null,
+            "from $6.90"
+          ],
+          [
+            "Black Pepper Chicken",
+            "Chicken, onions, bell peppers, celery, carrots, ginger, garlic, scallions, white wine, black bean and soy sauces",
+            690,
+            null,
+            "from $6.90"
+          ],
+          [
+            "Mango Chicken",
+            "Chicken with soy sauce, white pepper, Thai basil, onions, sambal chili and mango puree",
+            690,
+            null,
+            "from $6.90"
+          ],
+          [
+            "Sesame Chicken",
+            "Lightly fried chicken strips with soy sauce, vinegar, honey and sesame",
+            690,
+            null,
+            "from $6.90"
+          ],
+          [
+            "Teriyaki Chicken",
+            "Chicken thigh, teriyaki, garlic, ginger, vinegar, soy sauce, honey and pineapple juice",
+            690,
+            null,
+            "from $6.90"
+          ],
+          [
+            "Chicken Kebat",
+            "Chicken, onions, tomato, mint, cilantro, jalapeños, turmeric, tamarind, masala and paprika",
+            690,
+            null,
+            "from $6.90"
+          ],
+          [
+            "Basil Dried Chili Beef",
+            "Tri-tip, dried chili, Thai chili, jalapeños, onions, tamarind, black pepper and basil",
+            790,
+            null,
+            "from $7.90"
+          ],
+          [
+            "String Bean Beef",
+            "Tri-tip and string beans with onions, garlic, ginger, jalapeños, dried chilies, soy and hoisin",
+            790,
+            null,
+            "from $7.90"
+          ],
+          [
+            "Burmese Shrimp",
+            "Shrimp with onions, garlic, ginger, jalapeños, dried chilies, gluten-free soy sauce, hoisin and vegetables",
+            790,
+            null,
+            "from $7.90"
+          ],
+          [
+            "Honey Walnut Shrimp",
+            "Lightly fried shrimp in sweet sauce with toasted walnuts and sesame",
+            790,
+            null,
+            "from $7.90"
+          ],
+          [
+            "Eggplant & Tofu Garlic",
+            "Eggplant and tofu, garlic, ginger, scallions, basil, soy sauce and dried chilies",
+            690,
+            null,
+            "from $6.90"
+          ],
+          [
+            "Veggie Tofu Curry",
+            "Kabocha squash, coconut milk, evaporated milk, curry powder, broccoli, carrots, onion, garlic and ginger",
+            690,
+            null,
+            "from $6.90"
+          ],
+          [
+            "Super Broccoli Carrot",
+            "",
+            690,
+            null,
+            "from $6.90"
+          ],
+          [
+            "Burmese Noodles",
+            "",
+            500,
+            null,
+            "from $5.00"
+          ],
+          [
+            "Pineapple Fried Rice",
+            "",
+            500,
+            null,
+            "from $5.00"
+          ],
+          [
+            "Coconut Chicken Curry",
+            "",
+            690,
+            null,
+            "from $6.90"
+          ]
+        ]
+      },
+      {
+        "name": "Combo",
+        "items": [
+          [
+            "Signature Combo",
+            "Tea leaf salad, small dish portion, one samosa and house drink",
+            2395,
+            null,
+            "from $23.95"
+          ],
+          [
+            "Fill-Up Combo",
+            "Single plate, one samosa and medium soda",
+            1595,
+            null,
+            "from $15.95"
+          ]
+        ]
+      },
+      {
+        "name": "Fresh Bowls",
+        "items": [
+          [
+            "Tea Leaf Salad",
+            "Classic Tleaf dressing; romaine, cabbage, jalapeños, lemon, cherry tomatoes, fried garlic, yellow beans, peanuts, sesame and sunflower seeds",
+            1395,
+            null,
+            "from $13.95"
+          ],
+          [
+            "Golden Mango Salad",
+            "Tropical mango dressing; pickled mango, romaine, cucumber, cabbage, red onion, cilantro, fried garlic, yellow bean powder, fried onions and spring mix",
+            1295,
+            null,
+            "from $12.95"
+          ],
+          [
+            "Burmese Chicken Salad",
+            "House blend dressing; chicken, spring mix, romaine, cabbage, cucumber, red onion, cilantro, yellow bean powder, fried wontons, fried garlic, fried onions and sesame",
+            1395,
+            null,
+            "from $13.95"
+          ],
+          [
+            "Ginger Citrus Salad",
+            "Zesty ginger dressing; pickled ginger, romaine, cabbage, tomatoes, jalapeño, cilantro, lemon, nuts mix and spring mix",
+            1295,
+            null,
+            "from $12.95"
+          ],
+          [
+            "Samosa Spice Salad",
+            "Samosa spice dressing; samosa, spring mix, romaine, cabbage, cucumber, jalapeño, red onion, cilantro, fried garlic, yellow bean powder, fried onions, wontons and sesame",
+            1295,
+            null,
+            "from $12.95"
+          ],
+          [
+            "Lychee Garden Salad",
+            "Lychee dressing; romaine, cabbage, tomatoes, pineapple, honey walnut, lemon, red onion, cilantro, fried garlic, fried onions, sesame, sunflower seeds and spring mix",
+            1295,
+            null,
+            "from $12.95"
+          ],
+          [
+            "Savory Noodle Salad",
+            "Noodle dressing; vegan noodles, spring mix, cabbage, cucumber, fried tofu, fried wontons, red onion, cilantro, fried onions and yellow bean powder",
+            1295,
+            null,
+            "from $12.95"
+          ],
+          [
+            "Nan Gyi Thoke (Coconut Chicken Noodle)",
+            "",
+            1395,
+            null,
+            "from $13.95"
+          ]
+        ]
+      },
+      {
+        "name": "Plates",
+        "items": [
+          [
+            "Single Plate",
+            "One entree and two bases; tea leaf or mango salad choice on their menu",
+            1095,
+            null,
+            "from $10.95"
+          ],
+          [
+            "Double Plate",
+            "Two entrees and two bases; tea leaf or mango salad choice on their menu",
+            1295,
+            null,
+            "from $12.95"
+          ],
+          [
+            "Triple Plate",
+            "Three entrees and two bases; tea leaf or mango salad choice on their menu",
+            1495,
+            null,
+            "from $14.95"
+          ],
+          [
+            "Family Feast",
+            "Choose two bases and three entrees or salads",
+            4500,
+            null,
+            "from $45.00"
+          ],
+          [
+            "Little Greens Plate",
+            "Half-and-half side, one entree and one drink",
+            890,
+            null,
+            "from $8.90"
+          ]
+        ]
+      },
+      {
+        "name": "Sides",
+        "items": [
+          [
+            "Jasmine Rice (16 oz)",
+            "",
+            285
+          ],
+          [
+            "Brown Rice (16 oz)",
+            "",
+            285
+          ],
+          [
+            "Samosa (1 piece)",
+            "",
+            285
+          ],
+          [
+            "Palata (4 pieces)",
+            "",
+            285
+          ],
+          [
+            "Yellow Tofu (3 pieces)",
+            "",
+            295
+          ]
+        ]
+      },
+      {
+        "name": "House Beverages",
+        "items": [
+          [
+            "Burmese Milk Tea",
+            "",
+            350
+          ],
+          [
+            "Mango Lassi",
+            "",
+            350
+          ],
+          [
+            "Honey Lemon Ice Tea",
+            "",
+            350
+          ]
+        ]
+      },
+      {
+        "name": "Fountain Drinks",
+        "items": [
+          [
+            "Coke (fountain)",
+            "",
+            230,
+            null,
+            "from $2.30"
+          ],
+          [
+            "Diet Coke (fountain)",
+            "",
+            230,
+            null,
+            "from $2.30"
+          ],
+          [
+            "Coke Zero (fountain)",
+            "",
+            230,
+            null,
+            "from $2.30"
+          ],
+          [
+            "Cherry Coke (fountain)",
+            "",
+            230,
+            null,
+            "from $2.30"
+          ],
+          [
+            "Fanta (fountain)",
+            "",
+            230,
+            null,
+            "from $2.30"
+          ],
+          [
+            "Sprite (fountain)",
+            "",
+            230,
+            null,
+            "from $2.30"
+          ],
+          [
+            "Lemonade (fountain)",
+            "",
+            230,
+            null,
+            "from $2.30"
+          ],
+          [
+            "Root Beer (fountain)",
+            "",
+            230,
+            null,
+            "from $2.30"
+          ]
+        ]
+      },
+      {
+        "name": "Bottle Drinks",
+        "items": [
+          [
+            "Dasani Water (bottle)",
+            "",
+            299
+          ],
+          [
+            "Diet Coke (bottle)",
+            "",
+            299
+          ],
+          [
+            "Coca-Cola (bottle)",
+            "",
+            299
+          ],
+          [
+            "Sprite (bottle)",
+            "",
+            299
+          ],
+          [
+            "San Pellegrino Water (bottle)",
+            "",
+            299
+          ],
+          [
+            "Celsius Kiwi Guava (bottle)",
+            "",
+            349
+          ],
+          [
+            "Celsius Orange (bottle)",
+            "",
+            349
+          ],
+          [
+            "Celsius Cherry Cola (bottle)",
+            "",
+            349
+          ],
+          [
+            "Bodyarmor Strawberry Kiwi (bottle)",
+            "",
+            349
+          ],
+          [
+            "Bodyarmor Tropical Punch (bottle)",
+            "",
+            349
+          ]
+        ]
+      },
+      {
+        "name": "House Dressings",
+        "items": [
+          [
+            "Tleaf House Dressing",
+            "",
+            495
+          ],
+          [
+            "House Blend Dressing",
+            "",
+            395
+          ],
+          [
+            "Golden Mango Dressing",
+            "",
+            395
+          ],
+          [
+            "Ginger Citrus Dressing",
+            "",
+            395
+          ],
+          [
+            "Samosa Spice Dressing",
+            "",
+            395
+          ],
+          [
+            "Lychee Garden Dressing",
+            "",
+            395
+          ],
+          [
+            "Sweet Chili Lemon Dressing",
+            "",
+            395
+          ],
+          [
+            "Savory Noodle Dressing",
+            "",
+            395
+          ]
+        ]
+      },
+      {
+        "name": "Catering Trays",
+        "items": [
+          [
+            "Tea Leaf Salad (Vegan & GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            5500,
+            null,
+            "from $55.00"
+          ],
+          [
+            "Golden Mango Salad (Vegan & GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            5000,
+            null,
+            "from $50.00"
+          ],
+          [
+            "Burmese Chicken Salad (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            5500,
+            null,
+            "from $55.00"
+          ],
+          [
+            "Ginger Citrus Salad (Vegan) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            5000,
+            null,
+            "from $50.00"
+          ],
+          [
+            "Samosa Spice Salad (Vegetarian) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            5000,
+            null,
+            "from $50.00"
+          ],
+          [
+            "Lychee Garden Salad (Vegetarian & GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            5000,
+            null,
+            "from $50.00"
+          ],
+          [
+            "Savory Noodle Salad (Vegan) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            6500,
+            null,
+            "from $65.00"
+          ],
+          [
+            "Mint Jalapeño Chicken (Halal & GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            6500,
+            null,
+            "from $65.00"
+          ],
+          [
+            "Black Pepper Chicken (Halal & GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            6500,
+            null,
+            "from $65.00"
+          ],
+          [
+            "Mango Chicken (Halal & GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            6500,
+            null,
+            "from $65.00"
+          ],
+          [
+            "Sesame Chicken (Halal & GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            6500,
+            null,
+            "from $65.00"
+          ],
+          [
+            "Chicken Kebat (Halal & GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            6500,
+            null,
+            "from $65.00"
+          ],
+          [
+            "Teriyaki Chicken (Halal & GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            7000,
+            null,
+            "from $70.00"
+          ],
+          [
+            "Basil Dried Chili Beef (Halal & GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            7000,
+            null,
+            "from $70.00"
+          ],
+          [
+            "String Bean Beef (Halal & GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            7000,
+            null,
+            "from $70.00"
+          ],
+          [
+            "Burmese Shrimp (GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            7000,
+            null,
+            "from $70.00"
+          ],
+          [
+            "Honey Walnut Shrimp (GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            6000,
+            null,
+            "from $60.00"
+          ],
+          [
+            "Eggplant & Garlic (GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            6000,
+            null,
+            "from $60.00"
+          ],
+          [
+            "Veggie Tofu Curry (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            6000,
+            null,
+            "from $60.00"
+          ],
+          [
+            "Super Broccoli Carrot (GF) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            6000,
+            null,
+            "from $60.00"
+          ],
+          [
+            "Jasmine Rice (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            2500,
+            null,
+            "from $25.00"
+          ],
+          [
+            "Pineapple Fried Rice (Vegetarian) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            5000,
+            null,
+            "from $50.00"
+          ],
+          [
+            "Burmese Fried Noodle (Vegetarian) (catering tray)",
+            "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+            5000,
+            null,
+            "from $50.00"
+          ]
+        ]
+      }
+    ],
+    "orderUrl": "https://pos.chowbus.com/online-ordering/store/TLeafGreen/22963",
+    "siteCta": "Order on their menu",
+    "quoteOnly": "Published menu prices; “from” means sizes or choices can change the total. Choose your options on their own ordering page.",
+    "siteNote": "Prices are from the Chowbus menu linked by their website, checked 29 October. Catering prices are starting prices, not a full-tray quote. Ask the restaurant for current dining hours.",
+    "clip": {
+      "src": "/clips/tleafgreen-san-jose.mp4",
+      "poster": "/clips/tleafgreen-san-jose-poster.webp",
+      "href": "https://www.instagram.com/reel/De3VXvPT9m8/",
+      "credit": "Posted by @tleafgreensj",
+      "platform": "Instagram"
+    }
+  },
+  "placements": [
+    "san-jose-goods2-26",
+    "beasty-goods2-89"
+  ],
+  "flags": [
+    "Hours held: screenshot9:30pm, current own site9pm, ordering9:15pm. No schedule inferred.",
+    "Every menu plus sign is a starting price with a visible from label; menu is read-only with own ordering link.",
+    "Mint bowl dialog confirms Small+$0, Medium+$2.60, Large+$5.60. Other complete option schedules not copied; no full-tray price inferred.",
+    "Veggie Tofu Curry contains evaporated milk in its own description: not labeled vegan.",
+    "Own film ends at18s, excluding dated promotion graphic from about21s."
+  ]
+}

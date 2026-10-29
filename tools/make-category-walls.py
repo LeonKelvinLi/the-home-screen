@@ -744,7 +744,21 @@ def m_games(rng):
     return composite(img, over, blur=3)
 
 
+def m_vegan(rng):
+    # Broad leaves with fine veins on forest green; white labels stay readable.
+    img = gradient('#06150c', '#142519')
+    img = glow(img, W * .5, H * .38, 1100, '#4d7c0f', .25)
+    over, d = layer()
+    for x, y, r in [(W*.32,H*.25,230), (W*.72,H*.52,180), (W*.35,H*.78,210)]:
+        d.ellipse((x-r*.6, y-r, x+r*.6, y+r), outline=rgba('#86efac',.21), width=10)
+        d.line((x,y-r*.85,x,y+r*1.2),fill=rgba('#bbf7d0',.23),width=9)
+        for k in (-.4,0,.4):
+            d.line((x-r*.45,y+r*k-r*.25,x,y+r*k,x+r*.45,y+r*k-r*.25),fill=rgba('#86efac',.18),width=7)
+    return composite(img, over, blur=3)
+
+
 MOTIFS = {
+    "vegan": m_vegan,
     "froyo": m_froyo,
     "catering": m_catering,
     "steakhouse": m_steakhouse,

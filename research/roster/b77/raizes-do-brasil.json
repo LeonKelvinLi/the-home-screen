@@ -1,0 +1,364 @@
+{
+  "id": "b_raizesdobrasil",
+  "name_exact": "Raízes do Brasil",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://restaurantraizesdobrasil.com/",
+    "https://restaurantraizesdobrasil.com/menu/",
+    "Glenn IMG_8475 mark, IMG_8476 own Instagram bio"
+  ],
+  "facts": {
+    "slug": "raizes-do-brasil",
+    "name": "Raízes do Brasil",
+    "label": "Raízes do Brasil",
+    "cuisine": "Brazilian breakfast and lunch",
+    "color": "#226843",
+    "icon": "raizes-do-brasil",
+    "prep": 0,
+    "category": "Brazilian breakfast and lunch",
+    "items": [],
+    "tagline": "Brazilian breakfast, baked snacks and homestyle lunch plates on San Pablo Avenue in Richmond.",
+    "site": "https://restaurantraizesdobrasil.com/",
+    "needsSite": true,
+    "address": "12221 San Pablo Ave, Richmond, CA 94805",
+    "phone": "(510) 237-9000",
+    "hours": "Mon–Sat 6am–4pm; Sun 7am–4pm",
+    "sections": [
+      {
+        "name": "Menu",
+        "items": [
+          [
+            "Kibe com ovo",
+            "",
+            700
+          ],
+          [
+            "Esfiha de Frango",
+            "",
+            700
+          ],
+          [
+            "Americano de Presunto e Queijo",
+            "",
+            700
+          ],
+          [
+            "Esfiha de Carne",
+            "",
+            700
+          ],
+          [
+            "Americano de Salsicha",
+            "",
+            700
+          ],
+          [
+            "Redbull",
+            "",
+            500
+          ],
+          [
+            "Guaraná",
+            "",
+            400
+          ],
+          [
+            "Garrafa de Coca-Cola",
+            "",
+            400
+          ],
+          [
+            "Can Soda",
+            "",
+            300
+          ],
+          [
+            "Sparkling Water",
+            "",
+            300
+          ],
+          [
+            "Water",
+            "",
+            100
+          ],
+          [
+            "Tea",
+            "",
+            300
+          ],
+          [
+            "Chocolate Milk",
+            "",
+            300
+          ],
+          [
+            "Coffee or Coffee with Milk",
+            "",
+            300
+          ],
+          [
+            "Root Vitamins",
+            "",
+            1200
+          ],
+          [
+            "Mixed Vitamins",
+            "",
+            1000
+          ],
+          [
+            "Vitamina de abacate",
+            "",
+            800
+          ],
+          [
+            "Creme de Polpa",
+            "",
+            800
+          ],
+          [
+            "Suco de Polpa",
+            "",
+            600
+          ],
+          [
+            "Orange Juice Mixed with Pulp",
+            "",
+            1000
+          ],
+          [
+            "Suco de Laranja",
+            "",
+            700
+          ],
+          [
+            "Brazilian Shortcake",
+            "",
+            800
+          ],
+          [
+            "Passion Fruit Mousse",
+            "",
+            500
+          ],
+          [
+            "Cural de milho",
+            "",
+            500
+          ],
+          [
+            "Adicional de Ovo ou Bacon (cada)",
+            "",
+            200
+          ],
+          [
+            "Omelete Completa",
+            "",
+            1500
+          ],
+          [
+            "Omelete Simples",
+            "",
+            1200
+          ],
+          [
+            "Empadão Goiano",
+            "",
+            1800
+          ],
+          [
+            "Disco",
+            "",
+            700
+          ],
+          [
+            "Empada de Camarão",
+            "",
+            800
+          ],
+          [
+            "Empadinha de Frango",
+            "",
+            700
+          ],
+          [
+            "Coxinha de Carne do Sol",
+            "",
+            800
+          ],
+          [
+            "Sonho",
+            "",
+            300
+          ],
+          [
+            "Rosca hungara",
+            "",
+            300
+          ],
+          [
+            "Mané Pelado",
+            "",
+            600
+          ],
+          [
+            "Coxinha de Frango",
+            "",
+            700
+          ],
+          [
+            "Fatia de Bolo com calda",
+            "",
+            600
+          ],
+          [
+            "Fatia de Bolo",
+            "",
+            500
+          ],
+          [
+            "Peta",
+            "",
+            100
+          ],
+          [
+            "Biscoito de Queijo",
+            "",
+            150
+          ],
+          [
+            "Pão de Queijo (cada)",
+            "",
+            50
+          ],
+          [
+            "Enroladinho Romeu e Julieta (Com Goiabada)",
+            "",
+            500
+          ],
+          [
+            "Enroladinho de Queijo",
+            "",
+            400
+          ],
+          [
+            "Nhoque com Goiabada",
+            "",
+            100
+          ],
+          [
+            "Broa",
+            "",
+            200
+          ],
+          [
+            "Misto Quente com Bacon",
+            "",
+            950
+          ],
+          [
+            "Misto Quente com Pão Francês",
+            "",
+            750
+          ],
+          [
+            "Pão com Ovo",
+            "",
+            500
+          ],
+          [
+            "Pão na Chapa",
+            "",
+            350
+          ],
+          [
+            "Pão com Manteiga",
+            "",
+            250
+          ],
+          [
+            "Pão Francês",
+            "",
+            150
+          ],
+          [
+            "Misto Quente com Pão de Forma",
+            "",
+            750
+          ],
+          [
+            "Mousse de chocolate branco com frutas vermelhas",
+            "",
+            700
+          ],
+          [
+            "Picanha na chapa",
+            "",
+            2300
+          ],
+          [
+            "Frango grelhado",
+            "",
+            1900
+          ],
+          [
+            "Bife acebolado",
+            "",
+            2000
+          ],
+          [
+            "Frango empanado",
+            "",
+            2000
+          ],
+          [
+            "Peixe grelhado",
+            "",
+            1900
+          ],
+          [
+            "Frango Assado",
+            "",
+            1800
+          ],
+          [
+            "Bife a Cavalo",
+            "",
+            2000
+          ],
+          [
+            "Empadinha de Carne do Sol",
+            "",
+            800
+          ],
+          [
+            "Pudim",
+            "",
+            500
+          ]
+        ]
+      }
+    ],
+    "siteCta": "See their menu",
+    "orderUrl": "https://restaurantraizesdobrasil.com/menu/",
+    "siteNote": "Regular prices from their own full menu. Rotating daily specials, alcohol and two items without prices are left off this list. Call for today’s availability.",
+    "clip": {
+      "src": "/clips/raizes-do-brasil.mp4",
+      "poster": "/clips/raizes-do-brasil-poster.webp",
+      "href": "https://www.instagram.com/p/DeznhqSAX8j/",
+      "credit": "Posted by @raizesdobrasilus",
+      "platform": "Instagram"
+    }
+  },
+  "placements": [
+    "richmond-goods2-3",
+    "beasty-goods2-90",
+    "beasty-diner-22"
+  ],
+  "flags": [
+    "Glenn called this a website-beta candidate despite an existing full-menu site: needsSite=true is intentional.",
+    "Two unpriced regular items Açai Bowl and Bolo de Cenoura Vulcão held. Rotating daily specials not treated as everyday availability. Eight alcohol listings excluded.",
+    "No new pilot site built/published without a separate website-build request."
+  ]
+}

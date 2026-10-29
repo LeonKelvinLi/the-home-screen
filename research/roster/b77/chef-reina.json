@@ -1,0 +1,51 @@
+{
+  "id": "b_chefreina",
+  "name_exact": "Chef Reina Montenegro",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://linktr.ee/chefreina (read in Chrome)",
+    "https://fulton.laughingmonk.com/chef-reina",
+    "Glenn IMG_8482 own Instagram bio, IMG_8483 portrait"
+  ],
+  "facts": {
+    "slug": "chef-reina",
+    "name": "Chef Reina Montenegro",
+    "label": "Chef Reina",
+    "cuisine": "Vegan personal chef",
+    "color": "#6b5145",
+    "icon": "chef-reina",
+    "prep": 0,
+    "category": "Vegan personal chef",
+    "items": [],
+    "tagline": "Chef Reina Montenegro brings her Filipino roots and plant-based cooking to Laughing Monk NOPA.",
+    "site": "https://linktr.ee/chefreina",
+    "contactOnly": "Her public links include chef dinners, interviews and her ebook. Contact her through her own channels for current events and services.",
+    "siteCta": "See her links",
+    "panels": [
+      {
+        "head": "At Laughing Monk NOPA",
+        "body": [
+          "Chef Reina’s own Instagram names Laughing Monk San Francisco as her current home. The restaurant’s biography describes her background as a personal chef and caterer. Her individual chef page is separate from the restaurant."
+        ],
+        "links": [
+          {
+            "label": "Chef Reina at Laughing Monk",
+            "href": "https://fulton.laughingmonk.com/chef-reina"
+          },
+          {
+            "label": "Laughing Monk events",
+            "href": "https://fulton.laughingmonk.com/events"
+          }
+        ]
+      }
+    ]
+  },
+  "placements": [
+    "beasty-cooks-15",
+    "beasty-vegan-1"
+  ],
+  "flags": [
+    "Individual chef page; no restaurant phone/address/menu assigned to her personal business.",
+    "No paid contract, availability or private-service price inferred."
+  ]
+}

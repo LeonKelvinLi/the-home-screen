@@ -1,0 +1,439 @@
+{
+  "id": "b_laughingmonknopa",
+  "name_exact": "Laughing Monk NOPA",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://fulton.laughingmonk.com/",
+    "https://www.instagram.com/reel/Def_2PqRcyz/",
+    "https://www.instagram.com/reel/DfFq35OzQqk/"
+  ],
+  "facts": {
+    "slug": "laughing-monk-nopa",
+    "name": "Laughing Monk NOPA",
+    "label": "Laughing Monk",
+    "cuisine": "Brewpub: Filipino and Californian food",
+    "color": "#f5f5f5",
+    "icon": "laughing-monk-nopa",
+    "tagline": "Laughing Monk Brewing's gastropub on Fulton Street in NOPA, with Chef Reina Montenegro's plant-forward Filipino dishes alongside burgers and flatbreads.",
+    "prep": 0,
+    "category": "Brewpub: Filipino and Californian food",
+    "items": [],
+    "sections": [
+      {
+        "name": "Starters",
+        "items": [
+          [
+            "Lumpia Shanghai",
+            "Filipino spring rolls filled with seasoned soy protein and vegetables",
+            1900
+          ],
+          [
+            "Birria Carnitas Tacos",
+            "Three tacos of slow-cooked soy carnitas, pickled onions, cilantro; consommé and avocado crema",
+            2000
+          ],
+          [
+            "Falafel Bites",
+            "House-made falafel on pita chips with hummus and tahini dressing",
+            1500
+          ],
+          [
+            "Mushroom Chicharon",
+            "Crispy mushroom chicharrón with spiced coconut vinegar",
+            1800
+          ],
+          [
+            "Vegetable Lumpia",
+            "Crispy spring rolls filled with seasoned vegetables",
+            1500
+          ],
+          [
+            "SPAM Musubi",
+            "Teriyaki-glazed SPAM over seasoned rice, wrapped in nori",
+            900
+          ],
+          [
+            "French Fries",
+            "Cajun or sinigang fries +$1, garlic fries +$2",
+            800
+          ],
+          [
+            "IPA Onion Ring Tower",
+            "Beer-battered onion rings with ranch and ketchup",
+            1300
+          ],
+          [
+            "Salted Warm Pretzel",
+            "Soft-baked pretzel with beer cheese and pub mustard",
+            1600
+          ],
+          [
+            "Crispy Wings (6)",
+            "Naked, garlic parmesan, lemon pepper or gochujang; vegan wings on request",
+            1600
+          ],
+          [
+            "Poke Kinilaw",
+            "Ahi tuna, coconut milk, citrus and ginger with wonton chips",
+            2000
+          ],
+          [
+            "Mini Skewers",
+            "Grilled pork skewers, lemongrass-pineapple barbecue glaze, spiced vinegar",
+            1500
+          ]
+        ]
+      },
+      {
+        "name": "Salads & Noodles",
+        "items": [
+          [
+            "Caesar Salad",
+            "Romaine, Parmesan, croutons, Caesar dressing; add tofu +$6, chicken +$8",
+            1500
+          ],
+          [
+            "Rainbow Sesame Salad",
+            "Rice noodles, seasonal vegetables, sesame dressing, crispy wontons; add chicken or vegan chicken +$8",
+            1800
+          ],
+          [
+            "Pancit Bihon/Canton",
+            "Rice noodles, egg noodles or both, stir-fried with vegetables, garlic, scallions, lemon; add chicken or vegan chicken +$8",
+            1600
+          ]
+        ]
+      },
+      {
+        "name": "Flatbreads",
+        "items": [
+          [
+            "Margherita",
+            "Cheese, tomato, basil",
+            1600
+          ],
+          [
+            "Pesto Potato Garlic",
+            "Cheese, pesto, potatoes, garlic",
+            1800
+          ],
+          [
+            "BBQ Bacon Chicken",
+            "Cheese, barbecue sauce, bacon, chicken, red onions",
+            2200
+          ],
+          [
+            "Vegan",
+            "Vegan cheese, vegan bacon, tomatoes, spinach, red onions",
+            1900
+          ]
+        ]
+      },
+      {
+        "name": "Mains",
+        "items": [
+          [
+            "All-American Smash Burger",
+            "Two 3.5-oz patties, cheddar, bacon jam, lettuce, tomato, Thousand Island",
+            2200
+          ],
+          [
+            "Bacon Cheese Burger",
+            "Seven-ounce patty, cheddar, bacon, lettuce, tomato, garlic aioli",
+            2200
+          ],
+          [
+            "West of 101 Burger",
+            "Seven-ounce patty, smoked Gouda, cheddar, onion ring, bacon, tomato, pickled onions, garlic aioli, lettuce, jalapeño",
+            2400
+          ],
+          [
+            "Fried Chicken Sandwich",
+            "Mochiko-fried chicken, shredded cabbage, pickled onions, spicy mayonnaise",
+            2200
+          ],
+          [
+            "Caesar Wrap",
+            "Romaine, Caesar dressing, Parmesan and croutons in a flour tortilla, with fries; add chicken or vegan chicken +$8",
+            1500
+          ],
+          [
+            "Adobo Mango Short Ribs",
+            "Short ribs braised in an adobo-mango glaze, mashed potatoes, roasted vegetables. Weekends only",
+            3000
+          ],
+          [
+            "Crispy Pata",
+            "Crispy pork knuckle, garlic rice, cucumber salad, spicy vinegar. Weekends only",
+            2500
+          ],
+          [
+            "Skirt Steak",
+            "American Wagyu skirt steak, chimichurri, mashed potatoes, seasonal vegetables",
+            2500
+          ],
+          [
+            "Katsu Plate",
+            "Mochiko-fried chicken, potato salad, rice, katsu sauce",
+            2200
+          ],
+          [
+            "Fish and Chips",
+            "Beer-battered fish, fries, tartar sauce, coleslaw",
+            2200
+          ]
+        ]
+      },
+      {
+        "name": "Chef Specials",
+        "items": [
+          [
+            "BBQ Skewers",
+            "Grilled soy protein in banana barbecue sauce, garlic rice, pickled cucumber",
+            1800
+          ],
+          [
+            "Tocino",
+            "Marinated, charred soy protein, garlic rice, spiced vinegar; add egg or vegan egg +$4",
+            2200
+          ],
+          [
+            "Sizzling Sisig",
+            "Mushrooms, tofu and jalapeño with garlic and ginger, served sizzling with rice and vegan shrimp paste; add egg or vegan egg +$4",
+            2200
+          ],
+          [
+            "Birria Quesadilla",
+            "Slow-cooked soy carnitas, pickled onions, cilantro, avocado crema in a flour tortilla, with consommé",
+            2200
+          ],
+          [
+            "Succulent Ribz",
+            "Jackfruit and soy ribs in smoky barbecue sauce, with two sides",
+            2200
+          ],
+          [
+            "Loco Moco",
+            "Impossible patty over white rice, mushroom gravy, vegan fried egg, on a sizzling platter; beef patty on request",
+            1800
+          ],
+          [
+            "Lomo Saltado",
+            "Soy protein, tomatoes, onions, ají amarillo and Peruvian brandy in a tangy soy blend, over rice with fries",
+            2200
+          ],
+          [
+            "Thai Veggie Basil",
+            "Seasonal vegetables, Thai chiles, Thai basil, coconut milk sauce, white rice",
+            1800
+          ]
+        ]
+      },
+      {
+        "name": "Sides",
+        "items": [
+          [
+            "Roasted Veggies",
+            "",
+            800
+          ],
+          [
+            "House Salad",
+            "",
+            500
+          ],
+          [
+            "Potato Salad",
+            "",
+            600
+          ],
+          [
+            "Mashed Potatoes",
+            "",
+            800
+          ],
+          [
+            "White Rice",
+            "",
+            300
+          ],
+          [
+            "Garlic Rice",
+            "",
+            400
+          ]
+        ]
+      },
+      {
+        "name": "Brunch",
+        "items": [
+          [
+            "All-American Breakfast",
+            "Two eggs any style, bacon or sausage, hashbrowns or breakfast potatoes, toast",
+            1800
+          ],
+          [
+            "Chilaquiles",
+            "Tortilla chips, red or green salsa, crema, queso fresco, two eggs; add chicken or longanisa +$4",
+            1800
+          ],
+          [
+            "Ube Pancakes",
+            "Ube pancakes, butter, maple syrup, two eggs, bacon or sausage",
+            2200
+          ],
+          [
+            "All-American Breakfast Sandwich",
+            "Egg, cheddar, bacon or sausage on brioche, with breakfast potatoes or hashbrowns",
+            1800
+          ],
+          [
+            "French Toast Banana Foster",
+            "Brioche French toast, caramelized bananas, brown sugar rum sauce, two eggs, bacon or sausage",
+            2200
+          ],
+          [
+            "Steak & Eggs",
+            "Grilled steak, two eggs any style, breakfast potatoes",
+            2600
+          ]
+        ]
+      },
+      {
+        "name": "Omelets",
+        "items": [
+          [
+            "Denver Omelet",
+            "Ham, cheddar, onions, red bell peppers; breakfast potatoes or hashbrowns",
+            1700
+          ],
+          [
+            "Veggie Omelet",
+            "Mushrooms, spinach, onions, tomatoes, cheddar; breakfast potatoes or hashbrowns",
+            1600
+          ],
+          [
+            "Build Your Own Omelet",
+            "One protein, one cheese, up to three vegetables; breakfast potatoes or hashbrowns",
+            1800
+          ]
+        ]
+      },
+      {
+        "name": "Burritos",
+        "items": [
+          [
+            "Longanisa Breakfast Burrito",
+            "Scrambled eggs, breakfast potatoes, cheese, longanisa, sautéed vegetables, house-made salsa",
+            1900
+          ],
+          [
+            "Build Your Own Burrito",
+            "Scrambled eggs, breakfast potatoes, house-made salsa, one protein, one cheese, up to three vegetables",
+            1800
+          ]
+        ]
+      },
+      {
+        "name": "Rice Plates",
+        "items": [
+          [
+            "Baconsilog",
+            "With garlic rice and a fried egg; vegan option available",
+            1500
+          ],
+          [
+            "Corned Beef Silog",
+            "With garlic rice and a fried egg; vegan option available",
+            1800
+          ],
+          [
+            "Longsilog",
+            "With garlic rice and a fried egg; vegan option available",
+            1800
+          ],
+          [
+            "Spamsilog",
+            "With garlic rice and a fried egg; vegan option available",
+            1500
+          ],
+          [
+            "Sisigsilog",
+            "With garlic rice and a fried egg; vegan option available",
+            1800
+          ],
+          [
+            "Tocilog",
+            "With garlic rice and a fried egg; vegan option available",
+            1800
+          ]
+        ]
+      },
+      {
+        "name": "Brunch Sides",
+        "items": [
+          [
+            "Avocado",
+            "",
+            400
+          ],
+          [
+            "Bacon/Sausage/SPAM",
+            "",
+            600
+          ],
+          [
+            "Breakfast Potatoes",
+            "",
+            600
+          ],
+          [
+            "Eggs",
+            "",
+            500
+          ],
+          [
+            "Grilled Chicken",
+            "",
+            800
+          ],
+          [
+            "Hashbrowns",
+            "",
+            600
+          ],
+          [
+            "Toast",
+            "",
+            400
+          ]
+        ]
+      }
+    ],
+    "address": "1785 Fulton St, San Francisco, CA 94117",
+    "phone": "(415) 638-6667",
+    "email": "nopa@laughingmonk.com",
+    "hours": "Mon–Thu 11:30am–9pm, Fri 11:30am–10pm, Sat 11am–10pm, Sun 11am–9pm",
+    "site": "https://fulton.laughingmonk.com/",
+    "siteCta": "Visit their site",
+    "siteNote": "Prices are from the food menu on their own website; to order, they ask you to call (415) 638-6667. Beer, cocktails and the weekday happy-hour menu are not listed here. Adobo Mango Short Ribs and Crispy Pata are weekends only.",
+    "clip": {
+      "src": "/clips/laughing-monk-nopa-b77.mp4",
+      "poster": "/clips/laughing-monk-nopa-b77-poster.webp",
+      "href": "https://www.instagram.com/reel/Def_2PqRcyz/",
+      "credit": "Filmed by @startingfiresevrywhere",
+      "platform": "Instagram",
+      "by": "startingfiresevrywhere"
+    }
+  },
+  "placements": [
+    "san-francisco-goods-10",
+    "beasty-vegan-0",
+    "beasty-bars-22"
+  ],
+  "flags": [
+    "Existing priced menu, contact facts, icon and city seats retained; only main film replaced and old main retained as extra.",
+    "Vegan category requested beside these films; venue offers vegan and non-vegan menus, not claimed exclusively vegan.",
+    "Repost credits original TikTok @bsgmoments and posting IG @thelaughingmonksf separately."
+  ]
+}

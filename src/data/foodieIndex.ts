@@ -24,6 +24,8 @@ export interface Review {
   /** A copy BEASTY plays, when the review is the film on that business's page. */
   src?: string
   poster?: string
+  /** Original reviewer and posting-account credit for a repost. */
+  credit?: string
 }
 
 /* Accounts that posted a business's own film: they are the business, not a reviewer. */
@@ -51,6 +53,7 @@ const ALL: Review[] = [
     city: r.city,
     brand: r.brand ? byId.get(r.brand) : undefined,
     href: r.reel,
+    credit: r.credit,
     ...(r.clip
       ? (() => {
           const code = /\/reel\/([^/]+)\//.exec(r.reel)?.[1]

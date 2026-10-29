@@ -28845,12 +28845,12 @@ export const LOCAL_SEED: LocalSeed[] = [
       "siteCta": "Visit their site",
       "siteNote": "Prices are from the food menu on their own website; to order, they ask you to call (415) 638-6667. Beer, cocktails and the weekday happy-hour menu are not listed here. Adobo Mango Short Ribs and Crispy Pata are weekends only.",
       "clip": {
-          "src": "/clips/laughing-monk-nopa.mp4",
-          "poster": "/clips/laughing-monk-nopa-poster.webp",
-          "href": "https://www.instagram.com/reel/Defo2sWSjXA/",
-          "credit": "Filmed by @itsslydiia",
+          "src": "/clips/laughing-monk-nopa-b77.mp4",
+          "poster": "/clips/laughing-monk-nopa-b77-poster.webp",
+          "href": "https://www.instagram.com/reel/Def_2PqRcyz/",
+          "credit": "Filmed by @startingfiresevrywhere",
           "platform": "Instagram",
-          "by": "itsslydiia"
+          "by": "startingfiresevrywhere"
       }
   },
   {
@@ -55949,6 +55949,1098 @@ export const LOCAL_SEED: LocalSeed[] = [
               "head": "Groups & private dining",
               "body": [
                   "Their website offers a private dining room for 8–12 guests with two shared hotpots and karaoke. Call (415) 571-8225 to ask about availability and booking."
+              ]
+          }
+      ]
+  },
+  /* Batch 77, 29 Oct 1:02–3:49 pm. Sources and holds: research/roster/b77/. */
+  {
+      "slug": "urban-matcha-castro-valley",
+      "name": "Urban Matcha — Castro Valley",
+      "label": "Urban Matcha",
+      "cuisine": "Matcha cafe",
+      "color": "#9ca48d",
+      "icon": "urban-matcha-castro-valley",
+      "prep": 0,
+      "category": "Matcha cafe",
+      "items": [],
+      "tagline": "Uji matcha drinks and soft serve at the Castro Valley cafe.",
+      "site": "https://www.instagram.com/urbanmatcha.castrovalley/",
+      "needsSite": true,
+      "address": "3311 Castro Valley Blvd, Castro Valley, CA 94546",
+      "phone": "(510) 274-5001",
+      "contactOnly": "Their Castro Valley Instagram shows drinks and desserts but no complete priced menu. Ask the cafe for the current menu.",
+      "siteCta": "See their Instagram",
+      "siteNote": "See the Castro Valley cafe’s own Instagram for current drinks and desserts, or call for its menu.",
+      "panels": [
+          {
+              "head": "Drinks & desserts",
+              "body": [
+                  "Their own Castro Valley posts show hot matcha latte, coconut water with matcha or ube cloud, Sea Salt Double Matcha and matcha soft serve. Ask the shop for availability and current prices."
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/urban-matcha-castro-valley.mp4",
+          "poster": "/clips/urban-matcha-castro-valley-poster.webp",
+          "href": "https://www.instagram.com/reel/DdzzWXtiYsE/",
+          "credit": "Posted by @urbanmatcha.castrovalley",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "tleafgreen-san-jose",
+      "name": "TLeafGreen — San Jose",
+      "label": "TLeafGreen",
+      "cuisine": "Burmese kitchen",
+      "color": "#80a923",
+      "icon": "tleafgreen-san-jose",
+      "prep": 0,
+      "category": "Burmese kitchen",
+      "items": [],
+      "tagline": "Burmese tea-leaf salad, fresh bowls and build-your-own plates on Almaden Expressway in South San Jose.",
+      "site": "https://www.tleafgreen.com/",
+      "address": "5353 Almaden Expy #40A, San Jose, CA 95118",
+      "phone": "(408) 389-6388",
+      "email": "sanjose@tleafgreen.com",
+      "sections": [
+          {
+              "name": "Bowls",
+              "items": [
+                  [
+                      "Mint Jalapeño Chicken",
+                      "Minced chicken, sambal chili, mint, garlic, ginger, jalapeños, cilantro, soy sauce, fennel and mustard seed",
+                      690,
+                      null,
+                      "from $6.90"
+                  ],
+                  [
+                      "Black Pepper Chicken",
+                      "Chicken, onions, bell peppers, celery, carrots, ginger, garlic, scallions, white wine, black bean and soy sauces",
+                      690,
+                      null,
+                      "from $6.90"
+                  ],
+                  [
+                      "Mango Chicken",
+                      "Chicken with soy sauce, white pepper, Thai basil, onions, sambal chili and mango puree",
+                      690,
+                      null,
+                      "from $6.90"
+                  ],
+                  [
+                      "Sesame Chicken",
+                      "Lightly fried chicken strips with soy sauce, vinegar, honey and sesame",
+                      690,
+                      null,
+                      "from $6.90"
+                  ],
+                  [
+                      "Teriyaki Chicken",
+                      "Chicken thigh, teriyaki, garlic, ginger, vinegar, soy sauce, honey and pineapple juice",
+                      690,
+                      null,
+                      "from $6.90"
+                  ],
+                  [
+                      "Chicken Kebat",
+                      "Chicken, onions, tomato, mint, cilantro, jalapeños, turmeric, tamarind, masala and paprika",
+                      690,
+                      null,
+                      "from $6.90"
+                  ],
+                  [
+                      "Basil Dried Chili Beef",
+                      "Tri-tip, dried chili, Thai chili, jalapeños, onions, tamarind, black pepper and basil",
+                      790,
+                      null,
+                      "from $7.90"
+                  ],
+                  [
+                      "String Bean Beef",
+                      "Tri-tip and string beans with onions, garlic, ginger, jalapeños, dried chilies, soy and hoisin",
+                      790,
+                      null,
+                      "from $7.90"
+                  ],
+                  [
+                      "Burmese Shrimp",
+                      "Shrimp with onions, garlic, ginger, jalapeños, dried chilies, gluten-free soy sauce, hoisin and vegetables",
+                      790,
+                      null,
+                      "from $7.90"
+                  ],
+                  [
+                      "Honey Walnut Shrimp",
+                      "Lightly fried shrimp in sweet sauce with toasted walnuts and sesame",
+                      790,
+                      null,
+                      "from $7.90"
+                  ],
+                  [
+                      "Eggplant & Tofu Garlic",
+                      "Eggplant and tofu, garlic, ginger, scallions, basil, soy sauce and dried chilies",
+                      690,
+                      null,
+                      "from $6.90"
+                  ],
+                  [
+                      "Veggie Tofu Curry",
+                      "Kabocha squash, coconut milk, evaporated milk, curry powder, broccoli, carrots, onion, garlic and ginger",
+                      690,
+                      null,
+                      "from $6.90"
+                  ],
+                  [
+                      "Super Broccoli Carrot",
+                      "",
+                      690,
+                      null,
+                      "from $6.90"
+                  ],
+                  [
+                      "Burmese Noodles",
+                      "",
+                      500,
+                      null,
+                      "from $5.00"
+                  ],
+                  [
+                      "Pineapple Fried Rice",
+                      "",
+                      500,
+                      null,
+                      "from $5.00"
+                  ],
+                  [
+                      "Coconut Chicken Curry",
+                      "",
+                      690,
+                      null,
+                      "from $6.90"
+                  ]
+              ]
+          },
+          {
+              "name": "Combo",
+              "items": [
+                  [
+                      "Signature Combo",
+                      "Tea leaf salad, small dish portion, one samosa and house drink",
+                      2395,
+                      null,
+                      "from $23.95"
+                  ],
+                  [
+                      "Fill-Up Combo",
+                      "Single plate, one samosa and medium soda",
+                      1595,
+                      null,
+                      "from $15.95"
+                  ]
+              ]
+          },
+          {
+              "name": "Fresh Bowls",
+              "items": [
+                  [
+                      "Tea Leaf Salad",
+                      "Classic Tleaf dressing; romaine, cabbage, jalapeños, lemon, cherry tomatoes, fried garlic, yellow beans, peanuts, sesame and sunflower seeds",
+                      1395,
+                      null,
+                      "from $13.95"
+                  ],
+                  [
+                      "Golden Mango Salad",
+                      "Tropical mango dressing; pickled mango, romaine, cucumber, cabbage, red onion, cilantro, fried garlic, yellow bean powder, fried onions and spring mix",
+                      1295,
+                      null,
+                      "from $12.95"
+                  ],
+                  [
+                      "Burmese Chicken Salad",
+                      "House blend dressing; chicken, spring mix, romaine, cabbage, cucumber, red onion, cilantro, yellow bean powder, fried wontons, fried garlic, fried onions and sesame",
+                      1395,
+                      null,
+                      "from $13.95"
+                  ],
+                  [
+                      "Ginger Citrus Salad",
+                      "Zesty ginger dressing; pickled ginger, romaine, cabbage, tomatoes, jalapeño, cilantro, lemon, nuts mix and spring mix",
+                      1295,
+                      null,
+                      "from $12.95"
+                  ],
+                  [
+                      "Samosa Spice Salad",
+                      "Samosa spice dressing; samosa, spring mix, romaine, cabbage, cucumber, jalapeño, red onion, cilantro, fried garlic, yellow bean powder, fried onions, wontons and sesame",
+                      1295,
+                      null,
+                      "from $12.95"
+                  ],
+                  [
+                      "Lychee Garden Salad",
+                      "Lychee dressing; romaine, cabbage, tomatoes, pineapple, honey walnut, lemon, red onion, cilantro, fried garlic, fried onions, sesame, sunflower seeds and spring mix",
+                      1295,
+                      null,
+                      "from $12.95"
+                  ],
+                  [
+                      "Savory Noodle Salad",
+                      "Noodle dressing; vegan noodles, spring mix, cabbage, cucumber, fried tofu, fried wontons, red onion, cilantro, fried onions and yellow bean powder",
+                      1295,
+                      null,
+                      "from $12.95"
+                  ],
+                  [
+                      "Nan Gyi Thoke (Coconut Chicken Noodle)",
+                      "",
+                      1395,
+                      null,
+                      "from $13.95"
+                  ]
+              ]
+          },
+          {
+              "name": "Plates",
+              "items": [
+                  [
+                      "Single Plate",
+                      "One entree and two bases; tea leaf or mango salad choice on their menu",
+                      1095,
+                      null,
+                      "from $10.95"
+                  ],
+                  [
+                      "Double Plate",
+                      "Two entrees and two bases; tea leaf or mango salad choice on their menu",
+                      1295,
+                      null,
+                      "from $12.95"
+                  ],
+                  [
+                      "Triple Plate",
+                      "Three entrees and two bases; tea leaf or mango salad choice on their menu",
+                      1495,
+                      null,
+                      "from $14.95"
+                  ],
+                  [
+                      "Family Feast",
+                      "Choose two bases and three entrees or salads",
+                      4500,
+                      null,
+                      "from $45.00"
+                  ],
+                  [
+                      "Little Greens Plate",
+                      "Half-and-half side, one entree and one drink",
+                      890,
+                      null,
+                      "from $8.90"
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Jasmine Rice (16 oz)",
+                      "",
+                      285
+                  ],
+                  [
+                      "Brown Rice (16 oz)",
+                      "",
+                      285
+                  ],
+                  [
+                      "Samosa (1 piece)",
+                      "",
+                      285
+                  ],
+                  [
+                      "Palata (4 pieces)",
+                      "",
+                      285
+                  ],
+                  [
+                      "Yellow Tofu (3 pieces)",
+                      "",
+                      295
+                  ]
+              ]
+          },
+          {
+              "name": "House Beverages",
+              "items": [
+                  [
+                      "Burmese Milk Tea",
+                      "",
+                      350
+                  ],
+                  [
+                      "Mango Lassi",
+                      "",
+                      350
+                  ],
+                  [
+                      "Honey Lemon Ice Tea",
+                      "",
+                      350
+                  ]
+              ]
+          },
+          {
+              "name": "Fountain Drinks",
+              "items": [
+                  [
+                      "Coke (fountain)",
+                      "",
+                      230,
+                      null,
+                      "from $2.30"
+                  ],
+                  [
+                      "Diet Coke (fountain)",
+                      "",
+                      230,
+                      null,
+                      "from $2.30"
+                  ],
+                  [
+                      "Coke Zero (fountain)",
+                      "",
+                      230,
+                      null,
+                      "from $2.30"
+                  ],
+                  [
+                      "Cherry Coke (fountain)",
+                      "",
+                      230,
+                      null,
+                      "from $2.30"
+                  ],
+                  [
+                      "Fanta (fountain)",
+                      "",
+                      230,
+                      null,
+                      "from $2.30"
+                  ],
+                  [
+                      "Sprite (fountain)",
+                      "",
+                      230,
+                      null,
+                      "from $2.30"
+                  ],
+                  [
+                      "Lemonade (fountain)",
+                      "",
+                      230,
+                      null,
+                      "from $2.30"
+                  ],
+                  [
+                      "Root Beer (fountain)",
+                      "",
+                      230,
+                      null,
+                      "from $2.30"
+                  ]
+              ]
+          },
+          {
+              "name": "Bottle Drinks",
+              "items": [
+                  [
+                      "Dasani Water (bottle)",
+                      "",
+                      299
+                  ],
+                  [
+                      "Diet Coke (bottle)",
+                      "",
+                      299
+                  ],
+                  [
+                      "Coca-Cola (bottle)",
+                      "",
+                      299
+                  ],
+                  [
+                      "Sprite (bottle)",
+                      "",
+                      299
+                  ],
+                  [
+                      "San Pellegrino Water (bottle)",
+                      "",
+                      299
+                  ],
+                  [
+                      "Celsius Kiwi Guava (bottle)",
+                      "",
+                      349
+                  ],
+                  [
+                      "Celsius Orange (bottle)",
+                      "",
+                      349
+                  ],
+                  [
+                      "Celsius Cherry Cola (bottle)",
+                      "",
+                      349
+                  ],
+                  [
+                      "Bodyarmor Strawberry Kiwi (bottle)",
+                      "",
+                      349
+                  ],
+                  [
+                      "Bodyarmor Tropical Punch (bottle)",
+                      "",
+                      349
+                  ]
+              ]
+          },
+          {
+              "name": "House Dressings",
+              "items": [
+                  [
+                      "Tleaf House Dressing",
+                      "",
+                      495
+                  ],
+                  [
+                      "House Blend Dressing",
+                      "",
+                      395
+                  ],
+                  [
+                      "Golden Mango Dressing",
+                      "",
+                      395
+                  ],
+                  [
+                      "Ginger Citrus Dressing",
+                      "",
+                      395
+                  ],
+                  [
+                      "Samosa Spice Dressing",
+                      "",
+                      395
+                  ],
+                  [
+                      "Lychee Garden Dressing",
+                      "",
+                      395
+                  ],
+                  [
+                      "Sweet Chili Lemon Dressing",
+                      "",
+                      395
+                  ],
+                  [
+                      "Savory Noodle Dressing",
+                      "",
+                      395
+                  ]
+              ]
+          },
+          {
+              "name": "Catering Trays",
+              "items": [
+                  [
+                      "Tea Leaf Salad (Vegan & GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      5500,
+                      null,
+                      "from $55.00"
+                  ],
+                  [
+                      "Golden Mango Salad (Vegan & GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      5000,
+                      null,
+                      "from $50.00"
+                  ],
+                  [
+                      "Burmese Chicken Salad (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      5500,
+                      null,
+                      "from $55.00"
+                  ],
+                  [
+                      "Ginger Citrus Salad (Vegan) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      5000,
+                      null,
+                      "from $50.00"
+                  ],
+                  [
+                      "Samosa Spice Salad (Vegetarian) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      5000,
+                      null,
+                      "from $50.00"
+                  ],
+                  [
+                      "Lychee Garden Salad (Vegetarian & GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      5000,
+                      null,
+                      "from $50.00"
+                  ],
+                  [
+                      "Savory Noodle Salad (Vegan) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      6500,
+                      null,
+                      "from $65.00"
+                  ],
+                  [
+                      "Mint Jalapeño Chicken (Halal & GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      6500,
+                      null,
+                      "from $65.00"
+                  ],
+                  [
+                      "Black Pepper Chicken (Halal & GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      6500,
+                      null,
+                      "from $65.00"
+                  ],
+                  [
+                      "Mango Chicken (Halal & GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      6500,
+                      null,
+                      "from $65.00"
+                  ],
+                  [
+                      "Sesame Chicken (Halal & GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      6500,
+                      null,
+                      "from $65.00"
+                  ],
+                  [
+                      "Chicken Kebat (Halal & GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      6500,
+                      null,
+                      "from $65.00"
+                  ],
+                  [
+                      "Teriyaki Chicken (Halal & GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      7000,
+                      null,
+                      "from $70.00"
+                  ],
+                  [
+                      "Basil Dried Chili Beef (Halal & GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      7000,
+                      null,
+                      "from $70.00"
+                  ],
+                  [
+                      "String Bean Beef (Halal & GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      7000,
+                      null,
+                      "from $70.00"
+                  ],
+                  [
+                      "Burmese Shrimp (GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      7000,
+                      null,
+                      "from $70.00"
+                  ],
+                  [
+                      "Honey Walnut Shrimp (GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      6000,
+                      null,
+                      "from $60.00"
+                  ],
+                  [
+                      "Eggplant & Garlic (GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      6000,
+                      null,
+                      "from $60.00"
+                  ],
+                  [
+                      "Veggie Tofu Curry (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      6000,
+                      null,
+                      "from $60.00"
+                  ],
+                  [
+                      "Super Broccoli Carrot (GF) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      6000,
+                      null,
+                      "from $60.00"
+                  ],
+                  [
+                      "Jasmine Rice (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      2500,
+                      null,
+                      "from $25.00"
+                  ],
+                  [
+                      "Pineapple Fried Rice (Vegetarian) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      5000,
+                      null,
+                      "from $50.00"
+                  ],
+                  [
+                      "Burmese Fried Noodle (Vegetarian) (catering tray)",
+                      "Published starting price; half trays serve 7–10, full trays 12–15. Choose size and confirm final price on their menu.",
+                      5000,
+                      null,
+                      "from $50.00"
+                  ]
+              ]
+          }
+      ],
+      "orderUrl": "https://pos.chowbus.com/online-ordering/store/TLeafGreen/22963",
+      "siteCta": "Order on their menu",
+      "quoteOnly": "Published menu prices; “from” means sizes or choices can change the total. Choose your options on their own ordering page.",
+      "siteNote": "Prices are from the Chowbus menu linked by their website, checked 29 October. Catering prices are starting prices, not a full-tray quote. Ask the restaurant for current dining hours.",
+      "clip": {
+          "src": "/clips/tleafgreen-san-jose.mp4",
+          "poster": "/clips/tleafgreen-san-jose-poster.webp",
+          "href": "https://www.instagram.com/reel/De3VXvPT9m8/",
+          "credit": "Posted by @tleafgreensj",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "raizes-do-brasil",
+      "name": "Raízes do Brasil",
+      "label": "Raízes do Brasil",
+      "cuisine": "Brazilian breakfast and lunch",
+      "color": "#226843",
+      "icon": "raizes-do-brasil",
+      "prep": 0,
+      "category": "Brazilian breakfast and lunch",
+      "items": [],
+      "tagline": "Brazilian breakfast, baked snacks and homestyle lunch plates on San Pablo Avenue in Richmond.",
+      "site": "https://restaurantraizesdobrasil.com/",
+      "needsSite": true,
+      "address": "12221 San Pablo Ave, Richmond, CA 94805",
+      "phone": "(510) 237-9000",
+      "hours": "Mon–Sat 6am–4pm; Sun 7am–4pm",
+      "sections": [
+          {
+              "name": "Menu",
+              "items": [
+                  [
+                      "Kibe com ovo",
+                      "",
+                      700
+                  ],
+                  [
+                      "Esfiha de Frango",
+                      "",
+                      700
+                  ],
+                  [
+                      "Americano de Presunto e Queijo",
+                      "",
+                      700
+                  ],
+                  [
+                      "Esfiha de Carne",
+                      "",
+                      700
+                  ],
+                  [
+                      "Americano de Salsicha",
+                      "",
+                      700
+                  ],
+                  [
+                      "Redbull",
+                      "",
+                      500
+                  ],
+                  [
+                      "Guaraná",
+                      "",
+                      400
+                  ],
+                  [
+                      "Garrafa de Coca-Cola",
+                      "",
+                      400
+                  ],
+                  [
+                      "Can Soda",
+                      "",
+                      300
+                  ],
+                  [
+                      "Sparkling Water",
+                      "",
+                      300
+                  ],
+                  [
+                      "Water",
+                      "",
+                      100
+                  ],
+                  [
+                      "Tea",
+                      "",
+                      300
+                  ],
+                  [
+                      "Chocolate Milk",
+                      "",
+                      300
+                  ],
+                  [
+                      "Coffee or Coffee with Milk",
+                      "",
+                      300
+                  ],
+                  [
+                      "Root Vitamins",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Mixed Vitamins",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Vitamina de abacate",
+                      "",
+                      800
+                  ],
+                  [
+                      "Creme de Polpa",
+                      "",
+                      800
+                  ],
+                  [
+                      "Suco de Polpa",
+                      "",
+                      600
+                  ],
+                  [
+                      "Orange Juice Mixed with Pulp",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Suco de Laranja",
+                      "",
+                      700
+                  ],
+                  [
+                      "Brazilian Shortcake",
+                      "",
+                      800
+                  ],
+                  [
+                      "Passion Fruit Mousse",
+                      "",
+                      500
+                  ],
+                  [
+                      "Cural de milho",
+                      "",
+                      500
+                  ],
+                  [
+                      "Adicional de Ovo ou Bacon (cada)",
+                      "",
+                      200
+                  ],
+                  [
+                      "Omelete Completa",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Omelete Simples",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Empadão Goiano",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Disco",
+                      "",
+                      700
+                  ],
+                  [
+                      "Empada de Camarão",
+                      "",
+                      800
+                  ],
+                  [
+                      "Empadinha de Frango",
+                      "",
+                      700
+                  ],
+                  [
+                      "Coxinha de Carne do Sol",
+                      "",
+                      800
+                  ],
+                  [
+                      "Sonho",
+                      "",
+                      300
+                  ],
+                  [
+                      "Rosca hungara",
+                      "",
+                      300
+                  ],
+                  [
+                      "Mané Pelado",
+                      "",
+                      600
+                  ],
+                  [
+                      "Coxinha de Frango",
+                      "",
+                      700
+                  ],
+                  [
+                      "Fatia de Bolo com calda",
+                      "",
+                      600
+                  ],
+                  [
+                      "Fatia de Bolo",
+                      "",
+                      500
+                  ],
+                  [
+                      "Peta",
+                      "",
+                      100
+                  ],
+                  [
+                      "Biscoito de Queijo",
+                      "",
+                      150
+                  ],
+                  [
+                      "Pão de Queijo (cada)",
+                      "",
+                      50
+                  ],
+                  [
+                      "Enroladinho Romeu e Julieta (Com Goiabada)",
+                      "",
+                      500
+                  ],
+                  [
+                      "Enroladinho de Queijo",
+                      "",
+                      400
+                  ],
+                  [
+                      "Nhoque com Goiabada",
+                      "",
+                      100
+                  ],
+                  [
+                      "Broa",
+                      "",
+                      200
+                  ],
+                  [
+                      "Misto Quente com Bacon",
+                      "",
+                      950
+                  ],
+                  [
+                      "Misto Quente com Pão Francês",
+                      "",
+                      750
+                  ],
+                  [
+                      "Pão com Ovo",
+                      "",
+                      500
+                  ],
+                  [
+                      "Pão na Chapa",
+                      "",
+                      350
+                  ],
+                  [
+                      "Pão com Manteiga",
+                      "",
+                      250
+                  ],
+                  [
+                      "Pão Francês",
+                      "",
+                      150
+                  ],
+                  [
+                      "Misto Quente com Pão de Forma",
+                      "",
+                      750
+                  ],
+                  [
+                      "Mousse de chocolate branco com frutas vermelhas",
+                      "",
+                      700
+                  ],
+                  [
+                      "Picanha na chapa",
+                      "",
+                      2300
+                  ],
+                  [
+                      "Frango grelhado",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Bife acebolado",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Frango empanado",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Peixe grelhado",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Frango Assado",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Bife a Cavalo",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Empadinha de Carne do Sol",
+                      "",
+                      800
+                  ],
+                  [
+                      "Pudim",
+                      "",
+                      500
+                  ]
+              ]
+          }
+      ],
+      "siteCta": "See their menu",
+      "orderUrl": "https://restaurantraizesdobrasil.com/menu/",
+      "siteNote": "Regular prices from their own full menu. Rotating daily specials, alcohol and two items without prices are left off this list. Call for today’s availability.",
+      "clip": {
+          "src": "/clips/raizes-do-brasil.mp4",
+          "poster": "/clips/raizes-do-brasil-poster.webp",
+          "href": "https://www.instagram.com/p/DeznhqSAX8j/",
+          "credit": "Posted by @raizesdobrasilus",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "house-of-prime-rib",
+      "name": "House of Prime Rib",
+      "label": "House of Prime Rib",
+      "cuisine": "Prime rib steakhouse",
+      "color": "#efefef",
+      "icon": "house-of-prime-rib",
+      "prep": 0,
+      "category": "Prime rib steakhouse",
+      "items": [],
+      "tagline": "Prime rib carved tableside from stainless-steel carts in an English-style dining room on Van Ness Avenue.",
+      "site": "https://houseofprimerib.net/",
+      "address": "1906 Van Ness Ave, San Francisco, CA 94109",
+      "phone": "(415) 885-4605",
+      "email": "houseofprimerib@aol.com",
+      "hours": "Mon–Fri 5–10pm; Sat–Sun 4–10pm",
+      "contactOnly": "Their own site describes the cuts and included sides without publishing dinner prices. Reserve a table or call for current prices.",
+      "siteCta": "Reserve a table",
+      "orderUrl": "https://www.opentable.com/house-of-prime-rib-restaurant",
+      "panels": [
+          {
+              "head": "Cuts & included sides",
+              "body": [
+                  "Their dinner menu offers the City Cut, House of Prime Rib Cut, English Cut and King Henry VIII Cut, plus a children’s prime rib dinner for ages eight and under and the day’s fresh fish. Ask the restaurant for current prices.",
+                  "Prime rib dinners include their salad bowl, mashed potatoes or a baked potato, Yorkshire pudding, creamed spinach and fresh cream of horseradish sauce."
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/house-of-prime-rib.mp4",
+          "poster": "/clips/house-of-prime-rib-poster.webp",
+          "href": "https://www.instagram.com/reel/DeeoxAoOLeK/",
+          "credit": "Filmed by @your_travel_daddy",
+          "platform": "Instagram",
+          "by": "your_travel_daddy"
+      }
+  },
+  {
+      "slug": "chef-reina",
+      "name": "Chef Reina Montenegro",
+      "label": "Chef Reina",
+      "cuisine": "Vegan personal chef",
+      "color": "#6b5145",
+      "icon": "chef-reina",
+      "prep": 0,
+      "category": "Vegan personal chef",
+      "items": [],
+      "tagline": "Chef Reina Montenegro brings her Filipino roots and plant-based cooking to Laughing Monk NOPA.",
+      "site": "https://linktr.ee/chefreina",
+      "contactOnly": "Her public links include chef dinners, interviews and her ebook. Contact her through her own channels for current events and services.",
+      "siteCta": "See her links",
+      "panels": [
+          {
+              "head": "At Laughing Monk NOPA",
+              "body": [
+                  "Chef Reina’s own Instagram names Laughing Monk San Francisco as her current home. The restaurant’s biography describes her background as a personal chef and caterer. Her individual chef page is separate from the restaurant."
+              ],
+              "links": [
+                  {
+                      "label": "Chef Reina at Laughing Monk",
+                      "href": "https://fulton.laughingmonk.com/chef-reina"
+                  },
+                  {
+                      "label": "Laughing Monk events",
+                      "href": "https://fulton.laughingmonk.com/events"
+                  }
               ]
           }
       ]

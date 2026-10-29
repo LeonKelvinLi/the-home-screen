@@ -66,6 +66,7 @@ export function FoodieReviews({ title, reviews, side, api, here }: {
                     }}
                   />
                 ) : null}
+                {r.credit && <p className="foodie-review-credit">{r.credit}</p>}
                 <div className="foodie-review-links">
                   <a href={r.href} target="_blank" rel="noopener noreferrer">
                     {r.src ? 'See the post on Instagram' : `Watch ${side === 'place' ? 'the review' : `@${r.by}’s review`} on Instagram`}

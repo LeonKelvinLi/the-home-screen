@@ -294,3 +294,10 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `binge-coffee-house.webp` | [Original artwork](https://www.instagram.com/bingecoffeehouse/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8433, inside enlarged own profile disc. |
 | `house-of-phin.webp` | [Original artwork](https://www.instagram.com/houseofphin_/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8446, inside enlarged own profile disc. |
 | `hotpot-bay.webp` | [Original artwork](https://www.instagram.com/hotpotbay/) | Their own HPB Hotpot Bay red-and-gold pot mark on black, from Glenn’s 29 Oct IMG_8458 enlarged profile disc, cropped inside its edge. |
+
+<!-- Batch 77: original marks/portrait from Glenn’s profile-picture screenshots; no story rings -->
+| `urban-matcha-castro-valley.webp` | [@urbanmatcha.castrovalley](https://www.instagram.com/urbanmatcha.castrovalley/), Glenn IMG_8466, 29 Oct 2026 | Original mark/portrait cropped from the enlarged profile disc; edge paper fills the corners. |
+| `tleafgreen-san-jose.webp` | [@tleafgreensj](https://www.instagram.com/tleafgreensj/), Glenn IMG_8472, 29 Oct 2026 | Original mark/portrait cropped from the enlarged profile disc; edge paper fills the corners. |
+| `raizes-do-brasil.webp` | [@raizesdobrasilus](https://www.instagram.com/raizesdobrasilus/), Glenn IMG_8475, 29 Oct 2026 | Original mark/portrait cropped from the enlarged profile disc; edge paper fills the corners. |
+| `house-of-prime-rib.webp` | [@thehouseofprimerib](https://www.instagram.com/thehouseofprimerib/), Glenn IMG_8478, 29 Oct 2026 | Original mark/portrait cropped from the enlarged profile disc; edge paper fills the corners. |
+| `chef-reina.webp` | [@chef.reina](https://www.instagram.com/chef.reina/), Glenn IMG_8483, 29 Oct 2026 | Original mark/portrait cropped from the enlarged profile disc; edge paper fills the corners. |
