@@ -44,3 +44,11 @@ Chose **BEASTY • Dumplings**: it includes dumpling specialists and dim sum roo
 - Seat comparison against `7bc7215`: **19 additions, no moves or removals**.
 - Batch audit covers every business page, film decoding, full menus (447 items), city seats, icons, both-shop panel, review playback, category seat data and More eats. Category audit opens Dumplings, verifies twelve shops and its wallpaper, and searches for both names. Foodie audit covers review-to-business links.
 - Historical roster walking in live-verify is now optional with `--skip-roster` for follow-up releases; all other existing verification remains enabled. This batch uses the full batch audit plus that focused live verification rather than repeating the already-checked historical roster walk.
+
+## Live
+
+Release `c4e1370` is live on beastypages.com. Render deployment `dep-dbhcavfb9u1s739n09b0` finished on **28 October 2026 at 9:09 pm PDT**. The brief restart returned 502; waited for HTTP 200 and the new bundle before running verification.
+
+- `BASE=https://beastypages.com node tools/audit-batch74.mjs`: **63 checks passed**, including all four pages, 447 menu rows, eleven decoded films, credits, city seats, icons, both shops, review playback and category seat data.
+- `node tools/live-verify.mjs --skip-roster`: **passed**. The historical roster walk is intentionally omitted in this mode; all other existing checks ran.
+- Real Chrome at 393×852: Taste of Shaxian’s 181 menu rows render without horizontal overflow and crab roe noodles now draw a noodle icon; Din Ding’s main film decodes with “Posted by @dindingdumplingbayarea,” its two reviewers stay below it, and its page has no horizontal overflow.
