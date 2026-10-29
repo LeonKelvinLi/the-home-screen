@@ -39,10 +39,17 @@ The four Hotpot Bay films arrived during preparation and were incorporated befor
 - `tools/audit-batch68.mjs`: passed. It now accepts an original film retained in the reviewer list after a later Watch request and checks that clip decoding there; the approved four-film cap replaces the historical three-film assertion.
 - `tools/audit-foodies.mjs`: passed. Batch 75’s Hot Pot count assertion now allows later additions while preserving its original minimum.
 - Seat comparison: three additions, no existing moves or removals. No affiliate terms files/worktree touched.
-- Final pre-push refetch still ends at **12:27 pm**. Gap check: 535 business domains, 17 historical unmatched domains; no business domain from this batch is unmatched.
+- Final pre-push and post-push refetches still end at **12:27 pm**. Gap check: 535 business domains, 17 historical unmatched domains; no business domain from this batch is unmatched.
 
 ### Review navigation
 
 The phone check exposed a dropdown state bug: opening Sachi’s page from Hotpot Bay reused the selected row number and expanded Sachi’s unrelated third review. The dropdown now tracks the page and source post, so navigating to another page cannot open a different review at the same index. Regression checks cover business → creator → business navigation and the correct Hotpot Bay excerpt. Build, all 58 local batch checks and the Foodie audit pass after this fix.
 
-Live results follow after the final deployment.
+### Live result
+
+- Data release `a54de31` became live at **12:47:22 pm PDT** on 29 Oct 2026. Review-navigation fix `ebc8a8e` became live at **1:00:16 pm PDT**, Render deploy `dep-dbhq83navr4c73a9jk3g`; `/api/health` returned HTTP 200 afterward.
+- Final `BASE=https://beastypages.com node tools/audit-batch76.mjs`: **55 checks passed**, including the three navigation regressions. Three extra signed-in category checks run locally only, accounting for the local total of 58.
+- Real **Chrome at 393 × 852**: all three business pages, their icons, main films and menus checked. All 160 menu rows are present (Hotpot Bay 74, The Sea 54, Chubby Cattle 32). Films play, credit links show, and the two Sea A5 minimum portions show correctly. No broken images or horizontal overflow observed. The final live Hotpot Bay → Sachi → Hotpot Bay round trip closes unrelated dropdowns and opens Sachi’s correct Hotpot Bay excerpt, with no console errors on that path. Chrome viewport restored after checking.
+- Production verification is read-only: no accounts, purchases or messages created.
+
+- Final `node tools/live-verify.mjs --skip-roster`: **PASS** on beastypages.com. All general checks ran; the previously verified historical roster walk was skipped. Sign-in, signed-out API protection, kitchen sign-in, scan entry and shared invitation pages passed their read-only checks.
