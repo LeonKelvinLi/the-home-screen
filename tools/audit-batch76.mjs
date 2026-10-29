@@ -90,6 +90,18 @@ try{
   }
   check(`${id} has at most 4 distinct films`, films.size<=4)
  }
+ /* Regression observed in real Chrome: Hotpot's third row used to open Sachi's third,
+    unrelated review because this reused component stored only an array index. */
+ await open('b_hotpotbay')
+ await p.locator('.foodie-review-head',{hasText:'@foodandsachi'}).click()
+ await p.getByRole('button',{name:'See Sachi’s page',exact:true}).click()
+ await p.getByRole('heading',{name:'Sachi',exact:true}).waitFor()
+ check('review-to-creator navigation closes the previous page’s dropdown',await p.locator('.foodie-review.is-open').count()===0)
+ await p.locator('.foodie-review-head',{hasText:'Hotpot Bay'}).click()
+ check('Sachi’s Hotpot Bay row opens the correct excerpt',(await p.locator('.foodie-review.is-open video').getAttribute('src'))==='/clips/review-DXr9m1JEt1A.mp4')
+ await p.getByRole('button',{name:'Open Hotpot Bay on BEASTY',exact:true}).click()
+ await p.getByRole('heading',{name:'Hotpot Bay',exact:true}).waitFor()
+ check('creator-to-business navigation does not open another review',await p.locator('.foodie-review.is-open').count()===0)
  for(const f of data.map(d=>d.facts.icon))check(`${f} icon is served`,(await fetch(base+'/icons/'+f+'.webp')).headers.get('content-type')?.includes('webp'))
  for(const [kind,id] of [['hotpot','b_hotpotbay'],['steakhouse','b_theseabyash']])
   check(id+' has its '+kind+' seat',Object.entries(ALL_PLACEMENTS).some(([seat,brand])=>seat.startsWith('beasty-'+kind+'-')&&brand===id))

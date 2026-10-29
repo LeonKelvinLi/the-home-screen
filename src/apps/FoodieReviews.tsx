@@ -22,24 +22,26 @@ export function FoodieReviews({ title, reviews, side, api, here }: {
   /** The page this list is on, so a row never offers to open it again. */
   here: string
 }) {
-  const [open, setOpen] = useState<number | null>(null)
+  const [open, setOpen] = useState<string | null>(null)
   const preview = useInPreview()
   if (!reviews.length) return null
   return (
     <section className="foodie-reviews" aria-label={title}>
       <h3 className="foodie-reviews-h">{title}</h3>
-      {reviews.map((r, i) => {
-        const isOpen = open === i
+      {reviews.map((r) => {
+        // This panel is reused between pages; an index could open another page's review.
+        const reviewKey = `${here}:${r.by}:${r.href}`
+        const isOpen = open === reviewKey
         const head = side === 'place' ? r.place : r.byName ?? `@${r.by}`
         const sub = side === 'place' ? r.city : `@${r.by}`
         const other = side === 'place' ? r.brand?.id : pageOfFoodie(r.by)
         return (
-          <div className={`foodie-review${isOpen ? ' is-open' : ''}`} key={`${r.by}-${r.href}`}>
+          <div className={`foodie-review${isOpen ? ' is-open' : ''}`} key={reviewKey}>
             <button
               type="button"
               className="foodie-review-head"
               aria-expanded={isOpen}
-              onClick={() => setOpen(isOpen ? null : i)}
+              onClick={() => setOpen(isOpen ? null : reviewKey)}
             >
               <span>
                 <strong>{head}</strong>

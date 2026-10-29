@@ -35,10 +35,14 @@ The four Hotpot Bay films arrived during preparation and were incorporated befor
 ## Verification
 
 - Build passed; data audit: **0 errors**, 153 existing/portion warnings.
-- `tools/audit-batch76.mjs`: **55 local checks passed** across the three pages, all 160 menu rows, films and credits, all additional reviews, both category placements, A5 portions and four-film limits. Local-only membership checks open Hot Pot and Steakhouse from Search and verify Hotpot Bay and The Sea on their grids.
+- `tools/audit-batch76.mjs`: **58 local checks passed** across the three pages, all 160 menu rows, films and credits, all additional reviews, both category placements, A5 portions and four-film limits. Local-only membership checks open Hot Pot and Steakhouse from Search and verify Hotpot Bay and The Sea on their grids.
 - `tools/audit-batch68.mjs`: passed. It now accepts an original film retained in the reviewer list after a later Watch request and checks that clip decoding there; the approved four-film cap replaces the historical three-film assertion.
 - `tools/audit-foodies.mjs`: passed. Batch 75’s Hot Pot count assertion now allows later additions while preserving its original minimum.
 - Seat comparison: three additions, no existing moves or removals. No affiliate terms files/worktree touched.
 - Final pre-push refetch still ends at **12:27 pm**. Gap check: 535 business domains, 17 historical unmatched domains; no business domain from this batch is unmatched.
 
-Live results follow after deployment.
+### Review navigation
+
+The phone check exposed a dropdown state bug: opening Sachi’s page from Hotpot Bay reused the selected row number and expanded Sachi’s unrelated third review. The dropdown now tracks the page and source post, so navigating to another page cannot open a different review at the same index. Regression checks cover business → creator → business navigation and the correct Hotpot Bay excerpt. Build, all 58 local batch checks and the Foodie audit pass after this fix.
+
+Live results follow after the final deployment.
