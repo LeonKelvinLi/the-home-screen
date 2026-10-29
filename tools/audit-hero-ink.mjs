@@ -17,7 +17,7 @@ import { join } from 'node:path'
 import { execFileSync } from 'node:child_process'
 const OUT=process.argv[2] || mkdtempSync(join(tmpdir(),'heroink-'))
 const shot=[]
-for (const id of ['b_rywire','b_downtownbbq','b_sincitypits','b_luckythreeseven']) {
+for (const id of ['b_rywire','b_downtownbbq','b_sincitypits','b_luckythreeseven','b_garlichighsunnyvale']) {
   const p=await b.newPage({viewport:{width:393,height:852},deviceScaleFactor:2})
   await p.goto(`${base}/?b=${id}`,{waitUntil:'networkidle'})
   await p.waitForTimeout(1200)

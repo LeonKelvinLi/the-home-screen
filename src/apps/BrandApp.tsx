@@ -191,7 +191,8 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   const picks = brand.menu.flatMap((c) => c.items).slice(0, 3)
   // Header text must be chosen from the tint, not assumed white — several
   // brands use light plates and were rendering white-on-white.
-  const ink = readableOn(brand.logo.bg)
+  // Footage has a dark scrim, regardless of the logo tile’s background.
+  const ink = readableOn(film ? '#000000' : brand.logo.bg)
 
   const jump = (i: number) => {
     setActiveCat(i)

@@ -41,3 +41,15 @@ The call arrangements and seller pickup messages are personal follow-ups. The ea
 - Foodie audit passes. The category audit’s category count is updated from 44 to 45 for Ramen.
 
 Local batch audit, category audit and Foodie audit all passed.
+
+## Production
+
+Release `ffacc1d` deployed on 28 October 2026. Render reports the website deployment `dep-dbh9obo473hc73cb5pq0` live at 6:13 pm PDT, and CRM deployment `dep-dbh9obo473hc73cb5q70` live at 6:13 pm PDT. A temporary HTTP 502 during deployment recovered; `/api/health` returned 200 afterward.
+
+`BASE=https://beastypages.com node tools/audit-batch73.mjs` passed all **127 checks**. `tools/live-check.mjs` found `b_garlichighsunnyvale` and `beasty-goods2-84` in the deployed bundle, and `/wallpapers/cat-ramen.webp` served HTTP 200 with `image/webp`. The category audit additionally opened Ramen through signed-in Search and verified seven shops and its wallpaper locally.
+
+## Chrome phone check — 28 October
+
+Drove the real Chrome browser at 393×852 and 375×667. Opened all eight new business pages and both updated pages; checked menu layouts, EPIC’s read-only price list (81 rows, zero ordering buttons), six-shop and two-shop panels, creator review playback, Brunch & Bloom’s gallery, The Sweet Spot’s updated tel link, and city-tile navigation. Inspected pages had no document-level horizontal overflow.
+
+Found dark tagline text over Garlic High’s darkened background film. Film heroes now choose light ink from the dark scrim, independently of the logo tile’s color. Confirmed visually in Chrome at 375×667; the five-brand video-frame contrast audit passes, Garlic High worst frame 6.27:1 (all five above 4.5:1). Added Garlic High to that regression audit.
