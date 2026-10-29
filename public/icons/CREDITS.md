@@ -280,3 +280,7 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `early-to-rise-sf.webp` | [Original artwork](https://linktr.ee/earlytorisesf) | Their own red rooster mark, their Linktree and Instagram picture. |
 | `chef-smelly.webp` | [Original artwork](https://www.threads.com/@chefsmelly) | His own profile photo (Threads and Instagram), cropped to him. |
 | `brunch-and-bloom.webp` | [Original artwork](https://www.instagram.com/brunchandbloomcafe/) | Their own Brunch & Bloom Artisan Cafe mark, their Instagram picture from Glenn's screenshot of 27 Oct 2026. |
+| `thien-ly-house.webp` | [Original artwork](https://www.instagram.com/thienly.restaurant/) | Their own THIEN LY HOUSE bowl-and-chopsticks wordmark on dark green, cut inside the zoomed profile disc Glenn sent (IMG_8372). |
+| `kajiken-san-mateo.webp` | [Original artwork](https://www.kajikenusa.com/san-mateo-store) | Their own white Japanese Kajiken/aburasoba wordmark and red seal from the website header PNG, fitted on charcoal. |
+| `taste-of-shaxian.webp` | [Original artwork](https://www.instagram.com/tasteofshaxian/) | Their own white Chinese Shaxian Snacks mark on an orange-red roundel, from Glenn's zoomed profile screenshot (IMG_8386), cut inside its disc. |
+| `din-ding-dumpling-house-fremont.webp` | [Original artwork](https://dindingdumplinghouses.com/images/logo-v2.png) | Their own red-and-white Din Ding seal, from the site's logo-v2.png, enlarged proportionally and padded with near-black. |

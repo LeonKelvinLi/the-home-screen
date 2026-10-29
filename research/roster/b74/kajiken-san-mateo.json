@@ -1,0 +1,303 @@
+{
+  "id": "b_kajikensanmateo",
+  "name_exact": "Kajiken San Mateo",
+  "checked_on": "2026-10-28",
+  "sources": [
+    "https://www.kajikenusa.com/san-mateo-store (112 S B St, San Mateo, daily hours, links to San Mateo Toast and delivery platforms)",
+    "https://order.toasttab.com/online/kajiken-san-mateo-new-112-s-b-st (read in Chrome 28 Oct 2026: Signature, Appetizers (Take Out), Rice Bowls, Toppings; item names, descriptions, regular prices, (650) 458-3061)",
+    "https://www.kajikenusa.com/menu-1 (general menu; no prices; San Mateo Toast used)",
+    "https://www.kajikenusa.com/whatisaburasoba-1 (aburasoba, soupless ramen with oil and sauce)",
+    "https://images.squarespace-cdn.com/content/v1/61fc1d3552ad3346df84b939/4df3d452-d783-4a01-b7ce-f0568d27cd85/kajiken_white.png?format=1000w (own header artwork)",
+    "Glenn’s 28 Oct 7:37 pm screenshots IMG_8378 (Kajiken wordmark), IMG_8379 (Instagram @kajikenusa), IMG_8381 (San Mateo own website’s schedule)",
+    "https://www.instagram.com/reel/DfD7T6YT7Cy/ (@antoinetterzz, San Mateo dinner and dessert itinerary, posted 28 Oct 2026 Pacific)",
+    "https://www.instagram.com/reel/DBvMxORRkM7/ (@eatswithkath, San Mateo aburasoba)",
+    "https://www.instagram.com/reel/DZHBRMYvzav/ (@eatswithfoodie, Kajiken San Mateo)"
+  ],
+  "facts": {
+    "slug": "kajiken-san-mateo",
+    "name": "Kajiken San Mateo",
+    "label": "Kajiken",
+    "cuisine": "Aburasoba & soupless ramen",
+    "color": "#292929",
+    "icon": "kajiken-san-mateo",
+    "site": "https://www.kajikenusa.com/san-mateo-store",
+    "tagline": "A soupless ramen shop on South B Street in San Mateo: thick noodles tossed with oils and sauce, chashu, minced pork or wagyu roast beef, with karaage and rice bowls.",
+    "prep": 0,
+    "category": "Aburasoba & soupless ramen",
+    "items": [],
+    "sections": [
+      {
+        "name": "Signature",
+        "items": [
+          [
+            "Homura Aburasoba",
+            "Spicy minced pork, Tokyo onions, bamboo shoots, seaweed, fish powder, chives and raw egg yolk (can sub poached egg or half ajitama)",
+            1900
+          ],
+          [
+            "Nikumori Aburasoba",
+            "Spicy minced pork, pork belly slices, green onions, chili threads and raw egg yolk (can sub poached egg or half ajitama)",
+            2050
+          ],
+          [
+            "Wagyu Roast Beef Aburasoba",
+            "Wagyu roast beef, crispy onions, green onions, butter onion sauce, yogurt sauce and raw egg yolk (can sub poached egg or half ajitama)",
+            2650
+          ],
+          [
+            "Megami Aburasoba",
+            "Fried tofu, bok choy, eggplant, red onions, green onions, cabbage and garlic chili flakes",
+            1975
+          ],
+          [
+            "Original Aburasoba",
+            "Chashu, bamboo shoots, Tokyo onions and seaweed",
+            1675
+          ],
+          [
+            "Soboro Aburasoba",
+            "Soy-marinated ground chicken, green onion, sesame seeds and raw egg yolk",
+            1775
+          ],
+          [
+            "Unagi Aburasoba",
+            "Barbeque eel, pickled daikon, green onions and sesame seeds",
+            2670
+          ],
+          [
+            "Vegan Nikumiso",
+            "",
+            1900
+          ]
+        ]
+      },
+      {
+        "name": "Appetizers (Take Out)",
+        "items": [
+          [
+            "Oroshi Ponzu Karaage",
+            "With grated daikon, green onions and ponzu",
+            1050
+          ],
+          [
+            "Ika Geso Karaage",
+            "Deep-fried calamari with spicy mayo and lemon",
+            1295
+          ],
+          [
+            "Takoyaki",
+            "6 pieces of deep-fried balls with octopus, okonomi sauce, mayonnaise, aonori and bonito flakes",
+            900
+          ],
+          [
+            "Pan Fried Gyoza",
+            "With ponzu sauce",
+            800
+          ],
+          [
+            "Edamame",
+            "With salt",
+            500
+          ]
+        ]
+      },
+      {
+        "name": "Rice Bowls",
+        "items": [
+          [
+            "Chashu Rice",
+            "Diced chashu, green onions and seaweed",
+            800
+          ],
+          [
+            "Mentaiko Rice",
+            "Spicy mentaiko cod, green onions and seaweed",
+            700
+          ],
+          [
+            "Wagyu Roast Beef Rice",
+            "Diced roast beef, onion butter sauce, yogurt sauce, green onions, black pepper, sesame seeds and raw egg yolk (can sub ajitama or poached egg)",
+            1500
+          ],
+          [
+            "White Rice",
+            "",
+            400
+          ]
+        ]
+      },
+      {
+        "name": "Toppings",
+        "items": [
+          [
+            "Spicy Minced Pork",
+            "",
+            800
+          ],
+          [
+            "Plant-Based Sweet Pork",
+            "",
+            500
+          ],
+          [
+            "Soboro Chicken",
+            "",
+            650
+          ],
+          [
+            "Spicy Hatcho Miso",
+            "",
+            500
+          ],
+          [
+            "Chashu",
+            "",
+            175
+          ],
+          [
+            "Raw Egg",
+            "",
+            250
+          ],
+          [
+            "Ajitama",
+            "Soft-boiled eggs",
+            250
+          ],
+          [
+            "Poached Egg",
+            "",
+            250
+          ],
+          [
+            "Mentaiko",
+            "Spicy cod roe",
+            200
+          ],
+          [
+            "Kimchi",
+            "",
+            175
+          ],
+          [
+            "Menma",
+            "Bamboo shoots",
+            150
+          ],
+          [
+            "Negi",
+            "Green onion",
+            150
+          ],
+          [
+            "Nori",
+            "Seaweed",
+            150
+          ],
+          [
+            "Fish Powder",
+            "",
+            150
+          ],
+          [
+            "Curry Powder",
+            "",
+            150
+          ],
+          [
+            "Tofu",
+            "",
+            150
+          ],
+          [
+            "Cheese",
+            "",
+            150
+          ],
+          [
+            "Corn",
+            "",
+            150
+          ],
+          [
+            "Crispy Onion",
+            "",
+            150
+          ],
+          [
+            "Garlic, Sesame Seeds, Chili Paste",
+            "",
+            100
+          ],
+          [
+            "Nira",
+            "Chives",
+            150
+          ],
+          [
+            "Chili Oil & Vinegar",
+            "",
+            100
+          ],
+          [
+            "Yogurt Sauce",
+            "",
+            150
+          ],
+          [
+            "White Onions",
+            "",
+            175
+          ],
+          [
+            "Lemon Slice",
+            "",
+            25
+          ],
+          [
+            "Kewpie Mayonnaise",
+            "",
+            100
+          ],
+          [
+            "Bok Choy",
+            "",
+            150
+          ],
+          [
+            "Cabbage",
+            "",
+            150
+          ]
+        ]
+      }
+    ],
+    "address": "112 S B St, San Mateo, CA 94401",
+    "phone": "(650) 458-3061",
+    "clip": {
+      "src": "/clips/kajiken-san-mateo.mp4",
+      "poster": "/clips/kajiken-san-mateo-poster.webp",
+      "href": "https://www.instagram.com/reel/DfD7T6YT7Cy/",
+      "credit": "Filmed by @antoinetterzz",
+      "platform": "Instagram",
+      "by": "antoinetterzz"
+    },
+    "hours": "Mon–Thu 11am–2pm & 5–9pm, Fri–Sat 11am–10pm, Sun 11am–9:30pm",
+    "orderUrl": "https://order.toasttab.com/online/kajiken-san-mateo-new-112-s-b-st",
+    "siteCta": "Order online",
+    "instagram": "kajikenusa",
+    "siteNote": "Prices are from the San Mateo Toast ordering page linked by their website. Other Kajiken shops have their own menus and hours. Aburasoba is served without broth; the sauce and oil are mixed through the noodles."
+  },
+  "placements": [
+    "beasty-ramen-7",
+    "san-mateo-goods2-3"
+  ],
+  "glenn": "28 Oct 2026, 7:37 pm: San Mateo • Eats / BEASTY • Ramen, Kajiken San Mateo link and screenshots; DfD7T6YT7Cy, Clip this video plz. 7:42 pm DBvMxORRkM7, Heavy / Clip this video plz. 7:45 pm DZHBRMYvzav, Clip this video plz / Foodie.",
+  "flags": [
+    "MENU: four sections from the San Mateo Toast page, all positive-priced available non-alcoholic items. Left out the repeated Featured Items, free chopsticks and bowl options, Hiyayakko Cold Tofu marked out of stock, and UMESHU HH ($9) incorrectly sitting in Toppings (alcohol). Names set in title case and leading + dropped from toppings; descriptions lightly punctuated.",
+    "Unagi is $26.70 as Toast prints; not rounded to match Wagyu. Lemon Slice is $0.25, a topping, not a units error.",
+    "HOURS from their own San Mateo page and Glenn’s screenshot; Toast ordering ends earlier and does not set dining hours.",
+    "Film: 5–29s of @antoinetterzz’s dinner-and-dessert itinerary, only Kajiken. The later SomiSomi stop is excluded. Two additional reviews: @eatswithkath (Heavy) and @eatswithfoodie (Foodie).",
+    "Icon uses the site’s complete white Japanese Kajiken wordmark with red seal, padded on charcoal; Glenn’s English wordmark is a different official mark."
+  ]
+}

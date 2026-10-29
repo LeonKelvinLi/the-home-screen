@@ -1,0 +1,239 @@
+{
+  "id": "b_thienlyhouse",
+  "name_exact": "Thiên Lý House",
+  "checked_on": "2026-10-28",
+  "sources": [
+    "https://thienly.us/ and https://thienly.us/contact (name, address, phone, current menu navigation and To go link, read 28 Oct 2026)",
+    "https://thienly.us/api/menu-groups/public/hierarchical (the public API called by their website, all menu sections, item names, descriptions and prices, read 28 Oct 2026)",
+    "https://thienly.us/api/menu-groups/public/list (navigation groups)",
+    "Glenn’s 28 Oct 5:35 pm screenshots: IMG_8372 (zoomed Instagram logo), IMG_8374 (Maps address, phone and hours), IMG_8375 (own website footer, daily 11am–3pm and 5–8:30pm), IMG_8376 (Instagram @thienly.restaurant)",
+    "https://www.instagram.com/reel/DblRvB7x1I4/ (@yourglobalfoodiebff, Thiên Lý House at 200 Grand Ave, posted 3 Aug 2026 Pacific)"
+  ],
+  "facts": {
+    "slug": "thien-ly-house",
+    "name": "Thiên Lý House",
+    "label": "Thiên Lý",
+    "cuisine": "Vietnamese kitchen",
+    "color": "#172e21",
+    "icon": "thien-ly-house",
+    "site": "https://thienly.us/",
+    "tagline": "Vietnamese pho, bún bò Huế, banh mi and sizzling steak and eggs at 200 Grand Avenue in downtown South San Francisco, with a family meal set for four.",
+    "prep": 0,
+    "category": "Vietnamese kitchen",
+    "items": [],
+    "sections": [
+      {
+        "name": "Family Meal Set",
+        "items": [
+          [
+            "\"Viet\" Family Meal Set",
+            "Suitable for a group of 4; includes White Rice, Crispy Claypot Rice, Braised Pork with Eggs, Minced Pork Omelet, Fish Sauce Fried Chicken, Fried Spring Rolls (Pork & Shrimp), Sour Shrimp Soup, Boiled Veggies with braised fish sauce & pork dip",
+            9500
+          ]
+        ]
+      },
+      {
+        "name": "Pho (Beef and Chicken)",
+        "items": [
+          [
+            "Special Beef Pho",
+            "Rare beef, well-done brisket, beef meatballs Can request: spicy/non-spicy hoisin sauce May Allergic.",
+            2200
+          ],
+          [
+            "Rare & Flank Beef Pho",
+            "Rare beef, flank steak, rice noodles Can request: spicy/non-spicy hoisin sauce May Allergic.",
+            1800
+          ],
+          [
+            "Chicken pho",
+            "Vietnamese rice noodle soup with chicken, scallions, and onions, served with bean sprouts and fresh herbs on the side (mildly-spicy)",
+            1800
+          ],
+          [
+            "Mixed chicken Pho",
+            "Rice noodles with chicken, savory mixed sauce, scallions, onions, crispy fried shallots, bean sprouts, and fresh herbs (mildly-spicy)",
+            1800
+          ],
+          [
+            "Combination Pho",
+            "Vietnamese rice noodle soup with rare beef, cooked beef, beef meatballs, scallions, and onions, served with bean sprouts and fresh herbs on the side (mildly-spicy)",
+            2000
+          ]
+        ]
+      },
+      {
+        "name": "Beef Noodle",
+        "items": [
+          [
+            "Hue Style Beef Noodle Soup",
+            "Well-done beef, pork ham (Cha lua), crab balls Spicy, May Allergic.",
+            1800
+          ],
+          [
+            "Special Hue Style Beef Noodle Soup",
+            "Well-done beef, well-done beef ribs, pork ham (Cha lua), crab balls Spicy, May Allergic",
+            2000
+          ]
+        ]
+      },
+      {
+        "name": "Banh Mi",
+        "items": [
+          [
+            "Sizzling Steak & Egg Baguette",
+            "Stir-fried beef, sunny-side up egg, pate, sausage, baguette Non-spicy",
+            1700
+          ],
+          [
+            "Roasted Pork Banh Mi",
+            "Roasted pork, baguette, cilantro, cucumber, pickled carrots & daikon Non-spicy",
+            1500
+          ],
+          [
+            "Grilled Pork Banh Mi",
+            "Grilled pork, baguette, cilantro, cucumber, pickled carrots & daikon Non-spicy",
+            1500
+          ]
+        ]
+      },
+      {
+        "name": "Vermicelli Bowls",
+        "items": [
+          [
+            "Hanoi Style Bun Cha",
+            "Grilled pork slices, grilled meatballs, served with sweet & sour fish sauce with carrots, pickled papaya/kohlrabi, lettuce, herbs, and vermicelli May Allergic Can request: Spicy/non-spicy fish sauce.",
+            1700
+          ],
+          [
+            "Grilled Pork Vermicelli",
+            "Grilled pork, fried spring rolls, vermicelli, roasted peanuts, lettuce, herbs, cucumber served with sweet & sour fish sauce with carrots, pickled daikon May Allergic. Can request: Spicy/non-spicy fish sauce.",
+            1700
+          ],
+          [
+            "Southern Beef Vermicelli Salad",
+            "Stir-fried well-done beef, lettuce, roasted peanuts, cucumber, herbs served with sweet & sour fish sauce with carrots, pickled daikon May Allergic. Can request: Spicy/non-spicy fish sauce.",
+            1700
+          ]
+        ]
+      },
+      {
+        "name": "Specialties",
+        "items": [
+          [
+            "Shrimp & Pork Summer Rolls",
+            "Shrimp, pork, vermicelli, lettuce, carrots, served with sweet & sour fish sauce May Allergic Can request: Spicy/non-spicy fish sauce.",
+            1500
+          ],
+          [
+            "Fried Spring Rolls (Pork & Shrimp)",
+            "Shrimp, minced pork, carrots, spices, served with sweet & sour fish sauce May Allergic Can request: Spicy/non-spicy fish sauce.",
+            1500
+          ],
+          [
+            "Fish Sauce Fried Chicken Rice",
+            "Fried rice, fried chicken, non-spicy, served with soy sauce",
+            1800
+          ],
+          [
+            "Seafood Fried Rice",
+            "Fried rice, shrimp, squid, chicken egg, carrots, peas, served with soy sauce May Allergic",
+            1700
+          ],
+          [
+            "Vietnamese crispy pancake",
+            "Vietnamese crispy rice pancake with shrimp, pork, bean sprouts, mango, fresh herbs, lettuce, and sweet and sour fish sauce (mildly-spicy)",
+            1800
+          ],
+          [
+            "Vietnamese mini savory pancakes",
+            "Mini crispy rice pancakes topped with shrimp and pork, served with mango, fresh herbs, lettuce, and sweet and sour fish sauce (mildly-spicy)",
+            1700
+          ]
+        ]
+      },
+      {
+        "name": "Side & Extra Dishes",
+        "items": [
+          [
+            "White Rice",
+            "White Rice",
+            300
+          ],
+          [
+            "Minced Pork Omelet",
+            "Chicken eggs, minced pork, scallions, stir-fry spices Non-spicy",
+            800
+          ],
+          [
+            "Fish Sauce Fried Chicken",
+            "Chicken, fish sauce glaze Mild spicy",
+            1800
+          ]
+        ]
+      },
+      {
+        "name": "Dessert",
+        "items": [
+          [
+            "Ca phe da",
+            "",
+            500
+          ],
+          [
+            "Ca phe sua da",
+            "",
+            600
+          ],
+          [
+            "Dua tuoi",
+            "",
+            800
+          ],
+          [
+            "NUOC SUOI",
+            "",
+            300
+          ],
+          [
+            "Coca-Cola",
+            "",
+            300
+          ],
+          [
+            "Sprite",
+            "",
+            300
+          ]
+        ]
+      }
+    ],
+    "address": "200 Grand Ave, South San Francisco, CA 94080",
+    "phone": "(415) 314-8970",
+    "clip": {
+      "src": "/clips/thien-ly-house.mp4",
+      "poster": "/clips/thien-ly-house-poster.webp",
+      "href": "https://www.instagram.com/reel/DblRvB7x1I4/",
+      "credit": "Filmed by @yourglobalfoodiebff",
+      "platform": "Instagram",
+      "by": "yourglobalfoodiebff"
+    },
+    "hours": "Daily 11am–3pm & 5–8:30pm",
+    "orderUrl": "https://www.fronteats.com/product/?mid=543517#/pos/order/index?channelOrderingId=3&mid=543517",
+    "siteCta": "Order online",
+    "instagram": "thienly.restaurant",
+    "siteNote": "Prices are from the menu on their own website. The $95 family set serves four; the dishes in the set are included, not sold separately at those prices."
+  },
+  "placements": [
+    "beasty-goods2-85",
+    "south-san-francisco-goods2-1"
+  ],
+  "glenn": "28 Oct 2026, 5:35 pm: South San Francisco • Eats / BEASTY • Eats; thienly.us/contact, four screenshots. 5:38 pm: DblRvB7x1I4, Clip this video plz.",
+  "flags": [
+    "MENU: every positive-priced row from the public hierarchical menu endpoint. The $95 family set is one item with its included eight dishes in the description; the zero-priced components are not standalone menu items. Fried Spring Rolls appears again at the same $15 under Side & Extra Dishes and is kept once.",
+    "HOURS from their own website footer in Glenn’s screenshot of today, matching his Maps screenshot. The current footer no longer prints a schedule; the original published schedule is preserved, not inferred from delivery hours.",
+    "NAME: website THIÊN LÝ; Instagram Thien Ly House; used Thiên Lý House, the storefront name. The footer labels part of the phone as a tax code; no tax identifier is copied.",
+    "Icon cut from their own green profile roundel in IMG_8372.",
+    "Film: 0–24s of the 98.6s review, shop exterior, room and the creator with a bowl; the reel remains credited to @yourglobalfoodiebff."
+  ]
+}

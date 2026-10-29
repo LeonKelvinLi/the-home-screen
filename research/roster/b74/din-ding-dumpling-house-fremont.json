@@ -1,0 +1,598 @@
+{
+  "id": "b_dindingdumplinghousefremont",
+  "name_exact": "Din Ding Dumpling House — Fremont",
+  "checked_on": "2026-10-28",
+  "sources": [
+    "https://dindingdumplinghouses.com/ (own site: handcrafted dumplings and noodles, family owned, two shops; direct ordering links for each)",
+    "https://dindingdumplinghouses.com/locations (Fremont address, phone, hours; Union City address, phone, hours; read 28 Oct 2026)",
+    "https://dindingdumplinghouses.com/menu (dish descriptions, no prices)",
+    "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=0d043941-26c5-48d9-8858-ccf82c12f712 (Fremont ordering, linked by own site, heading DIN DING DUMPLING HOUSE FREMONT, read in Chrome 28 Oct 2026: full menu and prices)",
+    "https://www.bestfoodtodayus.com/ordering/restaurant/menu?restaurant_uid=5bc52437-352d-4ece-8490-acfa40a4cae1 (Union City ordering, heading DIN DING DUMPLING HOUSE UNION CITY; read, not used for Fremont prices)",
+    "https://dindingdumplinghouses.com/images/logo-v2.png (own red seal logo)",
+    "Glenn’s 28 Oct 8:37 pm screenshots IMG_8387 (Instagram contact phone 510-797-8122, email dindingdumpling@gmail.com), IMG_8388 (profile @dindingdumplingbayarea), IMG_8389 (logo), IMG_8390 (own site’s two addresses)",
+    "https://www.instagram.com/reel/DYNeXe3SB9U/ (@thesnacksensei, Din Ding in Fremont)",
+    "https://www.instagram.com/reel/DPM1flUEqkS/ (@apoorva_sharma1, Fremont; marked #ad)",
+    "https://www.instagram.com/reel/DBFuIT3vF3j/ (their own Fremont opening reel, posted 13 Oct 2024 Pacific, sent 28 Oct 2026 8:39 pm as Watch this video clip)"
+  ],
+  "facts": {
+    "slug": "din-ding-dumpling-house-fremont",
+    "name": "Din Ding Dumpling House — Fremont",
+    "label": "Din Ding",
+    "cuisine": "Chinese dumplings & dim sum",
+    "color": "#191919",
+    "icon": "din-ding-dumpling-house-fremont",
+    "site": "https://dindingdumplinghouses.com/",
+    "tagline": "Handmade xiao long bao, steamed dumplings, shao mai and fresh noodles at the Fremont shop on Capitol Avenue, with a second room in Union City.",
+    "prep": 0,
+    "category": "Chinese dumplings & dim sum",
+    "items": [],
+    "sections": [
+      {
+        "name": "Appetizers",
+        "items": [
+          [
+            "Green Bean Cold Vermicelli with Spicy Sauce",
+            "Contains peanuts; spicy, vegetarian",
+            1250
+          ],
+          [
+            "Seaweed & Bean Curd in a Vinegar Dressing",
+            "Vegetarian",
+            950
+          ],
+          [
+            "Wood & Silver Ear Mushrooms in a Vinegar Dressing",
+            "Vegetarian",
+            895
+          ],
+          [
+            "Cucumber Salad",
+            "Vegetarian",
+            895
+          ],
+          [
+            "Sliced Potato Salad with Spicy Sauce",
+            "Spicy, vegetarian",
+            850
+          ],
+          [
+            "The Twisty Cucumber",
+            "Spicy, vegan",
+            1095
+          ]
+        ]
+      },
+      {
+        "name": "Special",
+        "items": [
+          [
+            "Sliced Garlic Pork with Skin",
+            "",
+            1295
+          ],
+          [
+            "Sliced Beef & Tendon in Chili Sauce",
+            "Contains peanuts; spicy",
+            1695
+          ],
+          [
+            "Beef Seasoned with Soy Sauce",
+            "",
+            1495
+          ],
+          [
+            "Sweet and Sour Baby Pork Ribs",
+            "",
+            1395
+          ],
+          [
+            "Spicy Shrimp Toast",
+            "Spicy",
+            1250
+          ],
+          [
+            "Bang Bang Chicken Wing",
+            "4 pieces",
+            1095
+          ],
+          [
+            "House Special BBQ Chicken",
+            "",
+            1295
+          ],
+          [
+            "Golden Shrimp Spring Roll",
+            "",
+            1450
+          ],
+          [
+            "Salt & Pepper Chicken Wing",
+            "4 pieces",
+            1095
+          ]
+        ]
+      },
+      {
+        "name": "Soup",
+        "items": [
+          [
+            "Egg Soup with Vegetable & Tofu",
+            "",
+            1595
+          ],
+          [
+            "Hot & Sour Soup",
+            "Spicy",
+            1595
+          ],
+          [
+            "Chicken Soup with Corn",
+            "",
+            1595
+          ],
+          [
+            "Tofu Puff & Thin Noodle Soup",
+            "Contains pork",
+            1695
+          ]
+        ]
+      },
+      {
+        "name": "Dumplings / Buns",
+        "items": [
+          [
+            "Pork Xiao Long Bao",
+            "8 pieces",
+            1350
+          ],
+          [
+            "Pork & Crab Xiao Long Bao",
+            "8 pieces",
+            1695
+          ],
+          [
+            "Shrimp & Loofah Xiao Long Bao",
+            "8 pieces",
+            1695
+          ],
+          [
+            "Fish Dumpling",
+            "8 pieces",
+            1450
+          ],
+          [
+            "Shrimp & Pork Dumpling",
+            "8 pieces",
+            1450
+          ],
+          [
+            "Korean Sprout Vegetable Dumpling",
+            "8 pieces; vegetarian",
+            1450
+          ],
+          [
+            "Pork, Shrimp & Egg Bun",
+            "3 pieces",
+            1295
+          ],
+          [
+            "Vegetable Bun",
+            "3 pieces; vegetarian",
+            1295
+          ],
+          [
+            "Pork Belly Burger",
+            "3 pieces; contains peanuts",
+            1450
+          ],
+          [
+            "Beef & Onion Shao Mai",
+            "6 pieces",
+            1450
+          ],
+          [
+            "Pumpkin Shrimp & Pork Shao Mai",
+            "6 pieces",
+            1450
+          ],
+          [
+            "Chicken & Corn Shao Mai",
+            "6 pieces",
+            1450
+          ],
+          [
+            "Shrimp & Pork Pot Sticker",
+            "6 pieces",
+            1395
+          ],
+          [
+            "Shrimp & Pork Wonton with Spicy Sauce",
+            "Contains peanuts; spicy",
+            1495
+          ],
+          [
+            "Pan Fried Chives Dumpling with Scallop & Shrimp",
+            "3 pieces",
+            1450
+          ],
+          [
+            "Pan Fried Ground Beef Pie",
+            "3 pieces",
+            1450
+          ]
+        ]
+      },
+      {
+        "name": "Fresh Greens",
+        "items": [
+          [
+            "Dry-Fried String Bean with Pork",
+            "Spicy",
+            1795
+          ],
+          [
+            "Sautéed String Bean",
+            "Vegetarian",
+            1750
+          ],
+          [
+            "Sautéed Bok Choy",
+            "Vegetarian",
+            1750
+          ],
+          [
+            "Sautéed Green Bean Sprout",
+            "Vegetarian",
+            2295
+          ],
+          [
+            "Garlic Spinach",
+            "Vegetarian",
+            1750
+          ],
+          [
+            "Broccoli with Black Pepper",
+            "Vegetarian",
+            1795
+          ]
+        ]
+      },
+      {
+        "name": "Noodle Soup",
+        "items": [
+          [
+            "Beef Brisket Noodle",
+            "Contains tendon and fat",
+            1995
+          ],
+          [
+            "Hot & Sour Minced Pork Noodle",
+            "Spicy",
+            1750
+          ],
+          [
+            "Braised Beef Noodle",
+            "",
+            1950
+          ],
+          [
+            "Spicy Sour Cabbage Fish Slices Noodle",
+            "Spicy",
+            1850
+          ],
+          [
+            "Spicy Beef Brisket Noodle",
+            "Spicy",
+            1995
+          ],
+          [
+            "Braised Beef Rib Noodle",
+            "Bone-in",
+            2050
+          ],
+          [
+            "Chow Ma Mein",
+            "Spicy",
+            1850
+          ]
+        ]
+      },
+      {
+        "name": "Dry Noodle",
+        "items": [
+          [
+            "Xinjiang Style Chicken Noodle",
+            "",
+            2150
+          ],
+          [
+            "Qishan Minced Meat Noodle",
+            "Spicy",
+            1595
+          ],
+          [
+            "Spicy Cumin Zhajiang Noodle",
+            "Spicy",
+            1595
+          ],
+          [
+            "Tomato & Egg with Noodle",
+            "",
+            1595
+          ],
+          [
+            "Special Hot Oil Noodle",
+            "Spicy",
+            1595
+          ],
+          [
+            "Zhajiang Noodle",
+            "",
+            1595
+          ],
+          [
+            "Cold Noodle with Sesame Paste",
+            "Contains peanuts",
+            1550
+          ],
+          [
+            "Spicy Garlic Noodle (Beef)",
+            "Spicy",
+            1595
+          ],
+          [
+            "Chicken Hajiang Noodle with Shiitake Mushroom",
+            "",
+            1595
+          ]
+        ]
+      },
+      {
+        "name": "Chow Mein",
+        "items": [
+          [
+            "Pork Chow Mein",
+            "",
+            1850
+          ],
+          [
+            "Chicken Chow Mein",
+            "",
+            1850
+          ],
+          [
+            "Shrimp Chow Mein",
+            "",
+            1895
+          ],
+          [
+            "Vegetable Chow Mein",
+            "Vegetarian",
+            1850
+          ],
+          [
+            "Combination Chow Mein",
+            "",
+            1895
+          ]
+        ]
+      },
+      {
+        "name": "Rice",
+        "items": [
+          [
+            "Ham Fried Rice",
+            "",
+            1795
+          ],
+          [
+            "Shrimp Fried Rice",
+            "",
+            1895
+          ],
+          [
+            "Chicken Fried Rice",
+            "",
+            1795
+          ],
+          [
+            "Vegetable Fried Rice",
+            "",
+            1795
+          ],
+          [
+            "Combination Fried Rice",
+            "",
+            1895
+          ],
+          [
+            "Seafood Scallop Fried Rice",
+            "",
+            1895
+          ]
+        ]
+      },
+      {
+        "name": "Stir Fry",
+        "items": [
+          [
+            "Pork Chops with Garlic Sauces",
+            "",
+            1950
+          ],
+          [
+            "Fish with Black Bean Sauce",
+            "",
+            2095
+          ],
+          [
+            "Honey Walnut Prawns",
+            "",
+            1995
+          ],
+          [
+            "Salt & Pepper Pork Chops",
+            "Spicy",
+            1950
+          ],
+          [
+            "Braised Tofu",
+            "Vegetarian",
+            1895
+          ],
+          [
+            "Braised Beef Brisket in a Pot",
+            "",
+            2550
+          ],
+          [
+            "Seafood with Tofu in a Pot",
+            "",
+            2395
+          ],
+          [
+            "Salt & Pepper Prawns",
+            "Spicy",
+            2095
+          ],
+          [
+            "Spicy Clams",
+            "Spicy",
+            2095
+          ],
+          [
+            "Mongolian Beef",
+            "Spicy",
+            2050
+          ],
+          [
+            "Broccoli Beef",
+            "",
+            2095
+          ],
+          [
+            "The Crispy Pork with Peach Sauce",
+            "",
+            2095
+          ],
+          [
+            "Spicy Tofu",
+            "Vegan, vegetarian, spicy",
+            1850
+          ],
+          [
+            "Sweet & Sour Chicken",
+            "",
+            1895
+          ]
+        ]
+      },
+      {
+        "name": "Dessert",
+        "items": [
+          [
+            "Deep Fry Rice Cake",
+            "Vegetarian",
+            995
+          ],
+          [
+            "Taro Bun",
+            "3 pieces; vegetarian",
+            995
+          ],
+          [
+            "Piggy Bun",
+            "3 pieces",
+            1295
+          ],
+          [
+            "Strawberry Chocolate XLB",
+            "4 pieces; vegetarian",
+            1050
+          ],
+          [
+            "Sesame Sticky Rice Ball",
+            "Vegetarian",
+            1095
+          ],
+          [
+            "Red Bean Bun",
+            "3 pieces",
+            995
+          ],
+          [
+            "White Rice",
+            "",
+            350
+          ]
+        ]
+      },
+      {
+        "name": "Drinks",
+        "items": [
+          [
+            "Soda",
+            "Coke, Diet Coke or Sprite",
+            295
+          ],
+          [
+            "Thai Ice Tea",
+            "",
+            495
+          ],
+          [
+            "Apple Juice",
+            "",
+            350
+          ]
+        ]
+      }
+    ],
+    "address": "3768 Capitol Ave, Unit J, Fremont, CA 94538",
+    "phone": "(510) 797-8122",
+    "clip": {
+      "src": "/clips/din-ding-dumpling-house-fremont.mp4",
+      "poster": "/clips/din-ding-dumpling-house-fremont-poster.webp",
+      "href": "https://www.instagram.com/reel/DBFuIT3vF3j/",
+      "credit": "Posted by @dindingdumplingbayarea",
+      "platform": "Instagram"
+    },
+    "hours": "Mon–Thu 11am–2:30pm & 5–9pm, Fri 11am–2:30pm & 5–9:30pm, Sat 11am–9:30pm, Sun 11am–9pm",
+    "orderUrl": "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=0d043941-26c5-48d9-8858-ccf82c12f712",
+    "siteCta": "Order online",
+    "email": "dindingdumpling@gmail.com",
+    "instagram": "dindingdumplingbayarea",
+    "siteNote": "Prices are from the Fremont ordering page linked by their website. Union City has its own ordering page and some prices differ. Both shops make their dumplings fresh; the vegetarian and spicy labels repeat the kitchen’s descriptions.",
+    "panels": [
+      {
+        "body": [
+          "Fremont: 3768 Capitol Ave, Unit J, Fremont, CA 94538; (510) 797-8122. Union City: 1779 Decoto Rd, Union City, CA 94587; (510) 675-9958. Both: Mon–Thu 11am–2:30pm & 5–9pm; Fri 11am–2:30pm & 5–9:30pm; Sat 11am–9:30pm; Sun 11am–9pm."
+        ],
+        "links": [
+          {
+            "label": "Order from Fremont",
+            "href": "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=0d043941-26c5-48d9-8858-ccf82c12f712"
+          },
+          {
+            "label": "Order from Union City",
+            "href": "https://www.bestfoodtodayus.com/ordering/restaurant/menu?restaurant_uid=5bc52437-352d-4ece-8490-acfa40a4cae1"
+          }
+        ],
+        "head": "Both shops"
+      }
+    ]
+  },
+  "placements": [
+    "beasty-dimsum-11",
+    "fremont-goods2-9"
+  ],
+  "glenn": "28 Oct 2026, 8:38 pm: Fremont • Eats / BEASTY • Dim Sum / New Category; dindingdumplinghouses.com and four screenshots; DYNeXe3SB9U (Clip this video plz), DPM1flUEqkS (2nd). At 8:39 pm asked Dumplings or Dim Sum?, sent DBFuIT3vF3j as Watch this video clip; at 8:41 pm You choose. But it’s a category everyone will search.",
+  "flags": [
+    "MENU: all items from the Fremont ordering page, 12 sections. Their English dish names and piece counts kept, punctuation tidied. Labels such as Hot are stated as Spicy rather than allergy claims; peanuts and vegetarian notes come from their own descriptions. Duplicate English names that denote different products would need care; here the Fremont menu has no such unresolved repeat.",
+    "LOCATION: the 5bc52437 ordering link is Union City, not Fremont. Its Pork Belly Burger is $13.95 and Pot Sticker $15.50; the Fremont 0d043941 link prints $14.50 and $13.95. Used only Fremont prices.",
+    "HOURS from their own Locations page; both shops publish the same schedule. Email from their Instagram Contact screenshot.",
+    "FILMS: first review 0–15s of @thesnacksensei, potstickers and pork chops at Fremont. Second review 15–30s of @apoorva_sharma1, drinks, dishes and noodles; her original post is marked #ad, recorded in credits.",
+    "Icon uses the own site’s original red seal artwork on its own near-black, enlarged proportionally, no recreated text.",
+    "Own film replaces the main reviewer slot after Glenn’s 8:39 pm follow-up: 0–24s of a 49s own reel, piggy buns, shao mai, noodles, fried rice and wok footage. No opening discount or expired offer is shown. The two reviewer cuts remain below it. The original 2024 caption says Fremont now opens; the page makes no current opening claim."
+  ]
+}

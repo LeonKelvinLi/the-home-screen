@@ -50542,4 +50542,2074 @@ export const LOCAL_SEED: LocalSeed[] = [
       "hours": "Wed–Sun 1pm–9pm",
       "siteNote": "He cooks inside Au Lounge, at the corner of 25th and Broadway. Tables are booked on OpenTable under ‘Smellys’, and his OpenTable listing says he caters events and the room is available for daily buyouts."
   },
+  /* BATCH 74, 2026-10-28: Glenn's evening sends through 8:41 pm.
+     Research: research/roster/b74/. */
+  {
+      "slug": "thien-ly-house",
+      "name": "Thiên Lý House",
+      "label": "Thiên Lý",
+      "cuisine": "Vietnamese kitchen",
+      "color": "#172e21",
+      "icon": "thien-ly-house",
+      "site": "https://thienly.us/",
+      "tagline": "Vietnamese pho, bún bò Huế, banh mi and sizzling steak and eggs at 200 Grand Avenue in downtown South San Francisco, with a family meal set for four.",
+      "prep": 0,
+      "category": "Vietnamese kitchen",
+      "items": [],
+      "sections": [
+          {
+              "name": "Family Meal Set",
+              "items": [
+                  [
+                      "\"Viet\" Family Meal Set",
+                      "Suitable for a group of 4; includes White Rice, Crispy Claypot Rice, Braised Pork with Eggs, Minced Pork Omelet, Fish Sauce Fried Chicken, Fried Spring Rolls (Pork & Shrimp), Sour Shrimp Soup, Boiled Veggies with braised fish sauce & pork dip",
+                      9500
+                  ]
+              ]
+          },
+          {
+              "name": "Pho (Beef and Chicken)",
+              "items": [
+                  [
+                      "Special Beef Pho",
+                      "Rare beef, well-done brisket, beef meatballs Can request: spicy/non-spicy hoisin sauce May Allergic.",
+                      2200
+                  ],
+                  [
+                      "Rare & Flank Beef Pho",
+                      "Rare beef, flank steak, rice noodles Can request: spicy/non-spicy hoisin sauce May Allergic.",
+                      1800
+                  ],
+                  [
+                      "Chicken pho",
+                      "Vietnamese rice noodle soup with chicken, scallions, and onions, served with bean sprouts and fresh herbs on the side (mildly-spicy)",
+                      1800
+                  ],
+                  [
+                      "Mixed chicken Pho",
+                      "Rice noodles with chicken, savory mixed sauce, scallions, onions, crispy fried shallots, bean sprouts, and fresh herbs (mildly-spicy)",
+                      1800
+                  ],
+                  [
+                      "Combination Pho",
+                      "Vietnamese rice noodle soup with rare beef, cooked beef, beef meatballs, scallions, and onions, served with bean sprouts and fresh herbs on the side (mildly-spicy)",
+                      2000
+                  ]
+              ]
+          },
+          {
+              "name": "Beef Noodle",
+              "items": [
+                  [
+                      "Hue Style Beef Noodle Soup",
+                      "Well-done beef, pork ham (Cha lua), crab balls Spicy, May Allergic.",
+                      1800
+                  ],
+                  [
+                      "Special Hue Style Beef Noodle Soup",
+                      "Well-done beef, well-done beef ribs, pork ham (Cha lua), crab balls Spicy, May Allergic",
+                      2000
+                  ]
+              ]
+          },
+          {
+              "name": "Banh Mi",
+              "items": [
+                  [
+                      "Sizzling Steak & Egg Baguette",
+                      "Stir-fried beef, sunny-side up egg, pate, sausage, baguette Non-spicy",
+                      1700
+                  ],
+                  [
+                      "Roasted Pork Banh Mi",
+                      "Roasted pork, baguette, cilantro, cucumber, pickled carrots & daikon Non-spicy",
+                      1500
+                  ],
+                  [
+                      "Grilled Pork Banh Mi",
+                      "Grilled pork, baguette, cilantro, cucumber, pickled carrots & daikon Non-spicy",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "Vermicelli Bowls",
+              "items": [
+                  [
+                      "Hanoi Style Bun Cha",
+                      "Grilled pork slices, grilled meatballs, served with sweet & sour fish sauce with carrots, pickled papaya/kohlrabi, lettuce, herbs, and vermicelli May Allergic Can request: Spicy/non-spicy fish sauce.",
+                      1700
+                  ],
+                  [
+                      "Grilled Pork Vermicelli",
+                      "Grilled pork, fried spring rolls, vermicelli, roasted peanuts, lettuce, herbs, cucumber served with sweet & sour fish sauce with carrots, pickled daikon May Allergic. Can request: Spicy/non-spicy fish sauce.",
+                      1700
+                  ],
+                  [
+                      "Southern Beef Vermicelli Salad",
+                      "Stir-fried well-done beef, lettuce, roasted peanuts, cucumber, herbs served with sweet & sour fish sauce with carrots, pickled daikon May Allergic. Can request: Spicy/non-spicy fish sauce.",
+                      1700
+                  ]
+              ]
+          },
+          {
+              "name": "Specialties",
+              "items": [
+                  [
+                      "Shrimp & Pork Summer Rolls",
+                      "Shrimp, pork, vermicelli, lettuce, carrots, served with sweet & sour fish sauce May Allergic Can request: Spicy/non-spicy fish sauce.",
+                      1500
+                  ],
+                  [
+                      "Fried Spring Rolls (Pork & Shrimp)",
+                      "Shrimp, minced pork, carrots, spices, served with sweet & sour fish sauce May Allergic Can request: Spicy/non-spicy fish sauce.",
+                      1500
+                  ],
+                  [
+                      "Fish Sauce Fried Chicken Rice",
+                      "Fried rice, fried chicken, non-spicy, served with soy sauce",
+                      1800
+                  ],
+                  [
+                      "Seafood Fried Rice",
+                      "Fried rice, shrimp, squid, chicken egg, carrots, peas, served with soy sauce May Allergic",
+                      1700
+                  ],
+                  [
+                      "Vietnamese crispy pancake",
+                      "Vietnamese crispy rice pancake with shrimp, pork, bean sprouts, mango, fresh herbs, lettuce, and sweet and sour fish sauce (mildly-spicy)",
+                      1800
+                  ],
+                  [
+                      "Vietnamese mini savory pancakes",
+                      "Mini crispy rice pancakes topped with shrimp and pork, served with mango, fresh herbs, lettuce, and sweet and sour fish sauce (mildly-spicy)",
+                      1700
+                  ]
+              ]
+          },
+          {
+              "name": "Side & Extra Dishes",
+              "items": [
+                  [
+                      "White Rice",
+                      "White Rice",
+                      300
+                  ],
+                  [
+                      "Minced Pork Omelet",
+                      "Chicken eggs, minced pork, scallions, stir-fry spices Non-spicy",
+                      800
+                  ],
+                  [
+                      "Fish Sauce Fried Chicken",
+                      "Chicken, fish sauce glaze Mild spicy",
+                      1800
+                  ]
+              ]
+          },
+          {
+              "name": "Dessert",
+              "items": [
+                  [
+                      "Ca phe da",
+                      "",
+                      500
+                  ],
+                  [
+                      "Ca phe sua da",
+                      "",
+                      600
+                  ],
+                  [
+                      "Dua tuoi",
+                      "",
+                      800
+                  ],
+                  [
+                      "NUOC SUOI",
+                      "",
+                      300
+                  ],
+                  [
+                      "Coca-Cola",
+                      "",
+                      300
+                  ],
+                  [
+                      "Sprite",
+                      "",
+                      300
+                  ]
+              ]
+          }
+      ],
+      "address": "200 Grand Ave, South San Francisco, CA 94080",
+      "phone": "(415) 314-8970",
+      "clip": {
+          "src": "/clips/thien-ly-house.mp4",
+          "poster": "/clips/thien-ly-house-poster.webp",
+          "href": "https://www.instagram.com/reel/DblRvB7x1I4/",
+          "credit": "Filmed by @yourglobalfoodiebff",
+          "platform": "Instagram",
+          "by": "yourglobalfoodiebff"
+      },
+      "hours": "Daily 11am–3pm & 5–8:30pm",
+      "orderUrl": "https://www.fronteats.com/product/?mid=543517#/pos/order/index?channelOrderingId=3&mid=543517",
+      "siteCta": "Order online",
+      "instagram": "thienly.restaurant",
+      "siteNote": "Prices are from the menu on their own website. The $95 family set serves four; the dishes in the set are included, not sold separately at those prices."
+  },
+  {
+      "slug": "kajiken-san-mateo",
+      "name": "Kajiken San Mateo",
+      "label": "Kajiken",
+      "cuisine": "Aburasoba & soupless ramen",
+      "color": "#292929",
+      "icon": "kajiken-san-mateo",
+      "site": "https://www.kajikenusa.com/san-mateo-store",
+      "tagline": "A soupless ramen shop on South B Street in San Mateo: thick noodles tossed with oils and sauce, chashu, minced pork or wagyu roast beef, with karaage and rice bowls.",
+      "prep": 0,
+      "category": "Aburasoba & soupless ramen",
+      "items": [],
+      "sections": [
+          {
+              "name": "Signature",
+              "items": [
+                  [
+                      "Homura Aburasoba",
+                      "Spicy minced pork, Tokyo onions, bamboo shoots, seaweed, fish powder, chives and raw egg yolk (can sub poached egg or half ajitama)",
+                      1900
+                  ],
+                  [
+                      "Nikumori Aburasoba",
+                      "Spicy minced pork, pork belly slices, green onions, chili threads and raw egg yolk (can sub poached egg or half ajitama)",
+                      2050
+                  ],
+                  [
+                      "Wagyu Roast Beef Aburasoba",
+                      "Wagyu roast beef, crispy onions, green onions, butter onion sauce, yogurt sauce and raw egg yolk (can sub poached egg or half ajitama)",
+                      2650
+                  ],
+                  [
+                      "Megami Aburasoba",
+                      "Fried tofu, bok choy, eggplant, red onions, green onions, cabbage and garlic chili flakes",
+                      1975
+                  ],
+                  [
+                      "Original Aburasoba",
+                      "Chashu, bamboo shoots, Tokyo onions and seaweed",
+                      1675
+                  ],
+                  [
+                      "Soboro Aburasoba",
+                      "Soy-marinated ground chicken, green onion, sesame seeds and raw egg yolk",
+                      1775
+                  ],
+                  [
+                      "Unagi Aburasoba",
+                      "Barbeque eel, pickled daikon, green onions and sesame seeds",
+                      2670
+                  ],
+                  [
+                      "Vegan Nikumiso",
+                      "",
+                      1900
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizers (Take Out)",
+              "items": [
+                  [
+                      "Oroshi Ponzu Karaage",
+                      "With grated daikon, green onions and ponzu",
+                      1050
+                  ],
+                  [
+                      "Ika Geso Karaage",
+                      "Deep-fried calamari with spicy mayo and lemon",
+                      1295
+                  ],
+                  [
+                      "Takoyaki",
+                      "6 pieces of deep-fried balls with octopus, okonomi sauce, mayonnaise, aonori and bonito flakes",
+                      900
+                  ],
+                  [
+                      "Pan Fried Gyoza",
+                      "With ponzu sauce",
+                      800
+                  ],
+                  [
+                      "Edamame",
+                      "With salt",
+                      500
+                  ]
+              ]
+          },
+          {
+              "name": "Rice Bowls",
+              "items": [
+                  [
+                      "Chashu Rice",
+                      "Diced chashu, green onions and seaweed",
+                      800
+                  ],
+                  [
+                      "Mentaiko Rice",
+                      "Spicy mentaiko cod, green onions and seaweed",
+                      700
+                  ],
+                  [
+                      "Wagyu Roast Beef Rice",
+                      "Diced roast beef, onion butter sauce, yogurt sauce, green onions, black pepper, sesame seeds and raw egg yolk (can sub ajitama or poached egg)",
+                      1500
+                  ],
+                  [
+                      "White Rice",
+                      "",
+                      400
+                  ]
+              ]
+          },
+          {
+              "name": "Toppings",
+              "items": [
+                  [
+                      "Spicy Minced Pork",
+                      "",
+                      800
+                  ],
+                  [
+                      "Plant-Based Sweet Pork",
+                      "",
+                      500
+                  ],
+                  [
+                      "Soboro Chicken",
+                      "",
+                      650
+                  ],
+                  [
+                      "Spicy Hatcho Miso",
+                      "",
+                      500
+                  ],
+                  [
+                      "Chashu",
+                      "",
+                      175
+                  ],
+                  [
+                      "Raw Egg",
+                      "",
+                      250
+                  ],
+                  [
+                      "Ajitama",
+                      "Soft-boiled eggs",
+                      250
+                  ],
+                  [
+                      "Poached Egg",
+                      "",
+                      250
+                  ],
+                  [
+                      "Mentaiko",
+                      "Spicy cod roe",
+                      200
+                  ],
+                  [
+                      "Kimchi",
+                      "",
+                      175
+                  ],
+                  [
+                      "Menma",
+                      "Bamboo shoots",
+                      150
+                  ],
+                  [
+                      "Negi",
+                      "Green onion",
+                      150
+                  ],
+                  [
+                      "Nori",
+                      "Seaweed",
+                      150
+                  ],
+                  [
+                      "Fish Powder",
+                      "",
+                      150
+                  ],
+                  [
+                      "Curry Powder",
+                      "",
+                      150
+                  ],
+                  [
+                      "Tofu",
+                      "",
+                      150
+                  ],
+                  [
+                      "Cheese",
+                      "",
+                      150
+                  ],
+                  [
+                      "Corn",
+                      "",
+                      150
+                  ],
+                  [
+                      "Crispy Onion",
+                      "",
+                      150
+                  ],
+                  [
+                      "Garlic, Sesame Seeds, Chili Paste",
+                      "",
+                      100
+                  ],
+                  [
+                      "Nira",
+                      "Chives",
+                      150
+                  ],
+                  [
+                      "Chili Oil & Vinegar",
+                      "",
+                      100
+                  ],
+                  [
+                      "Yogurt Sauce",
+                      "",
+                      150
+                  ],
+                  [
+                      "White Onions",
+                      "",
+                      175
+                  ],
+                  [
+                      "Lemon Slice",
+                      "",
+                      25
+                  ],
+                  [
+                      "Kewpie Mayonnaise",
+                      "",
+                      100
+                  ],
+                  [
+                      "Bok Choy",
+                      "",
+                      150
+                  ],
+                  [
+                      "Cabbage",
+                      "",
+                      150
+                  ]
+              ]
+          }
+      ],
+      "address": "112 S B St, San Mateo, CA 94401",
+      "phone": "(650) 458-3061",
+      "clip": {
+          "src": "/clips/kajiken-san-mateo.mp4",
+          "poster": "/clips/kajiken-san-mateo-poster.webp",
+          "href": "https://www.instagram.com/reel/DfD7T6YT7Cy/",
+          "credit": "Filmed by @antoinetterzz",
+          "platform": "Instagram",
+          "by": "antoinetterzz"
+      },
+      "hours": "Mon–Thu 11am–2pm & 5–9pm, Fri–Sat 11am–10pm, Sun 11am–9:30pm",
+      "orderUrl": "https://order.toasttab.com/online/kajiken-san-mateo-new-112-s-b-st",
+      "siteCta": "Order online",
+      "instagram": "kajikenusa",
+      "siteNote": "Prices are from the San Mateo Toast ordering page linked by their website. Other Kajiken shops have their own menus and hours. Aburasoba is served without broth; the sauce and oil are mixed through the noodles."
+  },
+  {
+      "slug": "taste-of-shaxian",
+      "name": "Taste of Shaxian",
+      "label": "Taste of Shaxian",
+      "cuisine": "Fujian noodles, dumplings & dim sum",
+      "color": "#df442b",
+      "icon": "taste-of-shaxian",
+      "site": "https://chowbusmkt.wixsite.com/tasteofshaxian",
+      "tagline": "Fujian-style snacks in downtown San Mateo: peanut-sauce noodles, wontons, soup dumplings, steamed pots and clay-pot rice, with crab roe noodles and house-made chili sauce.",
+      "prep": 0,
+      "category": "Fujian noodles, dumplings & dim sum",
+      "items": [],
+      "sections": [
+          {
+              "name": "New Items",
+              "items": [
+                  [
+                      "Crab roe noodles/rice",
+                      "蟹黄拌面/饭 — Crab Roe Mixed Noodles is a delectable dish that showcases the rich and savory flavors of fresh crab roe combined with perfectly cooked noodles",
+                      1898
+                  ],
+                  [
+                      "Litsea hot & sour fish fillet spicy",
+                      "云南木姜子酸汤鱼片🌶️",
+                      1898
+                  ],
+                  [
+                      "Pan fried sha xian pork buns(6)",
+                      "生煎沙县小笼包(6)",
+                      1198
+                  ],
+                  [
+                      "Steamed geen mala soup dumplings(15 mins waiting)(4)",
+                      "碧绿麻辣鲜肉灌汤包（15分钟) (4)",
+                      1298
+                  ],
+                  [
+                      "Steamed beef dumplings(6)(15min wait)",
+                      "爆汁牛肉蒸饺(6)(需等15分钟)",
+                      1198
+                  ],
+                  [
+                      "Cherry blossom shimp & pork soup dumplings",
+                      "樱花鲜虾猪肉小笼包",
+                      1398
+                  ],
+                  [
+                      "Fujian spicy chicken steamed pot (bone in) spicy",
+                      "闽南客家汽锅鸡🌶️",
+                      1698
+                  ],
+                  [
+                      "Beef ribs steamed pot",
+                      "汽锅泉州牛排🌶️",
+                      1798
+                  ],
+                  [
+                      "Crispy shredded taro salad",
+                      "香脆芋头沙拉",
+                      998
+                  ],
+                  [
+                      "Sesame dressing with soft tofu salad",
+                      "芝麻沙拉嫩豆腐🌶️",
+                      898
+                  ],
+                  [
+                      "Chef special spicy fried rice w prawn & minced pork",
+                      "双鲜香辣黄金炒饭🌶️",
+                      1598
+                  ],
+                  [
+                      "Minced pork fill in crisp ball",
+                      "黑金肉碎脆球 (6pc)",
+                      1398
+                  ],
+                  [
+                      "Crispy glacier eggplant",
+                      "冰川茄子",
+                      1398
+                  ],
+                  [
+                      "Pan fried vegetable buns(4)",
+                      "生煎素菜包",
+                      1198
+                  ]
+              ]
+          },
+          {
+              "name": "Shaxian Special Dim sum",
+              "items": [
+                  [
+                      "Shaxian wonton soup",
+                      "沙县骨汤小馄饨汤(扁肉） — small wonton w/ pork bone soup base, come w/ dry shrimp and seaweed .",
+                      898
+                  ],
+                  [
+                      "Fried wontons",
+                      "香炸馄饨",
+                      698
+                  ],
+                  [
+                      "Shaxian noodles w peanut sauce",
+                      "沙县花生酱拌面🥜 — cooked Fresh Noodle w soy sauce and peanut sauce",
+                      698
+                  ],
+                  [
+                      "Sha xian steamed pork dumplings(8) ( 15mins)",
+                      "柳叶蒸饺（8个) (等15分钟) — Fresh made dumping leaf shaped , steamed dumplings w/translucent skin , Filled w/poke and cabbage , juicy stuffing .",
+                      1198
+                  ],
+                  [
+                      "Steamed sha xian pork buns (15 minute wait)",
+                      "蒸沙县小笼包(6)(15分钟等待)",
+                      1098
+                  ],
+                  [
+                      "Pork wonton w/ sour soup",
+                      "开味酸汤馄炖🌶️",
+                      998
+                  ],
+                  [
+                      "Peanut sauce w shaxian wontons",
+                      "香拌小馄饨",
+                      798
+                  ],
+                  [
+                      "Sha xian fish ball soup",
+                      "沙县鱼丸汤(6)",
+                      1198
+                  ],
+                  [
+                      "Hot & sour wonton soup",
+                      "酸辣小馄炖🌶️",
+                      998
+                  ],
+                  [
+                      "Fuzhou oyster pancake",
+                      "福州海蛎煎饼",
+                      1398
+                  ],
+                  [
+                      "Sea food flakes soup",
+                      "海鲜锅边糊",
+                      1299
+                  ],
+                  [
+                      "Fuzhou pork wonton soup",
+                      "福州燕丸汤",
+                      998
+                  ],
+                  [
+                      "Chef special pork bun(3)(10 mins waiting)",
+                      "京酱肉包子(3)(10分钟等待) — Fluffy steamed buns filled with tender pork, offering a delightful taste",
+                      898
+                  ],
+                  [
+                      "Steamed big pork buns(2)(15 mins waiting)",
+                      "关汤手撕鲜肉包(2)(15分钟等待)",
+                      798
+                  ],
+                  [
+                      "Sha xian crysal pork siu mai",
+                      "沙县水晶烧卖 — crystal siu mai is a translucent, delicate variety of dim sum from Fujian' Filling Glass noodles Softened chopped and A little Minced pork add. Special from sha Xian",
+                      998
+                  ],
+                  [
+                      "Pan fried beef buns(4)",
+                      "生煎牛肉包(4)",
+                      1198
+                  ],
+                  [
+                      "Stir fried vermicelli (rice noodle)",
+                      "沙县炒米粉 — This dish features thin rice noodles stir-fried with a variety of ingredients, including vegetables, protein (such as beef, chicken, or duck), and  flavored with garlic, soy sauce",
+                      998
+                  ]
+              ]
+          },
+          {
+              "name": "Dim Sum",
+              "items": [
+                  [
+                      "Vegetarian egg rolls",
+                      "手工春卷（4条） — Crispy vegetable-filled rolls",
+                      798
+                  ],
+                  [
+                      "Pork & napa cabbage dumplings",
+                      "白菜猪肉水饺（8个） — dumplings filled with pork and vegetables.",
+                      998
+                  ],
+                  [
+                      "Pork & chives pot stickers",
+                      "开口锅贴(韭菜猪肉）",
+                      998
+                  ],
+                  [
+                      "Green onion pancakes",
+                      "葱油饼 — Crispy pancakes with a savory green onion infusion.",
+                      898
+                  ],
+                  [
+                      "Cold chewy bean curb noodles",
+                      "凉拌干丝",
+                      898
+                  ],
+                  [
+                      "Pork & chives dumplings",
+                      "韭菜猪肉水饺（8个） — Delicate pork dumplings filled with chives and served Boiled",
+                      998
+                  ],
+                  [
+                      "Chicken & napa cabbage dumplings(8pc)",
+                      "白菜鸡肉水饺(8个)",
+                      998
+                  ],
+                  [
+                      "Corn & pork dumplings(8pc)",
+                      "玉米猪肉水饺(8个） — dumplings filled with pork and corn.",
+                      998
+                  ],
+                  [
+                      "Triple delight dumplings(8)(shrimp chive pork)",
+                      "三鲜水饺(8个) (虾,韭菜,猪肉)",
+                      1098
+                  ],
+                  [
+                      "Vegetarian dumplings(8)",
+                      "素菜水饺(8个) — Delicate dumplings filled with fresh vegetables, offering a Chinese cabbage, mushroom, carrot",
+                      1098
+                  ],
+                  [
+                      "Steamed soup dumpling (6) ( 15mins waiting)",
+                      "灌汤小笼包(6) (15分钟等待） — Steamed dumplings with a savory filling, offering a burst of soup in every bite.",
+                      1198
+                  ],
+                  [
+                      "Steamed soup dumplings w/ crab meat (6) (15mins waiting)",
+                      "蟹粉小笼包 (6) (15分钟等待)",
+                      1398
+                  ],
+                  [
+                      "Shrimp pork siu mai (6) (15 minutes waiting)",
+                      "鲜虾猪肉烧卖 (6) (15分钟等待) — Shrimp,pork,shitake mushroom",
+                      1198
+                  ],
+                  [
+                      "Steamed b.b.q. buns(3pc)",
+                      "蒸叉烧包(3个)",
+                      798
+                  ],
+                  [
+                      "Steamed vegetarian buns(3)(15 mins waiting)",
+                      "蒸素菜包(3)(15分钟等待） — Cabbage, Napa Cabbage, carrots",
+                      798
+                  ],
+                  [
+                      "Spicy pork dumplings w peanut sauce",
+                      "红油水饺 — Savory dumplings in spicy red oil, peanut sauce offering a burst of flavor in every bite.",
+                      1098
+                  ],
+                  [
+                      "Spicy wonton w peanut sauce",
+                      "红油抄手🌶️ — Savory wonton in spicy red oil, peanut sauce offering a burst of flavor in every bite.",
+                      898
+                  ],
+                  [
+                      "Steamed mini pork buns",
+                      "老面鲜香小肉包(6)",
+                      1198
+                  ]
+              ]
+          },
+          {
+              "name": "Snacks & Cold Appetizer &",
+              "items": [
+                  [
+                      "Cucumber salad w garlic sauce",
+                      "凉拌黄瓜",
+                      798
+                  ],
+                  [
+                      "Shredded seaweed salad",
+                      "凉拌海带丝",
+                      898
+                  ],
+                  [
+                      "French fries",
+                      "炸薯条",
+                      598
+                  ],
+                  [
+                      "Mochi chinese donut (2)",
+                      "糍粑油条(2个)",
+                      698
+                  ],
+                  [
+                      "Fried chinese donut 1pc",
+                      "炸油条(一根)",
+                      298
+                  ],
+                  [
+                      "Osmanthus chinese tea eggs (3)",
+                      "桂花茶叶蛋(3个)",
+                      598
+                  ],
+                  [
+                      "Soybean milk",
+                      "豆浆",
+                      398
+                  ],
+                  [
+                      "Salt soybean milk (weekend only)",
+                      "咸豆浆(周末限定)",
+                      698
+                  ],
+                  [
+                      "Marinated razor clam spicy",
+                      "捞汁老蛏",
+                      1398
+                  ],
+                  [
+                      "Fried stuffed tofu",
+                      "炸黄金包浆豆腐",
+                      998
+                  ]
+              ]
+          },
+          {
+              "name": "Soup",
+              "items": [
+                  [
+                      "Duck soup w mushroom",
+                      "茶树菇老鸭汤 — 养胃生津，滋养补阴，清热祛火，增强抵抗力",
+                      1098
+                  ],
+                  [
+                      "Ginseng chicken soup",
+                      "花旗参乌鸡汤 — 花旗参乌鸡含有丰富氨基酸，矿物质，维生素，补气养血，抗疲劳",
+                      998
+                  ],
+                  [
+                      "Pork ribs and corn soup",
+                      "玉米排骨汤 — 健脾消食，含丰富膳食纤维，补气血",
+                      898
+                  ],
+                  [
+                      "White radish with pork rib soup",
+                      "白萝卜排骨汤 — 健胃消食，化痰止咳，补中益气",
+                      1098
+                  ],
+                  [
+                      "Morel mushrooms chicken soup",
+                      "羊肚菌虫草花鸡汤 — 羊肚菌“菌中之王”老少皆宜，补气养血，营养滋润，增强免疫力",
+                      1298
+                  ]
+              ]
+          },
+          {
+              "name": "Package Recommendations",
+              "items": [
+                  [
+                      "Combo a shaxian pork buns & pork ribs and corn soup",
+                      "沙县小笼包(6个)+玉米排骨汤",
+                      1498
+                  ],
+                  [
+                      "Combo b shaxian noodles w peanut sauce & duck soup w mushroom",
+                      "沙县花生酱拌面+茶树菇老鸭汤",
+                      1498
+                  ],
+                  [
+                      "Combo c steamed pork dumplings & shaxian wonton soup",
+                      "柳叶蒸饺(8个)+沙县小馄饨",
+                      1798
+                  ],
+                  [
+                      "Combo d shaxian noodles w peanut sauce & shaxian wonton soup",
+                      "沙县花生酱拌面+沙县小馄饨",
+                      1398
+                  ],
+                  [
+                      "Combo e scallion oil noodle or rice noodle and white radish with pork rib soup",
+                      "葱油拌面+白萝卜排骨汤",
+                      1498
+                  ],
+                  [
+                      "Shaxian special combo",
+                      "沙县四大金刚【沙县拌面+沙县馄炖汤+柳叶蒸饺+羊肚菌虫草花鸡汤",
+                      3298
+                  ],
+                  [
+                      "Kids meal (under12 years old)",
+                      "儿童套餐 (玩具随机）",
+                      698
+                  ]
+              ]
+          },
+          {
+              "name": "Specialty Noodles",
+              "items": [
+                  [
+                      "Spicy cold noodles",
+                      "川香凉面🌶️",
+                      898
+                  ],
+                  [
+                      "Spicy shredded chicken cold noodles",
+                      "鸡丝凉面🌶️",
+                      1198
+                  ],
+                  [
+                      "Shredded duck w/ spicy cold noodle",
+                      "鸭丝凉面🌶️",
+                      1298
+                  ],
+                  [
+                      "Hanakatsuo pork noodle",
+                      "特色鲜舞面",
+                      1398
+                  ],
+                  [
+                      "Scallion oil noodle or rice noodle",
+                      "飘香葱油拌面",
+                      698
+                  ],
+                  [
+                      "Noodle w.pork bone soup base",
+                      "猪骨清汤面",
+                      898
+                  ],
+                  [
+                      "Vegetable egg noodles soup or rice noodle",
+                      "鲜蔬菜鸡蛋面",
+                      1498
+                  ],
+                  [
+                      "Braised beef brisket noodles soup",
+                      "招牌牛腩面",
+                      1698
+                  ],
+                  [
+                      "Mala beef brisket noodles soup",
+                      "麻辣牛腩面",
+                      1698
+                  ],
+                  [
+                      "Spicy minced pork noodle soup",
+                      "香辣杂酱小面",
+                      1498
+                  ],
+                  [
+                      "Sour pickled w beef noodle",
+                      "老坛酸菜牛肉面",
+                      1598
+                  ],
+                  [
+                      "Spicy satay noodle soup w/ seafood(peanut allergy)",
+                      "闽南沙茶海鲜面(辣)(内有花生）",
+                      1698
+                  ]
+              ]
+          },
+          {
+              "name": "Rice Noodles and Potato Noodle /",
+              "items": [
+                  [
+                      "Mala duck intestine noodles soup",
+                      "麻辣火锅鸭血米线",
+                      1698
+                  ],
+                  [
+                      "Nan chang rice noodles w/ spicy sauce",
+                      "南昌拌粉(辣)",
+                      1198
+                  ],
+                  [
+                      "Mala beef brisket rice noodles soup",
+                      "麻辣牛腩米线",
+                      1698
+                  ],
+                  [
+                      "Braised beef noodles soup",
+                      "红烧牛腩米线",
+                      1698
+                  ],
+                  [
+                      "Angus beef rib eye with tomato noodles soup",
+                      "鲜浓番茄肥牛米线",
+                      1698
+                  ],
+                  [
+                      "Pickled chilli rice noodle with angus rib-eye beef",
+                      "酸辣泡椒肥牛米线",
+                      1698
+                  ],
+                  [
+                      "Special seafood rice noodles soup (shrimp and clam)",
+                      "三鲜米线 (内含虾和花蛤）",
+                      1698
+                  ],
+                  [
+                      "Guizhou pork hot &sour soup w/rice noodles",
+                      "贵州红酸汤米线",
+                      1598
+                  ],
+                  [
+                      "Hot & sour angus beef rib eye w rice noodle soup",
+                      "肥牛酸辣粉 — Spicy & sour w/ Angus beef , peanuts, onion, bean sprouts",
+                      1598
+                  ]
+              ]
+          },
+          {
+              "name": "Clay Pot",
+              "items": [
+                  [
+                      "Braised chicken (bone in) clay pot w rice",
+                      "砂锅黄焖鸡饭",
+                      1598
+                  ],
+                  [
+                      "Stir fried egg tomato w rice",
+                      "番茄爱上炸蛋饭",
+                      1498
+                  ],
+                  [
+                      "Spicy baby chinese cabbage w pork clay pot w rice",
+                      "砂锅娃娃菜饭 🌶️",
+                      1498
+                  ],
+                  [
+                      "Soy drumstick w rice",
+                      "经典手枪鸡腿饭",
+                      1598
+                  ],
+                  [
+                      "Soy duck drumstick w rice",
+                      "经典鸭腿饭",
+                      1598
+                  ],
+                  [
+                      "Braised pork clay pot w rice",
+                      "香酥把子肉砂锅饭",
+                      1598
+                  ],
+                  [
+                      "Spicy mapo tofu clay pot w rice",
+                      "砂锅麻婆豆腐饭🌶️",
+                      1498
+                  ],
+                  [
+                      "Spicy angus beef rib eye clay pot",
+                      "砂锅肥牛煲🌶️",
+                      1798
+                  ],
+                  [
+                      "Spicy braised egg plant w/ mince pork",
+                      "砂锅肉沫茄子煲🌶️",
+                      1598
+                  ],
+                  [
+                      "Long jiang pork knuckle rice",
+                      "隆江猪脚饭",
+                      1598
+                  ],
+                  [
+                      "Braised beef flank w rice",
+                      "红烧牛腩饭",
+                      1698
+                  ],
+                  [
+                      "Tomato beef brisket clay pot",
+                      "一个番茄牛腩煲",
+                      1898
+                  ],
+                  [
+                      "Braised minced pork rice/noodle",
+                      "经典卤肉饭/面",
+                      1598
+                  ],
+                  [
+                      "Braised pork trotters w/ rice (spicy)",
+                      "招牌猪手饭 (辣)",
+                      1598
+                  ],
+                  [
+                      "Egg fried rice",
+                      "鸡蛋炒饭",
+                      998
+                  ]
+              ]
+          },
+          {
+              "name": "Fujian Signature Dish",
+              "items": [
+                  [
+                      "Boiled fish fillets with lemon pickled cabbage",
+                      "鱼柠有约🌶️",
+                      1698
+                  ],
+                  [
+                      "Intestine w spicy sauce",
+                      "麻辣鸭血🌶️",
+                      1698
+                  ],
+                  [
+                      "Braised beef brisket",
+                      "红烧牛腩煲",
+                      1798
+                  ],
+                  [
+                      "Poached fish fillet in hot chili oil",
+                      "水煮鱼片🌶️",
+                      1898
+                  ],
+                  [
+                      "Fish fillet w. sour pickle",
+                      "酸菜鱼片",
+                      1898
+                  ],
+                  [
+                      "Tomato fish fillet",
+                      "番茄啵啵鱼",
+                      1798
+                  ],
+                  [
+                      "Rattan pepper w/fish fillet",
+                      "砂锅藤椒鱼片🌶️",
+                      1698
+                  ],
+                  [
+                      "Angus beef rib eye w/lemon pickled cabbage",
+                      "柠檬金汤肥牛🌶️",
+                      1898
+                  ],
+                  [
+                      "Sweet & sour pork",
+                      "招牌荔枝肉",
+                      1598
+                  ],
+                  [
+                      "Stir-fry chick gizzard w/chili peppers",
+                      "酸辣泡椒鸡杂🌶️",
+                      1988
+                  ],
+                  [
+                      "Crispy chicken breast cutlet",
+                      "香酥炸鸡排",
+                      1598
+                  ],
+                  [
+                      "Garlic broccoli w. garlic",
+                      "拌西兰花",
+                      998
+                  ],
+                  [
+                      "Bok choy w garlic",
+                      "蒜蓉拌青江菜",
+                      998
+                  ]
+              ]
+          },
+          {
+              "name": "Side order",
+              "items": [
+                  [
+                      "Steamed rice",
+                      "白饭",
+                      250
+                  ],
+                  [
+                      "Soy egg (1)",
+                      "卤蛋 (1)",
+                      250
+                  ],
+                  [
+                      "Soy chicken drumstick",
+                      "卤手枪鸡腿",
+                      698
+                  ],
+                  [
+                      "Soy duck drumstick",
+                      "卤鸭腿",
+                      698
+                  ],
+                  [
+                      "Soy dried tofu(2)",
+                      "卤豆干(2)",
+                      298
+                  ],
+                  [
+                      "Prok bone soup base(cup)",
+                      "猪骨清汤(一碗）",
+                      298
+                  ],
+                  [
+                      "Fried egg(1)",
+                      "煎荷包蛋(1个）",
+                      298
+                  ]
+              ]
+          },
+          {
+              "name": "Dessert",
+              "items": [
+                  [
+                      "Brown sugar rice cake",
+                      "红糖糍粑",
+                      798
+                  ],
+                  [
+                      "Pumpkin rice cake",
+                      "南瓜饼（ 6）",
+                      798
+                  ],
+                  [
+                      "Steam custard bun (3)",
+                      "蒸奶黄包（3)",
+                      698
+                  ],
+                  [
+                      "Red bean paste bun (3) (10 mins waiting)",
+                      "蒸豆沙包（3）（10分钟等待）",
+                      698
+                  ],
+                  [
+                      "Fried flour bun(4)",
+                      "炸奶香小馒头(4)",
+                      498
+                  ],
+                  [
+                      "Sweet rice ball with fermented rice soup",
+                      "酒酿汤圆",
+                      698
+                  ],
+                  [
+                      "Osmanthus tomato",
+                      "桂花冰番茄",
+                      598
+                  ],
+                  [
+                      "Lotus root glutinous rice balls(peanut allergy)",
+                      "酒酿藕粉汤圆(内有花生）",
+                      798
+                  ],
+                  [
+                      "Brown sugar ice jelly (peanut allergy)",
+                      "红糖冰粉 (内含花生）",
+                      698
+                  ],
+                  [
+                      "Osmanthus cake(4)",
+                      "桂花白糖糕(4)",
+                      798
+                  ],
+                  [
+                      "Creme brulee tofu pudding",
+                      "焦糖豆花",
+                      798
+                  ],
+                  [
+                      "Fujian sweet taro paste (15 mins waiting)",
+                      "暖心甜芋泥 （等待15分钟）",
+                      898
+                  ],
+                  [
+                      "Steamed black gold salted egg yolk buns(3)",
+                      "黑金流沙包(3)",
+                      798
+                  ],
+                  [
+                      "Osmanthus green tea tofu pudding",
+                      "桂花龙井豆花盏",
+                      798
+                  ],
+                  [
+                      "Crispy black sesame dumplings",
+                      "薄脆芝麻汤圆",
+                      698
+                  ],
+                  [
+                      "Cold sweet pear soup",
+                      "冰镇烤梨汤",
+                      898
+                  ],
+                  [
+                      "Roasted pear sweet soup",
+                      "鲜炖烤梨",
+                      898
+                  ]
+              ]
+          },
+          {
+              "name": "Drink",
+              "items": [
+                  [
+                      "Soda",
+                      "苏打饮料",
+                      298
+                  ],
+                  [
+                      "Pineapple soda",
+                      "广式菠萝啤",
+                      298
+                  ],
+                  [
+                      "Peach flavor sparkling water",
+                      "元气森林白桃味",
+                      298
+                  ],
+                  [
+                      "Beijing tangerine orange soda",
+                      "北冰洋汽水",
+                      398
+                  ],
+                  [
+                      "Lemon ice tea",
+                      "康师傅冰红茶",
+                      298
+                  ],
+                  [
+                      "Jasmine green tea",
+                      "东方树叶茉莉绿茶",
+                      298
+                  ],
+                  [
+                      "Vita soy milk",
+                      "维他豆奶",
+                      298
+                  ],
+                  [
+                      "Honey jasmine green tea",
+                      "康师傅茉莉蜜茶",
+                      298
+                  ],
+                  [
+                      "Ksf honey jasmine green tea",
+                      "康师傅绿茶",
+                      298
+                  ],
+                  [
+                      "Hawthorn spakling drink",
+                      "望山楂",
+                      498
+                  ],
+                  [
+                      "Red babyberry sparkling drink",
+                      "望梅好",
+                      498
+                  ]
+              ]
+          },
+          {
+              "name": "Milk Tea or Coffee",
+              "items": [
+                  [
+                      "Ice rose latte",
+                      "玫瑰拿铁",
+                      498
+                  ],
+                  [
+                      "Ice osmanthus latte",
+                      "桂花拿铁",
+                      498
+                  ],
+                  [
+                      "Ice matcha latte",
+                      "抹茶拿铁",
+                      598
+                  ],
+                  [
+                      "Ice black tea latter",
+                      "红茶鸳鸯拿铁",
+                      498
+                  ],
+                  [
+                      "Ice jasmine soy milk",
+                      "茉莉冰豆浆",
+                      598
+                  ],
+                  [
+                      "Ice longjing milk tea w",
+                      "烟雨龙井奶茶",
+                      599
+                  ],
+                  [
+                      "Ice yunnan puer rose milk tea",
+                      "云南普洱玫瑰奶茶",
+                      599
+                  ],
+                  [
+                      "Jasmine milk tea",
+                      "茉莉雪芽奶茶",
+                      599
+                  ],
+                  [
+                      "Ice winter melon jasmine tea",
+                      "茉莉冬瓜茶",
+                      498
+                  ],
+                  [
+                      "Rose jasmine iced milk",
+                      "玫瑰茉莉冰奶",
+                      598
+                  ],
+                  [
+                      "Osmanthus iced milk w/ sweet rice",
+                      "桂花酒酿冰奶",
+                      698
+                  ],
+                  [
+                      "Ice orange americano",
+                      "橙C冰美式",
+                      598
+                  ],
+                  [
+                      "Da hong pao hot tea( 1 pot)",
+                      "福建大红袍(一壶)",
+                      498
+                  ],
+                  [
+                      "Lapsang souchong hot tea(1pot)",
+                      "正山小种(一壶)",
+                      498
+                  ]
+              ]
+          },
+          {
+              "name": "Frozen Food /Sauce /",
+              "items": [
+                  [
+                      "Forzen shaxian wonton 15 pc",
+                      "冷冻沙县馄炖 15个",
+                      799
+                  ],
+                  [
+                      "Frozen fuzhou wonton 30pc",
+                      "冷冻福州燕丸 30个",
+                      1898
+                  ],
+                  [
+                      "Frozen chives & pork dumplings",
+                      "冷冻 手工韭菜猪肉水饺  40个",
+                      2898
+                  ],
+                  [
+                      "Frozen pork & vegetable dumplings 40pc",
+                      "冷冻 手工白菜猪肉水饺 40个",
+                      2898
+                  ],
+                  [
+                      "Frozen chicken & napa cabbage dumpling 40pc",
+                      "冷冻 手工白菜鸡肉水饺 40个",
+                      2898
+                  ],
+                  [
+                      "Frozen corn & pork dumplings (40)",
+                      "冷冻 玉米猪肉水饺 (40个)",
+                      2698
+                  ],
+                  [
+                      "Frozen sha xian pork dumpling(20pc)",
+                      "冷冻柳叶蒸饺(20个)",
+                      2098
+                  ],
+                  [
+                      "Frozen chef special pork buns 20pc",
+                      "冷冻京酱肉包子 20个",
+                      2398
+                  ],
+                  [
+                      "Frozen big pork bun (8)",
+                      "冷冻关汁鲜肉大包(8)",
+                      2198
+                  ],
+                  [
+                      "Home made penut sauce 12oz",
+                      "自制香滑花生酱12oz(玻璃瓶装）",
+                      1098
+                  ],
+                  [
+                      "Home made garlic chili sauce(12oz)",
+                      "自制沙县蒜蓉辣椒酱12oz (玻璃瓶装）",
+                      1098
+                  ],
+                  [
+                      "Fresh noodle 5lb",
+                      "新鲜面条一袋 5LB",
+                      2398
+                  ]
+              ]
+          }
+      ],
+      "address": "38 E 4th Ave, San Mateo, CA 94401",
+      "phone": "(650) 393-4715",
+      "clip": {
+          "src": "/clips/taste-of-shaxian.mp4",
+          "poster": "/clips/taste-of-shaxian-poster.webp",
+          "href": "https://www.instagram.com/reel/DU9GimFkmVj/",
+          "credit": "Filmed by @firstdibs.bayarea",
+          "platform": "Instagram",
+          "by": "firstdibs.bayarea"
+      },
+      "orderUrl": "https://pos.chowbus.com/online-ordering/store/15020",
+      "siteCta": "Order online",
+      "email": "Tasteofshaxian@gmail.com",
+      "instagram": "tasteofshaxian",
+      "siteNote": "Regular prices are from their Chowbus ordering page, linked from their own website; member-point offers are excluded. Some noodle and rice dishes have extra options. Their Instagram and website give different weekend hours, so call to confirm. Some dumplings are made to order with a 10–15 minute wait."
+  },
+  {
+      "slug": "din-ding-dumpling-house-fremont",
+      "name": "Din Ding Dumpling House — Fremont",
+      "label": "Din Ding",
+      "cuisine": "Chinese dumplings & dim sum",
+      "color": "#191919",
+      "icon": "din-ding-dumpling-house-fremont",
+      "site": "https://dindingdumplinghouses.com/",
+      "tagline": "Handmade xiao long bao, steamed dumplings, shao mai and fresh noodles at the Fremont shop on Capitol Avenue, with a second room in Union City.",
+      "prep": 0,
+      "category": "Chinese dumplings & dim sum",
+      "items": [],
+      "sections": [
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Green Bean Cold Vermicelli with Spicy Sauce",
+                      "Contains peanuts; spicy, vegetarian",
+                      1250
+                  ],
+                  [
+                      "Seaweed & Bean Curd in a Vinegar Dressing",
+                      "Vegetarian",
+                      950
+                  ],
+                  [
+                      "Wood & Silver Ear Mushrooms in a Vinegar Dressing",
+                      "Vegetarian",
+                      895
+                  ],
+                  [
+                      "Cucumber Salad",
+                      "Vegetarian",
+                      895
+                  ],
+                  [
+                      "Sliced Potato Salad with Spicy Sauce",
+                      "Spicy, vegetarian",
+                      850
+                  ],
+                  [
+                      "The Twisty Cucumber",
+                      "Spicy, vegan",
+                      1095
+                  ]
+              ]
+          },
+          {
+              "name": "Special",
+              "items": [
+                  [
+                      "Sliced Garlic Pork with Skin",
+                      "",
+                      1295
+                  ],
+                  [
+                      "Sliced Beef & Tendon in Chili Sauce",
+                      "Contains peanuts; spicy",
+                      1695
+                  ],
+                  [
+                      "Beef Seasoned with Soy Sauce",
+                      "",
+                      1495
+                  ],
+                  [
+                      "Sweet and Sour Baby Pork Ribs",
+                      "",
+                      1395
+                  ],
+                  [
+                      "Spicy Shrimp Toast",
+                      "Spicy",
+                      1250
+                  ],
+                  [
+                      "Bang Bang Chicken Wing",
+                      "4 pieces",
+                      1095
+                  ],
+                  [
+                      "House Special BBQ Chicken",
+                      "",
+                      1295
+                  ],
+                  [
+                      "Golden Shrimp Spring Roll",
+                      "",
+                      1450
+                  ],
+                  [
+                      "Salt & Pepper Chicken Wing",
+                      "4 pieces",
+                      1095
+                  ]
+              ]
+          },
+          {
+              "name": "Soup",
+              "items": [
+                  [
+                      "Egg Soup with Vegetable & Tofu",
+                      "",
+                      1595
+                  ],
+                  [
+                      "Hot & Sour Soup",
+                      "Spicy",
+                      1595
+                  ],
+                  [
+                      "Chicken Soup with Corn",
+                      "",
+                      1595
+                  ],
+                  [
+                      "Tofu Puff & Thin Noodle Soup",
+                      "Contains pork",
+                      1695
+                  ]
+              ]
+          },
+          {
+              "name": "Dumplings / Buns",
+              "items": [
+                  [
+                      "Pork Xiao Long Bao",
+                      "8 pieces",
+                      1350
+                  ],
+                  [
+                      "Pork & Crab Xiao Long Bao",
+                      "8 pieces",
+                      1695
+                  ],
+                  [
+                      "Shrimp & Loofah Xiao Long Bao",
+                      "8 pieces",
+                      1695
+                  ],
+                  [
+                      "Fish Dumpling",
+                      "8 pieces",
+                      1450
+                  ],
+                  [
+                      "Shrimp & Pork Dumpling",
+                      "8 pieces",
+                      1450
+                  ],
+                  [
+                      "Korean Sprout Vegetable Dumpling",
+                      "8 pieces; vegetarian",
+                      1450
+                  ],
+                  [
+                      "Pork, Shrimp & Egg Bun",
+                      "3 pieces",
+                      1295
+                  ],
+                  [
+                      "Vegetable Bun",
+                      "3 pieces; vegetarian",
+                      1295
+                  ],
+                  [
+                      "Pork Belly Burger",
+                      "3 pieces; contains peanuts",
+                      1450
+                  ],
+                  [
+                      "Beef & Onion Shao Mai",
+                      "6 pieces",
+                      1450
+                  ],
+                  [
+                      "Pumpkin Shrimp & Pork Shao Mai",
+                      "6 pieces",
+                      1450
+                  ],
+                  [
+                      "Chicken & Corn Shao Mai",
+                      "6 pieces",
+                      1450
+                  ],
+                  [
+                      "Shrimp & Pork Pot Sticker",
+                      "6 pieces",
+                      1395
+                  ],
+                  [
+                      "Shrimp & Pork Wonton with Spicy Sauce",
+                      "Contains peanuts; spicy",
+                      1495
+                  ],
+                  [
+                      "Pan Fried Chives Dumpling with Scallop & Shrimp",
+                      "3 pieces",
+                      1450
+                  ],
+                  [
+                      "Pan Fried Ground Beef Pie",
+                      "3 pieces",
+                      1450
+                  ]
+              ]
+          },
+          {
+              "name": "Fresh Greens",
+              "items": [
+                  [
+                      "Dry-Fried String Bean with Pork",
+                      "Spicy",
+                      1795
+                  ],
+                  [
+                      "Sautéed String Bean",
+                      "Vegetarian",
+                      1750
+                  ],
+                  [
+                      "Sautéed Bok Choy",
+                      "Vegetarian",
+                      1750
+                  ],
+                  [
+                      "Sautéed Green Bean Sprout",
+                      "Vegetarian",
+                      2295
+                  ],
+                  [
+                      "Garlic Spinach",
+                      "Vegetarian",
+                      1750
+                  ],
+                  [
+                      "Broccoli with Black Pepper",
+                      "Vegetarian",
+                      1795
+                  ]
+              ]
+          },
+          {
+              "name": "Noodle Soup",
+              "items": [
+                  [
+                      "Beef Brisket Noodle",
+                      "Contains tendon and fat",
+                      1995
+                  ],
+                  [
+                      "Hot & Sour Minced Pork Noodle",
+                      "Spicy",
+                      1750
+                  ],
+                  [
+                      "Braised Beef Noodle",
+                      "",
+                      1950
+                  ],
+                  [
+                      "Spicy Sour Cabbage Fish Slices Noodle",
+                      "Spicy",
+                      1850
+                  ],
+                  [
+                      "Spicy Beef Brisket Noodle",
+                      "Spicy",
+                      1995
+                  ],
+                  [
+                      "Braised Beef Rib Noodle",
+                      "Bone-in",
+                      2050
+                  ],
+                  [
+                      "Chow Ma Mein",
+                      "Spicy",
+                      1850
+                  ]
+              ]
+          },
+          {
+              "name": "Dry Noodle",
+              "items": [
+                  [
+                      "Xinjiang Style Chicken Noodle",
+                      "",
+                      2150
+                  ],
+                  [
+                      "Qishan Minced Meat Noodle",
+                      "Spicy",
+                      1595
+                  ],
+                  [
+                      "Spicy Cumin Zhajiang Noodle",
+                      "Spicy",
+                      1595
+                  ],
+                  [
+                      "Tomato & Egg with Noodle",
+                      "",
+                      1595
+                  ],
+                  [
+                      "Special Hot Oil Noodle",
+                      "Spicy",
+                      1595
+                  ],
+                  [
+                      "Zhajiang Noodle",
+                      "",
+                      1595
+                  ],
+                  [
+                      "Cold Noodle with Sesame Paste",
+                      "Contains peanuts",
+                      1550
+                  ],
+                  [
+                      "Spicy Garlic Noodle (Beef)",
+                      "Spicy",
+                      1595
+                  ],
+                  [
+                      "Chicken Hajiang Noodle with Shiitake Mushroom",
+                      "",
+                      1595
+                  ]
+              ]
+          },
+          {
+              "name": "Chow Mein",
+              "items": [
+                  [
+                      "Pork Chow Mein",
+                      "",
+                      1850
+                  ],
+                  [
+                      "Chicken Chow Mein",
+                      "",
+                      1850
+                  ],
+                  [
+                      "Shrimp Chow Mein",
+                      "",
+                      1895
+                  ],
+                  [
+                      "Vegetable Chow Mein",
+                      "Vegetarian",
+                      1850
+                  ],
+                  [
+                      "Combination Chow Mein",
+                      "",
+                      1895
+                  ]
+              ]
+          },
+          {
+              "name": "Rice",
+              "items": [
+                  [
+                      "Ham Fried Rice",
+                      "",
+                      1795
+                  ],
+                  [
+                      "Shrimp Fried Rice",
+                      "",
+                      1895
+                  ],
+                  [
+                      "Chicken Fried Rice",
+                      "",
+                      1795
+                  ],
+                  [
+                      "Vegetable Fried Rice",
+                      "",
+                      1795
+                  ],
+                  [
+                      "Combination Fried Rice",
+                      "",
+                      1895
+                  ],
+                  [
+                      "Seafood Scallop Fried Rice",
+                      "",
+                      1895
+                  ]
+              ]
+          },
+          {
+              "name": "Stir Fry",
+              "items": [
+                  [
+                      "Pork Chops with Garlic Sauces",
+                      "",
+                      1950
+                  ],
+                  [
+                      "Fish with Black Bean Sauce",
+                      "",
+                      2095
+                  ],
+                  [
+                      "Honey Walnut Prawns",
+                      "",
+                      1995
+                  ],
+                  [
+                      "Salt & Pepper Pork Chops",
+                      "Spicy",
+                      1950
+                  ],
+                  [
+                      "Braised Tofu",
+                      "Vegetarian",
+                      1895
+                  ],
+                  [
+                      "Braised Beef Brisket in a Pot",
+                      "",
+                      2550
+                  ],
+                  [
+                      "Seafood with Tofu in a Pot",
+                      "",
+                      2395
+                  ],
+                  [
+                      "Salt & Pepper Prawns",
+                      "Spicy",
+                      2095
+                  ],
+                  [
+                      "Spicy Clams",
+                      "Spicy",
+                      2095
+                  ],
+                  [
+                      "Mongolian Beef",
+                      "Spicy",
+                      2050
+                  ],
+                  [
+                      "Broccoli Beef",
+                      "",
+                      2095
+                  ],
+                  [
+                      "The Crispy Pork with Peach Sauce",
+                      "",
+                      2095
+                  ],
+                  [
+                      "Spicy Tofu",
+                      "Vegan, vegetarian, spicy",
+                      1850
+                  ],
+                  [
+                      "Sweet & Sour Chicken",
+                      "",
+                      1895
+                  ]
+              ]
+          },
+          {
+              "name": "Dessert",
+              "items": [
+                  [
+                      "Deep Fry Rice Cake",
+                      "Vegetarian",
+                      995
+                  ],
+                  [
+                      "Taro Bun",
+                      "3 pieces; vegetarian",
+                      995
+                  ],
+                  [
+                      "Piggy Bun",
+                      "3 pieces",
+                      1295
+                  ],
+                  [
+                      "Strawberry Chocolate XLB",
+                      "4 pieces; vegetarian",
+                      1050
+                  ],
+                  [
+                      "Sesame Sticky Rice Ball",
+                      "Vegetarian",
+                      1095
+                  ],
+                  [
+                      "Red Bean Bun",
+                      "3 pieces",
+                      995
+                  ],
+                  [
+                      "White Rice",
+                      "",
+                      350
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Soda",
+                      "Coke, Diet Coke or Sprite",
+                      295
+                  ],
+                  [
+                      "Thai Ice Tea",
+                      "",
+                      495
+                  ],
+                  [
+                      "Apple Juice",
+                      "",
+                      350
+                  ]
+              ]
+          }
+      ],
+      "address": "3768 Capitol Ave, Unit J, Fremont, CA 94538",
+      "phone": "(510) 797-8122",
+      "clip": {
+          "src": "/clips/din-ding-dumpling-house-fremont.mp4",
+          "poster": "/clips/din-ding-dumpling-house-fremont-poster.webp",
+          "href": "https://www.instagram.com/reel/DBFuIT3vF3j/",
+          "credit": "Posted by @dindingdumplingbayarea",
+          "platform": "Instagram"
+      },
+      "hours": "Mon–Thu 11am–2:30pm & 5–9pm, Fri 11am–2:30pm & 5–9:30pm, Sat 11am–9:30pm, Sun 11am–9pm",
+      "orderUrl": "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=0d043941-26c5-48d9-8858-ccf82c12f712",
+      "siteCta": "Order online",
+      "email": "dindingdumpling@gmail.com",
+      "instagram": "dindingdumplingbayarea",
+      "siteNote": "Prices are from the Fremont ordering page linked by their website. Union City has its own ordering page and some prices differ. Both shops make their dumplings fresh; the vegetarian and spicy labels repeat the kitchen’s descriptions.",
+      "panels": [
+          {
+              "body": [
+                  "Fremont: 3768 Capitol Ave, Unit J, Fremont, CA 94538; (510) 797-8122. Union City: 1779 Decoto Rd, Union City, CA 94587; (510) 675-9958. Both: Mon–Thu 11am–2:30pm & 5–9pm; Fri 11am–2:30pm & 5–9:30pm; Sat 11am–9:30pm; Sun 11am–9pm."
+              ],
+              "links": [
+                  {
+                      "label": "Order from Fremont",
+                      "href": "https://www.bestfoodtodayus.com/ordering/?restaurant_uid=0d043941-26c5-48d9-8858-ccf82c12f712"
+                  },
+                  {
+                      "label": "Order from Union City",
+                      "href": "https://www.bestfoodtodayus.com/ordering/restaurant/menu?restaurant_uid=5bc52437-352d-4ece-8490-acfa40a4cae1"
+                  }
+              ],
+              "head": "Both shops"
+          }
+      ]
+  },
 ]

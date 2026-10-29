@@ -1826,4 +1826,15 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-goods2-83': 'b_frescasf',
   'beasty-goods2-84': 'b_thesweetspot',
 
+  /* Batch 74, Glenn, 28 October. Their cities' Asian spots are held; Kajiken's Korean/ramen
+     spot is Yayoi's too. Taste of Shaxian is Fujian Chinese food: his explicit Ramen request is
+     seated by hand without changing its cuisine. New category Dim Sum fills from actual type lines. */
+  'south-san-francisco-goods2-1': 'b_thienlyhouse',
+  'beasty-goods2-85': 'b_thienlyhouse',
+  'san-mateo-goods2-3': 'b_kajikensanmateo',
+  'san-mateo-goods2-4': 'b_tasteofshaxian',
+  'beasty-ramen-7': 'b_kajikensanmateo',
+  'beasty-ramen-8': 'b_tasteofshaxian',
+  'fremont-goods2-9': 'b_dindingdumplinghousefremont',
+
 }

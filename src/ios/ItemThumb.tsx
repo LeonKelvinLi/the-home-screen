@@ -21,7 +21,8 @@ const GOODS_KEYWORDS: [RegExp, GlyphName][] = [
   // one of the six bottles its description happens to mention.
   [/bowl|mug|tumbler|flask|copper|wand|drinkware/i, 'cup'],
   [/bottle|gallon|refill|alkaline|jug/i, 'bottle'],
-  [/tee|t-shirt|shirt|polo|hoodie|crewneck|sweat|hat|cap|apparel|tote|sticker/i, 'shirt'],
+  // Whole item words: "that" is not a hat and potstickers are not stickers.
+  [/\b(?:tees?|t-shirts?|shirts?|polos?|hoodies?|crewnecks?|sweat(?:shirts?|pants)?|hats?|caps?|apparel|totes?|stickers?)\b/i, 'shirt'],
 ]
 
 /* Container words, goods sellers ONLY. A butcher's "Ribeye 2-Pack" is a steak,

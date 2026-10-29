@@ -177,6 +177,21 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'wthellydanyelly', place: 'The Sweet Spot', city: 'Walnut Creek', brand: 'b_thesweetspot', reel: reel('DcT6BBStbAk'), clip: true },
   { by: 'realtorandreviewer', place: 'The Sweet Spot', city: 'Walnut Creek', brand: 'b_thesweetspot', reel: reel('DbldkkFqBA2'), clip: true },
   { by: 'xoaramarie', place: 'The Sweet Spot', city: 'Walnut Creek', brand: 'b_thesweetspot', reel: reel('Dbd5kXthhrw'), clip: true },
+  /* Batch 74, Glenn, 28 Oct. Manila Inasal is in Los Angeles and has no BEASTY page: source link only. */
+  { by: 'foodie.dreams', place: 'Manila Inasal', city: 'Los Angeles', reel: reel('DfDGnnGPsYp') },
+  /* Kajiken, San Mateo. Glenn: "Heavy", then "Foodie". Antoinette's Kajiken-only excerpt is its main film. */
+  { by: 'eatswithkath', place: 'Kajiken San Mateo', brand: 'b_kajikensanmateo', reel: reel('DBvMxORRkM7'), clip: true },
+  { by: 'eatswithfoodie', place: 'Kajiken San Mateo', brand: 'b_kajikensanmateo', reel: reel('DZHBRMYvzav'), clip: true },
+  /* Taste of Shaxian: "Clip this video plz", "2nd", "3rd". @firstdibs.bayarea's "Watch this video clip"
+     (resent as "Foodie") is the main film, so it is not duplicated here. */
+  { by: 'thesnacksensei', place: 'Taste of Shaxian', brand: 'b_tasteofshaxian', reel: reel('DcXXO44osnK'), clip: true },
+  { by: 'jensintec', place: 'Taste of Shaxian', brand: 'b_tasteofshaxian', reel: reel('Dcmwqxlp0WR'), clip: true },
+  { by: 'snackateriansf', place: 'Taste of Shaxian', brand: 'b_tasteofshaxian', reel: reel('DbUmGGDyMF3'), clip: true },
+  /* Din Ding's own film arrived afterward as "Watch this video clip"; the first reviewer stays below it. */
+  { by: 'thesnacksensei', place: 'Din Ding Dumpling House — Fremont', brand: 'b_dindingdumplinghousefremont', reel: reel('DYNeXe3SB9U'), clip: true },
+  /* Din Ding in Fremont, "2nd"; original is marked #ad. */
+  { by: 'apoorva_sharma1', place: 'Din Ding Dumpling House — Fremont', brand: 'b_dindingdumplinghousefremont', reel: reel('DPM1flUEqkS'), clip: true },
+
 ]
 
 /*

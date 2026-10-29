@@ -16,6 +16,7 @@ const ring = (cx: number, cy: number, r: number) => `M${cx - r} ${cy}a${r} ${r} 
 
 export const CATEGORY_GLYPHS: Record<string, CategoryGlyph> = {
   froyo: { paths: ['M7 10h10l-1.6 10.5a1 1 0 0 1-1 .9H9.6a1 1 0 0 1-1-.9Z', 'M8 10c0-2 1.6-3 4-3s4 1 4 3', 'M10 7c0-1.6 1-2.6 2-3.6 1 1 2 2 2 3.6'] },
+  dimsum: { paths: ['M3 12c0 5 18 5 18 0', 'M3 12v6c0 5 18 5 18 0v-6', 'M3 12c0-4 18-4 18 0', 'M7 10c0-4 4-4 4 0', 'M13 10c0-4 4-4 4 0', 'M9 7c0-4 4-4 4 0'] },
   ramen: { paths: ['M3 12h18', 'M4 12a8 8 0 0 0 16 0', 'M9 20h6', 'M14 3l6 6', 'M11 4l7 7', 'M8 9c0-1.5 1-1.5 1-3', 'M12 9c0-1.5 1-1.5 1-3'] },
   steakhouse: { paths: ['M5 9c0-3 3-5 7-5s7 2 7 5-2 9-7 9-7-3-7-6Z', 'M9.5 10.5c1-1 2.5-1 3.5 0s1 2.5 0 3.5', 'M3 21h18'] },
   catering: { paths: ['M3 17h18', 'M5 17a7 7 0 0 1 14 0', 'M12 10V8', 'M10.5 8h3', 'M4 20h16'] },

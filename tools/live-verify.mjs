@@ -11,7 +11,7 @@
   membership screen is checked by the strings in its bundle rather than by
   opening it — the alternative is a real account and a real text message.
 
-      node tools/live-verify.mjs [--url https://...]
+      node tools/live-verify.mjs [--url https://...] [--skip-roster]
 */
 import { chromium } from 'playwright'
 
@@ -51,6 +51,9 @@ else {
   else if (still.expanded !== 1 || still.bodies !== 1) fails.push('A CHAPTER CLOSED ITSELF ON RE-RENDER — Glenn’s glitch is still live')
 }
 
+/* --skip-roster is for follow-up deployments after the historical roster walk passed.
+   The current batch has its own full-page audit; this mode keeps all other checks. */
+if (!args.includes('--skip-roster')) {
 // ---- the pages added with it --------------------------------------------
 for (const [id, want] of [
   ['b_pinkonion', 'Pink Onion'],
@@ -381,6 +384,8 @@ for (const [id, want, expect] of [
   if (expect.free && !got.free) fails.push(`${id}: a yellow-sheet spot should be drawn as the free Tier 1 listing`)
   if (expect.free && got.menuBar) fails.push(`${id}: the free listing must not carry the menu`)
   if (expect.reviewBy && !got.reviewBar.includes(`@${expect.reviewBy}`)) fails.push(`${id}: the requested review is missing its creator credit`)
+}
+
 }
 
 // ---- the reviewer's film, his 2026-09-09 protocol ----------------------
@@ -950,4 +955,4 @@ if (landingLine) fails.push('the landing still prints the "local businesses. Ope
 
 await b.close()
 if (fails.length) { console.log('\nFAIL: ' + fails.join('; ')); process.exit(1) }
-console.log(`\nPASS on ${base}: the chapter stays open, the pages render, the roster facts show, the button links, the folded perks shipped.`)
+console.log(`\nPASS on ${base}${args.includes('--skip-roster') ? ' (historical roster walk skipped)' : ''}: the chapter stays open, the pages render, the button links, the folded perks shipped.`)

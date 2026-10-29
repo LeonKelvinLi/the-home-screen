@@ -636,6 +636,25 @@ def m_catering(rng):
     return composite(img, over, blur=3)
 
 
+def m_dimsum(rng):
+    img = gradient('#3a2116', '#181e24')
+    over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(over)
+    # Bamboo baskets with three pleated dumplings.
+    for x, y, scale in [(W * .32, H * .30, 1.1), (W * .7, H * .57, .9), (W * .35, H * .82, .7)]:
+        r = 140 * scale
+        d.ellipse((x-r, y-r*.48, x+r, y+r*.48), outline=rgba('#e8c58c', .27), width=10)
+        d.arc((x-r, y-r*.1, x+r, y+r*.85), 0, 180, fill=rgba('#e8c58c', .27), width=10)
+        d.line((x-r, y, x-r, y+r*.4), fill=rgba('#e8c58c', .27), width=10)
+        d.line((x+r, y, x+r, y+r*.4), fill=rgba('#e8c58c', .27), width=10)
+        for dx, dy in [(-.4, .0), (.4, .0), (0, -.3)]:
+            cx, cy = x+dx*r, y+dy*r
+            d.arc((cx-r*.26, cy-r*.25, cx+r*.26, cy+r*.2), 180, 355, fill=rgba('#fff4dc', .25), width=8)
+            for tilt in [-.12, 0, .12]:
+                d.line((cx+tilt*r, cy-r*.22, cx+tilt*r*.5, cy-r*.05), fill=rgba('#fff4dc', .25), width=5)
+    return composite(img, over, blur=3)
+
+
 def m_ramen(rng):
     img = gradient('#2b1a10', '#141c22')
     over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
@@ -701,6 +720,7 @@ MOTIFS = {
     "catering": m_catering,
     "steakhouse": m_steakhouse,
     "ramen": m_ramen,
+    "dimsum": m_dimsum,
     "diner": m_diner,
     "health": m_health,
     "games": m_games,

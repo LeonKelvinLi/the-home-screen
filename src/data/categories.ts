@@ -130,6 +130,10 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
      Harris' and Blind Butcher in San Francisco. Steakhouses and chophouses by their type line. */
   /* Glenn, 2026-10-27, 6:28 pm: "Sunnyvale • Eats / BEASTY • Ramen / New Category", with Garlic High.
      Ramen shops by their type line. */
+  /* Glenn, 2026-10-28, 8:38 pm: "BEASTY • Dim Sum / New Category"; at 8:39–8:41 asks
+     "Dumplings or Dim Sum?", then "You choose". Dumplings includes both specialists and dim sum rooms;
+     the internal kind remains dimsum, and Search also finds it by "dim sum". */
+  { kind: 'dimsum', heading: 'Dumplings', about: 'Dim sum, dumplings and soup buns', wall: wall('dimsum'), test: /dim[ -]?sum|dumplings?|xiao[ -]?long[ -]?bao/i },
   { kind: 'ramen', heading: 'Ramen', about: 'Ramen shops', wall: wall('ramen'), test: /ramen/i },
   { kind: 'steakhouse', heading: 'Steakhouse', about: 'Steakhouses and chophouses', wall: wall('steakhouse'), test: /steak ?house|chop ?house/i },
   /* "New category BEASTY • Breakfast/diner. Or just • diner" — Glenn, 2026-10-22, 8:56 pm.

@@ -109,7 +109,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
     if (term.length < 2) return { categoryHits: [] as CategoryRow[], cityHits: [], brandHits: [], itemHits: [] as Hit[] }
 
     /* A category first of all: "tattoo" means BEASTY · Tattoo. */
-    const categoryHits = CATEGORY_ROWS.filter((c) => fold(c.heading).includes(fold(term)) || fold(c.kind).includes(fold(term)))
+    const categoryHits = CATEGORY_ROWS.filter((c) => fold(c.heading).includes(fold(term)) || fold(c.kind).includes(fold(term).replace(/\s+/g, '')))
 
     /*
       Cities first, because a place is a different KIND of answer.

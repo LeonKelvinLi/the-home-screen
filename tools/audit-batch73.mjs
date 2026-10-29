@@ -109,7 +109,7 @@ try{
  for(const [kind,id] of [['ramen','b_garlichighsunnyvale'],['steakhouse','b_epicsteak'],['diner','b_earlytorisesf'],['cooks','b_chefsmelly'],['catering','b_chefsmelly']])
   check(`${id} has its ${kind} category seat in the release data`,Object.entries(ALL_PLACEMENTS).some(([seat,brand])=>seat.startsWith(`beasty-${kind}-`)&&brand===id))
  await on('More eats',['b_tacososcar','b_lunettecambodia','b_squarepieguys','b_frescasf'])
- check('BEASTY • Ramen has seven occupied seats in the release data',Object.keys(ALL_PLACEMENTS).filter(s=>s.startsWith('beasty-ramen-')).length===7)
+ check('BEASTY • Ramen retains its first seven occupied seats in the release data',Object.keys(ALL_PLACEMENTS).filter(s=>s.startsWith('beasty-ramen-')).length>=7)
 }catch(e){fails.push(e.message);console.log('FAIL',e.stack)}finally{await b.close();srv?.kill();await db?.drop()}
 if(fails.length){console.log(`FAIL: ${fails.length} batch 73 checks`);process.exit(1)}
 console.log('PASS: batch 73: eight pages, their films, menus, city seats, icons, reviews and BEASTY • Ramen, Steakhouse, Breakfast/Diner, Chefs, Catering and More eats.')

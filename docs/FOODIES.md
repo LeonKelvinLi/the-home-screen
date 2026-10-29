@@ -328,3 +328,9 @@ Secondary and unavailable links:
 | 27 Oct 2026 | @allie.eats (Allie Tong, already listed) | Gao Viet Kitchen, 1900 Irving St, San Francisco: the second half of her Outer Sunset crawl with @festusfeasts, the room, the beef rib pho, the lobster, the staff — [DdX5Vztgv0A](https://www.instagram.com/reel/DdX5Vztgv0A/), sent as “Clip this video plz for Gao” | **Yes.** A second film on Gao Viet Kitchen's page (41–56 s, the Gao half only; the bakery half is Pineapple King's film) |
 | 27 Oct 2026 | @mr.gaoviet (Viet Linh Nguyen, “Mr. Gao”) | Gao Viet Kitchen: “BEAUTY vs. The PHOZILLA”, the giant beef rib pho — [DQzrjKrkuTe](https://www.instagram.com/reel/DQzrjKrkuTe/), sent as “Clip this video plz 2nd”, then “as 1st video” | **Yes.** Gao Viet Kitchen's page film (7–31 s) |
 | 27 Oct 2026 | @mayakay.official (Maya, already listed) | Nawah Market & Deli, Foothill Blvd, Oakland: the famous chopped cheese, a burger, loaded fries and wings — [DfAZqKEM2fX](https://www.instagram.com/reel/DfAZqKEM2fX/), sent as “Clip this video plz / Foodie” | **Yes.** Nawah Market's page film (1–25 s) |
+
+## 28 October 2026 — Batch 74
+
+- @foodie.dreams: [Manila Inasal](https://www.instagram.com/reel/DfDGnnGPsYp/), Los Angeles, “Foodie” (5:17 pm). Source-only OTHER_REVIEWS entry; no business page, so its food stays out of the BEASTY feed.
+- @eatswithfoodie: [Kajiken San Mateo](https://www.instagram.com/reel/DZHBRMYvzav/), “Clip this video plz / Foodie” (7:45 pm); a second additional review under Kajiken's film.
+- @firstdibs.bayarea: [Taste of Shaxian](https://www.instagram.com/reel/DU9GimFkmVj/), first “Watch this video clip” (7:53 pm), then resent as “Foodie” (8:03 pm); credited as its main film once.
