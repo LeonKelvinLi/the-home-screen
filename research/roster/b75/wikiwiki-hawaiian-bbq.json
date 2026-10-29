@@ -1,0 +1,944 @@
+{
+  "id": "b_wikiwikihawaiianbbq",
+  "name_exact": "Wikiwiki Hawaiian BBQ",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://www.wikiwikionline.com/ (address, phone, daily hours)",
+    "https://order.mealkeyway.com/merchant/776e4557594f387733444f4e644f504d656b6b6731413d3d/main (160 distinct regular items, own linked menu)",
+    "Glenn IMG_8421 bio and IMG_8422 own Facebook logo screenshot",
+    "https://www.instagram.com/reel/DdIXcNQhIcm/",
+    "https://www.instagram.com/reel/DcOpenPtXTm/",
+    "https://www.instagram.com/reel/DYT0xwFS2RV/"
+  ],
+  "facts": {
+    "slug": "wikiwiki-hawaiian-bbq",
+    "name": "Wikiwiki Hawaiian BBQ",
+    "label": "Wikiwiki",
+    "cuisine": "Hawaiian BBQ",
+    "color": "#f5f5f5",
+    "icon": "wikiwiki-hawaiian-bbq",
+    "site": "https://www.wikiwikionline.com/",
+    "tagline": "Hawaiian plate lunches, chicken katsu, kalua pork, musubi and saimin on Shattuck Avenue in Berkeley.",
+    "prep": 0,
+    "category": "Hawaiian BBQ",
+    "items": [],
+    "address": "2417 Shattuck Ave, Berkeley, CA 94704",
+    "phone": "(510) 548-3936",
+    "hours": "Daily 11am–9pm",
+    "instagram": "wikiwikihawaiianbbq",
+    "sections": [
+      {
+        "name": "Combination Plate",
+        "items": [
+          [
+            "BBQ Mix Plate",
+            "Grilled teriyaki chicken, beef and short ribs",
+            1675
+          ],
+          [
+            "Seafood Combo",
+            "Fried fish and shrimp; choice of chicken, steak or ribs",
+            1640
+          ],
+          [
+            "Bento Plate",
+            "Teriyaki chicken and beef, a piece of Spam and fried fish",
+            1675
+          ],
+          [
+            "Steamed Broccoli Plate",
+            "Choice of chicken, beef, short ribs or katsu",
+            1625
+          ],
+          [
+            "Curry Mix Plate",
+            "Beef cubes, steak and hamburger patties in curry with carrots and potatoes",
+            1655
+          ],
+          [
+            "Loco Moco Plate",
+            "Hamburger patties, over-easy eggs and gravy",
+            1595
+          ],
+          [
+            "Kalua Pork & Pork Lau Lau",
+            "Shredded pork with pork laulau wrapped in ti leaves",
+            1795
+          ],
+          [
+            "Chicken Deluxe Plate",
+            "Teriyaki chicken, black pepper chicken and chicken katsu",
+            1675
+          ],
+          [
+            "Mix Veggie Plate",
+            "",
+            1495
+          ]
+        ]
+      },
+      {
+        "name": "Saimin (Noodle Soup)",
+        "items": [
+          [
+            "Saimin Noodle Soup",
+            "",
+            725
+          ],
+          [
+            "Teriyaki Beef Saimin",
+            "",
+            995
+          ],
+          [
+            "BBQ Chicken Saimin",
+            "",
+            975
+          ],
+          [
+            "Wikiwiki Saimin",
+            "Chicken and egg",
+            1195
+          ]
+        ]
+      },
+      {
+        "name": "Chicken Plate Lunch",
+        "items": [
+          [
+            "Black Pepper Chicken (Mini)",
+            "Grilled boneless chicken in black pepper marinade",
+            1355
+          ],
+          [
+            "Katsu Chicken (Mini)",
+            "Breaded chicken with katsu sauce",
+            1355
+          ],
+          [
+            "Lemon Chicken (Mini)",
+            "Breaded chicken with lemon sauce",
+            1355
+          ],
+          [
+            "Teriyaki Chicken (Mini)",
+            "Grilled chicken marinated in teriyaki",
+            1355
+          ],
+          [
+            "Chicken Cutlet (Mini)",
+            "Breaded boneless chicken with gravy",
+            1355
+          ],
+          [
+            "Curry Grilled Chicken (Mini)",
+            "",
+            1375
+          ],
+          [
+            "Black Pepper Chicken (Regular)",
+            "Grilled boneless chicken in black pepper marinade",
+            1575
+          ],
+          [
+            "Katsu Chicken (Regular)",
+            "Breaded chicken with katsu sauce",
+            1575
+          ],
+          [
+            "Lemon Chicken (Regular)",
+            "Breaded chicken with lemon sauce",
+            1575
+          ],
+          [
+            "Teriyaki Chicken (Regular)",
+            "Grilled chicken marinated in teriyaki",
+            1575
+          ],
+          [
+            "Chicken Cutlet (Regular)",
+            "Breaded boneless chicken with gravy",
+            1575
+          ],
+          [
+            "Curry Grilled Chicken (Regular)",
+            "",
+            1595
+          ]
+        ]
+      },
+      {
+        "name": "Pork Plate Lunch",
+        "items": [
+          [
+            "Teriyaki Pork Chop (Mini)",
+            "Grilled teriyaki pork chop",
+            1375
+          ],
+          [
+            "Kalua Pork (Mini)",
+            "Slow-roasted smoky shredded pork",
+            1375
+          ],
+          [
+            "Teriyaki Pork Chop (Regular)",
+            "Grilled teriyaki pork chop",
+            1575
+          ],
+          [
+            "Kalua Pork (Regular)",
+            "Slow-roasted smoky shredded pork",
+            1575
+          ]
+        ]
+      },
+      {
+        "name": "Beef Plate Lunch",
+        "items": [
+          [
+            "BBQ Short Ribs (Mini)",
+            "Grilled short ribs marinated in teriyaki",
+            1525
+          ],
+          [
+            "Teriyaki Steak (Mini)",
+            "Thin-sliced beef in teriyaki",
+            1555
+          ],
+          [
+            "Hamburger Steak (Mini)",
+            "Homemade patties in gravy",
+            1525
+          ],
+          [
+            "Beef Curry (Mini)",
+            "Beef cubes, yellow curry, potatoes and carrots",
+            1525
+          ],
+          [
+            "BBQ Short Ribs (Regular)",
+            "Grilled short ribs marinated in teriyaki",
+            1725
+          ],
+          [
+            "Teriyaki Steak (Regular)",
+            "Thin-sliced beef in teriyaki",
+            1755
+          ],
+          [
+            "Hamburger Steak (Regular)",
+            "Homemade patties in gravy",
+            1725
+          ],
+          [
+            "Beef Curry (Regular)",
+            "Beef cubes, yellow curry, potatoes and carrots",
+            1725
+          ]
+        ]
+      },
+      {
+        "name": "Seafood Plate Lunch",
+        "items": [
+          [
+            "Deep Fried Shrimp (Mini)",
+            "Individually breaded shrimp",
+            1525
+          ],
+          [
+            "Deep Fried Fish (Mini)",
+            "Battered fish fillet with tartar sauce",
+            1525
+          ],
+          [
+            "Grilled Fish Fillet (Mini)",
+            "Marinated fish with garlic sauce",
+            1525
+          ],
+          [
+            "Grilled Prawns (Mini)",
+            "With homemade garlic sauce",
+            1525
+          ],
+          [
+            "Deep Fried Shrimp (Regular)",
+            "Individually breaded shrimp",
+            1725
+          ],
+          [
+            "Deep Fried Fish (Regular)",
+            "Battered fish fillet with tartar sauce",
+            1725
+          ],
+          [
+            "Grilled Fish Fillet (Regular)",
+            "Marinated fish with garlic sauce",
+            1725
+          ],
+          [
+            "Grilled Prawns (Regular)",
+            "With homemade garlic sauce",
+            1725
+          ]
+        ]
+      },
+      {
+        "name": "Pork Lau Lau",
+        "items": [
+          [
+            "Pork Lau Lau (Regular)",
+            "Taro leaves, pork and butterfish wrapped in ti leaves",
+            1595
+          ]
+        ]
+      },
+      {
+        "name": "Breakfast",
+        "items": [
+          [
+            "Spam & Eggs with Rice",
+            "",
+            1325
+          ],
+          [
+            "Portuguese Sausages & Eggs with Rice",
+            "",
+            1325
+          ]
+        ]
+      },
+      {
+        "name": "Fix Your Mix",
+        "items": [
+          [
+            "Pick any 2",
+            "",
+            1745
+          ]
+        ]
+      },
+      {
+        "name": "Musubis",
+        "items": [
+          [
+            "Spam Musubi",
+            "",
+            375
+          ],
+          [
+            "BBQ Chicken Musubi",
+            "",
+            425
+          ],
+          [
+            "Katsu Chicken Musubi",
+            "",
+            425
+          ],
+          [
+            "Portuguese Sausage Musubi",
+            "",
+            425
+          ],
+          [
+            "Bacon Cheese Musubi",
+            "",
+            425
+          ],
+          [
+            "Fried Spam Musubi",
+            "",
+            425
+          ]
+        ]
+      },
+      {
+        "name": "Burgers",
+        "items": [
+          [
+            "Two Chicken Burger Special",
+            "",
+            550
+          ],
+          [
+            "Hamburger",
+            "",
+            345
+          ],
+          [
+            "Double Hamburger",
+            "",
+            485
+          ],
+          [
+            "Cheeseburger",
+            "",
+            365
+          ],
+          [
+            "Double Cheeseburger",
+            "",
+            515
+          ],
+          [
+            "Fried Chicken Burger",
+            "",
+            345
+          ],
+          [
+            "Grilled Chicken Burger",
+            "",
+            345
+          ],
+          [
+            "Teriyaki BBQ Chicken Burger",
+            "",
+            455
+          ],
+          [
+            "Teriyaki Beef Burger",
+            "",
+            475
+          ],
+          [
+            "Katsu Chicken Burger",
+            "",
+            455
+          ],
+          [
+            "Fried Fish Burger",
+            "",
+            475
+          ],
+          [
+            "Shrimp Burger",
+            "",
+            425
+          ],
+          [
+            "Kalua Pork Burger",
+            "",
+            475
+          ],
+          [
+            "Hamburger Combo",
+            "",
+            925
+          ],
+          [
+            "Double Hamburger Combo",
+            "",
+            1050
+          ],
+          [
+            "Cheeseburger Combo",
+            "",
+            945
+          ],
+          [
+            "Double Cheeseburger Combo",
+            "",
+            1150
+          ],
+          [
+            "Fried Chicken Burger Combo",
+            "",
+            925
+          ],
+          [
+            "Grilled Chicken Burger Combo",
+            "",
+            925
+          ],
+          [
+            "Teriyaki Chicken Burger Combo",
+            "",
+            1045
+          ],
+          [
+            "Teriyaki Beef Burger Combo",
+            "",
+            1055
+          ],
+          [
+            "Katsu Chicken Burger Combo",
+            "",
+            1045
+          ],
+          [
+            "Fried Fish Burger Combo",
+            "",
+            1055
+          ],
+          [
+            "Shrimp Burger Combo",
+            "",
+            1050
+          ],
+          [
+            "Kalua Pork Burger Combo",
+            "",
+            1125
+          ]
+        ]
+      },
+      {
+        "name": "Paks",
+        "items": [
+          [
+            "Mini Paks (Serves 3–4)",
+            "",
+            5095
+          ],
+          [
+            "Family Paks (Serves 6–7)",
+            "",
+            8595
+          ]
+        ]
+      },
+      {
+        "name": "Catering/Party Trays",
+        "items": [
+          [
+            "Chicken Katsu Catering",
+            "",
+            4650
+          ],
+          [
+            "Teriyaki Chicken Catering",
+            "",
+            4650
+          ],
+          [
+            "Teriyaki Steak Catering",
+            "",
+            7785
+          ],
+          [
+            "Teriyaki Short Ribs Catering",
+            "",
+            8640
+          ],
+          [
+            "Teriyaki Pork Chop Catering",
+            "",
+            4935
+          ],
+          [
+            "Deep Fried Shrimp Catering",
+            "",
+            4365
+          ],
+          [
+            "Deep Fried Fish Fillet Catering",
+            "",
+            7690
+          ],
+          [
+            "Steamed Rice Catering",
+            "",
+            3985
+          ],
+          [
+            "Macaroni Salad Catering",
+            "",
+            5030
+          ],
+          [
+            "Spam Musubi Catering",
+            "",
+            3415
+          ],
+          [
+            "Portuguese Musubi Catering",
+            "",
+            3890
+          ],
+          [
+            "Katsu Musubi Catering",
+            "",
+            3890
+          ],
+          [
+            "Teriyaki Chicken Musubi Catering",
+            "",
+            3890
+          ],
+          [
+            "Kalua Pork Catering",
+            "",
+            4555
+          ],
+          [
+            "Steamed Broccoli Catering",
+            "",
+            2845
+          ],
+          [
+            "House Green Salad Catering",
+            "",
+            2845
+          ]
+        ]
+      },
+      {
+        "name": "Side Items",
+        "items": [
+          [
+            "Chicken Katsu",
+            "",
+            425
+          ],
+          [
+            "Teriyaki Chicken",
+            "",
+            425
+          ],
+          [
+            "Teriyaki Short Ribs",
+            "",
+            525
+          ],
+          [
+            "Teriyaki Steak",
+            "",
+            475
+          ],
+          [
+            "Teriyaki Pork Chop",
+            "",
+            535
+          ],
+          [
+            "Deep Fried Shrimp",
+            "",
+            199
+          ],
+          [
+            "Fried Fish Fillet",
+            "",
+            350
+          ],
+          [
+            "Pork Lau Lau",
+            "",
+            895
+          ],
+          [
+            "Kalua Pork",
+            "",
+            835
+          ],
+          [
+            "Hamburger Patties",
+            "",
+            225
+          ],
+          [
+            "Spam",
+            "",
+            195
+          ],
+          [
+            "Portuguese Sausage",
+            "",
+            95
+          ],
+          [
+            "Egg",
+            "",
+            195
+          ],
+          [
+            "Rice",
+            "",
+            199
+          ],
+          [
+            "House Salad",
+            "",
+            525
+          ],
+          [
+            "French Fries",
+            "",
+            450
+          ],
+          [
+            "Kim Chee",
+            "",
+            450
+          ],
+          [
+            "Macaroni Salad",
+            "",
+            265
+          ],
+          [
+            "Steamed Broccoli",
+            "",
+            525
+          ],
+          [
+            "Cheese Fries/Jalapenos",
+            "",
+            625
+          ],
+          [
+            "Seasoned Cheese Fries/Jalapenos",
+            "",
+            675
+          ],
+          [
+            "Popcorn Chicken",
+            "",
+            625
+          ],
+          [
+            "Edamame",
+            "",
+            525
+          ],
+          [
+            "Seasoned Fries",
+            "",
+            495
+          ],
+          [
+            "Gyoza",
+            "",
+            475
+          ],
+          [
+            "Side Black Pepper Chicken",
+            "",
+            425
+          ],
+          [
+            "Add Bacon",
+            "",
+            150
+          ],
+          [
+            "Add Grilled Onion",
+            "",
+            125
+          ],
+          [
+            "Ajitama Soft Center Egg",
+            "",
+            225
+          ],
+          [
+            "Add Grilled Shrimps",
+            "",
+            130
+          ]
+        ]
+      },
+      {
+        "name": "Beverages",
+        "items": [
+          [
+            "Thai Iced Tea",
+            "",
+            499
+          ],
+          [
+            "Rose Lychee Fizz",
+            "",
+            499
+          ],
+          [
+            "Thai Green Tea",
+            "",
+            499
+          ],
+          [
+            "Hawaiian Sun",
+            "",
+            499
+          ],
+          [
+            "Can Drinks",
+            "",
+            235
+          ],
+          [
+            "Fountain Drinks",
+            "",
+            325
+          ],
+          [
+            "Bottle Drinks",
+            "",
+            325
+          ],
+          [
+            "Bottled Water",
+            "",
+            135
+          ],
+          [
+            "Arizona",
+            "",
+            210
+          ]
+        ]
+      },
+      {
+        "name": "Smoothie",
+        "items": [
+          [
+            "Mango Smoothie",
+            "",
+            499
+          ],
+          [
+            "Pineapple Smoothie",
+            "",
+            499
+          ],
+          [
+            "Banana Smoothie",
+            "",
+            499
+          ],
+          [
+            "Cookie & Cream Smoothie",
+            "",
+            499
+          ],
+          [
+            "Strawberry Smoothie",
+            "",
+            499
+          ],
+          [
+            "Watermelon Smoothie",
+            "",
+            499
+          ],
+          [
+            "Honeydew Smoothie",
+            "",
+            499
+          ],
+          [
+            "Piña Colada (Pineapple Coconut) Smoothie",
+            "",
+            499
+          ],
+          [
+            "Taro Smoothie",
+            "",
+            499
+          ],
+          [
+            "Ube (Purple Yam) Smoothie",
+            "",
+            499
+          ]
+        ]
+      },
+      {
+        "name": "Fruit Tea",
+        "items": [
+          [
+            "Mango Fruit Tea",
+            "",
+            499
+          ],
+          [
+            "Guava Fruit Tea",
+            "",
+            499
+          ],
+          [
+            "Orange Fruit Tea",
+            "",
+            499
+          ],
+          [
+            "Pineapple Fruit Tea",
+            "",
+            499
+          ],
+          [
+            "Peach Fruit Tea",
+            "",
+            499
+          ],
+          [
+            "Passion Fruit Fruit Tea",
+            "",
+            499
+          ],
+          [
+            "Green Apple Fruit Tea",
+            "",
+            499
+          ],
+          [
+            "Rose Fruit Tea",
+            "",
+            499
+          ],
+          [
+            "Lychee Fruit Tea",
+            "",
+            499
+          ]
+        ]
+      },
+      {
+        "name": "Oolong Tea",
+        "items": [
+          [
+            "Osmanthus Oolong Tea",
+            "",
+            499
+          ],
+          [
+            "Roasted Oolong Tea",
+            "",
+            499
+          ],
+          [
+            "Black Tea",
+            "",
+            499
+          ],
+          [
+            "Jasmine Green Tea",
+            "",
+            499
+          ]
+        ]
+      }
+    ],
+    "orderUrl": "https://order.mealkeyway.com/merchant/776e4557594f387733444f4e644f504d656b6b6731413d3d/main",
+    "siteCta": "Order online",
+    "siteNote": "Prices are from their linked ordering menu. Plate lunches, mini plates, individual sides and catering trays have different portions.",
+    "clip": {
+      "src": "/clips/wikiwiki-hawaiian-bbq.mp4",
+      "poster": "/clips/wikiwiki-hawaiian-bbq-poster.webp",
+      "href": "https://www.instagram.com/reel/DdIXcNQhIcm/",
+      "credit": "Filmed by @yogetasworld",
+      "platform": "Instagram",
+      "by": "yogetasworld"
+    }
+  },
+  "placements": [
+    "berkeley-goods2-17",
+    "beasty-goods2-88"
+  ],
+  "glenn": "29 Oct 8:09–8:12 am: Berkeley • Eats / BEASTY • Eats; Yogeta Medium, Danielle Newbie, Ariana Heavyweight.",
+  "flags": [
+    "The 8:14 am Watch reel is Ocean Redwood City, not Wikiwiki. First Wikiwiki send is main; two others remain additional.",
+    "Ariana’s 17–32s excerpt excludes the dated 20 years this year claim.",
+    "Menu: 160 distinct regular rows, including mini/regular sizes, sides, party trays and beverages. Duplicate Mango Fruit Tea appears once. Obvious typos and numbering cleaned; all prices retained.",
+    "The $0.95 Portuguese Sausage is a side portion as listed, not a whole plate."
+  ]
+}

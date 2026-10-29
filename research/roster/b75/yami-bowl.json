@@ -1,0 +1,564 @@
+{
+  "id": "b_yamibowl",
+  "name_exact": "Yami Bowl Bar & BBQ",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://www.yamibowlsj.com/ (address, phone, hours, own ordering link)",
+    "https://order.mealkeyway.com/customer/release/index?mid=70414466536c386b57625962787243797a586c716b513d3d#/main (own linked menu read in Chrome; 88 items)",
+    "Glenn IMG_8415 bio and IMG_8417 enlarged icon",
+    "https://www.instagram.com/reel/De3dn2GpbjB/",
+    "https://www.instagram.com/reel/Dd7oiAFo-s-/",
+    "https://www.instagram.com/reel/Dep7JcOREof/",
+    "https://www.instagram.com/reel/DewyciVBPO8/"
+  ],
+  "facts": {
+    "slug": "yami-bowl",
+    "name": "Yami Bowl Bar & BBQ",
+    "label": "Yami Bowl",
+    "cuisine": "Chinese charcoal BBQ & rice noodles",
+    "color": "#151515",
+    "icon": "yami-bowl",
+    "site": "https://www.yamibowlsj.com/",
+    "tagline": "Northeastern Chinese dishes, charcoal-grilled skewers and Yunnan rice noodles on Berryessa Road in San Jose.",
+    "prep": 0,
+    "category": "Chinese charcoal BBQ & rice noodles",
+    "items": [],
+    "address": "1710 Berryessa Rd #110, San Jose, CA 95133",
+    "phone": "(408) 649-3666",
+    "hours": "Tue–Sun 11am–3pm & 5–11:30pm; Mon closed",
+    "instagram": "yamibowlbbq",
+    "sections": [
+      {
+        "name": "Appetizer",
+        "items": [
+          [
+            "Grilled Chili & Beef Penis Salad",
+            "",
+            1399
+          ],
+          [
+            "Shenyang Mixed Vegetables",
+            "",
+            1199
+          ],
+          [
+            "Tiger Salad",
+            "",
+            1199
+          ],
+          [
+            "Century Egg with Tofu",
+            "",
+            999
+          ],
+          [
+            "Smashed Cucumber with Peanuts",
+            "",
+            1099
+          ],
+          [
+            "Green Onion with Tofu",
+            "",
+            999
+          ],
+          [
+            "Fried Peanuts",
+            "",
+            899
+          ],
+          [
+            "Cold Tossed Bean Curd Sticks",
+            "",
+            999
+          ],
+          [
+            "Mixed Three Shreds",
+            "",
+            1199
+          ],
+          [
+            "Fushun-Style Spicy Fish",
+            "",
+            1499
+          ]
+        ]
+      },
+      {
+        "name": "Northeast Style Rice Noodles",
+        "items": [
+          [
+            "Northeast Yunnan Crossing Bridge Rice Noodles (Clear Soup)",
+            "Rice noodles, leaf lettuce, fish balls, bean sprouts, dried tofu, luncheon meat and quail eggs",
+            1799
+          ],
+          [
+            "Northeast Yunnan Crossing Bridge Rice Noodles (Spicy)",
+            "Rice noodles, celtuce, fish balls, bean sprouts, pressed tofu, luncheon meat and quail eggs",
+            1799
+          ],
+          [
+            "Northeast Yunnan Crossing Bridge Rice Noodles (Tomato)",
+            "Rice noodles, celtuce, fish balls, bean sprouts, pressed tofu, luncheon meat and quail eggs",
+            1799
+          ]
+        ]
+      },
+      {
+        "name": "Malatang",
+        "items": [
+          [
+            "Traditional Northeast Spicy Hot Pot",
+            "Baby bok choy, garland chrysanthemum, shredded kelp, mushrooms, bean sprouts and fried tofu puffs",
+            1699
+          ],
+          [
+            "Northeast Cold Noodles",
+            "",
+            1499
+          ]
+        ]
+      },
+      {
+        "name": "Northeast Specialties",
+        "items": [
+          [
+            "Traditional Northeast Fried Pork Strips",
+            "",
+            2599
+          ],
+          [
+            "Northeast Style Braised Tofu",
+            "",
+            1999
+          ],
+          [
+            "Braised Eggplant (Sweet & Sour)",
+            "",
+            1999
+          ],
+          [
+            "Chili Pepper with Dried Tofu Skin",
+            "",
+            1999
+          ],
+          [
+            "Scrambled Eggs with Tomato",
+            "",
+            1999
+          ],
+          [
+            "Northeast Style Di San Xian",
+            "",
+            1999
+          ],
+          [
+            "Stir-fried Lettuce with Garlic",
+            "",
+            1999
+          ]
+        ]
+      },
+      {
+        "name": "Juewei Duck Snacks",
+        "items": [
+          [
+            "Duck Head (3pc)",
+            "",
+            1149
+          ],
+          [
+            "Duck Neck (300g)",
+            "",
+            1299
+          ],
+          [
+            "Duck Gizzard (250g)",
+            "",
+            1399
+          ],
+          [
+            "Duck Web (8pcs)",
+            "",
+            899
+          ],
+          [
+            "Lotus Root Slices (200g)",
+            "",
+            799
+          ],
+          [
+            "Kelp (200g)",
+            "",
+            749
+          ],
+          [
+            "Bean Curd Skin (200g)",
+            "",
+            749
+          ],
+          [
+            "Quail Eggs (18pcs)",
+            "",
+            1099
+          ],
+          [
+            "Duck Intestine (170g)",
+            "",
+            2999
+          ]
+        ]
+      },
+      {
+        "name": "Old Lady Street Fried Skewers",
+        "items": [
+          [
+            "Fried Fresh Mushrooms (5pcs)",
+            "",
+            899
+          ],
+          [
+            "Fried Cilantro Rolls (1pc)",
+            "",
+            369
+          ],
+          [
+            "Fried Fish Balls (1pc)",
+            "",
+            299
+          ],
+          [
+            "Fried Sausage (2pc)",
+            "",
+            369
+          ],
+          [
+            "Fried Squid (1pc)",
+            "",
+            399
+          ],
+          [
+            "Fried Cabbage",
+            "",
+            299
+          ],
+          [
+            "Fried Potato Slices (4pcs)",
+            "",
+            499
+          ],
+          [
+            "Fried Mini Beef Skewers (10pcs)",
+            "",
+            899
+          ],
+          [
+            "Fried Egg (1)",
+            "",
+            299
+          ],
+          [
+            "Fried Cauliflower",
+            "",
+            299
+          ],
+          [
+            "Fried Green Peppers",
+            "",
+            269
+          ],
+          [
+            "Fried Fish Tofu (1pc)",
+            "",
+            289
+          ],
+          [
+            "Fried Pork Loin (2pc)",
+            "",
+            299
+          ],
+          [
+            "Fried Corn (1pc)",
+            "",
+            299
+          ],
+          [
+            "Fried Chicken (3pcs)",
+            "",
+            299
+          ],
+          [
+            "Fried Chicken Gizzards",
+            "",
+            299
+          ],
+          [
+            "Fried Chicken Hearts",
+            "",
+            299
+          ],
+          [
+            "Fried Bacon Enoki Mushrooms",
+            "",
+            399
+          ],
+          [
+            "Fried Chicken Cutlet Skewers",
+            "",
+            499
+          ]
+        ]
+      },
+      {
+        "name": "Chicken",
+        "items": [
+          [
+            "Basil Chicken",
+            "",
+            1899
+          ],
+          [
+            "Eggplant Chicken in Basil Sauce",
+            "",
+            1899
+          ],
+          [
+            "Broccoli Chicken",
+            "",
+            1899
+          ]
+        ]
+      },
+      {
+        "name": "Beef",
+        "items": [
+          [
+            "Broccoli Beef",
+            "",
+            1999
+          ],
+          [
+            "Cumin Beef",
+            "",
+            1999
+          ]
+        ]
+      },
+      {
+        "name": "Seafood",
+        "items": [
+          [
+            "Broccoli Shrimp",
+            "",
+            1999
+          ],
+          [
+            "Eggplant Shrimp with Basil",
+            "",
+            1999
+          ]
+        ]
+      },
+      {
+        "name": "Vegetables",
+        "items": [
+          [
+            "Mapo Tofu",
+            "",
+            1799
+          ],
+          [
+            "Basil Eggplant",
+            "",
+            1799
+          ],
+          [
+            "Stir Fry Broccoli",
+            "",
+            1699
+          ],
+          [
+            "Stir-fried Vegetables",
+            "",
+            1699
+          ]
+        ]
+      },
+      {
+        "name": "Soup",
+        "items": [
+          [
+            "Seaweed Egg Drop Soup",
+            "",
+            1199
+          ],
+          [
+            "Mixed Stew",
+            "",
+            1199
+          ]
+        ]
+      },
+      {
+        "name": "Fried Rice",
+        "items": [
+          [
+            "Chicken Fried Rice",
+            "",
+            1495
+          ],
+          [
+            "Shrimp Fried Rice",
+            "",
+            1595
+          ],
+          [
+            "Mixed Fried Rice",
+            "Chicken and shrimp",
+            1695
+          ],
+          [
+            "Vegetables Fried Rice",
+            "",
+            1495
+          ],
+          [
+            "Steam Rice",
+            "",
+            250
+          ]
+        ]
+      },
+      {
+        "name": "Noodle",
+        "items": [
+          [
+            "Veggies Chow Mein",
+            "",
+            1495
+          ],
+          [
+            "Chicken Chow Mein",
+            "",
+            1495
+          ],
+          [
+            "Shrimp Chow Mein",
+            "",
+            1595
+          ],
+          [
+            "Beef Chow Mein",
+            "",
+            1595
+          ],
+          [
+            "Mixed Chow Mein",
+            "Chicken and shrimp",
+            1695
+          ]
+        ]
+      },
+      {
+        "name": "Drinks",
+        "items": [
+          [
+            "Coke",
+            "",
+            250
+          ],
+          [
+            "Diet Coke",
+            "",
+            250
+          ],
+          [
+            "Sprite",
+            "",
+            250
+          ],
+          [
+            "Hongbaolai",
+            "",
+            499
+          ],
+          [
+            "Hongbaolai Peanut Milk",
+            "",
+            499
+          ],
+          [
+            "Iced Black Tea",
+            "",
+            350
+          ],
+          [
+            "Wanglaoji Herbal Tea",
+            "",
+            350
+          ],
+          [
+            "Ba Wang Si",
+            "",
+            699
+          ],
+          [
+            "Arctic Ocean Soda",
+            "",
+            400
+          ],
+          [
+            "Master Kong Crystal Sugar Pear",
+            "",
+            400
+          ],
+          [
+            "Oriental Leaf",
+            "",
+            450
+          ],
+          [
+            "Wangzai Milk",
+            "",
+            300
+          ],
+          [
+            "Coconut Palm Coconut Milk",
+            "",
+            350
+          ],
+          [
+            "Master Kong Sour Plum Drink",
+            "",
+            350
+          ],
+          [
+            "Genki Forest (Peach Flavor)",
+            "",
+            400
+          ]
+        ]
+      }
+    ],
+    "orderUrl": "https://order.mealkeyway.com/customer/release/index?mid=70414466536c386b57625962787243797a586c716b513d3d#/main",
+    "siteCta": "Order online",
+    "siteNote": "Prices are from the ordering page linked by their website. Confirm ingredients and allergens with the restaurant.",
+    "clip": {
+      "src": "/clips/yami-bowl.mp4",
+      "poster": "/clips/yami-bowl-poster.webp",
+      "href": "https://www.instagram.com/reel/De3dn2GpbjB/",
+      "credit": "Posted by @yamibowlbbq",
+      "platform": "Instagram"
+    }
+  },
+  "placements": [
+    "san-jose-goods2-25",
+    "beasty-goods2-87",
+    "beasty-bbq-23"
+  ],
+  "glenn": "29 Oct 7:59–8:01 am: San Jose • Eats / BEASTY • Eats; Volha Heavyweight/Foodie; own Watch; Tony Medium; Jenn Newbie.",
+  "flags": [
+    "88 available regular items, excluding duplicated Reward Items, sold-out Eggplant in Garlic Sauce and the seasonal Chinese Valentine’s Day set. Removed (D) prefixes and corrected obvious spelling, preserving prices and portions.",
+    "Own film 1–10.9s; three reviews keep page at four films. Jenn’s original caption says Thank you for having me.",
+    "Charcoal skewers appear in the films, while current online menu has a large fried-skewer section: kept actual ordering names instead of relabeling them grilled."
+  ]
+}

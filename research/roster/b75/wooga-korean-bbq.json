@@ -1,0 +1,39 @@
+{
+  "id": "b_woogakoreanbbq",
+  "name_exact": "Wooga Korean BBQ",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://woogakorean.com/contact/ (address and phone)",
+    "https://woogakorean.com/location/ (schedule matches Glenn’s Instagram screenshot)",
+    "https://woogakorean.com/menu/ (eight generic dish previews, not a full detailed barbecue menu)",
+    "Glenn IMG_8429 Instagram bio, IMG_8430 enlarged own logo"
+  ],
+  "facts": {
+    "slug": "wooga-korean-bbq",
+    "name": "Wooga Korean BBQ",
+    "label": "Wooga",
+    "cuisine": "Korean BBQ",
+    "color": "#292929",
+    "icon": "wooga-korean-bbq",
+    "site": "https://woogakorean.com/contact/",
+    "tagline": "Korean barbecue on South De Anza Boulevard in Cupertino, with table grills, meats and banchan.",
+    "prep": 0,
+    "category": "Korean BBQ",
+    "items": [],
+    "address": "10493 S De Anza Blvd, Cupertino, CA 95014",
+    "phone": "(408) 352-5515",
+    "hours": "Mon–Thu 11am–3pm & 5–9pm, Fri–Sat 11am–10pm, Sun 11am–9pm",
+    "instagram": "wooga_koreanbbq",
+    "siteCta": "Visit their website",
+    "contactOnly": "Call Wooga for the current barbecue menu, set options, prices and reservations. Their website has a short dish preview; confirm the details with the restaurant."
+  },
+  "placements": [
+    "beasty-bbq-0",
+    "cupertino-goods-7"
+  ],
+  "glenn": "29 Oct 8:31 am: Cupertino • Eats / BEASTY • BBQ / New Category.",
+  "flags": [
+    "No reel sent for Wooga.",
+    "Full priced menu held: website only has eight broad preview names such as Bbq, Beef and Korean BBQ, without cuts, weights or set contents. Contact-only page sends people to restaurant rather than inventing a full menu."
+  ]
+}

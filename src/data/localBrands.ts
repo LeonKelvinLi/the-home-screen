@@ -11958,12 +11958,11 @@ export const LOCAL_SEED: LocalSeed[] = [
     siteCta: "See their menu",
     contactOnly: "Fresh seafood and international cuisine: raw oysters, cioppino, seafood towers, pasta and steaks, with lunch and weekend brunch. The Redwood City menu is priced a little differently from Union City’s, so see theirs; call to check today’s hours.",
     clip: {
-      src: '/clips/ocean-oyster-bar.mp4',
-      poster: '/clips/ocean-oyster-bar-poster.webp',
-      href: 'https://www.instagram.com/reel/DVPR8vWEr9U/',
-      credit: "Filmed by @bayarea_fooddreamz",
-      platform: 'Instagram',
-      by: "bayarea_fooddreamz",
+      "src": "/clips/ocean-oyster-bar-redwood-city.mp4",
+      "poster": "/clips/ocean-oyster-bar-redwood-city-poster.webp",
+      "href": "https://www.instagram.com/reel/DWIGk2_j-fX/",
+      "credit": "Filmed by @indigosmedia",
+      "platform": "Instagram"
     },
     items: [],
   },
@@ -20789,6 +20788,13 @@ export const LOCAL_SEED: LocalSeed[] = [
       "prep": 0,
       "category": "Pizza and wings",
       "items": [],
+      "clip": {
+          "src": "/clips/pizza-casamia.mp4",
+          "poster": "/clips/pizza-casamia-poster.webp",
+          "href": "https://www.instagram.com/reel/De3TqRvOWos/",
+          "credit": "Posted by @pizzacasamiasanjose",
+          "platform": "Instagram"
+      },
       "address": "1423 Branham Ln, San Jose, CA 95118",
       "phone": "(408) 265-2222",
       "email": "info@pizzacasamia.com",
@@ -52611,5 +52617,2866 @@ export const LOCAL_SEED: LocalSeed[] = [
               "head": "Both shops"
           }
       ]
+  },
+  /* BATCH 75, Glenn’s 28–29 October sends. Sources and held details: research/roster/b75/. */
+  {
+      "slug": "origin-lab-coffee-matcha",
+      "name": "Origin Lab Coffee & Matcha",
+      "label": "Origin Lab",
+      "cuisine": "Specialty coffee & matcha",
+      "color": "#ffffff",
+      "icon": "origin-lab-coffee-matcha",
+      "site": "https://originlabcoffeematcha.toast.site/",
+      "tagline": "Specialty coffee, ceremonial matcha and cloud-topped lattes on Sutter Street, with pastries and coffee gear.",
+      "prep": 0,
+      "category": "Specialty coffee & matcha",
+      "items": [],
+      "address": "211 Sutter St, San Francisco, CA 94108",
+      "phone": "(628) 724-7775",
+      "instagram": "originlabcoffeematcha",
+      "sections": [
+          {
+              "name": "Handcrafted Matcha Cloud",
+              "items": [
+                  [
+                      "Velvet Matcha Cloud",
+                      "",
+                      795
+                  ],
+                  [
+                      "Pure Matcha Lab",
+                      "",
+                      775
+                  ],
+                  [
+                      "Coconut Wave Matcha Cloud",
+                      "",
+                      775
+                  ],
+                  [
+                      "Yuzu Air Matcha Cloud",
+                      "",
+                      825
+                  ],
+                  [
+                      "Citrus Wave Matcha Cloud",
+                      "",
+                      775
+                  ],
+                  [
+                      "Roast Lab Hojicha",
+                      "",
+                      775
+                  ],
+                  [
+                      "Hot Matcha Latte",
+                      "",
+                      650
+                  ],
+                  [
+                      "Hot Hojicha Latte",
+                      "",
+                      750
+                  ],
+                  [
+                      "Mango Matcha Nimbus",
+                      "",
+                      795
+                  ],
+                  [
+                      "Ube Matcha Nimbus",
+                      "",
+                      795
+                  ]
+              ]
+          },
+          {
+              "name": "Handcrafted Espresso Clouds",
+              "items": [
+                  [
+                      "Banana Espresso Cloud",
+                      "",
+                      795
+                  ],
+                  [
+                      "Amber Velvet Cloud",
+                      "",
+                      795
+                  ],
+                  [
+                      "Midnight Mocha Cloud",
+                      "",
+                      795
+                  ],
+                  [
+                      "Coco Snow Cloud",
+                      "",
+                      795
+                  ],
+                  [
+                      "Solar Ember Cloud",
+                      "",
+                      775
+                  ],
+                  [
+                      "Tropic Luxe Cloud",
+                      "",
+                      775
+                  ],
+                  [
+                      "Pumpkin Nimbus Latte",
+                      "",
+                      795
+                  ]
+              ]
+          },
+          {
+              "name": "Handcrafted Strawberry Clouds",
+              "items": [
+                  [
+                      "Matcha Strawberry Nimbus",
+                      "",
+                      795
+                  ],
+                  [
+                      "Hojicha Strawberry Nimbus",
+                      "",
+                      795
+                  ],
+                  [
+                      "Strawberry Citrus Nimbus",
+                      "",
+                      775
+                  ],
+                  [
+                      "Strawberry Coco Nimbus",
+                      "",
+                      775
+                  ]
+              ]
+          },
+          {
+              "name": "Espresso Drinks",
+              "items": [
+                  [
+                      "Latte",
+                      "",
+                      700
+                  ],
+                  [
+                      "Cappuccino",
+                      "",
+                      700
+                  ],
+                  [
+                      "Americano",
+                      "",
+                      500
+                  ],
+                  [
+                      "Cortado",
+                      "",
+                      600
+                  ],
+                  [
+                      "Espresso",
+                      "",
+                      500
+                  ],
+                  [
+                      "Mocha",
+                      "",
+                      700
+                  ],
+                  [
+                      "Brew Coffee",
+                      "",
+                      550
+                  ],
+                  [
+                      "Flat White",
+                      "",
+                      700
+                  ],
+                  [
+                      "London Fog",
+                      "",
+                      650
+                  ],
+                  [
+                      "Pour Over",
+                      "",
+                      600
+                  ],
+                  [
+                      "Black Eye Cloud",
+                      "",
+                      750
+                  ],
+                  [
+                      "Cafe Au Lait",
+                      "",
+                      600
+                  ],
+                  [
+                      "Hot Chocolate",
+                      "",
+                      600
+                  ],
+                  [
+                      "Macchiato",
+                      "",
+                      500
+                  ],
+                  [
+                      "Black Eye",
+                      "",
+                      650
+                  ],
+                  [
+                      "Cold Brew",
+                      "",
+                      550
+                  ],
+                  [
+                      "Steam Milk",
+                      "",
+                      300
+                  ]
+              ]
+          },
+          {
+              "name": "Tea Bags",
+              "items": [
+                  [
+                      "Chamomile Tea",
+                      "",
+                      400
+                  ],
+                  [
+                      "Black Tea - Decaf",
+                      "",
+                      400
+                  ],
+                  [
+                      "Earl Grey",
+                      "",
+                      400
+                  ],
+                  [
+                      "Earl Grey - Decaf",
+                      "",
+                      400
+                  ],
+                  [
+                      "English Breakfast",
+                      "",
+                      400
+                  ],
+                  [
+                      "Jasmine Green Tea",
+                      "",
+                      400
+                  ],
+                  [
+                      "Lemon Ginger Tea",
+                      "",
+                      400
+                  ],
+                  [
+                      "Peppermint Tea",
+                      "",
+                      400
+                  ],
+                  [
+                      "Premium Earl Grey",
+                      "",
+                      600
+                  ]
+              ]
+          },
+          {
+              "name": "Food/Pastries",
+              "items": [
+                  [
+                      "Breakfast Sandwich",
+                      "",
+                      799
+                  ],
+                  [
+                      "Danish",
+                      "",
+                      475
+                  ],
+                  [
+                      "Bagel - Everything",
+                      "",
+                      450
+                  ],
+                  [
+                      "Croissant",
+                      "",
+                      400
+                  ],
+                  [
+                      "Egg Bites (2) - Vegetarian",
+                      "",
+                      649
+                  ],
+                  [
+                      "Bagel - Plain",
+                      "",
+                      450
+                  ],
+                  [
+                      "Waffles (2)",
+                      "",
+                      699
+                  ]
+              ]
+          },
+          {
+              "name": "Candy",
+              "items": [
+                  [
+                      "Bolci - Matcha Strawberry",
+                      "",
+                      1699
+                  ],
+                  [
+                      "Fig Bar - Blueberry",
+                      "",
+                      150
+                  ],
+                  [
+                      "Fig Bar - Raspberry",
+                      "",
+                      150
+                  ],
+                  [
+                      "Kit Kat - Matcha (10 pack)",
+                      "",
+                      1299
+                  ],
+                  [
+                      "Kit Kat - Matcha (Single)",
+                      "",
+                      150
+                  ],
+                  [
+                      "Kit Kat - Strawberry (10 pack)",
+                      "",
+                      1299
+                  ],
+                  [
+                      "Kit Kat - Strawberry (Single)",
+                      "",
+                      150
+                  ],
+                  [
+                      "Oreo - Matcha (China)",
+                      "",
+                      599
+                  ],
+                  [
+                      "Oreo - Strawberry (Japan)",
+                      "",
+                      699
+                  ],
+                  [
+                      "Pocky - Matcha Green Tea Cream",
+                      "",
+                      699
+                  ],
+                  [
+                      "Pocky - Rich Matcha",
+                      "",
+                      699
+                  ],
+                  [
+                      "Tcho - Chico Latte - Singles",
+                      "",
+                      299
+                  ],
+                  [
+                      "Tcho - Choco Latte",
+                      "",
+                      899
+                  ],
+                  [
+                      "Tcho - Perfect Matcha",
+                      "",
+                      899
+                  ],
+                  [
+                      "Tcho - Perfect Matcha - Singles",
+                      "",
+                      299
+                  ]
+              ]
+          },
+          {
+              "name": "Coffee Beans",
+              "items": [
+                  [
+                      "Neapolitan Espresso Beans",
+                      "",
+                      2099
+                  ]
+              ]
+          },
+          {
+              "name": "Bottled Drinks",
+              "items": [
+                  [
+                      "Crystal Geyser",
+                      "",
+                      250
+                  ],
+                  [
+                      "Fiji",
+                      "",
+                      400
+                  ],
+                  [
+                      "Harmless Harvest Coconut Water",
+                      "",
+                      599
+                  ],
+                  [
+                      "Liquid Death Severed Lime",
+                      "",
+                      400
+                  ],
+                  [
+                      "Martinelli’s Apple Juice",
+                      "",
+                      400
+                  ],
+                  [
+                      "Mexican Coca Cola",
+                      "",
+                      550
+                  ],
+                  [
+                      "San Pellegrino",
+                      "",
+                      450
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks - Cup",
+              "items": [
+                  [
+                      "Coconut Water - Iced",
+                      "",
+                      450
+                  ],
+                  [
+                      "Orange Juice - Iced",
+                      "",
+                      400
+                  ]
+              ]
+          },
+          {
+              "name": "Milk",
+              "items": [
+                  [
+                      "Almond Milk - Iced",
+                      "",
+                      350
+                  ],
+                  [
+                      "Coconut Milk - Iced",
+                      "",
+                      400
+                  ],
+                  [
+                      "Nonfat/Skim Milk - Iced",
+                      "",
+                      275
+                  ],
+                  [
+                      "Oat Milk - Iced",
+                      "",
+                      400
+                  ],
+                  [
+                      "Soy Milk - Iced",
+                      "",
+                      350
+                  ],
+                  [
+                      "Whole Milk - Iced",
+                      "",
+                      275
+                  ]
+              ]
+          },
+          {
+              "name": "Retail",
+              "items": [
+                  [
+                      "Apron",
+                      "",
+                      3499
+                  ],
+                  [
+                      "Matcha Set",
+                      "",
+                      4999
+                  ],
+                  [
+                      "Traveler Mug",
+                      "",
+                      1999
+                  ],
+                  [
+                      "Whisk",
+                      "",
+                      1499
+                  ],
+                  [
+                      "Pour Over Kits",
+                      "",
+                      5999
+                  ]
+              ]
+          },
+          {
+              "name": "Books",
+              "items": [
+                  [
+                      "A Beginner's Guide to Japanese Tea",
+                      "",
+                      2799
+                  ],
+                  [
+                      "Craft Coffee A Manual",
+                      "",
+                      3125
+                  ],
+                  [
+                      "How to Taste Coffee",
+                      "",
+                      3125
+                  ],
+                  [
+                      "Stories of Japanese Tea",
+                      "",
+                      3125
+                  ],
+                  [
+                      "The Coffee Bean",
+                      "",
+                      2750
+                  ],
+                  [
+                      "The Little Book for Coffee Lovers",
+                      "",
+                      1499
+                  ],
+                  [
+                      "The World Atlas of Coffee 3rd Edition",
+                      "",
+                      4999
+                  ]
+              ]
+          }
+      ],
+      "orderUrl": "https://originlabcoffeematcha.toast.site/order",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from their Toast ordering menu. Call to confirm today’s opening hours.",
+      "clip": {
+          "src": "/clips/origin-lab-coffee-matcha.mp4",
+          "poster": "/clips/origin-lab-coffee-matcha-poster.webp",
+          "href": "https://www.instagram.com/reel/DaT-h7hO6UK/",
+          "credit": "Posted by @originlabcoffeematcha",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "parekoy-lutong-pinoy",
+      "name": "Parekoy Lutong Pinoy",
+      "label": "Parekoy",
+      "cuisine": "Filipino home cooking",
+      "color": "#003e2b",
+      "icon": "parekoy-lutong-pinoy",
+      "site": "https://www.parekoylutongpinoy.com/",
+      "tagline": "Filipino home cooking on East 14th Street: crispy pork sisig, silog breakfasts, adobo, pancit and halo-halo.",
+      "prep": 0,
+      "category": "Filipino home cooking",
+      "items": [],
+      "address": "14807 E 14th St, San Leandro, CA 94578",
+      "phone": "(510) 614-8112",
+      "instagram": "parekoylutongpinoy",
+      "sections": [
+          {
+              "name": "Breakfast",
+              "items": [
+                  [
+                      "Longsilog",
+                      "Filipino sausage/Fried Rice/Egg",
+                      1499
+                  ],
+                  [
+                      "Tosilog",
+                      "Sweet Marinated Pork/Fried Rice/Egg",
+                      1499
+                  ],
+                  [
+                      "Tapsilog",
+                      "Marinated Beef/Fried Rice/Egg",
+                      1499
+                  ],
+                  [
+                      "Bangsilog",
+                      "Milkfish/Fried Rice/Egg",
+                      1499
+                  ],
+                  [
+                      "Tuysilog",
+                      "Dried Fish/Fried Rice/Egg",
+                      1499
+                  ],
+                  [
+                      "Spamsilog",
+                      "Spam/Fried Rice/Egg",
+                      1499
+                  ],
+                  [
+                      "Side orders of Meat",
+                      "Options:\nTocino\nLonganisa\nTapa\nBangus\nJeprox\nTinapa",
+                      950
+                  ],
+                  [
+                      "Side order of Egg",
+                      "2 eggs",
+                      450
+                  ]
+              ]
+          },
+          {
+              "name": "APPETIZERS",
+              "items": [
+                  [
+                      "Lumpia Shanghai",
+                      "20 pieces",
+                      1499
+                  ],
+                  [
+                      "Lumpia Gulay (EggRoll)",
+                      "3 pieces",
+                      899
+                  ],
+                  [
+                      "Fried Calamari",
+                      "",
+                      1699
+                  ],
+                  [
+                      "Chicharon Bulaklak",
+                      "",
+                      1699
+                  ],
+                  [
+                      "Tofu Sisig",
+                      "",
+                      1599
+                  ],
+                  [
+                      "Tokwat Baboy",
+                      "",
+                      1399
+                  ],
+                  [
+                      "Tokwat Chicharon Bulaklak",
+                      "",
+                      1399
+                  ]
+              ]
+          },
+          {
+              "name": "PORK",
+              "items": [
+                  [
+                      "Menudo",
+                      "Pork stew with potatoes and carrots",
+                      1999
+                  ],
+                  [
+                      "Pork Sisig",
+                      "Crispy pork pieces mixed with onions and jalapenos with our secret sauce",
+                      1999
+                  ],
+                  [
+                      "Adobo",
+                      "Soy Sauce base dish with pork belly",
+                      1999
+                  ],
+                  [
+                      "Lechon Kawali",
+                      "Deep fried pork belly",
+                      1999
+                  ],
+                  [
+                      "Crispy Binagoongan",
+                      "Deep fried pork belly, sauteed in shrimp paste, topped with tomatoes and mango served on an eggplant.",
+                      2299
+                  ],
+                  [
+                      "Bicol Express",
+                      "Pork belly cooked in crab paste and coconut milk with veggies and topped with jalepenos.",
+                      2299
+                  ],
+                  [
+                      "Crispy Pata",
+                      "per piece",
+                      1899
+                  ],
+                  [
+                      "Embotido",
+                      "per piece",
+                      1499
+                  ],
+                  [
+                      "Dinuguan",
+                      "Pork stew simmered in pigs blood",
+                      1899
+                  ],
+                  [
+                      "Pata Kare-Kare",
+                      "",
+                      2399
+                  ]
+              ]
+          },
+          {
+              "name": "BEEF",
+              "items": [
+                  [
+                      "Kaldereta",
+                      "Beef stew with carrots and potatoes",
+                      2399
+                  ],
+                  [
+                      "Kare-Kare",
+                      "Oxtail and tripe in a peanut butter based sauce, topped with bokchoy, string beans and eggplant, served with a side of bagoong",
+                      2499
+                  ],
+                  [
+                      "Pinoy Beef Steak",
+                      "Soy sauce marinated beef with sauteed onions",
+                      2399
+                  ],
+                  [
+                      "Estofado",
+                      "Beef stew with plantain",
+                      2399
+                  ],
+                  [
+                      "Kaldereta Kambing",
+                      "Goat stew with potatoes, carrots, and olives",
+                      2699
+                  ]
+              ]
+          },
+          {
+              "name": "CHICKEN",
+              "items": [
+                  [
+                      "Afritada",
+                      "Chicken stew with a tomato based sauce",
+                      1899
+                  ],
+                  [
+                      "Adobo",
+                      "Soy sauce marinated chicken breasts",
+                      1899
+                  ],
+                  [
+                      "Whole Crispy Fried Chicken",
+                      "",
+                      2799
+                  ],
+                  [
+                      "Half Fried Chicken",
+                      "",
+                      1499
+                  ]
+              ]
+          },
+          {
+              "name": "FISH",
+              "items": [
+                  [
+                      "Bangus Sisig",
+                      "Deep fried milkfish mixed with onions and jalepenos",
+                      2099
+                  ],
+                  [
+                      "Filet Escabeche",
+                      "Deep fried filet fish topped with a sweet and sour based sauce",
+                      2099
+                  ],
+                  [
+                      "Pinoy Fish Steak",
+                      "Deep fried milkfish chopped in pieces cooked in a soy sauce based sauce and sauteed onions",
+                      2099
+                  ],
+                  [
+                      "Whole Fried Bangus",
+                      "",
+                      2099
+                  ]
+              ]
+          },
+          {
+              "name": "VEGETABLES",
+              "items": [
+                  [
+                      "Pinakbet",
+                      "Mixed veggies sauteed in bagoong",
+                      2099
+                  ],
+                  [
+                      "Bicol Gulay",
+                      "Mixed veggies sauteed in bagoong and coconut milk",
+                      2099
+                  ],
+                  [
+                      "Ginataang Sitaw/Kalabasa",
+                      "Squash, green beans, shrimp and pork sauteed in coconut milk and crab paste",
+                      2099
+                  ],
+                  [
+                      "Guisadong Amplaya",
+                      "Bittermelon cooked in scrambled eggs with shrimp and pork",
+                      2099
+                  ],
+                  [
+                      "Laing",
+                      "Taro leaves cooked in coconut milk",
+                      2099
+                  ]
+              ]
+          },
+          {
+              "name": "SOUP  BASE (sabaw)",
+              "items": [
+                  [
+                      "Pork Sinigang",
+                      "Sour tamarind soup with pork belly and mixed veggies",
+                      1999
+                  ],
+                  [
+                      "Beef Bulalo",
+                      "Ginger based soup with beef and veggies",
+                      2299
+                  ],
+                  [
+                      "Bangus Sinigang",
+                      "Sour tamarind base soup with milk fish and mixed veggies",
+                      1999
+                  ],
+                  [
+                      "Shrimp Sinigang",
+                      "Sour tamarind base soup with shrimp and mixed veggies",
+                      1999
+                  ],
+                  [
+                      "Chicken Tinola",
+                      "Chayote base soup with chicken and bokchoy",
+                      1999
+                  ],
+                  [
+                      "Sinampalukang Manok",
+                      "Chicken soup dish with a sour broth. Similar to sinigang",
+                      1999
+                  ],
+                  [
+                      "Beef Sinigang",
+                      "Sour tamarind  base soup with beef and mixed veggies",
+                      2299
+                  ]
+              ]
+          },
+          {
+              "name": "RICE",
+              "items": [
+                  [
+                      "Steam Rice (Cup)",
+                      "",
+                      415
+                  ],
+                  [
+                      "Steam Rice (Bowl)",
+                      "",
+                      845
+                  ],
+                  [
+                      "Garlic Fried Rice (Cup)",
+                      "",
+                      450
+                  ],
+                  [
+                      "Garlic Fried Rice (Bowl)",
+                      "",
+                      885
+                  ],
+                  [
+                      "Adobo Fried Rice",
+                      "",
+                      950
+                  ],
+                  [
+                      "Tinapa Fried Rice",
+                      "",
+                      950
+                  ],
+                  [
+                      "Binagoongan Fried Rice",
+                      "",
+                      950
+                  ]
+              ]
+          },
+          {
+              "name": "NOODLES",
+              "items": [
+                  [
+                      "Pancit Canton",
+                      "",
+                      1999
+                  ],
+                  [
+                      "Pancit Bihon",
+                      "",
+                      1999
+                  ],
+                  [
+                      "Pancit Canton/Bihon",
+                      "",
+                      2099
+                  ],
+                  [
+                      "Pancit Miki/Bihon",
+                      "",
+                      2099
+                  ],
+                  [
+                      "Pancit Lomi soup",
+                      "",
+                      2099
+                  ],
+                  [
+                      "Pancit Sotanghon",
+                      "",
+                      2099
+                  ],
+                  [
+                      "Pancit Palabok",
+                      "",
+                      2099
+                  ]
+              ]
+          },
+          {
+              "name": "DESSERT",
+              "items": [
+                  [
+                      "Leche Flan (Whole)",
+                      "",
+                      1650
+                  ],
+                  [
+                      "Leche Flan (Half)",
+                      "",
+                      950
+                  ],
+                  [
+                      "Crispy Leche Flan",
+                      "4 pieces",
+                      1075
+                  ],
+                  [
+                      "Cassava Cake",
+                      "8\"\nTakes about 45 minutes to bake",
+                      1499
+                  ],
+                  [
+                      "Turon",
+                      "3 pieces",
+                      899
+                  ]
+              ]
+          },
+          {
+              "name": "DRINKS",
+              "items": [
+                  [
+                      "Sago/Gulaman",
+                      "",
+                      599
+                  ],
+                  [
+                      "Halo-Halo",
+                      "",
+                      959
+                  ],
+                  [
+                      "Mango Juice",
+                      "",
+                      429
+                  ],
+                  [
+                      "Buko Juice",
+                      "",
+                      429
+                  ],
+                  [
+                      "Mais Con-Yelo",
+                      "",
+                      799
+                  ],
+                  [
+                      "Bottled Water",
+                      "",
+                      389
+                  ],
+                  [
+                      "Soda Cans",
+                      "Coke/Sprite/Orange/Rootbeer/Diet Coke/Pepsi",
+                      389
+                  ],
+                  [
+                      "Hot Tea",
+                      "Lipton Black Tea",
+                      329
+                  ]
+              ]
+          }
+      ],
+      "siteCta": "Visit their website",
+      "siteNote": "Prices are from their own menu. Call directly for pickup orders and current hours; their site says third-party orders and coupons are not honored.",
+      "clip": {
+          "src": "/clips/parekoy-lutong-pinoy.mp4",
+          "poster": "/clips/parekoy-lutong-pinoy-poster.webp",
+          "href": "https://www.instagram.com/reel/DICDnlYS968/",
+          "credit": "Filmed by @margs.out",
+          "platform": "Instagram",
+          "by": "margs.out"
+      }
+  },
+  {
+      "slug": "gemcity-kennels",
+      "name": "Gem City Kennels",
+      "label": "Gem City",
+      "cuisine": "American bully breeder",
+      "color": "#151515",
+      "icon": "gemcity-kennels",
+      "site": "https://www.instagram.com/gemcity_kennels/",
+      "tagline": "An American bully kennel in Dayton, Ohio. Contact Gem City Kennels on Instagram for current information.",
+      "prep": 0,
+      "category": "American bully breeder",
+      "items": [],
+      "instagram": "gemcity_kennels",
+      "needsSite": true,
+      "contactOnly": "Gem City Kennels lists Dayton, Ohio and SCP Bellatrix on Instagram. Message their account for details.",
+      "siteCta": "Open Instagram"
+  },
+  {
+      "slug": "yami-bowl",
+      "name": "Yami Bowl Bar & BBQ",
+      "label": "Yami Bowl",
+      "cuisine": "Chinese charcoal BBQ & rice noodles",
+      "color": "#151515",
+      "icon": "yami-bowl",
+      "site": "https://www.yamibowlsj.com/",
+      "tagline": "Northeastern Chinese dishes, charcoal-grilled skewers and Yunnan rice noodles on Berryessa Road in San Jose.",
+      "prep": 0,
+      "category": "Chinese charcoal BBQ & rice noodles",
+      "items": [],
+      "address": "1710 Berryessa Rd #110, San Jose, CA 95133",
+      "phone": "(408) 649-3666",
+      "hours": "Tue–Sun 11am–3pm & 5–11:30pm; Mon closed",
+      "instagram": "yamibowlbbq",
+      "sections": [
+          {
+              "name": "Appetizer",
+              "items": [
+                  [
+                      "Grilled Chili & Beef Penis Salad",
+                      "",
+                      1399
+                  ],
+                  [
+                      "Shenyang Mixed Vegetables",
+                      "",
+                      1199
+                  ],
+                  [
+                      "Tiger Salad",
+                      "",
+                      1199
+                  ],
+                  [
+                      "Century Egg with Tofu",
+                      "",
+                      999
+                  ],
+                  [
+                      "Smashed Cucumber with Peanuts",
+                      "",
+                      1099
+                  ],
+                  [
+                      "Green Onion with Tofu",
+                      "",
+                      999
+                  ],
+                  [
+                      "Fried Peanuts",
+                      "",
+                      899
+                  ],
+                  [
+                      "Cold Tossed Bean Curd Sticks",
+                      "",
+                      999
+                  ],
+                  [
+                      "Mixed Three Shreds",
+                      "",
+                      1199
+                  ],
+                  [
+                      "Fushun-Style Spicy Fish",
+                      "",
+                      1499
+                  ]
+              ]
+          },
+          {
+              "name": "Northeast Style Rice Noodles",
+              "items": [
+                  [
+                      "Northeast Yunnan Crossing Bridge Rice Noodles (Clear Soup)",
+                      "Rice noodles, leaf lettuce, fish balls, bean sprouts, dried tofu, luncheon meat and quail eggs",
+                      1799
+                  ],
+                  [
+                      "Northeast Yunnan Crossing Bridge Rice Noodles (Spicy)",
+                      "Rice noodles, celtuce, fish balls, bean sprouts, pressed tofu, luncheon meat and quail eggs",
+                      1799
+                  ],
+                  [
+                      "Northeast Yunnan Crossing Bridge Rice Noodles (Tomato)",
+                      "Rice noodles, celtuce, fish balls, bean sprouts, pressed tofu, luncheon meat and quail eggs",
+                      1799
+                  ]
+              ]
+          },
+          {
+              "name": "Malatang",
+              "items": [
+                  [
+                      "Traditional Northeast Spicy Hot Pot",
+                      "Baby bok choy, garland chrysanthemum, shredded kelp, mushrooms, bean sprouts and fried tofu puffs",
+                      1699
+                  ],
+                  [
+                      "Northeast Cold Noodles",
+                      "",
+                      1499
+                  ]
+              ]
+          },
+          {
+              "name": "Northeast Specialties",
+              "items": [
+                  [
+                      "Traditional Northeast Fried Pork Strips",
+                      "",
+                      2599
+                  ],
+                  [
+                      "Northeast Style Braised Tofu",
+                      "",
+                      1999
+                  ],
+                  [
+                      "Braised Eggplant (Sweet & Sour)",
+                      "",
+                      1999
+                  ],
+                  [
+                      "Chili Pepper with Dried Tofu Skin",
+                      "",
+                      1999
+                  ],
+                  [
+                      "Scrambled Eggs with Tomato",
+                      "",
+                      1999
+                  ],
+                  [
+                      "Northeast Style Di San Xian",
+                      "",
+                      1999
+                  ],
+                  [
+                      "Stir-fried Lettuce with Garlic",
+                      "",
+                      1999
+                  ]
+              ]
+          },
+          {
+              "name": "Juewei Duck Snacks",
+              "items": [
+                  [
+                      "Duck Head (3pc)",
+                      "",
+                      1149
+                  ],
+                  [
+                      "Duck Neck (300g)",
+                      "",
+                      1299
+                  ],
+                  [
+                      "Duck Gizzard (250g)",
+                      "",
+                      1399
+                  ],
+                  [
+                      "Duck Web (8pcs)",
+                      "",
+                      899
+                  ],
+                  [
+                      "Lotus Root Slices (200g)",
+                      "",
+                      799
+                  ],
+                  [
+                      "Kelp (200g)",
+                      "",
+                      749
+                  ],
+                  [
+                      "Bean Curd Skin (200g)",
+                      "",
+                      749
+                  ],
+                  [
+                      "Quail Eggs (18pcs)",
+                      "",
+                      1099
+                  ],
+                  [
+                      "Duck Intestine (170g)",
+                      "",
+                      2999
+                  ]
+              ]
+          },
+          {
+              "name": "Old Lady Street Fried Skewers",
+              "items": [
+                  [
+                      "Fried Fresh Mushrooms (5pcs)",
+                      "",
+                      899
+                  ],
+                  [
+                      "Fried Cilantro Rolls (1pc)",
+                      "",
+                      369
+                  ],
+                  [
+                      "Fried Fish Balls (1pc)",
+                      "",
+                      299
+                  ],
+                  [
+                      "Fried Sausage (2pc)",
+                      "",
+                      369
+                  ],
+                  [
+                      "Fried Squid (1pc)",
+                      "",
+                      399
+                  ],
+                  [
+                      "Fried Cabbage",
+                      "",
+                      299
+                  ],
+                  [
+                      "Fried Potato Slices (4pcs)",
+                      "",
+                      499
+                  ],
+                  [
+                      "Fried Mini Beef Skewers (10pcs)",
+                      "",
+                      899
+                  ],
+                  [
+                      "Fried Egg (1)",
+                      "",
+                      299
+                  ],
+                  [
+                      "Fried Cauliflower",
+                      "",
+                      299
+                  ],
+                  [
+                      "Fried Green Peppers",
+                      "",
+                      269
+                  ],
+                  [
+                      "Fried Fish Tofu (1pc)",
+                      "",
+                      289
+                  ],
+                  [
+                      "Fried Pork Loin (2pc)",
+                      "",
+                      299
+                  ],
+                  [
+                      "Fried Corn (1pc)",
+                      "",
+                      299
+                  ],
+                  [
+                      "Fried Chicken (3pcs)",
+                      "",
+                      299
+                  ],
+                  [
+                      "Fried Chicken Gizzards",
+                      "",
+                      299
+                  ],
+                  [
+                      "Fried Chicken Hearts",
+                      "",
+                      299
+                  ],
+                  [
+                      "Fried Bacon Enoki Mushrooms",
+                      "",
+                      399
+                  ],
+                  [
+                      "Fried Chicken Cutlet Skewers",
+                      "",
+                      499
+                  ]
+              ]
+          },
+          {
+              "name": "Chicken",
+              "items": [
+                  [
+                      "Basil Chicken",
+                      "",
+                      1899
+                  ],
+                  [
+                      "Eggplant Chicken in Basil Sauce",
+                      "",
+                      1899
+                  ],
+                  [
+                      "Broccoli Chicken",
+                      "",
+                      1899
+                  ]
+              ]
+          },
+          {
+              "name": "Beef",
+              "items": [
+                  [
+                      "Broccoli Beef",
+                      "",
+                      1999
+                  ],
+                  [
+                      "Cumin Beef",
+                      "",
+                      1999
+                  ]
+              ]
+          },
+          {
+              "name": "Seafood",
+              "items": [
+                  [
+                      "Broccoli Shrimp",
+                      "",
+                      1999
+                  ],
+                  [
+                      "Eggplant Shrimp with Basil",
+                      "",
+                      1999
+                  ]
+              ]
+          },
+          {
+              "name": "Vegetables",
+              "items": [
+                  [
+                      "Mapo Tofu",
+                      "",
+                      1799
+                  ],
+                  [
+                      "Basil Eggplant",
+                      "",
+                      1799
+                  ],
+                  [
+                      "Stir Fry Broccoli",
+                      "",
+                      1699
+                  ],
+                  [
+                      "Stir-fried Vegetables",
+                      "",
+                      1699
+                  ]
+              ]
+          },
+          {
+              "name": "Soup",
+              "items": [
+                  [
+                      "Seaweed Egg Drop Soup",
+                      "",
+                      1199
+                  ],
+                  [
+                      "Mixed Stew",
+                      "",
+                      1199
+                  ]
+              ]
+          },
+          {
+              "name": "Fried Rice",
+              "items": [
+                  [
+                      "Chicken Fried Rice",
+                      "",
+                      1495
+                  ],
+                  [
+                      "Shrimp Fried Rice",
+                      "",
+                      1595
+                  ],
+                  [
+                      "Mixed Fried Rice",
+                      "Chicken and shrimp",
+                      1695
+                  ],
+                  [
+                      "Vegetables Fried Rice",
+                      "",
+                      1495
+                  ],
+                  [
+                      "Steam Rice",
+                      "",
+                      250
+                  ]
+              ]
+          },
+          {
+              "name": "Noodle",
+              "items": [
+                  [
+                      "Veggies Chow Mein",
+                      "",
+                      1495
+                  ],
+                  [
+                      "Chicken Chow Mein",
+                      "",
+                      1495
+                  ],
+                  [
+                      "Shrimp Chow Mein",
+                      "",
+                      1595
+                  ],
+                  [
+                      "Beef Chow Mein",
+                      "",
+                      1595
+                  ],
+                  [
+                      "Mixed Chow Mein",
+                      "Chicken and shrimp",
+                      1695
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Coke",
+                      "",
+                      250
+                  ],
+                  [
+                      "Diet Coke",
+                      "",
+                      250
+                  ],
+                  [
+                      "Sprite",
+                      "",
+                      250
+                  ],
+                  [
+                      "Hongbaolai",
+                      "",
+                      499
+                  ],
+                  [
+                      "Hongbaolai Peanut Milk",
+                      "",
+                      499
+                  ],
+                  [
+                      "Iced Black Tea",
+                      "",
+                      350
+                  ],
+                  [
+                      "Wanglaoji Herbal Tea",
+                      "",
+                      350
+                  ],
+                  [
+                      "Ba Wang Si",
+                      "",
+                      699
+                  ],
+                  [
+                      "Arctic Ocean Soda",
+                      "",
+                      400
+                  ],
+                  [
+                      "Master Kong Crystal Sugar Pear",
+                      "",
+                      400
+                  ],
+                  [
+                      "Oriental Leaf",
+                      "",
+                      450
+                  ],
+                  [
+                      "Wangzai Milk",
+                      "",
+                      300
+                  ],
+                  [
+                      "Coconut Palm Coconut Milk",
+                      "",
+                      350
+                  ],
+                  [
+                      "Master Kong Sour Plum Drink",
+                      "",
+                      350
+                  ],
+                  [
+                      "Genki Forest (Peach Flavor)",
+                      "",
+                      400
+                  ]
+              ]
+          }
+      ],
+      "orderUrl": "https://order.mealkeyway.com/customer/release/index?mid=70414466536c386b57625962787243797a586c716b513d3d#/main",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from the ordering page linked by their website. Confirm ingredients and allergens with the restaurant.",
+      "clip": {
+          "src": "/clips/yami-bowl.mp4",
+          "poster": "/clips/yami-bowl-poster.webp",
+          "href": "https://www.instagram.com/reel/De3dn2GpbjB/",
+          "credit": "Posted by @yamibowlbbq",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "wikiwiki-hawaiian-bbq",
+      "name": "Wikiwiki Hawaiian BBQ",
+      "label": "Wikiwiki",
+      "cuisine": "Hawaiian BBQ",
+      "color": "#f5f5f5",
+      "icon": "wikiwiki-hawaiian-bbq",
+      "site": "https://www.wikiwikionline.com/",
+      "tagline": "Hawaiian plate lunches, chicken katsu, kalua pork, musubi and saimin on Shattuck Avenue in Berkeley.",
+      "prep": 0,
+      "category": "Hawaiian BBQ",
+      "items": [],
+      "address": "2417 Shattuck Ave, Berkeley, CA 94704",
+      "phone": "(510) 548-3936",
+      "hours": "Daily 11am–9pm",
+      "instagram": "wikiwikihawaiianbbq",
+      "sections": [
+          {
+              "name": "Combination Plate",
+              "items": [
+                  [
+                      "BBQ Mix Plate",
+                      "Grilled teriyaki chicken, beef and short ribs",
+                      1675
+                  ],
+                  [
+                      "Seafood Combo",
+                      "Fried fish and shrimp; choice of chicken, steak or ribs",
+                      1640
+                  ],
+                  [
+                      "Bento Plate",
+                      "Teriyaki chicken and beef, a piece of Spam and fried fish",
+                      1675
+                  ],
+                  [
+                      "Steamed Broccoli Plate",
+                      "Choice of chicken, beef, short ribs or katsu",
+                      1625
+                  ],
+                  [
+                      "Curry Mix Plate",
+                      "Beef cubes, steak and hamburger patties in curry with carrots and potatoes",
+                      1655
+                  ],
+                  [
+                      "Loco Moco Plate",
+                      "Hamburger patties, over-easy eggs and gravy",
+                      1595
+                  ],
+                  [
+                      "Kalua Pork & Pork Lau Lau",
+                      "Shredded pork with pork laulau wrapped in ti leaves",
+                      1795
+                  ],
+                  [
+                      "Chicken Deluxe Plate",
+                      "Teriyaki chicken, black pepper chicken and chicken katsu",
+                      1675
+                  ],
+                  [
+                      "Mix Veggie Plate",
+                      "",
+                      1495
+                  ]
+              ]
+          },
+          {
+              "name": "Saimin (Noodle Soup)",
+              "items": [
+                  [
+                      "Saimin Noodle Soup",
+                      "",
+                      725
+                  ],
+                  [
+                      "Teriyaki Beef Saimin",
+                      "",
+                      995
+                  ],
+                  [
+                      "BBQ Chicken Saimin",
+                      "",
+                      975
+                  ],
+                  [
+                      "Wikiwiki Saimin",
+                      "Chicken and egg",
+                      1195
+                  ]
+              ]
+          },
+          {
+              "name": "Chicken Plate Lunch",
+              "items": [
+                  [
+                      "Black Pepper Chicken (Mini)",
+                      "Grilled boneless chicken in black pepper marinade",
+                      1355
+                  ],
+                  [
+                      "Katsu Chicken (Mini)",
+                      "Breaded chicken with katsu sauce",
+                      1355
+                  ],
+                  [
+                      "Lemon Chicken (Mini)",
+                      "Breaded chicken with lemon sauce",
+                      1355
+                  ],
+                  [
+                      "Teriyaki Chicken (Mini)",
+                      "Grilled chicken marinated in teriyaki",
+                      1355
+                  ],
+                  [
+                      "Chicken Cutlet (Mini)",
+                      "Breaded boneless chicken with gravy",
+                      1355
+                  ],
+                  [
+                      "Curry Grilled Chicken (Mini)",
+                      "",
+                      1375
+                  ],
+                  [
+                      "Black Pepper Chicken (Regular)",
+                      "Grilled boneless chicken in black pepper marinade",
+                      1575
+                  ],
+                  [
+                      "Katsu Chicken (Regular)",
+                      "Breaded chicken with katsu sauce",
+                      1575
+                  ],
+                  [
+                      "Lemon Chicken (Regular)",
+                      "Breaded chicken with lemon sauce",
+                      1575
+                  ],
+                  [
+                      "Teriyaki Chicken (Regular)",
+                      "Grilled chicken marinated in teriyaki",
+                      1575
+                  ],
+                  [
+                      "Chicken Cutlet (Regular)",
+                      "Breaded boneless chicken with gravy",
+                      1575
+                  ],
+                  [
+                      "Curry Grilled Chicken (Regular)",
+                      "",
+                      1595
+                  ]
+              ]
+          },
+          {
+              "name": "Pork Plate Lunch",
+              "items": [
+                  [
+                      "Teriyaki Pork Chop (Mini)",
+                      "Grilled teriyaki pork chop",
+                      1375
+                  ],
+                  [
+                      "Kalua Pork (Mini)",
+                      "Slow-roasted smoky shredded pork",
+                      1375
+                  ],
+                  [
+                      "Teriyaki Pork Chop (Regular)",
+                      "Grilled teriyaki pork chop",
+                      1575
+                  ],
+                  [
+                      "Kalua Pork (Regular)",
+                      "Slow-roasted smoky shredded pork",
+                      1575
+                  ]
+              ]
+          },
+          {
+              "name": "Beef Plate Lunch",
+              "items": [
+                  [
+                      "BBQ Short Ribs (Mini)",
+                      "Grilled short ribs marinated in teriyaki",
+                      1525
+                  ],
+                  [
+                      "Teriyaki Steak (Mini)",
+                      "Thin-sliced beef in teriyaki",
+                      1555
+                  ],
+                  [
+                      "Hamburger Steak (Mini)",
+                      "Homemade patties in gravy",
+                      1525
+                  ],
+                  [
+                      "Beef Curry (Mini)",
+                      "Beef cubes, yellow curry, potatoes and carrots",
+                      1525
+                  ],
+                  [
+                      "BBQ Short Ribs (Regular)",
+                      "Grilled short ribs marinated in teriyaki",
+                      1725
+                  ],
+                  [
+                      "Teriyaki Steak (Regular)",
+                      "Thin-sliced beef in teriyaki",
+                      1755
+                  ],
+                  [
+                      "Hamburger Steak (Regular)",
+                      "Homemade patties in gravy",
+                      1725
+                  ],
+                  [
+                      "Beef Curry (Regular)",
+                      "Beef cubes, yellow curry, potatoes and carrots",
+                      1725
+                  ]
+              ]
+          },
+          {
+              "name": "Seafood Plate Lunch",
+              "items": [
+                  [
+                      "Deep Fried Shrimp (Mini)",
+                      "Individually breaded shrimp",
+                      1525
+                  ],
+                  [
+                      "Deep Fried Fish (Mini)",
+                      "Battered fish fillet with tartar sauce",
+                      1525
+                  ],
+                  [
+                      "Grilled Fish Fillet (Mini)",
+                      "Marinated fish with garlic sauce",
+                      1525
+                  ],
+                  [
+                      "Grilled Prawns (Mini)",
+                      "With homemade garlic sauce",
+                      1525
+                  ],
+                  [
+                      "Deep Fried Shrimp (Regular)",
+                      "Individually breaded shrimp",
+                      1725
+                  ],
+                  [
+                      "Deep Fried Fish (Regular)",
+                      "Battered fish fillet with tartar sauce",
+                      1725
+                  ],
+                  [
+                      "Grilled Fish Fillet (Regular)",
+                      "Marinated fish with garlic sauce",
+                      1725
+                  ],
+                  [
+                      "Grilled Prawns (Regular)",
+                      "With homemade garlic sauce",
+                      1725
+                  ]
+              ]
+          },
+          {
+              "name": "Pork Lau Lau",
+              "items": [
+                  [
+                      "Pork Lau Lau (Regular)",
+                      "Taro leaves, pork and butterfish wrapped in ti leaves",
+                      1595
+                  ]
+              ]
+          },
+          {
+              "name": "Breakfast",
+              "items": [
+                  [
+                      "Spam & Eggs with Rice",
+                      "",
+                      1325
+                  ],
+                  [
+                      "Portuguese Sausages & Eggs with Rice",
+                      "",
+                      1325
+                  ]
+              ]
+          },
+          {
+              "name": "Fix Your Mix",
+              "items": [
+                  [
+                      "Pick any 2",
+                      "",
+                      1745
+                  ]
+              ]
+          },
+          {
+              "name": "Musubis",
+              "items": [
+                  [
+                      "Spam Musubi",
+                      "",
+                      375
+                  ],
+                  [
+                      "BBQ Chicken Musubi",
+                      "",
+                      425
+                  ],
+                  [
+                      "Katsu Chicken Musubi",
+                      "",
+                      425
+                  ],
+                  [
+                      "Portuguese Sausage Musubi",
+                      "",
+                      425
+                  ],
+                  [
+                      "Bacon Cheese Musubi",
+                      "",
+                      425
+                  ],
+                  [
+                      "Fried Spam Musubi",
+                      "",
+                      425
+                  ]
+              ]
+          },
+          {
+              "name": "Burgers",
+              "items": [
+                  [
+                      "Two Chicken Burger Special",
+                      "",
+                      550
+                  ],
+                  [
+                      "Hamburger",
+                      "",
+                      345
+                  ],
+                  [
+                      "Double Hamburger",
+                      "",
+                      485
+                  ],
+                  [
+                      "Cheeseburger",
+                      "",
+                      365
+                  ],
+                  [
+                      "Double Cheeseburger",
+                      "",
+                      515
+                  ],
+                  [
+                      "Fried Chicken Burger",
+                      "",
+                      345
+                  ],
+                  [
+                      "Grilled Chicken Burger",
+                      "",
+                      345
+                  ],
+                  [
+                      "Teriyaki BBQ Chicken Burger",
+                      "",
+                      455
+                  ],
+                  [
+                      "Teriyaki Beef Burger",
+                      "",
+                      475
+                  ],
+                  [
+                      "Katsu Chicken Burger",
+                      "",
+                      455
+                  ],
+                  [
+                      "Fried Fish Burger",
+                      "",
+                      475
+                  ],
+                  [
+                      "Shrimp Burger",
+                      "",
+                      425
+                  ],
+                  [
+                      "Kalua Pork Burger",
+                      "",
+                      475
+                  ],
+                  [
+                      "Hamburger Combo",
+                      "",
+                      925
+                  ],
+                  [
+                      "Double Hamburger Combo",
+                      "",
+                      1050
+                  ],
+                  [
+                      "Cheeseburger Combo",
+                      "",
+                      945
+                  ],
+                  [
+                      "Double Cheeseburger Combo",
+                      "",
+                      1150
+                  ],
+                  [
+                      "Fried Chicken Burger Combo",
+                      "",
+                      925
+                  ],
+                  [
+                      "Grilled Chicken Burger Combo",
+                      "",
+                      925
+                  ],
+                  [
+                      "Teriyaki Chicken Burger Combo",
+                      "",
+                      1045
+                  ],
+                  [
+                      "Teriyaki Beef Burger Combo",
+                      "",
+                      1055
+                  ],
+                  [
+                      "Katsu Chicken Burger Combo",
+                      "",
+                      1045
+                  ],
+                  [
+                      "Fried Fish Burger Combo",
+                      "",
+                      1055
+                  ],
+                  [
+                      "Shrimp Burger Combo",
+                      "",
+                      1050
+                  ],
+                  [
+                      "Kalua Pork Burger Combo",
+                      "",
+                      1125
+                  ]
+              ]
+          },
+          {
+              "name": "Paks",
+              "items": [
+                  [
+                      "Mini Paks (Serves 3–4)",
+                      "",
+                      5095
+                  ],
+                  [
+                      "Family Paks (Serves 6–7)",
+                      "",
+                      8595
+                  ]
+              ]
+          },
+          {
+              "name": "Catering/Party Trays",
+              "items": [
+                  [
+                      "Chicken Katsu Catering",
+                      "",
+                      4650
+                  ],
+                  [
+                      "Teriyaki Chicken Catering",
+                      "",
+                      4650
+                  ],
+                  [
+                      "Teriyaki Steak Catering",
+                      "",
+                      7785
+                  ],
+                  [
+                      "Teriyaki Short Ribs Catering",
+                      "",
+                      8640
+                  ],
+                  [
+                      "Teriyaki Pork Chop Catering",
+                      "",
+                      4935
+                  ],
+                  [
+                      "Deep Fried Shrimp Catering",
+                      "",
+                      4365
+                  ],
+                  [
+                      "Deep Fried Fish Fillet Catering",
+                      "",
+                      7690
+                  ],
+                  [
+                      "Steamed Rice Catering",
+                      "",
+                      3985
+                  ],
+                  [
+                      "Macaroni Salad Catering",
+                      "",
+                      5030
+                  ],
+                  [
+                      "Spam Musubi Catering",
+                      "",
+                      3415
+                  ],
+                  [
+                      "Portuguese Musubi Catering",
+                      "",
+                      3890
+                  ],
+                  [
+                      "Katsu Musubi Catering",
+                      "",
+                      3890
+                  ],
+                  [
+                      "Teriyaki Chicken Musubi Catering",
+                      "",
+                      3890
+                  ],
+                  [
+                      "Kalua Pork Catering",
+                      "",
+                      4555
+                  ],
+                  [
+                      "Steamed Broccoli Catering",
+                      "",
+                      2845
+                  ],
+                  [
+                      "House Green Salad Catering",
+                      "",
+                      2845
+                  ]
+              ]
+          },
+          {
+              "name": "Side Items",
+              "items": [
+                  [
+                      "Chicken Katsu",
+                      "",
+                      425
+                  ],
+                  [
+                      "Teriyaki Chicken",
+                      "",
+                      425
+                  ],
+                  [
+                      "Teriyaki Short Ribs",
+                      "",
+                      525
+                  ],
+                  [
+                      "Teriyaki Steak",
+                      "",
+                      475
+                  ],
+                  [
+                      "Teriyaki Pork Chop",
+                      "",
+                      535
+                  ],
+                  [
+                      "Deep Fried Shrimp",
+                      "",
+                      199
+                  ],
+                  [
+                      "Fried Fish Fillet",
+                      "",
+                      350
+                  ],
+                  [
+                      "Pork Lau Lau",
+                      "",
+                      895
+                  ],
+                  [
+                      "Kalua Pork",
+                      "",
+                      835
+                  ],
+                  [
+                      "Hamburger Patties",
+                      "",
+                      225
+                  ],
+                  [
+                      "Spam",
+                      "",
+                      195
+                  ],
+                  [
+                      "Portuguese Sausage",
+                      "",
+                      95
+                  ],
+                  [
+                      "Egg",
+                      "",
+                      195
+                  ],
+                  [
+                      "Rice",
+                      "",
+                      199
+                  ],
+                  [
+                      "House Salad",
+                      "",
+                      525
+                  ],
+                  [
+                      "French Fries",
+                      "",
+                      450
+                  ],
+                  [
+                      "Kim Chee",
+                      "",
+                      450
+                  ],
+                  [
+                      "Macaroni Salad",
+                      "",
+                      265
+                  ],
+                  [
+                      "Steamed Broccoli",
+                      "",
+                      525
+                  ],
+                  [
+                      "Cheese Fries/Jalapenos",
+                      "",
+                      625
+                  ],
+                  [
+                      "Seasoned Cheese Fries/Jalapenos",
+                      "",
+                      675
+                  ],
+                  [
+                      "Popcorn Chicken",
+                      "",
+                      625
+                  ],
+                  [
+                      "Edamame",
+                      "",
+                      525
+                  ],
+                  [
+                      "Seasoned Fries",
+                      "",
+                      495
+                  ],
+                  [
+                      "Gyoza",
+                      "",
+                      475
+                  ],
+                  [
+                      "Side Black Pepper Chicken",
+                      "",
+                      425
+                  ],
+                  [
+                      "Add Bacon",
+                      "",
+                      150
+                  ],
+                  [
+                      "Add Grilled Onion",
+                      "",
+                      125
+                  ],
+                  [
+                      "Ajitama Soft Center Egg",
+                      "",
+                      225
+                  ],
+                  [
+                      "Add Grilled Shrimps",
+                      "",
+                      130
+                  ]
+              ]
+          },
+          {
+              "name": "Beverages",
+              "items": [
+                  [
+                      "Thai Iced Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Rose Lychee Fizz",
+                      "",
+                      499
+                  ],
+                  [
+                      "Thai Green Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Hawaiian Sun",
+                      "",
+                      499
+                  ],
+                  [
+                      "Can Drinks",
+                      "",
+                      235
+                  ],
+                  [
+                      "Fountain Drinks",
+                      "",
+                      325
+                  ],
+                  [
+                      "Bottle Drinks",
+                      "",
+                      325
+                  ],
+                  [
+                      "Bottled Water",
+                      "",
+                      135
+                  ],
+                  [
+                      "Arizona",
+                      "",
+                      210
+                  ]
+              ]
+          },
+          {
+              "name": "Smoothie",
+              "items": [
+                  [
+                      "Mango Smoothie",
+                      "",
+                      499
+                  ],
+                  [
+                      "Pineapple Smoothie",
+                      "",
+                      499
+                  ],
+                  [
+                      "Banana Smoothie",
+                      "",
+                      499
+                  ],
+                  [
+                      "Cookie & Cream Smoothie",
+                      "",
+                      499
+                  ],
+                  [
+                      "Strawberry Smoothie",
+                      "",
+                      499
+                  ],
+                  [
+                      "Watermelon Smoothie",
+                      "",
+                      499
+                  ],
+                  [
+                      "Honeydew Smoothie",
+                      "",
+                      499
+                  ],
+                  [
+                      "Piña Colada (Pineapple Coconut) Smoothie",
+                      "",
+                      499
+                  ],
+                  [
+                      "Taro Smoothie",
+                      "",
+                      499
+                  ],
+                  [
+                      "Ube (Purple Yam) Smoothie",
+                      "",
+                      499
+                  ]
+              ]
+          },
+          {
+              "name": "Fruit Tea",
+              "items": [
+                  [
+                      "Mango Fruit Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Guava Fruit Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Orange Fruit Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Pineapple Fruit Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Peach Fruit Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Passion Fruit Fruit Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Green Apple Fruit Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Rose Fruit Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Lychee Fruit Tea",
+                      "",
+                      499
+                  ]
+              ]
+          },
+          {
+              "name": "Oolong Tea",
+              "items": [
+                  [
+                      "Osmanthus Oolong Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Roasted Oolong Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Black Tea",
+                      "",
+                      499
+                  ],
+                  [
+                      "Jasmine Green Tea",
+                      "",
+                      499
+                  ]
+              ]
+          }
+      ],
+      "orderUrl": "https://order.mealkeyway.com/merchant/776e4557594f387733444f4e644f504d656b6b6731413d3d/main",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from their linked ordering menu. Plate lunches, mini plates, individual sides and catering trays have different portions.",
+      "clip": {
+          "src": "/clips/wikiwiki-hawaiian-bbq.mp4",
+          "poster": "/clips/wikiwiki-hawaiian-bbq-poster.webp",
+          "href": "https://www.instagram.com/reel/DdIXcNQhIcm/",
+          "credit": "Filmed by @yogetasworld",
+          "platform": "Instagram",
+          "by": "yogetasworld"
+      }
+  },
+  {
+      "slug": "mumu-hot-pot-sunnyvale",
+      "name": "Mumu Hot Pot — Sunnyvale",
+      "label": "Mumu Hot Pot",
+      "cuisine": "Individual hot pot",
+      "color": "#efdab0",
+      "icon": "mumu-hot-pot-sunnyvale",
+      "site": "https://mumuhotpot.com/locations/",
+      "tagline": "Individual hot pots on Lawrence Station Road, with soup bases, wagyu, vegetables and set meals for one or two.",
+      "prep": 0,
+      "category": "Individual hot pot",
+      "items": [],
+      "address": "1273 Lawrence Station Rd, Sunnyvale, CA 94089",
+      "instagram": "mumuhotpot.usa",
+      "email": "help@mumuhotpot.com",
+      "sections": [
+          {
+              "name": "Combos",
+              "items": [
+                  [
+                      "The Classic",
+                      "2 soup bases, 3 meats, 3 sides, 2 noodles/rice and 1 large veggie platter",
+                      7500
+                  ],
+                  [
+                      "Premium Wagyu Set",
+                      "2 soup bases, Japanese A5 wagyu, M8–M9 wagyu flat iron, M8–M9 wagyu zabuton, 3 sides, 2 noodles/rice and a large veggie platter",
+                      12500
+                  ],
+                  [
+                      "Japanese A5 Set",
+                      "2 soup bases, 3 Japanese A5 wagyu, 3 sides, 2 noodles/rice and a large veggie platter",
+                      16500
+                  ],
+                  [
+                      "Single’s Meat",
+                      "1 soup base, 1 meat, 2 sides, 1 noodle/rice and a small veggie platter",
+                      3300
+                  ],
+                  [
+                      "Single’s Three Side",
+                      "1 soup base, 3 sides, 1 noodle/rice and a small veggie platter",
+                      2800
+                  ],
+                  [
+                      "Single’s Vegetarian",
+                      "1 soup base, 2 vegan sides, 1 noodle/rice and a medium veggie platter",
+                      2600
+                  ]
+              ]
+          }
+      ],
+      "siteCta": "Visit their website",
+      "siteNote": "Set prices are from Mumu’s published menu. Ask the Sunnyvale shop about current availability, add-on prices and opening hours.",
+      "clip": {
+          "src": "/clips/mumu-hot-pot-sunnyvale.mp4",
+          "poster": "/clips/mumu-hot-pot-sunnyvale-poster.webp",
+          "href": "https://www.instagram.com/reel/DfEOxAYSUDd/",
+          "credit": "Filmed by @itsmayrazambrano",
+          "platform": "Instagram",
+          "by": "itsmayrazambrano"
+      },
+      "panels": [
+          {
+              "head": "Soup bases & add-ons",
+              "body": [
+                  "Soup bases: Tom Yum, Yuzu Shio, Miso, Sukiyaki, Creamy Tomato, Mushroom, Sichuan Spicy, Buttery Spicy and Clear Water. The menu marks all but Sukiyaki and Buttery Spicy vegan.",
+                  "Meats include Japanese A5 wagyu, Australian wagyu, Black Angus beef, beef tongue, lamb, Kurobuta pork and chicken. The menu marks selected Australian wagyu and lamb halal; ask the kitchen about your specific order.",
+                  "Other selections include quail egg, Spam, tripe, tendon, bean curd, tofu, enoki, shrimp, tilapia, fish balls, vegetables, ramen, vermicelli, udon, instant noodles, rice cakes and rice. Add-on and fruit-tea prices are not published."
+              ],
+              "links": [
+                  {
+                      "label": "Full menu & selections",
+                      "href": "https://mumuhotpot.com/menu/"
+                  }
+              ]
+          }
+      ]
+  },
+  {
+      "slug": "wooga-korean-bbq",
+      "name": "Wooga Korean BBQ",
+      "label": "Wooga",
+      "cuisine": "Korean BBQ",
+      "color": "#292929",
+      "icon": "wooga-korean-bbq",
+      "site": "https://woogakorean.com/contact/",
+      "tagline": "Korean barbecue on South De Anza Boulevard in Cupertino, with table grills, meats and banchan.",
+      "prep": 0,
+      "category": "Korean BBQ",
+      "items": [],
+      "address": "10493 S De Anza Blvd, Cupertino, CA 95014",
+      "phone": "(408) 352-5515",
+      "hours": "Mon–Thu 11am–3pm & 5–9pm, Fri–Sat 11am–10pm, Sun 11am–9pm",
+      "instagram": "wooga_koreanbbq",
+      "siteCta": "Visit their website",
+      "contactOnly": "Call Wooga for the current barbecue menu, set options, prices and reservations. Their website has a short dish preview; confirm the details with the restaurant."
+  },
+  {
+      "slug": "binge-coffee-house",
+      "name": "Binge Coffee House",
+      "label": "Binge",
+      "cuisine": "Vietnamese coffee & matcha",
+      "color": "#0c0c0c",
+      "icon": "binge-coffee-house",
+      "site": "https://www.bingecoffeehouse.com/",
+      "tagline": "Vietnamese phin coffee, ceremonial matcha, bánh mì and pandan waffles, with two Berkeley cafes.",
+      "prep": 0,
+      "category": "Vietnamese coffee & matcha",
+      "items": [],
+      "address": "2199 Bancroft Way, Berkeley, CA 94704",
+      "phone": "(510) 721-3839",
+      "hours": "Daily 9am–7pm",
+      "instagram": "bingecoffeehouse",
+      "orderUrl": "https://order.snackpass.co/bingecoffeehouse",
+      "siteCta": "Order online",
+      "contactOnly": "Their drink menu includes Vietnamese phin coffee with salted cream, egg cream, pandan, ube and black sesame, ceremonial matcha, fruit teas and milk teas. Visit their own menu or ordering page for current availability and prices.",
+      "panels": [
+          {
+              "head": "Berkeley cafes",
+              "body": [
+                  "Binge #1: 2199 Bancroft Way, Berkeley, CA 94704; (510) 721-3839.",
+                  "Binge #2: 2528A Durant Ave, Berkeley, CA 94704. Their website lists daily 9am–7pm."
+              ],
+              "links": [
+                  {
+                      "label": "Their drink menu",
+                      "href": "https://www.bingecoffeehouse.com/menu"
+                  }
+              ]
+          }
+      ]
+  },
+  {
+      "slug": "house-of-phin",
+      "name": "House of Phin",
+      "label": "House of Phin",
+      "cuisine": "Vietnamese phin coffee",
+      "color": "#151515",
+      "icon": "house-of-phin",
+      "site": "https://www.houseofphin.com/",
+      "tagline": "Vietnamese coffee brewed by hand with phin filters on International Boulevard, with egg cream, pandan, ube and matcha drinks.",
+      "prep": 0,
+      "category": "Vietnamese phin coffee",
+      "items": [],
+      "address": "1920 International Blvd, Oakland, CA 94606",
+      "phone": "(510) 603-4614",
+      "email": "houseofphincoffee@gmail.com",
+      "hours": "Wed–Sun 7:30am–3pm; Mon–Tue closed",
+      "instagram": "houseofphin_",
+      "sections": [
+          {
+              "name": "Seasonal & New",
+              "items": [
+                  [
+                      "Pumpkin Spice Vietnamese Latte",
+                      "Phin coffee, pumpkin spice sauce, sea salt cream and pumpkin spice",
+                      850
+                  ],
+                  [
+                      "Pumpkin Spice Matcha Latte",
+                      "Matcha, choice of milk and pumpkin spice blend",
+                      850
+                  ],
+                  [
+                      "Matcha Foam Vietnamese Coffee",
+                      "Phin-dripped coffee with matcha foam",
+                      850
+                  ],
+                  [
+                      "Pumpkin Spice Hojicha",
+                      "Roasted hojicha, choice of milk and pumpkin spice sauce",
+                      850
+                  ],
+                  [
+                      "Good Morning Pumpkin",
+                      "Pumpkin spice cake, brown sugar crumble and maple glaze",
+                      575
+                  ],
+                  [
+                      "PSL Matcha Cake",
+                      "Pumpkin spice cake with matcha cream",
+                      650
+                  ]
+              ]
+          },
+          {
+              "name": "Cà Phê",
+              "items": [
+                  [
+                      "House of Phin",
+                      "Phin-dripped coffee with specialty house cream",
+                      725
+                  ],
+                  [
+                      "The O.G",
+                      "Cà phê sữa đá, classic Vietnamese iced coffee",
+                      700
+                  ],
+                  [
+                      "Hanoi Egg Coffee",
+                      "Phin-dripped coffee with signature egg cream",
+                      800
+                  ],
+                  [
+                      "Vietnamese Coffee Latte / Bạc Xỉu",
+                      "House milk with a double shot of phin-dripped black coffee",
+                      700
+                  ],
+                  [
+                      "Banana Milk Latte",
+                      "Coffee, banana purée, soy milk and almond milk; dairy free",
+                      775
+                  ],
+                  [
+                      "Good Morning Em",
+                      "Phin-dripped coffee with ube cream and egg cream",
+                      850
+                  ],
+                  [
+                      "Hello Pandan",
+                      "House pandan milk made with real pandan leaves and a double shot of phin coffee; vegan",
+                      800
+                  ],
+                  [
+                      "Hue-Style Salted Cream",
+                      "Phin-dripped coffee with sea salt cream",
+                      750
+                  ],
+                  [
+                      "Manila To Saigon",
+                      "Phin coffee with ube sauce and ube cream",
+                      775
+                  ],
+                  [
+                      "Coconut Coffee “CC”",
+                      "Phin coffee with coconut cream and flakes",
+                      750
+                  ],
+                  [
+                      "Money Tree",
+                      "Phin coffee with fresh mint",
+                      775
+                  ],
+                  [
+                      "Saigon By Night",
+                      "Phin coffee with black sesame cream",
+                      750
+                  ],
+                  [
+                      "Caramel By The Mekong",
+                      "Caramel phin coffee, house cream and caramel drizzle",
+                      750
+                  ],
+                  [
+                      "Black Vietnamese Coffee",
+                      "No sugar or dairy",
+                      725
+                  ]
+              ]
+          },
+          {
+              "name": "Matcha",
+              "items": [
+                  [
+                      "House Matcha",
+                      "Japanese matcha and house vanilla",
+                      750
+                  ],
+                  [
+                      "Banana Matcha Latte",
+                      "Matcha, banana purée, almond and soy milk; dairy free",
+                      800
+                  ],
+                  [
+                      "Pandan Matcha",
+                      "Japanese matcha and house pandan milk with coconut; vegan",
+                      800
+                  ],
+                  [
+                      "Strawberry Matcha Latte",
+                      "Ceremonial matcha, strawberry purée and choice of milk",
+                      800
+                  ],
+                  [
+                      "Ube Matcha",
+                      "Japanese matcha and house ube purée",
+                      775
+                  ],
+                  [
+                      "Black Sesame Matcha",
+                      "Japanese matcha and black sesame cream",
+                      750
+                  ],
+                  [
+                      "Coconut Matcha Latte",
+                      "Coconut milk and Japanese matcha; dairy free",
+                      750
+                  ],
+                  [
+                      "Mango Matcha Latte",
+                      "Matcha, mango purée and choice of milk",
+                      800
+                  ]
+              ]
+          },
+          {
+              "name": "Hojicha",
+              "items": [
+                  [
+                      "Hojicha Latte",
+                      "Roasted green tea latte",
+                      750
+                  ],
+                  [
+                      "Midnight Hojicha",
+                      "Roasted hojicha latte with black sesame cream",
+                      775
+                  ]
+              ]
+          }
+      ],
+      "orderUrl": "https://www.houseofphin.com/s/order",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from their online ordering menu. Check their site for today’s pastry and other drink availability.",
+      "clip": {
+          "src": "/clips/house-of-phin.mp4",
+          "poster": "/clips/house-of-phin-poster.webp",
+          "href": "https://www.instagram.com/reel/DEXqp6JRA7r/",
+          "credit": "Posted by @houseofphin_",
+          "platform": "Instagram"
+      }
   },
 ]

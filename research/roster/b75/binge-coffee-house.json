@@ -1,0 +1,57 @@
+{
+  "id": "b_bingecoffeehouse",
+  "name_exact": "Binge Coffee House",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://www.bingecoffeehouse.com/ (two Berkeley addresses, phone and daily hours)",
+    "https://www.bingecoffeehouse.com/menu (full drink descriptions, no prices)",
+    "https://www.bingecoffeehouse.com/contact",
+    "https://order.snackpass.co/bingecoffeehouse (own linked ordering service; Vercel browser verification prevented menu access)",
+    "Glenn IMG_8432 bio and IMG_8433 own icon"
+  ],
+  "facts": {
+    "slug": "binge-coffee-house",
+    "name": "Binge Coffee House",
+    "label": "Binge",
+    "cuisine": "Vietnamese coffee & matcha",
+    "color": "#0c0c0c",
+    "icon": "binge-coffee-house",
+    "site": "https://www.bingecoffeehouse.com/",
+    "tagline": "Vietnamese phin coffee, ceremonial matcha, bánh mì and pandan waffles, with two Berkeley cafes.",
+    "prep": 0,
+    "category": "Vietnamese coffee & matcha",
+    "items": [],
+    "address": "2199 Bancroft Way, Berkeley, CA 94704",
+    "phone": "(510) 721-3839",
+    "hours": "Daily 9am–7pm",
+    "instagram": "bingecoffeehouse",
+    "orderUrl": "https://order.snackpass.co/bingecoffeehouse",
+    "siteCta": "Order online",
+    "contactOnly": "Their drink menu includes Vietnamese phin coffee with salted cream, egg cream, pandan, ube and black sesame, ceremonial matcha, fruit teas and milk teas. Visit their own menu or ordering page for current availability and prices.",
+    "panels": [
+      {
+        "head": "Berkeley cafes",
+        "body": [
+          "Binge #1: 2199 Bancroft Way, Berkeley, CA 94704; (510) 721-3839.",
+          "Binge #2: 2528A Durant Ave, Berkeley, CA 94704. Their website lists daily 9am–7pm."
+        ],
+        "links": [
+          {
+            "label": "Their drink menu",
+            "href": "https://www.bingecoffeehouse.com/menu"
+          }
+        ]
+      }
+    ]
+  },
+  "placements": [
+    "berkeley-goods2-18",
+    "beasty-coffee-21"
+  ],
+  "glenn": "29 Oct 8:36 am: Berkeley • Goods / BEASTY • Cafe.",
+  "flags": [
+    "No reel sent for Binge; later 11:08 am reels are Lucky Three Seven.",
+    "Priced menu held: own menu has no prices and own linked Snackpass stopped at browser verification. No CAPTCHA bypass attempted, no third-party prices borrowed.",
+    "Primary address is Berkeley #1 Bancroft Way; second Berkeley cafe listed in panel. Bio additionally mentions SF and Newark coming soon; those are not inferred as requested seats."
+  ]
+}

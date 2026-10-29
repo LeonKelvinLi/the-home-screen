@@ -1,0 +1,222 @@
+{
+  "id": "b_houseofphin",
+  "name_exact": "House of Phin",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://www.houseofphin.com/ (phone, address, email, current hours)",
+    "https://www.houseofphin.com/s/order (30 priced rendered items across Seasonal/New, Cà Phê, Matcha and Hojicha; later sections empty on this visit)",
+    "Glenn IMG_8444 bio and IMG_8446 enlarged own logo",
+    "https://www.instagram.com/reel/DEXqp6JRA7r/",
+    "https://www.instagram.com/reel/DWCrai9EjCQ/"
+  ],
+  "facts": {
+    "slug": "house-of-phin",
+    "name": "House of Phin",
+    "label": "House of Phin",
+    "cuisine": "Vietnamese phin coffee",
+    "color": "#151515",
+    "icon": "house-of-phin",
+    "site": "https://www.houseofphin.com/",
+    "tagline": "Vietnamese coffee brewed by hand with phin filters on International Boulevard, with egg cream, pandan, ube and matcha drinks.",
+    "prep": 0,
+    "category": "Vietnamese phin coffee",
+    "items": [],
+    "address": "1920 International Blvd, Oakland, CA 94606",
+    "phone": "(510) 603-4614",
+    "email": "houseofphincoffee@gmail.com",
+    "hours": "Wed–Sun 7:30am–3pm; Mon–Tue closed",
+    "instagram": "houseofphin_",
+    "sections": [
+      {
+        "name": "Seasonal & New",
+        "items": [
+          [
+            "Pumpkin Spice Vietnamese Latte",
+            "Phin coffee, pumpkin spice sauce, sea salt cream and pumpkin spice",
+            850
+          ],
+          [
+            "Pumpkin Spice Matcha Latte",
+            "Matcha, choice of milk and pumpkin spice blend",
+            850
+          ],
+          [
+            "Matcha Foam Vietnamese Coffee",
+            "Phin-dripped coffee with matcha foam",
+            850
+          ],
+          [
+            "Pumpkin Spice Hojicha",
+            "Roasted hojicha, choice of milk and pumpkin spice sauce",
+            850
+          ],
+          [
+            "Good Morning Pumpkin",
+            "Pumpkin spice cake, brown sugar crumble and maple glaze",
+            575
+          ],
+          [
+            "PSL Matcha Cake",
+            "Pumpkin spice cake with matcha cream",
+            650
+          ]
+        ]
+      },
+      {
+        "name": "Cà Phê",
+        "items": [
+          [
+            "House of Phin",
+            "Phin-dripped coffee with specialty house cream",
+            725
+          ],
+          [
+            "The O.G",
+            "Cà phê sữa đá, classic Vietnamese iced coffee",
+            700
+          ],
+          [
+            "Hanoi Egg Coffee",
+            "Phin-dripped coffee with signature egg cream",
+            800
+          ],
+          [
+            "Vietnamese Coffee Latte / Bạc Xỉu",
+            "House milk with a double shot of phin-dripped black coffee",
+            700
+          ],
+          [
+            "Banana Milk Latte",
+            "Coffee, banana purée, soy milk and almond milk; dairy free",
+            775
+          ],
+          [
+            "Good Morning Em",
+            "Phin-dripped coffee with ube cream and egg cream",
+            850
+          ],
+          [
+            "Hello Pandan",
+            "House pandan milk made with real pandan leaves and a double shot of phin coffee; vegan",
+            800
+          ],
+          [
+            "Hue-Style Salted Cream",
+            "Phin-dripped coffee with sea salt cream",
+            750
+          ],
+          [
+            "Manila To Saigon",
+            "Phin coffee with ube sauce and ube cream",
+            775
+          ],
+          [
+            "Coconut Coffee “CC”",
+            "Phin coffee with coconut cream and flakes",
+            750
+          ],
+          [
+            "Money Tree",
+            "Phin coffee with fresh mint",
+            775
+          ],
+          [
+            "Saigon By Night",
+            "Phin coffee with black sesame cream",
+            750
+          ],
+          [
+            "Caramel By The Mekong",
+            "Caramel phin coffee, house cream and caramel drizzle",
+            750
+          ],
+          [
+            "Black Vietnamese Coffee",
+            "No sugar or dairy",
+            725
+          ]
+        ]
+      },
+      {
+        "name": "Matcha",
+        "items": [
+          [
+            "House Matcha",
+            "Japanese matcha and house vanilla",
+            750
+          ],
+          [
+            "Banana Matcha Latte",
+            "Matcha, banana purée, almond and soy milk; dairy free",
+            800
+          ],
+          [
+            "Pandan Matcha",
+            "Japanese matcha and house pandan milk with coconut; vegan",
+            800
+          ],
+          [
+            "Strawberry Matcha Latte",
+            "Ceremonial matcha, strawberry purée and choice of milk",
+            800
+          ],
+          [
+            "Ube Matcha",
+            "Japanese matcha and house ube purée",
+            775
+          ],
+          [
+            "Black Sesame Matcha",
+            "Japanese matcha and black sesame cream",
+            750
+          ],
+          [
+            "Coconut Matcha Latte",
+            "Coconut milk and Japanese matcha; dairy free",
+            750
+          ],
+          [
+            "Mango Matcha Latte",
+            "Matcha, mango purée and choice of milk",
+            800
+          ]
+        ]
+      },
+      {
+        "name": "Hojicha",
+        "items": [
+          [
+            "Hojicha Latte",
+            "Roasted green tea latte",
+            750
+          ],
+          [
+            "Midnight Hojicha",
+            "Roasted hojicha latte with black sesame cream",
+            775
+          ]
+        ]
+      }
+    ],
+    "orderUrl": "https://www.houseofphin.com/s/order",
+    "siteCta": "Order online",
+    "siteNote": "Prices are from their online ordering menu. Check their site for today’s pastry and other drink availability.",
+    "clip": {
+      "src": "/clips/house-of-phin.mp4",
+      "poster": "/clips/house-of-phin-poster.webp",
+      "href": "https://www.instagram.com/reel/DEXqp6JRA7r/",
+      "credit": "Posted by @houseofphin_",
+      "platform": "Instagram"
+    }
+  },
+  "placements": [
+    "oakland-goods2-38",
+    "beasty-coffee-22"
+  ],
+  "glenn": "29 Oct 11:14–11:16 am: Oakland • Goods / BEASTY • Cafe; own Watch film; Eileen Medium/Foodie.",
+  "flags": [
+    "Own Watch film is 5.4s in full, not padded or looped into a longer asset.",
+    "30 items with current prices visible in own online menu. Phrosty, No Cà Phê Today, Tea and Pastries headings rendered no items even after section navigation and scrolling; these unpriced/unreturned items are not invented.",
+    "Email from own site. Placeholder 512-555-0126 in hidden template is ignored; actual rendered local phone is (510) 603-4614."
+  ]
+}

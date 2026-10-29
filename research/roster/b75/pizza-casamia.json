@@ -1,0 +1,30 @@
+{
+  "id": "b_pizzacasamia",
+  "name_exact": "Pizza Casamia",
+  "checked_on": "2026-10-29",
+  "update_only": true,
+  "facts": {
+    "slug": "pizza-casamia",
+    "name": "Pizza Casamia",
+    "label": "Pizza Casamia",
+    "tagline": "Fresh pizza, wings and salads on Branham Lane",
+    "icon": "pizza-casamia",
+    "clip": {
+      "src": "/clips/pizza-casamia.mp4",
+      "poster": "/clips/pizza-casamia-poster.webp",
+      "href": "https://www.instagram.com/reel/De3TqRvOWos/",
+      "credit": "Posted by @pizzacasamiasanjose",
+      "platform": "Instagram"
+    }
+  },
+  "sources": [
+    "https://www.instagram.com/reel/De3TqRvOWos/"
+  ],
+  "flags": [
+    "Own-account film added; 24–48s shows cheese bread and pizza, no invented filmmaker."
+  ],
+  "placements": [
+    "san-jose-goods2-19",
+    "beasty-goods2-32"
+  ]
+}

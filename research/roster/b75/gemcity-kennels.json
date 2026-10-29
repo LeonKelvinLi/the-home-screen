@@ -1,0 +1,35 @@
+{
+  "id": "b_gemcitykennels",
+  "name_exact": "Gem City Kennels",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "Glenn’s 29 Oct IMG_8411 @gemcity_kennels bio: Dayton OH, SCP Bellatrix, Bullypedia pedigree link",
+    "Glenn’s IMG_8412 enlarged Gem City Kennels logo"
+  ],
+  "facts": {
+    "slug": "gemcity-kennels",
+    "name": "Gem City Kennels",
+    "label": "Gem City",
+    "cuisine": "American bully breeder",
+    "color": "#151515",
+    "icon": "gemcity-kennels",
+    "site": "https://www.instagram.com/gemcity_kennels/",
+    "tagline": "An American bully kennel in Dayton, Ohio. Contact Gem City Kennels on Instagram for current information.",
+    "prep": 0,
+    "category": "American bully breeder",
+    "items": [],
+    "instagram": "gemcity_kennels",
+    "needsSite": true,
+    "contactOnly": "Gem City Kennels lists Dayton, Ohio and SCP Bellatrix on Instagram. Message their account for details.",
+    "siteCta": "Open Instagram"
+  },
+  "placements": [
+    "beasty-pits-1"
+  ],
+  "glenn": "29 Oct 7:14 am: BEASTY • Pits; “This is the other half of Sade’s parents.”",
+  "flags": [
+    "Manual Pit’s seat honors Glenn’s request without changing American bully into pit bull.",
+    "No Bay Area city seat: their own bio gives Dayton, Ohio.",
+    "Glenn’s parentage note is provenance, not an independently verified pedigree claim. No dog listings, availability, prices, phone or sales checkout invented."
+  ]
+}

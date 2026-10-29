@@ -1,0 +1,99 @@
+{
+  "id": "b_mumuhotpotsunnyvale",
+  "name_exact": "Mumu Hot Pot — Sunnyvale",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://mumuhotpot.com/locations/ (Sunnyvale address)",
+    "https://mumuhotpot.com/menu/ (six priced sets; add-ons, tea and soup selections unpriced)",
+    "Glenn IMG_8426 bio, IMG_8427 Sunnyvale location and IMG_8428 own wordmark",
+    "https://www.instagram.com/reel/DfEOxAYSUDd/"
+  ],
+  "facts": {
+    "slug": "mumu-hot-pot-sunnyvale",
+    "name": "Mumu Hot Pot — Sunnyvale",
+    "label": "Mumu Hot Pot",
+    "cuisine": "Individual hot pot",
+    "color": "#efdab0",
+    "icon": "mumu-hot-pot-sunnyvale",
+    "site": "https://mumuhotpot.com/locations/",
+    "tagline": "Individual hot pots on Lawrence Station Road, with soup bases, wagyu, vegetables and set meals for one or two.",
+    "prep": 0,
+    "category": "Individual hot pot",
+    "items": [],
+    "address": "1273 Lawrence Station Rd, Sunnyvale, CA 94089",
+    "instagram": "mumuhotpot.usa",
+    "email": "help@mumuhotpot.com",
+    "sections": [
+      {
+        "name": "Combos",
+        "items": [
+          [
+            "The Classic",
+            "2 soup bases, 3 meats, 3 sides, 2 noodles/rice and 1 large veggie platter",
+            7500
+          ],
+          [
+            "Premium Wagyu Set",
+            "2 soup bases, Japanese A5 wagyu, M8–M9 wagyu flat iron, M8–M9 wagyu zabuton, 3 sides, 2 noodles/rice and a large veggie platter",
+            12500
+          ],
+          [
+            "Japanese A5 Set",
+            "2 soup bases, 3 Japanese A5 wagyu, 3 sides, 2 noodles/rice and a large veggie platter",
+            16500
+          ],
+          [
+            "Single’s Meat",
+            "1 soup base, 1 meat, 2 sides, 1 noodle/rice and a small veggie platter",
+            3300
+          ],
+          [
+            "Single’s Three Side",
+            "1 soup base, 3 sides, 1 noodle/rice and a small veggie platter",
+            2800
+          ],
+          [
+            "Single’s Vegetarian",
+            "1 soup base, 2 vegan sides, 1 noodle/rice and a medium veggie platter",
+            2600
+          ]
+        ]
+      }
+    ],
+    "siteCta": "Visit their website",
+    "siteNote": "Set prices are from Mumu’s published menu. Ask the Sunnyvale shop about current availability, add-on prices and opening hours.",
+    "clip": {
+      "src": "/clips/mumu-hot-pot-sunnyvale.mp4",
+      "poster": "/clips/mumu-hot-pot-sunnyvale-poster.webp",
+      "href": "https://www.instagram.com/reel/DfEOxAYSUDd/",
+      "credit": "Filmed by @itsmayrazambrano",
+      "platform": "Instagram",
+      "by": "itsmayrazambrano"
+    },
+    "panels": [
+      {
+        "head": "Soup bases & add-ons",
+        "body": [
+          "Soup bases: Tom Yum, Yuzu Shio, Miso, Sukiyaki, Creamy Tomato, Mushroom, Sichuan Spicy, Buttery Spicy and Clear Water. The menu marks all but Sukiyaki and Buttery Spicy vegan.",
+          "Meats include Japanese A5 wagyu, Australian wagyu, Black Angus beef, beef tongue, lamb, Kurobuta pork and chicken. The menu marks selected Australian wagyu and lamb halal; ask the kitchen about your specific order.",
+          "Other selections include quail egg, Spam, tripe, tendon, bean curd, tofu, enoki, shrimp, tilapia, fish balls, vegetables, ramen, vermicelli, udon, instant noodles, rice cakes and rice. Add-on and fruit-tea prices are not published."
+        ],
+        "links": [
+          {
+            "label": "Full menu & selections",
+            "href": "https://mumuhotpot.com/menu/"
+          }
+        ]
+      }
+    ]
+  },
+  "placements": [
+    "sunnyvale-goods2-0",
+    "beasty-hotpot-4"
+  ],
+  "glenn": "29 Oct 8:23–8:25 am: Clip this; Sunnyvale • Eats / BEASTY • Hot Pot / New Category.",
+  "flags": [
+    "No phone or hours published on their own location page; not inferred from another shop.",
+    "Six priced sets from own general menu; add-ons and tea without prices summarized in panel, no invented prices. No alcohol."
+  ]
+}

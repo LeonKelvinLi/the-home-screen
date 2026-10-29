@@ -284,3 +284,12 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `kajiken-san-mateo.webp` | [Original artwork](https://www.kajikenusa.com/san-mateo-store) | Their own white Japanese Kajiken/aburasoba wordmark and red seal from the website header PNG, fitted on charcoal. |
 | `taste-of-shaxian.webp` | [Original artwork](https://www.instagram.com/tasteofshaxian/) | Their own white Chinese Shaxian Snacks mark on an orange-red roundel, from Glenn's zoomed profile screenshot (IMG_8386), cut inside its disc. |
 | `din-ding-dumpling-house-fremont.webp` | [Original artwork](https://dindingdumplinghouses.com/images/logo-v2.png) | Their own red-and-white Din Ding seal, from the site's logo-v2.png, enlarged proportionally and padded with near-black. |
+| `origin-lab-coffee-matcha.webp` | [Original artwork](https://www.instagram.com/originlabcoffeematcha/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8397, whole test-tube mark on white. |
+| `parekoy-lutong-pinoy.webp` | [Original artwork](https://www.instagram.com/parekoylutongpinoy/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8409, the core mark Glenn explicitly chose; dated anniversary line cropped away. |
+| `gemcity-kennels.webp` | [Original artwork](https://www.instagram.com/gemcity_kennels/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8412, enlarged own kennel mark. |
+| `yami-bowl.webp` | [Original artwork](https://www.instagram.com/yamibowlbbq/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8417, cropped inside the Instagram story ring. |
+| `wikiwiki-hawaiian-bbq.webp` | [Original artwork](https://www.instagram.com/wikiwikihawaiianbbq/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8422, own Facebook pineapple wordmark. |
+| `mumu-hot-pot-sunnyvale.webp` | [Original artwork](https://www.instagram.com/mumuhotpot.usa/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8428, own website wordmark. |
+| `wooga-korean-bbq.webp` | [Original artwork](https://www.instagram.com/wooga_koreanbbq/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8430, inside enlarged own profile disc. |
+| `binge-coffee-house.webp` | [Original artwork](https://www.instagram.com/bingecoffeehouse/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8433, inside enlarged own profile disc. |
+| `house-of-phin.webp` | [Original artwork](https://www.instagram.com/houseofphin_/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8446, inside enlarged own profile disc. |

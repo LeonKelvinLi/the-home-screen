@@ -1,0 +1,600 @@
+{
+  "id": "b_originlabcoffeematcha",
+  "name_exact": "Origin Lab Coffee & Matcha",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://originlabcoffeematcha.toast.site/ (own site, phone and address; read in Chrome 29 Oct)",
+    "https://originlabcoffeematcha.toast.site/order (97 available priced items, including coffee gear and books)",
+    "Glenn’s IMG_8397 logo, IMG_8394 Instagram bio and IMG_8396 Toast footer",
+    "https://www.instagram.com/reel/DaT-h7hO6UK/",
+    "https://www.instagram.com/reel/DXsa0XQj9lg/"
+  ],
+  "facts": {
+    "slug": "origin-lab-coffee-matcha",
+    "name": "Origin Lab Coffee & Matcha",
+    "label": "Origin Lab",
+    "cuisine": "Specialty coffee & matcha",
+    "color": "#ffffff",
+    "icon": "origin-lab-coffee-matcha",
+    "site": "https://originlabcoffeematcha.toast.site/",
+    "tagline": "Specialty coffee, ceremonial matcha and cloud-topped lattes on Sutter Street, with pastries and coffee gear.",
+    "prep": 0,
+    "category": "Specialty coffee & matcha",
+    "items": [],
+    "address": "211 Sutter St, San Francisco, CA 94108",
+    "phone": "(628) 724-7775",
+    "instagram": "originlabcoffeematcha",
+    "sections": [
+      {
+        "name": "Handcrafted Matcha Cloud",
+        "items": [
+          [
+            "Velvet Matcha Cloud",
+            "",
+            795
+          ],
+          [
+            "Pure Matcha Lab",
+            "",
+            775
+          ],
+          [
+            "Coconut Wave Matcha Cloud",
+            "",
+            775
+          ],
+          [
+            "Yuzu Air Matcha Cloud",
+            "",
+            825
+          ],
+          [
+            "Citrus Wave Matcha Cloud",
+            "",
+            775
+          ],
+          [
+            "Roast Lab Hojicha",
+            "",
+            775
+          ],
+          [
+            "Hot Matcha Latte",
+            "",
+            650
+          ],
+          [
+            "Hot Hojicha Latte",
+            "",
+            750
+          ],
+          [
+            "Mango Matcha Nimbus",
+            "",
+            795
+          ],
+          [
+            "Ube Matcha Nimbus",
+            "",
+            795
+          ]
+        ]
+      },
+      {
+        "name": "Handcrafted Espresso Clouds",
+        "items": [
+          [
+            "Banana Espresso Cloud",
+            "",
+            795
+          ],
+          [
+            "Amber Velvet Cloud",
+            "",
+            795
+          ],
+          [
+            "Midnight Mocha Cloud",
+            "",
+            795
+          ],
+          [
+            "Coco Snow Cloud",
+            "",
+            795
+          ],
+          [
+            "Solar Ember Cloud",
+            "",
+            775
+          ],
+          [
+            "Tropic Luxe Cloud",
+            "",
+            775
+          ],
+          [
+            "Pumpkin Nimbus Latte",
+            "",
+            795
+          ]
+        ]
+      },
+      {
+        "name": "Handcrafted Strawberry Clouds",
+        "items": [
+          [
+            "Matcha Strawberry Nimbus",
+            "",
+            795
+          ],
+          [
+            "Hojicha Strawberry Nimbus",
+            "",
+            795
+          ],
+          [
+            "Strawberry Citrus Nimbus",
+            "",
+            775
+          ],
+          [
+            "Strawberry Coco Nimbus",
+            "",
+            775
+          ]
+        ]
+      },
+      {
+        "name": "Espresso Drinks",
+        "items": [
+          [
+            "Latte",
+            "",
+            700
+          ],
+          [
+            "Cappuccino",
+            "",
+            700
+          ],
+          [
+            "Americano",
+            "",
+            500
+          ],
+          [
+            "Cortado",
+            "",
+            600
+          ],
+          [
+            "Espresso",
+            "",
+            500
+          ],
+          [
+            "Mocha",
+            "",
+            700
+          ],
+          [
+            "Brew Coffee",
+            "",
+            550
+          ],
+          [
+            "Flat White",
+            "",
+            700
+          ],
+          [
+            "London Fog",
+            "",
+            650
+          ],
+          [
+            "Pour Over",
+            "",
+            600
+          ],
+          [
+            "Black Eye Cloud",
+            "",
+            750
+          ],
+          [
+            "Cafe Au Lait",
+            "",
+            600
+          ],
+          [
+            "Hot Chocolate",
+            "",
+            600
+          ],
+          [
+            "Macchiato",
+            "",
+            500
+          ],
+          [
+            "Black Eye",
+            "",
+            650
+          ],
+          [
+            "Cold Brew",
+            "",
+            550
+          ],
+          [
+            "Steam Milk",
+            "",
+            300
+          ]
+        ]
+      },
+      {
+        "name": "Tea Bags",
+        "items": [
+          [
+            "Chamomile Tea",
+            "",
+            400
+          ],
+          [
+            "Black Tea - Decaf",
+            "",
+            400
+          ],
+          [
+            "Earl Grey",
+            "",
+            400
+          ],
+          [
+            "Earl Grey - Decaf",
+            "",
+            400
+          ],
+          [
+            "English Breakfast",
+            "",
+            400
+          ],
+          [
+            "Jasmine Green Tea",
+            "",
+            400
+          ],
+          [
+            "Lemon Ginger Tea",
+            "",
+            400
+          ],
+          [
+            "Peppermint Tea",
+            "",
+            400
+          ],
+          [
+            "Premium Earl Grey",
+            "",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Food/Pastries",
+        "items": [
+          [
+            "Breakfast Sandwich",
+            "",
+            799
+          ],
+          [
+            "Danish",
+            "",
+            475
+          ],
+          [
+            "Bagel - Everything",
+            "",
+            450
+          ],
+          [
+            "Croissant",
+            "",
+            400
+          ],
+          [
+            "Egg Bites (2) - Vegetarian",
+            "",
+            649
+          ],
+          [
+            "Bagel - Plain",
+            "",
+            450
+          ],
+          [
+            "Waffles (2)",
+            "",
+            699
+          ]
+        ]
+      },
+      {
+        "name": "Candy",
+        "items": [
+          [
+            "Bolci - Matcha Strawberry",
+            "",
+            1699
+          ],
+          [
+            "Fig Bar - Blueberry",
+            "",
+            150
+          ],
+          [
+            "Fig Bar - Raspberry",
+            "",
+            150
+          ],
+          [
+            "Kit Kat - Matcha (10 pack)",
+            "",
+            1299
+          ],
+          [
+            "Kit Kat - Matcha (Single)",
+            "",
+            150
+          ],
+          [
+            "Kit Kat - Strawberry (10 pack)",
+            "",
+            1299
+          ],
+          [
+            "Kit Kat - Strawberry (Single)",
+            "",
+            150
+          ],
+          [
+            "Oreo - Matcha (China)",
+            "",
+            599
+          ],
+          [
+            "Oreo - Strawberry (Japan)",
+            "",
+            699
+          ],
+          [
+            "Pocky - Matcha Green Tea Cream",
+            "",
+            699
+          ],
+          [
+            "Pocky - Rich Matcha",
+            "",
+            699
+          ],
+          [
+            "Tcho - Chico Latte - Singles",
+            "",
+            299
+          ],
+          [
+            "Tcho - Choco Latte",
+            "",
+            899
+          ],
+          [
+            "Tcho - Perfect Matcha",
+            "",
+            899
+          ],
+          [
+            "Tcho - Perfect Matcha - Singles",
+            "",
+            299
+          ]
+        ]
+      },
+      {
+        "name": "Coffee Beans",
+        "items": [
+          [
+            "Neapolitan Espresso Beans",
+            "",
+            2099
+          ]
+        ]
+      },
+      {
+        "name": "Bottled Drinks",
+        "items": [
+          [
+            "Crystal Geyser",
+            "",
+            250
+          ],
+          [
+            "Fiji",
+            "",
+            400
+          ],
+          [
+            "Harmless Harvest Coconut Water",
+            "",
+            599
+          ],
+          [
+            "Liquid Death Severed Lime",
+            "",
+            400
+          ],
+          [
+            "Martinelli’s Apple Juice",
+            "",
+            400
+          ],
+          [
+            "Mexican Coca Cola",
+            "",
+            550
+          ],
+          [
+            "San Pellegrino",
+            "",
+            450
+          ]
+        ]
+      },
+      {
+        "name": "Drinks - Cup",
+        "items": [
+          [
+            "Coconut Water - Iced",
+            "",
+            450
+          ],
+          [
+            "Orange Juice - Iced",
+            "",
+            400
+          ]
+        ]
+      },
+      {
+        "name": "Milk",
+        "items": [
+          [
+            "Almond Milk - Iced",
+            "",
+            350
+          ],
+          [
+            "Coconut Milk - Iced",
+            "",
+            400
+          ],
+          [
+            "Nonfat/Skim Milk - Iced",
+            "",
+            275
+          ],
+          [
+            "Oat Milk - Iced",
+            "",
+            400
+          ],
+          [
+            "Soy Milk - Iced",
+            "",
+            350
+          ],
+          [
+            "Whole Milk - Iced",
+            "",
+            275
+          ]
+        ]
+      },
+      {
+        "name": "Retail",
+        "items": [
+          [
+            "Apron",
+            "",
+            3499
+          ],
+          [
+            "Matcha Set",
+            "",
+            4999
+          ],
+          [
+            "Traveler Mug",
+            "",
+            1999
+          ],
+          [
+            "Whisk",
+            "",
+            1499
+          ],
+          [
+            "Pour Over Kits",
+            "",
+            5999
+          ]
+        ]
+      },
+      {
+        "name": "Books",
+        "items": [
+          [
+            "A Beginner's Guide to Japanese Tea",
+            "",
+            2799
+          ],
+          [
+            "Craft Coffee A Manual",
+            "",
+            3125
+          ],
+          [
+            "How to Taste Coffee",
+            "",
+            3125
+          ],
+          [
+            "Stories of Japanese Tea",
+            "",
+            3125
+          ],
+          [
+            "The Coffee Bean",
+            "",
+            2750
+          ],
+          [
+            "The Little Book for Coffee Lovers",
+            "",
+            1499
+          ],
+          [
+            "The World Atlas of Coffee 3rd Edition",
+            "",
+            4999
+          ]
+        ]
+      }
+    ],
+    "orderUrl": "https://originlabcoffeematcha.toast.site/order",
+    "siteCta": "Order online",
+    "siteNote": "Prices are from their Toast ordering menu. Call to confirm today’s opening hours.",
+    "clip": {
+      "src": "/clips/origin-lab-coffee-matcha.mp4",
+      "poster": "/clips/origin-lab-coffee-matcha-poster.webp",
+      "href": "https://www.instagram.com/reel/DaT-h7hO6UK/",
+      "credit": "Posted by @originlabcoffeematcha",
+      "platform": "Instagram"
+    }
+  },
+  "placements": [
+    "san-francisco-goods2-61",
+    "beasty-coffee-20"
+  ],
+  "glenn": "28 Oct 10:24 pm: San Francisco • Goods / BEASTY • Cafe; 10:25 pm Andrew clip; 10:27 pm own Watch clip.",
+  "flags": [
+    "No hours: Instagram says daily 6am–8pm; own Toast footer says closes 11pm and preview mode.",
+    "Menu excludes out-of-stock items and duplicate Featured Items. Regular current prices; retail and books kept in their own sections. Descriptions omitted rather than copying marketing text.",
+    "Own film 0–15.1s; caption sounds pre-opening but the film itself says Come Visit Today and shows the open shop. Andrew review 0–14s."
+  ]
+}

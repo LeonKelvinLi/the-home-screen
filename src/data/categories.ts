@@ -133,6 +133,9 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   /* Glenn, 2026-10-28, 8:38 pm: "BEASTY • Dim Sum / New Category"; at 8:39–8:41 asks
      "Dumplings or Dim Sum?", then "You choose". Leon replies "Dim sum I think" at 9:11 pm and
      Glenn likes it at 9:12 pm. Dim Sum is the final heading; Search also finds "dumplings". */
+  /* Glenn, 2026-10-29: new Hot Pot (Mumu Sunnyvale) and BBQ (Wooga Cupertino). */
+  { kind: 'hotpot', heading: 'Hot Pot', about: 'Hot pot and shabu-shabu restaurants', wall: wall('hotpot'), test: /hot[ -]?pot|shabu[ -]?shabu/i },
+  { kind: 'bbq', heading: 'BBQ', about: 'Barbecue, smokehouses and Korean BBQ', wall: wall('bbq'), test: /\bbbq\b|barbecue|barbeque|smoked meat|smokehouse/i },
   { kind: 'dimsum', heading: 'Dim Sum', about: 'Dim sum, dumplings and soup buns', wall: wall('dimsum'), test: /dim[ -]?sum|dumplings?|xiao[ -]?long[ -]?bao/i },
   { kind: 'ramen', heading: 'Ramen', about: 'Ramen shops', wall: wall('ramen'), test: /ramen/i },
   { kind: 'steakhouse', heading: 'Steakhouse', about: 'Steakhouses and chophouses', wall: wall('steakhouse'), test: /steak ?house|chop ?house/i },

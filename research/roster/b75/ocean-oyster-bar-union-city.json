@@ -1,0 +1,30 @@
+{
+  "id": "b_oceanoysterbarunioncity",
+  "name_exact": "Ocean Oyster Bar & Grill",
+  "checked_on": "2026-10-29",
+  "update_only": true,
+  "facts": {
+    "slug": "ocean-oyster-bar-union-city",
+    "name": "Ocean Oyster Bar & Grill",
+    "label": "Ocean",
+    "tagline": "Raw-bar oysters, cioppino, seafood towers and steaks on Dyer Street",
+    "icon": "ocean-oyster-bar",
+    "clip": {
+      "src": "/clips/ocean-oyster-bar.mp4",
+      "poster": "/clips/ocean-oyster-bar-poster.webp",
+      "href": "https://www.instagram.com/reel/DVPR8vWEr9U/",
+      "credit": "Filmed by @bayarea_fooddreamz",
+      "platform": "Instagram",
+      "by": "bayarea_fooddreamz"
+    }
+  },
+  "sources": [
+    "https://www.instagram.com/reel/DVPR8vWEr9U/"
+  ],
+  "flags": [
+    "Existing Union City hero retained; @booziebrunch review DfDb-kFSieE added here only."
+  ],
+  "placements": [
+    "union-city-goods2-4"
+  ]
+}

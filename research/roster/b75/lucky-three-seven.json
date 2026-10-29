@@ -1,0 +1,31 @@
+{
+  "id": "b_luckythreeseven",
+  "name_exact": "Lucky Three Seven",
+  "checked_on": "2026-10-29",
+  "update_only": true,
+  "facts": {
+    "slug": "lucky-three-seven",
+    "name": "Lucky Three Seven",
+    "label": "Lucky 3 Seven",
+    "tagline": "Filipino restaurant in Oakland serving comfort food and wings",
+    "icon": "lucky-three-seven",
+    "clip": {
+      "src": "/clips/lucky-three-seven-b75.mp4",
+      "poster": "/clips/lucky-three-seven-b75-poster.webp",
+      "href": "https://www.instagram.com/reel/DevbNctK0uP/",
+      "credit": "Filmed by @hungry4munchies",
+      "platform": "Instagram",
+      "by": "hungry4munchies"
+    }
+  },
+  "sources": [
+    "https://www.instagram.com/reel/DevbNctK0uP/"
+  ],
+  "flags": [
+    "Glenn Watch/Heavy hitter becomes hero. Three extras: existing Lucky-only @thetastebud excerpt, @mayakay.official Newbie, and Larry/Tommy wings tasting posted by @lucky777oakland, 3rd/Heavy also. Four distinct films. Existing fundraiser/site requirement unchanged."
+  ],
+  "placements": [
+    "oakland-goods-8",
+    "beasty-goods2-16"
+  ]
+}

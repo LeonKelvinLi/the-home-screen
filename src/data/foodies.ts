@@ -34,6 +34,8 @@ export interface OtherReview {
   reel: string
   /** A 15-second copy BEASTY plays, /clips/review-<code>.mp4, where one is cut. */
   clip?: boolean
+  /** Source attribution when the posting account differs from the reviewer. */
+  credit?: string
 }
 
 export interface FoodiePage {
@@ -191,6 +193,34 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'thesnacksensei', place: 'Din Ding Dumpling House — Fremont', brand: 'b_dindingdumplinghousefremont', reel: reel('DYNeXe3SB9U'), clip: true },
   /* Din Ding in Fremont, "2nd"; original is marked #ad. */
   { by: 'apoorva_sharma1', place: 'Din Ding Dumpling House — Fremont', brand: 'b_dindingdumplinghousefremont', reel: reel('DPM1flUEqkS'), clip: true },
+
+  /* Batch 75 — Glenn’s 28–29 October sends; his reviewer tags are retained here. */
+  /* Foodie */
+  {"by": "andreweatsinsf", "place": "Origin Lab Coffee & Matcha", "city": "San Francisco", "brand": "b_originlabcoffeematcha", "reel": "https://www.instagram.com/reel/DXsa0XQj9lg/", "clip": true},
+  /* Heavyweight */
+  {"by": "bayarea_fooddreamz", "place": "Parekoy Lutong Pinoy", "city": "San Leandro", "brand": "b_parekoylutongpinoy", "reel": "https://www.instagram.com/reel/De-Tlz7SnXg/", "clip": true},
+  /* Heavyweight / Foodie */
+  {"by": "volha_creative", "place": "Yami Bowl Bar & BBQ", "city": "San Jose", "brand": "b_yamibowl", "reel": "https://www.instagram.com/reel/Dd7oiAFo-s-/", "clip": true},
+  /* Medium */
+  {"by": "yourglobalfoodiebff", "place": "Yami Bowl Bar & BBQ", "city": "San Jose", "brand": "b_yamibowl", "reel": "https://www.instagram.com/reel/Dep7JcOREof/", "clip": true},
+  /* Newbie; invited visit */
+  {"by": "boba._.addict", "place": "Yami Bowl Bar & BBQ", "city": "San Jose", "brand": "b_yamibowl", "reel": "https://www.instagram.com/reel/DewyciVBPO8/", "clip": true},
+  /* Newbie */
+  {"by": "wthellydanyelly", "place": "Wikiwiki Hawaiian BBQ", "city": "Berkeley", "brand": "b_wikiwikihawaiianbbq", "reel": "https://www.instagram.com/reel/DcOpenPtXTm/", "clip": true},
+  /* Heavyweight */
+  {"by": "feed_happiness_", "place": "Wikiwiki Hawaiian BBQ", "city": "Berkeley", "brand": "b_wikiwikihawaiianbbq", "reel": "https://www.instagram.com/reel/DYT0xwFS2RV/", "clip": true},
+  /* Ocean oyster bar */
+  {"by": "booziebrunch", "place": "Ocean Oyster Bar & Grill — Union City", "city": "Union City", "brand": "b_oceanoysterbarunioncity", "reel": "https://www.instagram.com/reel/DfDb-kFSieE/", "clip": true},
+  /* Newbie */
+  {"by": "ruthannesturman", "place": "Ocean Oyster Bar & Grill — Redwood City", "city": "Redwood City", "brand": "b_oceanoysterbarredwoodcity", "reel": "https://www.instagram.com/reel/DdaEd-tvxIk/", "clip": true},
+  /* Existing 6–22s Lucky-only excerpt */
+  {"by": "thetastebud", "place": "Lucky Three Seven", "city": "Oakland", "brand": "b_luckythreeseven", "reel": "https://www.instagram.com/reel/DBw6bNGv2nD/", "clip": true},
+  /* Newbie */
+  {"by": "mayakay.official", "place": "Lucky Three Seven", "city": "Oakland", "brand": "b_luckythreeseven", "reel": "https://www.instagram.com/reel/DfDGWfQPoFv/", "clip": true},
+  /* 3rd / Heavy also; posted by the restaurant */
+  {"by": "larryjunetfm", "place": "Lucky Three Seven", "city": "Oakland", "brand": "b_luckythreeseven", "reel": "https://www.instagram.com/reel/DUg0QAHEgY4/", "clip": true, "credit": "Posted by @lucky777oakland; featuring @larryjunetfm and @tommybogo"},
+  /* Medium / Foodie */
+  {"by": "eileenhuynher", "place": "House of Phin", "city": "Oakland", "brand": "b_houseofphin", "reel": "https://www.instagram.com/reel/DWCrai9EjCQ/", "clip": true},
 
 ]
 

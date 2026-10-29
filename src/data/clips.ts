@@ -66,7 +66,7 @@ const REVIEW_REELS: Reel[] = OTHER_REVIEWS.flatMap((r) => {
     line: r.city ? `A Foodie review, ${r.city}` : 'A Foodie review',
     src: `/clips/review-${code}.mp4`,
     poster: `/clips/review-${code}-poster.webp`,
-    credit: `Filmed by ${who}`,
+    credit: r.credit ?? `Filmed by ${who}`,
     by: r.by,
     href: r.reel,
     logo: BRANDS.find((b) => b.id === opens)?.logo,

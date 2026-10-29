@@ -1837,4 +1837,19 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-ramen-8': 'b_tasteofshaxian',
   'fremont-goods2-9': 'b_dindingdumplinghousefremont',
 
+  /* Batch 75, Glenn’s 28–29 Oct sends: existing city category spots stay with their owners. */
+  'san-francisco-goods2-61': 'b_originlabcoffeematcha',
+  'san-leandro-goods-10': 'b_parekoylutongpinoy',
+  'beasty-goods2-86': 'b_parekoylutongpinoy',
+  'beasty-pits-1': 'b_gemcitykennels',
+  'beasty-bbq-0': 'b_woogakoreanbbq',
+  'san-jose-goods2-25': 'b_yamibowl',
+  'beasty-goods2-87': 'b_yamibowl',
+  'berkeley-goods2-17': 'b_wikiwikihawaiianbbq',
+  'beasty-goods2-88': 'b_wikiwikihawaiianbbq',
+  'sunnyvale-goods2-0': 'b_mumuhotpotsunnyvale',
+  'cupertino-goods-7': 'b_woogakoreanbbq',
+  'berkeley-goods2-18': 'b_bingecoffeehouse',
+  'oakland-goods2-38': 'b_houseofphin',
+
 }

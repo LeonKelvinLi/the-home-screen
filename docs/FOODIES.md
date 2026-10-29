@@ -334,3 +334,17 @@ Secondary and unavailable links:
 - @foodie.dreams: [Manila Inasal](https://www.instagram.com/reel/DfDGnnGPsYp/), Los Angeles, “Foodie” (5:17 pm). Source-only OTHER_REVIEWS entry; no business page, so its food stays out of the BEASTY feed.
 - @eatswithfoodie: [Kajiken San Mateo](https://www.instagram.com/reel/DZHBRMYvzav/), “Clip this video plz / Foodie” (7:45 pm); a second additional review under Kajiken's film.
 - @firstdibs.bayarea: [Taste of Shaxian](https://www.instagram.com/reel/DU9GimFkmVj/), first “Watch this video clip” (7:53 pm), then resent as “Foodie” (8:03 pm); credited as its main film once.
+
+## 28–29 October 2026 — Batch 75
+
+All sources and exact excerpts are in [Batch 75](BATCH-75.md) and `research/roster/b75-films.json`.
+
+- Origin Lab: @andreweatsinsf review beside its own main film.
+- Parekoy: @margs.out main (Watch/Foodie), @bayarea_fooddreamz additional (Heavyweight).
+- Yami: its own main plus @volha_creative (Heavyweight/Foodie), @yourglobalfoodiebff (Medium) and @boba._.addict (Newbie; original thanks restaurant for hosting).
+- Wikiwiki: @yogetasworld main (Medium), @wthellydanyelly (Newbie), @feed_happiness_ (Heavyweight). Ariana’s cut excludes the dated anniversary claim.
+- Ocean: @booziebrunch reviews **Union City**; @ruthannesturman reviews **Redwood City**. The latter’s cut excludes the oyster-price promotion. Redwood’s own main is credited to its caption’s filmmaker @indigosmedia.
+- Mumu Sunnyvale: @itsmayrazambrano main.
+- Lucky Three Seven: @hungry4munchies main (Watch/Heavy hitter), @mayakay.official (Newbie), @larryjunetfm with @tommybogo (3rd/Heavy also), and the retained @thetastebud 6–22s Lucky-only excerpt. The Larry/Tommy tasting was **posted by @lucky777oakland**; the feed uses that attribution, never claims Larry filmed it. Four distinct films.
+- House of Phin: @eileenhuynher (Medium/Foodie) beside its own main film.
+- Pizza Casamia’s new film is its own post, not assigned a Foodie filmmaker.

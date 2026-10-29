@@ -1,0 +1,496 @@
+{
+  "id": "b_parekoylutongpinoy",
+  "name_exact": "Parekoy Lutong Pinoy",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://www.parekoylutongpinoy.com/ (phone, address, direct phone orders; contradicting Saturday hours)",
+    "https://www.parekoylutongpinoy.com/menus (full priced own menu, 77 rows including sizes)",
+    "Glenn IMG_8409 explicitly marked Icon, cropped below anniversary message",
+    "https://www.instagram.com/reel/DICDnlYS968/",
+    "https://www.instagram.com/reel/De-Tlz7SnXg/"
+  ],
+  "facts": {
+    "slug": "parekoy-lutong-pinoy",
+    "name": "Parekoy Lutong Pinoy",
+    "label": "Parekoy",
+    "cuisine": "Filipino home cooking",
+    "color": "#003e2b",
+    "icon": "parekoy-lutong-pinoy",
+    "site": "https://www.parekoylutongpinoy.com/",
+    "tagline": "Filipino home cooking on East 14th Street: crispy pork sisig, silog breakfasts, adobo, pancit and halo-halo.",
+    "prep": 0,
+    "category": "Filipino home cooking",
+    "items": [],
+    "address": "14807 E 14th St, San Leandro, CA 94578",
+    "phone": "(510) 614-8112",
+    "instagram": "parekoylutongpinoy",
+    "sections": [
+      {
+        "name": "Breakfast",
+        "items": [
+          [
+            "Longsilog",
+            "Filipino sausage/Fried Rice/Egg",
+            1499
+          ],
+          [
+            "Tosilog",
+            "Sweet Marinated Pork/Fried Rice/Egg",
+            1499
+          ],
+          [
+            "Tapsilog",
+            "Marinated Beef/Fried Rice/Egg",
+            1499
+          ],
+          [
+            "Bangsilog",
+            "Milkfish/Fried Rice/Egg",
+            1499
+          ],
+          [
+            "Tuysilog",
+            "Dried Fish/Fried Rice/Egg",
+            1499
+          ],
+          [
+            "Spamsilog",
+            "Spam/Fried Rice/Egg",
+            1499
+          ],
+          [
+            "Side orders of Meat",
+            "Options:\nTocino\nLonganisa\nTapa\nBangus\nJeprox\nTinapa",
+            950
+          ],
+          [
+            "Side order of Egg",
+            "2 eggs",
+            450
+          ]
+        ]
+      },
+      {
+        "name": "APPETIZERS",
+        "items": [
+          [
+            "Lumpia Shanghai",
+            "20 pieces",
+            1499
+          ],
+          [
+            "Lumpia Gulay (EggRoll)",
+            "3 pieces",
+            899
+          ],
+          [
+            "Fried Calamari",
+            "",
+            1699
+          ],
+          [
+            "Chicharon Bulaklak",
+            "",
+            1699
+          ],
+          [
+            "Tofu Sisig",
+            "",
+            1599
+          ],
+          [
+            "Tokwat Baboy",
+            "",
+            1399
+          ],
+          [
+            "Tokwat Chicharon Bulaklak",
+            "",
+            1399
+          ]
+        ]
+      },
+      {
+        "name": "PORK",
+        "items": [
+          [
+            "Menudo",
+            "Pork stew with potatoes and carrots",
+            1999
+          ],
+          [
+            "Pork Sisig",
+            "Crispy pork pieces mixed with onions and jalapenos with our secret sauce",
+            1999
+          ],
+          [
+            "Adobo",
+            "Soy Sauce base dish with pork belly",
+            1999
+          ],
+          [
+            "Lechon Kawali",
+            "Deep fried pork belly",
+            1999
+          ],
+          [
+            "Crispy Binagoongan",
+            "Deep fried pork belly, sauteed in shrimp paste, topped with tomatoes and mango served on an eggplant.",
+            2299
+          ],
+          [
+            "Bicol Express",
+            "Pork belly cooked in crab paste and coconut milk with veggies and topped with jalepenos.",
+            2299
+          ],
+          [
+            "Crispy Pata",
+            "per piece",
+            1899
+          ],
+          [
+            "Embotido",
+            "per piece",
+            1499
+          ],
+          [
+            "Dinuguan",
+            "Pork stew simmered in pigs blood",
+            1899
+          ],
+          [
+            "Pata Kare-Kare",
+            "",
+            2399
+          ]
+        ]
+      },
+      {
+        "name": "BEEF",
+        "items": [
+          [
+            "Kaldereta",
+            "Beef stew with carrots and potatoes",
+            2399
+          ],
+          [
+            "Kare-Kare",
+            "Oxtail and tripe in a peanut butter based sauce, topped with bokchoy, string beans and eggplant, served with a side of bagoong",
+            2499
+          ],
+          [
+            "Pinoy Beef Steak",
+            "Soy sauce marinated beef with sauteed onions",
+            2399
+          ],
+          [
+            "Estofado",
+            "Beef stew with plantain",
+            2399
+          ],
+          [
+            "Kaldereta Kambing",
+            "Goat stew with potatoes, carrots, and olives",
+            2699
+          ]
+        ]
+      },
+      {
+        "name": "CHICKEN",
+        "items": [
+          [
+            "Afritada",
+            "Chicken stew with a tomato based sauce",
+            1899
+          ],
+          [
+            "Adobo",
+            "Soy sauce marinated chicken breasts",
+            1899
+          ],
+          [
+            "Whole Crispy Fried Chicken",
+            "",
+            2799
+          ],
+          [
+            "Half Fried Chicken",
+            "",
+            1499
+          ]
+        ]
+      },
+      {
+        "name": "FISH",
+        "items": [
+          [
+            "Bangus Sisig",
+            "Deep fried milkfish mixed with onions and jalepenos",
+            2099
+          ],
+          [
+            "Filet Escabeche",
+            "Deep fried filet fish topped with a sweet and sour based sauce",
+            2099
+          ],
+          [
+            "Pinoy Fish Steak",
+            "Deep fried milkfish chopped in pieces cooked in a soy sauce based sauce and sauteed onions",
+            2099
+          ],
+          [
+            "Whole Fried Bangus",
+            "",
+            2099
+          ]
+        ]
+      },
+      {
+        "name": "VEGETABLES",
+        "items": [
+          [
+            "Pinakbet",
+            "Mixed veggies sauteed in bagoong",
+            2099
+          ],
+          [
+            "Bicol Gulay",
+            "Mixed veggies sauteed in bagoong and coconut milk",
+            2099
+          ],
+          [
+            "Ginataang Sitaw/Kalabasa",
+            "Squash, green beans, shrimp and pork sauteed in coconut milk and crab paste",
+            2099
+          ],
+          [
+            "Guisadong Amplaya",
+            "Bittermelon cooked in scrambled eggs with shrimp and pork",
+            2099
+          ],
+          [
+            "Laing",
+            "Taro leaves cooked in coconut milk",
+            2099
+          ]
+        ]
+      },
+      {
+        "name": "SOUP  BASE (sabaw)",
+        "items": [
+          [
+            "Pork Sinigang",
+            "Sour tamarind soup with pork belly and mixed veggies",
+            1999
+          ],
+          [
+            "Beef Bulalo",
+            "Ginger based soup with beef and veggies",
+            2299
+          ],
+          [
+            "Bangus Sinigang",
+            "Sour tamarind base soup with milk fish and mixed veggies",
+            1999
+          ],
+          [
+            "Shrimp Sinigang",
+            "Sour tamarind base soup with shrimp and mixed veggies",
+            1999
+          ],
+          [
+            "Chicken Tinola",
+            "Chayote base soup with chicken and bokchoy",
+            1999
+          ],
+          [
+            "Sinampalukang Manok",
+            "Chicken soup dish with a sour broth. Similar to sinigang",
+            1999
+          ],
+          [
+            "Beef Sinigang",
+            "Sour tamarind  base soup with beef and mixed veggies",
+            2299
+          ]
+        ]
+      },
+      {
+        "name": "RICE",
+        "items": [
+          [
+            "Steam Rice (Cup)",
+            "",
+            415
+          ],
+          [
+            "Steam Rice (Bowl)",
+            "",
+            845
+          ],
+          [
+            "Garlic Fried Rice (Cup)",
+            "",
+            450
+          ],
+          [
+            "Garlic Fried Rice (Bowl)",
+            "",
+            885
+          ],
+          [
+            "Adobo Fried Rice",
+            "",
+            950
+          ],
+          [
+            "Tinapa Fried Rice",
+            "",
+            950
+          ],
+          [
+            "Binagoongan Fried Rice",
+            "",
+            950
+          ]
+        ]
+      },
+      {
+        "name": "NOODLES",
+        "items": [
+          [
+            "Pancit Canton",
+            "",
+            1999
+          ],
+          [
+            "Pancit Bihon",
+            "",
+            1999
+          ],
+          [
+            "Pancit Canton/Bihon",
+            "",
+            2099
+          ],
+          [
+            "Pancit Miki/Bihon",
+            "",
+            2099
+          ],
+          [
+            "Pancit Lomi soup",
+            "",
+            2099
+          ],
+          [
+            "Pancit Sotanghon",
+            "",
+            2099
+          ],
+          [
+            "Pancit Palabok",
+            "",
+            2099
+          ]
+        ]
+      },
+      {
+        "name": "DESSERT",
+        "items": [
+          [
+            "Leche Flan (Whole)",
+            "",
+            1650
+          ],
+          [
+            "Leche Flan (Half)",
+            "",
+            950
+          ],
+          [
+            "Crispy Leche Flan",
+            "4 pieces",
+            1075
+          ],
+          [
+            "Cassava Cake",
+            "8\"\nTakes about 45 minutes to bake",
+            1499
+          ],
+          [
+            "Turon",
+            "3 pieces",
+            899
+          ]
+        ]
+      },
+      {
+        "name": "DRINKS",
+        "items": [
+          [
+            "Sago/Gulaman",
+            "",
+            599
+          ],
+          [
+            "Halo-Halo",
+            "",
+            959
+          ],
+          [
+            "Mango Juice",
+            "",
+            429
+          ],
+          [
+            "Buko Juice",
+            "",
+            429
+          ],
+          [
+            "Mais Con-Yelo",
+            "",
+            799
+          ],
+          [
+            "Bottled Water",
+            "",
+            389
+          ],
+          [
+            "Soda Cans",
+            "Coke/Sprite/Orange/Rootbeer/Diet Coke/Pepsi",
+            389
+          ],
+          [
+            "Hot Tea",
+            "Lipton Black Tea",
+            329
+          ]
+        ]
+      }
+    ],
+    "siteCta": "Visit their website",
+    "siteNote": "Prices are from their own menu. Call directly for pickup orders and current hours; their site says third-party orders and coupons are not honored.",
+    "clip": {
+      "src": "/clips/parekoy-lutong-pinoy.mp4",
+      "poster": "/clips/parekoy-lutong-pinoy-poster.webp",
+      "href": "https://www.instagram.com/reel/DICDnlYS968/",
+      "credit": "Filmed by @margs.out",
+      "platform": "Instagram",
+      "by": "margs.out"
+    }
+  },
+  "placements": [
+    "san-leandro-goods-10",
+    "beasty-goods2-86"
+  ],
+  "glenn": "29 Oct 6:53–6:56 am: San Leandro • Eats / BEASTY • Eats; Icon; Heavyweight clip and margs.out Watch/Foodie.",
+  "flags": [
+    "No hours: same site says Saturday closes 8pm in notice but 10pm in footer.",
+    "Menu preserves published prices, including Crispy Pata $18.99 per piece. Rice and flan sizes, and the half-chicken price printed in description, are separate rows.",
+    "No third-party ordering link: site says call directly and it does not honor third-party orders.",
+    "Icon is the core mark Glenn chose, with the dated Happy 10 Year Anniversary text cropped away."
+  ]
+}

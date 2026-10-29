@@ -636,6 +636,35 @@ def m_catering(rng):
     return composite(img, over, blur=3)
 
 
+def m_hotpot(rng):
+    img = gradient('#3a1717', '#151c28')
+    over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(over)
+    for x, y, scale in [(W * .32, H * .30, 1.1), (W * .7, H * .57, .9), (W * .35, H * .82, .7)]:
+        r = 140 * scale
+        d.ellipse((x-r, y-r*.5, x+r, y+r*.5), outline=rgba('#f7c798', .28), width=11)
+        d.arc((x-r, y-r*.1, x+r, y+r*.95), 0, 180, fill=rgba('#f7c798', .28), width=11)
+        d.line((x, y-r*.46, x, y+r*.46), fill=rgba('#f7c798', .26), width=9)
+        for dx in [-.55, .1, .65]:
+            curve(d, [(x+dx*r, y-r*.7), (x+(dx+.15)*r, y-r), (x+dx*r, y-r*1.3)], rgba('#fff1db', .2), 7)
+    return composite(img, over, blur=3)
+
+
+def m_bbq(rng):
+    img = gradient('#341b14', '#171b24')
+    over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(over)
+    for x, y, scale in [(W * .32, H * .30, 1.1), (W * .7, H * .57, .9), (W * .35, H * .82, .7)]:
+        r = 140 * scale
+        d.ellipse((x-r, y-r*.4, x+r, y+r*.4), outline=rgba('#f5b77b', .28), width=11)
+        d.arc((x-r, y-r*.1, x+r, y+r), 0, 180, fill=rgba('#f5b77b', .28), width=11)
+        for dx in [-.65, -.3, .05, .4]:
+            d.line((x+dx*r, y-r*.25, x+(dx+.2)*r, y+r*.2), fill=rgba('#f5b77b', .22), width=7)
+        d.line((x-r*.5, y+r*.5, x-r*.75, y+r*1.05), fill=rgba('#f5b77b', .24), width=9)
+        d.line((x+r*.5, y+r*.5, x+r*.75, y+r*1.05), fill=rgba('#f5b77b', .24), width=9)
+    return composite(img, over, blur=3)
+
+
 def m_dimsum(rng):
     img = gradient('#3a2116', '#181e24')
     over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
@@ -721,6 +750,8 @@ MOTIFS = {
     "steakhouse": m_steakhouse,
     "ramen": m_ramen,
     "dimsum": m_dimsum,
+    "hotpot": m_hotpot,
+    "bbq": m_bbq,
     "diner": m_diner,
     "health": m_health,
     "games": m_games,

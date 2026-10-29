@@ -1,0 +1,29 @@
+{
+  "id": "b_oceanoysterbarredwoodcity",
+  "name_exact": "Ocean Oyster Bar & Grill",
+  "checked_on": "2026-10-29",
+  "update_only": true,
+  "facts": {
+    "slug": "ocean-oyster-bar-redwood-city",
+    "name": "Ocean Oyster Bar & Grill",
+    "label": "Ocean",
+    "tagline": "Raw-bar oysters, cioppino, seafood towers and steaks on Broadway",
+    "icon": "ocean-oyster-bar",
+    "clip": {
+      "src": "/clips/ocean-oyster-bar-redwood-city.mp4",
+      "poster": "/clips/ocean-oyster-bar-redwood-city-poster.webp",
+      "href": "https://www.instagram.com/reel/DWIGk2_j-fX/",
+      "credit": "Filmed by @indigosmedia",
+      "platform": "Instagram"
+    }
+  },
+  "sources": [
+    "https://www.instagram.com/reel/DWIGk2_j-fX/"
+  ],
+  "flags": [
+    "Old Union City hero removed from this location; own Redwood film 4–18s credited to caption’s @indigosmedia. Ruthanne’s review 9–24s excludes price promotion."
+  ],
+  "placements": [
+    "redwood-city-goods2-2"
+  ]
+}

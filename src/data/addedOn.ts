@@ -827,4 +827,14 @@ export const ADDED_ON: Record<string, string> = {
   b_kajikensanmateo: '2026-10-28',
   b_tasteofshaxian: '2026-10-28',
   b_dindingdumplinghousefremont: '2026-10-28',
+  b_wikiwikihawaiianbbq: '2026-10-29',
+  b_woogakoreanbbq: '2026-10-29',
+  b_bingecoffeehouse: '2026-10-29',
+  b_houseofphin: '2026-10-29',
+  b_originlabcoffeematcha: '2026-10-29',
+  b_gemcitykennels: '2026-10-29',
+  b_parekoylutongpinoy: '2026-10-29',
+  b_yamibowl: '2026-10-29',
+  b_mumuhotpotsunnyvale: '2026-10-29',
+
 }
