@@ -71,4 +71,15 @@ Nine new main-film assets and twelve new review assets; the retained old Lucky e
 - `tools/audit-foodies.mjs` and `tools/audit-item-glyphs.ts`: passed.
 - Final pre-push refetch still ends at **11:16 am**; no later sends arrived while preparing this batch.
 
-Live deployment and real Chrome phone verification are recorded after the release.
+## Live release
+
+Release **3ddfbce** is live on **https://beastypages.com**. Render deployment **dep-dbhp408u01pc73amk8p0** finished on **29 October 2026 at 11:42:46 am PDT**. The build succeeded at 11:40 am; the attached persistent disk requires an interruption while the service restarts. Startup logs show the app listening on port 10000 and the deployment succeeding. No service setting or environment variable was changed.
+
+- `/api/health`: **200**, `{"ok":true}`. Live bundle includes House of Phin, Origin Lab, Hot Pot and BBQ.
+- `BASE=https://beastypages.com node tools/audit-batch75.mjs`: **all 165 checks passed** live, including every new/updated page, 458 new menu rows, all main and additional films, original credits, location separation, icons, grids and four-film limits.
+- `node tools/live-verify.mjs --skip-roster`: **passed**. All checks outside the historical roster walk ran, including the About chapter staying open, existing page interactions, protected endpoints, email join form, category navigation, Collab links and current bundles. The already-covered historical roster walk is explicitly skipped.
+- **Real Chrome, 393×852:** all thirteen new/updated business pages open with the correct title, **zero broken images and no horizontal overflow**. Yami’s 88 menu rows render, with the first and last items verified, and its credited 540px film plays. Larry/Tommy’s 16-second Lucky review plays with its original-post link. House of Phin’s full 5.4-second film plays and shows “Posted by @houseofphin_”.
+- Chrome’s home grid, landing About panel and More pages work; **Hot Pot and BBQ have their live tiles and labels**. Tapping Hot Pot while signed out opens the expected membership prompt. Signed-in category contents, wallpapers and Search are covered by the isolated local category audit, not a newly created production account.
+- Chrome reported **no console errors** during the BEASTY checks. The temporary viewport was reset and test tabs closed.
+
+Verification is read-only on production: no sign-in code, purchase or outbound message was sent. Menu holds and source conflicts above remain explicit; no missing details were guessed. Release and verification records are pushed to origin/main.
