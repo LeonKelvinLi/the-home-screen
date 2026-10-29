@@ -54,3 +54,9 @@ Release `c4e1370` is live on beastypages.com. Render deployment `dep-dbhcavfb9u1
 - Real Chrome at 393×852: Taste of Shaxian’s 181 menu rows render without horizontal overflow and crab roe noodles now draw a noodle icon; Din Ding’s main film decodes with “Posted by @dindingdumplingbayarea,” its two reviewers stay below it, and its page has no horizontal overflow.
 
 The initial `c4e1370` release used Dumplings; the follow-up heading change incorporates the naming decision received while that release was being verified. Both names remain searchable.
+
+### Final name confirmation
+
+`708a5ce` incorporates Leon’s 9:11 pm “Dim sum I think” and Glenn’s acknowledgment. Render deployment `dep-dbhch84s728c73cudut0` finished **28 October at 9:23 pm PDT**. The final heading **BEASTY • Dim Sum** is visible on More pages in real Chrome at 393×852. The local category audit confirms that both “dumplings” and “dim sum” search for and open this page, with twelve businesses.
+
+After this final release, the live batch audit passed **all 63 checks again**, and `tools/live-verify.mjs --skip-roster` passed again. All business/film/placement changes are on origin/main; only the historical roster walk is excluded from the focused verifier.
