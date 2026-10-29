@@ -109,7 +109,12 @@ export function SearchApp({ api }: { api: ShellApi }) {
     if (term.length < 2) return { categoryHits: [] as CategoryRow[], cityHits: [], brandHits: [], itemHits: [] as Hit[] }
 
     /* A category first of all: "tattoo" means BEASTY · Tattoo. */
-    const categoryHits = CATEGORY_ROWS.filter((c) => fold(c.heading).includes(fold(term)) || fold(c.kind).includes(fold(term).replace(/\s+/g, '')))
+    // Glenn considered both names; Dim Sum is the agreed heading, with Dumplings searchable too.
+    const categoryHits = CATEGORY_ROWS.filter((c) =>
+      fold(c.heading).includes(fold(term)) ||
+      fold(c.kind).includes(fold(term).replace(/\s+/g, '')) ||
+      (c.kind === 'dimsum' && fold('dumplings').includes(fold(term)))
+    )
 
     /*
       Cities first, because a place is a different KIND of answer.

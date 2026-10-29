@@ -1,4 +1,4 @@
-/* Batch 74, Glenn's 28 October sends: four businesses, eleven films, Ramen and the new Dumplings page. Read-only on BASE. */
+/* Batch 74, Glenn's 28 October sends: four businesses, eleven films, Ramen and the new Dim Sum page. Read-only on BASE. */
 import { chromium } from 'playwright'
 import { spawn } from 'node:child_process'
 import { openSync, readFileSync, mkdirSync, readdirSync } from 'node:fs'
@@ -88,7 +88,7 @@ try{
   check(`${id} has at most 4 distinct films`, films.size<=4)
  }
  for(const f of data.map(d=>d.facts.icon))check(`${f} icon is served`,(await fetch(base+'/icons/'+f+'.webp')).headers.get('content-type')?.includes('webp'))
- check('the Dumplings wallpaper is served',(await fetch(base+'/wallpapers/cat-dimsum.webp')).headers.get('content-type')?.includes('webp'))
+ check('the Dim Sum wallpaper is served',(await fetch(base+'/wallpapers/cat-dimsum.webp')).headers.get('content-type')?.includes('webp'))
  /* BEASTY's own sheets, from Home. */
  await open(data[0].id);await p.click('.nav-back');await p.waitForTimeout(900)
  const on=async(name,ids)=>{const g=await sheet(name);for(const id of ids){const d=data.find(x=>x.id===id)||{facts:{name:id,label:id}};check(`${id} is on BEASTY • ${name}`,g.some(l=>l.includes(d.facts.label)||l.includes(d.facts.name)))}}
@@ -98,7 +98,7 @@ try{
   check(`${id} has its ${kind} category seat in the release data`,Object.entries(ALL_PLACEMENTS).some(([seat,brand])=>seat.startsWith(`beasty-${kind}-`)&&brand===id))
  await on('More eats',['b_thienlyhouse'])
  check('Ramen has nine occupied seats',Object.keys(ALL_PLACEMENTS).filter(s=>s.startsWith('beasty-ramen-')).length===9)
- check('Dumplings has twelve occupied seats',Object.keys(ALL_PLACEMENTS).filter(s=>s.startsWith('beasty-dimsum-')).length===12)
+ check('Dim Sum has twelve occupied seats',Object.keys(ALL_PLACEMENTS).filter(s=>s.startsWith('beasty-dimsum-')).length===12)
  const {OTHER_REVIEWS}=await tsImport('../src/data/foodies.ts',import.meta.url)
  const held=OTHER_REVIEWS.find(r=>r.reel.includes('DfDGnnGPsYp'))
  check('Manila Inasal is a Los Angeles source-only Foodie entry',held?.city==='Los Angeles'&&!held.brand&&!held.clip)
@@ -107,4 +107,4 @@ try{
 
 }catch(e){fails.push(e.message);console.log('FAIL',e.stack)}finally{await b.close();srv?.kill();await db?.drop()}
 if(fails.length){console.log(`FAIL: ${fails.length} batch 74 checks`);process.exit(1)}
-console.log('PASS: batch 74: four pages, eleven films, full menus, city seats, icons, reviews, both shops, Ramen and Dumplings.')
+console.log('PASS: batch 74: four pages, eleven films, full menus, city seats, icons, reviews, both shops, Ramen and Dim Sum.')

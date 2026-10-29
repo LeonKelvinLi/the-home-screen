@@ -1,6 +1,6 @@
 # Batch 74 — 28 October 2026 evening
 
-Refetched Glenn’s Mac Messages thread from 28 October, including the two pending sends noted in Batch 73. Covers his 5:17–8:41 pm business/reel sends, naming question and final “You choose.” Research and source notes: `research/roster/b74/`.
+Refetched Glenn’s Mac Messages thread from 28 October, including the two pending sends noted in Batch 73. Covers his 5:17–8:41 pm business/reel sends and naming question, plus the 9:11–9:12 pm naming confirmation. Research and source notes: `research/roster/b74/`.
 
 ## Businesses
 
@@ -8,16 +8,16 @@ Refetched Glenn’s Mac Messages thread from 28 October, including the two pendi
 |---|---|---|
 | Thiên Lý House, South San Francisco | South San Francisco More goods 1; BEASTY More eats 85 | “South San Francisco • Eats / BEASTY • Eats.” The Asian spot is HL Peninsula’s and BEASTY’s Pho spot is Gao’s. 29 items from the public menu API used by their own site; the $95 family set is one item with eight included dishes. Hours from the own-site footer in Glenn’s screenshot, matching his Maps screenshot. Film: @yourglobalfoodiebff, 0–24s. |
 | Kajiken San Mateo | San Mateo More goods 3; BEASTY • Ramen 7 | “San Mateo • Eats / BEASTY • Ramen.” The Asian spot is Pho de Nguyen’s and Korean/ramen is Yayoi’s. 45 items from the San Mateo Toast page linked by their site; no alcohol, free options or out-of-stock cold tofu. Own-site dining hours. Main film: @antoinetterzz, **5–29s, Kajiken only**, excluding her later SomiSomi stop. Additional reviews: @eatswithkath (“Heavy”), @eatswithfoodie (“Foodie”). |
-| Taste of Shaxian, San Mateo | San Mateo More goods 4; BEASTY • Ramen 8 (by hand); BEASTY • Dumplings 10 | “San Mateo • Eats / BEASTY • Ramen.” **Fujian Chinese noodles and dim sum, not Japanese ramen**: its honest cuisine line is retained and the Ramen seat honors Glenn’s explicit request. 181 regular-price non-alcoholic items from their own linked Chowbus menu, including frozen food and house sauces. Zero-price disclaimer, repeated dishes and member-point offers excluded. No hours because their site and Instagram give conflicting weekend schedules. @firstdibs.bayarea is the main film (“Watch this video clip,” resent as “Foodie”); three additional reviews from @thesnacksensei, @jensintec and @snackateriansf. |
-| Din Ding Dumpling House — Fremont | Fremont More goods 9; BEASTY • Dumplings 11 | “Fremont • Eats / BEASTY • Dim Sum / New Category.” 92 items from **Fremont’s** own linked Best Food Today menu; Union City’s prices differ. Both shops and ordering links in a panel. After his 8:39 pm follow-up, their own @dindingdumplingbayarea reel is the main film (0–24s of a 2024 opening film, without any expired promotion). Reviews: @thesnacksensei and @apoorva_sharma1 (original marked **#ad**). |
+| Taste of Shaxian, San Mateo | San Mateo More goods 4; BEASTY • Ramen 8 (by hand); BEASTY • Dim Sum 10 | “San Mateo • Eats / BEASTY • Ramen.” **Fujian Chinese noodles and dim sum, not Japanese ramen**: its honest cuisine line is retained and the Ramen seat honors Glenn’s explicit request. 181 regular-price non-alcoholic items from their own linked Chowbus menu, including frozen food and house sauces. Zero-price disclaimer, repeated dishes and member-point offers excluded. No hours because their site and Instagram give conflicting weekend schedules. @firstdibs.bayarea is the main film (“Watch this video clip,” resent as “Foodie”); three additional reviews from @thesnacksensei, @jensintec and @snackateriansf. |
+| Din Ding Dumpling House — Fremont | Fremont More goods 9; BEASTY • Dim Sum 11 | “Fremont • Eats / BEASTY • Dim Sum / New Category.” 92 items from **Fremont’s** own linked Best Food Today menu; Union City’s prices differ. Both shops and ordering links in a panel. After his 8:39 pm follow-up, their own @dindingdumplingbayarea reel is the main film (0–24s of a 2024 opening film, without any expired promotion). Reviews: @thesnacksensei and @apoorva_sharma1 (original marked **#ad**). |
 
 Seat numbers above are the zero-based internal IDs used in placements.ts and research; the page’s human spot number is one higher.
 
 ## Dumplings or Dim Sum?
 
-At 8:38 pm Glenn requested Dim Sum; at 8:39 pm he asked “Should it be BEASTY • Dumplings or Dim Sum? Are they the same?”, then at 8:41 pm “You choose. But it’s a category everyone will search.”
+At 8:38 pm Glenn requested Dim Sum; at 8:39 pm he asked “Should it be BEASTY • Dim Sum or Dim Sum? Are they the same?”, then at 8:41 pm “You choose. But it’s a category everyone will search.”
 
-Chose **BEASTY • Dumplings**: it includes dumpling specialists and dim sum rooms, without suggesting every dumpling restaurant serves traditional Cantonese dim sum. Its internal kind stays `dimsum`. Both **“dumplings” and “dim sum” find the page in Search**. Twelve businesses fill it from their actual type lines, with its own bamboo-basket wallpaper, thumbnail and category glyph. Ramen now has nine businesses. No existing seat moved.
+Initially used Dumplings after the 8:41 pm “You choose.” The final refetch caught Leon’s **9:11 pm “Dim sum I think”** and Glenn’s 9:12 pm acknowledgment, so the final heading is **BEASTY • Dim Sum**. Its internal kind is `dimsum`, and both **“dumplings” and “dim sum” find the page in Search**. Twelve businesses fill it from their type lines, with its own bamboo-basket wallpaper, thumbnail and category glyph. Ramen now has nine businesses. No existing seat moved.
 
 ## Every reel send
 
@@ -42,7 +42,7 @@ Chose **BEASTY • Dumplings**: it includes dumpling specialists and dim sum roo
 
 - Build and data audit pass with 0 errors. Item glyph regression checks pass: ordinary words such as “that” and “potstickers” no longer match “hat” or “sticker” and draw a shirt on food; real apparel still does.
 - Seat comparison against `7bc7215`: **19 additions, no moves or removals**.
-- Batch audit covers every business page, film decoding, full menus (447 items), city seats, icons, both-shop panel, review playback, category seat data and More eats. Category audit opens Dumplings, verifies twelve shops and its wallpaper, and searches for both names. Foodie audit covers review-to-business links.
+- Batch audit covers every business page, film decoding, full menus (447 items), city seats, icons, both-shop panel, review playback, category seat data and More eats. Category audit opens Dim Sum, verifies twelve shops and its wallpaper, and searches for both names. Foodie audit covers review-to-business links.
 - Historical roster walking in live-verify is now optional with `--skip-roster` for follow-up releases; all other existing verification remains enabled. This batch uses the full batch audit plus that focused live verification rather than repeating the already-checked historical roster walk.
 
 ## Live
@@ -52,3 +52,5 @@ Release `c4e1370` is live on beastypages.com. Render deployment `dep-dbhcavfb9u1
 - `BASE=https://beastypages.com node tools/audit-batch74.mjs`: **63 checks passed**, including all four pages, 447 menu rows, eleven decoded films, credits, city seats, icons, both shops, review playback and category seat data.
 - `node tools/live-verify.mjs --skip-roster`: **passed**. The historical roster walk is intentionally omitted in this mode; all other existing checks ran.
 - Real Chrome at 393×852: Taste of Shaxian’s 181 menu rows render without horizontal overflow and crab roe noodles now draw a noodle icon; Din Ding’s main film decodes with “Posted by @dindingdumplingbayarea,” its two reviewers stay below it, and its page has no horizontal overflow.
+
+The initial `c4e1370` release used Dumplings; the follow-up heading change incorporates the naming decision received while that release was being verified. Both names remain searchable.

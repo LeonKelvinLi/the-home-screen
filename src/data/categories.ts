@@ -131,9 +131,9 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   /* Glenn, 2026-10-27, 6:28 pm: "Sunnyvale • Eats / BEASTY • Ramen / New Category", with Garlic High.
      Ramen shops by their type line. */
   /* Glenn, 2026-10-28, 8:38 pm: "BEASTY • Dim Sum / New Category"; at 8:39–8:41 asks
-     "Dumplings or Dim Sum?", then "You choose". Dumplings includes both specialists and dim sum rooms;
-     the internal kind remains dimsum, and Search also finds it by "dim sum". */
-  { kind: 'dimsum', heading: 'Dumplings', about: 'Dim sum, dumplings and soup buns', wall: wall('dimsum'), test: /dim[ -]?sum|dumplings?|xiao[ -]?long[ -]?bao/i },
+     "Dumplings or Dim Sum?", then "You choose". Leon replies "Dim sum I think" at 9:11 pm and
+     Glenn likes it at 9:12 pm. Dim Sum is the final heading; Search also finds "dumplings". */
+  { kind: 'dimsum', heading: 'Dim Sum', about: 'Dim sum, dumplings and soup buns', wall: wall('dimsum'), test: /dim[ -]?sum|dumplings?|xiao[ -]?long[ -]?bao/i },
   { kind: 'ramen', heading: 'Ramen', about: 'Ramen shops', wall: wall('ramen'), test: /ramen/i },
   { kind: 'steakhouse', heading: 'Steakhouse', about: 'Steakhouses and chophouses', wall: wall('steakhouse'), test: /steak ?house|chop ?house/i },
   /* "New category BEASTY • Breakfast/diner. Or just • diner" — Glenn, 2026-10-22, 8:56 pm.
