@@ -45,7 +45,11 @@ try{
  }
  await open('b_houseofprimerib')
  for(const by of ['bayarea_fooddreamz','bayarea.foodies']){const row=p.locator('.foodie-review',{has:p.locator('.foodie-review-head',{hasText:'@'+by})});await row.locator('.foodie-review-head').click();check(by+' held source stays linked without a fifth film',await row.locator('a[href*="instagram.com/reel/"]').count()===1&&await row.locator('video').count()===0);await row.locator('.foodie-review-head').click()}
- await open('b_tleafgreensanjose');await p.locator('.brand-menu-drop .menu-picks-bar').click()
+ await open('b_houseofprimerib')
+ check('House of Prime Rib reserve button uses its actual booking link',(await p.getByRole('link',{name:'Reserve a table',exact:true}).getAttribute('href'))==='https://www.opentable.com/house-of-prime-rib-reservations-san-francisco?restref=1779')
+ await open('b_tleafgreensanjose')
+ check('TLeafGreen order button uses its actual menu link',(await p.getByRole('link',{name:'Order on their menu',exact:true}).getAttribute('href'))==='https://pos.chowbus.com/online-ordering/store/TLeafGreen/22963')
+ await p.locator('.brand-menu-drop .menu-picks-bar').click()
  check('TLeafGreen preserves from-price labels',await p.getByText('from $6.90',{exact:true}).count()>0)
  check('TLeafGreen does not publish promotional $4.90',(await p.locator('.brand-body').innerText()).includes('$4.90')===false)
  await open('b_urbanmatchacastrovalley')

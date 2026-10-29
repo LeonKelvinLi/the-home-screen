@@ -134,6 +134,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   }
   /* What the site button is for, by what it says: "Order online", "Book", or their site. */
   const siteKind = /order/i.test(brand?.siteCta ?? '') ? 'order' : /book|reserve|appoint/i.test(brand?.siteCta ?? '') ? 'booking' : 'website'
+  const siteHref = siteKind === 'website' ? brand?.site : brand?.orderUrl ?? brand?.site
 
   const tap = async (kind: SignalKind) => {
     if (!brand?.id) return
@@ -977,7 +978,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                 </a>
               )}
               {brand.site && (
-                <a className="btn-secondary" href={brand.site} target="_blank" rel="noreferrer" onClick={out(siteKind)}>
+                <a className="btn-secondary" href={siteHref} target="_blank" rel="noreferrer" onClick={out(siteKind)}>
                   {brand.siteCta ?? 'Open their page'}
                 </a>
               )}
@@ -997,7 +998,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               {brand.phone && <p className="brand-free-line">Phone {brand.phone}</p>}
               {brand.email && <p className="brand-free-line">Email {brand.email}</p>}
               {brand.site && (
-                <a className="btn-secondary" href={brand.site} target="_blank" rel="noreferrer" onClick={out(siteKind)}>
+                <a className="btn-secondary" href={siteHref} target="_blank" rel="noreferrer" onClick={out(siteKind)}>
                   {brand.siteCta ?? 'Open their page'}
                 </a>
               )}

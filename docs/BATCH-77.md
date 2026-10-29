@@ -52,11 +52,15 @@ A new leaf glyph, dark forest-green leaf wallpaper and Search thumbnail. It appe
 ## Verification
 
 - Build passed. Data audit: **0 errors, 154 warnings**; the one new warning is Raízes’ genuine $0.50 cheese bread.
-- Local `tools/audit-batch77.mjs`: **118 checks passed** across all six pages, all 150 new menu rows, main/additional film decoding and credits, starting-price labels, no fake priced menus, held sources, requested city grids, seat records, four-film cap and Vegan tile.
+- Local `tools/audit-batch77.mjs`: **120 checks passed** across all six pages, all 150 new menu rows, main/additional film decoding and credits, starting-price labels, no fake priced menus, held sources, requested city grids, seat records, four-film cap and Vegan tile.
 - `tools/audit-categories.mjs`: passed, including **49 categories**, Vegan Search navigation, contents and wallpaper.
 - `tools/audit-foodies.mjs`: passed. All 15 new films have an audio stream and the recorded excerpt duration.
 - Seat comparison against `3cc1bdb`: **15 additions, zero moves/removals**.
 - Final pre-push refetch still ends at **3:49 pm** (Leon’s 4:03 pm reaction). Gap check: 537 site domains, 17 historical unmatched; this batch’s new business domain is represented.
 - Affiliate terms files and the separate affiliate worktree untouched. No outbound messages, sign-in codes or purchases sent.
 
-Live and real Chrome phone results follow after deployment.
+## Action-button correction
+
+The first live Chrome pass found that contact/price-list pages always sent their labeled action button to the homepage, even when the seed already supplied a specific order or booking URL. Those buttons now use the specific destination for ordering and bookings, with the homepage as fallback. Generic website buttons keep their website destination. House of Prime Rib uses the exact OpenTable reservation link from its own website, including `restref=1779`. Two browser checks cover TLeafGreen’s ordering page and House of Prime Rib’s reservation page. Raízes’ full menu renders directly on BEASTY.
+
+Initial data release `c084978` became live at **4:31:59 pm PDT** (Render `dep-dbhtbjnf3r2c7384a0eg`). Its 118 live checks and general live verifier passed. Chrome confirmed all six page layouts, films and both new menus; final action-button deployment and live results follow.
