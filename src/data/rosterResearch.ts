@@ -23507,7 +23507,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
         ["Abalone Risotto (Monterey)","sesame oil, asparagus, maitake mushrooms, seaweed",3200],
       ] },
       { name: "Tasting", items: [
-        ["Tasting","full table participation, before 8pm",19500,null,"195 per person (maximum of 6 guests)"],
+        ["Tasting","Big eye tartare, abalone, Hokkaido scallops, Kerwee wagyu and vanilla cake. Full-table participation before 8pm; maximum 6 guests. Food supplements: Osetra caviar +$55; Miyazaki A5 +$80.",19500,null,"$195 per person"],
       ] },
       { name: "The Land Entrée", items: [
         ["Upper Iowa Angus Filet Mignon","portobello mushroom raviolis, caramelized onions, green peppercorn jus",7800],
@@ -23533,8 +23533,8 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
         ["Hot Seafood Platter","lobster, mussels, scallops, shrimp, seppia, ocean escargot",19500],
       ] },
       { name: "Fullblood Japanese Wagyu", items: [
-        ["北海道 Hokkaido, Japan A5","privately farmed in below freezing temperatures",4500,null,"45/oz"],
-        ["宮崎 Miyazaki, Japan A5","warm climate / ideal for raising cattle",4500,null,"45/oz"],
+        ["北海道 Hokkaido, Japan A5 (4 oz)","Privately farmed in below-freezing temperatures. Cut to order in 4 oz increments; king oyster mushrooms, carrots and bordelaise.",18000,null,"4 oz $180 ($45/oz)"],
+        ["宮崎 Miyazaki, Japan A5 (4 oz)","Warm climate, ideal for raising cattle. Cut to order in 4 oz increments; king oyster mushrooms, carrots and bordelaise.",18000,null,"4 oz $180 ($45/oz)"],
       ] },
       { name: "Market Feature", items: [
         ["Wagyu Trio (Japan, Australia, USA)","trio of salts, trio of sauces",24000],
@@ -23567,7 +23567,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
         ["Pacific Peppermint","(non-caffeinated) vibrant, cooling, refreshing",800],
       ] },
     ],
-    siteNote: "Prices are from the dinner menu linked from their own website.",
+    siteNote: "Prices are from their own linked dinner menu, checked 29 October 2026. Japanese A5 wagyu is sold in 4 oz increments at $45/oz; the minimum 4 oz portion is shown. Call about the Sunday prix fixe, whose website and menu prices differ.",
   },
 
   /*

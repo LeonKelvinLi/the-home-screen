@@ -290,6 +290,7 @@ export const ICON_LUMA: Record<string, number> = {
   'hone-piercing': 0.8131,
   'honey-pot-gelato': 0.7421,
   'hotboys': 0.5386,
+  'hotpot-bay': 0.0521,
   'house-of-phin': 0.1495,
   'house-of-raha': 0.0223,
   'house-of-silog': 0.1525,

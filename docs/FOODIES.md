@@ -348,3 +348,10 @@ All sources and exact excerpts are in [Batch 75](BATCH-75.md) and `research/rost
 - Lucky Three Seven: @hungry4munchies main (Watch/Heavy hitter), @mayakay.official (Newbie), @larryjunetfm with @tommybogo (3rd/Heavy also), and the retained @thetastebud 6–22s Lucky-only excerpt. The Larry/Tommy tasting was **posted by @lucky777oakland**; the feed uses that attribution, never claims Larry filmed it. Four distinct films.
 - House of Phin: @eileenhuynher (Medium/Foodie) beside its own main film.
 - Pizza Casamia’s new film is its own post, not assigned a Foodie filmmaker.
+
+## 29 October 2026 — Batch 76
+
+- Chubby Cattle BBQ, Pleasanton: [@trinhdoesthings](https://www.instagram.com/reel/DfFnfKgvdwi/) is the new main film (11:37 am, Watch / Heavy hitter). [@aloha_stephanie](https://www.instagram.com/reel/DbY-GatSDXj/) is the additional Newbie (11:38 am). The former @createwithcv main is retained beside @bayarea.foodie.adventures: four distinct films.
+- [@zoegabon’s Alexander’s Steakhouse review](https://www.instagram.com/reel/DbjaM1oycXc/) (11:46 am) is **Cupertino**, confirmed by the restaurant’s own 19379 Stevens Creek Blvd address and the film. **Source only**, off The Sea’s Palo Alto page and Watch; no Cupertino listing/placement request was supplied.
+- The Sea’s own [@theseabyash post](https://www.instagram.com/p/Dexogd1g-UR/) is credited as posted by the business, not assigned a Foodie filmmaker.
+- Hotpot Bay: @martiwantsmore (“Mediocre”), @dchangshangry (“Newbie”) and @foodandsachi (“Heavy Hitter”) are additional reviews beside the restaurant’s own Watch film, received 12:25–12:27 pm. Sachi’s 10–25s excerpt excludes the later $19.99 offer and review screenshot; current combo contents come from the restaurant’s menu.

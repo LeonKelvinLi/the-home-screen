@@ -43004,12 +43004,12 @@ export const LOCAL_SEED: LocalSeed[] = [
       "siteCta": "Open their page",
       "siteNote": "Their first Bay Area shop, in the Pacific Pearl centre on Stoneridge Drive. All-you-can-eat prices are per person from the menu on their own site; the tiers share seafood, sushi, hot dishes and a self-serve station. 90-minute seating (last call at 70); 18% gratuity for 6 or more; under 100 cm eat free, 100–130 cm half price; seniors 65+ 20% off; leftovers add 20%. To-go prices are from their own Chowbus pickup page.",
       "clip": {
-          "src": "/clips/chubby-cattle-bbq-pleasanton.mp4",
-          "poster": "/clips/chubby-cattle-bbq-pleasanton-poster.webp",
-          "href": "https://www.instagram.com/reel/DevfMX2isDa/",
-          "credit": "Filmed by @createwithcv",
+          "src": "/clips/chubby-cattle-bbq-pleasanton-b76.mp4",
+          "poster": "/clips/chubby-cattle-bbq-pleasanton-b76-poster.webp",
+          "href": "https://www.instagram.com/reel/DfFnfKgvdwi/",
+          "credit": "Filmed by @trinhdoesthings",
           "platform": "Instagram",
-          "by": "createwithcv"
+          "by": "trinhdoesthings"
       }
   },
   {
@@ -55478,5 +55478,479 @@ export const LOCAL_SEED: LocalSeed[] = [
           "credit": "Posted by @houseofphin_",
           "platform": "Instagram"
       }
+  },
+  /* BATCH 76, 29 October afternoon: Hotpot Bay. Sources: research/roster/b76/. */
+  {
+      "slug": "hotpot-bay",
+      "name": "Hotpot Bay",
+      "label": "Hotpot Bay",
+      "cuisine": "Chinese hot pot",
+      "color": "#171616",
+      "icon": "hotpot-bay",
+      "site": "https://www.hotpotbay.com/",
+      "tagline": "Personal hot pots on Taraval Street, with wagyu, seafood, vegetables and two-person or individual combos.",
+      "prep": 0,
+      "category": "Chinese hot pot",
+      "items": [],
+      "clip": {
+            "src": "/clips/hotpot-bay.mp4",
+            "poster": "/clips/hotpot-bay-poster.webp",
+            "href": "https://www.instagram.com/reel/DbmW4BoD9bf/",
+            "credit": "Posted by @hotpotbay",
+            "platform": "Instagram"
+      },
+      "sections": [
+          {
+              "name": "Lunch Combo",
+              "items": [
+                  [
+                      "Build-A-Bay Lunch Combo",
+                      "For two: 2 soup bases, 2 meats, 2 side dishes, 2 noodles or rice, assorted vegetables and sauce bar for two",
+                      6200
+                  ],
+                  [
+                      "Meat-A-Bay Lunch Combo",
+                      "For two: 2 soup bases, 3 meats, 2 noodles or rice, assorted vegetables and sauce bar for two",
+                      6200
+                  ],
+                  [
+                      "My-Bay Lunch Combo A",
+                      "1 soup base, 1 meat, 1 noodle or rice, assorted vegetables and sauce bar for one",
+                      2800
+                  ],
+                  [
+                      "My-Bay Lunch Combo B",
+                      "1 soup base, 2 side dishes, 1 noodle or rice, assorted vegetables and sauce bar for one",
+                      2800
+                  ]
+              ]
+          },
+          {
+              "name": "Combo",
+              "items": [
+                  [
+                      "Build-A-Bay Combo",
+                      "For two: 2 soup bases, 2 meats, 2 side dishes, 2 noodles or rice, assorted vegetables and sauce bar for two",
+                      7800
+                  ],
+                  [
+                      "Meat-A-Bay Combo",
+                      "For two: 2 soup bases, 3 meats, 2 noodles or rice, assorted vegetables and sauce bar for two",
+                      7800
+                  ],
+                  [
+                      "My-Bay Combo A",
+                      "1 soup base, 1 meat, 1 noodle or rice, assorted vegetables and sauce bar for one",
+                      3500
+                  ],
+                  [
+                      "My-Bay Combo B",
+                      "1 soup base, 2 side dishes, 1 noodle or rice, assorted vegetables and sauce bar for one",
+                      3500
+                  ],
+                  [
+                      "Vegetarian Combo",
+                      "For one: vegetarian soup, 2 vegetarian side dishes, 1 noodle or rice, assorted vegetables and sauce bar for one",
+                      2500
+                  ]
+              ]
+          },
+          {
+              "name": "Soup Base",
+              "items": [
+                  [
+                      "House Spicy Soup",
+                      "",
+                      600
+                  ],
+                  [
+                      "Spicy Beef Tallow Soup",
+                      "",
+                      600
+                  ],
+                  [
+                      "Mushroom Soup",
+                      "",
+                      600
+                  ],
+                  [
+                      "Tomato Soup",
+                      "",
+                      600
+                  ],
+                  [
+                      "Mountain-Pepper Spicy & Sour Soup",
+                      "Limited-time selection",
+                      600
+                  ],
+                  [
+                      "Green Peppercorn Soup",
+                      "",
+                      600
+                  ],
+                  [
+                      "Tom Yum Soup",
+                      "",
+                      600
+                  ],
+                  [
+                      "Miso Soup",
+                      "",
+                      600
+                  ],
+                  [
+                      "Clear Water Base",
+                      "",
+                      200
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizer",
+              "items": [
+                  [
+                      "Fried Crispy Pork",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Fried Dough Sticks",
+                      "",
+                      800
+                  ],
+                  [
+                      "Rice Cake with Brown Sugar",
+                      "",
+                      800
+                  ]
+              ]
+          },
+          {
+              "name": "Meat",
+              "items": [
+                  [
+                      "Wagyu Beef Boneless Short Ribs (8oz)",
+                      "",
+                      2500
+                  ],
+                  [
+                      "Beef Tongue",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Australian Wagyu Beef Shoulder Clod",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Wagyu Beef Chuck Eye Roll",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Lamb Shoulder",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Prime Beef Top Blade",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Wagyu Beef Short Plate",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Kurobuta Pork",
+                      "",
+                      1600
+                  ],
+                  [
+                      "House Spicy Beef",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Beef Tripe",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Chicken Thigh Slices",
+                      "",
+                      1600
+                  ]
+              ]
+          },
+          {
+              "name": "Meatball",
+              "items": [
+                  [
+                      "Fish Ball with Roe",
+                      "",
+                      600
+                  ],
+                  [
+                      "Imitation Lobster Ball",
+                      "",
+                      600
+                  ],
+                  [
+                      "Imitation Crab Stick",
+                      "",
+                      600
+                  ],
+                  [
+                      "Fish Tofu",
+                      "",
+                      600
+                  ],
+                  [
+                      "Quail Egg",
+                      "",
+                      600
+                  ],
+                  [
+                      "Spam",
+                      "",
+                      500
+                  ],
+                  [
+                      "Fish Cake Rolls",
+                      "",
+                      600
+                  ]
+              ]
+          },
+          {
+              "name": "Seafood",
+              "items": [
+                  [
+                      "House Shrimp Paste",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Snakehead Fish Fillet",
+                      "",
+                      800
+                  ],
+                  [
+                      "Black Tiger Prawn",
+                      "",
+                      800
+                  ]
+              ]
+          },
+          {
+              "name": "Mushroom",
+              "items": [
+                  [
+                      "Enoki Mushroom",
+                      "",
+                      600
+                  ],
+                  [
+                      "King Oyster Mushroom",
+                      "",
+                      600
+                  ],
+                  [
+                      "Seafood Mushroom",
+                      "",
+                      600
+                  ]
+              ]
+          },
+          {
+              "name": "Soybean",
+              "items": [
+                  [
+                      "Fresh Beancurd Stick",
+                      "",
+                      600
+                  ],
+                  [
+                      "Fried Beancurd Rolls",
+                      "",
+                      600
+                  ],
+                  [
+                      "Frozen Tofu",
+                      "",
+                      500
+                  ],
+                  [
+                      "Fried Tofu Puffs",
+                      "",
+                      500
+                  ]
+              ]
+          },
+          {
+              "name": "Vegetables",
+              "items": [
+                  [
+                      "Cabbage",
+                      "",
+                      500
+                  ],
+                  [
+                      "Spinach",
+                      "",
+                      500
+                  ],
+                  [
+                      "Winter Melon",
+                      "",
+                      500
+                  ],
+                  [
+                      "Corn",
+                      "",
+                      500
+                  ],
+                  [
+                      "Pumpkin Slices",
+                      "",
+                      500
+                  ],
+                  [
+                      "Thinly Shredded Potatoes",
+                      "",
+                      500
+                  ],
+                  [
+                      "Bamboo Shoots",
+                      "",
+                      500
+                  ],
+                  [
+                      "Broccoli",
+                      "",
+                      500
+                  ],
+                  [
+                      "Kelp Knot",
+                      "",
+                      600
+                  ]
+              ]
+          },
+          {
+              "name": "Noodle / Rice",
+              "items": [
+                  [
+                      "Udon Noodle",
+                      "",
+                      400
+                  ],
+                  [
+                      "Instant Noodle",
+                      "",
+                      400
+                  ],
+                  [
+                      "Flat Noodle",
+                      "",
+                      400
+                  ],
+                  [
+                      "Rice Cake",
+                      "",
+                      400
+                  ],
+                  [
+                      "Steamed Rice",
+                      "",
+                      200
+                  ],
+                  [
+                      "Ramen Noodle",
+                      "",
+                      400
+                  ],
+                  [
+                      "Rice Noodle",
+                      "",
+                      400
+                  ]
+              ]
+          },
+          {
+              "name": "Dessert",
+              "items": [
+                  [
+                      "Combo Coconut Pudding",
+                      "",
+                      400
+                  ]
+              ]
+          },
+          {
+              "name": "Beverages",
+              "items": [
+                  [
+                      "Coke",
+                      "",
+                      300
+                  ],
+                  [
+                      "Diet Coke",
+                      "",
+                      300
+                  ],
+                  [
+                      "Sprite",
+                      "",
+                      300
+                  ],
+                  [
+                      "Sunkist",
+                      "",
+                      300
+                  ],
+                  [
+                      "Herbal Tea",
+                      "",
+                      300
+                  ],
+                  [
+                      "Plum Juice",
+                      "",
+                      400
+                  ],
+                  [
+                      "Iced Tea",
+                      "",
+                      400
+                  ],
+                  [
+                      "Passion Fruit Lemon Green Tea",
+                      "",
+                      500
+                  ]
+              ]
+          }
+      ],
+      "address": "1626 Taraval St, San Francisco, CA 94116",
+      "phone": "(415) 571-8225",
+      "email": "hotpotbaysf@gmail.com",
+      "hours": "Mon–Thu 5–10pm; Fri–Sun 11:30am–2:30pm & 5–10pm",
+      "instagram": "hotpotbay",
+      "orderUrl": "https://order.mealkeyway.com/customer/release/index?mid=336338517343624e4c79695867526349343645416d413d3d#/main",
+      "siteCta": "Order online",
+      "siteNote": "Prices are from the ordering page linked by their website. Lunch combos have separate prices; ask the restaurant about availability. Dining hours are from their website; online pickup can end earlier.",
+      "panels": [
+          {
+              "head": "Groups & private dining",
+              "body": [
+                  "Their website offers a private dining room for 8–12 guests with two shared hotpots and karaoke. Call (415) 571-8225 to ask about availability and booking."
+              ]
+          }
+      ]
   },
 ]

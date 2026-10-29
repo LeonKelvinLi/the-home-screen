@@ -222,6 +222,18 @@ export const OTHER_REVIEWS: OtherReview[] = [
   /* Medium / Foodie */
   {"by": "eileenhuynher", "place": "House of Phin", "city": "Oakland", "brand": "b_houseofphin", "reel": "https://www.instagram.com/reel/DWCrai9EjCQ/", "clip": true},
 
+  /* Batch 76, 29 Oct: new Chubby Watch/Heavy hitter is @trinhdoesthings.
+     Its former main stays beside @bayarea.foodie.adventures and the new Newbie. */
+  { by: 'createwithcv', place: 'Chubby Cattle BBQ', city: 'Pleasanton', brand: 'b_chubbycattlebbqpleasanton', reel: reel('DevfMX2isDa'), clip: true },
+  { by: 'aloha_stephanie', place: 'Chubby Cattle BBQ', city: 'Pleasanton', brand: 'b_chubbycattlebbqpleasanton', reel: reel('DbY-GatSDXj'), clip: true },
+  /* Separate Cupertino restaurant, not The Sea. No Cupertino page/add request yet: source only. */
+  { by: 'zoegabon', place: 'Alexander’s Steakhouse', city: 'Cupertino', reel: reel('DbjaM1oycXc') },
+
+  /* Hotpot Bay, Glenn 12:25–12:27 pm: Mediocre / Newbie / Heavy Hitter; own Watch is main. */
+  { by: 'martiwantsmore', place: 'Hotpot Bay', city: 'San Francisco', brand: 'b_hotpotbay', reel: reel('DdQBcwLT8Iy'), clip: true },
+  { by: 'dchangshangry', place: 'Hotpot Bay', city: 'San Francisco', brand: 'b_hotpotbay', reel: reel('DZbrqbWT98E'), clip: true },
+  { by: 'foodandsachi', place: 'Hotpot Bay', city: 'San Francisco', brand: 'b_hotpotbay', reel: reel('DXr9m1JEt1A'), clip: true },
+
 ]
 
 /*

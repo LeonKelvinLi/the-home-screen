@@ -34,7 +34,8 @@ try{
    const v=p.locator('.brand-clip-drop video');await v.waitFor({timeout:10000});await v.scrollIntoViewIfNeeded()
    await p.waitForFunction(()=>{const v=document.querySelector('.brand-clip-drop video');return v&&v.readyState>=1},{},{timeout:20000})
    check(`${d.id} film decodes`,await v.evaluate(v=>v.videoWidth===540&&v.duration>0))
-   if(d.facts.clip.by)check(`${d.id} creator credited`,(await p.locator('.brand-clip-drop').innerText()).includes('@'+d.facts.clip.by))
+   /* A later Watch request may move the original to Foodie reviews (Batch 76 Chubby). */
+   if(d.facts.clip.by)check(`${d.id} original creator remains credited`,(await p.locator('.brand-clip-drop').innerText()+' '+await p.locator('.foodie-reviews').allTextContents()).includes('@'+d.facts.clip.by))
   }
  }
  for(const d of data){
@@ -59,8 +60,8 @@ try{
   if(d.facts.quoteOnly)check(`${d.id} cannot be ordered from`,await p.locator('.menu-row.is-quote').count()===want&&await p.locator('button.menu-row').count()===0)
   if(!live)await p.screenshot({path:`.verify/batch68-${d.facts.slug}.png`})
  }
- /* Second and third films: listed under the page's own film, each one decoding, never more than three. */
- const extra={b_westcoastsips:['westcoastsips707'],b_meadowlarkdairylivermore:['eighty6ix_','lovelivermore'],b_chubbycattlebbqpleasanton:['bayarea.foodie.adventures'],b_bourbonsteaksanfrancisco:['celineeats','explorewithtaka'],b_harrisrestaurant:['yourglobalfoodiebff'],b_blindbutcher:['thehautesheet'],b_meadowlarkdairy:['humminglion','siliconvalley.foodies'],b_wagyumastersanjose:['wagyumastersukiyaki'],b_goldbeandurant:['_whatarethechances_']}
+ /* Second and third films: listed under the page's own film, each one decoding, never more than four (the later approved limit). */
+ const extra={b_westcoastsips:['westcoastsips707'],b_meadowlarkdairylivermore:['eighty6ix_','lovelivermore'],b_chubbycattlebbqpleasanton:['bayarea.foodie.adventures','createwithcv'],b_bourbonsteaksanfrancisco:['celineeats','explorewithtaka'],b_harrisrestaurant:['yourglobalfoodiebff'],b_blindbutcher:['thehautesheet'],b_meadowlarkdairy:['humminglion','siliconvalley.foodies'],b_wagyumastersanjose:['wagyumastersukiyaki'],b_goldbeandurant:['_whatarethechances_']}
  for(const [id,bys] of Object.entries(extra)){
   await open(id)
   const list=p.locator('.foodie-reviews[aria-label="Foodie reviews"]')
@@ -68,7 +69,7 @@ try{
   const text=await list.innerText()
   for(const by of bys)check(`${id} lists @${by}`,text.includes('@'+by))
   const rows=list.locator('.foodie-review')
-  check(`${id} has at most 3 films`,await rows.count()<=3)
+  check(`${id} has at most 4 films`,await rows.count()<=4)
   for(let i=0;i<await rows.count();i++){
    const row=rows.nth(i)
    const head=await row.locator('.foodie-review-head').innerText()

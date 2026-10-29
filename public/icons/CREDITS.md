@@ -293,3 +293,4 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `wooga-korean-bbq.webp` | [Original artwork](https://www.instagram.com/wooga_koreanbbq/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8430, inside enlarged own profile disc. |
 | `binge-coffee-house.webp` | [Original artwork](https://www.instagram.com/bingecoffeehouse/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8433, inside enlarged own profile disc. |
 | `house-of-phin.webp` | [Original artwork](https://www.instagram.com/houseofphin_/) | Their own mark from Glenn’s 28–29 Oct 2026 screenshot: IMG_8446, inside enlarged own profile disc. |
+| `hotpot-bay.webp` | [Original artwork](https://www.instagram.com/hotpotbay/) | Their own HPB Hotpot Bay red-and-gold pot mark on black, from Glenn’s 29 Oct IMG_8458 enlarged profile disc, cropped inside its edge. |

@@ -1852,4 +1852,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'berkeley-goods2-18': 'b_bingecoffeehouse',
   'oakland-goods2-38': 'b_houseofphin',
 
+  /* Batch 76: The Sea keeps Palo Alto More goods 0 and gains Glenn's Steakhouse seat;
+     Hotpot Bay's Asian/Korean city spots are held, so append to More goods. */
+  'beasty-steakhouse-9': 'b_theseabyash',
+  'san-francisco-goods2-62': 'b_hotpotbay',
+
 }

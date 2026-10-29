@@ -1,0 +1,251 @@
+{
+  "id": "b_chubbycattlebbqpleasanton",
+  "facts": {
+    "slug": "chubby-cattle-bbq-pleasanton",
+    "name": "Chubby Cattle BBQ",
+    "label": "Chubby Cattle",
+    "cuisine": "AYCE Japanese wagyu BBQ",
+    "tagline": "Their first Bay Area shop: all-you-can-eat Japanese wagyu barbecue in Silver, Gold and Diamond tiers, with sushi and a self-serve station.",
+    "color": "#FFFFFF",
+    "icon": "chubby-cattle-bbq-pleasanton",
+    "prep": 0,
+    "category": "Japanese BBQ",
+    "items": [],
+    "sections": [
+      {
+        "name": "All-you-can-eat (per person)",
+        "items": [
+          [
+            "Silver Tier",
+            "Member price $49.99. Unlimited full-blood thick-cut wagyu short rib, wagyu brisket, top blade, knuckle, steak and finger meat, miso wagyu chuck eye, M8-9 wagyu otoro, wagyu skirt steak, wagyu cubes, thin-sliced beef tongue, pork belly, Iberico pork and chicken cartilage, plus the items for all tiers.",
+            5800
+          ],
+          [
+            "Gold Tier",
+            "Member price $65. Everything in Silver, plus one special meat per person (A5 Miyazaki wagyu short rib, A5 wagyu otoro thick cut, A5 Miyazaki ribeye, A5 finger meat or full-blood wagyu steak), one special dish (A5 wagyu foie gras nigiri or A5 wagyu uni caviar nigiri), unlimited A5 brisket, A5 knuckle, beef tongue platter, tender meats and lamb chop, and scallop.",
+            7800
+          ],
+          [
+            "Diamond Tier",
+            "Member price $75. Everything in Gold and Silver, plus two special meats per person (the Gold choices and A5 striploin 2oz) and two special dishes.",
+            8800
+          ]
+        ]
+      },
+      {
+        "name": "To-go: Wagyu Rice Boxes",
+        "items": [
+          [
+            "Japanese Curry Wagyu Rice Bowl",
+            "Wagyu over rice with Japanese curry sauce.",
+            1499
+          ],
+          [
+            "Wagyu Mapo Tofu Rice Bowl",
+            "Wagyu over rice with a miso-style sauce.",
+            1499
+          ],
+          [
+            "Wagyu Juicy Slider",
+            "Wagyu patty with fresh toppings and their sauce.",
+            799
+          ]
+        ]
+      },
+      {
+        "name": "To-go: Fried Bites & Appetizers",
+        "items": [
+          [
+            "Takoyaki",
+            "Octopus balls with savory sauce and bonito.",
+            999
+          ],
+          [
+            "Japanese Karaage Chicken",
+            "Japanese fried chicken.",
+            899
+          ],
+          [
+            "Orleans Crispy Chicken Cartilage",
+            "Orleans-style spiced.",
+            699
+          ],
+          [
+            "Tempura Shrimp",
+            "",
+            999
+          ],
+          [
+            "Truffle Fries",
+            "",
+            599
+          ],
+          [
+            "Crispy Calamari",
+            "",
+            999
+          ],
+          [
+            "Crispy Tofu Bites",
+            "",
+            799
+          ]
+        ]
+      },
+      {
+        "name": "To-go: Sushi",
+        "items": [
+          [
+            "Salmon Sushi (2 pcs)",
+            "",
+            1099
+          ],
+          [
+            "Yellowtail Sushi (2 pcs)",
+            "",
+            899
+          ],
+          [
+            "Seared Wagyu Sushi (2 pcs)",
+            "",
+            999
+          ],
+          [
+            "Classic Sushi Platter (8 pcs)",
+            "Two each of salmon, yellowtail, tuna and seared wagyu.",
+            2199
+          ]
+        ]
+      },
+      {
+        "name": "To-go: Cold Dishes & Sides",
+        "items": [
+          [
+            "Seaweed & Kimchi Combo",
+            "",
+            899
+          ],
+          [
+            "Seaweed, Kimchi & Spicy Clam Combo",
+            "A three-item side combo.",
+            799
+          ],
+          [
+            "Japanese Octopus Salad",
+            "",
+            699
+          ],
+          [
+            "Korean Seasoned Scallions",
+            "",
+            699
+          ]
+        ]
+      },
+      {
+        "name": "To-go: Poke Bowls",
+        "items": [
+          [
+            "Fresh Salmon Poke Bowl",
+            "Salmon with rice, greens and poke toppings.",
+            2099
+          ],
+          [
+            "Yellowtail Poke Bowl",
+            "",
+            2199
+          ],
+          [
+            "Salmon & Yellowtail Combo Poke Bowl",
+            "",
+            2199
+          ]
+        ]
+      },
+      {
+        "name": "To-go: Bento Boxes",
+        "items": [
+          [
+            "Japanese Onion Wagyu Bowl",
+            "Wagyu with sweet onions.",
+            1599
+          ],
+          [
+            "Japanese Curry Wagyu & Onion Wagyu Bowl",
+            "",
+            1799
+          ],
+          [
+            "Grilled Eel & Wagyu Combo Bowl",
+            "Soy-glazed eel with onion wagyu.",
+            2099
+          ]
+        ]
+      },
+      {
+        "name": "To-go: Soup, Dessert & Drinks",
+        "items": [
+          [
+            "Creamy Tom Yum Soup",
+            "Thai-style, with seafood.",
+            1999
+          ],
+          [
+            "Portuguese Egg Tart",
+            "",
+            699
+          ],
+          [
+            "Pepsi",
+            "",
+            299
+          ],
+          [
+            "Pepsi Zero",
+            "",
+            299
+          ],
+          [
+            "Moshi Sparkling Yuzu",
+            "355 ml can.",
+            399
+          ]
+        ]
+      }
+    ],
+    "address": "2693 Stoneridge Dr #106, Pleasanton, CA 94588",
+    "phone": "(925) 892-3356",
+    "hours": "Sun–Thu 11:30am–10pm; Fri–Sat 11:30am–11pm (kitchen last call 9:30pm / 10:30pm)",
+    "site": "https://www.chubbycattle.com/project/chubby-cattle-pleasanton/",
+    "orderUrl": "https://pos.chowbus.com/online-ordering/store/Chubby-Cattle-Pleasanton/22243",
+    "siteCta": "Open their page",
+    "siteNote": "Their first Bay Area shop, in the Pacific Pearl centre on Stoneridge Drive. All-you-can-eat prices are per person from the menu on their own site; the tiers share seafood, sushi, hot dishes and a self-serve station. 90-minute seating (last call at 70); 18% gratuity for 6 or more; under 100 cm eat free, 100–130 cm half price; seniors 65+ 20% off; leftovers add 20%. To-go prices are from their own Chowbus pickup page.",
+    "clip": {
+      "src": "/clips/chubby-cattle-bbq-pleasanton-b76.mp4",
+      "poster": "/clips/chubby-cattle-bbq-pleasanton-b76-poster.webp",
+      "href": "https://www.instagram.com/reel/DfFnfKgvdwi/",
+      "credit": "Filmed by @trinhdoesthings",
+      "platform": "Instagram",
+      "by": "trinhdoesthings"
+    }
+  },
+  "name_exact": "Chubby Cattle BBQ",
+  "glenn": "29 Oct 11:37 am: DfFnfKgvdwi, Watch this video clip / Heavy hitter. 11:38 am: DbY-GatSDXj, Clip this video plz / Newbie.",
+  "sources": [
+    "https://www.instagram.com/reel/DfFnfKgvdwi/ (@trinhdoesthings, caption tags Chubby Cattle BBQ Bay Area; footage matches Pleasanton)",
+    "https://www.instagram.com/reel/DbY-GatSDXj/ (@aloha_stephanie; caption explicitly names Pleasanton)",
+    "research/roster/batch68.json (existing verified menu and original @createwithcv film)"
+  ],
+  "flags": [
+    "New Watch/Heavy hitter @trinhdoesthings is main 0–24s. Newbie @aloha_stephanie is additional 0–15s.",
+    "Existing @createwithcv main is copied without recutting into review-DevfMX2isDa; existing @bayarea.foodie.adventures remains. Four distinct films, none dropped.",
+    "Business facts, menu, existing icon and all three old placements are preserved."
+  ],
+  "checked_on": "2026-10-29",
+  "update_only": true,
+  "placements": [
+    "pleasanton-goods-2",
+    "beasty-ayce-11",
+    "beasty-bbq-19"
+  ]
+}

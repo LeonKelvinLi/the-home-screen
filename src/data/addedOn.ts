@@ -837,4 +837,6 @@ export const ADDED_ON: Record<string, string> = {
   b_yamibowl: '2026-10-29',
   b_mumuhotpotsunnyvale: '2026-10-29',
 
+  b_hotpotbay: '2026-10-29',
+
 }

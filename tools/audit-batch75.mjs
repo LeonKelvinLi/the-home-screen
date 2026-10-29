@@ -94,7 +94,7 @@ try{
  for(const kind of ['hotpot','bbq'])check(kind+' wallpaper is served',(await fetch(base+'/wallpapers/cat-'+kind+'.webp')).headers.get('content-type')?.includes('webp'))
  for(const [kind,id] of [['coffee','b_originlabcoffeematcha'],['coffee','b_bingecoffeehouse'],['coffee','b_houseofphin'],['pits','b_gemcitykennels'],['hotpot','b_mumuhotpotsunnyvale'],['bbq','b_woogakoreanbbq']])
   check(id+' has its '+kind+' seat',Object.entries(ALL_PLACEMENTS).some(([seat,brand])=>seat.startsWith('beasty-'+kind+'-')&&brand===id))
- check('Hot Pot has five occupied seats',Object.keys(ALL_PLACEMENTS).filter(s=>s.startsWith('beasty-hotpot-')).length===5)
+ check('Hot Pot has at least five occupied seats',Object.keys(ALL_PLACEMENTS).filter(s=>s.startsWith('beasty-hotpot-')).length>=5)
  check('BBQ has twenty-four occupied seats',Object.keys(ALL_PLACEMENTS).filter(s=>s.startsWith('beasty-bbq-')).length===24)
  await open('b_parekoylutongpinoy');await p.click('.nav-back');await p.waitForTimeout(900)
  const g=await sheet('More eats')

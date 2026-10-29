@@ -2556,7 +2556,15 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'wordmark', logoLines: ['THE', 'SEA'], logoFace: 'grotesk',
     site: 'https://theseausa.com/',
     siteCta: 'See their menu',
-    tier: 1,
+    /* Glenn, 29 Oct: BEASTY • Steakhouse and Watch their own film: show the full page. */
+    tier: 3,
+    clip: {
+      src: '/clips/the-sea-by-ash.mp4',
+      poster: '/clips/the-sea-by-ash-poster.webp',
+      href: 'https://www.instagram.com/p/Dexogd1g-UR/',
+      credit: 'Posted by @theseabyash',
+      platform: 'Instagram',
+    },
   }),
 
   /* ---- 2026-09-15 and 16. Research in research/roster/batch25.json. ----

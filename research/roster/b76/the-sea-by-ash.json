@@ -1,0 +1,389 @@
+{
+  "id": "b_theseabyash",
+  "facts": {
+    "slug": "the-sea-by-ash",
+    "name": "The Sea by Alexander's Steakhouse",
+    "label": "The Sea",
+    "cuisine": "Seafood & Wagyu",
+    "tagline": "Modern seafood with Japanese flair, plus wagyu steaks, in Palo Alto",
+    "color": "#1F4E9C",
+    "prep": 0,
+    "category": "Roster",
+    "items": [],
+    "icon": "the-sea-palo-alto",
+    "logoTemplate": "wordmark",
+    "logoLines": [
+      "THE",
+      "SEA"
+    ],
+    "logoFace": "grotesk",
+    "site": "https://theseausa.com/",
+    "siteCta": "See their menu",
+    "tier": 3,
+    "clip": {
+      "src": "/clips/the-sea-by-ash.mp4",
+      "poster": "/clips/the-sea-by-ash-poster.webp",
+      "href": "https://www.instagram.com/p/Dexogd1g-UR/",
+      "credit": "Posted by @theseabyash",
+      "platform": "Instagram"
+    },
+    "address": "4269 El Camino Real, Palo Alto, CA 94306",
+    "phone": "(650) 213-1111",
+    "email": "contact@theseausa.com",
+    "hours": "Dinner Sun 5-8:30pm, Mon 5:30-8pm, Tue-Thu 5:30-8:30pm, Fri 5:30-9pm, Sat 5-9pm",
+    "instagram": "theseabyash",
+    "sections": [
+      {
+        "name": "Cold Appetizers",
+        "items": [
+          [
+            "Hamachi Shots",
+            "ponzu, avocado, ginger, jalapeño",
+            4200
+          ],
+          [
+            "Today's Oysters",
+            "",
+            3200,
+            null,
+            "half dozen 32 or dozen 60"
+          ],
+          [
+            "Cinco Jotas Jamon Iberico",
+            "truffle mushroom, tomato, olive, idiazábal cheese",
+            4000
+          ],
+          [
+            "Big Eye Tuna Tataki",
+            "watermelon radish, crispy garlic, avocado, sesame",
+            3500
+          ],
+          [
+            "Farmer's Market Salad",
+            "seasonal selection hand picked by Chef Yumin",
+            2500
+          ]
+        ]
+      },
+      {
+        "name": "Hot Appetizers",
+        "items": [
+          [
+            "Lobster Rocks",
+            "almond purée, truffle, mitsuba",
+            3200
+          ],
+          [
+            "Popcorn Crab",
+            "jumbo lump crab, togarashi, sriracha aioli",
+            3800
+          ],
+          [
+            "The Sea Fried Clam Chowder",
+            "potato, celery, carrot, bacon",
+            2700
+          ],
+          [
+            "Shrimp Toast Skewer",
+            "shiitake mushroom, lemon, paprika, garlic",
+            2400
+          ],
+          [
+            "Abalone Risotto (Monterey)",
+            "sesame oil, asparagus, maitake mushrooms, seaweed",
+            3200
+          ]
+        ]
+      },
+      {
+        "name": "Tasting",
+        "items": [
+          [
+            "Tasting",
+            "Big eye tartare, abalone, Hokkaido scallops, Kerwee wagyu and vanilla cake. Full-table participation before 8pm; maximum 6 guests. Food supplements: Osetra caviar +$55; Miyazaki A5 +$80.",
+            19500,
+            null,
+            "$195 per person"
+          ]
+        ]
+      },
+      {
+        "name": "The Land Entrée",
+        "items": [
+          [
+            "Upper Iowa Angus Filet Mignon",
+            "portobello mushroom raviolis, caramelized onions, green peppercorn jus",
+            7800
+          ],
+          [
+            "Upper Iowa Angus Prime New York",
+            "crispy polenta, tomato compote, parmesan cheese, bordelaise",
+            7500
+          ],
+          [
+            "Wagyu Flat Iron Steak (USA)",
+            "tempura asparagus, jimmy nardello sweet pepper chimichurri, garlic herb sauce",
+            8700
+          ],
+          [
+            "Imperial Wagyu Ribeye (USA)",
+            "corn kakiage, sweet paprika, green peppercorn jus",
+            11500
+          ],
+          [
+            "Kerwee Wagyu Strip (Australia)",
+            "potato fondant, wild mushrooms, bordelaise",
+            15500
+          ]
+        ]
+      },
+      {
+        "name": "Sides",
+        "items": [
+          [
+            "Brussels Sprouts",
+            "balsamic vinegar, shallots, bacon",
+            1600
+          ],
+          [
+            "Wild Mushrooms",
+            "chives / garlic",
+            1800
+          ],
+          [
+            "Shishito Peppers",
+            "balsamic vinegar / bonito flakes",
+            1600
+          ],
+          [
+            "Garlic Mashed Potato",
+            "butter and chives",
+            1600
+          ],
+          [
+            "Black Forest Ham Mac N’ Cheese",
+            "a blend of eight cheeses / truffle oil",
+            1600
+          ],
+          [
+            "Truffle Fries",
+            "parmesan, truffle aioli",
+            1800
+          ],
+          [
+            "Lobster Fried Rice",
+            "bacon, egg, garlic, green onions",
+            3000
+          ]
+        ]
+      },
+      {
+        "name": "The Sea Entrée",
+        "items": [
+          [
+            "Halibut T-Bone (Wild - Alaska)",
+            "flat beans, oyster mushrooms, tomatoes, lemongrass shellfish emulsion, basil",
+            7900
+          ],
+          [
+            "Seared Mero Seabass (Wild - Hawaii)",
+            "zucchini, tomato compote, sweet potato, shallot, red wine sauce",
+            6700
+          ],
+          [
+            "Miso Black Cod (Wild - Half Moon Bay)",
+            "koshihikari rice, lobster soboro, bell pepper miso, kale, aged vinegar",
+            6000
+          ],
+          [
+            "Grilled Lobster (Wild - Maine)",
+            "lemon risotto, tarragon, asparagus, parmesan cheese, wild mushroom",
+            9500
+          ],
+          [
+            "Hot Seafood Platter",
+            "lobster, mussels, scallops, shrimp, seppia, ocean escargot",
+            19500
+          ]
+        ]
+      },
+      {
+        "name": "Fullblood Japanese Wagyu",
+        "items": [
+          [
+            "北海道 Hokkaido, Japan A5 (4 oz)",
+            "Privately farmed in below-freezing temperatures. Cut to order in 4 oz increments; king oyster mushrooms, carrots and bordelaise.",
+            18000,
+            null,
+            "4 oz $180 ($45/oz)"
+          ],
+          [
+            "宮崎 Miyazaki, Japan A5 (4 oz)",
+            "Warm climate, ideal for raising cattle. Cut to order in 4 oz increments; king oyster mushrooms, carrots and bordelaise.",
+            18000,
+            null,
+            "4 oz $180 ($45/oz)"
+          ]
+        ]
+      },
+      {
+        "name": "Market Feature",
+        "items": [
+          [
+            "Wagyu Trio (Japan, Australia, USA)",
+            "trio of salts, trio of sauces",
+            24000
+          ],
+          [
+            "American Wagyu Tomahawk Chop 48 oz.",
+            "crushed potatoes, half lobster tail, green peppercorn sauce",
+            37500
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "Honey Butter Toast",
+            "caramelized apples / apple butterscotch / vanilla ice cream",
+            2000
+          ],
+          [
+            "Berry Sweet",
+            "mascarpone cheesecake / strawberry / graham cracker crumble",
+            2000
+          ],
+          [
+            "Banana Cream Puffs",
+            "caramelized banana / banana ice cream / dulce de leche",
+            2000
+          ],
+          [
+            "Sunset",
+            "coconut crème brûlée / strawberry / vanilla pineapple chutney / crispy honey",
+            2000
+          ],
+          [
+            "Burnt Almond Bombe",
+            "amaretto ice cream / toasted almonds / vanilla cream / devil's food / espresso caramel",
+            2200
+          ],
+          [
+            "Rise N' Shine",
+            "mango soufflé / vanilla crème anglaise",
+            2400
+          ]
+        ]
+      },
+      {
+        "name": "Coffee & Tea",
+        "items": [
+          [
+            "Monaco Coffee",
+            "dark chocolate, almond, chrysanthemum",
+            900
+          ],
+          [
+            "Virgin Silver Buds",
+            "(white tea) wild honey, amaretto, plum",
+            1600
+          ],
+          [
+            "Monte Carlo Decaf",
+            "plum, walnut, blueberry",
+            900
+          ],
+          [
+            "Straight Leaf Jasmine",
+            "(green tea) lush, honeysuckle, floral",
+            1200
+          ],
+          [
+            "Rouge Espresso",
+            "raspberry, caramel, cacao",
+            900
+          ],
+          [
+            "Spring Jade",
+            "(green tea) creamy, honeydew, lilac",
+            1200
+          ],
+          [
+            "Cappuccino",
+            "espresso, microfoam milk",
+            1200
+          ],
+          [
+            "Genmaicha",
+            "(green tea) toasted brown rice, nutty, delicate",
+            800
+          ],
+          [
+            "Latte",
+            "espresso, microfoam milk",
+            1200
+          ],
+          [
+            "Bergamot Black",
+            "(earl gray) sour orange , robust, fragrant",
+            800
+          ],
+          [
+            "Honey Latte",
+            "espresso, honey, microfoam milk",
+            1200
+          ],
+          [
+            "Heirloom Pu'er",
+            "(black tea) rich, carmel, earthy",
+            1100
+          ],
+          [
+            "Nutella Latte",
+            "espresso, nutella, microfoam milk",
+            1200
+          ],
+          [
+            "Nile Valley Chamomile",
+            "(non-caffeinated) apple, melon, soothing",
+            1200
+          ],
+          [
+            "Mocha",
+            "espresso, chocolate, microfoam milk",
+            1200
+          ],
+          [
+            "Pacific Peppermint",
+            "(non-caffeinated) vibrant, cooling, refreshing",
+            800
+          ]
+        ]
+      }
+    ],
+    "siteNote": "Prices are from their own linked dinner menu, checked 29 October 2026. Japanese A5 wagyu is sold in 4 oz increments at $45/oz; the minimum 4 oz portion is shown. Call about the Sunday prix fixe, whose website and menu prices differ."
+  },
+  "name_exact": "The Sea by Alexander's Steakhouse",
+  "glenn": "29 Oct 11:42 am: Palo Alto • Eats / BEASTY • Steakhouse; own Instagram post, Watch this video clip.",
+  "sources": [
+    "https://theseausa.com/ (current address, phone, email, hours, linked dinner menu)",
+    "https://theseausa.com/going-to-imenupro-dinner/",
+    "https://qr.imenupro.com/s65-5l (current dinner menu rechecked 29 Oct, matches existing 54 priced rows)",
+    "https://www.instagram.com/p/Dexogd1g-UR/ (@theseabyash own post, no caption, full 5.32s)",
+    "Glenn IMG_8448, IMG_8449, IMG_8450: current own wordmark and profile"
+  ],
+  "flags": [
+    "Existing Palo Alto More goods 0 preserved; explicit Steakhouse seat 9 added manually to avoid shifting existing category seats. Cuisine remains honest Seafood & Wagyu.",
+    "Tier 1 upgraded to full page for Glenn’s requested Watch film and category placement. No payment or agreement inferred.",
+    "The current own dinner menu is rechecked and retained. Two Japanese A5 items now explicitly show the published 4 oz increments/minimum at $45/oz, $180 for 4 oz. Tasting describes the included courses and priced food supplements. Wine pairing excluded.",
+    "Sunday prix fixe still conflicts: homepage says $85, linked Sunday menu previously says $95; no Sunday price added. Thanksgiving opening advertisement and holiday-closure footer disagree, so no holiday schedule is inferred.",
+    "Existing whole website wordmark icon is kept; Glenn’s enlarged Instagram disc crops its sides."
+  ],
+  "checked_on": "2026-10-29",
+  "update_only": true,
+  "placements": [
+    "palo-alto-goods2-0",
+    "beasty-steakhouse-9"
+  ]
+}
