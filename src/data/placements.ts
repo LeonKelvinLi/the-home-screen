@@ -1802,4 +1802,28 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      The Cheesecake Lab before it. */
   'beasty-goods2-79': 'b_jaythecheesecakequeen',
 
+  /* Batch 73, Glenn, 27 October 5:55–10:51 pm. Garlic High takes Sunnyvale's open Korean and ramen spot;
+     the new BEASTY • Ramen page, Steakhouse (Epic Steak), Breakfast/Diner (Early to Rise) and Chefs (Chef
+     Smelly, "Creole restaurant and catering") fill from type lines. San Francisco's and Oakland's spots for
+     these are held, so More goods. Glenn's "BEASTY • Eats" four and The Sweet Spot's "BEASTY • Sweets" find
+     their Eats and Sweets spots held (Mexican, Pizza; no Cambodian, Peruvian or cream-sando spot), so
+     BEASTY's More eats, as Jay The Cheesecake Queen. */
+  'sunnyvale-goods-7': 'b_garlichighsunnyvale',
+  'san-francisco-goods2-57': 'b_epicsteak',
+  'san-francisco-goods2-58': 'b_lunettecambodia',
+  'san-francisco-goods2-59': 'b_frescasf',
+  'san-francisco-goods2-60': 'b_earlytorisesf',
+  'oakland-goods2-35': 'b_tacososcar',
+  'oakland-goods2-36': 'b_squarepieguys',
+  'oakland-goods2-37': 'b_chefsmelly',
+  /* Glenn, 10:51 pm, "BEASTY • Chef". By his type line he would take spot 5 on Chefs and 6 on Catering and
+     push LOL Catering down one, so he is seated by hand after the last of each. */
+  'beasty-cooks-14': 'b_chefsmelly',
+  'beasty-catering-10': 'b_chefsmelly',
+  'beasty-goods2-80': 'b_tacososcar',
+  'beasty-goods2-81': 'b_lunettecambodia',
+  'beasty-goods2-82': 'b_squarepieguys',
+  'beasty-goods2-83': 'b_frescasf',
+  'beasty-goods2-84': 'b_thesweetspot',
+
 }

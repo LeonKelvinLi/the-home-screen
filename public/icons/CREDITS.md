@@ -271,3 +271,12 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `fusion-buffet-concord.webp` | [Original artwork](https://www.instagram.com/fusionbuffetconcord/) | Their own red Fusion Buffet script, their Instagram picture from Glenn's screenshot. |
 | `kakuna-sushi.webp` | [Original artwork](https://www.instagram.com/kakunasushi/) | Their own Kakuna Sushi mark (a sushi roll in a bowl over the red name), their Instagram picture from Glenn's screenshot. |
 | `jay-the-cheesecake-queen.webp` | [Original artwork](https://www.instagram.com/jaythecheesecakequeen/) | Their own pink “Jay The Cheesecake Queen” disc, their Instagram picture from Glenn's screenshot, without Instagram's frame. |
+| `epic-steak.webp` | [Original artwork](https://www.epicsteak.com/) | Their own EPIC STEAK wordmark from their website, white on black. |
+| `garlic-high-sunnyvale.webp` | [Original artwork](https://www.garlic-high.com/) | Their own Garlic High logo, their ordering site's logo file, on white. |
+| `tacos-oscar.webp` | [Original artwork](https://www.tacososcar.com/) | Their own “tacos oscar” egg wordmark from their website, on their sky blue. |
+| `lunette-cambodia.webp` | [Original artwork](https://www.lunettecambodia.com/) | Their own lunette mark (their website's icon), on white. |
+| `square-pie-guys.webp` | [Original artwork](https://squarepieguys.com/) | Their own Square Pie Guys badge from their ordering site, on white. |
+| `fresca-sf.webp` | [Original artwork](https://www.facebook.com/FrescaSF) | Their own purple “Peruvian • F • Gathering Place” badge, their Facebook picture. |
+| `early-to-rise-sf.webp` | [Original artwork](https://linktr.ee/earlytorisesf) | Their own red rooster mark, their Linktree and Instagram picture. |
+| `chef-smelly.webp` | [Original artwork](https://www.threads.com/@chefsmelly) | His own profile photo (Threads and Instagram), cropped to him. |
+| `brunch-and-bloom.webp` | [Original artwork](https://www.instagram.com/brunchandbloomcafe/) | Their own Brunch & Bloom Artisan Cafe mark, their Instagram picture from Glenn's screenshot of 27 Oct 2026. |

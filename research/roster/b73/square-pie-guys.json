@@ -1,0 +1,495 @@
+{
+ "id": "b_squarepieguys",
+ "name_exact": "Square Pie Guys",
+ "checked_on": "2026-10-28",
+ "sources": [
+  "https://www.squarepieguys.com/order/oakland (their Oakland ordering menu, 70 items, read 2026-10-28)",
+  "https://www.squarepieguys.com/order/soma, /order/ghirardelli-square, /order/walnut-creek, /order/campbell, /order/palo-alto (same food and prices as Oakland; only the canned beer differs)",
+  "https://www.squarepieguys.com/currentlocations ('Our 6 Bay Area Locations': addresses, shop emails, phones, hours)",
+  "https://www.squarepieguys.com/locations/old-oakland and the five other /locations/ pages (full addresses with ZIPs, daily hours)",
+  "https://www.squarepieguys.com/menu (cheddar cheese edge, dairy free +2, gluten free +3, no other modifications)",
+  "https://www.instagram.com/squarepieguys/ (Glenn's screenshot: verified, 'Detroit 🍕 in The Bay', 126K followers)",
+  "https://storage.googleapis.com/open-merchant-app-assets/squarepieguys/color_logo.png (logo: their circular SQUARE PIE GUYS pizza-slice badge, 735x672 PNG, from their ordering site)"
+ ],
+ "facts": {
+  "slug": "square-pie-guys",
+  "name": "Square Pie Guys",
+  "label": "Square Pie Guys",
+  "cuisine": "Detroit-style pizza",
+  "tagline": "Detroit-style square pizzas with a cheddar cheese edge, plus wings, salads and sides, from six Bay Area shops in San Francisco, Oakland, Walnut Creek, Campbell and Palo Alto.",
+  "color": "#1630FF",
+  "icon": "square-pie-guys",
+  "prep": 0,
+  "category": "Pizza",
+  "items": [],
+  "sections": [
+   {
+    "name": "Lunch Size Pizzas",
+    "items": [
+     [
+      "Half Sausage & Peppers",
+      "lunch size pizza - feeds one hungry pizza lover - red sauce, italian sausage, marinated red peppers, pickled jalapenos, finished with grana cheese",
+      1297
+     ],
+     [
+      "Half Regular Square",
+      "comfortably feeds one hungry pizza lover - our plain cheese with basil: red sauce, fresh mozzarella, grated grana cheese",
+      1297
+     ],
+     [
+      "Half Pepperoni",
+      "comfortably feeds one hungry pizza lover - our pepperoni: red sauce, 48 pepperonis",
+      1297
+     ],
+     [
+      "Half Spicy Pepperoni",
+      "comfortably feeds one hungry pizza lover - vodka sauce, loaded with 48 cupping pepperonis, pickled jalapeños, spicy ranch.",
+      1297
+     ],
+     [
+      "Half The Big Von",
+      "comfortably feeds one hungry pizza lover - white sauce, italian sausage, pepperoni, mike's hot honey 106.1's own Big Von has been a fan of Square Pie Guys since day one.",
+      1297
+     ],
+     [
+      "Half The Hawaiian",
+      "comfortably feeds one hungry pizza lover - vodka sauce, pineapple, pickled jalapeños, cupping pepperonis, mozzarella, topped with grated grana cheese and scallions",
+      1297
+     ],
+     [
+      "Half Ellen Supreme",
+      "Two Slices - vodka sauce, pepperoni, italian sausage, grilled red onions, marinated red peppers, and mushrooms",
+      1297
+     ],
+     [
+      "Half Mush-O-Roni",
+      "two slices- red sauce, mushrooms, pepperoni, Mike's hot honey, grated grana cheese.",
+      1297
+     ],
+     [
+      "Half Plant Supreme",
+      "two slices - mushrooms, sliced kalamata olives, marinated red peppers, sliced grilled red onions, grated grana cheese, red sauce, mozz, cheddar edge",
+      1297
+     ],
+     [
+      "Half How Mush-Room",
+      "comfortably feeds one hungry pizza lover - white sauce, mushrooms, grated grana cheese",
+      1297
+     ],
+     [
+      "Half Lemon Pepper Pie",
+      "two slices - lemon ricotta cream sauce, lemon pepper crispy chicken, ranch drizzle, and green onions. Inspired by your favorite Bay Area DJ - Big Von",
+      1297
+     ],
+     [
+      "Half Buffalo Chicken",
+      "two slices - buffalo parm sauce, crispy buffalo chicken, ranch and buffalo sauce drizzle, and green onions. your tastebuds will thank you.",
+      1297
+     ]
+    ]
+   },
+   {
+    "name": "Pizzas",
+    "items": [
+     [
+      "Sausage & Peppers",
+      "red sauce, italian sausage, marinated red peppers, pickled jalapenos, finished with grana cheese",
+      2350
+     ],
+     [
+      "Pepperoni",
+      "comfortably feeds two people, or one hungry pizza lover - our pepperoni: red sauce, 48 pepperonis",
+      2350
+     ],
+     [
+      "Spicy Pepperoni",
+      "comfortably feeds two people or one hungry pizza lover - vodka sauce, loaded with 48 cupping pepperonis, pickled jalapeños, spicy ranch.",
+      2450
+     ],
+     [
+      "Regular Square",
+      "comfortably feeds two people or one hungry pizza lover - our plain cheese with basil: red sauce, fresh mozzarella, grated grana cheese",
+      2000
+     ],
+     [
+      "The Big Von",
+      "comfortably feeds two people or one hungry pizza lover - white sauce, italian sausage, pepperoni, mike's hot honey 106.1's own Big Von has been a fan of Square Pie Guys since day one.",
+      2450
+     ],
+     [
+      "Ellen Supreme",
+      "comfortably feeds two people or one hungry pizza lover - vodka sauce, pepperoni, italian sausage, grilled red onions, marinated red peppers, and mushrooms",
+      2450
+     ],
+     [
+      "Create Your Own",
+      "choose 1 sauce, up to 2 finishes, and up to 4 toppings to build your custom square. You can select vegan cheese and gluten free dough as a substitute.",
+      1950
+     ],
+     [
+      "Buffalo Chicken",
+      "comfortably feeds two people or one hungry pizza lover - buffalo parm sauce, crispy buffalo chicken, ranch and buffalo sauce drizzle, and green onions.",
+      2350
+     ],
+     [
+      "Lemon Pepper Pie",
+      "THE BIGGER VON! - lemon ricotta cream sauce, lemon pepper crispy chicken, ranch drizzle, and green onions. Inspired by your favorite Bay Area DJ - Big Von",
+      2350
+     ],
+     [
+      "The Hawaiian",
+      "comfortably feeds two people or one hungry pizza lover - vodka sauce, pineapple, pickled jalapeños, cupping pepperonis, mozzarella, topped with grated grana cheese and scallions",
+      2450
+     ],
+     [
+      "Mush-O-Roni",
+      "comfortably feeds two people or one hungry pizza lover - red sauce, mushrooms, pepperoni, Mike's hot honey, grated grana cheese.",
+      2400
+     ],
+     [
+      "How Mush-Room",
+      "comfortably feeds two people or one hungry pizza lover - white sauce, mushrooms, grated grana cheese",
+      2300
+     ],
+     [
+      "Plant Supreme",
+      "comfortably feeds two people or one hungry pizza lover - mushrooms, sliced kalamata olives, marinated red peppers, sliced grilled red onions, grated grana cheese, red sauce, mozz, cheddar edge",
+      2350
+     ]
+    ]
+   },
+   {
+    "name": "Wings and Sides",
+    "items": [
+     [
+      "Crispy Brussels",
+      "california brussels sprouts, halved then cooked till crispy, tossed in our house szechuan dry rub, served with our cilantro lime crema",
+      1300
+     ],
+     [
+      "Garlic Cheesy Bread",
+      "Cheesy bread with chopped garlic and garlic oil",
+      1100
+     ],
+     [
+      "Cheesy Bread",
+      "comes with a side of red sauce",
+      900
+     ],
+     [
+      "Hot Honey Buffalo Wings",
+      "six all natural jumbo hot honey buffalo chicken wings, with scallions and carrot sticks and choice of blue cheese or ranch (GF)",
+      1500
+     ],
+     [
+      "Szechuan Wings",
+      "house Szechuan dry fried, green onions, with cilantro lime crema",
+      1500
+     ],
+     [
+      "Buffalo Wings",
+      "classic buffalo, carrot sticks, choice of blue cheese or ranch",
+      1500
+     ],
+     [
+      "Lemon Pepper Wings",
+      "lemon pepper seasoning, green onions, carrot sticks, ranch",
+      1500
+     ],
+     [
+      "Plain Wings",
+      "six all natural jumbo wings, extra crispy, scallions with carrot sticks and ranch (GF)",
+      1500
+     ],
+     [
+      "Fries",
+      "with a side of ketchup",
+      650
+     ],
+     [
+      "Garlic Fries",
+      "crispy golden fries tossed in chopped garlic, and shredded grana served with ketchup",
+      750
+     ]
+    ]
+   },
+   {
+    "name": "Salads",
+    "items": [
+     [
+      "House Salad",
+      "a bed of romaine lettuce, carrots, tomatoes, brioche croutons, green onions, with grated grana cheese and red wine vinaigrette",
+      1150
+     ],
+     [
+      "Kale Caesar",
+      "kale & romaine, cherry tomato, brioche crouton, grated grana cheese, with green goddess dressing (contains anchovies)",
+      1300
+     ],
+     [
+      "Chilled Bowl Salad",
+      "kale & romaine, shaved brussels sprouts, cherry tomato, spicy sunflower seeds, marinated garbanzo beans, with tomato garlic vinaigrette",
+      1400
+     ]
+    ]
+   },
+   {
+    "name": "Dippin' Sauce",
+    "items": [
+     [
+      "Ranch",
+      "our house made ranch, some call it a bit sour, we call it lime and citrus foward, it's the classic companion to those pepperoni cups",
+      140
+     ],
+     [
+      "Spicy Ranch",
+      "the calabrian chili infused sibling to our house made ranch! try it, its hot ;)",
+      140
+     ],
+     [
+      "Cilantro Lime Crema",
+      "some people love it, some people hate it, it's a cilantro based dipping sauce, pairs well with our wings and sprouts",
+      140
+     ],
+     [
+      "Red Sauce",
+      "big cup of our house red sauce",
+      300
+     ],
+     [
+      "Green Goddess Dressing",
+      "bright, herby, creamy, currently resides on our caesar salad or your favorite slice. Dressing contains anchovies",
+      140
+     ],
+     [
+      "Tomato Garlic Vinaigrette",
+      "tart, umami vinaigrette that’s perfect for dippin’ even if you’re vegan",
+      140
+     ],
+     [
+      "Mike's Hot Honey",
+      "sweet and spicy a chili infused honey",
+      140
+     ],
+     [
+      "Blue Cheese",
+      "some people love it some people hate it, we make ours fresh in house and we love it on wings and even a pepperoni slice",
+      140
+     ],
+     [
+      "Red Wine Vinaigrette",
+      "an awesome vin, made with red wine vinegar and used on our chopped salad, this dressing will be tangy, punchy, and fruity.",
+      140
+     ],
+     [
+      "Buffalo Sauce",
+      "our house made wing sauce, it's what you know and love and absolutely contains franks red hot plus a proprietary mix of SPG spices",
+      400
+     ],
+     [
+      "BBQ Sauce",
+      "",
+      140
+     ],
+     [
+      "Alabama Sauce",
+      "",
+      140
+     ]
+    ]
+   },
+   {
+    "name": "Desserts",
+    "items": [
+     [
+      "Square Brownie",
+      "chocolate brownie warmed in our oven drizzled with white chocolate sauce and chocolate sprinkles",
+      1200
+     ],
+     [
+      "Square Cookie (GF)",
+      "freshly baked chocolate chip cookie with white chocolate sauce and chocolate sprinkles topped with a sprinkle of flaky Maldon salt",
+      900
+     ]
+    ]
+   },
+   {
+    "name": "Soft Drinks",
+    "items": [
+     [
+      "Alameda Cola",
+      "a well balanced cola with hints of vanilla, chicory room, caramel, and nutmeg.",
+      397
+     ],
+     [
+      "Alameda Diet Cola",
+      "a well balanced cola with hints of vanilla, chicory root, caramel and nutmeg",
+      397
+     ],
+     [
+      "Alameda Rootbeer",
+      "smooth and creamy, full-barrel flavor tastes of vanilla, anise, sarsaparilla, birch-bark and licorice root",
+      397
+     ],
+     [
+      "Alameda Cream Soda",
+      "a taste of rich, creamy, vanilla flavors",
+      397
+     ],
+     [
+      "Harney & Sons Lemonade",
+      "",
+      500
+     ],
+     [
+      "Harney & Sons Apple Juice",
+      "Enjoy the crisp, succulent taste of nature's gifts without a visit to the orchard. (16 oz bottle)",
+      500
+     ],
+     [
+      "Saratoga",
+      "Saratoga® still water has a clean flavor profile, with a refreshing aftertaste.",
+      400
+     ],
+     [
+      "Hoptonic Green Tea",
+      "Hoptonic sparkling green tea combines uniquely sourced whole jasmine flowers and green tea grown in the high elevations of the Yunnan province.",
+      500
+     ],
+     [
+      "Hoptonic Earl Grey",
+      "This sparkling tea is comprised of French Earl Grey tea containing organic rose petals sourced from a high elevation farm in Poland.",
+      500
+     ],
+     [
+      "Ferrarelle",
+      "Ferrarelle sparkling water",
+      450
+     ]
+    ]
+   },
+   {
+    "name": "Canned Local Beer - All",
+    "items": [
+     [
+      "Bo Pils Can",
+      "",
+      800
+     ],
+     [
+      "4-Pack Bo Pils",
+      "",
+      3000
+     ],
+     [
+      "4-pack Love Hazy IPA",
+      "",
+      3400
+     ],
+     [
+      "Tierra Madre Lager",
+      "4.5 % ABV Thirst-quenching, crisp & snappy are all adjectives that come to mind when drinking this fresh, light Mexican-style lager.",
+      550
+     ],
+     [
+      "Can Love Hazy IPA",
+      "",
+      900
+     ]
+    ]
+   },
+   {
+    "name": "Canned Local Wine",
+    "items": [
+     [
+      "Una-Lou Rose",
+      "Vibrant, with just-ripened fruit, white nectarine, and orange blossom.",
+      1600
+     ],
+     [
+      "Broc Love Red",
+      "This is a versatile wine perfect for all red wine loving friends.",
+      1600
+     ],
+     [
+      "Broc Love White",
+      "Tasting Notes: Kaffir lime & orange peel on the nose. Key lime, grapefruit, honey blossom & sea salt on the palate.",
+      1600
+     ]
+    ]
+   }
+  ],
+  "address": "499 9th St, Oakland, CA 94607",
+  "phone": "(510) 626-9960",
+  "email": "oakland@squarepieguys.com",
+  "hours": "Sun–Thu 11:30am–9:30pm, Fri–Sat 11:30am–10:30pm",
+  "site": "https://www.squarepieguys.com/",
+  "siteCta": "Order from Oakland",
+  "orderUrl": "https://www.squarepieguys.com/order/oakland",
+  "instagram": "squarepieguys",
+  "menuNote": "Prices from their Oakland online ordering menu; food prices are the same at all six shops, only the canned beer differs.",
+  "siteNote": "All pizzas come with a cheddar cheese edge and mozzarella. Any pie can be made dairy free for $2 more or gluten free for $3 more; they decline other add-ons, modifications and swaps, and are not a certified gluten-free kitchen.",
+  "panels": [
+   {
+    "head": "Their shops",
+    "body": [
+     "Oakland (Old Oakland): 499 9th St, Oakland, CA 94607, (510) 626-9960. Sun–Thu 11:30am–9:30pm, Fri–Sat 11:30am–10:30pm",
+     "SoMa: 1077 Mission St, San Francisco, CA 94103, (415) 872-9290. Sun–Thu 11:30am–9:30pm, Fri–Sat 11:30am–10:30pm",
+     "Ghirardelli Square: 845 Beach St, San Francisco, CA 94109, (415) 890-2335. Sun–Thu 11:30am–9:30pm, Fri–Sat 11:30am–10:30pm",
+     "Walnut Creek: 1991 N California Blvd, Walnut Creek, CA 94596, (925) 378-5862. Daily 11:30am–9pm",
+     "Campbell: 501 E Campbell Ave, Campbell, CA 95008, (408) 409-5955. Daily 11:30am–9pm",
+     "Palo Alto: 369 California Ave, Palo Alto, CA 94306, (650) 285-2002. Daily 11:30am–9pm"
+    ],
+    "links": [
+     {
+      "label": "Order from Oakland",
+      "href": "https://www.squarepieguys.com/order/oakland"
+     },
+     {
+      "label": "Order from SoMa",
+      "href": "https://www.squarepieguys.com/order/soma"
+     },
+     {
+      "label": "Order from Ghirardelli Square",
+      "href": "https://www.squarepieguys.com/order/ghirardelli-square"
+     },
+     {
+      "label": "Order from Walnut Creek",
+      "href": "https://www.squarepieguys.com/order/walnut-creek"
+     },
+     {
+      "label": "Order from Campbell",
+      "href": "https://www.squarepieguys.com/order/campbell"
+     },
+     {
+      "label": "Order from Palo Alto",
+      "href": "https://www.squarepieguys.com/order/palo-alto"
+     }
+    ]
+   }
+  ],
+  "clip": {
+   "src": "/clips/square-pie-guys.mp4",
+   "poster": "/clips/square-pie-guys-poster.webp",
+   "href": "https://www.instagram.com/reel/DeikmKLTGkv/",
+   "credit": "Filmed by @stunnaman02",
+   "platform": "Instagram",
+   "by": "stunnaman02"
+  }
+ },
+ "placements": [
+  "beasty-goods2-82",
+  "oakland-goods2-36"
+ ],
+ "glenn": "27 Oct 7:34 pm: screenshots of squarepieguys.com and Instagram @squarepieguys (verified, 'Detroit 🍕 in The Bay', 126K followers, 'SF, Oakland, Walnut Creek, Campbell, Palo Alto'), 'Multiple locations / BEASTY • Eats'.",
+ "flags": [
+  "70 items from the Oakland ordering menu, their own names and wording kept; the repeated ordering notes ('we respectfully decline add-on requests...', gluten-free disclaimer, slice counts) were cut from descriptions and summed up in siteNote. The 'Crowd favorites' strip repeats four items and was left out.",
+  "Their Oakland ordering page lists 'Canned Local Beer - All' twice (5 items, then the same minus Can Love Hazy IPA); kept once.",
+  "Canned beer differs by shop: SoMa and Ghirardelli have Kolsch $7 and Golden State Cider $9; Walnut Creek has Sincere Cider $9; Palo Alto only Can Love Hazy IPA $9; Campbell has no beer, only the canned wine. Everything else is identical at all six.",
+  "Hoptonic Green Tea and Hoptonic Earl Grey show '$5.00+' on the ordering page but $0 in its data; $5.00 used.",
+  "Six shops on their site, matching Glenn's screenshots; all hours and phones match. The Oakland page adds '(on Dr. Huey P. Newton Way)'.",
+  "Shop emails (their site capitalises them): oakland@, soma@, thesquare@ (Ghirardelli), walnutcreek@, campbell@, paloalto@squarepieguys.com. Only Oakland's is in facts.email.",
+  "Color #1630FF is the blue in their logo and ordering-site theme.",
+  "Instagram not opened; the follower count and bio are from Glenn's screenshot."
+ ]
+}

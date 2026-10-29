@@ -6634,8 +6634,12 @@ export const LOCAL_SEED: LocalSeed[] = [
     /* A dessert counter serving crepes and pancakes to order is not the Bakery
        seat and the Ice cream one is Milky Flakes'. Yellow sheet. */
     category: 'Dessert shop',
-    phone: '(925) 999-6394',
+    /* (925) 401-5016 is the number on their Instagram's Contact button in Glenn's screenshot of
+       27 Oct 2026; the page had (925) 999-6394 since September. */
+    phone: '(925) 401-5016',
     address: '1512 Sunnyvale Ave, Walnut Creek, CA 94597',
+    /* Glenn, 2026-10-27, 10:29 pm: "Watch this video clip", their own reel. */
+    clip: { src: '/clips/the-sweet-spot.mp4', poster: '/clips/the-sweet-spot-poster.webp', href: 'https://www.instagram.com/reel/De2eTakJcwz/', credit: 'Posted by @thesweetspotwc', platform: 'Instagram' },
     site: 'https://thesweetspotwc.square.site/',
     /* "Walnut Creek • Goods. Needs a proper website", 2026-09-15, with the
        same Square link. Their only site is the Square Online ordering page,
@@ -7565,6 +7569,9 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'brunch-and-bloom',
+    /* Glenn, 2026-10-27, 8:29 pm: "Please update icon and add clip", with their profile picture. */
+    icon: 'brunch-and-bloom',
+    clip: { src: '/clips/brunch-and-bloom.mp4', poster: '/clips/brunch-and-bloom-poster.webp', href: 'https://www.instagram.com/reel/De4jwJIT1yf/', credit: 'Posted by @brunchandbloomcafe', platform: 'Instagram' },
     hours: 'Every day 8am–3pm',
     /* An ampersand, which is how they write it everywhere. His note said "and". */
     name: 'Brunch & Bloom',
@@ -47352,5 +47359,3187 @@ export const LOCAL_SEED: LocalSeed[] = [
           "credit": "Posted by @jaythecheesecakequeen",
           "platform": "Instagram"
       }
+  },
+  /* BATCH 73, 2026-10-28: Glenn's sends of 27 Oct 5:55 pm-10:51 pm. Sources: research/roster/b73/. */
+  {
+      "slug": "epic-steak",
+      "name": "EPIC Steak",
+      "label": "EPIC Steak",
+      "cuisine": "Waterfront American steakhouse",
+      "tagline": "A steakhouse on The Embarcadero with Bay Bridge views, serving prime and dry-aged steaks, seafood and a weekend brunch.",
+      "color": "#550002",
+      "icon": "epic-steak",
+      "prep": 0,
+      "category": "Steakhouse",
+      "items": [],
+      "sections": [
+          {
+              "name": "Starters & raw bar",
+              "items": [
+                  [
+                      "Burrata Pugliese",
+                      "Pears, grapes, smoked prosciutto, olio nuovo & aged balsamic.",
+                      2600
+                  ],
+                  [
+                      "Beef Tartare",
+                      "Quail egg, caper berries, radish & wagyu fat potato chips.",
+                      2400
+                  ],
+                  [
+                      "Dungeness Crab Cakes",
+                      "Smoked trout roe beurre blanc, frilly mustard green & burnt orange remoulade.",
+                      4200
+                  ],
+                  [
+                      "Garlic Shrimp",
+                      "Cognac & brioche.",
+                      2800
+                  ],
+                  [
+                      "Bread & Butter",
+                      "Acme sourdough & European style butter.",
+                      900
+                  ],
+                  [
+                      "Daily Pacific Oyster Selection",
+                      "Fire roasted onion mignonette & lemon. The smaller of two orders.",
+                      2400
+                  ],
+                  [
+                      "Daily Pacific Oyster Selection, larger order",
+                      "Fire roasted onion mignonette & lemon.",
+                      4600
+                  ],
+                  [
+                      "Shrimp Cocktail",
+                      "House cocktail sauce & lemon.",
+                      2800
+                  ],
+                  [
+                      "Yellowfin Tuna Poke",
+                      "Hawaiian ahi tuna, ogo seaweed & Korean chili aioli.",
+                      2600
+                  ],
+                  [
+                      "Seafood Platter",
+                      "12 oysters, 4 oz Dungeness crab, 5 shrimp, tuna poke, ½ Maine lobster.",
+                      18500
+                  ]
+              ]
+          },
+          {
+              "name": "Soup & salad",
+              "items": [
+                  [
+                      "EPIC Caesar",
+                      "Petite romaine hearts, parmesan & levain croutons.",
+                      1800
+                  ],
+                  [
+                      "Baby Mixed Greens",
+                      "Radish, shallots, fines herbes, pumpkin seeds & champagne vinaigrette.",
+                      1600
+                  ],
+                  [
+                      "Baby Iceberg Wedge Salad",
+                      "Cherry tomatoes, smoked bacon, blue cheese & buttermilk dressing.",
+                      1800
+                  ],
+                  [
+                      "Roasted Butternut Squash Soup",
+                      "Toasted pumpkin seeds, crème fraîche & sage.",
+                      1600
+                  ]
+              ]
+          },
+          {
+              "name": "Land & sea",
+              "items": [
+                  [
+                      "Grilled Eggplant Steak",
+                      "Chanterelle mushrooms, tomato jam & basil pistou.",
+                      2900
+                  ],
+                  [
+                      "Roasted Alaskan Halibut",
+                      "Summer ratatouille, savoy spinach, tomato vinaigrette & olive tapenade.",
+                      4800
+                  ],
+                  [
+                      "Grilled Bone-In Pork Chop",
+                      "Honeynut squash purée, radicchio, red grape relish & truffle bordelaise.",
+                      4500
+                  ],
+                  [
+                      "Braised Prime Short Rib",
+                      "Saffron risotto, crispy leeks & pickled pearl onions.",
+                      5500
+                  ],
+                  [
+                      "Prime Rib, 14 oz",
+                      "Sunday & Monday from 4pm, until they run out.",
+                      6400
+                  ],
+                  [
+                      "Steak Frites",
+                      "Grilled Flannery beef flat iron steak, french fries & tarragon béarnaise; includes a glass of Hamel Cabernet Sauvignon.",
+                      4500
+                  ],
+                  [
+                      "Epic Burger",
+                      "10 oz wagyu blend, smoked bacon, Humboldt organic cheddar, secret sauce, house-made bun & french fries.",
+                      2600
+                  ]
+              ]
+          },
+          {
+              "name": "Steaks",
+              "items": [
+                  [
+                      "The Best Damn Filet, 6 oz",
+                      "Filet mignon, Schmitz Ranch, California. Hardwood grilled, with chimichurri and EPIC steak sauce.",
+                      5900
+                  ],
+                  [
+                      "The Best Damn Filet, 9 oz",
+                      "Filet mignon, Schmitz Ranch, California.",
+                      6900
+                  ],
+                  [
+                      "New York Steak, 14 oz",
+                      "USDA Prime, S.F. butcher Bryan Flannery.",
+                      6800
+                  ],
+                  [
+                      "Ribeye Steak, 14 oz",
+                      "USDA Prime, S.F. butcher Bryan Flannery.",
+                      7400
+                  ],
+                  [
+                      "Porterhouse, 28 oz",
+                      "28-day dry aged, grass-fed, grain finished, Olivier's Butchery.",
+                      12500
+                  ],
+                  [
+                      "A5 Wagyu Striploin, 4 oz",
+                      "Kumamoto, Japan.",
+                      9500
+                  ],
+                  [
+                      "A5 Wagyu Striploin, 8 oz",
+                      "Kumamoto, Japan.",
+                      19000
+                  ],
+                  [
+                      "Tomahawk Ribeye, 38 oz",
+                      "45-day dry-aged, grass-fed, grain-finished, Olivier's Butchery.",
+                      19000
+                  ],
+                  [
+                      "All in",
+                      "Add to any steak: soup or salad, one side dish and dessert.",
+                      3900
+                  ]
+              ]
+          },
+          {
+              "name": "Add something epic",
+              "items": [
+                  [
+                      "Buttered Dungeness Crab",
+                      "",
+                      2400
+                  ],
+                  [
+                      "Maine Lobster",
+                      "The smaller of two sizes.",
+                      4600
+                  ],
+                  [
+                      "Maine Lobster, larger",
+                      "",
+                      9400
+                  ],
+                  [
+                      "Horseradish Cream",
+                      "",
+                      600
+                  ],
+                  [
+                      "Tarragon Béarnaise",
+                      "",
+                      600
+                  ],
+                  [
+                      "Blue Cheese",
+                      "",
+                      800
+                  ],
+                  [
+                      "Truffle Miso Butter",
+                      "",
+                      800
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "French Fries",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Make 'em EPIC truffled",
+                      "Add to the fries.",
+                      500
+                  ],
+                  [
+                      "Blue Lake Beans",
+                      "Romesco sauce & crispy onions.",
+                      1500
+                  ],
+                  [
+                      "Yukon Gold Potato Purée",
+                      "Chives & olive oil.",
+                      1500
+                  ],
+                  [
+                      "Julia Child's Potatoes",
+                      "Gruyère, white wine & cream.",
+                      1500
+                  ],
+                  [
+                      "Black Truffle Mac N Cheese",
+                      "Taleggio cheese & summer truffles.",
+                      1500
+                  ],
+                  [
+                      "Sautéed Chef's Mix Mushrooms",
+                      "Garlic confit, thyme & sherry.",
+                      1500
+                  ],
+                  [
+                      "Rainbow Carrots",
+                      "Olive relish, feta mousse & Pedro Ximénez gastrique.",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "Brunch",
+              "items": [
+                  [
+                      "House-Made Biscuits",
+                      "Whipped butter & seasonal preserves. Saturday & Sunday 11:30am–2:30pm, with the steaks and raw bar.",
+                      1000
+                  ],
+                  [
+                      "Caviar Service",
+                      "½ oz Tsar Nicoulai classic caviar & accoutrements.",
+                      4000
+                  ],
+                  [
+                      "Seasonal Fruit",
+                      "Greek yogurt, orange blossom honey & wild oat granola.",
+                      1600
+                  ],
+                  [
+                      "Shrimp & Grits",
+                      "Jumbo shrimp, Anson Mills grits, chorizo & creole sauce.",
+                      2800
+                  ],
+                  [
+                      "Dungeness Crab & Bay Shrimp Louie",
+                      "Russian dressing, soft boiled egg, Spanish olives & sourdough garlic toast.",
+                      2900
+                  ],
+                  [
+                      "Grilled Chicken Salad",
+                      "Roasted beets, arugula, radicchio & citrus vinaigrette.",
+                      2500
+                  ],
+                  [
+                      "Lox and Bagel Plate",
+                      "Meyer lemon, crème fraîche, capers, red onions & a house-made everything bagel.",
+                      2400
+                  ],
+                  [
+                      "Chilaquiles Rojo",
+                      "Shredded beef, guajillo chile, lime crema & queso fresco.",
+                      2300
+                  ],
+                  [
+                      "Corned Beef Succotash",
+                      "House-cured corned beef, roasted butternut squash, potatoes, piquillo peppers & sunny side up eggs.",
+                      2400
+                  ],
+                  [
+                      "EPIC Scramble",
+                      "Three eggs, roasted mushrooms, spinach & goat cheese.",
+                      2100
+                  ],
+                  [
+                      "Brioche French Toast",
+                      "Pear compote, chantilly cream & spiced streusel.",
+                      2100
+                  ],
+                  [
+                      "Crab Cake Benedict",
+                      "Poached eggs & sauce choron.",
+                      3200
+                  ],
+                  [
+                      "Steak & Eggs",
+                      "8 oz Flannery beef flat iron steak, two eggs & country potatoes.",
+                      3600
+                  ],
+                  [
+                      "The Classic BBQ Platter",
+                      "Smoked baby back ribs, 20-hour smoked brisket & cheddar hot link, BBQ sauce, cole slaw, Texas toast & pickles. Add pulled pork or smoked chicken +$9.",
+                      2900
+                  ],
+                  [
+                      "Epic French Dip",
+                      "Slow roasted prime rib, taleggio cheese, Dijon aioli, French roll & au jus.",
+                      2800
+                  ],
+                  [
+                      "Delta Asparagus",
+                      "Meyer lemon & green garlic aioli.",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "Happy hour",
+              "items": [
+                  [
+                      "Bucket of Fried Chicken",
+                      "Monday to Friday 4–6pm, not holidays.",
+                      1000
+                  ],
+                  [
+                      "Wagyu Cheeseburger & Fries",
+                      "Make it a double +$5.",
+                      1200
+                  ],
+                  [
+                      "Pacific Oysters",
+                      "Each.",
+                      200
+                  ],
+                  [
+                      "Ahi Poke Cones",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Beef Tartare Gougères",
+                      "",
+                      900
+                  ],
+                  [
+                      "Artichoke Dip",
+                      "",
+                      900
+                  ],
+                  [
+                      "Mini Dungeness Crab Cakes",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Chimichurri Steak Skewers",
+                      "",
+                      900
+                  ],
+                  [
+                      "Pulled Pork Sliders",
+                      "",
+                      900
+                  ],
+                  [
+                      "Truffle-Parm Fries",
+                      "",
+                      900
+                  ]
+              ]
+          },
+          {
+              "name": "Dessert",
+              "items": [
+                  [
+                      "Fall Flan",
+                      "Custard, red wine poached pears & orange.",
+                      1600
+                  ],
+                  [
+                      "S'mores Cake",
+                      "Chocolate ganache, graham crust & roasted marshmallow ice cream.",
+                      1600
+                  ],
+                  [
+                      "Carrot Cake",
+                      "White chocolate cheesecake, candied pecans & poached pineapple.",
+                      1600
+                  ],
+                  [
+                      "Apple Pie Sundae",
+                      "Apple compote, spiced streusel & pie crust.",
+                      1600
+                  ],
+                  [
+                      "Straus Creamery Vanilla Soft Serve Ice Cream",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Seasonal Housemade Sorbet",
+                      "",
+                      1600
+                  ]
+              ]
+          },
+          {
+              "name": "Kids",
+              "items": [
+                  [
+                      "Mini Epic Cheese Burger",
+                      "Ten and under. Pickles on the side, ketchup & french fries.",
+                      1200
+                  ],
+                  [
+                      "Chicken Tenders",
+                      "French fries & ranch dressing.",
+                      1200
+                  ],
+                  [
+                      "Grilled Cheese",
+                      "White cheddar, french fries & marinara sauce.",
+                      1200
+                  ],
+                  [
+                      "Mac & Cheese",
+                      "",
+                      1200
+                  ]
+              ]
+          }
+      ],
+      "address": "369 The Embarcadero, San Francisco, CA 94105",
+      "phone": "(415) 369-9955",
+      "site": "https://www.epicsteak.com/",
+      "siteCta": "Reserve on their site",
+      "instagram": "epicsteak",
+      "hours": "Mon–Thu 4pm–9pm, Fri 4pm–9:30pm, Sat 11:30am–9:30pm, Sun 11:30am–9pm",
+      "email": "reservations@epicsteak.com",
+      "quoteOnly": "A sit-down steakhouse: these are their published menu prices, so nothing is ordered here. Book a table on their site or call.",
+      "menuNote": "Prices from the menus on their own website; drinks and wine are not listed here.",
+      "siteNote": "Brunch is Saturday and Sunday 11:30am–2:30pm; happy hour Monday to Friday 4–6pm, not holidays. No valet: metered street parking, Hills Plaza Garage on Folsom, or SpotHero. Corkage is $35 a bottle (four at most) and cake is $5 a guest. Their sister restaurant Waterbar is next door.",
+      "clip": {
+          "src": "/clips/epic-steak.mp4",
+          "poster": "/clips/epic-steak-poster.webp",
+          "href": "https://www.instagram.com/reel/Cv5AXy7g0ma/",
+          "credit": "Posted by @epicsteak",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "garlic-high-sunnyvale",
+      "name": "Garlic High — Sunnyvale",
+      "label": "Garlic High",
+      "cuisine": "Jiro-style ramen & mazesoba",
+      "tagline": "A Jiro-style ramen shop on West Maude Avenue serving thick, curly noodles in pork bone broth under bean sprouts, cabbage, chashu and fresh garlic, plus brothless mazesoba.",
+      "color": "#FFD814",
+      "icon": "garlic-high-sunnyvale",
+      "prep": 0,
+      "category": "Jiro-style Ramen",
+      "items": [],
+      "sections": [
+          {
+              "name": "Ramen",
+              "items": [
+                  [
+                      "Small Ramen",
+                      "Dine-in. 150g noodles and 1 slice of chashu pork: thick, curly noodles in a rich pork bone broth, topped with bean sprouts, garlic and cabbage.",
+                      1800
+                  ],
+                  [
+                      "Medium Ramen",
+                      "Dine-in. 200g noodles and 2 slices of chashu pork, with bean sprouts, garlic and cabbage.",
+                      2400
+                  ],
+                  [
+                      "Large Ramen",
+                      "Dine-in. 300g noodles and 3 slices of chashu pork, with bean sprouts, garlic and cabbage.",
+                      3000
+                  ],
+                  [
+                      "To Go Ramen",
+                      "150g noodles and 1 slice of chashu pork in pork bone broth. Bean sprouts, garlic and umami fat come in separate containers; boil fresh noodles 7 minutes.",
+                      2000
+                  ]
+              ]
+          },
+          {
+              "name": "Mazesoba",
+              "items": [
+                  [
+                      "Small Mazesoba",
+                      "Dine-in. 150g noodles and 1 slice of chashu pork, with fried onion, fresh egg, bean sprouts, garlic and cabbage.",
+                      1800
+                  ],
+                  [
+                      "Medium Mazesoba",
+                      "Dine-in. 200g noodles and 2 slices of chashu pork, with fried onion, fresh egg, bean sprouts, garlic and cabbage.",
+                      2400
+                  ],
+                  [
+                      "Large Mazesoba",
+                      "Dine-in. 300g noodles and 3 slices of chashu pork, with fried onion, fresh egg, bean sprouts, garlic and cabbage.",
+                      3000
+                  ],
+                  [
+                      "To Go Mazesoba",
+                      "200g noodles, 1 slice of chashu pork and a poached egg. Bean sprouts, garlic and umami fat come in separate containers; boil fresh noodles 7 minutes.",
+                      2000
+                  ],
+                  [
+                      "Mala Tantan",
+                      "200g thick noodles in spicy sesame tantan sauce with sweet miso ground pork, egg yolk, cilantro and Kana chili mala oil. Contains peanut butter.",
+                      2000
+                  ]
+              ]
+          },
+          {
+              "name": "Mini Bowls",
+              "items": [
+                  [
+                      "Tantan Chashu Bowl",
+                      "",
+                      500
+                  ],
+                  [
+                      "Savage Chashu Bowl",
+                      "",
+                      500
+                  ]
+              ]
+          },
+          {
+              "name": "Extra Toppings",
+              "items": [
+                  [
+                      "AYCE Egg",
+                      "",
+                      600
+                  ],
+                  [
+                      "Chashu Pork",
+                      "",
+                      400
+                  ],
+                  [
+                      "Boiled Egg",
+                      "",
+                      300
+                  ],
+                  [
+                      "Quail Eggs",
+                      "",
+                      300
+                  ],
+                  [
+                      "Veg Bomb",
+                      "Dine-in.",
+                      300
+                  ],
+                  [
+                      "Noodles (100g)",
+                      "",
+                      300
+                  ],
+                  [
+                      "White Rice",
+                      "Dine-in.",
+                      300
+                  ],
+                  [
+                      "Poached Egg",
+                      "",
+                      200
+                  ],
+                  [
+                      "Raw Egg",
+                      "For dipping style.",
+                      200
+                  ],
+                  [
+                      "Umami Fat",
+                      "On the side.",
+                      200
+                  ],
+                  [
+                      "Cheese",
+                      "",
+                      200
+                  ],
+                  [
+                      "Fried Onion",
+                      "",
+                      200
+                  ],
+                  [
+                      "Mala Chili Oil",
+                      "",
+                      200
+                  ],
+                  [
+                      "Death Sauce",
+                      "",
+                      200
+                  ],
+                  [
+                      "Garlic",
+                      "",
+                      100
+                  ],
+                  [
+                      "Cilantro",
+                      "",
+                      100
+                  ],
+                  [
+                      "Chives Kimchi",
+                      "",
+                      50
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks & Dessert",
+              "items": [
+                  [
+                      "Coke",
+                      "",
+                      250
+                  ],
+                  [
+                      "Sprite",
+                      "",
+                      250
+                  ],
+                  [
+                      "Yuzu Soda",
+                      "",
+                      300
+                  ],
+                  [
+                      "Calpico",
+                      "Bottle.",
+                      300
+                  ],
+                  [
+                      "Green Tea",
+                      "Bottle.",
+                      300
+                  ],
+                  [
+                      "Jasmin Tea",
+                      "Bottle.",
+                      300
+                  ],
+                  [
+                      "Mugi Cha",
+                      "Bottle.",
+                      300
+                  ],
+                  [
+                      "Asahi Non Alcohol Beer",
+                      "",
+                      500
+                  ],
+                  [
+                      "Matcha Ice Cream",
+                      "",
+                      350
+                  ],
+                  [
+                      "Houjicha Ice Cream",
+                      "",
+                      350
+                  ],
+                  [
+                      "Lychee Sorbet",
+                      "",
+                      350
+                  ],
+                  [
+                      "Yuzu Sorbet",
+                      "",
+                      350
+                  ]
+              ]
+          },
+          {
+              "name": "T-Shirts",
+              "items": [
+                  [
+                      "\"LOGO\" T-Shirt",
+                      "Black, yellow or white; S to XL.",
+                      3000
+                  ]
+              ]
+          }
+      ],
+      "address": "107 W Maude Ave, Sunnyvale, CA 94085",
+      "phone": "(669) 899-7165",
+      "site": "https://www.garlic-high.com/",
+      "siteCta": "Order on their site",
+      "instagram": "garlic.high_sunnyvale",
+      "siteNote": "Small, medium and large bowls are dine-in; pickup and delivery orders get the To Go ramen or mazesoba. You pick veg, garlic and umami fat levels: max veg is $3 more, heavy or max garlic or umami fat 50¢ or $1. Their Instagram says to text the number.",
+      "hours": "Tue–Sun 11:30am–1:30pm & 5:30–8:30pm; Fri–Sat to 9pm; Sat–Sun lunch to 2pm; closed Mon",
+      "email": "garlic.high.ramen@gmail.com",
+      "clip": {
+          "src": "/clips/garlic-high-sunnyvale.mp4",
+          "poster": "/clips/garlic-high-sunnyvale-poster.webp",
+          "href": "https://www.instagram.com/reel/DW2mdUEBWzv/",
+          "credit": "Filmed by @kvbitesandgo",
+          "platform": "Instagram",
+          "by": "kvbitesandgo"
+      }
+  },
+  {
+      "slug": "tacos-oscar",
+      "name": "Tacos Oscar",
+      "label": "Tacos Oscar",
+      "cuisine": "Tacos, tostadas & breakfast burritos",
+      "tagline": "A taco shop in the alley at 420 40th St in Oakland, with weekend brunch, and a second kitchen inside Woods Lowside on Haight Street in San Francisco.",
+      "color": "#00CCFF",
+      "icon": "tacos-oscar",
+      "prep": 0,
+      "category": "Tacos",
+      "items": [],
+      "sections": [
+          {
+              "name": "Dinner",
+              "items": [
+                  [
+                      "Tostada de Frijoles",
+                      "Italian butter beans, avocado crema, Jalapeño vinaigrette, Thai basil, radish. Contains dairy.",
+                      1300
+                  ],
+                  [
+                      "Taco de Barbacoa",
+                      "Banana leaf & chile-braised beef shoulder, roasted tomatillo salsa, cilantro, onion",
+                      550
+                  ],
+                  [
+                      "Pork Chile Verde Taco",
+                      "Tomatillo-braised pork shoulder, guacasalsa, cilantro, onion, polvo de chicharrón",
+                      550
+                  ],
+                  [
+                      "Charred Broccoli Taco",
+                      "Charred broccoli, peanut-arbol salsa, pickled onion, cilantro. Vegan; contains peanuts.",
+                      500
+                  ],
+                  [
+                      "Tinga de Pollo Taco",
+                      "Chile-braised chicken thigh, guacasalsa, pickled onion, cilantro",
+                      500
+                  ],
+                  [
+                      "Taco de Hongos",
+                      "Taco-spiced mushrooms, cabbage-mint slaw, chile verde cashew crema, onion, cilantro, serrano. Vegan; contains nuts.",
+                      550
+                  ],
+                  [
+                      "Chips y Salsa Morita (4oz.)",
+                      "",
+                      500
+                  ],
+                  [
+                      "Fermented Habanero Hot Sauce (2oz.)",
+                      "",
+                      200
+                  ]
+              ]
+          },
+          {
+              "name": "Brunch",
+              "items": [
+                  [
+                      "Barbacoa Scramble Breakfast Burrito",
+                      "Beef barbacoa scramble, Mayocoba beans, Tillamook cheddar, roasted tomatillo-jalapeño salsa, onion, cilantro in a flour tortilla",
+                      1600
+                  ],
+                  [
+                      "Vegan Breakfast Burrito",
+                      "Pan fried potatoes, sautéed peppers & onions, Mayocoba beans, chile morita mayonesa, avocado, onion, cilantro in a flour tortilla. Vegan; contains soy.",
+                      1500
+                  ],
+                  [
+                      "Taco de Huevo",
+                      "Fried egg, salsa macha, Tillamook cheddar, pickled onion, cilantro. Contains pumpkin, sunflower and sesame seeds.",
+                      600
+                  ],
+                  [
+                      "Charred Broccoli Taco",
+                      "Charred broccoli, peanut-arbol salsa, pickled onion, cilantro. Vegan; contains peanuts.",
+                      500
+                  ],
+                  [
+                      "Barbacoa Scramble Taco",
+                      "Beef barbacoa scramble, roasted tomatillo-jalapeño salsa, onion, cilantro",
+                      650
+                  ],
+                  [
+                      "Bean & Cheese Taco",
+                      "Puréed Mayocoba beans, Tillamook cheddar, roasted tomatillo-jalapeño salsa, onion, cilantro",
+                      600
+                  ],
+                  [
+                      "Chips y Salsa Morita (4oz.)",
+                      "",
+                      500
+                  ],
+                  [
+                      "Fermented Habanero Hot Sauce (2oz.)",
+                      "",
+                      200
+                  ]
+              ]
+          },
+          {
+              "name": "Beers Y Mas",
+              "items": [
+                  [
+                      "Café de Olla",
+                      "At brunch.",
+                      400
+                  ],
+                  [
+                      "Michelada",
+                      "Spicy tomato juice, ice, beer. At brunch. Vegan; contains soy & wheat.",
+                      800
+                  ],
+                  [
+                      "Agua Fresca Del Dia",
+                      "",
+                      600
+                  ],
+                  [
+                      "East Brother Beer Co. Mexican Lager",
+                      "12oz. can",
+                      500
+                  ],
+                  [
+                      "Temescal Brewing “Lucky Cat” Rice Lager",
+                      "12oz. can",
+                      600
+                  ],
+                  [
+                      "Far West Cider “You Guava Be Kidding Me”",
+                      "12 oz. can",
+                      800
+                  ],
+                  [
+                      "East Brother Blonde Ale",
+                      "16 oz. can",
+                      800
+                  ],
+                  [
+                      "Ysidro Grapefruit & Sea Salt Sake Spritz",
+                      "8.4 oz. can",
+                      900
+                  ],
+                  [
+                      "Gulp Hablo Orange Wine",
+                      "250ml",
+                      1200
+                  ],
+                  [
+                      "Gulp Hablo “Fresco” Chilled Red Wine",
+                      "250ml",
+                      1200
+                  ],
+                  [
+                      "Best Day Brewing N/A Kölsch",
+                      "12oz. can",
+                      600
+                  ],
+                  [
+                      "Mexican Coke",
+                      "12oz. Btl.",
+                      400
+                  ],
+                  [
+                      "Mexican Squirt",
+                      "12oz. Btl.",
+                      400
+                  ],
+                  [
+                      "Jarritos Mineragua Mineral Water",
+                      "12oz. Btl.",
+                      400
+                  ]
+              ]
+          },
+          {
+              "name": "San Francisco dinner (530 Haight St)",
+              "items": [
+                  [
+                      "DOS TOSTADAS!!!",
+                      "Your choice of chicken tinga or pork chile verde OR one of each with Mayocoba beans, shredduce, roasted tomatillo salsa, dill-jalapeño crema, queso cotija, pickled onion, cilantro",
+                      1500
+                  ],
+                  [
+                      "Fried Huevo Taco",
+                      "Fried egg, mayocoba beans, salsa macha, queso cotija, pickled onion, cilantro. Contains pumpkin, sunflower and sesame seeds.",
+                      700
+                  ],
+                  [
+                      "Pork Chile Verde Taco",
+                      "Tomatillo-braised pork shoulder, guacasalsa, cilantro, onion, polvo de chicharrón",
+                      550
+                  ],
+                  [
+                      "Double Decker",
+                      "Mayocoba bean & jack cheese quesadilla stuffed with a tostada and topped with roasted tomatillo salsa, queso cotija, pickled onion, cilantro. Add chicken tinga or pork chile verde +$5.",
+                      900
+                  ],
+                  [
+                      "Charred Broccoli Taco",
+                      "Featuring Mama Lam’s Malaysian peanut satay paste, pickled onion, cilantro. Vegan; contains peanut & candlenut. 50% of proceeds go to No Immigrants, No Spice!",
+                      500
+                  ],
+                  [
+                      "Tinga de Pollo Taco",
+                      "Chile-braised chicken thigh, guacasalsa, pickled onion, cilantro",
+                      500
+                  ],
+                  [
+                      "Guacamole, Roasted Tomatillo Salsa y Chips",
+                      "",
+                      1400
+                  ]
+              ]
+          }
+      ],
+      "address": "420 40th St, Oakland, CA 94609",
+      "phone": "(719) 266-2837",
+      "email": "tacososcar@gmail.com",
+      "hours": "Sun, Mon & Thu 5–9pm; Fri–Sat 5–9:30pm; brunch Sat–Sun 11am–2pm; closed Tue & Wed",
+      "site": "https://www.tacososcar.com/",
+      "siteCta": "Open their site",
+      "instagram": "tacososcar",
+      "menuNote": "Prices from the Oakland dinner and brunch menus and the SF dinner menu on their own site. Brunch is Saturday and Sunday, 11am to 2pm, in Oakland.",
+      "siteNote": "A 1% Dining For Justice surcharge goes on every check to help feed houseless neighbors; ask if you'd like to opt out. Kid-friendly, and dogs on a leash are welcome. The food is typically gluten-free unless noted, with one or two vegan options. Brunch tacos are on La Palma flour tortillas, corn on request. The Oakland space can be bought out for up to 50 guests.",
+      "panels": [
+          {
+              "head": "Both shops",
+              "body": [
+                  "Oakland — 420 40th St, \"in the alley\": Sunday, Monday and Thursday 5pm to 9pm, Friday and Saturday 5pm to 9:30pm, brunch Saturday and Sunday 11am to 2pm.",
+                  "San Francisco — 530 Haight St, \"in the bar\" at Woods Lowside: tacos Monday and Thursday to Sunday, 5pm to 9pm, in-house or to go.",
+                  "Both closed Tuesdays and Wednesdays."
+              ],
+              "links": [
+                  {
+                      "label": "SF dinner menu",
+                      "href": "https://www.tacososcar.com/menu-2/"
+                  },
+                  {
+                      "label": "Woods Lowside",
+                      "href": "https://www.woodsbeer.com/lowside"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/tacos-oscar.mp4",
+          "poster": "/clips/tacos-oscar-poster.webp",
+          "href": "https://www.instagram.com/reel/DfBPV_UTQ7Q/",
+          "credit": "Filmed by @antoinetterzz",
+          "platform": "Instagram",
+          "by": "antoinetterzz"
+      }
+  },
+  {
+      "slug": "lunette-cambodia",
+      "name": "Lunette Cambodia",
+      "label": "Lunette",
+      "cuisine": "Cambodian noodles & rice",
+      "tagline": "Chef Nite Yun's Cambodian counter on the ground floor of the Ferry Building, from the Nyum Bai family, serving Khmer noodle soups, rice plates and snacks.",
+      "color": "#1E90B8",
+      "icon": "lunette-cambodia",
+      "prep": 0,
+      "category": "Cambodian",
+      "items": [],
+      "sections": [
+          {
+              "name": "Nyum Mee (Eat Noodles)",
+              "items": [
+                  [
+                      "K.T.P.P (kuy teav phnom penh)",
+                      "Rice noodles, shrimp, pork two ways, crispy garlic with oil, cilantro and scallions in 8-hour pork broth.",
+                      2100
+                  ],
+                  [
+                      "KTTP DRY",
+                      "Rice noodles, shrimp, pork three ways, crispy garlic, cilantro and scallions in a sweet soy dressing. Broth on the side.",
+                      2100
+                  ],
+                  [
+                      "LORT CHA",
+                      "Stir-fry pin noodles with pork and egg, or make it vegan with mushroom.",
+                      2100
+                  ]
+              ]
+          },
+          {
+              "name": "Nyum Bai (Eat Rice)",
+              "items": [
+                  [
+                      "Yellow Curi",
+                      "Madras curry, kroeung, coconut milk, crispy potatoes, tofu, sweet potatoes, eggplant; mild to spicy, with steamed jasmine rice.",
+                      2100
+                  ],
+                  [
+                      "Bai Cha",
+                      "Aromatic ginger rice with fried chicken fillet and pickled chili garlic sauce for dipping.",
+                      2100
+                  ],
+                  [
+                      "Lok Lak",
+                      "Wok-tossed beef, red onions and pea shoots with a lime dipping sauce. Served with jasmine rice.",
+                      2100
+                  ],
+                  [
+                      "Cha Kroeung",
+                      "Wok-fried chicken with herbs, lemongrass, galangal, shallots, makrut lime leaves and turmeric paste. Served with ginger rice; veggie option available.",
+                      2100
+                  ],
+                  [
+                      "Prahok Ktiss",
+                      "Minced pork belly simmered in house-made kroeung, coconut milk, prahok and dried California chile paste. Served with seasonal raw vegetables.",
+                      1800
+                  ]
+              ]
+          },
+          {
+              "name": "Snacks",
+              "items": [
+                  [
+                      "(KFC) Khmer Fried chicken",
+                      "Salt and Kampot pepper fried chicken.",
+                      1600
+                  ],
+                  [
+                      "Khmer Pickle",
+                      "Pickled green papaya, carrots, cucumbers, chili and garlic.",
+                      800
+                  ],
+                  [
+                      "Fish Cakes",
+                      "Cod and catfish fillet, house-made kroeung and yardlong beans, formed into balls and fried.",
+                      1600
+                  ],
+                  [
+                      "Side Rice",
+                      "",
+                      300
+                  ],
+                  [
+                      "Side Noodles",
+                      "",
+                      300
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Sparkling Agua",
+                      "",
+                      350
+                  ],
+                  [
+                      "Dram Cardamon & Black Tea Sparkling Water",
+                      "",
+                      450
+                  ],
+                  [
+                      "Coconut Water",
+                      "",
+                      700
+                  ]
+              ]
+          },
+          {
+              "name": "Take Home",
+              "items": [
+                  [
+                      "Hot Garlic Mild",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Hot Garlic OG",
+                      "",
+                      1600
+                  ]
+              ]
+          }
+      ],
+      "address": "Ferry Building, Floor 1, Suite 33/47, San Francisco, CA 94111",
+      "phone": "(510) 239-3755",
+      "site": "https://www.lunettecambodia.com/",
+      "orderUrl": "https://order.toasttab.com/online/lunette-cambodia-ferry-building-1-ferry-building-suite-33-47",
+      "siteCta": "Order online",
+      "instagram": "lunette_cambodia",
+      "email": "hi@nyumbai.com",
+      "hours": "Tue–Fri 11am–8pm, Sat 10am–7pm, Sun 11am–2:30pm, closed Mon",
+      "siteNote": "Prices are from their own Toast online ordering, linked from their website, for pickup. They are on the first floor of the Ferry Building.",
+      "clip": {
+          "src": "/clips/lunette-cambodia.mp4",
+          "poster": "/clips/lunette-cambodia-poster.webp",
+          "href": "https://www.instagram.com/reel/DfBSCCyTsMx/",
+          "credit": "Filmed by @thetastebud",
+          "platform": "Instagram",
+          "by": "thetastebud"
+      }
+  },
+  {
+      "slug": "square-pie-guys",
+      "name": "Square Pie Guys",
+      "label": "Square Pie Guys",
+      "cuisine": "Detroit-style pizza",
+      "tagline": "Detroit-style square pizzas with a cheddar cheese edge, plus wings, salads and sides, from six Bay Area shops in San Francisco, Oakland, Walnut Creek, Campbell and Palo Alto.",
+      "color": "#1630FF",
+      "icon": "square-pie-guys",
+      "prep": 0,
+      "category": "Pizza",
+      "items": [],
+      "sections": [
+          {
+              "name": "Lunch Size Pizzas",
+              "items": [
+                  [
+                      "Half Sausage & Peppers",
+                      "lunch size pizza - feeds one hungry pizza lover - red sauce, italian sausage, marinated red peppers, pickled jalapenos, finished with grana cheese",
+                      1297
+                  ],
+                  [
+                      "Half Regular Square",
+                      "comfortably feeds one hungry pizza lover - our plain cheese with basil: red sauce, fresh mozzarella, grated grana cheese",
+                      1297
+                  ],
+                  [
+                      "Half Pepperoni",
+                      "comfortably feeds one hungry pizza lover - our pepperoni: red sauce, 48 pepperonis",
+                      1297
+                  ],
+                  [
+                      "Half Spicy Pepperoni",
+                      "comfortably feeds one hungry pizza lover - vodka sauce, loaded with 48 cupping pepperonis, pickled jalapeños, spicy ranch.",
+                      1297
+                  ],
+                  [
+                      "Half The Big Von",
+                      "comfortably feeds one hungry pizza lover - white sauce, italian sausage, pepperoni, mike's hot honey 106.1's own Big Von has been a fan of Square Pie Guys since day one.",
+                      1297
+                  ],
+                  [
+                      "Half The Hawaiian",
+                      "comfortably feeds one hungry pizza lover - vodka sauce, pineapple, pickled jalapeños, cupping pepperonis, mozzarella, topped with grated grana cheese and scallions",
+                      1297
+                  ],
+                  [
+                      "Half Ellen Supreme",
+                      "Two Slices - vodka sauce, pepperoni, italian sausage, grilled red onions, marinated red peppers, and mushrooms",
+                      1297
+                  ],
+                  [
+                      "Half Mush-O-Roni",
+                      "two slices- red sauce, mushrooms, pepperoni, Mike's hot honey, grated grana cheese.",
+                      1297
+                  ],
+                  [
+                      "Half Plant Supreme",
+                      "two slices - mushrooms, sliced kalamata olives, marinated red peppers, sliced grilled red onions, grated grana cheese, red sauce, mozz, cheddar edge",
+                      1297
+                  ],
+                  [
+                      "Half How Mush-Room",
+                      "comfortably feeds one hungry pizza lover - white sauce, mushrooms, grated grana cheese",
+                      1297
+                  ],
+                  [
+                      "Half Lemon Pepper Pie",
+                      "two slices - lemon ricotta cream sauce, lemon pepper crispy chicken, ranch drizzle, and green onions. Inspired by your favorite Bay Area DJ - Big Von",
+                      1297
+                  ],
+                  [
+                      "Half Buffalo Chicken",
+                      "two slices - buffalo parm sauce, crispy buffalo chicken, ranch and buffalo sauce drizzle, and green onions. your tastebuds will thank you.",
+                      1297
+                  ]
+              ]
+          },
+          {
+              "name": "Pizzas",
+              "items": [
+                  [
+                      "Sausage & Peppers",
+                      "red sauce, italian sausage, marinated red peppers, pickled jalapenos, finished with grana cheese",
+                      2350
+                  ],
+                  [
+                      "Pepperoni",
+                      "comfortably feeds two people, or one hungry pizza lover - our pepperoni: red sauce, 48 pepperonis",
+                      2350
+                  ],
+                  [
+                      "Spicy Pepperoni",
+                      "comfortably feeds two people or one hungry pizza lover - vodka sauce, loaded with 48 cupping pepperonis, pickled jalapeños, spicy ranch.",
+                      2450
+                  ],
+                  [
+                      "Regular Square",
+                      "comfortably feeds two people or one hungry pizza lover - our plain cheese with basil: red sauce, fresh mozzarella, grated grana cheese",
+                      2000
+                  ],
+                  [
+                      "The Big Von",
+                      "comfortably feeds two people or one hungry pizza lover - white sauce, italian sausage, pepperoni, mike's hot honey 106.1's own Big Von has been a fan of Square Pie Guys since day one.",
+                      2450
+                  ],
+                  [
+                      "Ellen Supreme",
+                      "comfortably feeds two people or one hungry pizza lover - vodka sauce, pepperoni, italian sausage, grilled red onions, marinated red peppers, and mushrooms",
+                      2450
+                  ],
+                  [
+                      "Create Your Own",
+                      "choose 1 sauce, up to 2 finishes, and up to 4 toppings to build your custom square. You can select vegan cheese and gluten free dough as a substitute.",
+                      1950
+                  ],
+                  [
+                      "Buffalo Chicken",
+                      "comfortably feeds two people or one hungry pizza lover - buffalo parm sauce, crispy buffalo chicken, ranch and buffalo sauce drizzle, and green onions.",
+                      2350
+                  ],
+                  [
+                      "Lemon Pepper Pie",
+                      "THE BIGGER VON! - lemon ricotta cream sauce, lemon pepper crispy chicken, ranch drizzle, and green onions. Inspired by your favorite Bay Area DJ - Big Von",
+                      2350
+                  ],
+                  [
+                      "The Hawaiian",
+                      "comfortably feeds two people or one hungry pizza lover - vodka sauce, pineapple, pickled jalapeños, cupping pepperonis, mozzarella, topped with grated grana cheese and scallions",
+                      2450
+                  ],
+                  [
+                      "Mush-O-Roni",
+                      "comfortably feeds two people or one hungry pizza lover - red sauce, mushrooms, pepperoni, Mike's hot honey, grated grana cheese.",
+                      2400
+                  ],
+                  [
+                      "How Mush-Room",
+                      "comfortably feeds two people or one hungry pizza lover - white sauce, mushrooms, grated grana cheese",
+                      2300
+                  ],
+                  [
+                      "Plant Supreme",
+                      "comfortably feeds two people or one hungry pizza lover - mushrooms, sliced kalamata olives, marinated red peppers, sliced grilled red onions, grated grana cheese, red sauce, mozz, cheddar edge",
+                      2350
+                  ]
+              ]
+          },
+          {
+              "name": "Wings and Sides",
+              "items": [
+                  [
+                      "Crispy Brussels",
+                      "california brussels sprouts, halved then cooked till crispy, tossed in our house szechuan dry rub, served with our cilantro lime crema",
+                      1300
+                  ],
+                  [
+                      "Garlic Cheesy Bread",
+                      "Cheesy bread with chopped garlic and garlic oil",
+                      1100
+                  ],
+                  [
+                      "Cheesy Bread",
+                      "comes with a side of red sauce",
+                      900
+                  ],
+                  [
+                      "Hot Honey Buffalo Wings",
+                      "six all natural jumbo hot honey buffalo chicken wings, with scallions and carrot sticks and choice of blue cheese or ranch (GF)",
+                      1500
+                  ],
+                  [
+                      "Szechuan Wings",
+                      "house Szechuan dry fried, green onions, with cilantro lime crema",
+                      1500
+                  ],
+                  [
+                      "Buffalo Wings",
+                      "classic buffalo, carrot sticks, choice of blue cheese or ranch",
+                      1500
+                  ],
+                  [
+                      "Lemon Pepper Wings",
+                      "lemon pepper seasoning, green onions, carrot sticks, ranch",
+                      1500
+                  ],
+                  [
+                      "Plain Wings",
+                      "six all natural jumbo wings, extra crispy, scallions with carrot sticks and ranch (GF)",
+                      1500
+                  ],
+                  [
+                      "Fries",
+                      "with a side of ketchup",
+                      650
+                  ],
+                  [
+                      "Garlic Fries",
+                      "crispy golden fries tossed in chopped garlic, and shredded grana served with ketchup",
+                      750
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "House Salad",
+                      "a bed of romaine lettuce, carrots, tomatoes, brioche croutons, green onions, with grated grana cheese and red wine vinaigrette",
+                      1150
+                  ],
+                  [
+                      "Kale Caesar",
+                      "kale & romaine, cherry tomato, brioche crouton, grated grana cheese, with green goddess dressing (contains anchovies)",
+                      1300
+                  ],
+                  [
+                      "Chilled Bowl Salad",
+                      "kale & romaine, shaved brussels sprouts, cherry tomato, spicy sunflower seeds, marinated garbanzo beans, with tomato garlic vinaigrette",
+                      1400
+                  ]
+              ]
+          },
+          {
+              "name": "Dippin' Sauce",
+              "items": [
+                  [
+                      "Ranch",
+                      "our house made ranch, some call it a bit sour, we call it lime and citrus foward, it's the classic companion to those pepperoni cups",
+                      140
+                  ],
+                  [
+                      "Spicy Ranch",
+                      "the calabrian chili infused sibling to our house made ranch! try it, its hot ;)",
+                      140
+                  ],
+                  [
+                      "Cilantro Lime Crema",
+                      "some people love it, some people hate it, it's a cilantro based dipping sauce, pairs well with our wings and sprouts",
+                      140
+                  ],
+                  [
+                      "Red Sauce",
+                      "big cup of our house red sauce",
+                      300
+                  ],
+                  [
+                      "Green Goddess Dressing",
+                      "bright, herby, creamy, currently resides on our caesar salad or your favorite slice. Dressing contains anchovies",
+                      140
+                  ],
+                  [
+                      "Tomato Garlic Vinaigrette",
+                      "tart, umami vinaigrette that’s perfect for dippin’ even if you’re vegan",
+                      140
+                  ],
+                  [
+                      "Mike's Hot Honey",
+                      "sweet and spicy a chili infused honey",
+                      140
+                  ],
+                  [
+                      "Blue Cheese",
+                      "some people love it some people hate it, we make ours fresh in house and we love it on wings and even a pepperoni slice",
+                      140
+                  ],
+                  [
+                      "Red Wine Vinaigrette",
+                      "an awesome vin, made with red wine vinegar and used on our chopped salad, this dressing will be tangy, punchy, and fruity.",
+                      140
+                  ],
+                  [
+                      "Buffalo Sauce",
+                      "our house made wing sauce, it's what you know and love and absolutely contains franks red hot plus a proprietary mix of SPG spices",
+                      400
+                  ],
+                  [
+                      "BBQ Sauce",
+                      "",
+                      140
+                  ],
+                  [
+                      "Alabama Sauce",
+                      "",
+                      140
+                  ]
+              ]
+          },
+          {
+              "name": "Desserts",
+              "items": [
+                  [
+                      "Square Brownie",
+                      "chocolate brownie warmed in our oven drizzled with white chocolate sauce and chocolate sprinkles",
+                      1200
+                  ],
+                  [
+                      "Square Cookie (GF)",
+                      "freshly baked chocolate chip cookie with white chocolate sauce and chocolate sprinkles topped with a sprinkle of flaky Maldon salt",
+                      900
+                  ]
+              ]
+          },
+          {
+              "name": "Soft Drinks",
+              "items": [
+                  [
+                      "Alameda Cola",
+                      "a well balanced cola with hints of vanilla, chicory room, caramel, and nutmeg.",
+                      397
+                  ],
+                  [
+                      "Alameda Diet Cola",
+                      "a well balanced cola with hints of vanilla, chicory root, caramel and nutmeg",
+                      397
+                  ],
+                  [
+                      "Alameda Rootbeer",
+                      "smooth and creamy, full-barrel flavor tastes of vanilla, anise, sarsaparilla, birch-bark and licorice root",
+                      397
+                  ],
+                  [
+                      "Alameda Cream Soda",
+                      "a taste of rich, creamy, vanilla flavors",
+                      397
+                  ],
+                  [
+                      "Harney & Sons Lemonade",
+                      "",
+                      500
+                  ],
+                  [
+                      "Harney & Sons Apple Juice",
+                      "Enjoy the crisp, succulent taste of nature's gifts without a visit to the orchard. (16 oz bottle)",
+                      500
+                  ],
+                  [
+                      "Saratoga",
+                      "Saratoga® still water has a clean flavor profile, with a refreshing aftertaste.",
+                      400
+                  ],
+                  [
+                      "Hoptonic Green Tea",
+                      "Hoptonic sparkling green tea combines uniquely sourced whole jasmine flowers and green tea grown in the high elevations of the Yunnan province.",
+                      500
+                  ],
+                  [
+                      "Hoptonic Earl Grey",
+                      "This sparkling tea is comprised of French Earl Grey tea containing organic rose petals sourced from a high elevation farm in Poland.",
+                      500
+                  ],
+                  [
+                      "Ferrarelle",
+                      "Ferrarelle sparkling water",
+                      450
+                  ]
+              ]
+          },
+          {
+              "name": "Canned Local Beer - All",
+              "items": [
+                  [
+                      "Bo Pils Can",
+                      "",
+                      800
+                  ],
+                  [
+                      "4-Pack Bo Pils",
+                      "",
+                      3000
+                  ],
+                  [
+                      "4-pack Love Hazy IPA",
+                      "",
+                      3400
+                  ],
+                  [
+                      "Tierra Madre Lager",
+                      "4.5 % ABV Thirst-quenching, crisp & snappy are all adjectives that come to mind when drinking this fresh, light Mexican-style lager.",
+                      550
+                  ],
+                  [
+                      "Can Love Hazy IPA",
+                      "",
+                      900
+                  ]
+              ]
+          },
+          {
+              "name": "Canned Local Wine",
+              "items": [
+                  [
+                      "Una-Lou Rose",
+                      "Vibrant, with just-ripened fruit, white nectarine, and orange blossom.",
+                      1600
+                  ],
+                  [
+                      "Broc Love Red",
+                      "This is a versatile wine perfect for all red wine loving friends.",
+                      1600
+                  ],
+                  [
+                      "Broc Love White",
+                      "Tasting Notes: Kaffir lime & orange peel on the nose. Key lime, grapefruit, honey blossom & sea salt on the palate.",
+                      1600
+                  ]
+              ]
+          }
+      ],
+      "address": "499 9th St, Oakland, CA 94607",
+      "phone": "(510) 626-9960",
+      "email": "oakland@squarepieguys.com",
+      "hours": "Sun–Thu 11:30am–9:30pm, Fri–Sat 11:30am–10:30pm",
+      "site": "https://www.squarepieguys.com/",
+      "siteCta": "Order from Oakland",
+      "orderUrl": "https://www.squarepieguys.com/order/oakland",
+      "instagram": "squarepieguys",
+      "menuNote": "Prices from their Oakland online ordering menu; food prices are the same at all six shops, only the canned beer differs.",
+      "siteNote": "All pizzas come with a cheddar cheese edge and mozzarella. Any pie can be made dairy free for $2 more or gluten free for $3 more; they decline other add-ons, modifications and swaps, and are not a certified gluten-free kitchen.",
+      "panels": [
+          {
+              "head": "Their shops",
+              "body": [
+                  "Oakland (Old Oakland): 499 9th St, Oakland, CA 94607, (510) 626-9960. Sun–Thu 11:30am–9:30pm, Fri–Sat 11:30am–10:30pm",
+                  "SoMa: 1077 Mission St, San Francisco, CA 94103, (415) 872-9290. Sun–Thu 11:30am–9:30pm, Fri–Sat 11:30am–10:30pm",
+                  "Ghirardelli Square: 845 Beach St, San Francisco, CA 94109, (415) 890-2335. Sun–Thu 11:30am–9:30pm, Fri–Sat 11:30am–10:30pm",
+                  "Walnut Creek: 1991 N California Blvd, Walnut Creek, CA 94596, (925) 378-5862. Daily 11:30am–9pm",
+                  "Campbell: 501 E Campbell Ave, Campbell, CA 95008, (408) 409-5955. Daily 11:30am–9pm",
+                  "Palo Alto: 369 California Ave, Palo Alto, CA 94306, (650) 285-2002. Daily 11:30am–9pm"
+              ],
+              "links": [
+                  {
+                      "label": "Order from Oakland",
+                      "href": "https://www.squarepieguys.com/order/oakland"
+                  },
+                  {
+                      "label": "Order from SoMa",
+                      "href": "https://www.squarepieguys.com/order/soma"
+                  },
+                  {
+                      "label": "Order from Ghirardelli Square",
+                      "href": "https://www.squarepieguys.com/order/ghirardelli-square"
+                  },
+                  {
+                      "label": "Order from Walnut Creek",
+                      "href": "https://www.squarepieguys.com/order/walnut-creek"
+                  },
+                  {
+                      "label": "Order from Campbell",
+                      "href": "https://www.squarepieguys.com/order/campbell"
+                  },
+                  {
+                      "label": "Order from Palo Alto",
+                      "href": "https://www.squarepieguys.com/order/palo-alto"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/square-pie-guys.mp4",
+          "poster": "/clips/square-pie-guys-poster.webp",
+          "href": "https://www.instagram.com/reel/DeikmKLTGkv/",
+          "credit": "Filmed by @stunnaman02",
+          "platform": "Instagram",
+          "by": "stunnaman02"
+      }
+  },
+  {
+      "slug": "fresca-sf",
+      "name": "Fresca",
+      "label": "Fresca",
+      "cuisine": "Nuevo Peruvian & ceviche",
+      "tagline": "A Peruvian restaurant on 24th Street in Noe Valley serving ceviches, tiraditos, lomo saltado and pisco cocktails for lunch and dinner, with a weekday happy hour.",
+      "color": "#7B418B",
+      "icon": "fresca-sf",
+      "prep": 0,
+      "category": "Peruvian",
+      "items": [],
+      "sections": [
+          {
+              "name": "Cevicheria",
+              "items": [
+                  [
+                      "Ceviche Clásico (gf)",
+                      "catch of the day, rocoto leche de tigre, choclo, cancha, sweet potato",
+                      2400
+                  ],
+                  [
+                      "Ceviche Mixto (gf)",
+                      "catch of the day, calamari, shrimp, aji amarillo leche de tigre, choclo, cancha, sweet potato",
+                      2600
+                  ],
+                  [
+                      "Ceviche Criollo",
+                      "catch of the day, shrimp, crispy octopus, aji amarillo leche de tigre, choclo, cancha, sweet potato",
+                      2800
+                  ],
+                  [
+                      "Ceviche Nikkei",
+                      "ahi tuna, ponzu leche de tigre, cucumber, avocado, sesame",
+                      2600
+                  ],
+                  [
+                      "Ceviche Trio Tasting",
+                      "tasting of our three popular ceviches: clásico, mixto, nikkei",
+                      6000
+                  ]
+              ]
+          },
+          {
+              "name": "Tiraditos",
+              "items": [
+                  [
+                      "Tiradito Apasionado (gf)",
+                      "thin sliced ahi tuna, passion fruit leche de tigre, rocoto avocado, chalaca, corn, cancha",
+                      2700
+                  ],
+                  [
+                      "Tiradito Nikkei",
+                      "thin sliced catch of the day, ponzu leche de tigre, jalapeño, quinoa, truffle oil, chalaca",
+                      2400
+                  ],
+                  [
+                      "Tiradito de Salmon (gf)",
+                      "thin sliced salmon, cilantro-jalapeño leche de tigre, chalaca, cucumber, ikura, corn, cancha",
+                      2500
+                  ],
+                  [
+                      "Tiradito Sampler",
+                      "tasting of our three tiraditos",
+                      5500
+                  ]
+              ]
+          },
+          {
+              "name": "To Share",
+              "items": [
+                  [
+                      "La Jalea",
+                      "crispy fried calamari, shrimp, fish, salsa criolla, ají amarillo tartar sauce",
+                      2500
+                  ],
+                  [
+                      "Pulpo Anticuchero",
+                      "grilled octopus, potatoes, olive aioli, andean corn, salsa criolla",
+                      2800
+                  ],
+                  [
+                      "Lomo Empanadas",
+                      "tenderloin steak, onion, tomato, cilantro, lomo demi, ají verde",
+                      1800
+                  ],
+                  [
+                      "Causa Limeña (gf)",
+                      "dungeness crab salad, yellow chili whipped potato, huancaina, rocoto aioli",
+                      2900
+                  ],
+                  [
+                      "Anticuchos",
+                      "beef heart skewers, yukon potatoes, andean corn, salsa criolla",
+                      1800
+                  ],
+                  [
+                      "Chicharrón de Pollo",
+                      "crispy chicken thighs, criolla five spice, rocoto aioli",
+                      1600
+                  ],
+                  [
+                      "Julito César (v)",
+                      "Little gems, ají amarillo, anchovies, manchego, grilled sourdough croutons, crispy quinoa. +chicken $24, +salmon $30, +steak strips $28, +shrimp $28 (as printed).",
+                      1800
+                  ],
+                  [
+                      "Fresca Market Salad (gf)(v)",
+                      "seasonal greens, tomato, quinoa, queso fresco, pickled onions, cucumber, radish, passion fruit vinaigrette. +chicken $24, +salmon $30, +steak strips $28, +shrimp $28 (as printed).",
+                      1800
+                  ]
+              ]
+          },
+          {
+              "name": "Large Plates",
+              "items": [
+                  [
+                      "Lomo Saltado",
+                      "wok fired steak strips, onions, tomatoes, cilantro, lomo demi, jasmine rice, french fries. Also surf n turf $44, chicken saltado $28, shrimp saltado $35.",
+                      3400
+                  ],
+                  [
+                      "Tallarín Saltado",
+                      "wok fried bucatini pasta with tenderloin steak strips, onions, tomatoes, scallions, cilantro, lomo demi. Also surf n turf $44, chicken saltado $28, shrimp saltado $35.",
+                      3400
+                  ],
+                  [
+                      "Pescado a lo Macho",
+                      "whole fried branzino, seafood and shellfish stew, ají amarillo cream, jasmine rice",
+                      4500
+                  ],
+                  [
+                      "Arroz Norteño",
+                      "peruvian seafood paella, cilantro sofrito, huancaina, salsa criolla",
+                      4200
+                  ],
+                  [
+                      "Salmon y Tacu-Tacu",
+                      "grilled aji-miso glazed salmon, canario bean tacu tacu, coconut milk, aji amarillo, lemon butter, salsa criolla",
+                      3800
+                  ],
+                  [
+                      "Fideos Achupados",
+                      "squid ink linguini pasta, seafood and shellfish bisque, ají panca cream, tomato, manchego cheese",
+                      3900
+                  ],
+                  [
+                      "Ají de Gallina",
+                      "pulled chicken stew, aji amarillo cream, parmesan, toasted walnuts, yukon potato, jasmine rice",
+                      2600
+                  ],
+                  [
+                      "Chaufa de Quinoa (gf)(v)",
+                      "roasted seasonal vegetable fried rice, andean quinoa, pickled daikon, fried egg",
+                      2600
+                  ],
+                  [
+                      "Pollo a la Brasa",
+                      "crispy skin, slow roasted half organic chicken, citrus butter glaze",
+                      2800
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Yuca Fries (v)",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Truffle-Manchego Fries (v)",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Sweet Plantains (gf)(v)",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Seasonal Vegetables (gf)(v)",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Plantain Chips (gf)(v)",
+                      "",
+                      900
+                  ],
+                  [
+                      "Huancaina Mac n Cheese",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Green Salad (gf)(v)",
+                      "",
+                      800
+                  ],
+                  [
+                      "Jasmine Rice (gf)(v)",
+                      "",
+                      500
+                  ]
+              ]
+          },
+          {
+              "name": "Happy Hour",
+              "items": [
+                  [
+                      "Ceviche Clásico",
+                      "catch of the day, aji rocoto leche de tigre. Happy hour, Mon–Fri 3–5:30pm.",
+                      1700
+                  ],
+                  [
+                      "Ceviche Mixto",
+                      "catch of the day, calamari, shrimp, octopus, aji amarillo leche de tigre",
+                      1900
+                  ],
+                  [
+                      "Ostiones",
+                      "oysters on the half shell, mango mignonette and cocktail sauce. Each.",
+                      200
+                  ],
+                  [
+                      "Salmon Wan-Taxos",
+                      "fried wonton, salmon tartar, rocoto aioli, avocado cream, ikura. Each.",
+                      700
+                  ],
+                  [
+                      "Alitas Criollas",
+                      "crispy chicken wings, peruvian aji-tamarind glaze, aji verde",
+                      1500
+                  ],
+                  [
+                      "Jaleita",
+                      "fried calamari, fish, shrimp, and scallops, salsa criolla, cancha, yuca fries, aji amarillo tartar sauce",
+                      1900
+                  ],
+                  [
+                      "Anticuchos de Corazón",
+                      "grilled veal heart skewers, yukon potatoes, andean corn, salsa criolla",
+                      1500
+                  ],
+                  [
+                      "Chicharrón de Pollo",
+                      "crispy chicken thighs, criolla five spice, rocoto aioli",
+                      1300
+                  ],
+                  [
+                      "Fresca Burger",
+                      "grilled 8oz steak burger, sharp cheddar, lettuce, tomato, rocoto aioli, brioche bun",
+                      1600
+                  ],
+                  [
+                      "Salchi-Papas",
+                      "french fries, sliced hot dogs, aji verde, ketchup and honey mustard",
+                      1500
+                  ],
+                  [
+                      "Yuca Fries",
+                      "Huancaina sauce",
+                      900
+                  ],
+                  [
+                      "Truffle Manchego Fries",
+                      "",
+                      900
+                  ],
+                  [
+                      "Plantain Chips",
+                      "",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "N.A. (Zero Proof)",
+              "items": [
+                  [
+                      "Chicha Blossom",
+                      "free spirits \"gin\", chicha morada, grapefruit, lime",
+                      1600
+                  ],
+                  [
+                      "Zero Sour",
+                      "free spirits agave, passionfruit, egg whites, lemon",
+                      1600
+                  ],
+                  [
+                      "Cerorita (N.A. piscorita)",
+                      "seedlip agave, dragonfruit, lime, passionfruit foam",
+                      1800
+                  ],
+                  [
+                      "Sinchelada",
+                      "lagunitas hoppy water, michelada mix, lime",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Soft Drinks",
+              "items": [
+                  [
+                      "Inka Kola",
+                      "the golden kola",
+                      600
+                  ],
+                  [
+                      "Chicha Morada",
+                      "peruvian purple corn punch, made in house",
+                      700
+                  ],
+                  [
+                      "Passionfruit Juice",
+                      "made fresh in house",
+                      700
+                  ],
+                  [
+                      "Coca Cola",
+                      "bottled mexican coke",
+                      600
+                  ],
+                  [
+                      "Diet Coke",
+                      "bottled mexican diet coke",
+                      600
+                  ],
+                  [
+                      "Sprite",
+                      "bottled mexican sprite",
+                      600
+                  ],
+                  [
+                      "Fever Tree Ginger Ale (200ml)",
+                      "",
+                      600
+                  ],
+                  [
+                      "Lagunitas Hoppy Sparkling Water (355ml)",
+                      "",
+                      600
+                  ],
+                  [
+                      "Saratoga Sparkling Water (828ml)",
+                      "",
+                      900
+                  ]
+              ]
+          }
+      ],
+      "address": "3945 24th St, San Francisco, CA 94114",
+      "phone": "(415) 718-5232",
+      "site": "https://www.frescasf.com/",
+      "siteCta": "Open their site",
+      "orderUrl": "https://order.toasttab.com/online/fresca-hq-3945-24th-street",
+      "instagram": "fresca_sf",
+      "email": "contact@frescasf.com",
+      "hours": "Mon & Wed–Thu 11:30am–9pm, Fri 11:30am–9:30pm, Sat 11am–9:30pm, Sun 11am–9pm, Tue closed",
+      "siteNote": "Happy hour Monday to Friday 3–5:30pm, with its own menu. Reservations for up to six online; parties of seven or more, group dining, semi-private events and buyouts through their Reservations & Events page. Gift cards on their Toast page.",
+      "clip": {
+          "src": "/clips/fresca-sf.mp4",
+          "poster": "/clips/fresca-sf-poster.webp",
+          "href": "https://www.instagram.com/reel/DeKwuUdSxhO/",
+          "credit": "Posted by @fresca_sf",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "early-to-rise-sf",
+      "name": "Early to Rise",
+      "label": "Early to Rise",
+      "cuisine": "Scratch-made brunch",
+      "tagline": "A scratch-made brunch restaurant in NoPa that makes its own bagels, butter and thick-cut bacon.",
+      "color": "#EE2C24",
+      "icon": "early-to-rise-sf",
+      "prep": 0,
+      "category": "Brunch",
+      "items": [],
+      "sections": [
+          {
+              "name": "A Few Good Ways to Start the Day",
+              "items": [
+                  [
+                      "Sugar Rolled Donut",
+                      "Small batch donut.",
+                      350
+                  ],
+                  [
+                      "Daily Deluxe Donut",
+                      "Small batch donut.",
+                      500
+                  ],
+                  [
+                      "Smoked Ricotta with Poached Pears",
+                      "White wine & honey poached pears with housemade smoked ricotta, walnut mostarda & tiny mustard greens.",
+                      1000
+                  ],
+                  [
+                      "Christina’s Granola",
+                      "Weekdays only. Served with organic Greek yogurt, house-made strawberry jelly, fresh fruit & honey.",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "ETR Bagels",
+              "items": [
+                  [
+                      "Bagel & Schmear",
+                      "Everything or plain bagel; chive or plain schmear.",
+                      500
+                  ],
+                  [
+                      "Vegan schmear",
+                      "Add to a bagel.",
+                      100
+                  ],
+                  [
+                      "Lox Bagel Sandwich",
+                      "Cold-smoked lox, chive schmear, capers, tomato & red onion.",
+                      1400
+                  ],
+                  [
+                      "Veggie Bagel Sandwich",
+                      "Chive schmear, heirloom tomato, bread & butter pickles, avocado & red onion.",
+                      1200
+                  ],
+                  [
+                      "Bagels & Lox Platter (for two)",
+                      "Two everything bagels, smoked salmon, chive schmear, tomatoes, red onions & capers.",
+                      2600
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Smokehouse",
+                      "Bacon, breakfast sausage, Canadian bacon or molasses ham.",
+                      800
+                  ],
+                  [
+                      "Sides",
+                      "White cheddar grits, grits with butter, hash browns, silver dollar pancakes, arugula salad or fruit.",
+                      500
+                  ]
+              ]
+          },
+          {
+              "name": "Mains",
+              "items": [
+                  [
+                      "Up and at ’Em",
+                      "Two eggs any style with toast, hash browns, arugula salad & choice from smokehouse.",
+                      2400
+                  ],
+                  [
+                      "Add two silver dollar pancakes",
+                      "",
+                      500
+                  ],
+                  [
+                      "Eggs Benedict",
+                      "House-smoked Canadian bacon OR garlic Bloomsdale spinach, poached eggs, English muffins & hollandaise; served with white cheddar grits & arugula salad.",
+                      2500
+                  ],
+                  [
+                      "With Canadian bacon AND garlic Bloomsdale spinach",
+                      "Eggs Benedict add-on.",
+                      300
+                  ],
+                  [
+                      "Samusa Potato Pancake",
+                      "Peas & their tendrils, roasted carrots, scallions, tamarind, lime coconut yogurt & garam masala spices; vegan & gluten-free.",
+                      2000
+                  ],
+                  [
+                      "Shrimp & Grits",
+                      "Poached shrimp, crispy bacon bits, roasted mushrooms, sweet onions & scallions; served with a poached egg & roasted prawn broth.",
+                      2600
+                  ],
+                  [
+                      "Apple Butter French Toast",
+                      "Griddled hazelnut brioche with Calvados apple butter, roasted pink lady apples, apple syrup & whipped creme fraiche.",
+                      2300
+                  ],
+                  [
+                      "Strawberry Pancakes",
+                      "Buttermilk hot cakes with fresh & preserved strawberries, crème fraîche, strawberry-maple syrup, pistachios, cocoa nibs & mint.",
+                      2300
+                  ],
+                  [
+                      "ETRBLT",
+                      "Weekdays only. Griddled challah, heirloom tomato, house-smoked bacon & Meyer lemon aioli; served with salt & vinegar potato chips & arugula salad.",
+                      1800
+                  ],
+                  [
+                      "The All-Star",
+                      "Weekdays only. House-smoked pepper turkey breast on Dutch crunch with white cheddar, smashed avocado, heirloom tomato, red onion, bread & butter pickles, shredded gem lettuce & garlic aioli; served with salt & vinegar potato chips & arugula salad.",
+                      1800
+                  ],
+                  [
+                      "Add ETR bacon",
+                      "",
+                      500
+                  ],
+                  [
+                      "Harvest Salad, small",
+                      "Young chicories with Delicata squash, pomegranate, herbed goat cheese, pecans, pepitas & a pomegranate-balsamic vinaigrette.",
+                      1200
+                  ],
+                  [
+                      "Harvest Salad, large",
+                      "Young chicories with Delicata squash, pomegranate, herbed goat cheese, pecans, pepitas & a pomegranate-balsamic vinaigrette.",
+                      1800
+                  ],
+                  [
+                      "Add smoked pepper turkey",
+                      "Salad add-on.",
+                      600
+                  ],
+                  [
+                      "Add bacon lardons",
+                      "Salad add-on.",
+                      300
+                  ],
+                  [
+                      "Add a poached egg",
+                      "Salad add-on.",
+                      200
+                  ]
+              ]
+          },
+          {
+              "name": "Cocktails",
+              "items": [
+                  [
+                      "The Wake Up Call",
+                      "Housemade horchata & coffee liqueur, nitro cold brew, cinnamon lemon zest.",
+                      1300
+                  ],
+                  [
+                      "Pear Sangria",
+                      "Pear purée, vodka, Sicilian pinot grigio & warm fall spices.",
+                      1300
+                  ],
+                  [
+                      "La Manzanita",
+                      "Crisp apple cider, lime juice, Lyre’s bitter orange Italian Spritz & tequila; served with a cinnamon-sugar rim.",
+                      1300
+                  ],
+                  [
+                      "Spicy Orange-Tamarind Margarita",
+                      "Pure agave wine, orange-tamarind puree, ETR chili flakes, agave & lime.",
+                      1300
+                  ],
+                  [
+                      "Italian Greyhound",
+                      "Tap.",
+                      1200
+                  ],
+                  [
+                      "Bloody Mary",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Add a strip of ETR bacon",
+                      "Bloody Mary add-on.",
+                      300
+                  ],
+                  [
+                      "Michelada",
+                      "",
+                      900
+                  ],
+                  [
+                      "Mimosa",
+                      "Grapefruit or orange.",
+                      1200
+                  ],
+                  [
+                      "Bottle Service",
+                      "",
+                      4800
+                  ],
+                  [
+                      "Bottle Service with Pierre Gimonnet & Fils 1er Cru Champagne",
+                      "",
+                      13000
+                  ]
+              ]
+          },
+          {
+              "name": "Wine",
+              "items": [
+                  [
+                      "Prosecco, glass",
+                      "Vigneti del Sole ‘1925’ Contessa, Veneto, IT, NV. Bottle $44.",
+                      1200
+                  ],
+                  [
+                      "Crémant de Bourgogne, glass",
+                      "Victorine de Chastenay Brut Rosé, Burgundy, FR, NV. Bottle $48.",
+                      1200
+                  ],
+                  [
+                      "Cava, bottle",
+                      "Raventós i Blanc ‘de Nit’ Brut Rosé, Catalunya, SP, 2021.",
+                      9800
+                  ],
+                  [
+                      "Champagne, bottle",
+                      "Gaston Chiquet Tradition 1er Cru, Champagne, FR, NV.",
+                      11500
+                  ],
+                  [
+                      "Champagne, bottle",
+                      "Pierre Gimonnet & Fils 1er Cru, Champagne, FR, NV.",
+                      12500
+                  ],
+                  [
+                      "Pinot Grigio, glass",
+                      "Tap, Gotham Project ‘Gazerra’, Sicily, IT, 2021.",
+                      1000
+                  ],
+                  [
+                      "Sauvignon Blanc, glass",
+                      "Famille Dubard ‘Coeur du Mont’ Vin de France, 2022. Bottle $40.",
+                      1200
+                  ],
+                  [
+                      "White Blend, glass",
+                      "Ilha do Pico ‘Terras de Lava’, Açores Branco, PR, 2020. Bottle $60.",
+                      1200
+                  ],
+                  [
+                      "Riesling, glass",
+                      "Selbach-Oster Kabinett, Mosel, GR, 2021. Bottle $85.",
+                      1800
+                  ],
+                  [
+                      "Rosé, glass",
+                      "Zweigelt, St. Laurent, Pinot Noir: Schloss Gobelsburg ‘Cistercien Rosé’, Kamptal, AU, 2022. Bottle $48.",
+                      1200
+                  ],
+                  [
+                      "Pinot Noir, glass",
+                      "Comtesse Marion, Languedoc/Roussillon, FR, 2022. Bottle $40.",
+                      1200
+                  ]
+              ]
+          },
+          {
+              "name": "Spirit-Free Cocktails",
+              "items": [
+                  [
+                      "Blackberry Sage Smash",
+                      "Muddled blackberries & fresh sage, honey syrup, grapefruit juice & sparkling water.",
+                      1200
+                  ],
+                  [
+                      "Fugazi Spritz",
+                      "Lyre’s bitter orange Italian Spritz & sparkling with soda & fresh orange.",
+                      1300
+                  ],
+                  [
+                      "Virgin Wake Up Call",
+                      "Housemade horchata, coffee syrup, nitro cold brew & a lemon twist.",
+                      1300
+                  ],
+                  [
+                      "Virgin Bloody Maria",
+                      "Lyre’s Agave Blanco with our house bloody mix & lime.",
+                      1200
+                  ],
+                  [
+                      "Virgin La Manzanita",
+                      "Crisp apple cider, lime juice, Lyre’s bitter orange Italian Spritz & Lyre’s Agave Blanco; served with a cinnamon-sugar rim.",
+                      1300
+                  ]
+              ]
+          },
+          {
+              "name": "Beer & Seltzer",
+              "items": [
+                  [
+                      "Mother Earth Tierra Madre Lager",
+                      "Tap.",
+                      800
+                  ],
+                  [
+                      "Almanac Love Hazy IPA",
+                      "16oz.",
+                      1200
+                  ],
+                  [
+                      "Granada Cider",
+                      "16oz.",
+                      1200
+                  ]
+              ]
+          },
+          {
+              "name": "Coffee & Tea",
+              "items": [
+                  [
+                      "Burnt Orange Latte",
+                      "",
+                      700
+                  ],
+                  [
+                      "Coffee",
+                      "",
+                      450
+                  ],
+                  [
+                      "Latte",
+                      "",
+                      600
+                  ],
+                  [
+                      "Nitro Cold Brew",
+                      "",
+                      600
+                  ],
+                  [
+                      "Cappuccino",
+                      "",
+                      450
+                  ],
+                  [
+                      "Espresso",
+                      "",
+                      400
+                  ],
+                  [
+                      "Mocha",
+                      "",
+                      700
+                  ],
+                  [
+                      "Hot Cocoa",
+                      "",
+                      600
+                  ],
+                  [
+                      "Milk",
+                      "",
+                      500
+                  ],
+                  [
+                      "Hot Tea",
+                      "‘Breakfast At Tiffany’s’ black tea, ‘Cloud Mist’ green tea, or chamomile-mint by Leland Tea Company.",
+                      450
+                  ],
+                  [
+                      "Iced Tea",
+                      "",
+                      500
+                  ],
+                  [
+                      "Arnold Palmer",
+                      "",
+                      500
+                  ]
+              ]
+          },
+          {
+              "name": "Other",
+              "items": [
+                  [
+                      "Lemonade",
+                      "",
+                      500
+                  ],
+                  [
+                      "Juice",
+                      "Orange or grapefruit.",
+                      500
+                  ],
+                  [
+                      "Sparkling Water 28oz",
+                      "",
+                      800
+                  ]
+              ]
+          }
+      ],
+      "address": "1801 McAllister Street, San Francisco, CA 94115",
+      "phone": "(415) 796-3360",
+      "site": "https://www.earlytorisesf.com/",
+      "siteCta": "Open their site",
+      "orderUrl": "https://order.toasttab.com/online/early-to-rise2-1801-mcallister-street",
+      "instagram": "earlytorisesf",
+      "siteNote": "A 6% surcharge to offset local ordinances is added to the bill. The granola, ETRBLT and All-Star are weekdays only. They keep the bar and window counter for walk-ins; reservations are on OpenTable.",
+      "hours": "Mon–Fri 8am–1:30pm, Sat–Sun 8am–2:30pm",
+      "email": "info@earlytorisesf.com",
+      "clip": {
+          "src": "/clips/early-to-rise-sf.mp4",
+          "poster": "/clips/early-to-rise-sf-poster.webp",
+          "href": "https://www.instagram.com/reel/DWEjWglk1Mk/",
+          "credit": "Filmed by @savorwithcoral",
+          "platform": "Instagram",
+          "by": "savorwithcoral"
+      }
+  },
+  {
+      "slug": "chef-smelly",
+      "name": "Chef Smelly’s Creole",
+      "label": "Chef Smelly",
+      "cuisine": "Creole & soul food chef, catering",
+      "tagline": "Chef Smelly, Edward’L Wooley, cooks Creole and soul food — fried and blackened seafood, garlic noodles, loaded fries and crack n cheese — inside Au Lounge on Broadway in Oakland.",
+      "color": "#111111|#FFFFFF",
+      "icon": "chef-smelly",
+      "prep": 0,
+      "category": "Creole restaurant and catering",
+      "items": [],
+      "sections": [
+          {
+              "name": "A la carte",
+              "items": [
+                  [
+                      "Catfish Side",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Creole Chicken Tenders Side",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Deep Fried Chicken",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Side Of Blackend Salmon W/ Creole Glaze",
+                      "",
+                      2800
+                  ],
+                  [
+                      "Blackened Catfish Side",
+                      "",
+                      1500
+                  ],
+                  [
+                      "16 oz. Bone in Cowboy Ribeye Al A Carte",
+                      "",
+                      5500
+                  ],
+                  [
+                      "Lobster Meat",
+                      "",
+                      3000
+                  ],
+                  [
+                      "Creole Lamb Chops Al Acarte",
+                      "",
+                      5000
+                  ],
+                  [
+                      "Snapper Side",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Dungeness Crab Meat",
+                      "",
+                      2500
+                  ],
+                  [
+                      "Blackened Snapper Side",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Lobster Tail Al A Carte",
+                      "",
+                      2500
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Creole Garlic Bread",
+                      "",
+                      600
+                  ],
+                  [
+                      "Smelly’s House Salad",
+                      "",
+                      900
+                  ],
+                  [
+                      "Creole Fried Oysters",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Fried Prawns Side",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Smellys Wings Sweet And Spicy",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Grilled Oysters Topped With Lobster Meat",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Hot Honey Chili Prawns",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Chargrilled Oysters Topped With Crab Meat",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Blackened Prawns Side",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Creole Fries",
+                      "",
+                      500
+                  ],
+                  [
+                      "Hot Honey Chili Wings Ala Carte",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Roasted Beat Arugula Salad Balsamic Vinaigrette Goat Cheese",
+                      "",
+                      1700
+                  ],
+                  [
+                      "Wings A la Carte",
+                      "",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "Land",
+              "items": [
+                  [
+                      "Chicken Wing Dinner",
+                      "",
+                      3100
+                  ],
+                  [
+                      "Creole Southern Fried Chicken Breast Tenders w/ Garlic Noodles",
+                      "",
+                      3000
+                  ],
+                  [
+                      "Lamb Chop Dinner",
+                      "",
+                      6000
+                  ],
+                  [
+                      "Ribeye Dinner",
+                      "",
+                      5800
+                  ],
+                  [
+                      "Hot Honey Chili Chicken Dinner",
+                      "",
+                      3300
+                  ],
+                  [
+                      "Chicken Wings Over Noodles",
+                      "",
+                      3000
+                  ],
+                  [
+                      "Chicken Tenders Dinner",
+                      "",
+                      3100
+                  ],
+                  [
+                      "Surf And Turf Ribeye Dinner",
+                      "",
+                      7500
+                  ],
+                  [
+                      "Creole Fried Hot Honey Chicken Breast Crack & Cheese & Garlicky Green Beans",
+                      "",
+                      3300
+                  ],
+                  [
+                      "Chicken & Deep Fried Prawns Crack & Cheese & Garlicky Green Beens",
+                      "",
+                      4200
+                  ],
+                  [
+                      "Hot Honey Chili Chicken Over Noodles",
+                      "",
+                      3300
+                  ],
+                  [
+                      "Surf And Turf Ribeye And Noodles",
+                      "",
+                      7500
+                  ],
+                  [
+                      "Blackened Tender Dinner",
+                      "",
+                      3000
+                  ],
+                  [
+                      "Blackened Lamb Chops",
+                      "",
+                      6000
+                  ],
+                  [
+                      "Chicken Tenders Over Noodles",
+                      "",
+                      3000
+                  ],
+                  [
+                      "Lamb Over Noodles",
+                      "",
+                      6000
+                  ],
+                  [
+                      "Ribeye Over Noodles",
+                      "",
+                      5800
+                  ],
+                  [
+                      "Chicken And Steak Noodles",
+                      "",
+                      3100
+                  ]
+              ]
+          },
+          {
+              "name": "Sea",
+              "items": [
+                  [
+                      "Catfish & Prawns Combo",
+                      "",
+                      4200
+                  ],
+                  [
+                      "Deep Fried Red Snapper Combo W/ fried Prawns Crack n Cheese W/ Garlicky Green Beans",
+                      "",
+                      4200
+                  ],
+                  [
+                      "Fried Prawns over Garlic Noodles",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Catfish And Wings Combo",
+                      "",
+                      4200
+                  ],
+                  [
+                      "Hot Honey Chili Prawns over Garlic Noodles",
+                      "",
+                      4300
+                  ],
+                  [
+                      "Blackened Salmon Over Noodles With Prawns Over Noodles",
+                      "",
+                      5500
+                  ],
+                  [
+                      "Salmon Dinner",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Deep Fried Catfish Crack & Cheese Garlicky Green beans",
+                      "",
+                      3100
+                  ],
+                  [
+                      "Deep Fried Red Snapper Crack & Cheese Garlicky Green beans",
+                      "",
+                      3100
+                  ],
+                  [
+                      "3 Way Catfish Seafood Combo",
+                      "",
+                      4200
+                  ],
+                  [
+                      "Blackened Catfish Dinner",
+                      "",
+                      3100
+                  ],
+                  [
+                      "Fish & Chips",
+                      "",
+                      3000
+                  ],
+                  [
+                      "Blackened Catfish And Prawns",
+                      "",
+                      3000
+                  ],
+                  [
+                      "3 Way Snapper Seafood Combo",
+                      "",
+                      4200
+                  ],
+                  [
+                      "Blackened Salmon W/ Creole Glaze over Garlic noodles",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Trifecta Noodles",
+                      "",
+                      7200
+                  ],
+                  [
+                      "Salmon topped with Crab meat over Mash with Veggies",
+                      "",
+                      6000
+                  ],
+                  [
+                      "Blackend Prawn Over Noodles",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Lobtail Combo",
+                      "",
+                      7500
+                  ],
+                  [
+                      "Fried Prawn Dinner",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Prawns, Crack & Cheese Garlicky Green Beans",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Blackened Snapper & Prawns Combo",
+                      "",
+                      3000
+                  ],
+                  [
+                      "Blackened Snapper Dinner",
+                      "",
+                      3100
+                  ],
+                  [
+                      "Creole Deep Fried Prawns over Creole Fries",
+                      "",
+                      3300
+                  ],
+                  [
+                      "Snapper And Wings Combo",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Snapper Over Noodle",
+                      "",
+                      3500
+                  ],
+                  [
+                      "Lobtail Dinner",
+                      "",
+                      6000
+                  ],
+                  [
+                      "Hot Honey Chili Prawn Dinner",
+                      "",
+                      4300
+                  ],
+                  [
+                      "Deep Fried Oyster Dinner And Prawns",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Oysters Over Noodles",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Catfish And Tenders Combo",
+                      "",
+                      4200
+                  ],
+                  [
+                      "Blackened Catfish Over Noodle",
+                      "",
+                      3100
+                  ],
+                  [
+                      "Blackened Prawn Dinner",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Snapper And Tenders Combo",
+                      "",
+                      4200
+                  ],
+                  [
+                      "Fried Oyster Dinner",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Lobster Tail Over Noodles",
+                      "",
+                      7000
+                  ]
+              ]
+          },
+          {
+              "name": "Designer fries",
+              "items": [
+                  [
+                      "Crab And Steak Over Noodles",
+                      "",
+                      5300
+                  ],
+                  [
+                      "Trifecta Small",
+                      "",
+                      4500
+                  ],
+                  [
+                      "Steak Fries",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Chicken And Steak Fries",
+                      "",
+                      2600
+                  ],
+                  [
+                      "Loaded Crab Fries",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Extravaganza Fries",
+                      "",
+                      6000
+                  ],
+                  [
+                      "Creole Surf & Turf Fries",
+                      "",
+                      5000
+                  ],
+                  [
+                      "Loaded Crab Noodles",
+                      "",
+                      4500
+                  ],
+                  [
+                      "Creole Loaded Prawn Fries",
+                      "",
+                      3000
+                  ],
+                  [
+                      "Extravaganza Noodles",
+                      "",
+                      7200
+                  ],
+                  [
+                      "Crab And Steak Over Fries",
+                      "",
+                      4800
+                  ],
+                  [
+                      "Loaded Lobster & Crab Noodles",
+                      "",
+                      5500
+                  ],
+                  [
+                      "Hot Honey Chili Prawns & Crab & Steak Over Fries",
+                      "",
+                      6300
+                  ],
+                  [
+                      "Trifecta Fries",
+                      "",
+                      6700
+                  ],
+                  [
+                      "Surf & Turf Noodles",
+                      "",
+                      6500
+                  ],
+                  [
+                      "Loaded Lobster Fries",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Creole Loaded Lobster & Dungeness Crab Fries",
+                      "",
+                      5000
+                  ],
+                  [
+                      "Lobster Over Noodles",
+                      "",
+                      4500
+                  ],
+                  [
+                      "Creole Loaded Prawn Noodles",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Creole Loaded Prawn Noodles",
+                      "",
+                      3500
+                  ],
+                  [
+                      "Prawn And Steak Fries",
+                      "",
+                      3000
+                  ]
+              ]
+          },
+          {
+              "name": "Loaded crack n cheese",
+              "items": [
+                  [
+                      "Crack N Cheese W/ Dungeness Crab",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Crack N Cheese W/ Chicken",
+                      "",
+                      2700
+                  ],
+                  [
+                      "Crack N Cheese W/ Lobster",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Crack N Cheese W/ Steak",
+                      "",
+                      2700
+                  ],
+                  [
+                      "Crack N Cheese W/ Prawns",
+                      "",
+                      3800
+                  ],
+                  [
+                      "Trifecta Crack n Cheese",
+                      "",
+                      6700
+                  ],
+                  [
+                      "Extravaganza Crack N Cheese",
+                      "",
+                      7200
+                  ],
+                  [
+                      "Chicken Mac",
+                      "",
+                      3000
+                  ]
+              ]
+          },
+          {
+              "name": "Platters",
+              "items": [
+                  [
+                      "Big Dog Platter",
+                      "",
+                      15000
+                  ],
+                  [
+                      "Couples Platter",
+                      "",
+                      18000
+                  ]
+              ]
+          },
+          {
+              "name": "Sammiches",
+              "items": [
+                  [
+                      "PoBoy",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Fried Prawns Poboy",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Cat Poboy",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Lobster Poboy",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Snapper Poboy",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Oyster Poboy",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Crab Poboy",
+                      "",
+                      4000
+                  ],
+                  [
+                      "Blackend Snapper Po",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Poboy Chicken",
+                      "",
+                      2000
+                  ]
+              ]
+          },
+          {
+              "name": "Kids meal",
+              "items": [
+                  [
+                      "Kids Chicken Crack & Cheese, Garlicky Green Beans",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Kids Chicken W/ Noddles",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Kids Chicken W/ Fries",
+                      "",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Mac & Cheese Aka Crack & Cheese",
+                      "",
+                      800
+                  ],
+                  [
+                      "Garlic Noodles",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Candied Yams",
+                      "",
+                      700
+                  ],
+                  [
+                      "Garlic Mash Potatoes",
+                      "",
+                      600
+                  ],
+                  [
+                      "Garlicky Green Beans",
+                      "",
+                      600
+                  ],
+                  [
+                      "Deep Fried Sweet Corn",
+                      "",
+                      800
+                  ],
+                  [
+                      "Fried Brussel Sprouts",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Collard Greens",
+                      "",
+                      700
+                  ],
+                  [
+                      "Garlic Butter",
+                      "",
+                      700
+                  ],
+                  [
+                      "Small Side Of Noodle",
+                      "",
+                      750
+                  ],
+                  [
+                      "Sweet Chili Sauce",
+                      "",
+                      500
+                  ],
+                  [
+                      "Garlic Fries",
+                      "",
+                      900
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Lemonade",
+                      "",
+                      500
+                  ]
+              ]
+          }
+      ],
+      "address": "2430 Broadway, Oakland, CA 94612",
+      "phone": "(510) 812-2675",
+      "site": "https://www.order.store/store/chef-smellys/Qmf4xMiSXCeH2577-QRJLw",
+      "siteCta": "Order from his menu",
+      "instagram": "chefsmelly",
+      "hours": "Wed–Sun 1pm–9pm",
+      "siteNote": "He cooks inside Au Lounge, at the corner of 25th and Broadway. Tables are booked on OpenTable under ‘Smellys’, and his OpenTable listing says he caters events and the room is available for daily buyouts."
   },
 ]

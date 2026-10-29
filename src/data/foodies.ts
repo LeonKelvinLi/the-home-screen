@@ -153,6 +153,30 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'victoria.pham17', place: 'Legend Hotpot & Grill', city: 'Newark', brand: 'b_legendhotpotgrill', reel: reel('DeruAsHMWIZ'), clip: true },
   /* Batch 72, Glenn, 27 Oct 8:41 am: the Gao Viet Kitchen half of @allie.eats's Outer Sunset crawl (with @festusfeasts), its second film. */
   { by: 'allie.eats', place: 'Gao Viet Kitchen', city: 'San Francisco', brand: 'b_gaovietkitchen', reel: reel('DdX5Vztgv0A'), clip: true },
+  /* Batch 73, Glenn, 27 Oct 5:55–5:57 pm: "Foodie heavy hitter", "Foodie mediocre", "3rd". */
+  { by: 'jacksdiningroom', place: 'Epic Steak', city: 'San Francisco', brand: 'b_epicsteak', reel: reel('Co8T0FtAwBY'), clip: true },
+  { by: 'katwalksf', place: 'Epic Steak', city: 'San Francisco', brand: 'b_epicsteak', reel: reel('DHCbSEYSFsN'), clip: true },
+  { by: 'charweeezy', place: 'Epic Steak', city: 'San Francisco', brand: 'b_epicsteak', reel: reel('Cf-UwSdgG8o'), clip: true },
+  /* Batch 73, Glenn, 27 Oct 6:29–6:31 pm: "Mediocre", "Newbie". */
+  { by: 'bayarea.foodie.san', place: 'Garlic High', city: 'Sunnyvale', brand: 'b_garlichighsunnyvale', reel: reel('De-gzy8snrZ'), clip: true },
+  { by: 'yulmoo_l', place: 'Garlic High', city: 'Sunnyvale', brand: 'b_garlichighsunnyvale', reel: reel('DcoUarDtU2I'), clip: true },
+  /* Batch 73, Glenn, 27 Oct 7:37–7:38 pm: "Medium", "Heavy heavy weight", "Newbie". */
+  { by: 'grubwitmike', place: 'Square Pie Guys', city: 'San Francisco', brand: 'b_squarepieguys', reel: reel('CxrN-55P8Nl'), clip: true },
+  { by: 'barstoolsports', place: 'Square Pie Guys', city: 'San Francisco', brand: 'b_squarepieguys', reel: reel('DUeW5F6EREw'), clip: true },
+  { by: 'takeoutwithtuck', place: 'Square Pie Guys', city: 'San Francisco', brand: 'b_squarepieguys', reel: reel('DT8dMM3Aem3'), clip: true },
+  /* Batch 73, Glenn, 27 Oct 8:09–8:10 pm: "Clip this video plz", "2nd", "Heavyweight". */
+  { by: 'hungrydanz', place: 'Fresca', city: 'San Francisco', brand: 'b_frescasf', reel: reel('De-iRunR54w'), clip: true },
+  { by: 'xo.pinsta', place: 'Fresca', city: 'San Francisco', brand: 'b_frescasf', reel: reel('DecI_svxxwC'), clip: true },
+  { by: 'andreweatsinsf', place: 'Fresca', city: 'San Francisco', brand: 'b_frescasf', reel: reel('DeQA76lh1PD'), clip: true },
+  /* Batch 73, Glenn, 27 Oct 8:31–8:32 pm: "Newbie", "Medium". */
+  { by: 'lovemissfit', place: 'Brunch & Bloom', city: 'Brentwood', brand: 'b_brunchandbloom', reel: reel('De29bZ_OXDu'), clip: true },
+  { by: 'jantrinanicole', place: 'Brunch & Bloom', city: 'Brentwood', brand: 'b_brunchandbloom', reel: reel('DbunZC5uSFX'), clip: true },
+  /* Batch 73, Glenn, 27 Oct 9:35 pm: "Newbie". */
+  { by: 'chloe_chomps', place: 'Early to Rise', city: 'San Francisco', brand: 'b_earlytorisesf', reel: reel('De2rMJPP9IC'), clip: true },
+  /* Batch 73, Glenn, 27 Oct 10:31–10:34 pm: "Clip this video plz", "Heavyweight", "Newbie". */
+  { by: 'wthellydanyelly', place: 'The Sweet Spot', city: 'Walnut Creek', brand: 'b_thesweetspot', reel: reel('DcT6BBStbAk'), clip: true },
+  { by: 'realtorandreviewer', place: 'The Sweet Spot', city: 'Walnut Creek', brand: 'b_thesweetspot', reel: reel('DbldkkFqBA2'), clip: true },
+  { by: 'xoaramarie', place: 'The Sweet Spot', city: 'Walnut Creek', brand: 'b_thesweetspot', reel: reel('Dbd5kXthhrw'), clip: true },
 ]
 
 /*

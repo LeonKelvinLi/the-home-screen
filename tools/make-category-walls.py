@@ -636,6 +636,22 @@ def m_catering(rng):
     return composite(img, over, blur=3)
 
 
+def m_ramen(rng):
+    img = gradient('#2b1a10', '#141c22')
+    over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(over)
+    # Ramen bowls with chopsticks across them and steam rising.
+    for x, y, s in [(W * .34, H * .32, 1.1), (W * .68, H * .58, .9), (W * .36, H * .82, .7)]:
+        r = 130 * s
+        d.chord((x - r, y - r, x + r, y + r), 0, 180, outline=rgba('#fcd34d', .24), width=12)
+        d.line((x - r * 1.15, y, x + r * 1.15, y), fill=rgba('#fcd34d', .24), width=12)
+        d.line((x - r * .9, y - r * .55, x + r * 1.1, y + r * .05), fill=rgba('#e5e7eb', .22), width=8)
+        d.line((x - r * .7, y - r * .7, x + r * 1.2, y - r * .1), fill=rgba('#e5e7eb', .22), width=8)
+        for k in (-1, 0, 1):
+            curve(d, [(x + k * r * .4, y - r * .25 - j * r * .2 + 0) if j % 2 == 0 else (x + k * r * .4 + r * .12, y - r * .25 - j * r * .2) for j in range(5)], rgba('#f8fafc', .16), 7)
+    return composite(img, over, blur=3)
+
+
 def m_steakhouse(rng):
     img = gradient('#2e1512', '#171b22')
     over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
@@ -684,6 +700,7 @@ MOTIFS = {
     "froyo": m_froyo,
     "catering": m_catering,
     "steakhouse": m_steakhouse,
+    "ramen": m_ramen,
     "diner": m_diner,
     "health": m_health,
     "games": m_games,

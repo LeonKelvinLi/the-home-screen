@@ -1,0 +1,408 @@
+{
+ "id": "b_frescasf",
+ "name_exact": "Fresca",
+ "checked_on": "2026-10-28",
+ "sources": [
+  "https://www.frescasf.com/",
+  "https://www.frescasf.com/menu",
+  "https://www.frescasf.com/contact",
+  "https://www.frescasf.com/our-story",
+  "https://www.frescasf.com/reservations",
+  "https://linktr.ee/frescasf",
+  "https://www.instagram.com/fresca_sf/",
+  "https://www.facebook.com/FrescaSF/",
+  "https://order.toasttab.com/online/fresca-hq-3945-24th-street (their Order Online link; cross-check only)",
+  "Yelp, Fresca, 3945 24th St (via Google result snippet, 28 Oct 2026): (415) 718-5232, Tue closed, same hours as their site",
+  "https://www.opentable.com/r/fresca-24th-street (via search snippets)",
+  "https://www.sfgate.com (13 Jul 2026, Calvo-Perez brothers reopening Fresca at 3945 24th St)",
+  "https://sfstandard.com/2023/10/10/san-francisco-restaurant-leaves-busy-neighborhood-after-13-years/",
+  "logo: https://graph.facebook.com/FrescaSF/picture?width=1080&height=1080 (Facebook page profile picture, 1080x1080, purple PERUVIAN F GATHERING PLACE badge; same as the Instagram profile picture)"
+ ],
+ "facts": {
+  "slug": "fresca-sf",
+  "name": "Fresca",
+  "label": "Fresca",
+  "cuisine": "Nuevo Peruvian & ceviche",
+  "tagline": "A Peruvian restaurant on 24th Street in Noe Valley serving ceviches, tiraditos, lomo saltado and pisco cocktails for lunch and dinner, with a weekday happy hour.",
+  "color": "#7B418B",
+  "icon": "fresca-sf",
+  "prep": 0,
+  "category": "Peruvian",
+  "items": [],
+  "sections": [
+   {
+    "name": "Cevicheria",
+    "items": [
+     [
+      "Ceviche Clásico (gf)",
+      "catch of the day, rocoto leche de tigre, choclo, cancha, sweet potato",
+      2400
+     ],
+     [
+      "Ceviche Mixto (gf)",
+      "catch of the day, calamari, shrimp, aji amarillo leche de tigre, choclo, cancha, sweet potato",
+      2600
+     ],
+     [
+      "Ceviche Criollo",
+      "catch of the day, shrimp, crispy octopus, aji amarillo leche de tigre, choclo, cancha, sweet potato",
+      2800
+     ],
+     [
+      "Ceviche Nikkei",
+      "ahi tuna, ponzu leche de tigre, cucumber, avocado, sesame",
+      2600
+     ],
+     [
+      "Ceviche Trio Tasting",
+      "tasting of our three popular ceviches: clásico, mixto, nikkei",
+      6000
+     ]
+    ]
+   },
+   {
+    "name": "Tiraditos",
+    "items": [
+     [
+      "Tiradito Apasionado (gf)",
+      "thin sliced ahi tuna, passion fruit leche de tigre, rocoto avocado, chalaca, corn, cancha",
+      2700
+     ],
+     [
+      "Tiradito Nikkei",
+      "thin sliced catch of the day, ponzu leche de tigre, jalapeño, quinoa, truffle oil, chalaca",
+      2400
+     ],
+     [
+      "Tiradito de Salmon (gf)",
+      "thin sliced salmon, cilantro-jalapeño leche de tigre, chalaca, cucumber, ikura, corn, cancha",
+      2500
+     ],
+     [
+      "Tiradito Sampler",
+      "tasting of our three tiraditos",
+      5500
+     ]
+    ]
+   },
+   {
+    "name": "To Share",
+    "items": [
+     [
+      "La Jalea",
+      "crispy fried calamari, shrimp, fish, salsa criolla, ají amarillo tartar sauce",
+      2500
+     ],
+     [
+      "Pulpo Anticuchero",
+      "grilled octopus, potatoes, olive aioli, andean corn, salsa criolla",
+      2800
+     ],
+     [
+      "Lomo Empanadas",
+      "tenderloin steak, onion, tomato, cilantro, lomo demi, ají verde",
+      1800
+     ],
+     [
+      "Causa Limeña (gf)",
+      "dungeness crab salad, yellow chili whipped potato, huancaina, rocoto aioli",
+      2900
+     ],
+     [
+      "Anticuchos",
+      "beef heart skewers, yukon potatoes, andean corn, salsa criolla",
+      1800
+     ],
+     [
+      "Chicharrón de Pollo",
+      "crispy chicken thighs, criolla five spice, rocoto aioli",
+      1600
+     ],
+     [
+      "Julito César (v)",
+      "Little gems, ají amarillo, anchovies, manchego, grilled sourdough croutons, crispy quinoa. +chicken $24, +salmon $30, +steak strips $28, +shrimp $28 (as printed).",
+      1800
+     ],
+     [
+      "Fresca Market Salad (gf)(v)",
+      "seasonal greens, tomato, quinoa, queso fresco, pickled onions, cucumber, radish, passion fruit vinaigrette. +chicken $24, +salmon $30, +steak strips $28, +shrimp $28 (as printed).",
+      1800
+     ]
+    ]
+   },
+   {
+    "name": "Large Plates",
+    "items": [
+     [
+      "Lomo Saltado",
+      "wok fired steak strips, onions, tomatoes, cilantro, lomo demi, jasmine rice, french fries. Also surf n turf $44, chicken saltado $28, shrimp saltado $35.",
+      3400
+     ],
+     [
+      "Tallarín Saltado",
+      "wok fried bucatini pasta with tenderloin steak strips, onions, tomatoes, scallions, cilantro, lomo demi. Also surf n turf $44, chicken saltado $28, shrimp saltado $35.",
+      3400
+     ],
+     [
+      "Pescado a lo Macho",
+      "whole fried branzino, seafood and shellfish stew, ají amarillo cream, jasmine rice",
+      4500
+     ],
+     [
+      "Arroz Norteño",
+      "peruvian seafood paella, cilantro sofrito, huancaina, salsa criolla",
+      4200
+     ],
+     [
+      "Salmon y Tacu-Tacu",
+      "grilled aji-miso glazed salmon, canario bean tacu tacu, coconut milk, aji amarillo, lemon butter, salsa criolla",
+      3800
+     ],
+     [
+      "Fideos Achupados",
+      "squid ink linguini pasta, seafood and shellfish bisque, ají panca cream, tomato, manchego cheese",
+      3900
+     ],
+     [
+      "Ají de Gallina",
+      "pulled chicken stew, aji amarillo cream, parmesan, toasted walnuts, yukon potato, jasmine rice",
+      2600
+     ],
+     [
+      "Chaufa de Quinoa (gf)(v)",
+      "roasted seasonal vegetable fried rice, andean quinoa, pickled daikon, fried egg",
+      2600
+     ],
+     [
+      "Pollo a la Brasa",
+      "crispy skin, slow roasted half organic chicken, citrus butter glaze",
+      2800
+     ]
+    ]
+   },
+   {
+    "name": "Sides",
+    "items": [
+     [
+      "Yuca Fries (v)",
+      "",
+      1000
+     ],
+     [
+      "Truffle-Manchego Fries (v)",
+      "",
+      1200
+     ],
+     [
+      "Sweet Plantains (gf)(v)",
+      "",
+      1000
+     ],
+     [
+      "Seasonal Vegetables (gf)(v)",
+      "",
+      1000
+     ],
+     [
+      "Plantain Chips (gf)(v)",
+      "",
+      900
+     ],
+     [
+      "Huancaina Mac n Cheese",
+      "",
+      1500
+     ],
+     [
+      "Green Salad (gf)(v)",
+      "",
+      800
+     ],
+     [
+      "Jasmine Rice (gf)(v)",
+      "",
+      500
+     ]
+    ]
+   },
+   {
+    "name": "Happy Hour",
+    "items": [
+     [
+      "Ceviche Clásico",
+      "catch of the day, aji rocoto leche de tigre. Happy hour, Mon–Fri 3–5:30pm.",
+      1700
+     ],
+     [
+      "Ceviche Mixto",
+      "catch of the day, calamari, shrimp, octopus, aji amarillo leche de tigre",
+      1900
+     ],
+     [
+      "Ostiones",
+      "oysters on the half shell, mango mignonette and cocktail sauce. Each.",
+      200
+     ],
+     [
+      "Salmon Wan-Taxos",
+      "fried wonton, salmon tartar, rocoto aioli, avocado cream, ikura. Each.",
+      700
+     ],
+     [
+      "Alitas Criollas",
+      "crispy chicken wings, peruvian aji-tamarind glaze, aji verde",
+      1500
+     ],
+     [
+      "Jaleita",
+      "fried calamari, fish, shrimp, and scallops, salsa criolla, cancha, yuca fries, aji amarillo tartar sauce",
+      1900
+     ],
+     [
+      "Anticuchos de Corazón",
+      "grilled veal heart skewers, yukon potatoes, andean corn, salsa criolla",
+      1500
+     ],
+     [
+      "Chicharrón de Pollo",
+      "crispy chicken thighs, criolla five spice, rocoto aioli",
+      1300
+     ],
+     [
+      "Fresca Burger",
+      "grilled 8oz steak burger, sharp cheddar, lettuce, tomato, rocoto aioli, brioche bun",
+      1600
+     ],
+     [
+      "Salchi-Papas",
+      "french fries, sliced hot dogs, aji verde, ketchup and honey mustard",
+      1500
+     ],
+     [
+      "Yuca Fries",
+      "Huancaina sauce",
+      900
+     ],
+     [
+      "Truffle Manchego Fries",
+      "",
+      900
+     ],
+     [
+      "Plantain Chips",
+      "",
+      1000
+     ]
+    ]
+   },
+   {
+    "name": "N.A. (Zero Proof)",
+    "items": [
+     [
+      "Chicha Blossom",
+      "free spirits \"gin\", chicha morada, grapefruit, lime",
+      1600
+     ],
+     [
+      "Zero Sour",
+      "free spirits agave, passionfruit, egg whites, lemon",
+      1600
+     ],
+     [
+      "Cerorita (N.A. piscorita)",
+      "seedlip agave, dragonfruit, lime, passionfruit foam",
+      1800
+     ],
+     [
+      "Sinchelada",
+      "lagunitas hoppy water, michelada mix, lime",
+      1000
+     ]
+    ]
+   },
+   {
+    "name": "Soft Drinks",
+    "items": [
+     [
+      "Inka Kola",
+      "the golden kola",
+      600
+     ],
+     [
+      "Chicha Morada",
+      "peruvian purple corn punch, made in house",
+      700
+     ],
+     [
+      "Passionfruit Juice",
+      "made fresh in house",
+      700
+     ],
+     [
+      "Coca Cola",
+      "bottled mexican coke",
+      600
+     ],
+     [
+      "Diet Coke",
+      "bottled mexican diet coke",
+      600
+     ],
+     [
+      "Sprite",
+      "bottled mexican sprite",
+      600
+     ],
+     [
+      "Fever Tree Ginger Ale (200ml)",
+      "",
+      600
+     ],
+     [
+      "Lagunitas Hoppy Sparkling Water (355ml)",
+      "",
+      600
+     ],
+     [
+      "Saratoga Sparkling Water (828ml)",
+      "",
+      900
+     ]
+    ]
+   }
+  ],
+  "address": "3945 24th St, San Francisco, CA 94114",
+  "phone": "(415) 718-5232",
+  "site": "https://www.frescasf.com/",
+  "siteCta": "Open their site",
+  "orderUrl": "https://order.toasttab.com/online/fresca-hq-3945-24th-street",
+  "instagram": "fresca_sf",
+  "email": "contact@frescasf.com",
+  "hours": "Mon & Wed–Thu 11:30am–9pm, Fri 11:30am–9:30pm, Sat 11am–9:30pm, Sun 11am–9pm, Tue closed",
+  "siteNote": "Happy hour Monday to Friday 3–5:30pm, with its own menu. Reservations for up to six online; parties of seven or more, group dining, semi-private events and buyouts through their Reservations & Events page. Gift cards on their Toast page.",
+  "clip": {
+   "src": "/clips/fresca-sf.mp4",
+   "poster": "/clips/fresca-sf-poster.webp",
+   "href": "https://www.instagram.com/reel/DeKwuUdSxhO/",
+   "credit": "Posted by @fresca_sf",
+   "platform": "Instagram"
+  }
+ },
+ "placements": [
+  "beasty-goods2-83",
+  "san-francisco-goods2-59"
+ ],
+ "glenn": "27 Oct 8:08 pm: Instagram screenshots (@fresca_sf, 'Nuevo Peruvian cuisine serving SF since 1996', 'Now open for lunch', sister restaurant @puerto27restaurant), https://linktr.ee/frescasf, 'San Francisco • Eats / BEASTY • Eats'",
+ "flags": [
+  "Instagram contact button says (415) 742-5727 and ivan@frescasf.com; their site, Google and Yelp give 415-718-5232 and the site gives contact@frescasf.com, which are used.",
+  "Founding year disagrees: Instagram/Linktree say 'since 1996'; their site's Our Story says 'Since opening in 1987'. Neither is in the tagline.",
+  "Happy hour: their site says Mon–Fri 3–5:30pm (used); OpenTable says 3–6pm in one listing and 3–6:30pm in another.",
+  "Menu is their site's /menu. Their Toast ordering page prices differ (e.g. Lomo Saltado $37 vs $34, Ceviche Nikkei $27 vs $26, Causa $32 vs $29, La Jalea $22 vs $25), many Toast descriptions sit on the wrong dishes, and Toast alone has a lunch menu, desserts and a kids menu; none of that is shown. orderUrl points at Toast, so ordered prices may not match these.",
+  "Salad add-ons ('+chicken $24 …') and saltado variants ('-surf n turf $44 …') are printed ambiguously (total or add-on), so they are kept as printed in the descriptions, not as items.",
+  "Pisco and house cocktails, martinis, wine and beer left out (age check); zero-proof and soft drinks kept.",
+  "Gold #DFB756 (badge lettering) not stored: no second-colour key. color is the badge purple #7B418B, sampled from the logo.",
+  "Logo from their Facebook page picture at 1080px; Instagram only serves the same badge at 100px without sign-in, and the site's og:image is the white wordmark on transparent.",
+  "Stale elsewhere: the 737 Irving St Fresca closed 30 Sep 2023 (Toast still lists it); a Frankiapp listing gives (415) 695-0549 and older OpenTable hours (10am weekend openings). Reopened at 24th St on 24 Aug 2026 per their Facebook post.",
+  "Sister restaurant @puerto27restaurant (from Glenn's screenshot) not researched."
+ ]
+}

@@ -1,0 +1,517 @@
+{
+ "id": "b_epicsteak",
+ "name_exact": "EPIC Steak",
+ "checked_on": "2026-10-28",
+ "sources": [
+  "https://www.epicsteak.com/ (hours, address, phone, email, happy hour, brunch)",
+  "https://www.epicsteak.com/menus/ (Dinner, Brunch, Happy Hour, Dessert, Kids; wine list PDF dated 10.18.26)",
+  "https://www.epicsteak.com/location/epic-steak/ (hours, matching the site's structured data)",
+  "https://www.epicsteak.com/faq/ (parking, corkage, cake fee)",
+  "https://instagram.com/epicsteak (linked from their site)",
+  "Yelp, EPIC Steak, 369 The Embarcadero (Steakhouses; hours snapshot Sept 2026)",
+  "OpenTable, EPIC Steak San Francisco (fka Epic Roasthouse)",
+  "logo: https://images.getbento.com/accounts/936c2a77b8979a519de51c934fa90ff4/media/images/58219logo1.png (their site's og:image, 1000x482 white wordmark on transparent)"
+ ],
+ "facts": {
+  "slug": "epic-steak",
+  "name": "EPIC Steak",
+  "label": "EPIC Steak",
+  "cuisine": "Waterfront American steakhouse",
+  "tagline": "A steakhouse on The Embarcadero with Bay Bridge views, serving prime and dry-aged steaks, seafood and a weekend brunch.",
+  "color": "#550002",
+  "icon": "epic-steak",
+  "prep": 0,
+  "category": "Steakhouse",
+  "items": [],
+  "sections": [
+   {
+    "name": "Starters & raw bar",
+    "items": [
+     [
+      "Burrata Pugliese",
+      "Pears, grapes, smoked prosciutto, olio nuovo & aged balsamic.",
+      2600
+     ],
+     [
+      "Beef Tartare",
+      "Quail egg, caper berries, radish & wagyu fat potato chips.",
+      2400
+     ],
+     [
+      "Dungeness Crab Cakes",
+      "Smoked trout roe beurre blanc, frilly mustard green & burnt orange remoulade.",
+      4200
+     ],
+     [
+      "Garlic Shrimp",
+      "Cognac & brioche.",
+      2800
+     ],
+     [
+      "Bread & Butter",
+      "Acme sourdough & European style butter.",
+      900
+     ],
+     [
+      "Daily Pacific Oyster Selection",
+      "Fire roasted onion mignonette & lemon. The smaller of two orders.",
+      2400
+     ],
+     [
+      "Daily Pacific Oyster Selection, larger order",
+      "Fire roasted onion mignonette & lemon.",
+      4600
+     ],
+     [
+      "Shrimp Cocktail",
+      "House cocktail sauce & lemon.",
+      2800
+     ],
+     [
+      "Yellowfin Tuna Poke",
+      "Hawaiian ahi tuna, ogo seaweed & Korean chili aioli.",
+      2600
+     ],
+     [
+      "Seafood Platter",
+      "12 oysters, 4 oz Dungeness crab, 5 shrimp, tuna poke, ½ Maine lobster.",
+      18500
+     ]
+    ]
+   },
+   {
+    "name": "Soup & salad",
+    "items": [
+     [
+      "EPIC Caesar",
+      "Petite romaine hearts, parmesan & levain croutons.",
+      1800
+     ],
+     [
+      "Baby Mixed Greens",
+      "Radish, shallots, fines herbes, pumpkin seeds & champagne vinaigrette.",
+      1600
+     ],
+     [
+      "Baby Iceberg Wedge Salad",
+      "Cherry tomatoes, smoked bacon, blue cheese & buttermilk dressing.",
+      1800
+     ],
+     [
+      "Roasted Butternut Squash Soup",
+      "Toasted pumpkin seeds, crème fraîche & sage.",
+      1600
+     ]
+    ]
+   },
+   {
+    "name": "Land & sea",
+    "items": [
+     [
+      "Grilled Eggplant Steak",
+      "Chanterelle mushrooms, tomato jam & basil pistou.",
+      2900
+     ],
+     [
+      "Roasted Alaskan Halibut",
+      "Summer ratatouille, savoy spinach, tomato vinaigrette & olive tapenade.",
+      4800
+     ],
+     [
+      "Grilled Bone-In Pork Chop",
+      "Honeynut squash purée, radicchio, red grape relish & truffle bordelaise.",
+      4500
+     ],
+     [
+      "Braised Prime Short Rib",
+      "Saffron risotto, crispy leeks & pickled pearl onions.",
+      5500
+     ],
+     [
+      "Prime Rib, 14 oz",
+      "Sunday & Monday from 4pm, until they run out.",
+      6400
+     ],
+     [
+      "Steak Frites",
+      "Grilled Flannery beef flat iron steak, french fries & tarragon béarnaise; includes a glass of Hamel Cabernet Sauvignon.",
+      4500
+     ],
+     [
+      "Epic Burger",
+      "10 oz wagyu blend, smoked bacon, Humboldt organic cheddar, secret sauce, house-made bun & french fries.",
+      2600
+     ]
+    ]
+   },
+   {
+    "name": "Steaks",
+    "items": [
+     [
+      "The Best Damn Filet, 6 oz",
+      "Filet mignon, Schmitz Ranch, California. Hardwood grilled, with chimichurri and EPIC steak sauce.",
+      5900
+     ],
+     [
+      "The Best Damn Filet, 9 oz",
+      "Filet mignon, Schmitz Ranch, California.",
+      6900
+     ],
+     [
+      "New York Steak, 14 oz",
+      "USDA Prime, S.F. butcher Bryan Flannery.",
+      6800
+     ],
+     [
+      "Ribeye Steak, 14 oz",
+      "USDA Prime, S.F. butcher Bryan Flannery.",
+      7400
+     ],
+     [
+      "Porterhouse, 28 oz",
+      "28-day dry aged, grass-fed, grain finished, Olivier's Butchery.",
+      12500
+     ],
+     [
+      "A5 Wagyu Striploin, 4 oz",
+      "Kumamoto, Japan.",
+      9500
+     ],
+     [
+      "A5 Wagyu Striploin, 8 oz",
+      "Kumamoto, Japan.",
+      19000
+     ],
+     [
+      "Tomahawk Ribeye, 38 oz",
+      "45-day dry-aged, grass-fed, grain-finished, Olivier's Butchery.",
+      19000
+     ],
+     [
+      "All in",
+      "Add to any steak: soup or salad, one side dish and dessert.",
+      3900
+     ]
+    ]
+   },
+   {
+    "name": "Add something epic",
+    "items": [
+     [
+      "Buttered Dungeness Crab",
+      "",
+      2400
+     ],
+     [
+      "Maine Lobster",
+      "The smaller of two sizes.",
+      4600
+     ],
+     [
+      "Maine Lobster, larger",
+      "",
+      9400
+     ],
+     [
+      "Horseradish Cream",
+      "",
+      600
+     ],
+     [
+      "Tarragon Béarnaise",
+      "",
+      600
+     ],
+     [
+      "Blue Cheese",
+      "",
+      800
+     ],
+     [
+      "Truffle Miso Butter",
+      "",
+      800
+     ]
+    ]
+   },
+   {
+    "name": "Sides",
+    "items": [
+     [
+      "French Fries",
+      "",
+      1500
+     ],
+     [
+      "Make 'em EPIC truffled",
+      "Add to the fries.",
+      500
+     ],
+     [
+      "Blue Lake Beans",
+      "Romesco sauce & crispy onions.",
+      1500
+     ],
+     [
+      "Yukon Gold Potato Purée",
+      "Chives & olive oil.",
+      1500
+     ],
+     [
+      "Julia Child's Potatoes",
+      "Gruyère, white wine & cream.",
+      1500
+     ],
+     [
+      "Black Truffle Mac N Cheese",
+      "Taleggio cheese & summer truffles.",
+      1500
+     ],
+     [
+      "Sautéed Chef's Mix Mushrooms",
+      "Garlic confit, thyme & sherry.",
+      1500
+     ],
+     [
+      "Rainbow Carrots",
+      "Olive relish, feta mousse & Pedro Ximénez gastrique.",
+      1500
+     ]
+    ]
+   },
+   {
+    "name": "Brunch",
+    "items": [
+     [
+      "House-Made Biscuits",
+      "Whipped butter & seasonal preserves. Saturday & Sunday 11:30am–2:30pm, with the steaks and raw bar.",
+      1000
+     ],
+     [
+      "Caviar Service",
+      "½ oz Tsar Nicoulai classic caviar & accoutrements.",
+      4000
+     ],
+     [
+      "Seasonal Fruit",
+      "Greek yogurt, orange blossom honey & wild oat granola.",
+      1600
+     ],
+     [
+      "Shrimp & Grits",
+      "Jumbo shrimp, Anson Mills grits, chorizo & creole sauce.",
+      2800
+     ],
+     [
+      "Dungeness Crab & Bay Shrimp Louie",
+      "Russian dressing, soft boiled egg, Spanish olives & sourdough garlic toast.",
+      2900
+     ],
+     [
+      "Grilled Chicken Salad",
+      "Roasted beets, arugula, radicchio & citrus vinaigrette.",
+      2500
+     ],
+     [
+      "Lox and Bagel Plate",
+      "Meyer lemon, crème fraîche, capers, red onions & a house-made everything bagel.",
+      2400
+     ],
+     [
+      "Chilaquiles Rojo",
+      "Shredded beef, guajillo chile, lime crema & queso fresco.",
+      2300
+     ],
+     [
+      "Corned Beef Succotash",
+      "House-cured corned beef, roasted butternut squash, potatoes, piquillo peppers & sunny side up eggs.",
+      2400
+     ],
+     [
+      "EPIC Scramble",
+      "Three eggs, roasted mushrooms, spinach & goat cheese.",
+      2100
+     ],
+     [
+      "Brioche French Toast",
+      "Pear compote, chantilly cream & spiced streusel.",
+      2100
+     ],
+     [
+      "Crab Cake Benedict",
+      "Poached eggs & sauce choron.",
+      3200
+     ],
+     [
+      "Steak & Eggs",
+      "8 oz Flannery beef flat iron steak, two eggs & country potatoes.",
+      3600
+     ],
+     [
+      "The Classic BBQ Platter",
+      "Smoked baby back ribs, 20-hour smoked brisket & cheddar hot link, BBQ sauce, cole slaw, Texas toast & pickles. Add pulled pork or smoked chicken +$9.",
+      2900
+     ],
+     [
+      "Epic French Dip",
+      "Slow roasted prime rib, taleggio cheese, Dijon aioli, French roll & au jus.",
+      2800
+     ],
+     [
+      "Delta Asparagus",
+      "Meyer lemon & green garlic aioli.",
+      1500
+     ]
+    ]
+   },
+   {
+    "name": "Happy hour",
+    "items": [
+     [
+      "Bucket of Fried Chicken",
+      "Monday to Friday 4–6pm, not holidays.",
+      1000
+     ],
+     [
+      "Wagyu Cheeseburger & Fries",
+      "Make it a double +$5.",
+      1200
+     ],
+     [
+      "Pacific Oysters",
+      "Each.",
+      200
+     ],
+     [
+      "Ahi Poke Cones",
+      "",
+      1200
+     ],
+     [
+      "Beef Tartare Gougères",
+      "",
+      900
+     ],
+     [
+      "Artichoke Dip",
+      "",
+      900
+     ],
+     [
+      "Mini Dungeness Crab Cakes",
+      "",
+      1200
+     ],
+     [
+      "Chimichurri Steak Skewers",
+      "",
+      900
+     ],
+     [
+      "Pulled Pork Sliders",
+      "",
+      900
+     ],
+     [
+      "Truffle-Parm Fries",
+      "",
+      900
+     ]
+    ]
+   },
+   {
+    "name": "Dessert",
+    "items": [
+     [
+      "Fall Flan",
+      "Custard, red wine poached pears & orange.",
+      1600
+     ],
+     [
+      "S'mores Cake",
+      "Chocolate ganache, graham crust & roasted marshmallow ice cream.",
+      1600
+     ],
+     [
+      "Carrot Cake",
+      "White chocolate cheesecake, candied pecans & poached pineapple.",
+      1600
+     ],
+     [
+      "Apple Pie Sundae",
+      "Apple compote, spiced streusel & pie crust.",
+      1600
+     ],
+     [
+      "Straus Creamery Vanilla Soft Serve Ice Cream",
+      "",
+      1600
+     ],
+     [
+      "Seasonal Housemade Sorbet",
+      "",
+      1600
+     ]
+    ]
+   },
+   {
+    "name": "Kids",
+    "items": [
+     [
+      "Mini Epic Cheese Burger",
+      "Ten and under. Pickles on the side, ketchup & french fries.",
+      1200
+     ],
+     [
+      "Chicken Tenders",
+      "French fries & ranch dressing.",
+      1200
+     ],
+     [
+      "Grilled Cheese",
+      "White cheddar, french fries & marinara sauce.",
+      1200
+     ],
+     [
+      "Mac & Cheese",
+      "",
+      1200
+     ]
+    ]
+   }
+  ],
+  "address": "369 The Embarcadero, San Francisco, CA 94105",
+  "phone": "(415) 369-9955",
+  "site": "https://www.epicsteak.com/",
+  "siteCta": "Reserve on their site",
+  "instagram": "epicsteak",
+  "hours": "Mon–Thu 4pm–9pm, Fri 4pm–9:30pm, Sat 11:30am–9:30pm, Sun 11:30am–9pm",
+  "email": "reservations@epicsteak.com",
+  "quoteOnly": "A sit-down steakhouse: these are their published menu prices, so nothing is ordered here. Book a table on their site or call.",
+  "menuNote": "Prices from the menus on their own website; drinks and wine are not listed here.",
+  "siteNote": "Brunch is Saturday and Sunday 11:30am–2:30pm; happy hour Monday to Friday 4–6pm, not holidays. No valet: metered street parking, Hills Plaza Garage on Folsom, or SpotHero. Corkage is $35 a bottle (four at most) and cake is $5 a guest. Their sister restaurant Waterbar is next door.",
+  "clip": {
+   "src": "/clips/epic-steak.mp4",
+   "poster": "/clips/epic-steak-poster.webp",
+   "href": "https://www.instagram.com/reel/Cv5AXy7g0ma/",
+   "credit": "Posted by @epicsteak",
+   "platform": "Instagram"
+  }
+ },
+ "placements": [
+  "beasty-steakhouse-8",
+  "san-francisco-goods2-57"
+ ],
+ "glenn": "27 Oct 5:55 pm: screenshots of their site, 'https://www.epicsteak.com/', 'San Francisco • Eats / BEASTY • Steakhouse'",
+ "flags": [
+  "81 items from their website menus (Dinner, Brunch, Happy Hour, Dessert, Kids); cocktails, beer, wine and dessert wines left out (age check), and brunch repeats of dinner dishes (raw bar, salads, steaks, sides) not listed twice. About the 80 cap.",
+  "Their oyster order ($24 / $46) and Maine lobster add-on ($46 / $94) each show two prices with no size given; labelled 'smaller'/'larger' only.",
+  "Steak Frites includes a glass of Hamel Cabernet Sauvignon in their description; kept as a dish.",
+  "Email: the visible text on their site says reservations@epicsteak.com, but the header/footer email icons link to reservations@epicroasthouse.com (their former name, Epic Roasthouse). The visible epicsteak.com address is used.",
+  "Hours agree on their site, its structured data and Yelp (Yelp's snapshot omits Sunday). OpenTable splits Sat/Sun into brunch 11:30am–2:30pm and dinner from 2:30pm, and also lists Friday dinner from 2:30pm where their site says 4pm.",
+  "OpenTable labels (415) 369-9955 as the private events coordinator's line; their own site uses it as the main number.",
+  "Menu still carries summer wording (summer ratatouille, summer truffles) beside fall dishes; spelling fixed only for 'ailoi' (aioli) and 'gastric' (gastrique), names otherwise kept, title-cased.",
+  "Brunch 'Hand Cut Beef Tartare' ($24, potato gaufrettes) and brunch-only Veuve Clicquot bottle ($60) not listed separately.",
+  "Instagram handle taken from their site's link; the profile itself was not opened."
+ ]
+}

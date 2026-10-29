@@ -1,0 +1,470 @@
+{
+ "id": "b_earlytorisesf",
+ "name_exact": "Early to Rise",
+ "checked_on": "2026-10-28",
+ "sources": [
+  "https://www.earlytorisesf.com/ (BentoBox: address, phone, hours on home and /location/early-to-rise/, email info@earlytorisesf.com)",
+  "https://www.earlytorisesf.com/menus/ (Scratch Made Brunch and Drinks menus with prices, 72 items, read 28 Oct 2026)",
+  "https://www.earlytorisesf.com/about/ (NoPa, chef Andrew McCormack, pop-up since 2016)",
+  "https://www.instagram.com/earlytorisesf/ (Glenn's screenshots: bio and hours)",
+  "https://linktr.ee/earlytorisesf",
+  "logo: https://ugc.production.linktr.ee/8c7deb42-b3da-4b62-88df-a31b7238baa2_Avatar-Instagram-Light.png (their Linktree avatar, the Instagram rooster, 400x400)",
+  "https://order.toasttab.com/online/early-to-rise2-1801-mcallister-street (their online ordering, linked from their site)",
+  "https://www.opentable.com/restaurant/profile/1355377 (hours match)",
+  "https://ww2.aaa.com/tripcanvas/restaurant/early-to-rise-AA72979 (address, phone, hours match)"
+ ],
+ "facts": {
+  "slug": "early-to-rise-sf",
+  "name": "Early to Rise",
+  "label": "Early to Rise",
+  "cuisine": "Scratch-made brunch",
+  "tagline": "A scratch-made brunch restaurant in NoPa that makes its own bagels, butter and thick-cut bacon.",
+  "color": "#EE2C24",
+  "icon": "early-to-rise-sf",
+  "prep": 0,
+  "category": "Brunch",
+  "items": [],
+  "sections": [
+   {
+    "name": "A Few Good Ways to Start the Day",
+    "items": [
+     [
+      "Sugar Rolled Donut",
+      "Small batch donut.",
+      350
+     ],
+     [
+      "Daily Deluxe Donut",
+      "Small batch donut.",
+      500
+     ],
+     [
+      "Smoked Ricotta with Poached Pears",
+      "White wine & honey poached pears with housemade smoked ricotta, walnut mostarda & tiny mustard greens.",
+      1000
+     ],
+     [
+      "Christina’s Granola",
+      "Weekdays only. Served with organic Greek yogurt, house-made strawberry jelly, fresh fruit & honey.",
+      1000
+     ]
+    ]
+   },
+   {
+    "name": "ETR Bagels",
+    "items": [
+     [
+      "Bagel & Schmear",
+      "Everything or plain bagel; chive or plain schmear.",
+      500
+     ],
+     [
+      "Vegan schmear",
+      "Add to a bagel.",
+      100
+     ],
+     [
+      "Lox Bagel Sandwich",
+      "Cold-smoked lox, chive schmear, capers, tomato & red onion.",
+      1400
+     ],
+     [
+      "Veggie Bagel Sandwich",
+      "Chive schmear, heirloom tomato, bread & butter pickles, avocado & red onion.",
+      1200
+     ],
+     [
+      "Bagels & Lox Platter (for two)",
+      "Two everything bagels, smoked salmon, chive schmear, tomatoes, red onions & capers.",
+      2600
+     ]
+    ]
+   },
+   {
+    "name": "Sides",
+    "items": [
+     [
+      "Smokehouse",
+      "Bacon, breakfast sausage, Canadian bacon or molasses ham.",
+      800
+     ],
+     [
+      "Sides",
+      "White cheddar grits, grits with butter, hash browns, silver dollar pancakes, arugula salad or fruit.",
+      500
+     ]
+    ]
+   },
+   {
+    "name": "Mains",
+    "items": [
+     [
+      "Up and at ’Em",
+      "Two eggs any style with toast, hash browns, arugula salad & choice from smokehouse.",
+      2400
+     ],
+     [
+      "Add two silver dollar pancakes",
+      "",
+      500
+     ],
+     [
+      "Eggs Benedict",
+      "House-smoked Canadian bacon OR garlic Bloomsdale spinach, poached eggs, English muffins & hollandaise; served with white cheddar grits & arugula salad.",
+      2500
+     ],
+     [
+      "With Canadian bacon AND garlic Bloomsdale spinach",
+      "Eggs Benedict add-on.",
+      300
+     ],
+     [
+      "Samusa Potato Pancake",
+      "Peas & their tendrils, roasted carrots, scallions, tamarind, lime coconut yogurt & garam masala spices; vegan & gluten-free.",
+      2000
+     ],
+     [
+      "Shrimp & Grits",
+      "Poached shrimp, crispy bacon bits, roasted mushrooms, sweet onions & scallions; served with a poached egg & roasted prawn broth.",
+      2600
+     ],
+     [
+      "Apple Butter French Toast",
+      "Griddled hazelnut brioche with Calvados apple butter, roasted pink lady apples, apple syrup & whipped creme fraiche.",
+      2300
+     ],
+     [
+      "Strawberry Pancakes",
+      "Buttermilk hot cakes with fresh & preserved strawberries, crème fraîche, strawberry-maple syrup, pistachios, cocoa nibs & mint.",
+      2300
+     ],
+     [
+      "ETRBLT",
+      "Weekdays only. Griddled challah, heirloom tomato, house-smoked bacon & Meyer lemon aioli; served with salt & vinegar potato chips & arugula salad.",
+      1800
+     ],
+     [
+      "The All-Star",
+      "Weekdays only. House-smoked pepper turkey breast on Dutch crunch with white cheddar, smashed avocado, heirloom tomato, red onion, bread & butter pickles, shredded gem lettuce & garlic aioli; served with salt & vinegar potato chips & arugula salad.",
+      1800
+     ],
+     [
+      "Add ETR bacon",
+      "",
+      500
+     ],
+     [
+      "Harvest Salad, small",
+      "Young chicories with Delicata squash, pomegranate, herbed goat cheese, pecans, pepitas & a pomegranate-balsamic vinaigrette.",
+      1200
+     ],
+     [
+      "Harvest Salad, large",
+      "Young chicories with Delicata squash, pomegranate, herbed goat cheese, pecans, pepitas & a pomegranate-balsamic vinaigrette.",
+      1800
+     ],
+     [
+      "Add smoked pepper turkey",
+      "Salad add-on.",
+      600
+     ],
+     [
+      "Add bacon lardons",
+      "Salad add-on.",
+      300
+     ],
+     [
+      "Add a poached egg",
+      "Salad add-on.",
+      200
+     ]
+    ]
+   },
+   {
+    "name": "Cocktails",
+    "items": [
+     [
+      "The Wake Up Call",
+      "Housemade horchata & coffee liqueur, nitro cold brew, cinnamon lemon zest.",
+      1300
+     ],
+     [
+      "Pear Sangria",
+      "Pear purée, vodka, Sicilian pinot grigio & warm fall spices.",
+      1300
+     ],
+     [
+      "La Manzanita",
+      "Crisp apple cider, lime juice, Lyre’s bitter orange Italian Spritz & tequila; served with a cinnamon-sugar rim.",
+      1300
+     ],
+     [
+      "Spicy Orange-Tamarind Margarita",
+      "Pure agave wine, orange-tamarind puree, ETR chili flakes, agave & lime.",
+      1300
+     ],
+     [
+      "Italian Greyhound",
+      "Tap.",
+      1200
+     ],
+     [
+      "Bloody Mary",
+      "",
+      1200
+     ],
+     [
+      "Add a strip of ETR bacon",
+      "Bloody Mary add-on.",
+      300
+     ],
+     [
+      "Michelada",
+      "",
+      900
+     ],
+     [
+      "Mimosa",
+      "Grapefruit or orange.",
+      1200
+     ],
+     [
+      "Bottle Service",
+      "",
+      4800
+     ],
+     [
+      "Bottle Service with Pierre Gimonnet & Fils 1er Cru Champagne",
+      "",
+      13000
+     ]
+    ]
+   },
+   {
+    "name": "Wine",
+    "items": [
+     [
+      "Prosecco, glass",
+      "Vigneti del Sole ‘1925’ Contessa, Veneto, IT, NV. Bottle $44.",
+      1200
+     ],
+     [
+      "Crémant de Bourgogne, glass",
+      "Victorine de Chastenay Brut Rosé, Burgundy, FR, NV. Bottle $48.",
+      1200
+     ],
+     [
+      "Cava, bottle",
+      "Raventós i Blanc ‘de Nit’ Brut Rosé, Catalunya, SP, 2021.",
+      9800
+     ],
+     [
+      "Champagne, bottle",
+      "Gaston Chiquet Tradition 1er Cru, Champagne, FR, NV.",
+      11500
+     ],
+     [
+      "Champagne, bottle",
+      "Pierre Gimonnet & Fils 1er Cru, Champagne, FR, NV.",
+      12500
+     ],
+     [
+      "Pinot Grigio, glass",
+      "Tap, Gotham Project ‘Gazerra’, Sicily, IT, 2021.",
+      1000
+     ],
+     [
+      "Sauvignon Blanc, glass",
+      "Famille Dubard ‘Coeur du Mont’ Vin de France, 2022. Bottle $40.",
+      1200
+     ],
+     [
+      "White Blend, glass",
+      "Ilha do Pico ‘Terras de Lava’, Açores Branco, PR, 2020. Bottle $60.",
+      1200
+     ],
+     [
+      "Riesling, glass",
+      "Selbach-Oster Kabinett, Mosel, GR, 2021. Bottle $85.",
+      1800
+     ],
+     [
+      "Rosé, glass",
+      "Zweigelt, St. Laurent, Pinot Noir: Schloss Gobelsburg ‘Cistercien Rosé’, Kamptal, AU, 2022. Bottle $48.",
+      1200
+     ],
+     [
+      "Pinot Noir, glass",
+      "Comtesse Marion, Languedoc/Roussillon, FR, 2022. Bottle $40.",
+      1200
+     ]
+    ]
+   },
+   {
+    "name": "Spirit-Free Cocktails",
+    "items": [
+     [
+      "Blackberry Sage Smash",
+      "Muddled blackberries & fresh sage, honey syrup, grapefruit juice & sparkling water.",
+      1200
+     ],
+     [
+      "Fugazi Spritz",
+      "Lyre’s bitter orange Italian Spritz & sparkling with soda & fresh orange.",
+      1300
+     ],
+     [
+      "Virgin Wake Up Call",
+      "Housemade horchata, coffee syrup, nitro cold brew & a lemon twist.",
+      1300
+     ],
+     [
+      "Virgin Bloody Maria",
+      "Lyre’s Agave Blanco with our house bloody mix & lime.",
+      1200
+     ],
+     [
+      "Virgin La Manzanita",
+      "Crisp apple cider, lime juice, Lyre’s bitter orange Italian Spritz & Lyre’s Agave Blanco; served with a cinnamon-sugar rim.",
+      1300
+     ]
+    ]
+   },
+   {
+    "name": "Beer & Seltzer",
+    "items": [
+     [
+      "Mother Earth Tierra Madre Lager",
+      "Tap.",
+      800
+     ],
+     [
+      "Almanac Love Hazy IPA",
+      "16oz.",
+      1200
+     ],
+     [
+      "Granada Cider",
+      "16oz.",
+      1200
+     ]
+    ]
+   },
+   {
+    "name": "Coffee & Tea",
+    "items": [
+     [
+      "Burnt Orange Latte",
+      "",
+      700
+     ],
+     [
+      "Coffee",
+      "",
+      450
+     ],
+     [
+      "Latte",
+      "",
+      600
+     ],
+     [
+      "Nitro Cold Brew",
+      "",
+      600
+     ],
+     [
+      "Cappuccino",
+      "",
+      450
+     ],
+     [
+      "Espresso",
+      "",
+      400
+     ],
+     [
+      "Mocha",
+      "",
+      700
+     ],
+     [
+      "Hot Cocoa",
+      "",
+      600
+     ],
+     [
+      "Milk",
+      "",
+      500
+     ],
+     [
+      "Hot Tea",
+      "‘Breakfast At Tiffany’s’ black tea, ‘Cloud Mist’ green tea, or chamomile-mint by Leland Tea Company.",
+      450
+     ],
+     [
+      "Iced Tea",
+      "",
+      500
+     ],
+     [
+      "Arnold Palmer",
+      "",
+      500
+     ]
+    ]
+   },
+   {
+    "name": "Other",
+    "items": [
+     [
+      "Lemonade",
+      "",
+      500
+     ],
+     [
+      "Juice",
+      "Orange or grapefruit.",
+      500
+     ],
+     [
+      "Sparkling Water 28oz",
+      "",
+      800
+     ]
+    ]
+   }
+  ],
+  "address": "1801 McAllister Street, San Francisco, CA 94115",
+  "phone": "(415) 796-3360",
+  "site": "https://www.earlytorisesf.com/",
+  "siteCta": "Open their site",
+  "orderUrl": "https://order.toasttab.com/online/early-to-rise2-1801-mcallister-street",
+  "instagram": "earlytorisesf",
+  "siteNote": "A 6% surcharge to offset local ordinances is added to the bill. The granola, ETRBLT and All-Star are weekdays only. They keep the bar and window counter for walk-ins; reservations are on OpenTable.",
+  "hours": "Mon–Fri 8am–1:30pm, Sat–Sun 8am–2:30pm",
+  "email": "info@earlytorisesf.com",
+  "clip": {
+   "src": "/clips/early-to-rise-sf.mp4",
+   "poster": "/clips/early-to-rise-sf-poster.webp",
+   "href": "https://www.instagram.com/reel/DWEjWglk1Mk/",
+   "credit": "Filmed by @savorwithcoral",
+   "platform": "Instagram",
+   "by": "savorwithcoral"
+  }
+ },
+ "placements": [
+  "beasty-diner-21",
+  "san-francisco-goods2-60"
+ ],
+ "glenn": "27 Oct 9:34 pm: Instagram and site screenshots, 'https://www.earlytorisesf.com/', 'San Francisco • Eats / BEASTY • Breakfast/Brunch'.",
+ "flags": [
+  "Name: their site says 'Early to Rise'; Instagram shows 'Early to Rise Brunch' and Google 'Early To Rise, Scratch Made Brunch'. Used the site's.",
+  "Pinot Grigio: the menu prints $10 (tap) and a stray 'G $9'; used $10.",
+  "Bottle Service ($48, or $130 with Pierre Gimonnet Champagne) is listed under Mimosa with no description; kept as printed.",
+  "Toast ordering shows earlier cutoffs (about 1:15pm weekdays, 2:15pm Sunday); those are order times, not opening hours.",
+  "Yelp blocked fetching (403), so Yelp hours were not cross-checked; site, Instagram, OpenTable and AAA agree.",
+  "Logo is the 400px Linktree avatar; the site's own rooster favicon is only 48px and its header logo is a wordmark."
+ ]
+}

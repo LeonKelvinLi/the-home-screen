@@ -815,4 +815,12 @@ export const ADDED_ON: Record<string, string> = {
   b_fusionbuffetconcord: '2026-10-27',
   b_kakunasushi: '2026-10-27',
   b_jaythecheesecakequeen: '2026-10-27',
+  b_epicsteak: '2026-10-28',
+  b_garlichighsunnyvale: '2026-10-28',
+  b_tacososcar: '2026-10-28',
+  b_lunettecambodia: '2026-10-28',
+  b_squarepieguys: '2026-10-28',
+  b_frescasf: '2026-10-28',
+  b_earlytorisesf: '2026-10-28',
+  b_chefsmelly: '2026-10-28',
 }

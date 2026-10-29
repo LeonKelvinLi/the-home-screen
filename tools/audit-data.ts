@@ -364,7 +364,10 @@ for (const b of BRANDS) {
     if (!brandById(r.brand)) err(`OTHER_REVIEWS ${r.place}: brand ${r.brand} does not exist`)
     films.set(r.brand, (films.get(r.brand) ?? 0) + 1)
   }
-  for (const [id, n] of films) if (n > 3) err(`${brandById(id)?.name ?? id}: ${n} films — Glenn's limit is 3 a page`)
+  /* Four since 2026-10-27: their own film ("Watch their video") and three foodie reviews, Glenn: "I'm trying
+     to balance the three food reviewers with one heavy hitter, someone mediocre and a new food reviewer";
+     Leon: "We can have more too". */
+  for (const [id, n] of films) if (n > 4) err(`${brandById(id)?.name ?? id}: ${n} films — Glenn's limit is 4 a page`)
 }
 
 /* A FILL FROM A SEARCH LANDS ON A REAL PAGE (onlineFills.ts), and an estimated menu says so. */

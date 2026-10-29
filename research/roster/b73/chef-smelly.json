@@ -1,0 +1,784 @@
+{
+ "id": "b_chefsmelly",
+ "name_exact": "Chef Smelly’s Creole (Broadway)",
+ "checked_on": "2026-10-28",
+ "sources": [
+  "https://www.instagram.com/chefsmelly/ (Edward’L, verified, 192K followers; bio: located inside @aulounge, Wed–Fri 1–9pm, Sat 1–9pm, Sun 1–9pm; bio links: order.store, SFGate Best of the Bay, DoorDash order.online, OpenTable)",
+  "https://www.order.store/store/chef-smellys/Qmf4xMiSXCeH2577-QRJLw (his own ordering page, Uber’s order.store; resolves to /store/chef-smellys-creole-broadway/; 135 items with prices, read 28 Oct 2026; address 2430 Broadway, phone +1 510-812-2675 in its structured data)",
+  "https://www.opentable.com/r/smellys-oakland (‘Smellys’: executive chef Edward’L Wooley; Creole / Cajun / Southern, seafood, soul food; Tue–Sun 1–9pm; (510) 812-2675; ‘We cater to all events’; daily buyouts; corner of 25th and Broadway)",
+  "https://order.online/business/chef-smellys-11762416 (his DoorDash storefront, linked from his Instagram; not read)",
+  "https://www.threads.com/@chefsmelly",
+  "The Infatuation, Chef Smelly’s (a semi-permanent pop-up operating out of Au Lounge); SF Chronicle pieces on his pop-up history",
+  "logo: https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-19/358177879_232455546387154_7473964581188635878_n.jpg?stp=dst-jpg_s320x320_tt6 (his Threads profile picture, 320x320, the same photo as his Instagram profile picture, which only served 150x150: .../355629769_699587678599499_1079472416591635180_n.jpg; signed CDN links, expire)"
+ ],
+ "facts": {
+  "slug": "chef-smelly",
+  "name": "Chef Smelly’s Creole",
+  "label": "Chef Smelly",
+  "cuisine": "Creole & soul food chef, catering",
+  "tagline": "Chef Smelly, Edward’L Wooley, cooks Creole and soul food — fried and blackened seafood, garlic noodles, loaded fries and crack n cheese — inside Au Lounge on Broadway in Oakland.",
+  "color": "#111111|#FFFFFF",
+  "icon": "chef-smelly",
+  "prep": 0,
+  "category": "Creole restaurant and catering",
+  "items": [],
+  "sections": [
+   {
+    "name": "A la carte",
+    "items": [
+     [
+      "Catfish Side",
+      "",
+      1500
+     ],
+     [
+      "Creole Chicken Tenders Side",
+      "",
+      1500
+     ],
+     [
+      "Deep Fried Chicken",
+      "",
+      1500
+     ],
+     [
+      "Side Of Blackend Salmon W/ Creole Glaze",
+      "",
+      2800
+     ],
+     [
+      "Blackened Catfish Side",
+      "",
+      1500
+     ],
+     [
+      "16 oz. Bone in Cowboy Ribeye Al A Carte",
+      "",
+      5500
+     ],
+     [
+      "Lobster Meat",
+      "",
+      3000
+     ],
+     [
+      "Creole Lamb Chops Al Acarte",
+      "",
+      5000
+     ],
+     [
+      "Snapper Side",
+      "",
+      1500
+     ],
+     [
+      "Dungeness Crab Meat",
+      "",
+      2500
+     ],
+     [
+      "Blackened Snapper Side",
+      "",
+      1500
+     ],
+     [
+      "Lobster Tail Al A Carte",
+      "",
+      2500
+     ]
+    ]
+   },
+   {
+    "name": "Appetizers",
+    "items": [
+     [
+      "Creole Garlic Bread",
+      "",
+      600
+     ],
+     [
+      "Smelly’s House Salad",
+      "",
+      900
+     ],
+     [
+      "Creole Fried Oysters",
+      "",
+      1500
+     ],
+     [
+      "Fried Prawns Side",
+      "",
+      1500
+     ],
+     [
+      "Smellys Wings Sweet And Spicy",
+      "",
+      1800
+     ],
+     [
+      "Grilled Oysters Topped With Lobster Meat",
+      "",
+      1000
+     ],
+     [
+      "Hot Honey Chili Prawns",
+      "",
+      2000
+     ],
+     [
+      "Chargrilled Oysters Topped With Crab Meat",
+      "",
+      1000
+     ],
+     [
+      "Blackened Prawns Side",
+      "",
+      1500
+     ],
+     [
+      "Creole Fries",
+      "",
+      500
+     ],
+     [
+      "Hot Honey Chili Wings Ala Carte",
+      "",
+      1800
+     ],
+     [
+      "Roasted Beat Arugula Salad Balsamic Vinaigrette Goat Cheese",
+      "",
+      1700
+     ],
+     [
+      "Wings A la Carte",
+      "",
+      1500
+     ]
+    ]
+   },
+   {
+    "name": "Land",
+    "items": [
+     [
+      "Chicken Wing Dinner",
+      "",
+      3100
+     ],
+     [
+      "Creole Southern Fried Chicken Breast Tenders w/ Garlic Noodles",
+      "",
+      3000
+     ],
+     [
+      "Lamb Chop Dinner",
+      "",
+      6000
+     ],
+     [
+      "Ribeye Dinner",
+      "",
+      5800
+     ],
+     [
+      "Hot Honey Chili Chicken Dinner",
+      "",
+      3300
+     ],
+     [
+      "Chicken Wings Over Noodles",
+      "",
+      3000
+     ],
+     [
+      "Chicken Tenders Dinner",
+      "",
+      3100
+     ],
+     [
+      "Surf And Turf Ribeye Dinner",
+      "",
+      7500
+     ],
+     [
+      "Creole Fried Hot Honey Chicken Breast Crack & Cheese & Garlicky Green Beans",
+      "",
+      3300
+     ],
+     [
+      "Chicken & Deep Fried Prawns Crack & Cheese & Garlicky Green Beens",
+      "",
+      4200
+     ],
+     [
+      "Hot Honey Chili Chicken Over Noodles",
+      "",
+      3300
+     ],
+     [
+      "Surf And Turf Ribeye And Noodles",
+      "",
+      7500
+     ],
+     [
+      "Blackened Tender Dinner",
+      "",
+      3000
+     ],
+     [
+      "Blackened Lamb Chops",
+      "",
+      6000
+     ],
+     [
+      "Chicken Tenders Over Noodles",
+      "",
+      3000
+     ],
+     [
+      "Lamb Over Noodles",
+      "",
+      6000
+     ],
+     [
+      "Ribeye Over Noodles",
+      "",
+      5800
+     ],
+     [
+      "Chicken And Steak Noodles",
+      "",
+      3100
+     ]
+    ]
+   },
+   {
+    "name": "Sea",
+    "items": [
+     [
+      "Catfish & Prawns Combo",
+      "",
+      4200
+     ],
+     [
+      "Deep Fried Red Snapper Combo W/ fried Prawns Crack n Cheese W/ Garlicky Green Beans",
+      "",
+      4200
+     ],
+     [
+      "Fried Prawns over Garlic Noodles",
+      "",
+      4000
+     ],
+     [
+      "Catfish And Wings Combo",
+      "",
+      4200
+     ],
+     [
+      "Hot Honey Chili Prawns over Garlic Noodles",
+      "",
+      4300
+     ],
+     [
+      "Blackened Salmon Over Noodles With Prawns Over Noodles",
+      "",
+      5500
+     ],
+     [
+      "Salmon Dinner",
+      "",
+      4000
+     ],
+     [
+      "Deep Fried Catfish Crack & Cheese Garlicky Green beans",
+      "",
+      3100
+     ],
+     [
+      "Deep Fried Red Snapper Crack & Cheese Garlicky Green beans",
+      "",
+      3100
+     ],
+     [
+      "3 Way Catfish Seafood Combo",
+      "",
+      4200
+     ],
+     [
+      "Blackened Catfish Dinner",
+      "",
+      3100
+     ],
+     [
+      "Fish & Chips",
+      "",
+      3000
+     ],
+     [
+      "Blackened Catfish And Prawns",
+      "",
+      3000
+     ],
+     [
+      "3 Way Snapper Seafood Combo",
+      "",
+      4200
+     ],
+     [
+      "Blackened Salmon W/ Creole Glaze over Garlic noodles",
+      "",
+      4000
+     ],
+     [
+      "Trifecta Noodles",
+      "",
+      7200
+     ],
+     [
+      "Salmon topped with Crab meat over Mash with Veggies",
+      "",
+      6000
+     ],
+     [
+      "Blackend Prawn Over Noodles",
+      "",
+      4000
+     ],
+     [
+      "Lobtail Combo",
+      "",
+      7500
+     ],
+     [
+      "Fried Prawn Dinner",
+      "",
+      4000
+     ],
+     [
+      "Prawns, Crack & Cheese Garlicky Green Beans",
+      "",
+      4000
+     ],
+     [
+      "Blackened Snapper & Prawns Combo",
+      "",
+      3000
+     ],
+     [
+      "Blackened Snapper Dinner",
+      "",
+      3100
+     ],
+     [
+      "Creole Deep Fried Prawns over Creole Fries",
+      "",
+      3300
+     ],
+     [
+      "Snapper And Wings Combo",
+      "",
+      4000
+     ],
+     [
+      "Snapper Over Noodle",
+      "",
+      3500
+     ],
+     [
+      "Lobtail Dinner",
+      "",
+      6000
+     ],
+     [
+      "Hot Honey Chili Prawn Dinner",
+      "",
+      4300
+     ],
+     [
+      "Deep Fried Oyster Dinner And Prawns",
+      "",
+      4000
+     ],
+     [
+      "Oysters Over Noodles",
+      "",
+      4000
+     ],
+     [
+      "Catfish And Tenders Combo",
+      "",
+      4200
+     ],
+     [
+      "Blackened Catfish Over Noodle",
+      "",
+      3100
+     ],
+     [
+      "Blackened Prawn Dinner",
+      "",
+      4000
+     ],
+     [
+      "Snapper And Tenders Combo",
+      "",
+      4200
+     ],
+     [
+      "Fried Oyster Dinner",
+      "",
+      4000
+     ],
+     [
+      "Lobster Tail Over Noodles",
+      "",
+      7000
+     ]
+    ]
+   },
+   {
+    "name": "Designer fries",
+    "items": [
+     [
+      "Crab And Steak Over Noodles",
+      "",
+      5300
+     ],
+     [
+      "Trifecta Small",
+      "",
+      4500
+     ],
+     [
+      "Steak Fries",
+      "",
+      1800
+     ],
+     [
+      "Chicken And Steak Fries",
+      "",
+      2600
+     ],
+     [
+      "Loaded Crab Fries",
+      "",
+      4000
+     ],
+     [
+      "Extravaganza Fries",
+      "",
+      6000
+     ],
+     [
+      "Creole Surf & Turf Fries",
+      "",
+      5000
+     ],
+     [
+      "Loaded Crab Noodles",
+      "",
+      4500
+     ],
+     [
+      "Creole Loaded Prawn Fries",
+      "",
+      3000
+     ],
+     [
+      "Extravaganza Noodles",
+      "",
+      7200
+     ],
+     [
+      "Crab And Steak Over Fries",
+      "",
+      4800
+     ],
+     [
+      "Loaded Lobster & Crab Noodles",
+      "",
+      5500
+     ],
+     [
+      "Hot Honey Chili Prawns & Crab & Steak Over Fries",
+      "",
+      6300
+     ],
+     [
+      "Trifecta Fries",
+      "",
+      6700
+     ],
+     [
+      "Surf & Turf Noodles",
+      "",
+      6500
+     ],
+     [
+      "Loaded Lobster Fries",
+      "",
+      4000
+     ],
+     [
+      "Creole Loaded Lobster & Dungeness Crab Fries",
+      "",
+      5000
+     ],
+     [
+      "Lobster Over Noodles",
+      "",
+      4500
+     ],
+     [
+      "Creole Loaded Prawn Noodles",
+      "",
+      4000
+     ],
+     [
+      "Creole Loaded Prawn Noodles",
+      "",
+      3500
+     ],
+     [
+      "Prawn And Steak Fries",
+      "",
+      3000
+     ]
+    ]
+   },
+   {
+    "name": "Loaded crack n cheese",
+    "items": [
+     [
+      "Crack N Cheese W/ Dungeness Crab",
+      "",
+      4000
+     ],
+     [
+      "Crack N Cheese W/ Chicken",
+      "",
+      2700
+     ],
+     [
+      "Crack N Cheese W/ Lobster",
+      "",
+      4000
+     ],
+     [
+      "Crack N Cheese W/ Steak",
+      "",
+      2700
+     ],
+     [
+      "Crack N Cheese W/ Prawns",
+      "",
+      3800
+     ],
+     [
+      "Trifecta Crack n Cheese",
+      "",
+      6700
+     ],
+     [
+      "Extravaganza Crack N Cheese",
+      "",
+      7200
+     ],
+     [
+      "Chicken Mac",
+      "",
+      3000
+     ]
+    ]
+   },
+   {
+    "name": "Platters",
+    "items": [
+     [
+      "Big Dog Platter",
+      "",
+      15000
+     ],
+     [
+      "Couples Platter",
+      "",
+      18000
+     ]
+    ]
+   },
+   {
+    "name": "Sammiches",
+    "items": [
+     [
+      "PoBoy",
+      "",
+      2000
+     ],
+     [
+      "Fried Prawns Poboy",
+      "",
+      2000
+     ],
+     [
+      "Cat Poboy",
+      "",
+      2000
+     ],
+     [
+      "Lobster Poboy",
+      "",
+      4000
+     ],
+     [
+      "Snapper Poboy",
+      "",
+      2000
+     ],
+     [
+      "Oyster Poboy",
+      "",
+      2000
+     ],
+     [
+      "Crab Poboy",
+      "",
+      4000
+     ],
+     [
+      "Blackend Snapper Po",
+      "",
+      2000
+     ],
+     [
+      "Poboy Chicken",
+      "",
+      2000
+     ]
+    ]
+   },
+   {
+    "name": "Kids meal",
+    "items": [
+     [
+      "Kids Chicken Crack & Cheese, Garlicky Green Beans",
+      "",
+      1500
+     ],
+     [
+      "Kids Chicken W/ Noddles",
+      "",
+      1500
+     ],
+     [
+      "Kids Chicken W/ Fries",
+      "",
+      1500
+     ]
+    ]
+   },
+   {
+    "name": "Sides",
+    "items": [
+     [
+      "Mac & Cheese Aka Crack & Cheese",
+      "",
+      800
+     ],
+     [
+      "Garlic Noodles",
+      "",
+      1500
+     ],
+     [
+      "Candied Yams",
+      "",
+      700
+     ],
+     [
+      "Garlic Mash Potatoes",
+      "",
+      600
+     ],
+     [
+      "Garlicky Green Beans",
+      "",
+      600
+     ],
+     [
+      "Deep Fried Sweet Corn",
+      "",
+      800
+     ],
+     [
+      "Fried Brussel Sprouts",
+      "",
+      1000
+     ],
+     [
+      "Collard Greens",
+      "",
+      700
+     ],
+     [
+      "Garlic Butter",
+      "",
+      700
+     ],
+     [
+      "Small Side Of Noodle",
+      "",
+      750
+     ],
+     [
+      "Sweet Chili Sauce",
+      "",
+      500
+     ],
+     [
+      "Garlic Fries",
+      "",
+      900
+     ]
+    ]
+   },
+   {
+    "name": "Drinks",
+    "items": [
+     [
+      "Lemonade",
+      "",
+      500
+     ]
+    ]
+   }
+  ],
+  "address": "2430 Broadway, Oakland, CA 94612",
+  "phone": "(510) 812-2675",
+  "site": "https://www.order.store/store/chef-smellys/Qmf4xMiSXCeH2577-QRJLw",
+  "siteCta": "Order from his menu",
+  "instagram": "chefsmelly",
+  "hours": "Wed–Sun 1pm–9pm",
+  "siteNote": "He cooks inside Au Lounge, at the corner of 25th and Broadway. Tables are booked on OpenTable under ‘Smellys’, and his OpenTable listing says he caters events and the room is available for daily buyouts."
+ },
+ "placements": [
+  "beasty-catering-10",
+  "beasty-cooks-14",
+  "oakland-goods2-37"
+ ],
+ "glenn": "27 Oct 10:51 pm: ‘BEASTY • Chef’ with a screenshot of Instagram @chefsmelly (Edward’L, verified, 192K followers, category Restaurant; located inside @aulounge, Wed–Sun 1–9pm; 2430 Broadway, Oakland; order.store link and 3 more; Threads chefsmelly; Facebook Edward Wooley; highlights include ‘San Jose’).",
+ "flags": [
+  "135 items from his order.store page, over the 80 cap: the whole menu kept; the page gives no descriptions, so every description is empty.",
+  "Menu cleanup: his ‘Specials’ section dropped (all 7 items repeat other sections); ‘Smellys Wings Sweet And Spicy’ and a second ‘Hot Honey Chili Chicken Over Noodles’ removed from Land, ‘Chicken And Steak Fries’ kept only under Designer Fries; ‘Creole Loaded Fries’ left out (priced by add-ons, $0 base); ‘Creole Loaded Prawn Noodles’ appears twice at $40 and $35 with no difference given, both kept.",
+  "Item names are his own spelling (Blackend, Beat Arugula, Noddles, Beens, Lobtail, Al Acarte); not corrected.",
+  "Hours differ by source: Instagram bio Wed–Sun 1–9pm (used; matches Glenn’s screenshot); OpenTable Tue–Sun 1–9pm; the order.store page lists Mon–Fri 1–8:30pm, Sat–Sun 1–7:30pm (ordering hours).",
+  "Same door as the existing Au Lounge seed (au-lounge, 2430 Broadway), whose phone is 510.893.1411; his own number (510) 812-2675 is from the order.store page and OpenTable.",
+  "No website of his own: site is the order.store page (OpenTable’s ‘restaurant’s website’ link points there too). No email found.",
+  "Catering is from his OpenTable listing only (‘We cater to all events’); no catering menu or prices. No private-chef work found.",
+  "LOGO: no logo; the picture is a photo of him with a young girl beside him (probably family). Saved the 320px Threads copy; consider cropping to him alone or a wordmark before use.",
+  "‘San Jose’ story highlight not viewable without signing in; no San Jose location found. Older press mentions a planned brick-and-mortar at 10801 Bancroft Ave (undated); not used.",
+  "DoorDash storefront (order.online/business/chef-smellys-11762416) not read; prices there may differ.",
+  "Facebook (Edward Wooley) not checked."
+ ]
+}

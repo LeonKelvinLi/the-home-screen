@@ -1,0 +1,290 @@
+{
+ "id": "b_tacososcar",
+ "name_exact": "Tacos Oscar (site); TAC🍉S 🍉SCAR (Instagram @tacososcar)",
+ "checked_on": "2026-10-28",
+ "sources": [
+  "https://www.tacososcar.com/ (Oakland address and hours, FAQ)",
+  "https://www.tacososcar.com/menu/ (Dinner Menu Oakland)",
+  "https://www.tacososcar.com/lunch-menu/ (Brunch Menu Oakland)",
+  "https://www.tacososcar.com/menu-2/ (Dinner Menu SF)",
+  "https://www.tacososcar.com/contact-us/ (email, buyouts)",
+  "https://www.instagram.com/tacososcar/ (Glenn's screenshots: both addresses, closed Tue & Wed, phone, email)",
+  "https://www.woodsbeer.com/lowside (530 Haight St; kitchen hours, 'Food is provided by Tacos Oscar')",
+  "https://guide.michelin.com/us/en/california/oakland/restaurant/tacos-oscar (Oakland address with ZIP, hours)",
+  "https://maps.apple.com/place?place-id=I753551CFA1175E69 (SF listing)",
+  "https://www.tacososcar.com/wp-content/uploads/2019/09/TO-logo-transparent-1.png (logo, 636x586 transparent PNG)",
+  "https://www.tacososcar.com/wp-content/uploads/dynamic_avia/avia_posts_css/post-21.css (brand blue #00ccff)"
+ ],
+ "facts": {
+  "slug": "tacos-oscar",
+  "name": "Tacos Oscar",
+  "label": "Tacos Oscar",
+  "cuisine": "Tacos, tostadas & breakfast burritos",
+  "tagline": "A taco shop in the alley at 420 40th St in Oakland, with weekend brunch, and a second kitchen inside Woods Lowside on Haight Street in San Francisco.",
+  "color": "#00CCFF",
+  "icon": "tacos-oscar",
+  "prep": 0,
+  "category": "Tacos",
+  "items": [],
+  "sections": [
+   {
+    "name": "Dinner",
+    "items": [
+     [
+      "Tostada de Frijoles",
+      "Italian butter beans, avocado crema, Jalapeño vinaigrette, Thai basil, radish. Contains dairy.",
+      1300
+     ],
+     [
+      "Taco de Barbacoa",
+      "Banana leaf & chile-braised beef shoulder, roasted tomatillo salsa, cilantro, onion",
+      550
+     ],
+     [
+      "Pork Chile Verde Taco",
+      "Tomatillo-braised pork shoulder, guacasalsa, cilantro, onion, polvo de chicharrón",
+      550
+     ],
+     [
+      "Charred Broccoli Taco",
+      "Charred broccoli, peanut-arbol salsa, pickled onion, cilantro. Vegan; contains peanuts.",
+      500
+     ],
+     [
+      "Tinga de Pollo Taco",
+      "Chile-braised chicken thigh, guacasalsa, pickled onion, cilantro",
+      500
+     ],
+     [
+      "Taco de Hongos",
+      "Taco-spiced mushrooms, cabbage-mint slaw, chile verde cashew crema, onion, cilantro, serrano. Vegan; contains nuts.",
+      550
+     ],
+     [
+      "Chips y Salsa Morita (4oz.)",
+      "",
+      500
+     ],
+     [
+      "Fermented Habanero Hot Sauce (2oz.)",
+      "",
+      200
+     ]
+    ]
+   },
+   {
+    "name": "Brunch",
+    "items": [
+     [
+      "Barbacoa Scramble Breakfast Burrito",
+      "Beef barbacoa scramble, Mayocoba beans, Tillamook cheddar, roasted tomatillo-jalapeño salsa, onion, cilantro in a flour tortilla",
+      1600
+     ],
+     [
+      "Vegan Breakfast Burrito",
+      "Pan fried potatoes, sautéed peppers & onions, Mayocoba beans, chile morita mayonesa, avocado, onion, cilantro in a flour tortilla. Vegan; contains soy.",
+      1500
+     ],
+     [
+      "Taco de Huevo",
+      "Fried egg, salsa macha, Tillamook cheddar, pickled onion, cilantro. Contains pumpkin, sunflower and sesame seeds.",
+      600
+     ],
+     [
+      "Charred Broccoli Taco",
+      "Charred broccoli, peanut-arbol salsa, pickled onion, cilantro. Vegan; contains peanuts.",
+      500
+     ],
+     [
+      "Barbacoa Scramble Taco",
+      "Beef barbacoa scramble, roasted tomatillo-jalapeño salsa, onion, cilantro",
+      650
+     ],
+     [
+      "Bean & Cheese Taco",
+      "Puréed Mayocoba beans, Tillamook cheddar, roasted tomatillo-jalapeño salsa, onion, cilantro",
+      600
+     ],
+     [
+      "Chips y Salsa Morita (4oz.)",
+      "",
+      500
+     ],
+     [
+      "Fermented Habanero Hot Sauce (2oz.)",
+      "",
+      200
+     ]
+    ]
+   },
+   {
+    "name": "Beers Y Mas",
+    "items": [
+     [
+      "Café de Olla",
+      "At brunch.",
+      400
+     ],
+     [
+      "Michelada",
+      "Spicy tomato juice, ice, beer. At brunch. Vegan; contains soy & wheat.",
+      800
+     ],
+     [
+      "Agua Fresca Del Dia",
+      "",
+      600
+     ],
+     [
+      "East Brother Beer Co. Mexican Lager",
+      "12oz. can",
+      500
+     ],
+     [
+      "Temescal Brewing “Lucky Cat” Rice Lager",
+      "12oz. can",
+      600
+     ],
+     [
+      "Far West Cider “You Guava Be Kidding Me”",
+      "12 oz. can",
+      800
+     ],
+     [
+      "East Brother Blonde Ale",
+      "16 oz. can",
+      800
+     ],
+     [
+      "Ysidro Grapefruit & Sea Salt Sake Spritz",
+      "8.4 oz. can",
+      900
+     ],
+     [
+      "Gulp Hablo Orange Wine",
+      "250ml",
+      1200
+     ],
+     [
+      "Gulp Hablo “Fresco” Chilled Red Wine",
+      "250ml",
+      1200
+     ],
+     [
+      "Best Day Brewing N/A Kölsch",
+      "12oz. can",
+      600
+     ],
+     [
+      "Mexican Coke",
+      "12oz. Btl.",
+      400
+     ],
+     [
+      "Mexican Squirt",
+      "12oz. Btl.",
+      400
+     ],
+     [
+      "Jarritos Mineragua Mineral Water",
+      "12oz. Btl.",
+      400
+     ]
+    ]
+   },
+   {
+    "name": "San Francisco dinner (530 Haight St)",
+    "items": [
+     [
+      "DOS TOSTADAS!!!",
+      "Your choice of chicken tinga or pork chile verde OR one of each with Mayocoba beans, shredduce, roasted tomatillo salsa, dill-jalapeño crema, queso cotija, pickled onion, cilantro",
+      1500
+     ],
+     [
+      "Fried Huevo Taco",
+      "Fried egg, mayocoba beans, salsa macha, queso cotija, pickled onion, cilantro. Contains pumpkin, sunflower and sesame seeds.",
+      700
+     ],
+     [
+      "Pork Chile Verde Taco",
+      "Tomatillo-braised pork shoulder, guacasalsa, cilantro, onion, polvo de chicharrón",
+      550
+     ],
+     [
+      "Double Decker",
+      "Mayocoba bean & jack cheese quesadilla stuffed with a tostada and topped with roasted tomatillo salsa, queso cotija, pickled onion, cilantro. Add chicken tinga or pork chile verde +$5.",
+      900
+     ],
+     [
+      "Charred Broccoli Taco",
+      "Featuring Mama Lam’s Malaysian peanut satay paste, pickled onion, cilantro. Vegan; contains peanut & candlenut. 50% of proceeds go to No Immigrants, No Spice!",
+      500
+     ],
+     [
+      "Tinga de Pollo Taco",
+      "Chile-braised chicken thigh, guacasalsa, pickled onion, cilantro",
+      500
+     ],
+     [
+      "Guacamole, Roasted Tomatillo Salsa y Chips",
+      "",
+      1400
+     ]
+    ]
+   }
+  ],
+  "address": "420 40th St, Oakland, CA 94609",
+  "phone": "(719) 266-2837",
+  "email": "tacososcar@gmail.com",
+  "hours": "Sun, Mon & Thu 5–9pm; Fri–Sat 5–9:30pm; brunch Sat–Sun 11am–2pm; closed Tue & Wed",
+  "site": "https://www.tacososcar.com/",
+  "siteCta": "Open their site",
+  "instagram": "tacososcar",
+  "menuNote": "Prices from the Oakland dinner and brunch menus and the SF dinner menu on their own site. Brunch is Saturday and Sunday, 11am to 2pm, in Oakland.",
+  "siteNote": "A 1% Dining For Justice surcharge goes on every check to help feed houseless neighbors; ask if you'd like to opt out. Kid-friendly, and dogs on a leash are welcome. The food is typically gluten-free unless noted, with one or two vegan options. Brunch tacos are on La Palma flour tortillas, corn on request. The Oakland space can be bought out for up to 50 guests.",
+  "panels": [
+   {
+    "head": "Both shops",
+    "body": [
+     "Oakland — 420 40th St, \"in the alley\": Sunday, Monday and Thursday 5pm to 9pm, Friday and Saturday 5pm to 9:30pm, brunch Saturday and Sunday 11am to 2pm.",
+     "San Francisco — 530 Haight St, \"in the bar\" at Woods Lowside: tacos Monday and Thursday to Sunday, 5pm to 9pm, in-house or to go.",
+     "Both closed Tuesdays and Wednesdays."
+    ],
+    "links": [
+     {
+      "label": "SF dinner menu",
+      "href": "https://www.tacososcar.com/menu-2/"
+     },
+     {
+      "label": "Woods Lowside",
+      "href": "https://www.woodsbeer.com/lowside"
+     }
+    ]
+   }
+  ],
+  "clip": {
+   "src": "/clips/tacos-oscar.mp4",
+   "poster": "/clips/tacos-oscar-poster.webp",
+   "href": "https://www.instagram.com/reel/DfBPV_UTQ7Q/",
+   "credit": "Filmed by @antoinetterzz",
+   "platform": "Instagram",
+   "by": "antoinetterzz"
+  }
+ },
+ "placements": [
+  "beasty-goods2-80",
+  "oakland-goods2-35"
+ ],
+ "glenn": "27 Oct 7:01 pm: Instagram screenshots of @tacososcar ('TAC🍉S 🍉SCAR', 24.6K followers: 420 40th St. 'In the alley' Oakland, 530 Haight St. 'In the bar' San Pancho, closed Tues & Weds, link tacososcar.com/menu, call (719) 266-2837, tacososcar@gmail.com), 'https://www.tacososcar.com/', 'Oakland • Eats / BEASTY • Eats'.",
+ "flags": [
+  "Phone (719) 266-2837 (a Colorado area code) is only on their Instagram contact button; their site lists no phone, and Foodle and ZoomInfo give (510) 735-9620. Instagram's number is used.",
+  "Google and Yelp not checked: the Chrome extension was not connected and Yelp returned 403. Oakland hours checked against the Michelin Guide instead, which matches their site exactly; Atmosfy and one Fine Dining Lovers version omit Saturday brunch.",
+  "SF hours are from Woods Lowside's own page (kitchen Mon, Thu–Sun 5–9pm). Apple Maps gives the SF listing Oakland's schedule (weekend brunch, 9:30pm Fri–Sat); SF Chronicle (Nov 2025) said Thu–Mon from 5pm. SF hours go in the panel only; the hours field is Oakland's.",
+  "No orderUrl: their 'Order Online Here!' button (Upserve, app.upserve.com/s/tacos-oscar-oakland) is set to hidden on every screen size.",
+  "The SF Charred Broccoli Taco (Mama Lam's satay, 50% to No Immigrants, No Spice) was a 24–26 Oct 2026 collab per ma.to, so the SF menu page may be out of date.",
+  "SF drinks list only 'Woods Beer & Wine Co.' with no prices, so none are shown.",
+  "Visit Oakland lists the shop at 481 Water St, Oakland 94607; that address is not used.",
+  "Their Instagram avatar is now a cactus drawing on pale blue (about #88D0F0), not the egg wordmark; the logo is the wordmark from their site, and the color #00CCFF is the bright blue their site uses for 'TACOS' and its buttons.",
+  "Brunch menu items repeat Charred Broccoli Taco, Chips y Salsa Morita and the hot sauce from dinner; kept as they publish them."
+ ]
+}

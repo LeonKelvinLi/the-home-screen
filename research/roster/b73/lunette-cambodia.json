@@ -1,0 +1,178 @@
+{
+ "id": "b_lunettecambodia",
+ "name_exact": "Lunette Cambodia",
+ "checked_on": "2026-10-28",
+ "sources": [
+  "https://www.lunettecambodia.com/ (their own website, Squarespace; read 2026-10-28: 'Welcome to Lunette Cambodia ... in the heart of San Francisco's Ferry Building'; Ferry Building, Floor 1, Suite 33/47, San Francisco, CA 94111; Sunday 11am-2:30pm, Monday- closed, Tuesday–Friday 11am–8pm, Saturday 10am–7pm; Order Online links to their Toast page; Netflix Chef's Table feature)",
+  "https://www.lunettecambodia.com/contact (Ferry Building, Floor 1, Suite 33/47, San Francisco, CA 94111; hi@nyumbai.com; no phone)",
+  "https://www.lunettecambodia.com/about ('Lunette is the older sister of Nyum Bai 1.0'; 'Lunette means Little Moon')",
+  "https://www.lunettecambodia.com/s/Copy-of-Lunette-Cambodia-Menu-Template-A3-1.pdf (their menu PDF from the site's Menu page, uploaded 3 Oct 2025: Eat Noodles (Nyum Mee) $21, Eat Rice (Nyum Bai) $21, Pantry, Snacks, Drinks, Merch)",
+  "https://order.toasttab.com/online/lunette-cambodia-ferry-building-1-ferry-building-suite-33-47 (their own Toast online ordering, linked from their website; read in a browser 2026-10-28: 'Lunette Cambodia - Ferry Building', 1 Ferry Building Suite 33/47, Pickup Only, 'Only accepting scheduled orders'; sections Staff's Fav, Nyum Mee (Eat Noodles), Nyum Bai (Eat Rice), Snacks, Drinks, Take Home, all priced; Call link tel:+15102393755)",
+  "https://www.ferrybuildingmarketplace.com/shops/lunette-cambodia/ (the Ferry Building's listing, read 2026-10-28: Chef/owner Nite Yun; Tuesday-Friday 11:00am to 8:00pm, Saturday 10:00am to 7:00pm, Sunday 11:00am to 2:30pm; Location Shop #33; www.lunettecambodia.com)",
+  "Instagram @lunette_cambodia (Glenn's screenshots 27 Oct: \"Let's eat. From the @nyumbai family\", 1 Ferry Building, Suite 33)",
+  "https://images.squarespace-cdn.com/content/v1/6732b93d7ad8a3335852f9c7/ad609557-e514-465a-963b-e1122a0878d2/favicon.ico?format=100w (logo: their site's light-mode favicon, white 'lunette' on a teal-blue circle, 250x250 PNG, the largest size the CDN serves)"
+ ],
+ "facts": {
+  "slug": "lunette-cambodia",
+  "name": "Lunette Cambodia",
+  "label": "Lunette",
+  "cuisine": "Cambodian noodles & rice",
+  "tagline": "Chef Nite Yun's Cambodian counter on the ground floor of the Ferry Building, from the Nyum Bai family, serving Khmer noodle soups, rice plates and snacks.",
+  "color": "#1E90B8",
+  "icon": "lunette-cambodia",
+  "prep": 0,
+  "category": "Cambodian",
+  "items": [],
+  "sections": [
+   {
+    "name": "Nyum Mee (Eat Noodles)",
+    "items": [
+     [
+      "K.T.P.P (kuy teav phnom penh)",
+      "Rice noodles, shrimp, pork two ways, crispy garlic with oil, cilantro and scallions in 8-hour pork broth.",
+      2100
+     ],
+     [
+      "KTTP DRY",
+      "Rice noodles, shrimp, pork three ways, crispy garlic, cilantro and scallions in a sweet soy dressing. Broth on the side.",
+      2100
+     ],
+     [
+      "LORT CHA",
+      "Stir-fry pin noodles with pork and egg, or make it vegan with mushroom.",
+      2100
+     ]
+    ]
+   },
+   {
+    "name": "Nyum Bai (Eat Rice)",
+    "items": [
+     [
+      "Yellow Curi",
+      "Madras curry, kroeung, coconut milk, crispy potatoes, tofu, sweet potatoes, eggplant; mild to spicy, with steamed jasmine rice.",
+      2100
+     ],
+     [
+      "Bai Cha",
+      "Aromatic ginger rice with fried chicken fillet and pickled chili garlic sauce for dipping.",
+      2100
+     ],
+     [
+      "Lok Lak",
+      "Wok-tossed beef, red onions and pea shoots with a lime dipping sauce. Served with jasmine rice.",
+      2100
+     ],
+     [
+      "Cha Kroeung",
+      "Wok-fried chicken with herbs, lemongrass, galangal, shallots, makrut lime leaves and turmeric paste. Served with ginger rice; veggie option available.",
+      2100
+     ],
+     [
+      "Prahok Ktiss",
+      "Minced pork belly simmered in house-made kroeung, coconut milk, prahok and dried California chile paste. Served with seasonal raw vegetables.",
+      1800
+     ]
+    ]
+   },
+   {
+    "name": "Snacks",
+    "items": [
+     [
+      "(KFC) Khmer Fried chicken",
+      "Salt and Kampot pepper fried chicken.",
+      1600
+     ],
+     [
+      "Khmer Pickle",
+      "Pickled green papaya, carrots, cucumbers, chili and garlic.",
+      800
+     ],
+     [
+      "Fish Cakes",
+      "Cod and catfish fillet, house-made kroeung and yardlong beans, formed into balls and fried.",
+      1600
+     ],
+     [
+      "Side Rice",
+      "",
+      300
+     ],
+     [
+      "Side Noodles",
+      "",
+      300
+     ]
+    ]
+   },
+   {
+    "name": "Drinks",
+    "items": [
+     [
+      "Sparkling Agua",
+      "",
+      350
+     ],
+     [
+      "Dram Cardamon & Black Tea Sparkling Water",
+      "",
+      450
+     ],
+     [
+      "Coconut Water",
+      "",
+      700
+     ]
+    ]
+   },
+   {
+    "name": "Take Home",
+    "items": [
+     [
+      "Hot Garlic Mild",
+      "",
+      1600
+     ],
+     [
+      "Hot Garlic OG",
+      "",
+      1600
+     ]
+    ]
+   }
+  ],
+  "address": "Ferry Building, Floor 1, Suite 33/47, San Francisco, CA 94111",
+  "phone": "(510) 239-3755",
+  "site": "https://www.lunettecambodia.com/",
+  "orderUrl": "https://order.toasttab.com/online/lunette-cambodia-ferry-building-1-ferry-building-suite-33-47",
+  "siteCta": "Order online",
+  "instagram": "lunette_cambodia",
+  "email": "hi@nyumbai.com",
+  "hours": "Tue–Fri 11am–8pm, Sat 10am–7pm, Sun 11am–2:30pm, closed Mon",
+  "siteNote": "Prices are from their own Toast online ordering, linked from their website, for pickup. They are on the first floor of the Ferry Building.",
+  "clip": {
+   "src": "/clips/lunette-cambodia.mp4",
+   "poster": "/clips/lunette-cambodia-poster.webp",
+   "href": "https://www.instagram.com/reel/DfBSCCyTsMx/",
+   "credit": "Filmed by @thetastebud",
+   "platform": "Instagram",
+   "by": "thetastebud"
+  }
+ },
+ "placements": [
+  "beasty-goods2-81",
+  "san-francisco-goods2-58"
+ ],
+ "glenn": "27 Oct 7:17–7:18 pm: screenshots (website and Instagram @lunette_cambodia), 'https://www.lunettecambodia.com/', 'San Francisco • Eats / BEASTY • Eats'",
+ "flags": [
+  "MENU: 5 sections, 18 items, every price from their own Toast online ordering (linked from their website), in Toast's section order; section names title-cased from Toast's capitals, item names kept as Toast prints them ('Yellow Curi', 'LORT CHA', 'Dram Cardamon'). Descriptions trimmed ('Made with all the extra love' dropped). Toast's 'Featured Items' and 'STAFF'S FAV' repeat rows and are left out.",
+  "LEFT OUT: the two beers (Temescal Beer IPA $10, Temescal pils $9; age check), and merchandise (T-SHIRT $35, LONG SLEEVE $45, TOTE BAG $45 marked OUT OF STOCK). The Ferry Building listing also mentions wine and sake, which are on neither Toast nor the PDF.",
+  "MENU PDF ON THEIR SITE (Oct 2025) DIFFERS from Toast: it has Pork Broth a la carte $15 and Cha Ban Lai stir-fry seasonal greens $15 (not on Toast), Yellow Curry 'Add fried chicken + $5', Sparkling Cardamom Tea $6 (Toast $4.50), Rotating Beer $8; it lacks Side Rice/Noodles and the Hot Garlic jars. Toast used as the current menu.",
+  "PHONE: (510) 239-3755 is only on their Toast page (Call link). Their website and contact page publish no phone, and Instagram (per Glenn's screenshots) shows none. It is an East Bay area code for an SF counter, possibly a Nyum Bai group line; coordinator may prefer to drop it.",
+  "ADDRESS: their site says 'Ferry Building, Floor 1, Suite 33/47'; Instagram '1 Ferry Building, Suite 33'; Toast '1 Ferry Building Suite 33/47'; the Ferry Building listing 'Shop #33'. Used the site's wording.",
+  "HOURS: their site and the Ferry Building listing agree (Tue–Fri 11–8, Sat 10–7, Sun 11–2:30); Monday closed is stated only on their site (the Ferry Building listing omits Monday). Google and Yelp NOT cross-checked: Yelp returned 403 and the Chrome extension disconnected mid-research.",
+  "EMAIL hi@nyumbai.com is the Nyum Bai family address, as published on Lunette's own contact page.",
+  "INSTAGRAM not re-read: the profile API was rate-limited (login required); handle and bio are from Glenn's screenshots.",
+  "LOGO: their site's light-mode favicon (white hand-drawn 'lunette' on a teal-blue moon circle), 250x250 PNG, the largest the Squarespace CDN serves; color #1E90B8 sampled from it. Their Instagram picture could not be fetched. Note their other marks differ: the og:image and menu PDF use a pink/yellow pixel 'LUNETTE CAMBODIA' wordmark.",
+  "TYPE LINE 'Cambodian noodles & rice'; category 'Cambodian'; label 'Lunette' (their logo's word). Chef/owner Nite Yun is named on the Ferry Building listing; their site also mentions a Netflix Chef's Table feature (not used in the tagline)."
+ ]
+}

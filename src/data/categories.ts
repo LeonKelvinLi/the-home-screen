@@ -128,6 +128,9 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'catering', heading: 'Catering', about: 'Caterers and restaurants that cater', wall: wall('catering'), test: /catering|caterer/i },
   /* Glenn, 2026-10-26, 7:48 am: "New category / BEASTY • Steakhouse", between Bourbon Steak and
      Harris' and Blind Butcher in San Francisco. Steakhouses and chophouses by their type line. */
+  /* Glenn, 2026-10-27, 6:28 pm: "Sunnyvale • Eats / BEASTY • Ramen / New Category", with Garlic High.
+     Ramen shops by their type line. */
+  { kind: 'ramen', heading: 'Ramen', about: 'Ramen shops', wall: wall('ramen'), test: /ramen/i },
   { kind: 'steakhouse', heading: 'Steakhouse', about: 'Steakhouses and chophouses', wall: wall('steakhouse'), test: /steak ?house|chop ?house/i },
   /* "New category BEASTY • Breakfast/diner. Or just • diner" — Glenn, 2026-10-22, 8:56 pm.
      His first wording, with Diner as the kind. Diners and breakfast and brunch rooms, by

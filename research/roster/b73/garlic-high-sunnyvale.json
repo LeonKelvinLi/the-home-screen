@@ -1,0 +1,296 @@
+{
+ "id": "b_garlichighsunnyvale",
+ "name_exact": "Garlic High",
+ "checked_on": "2026-10-28",
+ "sources": [
+  "https://www.garlic-high.com/",
+  "https://cdn5.editmysite.com/app/store/api/v28/editor/users/133266616/sites/749563189271224105/products (their Square Online menu data: items, descriptions, prices, add-on prices)",
+  "https://cdn5.editmysite.com/app/store/api/v28/editor/users/133266616/sites/749563189271224105/products/{id}/skus (variants, prices, pickup/delivery/dine-in availability, sold-out flags)",
+  "https://cdn5.editmysite.com/app/store/api/v28/editor/users/133266616/sites/749563189271224105/store-locations (address 107 W Maude Ave, phone +1 669-899-7165, email, Square business hours, online-order windows)",
+  "https://www.instagram.com/garlic.high_sunnyvale/ (via Glenn's screenshots: address, OPEN TUE–SUN, text (669) 899-7165, garlic.high.ramen@gmail.com)",
+  "https://es.restaurantguru.com/Garlic-High-Sunnyvale (Google-sourced hours, phone and site; matches their Square business hours)",
+  "https://frankiapp.com/business/garlic-high-776222.md (different phone; garbled hours)",
+  "https://atmosfy.io/location/sunnyvale/garlic-high (different address)",
+  "logo: https://www.garlic-high.com/uploads/b/cf6d4f2a1ca69952009a78d675d532d4164597e346622fbc7000d09ec240b884/654142D0-F2CE-40E6-BE74-EE328882A149_1766795541.PNG (1024×1024 site logo)"
+ ],
+ "facts": {
+  "slug": "garlic-high-sunnyvale",
+  "name": "Garlic High — Sunnyvale",
+  "label": "Garlic High",
+  "cuisine": "Jiro-style ramen & mazesoba",
+  "tagline": "A Jiro-style ramen shop on West Maude Avenue serving thick, curly noodles in pork bone broth under bean sprouts, cabbage, chashu and fresh garlic, plus brothless mazesoba.",
+  "color": "#FFD814",
+  "icon": "garlic-high-sunnyvale",
+  "prep": 0,
+  "category": "Jiro-style Ramen",
+  "items": [],
+  "sections": [
+   {
+    "name": "Ramen",
+    "items": [
+     [
+      "Small Ramen",
+      "Dine-in. 150g noodles and 1 slice of chashu pork: thick, curly noodles in a rich pork bone broth, topped with bean sprouts, garlic and cabbage.",
+      1800
+     ],
+     [
+      "Medium Ramen",
+      "Dine-in. 200g noodles and 2 slices of chashu pork, with bean sprouts, garlic and cabbage.",
+      2400
+     ],
+     [
+      "Large Ramen",
+      "Dine-in. 300g noodles and 3 slices of chashu pork, with bean sprouts, garlic and cabbage.",
+      3000
+     ],
+     [
+      "To Go Ramen",
+      "150g noodles and 1 slice of chashu pork in pork bone broth. Bean sprouts, garlic and umami fat come in separate containers; boil fresh noodles 7 minutes.",
+      2000
+     ]
+    ]
+   },
+   {
+    "name": "Mazesoba",
+    "items": [
+     [
+      "Small Mazesoba",
+      "Dine-in. 150g noodles and 1 slice of chashu pork, with fried onion, fresh egg, bean sprouts, garlic and cabbage.",
+      1800
+     ],
+     [
+      "Medium Mazesoba",
+      "Dine-in. 200g noodles and 2 slices of chashu pork, with fried onion, fresh egg, bean sprouts, garlic and cabbage.",
+      2400
+     ],
+     [
+      "Large Mazesoba",
+      "Dine-in. 300g noodles and 3 slices of chashu pork, with fried onion, fresh egg, bean sprouts, garlic and cabbage.",
+      3000
+     ],
+     [
+      "To Go Mazesoba",
+      "200g noodles, 1 slice of chashu pork and a poached egg. Bean sprouts, garlic and umami fat come in separate containers; boil fresh noodles 7 minutes.",
+      2000
+     ],
+     [
+      "Mala Tantan",
+      "200g thick noodles in spicy sesame tantan sauce with sweet miso ground pork, egg yolk, cilantro and Kana chili mala oil. Contains peanut butter.",
+      2000
+     ]
+    ]
+   },
+   {
+    "name": "Mini Bowls",
+    "items": [
+     [
+      "Tantan Chashu Bowl",
+      "",
+      500
+     ],
+     [
+      "Savage Chashu Bowl",
+      "",
+      500
+     ]
+    ]
+   },
+   {
+    "name": "Extra Toppings",
+    "items": [
+     [
+      "AYCE Egg",
+      "",
+      600
+     ],
+     [
+      "Chashu Pork",
+      "",
+      400
+     ],
+     [
+      "Boiled Egg",
+      "",
+      300
+     ],
+     [
+      "Quail Eggs",
+      "",
+      300
+     ],
+     [
+      "Veg Bomb",
+      "Dine-in.",
+      300
+     ],
+     [
+      "Noodles (100g)",
+      "",
+      300
+     ],
+     [
+      "White Rice",
+      "Dine-in.",
+      300
+     ],
+     [
+      "Poached Egg",
+      "",
+      200
+     ],
+     [
+      "Raw Egg",
+      "For dipping style.",
+      200
+     ],
+     [
+      "Umami Fat",
+      "On the side.",
+      200
+     ],
+     [
+      "Cheese",
+      "",
+      200
+     ],
+     [
+      "Fried Onion",
+      "",
+      200
+     ],
+     [
+      "Mala Chili Oil",
+      "",
+      200
+     ],
+     [
+      "Death Sauce",
+      "",
+      200
+     ],
+     [
+      "Garlic",
+      "",
+      100
+     ],
+     [
+      "Cilantro",
+      "",
+      100
+     ],
+     [
+      "Chives Kimchi",
+      "",
+      50
+     ]
+    ]
+   },
+   {
+    "name": "Drinks & Dessert",
+    "items": [
+     [
+      "Coke",
+      "",
+      250
+     ],
+     [
+      "Sprite",
+      "",
+      250
+     ],
+     [
+      "Yuzu Soda",
+      "",
+      300
+     ],
+     [
+      "Calpico",
+      "Bottle.",
+      300
+     ],
+     [
+      "Green Tea",
+      "Bottle.",
+      300
+     ],
+     [
+      "Jasmin Tea",
+      "Bottle.",
+      300
+     ],
+     [
+      "Mugi Cha",
+      "Bottle.",
+      300
+     ],
+     [
+      "Asahi Non Alcohol Beer",
+      "",
+      500
+     ],
+     [
+      "Matcha Ice Cream",
+      "",
+      350
+     ],
+     [
+      "Houjicha Ice Cream",
+      "",
+      350
+     ],
+     [
+      "Lychee Sorbet",
+      "",
+      350
+     ],
+     [
+      "Yuzu Sorbet",
+      "",
+      350
+     ]
+    ]
+   },
+   {
+    "name": "T-Shirts",
+    "items": [
+     [
+      "\"LOGO\" T-Shirt",
+      "Black, yellow or white; S to XL.",
+      3000
+     ]
+    ]
+   }
+  ],
+  "address": "107 W Maude Ave, Sunnyvale, CA 94085",
+  "phone": "(669) 899-7165",
+  "site": "https://www.garlic-high.com/",
+  "siteCta": "Order on their site",
+  "instagram": "garlic.high_sunnyvale",
+  "siteNote": "Small, medium and large bowls are dine-in; pickup and delivery orders get the To Go ramen or mazesoba. You pick veg, garlic and umami fat levels: max veg is $3 more, heavy or max garlic or umami fat 50¢ or $1. Their Instagram says to text the number.",
+  "hours": "Tue–Sun 11:30am–1:30pm & 5:30–8:30pm; Fri–Sat to 9pm; Sat–Sun lunch to 2pm; closed Mon",
+  "email": "garlic.high.ramen@gmail.com",
+  "clip": {
+   "src": "/clips/garlic-high-sunnyvale.mp4",
+   "poster": "/clips/garlic-high-sunnyvale-poster.webp",
+   "href": "https://www.instagram.com/reel/DW2mdUEBWzv/",
+   "credit": "Filmed by @kvbitesandgo",
+   "platform": "Instagram",
+   "by": "kvbitesandgo"
+  }
+ },
+ "placements": [
+  "beasty-ramen-6",
+  "sunnyvale-goods-7"
+ ],
+ "glenn": "27 Oct 6:28 pm: Instagram screenshots of @garlic.high_sunnyvale, 'https://www.garlic-high.com/', 'Sunnyvale • Eats / BEASTY • Ramen / New Category'.",
+ "flags": [
+  "Hours are their Square business hours, which match Google (via Restaurant Guru) and Instagram's 'OPEN TUE–SUN'. The online-order windows on garlic-high.com are wider (Tue–Thu 11am–2pm & 5–10pm, Fri–Sat to 11pm, Sun 9am–3pm & 5–10pm), so not used.",
+  "Frankiapp lists phone (408) 599-9475 and garbled hours ('11:30am–1:30am'); their site and Instagram say (669) 899-7165.",
+  "Atmosfy lists 511 Borregas Ave, Sunnyvale; their site, Instagram and Google say 107 W Maude Ave.",
+  "Instagram says to text (669) 899-7165; whether they take calls is unverified.",
+  "Left out as sold out and not in any menu category (last edited May 2026): Pork Curry Rice $10, Unagi Bowl $18, Onigiri $4, SALE Eel $10, Karaage $5. Also sold out now: Diet Coke $2.50, Mini Rice $2.",
+  "Their Square account also holds a disabled second store, 'Japanese bento catering company', at the same address with email fujiben.order@gmail.com; not used.",
+  "Item names are title-cased from their all-caps listing. Tantan Chashu Bowl and Savage Chashu Bowl have no description on their site.",
+  "Menu read from their Square Online store's public data (the Chrome extension was not connected), not from a rendered page. Yelp blocked fetching (403); Google was checked only through Restaurant Guru."
+ ]
+}
