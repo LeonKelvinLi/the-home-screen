@@ -1,6 +1,6 @@
 # Batch 77 — 29 October 2026 afternoon
 
-Refetched Glenn’s Messages thread after Batch 76’s **12:27 pm PDT** cutoff, through **3:49 pm** (Leon’s last reaction is 4:03 pm). Five new pages, Laughing Monk NOPA updated, **15 new playable films**, **150 priced menu rows**, and **BEASTY • Vegan**. Source records and holds: `research/roster/b77/`, `b77-films.json`, `b77-held.json`.
+Refetched Glenn’s Messages thread after Batch 76’s **12:27 pm PDT** cutoff. Last directory/clip request: **3:49 pm**; final thread refetch: **4:43 pm**. The two 4:43 pm operator follow-ups contain no directory or clip request, so no new seed or outbound action is inferred. Five new pages, Laughing Monk NOPA updated, **15 new playable films**, **150 priced menu rows**, and **BEASTY • Vegan**. Source records and holds: `research/roster/b77/`, `b77-films.json`, `b77-held.json`.
 
 ## Pages and seats
 
@@ -63,4 +63,17 @@ A new leaf glyph, dark forest-green leaf wallpaper and Search thumbnail. It appe
 
 The first live Chrome pass found that contact/price-list pages always sent their labeled action button to the homepage, even when the seed already supplied a specific order or booking URL. Those buttons now use the specific destination for ordering and bookings, with the homepage as fallback. Generic website buttons keep their website destination. House of Prime Rib uses the exact OpenTable reservation link from its own website, including `restref=1779`. Two browser checks cover TLeafGreen’s ordering page and House of Prime Rib’s reservation page. Raízes’ full menu renders directly on BEASTY.
 
-Initial data release `c084978` became live at **4:31:59 pm PDT** (Render `dep-dbhtbjnf3r2c7384a0eg`). Its 118 live checks and general live verifier passed. Chrome confirmed all six page layouts, films and both new menus; final action-button deployment and live results follow.
+Initial data release `c084978` became live at **4:31:59 pm PDT** (Render `dep-dbhtbjnf3r2c7384a0eg`). Its 118 live checks and general live verifier passed. Chrome confirmed all six page layouts, films and both new menus.
+
+## Final live verification
+
+- Action-button fix **`983488d`** is live: Render **`dep-dbhtivvf3r2c7384igdg`** finished **29 October 2026 at 4:47:48 pm PDT**. `/api/health` returned **HTTP 200** afterward.
+- Final `BASE=https://beastypages.com node tools/audit-batch77.mjs`: **all 120 checks passed**, including the actual ordering and reservation URLs, all six pages, 150 new menu rows, films/credits, held source links, city grids, seats and Vegan tile.
+- Final `node tools/live-verify.mjs --skip-roster`: **PASS**. The historical roster walk was explicitly skipped; the general interaction, sign-in, protected-endpoint, kitchen, scan and shared-page checks ran.
+- **Real Chrome, 393 × 852:** all six new/updated pages have no broken images or horizontal overflow. All five main films play; both new menus show their 88/62 rows, including first/last items, accurate from-price labels and catering portions. Chef Reina’s individual page and portrait render correctly. House of Prime Rib’s held Newbie remains a source link without a fifth film.
+- Chrome actually followed the fixed TLeafGreen button to **Chowbus TLeafGreen, 5353 Almaden Expressway #40A**, and the fixed reservation button to **OpenTable’s “Reservation at House of Prime Rib”** screen. No order or reservation was submitted.
+- The Laughing Monk repost plays through its full **15 seconds**, with **“Review by @bsgmoments (TikTok); posted by @thelaughingmonksf”** visible below it. No BEASTY console errors observed. Vegan’s live tile and expected signed-out membership prompt work; signed-in contents/Search/wallpaper are covered by the isolated local category audit.
+- Chrome viewport restored; all agent-created research, external-destination and QA tabs closed. No production account, purchase, reservation, sign-in code or message created.
+- Final thread refetch sees the 4:43 pm operator follow-ups above and no new listing/clip request after 3:49 pm. Source/price/hour holds remain explicit; no missing facts were guessed.
+
+Data release, action fix and verification record are pushed to origin/main.
