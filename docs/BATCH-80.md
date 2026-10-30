@@ -51,10 +51,24 @@ Affiliate agreement files and the separate affiliate worktree untouched. No mess
 
 ## Local verification
 
-Build passed. Final combined batch audit: **389 checks passed**, covering both shops, all six films with audio, exact source/context notes, both More pages sheets, every extended Foodie, original top-24 seats and a direct jump to overflow seat 137 on a shorter phone. Data audit: **0 errors, 156 warnings**; the new tea capacity warning counts 26 qualifying location rows, while the category seats 22 distinct business families. Foodies audit passed; category audit covers the new tea page and the 52-page Search list. All **16 iPhone WebKit entry checks** passed with the combined build. Gap check: **541 business domains, 17 historical unmatched**, the new Lnk.Bio gap closed. No existing seat changed. More pages and Foodies pagination retain the first pages and add continuations.
+Build passed. Final combined batch audit: **395 checks passed**, covering both shops, all six films with audio, exact source/context notes, corrected Instagram profiles and creator return links, both More pages sheets, every extended Foodie, original top-24 seats and a direct jump to overflow seat 137 on a shorter phone. Data audit: **0 errors, 156 warnings**; the new tea capacity warning counts 26 qualifying location rows, while the category seats 22 distinct business families. Foodies audit passed; category audit covers the new tea page and the 52-page Search list. All **16 iPhone WebKit entry checks** passed with the combined build. Gap check: **541 business domains, 17 historical unmatched**, the new Lnk.Bio gap closed. No existing seat changed. More pages and Foodies pagination retain the first pages and add continuations.
 
 ## Live verification
 
-Pending deployment and production checks. Results will be recorded in a separate `[skip render]` commit.
+Release `bbb6517` became live at **9:18:16 am PDT on October 30, 2026**. Both QA corrections are included in final deployed commit **`4ecbf76`**, Render deploy `dep-dbica0n23o6c73f0c4ig`, live at **9:39:00 am PDT**. `https://beastypages.com/api/health` returned **HTTP 200**, `{"ok":true}`.
+
+Against **https://beastypages.com** after that deployment:
+
+- `BASE=https://beastypages.com node tools/audit-batch80.mjs`: **395 checks passed**.
+- `BASE=https://beastypages.com node tools/audit-iphone-entry.mjs`: **16 checks passed**, including delayed-module loading, repeated Enter cycles, no document reload or JavaScript/process crash, and phone-width fit.
+- `node tools/live-verify.mjs --skip-roster`: **PASS** for the landing chapter, deployed pages and clips, navigation, public forms and protected endpoints. The historical roster walk was skipped on this follow-up; the current batch has its full dedicated audit above.
+
+These results are recorded in a separate `[skip render]` commit so the verification record does not trigger another deployment.
+
+Actual Chrome at **393×852** verified both shop layouts, current-hours and regional-contact panels, video playback, the first and last yellow Foodies sheets, creator/business navigation and both More pages sheets. The tea tile follows the existing sign-in gate for off-home categories; its signed-in category grid is covered by the disposable local-member category audit. No production account created.
+
+Chrome QA found and corrected two footer URLs that had used full Instagram URLs where the seed expects handles (`85f8490`). It also found the return buttons for Fremont/Pleasanton footage labeled with the filming location while opening the Berkeley host page; the buttons now name their actual Berkeley destination (`4ecbf76`). The filmed-location headings and source notes remain explicit. Both cases have regression assertions in the batch audit.
+
+After the corrections deployed, actual Chrome confirmed both exact Instagram profile URLs and both creator-to-Berkeley return buttons. No Chrome console errors were reported during the check. The QA tab was closed and the browser viewport restored.
 
 The earlier physical iPhone repair was verified on the actual mirrored iPhone 13/Chrome in Batch 79: two Enter cycles and Eats navigation succeeded after `0952810` deployed. Mirroring later ended because the phone was in use; this batch retains that fix and repeats the WebKit entry regression.
