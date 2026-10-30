@@ -57045,4 +57045,28 @@ export const LOCAL_SEED: LocalSeed[] = [
           }
       ]
   },
+  /* Batch 78, Glenn 29 Oct 4:52 pm: SCP Argos on Pit’s. Source: research/roster/b78/. */
+  {
+      "slug": "scp-argos",
+      "name": "SCP Argos",
+      "label": "SCP Argos",
+      "cuisine": "Pit bull profile",
+      "color": "#927a60",
+      "icon": "scp-argos",
+      "site": "https://www.instagram.com/scp_argos/",
+      "tagline": "Adventures with Argos, shared on Instagram as @scp_argos.",
+      "prep": 0,
+      "category": "Pit bull profile",
+      "items": [],
+      "contactOnly": "See Argos’s own Instagram for his photos and updates.",
+      "siteCta": "Open Instagram",
+      "panels": [
+          {
+              "head": "From his profile",
+              "body": [
+                  "His Instagram bio names SCP Shady × SCP Lilith."
+              ]
+          }
+      ]
+  },
 ]

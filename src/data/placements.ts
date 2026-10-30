@@ -1872,4 +1872,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-vegan-0': 'b_laughingmonknopa',
   'beasty-vegan-1': 'b_chefreina',
 
+  /* Batch 78: Argos follows Sin City Pits and Gem City without moving either. */
+  'beasty-pits-2': 'b_scpargos',
+
 }

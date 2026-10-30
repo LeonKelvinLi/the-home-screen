@@ -301,3 +301,6 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `raizes-do-brasil.webp` | [@raizesdobrasilus](https://www.instagram.com/raizesdobrasilus/), Glenn IMG_8475, 29 Oct 2026 | Original mark/portrait cropped from the enlarged profile disc; edge paper fills the corners. |
 | `house-of-prime-rib.webp` | [@thehouseofprimerib](https://www.instagram.com/thehouseofprimerib/), Glenn IMG_8478, 29 Oct 2026 | Original mark/portrait cropped from the enlarged profile disc; edge paper fills the corners. |
 | `chef-reina.webp` | [@chef.reina](https://www.instagram.com/chef.reina/), Glenn IMG_8483, 29 Oct 2026 | Original mark/portrait cropped from the enlarged profile disc; edge paper fills the corners. |
+
+<!-- Batch 78 -->
+| `scp-argos.webp` | [SCP Argos @scp_argos](https://www.instagram.com/scp_argos/), Glenn IMG_8499, 29 Oct 2026 | Original profile photograph cropped from the enlarged disc, with its edge colours filling corners; no story ring or redrawn animal. |

@@ -552,6 +552,7 @@ export const ICON_LUMA: Record<string, number> = {
   'santa-clara-super-kitchen': 0.4137,
   'sasa-walnut-creek': 0.0212,
   'scoop-n-chill': 0.5594,
+  'scp-argos': 0.3845,
   'sea-wagyu-house': 0.0895,
   'senor-sisig': 0.7762,
   'seoul-to-tokyo-kitchen': 0.9572,

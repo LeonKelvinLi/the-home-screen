@@ -1,0 +1,42 @@
+{
+  "id": "b_scpargos",
+  "name_exact": "SCP ARGOS",
+  "checked_on": "2026-10-29",
+  "sources": [
+    "https://www.instagram.com/scp_argos/ (read in Chrome: own name, Adventures with Argos bio, SCP Shady X SCP Lilith, own pitbullpuppy/xlpitbull post tags; no city, phone, website, prices or availability published in profile)",
+    "Glenn IMG_8498.png profile screenshot, IMG_8499.PNG enlarged own profile photo, 29 Oct 4:52 pm"
+  ],
+  "facts": {
+    "slug": "scp-argos",
+    "name": "SCP Argos",
+    "label": "SCP Argos",
+    "cuisine": "Pit bull profile",
+    "color": "#927a60",
+    "icon": "scp-argos",
+    "site": "https://www.instagram.com/scp_argos/",
+    "tagline": "Adventures with Argos, shared on Instagram as @scp_argos.",
+    "prep": 0,
+    "category": "Pit bull profile",
+    "items": [],
+    "contactOnly": "See Argos’s own Instagram for his photos and updates.",
+    "siteCta": "Open Instagram",
+    "panels": [
+      {
+        "head": "From his profile",
+        "body": [
+          "His Instagram bio names SCP Shady × SCP Lilith."
+        ]
+      }
+    ]
+  },
+  "placements": [
+    "beasty-pits-2"
+  ],
+  "glenn": "29 Oct 4:52 pm: BEASTY • Pits; Sade’s brother.",
+  "flags": [
+    "An individual dog’s profile, not a kennel or a sale listing. No stud service, availability, puppy price, kennel ownership or city inferred.",
+    "Glenn’s Sade relationship stays provenance. The own bio’s names are attributed to the profile, not certified pedigree facts.",
+    "No reel sent or requested in this batch; screenshots of the profile grid do not authorize choosing an unrelated reel.",
+    "No new website-pilot or paid-feature claim inferred."
+  ]
+}
