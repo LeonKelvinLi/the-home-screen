@@ -22,6 +22,14 @@ Reviewed the phone screenshot of San Leandro’s yellow sheet: the San San corne
 
 ## Live verification
 
-Pending deployment and production checks. Results will be recorded in a separate `[skip render]` commit.
+Release **`bdb9c76`** is live on **https://beastypages.com**, Render deploy **`dep-dbifciivcj2c73f9vs6g`**, completed at **1:03:14 pm PDT on October 30, 2026**. The health endpoint returned **HTTP 200**, `{"ok":true}`.
+
+- `BASE=https://beastypages.com node tools/audit-batch82.mjs`: **17 checks passed**, exit 0. The pink, light and dark rendered corner pixels again match the original artwork exactly; open spots retain their tile color and all 1,500 placements remain unchanged.
+- `BASE=https://beastypages.com node tools/audit-iphone-entry.mjs`: **16 checks passed**, exit 0, including repeated entry, delayed loading and no document reload or JavaScript/process crash.
+- `node tools/live-verify.mjs --skip-roster`: **PASS**, exit 0. Historical roster walk skipped for this follow-up; current changes have the dedicated pixel audit above.
+
+**Actual Chrome, 393×852:** Enter reached the real home grid. All 24 category windows and four visible dock windows use transparent fill. Inspected San San’s pink corner, light artwork, Hungry Cow’s dark icon, existing rings/glows and open spots; the white patch is gone where the artwork is colored or dark. Clicking directly on San San’s transparent upper corner still opened its business page. No console errors or horizontal overflow observed. The QA tab was closed and the viewport restored.
+
+Results are saved in a separate **`[skip render]`** commit, avoiding another deployment for the verification record.
 
 No outbound message, production account, purchase or booking created. Affiliate agreement files and the separate affiliate worktree untouched.
