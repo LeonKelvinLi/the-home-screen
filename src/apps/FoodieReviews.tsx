@@ -73,7 +73,7 @@ export function FoodieReviews({ title, reviews, side, api, here }: {
                   </a>
                   {other && other !== here && (
                     <button type="button" onClick={() => api.openApp(other)}>
-                      {side === 'place' ? `Open ${r.place} on BEASTY` : `See ${r.byName ?? '@' + r.by}’s page`}
+                      {side === 'place' ? `Open ${r.brand?.name ?? r.place} on BEASTY` : `See ${r.byName ?? '@' + r.by}’s page`}
                     </button>
                   )}
                 </div>

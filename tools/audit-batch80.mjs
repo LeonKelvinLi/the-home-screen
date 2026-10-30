@@ -75,6 +75,15 @@ try{
  }
  check('CHICHA keeps the four-film maximum',await p.locator('.foodie-review-head').count()===3&&await p.locator('.brand-clip-drop video').count()===1)
  for(const seat of ['berkeley-goods-14','beasty-goods2-95','beasty-teas-1'])check('CHICHA seat '+seat,ALL_PLACEMENTS[seat]==='b_chichasanchenberkeley')
+ for(const [handle,place,city] of [['sierra.eats.8','CHICHA San Chen — Fremont','Fremont'],['hungere.for.diy','CHICHA San Chen — Pleasanton','Pleasanton']]){
+  await open(pageOfFoodie(handle))
+  await p.getByRole('button',{name:place+' '+city,exact:true}).click()
+  const link=p.getByRole('button',{name:'Open CHICHA San Chen — Berkeley on BEASTY',exact:true})
+  check(handle+' business link names the actual Berkeley destination',await link.count()===1)
+  await link.click()
+  await p.waitForTimeout(600)
+  check(handle+' business link reaches Berkeley',await p.locator('h1').innerText()==='CHICHA San Chen — Berkeley')
+ }
  for(const h of [MORE_FOODIE_PAGES[0].handle,'bayarea.foodie.adventures','feed_happiness_','moniica.michelle','sanleandroeats']){
   await open(pageOfFoodie(h));check(h+' page renders its review list',/Their reviews/i.test(await p.locator('.foodie-reviews-h').innerText())&&await p.locator('.foodie-review-head').count()>0)
   check(h+' page fits',await p.evaluate(()=>document.documentElement.scrollWidth===innerWidth))
