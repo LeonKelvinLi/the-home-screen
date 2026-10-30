@@ -1,0 +1,20 @@
+{
+  "batch": 82,
+  "date": "2026-10-30",
+  "after": "2026-10-30T10:59:00-07:00",
+  "through": "2026-10-30T12:48:00-07:00",
+  "source": "Glenn’s iMessage thread, read-only thread-dump.py --since 2026-10-30, refetched 12:48 pm PDT",
+  "requests": [
+    {
+      "sent": "2026-10-30T12:36:00-07:00",
+      "acknowledged_by_leon": "2026-10-30T12:48:00-07:00",
+      "request": "I think it might be better that the white triangle just be transparent to show the icons color.",
+      "implementation": "The shared SVG upper fold path uses fill=none. The serialized open-spot SVG uses the same transparent fill. The black lower triangle and outline remain, with the original icon artwork visible behind the upper triangle.",
+      "status": "implemented"
+    }
+  ],
+  "new_businesses": [],
+  "new_films": [],
+  "new_placements": [],
+  "preserved_placements": 1500
+}
