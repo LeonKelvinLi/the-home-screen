@@ -7,7 +7,7 @@ import { PAGES, type AboutSection } from './dialer/copy'
 import { recentVisits, whenLabel } from '../lib/recents'
 import { favorites, isFavorite, toggleFavorite } from '../lib/favorites'
 import { CameraMark, EnterMark, KEY_MARKS, PANEL_MARKS, ReviewsMark, ShareMark, SignInMark } from './dialer/glyphs'
-import { Gem } from './MembersApp'
+import { Gem } from '../ios/ui/Gem'
 import { QrScanner, beastyPathFrom } from './QrScanner'
 import { CollabForm } from './CollabForm'
 import { SHARE_COLLAB, SHARE_MONEY, shareOrCopy, shareUrl, type SharePage } from '../lib/share'
@@ -190,15 +190,9 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro, openP
   */
   const [photo, setPhoto] = useState<number | null>(null)
   /*
-    The highest picture reached, so the ones after it are not fetched yet.
-
-    All four used to be given a background-image at mount. A hidden element is
-    still a rendered one, so the browser pulled every file at once — and once
-    these were rebuilt at the phone's real pixel grid that became 669KB
-    arriving before the first flip, on a screen whose entire job is the first
-    few seconds. Now it holds the current picture and the NEXT one, which is
-    two seconds of warning: far more than a decode needs, and the flip has
-    never been seen to arrive empty.
+    The last picture shown and the next one are the only active photo layers.
+    Keeping every picture reached left six full-size backgrounds resident
+    before entering the app, increasing the iPhone handoff's memory peak.
   */
   const [reached, setReached] = useState(0)
   const [toast, setToast] = useState<string | null>(null)
@@ -267,7 +261,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro, openP
       if (n % 2) {
         const i = Math.floor(n / 2) % LANDING_PHOTOS.length
         setPhoto(i)
-        setReached((r) => Math.max(r, i))
+        setReached(i)
       } else {
         setPhoto(null)
       }
@@ -560,7 +554,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro, openP
             key={p.src}
             className={`dialer-photo${photo === i ? ' is-on' : ''}`}
             style={
-              i <= reached + 1
+              i === reached || i === (reached + 1) % LANDING_PHOTOS.length
                 ? { backgroundImage: `url(${p.src})`, backgroundColor: p.bg }
                 : undefined
             }

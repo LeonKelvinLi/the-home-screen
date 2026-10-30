@@ -354,7 +354,11 @@ for (const b of BRANDS) {
 */
 {
   const films = new Map<string, number>()
-  for (const b of BRANDS) if (b.clip?.src) films.set(b.id, 1)
+  for (const b of BRANDS) {
+    const clips = [b.clip, ...(b.clips ?? [])].filter((c) => c?.src)
+    if (clips.length) films.set(b.id, clips.length)
+    for (const c of clips) if (!existsSync(join(ROOT_DIR, 'public', c!.src!))) err(`${b.name}: missing film ${c!.src}`)
+  }
   for (const r of OTHER_REVIEWS) {
     if (!r.clip) continue
     const code = /\/reel\/([^/]+)\//.exec(r.reel)?.[1]

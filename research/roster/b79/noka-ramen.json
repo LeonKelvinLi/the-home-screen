@@ -1,0 +1,383 @@
+{
+  "id": "b_nokaramen",
+  "name_exact": "N\u014dKA Ramen & Bar",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "noka-ramen",
+    "name": "N\u014dKA Ramen & Bar",
+    "label": "N\u014dKA Ramen",
+    "cuisine": "Ramen & cocktail bar",
+    "color": "#f2a5dd",
+    "icon": "noka-ramen",
+    "prep": 0,
+    "category": "Ramen & cocktail bar",
+    "items": [],
+    "address": "90 Franklin St, Oakland, CA 94607",
+    "site": "https://nokaramen.com/",
+    "tagline": "Hakata-style ramen, Japanese plates and an anime-themed dining room in Jack London Square.",
+    "phone": "(510) 419-0111",
+    "email": "noods@nokaramen.com",
+    "quoteOnly": "See their own menu for current options and availability.",
+    "siteCta": "Order on their menu",
+    "orderUrl": "https://nokaramen.com/menu",
+    "siteNote": "Prices from their own online menu; lunch/dinner duplicates combined. Ramen Lab is a starting price. Timed items and options are confirmed on their site.",
+    "sections": [
+      {
+        "name": "Appetizers",
+        "items": [
+          [
+            "Brussels Sprouts",
+            "",
+            1600
+          ],
+          [
+            "Chicken Karaage",
+            "",
+            1600
+          ],
+          [
+            "Chushu Bun",
+            "",
+            1500
+          ],
+          [
+            "Corn",
+            "",
+            1500
+          ],
+          [
+            "Kakuni",
+            "",
+            1900
+          ],
+          [
+            "Shishito Peppers",
+            "",
+            1300
+          ],
+          [
+            "Truffle Fries",
+            "",
+            1500
+          ],
+          [
+            "Garlic Shoyu Beef Jerky",
+            "",
+            1600
+          ],
+          [
+            "Chamame (Side)",
+            "",
+            800
+          ]
+        ]
+      },
+      {
+        "name": "Ramen",
+        "items": [
+          [
+            "Noka Classic Tonkotsu",
+            "",
+            2100
+          ],
+          [
+            "Black Garlic Tonkotsu",
+            "",
+            2100
+          ],
+          [
+            "Spicy Miso Ramen",
+            "",
+            2100
+          ],
+          [
+            "Tofu Ramen",
+            "",
+            2100
+          ],
+          [
+            "Shoyu Ramen",
+            "Beef confit, kelp and vegetable broth.",
+            2500
+          ],
+          [
+            "Tempura Ramen",
+            "",
+            2200
+          ],
+          [
+            "Clam Dashio Ramen",
+            "",
+            2400
+          ],
+          [
+            "Chicken Ka-Ramen",
+            "",
+            2500
+          ],
+          [
+            "Shoyu Tofu Ramen",
+            "",
+            2100
+          ],
+          [
+            "Itamemono Ramen",
+            "Shown in the lunch section.",
+            2900
+          ],
+          [
+            "Ramen Lab",
+            "Options chosen on their own menu.",
+            2500,
+            null,
+            "from $25.00"
+          ]
+        ]
+      },
+      {
+        "name": "Specials",
+        "items": [
+          [
+            "Ikari Steak Ramen",
+            "",
+            3900
+          ],
+          [
+            "Lobster Shio Ramen",
+            "",
+            5600
+          ],
+          [
+            "Loco Moco",
+            "",
+            3500
+          ],
+          [
+            "N\u014dka Burger",
+            "",
+            3500
+          ],
+          [
+            "Short Rib Mazesoba",
+            "",
+            3900
+          ],
+          [
+            "Crabby Ramen",
+            "",
+            3500
+          ],
+          [
+            "A5 Gold Chahan",
+            "",
+            3900
+          ],
+          [
+            "Garlic Butter Shrimp",
+            "Shown in the lunch section.",
+            2600
+          ]
+        ]
+      },
+      {
+        "name": "Kids menu",
+        "items": [
+          [
+            "Mini Ramen",
+            "For children under 8.",
+            1200
+          ],
+          [
+            "Mini Rice",
+            "For children under 8.",
+            1200
+          ]
+        ]
+      },
+      {
+        "name": "Sides",
+        "items": [
+          [
+            "Boiled Egg",
+            "",
+            400
+          ],
+          [
+            "Spicy Bomb",
+            "",
+            250
+          ],
+          [
+            "Marinated Tofu (2)",
+            "",
+            500
+          ],
+          [
+            "Chashu Side (2)",
+            "",
+            700
+          ],
+          [
+            "Corn (Side)",
+            "",
+            300
+          ],
+          [
+            "Bamboo Shoot",
+            "",
+            300
+          ],
+          [
+            "Wood Ear Mushroom",
+            "",
+            300
+          ],
+          [
+            "Garlic Chips",
+            "",
+            300
+          ],
+          [
+            "Noodles Side",
+            "",
+            800
+          ],
+          [
+            "Charcoal Noodles Side",
+            "",
+            800
+          ],
+          [
+            "Ground Pork Side",
+            "",
+            600
+          ],
+          [
+            "Spinach",
+            "",
+            300
+          ],
+          [
+            "Broth Side",
+            "",
+            800
+          ],
+          [
+            "Rice",
+            "",
+            400
+          ],
+          [
+            "Nori Seaweed Side (4)",
+            "",
+            300
+          ],
+          [
+            "Fresh Ramen Noodles (2)",
+            "",
+            800
+          ],
+          [
+            "Fried Onion",
+            "",
+            300
+          ],
+          [
+            "Scallion",
+            "",
+            300
+          ],
+          [
+            "Brussels Sprouts Side",
+            "",
+            400
+          ],
+          [
+            "Spicy Aioli",
+            "",
+            200
+          ],
+          [
+            "Aioli",
+            "",
+            200
+          ],
+          [
+            "Shrimp Tempura (Side)",
+            "",
+            900
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "Green Tea Tiramisu",
+            "",
+            1200
+          ],
+          [
+            "Choco Cake",
+            "",
+            1200
+          ]
+        ]
+      },
+      {
+        "name": "Bento and family meals",
+        "items": [
+          [
+            "Mafia's Bento Box",
+            "Lunch listing: Monday\u2013Friday, 11am\u20132pm.",
+            2500
+          ],
+          [
+            "Mafia's Bento Box Dinner",
+            "Own item title says Dinner but description repeats lunch hours; confirm service with N\u014dKA.",
+            2800
+          ],
+          [
+            "Family Meal for 8 People",
+            "",
+            19999
+          ]
+        ]
+      },
+      {
+        "name": "Reusable goods",
+        "items": [
+          [
+            "Furoshiki Wrapping",
+            "Reusable Japanese wrapping cloth; not a food item.",
+            1495
+          ]
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/noka-ramen.mp4",
+      "poster": "/clips/noka-ramen-poster.webp",
+      "href": "https://www.instagram.com/reel/C0X_JoGtESz/",
+      "credit": "Filmed by @grubwitmike",
+      "platform": "Instagram",
+      "by": "grubwitmike"
+    }
+  },
+  "sources": [
+    "Glenn 29 Oct 10:00 pm Oakland \u2022 Eats / BEASTY \u2022 Ramen; IMG_8534\u20138536",
+    "https://nokaramen.com/",
+    "https://nokaramen.com/menu"
+  ],
+  "placements": [
+    "oakland-goods2-40",
+    "beasty-ramen-10"
+  ],
+  "flags": [
+    "Lunch/dinner and popular duplicates combined by dish, not silently counted twice.",
+    "Hours held: website store/pickup schedules differ from menu-section service hours; no confusing 9am ramen availability claimed.",
+    "Mafia Dinner description repeats lunch wording; exact price retained with conflict disclosed.",
+    "Older creator prices ($33 burger, $15 highballs) not copied into current menu. Current burger $35.",
+    "DH9_OWiRznc has no source audio stream in any exposed format; copied silently and labeled below the review. All other 19 new films retain their audio."
+  ]
+}

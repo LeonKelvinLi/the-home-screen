@@ -353,3 +353,5 @@ The `-thumb.webp` files are 132px squares of each for Search's Categories list.
   over the Bay, with the original's caption band removed. The page is Glenn's
   "New Location that covers basically the Bay Area", opened for Matt's
   Motivated Movers.
+
+Batch 79: `cat-yakitori.webp` and `cat-yakitori-thumb.webp` are procedural grill/skewer artwork from `tools/make-category-walls.py`, generated under the Yakitori seed. Capitola has no landmark photograph; its new city page uses the neutral placeholder.

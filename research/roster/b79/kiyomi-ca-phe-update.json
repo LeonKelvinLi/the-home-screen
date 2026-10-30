@@ -1,0 +1,58 @@
+{
+  "id": "b_kiyomicaphe",
+  "name_exact": "Kiyomi Cà Phê",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "kiyomi-ca-phe",
+    "name": "Kiyomi Cà Phê",
+    "label": "Kiyomi",
+    "cuisine": "Vietnamese coffee",
+    "tagline": "Vietnamese coffee, matcha and brunch, in San Francisco",
+    "color": "#4C4C4C",
+    "prep": 0,
+    "category": "Roster",
+    "contactOnly": "Kiyomi Cà Phê doesn't publish prices online; their Instagram posts each week's menu.",
+    "items": [],
+    "icon": "kiyomi-ca-phe",
+    "clips": [
+      {
+        "src": "/clips/kiyomi-ca-phe-own-20261030.mp4",
+        "poster": "/clips/kiyomi-ca-phe-own-20261030-poster.webp",
+        "href": "https://www.instagram.com/reel/Db4lW0mPuf3/",
+        "credit": "Posted by @kiyomi_ca_phe",
+        "platform": "Instagram"
+      },
+      {
+        "src": "/clips/kiyomi-ca-phe-coffee.mp4",
+        "poster": "/clips/kiyomi-ca-phe-coffee-poster.webp",
+        "href": "https://www.instagram.com/reel/DXLdUcUkgWv/",
+        "credit": "Posted by @bkwa",
+        "platform": "Instagram"
+      }
+    ],
+    "needsSite": true,
+    "clip": {
+      "src": "/clips/kiyomi-ca-phe.mp4",
+      "poster": "/clips/kiyomi-ca-phe-poster.webp",
+      "href": "https://www.instagram.com/reel/DeJOlPgvkkA/",
+      "credit": "Posted by Kiyomi Cà Phê",
+      "platform": "Instagram"
+    },
+    "address": "1439 Taraval St, San Francisco, CA 94116",
+    "email": "Kiyomiblooms@gmail.com",
+    "hours": "Mon-Fri 10am-2:30pm"
+  },
+  "placements": [
+    "san-francisco-goods2-34",
+    "beasty-coffee-11"
+  ],
+  "sources": [
+    "Glenn 29 Oct 5:54 Newbie, 5:55 Watch",
+    "https://www.instagram.com/reel/Db4lW0mPuf3/",
+    "https://www.instagram.com/reel/DXLdUcUkgWv/"
+  ],
+  "flags": [
+    "Both are business/collaborator films rather than independent reviews. Old film retained; three total.",
+    "Dated caption invitations and ending event card excluded from clips. Existing menu/contact facts unchanged."
+  ]
+}

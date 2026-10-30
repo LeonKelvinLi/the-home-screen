@@ -671,7 +671,10 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                   <path d="M6 9l6 6 6-6" />
                 </svg>
               </button>
-              {clipOpen && <BrandClip clip={brand.clip} logo={brand.logo} brand={brand.id} />}
+              {clipOpen && <>
+                <BrandClip clip={brand.clip} logo={brand.logo} brand={brand.id} />
+                {brand.clips?.map((clip) => <BrandClip key={clip.src ?? clip.href} clip={clip} logo={brand.logo} brand={brand.id} />)}
+              </>}
             </div>
           )}
 

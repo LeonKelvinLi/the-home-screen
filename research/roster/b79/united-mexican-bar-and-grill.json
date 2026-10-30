@@ -1,0 +1,56 @@
+{
+  "id": "b_unitedmexicanbarandgrill",
+  "name_exact": "United Mexican Bar & Grill",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "united-mexican-bar-and-grill",
+    "name": "United Mexican Bar & Grill",
+    "label": "United Mexican",
+    "cuisine": "Mexican seafood & bar and grill",
+    "color": "#a42720",
+    "icon": "united-mexican-bar-and-grill",
+    "prep": 0,
+    "category": "Mexican seafood & bar and grill",
+    "items": [],
+    "address": "467 Jackson St, Hayward, CA 94544",
+    "site": "https://www.instagram.com/unitedmexicanrestaurant/",
+    "tagline": "Sinaloa-style seafood, Mexican plates and a bar on Jackson Street.",
+    "phone": "(510) 886-4588",
+    "siteCta": "See their Instagram",
+    "contactOnly": "Call the restaurant or see its own Instagram for current dishes and prices.",
+    "panels": [
+      {
+        "head": "Sinaloa-style seafood",
+        "body": [
+          "Their own profile describes Sinaloa-style seafood and Mexican food. It lists Uber Eats and Grubhub delivery."
+        ],
+        "links": [
+          {
+            "label": "Their own profile",
+            "href": "https://www.instagram.com/unitedmexicanrestaurant/"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/united-mexican-bar-and-grill.mp4",
+      "poster": "/clips/united-mexican-bar-and-grill-poster.webp",
+      "href": "https://www.instagram.com/reel/De0JUkJvxNE/",
+      "credit": "Posted by @unitedmexicanrestaurant",
+      "platform": "Instagram"
+    }
+  },
+  "sources": [
+    "Glenn 29 Oct 7:51 pm Hayward • Eats / BEASTY • Eats; IMG_8522–8524",
+    "https://www.instagram.com/unitedmexicanrestaurant/"
+  ],
+  "placements": [
+    "hayward-goods2-2",
+    "beasty-goods2-93"
+  ],
+  "flags": [
+    "Priced menu held: no current own menu or linked ordering list verified; third-party directory/delivery prices not copied.",
+    "Own film cut from 4s to exclude expired 10/24 free-drink opening offer.",
+    "Glenn’s Heavy Hitter review De-pYUOI2bt is by @thesnacksensei, verified in Chrome; download refused audience access. Source stays linked, playable copy held."
+  ]
+}

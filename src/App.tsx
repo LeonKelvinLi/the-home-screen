@@ -167,10 +167,17 @@ export default function App() {
     which is the whole reason it can be trusted to look the same every time.
   */
   const enter = (appId: string | null = null) => {
+    // Touch WebKit can restart its web process while two full-screen trees,
+    // photo layers and the outgoing blur are composited together. Release the
+    // landing screen in this commit on iPhone/iPad; the shell has a solid
+    // yellow Suspense fallback while its module arrives.
+    const touchApple = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+    const crossFade = !touchApple
     setOpenOn(appId)
     setEntered(true)
-    setHandoff(true)
-    window.setTimeout(() => setHandoff(false), HANDOFF_MS)
+    setHandoff(crossFade)
+    if (crossFade) window.setTimeout(() => setHandoff(false), HANDOFF_MS)
     try {
       // Idempotent. Pushing unconditionally grew the stack by one entry every
       // time somebody entered, went back and entered again.

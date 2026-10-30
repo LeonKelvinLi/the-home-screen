@@ -1,0 +1,285 @@
+{
+  "id": "b_ramenshop",
+  "name_exact": "Ramen Shop",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "ramen-shop",
+    "name": "Ramen Shop",
+    "label": "Ramen Shop",
+    "cuisine": "Ramen & cocktail bar",
+    "color": "#b44436",
+    "icon": "ramen-shop",
+    "prep": 0,
+    "category": "Ramen & cocktail bar",
+    "items": [],
+    "address": "5812 College Ave, Oakland, CA 94618",
+    "site": "https://www.ramenshop.com/",
+    "tagline": "House-made ramen and a rotating seasonal menu on College Avenue.",
+    "email": "info@ramenshop.com",
+    "hours": "Daily 5:30–10pm",
+    "quoteOnly": "See their own menu for current options and availability.",
+    "siteCta": "Reserve a table",
+    "orderUrl": "https://resy.com/cities/oak/ramen-shop-oak",
+    "siteNote": "Their dine-in menu dated October 29, 2026. Dishes rotate; prices and availability can change. The published menu lists a 5% healthcare charge, waivable on request. Alcohol is not listed here.",
+    "sections": [
+      {
+        "name": "Small bites",
+        "items": [
+          [
+            "Sansho Cabbage",
+            "Fresno chili, garlic and kombu.",
+            550
+          ],
+          [
+            "Roasted Japanese Sweet Potato",
+            "Miso butter, atsara and puffed rice.",
+            550
+          ],
+          [
+            "Mustard Pickled Zucchini",
+            "",
+            550
+          ],
+          [
+            "All Bites Plate",
+            "",
+            1500
+          ]
+        ]
+      },
+      {
+        "name": "Appetizers",
+        "items": [
+          [
+            "Duck, Pork & Shrimp Dumplings (3pc)",
+            "Scallion, rayu and Meyer lemon ponzu. Extra dumpling $4.50.",
+            1450
+          ],
+          [
+            "Full Belly Farms Heirloom Tomatoes",
+            "Ponzu, red onion and basil oil. Contains fish.",
+            1400
+          ],
+          [
+            "Red Little Gem Salad",
+            "Green goddess dressing, cherry tomatoes and basil.",
+            1850
+          ],
+          [
+            "Tempura Maitake & Negi",
+            "Calabrian mayo and shichimi.",
+            1850
+          ],
+          [
+            "Crispy Turnip Cake",
+            "Mushroom, peanut garlic chili crisp, soy glaze, scallion and chervil. Contains oyster.",
+            1650
+          ]
+        ]
+      },
+      {
+        "name": "Ramen",
+        "items": [
+          [
+            "Chicken Shoyu Ramen",
+            "Ginger-scallion chicken breast, jalapeño, negi, onion, half shoyu egg and mizuna.",
+            3000
+          ],
+          [
+            "Meyer Lemon Shoyu Veggie Ramen",
+            "Tomato, garlic-marinated zucchini, eggplant, half shio egg and komatsuna.",
+            2850
+          ],
+          [
+            "Hokkaido Miso Ramen",
+            "Pork chashu, Jimmy Nardello peppers, purple cabbage, half shoyu egg and shungiku.",
+            2850
+          ]
+        ]
+      },
+      {
+        "name": "Special and rice",
+        "items": [
+          [
+            "Chicken Leg Confit",
+            "Kabocha purée, pickled cranberries, beans, walnuts and chervil.",
+            3000
+          ],
+          [
+            "Yellowfin Tuna Poke Donburi",
+            "Negitoro, rice, avocado, daikon, cucumbers, tsukudani and scallion.",
+            2850
+          ],
+          [
+            "Pork & Chicken Fried Rice",
+            "Shrimp chili paste, tomato, zucchini, cauliflower, mint, cilantro and Thai basil.",
+            2450
+          ]
+        ]
+      },
+      {
+        "name": "Ramen add-ons",
+        "items": [
+          [
+            "Pork Chashu",
+            "",
+            500
+          ],
+          [
+            "Shoyu Egg",
+            "",
+            300
+          ],
+          [
+            "Shio Egg",
+            "",
+            300
+          ],
+          [
+            "Garlic Chili Paste",
+            "",
+            300
+          ]
+        ]
+      },
+      {
+        "name": "Kids",
+        "items": [
+          [
+            "Kid Ramen",
+            "Broth and noodles.",
+            1250
+          ],
+          [
+            "Kid Donburi",
+            "Soy-glazed pork and rice.",
+            1250
+          ],
+          [
+            "Side Chashu (kids)",
+            "",
+            400
+          ],
+          [
+            "Side Veggies (kids)",
+            "",
+            400
+          ],
+          [
+            "Side Rice (kids)",
+            "",
+            400
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "Black Sesame Ice Cream Sandwich",
+            "Brown butter cookies.",
+            1000
+          ],
+          [
+            "Thai Tea Ice Cream",
+            "Hoshigaki and sablé cookies.",
+            1000
+          ]
+        ]
+      },
+      {
+        "name": "Non-alcoholic drinks",
+        "items": [
+          [
+            "Kimino Yuzu Soda (250ml)",
+            "",
+            600
+          ],
+          [
+            "Fever-Tree Ginger Beer (200ml)",
+            "",
+            600
+          ],
+          [
+            "Boylan Black Cherry Cola (355ml)",
+            "",
+            600
+          ],
+          [
+            "Boylan Diet Cola (355ml)",
+            "",
+            600
+          ],
+          [
+            "Dram Holy Basil & Lemon Mineral Water",
+            "",
+            600
+          ],
+          [
+            "Sparkling Mineral Water",
+            "",
+            800
+          ],
+          [
+            "Fieldwork Headliner N/A IPA",
+            "",
+            900
+          ],
+          [
+            "Fieldwork Day Money N/A Grapefruit Blonde",
+            "",
+            900
+          ],
+          [
+            "Under the Cherry Moon",
+            "Cherry, yuzu, honey and cranberry.",
+            1000
+          ],
+          [
+            "Pandan Milk Punch",
+            "Coconut milk, pandan, orange and lime.",
+            1000
+          ],
+          [
+            "Leaves and Flowers: Genmaicha",
+            "Caffeinated.",
+            700
+          ],
+          [
+            "Leaves and Flowers: Mt. Tamalpais",
+            "Herbal.",
+            700
+          ],
+          [
+            "CDA (no spirits)",
+            "Orange, ginger, turmeric, lemon, honey, cinnamon and clove; hot. Spirits option omitted.",
+            1000
+          ]
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/ramen-shop.mp4",
+      "poster": "/clips/ramen-shop-poster.webp",
+      "href": "https://www.instagram.com/reel/DfGwYh5gSIi/",
+      "credit": "Filmed by @festusfeasts",
+      "platform": "Instagram",
+      "by": "festusfeasts"
+    }
+  },
+  "sources": [
+    "Glenn 29 Oct 9:54 pm Oakland • Eats / BEASTY • Ramen; IMG_8531–8533",
+    "https://www.ramenshop.com/",
+    "https://www.instagram.com/ramenshopoakland/",
+    "Own website menu images: 1793319276896-SB2Q7R5I43RL0WYXDAGV/1.jpg; 1793231225680-LECP7N0F6CGIFBRZUIIZ/8.jpg; 1793319276892-5KTUXOE2YN9WFPZDPV3F/2.jpg"
+  ],
+  "placements": [
+    "oakland-goods2-39",
+    "beasty-ramen-9"
+  ],
+  "flags": [
+    "Menu snapshot explicitly dated October 29; not the older delivery menu. No dairy/egg dish labeled vegan.",
+    "Phone omitted: public directories disagree and no current own phone confirmed. Email from Glenn’s public contact screenshot.",
+    "Dinner Bento wording not applicable; this page only uses Ramen Shop’s own daily menu."
+  ]
+}

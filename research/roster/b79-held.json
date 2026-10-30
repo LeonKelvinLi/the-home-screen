@@ -1,0 +1,29 @@
+[
+  {
+    "source": "https://www.instagram.com/reel/DMV3hajhWva/",
+    "sent": "2026-10-29 18:07 PDT",
+    "by": "ryanbyryanchua",
+    "request": "Clip / Heavy Hitter / For Pho Hoa",
+    "reason": "Verified public original in signed-in Chrome. Anonymous yt-dlp reel and post attempts return empty media; browser exposes a blob that cannot be exported by downloadMedia. Keep original linked. Caption tags Pho Hoa chain but names no address; do not present a specific Tully location as verified."
+  },
+  {
+    "source": "https://www.instagram.com/reel/De-pYUOI2bt/",
+    "sent": "2026-10-29 20:00 PDT",
+    "by": "thesnacksensei",
+    "request": "Clip / Heavy Hitter",
+    "reason": "Verified United Mexican Bar & Grill in the signed-in original and collaborator post in Chrome. Anonymous downloader refuses audience access in reel/post forms; keep exact source linked on the new business and Grand-O page; playable copy held."
+  },
+  {
+    "source": "Glenn IMG_8529.png",
+    "sent": "2026-10-29 20:44 PDT",
+    "request": "HEM Noodle Bar screenshot",
+    "reason": "Glenn explicitly said Disregard this last one at 20:47; not seeded or downloaded."
+  },
+  {
+    "source": "https://www.instagram.com/reel/Dexe7_gxwLe/",
+    "sent": "2026-10-30 04:46 PDT",
+    "by": "melsotel",
+    "request": "Foodie",
+    "reason": "Added to OTHER_REVIEWS as a source link to Macondo Colombian Fusion in Alameda, confirmed by the reel. No clip or separate restaurant listing requested; no new top-24 creator seat inferred."
+  }
+]

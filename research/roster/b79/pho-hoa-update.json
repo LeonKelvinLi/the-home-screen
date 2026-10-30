@@ -1,0 +1,483 @@
+{
+  "id": "b_phohoa",
+  "name_exact": "Pho Hoa",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "pho-hoa",
+    "name": "Pho Hoa",
+    "label": "Pho Hoa",
+    "cuisine": "Vietnamese pho",
+    "color": "#ffffff",
+    "icon": "pho-hoa",
+    "tagline": "The Pho Hoa chain's Tully Road shop in Lion Plaza, San Jose: two dozen kinds of pho, including a beef rib birria pho, rice plates, vermicelli bowls, rolls and Jazen fruit teas and smoothies.",
+    "prep": 0,
+    "category": "Vietnamese pho",
+    "items": [],
+    "sections": [
+      {
+        "name": "Pho Noodle",
+        "items": [
+          [
+            "Steak Pho",
+            "Phở Tái",
+            1595
+          ],
+          [
+            "Steak & Brisket Pho",
+            "Phở Tái, Chín",
+            1595
+          ],
+          [
+            "Steak & Meatball Pho",
+            "Phở Tái, Bò Viên",
+            1595
+          ],
+          [
+            "Meatball Pho",
+            "Phở Bò Viên",
+            1595
+          ],
+          [
+            "Steak & Flank Pho",
+            "Phở Tái, Nạm",
+            1595
+          ],
+          [
+            "Steak & Tripe Pho",
+            "Phở Tái, Sách",
+            1595
+          ],
+          [
+            "Steak, Flank & Fatty Flank Pho",
+            "Phở Tái, Nạm, Gầu",
+            1595
+          ],
+          [
+            "Special Combination Pho",
+            "Phở Đặc Biệt: steak, flank, fatty flank, tendon and tripe",
+            1595
+          ],
+          [
+            "Chicken Pho",
+            "Phở Gà",
+            1595
+          ],
+          [
+            "Brisket Pho",
+            "Phở Chín",
+            1595
+          ],
+          [
+            "Brisket & Meatball Pho",
+            "Phở Chín, Bò Viên",
+            1595
+          ],
+          [
+            "Brisket & Flank Pho",
+            "Phở Chín, Nạm",
+            1595
+          ],
+          [
+            "Steak & Tendon Pho",
+            "Phở Tái, Gân",
+            1595
+          ],
+          [
+            "Vegetarian Pho",
+            "Phở Chay",
+            1595
+          ],
+          [
+            "Brisket, Flank, Fatty Flank, Crunchy Flank & Tendon Pho",
+            "Phở Chín, Nạm, Gầu, Vè Dòn, Gân",
+            1595
+          ],
+          [
+            "Hot-N-Sour Seafood Pho",
+            "Phở Đồ Biển Chua Cay: shrimp, salmon, squid and pineapple",
+            1690
+          ],
+          [
+            "Spicy Sate Pho",
+            "Phở Satế: steak and brisket in a beef, coconut and peanut broth",
+            1690
+          ],
+          [
+            "Roasted Duck Pho",
+            "Regular size only",
+            1690
+          ],
+          [
+            "Hue-Style Soup",
+            "Regular size only",
+            1690
+          ],
+          [
+            "Seared Garlic Steak Pho",
+            "Phở Tái Lăn: thin-sliced steak sautéed with minced garlic",
+            1690
+          ],
+          [
+            "Beef Rib & Brisket Pho",
+            "Phở Sườn Bò, Chín",
+            1690
+          ],
+          [
+            "Beef Rib Birria Pho",
+            "Vietnamese pho in a savory Mexican birria broth, with beef rib",
+            1690
+          ],
+          [
+            "Shrimp Pho",
+            "",
+            1690
+          ]
+        ]
+      },
+      {
+        "name": "Snax",
+        "items": [
+          [
+            "Summer Roll",
+            "Gỏi Cuốn: vegetables, shrimp, pork and vermicelli in rice paper",
+            325
+          ],
+          [
+            "Fried Roll",
+            "Chả Giò: minced pork, shrimp and vegetables",
+            325
+          ],
+          [
+            "Tofu Roll",
+            "Gỏi Cuốn Chay Đậu Hũ",
+            325
+          ],
+          [
+            "Avocado Roll",
+            "Bơ Tươi Cuốn",
+            325
+          ],
+          [
+            "Popcorn Chicken",
+            "Gà Popcorn",
+            995
+          ],
+          [
+            "Popcorn Chicken Bowl",
+            "Rice, popcorn chicken, pickled vegetables and a fried egg",
+            1255
+          ],
+          [
+            "Salt & Pepper Tofu Squares",
+            "",
+            899
+          ],
+          [
+            "Fries",
+            "",
+            499
+          ],
+          [
+            "2 Rolls",
+            "",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Rice & Vermicelli",
+        "items": [
+          [
+            "Grilled Pork Chop & Fried Egg (Rice Plate)",
+            "Cơm Sườn Nướng Xả Trứng Chiên",
+            1675
+          ],
+          [
+            "Grilled Chicken & Fried Roll (Rice Plate)",
+            "Cơm Gà Nướng Chả Giò",
+            1625
+          ],
+          [
+            "Grilled Lemongrass Pork Chop (Rice Plate)",
+            "Cơm Sườn Nướng Xả",
+            1625
+          ],
+          [
+            "Grilled Prawns (Rice Plate)",
+            "Cơm Tôm Nướng",
+            1800
+          ],
+          [
+            "Sweet Chili Salmon (Rice Plate)",
+            "Cơm Cá Salmon",
+            1825
+          ],
+          [
+            "Grilled Chicken (Vermicelli Bowl)",
+            "Bún Gà Nướng",
+            1625
+          ],
+          [
+            "Grilled Pork & Fried Roll (Vermicelli Bowl)",
+            "Bún Thịt Nướng & Chả Giò",
+            1625
+          ],
+          [
+            "Grilled Prawn & Pork (Vermicelli Bowl)",
+            "Bún Tôm Thịt Nướng",
+            1700
+          ],
+          [
+            "Tofu & Vegetables (Vermicelli Bowl)",
+            "Bún Chay Đậu Hũ và Rau",
+            1625
+          ]
+        ]
+      },
+      {
+        "name": "Matcha Series",
+        "items": [
+          [
+            "Guava Matcha (16 oz)",
+            "Guava, milk and matcha under guava cold foam",
+            695
+          ],
+          [
+            "Mango Matcha (16 oz)",
+            "Mango purée, milk and matcha under cold foam",
+            695
+          ],
+          [
+            "Banana Matcha (16 oz)",
+            "Banana, milk and matcha under matcha cold foam",
+            695
+          ]
+        ]
+      },
+      {
+        "name": "Tea Series",
+        "items": [
+          [
+            "Black Tea (16 oz)",
+            "With strawberry, mango and pineapple fruit bits",
+            595
+          ],
+          [
+            "Buzzin' Berry (16 oz)",
+            "Honey strawberry milk tea with honey boba and strawberry bits",
+            595
+          ],
+          [
+            "Calamansi (16 oz)",
+            "Calamansi mango tea with chia seeds and mango bits",
+            595
+          ],
+          [
+            "Green Tea (16 oz)",
+            "With strawberry, mango and pineapple fruit bits",
+            595
+          ],
+          [
+            "Honey Delight (16 oz)",
+            "Honey jasmine green tea with chia seeds and strawberry bits or aloe",
+            595
+          ],
+          [
+            "Jasmine Milk Tea (16 oz)",
+            "",
+            595
+          ],
+          [
+            "Lychee Explosion (16 oz)",
+            "Lychee peach tea with lychee bits",
+            595
+          ],
+          [
+            "Lychee Mojito (16 oz)",
+            "Minty lime lychee peach tea with lychee bits",
+            620
+          ],
+          [
+            "Mango Fuzz (16 oz)",
+            "Mango peach tea with mango bits",
+            595
+          ],
+          [
+            "Mango Mojito (16 oz)",
+            "Minty lime mango peach tea with mango bits",
+            620
+          ],
+          [
+            "Original Milk Tea (16 oz)",
+            "Golden black milk tea with honey boba or red bean",
+            595
+          ],
+          [
+            "Original Thai (16 oz)",
+            "",
+            595
+          ],
+          [
+            "Strawberry Mojito (16 oz)",
+            "Minty lime strawberry peach tea with strawberry bits",
+            620
+          ],
+          [
+            "Taro Milk Tea (16 oz)",
+            "With real blended taro root",
+            595
+          ],
+          [
+            "The Islander (16 oz)",
+            "Pineapple honey tea with aloe, lime and strawberry bits",
+            595
+          ],
+          [
+            "Tutti Fruity (16 oz)",
+            "Strawberry mango lychee tea with strawberry and mango bits",
+            595
+          ]
+        ]
+      },
+      {
+        "name": "Tropical Series",
+        "items": [
+          [
+            "Flamingo (16 oz)",
+            "Fresh-squeezed lime with guava and strawberry purée",
+            625
+          ],
+          [
+            "Moonlight (16 oz)",
+            "Lemon juice with blueberry and lychee purée",
+            625
+          ],
+          [
+            "Sunrise (16 oz)",
+            "Citrus juices and pineapple purée",
+            625
+          ],
+          [
+            "Sunset (16 oz)",
+            "Fresh orange and lemon juice with Jazen green tea and berry purées",
+            625
+          ],
+          [
+            "Jamaica Splash (16 oz)",
+            "",
+            625
+          ],
+          [
+            "Horchata Milk Tea (16 oz)",
+            "",
+            625
+          ]
+        ]
+      },
+      {
+        "name": "Blended Series",
+        "items": [
+          [
+            "Avocado Overload (24 oz)",
+            "Fresh avocado smoothie",
+            725
+          ],
+          [
+            "Caribbean Breeze (24 oz)",
+            "Fresh strawberry, pineapple and banana smoothie",
+            725
+          ],
+          [
+            "Halo Halo Mix Mix (24 oz)",
+            "Taro root, coconut milk, honey boba, rainbow jelly and red bean",
+            775
+          ],
+          [
+            "Lychee Cooler (24 oz)",
+            "Lychee slushy with pineapple bits",
+            725
+          ],
+          [
+            "Mango Freeze (24 oz)",
+            "Mango slushy with strawberry bits",
+            725
+          ],
+          [
+            "Mango Tango (24 oz)",
+            "Fresh mango smoothie",
+            725
+          ],
+          [
+            "Pineopoly (24 oz)",
+            "Fresh pineapple, mango and chia seed smoothie",
+            725
+          ],
+          [
+            "Raspberry Breeze (24 oz)",
+            "Raspberry and strawberry slushy with pineapple bits",
+            725
+          ],
+          [
+            "Strawberry Chiller (24 oz)",
+            "Strawberry slushy with mango bits",
+            725
+          ],
+          [
+            "Strawberry Fusion (24 oz)",
+            "Fresh strawberry and banana smoothie",
+            725
+          ],
+          [
+            "Taro Smoothie (24 oz)",
+            "Fresh taro root, topped with whipped cream",
+            725
+          ],
+          [
+            "Treat-N-Sip (24 oz)",
+            "Caramel iced frappe with honey boba and egg pudding",
+            725
+          ]
+        ]
+      },
+      {
+        "name": "Beverages",
+        "items": [
+          [
+            "Soft Drink",
+            "",
+            250
+          ],
+          [
+            "Vietnamese Iced Coffee",
+            "",
+            499
+          ]
+        ]
+      }
+    ],
+    "address": "1834 Tully Rd, San Jose, CA 95122",
+    "phone": "(408) 238-1481",
+    "hours": "Mon–Thu 9am–10pm, Fri–Sun 9am–midnight",
+    "site": "https://phohoa.com/",
+    "orderUrl": "https://order.incentivio.com/c/phohoa/locations/tully/menu",
+    "siteCta": "Order online",
+    "siteNote": "Pho Hoa is a chain; this page is their Tully Road shop in Lion Plaza, San Jose. Prices are from that shop's own online ordering page and are for a regular bowl; a large is about $1 more. Other Bay Area Pho Hoa shops are in Santa Clara, Cupertino, San Ramon and Pinole.",
+    "clip": {
+      "src": "/clips/pho-hoa-jamesbaylife.mp4",
+      "poster": "/clips/pho-hoa-jamesbaylife-poster.webp",
+      "href": "https://www.instagram.com/reel/DeX4WuZRIa1/",
+      "credit": "Filmed by @jamesbaylife",
+      "platform": "Instagram",
+      "by": "jamesbaylife"
+    }
+  },
+  "placements": [
+    "beasty-goods2-51"
+  ],
+  "sources": [
+    "Glenn’s 29–30 Oct thread; see b79-films.json and BATCH-79.md"
+  ],
+  "flags": [
+    "Existing page; seats and menu facts preserved."
+  ]
+}

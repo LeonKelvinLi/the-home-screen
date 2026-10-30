@@ -1,0 +1,53 @@
+{
+  "id": "b_yakitoritoriman",
+  "name_exact": "Yakitori Toriman",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "yakitori-toriman",
+    "name": "Yakitori Toriman",
+    "label": "Toriman",
+    "cuisine": "Yakitori & Japanese market",
+    "color": "#e94721",
+    "icon": "yakitori-toriman",
+    "prep": 0,
+    "category": "Yakitori & Japanese market",
+    "items": [],
+    "address": "3555 Clares St, Suite G, Capitola, CA",
+    "site": "https://www.instagram.com/yakitori_toriman/",
+    "tagline": "Japanese skewers, Thursday ramen and a konbini market in Capitola.",
+    "phone": "(646) 641-2147",
+    "needsSite": true,
+    "siteCta": "See their latest schedule",
+    "contactOnly": "Check their Instagram for this week’s ramen and yakitori service, private-event closures and current offerings.",
+    "panels": [
+      {
+        "head": "Ramen and yakitori days",
+        "body": [
+          "Their latest profile and October 29 post list ramen Thursday 5–8pm; yakitori Friday 5–8pm, Saturday 1–7:30pm and Sunday 1–6:30pm. Private events can change the week’s schedule.",
+          "Their Japanese market also carries pantry goods and snacks."
+        ],
+        "links": [
+          {
+            "label": "Their latest schedule",
+            "href": "https://www.instagram.com/yakitori_toriman/p/DfEeix2m4BM/"
+          }
+        ]
+      }
+    ]
+  },
+  "sources": [
+    "Glenn 29 Oct 6:55 pm: Capitola • Eats / BEASTY • Yakatori / Needs Website pilot; IMG_8508–8511",
+    "https://www.instagram.com/yakitori_toriman/",
+    "https://www.instagram.com/yakitori_toriman/p/DfEeix2m4BM/"
+  ],
+  "placements": [
+    "capitola-goods-2",
+    "beasty-yakitori-0"
+  ],
+  "flags": [
+    "Hours from their latest own post supersede older Maps schedule; variable schedule is attributed in a panel.",
+    "Phone from Glenn’s public Maps details screenshot; postcode omitted because the Instagram and Maps screenshots differ.",
+    "Priced menu held: own profile, latest carousel and available links did not expose a complete current price list. No third-party menu prices used.",
+    "No clip request sent for Toriman. Website-pilot flag only; no new website built."
+  ]
+}

@@ -1,0 +1,736 @@
+{
+  "id": "b_acekingbbq",
+  "name_exact": "Ace King BBQ",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "ace-king-bbq",
+    "name": "Ace King BBQ",
+    "label": "Ace King",
+    "cuisine": "Chinese BBQ skewers",
+    "tagline": "Chinese BBQ skewers, foil-pan dishes and noodles, open late in Newark",
+    "color": "#2E3F7C",
+    "prep": 0,
+    "category": "Roster",
+    "items": [],
+    "icon": "ace-king-bbq",
+    "logoTemplate": "wordmark",
+    "logoLines": [
+      "ACE",
+      "KING"
+    ],
+    "logoFace": "condensed",
+    "site": "https://www.acekingbbqus.com/",
+    "siteCta": "Order online",
+    "tier": 3,
+    "clip": {
+      "src": "/clips/ace-king-bbq.mp4",
+      "poster": "/clips/ace-king-bbq-poster.webp",
+      "href": "https://www.instagram.com/reel/DeNbo-hynOi/",
+      "credit": "Filmed by @victoria.pham17",
+      "platform": "Instagram",
+      "by": "victoria.pham17"
+    },
+    "address": "6062 Mowry Ave, Newark, CA 94560",
+    "phone": "510-323-4987",
+    "hours": "Sunday - Thursday 5:00 PM - 11:30 PM; Friday - Saturday 5:00 PM - 12:30 AM",
+    "instagram": "acekingnewark",
+    "sections": [
+      {
+        "name": "BBQ Meat",
+        "items": [
+          [
+            "Hot Squid(Contains Peanuts)",
+            "",
+            499
+          ],
+          [
+            "Beef",
+            "Two Series Of Starting Point",
+            299
+          ],
+          [
+            "Lamb",
+            "Two Series Of Starting Point",
+            299
+          ],
+          [
+            "Chicken",
+            "Two Series Of Starting Point",
+            279
+          ],
+          [
+            "Backstrops of bull",
+            "",
+            269
+          ],
+          [
+            "Beef Tendon",
+            "",
+            329
+          ],
+          [
+            "Beef Tripe",
+            "",
+            329
+          ],
+          [
+            "Lamb Chop",
+            "",
+            509
+          ],
+          [
+            "Lamb Kidney",
+            "",
+            759
+          ],
+          [
+            "Charcoal Grilled Fatty Intestine",
+            "",
+            349
+          ],
+          [
+            "Chicken Wing",
+            "",
+            329
+          ],
+          [
+            "House Special Orleans Chicken Leg",
+            "",
+            539
+          ],
+          [
+            "Chicken Gizzard",
+            "",
+            269
+          ],
+          [
+            "Chicken Heart",
+            "",
+            269
+          ],
+          [
+            "Chicken Feet",
+            "",
+            269
+          ],
+          [
+            "Chicken Skin",
+            "",
+            269
+          ],
+          [
+            "Chicken Gristle",
+            "",
+            349
+          ],
+          [
+            "Pig Feet(Whole)",
+            "",
+            869
+          ],
+          [
+            "Squid",
+            "",
+            329
+          ],
+          [
+            "Shrimp",
+            "",
+            239
+          ],
+          [
+            "Yellow Croaker",
+            "",
+            349
+          ],
+          [
+            "Pollack",
+            "",
+            1099
+          ],
+          [
+            "Winkles",
+            "",
+            269
+          ],
+          [
+            "Home Made Fish Ball",
+            "",
+            269
+          ],
+          [
+            "Grilled Squid Tentacles",
+            "",
+            299
+          ],
+          [
+            "BBQ Garlic Scallop(2)",
+            "",
+            649
+          ],
+          [
+            "Sausage",
+            "",
+            269
+          ],
+          [
+            "Quail Egg",
+            "",
+            269
+          ],
+          [
+            "Egg Mix",
+            "",
+            269
+          ],
+          [
+            "Roasted Quail",
+            "",
+            869
+          ],
+          [
+            "Chinese Sausage",
+            "",
+            379
+          ],
+          [
+            "Fish Cake",
+            "",
+            289
+          ],
+          [
+            "BBQ Scalded Aorta",
+            "",
+            269
+          ],
+          [
+            "Bacon Enoki Roll",
+            "",
+            349
+          ],
+          [
+            "BBQ Pork w.Garlic(2)",
+            "",
+            539
+          ]
+        ]
+      },
+      {
+        "name": "BBQ Veggie",
+        "items": [
+          [
+            "Coriander Roll",
+            "",
+            279
+          ],
+          [
+            "Bell Pepper",
+            "",
+            269
+          ],
+          [
+            "Cabbage",
+            "",
+            349
+          ],
+          [
+            "A Vegetable",
+            "",
+            269
+          ],
+          [
+            "String Bean",
+            "",
+            269
+          ],
+          [
+            "Eggplant",
+            "",
+            269
+          ],
+          [
+            "Mushroom",
+            "",
+            269
+          ],
+          [
+            "Chinese Chives",
+            "",
+            269
+          ],
+          [
+            "Thin Toufu Wrap(10pcs）",
+            "",
+            269
+          ],
+          [
+            "Fried Bean Curd",
+            "",
+            239
+          ],
+          [
+            "Potato",
+            "",
+            239
+          ],
+          [
+            "Sweet Potato",
+            "",
+            239
+          ],
+          [
+            "Rice Cake",
+            "",
+            239
+          ],
+          [
+            "Bread Slice",
+            "",
+            239
+          ],
+          [
+            "Steamed Bun Slice",
+            "",
+            239
+          ],
+          [
+            "BBQ Glaten",
+            "",
+            299
+          ],
+          [
+            "Cotton Candy",
+            "",
+            279
+          ],
+          [
+            "Grilled Chiba Tofu",
+            "",
+            299
+          ]
+        ]
+      },
+      {
+        "name": "Mini BBQ Skewers",
+        "items": [
+          [
+            "Mini Chicken Wing Tips(5)",
+            "This product contains peanuts.此产品包含花生.",
+            499
+          ],
+          [
+            "Mini Sweet Corn(5)",
+            "",
+            329
+          ],
+          [
+            "Mini Thin Tutu Wrap(10)",
+            "",
+            349
+          ]
+        ]
+      },
+      {
+        "name": "BBQ In Foil Pan Box",
+        "items": [
+          [
+            "BBQ Oyster Chives & Egg w.Garlic Sauce",
+            "",
+            1399
+          ],
+          [
+            "BBQ Cucumber Mushroom & Egg(New)",
+            "",
+            869
+          ],
+          [
+            "BBQ Shrimp & Egg",
+            "",
+            1189
+          ],
+          [
+            "BBQ Eggplant w.Garlic",
+            "",
+            1099
+          ],
+          [
+            "BBQ Enokimushroom",
+            "",
+            1099
+          ],
+          [
+            "BBQ Spicy Tofu",
+            "",
+            1199
+          ],
+          [
+            "BBQ Minced Meat Vermicelli",
+            "",
+            1199
+          ],
+          [
+            "BBQ Shrimp",
+            "",
+            1599
+          ],
+          [
+            "BBQ Clam",
+            "",
+            1899
+          ],
+          [
+            "BBQ Pig Brain in Foil Pan Box",
+            "",
+            1749
+          ],
+          [
+            "BBQ Duck Blood In Foilpan Box",
+            "",
+            1699
+          ],
+          [
+            "BBQ Frog Leg",
+            "",
+            1999
+          ]
+        ]
+      },
+      {
+        "name": "Hot Selection",
+        "items": [
+          [
+            "Spicy Baby Shrimp",
+            "Original Price $26.99;New Product Promotion $23.99.",
+            2699
+          ],
+          [
+            "Baby Shrimp w.Chives",
+            "Original Price $26.99;New Product Promotion $23.99.",
+            2699
+          ],
+          [
+            "Shrimp w.Garlic Butter(New)",
+            "",
+            1699
+          ],
+          [
+            "Golden Corn Kernels(New)",
+            "",
+            799
+          ],
+          [
+            "Ak Spicy Chicken Feet(New)",
+            "",
+            1999
+          ],
+          [
+            "Ak Spicy Duck Head(New)",
+            "",
+            1899
+          ],
+          [
+            "Spicy Veggie",
+            "",
+            1799
+          ],
+          [
+            "Spicy Chicken",
+            "",
+            1899
+          ],
+          [
+            "Spicy Lamb Chop",
+            "",
+            2399
+          ]
+        ]
+      },
+      {
+        "name": "Crossing-The-Bridge Noodles",
+        "items": [
+          [
+            "Yunnan Bridge Noodles(Spicy)",
+            "",
+            1699
+          ]
+        ]
+      },
+      {
+        "name": "Appetizers",
+        "items": [
+          [
+            "Crisp Tofu w.Sesame Sauce(New)",
+            "",
+            1199
+          ],
+          [
+            "Lemon Chicken Feet",
+            "",
+            1399
+          ],
+          [
+            "Sliced Pork",
+            "",
+            1299
+          ],
+          [
+            "Sliced Pork Cucumber",
+            "",
+            1199
+          ],
+          [
+            "Cold Ear Wire",
+            "",
+            1199
+          ],
+          [
+            "Pork Liver",
+            "",
+            1299
+          ],
+          [
+            "Cucumber Tofu Strip",
+            "",
+            1099
+          ],
+          [
+            "Sweet Sour Cabbage",
+            "",
+            1099
+          ],
+          [
+            "Seaweed Salad",
+            "",
+            1199
+          ],
+          [
+            "Preserred Eggs w.Chili",
+            "",
+            899
+          ],
+          [
+            "Smashed Cucumber Salad",
+            "",
+            1099
+          ]
+        ]
+      },
+      {
+        "name": "Staple Food",
+        "items": [
+          [
+            "Sweet Osmanthus Fried Rice Cake(New)",
+            "",
+            799
+          ],
+          [
+            "H.Special Fried Rice(Spicy)",
+            "",
+            1399
+          ],
+          [
+            "fried rice with dried radish",
+            "",
+            1399
+          ],
+          [
+            "H.Special Rice Noodle(Spicy)",
+            "",
+            1399
+          ],
+          [
+            "Spicy Rice Noodle(Spicy)",
+            "",
+            1299
+          ],
+          [
+            "Hot & Sour Noodles",
+            "",
+            1299
+          ],
+          [
+            "House Special Dumpling",
+            "",
+            1299
+          ],
+          [
+            "House Special Wonton Soup",
+            "",
+            1299
+          ],
+          [
+            "House Special Cold Noodle",
+            "",
+            1299
+          ],
+          [
+            "Steamed Egg",
+            "",
+            1299
+          ],
+          [
+            "Doughbay Soup",
+            "",
+            1299
+          ],
+          [
+            "Fried Instant Noodles",
+            "",
+            1399
+          ],
+          [
+            "Fried Egg",
+            "",
+            299
+          ],
+          [
+            "Rice",
+            "",
+            249
+          ],
+          [
+            "Steamed Bun",
+            "",
+            799
+          ],
+          [
+            "Fried Bun",
+            "",
+            799
+          ],
+          [
+            "Rice Noodle w.Egg",
+            "",
+            1399
+          ]
+        ]
+      },
+      {
+        "name": "Drinks",
+        "items": [
+          [
+            "Coke",
+            "",
+            300
+          ],
+          [
+            "Zero Coke",
+            "",
+            300
+          ],
+          [
+            "Sprite",
+            "",
+            300
+          ],
+          [
+            "Wanglaoji",
+            "",
+            350
+          ],
+          [
+            "Beijing Original Yogurt",
+            "",
+            369
+          ],
+          [
+            "Bawang Temple Pear Soda",
+            "",
+            699
+          ],
+          [
+            "Iced Red Tea",
+            "",
+            400
+          ],
+          [
+            "Suanmeitang",
+            "",
+            400
+          ],
+          [
+            "Iced Pear Tea",
+            "",
+            400
+          ],
+          [
+            "Iced Grapefruit & Honey Tea",
+            "",
+            400
+          ],
+          [
+            "Master Kong Jasmine Tea",
+            "",
+            400
+          ],
+          [
+            "Ksf Jasmine Tea",
+            "",
+            400
+          ],
+          [
+            "Grape Green Tea",
+            "",
+            450
+          ],
+          [
+            "Yuanqi Sparking water(peach)",
+            "",
+            450
+          ],
+          [
+            "Yuanqi Sparking Water(grapes)",
+            "",
+            450
+          ],
+          [
+            "Yuanqi Sparking Water(lychee)",
+            "",
+            450
+          ],
+          [
+            "Arctic Ocean Tangerine Flavored Soda",
+            "",
+            450
+          ],
+          [
+            "Yinlu Peanut Milk",
+            "",
+            450
+          ],
+          [
+            "Unified Assam Milk Tea",
+            "",
+            499
+          ],
+          [
+            "Water",
+            "",
+            200
+          ],
+          [
+            "Xiaoming Liuliuda Tea",
+            "",
+            400
+          ],
+          [
+            "Maidong Peach Vitamin Drink",
+            "",
+            450
+          ]
+        ]
+      }
+    ],
+    "siteNote": "Prices are from their own online ordering page."
+  },
+  "placements": [
+    "newark-goods2-0",
+    "beasty-bbq-5"
+  ],
+  "sources": [
+    "Glenn’s 29 Oct clips; b79-films.json"
+  ],
+  "flags": [
+    "Existing page; old main film, menu, icon and placements retained."
+  ]
+}

@@ -5171,6 +5171,23 @@ export const ROSTER_SEED: LocalSeed[] = [
   /* BEASTY • Coffee */
   seed('kiyomi-ca-phe', 'Kiyomi Cà Phê', 'Kiyomi', 'Vietnamese coffee', '#4C4C4C', {
     icon: 'kiyomi-ca-phe',
+    // Batch 79: two more own/collaborator videos; dated event invitation excluded.
+    clips: [
+        {
+            "src": "/clips/kiyomi-ca-phe-own-20261030.mp4",
+            "poster": "/clips/kiyomi-ca-phe-own-20261030-poster.webp",
+            "href": "https://www.instagram.com/reel/Db4lW0mPuf3/",
+            "credit": "Posted by @kiyomi_ca_phe",
+            "platform": "Instagram"
+        },
+        {
+            "src": "/clips/kiyomi-ca-phe-coffee.mp4",
+            "poster": "/clips/kiyomi-ca-phe-coffee-poster.webp",
+            "href": "https://www.instagram.com/reel/DXLdUcUkgWv/",
+            "credit": "Posted by @bkwa",
+            "platform": "Instagram"
+        }
+    ],
     tagline: 'Vietnamese coffee, matcha and brunch, in San Francisco',
     needsSite: true,
     clip: {

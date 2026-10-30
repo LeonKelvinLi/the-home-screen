@@ -1,0 +1,587 @@
+{
+  "id": "b_royalrootcafe",
+  "name_exact": "Royal Root Cafe",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "royal-root-cafe",
+    "name": "Royal Root Cafe",
+    "label": "Royal Root",
+    "cuisine": "Coffee, Filipino desserts & ube pastries",
+    "color": "#785592",
+    "icon": "royal-root-cafe",
+    "prep": 0,
+    "category": "Coffee, Filipino desserts & ube pastries",
+    "items": [],
+    "address": "32148 Alvarado Blvd, Union City, CA 94587",
+    "site": "https://royalrootcafe.com/",
+    "tagline": "Coffee, ube drinks, halo-halo, crepes and bubble waffles in Union City.",
+    "phone": "(510) 991-8823",
+    "email": "royalrootcafe@gmail.com",
+    "hours": "Mon–Thu 7am–7pm, Fri 7am–9pm, Sat 8am–9pm; closed Sun",
+    "quoteOnly": "See their own menu for current options and availability.",
+    "siteCta": "Order on their menu",
+    "orderUrl": "https://royalrootcafe.com/order",
+    "siteNote": "Current available items from their own ordering menu. “From” prices depend on options; choose sizes and extras on their site. Their stock changes throughout the day.",
+    "sections": [
+      {
+        "name": "Matcha drinks",
+        "items": [
+          [
+            "Iced Double Matcha Latte",
+            "",
+            850,
+            null,
+            "from $8.50"
+          ],
+          [
+            "Matcha Ube",
+            "",
+            850,
+            null,
+            "from $8.50"
+          ],
+          [
+            "Matcha Mango",
+            "",
+            850,
+            null,
+            "from $8.50"
+          ],
+          [
+            "Matcha Strawberry",
+            "",
+            850,
+            null,
+            "from $8.50"
+          ],
+          [
+            "Matcha Biscoff",
+            "",
+            850,
+            null,
+            "from $8.50"
+          ],
+          [
+            "Matcha Pumpkin Spice",
+            "",
+            850,
+            null,
+            "from $8.50"
+          ]
+        ]
+      },
+      {
+        "name": "Smoothies",
+        "items": [
+          [
+            "Ube Smoothie Boba",
+            "",
+            850,
+            null,
+            "from $8.50"
+          ],
+          [
+            "Mango Puree Bliss Smoothie",
+            "",
+            850,
+            null,
+            "from $8.50"
+          ],
+          [
+            "Chocolate Smoothie",
+            "",
+            650,
+            null,
+            "from $6.50"
+          ],
+          [
+            "Strawberry Smoothie",
+            "",
+            700,
+            null,
+            "from $7.00"
+          ],
+          [
+            "Sweet Corn Cloud Crunch",
+            "",
+            700,
+            null,
+            "from $7.00"
+          ],
+          [
+            "Biscoff Smoothie",
+            "",
+            850,
+            null,
+            "from $8.50"
+          ],
+          [
+            "Pumpkin Spice Smoothie",
+            "",
+            850,
+            null,
+            "from $8.50"
+          ],
+          [
+            "Oreo Smoothie",
+            "",
+            850,
+            null,
+            "from $8.50"
+          ]
+        ]
+      },
+      {
+        "name": "Fruit tea",
+        "items": [
+          [
+            "Passionfruit",
+            "",
+            650,
+            null,
+            "from $6.50"
+          ],
+          [
+            "Mango Passionfruit",
+            "",
+            650,
+            null,
+            "from $6.50"
+          ],
+          [
+            "Wintermelon",
+            "",
+            650,
+            null,
+            "from $6.50"
+          ],
+          [
+            "Lychee Tea",
+            "",
+            650,
+            null,
+            "from $6.50"
+          ],
+          [
+            "Strawberry Lychee",
+            "",
+            650,
+            null,
+            "from $6.50"
+          ],
+          [
+            "Mangolicious",
+            "",
+            650,
+            null,
+            "from $6.50"
+          ]
+        ]
+      },
+      {
+        "name": "Milk tea",
+        "items": [
+          [
+            "Okinawa Milk Tea",
+            "",
+            650,
+            null,
+            "from $6.50"
+          ],
+          [
+            "Tiger Brown Sugar Boba",
+            "",
+            650,
+            null,
+            "from $6.50"
+          ],
+          [
+            "Thai Tea",
+            "",
+            650,
+            null,
+            "from $6.50"
+          ],
+          [
+            "Pumpkin Spice",
+            "",
+            650,
+            null,
+            "from $6.50"
+          ]
+        ]
+      },
+      {
+        "name": "Halo-halo",
+        "items": [
+          [
+            "UBE Halo Halo",
+            "Ube, fruit, beans, boba, ice cream, ube leche flan and pinipig.",
+            1100
+          ]
+        ]
+      },
+      {
+        "name": "Coffee",
+        "items": [
+          [
+            "Iced Ube Latte",
+            "",
+            750,
+            null,
+            "from $7.50"
+          ],
+          [
+            "Iced Strawberry Latte",
+            "",
+            750,
+            null,
+            "from $7.50"
+          ],
+          [
+            "Iced Mango Latte",
+            "",
+            750,
+            null,
+            "from $7.50"
+          ],
+          [
+            "Iced Latte",
+            "",
+            750,
+            null,
+            "from $7.50"
+          ],
+          [
+            "Iced Dalgona with Coffee Jelly",
+            "",
+            650,
+            null,
+            "from $6.50"
+          ],
+          [
+            "Hot Capuccino",
+            "",
+            500,
+            null,
+            "from $5.00"
+          ],
+          [
+            "Caramel Macchiato",
+            "",
+            450,
+            null,
+            "from $4.50"
+          ],
+          [
+            "Hot Latte",
+            "",
+            500,
+            null,
+            "from $5.00"
+          ],
+          [
+            "Hot Black Coffee",
+            "",
+            375,
+            null,
+            "from $3.75"
+          ],
+          [
+            "Hot Black Decaf Coffee",
+            "",
+            350,
+            null,
+            "from $3.50"
+          ],
+          [
+            "Iced Biscoff Latte",
+            "",
+            750,
+            null,
+            "from $7.50"
+          ],
+          [
+            "Ice Pumpkin Latte",
+            "",
+            750,
+            null,
+            "from $7.50"
+          ],
+          [
+            "Hot Pumpkin Latte",
+            "",
+            500,
+            null,
+            "from $5.00"
+          ]
+        ]
+      },
+      {
+        "name": "Tea, chocolate and water",
+        "items": [
+          [
+            "Hot Chocolate",
+            "",
+            500,
+            null,
+            "from $5.00"
+          ],
+          [
+            "Decaf Green Tea",
+            "",
+            350,
+            null,
+            "from $3.50"
+          ],
+          [
+            "Lemon Ginger Tea",
+            "",
+            350,
+            null,
+            "from $3.50"
+          ],
+          [
+            "Chai Spice Tea",
+            "",
+            350,
+            null,
+            "from $3.50"
+          ],
+          [
+            "Water Bottle",
+            "",
+            200
+          ]
+        ]
+      },
+      {
+        "name": "Crepes",
+        "items": [
+          [
+            "The Heavenly UBE Crepe",
+            "Ube jam, ube ice cream, whipped cream and ube syrup.",
+            1500
+          ],
+          [
+            "The Abundant Nutella",
+            "Nutella, banana, strawberries, ice cream, whipped cream and chocolate.",
+            1700
+          ],
+          [
+            "Build Your Own Crepe",
+            "Base price; fillings and toppings chosen on their site.",
+            700
+          ],
+          [
+            "The Holy Smoked Salmon Crepe",
+            "Salmon, cream cheese, capers and onions; salad and fries.",
+            1500
+          ]
+        ]
+      },
+      {
+        "name": "Bubble waffles",
+        "items": [
+          [
+            "Build Your Own Bubble Waffle",
+            "Base price; options chosen on their site.",
+            500
+          ],
+          [
+            "Divine Ube Bubble Waffle",
+            "",
+            1500
+          ],
+          [
+            "Matcha Bubble Blessing",
+            "",
+            1400
+          ],
+          [
+            "Campfire S'mores Bubble Waffle",
+            "",
+            1300
+          ],
+          [
+            "Biscoff Bubble Waffle",
+            "",
+            1300
+          ]
+        ]
+      },
+      {
+        "name": "Fries",
+        "items": [
+          [
+            "Large BBQ Fries",
+            "",
+            800
+          ],
+          [
+            "Large Cheese Fries",
+            "",
+            800
+          ],
+          [
+            "Large Sour Cream Fries",
+            "",
+            800
+          ],
+          [
+            "Large Sweet Potato Fries",
+            "",
+            700
+          ],
+          [
+            "Large Plain Potato Fries",
+            "",
+            550
+          ]
+        ]
+      },
+      {
+        "name": "Cookies, pastries and pies",
+        "items": [
+          [
+            "Chocolate Chip",
+            "",
+            600
+          ],
+          [
+            "UBE Cookies with UBE Halaya filling",
+            "",
+            700
+          ],
+          [
+            "Promised Puff UBE Flan",
+            "",
+            800
+          ],
+          [
+            "UBE Croissant",
+            "",
+            500
+          ],
+          [
+            "UBE Graham Pie Small",
+            "",
+            1200
+          ],
+          [
+            "UBE Graham Pie Big",
+            "",
+            3900
+          ]
+        ]
+      },
+      {
+        "name": "Chickcharon and jam",
+        "items": [
+          [
+            "Original Chickcharon",
+            "",
+            1200
+          ],
+          [
+            "Premium UBE Jam",
+            "",
+            1000
+          ],
+          [
+            "Vegan UBE Jam",
+            "",
+            1000
+          ]
+        ]
+      },
+      {
+        "name": "Savory meals",
+        "items": [
+          [
+            "Beef Cheesy Lasagna",
+            "",
+            1800,
+            null,
+            "from $18.00"
+          ],
+          [
+            "Beef Patty",
+            "",
+            500
+          ],
+          [
+            "Spicy Beef",
+            "",
+            750
+          ],
+          [
+            "3 PCS Chicken Tenders with Regular Flavored Fries",
+            "",
+            999
+          ],
+          [
+            "5 PCS Chicken Tenders with Regular Flavored Fries",
+            "",
+            1299
+          ],
+          [
+            "6 PCS Chicken Tenders with Large Flavored Fries",
+            "",
+            1499
+          ],
+          [
+            "15 PCS Chicken Tenders with 2 Large Flavored Fries",
+            "",
+            3500
+          ],
+          [
+            "Avocado Toast with Eggs",
+            "",
+            800
+          ]
+        ]
+      },
+      {
+        "name": "Merch",
+        "items": [
+          [
+            "Magnetic Bookmarks",
+            "",
+            450
+          ],
+          [
+            "Keychain",
+            "",
+            600
+          ]
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/royal-root-cafe.mp4",
+      "poster": "/clips/royal-root-cafe-poster.webp",
+      "href": "https://www.instagram.com/reel/De-AecpSF7k/",
+      "credit": "Posted by @royalrootcafe",
+      "platform": "Instagram"
+    }
+  },
+  "sources": [
+    "Glenn 29 Oct 7:32 pm Cafe, 7:33 pm Sweets as well; IMG_8519–8521",
+    "https://royalrootcafe.com/",
+    "https://royalrootcafe.com/order (live Chrome menu, not older crawl)",
+    "https://www.instagram.com/royalrootcafe/"
+  ],
+  "placements": [
+    "union-city-goods2-5",
+    "beasty-goods2-92",
+    "beasty-bakery-14"
+  ],
+  "flags": [
+    "91 priced rows observed; 15 marked OUT OF STOCK omitted, 76 available retained including two retail items separately.",
+    "Own live menu differs from an older crawl: UBE cookie $7, lasagna from $18, current seasonal items present.",
+    "Plus signs preserved as from prices and read-only menu; build-your-own dishes remain base-only without invented modifiers.",
+    "Mixed cafe; one vegan jam does not classify the whole venue as vegan.",
+    "Cafe 24/24 full; requested Cafe seat held for capacity. City coffee spot 13 and Filipino sweets spot are occupied. More eats holds the Sweets overflow; Bakery 14 is also open."
+  ]
+}

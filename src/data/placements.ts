@@ -1875,4 +1875,18 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   /* Batch 78: Argos follows Sin City Pits and Gem City without moving either. */
   'beasty-pits-2': 'b_scpargos',
 
+  /* Batch 79, 29–30 October. Existing seats stay fixed; Cafe is full. */
+  'san-leandro-goods2-0': 'b_tapsilogexpress',
+  'beasty-goods2-91': 'b_tapsilogexpress',
+  'hayward-goods2-2': 'b_unitedmexicanbarandgrill',
+  'beasty-goods2-93': 'b_unitedmexicanbarandgrill',
+  'oakland-goods2-40': 'b_nokaramen',
+  'beasty-ramen-10': 'b_nokaramen',
+  'capitola-goods-2': 'b_yakitoritoriman',
+  'beasty-yakitori-0': 'b_yakitoritoriman',
+  'union-city-goods2-5': 'b_royalrootcafe',
+  'beasty-goods2-92': 'b_royalrootcafe',
+  'beasty-bakery-14': 'b_royalrootcafe',
+  'oakland-goods2-39': 'b_ramenshop',
+  'beasty-ramen-9': 'b_ramenshop',
 }

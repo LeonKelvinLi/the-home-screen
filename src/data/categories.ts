@@ -148,6 +148,8 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   /* Glenn, 29 Oct 3:46 pm: BEASTY • Vegan, with Laughing Monk’s vegan food.
      Its mixed menu is seated by hand; type-based fills use vegan/plant-based businesses. */
   { kind: 'vegan', heading: 'Vegan', about: 'Vegan food and plant-based chefs', wall: wall('vegan'), test: /\bvegan\b|plant[- ]based/i },
+  /* Glenn, 29 Oct 6:55 pm, "BEASTY • Yakatori", with Toriman in Capitola. */
+  { kind: 'yakitori', heading: 'Yakitori', about: 'Japanese grilled skewers and yakitori bars', wall: wall('yakitori'), test: /yakitori/i },
 ]
 
 /** Every category page holds his twenty-four. */

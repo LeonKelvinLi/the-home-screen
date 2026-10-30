@@ -1,0 +1,321 @@
+{
+  "id": "b_tapsilogexpress",
+  "name_exact": "Tapsilog Express",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "tapsilog-express",
+    "name": "Tapsilog Express",
+    "label": "Tapsilog",
+    "cuisine": "Filipino silog meals",
+    "color": "#c82e22",
+    "icon": "tapsilog-express",
+    "prep": 0,
+    "category": "Filipino silog meals",
+    "items": [],
+    "address": "14843 Washington Ave, San Leandro, CA 94578",
+    "site": "https://tapsilogexpress.com/",
+    "tagline": "Filipino silog plates, lumpia and halo-halo on Washington Avenue.",
+    "phone": "(510) 878-1232",
+    "siteCta": "Order on their menu",
+    "orderUrl": "https://order.online/business/29378/store/149103?pickup=true&redirected=true",
+    "panels": [
+      {
+        "head": "Silog meals and Filipino favorites",
+        "body": [
+          "Tapsilog, longsilog, tosilog and bangsilog, plus lumpia, sisig, pork belly, pancit and halo-halo. Meal contents and current prices are on their own ordering page."
+        ],
+        "links": [
+          {
+            "label": "Their ordering menu",
+            "href": "https://order.online/business/29378"
+          }
+        ]
+      }
+    ],
+    "quoteOnly": "Choose options and place orders on their own menu.",
+    "siteNote": "Their own San Leandro pickup menu prices, checked October 30. Online prices can differ from in-store prices; ordering closes before the restaurant. No delivery fee or optional extras added to these prices.",
+    "sections": [
+      {
+        "name": "Meals",
+        "items": [
+          [
+            "Tapsilog",
+            "Braised beef, garlic rice and egg.",
+            1385
+          ],
+          [
+            "Tosilog",
+            "Sweet cured pork, garlic rice and egg.",
+            1385
+          ],
+          [
+            "Longsilog",
+            "Three longganisa, garlic rice and egg.",
+            1385
+          ],
+          [
+            "Adobosilog",
+            "Pork adobo, garlic rice and egg.",
+            1385
+          ],
+          [
+            "Sisigsilog",
+            "Minced pork, garlic rice and egg.",
+            1385
+          ],
+          [
+            "Hotsilog",
+            "Three cheesy hotdogs, garlic rice and egg.",
+            1385
+          ],
+          [
+            "Liemposilog",
+            "Salt-and-pepper pork belly, garlic rice and egg.",
+            1475
+          ],
+          [
+            "Bangsilog",
+            "Deboned milkfish, garlic rice and egg.",
+            1385
+          ],
+          [
+            "Tinapsilog",
+            "Smoked deboned milkfish, garlic rice and egg.",
+            1385
+          ],
+          [
+            "Spamsilog",
+            "Spam.",
+            1385
+          ],
+          [
+            "Bagnetsilog",
+            "Crispy pork belly, garlic rice and egg.",
+            1475
+          ],
+          [
+            "Chicksilog",
+            "Fried chicken, garlic rice and egg.",
+            1385
+          ],
+          [
+            "Pancit",
+            "Rice noodles with pork belly.",
+            962
+          ],
+          [
+            "Chorizosilog",
+            "Chorizo, garlic rice and egg.",
+            1385
+          ]
+        ]
+      },
+      {
+        "name": "Catering",
+        "items": [
+          [
+            "Lumpia Tray (140–150 pcs.)",
+            "",
+            8000
+          ],
+          [
+            "Lumpia Tray (70–75 pcs.)",
+            "",
+            4400
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "Halo-Halo",
+            "",
+            854
+          ],
+          [
+            "Mais Con Yelo",
+            "",
+            854
+          ]
+        ]
+      },
+      {
+        "name": "Drinks",
+        "items": [
+          [
+            "Pineapple Cooler",
+            "",
+            368
+          ],
+          [
+            "Special Iced Tea",
+            "",
+            368
+          ],
+          [
+            "Sago’t Gulaman",
+            "",
+            485
+          ],
+          [
+            "Calamansi Juice",
+            "",
+            422
+          ],
+          [
+            "Bottled Water",
+            "",
+            179
+          ],
+          [
+            "Coke (12 oz)",
+            "",
+            260
+          ],
+          [
+            "Sprite (12 oz)",
+            "",
+            260
+          ],
+          [
+            "Diet Coke (12 oz)",
+            "",
+            260
+          ],
+          [
+            "Rootbeer (12 oz)",
+            "",
+            260
+          ],
+          [
+            "Orange Soda (12 oz)",
+            "",
+            260
+          ]
+        ]
+      },
+      {
+        "name": "Sides",
+        "items": [
+          [
+            "Extra Rice",
+            "",
+            323
+          ],
+          [
+            "Extra Egg",
+            "",
+            323
+          ],
+          [
+            "Lumpia (12 pcs)",
+            "",
+            854
+          ],
+          [
+            "Tokwa't Baboy",
+            "",
+            1475
+          ]
+        ]
+      },
+      {
+        "name": "Extra meat",
+        "items": [
+          [
+            "Extra Adobo",
+            "Extra meat only; rice and egg are separate.",
+            953
+          ],
+          [
+            "Extra Bagnet",
+            "Extra meat only; rice and egg are separate.",
+            1016
+          ],
+          [
+            "Extra Bangus",
+            "Extra meat only; rice and egg are separate.",
+            953
+          ],
+          [
+            "Extra Hotdog (3 pcs)",
+            "Extra meat only; rice and egg are separate.",
+            953
+          ],
+          [
+            "Extra Liempo",
+            "Extra meat only; rice and egg are separate.",
+            1016
+          ],
+          [
+            "Extra Longganisa (3 pcs)",
+            "Extra meat only; rice and egg are separate.",
+            953
+          ],
+          [
+            "Extra Tapa",
+            "Extra meat only; rice and egg are separate.",
+            953
+          ],
+          [
+            "Extra Tinapa",
+            "Extra meat only; rice and egg are separate.",
+            953
+          ],
+          [
+            "Extra Spam",
+            "Extra meat only; rice and egg are separate.",
+            953
+          ],
+          [
+            "Extra Tocino",
+            "Extra meat only; rice and egg are separate.",
+            953
+          ],
+          [
+            "Extra Chorizo (3 pcs)",
+            "Extra meat only; rice and egg are separate.",
+            953
+          ],
+          [
+            "Extra Fried Chicken",
+            "Extra meat only; rice and egg are separate.",
+            953
+          ],
+          [
+            "Extra Sisig",
+            "Extra meat only; rice and egg are separate.",
+            953
+          ]
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/tapsilog-express.mp4",
+      "poster": "/clips/tapsilog-express-poster.webp",
+      "href": "https://www.instagram.com/reel/CzclnWPx0z4/",
+      "credit": "Filmed by @grubwitmike",
+      "platform": "Instagram",
+      "by": "grubwitmike"
+    }
+  },
+  "sources": [
+    "Glenn 29 Oct 7:15 pm; IMG_8514–8517",
+    "https://tapsilogexpress.com/",
+    "https://order.online/business/29378",
+    "https://www.instagram.com/tapsilogexpress/",
+    "https://order.online/business/29378/store/149103?pickup=true&redirected=true (resolved in Chrome; all menu sections navigated)"
+  ],
+  "placements": [
+    "san-leandro-goods2-0",
+    "beasty-goods2-91"
+  ],
+  "flags": [
+    "Official menu eventually resolved to store 149103 in Chrome; current pickup prices used, not estimated in-store prices.",
+    "Hours held: profile says 11:30am–7:30pm while the official website renders implausible evening-to-early-morning hours.",
+    "HR email is source provenance only and is not shown as a customer order address.",
+    "BEASTY Eats Filipino spot is occupied; append More eats. No new Filipino category inferred.",
+    "45 unique priced dishes, trays, drinks and extras. Duplicate extra Lumpia matches the sides listing and is shown once. No item added to the cart."
+  ]
+}

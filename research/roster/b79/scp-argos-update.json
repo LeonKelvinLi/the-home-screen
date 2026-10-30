@@ -1,0 +1,44 @@
+{
+  "id": "b_scpargos",
+  "name_exact": "SCP Argos",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "scp-argos",
+    "name": "SCP Argos",
+    "label": "SCP Argos",
+    "cuisine": "Pit bull profile",
+    "color": "#927a60",
+    "icon": "scp-argos",
+    "site": "https://www.instagram.com/scp_argos/",
+    "tagline": "Adventures with Argos, shared on Instagram as @scp_argos.",
+    "prep": 0,
+    "category": "Pit bull profile",
+    "items": [],
+    "contactOnly": "See Argos’s own Instagram for his photos and updates.",
+    "siteCta": "Open Instagram",
+    "panels": [
+      {
+        "head": "From his profile",
+        "body": [
+          "His Instagram bio names SCP Shady × SCP Lilith."
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/scp-argos.mp4",
+      "poster": "/clips/scp-argos-poster.webp",
+      "href": "https://www.instagram.com/reel/DfGEub9ou_5/",
+      "credit": "Posted by @scp_argos",
+      "platform": "Instagram"
+    }
+  },
+  "placements": [
+    "beasty-pits-2"
+  ],
+  "sources": [
+    "Glenn’s 29–30 Oct thread; see b79-films.json and BATCH-79.md"
+  ],
+  "flags": [
+    "Existing page; seats and menu facts preserved."
+  ]
+}

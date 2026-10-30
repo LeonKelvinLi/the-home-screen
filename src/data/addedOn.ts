@@ -847,4 +847,10 @@ export const ADDED_ON: Record<string, string> = {
 
   b_scpargos: '2026-10-29',
 
+  b_tapsilogexpress: '2026-10-30',
+  b_unitedmexicanbarandgrill: '2026-10-30',
+  b_nokaramen: '2026-10-30',
+  b_yakitoritoriman: '2026-10-30',
+  b_royalrootcafe: '2026-10-30',
+  b_ramenshop: '2026-10-30',
 }

@@ -243,6 +243,8 @@ export interface LocalSeed {
    * is required either way: it is their video, and whose it is gets said.
    */
   clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string; by?: string }
+  /** Additional videos from the business, kept separate from independent reviews. */
+  clips?: NonNullable<LocalSeed['clip']>[]
   /**
    * One photograph of the business, on our own origin.
    *
@@ -859,6 +861,8 @@ export const LOCAL_SEED: LocalSeed[] = [
     contactOnly:
       'Sin City Pits breeds American Pitbull Terriers and runs a canine semen bank \u2014 not a kitchen, so there is nothing to order here. They publish no prices at all: litters, stud fees and shipping are quoted by conversation. Call them, or start on their site.',
     items: [],
+    // Batch 79, Glenn’s additional film.
+    clips: [{"src": "/clips/sin-city-pits-vogue.mp4", "poster": "/clips/sin-city-pits-vogue-poster.webp", "href": "https://www.instagram.com/reel/DdTBdW7iuoN/", "credit": "Posted by @sincitypits_mama", "platform": "Instagram"}],
   },
   {
     /*
@@ -6622,7 +6626,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'the-sweet-spot',
-    icon: 'the-sweet-spot',
+    icon: "the-sweet-spot-20261030",
     /* Their own Instagram and their site title both say "The Sweet Spot". The
        WC is only in the square.site address he sent. */
     name: 'The Sweet Spot',
@@ -32856,14 +32860,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       "orderUrl": "https://order.incentivio.com/c/phohoa/locations/tully/menu",
       "siteCta": "Order online",
       "siteNote": "Pho Hoa is a chain; this page is their Tully Road shop in Lion Plaza, San Jose. Prices are from that shop's own online ordering page and are for a regular bowl; a large is about $1 more. Other Bay Area Pho Hoa shops are in Santa Clara, Cupertino, San Ramon and Pinole.",
-      "clip": {
-          "src": "/clips/pho-hoa.mp4",
-          "poster": "/clips/pho-hoa-poster.webp",
-          "href": "https://www.instagram.com/reel/De2Jr6CxEER/",
-          "credit": "Filmed by @moniica.michelle",
-          "platform": "Instagram",
-          "by": "moniica.michelle"
-      }
+      "clip": {"src": "/clips/pho-hoa-jamesbaylife.mp4", "poster": "/clips/pho-hoa-jamesbaylife-poster.webp", "href": "https://www.instagram.com/reel/DeX4WuZRIa1/", "credit": "Filmed by @jamesbaylife", "platform": "Instagram", "by": "jamesbaylife"}
   },
   {
       "slug": "crab-boil-and-things",
@@ -53685,7 +53682,9 @@ export const LOCAL_SEED: LocalSeed[] = [
       "instagram": "gemcity_kennels",
       "needsSite": true,
       "contactOnly": "Gem City Kennels lists Dayton, Ohio and SCP Bellatrix on Instagram. Message their account for details.",
-      "siteCta": "Open Instagram"
+      "siteCta": "Open Instagram",
+    // Batch 79, Glenn’s additional film.
+    clip: {"src": "/clips/gem-city-kennels.mp4", "poster": "/clips/gem-city-kennels-poster.webp", "href": "https://www.instagram.com/reel/DBriyqevail/", "credit": "Posted by @gemcity_kennels", "platform": "Instagram"},
   },
   {
       "slug": "yami-bowl",
@@ -57067,6 +57066,1569 @@ export const LOCAL_SEED: LocalSeed[] = [
                   "His Instagram bio names SCP Shady × SCP Lilith."
               ]
           }
+      ],
+    // Batch 79, Glenn’s additional film.
+    clip: {"src": "/clips/scp-argos.mp4", "poster": "/clips/scp-argos-poster.webp", "href": "https://www.instagram.com/reel/DfGEub9ou_5/", "credit": "Posted by @scp_argos", "platform": "Instagram"},
+  },
+  /* Batch 79, Glenn 29–30 Oct; source records: research/roster/b79/. */
+  {
+      "slug": "tapsilog-express",
+      "name": "Tapsilog Express",
+      "label": "Tapsilog",
+      "cuisine": "Filipino silog meals",
+      "color": "#c82e22",
+      "icon": "tapsilog-express",
+      "prep": 0,
+      "category": "Filipino silog meals",
+      "items": [],
+      "address": "14843 Washington Ave, San Leandro, CA 94578",
+      "site": "https://tapsilogexpress.com/",
+      "tagline": "Filipino silog plates, lumpia and halo-halo on Washington Avenue.",
+      "phone": "(510) 878-1232",
+      "siteCta": "Order on their menu",
+      "orderUrl": "https://order.online/business/29378/store/149103?pickup=true&redirected=true",
+      "panels": [
+          {
+              "head": "Silog meals and Filipino favorites",
+              "body": [
+                  "Tapsilog, longsilog, tosilog and bangsilog, plus lumpia, sisig, pork belly, pancit and halo-halo. Meal contents and current prices are on their own ordering page."
+              ],
+              "links": [
+                  {
+                      "label": "Their ordering menu",
+                      "href": "https://order.online/business/29378"
+                  }
+              ]
+          }
+      ],
+      "quoteOnly": "Choose options and place orders on their own menu.",
+      "siteNote": "Their own San Leandro pickup menu prices, checked October 30. Online prices can differ from in-store prices; ordering closes before the restaurant. No delivery fee or optional extras added to these prices.",
+      "sections": [
+          {
+              "name": "Meals",
+              "items": [
+                  [
+                      "Tapsilog",
+                      "Braised beef, garlic rice and egg.",
+                      1385
+                  ],
+                  [
+                      "Tosilog",
+                      "Sweet cured pork, garlic rice and egg.",
+                      1385
+                  ],
+                  [
+                      "Longsilog",
+                      "Three longganisa, garlic rice and egg.",
+                      1385
+                  ],
+                  [
+                      "Adobosilog",
+                      "Pork adobo, garlic rice and egg.",
+                      1385
+                  ],
+                  [
+                      "Sisigsilog",
+                      "Minced pork, garlic rice and egg.",
+                      1385
+                  ],
+                  [
+                      "Hotsilog",
+                      "Three cheesy hotdogs, garlic rice and egg.",
+                      1385
+                  ],
+                  [
+                      "Liemposilog",
+                      "Salt-and-pepper pork belly, garlic rice and egg.",
+                      1475
+                  ],
+                  [
+                      "Bangsilog",
+                      "Deboned milkfish, garlic rice and egg.",
+                      1385
+                  ],
+                  [
+                      "Tinapsilog",
+                      "Smoked deboned milkfish, garlic rice and egg.",
+                      1385
+                  ],
+                  [
+                      "Spamsilog",
+                      "Spam.",
+                      1385
+                  ],
+                  [
+                      "Bagnetsilog",
+                      "Crispy pork belly, garlic rice and egg.",
+                      1475
+                  ],
+                  [
+                      "Chicksilog",
+                      "Fried chicken, garlic rice and egg.",
+                      1385
+                  ],
+                  [
+                      "Pancit",
+                      "Rice noodles with pork belly.",
+                      962
+                  ],
+                  [
+                      "Chorizosilog",
+                      "Chorizo, garlic rice and egg.",
+                      1385
+                  ]
+              ]
+          },
+          {
+              "name": "Catering",
+              "items": [
+                  [
+                      "Lumpia Tray (140–150 pcs.)",
+                      "",
+                      8000
+                  ],
+                  [
+                      "Lumpia Tray (70–75 pcs.)",
+                      "",
+                      4400
+                  ]
+              ]
+          },
+          {
+              "name": "Desserts",
+              "items": [
+                  [
+                      "Halo-Halo",
+                      "",
+                      854
+                  ],
+                  [
+                      "Mais Con Yelo",
+                      "",
+                      854
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Pineapple Cooler",
+                      "",
+                      368
+                  ],
+                  [
+                      "Special Iced Tea",
+                      "",
+                      368
+                  ],
+                  [
+                      "Sago’t Gulaman",
+                      "",
+                      485
+                  ],
+                  [
+                      "Calamansi Juice",
+                      "",
+                      422
+                  ],
+                  [
+                      "Bottled Water",
+                      "",
+                      179
+                  ],
+                  [
+                      "Coke (12 oz)",
+                      "",
+                      260
+                  ],
+                  [
+                      "Sprite (12 oz)",
+                      "",
+                      260
+                  ],
+                  [
+                      "Diet Coke (12 oz)",
+                      "",
+                      260
+                  ],
+                  [
+                      "Rootbeer (12 oz)",
+                      "",
+                      260
+                  ],
+                  [
+                      "Orange Soda (12 oz)",
+                      "",
+                      260
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Extra Rice",
+                      "",
+                      323
+                  ],
+                  [
+                      "Extra Egg",
+                      "",
+                      323
+                  ],
+                  [
+                      "Lumpia (12 pcs)",
+                      "",
+                      854
+                  ],
+                  [
+                      "Tokwa't Baboy",
+                      "",
+                      1475
+                  ]
+              ]
+          },
+          {
+              "name": "Extra meat",
+              "items": [
+                  [
+                      "Extra Adobo",
+                      "Extra meat only; rice and egg are separate.",
+                      953
+                  ],
+                  [
+                      "Extra Bagnet",
+                      "Extra meat only; rice and egg are separate.",
+                      1016
+                  ],
+                  [
+                      "Extra Bangus",
+                      "Extra meat only; rice and egg are separate.",
+                      953
+                  ],
+                  [
+                      "Extra Hotdog (3 pcs)",
+                      "Extra meat only; rice and egg are separate.",
+                      953
+                  ],
+                  [
+                      "Extra Liempo",
+                      "Extra meat only; rice and egg are separate.",
+                      1016
+                  ],
+                  [
+                      "Extra Longganisa (3 pcs)",
+                      "Extra meat only; rice and egg are separate.",
+                      953
+                  ],
+                  [
+                      "Extra Tapa",
+                      "Extra meat only; rice and egg are separate.",
+                      953
+                  ],
+                  [
+                      "Extra Tinapa",
+                      "Extra meat only; rice and egg are separate.",
+                      953
+                  ],
+                  [
+                      "Extra Spam",
+                      "Extra meat only; rice and egg are separate.",
+                      953
+                  ],
+                  [
+                      "Extra Tocino",
+                      "Extra meat only; rice and egg are separate.",
+                      953
+                  ],
+                  [
+                      "Extra Chorizo (3 pcs)",
+                      "Extra meat only; rice and egg are separate.",
+                      953
+                  ],
+                  [
+                      "Extra Fried Chicken",
+                      "Extra meat only; rice and egg are separate.",
+                      953
+                  ],
+                  [
+                      "Extra Sisig",
+                      "Extra meat only; rice and egg are separate.",
+                      953
+                  ]
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/tapsilog-express.mp4",
+          "poster": "/clips/tapsilog-express-poster.webp",
+          "href": "https://www.instagram.com/reel/CzclnWPx0z4/",
+          "credit": "Filmed by @grubwitmike",
+          "platform": "Instagram",
+          "by": "grubwitmike"
+      }
+  },
+  {
+      "slug": "united-mexican-bar-and-grill",
+      "name": "United Mexican Bar & Grill",
+      "label": "United Mexican",
+      "cuisine": "Mexican seafood & bar and grill",
+      "color": "#a42720",
+      "icon": "united-mexican-bar-and-grill",
+      "prep": 0,
+      "category": "Mexican seafood & bar and grill",
+      "items": [],
+      "address": "467 Jackson St, Hayward, CA 94544",
+      "site": "https://www.instagram.com/unitedmexicanrestaurant/",
+      "tagline": "Sinaloa-style seafood, Mexican plates and a bar on Jackson Street.",
+      "phone": "(510) 886-4588",
+      "siteCta": "See their Instagram",
+      "contactOnly": "Call the restaurant or see its own Instagram for current dishes and prices.",
+      "panels": [
+          {
+              "head": "Sinaloa-style seafood",
+              "body": [
+                  "Their own profile describes Sinaloa-style seafood and Mexican food. It lists Uber Eats and Grubhub delivery."
+              ],
+              "links": [
+                  {
+                      "label": "Their own profile",
+                      "href": "https://www.instagram.com/unitedmexicanrestaurant/"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/united-mexican-bar-and-grill.mp4",
+          "poster": "/clips/united-mexican-bar-and-grill-poster.webp",
+          "href": "https://www.instagram.com/reel/De0JUkJvxNE/",
+          "credit": "Posted by @unitedmexicanrestaurant",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "noka-ramen",
+      "name": "NōKA Ramen & Bar",
+      "label": "NōKA Ramen",
+      "cuisine": "Ramen & cocktail bar",
+      "color": "#f2a5dd",
+      "icon": "noka-ramen",
+      "prep": 0,
+      "category": "Ramen & cocktail bar",
+      "items": [],
+      "address": "90 Franklin St, Oakland, CA 94607",
+      "site": "https://nokaramen.com/",
+      "tagline": "Hakata-style ramen, Japanese plates and an anime-themed dining room in Jack London Square.",
+      "phone": "(510) 419-0111",
+      "email": "noods@nokaramen.com",
+      "quoteOnly": "See their own menu for current options and availability.",
+      "siteCta": "Order on their menu",
+      "orderUrl": "https://nokaramen.com/menu",
+      "siteNote": "Prices from their own online menu; lunch/dinner duplicates combined. Ramen Lab is a starting price. Timed items and options are confirmed on their site.",
+      "sections": [
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Brussels Sprouts",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Chicken Karaage",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Chushu Bun",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Corn",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Kakuni",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Shishito Peppers",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Truffle Fries",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Garlic Shoyu Beef Jerky",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Chamame (Side)",
+                      "",
+                      800
+                  ]
+              ]
+          },
+          {
+              "name": "Ramen",
+              "items": [
+                  [
+                      "Noka Classic Tonkotsu",
+                      "",
+                      2100
+                  ],
+                  [
+                      "Black Garlic Tonkotsu",
+                      "",
+                      2100
+                  ],
+                  [
+                      "Spicy Miso Ramen",
+                      "",
+                      2100
+                  ],
+                  [
+                      "Tofu Ramen",
+                      "",
+                      2100
+                  ],
+                  [
+                      "Shoyu Ramen",
+                      "Beef confit, kelp and vegetable broth.",
+                      2500
+                  ],
+                  [
+                      "Tempura Ramen",
+                      "",
+                      2200
+                  ],
+                  [
+                      "Clam Dashio Ramen",
+                      "",
+                      2400
+                  ],
+                  [
+                      "Chicken Ka-Ramen",
+                      "",
+                      2500
+                  ],
+                  [
+                      "Shoyu Tofu Ramen",
+                      "",
+                      2100
+                  ],
+                  [
+                      "Itamemono Ramen",
+                      "Shown in the lunch section.",
+                      2900
+                  ],
+                  [
+                      "Ramen Lab",
+                      "Options chosen on their own menu.",
+                      2500,
+                      null,
+                      "from $25.00"
+                  ]
+              ]
+          },
+          {
+              "name": "Specials",
+              "items": [
+                  [
+                      "Ikari Steak Ramen",
+                      "",
+                      3900
+                  ],
+                  [
+                      "Lobster Shio Ramen",
+                      "",
+                      5600
+                  ],
+                  [
+                      "Loco Moco",
+                      "",
+                      3500
+                  ],
+                  [
+                      "Nōka Burger",
+                      "",
+                      3500
+                  ],
+                  [
+                      "Short Rib Mazesoba",
+                      "",
+                      3900
+                  ],
+                  [
+                      "Crabby Ramen",
+                      "",
+                      3500
+                  ],
+                  [
+                      "A5 Gold Chahan",
+                      "",
+                      3900
+                  ],
+                  [
+                      "Garlic Butter Shrimp",
+                      "Shown in the lunch section.",
+                      2600
+                  ]
+              ]
+          },
+          {
+              "name": "Kids menu",
+              "items": [
+                  [
+                      "Mini Ramen",
+                      "For children under 8.",
+                      1200
+                  ],
+                  [
+                      "Mini Rice",
+                      "For children under 8.",
+                      1200
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Boiled Egg",
+                      "",
+                      400
+                  ],
+                  [
+                      "Spicy Bomb",
+                      "",
+                      250
+                  ],
+                  [
+                      "Marinated Tofu (2)",
+                      "",
+                      500
+                  ],
+                  [
+                      "Chashu Side (2)",
+                      "",
+                      700
+                  ],
+                  [
+                      "Corn (Side)",
+                      "",
+                      300
+                  ],
+                  [
+                      "Bamboo Shoot",
+                      "",
+                      300
+                  ],
+                  [
+                      "Wood Ear Mushroom",
+                      "",
+                      300
+                  ],
+                  [
+                      "Garlic Chips",
+                      "",
+                      300
+                  ],
+                  [
+                      "Noodles Side",
+                      "",
+                      800
+                  ],
+                  [
+                      "Charcoal Noodles Side",
+                      "",
+                      800
+                  ],
+                  [
+                      "Ground Pork Side",
+                      "",
+                      600
+                  ],
+                  [
+                      "Spinach",
+                      "",
+                      300
+                  ],
+                  [
+                      "Broth Side",
+                      "",
+                      800
+                  ],
+                  [
+                      "Rice",
+                      "",
+                      400
+                  ],
+                  [
+                      "Nori Seaweed Side (4)",
+                      "",
+                      300
+                  ],
+                  [
+                      "Fresh Ramen Noodles (2)",
+                      "",
+                      800
+                  ],
+                  [
+                      "Fried Onion",
+                      "",
+                      300
+                  ],
+                  [
+                      "Scallion",
+                      "",
+                      300
+                  ],
+                  [
+                      "Brussels Sprouts Side",
+                      "",
+                      400
+                  ],
+                  [
+                      "Spicy Aioli",
+                      "",
+                      200
+                  ],
+                  [
+                      "Aioli",
+                      "",
+                      200
+                  ],
+                  [
+                      "Shrimp Tempura (Side)",
+                      "",
+                      900
+                  ]
+              ]
+          },
+          {
+              "name": "Desserts",
+              "items": [
+                  [
+                      "Green Tea Tiramisu",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Choco Cake",
+                      "",
+                      1200
+                  ]
+              ]
+          },
+          {
+              "name": "Bento and family meals",
+              "items": [
+                  [
+                      "Mafia's Bento Box",
+                      "Lunch listing: Monday–Friday, 11am–2pm.",
+                      2500
+                  ],
+                  [
+                      "Mafia's Bento Box Dinner",
+                      "Own item title says Dinner but description repeats lunch hours; confirm service with NōKA.",
+                      2800
+                  ],
+                  [
+                      "Family Meal for 8 People",
+                      "",
+                      19999
+                  ]
+              ]
+          },
+          {
+              "name": "Reusable goods",
+              "items": [
+                  [
+                      "Furoshiki Wrapping",
+                      "Reusable Japanese wrapping cloth; not a food item.",
+                      1495
+                  ]
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/noka-ramen.mp4",
+          "poster": "/clips/noka-ramen-poster.webp",
+          "href": "https://www.instagram.com/reel/C0X_JoGtESz/",
+          "credit": "Filmed by @grubwitmike",
+          "platform": "Instagram",
+          "by": "grubwitmike"
+      }
+  },
+  {
+      "slug": "yakitori-toriman",
+      "name": "Yakitori Toriman",
+      "label": "Toriman",
+      "cuisine": "Yakitori & Japanese market",
+      "color": "#e94721",
+      "icon": "yakitori-toriman",
+      "prep": 0,
+      "category": "Yakitori & Japanese market",
+      "items": [],
+      "address": "3555 Clares St, Suite G, Capitola, CA",
+      "site": "https://www.instagram.com/yakitori_toriman/",
+      "tagline": "Japanese skewers, Thursday ramen and a konbini market in Capitola.",
+      "phone": "(646) 641-2147",
+      "needsSite": true,
+      "siteCta": "See their latest schedule",
+      "contactOnly": "Check their Instagram for this week’s ramen and yakitori service, private-event closures and current offerings.",
+      "panels": [
+          {
+              "head": "Ramen and yakitori days",
+              "body": [
+                  "Their latest profile and October 29 post list ramen Thursday 5–8pm; yakitori Friday 5–8pm, Saturday 1–7:30pm and Sunday 1–6:30pm. Private events can change the week’s schedule.",
+                  "Their Japanese market also carries pantry goods and snacks."
+              ],
+              "links": [
+                  {
+                      "label": "Their latest schedule",
+                      "href": "https://www.instagram.com/yakitori_toriman/p/DfEeix2m4BM/"
+                  }
+              ]
+          }
       ]
+  },
+  {
+      "slug": "royal-root-cafe",
+      "name": "Royal Root Cafe",
+      "label": "Royal Root",
+      "cuisine": "Coffee, Filipino desserts & ube pastries",
+      "color": "#785592",
+      "icon": "royal-root-cafe",
+      "prep": 0,
+      "category": "Coffee, Filipino desserts & ube pastries",
+      "items": [],
+      "address": "32148 Alvarado Blvd, Union City, CA 94587",
+      "site": "https://royalrootcafe.com/",
+      "tagline": "Coffee, ube drinks, halo-halo, crepes and bubble waffles in Union City.",
+      "phone": "(510) 991-8823",
+      "email": "royalrootcafe@gmail.com",
+      "hours": "Mon–Thu 7am–7pm, Fri 7am–9pm, Sat 8am–9pm; closed Sun",
+      "quoteOnly": "See their own menu for current options and availability.",
+      "siteCta": "Order on their menu",
+      "orderUrl": "https://royalrootcafe.com/order",
+      "siteNote": "Current available items from their own ordering menu. “From” prices depend on options; choose sizes and extras on their site. Their stock changes throughout the day.",
+      "sections": [
+          {
+              "name": "Matcha drinks",
+              "items": [
+                  [
+                      "Iced Double Matcha Latte",
+                      "",
+                      850,
+                      null,
+                      "from $8.50"
+                  ],
+                  [
+                      "Matcha Ube",
+                      "",
+                      850,
+                      null,
+                      "from $8.50"
+                  ],
+                  [
+                      "Matcha Mango",
+                      "",
+                      850,
+                      null,
+                      "from $8.50"
+                  ],
+                  [
+                      "Matcha Strawberry",
+                      "",
+                      850,
+                      null,
+                      "from $8.50"
+                  ],
+                  [
+                      "Matcha Biscoff",
+                      "",
+                      850,
+                      null,
+                      "from $8.50"
+                  ],
+                  [
+                      "Matcha Pumpkin Spice",
+                      "",
+                      850,
+                      null,
+                      "from $8.50"
+                  ]
+              ]
+          },
+          {
+              "name": "Smoothies",
+              "items": [
+                  [
+                      "Ube Smoothie Boba",
+                      "",
+                      850,
+                      null,
+                      "from $8.50"
+                  ],
+                  [
+                      "Mango Puree Bliss Smoothie",
+                      "",
+                      850,
+                      null,
+                      "from $8.50"
+                  ],
+                  [
+                      "Chocolate Smoothie",
+                      "",
+                      650,
+                      null,
+                      "from $6.50"
+                  ],
+                  [
+                      "Strawberry Smoothie",
+                      "",
+                      700,
+                      null,
+                      "from $7.00"
+                  ],
+                  [
+                      "Sweet Corn Cloud Crunch",
+                      "",
+                      700,
+                      null,
+                      "from $7.00"
+                  ],
+                  [
+                      "Biscoff Smoothie",
+                      "",
+                      850,
+                      null,
+                      "from $8.50"
+                  ],
+                  [
+                      "Pumpkin Spice Smoothie",
+                      "",
+                      850,
+                      null,
+                      "from $8.50"
+                  ],
+                  [
+                      "Oreo Smoothie",
+                      "",
+                      850,
+                      null,
+                      "from $8.50"
+                  ]
+              ]
+          },
+          {
+              "name": "Fruit tea",
+              "items": [
+                  [
+                      "Passionfruit",
+                      "",
+                      650,
+                      null,
+                      "from $6.50"
+                  ],
+                  [
+                      "Mango Passionfruit",
+                      "",
+                      650,
+                      null,
+                      "from $6.50"
+                  ],
+                  [
+                      "Wintermelon",
+                      "",
+                      650,
+                      null,
+                      "from $6.50"
+                  ],
+                  [
+                      "Lychee Tea",
+                      "",
+                      650,
+                      null,
+                      "from $6.50"
+                  ],
+                  [
+                      "Strawberry Lychee",
+                      "",
+                      650,
+                      null,
+                      "from $6.50"
+                  ],
+                  [
+                      "Mangolicious",
+                      "",
+                      650,
+                      null,
+                      "from $6.50"
+                  ]
+              ]
+          },
+          {
+              "name": "Milk tea",
+              "items": [
+                  [
+                      "Okinawa Milk Tea",
+                      "",
+                      650,
+                      null,
+                      "from $6.50"
+                  ],
+                  [
+                      "Tiger Brown Sugar Boba",
+                      "",
+                      650,
+                      null,
+                      "from $6.50"
+                  ],
+                  [
+                      "Thai Tea",
+                      "",
+                      650,
+                      null,
+                      "from $6.50"
+                  ],
+                  [
+                      "Pumpkin Spice",
+                      "",
+                      650,
+                      null,
+                      "from $6.50"
+                  ]
+              ]
+          },
+          {
+              "name": "Halo-halo",
+              "items": [
+                  [
+                      "UBE Halo Halo",
+                      "Ube, fruit, beans, boba, ice cream, ube leche flan and pinipig.",
+                      1100
+                  ]
+              ]
+          },
+          {
+              "name": "Coffee",
+              "items": [
+                  [
+                      "Iced Ube Latte",
+                      "",
+                      750,
+                      null,
+                      "from $7.50"
+                  ],
+                  [
+                      "Iced Strawberry Latte",
+                      "",
+                      750,
+                      null,
+                      "from $7.50"
+                  ],
+                  [
+                      "Iced Mango Latte",
+                      "",
+                      750,
+                      null,
+                      "from $7.50"
+                  ],
+                  [
+                      "Iced Latte",
+                      "",
+                      750,
+                      null,
+                      "from $7.50"
+                  ],
+                  [
+                      "Iced Dalgona with Coffee Jelly",
+                      "",
+                      650,
+                      null,
+                      "from $6.50"
+                  ],
+                  [
+                      "Hot Capuccino",
+                      "",
+                      500,
+                      null,
+                      "from $5.00"
+                  ],
+                  [
+                      "Caramel Macchiato",
+                      "",
+                      450,
+                      null,
+                      "from $4.50"
+                  ],
+                  [
+                      "Hot Latte",
+                      "",
+                      500,
+                      null,
+                      "from $5.00"
+                  ],
+                  [
+                      "Hot Black Coffee",
+                      "",
+                      375,
+                      null,
+                      "from $3.75"
+                  ],
+                  [
+                      "Hot Black Decaf Coffee",
+                      "",
+                      350,
+                      null,
+                      "from $3.50"
+                  ],
+                  [
+                      "Iced Biscoff Latte",
+                      "",
+                      750,
+                      null,
+                      "from $7.50"
+                  ],
+                  [
+                      "Ice Pumpkin Latte",
+                      "",
+                      750,
+                      null,
+                      "from $7.50"
+                  ],
+                  [
+                      "Hot Pumpkin Latte",
+                      "",
+                      500,
+                      null,
+                      "from $5.00"
+                  ]
+              ]
+          },
+          {
+              "name": "Tea, chocolate and water",
+              "items": [
+                  [
+                      "Hot Chocolate",
+                      "",
+                      500,
+                      null,
+                      "from $5.00"
+                  ],
+                  [
+                      "Decaf Green Tea",
+                      "",
+                      350,
+                      null,
+                      "from $3.50"
+                  ],
+                  [
+                      "Lemon Ginger Tea",
+                      "",
+                      350,
+                      null,
+                      "from $3.50"
+                  ],
+                  [
+                      "Chai Spice Tea",
+                      "",
+                      350,
+                      null,
+                      "from $3.50"
+                  ],
+                  [
+                      "Water Bottle",
+                      "",
+                      200
+                  ]
+              ]
+          },
+          {
+              "name": "Crepes",
+              "items": [
+                  [
+                      "The Heavenly UBE Crepe",
+                      "Ube jam, ube ice cream, whipped cream and ube syrup.",
+                      1500
+                  ],
+                  [
+                      "The Abundant Nutella",
+                      "Nutella, banana, strawberries, ice cream, whipped cream and chocolate.",
+                      1700
+                  ],
+                  [
+                      "Build Your Own Crepe",
+                      "Base price; fillings and toppings chosen on their site.",
+                      700
+                  ],
+                  [
+                      "The Holy Smoked Salmon Crepe",
+                      "Salmon, cream cheese, capers and onions; salad and fries.",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "Bubble waffles",
+              "items": [
+                  [
+                      "Build Your Own Bubble Waffle",
+                      "Base price; options chosen on their site.",
+                      500
+                  ],
+                  [
+                      "Divine Ube Bubble Waffle",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Matcha Bubble Blessing",
+                      "",
+                      1400
+                  ],
+                  [
+                      "Campfire S'mores Bubble Waffle",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Biscoff Bubble Waffle",
+                      "",
+                      1300
+                  ]
+              ]
+          },
+          {
+              "name": "Fries",
+              "items": [
+                  [
+                      "Large BBQ Fries",
+                      "",
+                      800
+                  ],
+                  [
+                      "Large Cheese Fries",
+                      "",
+                      800
+                  ],
+                  [
+                      "Large Sour Cream Fries",
+                      "",
+                      800
+                  ],
+                  [
+                      "Large Sweet Potato Fries",
+                      "",
+                      700
+                  ],
+                  [
+                      "Large Plain Potato Fries",
+                      "",
+                      550
+                  ]
+              ]
+          },
+          {
+              "name": "Cookies, pastries and pies",
+              "items": [
+                  [
+                      "Chocolate Chip",
+                      "",
+                      600
+                  ],
+                  [
+                      "UBE Cookies with UBE Halaya filling",
+                      "",
+                      700
+                  ],
+                  [
+                      "Promised Puff UBE Flan",
+                      "",
+                      800
+                  ],
+                  [
+                      "UBE Croissant",
+                      "",
+                      500
+                  ],
+                  [
+                      "UBE Graham Pie Small",
+                      "",
+                      1200
+                  ],
+                  [
+                      "UBE Graham Pie Big",
+                      "",
+                      3900
+                  ]
+              ]
+          },
+          {
+              "name": "Chickcharon and jam",
+              "items": [
+                  [
+                      "Original Chickcharon",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Premium UBE Jam",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Vegan UBE Jam",
+                      "",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Savory meals",
+              "items": [
+                  [
+                      "Beef Cheesy Lasagna",
+                      "",
+                      1800,
+                      null,
+                      "from $18.00"
+                  ],
+                  [
+                      "Beef Patty",
+                      "",
+                      500
+                  ],
+                  [
+                      "Spicy Beef",
+                      "",
+                      750
+                  ],
+                  [
+                      "3 PCS Chicken Tenders with Regular Flavored Fries",
+                      "",
+                      999
+                  ],
+                  [
+                      "5 PCS Chicken Tenders with Regular Flavored Fries",
+                      "",
+                      1299
+                  ],
+                  [
+                      "6 PCS Chicken Tenders with Large Flavored Fries",
+                      "",
+                      1499
+                  ],
+                  [
+                      "15 PCS Chicken Tenders with 2 Large Flavored Fries",
+                      "",
+                      3500
+                  ],
+                  [
+                      "Avocado Toast with Eggs",
+                      "",
+                      800
+                  ]
+              ]
+          },
+          {
+              "name": "Merch",
+              "items": [
+                  [
+                      "Magnetic Bookmarks",
+                      "",
+                      450
+                  ],
+                  [
+                      "Keychain",
+                      "",
+                      600
+                  ]
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/royal-root-cafe.mp4",
+          "poster": "/clips/royal-root-cafe-poster.webp",
+          "href": "https://www.instagram.com/reel/De-AecpSF7k/",
+          "credit": "Posted by @royalrootcafe",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "ramen-shop",
+      "name": "Ramen Shop",
+      "label": "Ramen Shop",
+      "cuisine": "Ramen & cocktail bar",
+      "color": "#b44436",
+      "icon": "ramen-shop",
+      "prep": 0,
+      "category": "Ramen & cocktail bar",
+      "items": [],
+      "address": "5812 College Ave, Oakland, CA 94618",
+      "site": "https://www.ramenshop.com/",
+      "tagline": "House-made ramen and a rotating seasonal menu on College Avenue.",
+      "email": "info@ramenshop.com",
+      "hours": "Daily 5:30–10pm",
+      "quoteOnly": "See their own menu for current options and availability.",
+      "siteCta": "Reserve a table",
+      "orderUrl": "https://resy.com/cities/oak/ramen-shop-oak",
+      "siteNote": "Their dine-in menu dated October 29, 2026. Dishes rotate; prices and availability can change. The published menu lists a 5% healthcare charge, waivable on request. Alcohol is not listed here.",
+      "sections": [
+          {
+              "name": "Small bites",
+              "items": [
+                  [
+                      "Sansho Cabbage",
+                      "Fresno chili, garlic and kombu.",
+                      550
+                  ],
+                  [
+                      "Roasted Japanese Sweet Potato",
+                      "Miso butter, atsara and puffed rice.",
+                      550
+                  ],
+                  [
+                      "Mustard Pickled Zucchini",
+                      "",
+                      550
+                  ],
+                  [
+                      "All Bites Plate",
+                      "",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Duck, Pork & Shrimp Dumplings (3pc)",
+                      "Scallion, rayu and Meyer lemon ponzu. Extra dumpling $4.50.",
+                      1450
+                  ],
+                  [
+                      "Full Belly Farms Heirloom Tomatoes",
+                      "Ponzu, red onion and basil oil. Contains fish.",
+                      1400
+                  ],
+                  [
+                      "Red Little Gem Salad",
+                      "Green goddess dressing, cherry tomatoes and basil.",
+                      1850
+                  ],
+                  [
+                      "Tempura Maitake & Negi",
+                      "Calabrian mayo and shichimi.",
+                      1850
+                  ],
+                  [
+                      "Crispy Turnip Cake",
+                      "Mushroom, peanut garlic chili crisp, soy glaze, scallion and chervil. Contains oyster.",
+                      1650
+                  ]
+              ]
+          },
+          {
+              "name": "Ramen",
+              "items": [
+                  [
+                      "Chicken Shoyu Ramen",
+                      "Ginger-scallion chicken breast, jalapeño, negi, onion, half shoyu egg and mizuna.",
+                      3000
+                  ],
+                  [
+                      "Meyer Lemon Shoyu Veggie Ramen",
+                      "Tomato, garlic-marinated zucchini, eggplant, half shio egg and komatsuna.",
+                      2850
+                  ],
+                  [
+                      "Hokkaido Miso Ramen",
+                      "Pork chashu, Jimmy Nardello peppers, purple cabbage, half shoyu egg and shungiku.",
+                      2850
+                  ]
+              ]
+          },
+          {
+              "name": "Special and rice",
+              "items": [
+                  [
+                      "Chicken Leg Confit",
+                      "Kabocha purée, pickled cranberries, beans, walnuts and chervil.",
+                      3000
+                  ],
+                  [
+                      "Yellowfin Tuna Poke Donburi",
+                      "Negitoro, rice, avocado, daikon, cucumbers, tsukudani and scallion.",
+                      2850
+                  ],
+                  [
+                      "Pork & Chicken Fried Rice",
+                      "Shrimp chili paste, tomato, zucchini, cauliflower, mint, cilantro and Thai basil.",
+                      2450
+                  ]
+              ]
+          },
+          {
+              "name": "Ramen add-ons",
+              "items": [
+                  [
+                      "Pork Chashu",
+                      "",
+                      500
+                  ],
+                  [
+                      "Shoyu Egg",
+                      "",
+                      300
+                  ],
+                  [
+                      "Shio Egg",
+                      "",
+                      300
+                  ],
+                  [
+                      "Garlic Chili Paste",
+                      "",
+                      300
+                  ]
+              ]
+          },
+          {
+              "name": "Kids",
+              "items": [
+                  [
+                      "Kid Ramen",
+                      "Broth and noodles.",
+                      1250
+                  ],
+                  [
+                      "Kid Donburi",
+                      "Soy-glazed pork and rice.",
+                      1250
+                  ],
+                  [
+                      "Side Chashu (kids)",
+                      "",
+                      400
+                  ],
+                  [
+                      "Side Veggies (kids)",
+                      "",
+                      400
+                  ],
+                  [
+                      "Side Rice (kids)",
+                      "",
+                      400
+                  ]
+              ]
+          },
+          {
+              "name": "Desserts",
+              "items": [
+                  [
+                      "Black Sesame Ice Cream Sandwich",
+                      "Brown butter cookies.",
+                      1000
+                  ],
+                  [
+                      "Thai Tea Ice Cream",
+                      "Hoshigaki and sablé cookies.",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Non-alcoholic drinks",
+              "items": [
+                  [
+                      "Kimino Yuzu Soda (250ml)",
+                      "",
+                      600
+                  ],
+                  [
+                      "Fever-Tree Ginger Beer (200ml)",
+                      "",
+                      600
+                  ],
+                  [
+                      "Boylan Black Cherry Cola (355ml)",
+                      "",
+                      600
+                  ],
+                  [
+                      "Boylan Diet Cola (355ml)",
+                      "",
+                      600
+                  ],
+                  [
+                      "Dram Holy Basil & Lemon Mineral Water",
+                      "",
+                      600
+                  ],
+                  [
+                      "Sparkling Mineral Water",
+                      "",
+                      800
+                  ],
+                  [
+                      "Fieldwork Headliner N/A IPA",
+                      "",
+                      900
+                  ],
+                  [
+                      "Fieldwork Day Money N/A Grapefruit Blonde",
+                      "",
+                      900
+                  ],
+                  [
+                      "Under the Cherry Moon",
+                      "Cherry, yuzu, honey and cranberry.",
+                      1000
+                  ],
+                  [
+                      "Pandan Milk Punch",
+                      "Coconut milk, pandan, orange and lime.",
+                      1000
+                  ],
+                  [
+                      "Leaves and Flowers: Genmaicha",
+                      "Caffeinated.",
+                      700
+                  ],
+                  [
+                      "Leaves and Flowers: Mt. Tamalpais",
+                      "Herbal.",
+                      700
+                  ],
+                  [
+                      "CDA (no spirits)",
+                      "Orange, ginger, turmeric, lemon, honey, cinnamon and clove; hot. Spirits option omitted.",
+                      1000
+                  ]
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/ramen-shop.mp4",
+          "poster": "/clips/ramen-shop-poster.webp",
+          "href": "https://www.instagram.com/reel/DfGwYh5gSIi/",
+          "credit": "Filmed by @festusfeasts",
+          "platform": "Instagram",
+          "by": "festusfeasts"
+      }
   },
 ]

@@ -1,0 +1,201 @@
+{
+  "id": "b_thesweetspot",
+  "name_exact": "The Sweet Spot",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "the-sweet-spot",
+    "icon": "the-sweet-spot-20261030",
+    "name": "The Sweet Spot",
+    "label": "Sweet Spot",
+    "cuisine": "Dessert shop",
+    "tagline": "Cups, pancakes and crepes. Sunnyvale Avenue.",
+    "color": "#FF9BD2|#FFD23F",
+    "prep": 0,
+    "category": "Dessert shop",
+    "phone": "(925) 401-5016",
+    "address": "1512 Sunnyvale Ave, Walnut Creek, CA 94597",
+    "clip": {
+      "src": "/clips/the-sweet-spot.mp4",
+      "poster": "/clips/the-sweet-spot-poster.webp",
+      "href": "https://www.instagram.com/reel/De2eTakJcwz/",
+      "credit": "Posted by @thesweetspotwc",
+      "platform": "Instagram"
+    },
+    "site": "https://thesweetspotwc.square.site/",
+    "needsSite": true,
+    "siteNote": "Closed Mondays",
+    "items": [],
+    "sections": [
+      {
+        "name": "Sandos",
+        "items": [
+          [
+            "Biscoff Sando",
+            "Japanese style milk bread fried to perfection and filled with sweet cream. Topped with biscoff sauce and cookie crumbs",
+            1150
+          ],
+          [
+            "Dubai Sando",
+            "Japanese style milk bread fried to perfection and filled with sweet cream. Topped with pistachio cream and crispy katafi",
+            1150
+          ],
+          [
+            "Matcha Sando",
+            "Japanese style milk bread fried to perfection and filled with ceremonial grade Matcha cream",
+            1150
+          ],
+          [
+            "Plain Sando",
+            "Japanese style milk bread fried to perfection and filled with sweet cream",
+            950
+          ],
+          [
+            "Strawberry Nutella Sando",
+            "Japanese style milk bread fried to perfection and filled with sweet cream. Topped with strawberries and Nutella",
+            1050
+          ]
+        ]
+      },
+      {
+        "name": "Mini pancakes",
+        "items": [
+          [
+            "15 Biscoff Mini Pancakes",
+            "Fluffy pancakes coated with Lotus Biscoff sauce and Belgian white chocolate. Cookie crumbs sprinkled on top",
+            1299
+          ],
+          [
+            "15 Double Chocolate Mini Pancakes",
+            "Fluffy mini pancakes coated in Nutella and Belgian white chocolate",
+            1299
+          ],
+          [
+            "15 Dubai Chocolate Mini Pancakes",
+            "Fluffy mini pancakes covered in Nutella, pistachio cream and crispy katafi",
+            1399
+          ],
+          [
+            "20 Biscoff Mini Pancakes",
+            "Fluffy pancakes coated with Lotus Biscoff sauce and Belgian white chocolate. Cookie crumbs sprinkled on top",
+            1599
+          ],
+          [
+            "20 Double Chocolate Mini Pancakes",
+            "Fluffy mini pancakes coated in Nutella and Belgian white chocolate",
+            1599
+          ],
+          [
+            "20 Dubai Chocolate Mini Pancakes",
+            "Fluffy mini pancakes covered in Nutella, pistachio cream and crispy katafi",
+            1699
+          ],
+          [
+            "25 Biscoff Mini Pancakes",
+            "Fluffy pancakes coated with Lotus Biscoff sauce and Belgian white chocolate. Cookie crumbs sprinkled on top",
+            1899
+          ],
+          [
+            "25 Double Chocolate Mini Pancakes",
+            "Fluffy mini pancakes coated in Nutella and Belgian white chocolate",
+            1899
+          ],
+          [
+            "25 Dubai Chocolate Mini Pancakes",
+            "Fluffy mini pancakes covered in Nutella, pistachio cream and crispy katafi",
+            1999
+          ]
+        ]
+      },
+      {
+        "name": "Crepes",
+        "items": [
+          [
+            "Banana Biscoff Crepe",
+            "Crepe filled and topped with, biscoff sauce, biscoff cookie crumble, white chocolate and sliced banana.",
+            1499
+          ],
+          [
+            "Dubai Chocolate Crepe",
+            "Crepe filled and topped with crispy kunafa, pistachio cream, Nutella and ground pistachios.",
+            1499
+          ],
+          [
+            "Strawberry Nutella Crepe",
+            "Crepe filled and topped with sliced strawberries and Nutella",
+            1399
+          ],
+          [
+            "Just plain Nutella",
+            "",
+            1099
+          ]
+        ]
+      },
+      {
+        "name": "Strawberry cups",
+        "items": [
+          [
+            "Dubai Chocolate Strawberry Cup",
+            "Strawberries cut in half and covered in melted Nutella chocolate, pistachio cream and crispy katafi",
+            1599
+          ],
+          [
+            "Chocolate Strawberry Cup",
+            "strawberries cut in half and topped with melted Nutella",
+            1399
+          ],
+          [
+            "White Chocolate Strawberry cup",
+            "Strawberries cut in half and covered in melted Belgian white chocolate",
+            1399
+          ],
+          [
+            "Biscoff Strawberry Cup",
+            "Strawberries cut in half and covered in melted Belgian white chocolate, lotus biscoff sauce and lotus biscoff cookie crumble",
+            1499
+          ]
+        ]
+      },
+      {
+        "name": "Kunafa",
+        "items": [
+          [
+            "Dubai Chocolate Kunafa",
+            "Kunafa topped with pistachio cream, crushed pistachios and Nutella with strawberries on the side.",
+            1499
+          ],
+          [
+            "Banana Biscoff Kunafa",
+            "Crispy shredded phyllo dough filled with a sweet cheese filling soaked in sweet syrup, topped with fresh bananas, Lotus Biscoff sauce, white chocolate",
+            1399
+          ],
+          [
+            "Strawberry Nutella Kunafa",
+            "Crispy shredded phyllo dough soaked in sweet syrup, topped with fresh strawberries and a rich drizzle of Nutella.",
+            1299
+          ],
+          [
+            "Plain Kunafa",
+            "",
+            1099
+          ],
+          [
+            "12 oz or 16ozWhole milk",
+            "",
+            350
+          ]
+        ]
+      }
+    ]
+  },
+  "placements": [
+    "walnut-creek-goods2-1",
+    "beasty-goods2-84"
+  ],
+  "sources": [
+    "Glenn’s 29–30 Oct thread; see b79-films.json and BATCH-79.md"
+  ],
+  "flags": [
+    "Existing page; seats and menu facts preserved."
+  ]
+}

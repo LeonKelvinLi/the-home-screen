@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react'
-import { submitCollab } from '../lib/api'
 
 /**
  * The Collab key's form: a food creator's name, number, email and Instagram.
@@ -47,6 +46,7 @@ export function CollabForm() {
     setSending(true)
     setError(null)
     try {
+      const { submitCollab } = await import('../lib/api')
       await submitCollab({
         name: name.trim(),
         phone: phone.trim(),

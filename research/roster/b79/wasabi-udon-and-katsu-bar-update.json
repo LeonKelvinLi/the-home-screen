@@ -1,0 +1,703 @@
+{
+  "id": "b_wasabiudonandkatsubar",
+  "name_exact": "Wasabi Udon & Katsu Bar",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "wasabi-udon-and-katsu-bar",
+    "name": "Wasabi Udon & Katsu Bar",
+    "label": "Wasabi",
+    "cuisine": "Udon, katsu & sushi",
+    "color": "#0a0a0a",
+    "icon": "wasabi-udon-and-katsu-bar",
+    "tagline": "Fairfield's newest Japanese spot on Oliver Road: signature udon, pork and chicken katsu and curry, Korean fried chicken, sashimi, nigiri and 21 specialty rolls.",
+    "prep": 0,
+    "category": "Japanese",
+    "items": [],
+    "sections": [
+      {
+        "name": "Sushi Bar Special",
+        "items": [
+          [
+            "Salmon Carpaccio",
+            "Salmon, jalapeños, lime, cilantro, sriracha, ponzu",
+            1800
+          ],
+          [
+            "Hamachi Carpaccio",
+            "Yellowtail, jalapeños, lime, cilantro, sriracha, ponzu",
+            1900
+          ],
+          [
+            "Sashimi Sampler (10 pcs)",
+            "Chef's choice, 5 different fish topped with garnishes",
+            2900
+          ],
+          [
+            "Tuna Tartare",
+            "Bluefin tuna, yuzu guacamole, quail egg, chives, habanero masago, house-made wonton chips",
+            2200
+          ],
+          [
+            "Hamachi Sashimi Tacos (3 pcs)",
+            "Marinated yellowtail, avocado and jalapeño purée, cherry tomatoes, onions, micro cilantro",
+            1900
+          ],
+          [
+            "Miso Salmon Collar (Baked)",
+            "Saikyo miso, with rice and miso soup",
+            1900
+          ],
+          [
+            "Poke Salad",
+            "Wakame salad topped with spicy tuna",
+            1200
+          ],
+          [
+            "Wakame Salad",
+            "Wakame, microgreens, sesame seeds",
+            800
+          ],
+          [
+            "Miso Black Cod (Baked)",
+            "Saikyo miso, green mix, with rice and miso soup",
+            2400
+          ],
+          [
+            "Salmon Crudo",
+            "Salmon, diced mango, ponzu, micro greens",
+            1900
+          ],
+          [
+            "Hamachi Crudo",
+            "Yellowtail, diced mango, ponzu, green mix",
+            1900
+          ]
+        ]
+      },
+      {
+        "name": "Kitchen Special",
+        "items": [
+          [
+            "Crispy Brussels Sprouts",
+            "Mentaiko aioli, microgreens, chili threads",
+            1400
+          ],
+          [
+            "Agedashi Tofu (6 pcs)",
+            "Fried tofu with bonito and seaweed flakes",
+            1100
+          ],
+          [
+            "Croquette (2 pcs)",
+            "Crispy fried potato and vegetable with house sauces",
+            800
+          ],
+          [
+            "Combination Tempura",
+            "Shrimp, broccoli, onion, yam, green bean",
+            1100
+          ],
+          [
+            "Ube (Purple Yam) Fries",
+            "With their house special sauce",
+            1200
+          ],
+          [
+            "Panko Jumbo Shrimp (3 pcs)",
+            "",
+            900
+          ],
+          [
+            "Soft Shell Crab",
+            "Fried, on onion rings",
+            1100
+          ],
+          [
+            "Ika Geso",
+            "Deep-fried squid tentacles",
+            1200
+          ],
+          [
+            "Takoyaki (5 pcs)",
+            "Fried chopped octopus and vegetables with bonito flakes",
+            900
+          ],
+          [
+            "Gyoza (6 pcs)",
+            "Beef and vegetable fried dumplings",
+            900
+          ],
+          [
+            "Edamame",
+            "",
+            600
+          ],
+          [
+            "Spicy Edamame",
+            "House special spicy sauce",
+            700
+          ]
+        ]
+      },
+      {
+        "name": "Signature Udon",
+        "items": [
+          [
+            "Mentaiko Cream Udon",
+            "Seasoned cod roe, green onion, kaiware sprouts, tempura flakes, nori",
+            2100
+          ],
+          [
+            "Smoked Salmon Cream Udon",
+            "Sliced smoked salmon, spinach cream sauce, green onion, kaiware sprouts, tempura flakes, nori",
+            2200
+          ],
+          [
+            "Spicy Cold Udon",
+            "Beef belly, seasoned boiled egg, cabbage, green onion in their house-made spicy sauce",
+            1900
+          ],
+          [
+            "Combo Tempura Udon",
+            "Combination tempura, tofu, green onion, nori",
+            2200
+          ],
+          [
+            "Kitsune Udon",
+            "Fried tofu, green onion, tempura flakes",
+            1700
+          ],
+          [
+            "Tonkotsu Udon",
+            "Beef belly, seasoned boiled egg, green onion, shrimp tempura, boiled spinach, tempura flakes",
+            1900
+          ]
+        ]
+      },
+      {
+        "name": "Katsu & Curry",
+        "items": [
+          [
+            "Cheese Katsu (6 pcs)",
+            "Pork and cheese. With rice, salad and miso soup",
+            2000
+          ],
+          [
+            "Chicken Katsu",
+            "With rice, salad and miso soup",
+            1800
+          ],
+          [
+            "Pork Katsu",
+            "With rice, salad and miso soup",
+            1900
+          ],
+          [
+            "Chicken Katsu Combo",
+            "1 chicken, 2 shrimp, 2 cheese. With rice, salad and miso soup",
+            2500
+          ],
+          [
+            "Pork Katsu Combo",
+            "1 pork, 2 shrimp, 2 cheese. With rice, salad and miso soup",
+            2500
+          ],
+          [
+            "Chicken Curry Katsu Rice",
+            "With miso soup",
+            2100
+          ],
+          [
+            "Pork Curry Katsu Rice",
+            "With miso soup",
+            2100
+          ],
+          [
+            "Shrimp Curry Katsu Rice (3 pcs)",
+            "With miso soup",
+            2100
+          ],
+          [
+            "Chicken Katsu Curry Udon",
+            "With miso soup",
+            2100
+          ],
+          [
+            "Pork Katsu Curry Udon",
+            "With miso soup",
+            2100
+          ],
+          [
+            "Shrimp Katsu Curry Udon (3 pcs)",
+            "With miso soup",
+            2100
+          ]
+        ]
+      },
+      {
+        "name": "Korean Fried Chicken",
+        "items": [
+          [
+            "Original Chicken",
+            "Crispy seasoned fried chicken with rice and soup",
+            2400
+          ],
+          [
+            "Yangnyeom Chicken",
+            "Crispy fried chicken in a spicy and sweet sauce, with rice and soup",
+            2500
+          ],
+          [
+            "Soy Garlic Chicken",
+            "Crispy seasoned fried chicken with rice and soup",
+            2500
+          ]
+        ]
+      },
+      {
+        "name": "Sashimi",
+        "items": [
+          [
+            "Sashimi Mix (5 pcs)",
+            "Chef's choice of fresh fish",
+            1600
+          ],
+          [
+            "Sashimi Mix (9 pcs)",
+            "Chef's choice of fresh fish",
+            2800
+          ],
+          [
+            "Sashimi Mix (15 pcs)",
+            "Chef's choice of fresh fish",
+            4600
+          ],
+          [
+            "Sashimi Mix (25 pcs)",
+            "Chef's choice of fresh fish",
+            7600
+          ],
+          [
+            "Toro Sashimi (5 pcs)",
+            "Bluefin fatty tuna belly",
+            2600
+          ],
+          [
+            "Chirashi",
+            "Chef's choice of fresh fish and tobiko over sushi rice",
+            2900
+          ],
+          [
+            "Sake Don",
+            "Salmon over sushi rice",
+            2900
+          ],
+          [
+            "Tekka Don",
+            "Tuna over sushi rice",
+            2900
+          ]
+        ]
+      },
+      {
+        "name": "Nigiri (2 pcs)",
+        "items": [
+          [
+            "Amaebi",
+            "Jumbo sweet shrimp",
+            1400
+          ],
+          [
+            "Ebi",
+            "Shrimp",
+            700
+          ],
+          [
+            "Escolar",
+            "Butterfish",
+            800
+          ],
+          [
+            "Hamachi",
+            "Japanese yellowtail",
+            800
+          ],
+          [
+            "Hotate",
+            "Hokkaido scallop",
+            800
+          ],
+          [
+            "Ika",
+            "Squid",
+            700
+          ],
+          [
+            "Ikura",
+            "Salmon roe",
+            1200
+          ],
+          [
+            "Maguro",
+            "Bluefin tuna",
+            800
+          ],
+          [
+            "Madai",
+            "Yuzu red snapper",
+            800
+          ],
+          [
+            "Saba",
+            "Mackerel",
+            700
+          ],
+          [
+            "Sake",
+            "Scottish or Norwegian salmon",
+            800
+          ],
+          [
+            "Sake Belly",
+            "Scottish or Norwegian salmon belly",
+            800
+          ],
+          [
+            "Shiro Maguro",
+            "White tuna",
+            800
+          ],
+          [
+            "Tako",
+            "Octopus",
+            800
+          ],
+          [
+            "Tamago",
+            "Egg",
+            600
+          ],
+          [
+            "Toro",
+            "Bluefin fatty tuna",
+            1400
+          ],
+          [
+            "Unagi",
+            "Freshwater eel",
+            800
+          ],
+          [
+            "Uni (Hokkaido)",
+            "Hokkaido sea urchin",
+            2600
+          ]
+        ]
+      },
+      {
+        "name": "Rolls & Deep-Fried Rolls",
+        "items": [
+          [
+            "Avocado + Cucumber Roll",
+            "",
+            800
+          ],
+          [
+            "California Roll",
+            "Crabmeat, avocado, sesame seeds",
+            800
+          ],
+          [
+            "Deep Fried CA Roll",
+            "Deep-fried California roll, unagi sauce",
+            1300
+          ],
+          [
+            "Godzilla Roll (Deep Fried)",
+            "Spicy tuna, cream cheese, spicy mayo, unagi sauce, garlic cream",
+            1500
+          ],
+          [
+            "Panda Roll (Deep Fried)",
+            "Cream cheese, crabmeat, avocado, spicy mayo, unagi sauce",
+            1400
+          ],
+          [
+            "Philadelphia Roll",
+            "Salmon, cream cheese, avocado",
+            1200
+          ],
+          [
+            "Shrimp Tempura Roll",
+            "Shrimp tempura, crabmeat, avocado, cucumber, unagi sauce",
+            1200
+          ],
+          [
+            "Spicy California Roll",
+            "Spicy crabmeat, avocado, spicy mayo, Japanese 7 spice",
+            900
+          ],
+          [
+            "Spicy Tuna Roll",
+            "Spicy tuna, cucumber, spicy mayo, Japanese 7 spice",
+            1200
+          ],
+          [
+            "Spider Roll",
+            "Soft shell crab, crabmeat, avocado, cucumber, unagi sauce, tobiko",
+            1400
+          ]
+        ]
+      },
+      {
+        "name": "Specialty Rolls",
+        "items": [
+          [
+            "707 Roll",
+            "In: shrimp tempura, avocado, cucumber. On: spicy tuna, Hokkaido scallop, truffle ponzu",
+            1600
+          ],
+          [
+            "Angry Lion",
+            "In: crabmeat, avocado. Out: salmon, bake sauce, jalapeño, spicy sauce, tobiko",
+            1700
+          ],
+          [
+            "Bluefin Fatty Tuna",
+            "In: bluefin tuna, cucumber. Out: bluefin fatty tuna, ponzu, pickled wasabi",
+            2800
+          ],
+          [
+            "Climax Roll",
+            "In: spicy salmon, cucumber. Out: salmon, spicy crabmeat, spicy mayo, unagi sauce, tobiko",
+            1600
+          ],
+          [
+            "Dragon Roll",
+            "In: shrimp tempura, avocado, cucumber. Out: unagi, avocado, unagi sauce, tobiko",
+            1700
+          ],
+          [
+            "Fish on Fire Roll",
+            "In: panko shrimp, spicy tuna. Out: bluefin fatty tuna, ponzu, tobiko, micro cilantro",
+            2200
+          ],
+          [
+            "Golden Gate",
+            "In: crabmeat, avocado. Out: salmon, sliced lemon, tobiko",
+            1600
+          ],
+          [
+            "Hot Night Roll",
+            "In: shrimp tempura, avocado, cucumber. Out: spicy tuna, spicy mayo, unagi sauce, jalapeño",
+            1700
+          ],
+          [
+            "Lion King Roll",
+            "In: crabmeat, avocado. Out: salmon, bake sauce, unagi sauce, tobiko",
+            1600
+          ],
+          [
+            "Lollipop",
+            "In: shrimp tempura, cream cheese. Out: panko shrimp, unagi sauce, bake sauce, tobiko",
+            1800
+          ],
+          [
+            "Love Love",
+            "In: mango, avocado. Out: salmon, mango, spicy mayo",
+            1700
+          ],
+          [
+            "Mamacita",
+            "In: spicy salmon, cucumber. Out: yellowtail, jalapeño, lemon, sriracha",
+            1800
+          ],
+          [
+            "Mango Madness",
+            "In: mango, avocado. Out: bluefin tuna, mango, spicy mayo",
+            1700
+          ],
+          [
+            "Naruto",
+            "In: shrimp tempura, crabmeat, jalapeño, cream cheese. Out: salmon, yuzu guacamole, spicy mayo, unagi sauce, tobiko",
+            1900
+          ],
+          [
+            "Nemo Roll (Baked)",
+            "In: crabmeat, avocado. Out: baby lobster, bake sauce, unagi sauce, tobiko",
+            1700
+          ],
+          [
+            "Shaggy Dog Roll",
+            "In: crabmeat, avocado. Out: unagi, kani kama, onion crunch, spicy mayo, unagi sauce",
+            1800
+          ],
+          [
+            "Simba (Baked)",
+            "In: spicy crabmeat, avocado. Out: scallop, bake sauce, unagi sauce, tobiko",
+            1700
+          ],
+          [
+            "Sunset",
+            "In: apple, mango, spicy salmon. Out: escolar, crunch, sweet chili, garlic cream",
+            1900
+          ],
+          [
+            "Super Rainbow Roll",
+            "In: shrimp tempura, avocado, cucumber. Out: chef's choice of fresh fish, unagi sauce, tobiko",
+            1800
+          ],
+          [
+            "Totto Roll",
+            "In: crabmeat, avocado. Out: unagi, avocado, spicy crabmeat, crunch, spicy mayo, unagi sauce, tobiko",
+            1800
+          ],
+          [
+            "Yakuza",
+            "In: spicy tuna, panko shrimp. Out: tuna, albacore, avocado, koji sauce, incredible sauce, unagi sauce, torched, tobiko, green onion",
+            1800
+          ]
+        ]
+      },
+      {
+        "name": "Sides",
+        "items": [
+          [
+            "Extra Noodles",
+            "",
+            350
+          ],
+          [
+            "Extra Soup",
+            "",
+            550
+          ],
+          [
+            "Side of House Spicy",
+            "",
+            100
+          ],
+          [
+            "Steamed Rice",
+            "",
+            200
+          ],
+          [
+            "Sushi Rice",
+            "",
+            300
+          ],
+          [
+            "Side Miso Soup",
+            "",
+            200
+          ],
+          [
+            "Fresh Wasabi",
+            "",
+            300
+          ],
+          [
+            "Side Curry",
+            "",
+            300
+          ],
+          [
+            "Side One Egg",
+            "",
+            150
+          ]
+        ]
+      },
+      {
+        "name": "Beverages",
+        "items": [
+          [
+            "Coke",
+            "",
+            275
+          ],
+          [
+            "Coke Zero",
+            "",
+            275
+          ],
+          [
+            "Sprite",
+            "",
+            275
+          ],
+          [
+            "Sparkling Water",
+            "",
+            400
+          ],
+          [
+            "Banana Milk",
+            "",
+            350
+          ],
+          [
+            "Ramune Original",
+            "",
+            450
+          ],
+          [
+            "Ramune Strawberry",
+            "",
+            450
+          ],
+          [
+            "Ramune Orange",
+            "",
+            450
+          ],
+          [
+            "Sparkling Yogurt Original",
+            "",
+            400
+          ],
+          [
+            "Sparkling Yogurt Peach",
+            "",
+            400
+          ],
+          [
+            "Bottled Green Tea",
+            "",
+            400
+          ],
+          [
+            "Hot Tea",
+            "",
+            200
+          ]
+        ]
+      }
+    ],
+    "address": "1500 Oliver Rd, Ste L, Fairfield, CA 94534",
+    "phone": "(707) 389-4739",
+    "site": "https://wasabifairfield.com/",
+    "orderUrl": "https://wasabifairfield.menu11.com/fairfield/order",
+    "siteCta": "Order online",
+    "siteNote": "Prices are from the online ordering page their own website links to. Their website and their ordering page give different hours, so none are shown; call before you go, especially mid-afternoon on weekdays.",
+    "clip": {
+      "src": "/clips/wasabi-udon-and-katsu-bar.mp4",
+      "poster": "/clips/wasabi-udon-and-katsu-bar-poster.webp",
+      "href": "https://www.instagram.com/reel/Da3xXLFBsaC/",
+      "credit": "Filmed by @eatwithsie",
+      "platform": "Instagram",
+      "by": "eatwithsie"
+    }
+  },
+  "placements": [
+    "fairfield-goods-4",
+    "beasty-goods2-52"
+  ],
+  "sources": [
+    "Glenn’s 29 Oct clips; b79-films.json"
+  ],
+  "flags": [
+    "Existing page; old main film, menu, icon and placements retained."
+  ]
+}

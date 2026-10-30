@@ -187,6 +187,8 @@ export interface Brand {
    */
   quoteOnly?: string
   clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string; by?: string }
+  /** Additional business videos; all videos together share the four-film limit. */
+  clips?: NonNullable<Brand['clip']>[]
   /** A name-only seat from the operator's roster. Kept off the catalogue page. */
   rosterOnly?: boolean
   /** Published contact address, where the business publishes one. */
@@ -456,6 +458,7 @@ interface Seed {
    */
   quoteOnly?: string
   clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string; by?: string }
+  clips?: NonNullable<Brand['clip']>[]
   /** One photograph of the place. See LocalSeed.photo. */
   photo?: { src: string; credit: string; alt: string }
   /**
@@ -1170,6 +1173,7 @@ const fromSeed = (s: Seed): Brand => ({
   hours: s.hours,
   quoteOnly: s.quoteOnly,
   clip: s.clip,
+  clips: s.clips,
   photo: s.photo,
   photos: s.photos,
   photosTitle: s.photosTitle,

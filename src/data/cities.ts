@@ -343,4 +343,6 @@ export const CITY_PAGES = [
     lands — see public/wallpapers/CREDITS.md.
   */
   'Millbrae',
+  // Glenn, 29 Oct 6:55 pm, Toriman: Capitola • Eats. No landmark photo sent.
+  'Capitola',
 ] as const

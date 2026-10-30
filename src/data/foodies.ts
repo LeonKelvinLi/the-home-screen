@@ -262,6 +262,33 @@ export const OTHER_REVIEWS: OtherReview[] = [
   // Newbie; TikTok @bsgmoments repost
   {"by": "thelaughingmonksf", "place": "Laughing Monk NOPA", "city": "San Francisco", "brand": "b_laughingmonknopa", "reel": "https://www.instagram.com/reel/DfFq35OzQqk/", "clip": true, "credit": "Review by @bsgmoments (TikTok); posted by @thelaughingmonksf"},
 
+  /* Batch 79: Glenn 29 Oct evening–30 Oct morning. Original tags retained below. */
+  // Mediocre
+  {"by": "hungrydanz", "place": "Wasabi Udon & Katsu Bar", "reel": "https://www.instagram.com/reel/DfGVIPXRo28/", "city": "Fairfield", "brand": "b_wasabiudonandkatsubar", "clip": true},
+  // Existing film retained unchanged
+  {"by": "moniica.michelle", "place": "Pho Hoa", "reel": "https://www.instagram.com/reel/De2Jr6CxEER/", "city": "San Jose", "brand": "b_phohoa", "clip": true},
+  // Heavy Hitter; source copy held, chain location unspecified
+  {"by": "ryanbyryanchua", "place": "Pho Hoa", "reel": "https://www.instagram.com/reel/DMV3hajhWva/", "brand": "b_phohoa", "credit": "Pho Hoa chain; the original post does not identify a location."},
+  // Heavy Hitter
+  {"by": "thesnacksensei", "place": "Tapsilog Express", "reel": "https://www.instagram.com/reel/DfGNmCAowHQ/", "city": "San Leandro", "brand": "b_tapsilogexpress", "clip": true},
+  // Mediocre
+  {"by": "ivkicks", "place": "Tapsilog Express", "reel": "https://www.instagram.com/reel/DVoRfaOjo8q/", "city": "San Leandro", "brand": "b_tapsilogexpress", "clip": true},
+  // Heavy Hitter; source copy held
+  {"by": "thesnacksensei", "place": "United Mexican Bar & Grill", "reel": "https://www.instagram.com/reel/De-pYUOI2bt/", "city": "Hayward", "brand": "b_unitedmexicanbarandgrill"},
+  // Newbie
+  {"by": "bayareamunchies510", "place": "Ace King BBQ", "reel": "https://www.instagram.com/reel/Def33KkR7R_/", "city": "Newark", "brand": "b_acekingbbq", "clip": true},
+  // Heavy Hitter
+  {"by": "bayarea.foodie.adventures", "place": "Ace King BBQ", "reel": "https://www.instagram.com/reel/DV7dhE8CeFT/", "city": "Newark", "brand": "b_acekingbbq", "clip": true},
+  // Mediocre
+  {"by": "cestalmoco", "place": "Ace King BBQ", "reel": "https://www.instagram.com/reel/DSJIdTWAQnq/", "city": "Newark", "brand": "b_acekingbbq", "clip": true},
+  // Mediocre
+  {"by": "foodandsachi", "place": "Ramen Shop", "reel": "https://www.instagram.com/reel/DE221k6SUbK/", "city": "Oakland", "brand": "b_ramenshop", "clip": true},
+  // Mediocre
+  {"by": "bayarea.foodie.adventures", "place": "NōKA Ramen & Bar", "reel": "https://www.instagram.com/reel/DH9_OWiRznc/", "credit": "This source copy has no audio track.", "city": "Oakland", "brand": "b_nokaramen", "clip": true},
+  // Newbie
+  {"by": "hangrypotato", "place": "NōKA Ramen & Bar", "reel": "https://www.instagram.com/reel/DeNzH3MB3Lu/", "city": "Oakland", "brand": "b_nokaramen", "clip": true},
+  // Foodie; source-only request
+  {"by": "melsotel", "place": "Macondo Colombian Fusion", "reel": "https://www.instagram.com/reel/Dexe7_gxwLe/", "city": "Alameda"},
 ]
 
 /*

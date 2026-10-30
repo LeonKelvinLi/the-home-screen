@@ -304,3 +304,10 @@ Original business artwork; no third-party stock or invented business logos. Isla
 
 <!-- Batch 78 -->
 | `scp-argos.webp` | [SCP Argos @scp_argos](https://www.instagram.com/scp_argos/), Glenn IMG_8499, 29 Oct 2026 | Original profile photograph cropped from the enlarged disc, with its edge colours filling corners; no story ring or redrawn animal. |
+| `yakitori-toriman.webp` | Their own profile art, [@yakitori_toriman](https://www.instagram.com/yakitori_toriman/), Glenn IMG_8509.PNG, 29 Oct 2026 | Original mark cropped and resampled to 512px; no Instagram controls or story ring. |
+| `tapsilog-express.webp` | Their own profile art, [@tapsilogexpress](https://www.instagram.com/tapsilogexpress/), Glenn IMG_8517.AVIF, 29 Oct 2026 | Original mark cropped and resampled to 512px; no Instagram controls or story ring. |
+| `royal-root-cafe.webp` | Their own profile art, [@royalrootcafe](https://www.instagram.com/royalrootcafe/), Glenn IMG_8519.png, 29 Oct 2026 | Original mark cropped and resampled to 512px; no Instagram controls or story ring. |
+| `united-mexican-bar-and-grill.webp` | Their own profile art, [@unitedmexicanrestaurant](https://www.instagram.com/unitedmexicanrestaurant/), Glenn IMG_8522.png, 29 Oct 2026 | Original mark cropped and resampled to 512px; no Instagram controls or story ring. |
+| `ramen-shop.webp` | Their own profile art, [@ramenshopoakland](https://www.instagram.com/ramenshopoakland/), Glenn IMG_8531.PNG, 29 Oct 2026 | Original mark cropped and resampled to 512px; no Instagram controls or story ring. |
+| `noka-ramen.webp` | Their own profile art, [@nokaramensf](https://www.instagram.com/nokaramensf/), Glenn IMG_8534.PNG, 29 Oct 2026 | Original mark cropped and resampled to 512px; no Instagram controls or story ring. |
+| `the-sweet-spot-20261030.webp` | [Their own Square site](https://thesweetspotwc.square.site/), logo_AAD81977-D6CD-4618-842F-5A37285EF84E.png; Glenn 30 Oct 6:09 am IMG_8549.png/IMG_8551.png | Full original 2048px square reduced to 512px; flat pink paper and complete wordmark, no redrawing. Fresh asset path refreshes cached old icon. |
