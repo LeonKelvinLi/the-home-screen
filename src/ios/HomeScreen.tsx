@@ -7,7 +7,7 @@ import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
 import { APP_GROUPS, CITY_PAGES, DOCK_SETS, GALLERY_APP, WATCH_APP, appForSlot } from '../apps/registry'
 import { useGate } from '../lib/gate'
-import { ALL_BEASTY_PAGES, CATEGORY_PAGES, HOME_PAGES, SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
+import { ALL_BEASTY_PAGES, CATEGORY_OVERFLOW, CATEGORY_PAGES, HOME_PAGES, SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
 import type { SlotPage } from '../data/slots'
 import { ALL_PLACEMENTS } from '../data/categorySeats'
 import { PAGES_TILES } from '../data/categoryGlyphs'
@@ -137,13 +137,19 @@ function extraFor(city: string, appId?: string, kind?: string): string | null {
     const name = CITY_PAGES.find((c) => c.toLowerCase() === city.toLowerCase())
     return name ? `city:${name}` : null
   }
-  if (kind) return ON_HOME.has(kind) ? null : ALL_BEASTY_PAGES.some((p) => p.kind === kind) ? `kind:${kind}` : null
+  if (kind) {
+    const parent = ALL_BEASTY_PAGES.find((p) => p.kind === kind)?.parent ?? kind
+    return ON_HOME.has(parent) ? null : ALL_BEASTY_PAGES.some((p) => p.kind === parent) ? `kind:${parent}` : null
+  }
   /* A business whose only BEASTY seat is on a category page past the nine. */
   if (appId) {
     const kinds = Object.entries(ALL_PLACEMENTS)
       .filter(([seat, id]) => id === appId && seat.startsWith('beasty-'))
       .map(([seat]) => seat.split('-')[1])
-    if (kinds.length && !kinds.some((k) => ON_HOME.has(k))) return `kind:${kinds[0]}`
+    if (kinds.length && !kinds.some((k) => ON_HOME.has(k))) {
+      const parent = ALL_BEASTY_PAGES.find((p) => p.kind === kinds[0])?.parent ?? kinds[0]
+      return `kind:${parent}`
+    }
   }
   return null
 }
@@ -574,7 +580,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     for (let from = 0; from < PAGES_APPS.length; from += slotsPerPage) {
       out.push({ city: 'BEASTY', section: 'Pages', kind: 'pages', tile: slotTile, rowGap: slotGap, apps: PAGES_APPS.slice(from, from + slotsPerPage) })
     }
-    out.push({
+    for (let from = 0; from < MORE_PAGES_APPS.length; from += slotsPerPage) out.push({
       city: 'BEASTY',
       section: 'More pages',
       kind: 'pages2',
@@ -583,8 +589,8 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
       wall: '/wallpapers/_beasty-pages.webp',
       yellow: true,
       apps: [
-        ...MORE_PAGES_APPS.slice(0, slotsPerPage),
-        ...Array.from({ length: Math.max(0, slotsPerPage - MORE_PAGES_APPS.length) }, (_, i) => newCategoryApp(i)),
+        ...MORE_PAGES_APPS.slice(from, from + slotsPerPage),
+        ...Array.from({ length: Math.max(0, slotsPerPage - Math.min(slotsPerPage, MORE_PAGES_APPS.length - from)) }, (_, i) => newCategoryApp(from + i)),
       ],
     })
     buildCity('BEASTY', HOME_PAGES)
@@ -623,7 +629,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     if (extra?.startsWith('city:')) buildCity(extra.slice(5), SLOT_PAGES, true)
     if (extra?.startsWith('kind:')) {
       const sheet = ALL_BEASTY_PAGES.find((p) => p.kind === extra.slice(5))
-      if (sheet) buildCity('BEASTY', [sheet], true)
+      if (sheet) buildCity('BEASTY', [sheet, ...CATEGORY_OVERFLOW.filter((p) => p.parent === sheet.kind)], true)
     }
 
     return out.length ? out : [{ apps: [] }]

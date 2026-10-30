@@ -1,4 +1,5 @@
 import { BEASTY_CATEGORIES, CATEGORY_SPOTS } from './categories'
+import { MORE_FOODIE_PAGES } from './foodies'
 
 /**
  * The spots on a city's pages, and what each one is for.
@@ -262,6 +263,8 @@ export type SlotPageKind =
   | (string & {})
 
 export interface SlotPage {
+  /** A yellow continuation that travels with this category. */
+  parent?: string
   /**
    * Sits in the middle of a slot id — `oakland-services-5`.
    *
@@ -427,6 +430,17 @@ export const CATEGORY_PAGES: SlotPage[] = BEASTY_CATEGORIES.map((c) => ({
   categories: Array.from({ length: CATEGORY_SPOTS }, (_, i) => ({ n: i + 1, name: c.heading, label: 'Available' })),
 }))
 
+/* Glenn, 30 Oct: yellow pages for the foodies beyond the original 24.
+   Global seat indexes survive pagination and changing phone heights. */
+export const CATEGORY_OVERFLOW: SlotPage[] = [{
+  kind: 'foodies2',
+  parent: 'foodies',
+  heading: 'More foodies',
+  about: 'More food reviewers and creators',
+  yellow: true,
+  categories: Array.from({ length: Math.max(24, Math.ceil(MORE_FOODIE_PAGES.length / 24) * 24) }, (_, i) => ({ n: i + 1, name: 'Foodie', label: 'Available' })),
+}]
+
 /*
   WHAT THE HOME SCREEN SWIPES THROUGH. Glenn, 2026-09-30: "we will limit the
   amount of pages on the home screen to let's say 9 categories … You won't be
@@ -442,7 +456,7 @@ export const CATEGORY_PAGES: SlotPage[] = BEASTY_CATEGORIES.map((c) => ({
 export const HOME_KINDS: string[] = ['eats', 'sweets', 'ayce', 'boutiques', 'services', 'online', 'individuals', 'tattoo', 'automotive']
 
 /** Every BEASTY page there is: the flagship sheets, then the category pages. */
-export const ALL_BEASTY_PAGES: SlotPage[] = [...BEASTY_SHEETS, ...CATEGORY_PAGES]
+export const ALL_BEASTY_PAGES: SlotPage[] = [...BEASTY_SHEETS, ...CATEGORY_PAGES, ...CATEGORY_OVERFLOW]
 
 /** The home screen's BEASTY run, in order: the nine categories, then the yellow sheets. */
 export const HOME_PAGES: SlotPage[] = [
@@ -458,7 +472,7 @@ export const HOME_PAGES: SlotPage[] = [
 export const PAGE_KINDS: string[] = [...new Set([...SLOT_PAGES, ...ALL_BEASTY_PAGES].map((p) => p.kind))]
 
 /** A seat id, `oakland-goods-5` or `beasty-tattoo-3`: the place, the page, the spot. Longest kind first, so `goods2` is not read as `goods`. */
-export const SEAT_RE = new RegExp(`^(.+)-(${[...PAGE_KINDS].sort((a, b) => b.length - a.length).join('|')})-(\\d{1,2})$`)
+export const SEAT_RE = new RegExp(`^(.+)-(${[...PAGE_KINDS].sort((a, b) => b.length - a.length).join('|')})-(\\d{1,3})$`)
 
 /** The categories on a city page, or nothing if the id names no known page. */
 export const categoriesFor = (kind: string | undefined): SlotCategory[] | undefined =>

@@ -58631,4 +58631,109 @@ export const LOCAL_SEED: LocalSeed[] = [
           "by": "festusfeasts"
       }
   },
+  /* Batch 80, 30 Oct: San Leandro • Goods / BEASTY • Boba. */
+  {
+    "slug": "san-san-tea-house",
+    "name": "San San Tea House",
+    "label": "San San Tea",
+    "cuisine": "Boba, milk tea, coffee & croissants",
+    "tagline": "Handcrafted boba, fruit teas, Vietnamese coffee and filled croissants in San Leandro.",
+    "color": "#E798BE",
+    "icon": "san-san-tea-house",
+    "prep": 0,
+    "category": "Boba & tea",
+    "items": [],
+    "address": "1019 Williams St, San Leandro, CA 94577",
+    "phone": "(415) 322-3333",
+    "site": "https://lnk.bio/Sansanteahouse",
+    "instagram": "https://www.instagram.com/sansanteahouse/",
+    "hours": "Daily 11am–7pm · winter hours Oct 24–Jan 31",
+    "contactOnly": "See their latest drinks and treats on Instagram, or call the shop for the current menu.",
+    "siteCta": "Their links and latest updates",
+    "panels": [
+      {
+        "head": "Winter hours",
+        "body": ["Their October 22 announcement sets winter hours to 11am–7pm daily, October 24 through January 31. Their profile bio still lists the older hours."],
+        "links": [{
+          "label": "Their winter-hours announcement",
+          "href": "https://www.instagram.com/p/Dezx7S_y-jU/"
+        }]
+      },
+      {
+        "head": "Drinks and treats",
+        "body": ["Boba and milk teas, fruit teas, Vietnamese coffee, matcha drinks and filled croissants. Seasonal drinks and availability change; check their latest posts."]
+      }
+    ],
+    "clip": {
+      "src": "/clips/san-san-tea-house.mp4",
+      "poster": "/clips/san-san-tea-house-poster.webp",
+      "href": "https://www.instagram.com/reel/DW4iaEQkmUI/",
+      "credit": "Filmed by @sanleandroeats",
+      "platform": "Instagram",
+      "by": "sanleandroeats"
+    }
+  },
+  /* Batch 80, 30 Oct 8:44 am: Berkeley / Teas-Boba-Matcha. */
+  {
+    "slug": "chicha-san-chen-berkeley",
+    "name": "CHICHA San Chen — Berkeley",
+    "label": "CHICHA",
+    "cuisine": "Taiwanese tea, boba & milk tea",
+    "tagline": "Taiwanese tea brewed individually to order, on Bancroft Way in Berkeley.",
+    "color": "#F8F8F6",
+    "icon": "chicha-san-chen-berkeley",
+    "prep": 0,
+    "category": "Tea & boba",
+    "items": [],
+    "address": "2400A Bancroft Way, Berkeley, CA 94704",
+    "site": "https://chichasanchennorcal.com/",
+    "instagram": "https://www.instagram.com/chichasanchen.norcal/",
+    "orderUrl": "https://order.snackpass.co/chichasanchenberkeley",
+    "siteCta": "Berkeley ordering menu",
+    "contactOnly": "See their Berkeley ordering page for the current drinks, options and prices. Regional contact details and the location of each review are below.",
+    "panels": [
+      {
+        "head": "NorCal contact",
+        "body": [
+          "Regional team contact from their official Instagram; a Berkeley-specific phone number has not been verified."
+        ],
+        "links": [
+          {
+            "label": "NorCal team: (408) 792-9045",
+            "href": "tel:4087929045"
+          },
+          {
+            "label": "info@chichasanchennorcal.com",
+            "href": "mailto:info@chichasanchennorcal.com"
+          }
+        ]
+      },
+      {
+        "head": "Tea and mocktail experiences",
+        "body": [
+          "Their October 24 regional post lists Berkeley Lishan mocktails Friday and Saturday, 6–9:30pm. These are mocktail service hours, not the shop’s general opening hours. Confirm current service and reservations with the team."
+        ],
+        "links": [
+          {
+            "label": "Their latest mocktail announcement",
+            "href": "https://www.instagram.com/reel/De5q0XZq-D5/"
+          }
+        ]
+      },
+      {
+        "head": "Review locations",
+        "body": [
+          "The Berkeley review is by @eatswithkath. @sierra.eats.8 filmed at Fremont and @hungere.for.diy filmed at Pleasanton; those are identified as other-location reviews before each video.",
+          "The October 8 Fremont BOGO promotion in the archival video has ended."
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/chicha-san-chen-berkeley.mp4",
+      "poster": "/clips/chicha-san-chen-berkeley-poster.webp",
+      "href": "https://www.instagram.com/reel/De5q0XZq-D5/",
+      "credit": "Posted by @chichasanchen.norcal",
+      "platform": "Instagram"
+    }
+  },
 ]

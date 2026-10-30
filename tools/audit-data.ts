@@ -25,7 +25,7 @@ import { CITY_PLACEMENTS } from '../src/data/placements'
 import { CITY_PAGES } from '../src/data/cities'
 import { BEASTY_CATEGORIES, CATEGORY_KINDS, CATEGORY_SPOTS } from '../src/data/categories'
 import { CATEGORY_PLACEMENTS } from '../src/data/categorySeats'
-import { PAGE_KINDS, HOME_PAGES, categoriesFor } from '../src/data/slots'
+import { PAGE_KINDS, HOME_PAGES, CATEGORY_OVERFLOW, categoriesFor } from '../src/data/slots'
 import { ARCHIVE_DAYS, currentNews, archivedNews, dayLabel, upcoming } from '../src/data/news'
 import {
   GOODS_CATEGORIES,
@@ -78,6 +78,7 @@ const KINDS: Record<string, number> = {
   sweets: SWEETS_CATEGORIES.length,
   /* The BEASTY category pages, twenty-four each (src/data/categories.ts). */
   ...Object.fromEntries(CATEGORY_KINDS.map((k) => [k, CATEGORY_SPOTS])),
+  ...Object.fromEntries(CATEGORY_OVERFLOW.map((p) => [p.kind, p.categories.length])),
 }
 /* Longest first, so `goods2` is not eaten by `goods`. */
 const KEY_RE = new RegExp(
@@ -143,8 +144,11 @@ for (const c of BEASTY_CATEGORIES) {
     held.add(id)
   }
   const matching = c.test ? BRANDS.filter((b) => c.test!.test(b.cuisine) && !c.not?.test(b.cuisine)).length : 0
-  if (matching > CATEGORY_SPOTS) warn(`${matching} businesses fit BEASTY · ${c.heading}; only ${CATEGORY_SPOTS} show — pick the best by seating them by hand`)
-  note(`BEASTY · ${c.heading}: ${seats.length} of ${CATEGORY_SPOTS} spots filled`)
+  const overflow = CATEGORY_OVERFLOW.filter((p) => p.parent === c.kind)
+  const capacity = CATEGORY_SPOTS + overflow.reduce((n, p) => n + p.categories.length, 0)
+  const overflowSeated = Object.keys(CITY_PLACEMENTS).filter((s) => overflow.some((p) => s.startsWith(`beasty-${p.kind}-`))).length
+  if (matching > capacity) warn(`${matching} businesses fit BEASTY · ${c.heading}; only ${capacity} show — pick the best by seating them by hand`)
+  note(`BEASTY · ${c.heading}: ${seats.length + overflowSeated} of ${capacity} spots filled${overflow.length ? ' including yellow overflow' : ''}`)
 }
 
 // ---- 2b. menus nobody has confirmed -----------------------------------

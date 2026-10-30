@@ -1,0 +1,74 @@
+{
+  "id": "b_sansanteahouse",
+  "name_exact": "San San Tea House",
+  "checked_on": "2026-10-30",
+  "facts": {
+    "slug": "san-san-tea-house",
+    "name": "San San Tea House",
+    "label": "San San Tea",
+    "cuisine": "Boba, milk tea, coffee & croissants",
+    "tagline": "Handcrafted boba, fruit teas, Vietnamese coffee and filled croissants in San Leandro.",
+    "color": "#E798BE",
+    "icon": "san-san-tea-house",
+    "prep": 0,
+    "category": "Boba & tea",
+    "items": [],
+    "address": "1019 Williams St, San Leandro, CA 94577",
+    "phone": "(415) 322-3333",
+    "site": "https://lnk.bio/Sansanteahouse",
+    "instagram": "https://www.instagram.com/sansanteahouse/",
+    "hours": "Daily 11am–7pm · winter hours Oct 24–Jan 31",
+    "contactOnly": "See their latest drinks and treats on Instagram, or call the shop for the current menu.",
+    "siteCta": "Their links and latest updates",
+    "panels": [
+      {
+        "body": [
+          "Their October 22 announcement sets winter hours to 11am–7pm daily, October 24 through January 31. Their profile bio still lists the older hours."
+        ],
+        "head": "Winter hours",
+        "links": [
+          {
+            "label": "Their winter-hours announcement",
+            "href": "https://www.instagram.com/p/Dezx7S_y-jU/"
+          }
+        ]
+      },
+      {
+        "body": [
+          "Boba and milk teas, fruit teas, Vietnamese coffee, matcha drinks and filled croissants. Seasonal drinks and availability change; check their latest posts."
+        ],
+        "head": "Drinks and treats"
+      }
+    ],
+    "clip": {
+      "src": "/clips/san-san-tea-house.mp4",
+      "poster": "/clips/san-san-tea-house-poster.webp",
+      "href": "https://www.instagram.com/reel/DW4iaEQkmUI/",
+      "credit": "Filmed by @sanleandroeats",
+      "platform": "Instagram",
+      "by": "sanleandroeats"
+    }
+  },
+  "sources": [
+    "Glenn IMG_8561.PNG and IMG_8562.png, 30 Oct 8:21 am PDT",
+    "https://lnk.bio/Sansanteahouse",
+    "https://www.instagram.com/sansanteahouse/",
+    "https://www.instagram.com/p/Dezx7S_y-jU/",
+    "https://www.grubhub.com/restaurant/san-san-tea-house-1019-williams-street-san-leandro/9973840",
+    "https://www.instagram.com/reel/DW4iaEQkmUI/",
+    "https://www.instagram.com/reel/DfHBbcgSlPy/"
+  ],
+  "placements": [
+    "san-leandro-goods2-1",
+    "beasty-goods2-94",
+    "beasty-bakery-15",
+    "beasty-teas-0"
+  ],
+  "flags": [
+    "Current pinned winter hours supersede the older bio screenshot.",
+    "No complete current own priced menu found: own links provide Instagram, Yelp and Maps only; delivery menus disagree and Grubhub live menu did not resolve. Priced menu held rather than copying an unconfirmed crawl.",
+    "April reel caption’s SL EATS 10% offer expired 13 April 2026. No discount copied; film has no offer overlay.",
+    "Icon is current own Instagram profile at 1080 square, reduced to 512. Older Lnk.Bio avatar is purple and was not used.",
+    "At 8:44 Glenn explicitly requested Teas/Boba/Matcha: San San now holds category seat 0. Occupied city Boba and Sweets Boba seats still preserved."
+  ]
+}

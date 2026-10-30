@@ -758,6 +758,7 @@ def m_vegan(rng):
 
 
 MOTIFS = {
+    "teas": m_coffee,
     "yakitori": m_bbq,
     "vegan": m_vegan,
     "froyo": m_froyo,

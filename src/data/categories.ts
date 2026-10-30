@@ -150,6 +150,8 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'vegan', heading: 'Vegan', about: 'Vegan food and plant-based chefs', wall: wall('vegan'), test: /\bvegan\b|plant[- ]based/i },
   /* Glenn, 29 Oct 6:55 pm, "BEASTY • Yakatori", with Toriman in Capitola. */
   { kind: 'yakitori', heading: 'Yakitori', about: 'Japanese grilled skewers and yakitori bars', wall: wall('yakitori'), test: /yakitori/i },
+  /* Glenn, 30 Oct 8:44 am, with San San and CHICHA Berkeley. */
+  { kind: 'teas', heading: 'Teas/Boba/Matcha', about: 'Tea houses, boba, milk tea and matcha shops', wall: wall('teas'), test: /\bboba\b|bubble tea|milk tea|\bmatcha\b|\bteas?\b/i },
 ]
 
 /** Every category page holds his twenty-four. */

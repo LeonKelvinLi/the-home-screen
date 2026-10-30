@@ -16,8 +16,8 @@
      second review of one that is: OTHER_REVIEWS below, each a link to the
      post. The facts are the post's own caption (place and city).
 
-  FOODIE_PAGES is the 24 with a page, ranked by how many reviews each has sent
-  so far, then by Glenn's interest (@kimjsseats, "spearhead our movement").
+  The first 24 FOODIE_PAGES keep their original rank. The remaining creators
+  have pages on the yellow More foodies sheets, requested 30 October.
   Names are what each account calls itself. Grand-O already has a page on
   Individuals, so @thesnacksensei's reviews go on it instead of a second one.
 */
@@ -48,7 +48,7 @@ export interface FoodiePage {
 
 const reel = (code: string) => `https://www.instagram.com/reel/${code}/`
 
-export const FOODIE_PAGES: FoodiePage[] = [
+const TOP_FOODIE_PAGES: FoodiePage[] = [
   { handle: 'festusfeasts', name: 'Festus Ezeli', label: 'Festus' },
   { handle: 'thesnacksensei', name: 'Grand-O', label: 'Grand-O', brand: 'b_grando' },
   { handle: 'foodandsachi', name: 'Sachi', label: 'Sachi' },
@@ -74,6 +74,704 @@ export const FOODIE_PAGES: FoodiePage[] = [
   { handle: 'janeethefoodie', name: 'Jane', label: 'Jane' },
   { handle: 'peggy_shoo', name: 'peggy xu', label: 'Peggy' },
 ]
+
+/* Glenn, 30 Oct 8:26 am: a yellow page for the extended number of foodies.
+   Keep the original 24 and every existing seat. These source handles have
+   food reviews already in the index; their display names are not guessed.
+   Append new creators here so the overflow keeps its seat numbers. */
+export const MORE_FOODIE_PAGES: FoodiePage[] = [
+  {
+    "handle": "zarina.nawabi",
+    "name": "@zarina.nawabi",
+    "label": "zarina.nawabi"
+  },
+  {
+    "handle": "hungry4munchies",
+    "name": "@hungry4munchies",
+    "label": "hungry4munchies"
+  },
+  {
+    "handle": "jbrenes_",
+    "name": "@jbrenes_",
+    "label": "jbrenes_"
+  },
+  {
+    "handle": "simply_dorothy_",
+    "name": "@simply_dorothy_",
+    "label": "simply_dorothy_"
+  },
+  {
+    "handle": "acoupleofcooks",
+    "name": "@acoupleofcooks",
+    "label": "acoupleofcooks"
+  },
+  {
+    "handle": "jantrinanicole",
+    "name": "@jantrinanicole",
+    "label": "jantrinanicole"
+  },
+  {
+    "handle": "chris.corpz",
+    "name": "@chris.corpz",
+    "label": "chris.corpz"
+  },
+  {
+    "handle": "thealamedapulse",
+    "name": "@thealamedapulse",
+    "label": "thealamedapulse"
+  },
+  {
+    "handle": "bayareamunchies510",
+    "name": "@bayareamunchies510",
+    "label": "bayareamunchies510"
+  },
+  {
+    "handle": "victoria.pham17",
+    "name": "@victoria.pham17",
+    "label": "victoria.pham17"
+  },
+  {
+    "handle": "foodieberrie",
+    "name": "@foodieberrie",
+    "label": "foodieberrie"
+  },
+  {
+    "handle": "samserved",
+    "name": "@samserved",
+    "label": "samserved"
+  },
+  {
+    "handle": "areweeatingyet",
+    "name": "@areweeatingyet",
+    "label": "areweeatingyet"
+  },
+  {
+    "handle": "siusvision",
+    "name": "@siusvision",
+    "label": "siusvision"
+  },
+  {
+    "handle": "arianasade",
+    "name": "@arianasade",
+    "label": "arianasade"
+  },
+  {
+    "handle": "bayarea_fooddreamz",
+    "name": "@bayarea_fooddreamz",
+    "label": "bayarea_fooddreamz"
+  },
+  {
+    "handle": "bayareafoodz",
+    "name": "@bayareafoodz",
+    "label": "bayareafoodz"
+  },
+  {
+    "handle": "bestbayareafood",
+    "name": "@bestbayareafood",
+    "label": "bestbayareafood"
+  },
+  {
+    "handle": "annna_eats",
+    "name": "@annna_eats",
+    "label": "annna_eats"
+  },
+  {
+    "handle": "ugc.with.frances",
+    "name": "@ugc.with.frances",
+    "label": "ugc.with.frances"
+  },
+  {
+    "handle": "eatwithsie",
+    "name": "@eatwithsie",
+    "label": "eatwithsie"
+  },
+  {
+    "handle": "daeatzwitbri",
+    "name": "@daeatzwitbri",
+    "label": "daeatzwitbri"
+  },
+  {
+    "handle": "thetastebud",
+    "name": "@thetastebud",
+    "label": "thetastebud"
+  },
+  {
+    "handle": "dariananthony_",
+    "name": "@dariananthony_",
+    "label": "dariananthony_"
+  },
+  {
+    "handle": "charweeezy",
+    "name": "@charweeezy",
+    "label": "charweeezy"
+  },
+  {
+    "handle": "mukbangyourmama",
+    "name": "@mukbangyourmama",
+    "label": "mukbangyourmama"
+  },
+  {
+    "handle": "wanderingstefany",
+    "name": "@wanderingstefany",
+    "label": "wanderingstefany"
+  },
+  {
+    "handle": "lifebyvivien",
+    "name": "@lifebyvivien",
+    "label": "lifebyvivien"
+  },
+  {
+    "handle": "andre___lucas",
+    "name": "@andre___lucas",
+    "label": "andre___lucas"
+  },
+  {
+    "handle": "shrimpfriedroice",
+    "name": "@shrimpfriedroice",
+    "label": "shrimpfriedroice"
+  },
+  {
+    "handle": "_cynlacson",
+    "name": "@_cynlacson",
+    "label": "_cynlacson"
+  },
+  {
+    "handle": "alexytravels",
+    "name": "@alexytravels",
+    "label": "alexytravels"
+  },
+  {
+    "handle": "andygravs",
+    "name": "@andygravs",
+    "label": "andygravs"
+  },
+  {
+    "handle": "livingvivalakillah",
+    "name": "@livingvivalakillah",
+    "label": "livingvivalakillah"
+  },
+  {
+    "handle": "eighty6ix_",
+    "name": "@eighty6ix_",
+    "label": "eighty6ix_"
+  },
+  {
+    "handle": "mayakay.official",
+    "name": "@mayakay.official",
+    "label": "mayakay.official"
+  },
+  {
+    "handle": "bayarea.maganda.eats",
+    "name": "@bayarea.maganda.eats",
+    "label": "bayarea.maganda.eats"
+  },
+  {
+    "handle": "forkmeetsfood",
+    "name": "@forkmeetsfood",
+    "label": "forkmeetsfood"
+  },
+  {
+    "handle": "foodiesnflightss",
+    "name": "@foodiesnflightss",
+    "label": "foodiesnflightss"
+  },
+  {
+    "handle": "carlaylayyy",
+    "name": "@carlaylayyy",
+    "label": "carlaylayyy"
+  },
+  {
+    "handle": "shua.tangco",
+    "name": "@shua.tangco",
+    "label": "shua.tangco"
+  },
+  {
+    "handle": "jenny.home.loans",
+    "name": "@jenny.home.loans",
+    "label": "jenny.home.loans"
+  },
+  {
+    "handle": "wthellydanyelly",
+    "name": "@wthellydanyelly",
+    "label": "wthellydanyelly"
+  },
+  {
+    "handle": "thekhaysie",
+    "name": "@thekhaysie",
+    "label": "thekhaysie"
+  },
+  {
+    "handle": "sophiaxbayarea",
+    "name": "@sophiaxbayarea",
+    "label": "sophiaxbayarea"
+  },
+  {
+    "handle": "sierra.eats.8",
+    "name": "@sierra.eats.8",
+    "label": "sierra.eats.8"
+  },
+  {
+    "handle": "yo_siiii_foodie",
+    "name": "@yo_siiii_foodie",
+    "label": "yo_siiii_foodie"
+  },
+  {
+    "handle": "ivkicks",
+    "name": "@ivkicks",
+    "label": "ivkicks"
+  },
+  {
+    "handle": "itsslydiia",
+    "name": "@itsslydiia",
+    "label": "itsslydiia"
+  },
+  {
+    "handle": "startingfiresevrywhere",
+    "name": "@startingfiresevrywhere",
+    "label": "startingfiresevrywhere"
+  },
+  {
+    "handle": "bylizettexo",
+    "name": "@bylizettexo",
+    "label": "bylizettexo"
+  },
+  {
+    "handle": "aztec.ed",
+    "name": "@aztec.ed",
+    "label": "aztec.ed"
+  },
+  {
+    "handle": "brianthebarber",
+    "name": "@brianthebarber",
+    "label": "brianthebarber"
+  },
+  {
+    "handle": "ni.ckk_",
+    "name": "@ni.ckk_",
+    "label": "ni.ckk_"
+  },
+  {
+    "handle": "jamesbaylife",
+    "name": "@jamesbaylife",
+    "label": "jamesbaylife"
+  },
+  {
+    "handle": "shesvibinhigh",
+    "name": "@shesvibinhigh",
+    "label": "shesvibinhigh"
+  },
+  {
+    "handle": "imadoniseats",
+    "name": "@imadoniseats",
+    "label": "imadoniseats"
+  },
+  {
+    "handle": "mzz.juxtaposition",
+    "name": "@mzz.juxtaposition",
+    "label": "mzz.juxtaposition"
+  },
+  {
+    "handle": "yourglobalfoodiebff",
+    "name": "@yourglobalfoodiebff",
+    "label": "yourglobalfoodiebff"
+  },
+  {
+    "handle": "dchangshangry",
+    "name": "@dchangshangry",
+    "label": "dchangshangry"
+  },
+  {
+    "handle": "bayarea.foodie.san",
+    "name": "@bayarea.foodie.san",
+    "label": "bayarea.foodie.san"
+  },
+  {
+    "handle": "felicitythefoodie",
+    "name": "@felicitythefoodie",
+    "label": "felicitythefoodie"
+  },
+  {
+    "handle": "trinhdoesthings",
+    "name": "@trinhdoesthings",
+    "label": "trinhdoesthings"
+  },
+  {
+    "handle": "truly_athi",
+    "name": "@truly_athi",
+    "label": "truly_athi"
+  },
+  {
+    "handle": "smackinfood",
+    "name": "@smackinfood",
+    "label": "smackinfood"
+  },
+  {
+    "handle": "jetsetjanine",
+    "name": "@jetsetjanine",
+    "label": "jetsetjanine"
+  },
+  {
+    "handle": "drooling.bae",
+    "name": "@drooling.bae",
+    "label": "drooling.bae"
+  },
+  {
+    "handle": "kvbitesandgo",
+    "name": "@kvbitesandgo",
+    "label": "kvbitesandgo"
+  },
+  {
+    "handle": "stunnaman02",
+    "name": "@stunnaman02",
+    "label": "stunnaman02"
+  },
+  {
+    "handle": "savorwithcoral",
+    "name": "@savorwithcoral",
+    "label": "savorwithcoral"
+  },
+  {
+    "handle": "firstdibs.bayarea",
+    "name": "@firstdibs.bayarea",
+    "label": "firstdibs.bayarea"
+  },
+  {
+    "handle": "margs.out",
+    "name": "@margs.out",
+    "label": "margs.out"
+  },
+  {
+    "handle": "yogetasworld",
+    "name": "@yogetasworld",
+    "label": "yogetasworld"
+  },
+  {
+    "handle": "itsmayrazambrano",
+    "name": "@itsmayrazambrano",
+    "label": "itsmayrazambrano"
+  },
+  {
+    "handle": "your_travel_daddy",
+    "name": "@your_travel_daddy",
+    "label": "your_travel_daddy"
+  },
+  {
+    "handle": "thesauceboss_",
+    "name": "@thesauceboss_",
+    "label": "thesauceboss_"
+  },
+  {
+    "handle": "hella._local.mo",
+    "name": "@hella._local.mo",
+    "label": "hella._local.mo"
+  },
+  {
+    "handle": "thesnobbiefoodie",
+    "name": "@thesnobbiefoodie",
+    "label": "thesnobbiefoodie"
+  },
+  {
+    "handle": "katfoodsf",
+    "name": "@katfoodsf",
+    "label": "katfoodsf"
+  },
+  {
+    "handle": "charlikestoeat",
+    "name": "@charlikestoeat",
+    "label": "charlikestoeat"
+  },
+  {
+    "handle": "hellahansel",
+    "name": "@hellahansel",
+    "label": "hellahansel"
+  },
+  {
+    "handle": "geraldfermin",
+    "name": "@geraldfermin",
+    "label": "geraldfermin"
+  },
+  {
+    "handle": "pimchanyum",
+    "name": "@pimchanyum",
+    "label": "pimchanyum"
+  },
+  {
+    "handle": "bayareawilson",
+    "name": "@bayareawilson",
+    "label": "bayareawilson"
+  },
+  {
+    "handle": "whatthejessi_",
+    "name": "@whatthejessi_",
+    "label": "whatthejessi_"
+  },
+  {
+    "handle": "foodgiveness",
+    "name": "@foodgiveness",
+    "label": "foodgiveness"
+  },
+  {
+    "handle": "asideofsweet",
+    "name": "@asideofsweet",
+    "label": "asideofsweet"
+  },
+  {
+    "handle": "tasha.malan",
+    "name": "@tasha.malan",
+    "label": "tasha.malan"
+  },
+  {
+    "handle": "camemzmin",
+    "name": "@camemzmin",
+    "label": "camemzmin"
+  },
+  {
+    "handle": "venturewithkelly",
+    "name": "@venturewithkelly",
+    "label": "venturewithkelly"
+  },
+  {
+    "handle": "cookwithhenny",
+    "name": "@cookwithhenny",
+    "label": "cookwithhenny"
+  },
+  {
+    "handle": "_aemeriee.dance",
+    "name": "@_aemeriee.dance",
+    "label": "_aemeriee.dance"
+  },
+  {
+    "handle": "greatonezfoodreview",
+    "name": "@greatonezfoodreview",
+    "label": "greatonezfoodreview"
+  },
+  {
+    "handle": "mr.smackreviews",
+    "name": "@mr.smackreviews",
+    "label": "mr.smackreviews"
+  },
+  {
+    "handle": "bp__eats",
+    "name": "@bp__eats",
+    "label": "bp__eats"
+  },
+  {
+    "handle": "erinlovesfun",
+    "name": "@erinlovesfun",
+    "label": "erinlovesfun"
+  },
+  {
+    "handle": "lovelivermore",
+    "name": "@lovelivermore",
+    "label": "lovelivermore"
+  },
+  {
+    "handle": "bayarea.foodie.adventures",
+    "name": "@bayarea.foodie.adventures",
+    "label": "bayarea.foodie.adventures"
+  },
+  {
+    "handle": "explorewithtaka",
+    "name": "@explorewithtaka",
+    "label": "explorewithtaka"
+  },
+  {
+    "handle": "thehautesheet",
+    "name": "@thehautesheet",
+    "label": "thehautesheet"
+  },
+  {
+    "handle": "humminglion",
+    "name": "@humminglion",
+    "label": "humminglion"
+  },
+  {
+    "handle": "siliconvalley.foodies",
+    "name": "@siliconvalley.foodies",
+    "label": "siliconvalley.foodies"
+  },
+  {
+    "handle": "_whatarethechances_",
+    "name": "@_whatarethechances_",
+    "label": "_whatarethechances_"
+  },
+  {
+    "handle": "jacksdiningroom",
+    "name": "@jacksdiningroom",
+    "label": "jacksdiningroom"
+  },
+  {
+    "handle": "katwalksf",
+    "name": "@katwalksf",
+    "label": "katwalksf"
+  },
+  {
+    "handle": "yulmoo_l",
+    "name": "@yulmoo_l",
+    "label": "yulmoo_l"
+  },
+  {
+    "handle": "barstoolsports",
+    "name": "@barstoolsports",
+    "label": "barstoolsports"
+  },
+  {
+    "handle": "xo.pinsta",
+    "name": "@xo.pinsta",
+    "label": "xo.pinsta"
+  },
+  {
+    "handle": "andreweatsinsf",
+    "name": "@andreweatsinsf",
+    "label": "andreweatsinsf"
+  },
+  {
+    "handle": "lovemissfit",
+    "name": "@lovemissfit",
+    "label": "lovemissfit"
+  },
+  {
+    "handle": "chloe_chomps",
+    "name": "@chloe_chomps",
+    "label": "chloe_chomps"
+  },
+  {
+    "handle": "realtorandreviewer",
+    "name": "@realtorandreviewer",
+    "label": "realtorandreviewer"
+  },
+  {
+    "handle": "xoaramarie",
+    "name": "@xoaramarie",
+    "label": "xoaramarie"
+  },
+  {
+    "handle": "foodie.dreams",
+    "name": "@foodie.dreams",
+    "label": "foodie.dreams"
+  },
+  {
+    "handle": "eatswithkath",
+    "name": "@eatswithkath",
+    "label": "eatswithkath"
+  },
+  {
+    "handle": "eatswithfoodie",
+    "name": "@eatswithfoodie",
+    "label": "eatswithfoodie"
+  },
+  {
+    "handle": "jensintec",
+    "name": "@jensintec",
+    "label": "jensintec"
+  },
+  {
+    "handle": "snackateriansf",
+    "name": "@snackateriansf",
+    "label": "snackateriansf"
+  },
+  {
+    "handle": "apoorva_sharma1",
+    "name": "@apoorva_sharma1",
+    "label": "apoorva_sharma1"
+  },
+  {
+    "handle": "volha_creative",
+    "name": "@volha_creative",
+    "label": "volha_creative"
+  },
+  {
+    "handle": "boba._.addict",
+    "name": "@boba._.addict",
+    "label": "boba._.addict"
+  },
+  {
+    "handle": "feed_happiness_",
+    "name": "@feed_happiness_",
+    "label": "feed_happiness_"
+  },
+  {
+    "handle": "ruthannesturman",
+    "name": "@ruthannesturman",
+    "label": "ruthannesturman"
+  },
+  {
+    "handle": "larryjunetfm",
+    "name": "@larryjunetfm",
+    "label": "larryjunetfm"
+  },
+  {
+    "handle": "eileenhuynher",
+    "name": "@eileenhuynher",
+    "label": "eileenhuynher"
+  },
+  {
+    "handle": "createwithcv",
+    "name": "@createwithcv",
+    "label": "createwithcv"
+  },
+  {
+    "handle": "aloha_stephanie",
+    "name": "@aloha_stephanie",
+    "label": "aloha_stephanie"
+  },
+  {
+    "handle": "zoegabon",
+    "name": "@zoegabon",
+    "label": "zoegabon"
+  },
+  {
+    "handle": "martiwantsmore",
+    "name": "@martiwantsmore",
+    "label": "martiwantsmore"
+  },
+  {
+    "handle": "byhillaryn",
+    "name": "@byhillaryn",
+    "label": "byhillaryn"
+  },
+  {
+    "handle": "aly_eats_cali",
+    "name": "@aly_eats_cali",
+    "label": "aly_eats_cali"
+  },
+  {
+    "handle": "bayarea.foodies",
+    "name": "@bayarea.foodies",
+    "label": "bayarea.foodies"
+  },
+  {
+    "handle": "moniica.michelle",
+    "name": "@moniica.michelle",
+    "label": "moniica.michelle"
+  },
+  {
+    "handle": "ryanbyryanchua",
+    "name": "@ryanbyryanchua",
+    "label": "ryanbyryanchua"
+  },
+  {
+    "handle": "cestalmoco",
+    "name": "@cestalmoco",
+    "label": "cestalmoco"
+  },
+  {
+    "handle": "hangrypotato",
+    "name": "@hangrypotato",
+    "label": "hangrypotato"
+  },
+  {
+    "handle": "melsotel",
+    "name": "@melsotel",
+    "label": "melsotel"
+  },
+  {
+    "handle": "sanleandroeats",
+    "name": "San Leandro Eats",
+    "label": "SL Eats"
+  }
+]
+export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
 /** Reviews that are not a film on a business page. */
 export const OTHER_REVIEWS: OtherReview[] = [
@@ -289,11 +987,18 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "hangrypotato", "place": "NōKA Ramen & Bar", "reel": "https://www.instagram.com/reel/DeNzH3MB3Lu/", "city": "Oakland", "brand": "b_nokaramen", "clip": true},
   // Foodie; source-only request
   {"by": "melsotel", "place": "Macondo Colombian Fusion", "reel": "https://www.instagram.com/reel/Dexe7_gxwLe/", "city": "Alameda"},
+  // Batch 80, 30 Oct 8:26 am — Clip this video plz / Heavy Hitter.
+  { by: 'feed_happiness_', place: 'San San Tea House', city: 'San Leandro', brand: 'b_sansanteahouse', reel: reel('DfHBbcgSlPy'), clip: true },
+  // Batch 80: Heavy Hitter, Newbie, Mediocre respectively; source locations retained.
+  {"by": "eatswithkath", "place": "CHICHA San Chen — Berkeley", "city": "Berkeley", "brand": "b_chichasanchenberkeley", "reel": "https://www.instagram.com/reel/DGMZVoJywEB/", "clip": true},
+  {"by": "sierra.eats.8", "place": "CHICHA San Chen — Fremont", "city": "Fremont", "brand": "b_chichasanchenberkeley", "reel": "https://www.instagram.com/reel/DeORBvOI6mJ/", "clip": true, "credit": "Filmed at the Fremont location. Archival October 8 promotion: the BOGO offer has ended."},
+  {"by": "hungere.for.diy", "place": "CHICHA San Chen — Pleasanton", "city": "Pleasanton", "brand": "b_chichasanchenberkeley", "reel": "https://www.instagram.com/reel/DeCRPNNJrCa/", "clip": true, "credit": "Filmed at the Pleasanton location, 2709 Stoneridge Dr, Suite 102."},
+
 ]
 
 /*
-  The foodies' own pages, one per FOODIE_PAGES entry that has none yet, in
-  their rank, so BEASTY • Foodies seats them in that order (categories.ts:
+  The foodies' own pages, including the yellow overflow. The first 24 keep
+  their original order and seats (categories.ts:
   "Food reviewer"). Monogram tiles until they send a picture.
 */
 const PALETTE = ['#1F1B24', '#24161A', '#13201C', '#1B1F2A', '#2A1D12', '#191919']
