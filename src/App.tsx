@@ -37,6 +37,8 @@ const path = () =>
 
 /** How long the dialer and the home screen overlap during the cross-fade. */
 const HANDOFF_MS = 620
+const touchApple = () => /iPhone|iPad|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
 
 export default function App() {
   /*
@@ -117,6 +119,15 @@ export default function App() {
     the START of the fade rather than at the end of it.
   */
   const [handoff, setHandoff] = useState(false)
+  const [shellReady, setShellReady] = useState(entered)
+  useEffect(() => {
+    if (!entered || shellReady) return
+    // Give WebKit a painted frame without the outgoing photo/filter layers.
+    // Removing and creating both trees in one commit still overlaps their
+    // compositor resources on the physical iPhone.
+    const t = window.setTimeout(() => setShellReady(true), 120)
+    return () => window.clearTimeout(t)
+  }, [entered, shellReady])
   /*
     True when the landing screen should open already-settled.
 
@@ -171,10 +182,9 @@ export default function App() {
     // photo layers and the outgoing blur are composited together. Release the
     // landing screen in this commit on iPhone/iPad; the shell has a solid
     // yellow Suspense fallback while its module arrives.
-    const touchApple = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
-      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
-    const crossFade = !touchApple
+    const crossFade = !touchApple()
     setOpenOn(appId)
+    setShellReady(crossFade)
     setEntered(true)
     setHandoff(crossFade)
     if (crossFade) window.setTimeout(() => setHandoff(false), HANDOFF_MS)
@@ -228,11 +238,12 @@ export default function App() {
   */
   return (
     <GateProvider>
-      {entered && (
+      {entered && !shellReady && <div className="shell-loading" />}
+      {entered && shellReady && (
         <Suspense fallback={<div className="shell-loading" />}>
           {/* `is-arriving` scales it up from just under full size while the
               dialer dissolves off the top of it. */}
-          <div className={handoff ? 'shell-enter is-arriving' : 'shell-enter'}>
+          <div className={`shell-enter${handoff ? ' is-arriving' : ''}${touchApple() ? ' is-touch-apple' : ''}`}>
             <Shell openOn={openOn} />
           </div>
         </Suspense>

@@ -28,9 +28,13 @@ try{
  await page.locator('.home').waitFor({timeout:20000})
  check('Enter reaches the actual category grid',await page.getByRole('button',{name:'BEASTY • Eats',exact:true}).count()>0)
  check('iPhone skips the simultaneous full-screen crossfade',await page.locator('.shell-enter.is-arriving').count()===0)
+ check('iPhone category tiles avoid nested filter surfaces',await page.locator('.home .icon-tile').first().evaluate(e=>getComputedStyle(e).filter==='none')&&await page.locator('.cat-icon-glyph').first().evaluate(e=>getComputedStyle(e).filter==='none'))
+ check('iPhone dock avoids a live backdrop surface',await page.locator('.dock').evaluate(e=>getComputedStyle(e).getPropertyValue('backdrop-filter')==='none'||getComputedStyle(e).getPropertyValue('-webkit-backdrop-filter')==='none'))
  for(let i=0;i<3;i++){
   await page.goBack();await page.getByRole('button',{name:'Enter BEASTY',exact:true}).waitFor()
-  await page.getByRole('button',{name:'Enter BEASTY',exact:true}).click();await page.locator('.home').waitFor()
+  await page.getByRole('button',{name:'Enter BEASTY',exact:true}).click()
+  if(i===0)check('a warm app still releases landing layers before mounting home',await page.locator('.shell-loading').isVisible()&&await page.locator('.home').count()===0&&await page.locator('.dialer').count()===0)
+  await page.locator('.home').waitFor()
   check('return and re-enter '+(i+1)+' keeps the home screen',await page.locator('.dialer').count()===0)
  }
  check('entry never reloads the document',docs===1)

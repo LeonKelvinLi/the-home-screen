@@ -73,9 +73,11 @@ Glenn’s **8:44 pm HEM Noodle Bar screenshot is withdrawn at 8:47 pm** (“Disr
 - Foodies audit passed, including crosslinks to the two new Grand-O-reviewed restaurants. Category audit passed after updating its three expected counts for the now-full More pages grid, 50 categories and 11 Ramen shops.
 - Gap check: **540 business domains, 17 historical unmatched**; all three new website-domain gaps closed.
 
+Final pre-push refetch reaches **30 October 7:54 am PDT**. The 7:38–7:47 backlog/entry conversation, Mount Diablo discussion/link and Mercari “next build / BSTY Goods” inspiration at 7:52–7:54 contain no new directory or clip send. No unrelated product build or outbound response inferred.
+
 ## Live verification
 
-Pending the release deploy; production results will be recorded in a separate [skip render] commit after live audits and real Chrome phone checks.
+Release `c7a99a6` became live on Render at **30 October 8:05:12 am PDT** (`dep-dbib0njm8hqs73b17a4g`). Production Batch 79 audit: **232 checks passed**. Production iPhone WebKit entry audit: **13 checks passed**. General `live-verify.mjs --skip-roster` passed; the historical roster walk was explicitly skipped. Real Chrome at 393×852 opens all six new pages with fitting layouts; menu/video and remaining updated-page checks continue below. The physical iPhone entry test still failed, as recorded below; automated success is not physical-device success.
 
 ## iPhone entry repair requested during this batch
 
@@ -87,3 +89,9 @@ Leon reproduced a black screen and return to the landing screen when pressing Ca
 - New `tools/audit-iphone-entry.mjs` uses WebKit with an iPhone user agent, deliberately stalls the app module, checks the visible fallback and direct handoff, and repeats Back/Enter three times without a new document, error or crash. **All 13 checks passed locally.** The landing-asks audit also passed. Landing photo-rotation audit passed for all six photos and yellow.
 
 The actual mirrored iPhone must be rechecked after this release; automated WebKit does not emulate the physical phone’s memory limit.
+
+### Physical-device follow-up
+
+After a fresh production load at 8:08 am, iPhone Mirroring of Leon’s **iPhone 13 running Chrome** showed black after Enter and then the startup dialer again. The first release therefore did **not** resolve the physical-device failure. No device crash log is available; resource exhaustion remains a hypothesis.
+
+The follow-up separates landing unmount and home mount by a 120ms yellow frame, including when the module is already warm. On iPhone/iPad, the home grid retains its artwork, masks, seats and layout while omitting nested icon/glyph filter surfaces and live dock/Spotlight backdrop filters. Desktop rendering stays as before. Build, **16 WebKit entry checks**, **232 Batch 79 checks**, and all five home-grid layouts pass locally. Physical retest and production checks for the follow-up are pending.
