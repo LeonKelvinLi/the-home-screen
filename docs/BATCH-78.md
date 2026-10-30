@@ -16,4 +16,14 @@ Refetched after Batch 77’s **4:43 pm PDT** cutoff. Glenn’s new send is **4:5
 - `tools/audit-batch78.mjs`: **17 local checks passed**: profile name, copy, original photograph decoding, Instagram destination, phone layout, attributed bio, no invented menu/film/contact facts, seat preservation and served icon. Local-only checks sign into a disposable database, open Pit’s, confirm all three named tiles and open Argos’s tile.
 - `tools/gap-check.py`: 537 business-site domains, 17 historical unmatched; no new website-domain gap from this screenshot-only send.
 
-Live audit and real Chrome phone results follow after deployment.
+## Live verification
+
+Release **`09aebac`** is live on beastypages.com. Render **`dep-dbhts6h5efls73fc4kkg`** finished **29 October 2026 at 5:07:56 pm PDT**. Health returned **HTTP 200** after the persistent-disk restart.
+
+- `BASE=https://beastypages.com node tools/audit-batch78.mjs`: **14 read-only live checks passed**. The three disposable-member category checks run locally only, making 17 local checks.
+- `node tools/live-verify.mjs --skip-roster`: **PASS**; all general checks ran, with the previously verified historical roster walk explicitly skipped.
+- **Real Chrome, 393 × 852:** the original photograph, title, contact-only copy, attributed bio panel and exact `https://www.instagram.com/scp_argos/` destination are present. No horizontal overflow or BEASTY console errors observed.
+- Chrome’s place navigation opens **BEASTY • Pit’s**. Its first three tiles are **Sin City Pits, Gem City Kennels, SCP Argos**, in that order, with all three marks rendered. Tapping Argos opens his own page. This production check required no sign-in or account creation.
+- Viewport restored and all agent-created research/QA tabs closed. No account, sign-in code, purchase or outbound message created on production. No film, price, city or commercial service added without a source.
+
+Release and verification record are pushed to origin/main.
