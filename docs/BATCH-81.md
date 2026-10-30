@@ -21,6 +21,20 @@ Local verification passed:
 - Category and member-profile audits passed. Data audit: **0 errors, 156 warnings**, unchanged warning count; 191 notes.
 - Final thread refetch at **11:33 am PDT** still ends with the same 10:59 am request. Gap check remains **541 business domains, 17 historical unmatched**.
 
-Reviewed screenshots of the phone home grid, second More pages sheet, B i P and Owner’s contacts. The Scan sweep’s clipping now follows the square page corner, so it cannot round off the fold. Production deployment and actual Chrome phone-layout verification are pending.
+Reviewed screenshots of the phone home grid, second More pages sheet, B i P and Owner’s contacts. The Scan sweep’s clipping now follows the square page corner, so it cannot round off the fold.
+
+## Live verification
+
+Release **`4b49886`** is deployed on **https://beastypages.com**, Render deploy **`dep-dbie6d0473hc73ch9vkg`**, live at **11:41:44 am PDT on October 30, 2026**. The health endpoint returned **HTTP 200**, `{"ok":true}`.
+
+- `BASE=https://beastypages.com node tools/audit-batch81.mjs`: **25 production checks passed**, exit 0. Includes the deployed fold/category assets, absence of Janelle’s former owner contact details, real public Owner’s contacts with exactly Glenn and Leon, home/dock/city tiles and the B i P tile. Signed-in category checks use the disposable local member above; production mode creates nothing.
+- `BASE=https://beastypages.com node tools/audit-iphone-entry.mjs`: **16 checks passed**, exit 0, including repeated entry, delayed app loading, no document reload or JavaScript/process crash, and phone-width fit.
+- `node tools/live-verify.mjs --skip-roster`: **PASS**, exit 0. Checks the landing chapter, existing pages/videos and navigation, forms and protected endpoints. The historical roster walk is skipped on this follow-up; the current batch and previous batch have their dedicated audits above.
+
+**Actual Chrome, 393×852:** Enter opened the category grid; inspected all 24 home category folds and four dock folds, varied light/dark affiliate artwork with existing rings/glows on Eats, a business opening, the second More pages sheet with Teas and B i P, and San Leandro’s yellow sheet with two affiliates and 22 open tiles. `/contacts` shows **Owners 2**, Glenn and Leon with their correct contact actions. B i P keeps the existing signed-out access gate; its full signed-in empty grid, wallpaper, aliases and Search thumbnails were verified locally. No Chrome console errors and no horizontal overflow observed. Closed the QA tab and restored the viewport.
+
+iPhone Mirroring reported **iPhone in Use**, so no new physical-device claim is made for this batch. The Batch 79 physical entry repair remains in place and passes the 16 live WebKit entry checks above.
+
+The production results are recorded in a separate **`[skip render]`** commit so saving the verification does not redeploy the app.
 
 No outbound messages, production accounts, purchases or bookings created. Affiliate agreement files and the separate affiliate worktree untouched.
