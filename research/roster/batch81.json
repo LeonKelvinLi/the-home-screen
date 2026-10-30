@@ -1,0 +1,35 @@
+{
+  "batch": 81,
+  "date": "2026-10-30",
+  "after": "2026-10-30T08:47:00-07:00",
+  "through": "2026-10-30T10:59:00-07:00",
+  "source": "Glenn’s iMessage thread, read-only thread-dump.py --since 2026-10-30, refetched 11:22 am PDT",
+  "requests": [
+    {
+      "sent": "2026-10-30T10:04:00-07:00",
+      "request": "For now, remove Janelle on the Owner’s contacts until everything is squared out.",
+      "implementation": "Remove the public OWNERS contact entry. Glenn and Leon remain; no CRM account, business page or placement is deleted.",
+      "status": "implemented"
+    },
+    {
+      "sent": "2026-10-30T10:17:00-07:00",
+      "request": "Give every icon button a top-right page corner like the BEASTY icon, using white, black or both triangles for contrast.",
+      "acknowledged_by_leon": "2026-10-30T10:43:00-07:00",
+      "implementation": "Shared vector page silhouette and black/white fold across brand, category, system, dock, gallery/watch and open-spot icons; applies to grid and in-app thumbnails.",
+      "status": "implemented"
+    },
+    {
+      "sent": "2026-10-30T10:59:00-07:00",
+      "request": "New Category / B i P / BEAST in PEACE",
+      "kind": "bip",
+      "heading": "B i P",
+      "about": "BEAST in PEACE",
+      "implementation": "Append to More pages and Search, with a peace glyph and original procedural wallpaper. Manual placement only; 24 open spots until entries are supplied.",
+      "status": "implemented",
+      "held": "No names, business links, memorial subjects, biographies or other entries were supplied. No entries inferred."
+    }
+  ],
+  "new_businesses": [],
+  "new_films": [],
+  "preserved_placements": 1500
+}

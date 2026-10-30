@@ -111,7 +111,7 @@ try{
  check('25 overflow categories have two More pages sheets',more.length===2)
  const categories=new Set()
  for(const label of more){await p.getByRole('button',{name:label,exact:true}).click();await p.waitForTimeout(500);(await grid()).filter(n=>n.startsWith('BEASTY •')).forEach(n=>categories.add(n))}
- check('tea tile is reachable without losing earlier categories',categories.size===25&&categories.has('BEASTY • Teas/Boba/Matcha')&&categories.has('BEASTY • Yakitori')&&categories.has('BEASTY • Vegan'))
+ check('tea tile is reachable without losing earlier categories',categories.size>=25&&categories.has('BEASTY • Teas/Boba/Matcha')&&categories.has('BEASTY • Yakitori')&&categories.has('BEASTY • Vegan'))
  for(const file of ['cat-teas.webp','cat-teas-thumb.webp'])check(file+' is served',(await fetch(base+'/wallpapers/'+file)).headers.get('content-type')?.includes('webp'))
  const credits=await(await fetch(base+'/clips/CREDITS.md')).text()
  for(const f of JSON.parse(readFileSync('research/roster/b80-films.json'))){

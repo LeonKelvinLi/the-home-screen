@@ -1,5 +1,6 @@
+import { PageFold } from './PageFold'
 import { ICON_SIZE } from './constants'
-import { SQUIRCLE_100 } from './squircle'
+import { PAGE_ICON_PATH } from './pageIcon'
 
 /**
  * Icons for the platform's own apps.
@@ -118,7 +119,7 @@ export function SystemIcon({
             match exactly on the grid and in the dock. Clipping in the SVG also
             makes the shape scale-independent, which border-radius was not. */}
         <clipPath id={`${uid}-clip`}>
-          <path d={SQUIRCLE_100} />
+          <path d={PAGE_ICON_PATH} />
         </clipPath>
         <linearGradient id={`${uid}-bg`} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={a} />
@@ -241,6 +242,7 @@ export function SystemIcon({
         )}
       </g>
       </g>
+      <PageFold />
     </svg>
   )
 }

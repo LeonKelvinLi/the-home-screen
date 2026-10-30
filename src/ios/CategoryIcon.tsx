@@ -1,15 +1,11 @@
+import { PageFold } from './PageFold'
 import type { CSSProperties } from 'react'
 import { CATEGORY_GLYPHS } from '../data/categoryGlyphs'
-import { SQUIRCLE_100 } from './squircle'
+import { PAGE_ICON_PATH } from './pageIcon'
 
-/*
-  The squircle every other icon on the home screen wears (BrandLogo clips to
-  the same path), as a mask so it scales to whatever box the tile sits in: the
-  66px grid, Search's 44px list. Leon, 2026-10-10: "add radius on the
-  categories icons, improve the look". A mask, not a clip-path in px, and not
-  border-radius: a rounded rect beside the squircles would give it away.
-*/
-const MASK = `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='${SQUIRCLE_100}'/></svg>`)}")`
+/* One scalable page mask for the home grid and Search's smaller thumbnails.
+   The square top-right corner carries BEASTY's two-colour fold. */
+const MASK = `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='${PAGE_ICON_PATH}'/></svg>`)}")`
 
 /* The plain BEASTY background is the home screen's own wallpaper, so a tile
    cut from it reads as a hole in the screen. Those get a deeper tint. */
@@ -27,7 +23,8 @@ export function CategoryIcon({ kind, thumb }: { kind: string; thumb: string | nu
   return (
     <span className="cat-icon" aria-hidden="true" style={style}>
       <svg className="cat-icon-edge" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d={SQUIRCLE_100} vectorEffect="non-scaling-stroke" />
+        <path d={PAGE_ICON_PATH} vectorEffect="non-scaling-stroke" />
+        <PageFold />
       </svg>
       {g && (
         <svg className="cat-icon-glyph" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">

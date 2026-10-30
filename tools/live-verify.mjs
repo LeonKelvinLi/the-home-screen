@@ -579,12 +579,12 @@ for (const s of [
   /* 2026-09-21: his revision of Contacts — the owners' line, both owners and
      the call-or-text sheet. Signed out, the dock is behind the gate, so the
      card is proved from the bundle rather than by opening it. */
-  'Get in touch directly with the owners for any questions', 'Co-CEO/Co-Founder', '510-674-8011', 'calltext-sheet', 'sms:',
+  'Get in touch directly with the owners for any questions', 'calltext-sheet', 'sms:',
   /* 2026-09-21 evening: "Text or email is preferred" in bold on its own line. */
   'Text or email is preferred', 'operator-note-preferred',
   /* 2026-09-22: Contacts gets a drop-down per letter, its Share button and
      link, Janelle's mailbox, and Leon's line under his title. */
-  'contacts-letter', 'BEASTY contacts', 'janellenicole@beastypages.com', 'CTO/Co-Founder', '& growing', 'the-beaudega-by-maine', 'is-sweep',
+  'contacts-letter', 'BEASTY contacts', 'CTO/Co-Founder', '& growing', 'the-beaudega-by-maine', 'is-sweep',
   /* 2026-09-22, 9:15 pm: Reserve a Spot in his words, with his boxes. */
   'Business information', 'List your hours', 'Business description',
   'BEASTY Affiliate Member', 'Get in touch', 'Referral Klub (BARK)',

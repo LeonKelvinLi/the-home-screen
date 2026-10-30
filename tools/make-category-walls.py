@@ -757,7 +757,22 @@ def m_vegan(rng):
     return composite(img, over, blur=3)
 
 
+def m_bip(rng):
+    # Quiet dusk and a peace mark; no photographs or implied memorial entries.
+    img = gradient('#0b1720', '#18232c')
+    img = glow(img, W * .5, H * .42, 1100, '#74998d', .22)
+    over, d = layer()
+    cx, cy, r = W * .5, H * .46, W * .34
+    ink = rgba('#cbded5', .16)
+    d.ellipse((cx-r, cy-r, cx+r, cy+r), outline=ink, width=12)
+    d.line((cx, cy-r, cx, cy+r), fill=ink, width=12)
+    for direction in (-1, 1):
+        d.line((cx, cy, cx+direction*r*.707, cy+r*.707), fill=ink, width=12)
+    return composite(img, over, blur=3)
+
+
 MOTIFS = {
+    "bip": m_bip,
     "teas": m_coffee,
     "yakitori": m_bbq,
     "vegan": m_vegan,

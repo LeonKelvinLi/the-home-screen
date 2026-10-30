@@ -89,6 +89,6 @@ export interface Owner {
 */
 export const OWNERS: Owner[] = [
   { name: 'Glenn', role: 'CEO/Founder', phone: OPERATOR.phone, email: OPERATOR.email },
-  { name: 'Janelle', role: 'Co-CEO/Co-Founder', phone: '510-674-8011', email: 'janellenicole@beastypages.com' },
+  /* Temporarily off the public owners list at Glenn's request, 2026-10-30 10:04 am. */
   { name: 'Leon', role: 'CTO/Co-Founder', phone: '', email: 'leon@beastypages.com' },
 ]

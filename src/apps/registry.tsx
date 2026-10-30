@@ -1,10 +1,11 @@
+import { PageFold } from '../ios/PageFold'
 import type { ReactNode } from 'react'
 import { BRANDS, brandById } from '../data/brands'
 import { BrandLogo } from '../ios/BrandLogo'
 import { CalendarIcon } from '../ios/CalendarIcon'
 import { SystemIcon } from '../ios/SystemIcon'
 import { SlotIcon } from '../ios/SlotIcon'
-import { SQUIRCLE_100 } from '../ios/squircle'
+import { PAGE_ICON_PATH } from '../ios/pageIcon'
 import { GLYPHS } from '../data/glyphs'
 import { ALL_PLACEMENTS } from '../data/categorySeats'
 import { categoriesFor } from '../data/slots'
@@ -232,7 +233,7 @@ const DesignsIcon = () => (
   <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
     <defs>
       <clipPath id="clip-designs">
-        <path d={SQUIRCLE_100} />
+        <path d={PAGE_ICON_PATH} />
       </clipPath>
       <linearGradient id="designs-bg" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stopColor="#1E1E22" />
@@ -244,8 +245,9 @@ const DesignsIcon = () => (
       <g transform="translate(50 50) scale(0.66) translate(-50 -50)">
         <path d={GLYPHS.design} fill="#f6d800" fillRule="evenodd" />
       </g>
-      <path d={SQUIRCLE_100} fill="none" stroke="rgba(255,255,255,0.14)" strokeWidth="1" />
+      <path d={PAGE_ICON_PATH} fill="none" stroke="rgba(255,255,255,0.14)" strokeWidth="1" />
     </g>
+    <PageFold />
   </svg>
 )
 
@@ -274,7 +276,7 @@ const ScanIcon = () => (
   <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
     <defs>
       <clipPath id="clip-scan">
-        <path d={SQUIRCLE_100} />
+        <path d={PAGE_ICON_PATH} />
       </clipPath>
     </defs>
     <g clipPath="url(#clip-scan)">
@@ -294,8 +296,9 @@ const ScanIcon = () => (
         <rect x="53" y="53" width="5" height="5" rx="1.5" />
         <rect x="59" y="59" width="5" height="5" rx="1.5" />
       </g>
-      <path d={SQUIRCLE_100} fill="none" stroke="rgba(255,255,255,0.16)" strokeWidth="1" />
+      <path d={PAGE_ICON_PATH} fill="none" stroke="rgba(255,255,255,0.16)" strokeWidth="1" />
     </g>
+    <PageFold />
   </svg>
 )
 
@@ -307,7 +310,7 @@ const GemIcon = () => (
   <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
     <defs>
       <clipPath id="clip-members">
-        <path d={SQUIRCLE_100} />
+        <path d={PAGE_ICON_PATH} />
       </clipPath>
     </defs>
     <g clipPath="url(#clip-members)">
@@ -317,8 +320,9 @@ const GemIcon = () => (
         <path d="M6.2 3 2 8.4h20l-4.2-5.4Z" fill="#7FD9FF" />
         <path d="M12 20.8 2 8.4h20Z" fill="#39B3F0" />
       </g>
-      <path d={SQUIRCLE_100} fill="none" stroke="rgba(255,255,255,0.16)" strokeWidth="1" />
+      <path d={PAGE_ICON_PATH} fill="none" stroke="rgba(255,255,255,0.16)" strokeWidth="1" />
     </g>
+    <PageFold />
   </svg>
 )
 
@@ -430,7 +434,7 @@ function ProfileIcon() {
           <stop offset="1" stopColor="#0C0C0E" />
         </linearGradient>
         <clipPath id="clip-profile">
-          <path d={SQUIRCLE_100} />
+          <path d={PAGE_ICON_PATH} />
         </clipPath>
       </defs>
       {/*
@@ -446,8 +450,9 @@ function ProfileIcon() {
         <rect width="100" height="100" fill="url(#profg)" />
         <circle cx="50" cy="41" r="14" fill="#F6D800" />
         <path d="M24 80a26 26 0 0 1 52 0Z" fill="#F6D800" />
-        <path d={SQUIRCLE_100} fill="none" stroke="rgba(255,255,255,0.14)" strokeWidth="1" />
+        <path d={PAGE_ICON_PATH} fill="none" stroke="rgba(255,255,255,0.14)" strokeWidth="1" />
       </g>
+      <PageFold />
     </svg>
   )
 }
@@ -486,10 +491,11 @@ export const PROFILE_APP: AppDef = {
 */
 const AffiliateIcon = () => (
   <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
-    <rect width="100" height="100" fill="#141416" />
+    <path d={PAGE_ICON_PATH} fill="#141416" />
     <rect x="22" y="56" width="12" height="22" rx="3" fill="#fff" />
     <rect x="44" y="42" width="12" height="36" rx="3" fill="#fff" />
     <rect x="66" y="26" width="12" height="52" rx="3" fill="#F6D800" />
+    <PageFold />
   </svg>
 )
 
@@ -506,7 +512,7 @@ export const AFFILIATE_APP: AppDef = {
 /** The BEASTY Supply Co tile: his Shopify store, in the dock's BEASTY set. */
 const SupplyIcon = () => (
   <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
-    <rect width="100" height="100" fill="#111" />
+    <path d={PAGE_ICON_PATH} fill="#111" />
     <path
       d="M28 36h44l4 40H24l4-40Z"
       fill="none"
@@ -515,6 +521,7 @@ const SupplyIcon = () => (
       strokeLinejoin="round"
     />
     <path d="M39 43V32a11 11 0 0 1 22 0v11" fill="none" stroke="#FFE63D" strokeWidth="6" strokeLinecap="round" />
+    <PageFold />
   </svg>
 )
 
@@ -544,9 +551,10 @@ export const SUPPLY_APP: AppDef = {
 const GalleryIcon = () => (
   <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor"
        strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
-    <rect x="2.6" y="4.2" width="18.8" height="15.6" rx="3.2" />
+    <path d="M5.8 4.2h15.6v12.4a3.2 3.2 0 0 1-3.2 3.2H5.8a3.2 3.2 0 0 1-3.2-3.2V7.4a3.2 3.2 0 0 1 3.2-3.2Z" />
     <circle cx="16.1" cy="9.4" r="1.9" fill="currentColor" stroke="none" />
     <path d="M3.4 16.6l4.9-5.2 4.4 4.6 2.6-2.4 4.6 4.4" strokeLinecap="round" />
+    <g transform="translate(2.6 4.2) scale(.188 0.156)"><PageFold /></g>
   </svg>
 )
 
@@ -564,8 +572,9 @@ export const GALLERY_APP: AppDef = {
 const WatchIcon = () => (
   <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor"
        strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
-    <rect x="2.6" y="4.6" width="18.8" height="14.8" rx="3.2" />
+    <path d="M5.8 4.6h15.6v11.6a3.2 3.2 0 0 1-3.2 3.2H5.8a3.2 3.2 0 0 1-3.2-3.2V7.8a3.2 3.2 0 0 1 3.2-3.2Z" />
     <path d="M10.2 9.4l5.2 3.1-5.2 3.1V9.4Z" fill="currentColor" stroke="none" />
+    <g transform="translate(2.6 4.6) scale(.188 0.148)"><PageFold /></g>
   </svg>
 )
 

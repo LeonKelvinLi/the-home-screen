@@ -152,6 +152,9 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'yakitori', heading: 'Yakitori', about: 'Japanese grilled skewers and yakitori bars', wall: wall('yakitori'), test: /yakitori/i },
   /* Glenn, 30 Oct 8:44 am, with San San and CHICHA Berkeley. */
   { kind: 'teas', heading: 'Teas/Boba/Matcha', about: 'Tea houses, boba, milk tea and matcha shops', wall: wall('teas'), test: /\bboba\b|bubble tea|milk tea|\bmatcha\b|\bteas?\b/i },
+  /* Glenn, 30 Oct 10:59 am: "New Category / B i P / BEAST in PEACE".
+     No entries supplied yet; manual placement only. */
+  { kind: 'bip', heading: 'B i P', about: 'BEAST in PEACE', wall: wall('bip') },
 ]
 
 /** Every category page holds his twenty-four. */

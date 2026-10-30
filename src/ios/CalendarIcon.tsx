@@ -1,5 +1,6 @@
+import { PageFold } from './PageFold'
 import { useEffect, useState } from 'react'
-import { SQUIRCLE_100 } from './squircle'
+import { PAGE_ICON_PATH } from './pageIcon'
 
 /**
  * The calendar tile, showing today — the way the real one does.
@@ -35,7 +36,7 @@ export function CalendarIcon() {
     <svg viewBox="0 0 100 100" width="100%" height="100%" aria-hidden="true" style={{ display: 'block' }}>
       <defs>
         <clipPath id="cal-clip">
-          <path d={SQUIRCLE_100} />
+          <path d={PAGE_ICON_PATH} />
         </clipPath>
       </defs>
       <g clipPath="url(#cal-clip)">
@@ -67,7 +68,8 @@ export function CalendarIcon() {
           {day}
         </text>
       </g>
-      <path d={SQUIRCLE_100} fill="none" stroke="rgba(0,0,0,0.10)" strokeWidth="1" />
+      <path d={PAGE_ICON_PATH} fill="none" stroke="rgba(0,0,0,0.10)" strokeWidth="1" />
+      <PageFold />
     </svg>
   )
 }

@@ -113,6 +113,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
     const categoryHits = CATEGORY_ROWS.filter((c) =>
       fold(c.heading).includes(fold(term)) ||
       fold(c.kind).includes(fold(term).replace(/\s+/g, '')) ||
+      (c.kind === 'bip' && fold(c.about).includes(fold(term))) ||
       (c.kind === 'dimsum' && fold('dumplings').includes(fold(term)))
     )
 

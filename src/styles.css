@@ -2700,7 +2700,7 @@ textarea {
 .search-brand svg,
 .search-item svg {
   flex: 0 0 auto;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 .search-brand span {
@@ -14265,4 +14265,16 @@ a.owner-act {
 }
 .ff-done {
   padding-top: 24px;
+}
+
+/* Glenn, 2026-10-30: the BEASTY page corner on every launcher tile. The
+   existing rings and halos follow its square top-right corner too. No new
+   filters, backdrops or animation surfaces are needed for the fold. */
+.icon-tile,
+.icon-tile.is-mobile,
+.icon-tile.is-nosite,
+.icon-tile.is-glow,
+.icon-tile.is-sweep,
+.home-page.is-yellow .icon-tile {
+  border-radius: 24% 0 24% 24%;
 }

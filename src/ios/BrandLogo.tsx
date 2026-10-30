@@ -1,22 +1,12 @@
+import { PageFold } from './PageFold'
 import { GLYPHS } from '../data/glyphs'
-import { SQUIRCLE_100 } from './squircle'
+import { PAGE_ICON_PATH } from './pageIcon'
 import { readableOn } from './contrast'
 import type { Logo } from '../data/brands'
 
-/**
- * Renders a brand's logo as pure SVG on a 100x100 squircle.
- *
- * Two rules keep these reading as real iOS icons rather than as designed
- * posters:
- *   1. The silhouette is a superellipse, not a rounded rect (see squircle.ts).
- *   2. The mark sits *on* the tile with margin. Small-business icons on a real
- *      home screen are a logo dropped onto a light plate — type that bleeds to
- *      the tile edge is the tell that something was designed in CSS.
- *
- * No image files and no webfonts on purpose: icons stay crisp at every size and
- * the whole catalogue is one JSON payload. When vendors upload real artwork
- * this component gets an `imageUrl` branch and nothing else changes.
- */
+/** Renders the original brand artwork in BEASTY's folded-page frame.
+ * `masked={false}` leaves in-app artwork unframed. The frame and its fold
+ * are vector geometry, independent of the vendor's source image. */
 
 /**
  * Logo faces are self-hosted and named explicitly — no system fonts first.
@@ -123,7 +113,7 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
     >
       <defs>
         <clipPath id={clip}>
-          <path d={SQUIRCLE_100} />
+          <path d={PAGE_ICON_PATH} />
         </clipPath>
         <linearGradient id={grad} x1="0" y1="0" x2="0.35" y2="1">
           <stop offset="0%" stopColor={from} />
@@ -350,8 +340,9 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
         )}
 
         {/* Every tile needs an edge against the wallpaper — see `edge` above. */}
-        <path d={SQUIRCLE_100} fill="none" stroke={edge} strokeWidth="1" />
+        <path d={PAGE_ICON_PATH} fill="none" stroke={edge} strokeWidth="1" />
       </g>
+      {masked && <PageFold />}
     </svg>
   )
 }
