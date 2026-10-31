@@ -58736,4 +58736,1613 @@ export const LOCAL_SEED: LocalSeed[] = [
       "platform": "Instagram"
     }
   },
+  /* Batch 83 — Glenn, October 30–31, 2026. Own menus and current hours. */
+  {
+    "slug": "saigon-social-cafe",
+    "name": "Saigon Social Cafe",
+    "label": "Saigon Social",
+    "cuisine": "Vietnamese coffee, tea, matcha & bakery",
+    "tagline": "Vietnamese phin-drip coffee, matcha and freshly baked treats on Senter Road.",
+    "color": "#603A13",
+    "icon": "saigon-social-cafe",
+    "prep": 0,
+    "category": "Coffee & tea",
+    "items": [],
+    "sections": [
+      {
+        "name": "Vietnamese Phin Drip",
+        "items": [
+          [
+            "BMT Cream Coffee",
+            "Vietnamese robusta coffee with caramel foam.",
+            695
+          ],
+          [
+            "Foam Biscoff Coffee",
+            "Vietnamese robusta coffee with Biscoff cream and cookie.",
+            695
+          ],
+          [
+            "Egg Cream Coffee",
+            "Vietnamese robusta coffee with torched egg-brûlée cream.",
+            695
+          ],
+          [
+            "Foam Seasalt Coffee",
+            "",
+            649
+          ],
+          [
+            "Foam Ube Taro Coffee",
+            "",
+            649
+          ],
+          [
+            "Banana Coffee",
+            "",
+            649
+          ],
+          [
+            "Vietnamese Ice Coffee",
+            "",
+            625
+          ],
+          [
+            "Vietnamese Sweet Milk Coffee",
+            "",
+            649
+          ],
+          [
+            "Black Coffee",
+            "",
+            549
+          ],
+          [
+            "Foam Matcha Coffee",
+            "",
+            649
+          ],
+          [
+            "Coconut Cream Coffee",
+            "",
+            695
+          ]
+        ]
+      },
+      {
+        "name": "Matcha",
+        "items": [
+          [
+            "Ceremonial Matcha Latte",
+            "",
+            695
+          ],
+          [
+            "Matcha Einspainner",
+            "",
+            749
+          ],
+          [
+            "Banana Foam Matcha",
+            "",
+            749
+          ],
+          [
+            "Biscoff Foam Matcha",
+            "",
+            749
+          ],
+          [
+            "Strawberry Matcha",
+            "",
+            749
+          ],
+          [
+            "Mango Sticky Rice Matcha",
+            "",
+            749
+          ],
+          [
+            "Ube Foam Matcha",
+            "",
+            749
+          ],
+          [
+            "Coconut Juice Cloud",
+            "",
+            749
+          ]
+        ]
+      },
+      {
+        "name": "Premium Tea Leaves",
+        "items": [
+          [
+            "Saigon Sunset",
+            "Jasmine tea, pink peach, strawberry and grapefruit.",
+            695
+          ],
+          [
+            "Saigon Lychee Glow",
+            "Jasmine tea, lychee, pink peach, dragon fruit and aloe vera.",
+            695
+          ],
+          [
+            "Saigon Salted Plum Tea",
+            "",
+            695
+          ],
+          [
+            "Peach Strawberry Tea",
+            "",
+            695
+          ],
+          [
+            "Lemongrass Peach Tea",
+            "",
+            695
+          ],
+          [
+            "Passion Mango Tea",
+            "",
+            695
+          ]
+        ]
+      },
+      {
+        "name": "Ice Blended, Smoothies & Refreshers",
+        "items": [
+          [
+            "Coconut Kumquat Juice",
+            "",
+            695
+          ]
+        ]
+      },
+      {
+        "name": "Milk Tea",
+        "items": [
+          [
+            "Olong Jasmine MTea",
+            "",
+            649
+          ],
+          [
+            "Premium Leaf Black MTea",
+            "",
+            649
+          ],
+          [
+            "Roasted Rice MTea",
+            "",
+            649
+          ],
+          [
+            "Brown Sugar Milk/MTea & Bsugar Crystal Boba",
+            "",
+            695
+          ]
+        ]
+      },
+      {
+        "name": "Appetizers & Staple Foods",
+        "items": [
+          [
+            "Beef Stew with Bread",
+            "",
+            1395
+          ],
+          [
+            "Banh Gio Viet Steamed Rice Full Topping",
+            "",
+            995
+          ],
+          [
+            "Beef Ball Soup",
+            "",
+            895
+          ],
+          [
+            "Stickbread Pate Pork Floss",
+            "",
+            395
+          ],
+          [
+            "Stickbread Grilled Chicken Cheese",
+            "",
+            395
+          ],
+          [
+            "Stickbread Veggie Mushion",
+            "",
+            395
+          ],
+          [
+            "Egg Rolls",
+            "Choose portion on their ordering site.",
+            249,
+            null,
+            "from $2.49"
+          ],
+          [
+            "Stickbread Banh Mi Que Plain",
+            "",
+            100
+          ],
+          [
+            "Beef Intestine Pha Lau Bo",
+            "",
+            1395
+          ]
+        ]
+      },
+      {
+        "name": "Pastries & Cake",
+        "items": [
+          [
+            "Cheese Tiramisu",
+            "",
+            695
+          ],
+          [
+            "Strawberry Cream Cheese Tiramisu Cake",
+            "",
+            795
+          ],
+          [
+            "Matcha Custard Croissant",
+            "",
+            395
+          ],
+          [
+            "Strawberry Ceam Croissant",
+            "",
+            395
+          ],
+          [
+            "Matcha Custard Bread",
+            "",
+            395
+          ],
+          [
+            "Vanilla Custard Bread",
+            "",
+            395
+          ],
+          [
+            "Chocolate Custard Bread",
+            "",
+            395
+          ],
+          [
+            "Vanilla Custard Bread Vanilla Coating",
+            "",
+            395
+          ],
+          [
+            "Chocolate Custard Bread Chocolate Coating",
+            "",
+            395
+          ],
+          [
+            "French Milk Butter Bread Matcha Coating",
+            "",
+            395
+          ],
+          [
+            "Melty Cheese Bread",
+            "",
+            349
+          ],
+          [
+            "Melting Cheese Bread Larg",
+            "",
+            675
+          ],
+          [
+            "Salted Egg Cheese Sponge Cake Box",
+            "",
+            1095
+          ],
+          [
+            "Cream Puff 10 pcs",
+            "",
+            895
+          ],
+          [
+            "Matcha Cream Puffs 10 pcs",
+            "",
+            895
+          ],
+          [
+            "Mango Tiramisu",
+            "",
+            749
+          ],
+          [
+            "Light Durian Cheese Cake",
+            "",
+            1145
+          ],
+          [
+            "Cream Bread Cones",
+            "",
+            395
+          ],
+          [
+            "Cheesy Garlic Butter Bread",
+            "",
+            595
+          ],
+          [
+            "Pork Floss Bread Roll(3 pcs)",
+            "",
+            795
+          ],
+          [
+            "Stick Cookie",
+            "",
+            295
+          ],
+          [
+            "Spicy Crispy Toast Pork Floss Biscotti",
+            "",
+            595
+          ],
+          [
+            "Taro Sweet Bread",
+            "",
+            450
+          ],
+          [
+            "Mungbean Pandan Bread",
+            "",
+            450
+          ],
+          [
+            "Condensed Milk Bread",
+            "",
+            745
+          ],
+          [
+            "Crab Cheese Bread",
+            "",
+            845
+          ],
+          [
+            "Golden Egg Floss Bun",
+            "",
+            475
+          ]
+        ]
+      },
+      {
+        "name": "Dessert",
+        "items": [
+          [
+            "Flan 1 pc (No Topping)",
+            "",
+            295
+          ],
+          [
+            "Flan Dessert Combo",
+            "Two flans, coconut cream, coffee, coffee jelly and brown sugar boba.",
+            895
+          ]
+        ]
+      },
+      {
+        "name": "Snacks",
+        "items": [
+          [
+            "Dried Mango Chilli Salt",
+            "",
+            1095
+          ],
+          [
+            "Dried Pink Guava",
+            "",
+            695
+          ],
+          [
+            "Tamarind Strawberry",
+            "",
+            995
+          ],
+          [
+            "Tamarind Spicy Salted",
+            "",
+            995
+          ]
+        ]
+      },
+      {
+        "name": "Hot Drinks",
+        "items": [
+          [
+            "Jasmine Olong Mtea Hot",
+            "",
+            500
+          ],
+          [
+            "Roasted Rice Mtea Hot",
+            "",
+            500
+          ],
+          [
+            "Black Mtea Hot",
+            "",
+            500
+          ],
+          [
+            "Vietnamese Latte Bac Xiu Hot",
+            "",
+            500
+          ]
+        ]
+      }
+    ],
+    "address": "2611 Senter Rd #126, San Jose, CA 95111",
+    "phone": "(669) 336-1873",
+    "site": "https://saigonsocialcafe.toast.site/",
+    "orderUrl": "https://saigonsocialcafe.toast.site/",
+    "instagram": "saigonsocialcafe",
+    "hours": "Daily 7am–10pm",
+    "panels": [
+      {
+        "head": "Menu and ordering",
+        "body": [
+          "Full available menu from their own Toast page, checked October 31. Some pastries were sold out; availability and options change. The same-address Toast footer still carries the older Brew Banh Mi Cafe - EM name."
+        ],
+        "links": [
+          {
+            "label": "Their current menu",
+            "href": "https://saigonsocialcafe.toast.site/"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/saigon-social-cafe.mp4",
+      "poster": "/clips/saigon-social-cafe-poster.webp",
+      "href": "https://www.instagram.com/reel/DercuTjMEzT/",
+      "credit": "Posted by @saigonsocialcafe",
+      "platform": "Instagram"
+    }
+  },
+  {
+    "slug": "nobibi-hayward",
+    "name": "Nobibi — Hayward",
+    "label": "Nobibi",
+    "cuisine": "Soft-serve ice cream, boba, tea & coffee",
+    "tagline": "Soft-serve creations, milk teas and matcha at the Hayward shop.",
+    "color": "#F3CCD8",
+    "icon": "nobibi-hayward",
+    "prep": 0,
+    "category": "Ice cream & tea",
+    "items": [],
+    "sections": [
+      {
+        "name": "Soft Serve",
+        "items": [
+          [
+            "Create Your Own",
+            "",
+            399,
+            null,
+            "$3.99–7.49"
+          ],
+          [
+            "Biscoff Ice Cream",
+            "",
+            725
+          ],
+          [
+            "Brown Sugar Bobo Cup",
+            "",
+            725
+          ],
+          [
+            "Dream Cloud",
+            "",
+            1399
+          ],
+          [
+            "Dalgona Ice Cream",
+            "",
+            725
+          ],
+          [
+            "Dubai Chocolate Ice Cream",
+            "",
+            799
+          ],
+          [
+            "Mini Cloud",
+            "",
+            899
+          ],
+          [
+            "Ninja",
+            "Activated charcoal and cocoa.",
+            675
+          ],
+          [
+            "Oreo Crunch",
+            "",
+            725
+          ],
+          [
+            "Red Bean & Taro Ice Cream",
+            "",
+            725
+          ],
+          [
+            "S'more",
+            "",
+            675
+          ],
+          [
+            "Strawberry Blush Ice Cream",
+            "",
+            725
+          ],
+          [
+            "Mango Mellow",
+            "",
+            799
+          ],
+          [
+            "Mango Chili",
+            "",
+            799
+          ],
+          [
+            "Fruity Pebble",
+            "",
+            675
+          ],
+          [
+            "Rasmalai Tres Leches",
+            "",
+            825
+          ],
+          [
+            "Pecan Pumpkin Ice Cream",
+            "",
+            799
+          ],
+          [
+            "Pumpkin Cookie Monster",
+            "",
+            699
+          ]
+        ]
+      },
+      {
+        "name": "Milk Tea",
+        "items": [
+          [
+            "Brown Sugar Milk (Caffeine Free)",
+            "",
+            650
+          ],
+          [
+            "Brown Sugar Milk Tea",
+            "",
+            650
+          ],
+          [
+            "Roasted Milk Jasmine",
+            "",
+            650
+          ],
+          [
+            "Thai Milk Tea",
+            "",
+            650
+          ],
+          [
+            "Brown Sugar Milk Tea Brûlée",
+            "",
+            699
+          ],
+          [
+            "Taro Milk",
+            "",
+            650
+          ]
+        ]
+      },
+      {
+        "name": "Milk Frosty",
+        "items": [
+          [
+            "Uji Matcha",
+            "",
+            715
+          ],
+          [
+            "Pink Unicorn",
+            "",
+            699
+          ],
+          [
+            "Biscoff Crumbl",
+            "",
+            699
+          ],
+          [
+            "Ube Cloud",
+            "",
+            699
+          ],
+          [
+            "Oreo Frosty",
+            "",
+            699
+          ]
+        ]
+      },
+      {
+        "name": "Matcha",
+        "items": [
+          [
+            "Matcha Latte",
+            "",
+            650
+          ],
+          [
+            "Strawberry Matcha",
+            "",
+            715
+          ],
+          [
+            "Biscoff Matcha",
+            "",
+            715
+          ],
+          [
+            "Banana Cream Matcha",
+            "",
+            775
+          ],
+          [
+            "Double Matcha Latte",
+            "",
+            775
+          ]
+        ]
+      },
+      {
+        "name": "Fruit Tea",
+        "items": [
+          [
+            "Lemon Passionfruit",
+            "",
+            599
+          ],
+          [
+            "Peach Jasmine",
+            "",
+            599
+          ],
+          [
+            "Mango Oolong",
+            "",
+            599
+          ],
+          [
+            "Lychee Oolong",
+            "",
+            599
+          ]
+        ]
+      },
+      {
+        "name": "Fruit Tea Slush",
+        "items": [
+          [
+            "Lychee Dragonfruit Slush",
+            "",
+            715
+          ],
+          [
+            "Cheese Strawberry Slush",
+            "",
+            715
+          ],
+          [
+            "Pina Colada Slush",
+            "",
+            715
+          ]
+        ]
+      },
+      {
+        "name": "Signature Drinks",
+        "items": [
+          [
+            "Mango Sago",
+            "",
+            715
+          ],
+          [
+            "Dubai Chocolate Frosty",
+            "",
+            715
+          ],
+          [
+            "Mangonada",
+            "",
+            715
+          ],
+          [
+            "Pina Colada Frosty",
+            "",
+            715
+          ]
+        ]
+      },
+      {
+        "name": "Coffee",
+        "items": [
+          [
+            "Dalgona Biscoff Coffee",
+            "",
+            650
+          ],
+          [
+            "Dalgona Brown Sugar w/ Boba",
+            "",
+            650
+          ],
+          [
+            "Dalgona Brûlée w/ Boba",
+            "",
+            699
+          ],
+          [
+            "Iced Saigon",
+            "",
+            699
+          ]
+        ]
+      },
+      {
+        "name": "Soda Crush",
+        "items": [
+          [
+            "Paradise Crush",
+            "",
+            599
+          ],
+          [
+            "Sakura Blossom",
+            "",
+            599
+          ],
+          [
+            "Crystal Peach",
+            "",
+            599
+          ],
+          [
+            "Tropical Sunset",
+            "",
+            650
+          ]
+        ]
+      },
+      {
+        "name": "Floats",
+        "items": [
+          [
+            "Matcha Float",
+            "",
+            850
+          ],
+          [
+            "Soda Floats",
+            "",
+            599
+          ]
+        ]
+      },
+      {
+        "name": "Snacks",
+        "items": [
+          [
+            "Chocolate Cone",
+            "",
+            100
+          ],
+          [
+            "Cotton Candy",
+            "",
+            499,
+            null,
+            "$4.99–6.99"
+          ],
+          [
+            "Waffle Cone",
+            "",
+            100
+          ],
+          [
+            "Water Bottle",
+            "",
+            199
+          ]
+        ]
+      },
+      {
+        "name": "Pumpkin Series",
+        "items": [
+          [
+            "Pumpkin Cloud Matcha",
+            "",
+            775
+          ],
+          [
+            "Pecan Pumpkin Frosty",
+            "",
+            775
+          ],
+          [
+            "Pumpkin Spice Chai",
+            "",
+            775
+          ]
+        ]
+      }
+    ],
+    "address": "26201 Mission Blvd Ste 140, Hayward, CA 94544",
+    "email": "nobibihayward@gmail.com",
+    "site": "https://nobibi-hayward.square.site/",
+    "orderUrl": "https://nobibi-hayward.square.site/",
+    "instagram": "nobibi_hayward",
+    "hours": "Daily 11am–10pm",
+    "panels": [
+      {
+        "head": "Catering and current menu",
+        "body": [
+          "Catering is available; contact the Hayward team for details. Menu checked on their own Square site October 31; seasonal items and availability may change."
+        ],
+        "links": [
+          {
+            "label": "Ask about catering",
+            "href": "mailto:nobibihayward@gmail.com"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "magic-donuts",
+    "name": "Magic Donuts & Coffee",
+    "label": "Magic Donuts",
+    "cuisine": "Donuts, bakery & coffee",
+    "tagline": "Brioche and old-fashioned donuts with coffee on Mariposa Street.",
+    "color": "#E6B3CE",
+    "icon": "magic-donuts",
+    "prep": 0,
+    "category": "Donuts & coffee",
+    "items": [],
+    "address": "1675 Mariposa St, San Francisco, CA 94107",
+    "phone": "(628) 221-0111",
+    "email": "info@magicdonuts.com",
+    "site": "https://www.magicdonuts.com/",
+    "orderUrl": "https://www.magicdonuts.com/donuts",
+    "instagram": "magicdonutssf",
+    "hours": "Daily 7am–3pm",
+    "contactOnly": "Their own menu lists donut flavors and coffees without prices. See their menu or call for current availability.",
+    "siteCta": "Donuts and coffee menu",
+    "panels": [
+      {
+        "head": "Donuts and coffee",
+        "body": [
+          "Brioche: Milk Chocolate Glazed, Rainbow Sprinkle, Maple-Pecan, Black Forest, Blueberry & Lime.",
+          "Old fashioned: Dark Chocolate Sea Salt, Sugar & Spice, Coffee & Hazelnut Praline, Raspberry Lemonade.",
+          "Coffee, espresso, macchiato, cappuccino, latte, mocha and cold-brew."
+        ],
+        "links": [
+          {
+            "label": "Their own full menu",
+            "href": "https://www.magicdonuts.com/donuts"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "insomnibar",
+    "name": "Insomnibar",
+    "label": "Insomnibar",
+    "cuisine": "Vietnamese coffee, tea, matcha, boba & catering",
+    "tagline": "Coffee and tea lounge with phin-drip drinks, matcha and late-night bites.",
+    "color": "#111111",
+    "icon": "insomnibar",
+    "prep": 0,
+    "category": "Coffee & tea",
+    "items": [],
+    "sections": [
+      {
+        "name": "Signature Salads",
+        "items": [
+          [
+            "Insomnibar House Salad",
+            "Ham, bacon, tomato, lettuce, cabbage and egg; vegan ranch. Contains meat and egg.",
+            1249
+          ]
+        ]
+      },
+      {
+        "name": "Sandwiches & Bagels",
+        "items": [
+          [
+            "Avocado Toast",
+            "Avocado, cabbage, egg and chili crunch on sourdough. Contains egg and wheat.",
+            1395
+          ],
+          [
+            "Honey Garlic Bagel",
+            "Garlic butter and whipped cream cheese. Contains dairy and wheat.",
+            745
+          ],
+          [
+            "Signature BLT",
+            "Bacon, tomato, lettuce and vegan ranch on sourdough. Contains meat and wheat.",
+            1495
+          ],
+          [
+            "Breakfast Bagel",
+            "Eggs, bacon, cheddar and house sauce. Contains egg, dairy, meat and wheat.",
+            1299
+          ],
+          [
+            "Japanese Egg Sando",
+            "Egg salad and ham on brioche. Contains egg, dairy, meat and wheat.",
+            1149
+          ],
+          [
+            "Toasted Bagel",
+            "With honey-whipped cream cheese. Contains dairy and wheat.",
+            395
+          ]
+        ]
+      },
+      {
+        "name": "Small Bites",
+        "items": [
+          [
+            "Chicken Wings Garlic Butter Parmesan",
+            "Contains chicken, dairy and wheat.",
+            1295
+          ],
+          [
+            "Vegetarian Egg Roll",
+            "Tofu, mushroom, carrot, sweet potato and glass noodles. Contains soy and egg.",
+            825
+          ],
+          [
+            "Egg Rolls",
+            "Contains pork, shrimp, egg and wheat.",
+            845
+          ],
+          [
+            "Shrimp Egg Rolls",
+            "Contains shrimp, pork, egg and wheat.",
+            1045
+          ],
+          [
+            "Garlic Butter Fries",
+            "Contains dairy and wheat.",
+            745
+          ],
+          [
+            "Cheese Tots",
+            "Contains dairy and wheat.",
+            725
+          ],
+          [
+            "Sweet Potato Fries",
+            "Contains wheat.",
+            625
+          ],
+          [
+            "Tater Tots",
+            "Contains wheat.",
+            625
+          ],
+          [
+            "Fries",
+            "Contains wheat.",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Sweets & Pastries",
+        "items": [
+          [
+            "Coconut Silk Tofu",
+            "Tofu, boba and coconut sauce. Contains soy, dairy and coconut.",
+            595
+          ],
+          [
+            "Pressed Croissant",
+            "Waffle-pressed croissant and choice of cream. Contains dairy, egg and wheat.",
+            795
+          ],
+          [
+            "Rice Crispy",
+            "Seasonal flavor; contains dairy and gelatin.",
+            595
+          ]
+        ]
+      },
+      {
+        "name": "Signature Drinks",
+        "items": [
+          [
+            "Salted Viet Coffee",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Insomnia Latte",
+            "Matcha, phin coffee and choice of milk; caffeinated.",
+            820,
+            null,
+            "from $8.20"
+          ],
+          [
+            "Banana Coffee",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Dirty Taro",
+            "",
+            820,
+            null,
+            "from $8.20"
+          ],
+          [
+            "Lychee Limeade",
+            "Non-caffeinated.",
+            750,
+            null,
+            "from $7.50"
+          ]
+        ]
+      },
+      {
+        "name": "Seasonal",
+        "items": [
+          [
+            "Strawberry Milk Tea",
+            "",
+            800,
+            null,
+            "from $8.00"
+          ],
+          [
+            "Mango Peach Tea",
+            "",
+            750,
+            null,
+            "from $7.50"
+          ]
+        ]
+      },
+      {
+        "name": "Corn Series",
+        "items": [
+          [
+            "Corn Milk Tea",
+            "",
+            800,
+            null,
+            "from $8.00"
+          ],
+          [
+            "Corn Phin Drip",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Viet Corn Coffee",
+            "",
+            800,
+            null,
+            "from $8.00"
+          ],
+          [
+            "Corn Cream Matcha",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ]
+        ]
+      },
+      {
+        "name": "Pumpkin Series",
+        "items": [
+          [
+            "Pumpkin Caramel Milk",
+            "",
+            800,
+            null,
+            "from $8.00"
+          ],
+          [
+            "Pumpkin Biscoff Matcha",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Phin Drip Pumpkin Biscoff",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Pumpkin Biscoff Milk Tea",
+            "",
+            800,
+            null,
+            "from $8.00"
+          ]
+        ]
+      },
+      {
+        "name": "Taro Series",
+        "items": [
+          [
+            "Viet Taro",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Taro Matcha",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Phin Taro",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ]
+        ]
+      },
+      {
+        "name": "Biscoff Series",
+        "items": [
+          [
+            "Saigon Biscoff Drip",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Hanoi Biscoff",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Biscoff Matcha Latte",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Biscoff Milk Tea",
+            "",
+            800,
+            null,
+            "from $8.00"
+          ],
+          [
+            "Baby Biscoff",
+            "Non-caffeinated; contains dairy.",
+            725
+          ],
+          [
+            "Biscoff Bagel",
+            "Contains dairy and wheat.",
+            450
+          ]
+        ]
+      },
+      {
+        "name": "Phin Drip Coffee",
+        "items": [
+          [
+            "The Viet Classic",
+            "",
+            795,
+            null,
+            "from $7.95"
+          ],
+          [
+            "Honeycomb Phin Drip Latte",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Vietmericano",
+            "",
+            600,
+            null,
+            "from $6.00"
+          ],
+          [
+            "Phin Drip Latte",
+            "",
+            750,
+            null,
+            "from $7.50"
+          ]
+        ]
+      },
+      {
+        "name": "Matcha",
+        "items": [
+          [
+            "Banana Matcha Latte",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Matcha Latte",
+            "",
+            775,
+            null,
+            "from $7.75"
+          ]
+        ]
+      },
+      {
+        "name": "Milk Tea",
+        "items": [
+          [
+            "Jasmine Milk Tea",
+            "Their menu lists dairy as an allergen despite calling the creamer non-dairy.",
+            750,
+            null,
+            "from $7.50"
+          ],
+          [
+            "Milo Hokkaido",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Dirty Milo",
+            "",
+            825,
+            null,
+            "from $8.25"
+          ],
+          [
+            "Pandan Honeydew",
+            "",
+            750,
+            null,
+            "from $7.50"
+          ],
+          [
+            "Black Milk Tea",
+            "Their menu lists dairy as an allergen despite calling the creamer non-dairy.",
+            750,
+            null,
+            "from $7.50"
+          ],
+          [
+            "Taro Milk Latte",
+            "",
+            795,
+            null,
+            "from $7.95"
+          ],
+          [
+            "Thai Milk Tea",
+            "",
+            800,
+            null,
+            "from $8.00"
+          ],
+          [
+            "Banana Milk",
+            "",
+            725,
+            null,
+            "from $7.25"
+          ]
+        ]
+      },
+      {
+        "name": "Refresher & Just Tea",
+        "items": [
+          [
+            "Jasmine Tea",
+            "",
+            600,
+            null,
+            "from $6.00"
+          ],
+          [
+            "Peachy Mango",
+            "",
+            750,
+            null,
+            "from $7.50"
+          ],
+          [
+            "Salted Plum Soda",
+            "",
+            775
+          ],
+          [
+            "Lychee Limeade",
+            "",
+            750,
+            null,
+            "from $7.50"
+          ]
+        ]
+      },
+      {
+        "name": "Mini Me — For the Kiddos",
+        "items": [
+          [
+            "Baby Biscoff",
+            "",
+            725
+          ],
+          [
+            "Peachlight Brew",
+            "",
+            650
+          ],
+          [
+            "Enchanted Limeade",
+            "",
+            650
+          ],
+          [
+            "Taro Moonlight",
+            "",
+            695
+          ],
+          [
+            "Banana Potion",
+            "",
+            695
+          ],
+          [
+            "Moonmilk",
+            "",
+            595
+          ]
+        ]
+      },
+      {
+        "name": "1L Bottles",
+        "items": [
+          [
+            "Bottled Viet Coffee",
+            "Makes about four 16oz iced cups; cups, lids and straws excluded. Refrigerate; best within three days.",
+            2195
+          ],
+          [
+            "Bottled Refreshers",
+            "Makes about four 16oz iced cups; cups, lids and straws excluded. Refrigerate; best within three days.",
+            1995
+          ],
+          [
+            "Bottled Milk Teas",
+            "Makes about four 16oz iced cups; cups, lids and straws excluded. Refrigerate; best within three days.",
+            1995
+          ]
+        ]
+      },
+      {
+        "name": "InsomniKit",
+        "items": [
+          [
+            "Deluxe InsomniKit",
+            "One-hour notice; preordering recommended. Drinks, toppings and eight 16oz cups with lids and straws. Refrigerate; best within three days.",
+            5525
+          ]
+        ]
+      },
+      {
+        "name": "House-made Sauces",
+        "items": [
+          [
+            "Vegan House Sauce",
+            "",
+            75
+          ],
+          [
+            "Vegan Spicy Chipotle Sauce",
+            "",
+            75
+          ],
+          [
+            "Vegan Cilantro Jalapeño Sauce",
+            "",
+            75
+          ],
+          [
+            "Vegan Ranch Sauce",
+            "",
+            75
+          ]
+        ]
+      },
+      {
+        "name": "Grab & Go",
+        "items": [
+          [
+            "Sidral Mundet Apple Soda",
+            "",
+            350
+          ],
+          [
+            "Ginger Ale",
+            "",
+            250
+          ],
+          [
+            "Chips / Snacks",
+            "",
+            250
+          ],
+          [
+            "Sauce",
+            "",
+            75
+          ],
+          [
+            "Cereal",
+            "",
+            350
+          ],
+          [
+            "Olipop",
+            "",
+            300
+          ],
+          [
+            "Olipop Mini",
+            "",
+            225
+          ],
+          [
+            "Humm Kombucha",
+            "",
+            325
+          ],
+          [
+            "Darigold Milk",
+            "",
+            375
+          ],
+          [
+            "San Pellegrino Ciao!",
+            "",
+            225
+          ],
+          [
+            "Q Soda",
+            "",
+            100
+          ],
+          [
+            "Maison Perrier: Lime and Ginger",
+            "",
+            350
+          ],
+          [
+            "Martinelli's Apple Juice",
+            "",
+            250
+          ],
+          [
+            "Buddy fruit",
+            "",
+            245
+          ],
+          [
+            "Fiji",
+            "",
+            425
+          ],
+          [
+            "Poppi Wild Berry",
+            "",
+            375
+          ],
+          [
+            "Diet Coke",
+            "",
+            275
+          ]
+        ]
+      }
+    ],
+    "address": "5978 Silver Creek Valley Rd #25, San Jose, CA 95138",
+    "phone": "(408) 440-2284",
+    "email": "insomnibar@gmail.com",
+    "site": "https://insomnibar.com/",
+    "orderUrl": "https://order.toasttab.com/online/insomnibar-5978-silver-creek-valley-road-25",
+    "instagram": "insomnibar",
+    "hours": "Mon–Thu 7am–10pm · Fri–Sun 7am–midnight",
+    "panels": [
+      {
+        "head": "Current hours and menu",
+        "body": [
+          "Their Instagram’s new hours, starting September 14, supersede the older soft-opening hours still shown in the website footer.",
+          "Full available Toast menu checked October 31. Drinks marked “from” vary by size and options. Sold-out items are held; check their ordering page for current availability."
+        ],
+        "links": [
+          {
+            "label": "Their current Instagram hours",
+            "href": "https://www.instagram.com/insomnibar/"
+          }
+        ]
+      },
+      {
+        "head": "Catering and private events",
+        "body": [
+          "Coffee and boba bars, self-serve or full-service catering, and private lounge rentals. Ask the team for a quote."
+        ],
+        "links": [
+          {
+            "label": "Parties and events",
+            "href": "https://insomnibar.com/parties-events/"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/insomnibar.mp4",
+      "poster": "/clips/insomnibar-poster.webp",
+      "href": "https://www.instagram.com/reel/Db1e9yxSXL8/",
+      "credit": "Filmed by @thesnobbiefoodie",
+      "platform": "Instagram",
+      "by": "thesnobbiefoodie"
+    }
+  },
+
 ]

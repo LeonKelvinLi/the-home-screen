@@ -313,3 +313,12 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `the-sweet-spot-20261030.webp` | [Their own Square site](https://thesweetspotwc.square.site/), logo_AAD81977-D6CD-4618-842F-5A37285EF84E.png; Glenn 30 Oct 6:09 am IMG_8549.png/IMG_8551.png | Full original 2048px square reduced to 512px; flat pink paper and complete wordmark, no redrawing. Fresh asset path refreshes cached old icon. |
 | `san-san-tea-house.webp` | [Their current Instagram profile](https://www.instagram.com/sansanteahouse/), 30 Oct 2026; Glenn IMG_8561.PNG / IMG_8562.png | Own original 1080px flat-pink square reduced to 512px; full mark preserved, no interface or story ring. Older purple Lnk.Bio avatar not used. |
 | `chicha-san-chen-berkeley.webp` | [Their own NorCal Instagram](https://www.instagram.com/chichasanchen.norcal/), 30 Oct 2026; Glenn IMG_8565.png / IMG_8567.png | Original 1080px square reduced to 512px, complete mark retained, no interface or story ring. |
+
+## Batch 83 — October 31, 2026
+
+| `saigon-social-cafe.webp` | [Their own @saigonsocialcafe profile artwork](https://www.instagram.com/saigonsocialcafe/) | Downloaded original image, resized to 512×512 without redrawing or changing its aspect ratio. No story ring or screenshot controls. |
+| `nobibi-hayward.webp` | [Their own @nobibi_hayward profile artwork](https://www.instagram.com/nobibi_hayward/) | Downloaded original image, resized to 512×512 without redrawing or changing its aspect ratio. No story ring or screenshot controls. |
+| `magic-donuts.webp` | [Their own @magicdonutssf profile artwork](https://www.instagram.com/magicdonutssf/) | Downloaded original image, resized to 512×512 without redrawing or changing its aspect ratio. No story ring or screenshot controls. |
+| `insomnibar.webp` | [Their own @insomnibar profile artwork](https://www.instagram.com/insomnibar/) | Downloaded original image, resized to 512×512 without redrawing or changing its aspect ratio. No story ring or screenshot controls. |
+
+Existing source images with baked rounded corners are unchanged. BrandLogo fills only their empty upper fold window with their measured paper colour; see `src/ios/pagePaper.ts`. Intentional circular art (Quickly Benicia, Polly Ann) is preserved.

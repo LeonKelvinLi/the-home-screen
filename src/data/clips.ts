@@ -31,17 +31,13 @@ export interface Reel {
 
 /* A business with several locations has one film on each page; it plays here once. */
 const seen = new Set<string>()
-const BUSINESS_REELS: Reel[] = BRANDS.filter((b) => b.clip?.src && !seen.has(b.clip.src) && !!seen.add(b.clip.src)).map((b) => ({
-  brandId: b.id,
-  name: b.name,
-  line: b.cuisine,
-  src: b.clip!.src!,
-  poster: b.clip!.poster,
-  credit: b.clip!.credit,
-  by: b.clip!.by,
-  href: b.clip!.href,
-  logo: b.logo,
-}))
+const BUSINESS_REELS: Reel[] = BRANDS.flatMap((b) => [b.clip, ...(b.clips ?? [])]
+  .flatMap((c) => {
+    if (!c?.src || seen.has(c.src)) return []
+    seen.add(c.src)
+    return [{ brandId: b.id, name: b.name, line: b.cuisine, src: c.src,
+      poster: c.poster, credit: c.credit, by: c.by, href: c.href, logo: b.logo }]
+  }))
 
 /*
   THE FOODIES' OWN CUTS, TOO. Leon, 2026-10-11: "add all those clips in the

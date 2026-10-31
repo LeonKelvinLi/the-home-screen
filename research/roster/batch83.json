@@ -1,0 +1,340 @@
+{
+  "batch": 83,
+  "previous_commit": "77c39e0",
+  "since_pacific": "2026-10-30T12:48:00-07:00",
+  "through_pacific": "2026-10-31T08:41:00-07:00",
+  "businesses": [
+    {
+      "slug": "saigon-social-cafe",
+      "name": "Saigon Social Cafe",
+      "label": "Saigon Social",
+      "cuisine": "Vietnamese coffee, tea, matcha & bakery",
+      "tagline": "Vietnamese phin-drip coffee, matcha and freshly baked treats on Senter Road.",
+      "color": "#603A13",
+      "icon": "saigon-social-cafe",
+      "prep": 0,
+      "category": "Coffee & tea",
+      "address": "2611 Senter Rd #126, San Jose, CA 95111",
+      "phone": "(669) 336-1873",
+      "site": "https://saigonsocialcafe.toast.site/",
+      "orderUrl": "https://saigonsocialcafe.toast.site/",
+      "instagram": "saigonsocialcafe",
+      "hours": "Daily 7am–10pm",
+      "sources": [
+        "https://saigonsocialcafe.toast.site/",
+        "https://www.instagram.com/saigonsocialcafe/"
+      ],
+      "held": [
+        "Seven sold-out pastries: Spring Tiramisu Plant Pot, Pineapple Cream Cheese Cake, Butter & Pork Floss Bread, Pork Floss Bread Roll (1 pc), French Brioche, Sausage Bread, Coconut Raisin Bread.",
+        "Coffee/teas flagship has 24 established occupants; this shop is on Teas, Bakery and More eats instead."
+      ],
+      "notes": [
+        "Own live menu header confirms Saigon Social Cafe at Senter Road. Footer still uses legacy Brew Banh Mi Cafe - EM; not the separate Milpitas business.",
+        "Full currently available menu: 76 items in 10 sections. Exact original item names preserved. Variable Egg Rolls price marked from."
+      ],
+      "menu_sections": 10,
+      "menu_rows": 76
+    },
+    {
+      "slug": "nobibi-hayward",
+      "name": "Nobibi — Hayward",
+      "label": "Nobibi",
+      "cuisine": "Soft-serve ice cream, boba, tea & coffee",
+      "tagline": "Soft-serve creations, milk teas and matcha at the Hayward shop.",
+      "color": "#F3CCD8",
+      "icon": "nobibi-hayward",
+      "prep": 0,
+      "category": "Ice cream & tea",
+      "address": "26201 Mission Blvd Ste 140, Hayward, CA 94544",
+      "email": "nobibihayward@gmail.com",
+      "site": "https://nobibi-hayward.square.site/",
+      "orderUrl": "https://nobibi-hayward.square.site/",
+      "instagram": "nobibi_hayward",
+      "hours": "Daily 11am–10pm",
+      "sources": [
+        "https://nobibi-hayward.square.site/",
+        "https://www.instagram.com/nobibi_hayward/"
+      ],
+      "held": [
+        "No branch phone verified at primary sources; email is published instead.",
+        "Named BEASTY Sweets ice-cream spot and Coffee/teas/Teas flagship positions already held; city and BEASTY yellow seats are live."
+      ],
+      "notes": [
+        "62 priced items across all 12 own menu sections; ranges preserved as price labels.",
+        "DdXd5mSAhWY is Taj Mahal, not Nobibi. No Nobibi film falsely attached."
+      ],
+      "menu_sections": 12,
+      "menu_rows": 62
+    },
+    {
+      "slug": "magic-donuts",
+      "name": "Magic Donuts & Coffee",
+      "label": "Magic Donuts",
+      "cuisine": "Donuts, bakery & coffee",
+      "tagline": "Brioche and old-fashioned donuts with coffee on Mariposa Street.",
+      "color": "#E6B3CE",
+      "icon": "magic-donuts",
+      "prep": 0,
+      "category": "Donuts & coffee",
+      "address": "1675 Mariposa St, San Francisco, CA 94107",
+      "phone": "(628) 221-0111",
+      "email": "info@magicdonuts.com",
+      "site": "https://www.magicdonuts.com/",
+      "orderUrl": "https://www.magicdonuts.com/donuts",
+      "instagram": "magicdonutssf",
+      "hours": "Daily 7am–3pm",
+      "contactOnly": "Their own menu lists donut flavors and coffees without prices. See their menu or call for current availability.",
+      "siteCta": "Donuts and coffee menu",
+      "sources": [
+        "https://www.magicdonuts.com/",
+        "https://www.magicdonuts.com/donuts",
+        "https://www.magicdonuts.com/hourslocation",
+        "https://www.instagram.com/magicdonutssf/"
+      ],
+      "held": [
+        "Own menu has flavors but no prices; no delivery-marketplace prices copied. Unpriced full flavor list is a panel.",
+        "BEASTY Sweets Donuts and Coffee/teas positions already held; city and More eats plus Bakery are live."
+      ],
+      "notes": [
+        "Own hours/location page supplies (628) 221-0111, daily 7am–3pm and 1675 Mariposa.",
+        "Yo Sushi and Carabao reels are separately seated on their actual existing pages. No Magic film was explicitly supplied."
+      ],
+      "menu_sections": 0,
+      "menu_rows": 0
+    },
+    {
+      "slug": "insomnibar",
+      "name": "Insomnibar",
+      "label": "Insomnibar",
+      "cuisine": "Vietnamese coffee, tea, matcha, boba & catering",
+      "tagline": "Coffee and tea lounge with phin-drip drinks, matcha and late-night bites.",
+      "color": "#111111",
+      "icon": "insomnibar",
+      "prep": 0,
+      "category": "Coffee & tea",
+      "address": "5978 Silver Creek Valley Rd #25, San Jose, CA 95138",
+      "phone": "(408) 440-2284",
+      "email": "insomnibar@gmail.com",
+      "site": "https://insomnibar.com/",
+      "orderUrl": "https://order.toasttab.com/online/insomnibar-5978-silver-creek-valley-road-25",
+      "instagram": "insomnibar",
+      "hours": "Mon–Thu 7am–10pm · Fri–Sun 7am–midnight",
+      "sources": [
+        "https://insomnibar.com/",
+        "https://insomnibar.com/parties-events/",
+        "https://order.toasttab.com/online/insomnibar-5978-silver-creek-valley-road-25",
+        "https://www.instagram.com/insomnibar/"
+      ],
+      "held": [
+        "Five sold-out items: Earl Grey Phin Drip Latte, Earl Grey Matcha, OJ & Aloe, Orange Juice, Bundaberg.",
+        "Coffee/teas flagship is full; current shop is on Teas and More eats plus city, Chefs and Catering."
+      ],
+      "notes": [
+        "Current September 14 own Instagram schedule supersedes old soft-opening website footer; template 55 Main Street New York is rejected.",
+        "Full available Toast menu: 92 rows, 19 sections. Two deliberate cross-section duplicates retained; source category names normalized to omit emoji. No artificial $0 WordPress product prices.",
+        "Toast supplies own phone (408) 440-2284. Four requested films: one main, three reviews."
+      ],
+      "menu_sections": 19,
+      "menu_rows": 92
+    }
+  ],
+  "existing_updates": [
+    {
+      "id": "b_tajmahallivermore",
+      "code": "DdXd5mSAhWY",
+      "note": "Own repost. Footage visually identifies Taj Mahal Livermore; credit says posted by, not filmed by. Full-page display enabled for requested film, following Batch 76 precedent; no payment or agreement inferred."
+    },
+    {
+      "id": "b_yosushivacaville",
+      "code": "DfI7FA3BM6j",
+      "note": "Own Vacaville chicken post. Existing grubwitmike review retained; new film is an additional own post."
+    },
+    {
+      "id": "b_carabao",
+      "codes": [
+        "Dbjt-T3Prbf",
+        "DLVTjIlpLGo"
+      ],
+      "note": "Napa reviews, not Magic Donuts; August collaboration event disclosed as ended before playback. Existing main film retained."
+    }
+  ],
+  "foodie_only": {
+    "handle": "broitsva",
+    "code": "DeLKrmkManh",
+    "place": "Polynesian Island Luau",
+    "note": "Source-linked review on new Foodie page; Glenn said Foodie only, not Clip. No unrequested standalone business or guessed city."
+  },
+  "new_foodies": [
+    "broitsva",
+    "fat_ash_foodie",
+    "_foodieshots_",
+    "kitkatvales"
+  ],
+  "films": [
+    {
+      "code": "DercuTjMEzT",
+      "slug": "saigon-social-cafe",
+      "account": "saigonsocialcafe",
+      "source": "https://www.instagram.com/reel/DercuTjMEzT/",
+      "posted_pacific": "2026-10-19T07:16:40-07:00",
+      "start": 0,
+      "end": 20.222,
+      "duration_source": 20.222,
+      "audio": true,
+      "request": "Watch"
+    },
+    {
+      "code": "De0Lg8tNNAn",
+      "slug": "review-De0Lg8tNNAn",
+      "account": "orangeginger",
+      "source": "https://www.instagram.com/reel/De0Lg8tNNAn/",
+      "posted_pacific": "2026-10-22T16:38:55-07:00",
+      "start": 0,
+      "end": 15,
+      "duration_source": 19.108,
+      "audio": true,
+      "request": "Clip"
+    },
+    {
+      "code": "Dd_xBfBBTT2",
+      "slug": "review-Dd_xBfBBTT2",
+      "account": "fat_ash_foodie",
+      "source": "https://www.instagram.com/reel/Dd_xBfBBTT2/",
+      "posted_pacific": "2026-10-02T08:05:06-07:00",
+      "start": 14,
+      "end": 29,
+      "duration_source": 134.604,
+      "audio": true,
+      "request": "Newbie"
+    },
+    {
+      "code": "DdXd5mSAhWY",
+      "slug": "taj-mahal-livermore",
+      "account": "tajmahal.livermore",
+      "source": "https://www.instagram.com/p/DdXd5mSAhWY/",
+      "posted_pacific": "2026-09-16T16:28:56-07:00",
+      "start": 30,
+      "end": 45,
+      "duration_source": 69.82,
+      "audio": true,
+      "request": "Clip"
+    },
+    {
+      "code": "DfI7FA3BM6j",
+      "slug": "yo-sushi-own",
+      "account": "yosushivacaville",
+      "source": "https://www.instagram.com/reel/DfI7FA3BM6j/",
+      "posted_pacific": "2026-10-30T17:59:03-07:00",
+      "start": 0,
+      "end": 15,
+      "duration_source": 21.917,
+      "audio": true,
+      "request": "Clip"
+    },
+    {
+      "code": "Dbjt-T3Prbf",
+      "slug": "review-Dbjt-T3Prbf",
+      "account": "eighty6ix_",
+      "source": "https://www.instagram.com/reel/Dbjt-T3Prbf/",
+      "posted_pacific": "2026-08-02T17:44:31-07:00",
+      "start": 30,
+      "end": 45,
+      "duration_source": 73.721,
+      "audio": true,
+      "request": "Newbie"
+    },
+    {
+      "code": "DLVTjIlpLGo",
+      "slug": "review-DLVTjIlpLGo",
+      "account": "eatwithsie",
+      "source": "https://www.instagram.com/reel/DLVTjIlpLGo/",
+      "posted_pacific": "2025-06-25T10:55:18-07:00",
+      "start": 0,
+      "end": 15,
+      "duration_source": 38.403,
+      "audio": true,
+      "request": "Mediocre"
+    },
+    {
+      "code": "Dd7H1N0Su7F",
+      "slug": "review-Dd7H1N0Su7F",
+      "account": "cestalmoco",
+      "source": "https://www.instagram.com/reel/Dd7H1N0Su7F/",
+      "posted_pacific": "2026-09-30T12:50:45-07:00",
+      "start": 12,
+      "end": 27,
+      "duration_source": 104.116,
+      "audio": true,
+      "request": "Heavy Hitter / Foodie"
+    },
+    {
+      "code": "DdzgPZ1y1XV",
+      "slug": "review-DdzgPZ1y1XV",
+      "account": "_foodieshots_",
+      "source": "https://www.instagram.com/reel/DdzgPZ1y1XV/",
+      "posted_pacific": "2026-09-27T13:49:12-07:00",
+      "start": 3,
+      "end": 18,
+      "duration_source": 32.389,
+      "audio": true,
+      "request": "Newbie / Foodie"
+    },
+    {
+      "code": "Ddp1yP8SqXK",
+      "slug": "review-Ddp1yP8SqXK",
+      "account": "kitkatvales",
+      "source": "https://www.instagram.com/reel/Ddp1yP8SqXK/",
+      "posted_pacific": "2026-09-23T20:06:19-07:00",
+      "start": 0,
+      "end": 15,
+      "duration_source": 139.759,
+      "audio": true,
+      "request": "Mediocre / Foodie"
+    },
+    {
+      "code": "Db1e9yxSXL8",
+      "slug": "insomnibar",
+      "account": "thesnobbiefoodie",
+      "source": "https://www.instagram.com/reel/Db1e9yxSXL8/",
+      "posted_pacific": "2026-08-09T15:13:36-07:00",
+      "start": 0,
+      "end": 24,
+      "duration_source": 29.951,
+      "audio": true,
+      "request": "Watch / Foodie"
+    }
+  ],
+  "design_requests": {
+    "remove_corner_outline": "Shared rendered and serialized folds contain only the black lower triangle.",
+    "paper_corner_fix": [
+      "butter-pecan",
+      "baked-blooms",
+      "dingdongtogo",
+      "ding-dong",
+      "share-scan",
+      "free-kangen",
+      "lol-catering-featured",
+      "lol-catering",
+      "wildfork",
+      "beasty-h20",
+      "winky-dinky"
+    ],
+    "category": "Cafe renamed Coffee/teas; tea/matcha/boba eligibility expands, all previous seats fixed.",
+    "flyers": [
+      "/promos/website-pilot.pdf",
+      "/promos/beasty-designs.pdf"
+    ],
+    "promotion_source": "https://bstypilotprogram.onrender.com/",
+    "ad_cadence": "Every ninth total feed page, two offers alternating, once per feed opening; organic shuffled order preserved.",
+    "held": [
+      "Optional future AI video and future music submissions: no assets supplied; static promotional cards and printable flyers delivered now.",
+      "Unagreed October 18 free-hosting/initiation proposal is not promoted. Current published $299 pilot terms used."
+    ]
+  },
+  "baseline": {
+    "count": 1500,
+    "sha256": "b6a853e7c0bf4c5a7255707d2eb61f902b0a2905369ff6c44eb9e51604c181f1"
+  },
+  "final_refetch_messages": 95,
+  "final_refetch_new_sends": 0
+}

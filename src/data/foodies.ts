@@ -769,7 +769,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "sanleandroeats",
     "name": "San Leandro Eats",
     "label": "SL Eats"
-  }
+  },
+  {"handle": "broitsva", "name": "Va", "label": "Va"},
+  {"handle": "fat_ash_foodie", "name": "Ash", "label": "Ash"},
+  {"handle": "_foodieshots_", "name": "Joann Ha", "label": "Joann Ha"},
+  {"handle": "kitkatvales", "name": "@kitkatvales", "label": "kitkatvales"}
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -994,6 +998,23 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "sierra.eats.8", "place": "CHICHA San Chen — Fremont", "city": "Fremont", "brand": "b_chichasanchenberkeley", "reel": "https://www.instagram.com/reel/DeORBvOI6mJ/", "clip": true, "credit": "Filmed at the Fremont location. Archival October 8 promotion: the BOGO offer has ended."},
   {"by": "hungere.for.diy", "place": "CHICHA San Chen — Pleasanton", "city": "Pleasanton", "brand": "b_chichasanchenberkeley", "reel": "https://www.instagram.com/reel/DeCRPNNJrCa/", "clip": true, "credit": "Filmed at the Pleasanton location, 2709 Stoneridge Dr, Suite 102."},
 
+  /* Batch 83, October 30–31: exact Glenn tags are provenance, not ratings. */
+  // Foodie
+  {"by": "broitsva", "place": "Polynesian Island Luau", "reel": "https://www.instagram.com/reel/DeLKrmkManh/"},
+  // Clip
+  {"by": "orangeginger", "place": "Saigon Social Cafe", "reel": "https://www.instagram.com/reel/De0Lg8tNNAn/", "city": "San Jose", "brand": "b_saigonsocialcafe", "clip": true},
+  // Newbie
+  {"by": "fat_ash_foodie", "place": "Saigon Social Cafe", "reel": "https://www.instagram.com/reel/Dd_xBfBBTT2/", "city": "San Jose", "brand": "b_saigonsocialcafe", "clip": true},
+  // Newbie
+  {"by": "eighty6ix_", "place": "Carabao", "reel": "https://www.instagram.com/reel/Dbjt-T3Prbf/", "city": "Napa", "brand": "b_carabao", "clip": true, "credit": "Filmed by @eighty6ix_ · August 2 collaboration-event review; the event has ended."},
+  // Mediocre
+  {"by": "eatwithsie", "place": "Carabao", "reel": "https://www.instagram.com/reel/DLVTjIlpLGo/", "city": "Napa", "brand": "b_carabao", "clip": true},
+  // Heavy Hitter / Foodie
+  {"by": "cestalmoco", "place": "Insomnibar", "reel": "https://www.instagram.com/reel/Dd7H1N0Su7F/", "city": "San Jose", "brand": "b_insomnibar", "clip": true},
+  // Newbie / Foodie
+  {"by": "_foodieshots_", "place": "Insomnibar", "reel": "https://www.instagram.com/reel/DdzgPZ1y1XV/", "city": "San Jose", "brand": "b_insomnibar", "clip": true},
+  // Mediocre / Foodie
+  {"by": "kitkatvales", "place": "Insomnibar", "reel": "https://www.instagram.com/reel/Ddp1yP8SqXK/", "city": "San Jose", "brand": "b_insomnibar", "clip": true},
 ]
 
 /*

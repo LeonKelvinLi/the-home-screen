@@ -2812,7 +2812,9 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'wordmark', logoLines: ['TAJ', 'MAHAL'], logoFace: 'slab',
     site: 'https://tajmahalflavorsofindia.com/',
     siteCta: 'See their menu',
-    tier: 1,
+    tier: 3, // Glenn requested its film; full-page display, no payment or agreement inferred.
+    /* Batch 83: requested own-account post. */
+    clip: {"src": "/clips/taj-mahal-livermore.mp4", "poster": "/clips/taj-mahal-livermore-poster.webp", "href": "https://www.instagram.com/p/DdXd5mSAhWY/", "credit": "Posted by @tajmahal.livermore", "platform": "Instagram"},
   }),
   /* Yakiniku Shodai, "San Francisco • Goods" — Japanese wagyu barbecue on
      Market Street. No tile for yakiniku, and Asian food is House of Thai's, so
@@ -4000,6 +4002,8 @@ export const ROSTER_SEED: LocalSeed[] = [
         "platform": "Instagram",
         "by": "grubwitmike"
     },
+    /* Batch 83: requested own-account post. */
+    clips: [{"src": "/clips/yo-sushi-own.mp4", "poster": "/clips/yo-sushi-own-poster.webp", "href": "https://www.instagram.com/reel/DfI7FA3BM6j/", "credit": "Posted by @yosushivacaville", "platform": "Instagram"}],
   }),
   /* ABVE the Basics, "San Jose • Services", 2026-09-22, 9:28 pm, with their
      site and screenshots of it and of their Instagram (@abvethebasicscatering).

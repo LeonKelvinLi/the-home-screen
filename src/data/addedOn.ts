@@ -993,4 +993,12 @@ export const ADDED_ON: Record<string, string> = {
   b_foodiemelsotel: '2026-10-30',
   b_foodiesanleandroeats: '2026-10-30',
   b_chichasanchenberkeley: '2026-10-30',
+  b_saigonsocialcafe: '2026-10-31',
+  b_nobibihayward: '2026-10-31',
+  b_magicdonuts: '2026-10-31',
+  b_insomnibar: '2026-10-31',
+  b_foodiebroitsva: '2026-10-31',
+  b_foodiefatashfoodie: '2026-10-31',
+  b_foodiefoodieshots: '2026-10-31',
+  b_foodiekitkatvales: '2026-10-31',
 }

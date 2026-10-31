@@ -207,8 +207,9 @@ export const ONLINE_CATEGORIES: SlotCategory[] = [
    (Sugar Plum, then Powder Keg Pub) when My O My Berkeley came in, and San
    Francisco's More goods was full the day before. Same reasoning, one more
    page's worth; still no extra blank page anywhere. Ninety-six from
-   2026-10-25: Batch 65 brought ten more for More eats, which stood at 63. */
-export const OPEN_SPOTS: SlotCategory[] = Array.from({ length: 96 }, (_, i) => ({
+   2026-10-25: Batch 65 brought ten more for More eats, which stood at 63.
+   2026-10-31: Batch 83 fills spot 96; extend to 120, preserving every seat. */
+export const OPEN_SPOTS: SlotCategory[] = Array.from({ length: 120 }, (_, i) => ({
   n: i + 1,
   name: 'Open spot',
   label: 'Available',

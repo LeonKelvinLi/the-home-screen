@@ -31,7 +31,7 @@ const RESERVE = 'slot.join'
    BEASTY", his instructions for bringing a business in. */
 const LINKED_PANEL: Record<string, PanelPage | undefined> = { '/collab': 'collabs', '/money': 'careers' }
 /* /affiliate: the Affiliate dashboard, where a recruiter's BARK points and cash-outs are (server/bark.ts). */
-const LINKED_APP: Record<string, string | undefined> = { '/members': 'sys.members', '/contacts': 'sys.phone', '/search': 'sys.search', '/affiliate': 'sys.affiliate' }
+const LINKED_APP: Record<string, string | undefined> = { '/members': 'sys.members', '/contacts': 'sys.phone', '/search': 'sys.search', '/affiliate': 'sys.affiliate', '/designs': 'sys.designs' }
 const path = () =>
   typeof window === 'undefined' ? '' : window.location.pathname.replace(/\/+$/, '') || '/'
 

@@ -1,3 +1,4 @@
+import { pagePaper } from './pagePaper'
 import { PageFold } from './PageFold'
 import { GLYPHS } from '../data/glyphs'
 import { PAGE_ICON_PATH } from './pageIcon'
@@ -76,6 +77,7 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
   const id = uid(logo)
   const face = FACE[logo.face ?? 'grotesk']
   const accent = logo.accent ?? logo.fg
+  const paper = masked ? pagePaper(logo.imageUrl) : undefined
   const clip = `clip-${id}`
   const grad = `grad-${id}`
   /*
@@ -139,6 +141,8 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
             preserveAspectRatio="xMidYMid slice"
           />
         )}
+
+        {paper && <path d="M78 0H100V22Z" fill={paper} className="page-paper-corner" />}
 
         {logo.template === 'monogram' && (
           <>

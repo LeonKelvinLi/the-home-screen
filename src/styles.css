@@ -14278,3 +14278,23 @@ a.owner-act {
 .home-page.is-yellow .icon-tile {
   border-radius: 24% 0 24% 24%;
 }
+
+/* Batch 83: our static flyers every ninth reel page. No video decoder or
+   animation for an ad; the feed's existing near-window bound still applies. */
+.reel-promo {
+  height: 100%; box-sizing: border-box; overflow-y: auto;
+  color: #171717; padding: clamp(18px, 4vh, 36px) 24px 24px;
+  display: flex; flex-direction: column; gap: 12px;
+  font-family: Inter, system-ui, sans-serif;
+}
+.reel-promo-label { align-self: flex-start; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; border: 1px solid currentColor; border-radius: 20px; padding: 5px 9px; }
+.reel-promo-eyebrow { margin: 6px 0 0; font-size: 10px; font-weight: 700; letter-spacing: .08em; line-height: 1.5; }
+.reel-promo h2 { margin: 0; font-size: clamp(27px, 4.4vh, 39px); line-height: 1.06; letter-spacing: -.045em; }
+.reel-promo h2 span { display: block; }
+.reel-promo-price { font-size: clamp(25px, 5vh, 46px); line-height: 1.1; font-weight: 800; letter-spacing: -.04em; margin: 4px 0 0; }
+.reel-promo-sub { font-size: 13px; line-height: 1.5; margin: 0; }
+.reel-promo ul { padding: 0 0 0 17px; margin: 2px 0; font-size: 13px; line-height: 1.7; }
+.reel-promo-note { font-size: 10px; line-height: 1.6; margin: 0; }
+.reel-promo-actions { margin-top: auto; padding-top: 5px; display: grid; gap: 12px; }
+.reel-promo-cta { display: block; border: 0; border-radius: 8px; padding: 14px 16px; background: #171717; color: #fff; text-align: center; font: 700 13px Inter, system-ui, sans-serif; text-decoration: none; cursor: pointer; }
+.reel-promo-download { color: inherit; font-size: 11px; text-align: center; text-underline-offset: 3px; padding: 3px; }

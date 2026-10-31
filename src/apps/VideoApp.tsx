@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
+import { PromoCard } from './PromoCard'
+import { withPromotions } from '../data/promotions'
 import { REELS } from '../data/clips'
 import type { Reel } from '../data/clips'
 import { BrandLogo } from '../ios/BrandLogo'
@@ -179,7 +181,7 @@ export function VideoApp({ api }: { api: ShellApi }) {
   const [sound, setSound] = useState(false)
   /** Which reel just had its link copied, for the toast. Null when none. */
   const [shared, setShared] = useState<string | null>(null)
-  const [reels] = useState(() => shuffled(REELS))
+  const [reels] = useState(() => withPromotions(shuffled(REELS)))
   const [likes, setLikes] = useState(readLikes)
   /** The reel whose heart is bursting from a double tap, for the animation. */
   const [burst, setBurst] = useState<string | null>(null)
@@ -296,7 +298,14 @@ export function VideoApp({ api }: { api: ShellApi }) {
         rather than between two.
       */}
       <div className="reels" ref={wrap}>
-        {reels.map((r, i) => (
+        {reels.map((item, i) => {
+          if (item.kind === 'promotion') return (
+            <section className="reel is-promotion" key={item.key} aria-label={`BEASTY promotion, page ${i + 1} of ${reels.length}`}>
+              {i >= live - NEAR_BEHIND && i <= live + NEAR_AHEAD && <PromoCard promo={item.promo} api={api} />}
+            </section>
+          )
+          const r = item.reel
+          return (
           <section className="reel" key={r.src} aria-label={`${r.name}, video ${i + 1} of ${reels.length}`}>
             {i >= live - NEAR_BEHIND && i <= live + NEAR_AHEAD && (
               <>
@@ -404,7 +413,7 @@ export function VideoApp({ api }: { api: ShellApi }) {
               </>
             )}
           </section>
-        ))}
+        )})}
       </div>
     </AppChrome>
   )
