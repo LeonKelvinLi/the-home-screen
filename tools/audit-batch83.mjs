@@ -1,5 +1,5 @@
 /* Batch 83: production mode is read-only. Local server uses a disposable DB. */
-import { chromium } from 'playwright'
+import { chromium, webkit, devices } from 'playwright'
 import { PNG } from 'pngjs'
 import { PDFDocument, PDFName, PDFArray, PDFDict, decodePDFRawStream } from 'pdf-lib'
 import jsQR from 'jsqr'
@@ -21,9 +21,12 @@ const live=process.env.BASE,db=live?null:await freshTestDb('batch83')
 const port=live?0:await new Promise(r=>{const s=createServer();s.listen(0,'127.0.0.1',()=>{const n=s.address().port;s.close(()=>r(n))})})
 mkdirSync('.verify',{recursive:true})
 const srv=live?null:spawn(process.execPath,['--import','tsx','server/index.ts'],{stdio:['ignore',openSync('.verify/batch83-server.log','w'),openSync('.verify/batch83-server.log','a')],env:{...process.env,PORT:String(port),DATABASE_URL:db.url,NODE_ENV:'development',RESEND_API_KEY:'',LEAD_EMAIL:''}})
-const base=live||'http://127.0.0.1:'+port,b=await chromium.launch({args:['--autoplay-policy=no-user-gesture-required']}),p=await b.newPage({viewport:{width:393,height:852}}),fails=[],errors=[]
+const iphone=process.env.BROWSER==='webkit'
+const engine=iphone?webkit:chromium
+const base=live||'http://127.0.0.1:'+port,b=await engine.launch(iphone?{}:{args:['--autoplay-policy=no-user-gesture-required']}),p=await b.newPage({...(iphone?devices['iPhone 13']:{}),viewport:{width:393,height:852}}),fails=[],errors=[]
 let checks=0;const check=(name,ok)=>{checks++;console.log((ok?'ok ':'FAIL ')+name);if(!ok)fails.push(name)}
 p.on('pageerror',e=>errors.push(String(e)))
+p.on('crash',()=>errors.push('browser process crashed'))
 // Browser-only member fixture for gated navigation, including BASE mode.
 // No account or cookie is created on either server.
 await p.route('**/api/members/me', route => route.fulfill({status:200,json:{

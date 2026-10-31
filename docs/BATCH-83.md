@@ -66,9 +66,11 @@ No outbound message, production account, purchase, reservation or contact reques
 - Build and TypeScript passed.
 - `node tools/audit-batch83.mjs`: **162 checks passed**, including all 11 film decodes on their correct pages, original audio, complete available menus, creator links, fifth More eats sheet, all 1,500 preserved seats, rendered corner pixels, ad pages 9/18/27, no film loss or duplicates, stable ordering during interaction, no decoder on an ad, at most four mounted players and one playing after returning to film, both real CTAs, one-page PDFs and QR decoding.
 - `node tools/audit-iphone-entry.mjs`: **16 iPhone WebKit checks passed**, including stalled-module entry, repeated entry and no reload or process crash.
+- `BROWSER=webkit node tools/audit-batch83.mjs`: **162 checks passed** with the iPhone 13 user agent, including the full ad/film sequence and no JavaScript or process crash.
 - `node tools/audit-reel-sound.mjs`: **PASS**, actual decoded audio and mute/unmute taps.
+- `node tools/audit-reel-share.mjs`: **PASS**, hit-tested controls, copied link matches the actual film’s business, and sharing leaves sound unchanged. Updated its obsolete all-placeholder control count to require one share button per materialized film and none on ads or empty frames; the four-player bound remains asserted.
 - Data audit: **0 errors**, 161 historical warnings. Gap check: **545 business domains, 17 historical unmatched**, with all four new sites represented.
-- Phone screenshots inspected: four new shops on the fifth yellow sheet, all business pages, corrected folds and both complete promotional cards. Both PDF pages rendered and visually inspected; action annotations and embedded QR targets verified.
+- Phone screenshots inspected: four new shops on the fifth yellow sheet, all business pages, corrected folds and both complete promotional cards. Both PDF pages rendered and visually inspected; action annotations and embedded QR targets verified. Both final PNG-rendered flyer QR codes also scan to the correct destination.
 
 The batch audit uses a browser-only synthetic member response for gated navigation. It creates no account or session cookie on the server and does not submit contact forms. The production run uses the same explicit fixture for the gated feed; actual Chrome verification is recorded separately below.
 
@@ -76,4 +78,16 @@ Final bounded thread refetch before push: **95 messages**, identical to the rese
 
 ### Production
 
-Pending the release deployment; results will be recorded in a separate `[skip render]` commit.
+Release **`7dd8a8c`** is live at **https://beastypages.com**, Render deploy **`dep-dbj1f2ivcj2c73egi3pg`**, completed **October 31, 2026, 9:36:56 am PDT**. The new flyer and health endpoint were confirmed together at **9:37:16 am**, with **HTTP 200** and `{"ok":true}`.
+
+- `BASE=https://beastypages.com node tools/audit-batch83.mjs`: **162 checks passed**, exit 0. All new pages, requested film decodes and audio, source credits, original placements, menus, corners, fifth yellow sheet, promotions and real CTA/PDF destinations passed on production.
+- `BASE=https://beastypages.com node tools/audit-iphone-entry.mjs`: **16 iPhone WebKit entry checks passed**, exit 0, including delayed loading, repeated entry, no document reload and no JavaScript/process crash.
+- `node tools/live-verify.mjs --skip-roster`: **PASS**, exit 0. Historical full-roster walk skipped; this batch has its dedicated live audit above.
+
+**Actual Chrome, 393×852:** the green Enter button reached the real home grid. Coffee/teas appears with its new name. Opened all four business pages; Saigon’s 76 menu rows, Nobibi’s 62 and Insomnibar’s 92 were verified through their working dropdowns. Saigon’s city button reached the yellow San Jose sheet containing Saigon Social and Insomnibar, with the new corners. Insomnibar’s credited film loaded with ready state 4, 540×960 dimensions and 24-second duration. Magic’s unpriced flavor panel and call link are present. The `/designs` destination opened the real contact form; Send remained disabled and nothing was submitted. No console errors observed in the connected QA tab; measured pages have no horizontal overflow.
+
+This Chrome profile was signed out: Coffee/teas and Watch showed their expected membership prompt, including “Watch the reels.” No live account was created to bypass it. The production feed and both ads were exercised by the dedicated live browser audit’s explicit browser-only member fixture, and the full iPhone WebKit audit passed locally. This is Chrome phone-layout verification and WebKit testing, not a new physical iPhone Mirroring run.
+
+Chrome’s extension connection changed during QA; reconnecting restored direct control. The phone viewport override was reset and the active QA tab closed. Closing bounded thread refetch at **9:57 am PDT** still returned the same **95 messages**, with no further sends.
+
+Production results and the reusable WebKit audit option are saved in a separate **`[skip render]`** verification commit.

@@ -336,5 +336,19 @@
     "sha256": "b6a853e7c0bf4c5a7255707d2eb61f902b0a2905369ff6c44eb9e51604c181f1"
   },
   "final_refetch_messages": 95,
-  "final_refetch_new_sends": 0
+  "final_refetch_new_sends": 0,
+  "verification": {
+    "release": "7dd8a8cb61efdc1974c83a8b787e2d11d4c1386b",
+    "deploy": "dep-dbj1f2ivcj2c73egi3pg",
+    "live_finished": "2026-10-31T09:36:56-07:00",
+    "health": "HTTP 200, {\"ok\":true}",
+    "local_chromium": 162,
+    "local_iphone_webkit_batch": 162,
+    "live_batch": 162,
+    "live_iphone_entry": 16,
+    "live_general": "PASS --skip-roster, exit 0",
+    "actual_chrome_viewport": "393x852; entry, four business pages, menus, city navigation, film metadata, /designs form, signed-out category/Watch gates; no submission",
+    "closing_refetch_messages": 95,
+    "closing_refetch_new_sends": 0
+  }
 }
