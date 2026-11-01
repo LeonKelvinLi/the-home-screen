@@ -56,4 +56,15 @@ The gated feed audit uses an explicit browser-only synthetic member response; it
 
 ### Production
 
-Pending Render deployment and live verification.
+Release **`b85dc8b`** is live at **https://beastypages.com**, Render deploy **`dep-dbjbfmbncjis73dect6g`**, completed **October 31, 2026, 9:01:11 pm PDT**. At **9:02:11 pm**, the new M Omer icon matched its release SHA-256 and `/api/health` returned **HTTP 200** with `{"ok":true}`.
+
+- `BASE=https://beastypages.com node tools/audit-batch84.mjs`: **114 checks passed**, exit 0. All seven supplied films advance after user playback gestures from the correct panels, including native controls on the Grand-O review. Source credits, original audio, full menus, unchanged placements, logo viewer and bounded Watch playback pass.
+- `BASE=https://beastypages.com node tools/audit-iphone-entry.mjs`: **16 checks passed**, exit 0, including delayed loading, repeated entry, and no document restart, JavaScript error or WebKit process crash.
+- `node tools/live-verify.mjs --skip-roster`: **PASS**, exit 0. The historical roster walk is skipped; all new pages have the dedicated batch audit.
+- Final local iPhone WebKit audit: **114 checks passed**, exit 0, with real advancing playback. The audit helper uses native pointer playback in WebKit and the native Space control in Chromium for review videos; business films use their actual sound button. This verification-only audit strengthening is recorded with this document under `[skip render]`; product files are unchanged after release.
+
+**Actual Chrome, 393×852:** the green Enter button reached the real home grid twice, with return to landing between attempts. The landing layer then disappeared, the home remained visible, and no horizontal overflow was present. Opened all five new listing pages. Every new original logo enlarges and restores on a second tap; the Subs viewer was visually inspected on screen. Subs’ menu dropdown renders 65 rows; Lovitt’s price list renders 12 rows. Grand-O’s native review played through its 15-second duration. Rywire’s video panel contains its original film and both new credited SEMA posts. The connected QA tab reported no console errors. Temporary phone viewport restored and task tabs closed.
+
+The production feed test uses the browser-only synthetic membership fixture stated above. Actual Chrome checks cover public entry and pages. This is Chrome phone-layout and iPhone WebKit verification, not a new physical iPhone Mirroring run.
+
+Closing thread refetch: **49 messages**, unchanged from the 8:45 pm snapshot; no further sends. All listing/reel requests through that cutoff are seated live; held facts and sold-out items are explicitly listed above.
