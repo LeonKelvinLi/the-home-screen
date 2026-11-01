@@ -1,0 +1,4831 @@
+{
+  "batch": 85,
+  "previous_commit": "061f554",
+  "since_pacific": "2026-10-31T20:45:00-07:00",
+  "through_pacific": "2026-11-01T09:42:00-08:00",
+  "businesses": [
+    {
+      "slug": "flood-park",
+      "name": "Flood Park",
+      "label": "Flood Park",
+      "cuisine": "Park, inclusive playground",
+      "tagline": "An inclusive playground, courts, picnic areas and pump track in Menlo Park.",
+      "color": "#233429",
+      "icon": "flood-park",
+      "prep": 0,
+      "category": "Parks/Playgrounds",
+      "items": [],
+      "site": "https://www.smcgov.org/parks/flood-park",
+      "address": "215 Bay Rd, Menlo Park, CA 94025",
+      "phone": "650-363-4022",
+      "contactOnly": "Visit the county park website for facilities, closures and picnic reservations.",
+      "panels": [
+        {
+          "head": "Park hours",
+          "body": [
+            "Opens daily at 8 am. County seasonal schedule: closes at 6 pm October 12–November 1, 2026; closes at 5 pm November 2, 2026–February 2027. Map screenshots may show older hours."
+          ],
+          "links": [
+            {
+              "label": "Current county hours",
+              "href": "https://www.smcgov.org/parks/flood-park-hours"
+            }
+          ]
+        },
+        {
+          "head": "Playground and facilities",
+          "body": [
+            "Inclusive playground, sports courts, picnic areas and pump track. The county says the playground is open; the ribbon cutting is November 10. Check the county for closures and reservation availability."
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/flood-park.mp4",
+        "poster": "/clips/flood-park-poster.webp",
+        "href": "https://www.instagram.com/reel/DfL8ZCWJG0q/",
+        "credit": "Filmed by @polynesianmomx3",
+        "platform": "Instagram",
+        "by": "polynesianmomx3"
+      },
+      "menu_rows": 0,
+      "menu_sections": 1,
+      "placements": [
+        "beasty-parks-0",
+        "menlo-park-services2-0"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://www.smcgov.org/parks/flood-park"
+      ]
+    },
+    {
+      "slug": "bay-area-discovery-museum",
+      "name": "Bay Area Discovery Museum",
+      "label": "Discovery Museum",
+      "cuisine": "Children’s museum, family play",
+      "tagline": "Hands-on discovery and outdoor play for ages 0–8 at Fort Baker.",
+      "color": "#233429",
+      "icon": "bay-area-discovery-museum",
+      "prep": 0,
+      "category": "Parks/Playgrounds",
+      "items": [],
+      "site": "https://bayareadiscoverymuseum.org/plan-your-visit/",
+      "address": "557 McReynolds Rd, Sausalito, CA 94965",
+      "phone": "415-339-3900",
+      "email": "contact@badm.org",
+      "instagram": "bayareadiscoverymuseum",
+      "quoteOnly": "Buy tickets from the museum. Special events have separate prices and terms.",
+      "groups": [
+        {
+          "name": "General admission",
+          "items": [
+            [
+              "Child (ages 1–17)",
+              "",
+              2500
+            ],
+            [
+              "Adult (18–64)",
+              "",
+              2500
+            ],
+            [
+              "Senior (65+)",
+              "",
+              2300
+            ]
+          ]
+        },
+        {
+          "name": "Admission programs",
+          "items": [
+            [
+              "EBT / SNAP / WIC admission (up to 4 people)",
+              "",
+              500
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "Visiting hours",
+          "body": [
+            "Wednesday–Friday 10 am–4 pm; Saturday 9 am–4 pm; Sunday 10 am–4 pm. Closed Monday–Tuesday during the school year. The second Thursday of each month closes at 3 pm. Members-only early access is separate."
+          ]
+        },
+        {
+          "head": "Tickets and families",
+          "body": [
+            "Children under 1 enter free. Ages 0–8 are the museum’s intended audience. Adult supervision is required; one adult per five children. Free parking and an on-site café. Discounts have eligibility requirements; check the museum before booking."
+          ]
+        },
+        {
+          "head": "October films",
+          "body": [
+            "These Goblin Jamboree films are archival October footage. That event has ended. General admission prices do not apply to special events."
+          ],
+          "links": [
+            {
+              "label": "Current visit details and tickets",
+              "href": "https://bayareadiscoverymuseum.org/plan-your-visit/"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/bay-area-discovery-museum.mp4",
+        "poster": "/clips/bay-area-discovery-museum-poster.webp",
+        "href": "https://www.instagram.com/reel/DeIy_IyJv2i/",
+        "credit": "Filmed by @polynesianmomx3 · Archival October Goblin Jamboree footage; the event has ended. Check current museum tickets.",
+        "platform": "Instagram",
+        "by": "polynesianmomx3"
+      },
+      "menu_rows": 4,
+      "menu_sections": 2,
+      "placements": [
+        "beasty-parks-1",
+        "sausalito-services2-0",
+        "beasty-youth-5"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://bayareadiscoverymuseum.org/plan-your-visit/",
+        "https://www.instagram.com/bayareadiscoverymuseum/"
+      ]
+    },
+    {
+      "slug": "half-moon-play",
+      "name": "Half Moon Play",
+      "label": "Half Moon Play",
+      "cuisine": "Indoor playground, family play",
+      "tagline": "Indoor play and parties for children ages 0–9 in Half Moon Bay.",
+      "color": "#233429",
+      "icon": "half-moon-play",
+      "prep": 0,
+      "category": "Parks/Playgrounds",
+      "items": [],
+      "site": "https://thehalfmoonplay.com/",
+      "address": "50 Cabrillo Hwy N, Suite B4A, Half Moon Bay, CA 94019",
+      "phone": "650-729-3015",
+      "email": "info@thehalfmoonplay.com",
+      "instagram": "halfmoonplay",
+      "quoteOnly": "Check current hours and arrange admission or parties directly with Half Moon Play.",
+      "groups": [
+        {
+          "name": "Daily admission",
+          "items": [
+            [
+              "Child — Monday–Thursday",
+              "",
+              1600
+            ],
+            [
+              "Child — Friday–Sunday and holidays",
+              "",
+              1800
+            ],
+            [
+              "Additional adult",
+              "",
+              500
+            ],
+            [
+              "Grip socks",
+              "",
+              300
+            ]
+          ]
+        },
+        {
+          "name": "Monthly membership",
+          "items": [
+            [
+              "First child",
+              "",
+              10000
+            ],
+            [
+              "Sibling",
+              "",
+              7500
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "Hours and Sunday changes",
+          "body": [
+            "Monday–Thursday 10 am–6 pm; Friday 10 am–7 pm; Saturday 9 am–7 pm. Sunday is listed as 9 am–6 pm, with a notice that Sundays will soon be private parties only. Confirm before traveling."
+          ]
+        },
+        {
+          "head": "Play and membership",
+          "body": [
+            "A pre-walker is free with a paid child; one adult per family is included with daily admission. Grip socks are required. Membership includes one two-hour visit each day and two adults; additional adults are $5. Members receive the operator’s published 15% birthday-party discount; confirm terms directly."
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/half-moon-play.mp4",
+        "poster": "/clips/half-moon-play-poster.webp",
+        "href": "https://www.instagram.com/reel/De97hK7vvNH/",
+        "credit": "Posted by @halfmoonplay",
+        "platform": "Instagram"
+      },
+      "menu_rows": 6,
+      "menu_sections": 2,
+      "placements": [
+        "beasty-parks-2",
+        "half-moon-bay-services2-0"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://thehalfmoonplay.com/",
+        "https://www.instagram.com/halfmoonplay/"
+      ]
+    },
+    {
+      "slug": "peek-a-boo-factory-rc",
+      "name": "Peek-a-Boo Factory — Rancho Cordova",
+      "label": "Peek-a-Boo Factory",
+      "cuisine": "Indoor playground, ninja play",
+      "tagline": "Three levels of play, a toddler area and an obstacle course in Rancho Cordova.",
+      "color": "#233429",
+      "icon": "peek-a-boo-factory-rc",
+      "prep": 0,
+      "category": "Parks/Playgrounds",
+      "items": [],
+      "site": "https://www.peekaboofactory.com/rancho-cordova/",
+      "address": "11270 Sanders Dr, Suite A, Rancho Cordova, CA 95742",
+      "phone": "916-586-7500",
+      "email": "ranchocordova@peekaboofactory.com",
+      "instagram": "peekaboofactory_rc",
+      "quoteOnly": "Confirm the daily calendar and book directly. Party food below is the operator’s tray/package menu.",
+      "groups": [
+        {
+          "name": "Admission",
+          "items": [
+            [
+              "Child (one adult included)",
+              "",
+              2000
+            ],
+            [
+              "Additional adult",
+              "",
+              500
+            ],
+            [
+              "Under 1 (free with paid sibling)",
+              "",
+              1600
+            ],
+            [
+              "Last-hour pass",
+              "",
+              1600
+            ],
+            [
+              "Required brand grip socks",
+              "",
+              300
+            ],
+            [
+              "Weekday group admission (8+ children; non-holiday)",
+              "",
+              1800
+            ]
+          ]
+        },
+        {
+          "name": "Passes and monthly membership",
+          "items": [
+            [
+              "5-visit pass",
+              "",
+              9500
+            ],
+            [
+              "10-visit pass",
+              "",
+              18000
+            ],
+            [
+              "Weekday membership — first child",
+              "",
+              11500
+            ],
+            [
+              "Weekday membership — sibling",
+              "",
+              4500
+            ],
+            [
+              "All-week membership — first child",
+              "",
+              15500
+            ],
+            [
+              "All-week membership — sibling",
+              "",
+              6000
+            ]
+          ]
+        },
+        {
+          "name": "Party food packages",
+          "items": [
+            [
+              "Pizza package — 2 XL cheese pizzas and 10 juices",
+              "",
+              5600
+            ],
+            [
+              "24 bone-in wings and 10 juices",
+              "",
+              4600
+            ]
+          ]
+        },
+        {
+          "name": "Party pizzas",
+          "items": [
+            [
+              "XL 16-inch cheese (double cut)",
+              "",
+              2400
+            ],
+            [
+              "XL one-topping",
+              "",
+              2700
+            ],
+            [
+              "Pizza Guys Combo",
+              "",
+              3200
+            ],
+            [
+              "Buffalo Chicken",
+              "",
+              3200
+            ],
+            [
+              "Beef Taco",
+              "",
+              3200
+            ],
+            [
+              "Artichoke Fiesta",
+              "",
+              3200
+            ],
+            [
+              "Spinach Garlic Chicken",
+              "",
+              3200
+            ],
+            [
+              "Classic Vegetarian",
+              "",
+              3200
+            ],
+            [
+              "Hawaiian Delight",
+              "",
+              3200
+            ],
+            [
+              "Texas BBQ",
+              "",
+              3200
+            ],
+            [
+              "Garlic Lovers",
+              "",
+              3200
+            ],
+            [
+              "All Meat",
+              "",
+              3200
+            ]
+          ]
+        },
+        {
+          "name": "Party salad trays",
+          "items": [
+            [
+              "Garden",
+              "",
+              3000
+            ],
+            [
+              "Mediterranean",
+              "",
+              3000
+            ],
+            [
+              "Antipasto",
+              "",
+              3800
+            ],
+            [
+              "Chicken Bacon Ranch",
+              "",
+              3800
+            ],
+            [
+              "Spinach Tomato Bacon",
+              "",
+              3800
+            ],
+            [
+              "Crispy Chicken",
+              "",
+              3800
+            ]
+          ]
+        },
+        {
+          "name": "Party pasta trays",
+          "items": [
+            [
+              "Cheese Marinara",
+              "",
+              4000
+            ],
+            [
+              "Sausage Marinara",
+              "",
+              4800
+            ],
+            [
+              "Creamy Pesto Chicken",
+              "",
+              4800
+            ],
+            [
+              "Pollo Rustico Chicken",
+              "",
+              4800
+            ]
+          ]
+        },
+        {
+          "name": "Party appetizers",
+          "items": [
+            [
+              "Chicken wings (24)",
+              "",
+              3800
+            ],
+            [
+              "Boneless wings (24)",
+              "",
+              2600
+            ],
+            [
+              "Muncheez (20)",
+              "",
+              2000
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "Check the daily calendar",
+          "body": [
+            "The live calendar and the static hours/rates page publish different closing times. Confirm today’s hours before traveling."
+          ],
+          "links": [
+            {
+              "label": "Hours, rates and calendar",
+              "href": "https://www.peekaboofactory.com/rancho-cordova/hours-rates/"
+            }
+          ]
+        },
+        {
+          "head": "Play rules and passes",
+          "body": [
+            "Grip socks and waivers are required. Passes may be shared by siblings only and are nonrefundable and nontransferable. Membership requires at least one month. Arrange admission and any waiver with the venue."
+          ]
+        },
+        {
+          "head": "Shanna’s visit",
+          "body": [
+            "Family-outing film by Shanna, @outdoorideaswithkids, as requested by Glenn."
+          ],
+          "links": [
+            {
+              "label": "Shanna · outdoorideaswithkids",
+              "href": "https://www.instagram.com/outdoorideaswithkids/"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/peek-a-boo-factory-rc.mp4",
+        "poster": "/clips/peek-a-boo-factory-rc-poster.webp",
+        "href": "https://www.instagram.com/reel/DdpX7qVB39_/",
+        "credit": "Filmed by @amber.in.norcal",
+        "platform": "Instagram",
+        "by": "amber.in.norcal"
+      },
+      "menu_rows": 39,
+      "menu_sections": 7,
+      "placements": [
+        "beasty-parks-3",
+        "rancho-cordova-services2-0"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://www.peekaboofactory.com/rancho-cordova/",
+        "https://www.instagram.com/peekaboofactory_rc/"
+      ]
+    },
+    {
+      "slug": "el-dorado-orchards",
+      "name": "El Dorado Orchards",
+      "label": "El Dorado Orchards",
+      "cuisine": "Family farm, seasonal train ride",
+      "tagline": "Harvest-season train rides, a craft fair and picnic grounds in Camino.",
+      "color": "#233429",
+      "icon": "el-dorado-orchards",
+      "prep": 0,
+      "category": "Parks/Playgrounds",
+      "items": [],
+      "site": "https://www.eldoradoorchards.com/",
+      "address": "2881 North Canyon Rd, Camino, CA 95709",
+      "phone": "530-391-2152",
+      "instagram": "eldoradoorchards",
+      "contactOnly": "Seasonal family farm. Buy train tickets on site; no current fare is published on the official website.",
+      "panels": [
+        {
+          "head": "Seasonal visits",
+          "body": [
+            "The farm lists Friday–Sunday 9 am–5 pm during harvest season. This is not a year-round schedule. Confirm operating dates before traveling. Rain or damp tracks can stop train service."
+          ],
+          "links": [
+            {
+              "label": "Train ride information",
+              "href": "https://www.eldoradoorchards.com/train-ride.html"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/el-dorado-orchards.mp4",
+        "poster": "/clips/el-dorado-orchards-poster.webp",
+        "href": "https://www.instagram.com/reel/DeR5OQ2vVdw/",
+        "credit": "Filmed by @duhhhh_13 · Seasonal harvest visit; confirm the farm and train schedule before traveling.",
+        "platform": "Instagram",
+        "by": "duhhhh_13"
+      },
+      "menu_rows": 0,
+      "menu_sections": 1,
+      "placements": [
+        "beasty-parks-4",
+        "camino-services2-0"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://www.eldoradoorchards.com/",
+        "https://www.instagram.com/eldoradoorchards/"
+      ]
+    },
+    {
+      "slug": "lakewood-park",
+      "name": "Lakewood Park",
+      "label": "Lakewood Park",
+      "cuisine": "Park, inclusive playground",
+      "tagline": "An outer-space inclusive playground, sports courts and picnic areas in Sunnyvale.",
+      "color": "#233429",
+      "icon": "lakewood-park",
+      "prep": 0,
+      "category": "Parks/Playgrounds",
+      "items": [],
+      "site": "https://www.sunnyvale.ca.gov/Home/Components/FacilityDirectory/FacilityDirectory/50/260",
+      "address": "834 Lakechime Dr, Sunnyvale, CA 94089",
+      "phone": "408-730-7350",
+      "hours": "Daily 6am–9pm",
+      "contactOnly": "Check the City of Sunnyvale for park facilities, reservations and closures.",
+      "panels": [
+        {
+          "head": "Park facilities",
+          "body": [
+            "Inclusive playground, ballfields, basketball and tennis courts, picnic areas, skate ramps and pathways. Park hours are 6 am–9 pm; court lighting can run until 10 pm."
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/lakewood-park.mp4",
+        "poster": "/clips/lakewood-park-poster.webp",
+        "href": "https://www.instagram.com/reel/Ddh3Td-hD9e/",
+        "credit": "Filmed by @ishadiaries_",
+        "platform": "Instagram",
+        "by": "ishadiaries_"
+      },
+      "menu_rows": 0,
+      "menu_sections": 1,
+      "placements": [
+        "beasty-parks-5",
+        "sunnyvale-services2-0"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://www.sunnyvale.ca.gov/Home/Components/FacilityDirectory/FacilityDirectory/50/260"
+      ]
+    },
+    {
+      "slug": "ricky-baba",
+      "name": "Ricky Baba",
+      "label": "Ricky Baba",
+      "cuisine": "AI video creator",
+      "tagline": "Unofficial AI animation and nostalgic fan stories by @rickybaba.",
+      "color": "#233429",
+      "icon": "ricky-baba",
+      "prep": 0,
+      "category": "AI",
+      "items": [],
+      "instagram": "rickybaba",
+      "contactOnly": "Visual/art director Ricky Baba creates unofficial AI fan films. The featured fictional Dhalsim story was made with ChatGPT Images, Seedance, Photoshop and DaVinci Resolve. It is not affiliated with or endorsed by Capcom or Street Fighter. Contact the creator on Instagram; no service prices are published.",
+      "clip": {
+        "src": "/clips/ricky-baba.mp4",
+        "poster": "/clips/ricky-baba-poster.webp",
+        "href": "https://www.instagram.com/reel/Deu20_8xxbg/",
+        "credit": "Posted by @rickybaba · AI-generated Street Fighter fan story; fictional footage.",
+        "platform": "Instagram"
+      },
+      "menu_rows": 0,
+      "menu_sections": 1,
+      "placements": [
+        "beasty-ai-8"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://www.instagram.com/rickybaba/"
+      ]
+    },
+    {
+      "slug": "red-eye-barbecue",
+      "name": "Red Eye Barbecue",
+      "label": "Red Eye Barbecue",
+      "cuisine": "Barbecue, BBQ",
+      "tagline": "Smoked meats, sandwiches and sides at Epicenter in Santa Rosa.",
+      "color": "#233429",
+      "icon": "red-eye-barbecue",
+      "prep": 0,
+      "category": "Barbecue",
+      "items": [
+        [
+          "Beef cheek (each)",
+          "",
+          2400
+        ],
+        [
+          "Brisket (half lb; Saturday–Sunday)",
+          "",
+          2000
+        ],
+        [
+          "Beef ribs (per lb; Saturday–Sunday)",
+          "",
+          4400
+        ],
+        [
+          "Pork sausage (each)",
+          "",
+          1100
+        ],
+        [
+          "Pork spare ribs — 3 bones",
+          "",
+          1300
+        ],
+        [
+          "Pork spare ribs — 6 bones",
+          "",
+          2500
+        ],
+        [
+          "Pork spare ribs — 12 bones",
+          "",
+          4800
+        ],
+        [
+          "Pork belly (each)",
+          "",
+          1600
+        ],
+        [
+          "Chicken wings — 5 pieces",
+          "",
+          1100
+        ],
+        [
+          "Chicken wings — 10 pieces",
+          "",
+          2000
+        ],
+        [
+          "Half chicken (availability varies)",
+          "",
+          1800
+        ],
+        [
+          "Turkey breast (half lb; availability varies)",
+          "",
+          1600
+        ]
+      ],
+      "site": "https://www.redeyebarbecue.com/",
+      "address": "3215 Coffey Lane, Santa Rosa, CA 95403",
+      "phone": "707-757-9041",
+      "email": "info@visitepicenter.com",
+      "instagram": "redeye_barbecue",
+      "quoteOnly": "Order or confirm availability directly with Red Eye Barbecue. Prices are from its own published menus.",
+      "sections": [
+        {
+          "name": "Smoked meats",
+          "items": [
+            [
+              "Beef cheek (each)",
+              "",
+              2400
+            ],
+            [
+              "Brisket (half lb; Saturday–Sunday)",
+              "",
+              2000
+            ],
+            [
+              "Beef ribs (per lb; Saturday–Sunday)",
+              "",
+              4400
+            ],
+            [
+              "Pork sausage (each)",
+              "",
+              1100
+            ],
+            [
+              "Pork spare ribs — 3 bones",
+              "",
+              1300
+            ],
+            [
+              "Pork spare ribs — 6 bones",
+              "",
+              2500
+            ],
+            [
+              "Pork spare ribs — 12 bones",
+              "",
+              4800
+            ],
+            [
+              "Pork belly (each)",
+              "",
+              1600
+            ],
+            [
+              "Chicken wings — 5 pieces",
+              "",
+              1100
+            ],
+            [
+              "Chicken wings — 10 pieces",
+              "",
+              2000
+            ],
+            [
+              "Half chicken (availability varies)",
+              "",
+              1800
+            ],
+            [
+              "Turkey breast (half lb; availability varies)",
+              "",
+              1600
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "Roasted potato salad",
+              "",
+              600
+            ],
+            [
+              "Coleslaw",
+              "",
+              500
+            ],
+            [
+              "Beans (lentils)",
+              "",
+              500
+            ],
+            [
+              "Mac and cheese",
+              "",
+              600
+            ],
+            [
+              "Cheddar cornbread",
+              "",
+              700
+            ],
+            [
+              "Chips and queso",
+              "",
+              1100
+            ],
+            [
+              "Fried Oaxaca cheese",
+              "",
+              1400
+            ],
+            [
+              "Tallow fries",
+              "",
+              800
+            ],
+            [
+              "House greens",
+              "",
+              1200
+            ],
+            [
+              "Caesar salad",
+              "",
+              1200
+            ]
+          ]
+        },
+        {
+          "name": "In hands",
+          "items": [
+            [
+              "Smoked burger",
+              "",
+              1900
+            ],
+            [
+              "Fried chicken sando",
+              "",
+              1800
+            ],
+            [
+              "Pulled pork smash",
+              "",
+              1800
+            ],
+            [
+              "Sausage hoagie",
+              "",
+              1600
+            ],
+            [
+              "Smoked bird wrap",
+              "",
+              1600
+            ]
+          ]
+        },
+        {
+          "name": "Desserts",
+          "items": [
+            [
+              "Banana pudding",
+              "",
+              1000
+            ],
+            [
+              "Cornmeal butter cookies (2)",
+              "",
+              500
+            ]
+          ]
+        },
+        {
+          "name": "Kids meals",
+          "items": [
+            [
+              "Dino nuggets and fries",
+              "",
+              750
+            ],
+            [
+              "Hamburger and fries",
+              "",
+              750
+            ],
+            [
+              "Cheeseburger and fries",
+              "",
+              750
+            ],
+            [
+              "Mini corn dog bites and fries",
+              "",
+              750
+            ],
+            [
+              "Kids pizza — cheese or pepperoni",
+              "",
+              750
+            ]
+          ]
+        },
+        {
+          "name": "Kids drinks — no refills",
+          "items": [
+            [
+              "Milk",
+              "",
+              350
+            ],
+            [
+              "Chocolate milk",
+              "",
+              350
+            ],
+            [
+              "Apple juice",
+              "",
+              350
+            ],
+            [
+              "Orange juice",
+              "",
+              350
+            ],
+            [
+              "12 oz soda",
+              "",
+              200
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "Kitchen and venue hours",
+          "body": [
+            "Barbecue service starts at noon. Venue hours: Monday–Thursday noon–10 pm; Friday noon–midnight; Saturday 11 am–midnight; Sunday 9 am–10 pm. Monday–Thursday and Sunday kitchen closes at 9 pm. Confirm Friday event-dependent kitchen closing."
+          ]
+        },
+        {
+          "head": "Menu availability",
+          "body": [
+            "Full menu Wednesday–Sunday; Monday–Tuesday limited menu includes beef cheek, sausage, wings, turkey and the published sides, sandwiches and desserts. Brisket and beef ribs are Saturday–Sunday only; other meats can sell out. Add sausage to chips and queso for $6 or smoked chicken to a salad for $6. Kids meals for adults add $2; swap fries for yogurt or applesauce for $1."
+          ],
+          "links": [
+            {
+              "label": "Current menus",
+              "href": "https://www.redeyebarbecue.com/pages/menu"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/red-eye-barbecue.mp4",
+        "poster": "/clips/red-eye-barbecue-poster.webp",
+        "href": "https://www.instagram.com/reel/DdjxjlcBDPD/",
+        "credit": "Filmed by @kangofrealty",
+        "platform": "Instagram",
+        "by": "kangofrealty"
+      },
+      "menu_rows": 39,
+      "menu_sections": 6,
+      "placements": [
+        "santa-rosa-goods2-3",
+        "beasty-goods2-101"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://www.redeyebarbecue.com/",
+        "https://www.instagram.com/redeye_barbecue/"
+      ]
+    },
+    {
+      "slug": "jin-pot-shabu-house",
+      "name": "Jin Pot Shabu House",
+      "label": "Jin Pot",
+      "cuisine": "Hot pot, shabu shabu, AYCE",
+      "tagline": "Individual hot pots and all-you-can-eat shabu in San Francisco’s Richmond District.",
+      "color": "#233429",
+      "icon": "jin-pot-shabu-house",
+      "prep": 0,
+      "category": "Hot Pot",
+      "items": [
+        [
+          "Supreme AYCE — per person",
+          "",
+          4500
+        ],
+        [
+          "Children ages 4–9",
+          "",
+          1655
+        ]
+      ],
+      "site": "https://www.jinpotshabu.com/",
+      "address": "5158 Geary Blvd, San Francisco, CA 94118",
+      "phone": "415-379-4539",
+      "instagram": "jinpotshabu",
+      "hours": "Mon–Thu 5–9pm · Fri 4:30–9:30pm · Sat–Sun 11:30am–2pm & 4:30–9:30pm",
+      "quoteOnly": "Reserve or order directly with Jin Pot. Confirm current prices and AYCE conditions with the restaurant.",
+      "sections": [
+        {
+          "name": "Supreme AYCE",
+          "items": [
+            [
+              "Supreme AYCE — per person",
+              "",
+              4500
+            ],
+            [
+              "Children ages 4–9",
+              "",
+              1655
+            ]
+          ]
+        },
+        {
+          "name": "Starters",
+          "items": [
+            [
+              "Edamame",
+              "",
+              700
+            ],
+            [
+              "Housemade golden kimchi",
+              "",
+              700
+            ],
+            [
+              "Takoyaki fries",
+              "",
+              700
+            ],
+            [
+              "Chicken karaage",
+              "",
+              900
+            ],
+            [
+              "Spicy garlic edamame",
+              "",
+              800
+            ],
+            [
+              "Jin salad",
+              "",
+              700
+            ],
+            [
+              "Fried fish ball",
+              "",
+              700
+            ],
+            [
+              "Fried tofu",
+              "",
+              700
+            ],
+            [
+              "Gyoza",
+              "",
+              800
+            ]
+          ]
+        },
+        {
+          "name": "Broths",
+          "items": [
+            [
+              "House special spicy mala",
+              "",
+              600
+            ],
+            [
+              "Nagoya miso",
+              "",
+              600
+            ],
+            [
+              "Fresh tomato",
+              "",
+              600
+            ],
+            [
+              "Spicy kimchi",
+              "",
+              600
+            ],
+            [
+              "Sukiyaki",
+              "",
+              600
+            ],
+            [
+              "Organic soy milk and miso",
+              "",
+              600
+            ],
+            [
+              "Thai tom yum",
+              "",
+              700
+            ],
+            [
+              "Spicy garlic organic soy milk miso",
+              "",
+              700
+            ],
+            [
+              "Umami sea kelp",
+              "",
+              500
+            ],
+            [
+              "Healthy mushroom soup",
+              "",
+              600
+            ],
+            [
+              "Tonkotsu pork bone",
+              "",
+              600
+            ],
+            [
+              "Spicy garlic miso",
+              "",
+              600
+            ],
+            [
+              "Szechuan spicy pickled cabbage",
+              "",
+              600
+            ]
+          ]
+        },
+        {
+          "name": "Protein",
+          "items": [
+            [
+              "Premium Wagyu Kobe beef",
+              "",
+              1900
+            ],
+            [
+              "Premium lean Wagyu Kobe beef",
+              "",
+              1900
+            ],
+            [
+              "100% Kurobuta pork",
+              "",
+              1800
+            ],
+            [
+              "Premium Black Angus",
+              "",
+              1900
+            ],
+            [
+              "Chicken breasts",
+              "",
+              1500
+            ],
+            [
+              "New Zealand lamb shoulder",
+              "",
+              1900
+            ],
+            [
+              "Seafood deluxe",
+              "",
+              2700
+            ],
+            [
+              "Shrimp",
+              "",
+              800
+            ],
+            [
+              "Mussels",
+              "",
+              800
+            ],
+            [
+              "Fish fillets",
+              "",
+              800
+            ]
+          ]
+        },
+        {
+          "name": "Specialties",
+          "items": [
+            [
+              "Cilantro and Wagyu dumpling",
+              "",
+              800
+            ],
+            [
+              "Housemade shrimp paste",
+              "",
+              800
+            ]
+          ]
+        },
+        {
+          "name": "Special tsumire",
+          "items": [
+            [
+              "Black fungus",
+              "",
+              625
+            ],
+            [
+              "Fresh sweet corn",
+              "",
+              625
+            ],
+            [
+              "Negi scallion",
+              "",
+              625
+            ],
+            [
+              "Black garlic",
+              "",
+              625
+            ],
+            [
+              "Yellow curry",
+              "",
+              625
+            ]
+          ]
+        },
+        {
+          "name": "Vegetables",
+          "items": [
+            [
+              "Bok choy",
+              "",
+              495
+            ],
+            [
+              "Lettuce",
+              "",
+              395
+            ],
+            [
+              "Baby corn",
+              "",
+              395
+            ],
+            [
+              "Kabocha squash",
+              "",
+              495
+            ],
+            [
+              "Broccoli",
+              "",
+              495
+            ],
+            [
+              "Napa cabbage",
+              "",
+              495
+            ],
+            [
+              "Spinach",
+              "",
+              495
+            ],
+            [
+              "Fresh daikon",
+              "",
+              395
+            ],
+            [
+              "Dried seaweed",
+              "",
+              395
+            ],
+            [
+              "Carrot",
+              "",
+              495
+            ],
+            [
+              "Vegetable combo",
+              "",
+              1295
+            ]
+          ]
+        },
+        {
+          "name": "Mushrooms",
+          "items": [
+            [
+              "King mushroom",
+              "",
+              625
+            ],
+            [
+              "Black fungus",
+              "",
+              425
+            ],
+            [
+              "Shiitake",
+              "",
+              625
+            ],
+            [
+              "Mushroom medley",
+              "",
+              895
+            ]
+          ]
+        },
+        {
+          "name": "Soy and tempura",
+          "items": [
+            [
+              "Fresh tofu",
+              "",
+              625
+            ],
+            [
+              "Sponge tofu",
+              "",
+              625
+            ],
+            [
+              "Fish ball",
+              "",
+              600
+            ],
+            [
+              "Fish tofu",
+              "",
+              600
+            ]
+          ]
+        },
+        {
+          "name": "Rice and noodles",
+          "items": [
+            [
+              "Steamed rice",
+              "",
+              200
+            ],
+            [
+              "Ramen",
+              "",
+              355
+            ],
+            [
+              "Flour noodles",
+              "",
+              355
+            ],
+            [
+              "Thick vermicelli",
+              "",
+              355
+            ],
+            [
+              "Shirataki",
+              "",
+              355
+            ],
+            [
+              "Raw egg",
+              "",
+              155
+            ],
+            [
+              "Udon",
+              "",
+              355
+            ],
+            [
+              "Vermicelli",
+              "",
+              275
+            ],
+            [
+              "Quail egg",
+              "",
+              455
+            ]
+          ]
+        },
+        {
+          "name": "Nonalcoholic drinks",
+          "items": [
+            [
+              "Fresh watermelon juice (pitcher)",
+              "",
+              1075
+            ],
+            [
+              "Matcha milk (glass)",
+              "",
+              625
+            ],
+            [
+              "Coke / Sprite / Diet Coke / Sunkist",
+              "",
+              300
+            ],
+            [
+              "Lemon black tea",
+              "",
+              550
+            ],
+            [
+              "Apple sparkling",
+              "",
+              350
+            ],
+            [
+              "Plum juice",
+              "",
+              450
+            ],
+            [
+              "Lemonade",
+              "",
+              450
+            ],
+            [
+              "Iced unsweet matcha tea",
+              "",
+              450
+            ],
+            [
+              "San Pellegrino",
+              "",
+              500
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "AYCE conditions",
+          "body": [
+            "The published menu lists a 90-minute limit, one AYCE option for the entire party, no takeout and charges for wasted food. Children under 3 are listed free, ages 4–9 have a child price and ages 10+ pay regular price; ask about age 3. Parties of six or more have a 20% taxable service charge. Confirm all terms with the restaurant."
+          ]
+        },
+        {
+          "head": "Menus and film prices",
+          "body": [
+            "The older promotional film shows a different price from the currently linked menu. Confirm current prices directly. The alcohol-inclusive Ultimate package and alcoholic drinks are not offered through BEASTY."
+          ],
+          "links": [
+            {
+              "label": "Restaurant’s full menu PDF",
+              "href": "https://drive.google.com/file/d/1iMI8ikswyjUCzP04wZrOdKACVxTtydX9/view"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/jin-pot-shabu-house.mp4",
+        "poster": "/clips/jin-pot-shabu-house-poster.webp",
+        "href": "https://www.instagram.com/reel/DDGQCfsTrBs/",
+        "credit": "Posted by @jinpotshabu",
+        "platform": "Instagram"
+      },
+      "clips": [
+        {
+          "src": "/clips/jin-pot-heavy-hitter.mp4",
+          "poster": "/clips/jin-pot-heavy-hitter-poster.webp",
+          "href": "https://www.instagram.com/reel/DdtsLQts3Rn/",
+          "credit": "Posted by @jinpotshabu · Older promotional repost; prices in the video differ from the current published menu. Confirm with Jin Pot.",
+          "platform": "Instagram"
+        }
+      ],
+      "menu_rows": 78,
+      "menu_sections": 11,
+      "placements": [
+        "san-francisco-goods2-66",
+        "beasty-goods2-102",
+        "beasty-hotpot-6",
+        "beasty-ayce-19"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://www.jinpotshabu.com/",
+        "https://www.instagram.com/jinpotshabu/"
+      ]
+    },
+    {
+      "slug": "mikes-pastry-shop",
+      "name": "Mike’s Pastry Shop",
+      "label": "Mike’s Pastry Shop",
+      "cuisine": "Bakery, pastries, sweets",
+      "tagline": "Cakes and pastries on A Street in Antioch.",
+      "color": "#233429",
+      "icon": "mikes-pastry-shop",
+      "prep": 0,
+      "category": "Sweets",
+      "items": [],
+      "address": "1872 A St, Antioch, CA",
+      "phone": "925-757-3333",
+      "instagram": "themikespastryshop",
+      "needsSite": true,
+      "hours": "Tue–Sat 7am–3pm",
+      "contactOnly": "Contact Mike’s Pastry Shop for cakes, pastries, custom orders and current prices.",
+      "menu_rows": 0,
+      "menu_sections": 1,
+      "placements": [
+        "antioch-goods2-4",
+        "beasty-goods2-103",
+        "beasty-bakery-18"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://www.instagram.com/themikespastryshop/"
+      ]
+    },
+    {
+      "slug": "kidtopia-dublin",
+      "name": "KidTopia — Dublin",
+      "label": "KidTopia",
+      "cuisine": "Indoor playground, family play",
+      "tagline": "Indoor play, parties and memberships for ages 6 months–12 years in Dublin.",
+      "color": "#233429",
+      "icon": "kidtopia-dublin",
+      "prep": 0,
+      "category": "Parks/Playgrounds",
+      "items": [],
+      "site": "https://dublin.kidtopia.zone/",
+      "address": "7871 Amador Valley Blvd, Dublin, CA 94568",
+      "phone": "925-361-7036",
+      "email": "support_dublin@kidtopia.zone",
+      "instagram": "kidtopia_dublin",
+      "quoteOnly": "Book directly with KidTopia. Confirm current slots and complete any required waiver with the venue.",
+      "groups": [
+        {
+          "name": "Open play",
+          "items": [
+            [
+              "Child — weekday unlimited play",
+              "",
+              1800
+            ],
+            [
+              "Child — weekend/holiday two-hour slot",
+              "",
+              2000
+            ],
+            [
+              "Adult",
+              "",
+              500
+            ],
+            [
+              "Grip socks",
+              "",
+              300
+            ],
+            [
+              "Party-guest grip socks",
+              "",
+              150
+            ]
+          ]
+        },
+        {
+          "name": "Party package 1 — 4 kids + 4 adults",
+          "items": [
+            [
+              "Mon–Fri (3 hours)",
+              "",
+              12500
+            ],
+            [
+              "Friday 5–8 pm",
+              "",
+              13500
+            ],
+            [
+              "Sat–Sun (2 hours)",
+              "",
+              14500
+            ]
+          ]
+        },
+        {
+          "name": "Party package 2 — 8 kids + 8 adults",
+          "items": [
+            [
+              "Mon–Fri (3 hours)",
+              "",
+              22500
+            ],
+            [
+              "Friday 5–8 pm",
+              "",
+              25500
+            ],
+            [
+              "Sat–Sun (2 hours)",
+              "",
+              27500
+            ]
+          ]
+        },
+        {
+          "name": "Party package 4 — 15 kids + 15 adults",
+          "items": [
+            [
+              "Mon–Fri (3 hours)",
+              "",
+              39500
+            ],
+            [
+              "Friday 5–8 pm",
+              "",
+              42500
+            ],
+            [
+              "Sat–Sun (2 hours)",
+              "",
+              47500
+            ]
+          ]
+        },
+        {
+          "name": "Party package 5 — 25 kids + 25 adults",
+          "items": [
+            [
+              "Mon–Fri (3 hours)",
+              "",
+              62000
+            ],
+            [
+              "Friday 5–8 pm",
+              "",
+              65000
+            ],
+            [
+              "Sat–Sun (2 hours)",
+              "",
+              69500
+            ]
+          ]
+        },
+        {
+          "name": "Passes and memberships",
+          "items": [
+            [
+              "10-visit loyalty pass",
+              "",
+              17500
+            ],
+            [
+              "Weekday membership — monthly",
+              "",
+              10000
+            ],
+            [
+              "Weekday membership — sibling monthly",
+              "",
+              8500
+            ],
+            [
+              "All-week membership — monthly",
+              "",
+              11000
+            ],
+            [
+              "All-week membership — sibling monthly",
+              "",
+              9500
+            ],
+            [
+              "Annual membership",
+              "",
+              99900
+            ],
+            [
+              "Annual membership — sibling",
+              "",
+              89900
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "Hours and sessions",
+          "body": [
+            "Weekdays 10 am–7:30 pm. Weekend slots: 10 am–noon, 12:30–2:30 pm, 3–5 pm, 5:30–7:30 pm. Socks and waivers are required."
+          ]
+        },
+        {
+          "head": "Party details",
+          "body": [
+            "Birthday child and parents are included. Packages include a private room and host, child juice and water. Bring food and cake without a fee; drinks must be purchased from KidTopia. Extra children cost $18 weekdays or $20 weekends, extra adults $5. Package 3 is marked coming soon."
+          ]
+        },
+        {
+          "head": "Pass and membership terms",
+          "body": [
+            "The 10-visit pass does not expire; siblings may share it, using one visit per child. It includes up to two adults per visit, weekday full-day play or one weekend slot. Memberships renew manually, without automatic billing; active terms cannot be frozen or canceled. Private parties and selected holidays are excluded. Confirm terms before buying."
+          ]
+        }
+      ],
+      "menu_rows": 24,
+      "menu_sections": 6,
+      "placements": [
+        "beasty-parks-6",
+        "dublin-services2-0"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://dublin.kidtopia.zone/",
+        "https://www.instagram.com/kidtopia_dublin/"
+      ]
+    },
+    {
+      "slug": "united-dumplings-oakland",
+      "name": "United Dumplings — Oakland",
+      "label": "United Dumplings",
+      "cuisine": "Chinese dumplings, dim sum",
+      "tagline": "Soup dumplings, pot stickers and handmade dumplings on College Avenue.",
+      "color": "#233429",
+      "icon": "united-dumplings-oakland",
+      "prep": 0,
+      "category": "Dim Sum",
+      "items": [
+        [
+          "L1. Happy Family Cucumber",
+          "",
+          995
+        ],
+        [
+          "L3. Vegetarian Spring Rolls",
+          "",
+          995
+        ],
+        [
+          "R1. Five Spice Crispy Silken Tofu",
+          "",
+          1595
+        ],
+        [
+          "R10. Mongolian Beef",
+          "",
+          1995
+        ],
+        [
+          "R2. Sauteed Green String Bean",
+          "",
+          1795
+        ],
+        [
+          "R3. Sweet & Spicy Chicken Wings",
+          "",
+          1895
+        ],
+        [
+          "R5. Sauteed Pea Shoots with Garlic",
+          "",
+          1795
+        ],
+        [
+          "R7. Crispy Golden Calamari",
+          "",
+          1995
+        ],
+        [
+          "R8. Fried Mushroom Tempura",
+          "",
+          1695
+        ],
+        [
+          "R9. Chinese Broccoli with Garlic Sauce",
+          "",
+          1795
+        ],
+        [
+          "R111. Sichuan Chicken",
+          "",
+          1995
+        ],
+        [
+          "R112. Mapo Tofu",
+          "",
+          1995
+        ]
+      ],
+      "site": "https://www.uniteddumplings.com/",
+      "address": "6247 College Ave, Oakland, CA 94618",
+      "phone": "510-817-4070",
+      "instagram": "uniteddumplings",
+      "hours": "Mon & Wed–Sun 11am–2:30pm & 4:30–9pm · Tue 4:30–9pm",
+      "quoteOnly": "Order directly from United Dumplings’ Oakland menu. Pickup prices can change.",
+      "orderUrl": "https://www.chownow.com/order/27291/locations/56767",
+      "sections": [
+        {
+          "name": "Pairs well with dumplings",
+          "items": [
+            [
+              "L1. Happy Family Cucumber",
+              "",
+              995
+            ],
+            [
+              "L3. Vegetarian Spring Rolls",
+              "",
+              995
+            ],
+            [
+              "R1. Five Spice Crispy Silken Tofu",
+              "",
+              1595
+            ],
+            [
+              "R10. Mongolian Beef",
+              "",
+              1995
+            ],
+            [
+              "R2. Sauteed Green String Bean",
+              "",
+              1795
+            ],
+            [
+              "R3. Sweet & Spicy Chicken Wings",
+              "",
+              1895
+            ],
+            [
+              "R5. Sauteed Pea Shoots with Garlic",
+              "",
+              1795
+            ],
+            [
+              "R7. Crispy Golden Calamari",
+              "",
+              1995
+            ],
+            [
+              "R8. Fried Mushroom Tempura",
+              "",
+              1695
+            ],
+            [
+              "R9. Chinese Broccoli with Garlic Sauce",
+              "",
+              1795
+            ],
+            [
+              "R111. Sichuan Chicken",
+              "",
+              1995
+            ],
+            [
+              "R112. Mapo Tofu",
+              "",
+              1995
+            ]
+          ]
+        },
+        {
+          "name": "Dumplings and her cousins",
+          "items": [
+            [
+              "J0. Sichuan Wonton in Red Oil (8)",
+              "",
+              1295
+            ],
+            [
+              "J1. Grandma's Pork Dumplings (12)",
+              "",
+              1495
+            ],
+            [
+              "J3. Korean BBQ Beef Dumplings (12)",
+              "",
+              1495
+            ],
+            [
+              "J4. Chicken Mushroom Truffle Dumplings (12)",
+              "",
+              1595
+            ],
+            [
+              "J5. Vegetarian Dumplings (12)",
+              "",
+              1495
+            ],
+            [
+              "J7. Shrimp Dumplings (3)",
+              "",
+              1395
+            ],
+            [
+              "J8. Siu Mai (3)",
+              "",
+              1395
+            ],
+            [
+              "J9. Chinese BBQ Pork Bao (3)",
+              "",
+              1495
+            ]
+          ]
+        },
+        {
+          "name": "Soup dumplings (XLB)",
+          "items": [
+            [
+              "X1. Pork Soup Dumplings (6)",
+              "",
+              1395
+            ],
+            [
+              "X2. Chicken Soup Dumplings (6)",
+              "",
+              1395
+            ],
+            [
+              "X6. Crab and Pork Soup Dumplings (6)",
+              "",
+              1895
+            ],
+            [
+              "X5. Sichuan Mala Pork Soup Dumplings (6)",
+              "",
+              1495
+            ],
+            [
+              "X7. Vegetarian Soup Dumplings (6)",
+              "",
+              1695
+            ],
+            [
+              "X8. Five Treasure Soup Dumplings (5)",
+              "",
+              1395
+            ]
+          ]
+        },
+        {
+          "name": "Mini pan-fried buns",
+          "items": [
+            [
+              "Q1. Mini Pan-fried Pork Bun (6)",
+              "",
+              1595
+            ],
+            [
+              "Q5. Mini Pan-fried Spicy Pork Bun (6)",
+              "",
+              1595
+            ],
+            [
+              "Q9. Mini Pan-fried Curry Beef Bun (6)",
+              "",
+              1695
+            ]
+          ]
+        },
+        {
+          "name": "Noodles",
+          "items": [
+            [
+              "M1. California Beef Noodle Soup",
+              "",
+              1795
+            ],
+            [
+              "M2. Sichuan Dan Dan Noodles",
+              "",
+              1795
+            ],
+            [
+              "M2V. Vegetarian Dan Dan Noodles",
+              "",
+              1695
+            ],
+            [
+              "M5. Vegetarian Stir-Fried Noodles",
+              "",
+              1795
+            ],
+            [
+              "M6. Flat Rice Noodles with Beef",
+              "",
+              1695
+            ]
+          ]
+        },
+        {
+          "name": "Pot stickers",
+          "items": [
+            [
+              "S1. Grandma's Pork Pot Stickers (5)",
+              "",
+              1295
+            ],
+            [
+              "S5. Vegetarian Pot Stickers (5)",
+              "",
+              1295
+            ],
+            [
+              "S7. Lobster Pot Stickers (5)",
+              "",
+              1795
+            ]
+          ]
+        },
+        {
+          "name": "Rice",
+          "items": [
+            [
+              "F1. Singapore Curry Chicken Fried Rice",
+              "",
+              1795
+            ],
+            [
+              "F2. Kimchi Fried Rice",
+              "",
+              1795
+            ],
+            [
+              "F3. Vegetarian Fried Rice",
+              "",
+              1795
+            ]
+          ]
+        },
+        {
+          "name": "Desserts",
+          "items": [
+            [
+              "T2. Sesame Balls With Red Bean Paste (5)",
+              "",
+              995
+            ],
+            [
+              "T5. Steamed Egg Custard Bao (3)",
+              "",
+              1295
+            ],
+            [
+              "T7. Steamed Lotus Seed Paste Bao (3)",
+              "",
+              1495
+            ],
+            [
+              "T6. Steamed Red Bean Paste Bao (3)",
+              "",
+              1295
+            ]
+          ]
+        },
+        {
+          "name": "Nonalcoholic drinks",
+          "items": [
+            [
+              "Apple juice",
+              "",
+              500
+            ],
+            [
+              "Coca Cola",
+              "",
+              500
+            ],
+            [
+              "Diet Coke",
+              "",
+              500
+            ],
+            [
+              "Orange juice",
+              "",
+              500
+            ],
+            [
+              "Sprite",
+              "",
+              500
+            ],
+            [
+              "Bottled water",
+              "",
+              500
+            ],
+            [
+              "Sparkling water",
+              "",
+              700
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "Oakland location",
+          "body": [
+            "This page and pickup menu are for Oakland, not the Bernal Heights or Marina locations. Tuesday lunch is closed. Catering, frozen and wholesale inquiries use Hello@Uniteddumplings.com; the store phone above is the Oakland number."
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/united-dumplings-oakland.mp4",
+        "poster": "/clips/united-dumplings-oakland-poster.webp",
+        "href": "https://www.instagram.com/reel/DemcqSWzmgm/",
+        "credit": "Filmed by @foodelaventures · Filmed by @foodelaventures; reposted by @uniteddumplings.",
+        "platform": "Instagram",
+        "by": "foodelaventures"
+      },
+      "menu_rows": 51,
+      "menu_sections": 9,
+      "placements": [
+        "oakland-goods2-41",
+        "beasty-goods2-104",
+        "beasty-dimsum-12"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://www.uniteddumplings.com/",
+        "https://www.instagram.com/uniteddumplings/"
+      ]
+    },
+    {
+      "slug": "black-forest-kitchen",
+      "name": "Black Forest Kitchen",
+      "label": "Black Forest Kitchen",
+      "cuisine": "German döner, halal",
+      "tagline": "Döner sandwiches, bowls and plant-based options at Forage Kitchen in Oakland.",
+      "color": "#233429",
+      "icon": "black-forest-kitchen",
+      "prep": 0,
+      "category": "Eats",
+      "items": [
+        [
+          "The Don (Döner Original)",
+          "",
+          1699
+        ],
+        [
+          "Döner’Rito",
+          "",
+          2000
+        ],
+        [
+          "Super Döner’ish — plant-based",
+          "",
+          1900
+        ],
+        [
+          "Slim’bo Slice (Döner Salad)",
+          "",
+          1799
+        ],
+        [
+          "Döner Box",
+          "",
+          2100
+        ]
+      ],
+      "site": "https://blackforestkitchen.square.site/?location=LD6NTJQ6DN2F9",
+      "address": "478 25th St, Oakland, CA 94612",
+      "phone": "510-680-3063",
+      "email": "contact@theblackforestkitchen.com",
+      "instagram": "theblackforestkitchen",
+      "dietary": [
+        "Halal"
+      ],
+      "quoteOnly": "Order from Black Forest Kitchen’s own Square menu. Sale prices and limited-stock items can change.",
+      "sections": [
+        {
+          "name": "BFK menu",
+          "items": [
+            [
+              "The Don (Döner Original)",
+              "",
+              1699
+            ],
+            [
+              "Döner’Rito",
+              "",
+              2000
+            ],
+            [
+              "Super Döner’ish — plant-based",
+              "",
+              1900
+            ],
+            [
+              "Slim’bo Slice (Döner Salad)",
+              "",
+              1799
+            ],
+            [
+              "Döner Box",
+              "",
+              2100
+            ]
+          ]
+        },
+        {
+          "name": "Limited secret menu",
+          "items": [
+            [
+              "Chef’Don con Fusión",
+              "",
+              2100
+            ],
+            [
+              "Don King — beef and lamb (low stock)",
+              "",
+              2099
+            ]
+          ]
+        },
+        {
+          "name": "Sides and add-ons",
+          "items": [
+            [
+              "Extra garlic sauce",
+              "",
+              250
+            ],
+            [
+              "Extra spicy sauce",
+              "",
+              250
+            ],
+            [
+              "Preztel Mini",
+              "",
+              649
+            ],
+            [
+              "OG Fries (low stock)",
+              "",
+              900
+            ],
+            [
+              "Side fries",
+              "",
+              650
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "Pickup and menu",
+          "body": [
+            "Pickup location is Forage Kitchen, 478 25th St. The restaurant describes its food as 100% halal; this is its own dietary description. The live menu’s beverage section currently has no listed items. Confirm the pickup window when ordering."
+          ]
+        }
+      ],
+      "menu_rows": 12,
+      "menu_sections": 3,
+      "placements": [
+        "oakland-goods2-42",
+        "beasty-goods2-105"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://blackforestkitchen.square.site/?location=LD6NTJQ6DN2F9",
+        "https://www.instagram.com/theblackforestkitchen/"
+      ]
+    },
+    {
+      "slug": "the-richmond-backyard",
+      "name": "The Backyard — Richmond",
+      "label": "The Backyard",
+      "cuisine": "Burgers, sandwiches, outdoor eats",
+      "tagline": "An outdoor food garden with burgers, music and room to gather in Richmond.",
+      "color": "#233429",
+      "icon": "the-richmond-backyard",
+      "prep": 0,
+      "category": "Eats",
+      "items": [
+        [
+          "Backyard Single",
+          "",
+          1500
+        ],
+        [
+          "Backyard Double",
+          "",
+          1700
+        ],
+        [
+          "Santa Fe Single",
+          "",
+          1600
+        ],
+        [
+          "Santa Fe Double",
+          "",
+          1800
+        ],
+        [
+          "Marina Bay Single",
+          "",
+          1800
+        ],
+        [
+          "Marina Bay Double",
+          "",
+          2000
+        ],
+        [
+          "Point Richmond Patty — all vegan",
+          "",
+          1800
+        ],
+        [
+          "Sliders",
+          "",
+          2200
+        ],
+        [
+          "Philly Steak",
+          "",
+          1968
+        ],
+        [
+          "Point Molate Salad",
+          "",
+          1500
+        ],
+        [
+          "Bratwurst",
+          "",
+          1400
+        ]
+      ],
+      "site": "https://www.richmondbackyard.com/",
+      "address": "205 Cutting Blvd, Richmond, CA 94804",
+      "phone": "510-323-6708",
+      "email": "richmondbackyard@gmail.com",
+      "instagram": "richmondbackyard",
+      "hours": "Thu–Sun 11:30am–7pm",
+      "quoteOnly": "Order directly from The Backyard. Current Toast pickup prices are shown; events and seasonal availability can change.",
+      "orderUrl": "https://order.toasttab.com/online/the-backyard-205-cutting-blvd",
+      "sections": [
+        {
+          "name": "Lunch",
+          "items": [
+            [
+              "Backyard Single",
+              "",
+              1500
+            ],
+            [
+              "Backyard Double",
+              "",
+              1700
+            ],
+            [
+              "Santa Fe Single",
+              "",
+              1600
+            ],
+            [
+              "Santa Fe Double",
+              "",
+              1800
+            ],
+            [
+              "Marina Bay Single",
+              "",
+              1800
+            ],
+            [
+              "Marina Bay Double",
+              "",
+              2000
+            ],
+            [
+              "Point Richmond Patty — all vegan",
+              "",
+              1800
+            ],
+            [
+              "Sliders",
+              "",
+              2200
+            ],
+            [
+              "Philly Steak",
+              "",
+              1968
+            ],
+            [
+              "Point Molate Salad",
+              "",
+              1500
+            ],
+            [
+              "Bratwurst",
+              "",
+              1400
+            ]
+          ]
+        },
+        {
+          "name": "Kids menu",
+          "items": [
+            [
+              "Kids cheese burger",
+              "",
+              1000
+            ],
+            [
+              "Kids hot dog",
+              "",
+              600
+            ]
+          ]
+        },
+        {
+          "name": "Beverages",
+          "items": [
+            [
+              "Apple juice",
+              "",
+              325
+            ],
+            [
+              "Arnold Palmer",
+              "",
+              300
+            ],
+            [
+              "Bottle soft drinks",
+              "",
+              350
+            ],
+            [
+              "Coffee (from)",
+              "",
+              300,
+              null,
+              "from $3"
+            ],
+            [
+              "Diet Coke / Sprite can",
+              "",
+              325
+            ],
+            [
+              "Ginger ale",
+              "",
+              350
+            ],
+            [
+              "Hot cocoa",
+              "",
+              350
+            ],
+            [
+              "Iced coffee",
+              "",
+              350
+            ],
+            [
+              "Iced mocha coffee",
+              "",
+              350
+            ],
+            [
+              "Iced tea",
+              "",
+              300
+            ],
+            [
+              "Jarritos",
+              "",
+              375
+            ],
+            [
+              "Kern’s",
+              "",
+              325
+            ],
+            [
+              "Kombucha",
+              "",
+              525
+            ],
+            [
+              "Lemonade",
+              "",
+              300
+            ],
+            [
+              "Milk",
+              "",
+              375
+            ],
+            [
+              "Orange juice",
+              "",
+              350
+            ],
+            [
+              "Pellegrino soda",
+              "",
+              375
+            ],
+            [
+              "Pellegrino water (from)",
+              "",
+              300,
+              null,
+              "from $3"
+            ],
+            [
+              "Poppi",
+              "",
+              350
+            ],
+            [
+              "Smartwater bottle",
+              "",
+              375
+            ],
+            [
+              "Tea",
+              "",
+              300
+            ]
+          ]
+        },
+        {
+          "name": "Sides and snacks",
+          "items": [
+            [
+              "Fries",
+              "",
+              375
+            ],
+            [
+              "Tots",
+              "",
+              525
+            ],
+            [
+              "Garlic tots",
+              "",
+              850
+            ],
+            [
+              "Wild fries",
+              "",
+              800
+            ],
+            [
+              "Wild tots",
+              "",
+              950
+            ],
+            [
+              "Chips",
+              "",
+              275
+            ],
+            [
+              "Pup patty — beef, dogs only",
+              "",
+              500
+            ],
+            [
+              "Add vegan patty",
+              "",
+              400
+            ],
+            [
+              "Side balsamic salad",
+              "",
+              600
+            ],
+            [
+              "Side avocado",
+              "",
+              275
+            ],
+            [
+              "Side bacon",
+              "",
+              300
+            ],
+            [
+              "Side burger patty",
+              "",
+              400
+            ],
+            [
+              "Sliced toast",
+              "",
+              275
+            ],
+            [
+              "Add vegan cheese",
+              "",
+              200
+            ]
+          ]
+        },
+        {
+          "name": "Ice cream",
+          "items": [
+            [
+              "Vanilla ice cream sandwich",
+              "",
+              450
+            ],
+            [
+              "Neapolitan ice cream sandwich",
+              "",
+              450
+            ],
+            [
+              "Cookies and cream ice cream sandwich",
+              "",
+              550
+            ],
+            [
+              "Vanilla cup",
+              "",
+              250
+            ],
+            [
+              "Chocolate cup",
+              "",
+              250
+            ],
+            [
+              "Rainbow sherbert cup",
+              "",
+              250
+            ],
+            [
+              "Häagen-Dazs milk chocolate",
+              "",
+              650
+            ],
+            [
+              "Häagen-Dazs milk chocolate and almond",
+              "",
+              650
+            ],
+            [
+              "Ice cream popsicle",
+              "",
+              375
+            ],
+            [
+              "Trolli Pop",
+              "",
+              575
+            ]
+          ]
+        },
+        {
+          "name": "Seasonal pumpkins",
+          "items": [
+            [
+              "Small",
+              "",
+              1500
+            ],
+            [
+              "Medium",
+              "",
+              2000
+            ],
+            [
+              "Large",
+              "",
+              2500
+            ],
+            [
+              "X-large",
+              "",
+              3000
+            ]
+          ]
+        },
+        {
+          "name": "Seasonal drinks",
+          "items": [
+            [
+              "Far West apple juice",
+              "",
+              1000
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "Hours and events",
+          "body": [
+            "The 2026 season lists Thursday–Sunday 11:30 am–7 pm. Check the venue for current events and seasonal changes. Bri’s film shows a 2025 Kool John day party; that event has ended."
+          ]
+        },
+        {
+          "head": "Menu notes",
+          "body": [
+            "Coffee and Pellegrino water are starting prices. Toast lists a 3% credit-card surcharge. Seasonal pumpkins may change availability; confirm directly. Alcohol is not offered through BEASTY."
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/the-richmond-backyard.mp4",
+        "poster": "/clips/the-richmond-backyard-poster.webp",
+        "href": "https://www.instagram.com/reel/DOEMYNjEYww/",
+        "credit": "Filmed by @daeatzwitbri · Archival 2025 Kool John day-party visit; that event has ended. No upcoming event date is promised.",
+        "platform": "Instagram",
+        "by": "daeatzwitbri"
+      },
+      "menu_rows": 63,
+      "menu_sections": 7,
+      "placements": [
+        "richmond-goods2-4",
+        "beasty-goods2-106"
+      ],
+      "verified_on": "2026-11-01",
+      "sources": [
+        "https://www.richmondbackyard.com/",
+        "https://www.instagram.com/richmondbackyard/"
+      ]
+    }
+  ],
+  "films": [
+    {
+      "code": "DfL8ZCWJG0q",
+      "slug": "flood-park",
+      "brand": "b_floodpark",
+      "account": "polynesianmomx3",
+      "by": "polynesianmomx3",
+      "role": "main",
+      "source": "https://www.instagram.com/reel/DfL8ZCWJG0q/",
+      "posted_pacific": "2026-10-31T22:07:51-07:00",
+      "start": 0,
+      "end": 16.484,
+      "duration_source": 16.484,
+      "audio": true,
+      "request": "Watch",
+      "note": ""
+    },
+    {
+      "code": "DeIy_IyJv2i",
+      "slug": "bay-area-discovery-museum",
+      "brand": "b_bayareadiscoverymuseum",
+      "account": "polynesianmomx3",
+      "by": "polynesianmomx3",
+      "role": "main",
+      "source": "https://www.instagram.com/reel/DeIy_IyJv2i/",
+      "posted_pacific": "2026-10-05T20:18:19-07:00",
+      "start": 0,
+      "end": 15.787,
+      "duration_source": 15.787,
+      "audio": true,
+      "request": "Watch",
+      "note": "Archival October Goblin Jamboree footage; the event has ended. Check current museum tickets."
+    },
+    {
+      "code": "DeHetb-KJi-",
+      "slug": "review-DeHetb-KJi-",
+      "brand": "b_bayareadiscoverymuseum",
+      "account": "miks_outdoors",
+      "by": "miks_outdoors",
+      "role": "review",
+      "source": "https://www.instagram.com/reel/DeHetb-KJi-/",
+      "posted_pacific": "2026-10-05T08:00:38-07:00",
+      "start": 0,
+      "end": 15,
+      "duration_source": 15.857,
+      "audio": true,
+      "request": "Clip",
+      "note": "Archival October Goblin Jamboree footage; the event has ended."
+    },
+    {
+      "code": "De97hK7vvNH",
+      "slug": "half-moon-play",
+      "brand": "b_halfmoonplay",
+      "account": "halfmoonplay",
+      "by": null,
+      "role": "main",
+      "source": "https://www.instagram.com/reel/De97hK7vvNH/",
+      "posted_pacific": "2026-10-26T11:32:06-07:00",
+      "start": 0,
+      "end": 7.521,
+      "duration_source": 7.521,
+      "audio": true,
+      "request": "Watch (sent twice)",
+      "note": ""
+    },
+    {
+      "code": "DdpX7qVB39_",
+      "slug": "peek-a-boo-factory-rc",
+      "brand": "b_peekaboofactoryrc",
+      "account": "amber.in.norcal",
+      "by": "amber.in.norcal",
+      "role": "main",
+      "source": "https://www.instagram.com/reel/DdpX7qVB39_/",
+      "posted_pacific": "2026-09-23T15:28:30-07:00",
+      "start": 0,
+      "end": 16.762,
+      "duration_source": 16.762,
+      "audio": true,
+      "request": "Watch",
+      "note": ""
+    },
+    {
+      "code": "DchaQ5ZPMAz",
+      "slug": "review-DchaQ5ZPMAz",
+      "brand": "b_peekaboofactoryrc",
+      "account": "outdoorideaswithkids",
+      "by": "outdoorideaswithkids",
+      "role": "review",
+      "source": "https://www.instagram.com/reel/DchaQ5ZPMAz/",
+      "posted_pacific": "2026-08-26T16:48:00-07:00",
+      "start": 1,
+      "end": 16,
+      "duration_source": 16.53,
+      "audio": true,
+      "request": "Clip / Tag Shanna",
+      "note": ""
+    },
+    {
+      "code": "DeR5OQ2vVdw",
+      "slug": "el-dorado-orchards",
+      "brand": "b_eldoradoorchards",
+      "account": "duhhhh_13",
+      "by": "duhhhh_13",
+      "role": "main",
+      "source": "https://www.instagram.com/reel/DeR5OQ2vVdw/",
+      "posted_pacific": "2026-10-09T09:06:59-07:00",
+      "start": 3,
+      "end": 27,
+      "duration_source": 56.887,
+      "audio": true,
+      "request": "Clip",
+      "note": "Seasonal harvest visit; confirm the farm and train schedule before traveling."
+    },
+    {
+      "code": "DevA1QXvtAr",
+      "slug": "review-DevA1QXvtAr",
+      "brand": "b_eldoradoorchards",
+      "account": "outdoorideaswithkids",
+      "by": "outdoorideaswithkids",
+      "role": "review",
+      "source": "https://www.instagram.com/reel/DevA1QXvtAr/",
+      "posted_pacific": "2026-10-20T16:32:22-07:00",
+      "start": 1,
+      "end": 16,
+      "duration_source": 24.889,
+      "audio": true,
+      "request": "Clip",
+      "note": "Seasonal harvest visit; weather and dates can change."
+    },
+    {
+      "code": "Deu20_8xxbg",
+      "slug": "ricky-baba",
+      "brand": "b_rickybaba",
+      "account": "rickybaba",
+      "by": null,
+      "role": "main",
+      "source": "https://www.instagram.com/reel/Deu20_8xxbg/",
+      "posted_pacific": "2026-10-20T15:00:07-07:00",
+      "start": 60,
+      "end": 84,
+      "duration_source": 180.045,
+      "audio": true,
+      "request": "Watch / AI",
+      "note": "AI-generated Street Fighter fan story; fictional footage."
+    },
+    {
+      "code": "Dcqu-CkvNfy",
+      "slug": "review-Dcqu-CkvNfy",
+      "brand": "b_lakewoodpark",
+      "account": "truly_athi",
+      "by": "truly_athi",
+      "role": "review",
+      "source": "https://www.instagram.com/reel/Dcqu-CkvNfy/",
+      "posted_pacific": "2026-08-30T07:33:13-07:00",
+      "start": 0,
+      "end": 10.4,
+      "duration_source": 10.4,
+      "audio": true,
+      "request": "Clip",
+      "note": ""
+    },
+    {
+      "code": "Ddh3Td-hD9e",
+      "slug": "lakewood-park",
+      "brand": "b_lakewoodpark",
+      "account": "ishadiaries_",
+      "by": "ishadiaries_",
+      "role": "main",
+      "source": "https://www.instagram.com/reel/Ddh3Td-hD9e/",
+      "posted_pacific": "2026-09-20T17:37:53-07:00",
+      "start": 0,
+      "end": 15.021,
+      "duration_source": 15.021,
+      "audio": true,
+      "request": "Watch",
+      "note": ""
+    },
+    {
+      "code": "DdjxjlcBDPD",
+      "slug": "red-eye-barbecue",
+      "brand": "b_redeyebarbecue",
+      "account": "kangofrealty",
+      "by": "kangofrealty",
+      "role": "main",
+      "source": "https://www.instagram.com/reel/DdjxjlcBDPD/",
+      "posted_pacific": "2026-09-21T11:15:18-07:00",
+      "start": 18,
+      "end": 33,
+      "duration_source": 60.718,
+      "audio": true,
+      "request": "Heavy Hitter",
+      "note": ""
+    },
+    {
+      "code": "DdcJ0ICPTlh",
+      "slug": "review-DdcJ0ICPTlh",
+      "brand": "b_redeyebarbecue",
+      "account": "sonomacountyliving",
+      "by": "sonomacountyliving",
+      "role": "review",
+      "source": "https://www.instagram.com/reel/DdcJ0ICPTlh/",
+      "posted_pacific": "2026-09-18T12:12:50-07:00",
+      "start": 14,
+      "end": 29,
+      "duration_source": 61.484,
+      "audio": true,
+      "request": "Newbie",
+      "note": "Hosted menu-preview review; food was provided, as the creator discloses."
+    },
+    {
+      "code": "DcEmSpeBTu9",
+      "slug": "downtown-bbq-bts-v85",
+      "brand": "b_downtownbbq",
+      "account": "downtownbarbecue",
+      "by": null,
+      "role": "main",
+      "source": "https://www.instagram.com/reel/DcEmSpeBTu9/",
+      "posted_pacific": "2026-08-15T12:05:06-07:00",
+      "start": 46,
+      "end": 70,
+      "duration_source": 73.791,
+      "audio": true,
+      "request": "Watch / replace old film",
+      "note": ""
+    },
+    {
+      "code": "DDGQCfsTrBs",
+      "slug": "jin-pot-shabu-house",
+      "brand": "b_jinpotshabuhouse",
+      "account": "jinpotshabu",
+      "by": null,
+      "role": "main",
+      "source": "https://www.instagram.com/reel/DDGQCfsTrBs/",
+      "posted_pacific": "2024-12-02T17:25:07-08:00",
+      "start": 0,
+      "end": 9.495,
+      "duration_source": 9.495,
+      "audio": true,
+      "request": "Watch",
+      "note": ""
+    },
+    {
+      "code": "DdtsLQts3Rn",
+      "slug": "jin-pot-heavy-hitter",
+      "brand": "b_jinpotshabuhouse",
+      "account": "jinpotshabu",
+      "by": null,
+      "role": "extra",
+      "source": "https://www.instagram.com/reel/DdtsLQts3Rn/",
+      "posted_pacific": "2026-09-25T07:36:58-07:00",
+      "start": 3,
+      "end": 18,
+      "duration_source": 23.868,
+      "audio": true,
+      "request": "Heavy Hitter",
+      "note": "Older promotional repost; prices in the video differ from the current published menu. Confirm with Jin Pot."
+    },
+    {
+      "code": "DZ73122Jj0Q",
+      "slug": "review-DZ73122Jj0Q",
+      "brand": "b_jinpotshabuhouse",
+      "account": "lovecartier25",
+      "by": "lovecartier25",
+      "role": "review",
+      "source": "https://www.instagram.com/reel/DZ73122Jj0Q/",
+      "posted_pacific": "2026-06-23T09:50:25-07:00",
+      "start": 10,
+      "end": 25,
+      "duration_source": 39.472,
+      "audio": true,
+      "request": "Newbie",
+      "note": "Hosted visit, disclosed by the creator."
+    },
+    {
+      "code": "DfNCcelSeUT",
+      "slug": "review-DfNCcelSeUT",
+      "brand": "b_uniteddumplingsoakland",
+      "account": "hungere.for.diy",
+      "by": "hungere.for.diy",
+      "role": "review",
+      "source": "https://www.instagram.com/reel/DfNCcelSeUT/",
+      "posted_pacific": "2026-11-01T07:20:22-08:00",
+      "start": 6,
+      "end": 21,
+      "duration_source": 28.605,
+      "audio": true,
+      "request": "Mediocre",
+      "note": ""
+    },
+    {
+      "code": "DemcqSWzmgm",
+      "slug": "united-dumplings-oakland",
+      "brand": "b_uniteddumplingsoakland",
+      "account": "uniteddumplings",
+      "by": "foodelaventures",
+      "role": "main",
+      "source": "https://www.instagram.com/reel/DemcqSWzmgm/",
+      "posted_pacific": "2026-10-17T08:40:53-07:00",
+      "start": 0,
+      "end": 5.083,
+      "duration_source": 5.083,
+      "audio": true,
+      "request": "Watch",
+      "note": "Filmed by @foodelaventures; reposted by @uniteddumplings."
+    },
+    {
+      "code": "De3KeuWTmRO",
+      "slug": "review-De3KeuWTmRO",
+      "brand": "b_uniteddumplingsoakland",
+      "account": "fedoramaelle",
+      "by": "fedoramaelle",
+      "role": "review",
+      "source": "https://www.instagram.com/reel/De3KeuWTmRO/",
+      "posted_pacific": "2026-10-23T20:33:23-07:00",
+      "start": 20,
+      "end": 35,
+      "duration_source": 60.996,
+      "audio": true,
+      "request": "Heavy Hitter",
+      "note": ""
+    },
+    {
+      "code": "DAwd7foumEg",
+      "slug": "review-DAwd7foumEg",
+      "brand": "b_therichmondbackyard",
+      "account": "foodie_travel_happiness",
+      "by": "foodie_travel_happiness",
+      "role": "review",
+      "source": "https://www.instagram.com/reel/DAwd7foumEg/",
+      "posted_pacific": "2024-10-05T14:23:01-07:00",
+      "start": 1,
+      "end": 16,
+      "duration_source": 19.086,
+      "audio": true,
+      "request": "Newbie",
+      "note": "Archival 2024 visit; confirm current menu and events."
+    },
+    {
+      "code": "DOEMYNjEYww",
+      "slug": "the-richmond-backyard",
+      "brand": "b_therichmondbackyard",
+      "account": "daeatzwitbri",
+      "by": "daeatzwitbri",
+      "role": "main",
+      "source": "https://www.instagram.com/reel/DOEMYNjEYww/",
+      "posted_pacific": "2025-09-01T09:04:09-07:00",
+      "start": 34,
+      "end": 58,
+      "duration_source": 98.218,
+      "audio": true,
+      "request": "Heavy Hitter",
+      "note": "Archival 2025 Kool John day-party visit; that event has ended. No upcoming event date is promised."
+    },
+    {
+      "code": "DfNJ2ebMp0_",
+      "slug": "el-portal-buffet",
+      "brand": "b_elportalsanleandro",
+      "account": "elportalsanleandro",
+      "by": null,
+      "role": "main",
+      "source": "https://www.instagram.com/reel/DfNJ2ebMp0_/",
+      "posted_pacific": "2026-11-01T08:24:43-08:00",
+      "start": 0,
+      "end": 13.117,
+      "duration_source": 13.117,
+      "audio": true,
+      "request": "Clip / AYCE",
+      "note": ""
+    },
+    {
+      "code": "Da1oeItBNd3",
+      "slug": "review-Da1oeItBNd3",
+      "brand": "b_elportalsanleandro",
+      "account": "peterlyagent",
+      "by": "peterlyagent",
+      "role": "review",
+      "source": "https://www.instagram.com/reel/Da1oeItBNd3/",
+      "posted_pacific": "2026-07-15T20:06:22-07:00",
+      "start": 22,
+      "end": 37,
+      "duration_source": 81.616,
+      "audio": true,
+      "request": "Foodie",
+      "note": "Archival oyster review; confirm current specials and prices with the restaurant."
+    },
+    {
+      "code": "DXaKrrREnjH",
+      "slug": "review-DXaKrrREnjH",
+      "brand": "b_elportalsanleandro",
+      "account": "foodandsachi",
+      "by": "foodandsachi",
+      "role": "review",
+      "source": "https://www.instagram.com/reel/DXaKrrREnjH/",
+      "posted_pacific": "2026-04-21T14:36:14-07:00",
+      "start": 26,
+      "end": 41,
+      "duration_source": 46.95,
+      "audio": true,
+      "request": "Heavy Hitter",
+      "note": "Archival April review; menu prices and promotions may have changed."
+    },
+    {
+      "code": "DXDFiGkAbCn",
+      "slug": "review-DXDFiGkAbCn",
+      "brand": "b_elportalsanleandro",
+      "account": "aztec.ed",
+      "by": "aztec.ed",
+      "role": "review",
+      "source": "https://www.instagram.com/reel/DXDFiGkAbCn/",
+      "posted_pacific": "2026-04-12T15:23:55-07:00",
+      "start": 5,
+      "end": 20,
+      "duration_source": 34.55,
+      "audio": true,
+      "request": "Mediocre",
+      "note": "Archival April review; confirm current specials with the restaurant."
+    }
+  ],
+  "new_seats": {
+    "beasty-parks-0": "b_floodpark",
+    "beasty-parks-1": "b_bayareadiscoverymuseum",
+    "beasty-parks-2": "b_halfmoonplay",
+    "beasty-parks-3": "b_peekaboofactoryrc",
+    "beasty-parks-4": "b_eldoradoorchards",
+    "beasty-parks-5": "b_lakewoodpark",
+    "beasty-parks-6": "b_kidtopiadublin",
+    "menlo-park-services2-0": "b_floodpark",
+    "sausalito-services2-0": "b_bayareadiscoverymuseum",
+    "half-moon-bay-services2-0": "b_halfmoonplay",
+    "rancho-cordova-services2-0": "b_peekaboofactoryrc",
+    "camino-services2-0": "b_eldoradoorchards",
+    "sunnyvale-services2-0": "b_lakewoodpark",
+    "dublin-services2-0": "b_kidtopiadublin",
+    "santa-rosa-goods2-3": "b_redeyebarbecue",
+    "beasty-goods2-101": "b_redeyebarbecue",
+    "san-francisco-goods2-66": "b_jinpotshabuhouse",
+    "beasty-goods2-102": "b_jinpotshabuhouse",
+    "antioch-goods2-4": "b_mikespastryshop",
+    "beasty-goods2-103": "b_mikespastryshop",
+    "oakland-goods2-41": "b_uniteddumplingsoakland",
+    "beasty-goods2-104": "b_uniteddumplingsoakland",
+    "oakland-goods2-42": "b_blackforestkitchen",
+    "beasty-goods2-105": "b_blackforestkitchen",
+    "richmond-goods2-4": "b_therichmondbackyard",
+    "beasty-goods2-106": "b_therichmondbackyard",
+    "beasty-ai-8": "b_rickybaba",
+    "beasty-hotpot-6": "b_jinpotshabuhouse",
+    "beasty-dimsum-12": "b_uniteddumplingsoakland",
+    "beasty-ayce-18": "b_elportalsanleandro",
+    "beasty-ayce-19": "b_jinpotshabuhouse",
+    "beasty-foodies2-143": "b_foodiekangofrealty",
+    "beasty-foodies2-144": "b_foodiesonomacountyliving",
+    "beasty-foodies2-145": "b_foodielovecartier25",
+    "beasty-foodies2-146": "b_foodiefoodelaventures",
+    "beasty-foodies2-147": "b_foodiefedoramaelle",
+    "beasty-foodies2-148": "b_foodiefoodietravelhappiness",
+    "beasty-foodies2-149": "b_foodiepeterlyagent",
+    "beasty-bakery-18": "b_mikespastryshop",
+    "beasty-youth-5": "b_bayareadiscoverymuseum",
+    "beasty-diner-23": "b_elportalsanleandro"
+  },
+  "baseline": {
+    "commit": "061f554",
+    "seats": {
+      "beasty-eats-0": "b_downtownbbq",
+      "beasty-eats-1": "b_belly",
+      "beasty-eats-3": "b_harumiayce",
+      "beasty-eats-4": "b_masa",
+      "beasty-eats-5": "b_lumpiacompany",
+      "beasty-eats-6": "b_pippal",
+      "beasty-eats-10": "b_empirestatepizza",
+      "beasty-eats-11": "b_gaovietkitchen",
+      "beasty-eats-13": "b_bulapies",
+      "beasty-eats-14": "b_theyardbrentwood",
+      "beasty-eats-15": "b_chefjeffssmashburger",
+      "beasty-eats-16": "b_hotboyschicken",
+      "beasty-eats-17": "b_thelocalpetaluma",
+      "beasty-eats-18": "b_banhmioven",
+      "beasty-eats-21": "b_nossooakland",
+      "beasty-eats-22": "b_topdog",
+      "beasty-eats-23": "b_kingswcpizza",
+      "beasty-sweets-3": "b_cravingz",
+      "beasty-sweets-6": "b_butterpecan",
+      "beasty-sweets-17": "b_meadowlarkdairy",
+      "beasty-services-0": "b_dingdongtogo",
+      "beasty-services-1": "b_thebeaudegabymaine",
+      "beasty-services-2": "b_luckybarbershop",
+      "beasty-services-3": "b_poddtg",
+      "beasty-services-4": "b_bustdowncobeasty",
+      "beasty-services-5": "b_paintgo",
+      "beasty-services-6": "b_ubreakifix",
+      "beasty-services-7": "b_marinabaymedia",
+      "beasty-services-8": "b_eat",
+      "beasty-services-9": "b_germanautosport",
+      "beasty-services-10": "b_bobvalentineselectric",
+      "beasty-services-11": "b_bayareacharters",
+      "beasty-services-12": "b_rocknjump",
+      "beasty-services-13": "b_djrevroc",
+      "beasty-services-14": "b_petshowgrooming",
+      "beasty-services-15": "b_vendingenterprise",
+      "beasty-services-16": "b_rosebarycarcare",
+      "beasty-services-17": "b_highscores",
+      "beasty-services-18": "b_lolcatering",
+      "beasty-services-19": "b_nolastcallbartending",
+      "beasty-services-20": "b_winterwhitecarwash",
+      "beasty-services-21": "b_frank2artistic",
+      "beasty-services-22": "b_ezraluzjohns",
+      "beasty-services-23": "b_rywire",
+      "las-vegas-goods-17": "b_sincitypits",
+      "livermore-goods-1": "b_tequilastaqueria",
+      "livermore-goods-5": "b_glasshouzz",
+      "san-jose-goods-8": "b_jojoshotchicken",
+      "brentwood-goods-0": "b_theyardbrentwood",
+      "sunnyvale-goods-11": "b_jonnysitalianice",
+      "dublin-goods-3": "b_pippal",
+      "vallejo-goods-13": "b_grindcafe707",
+      "brentwood-services-7": "b_jdiautodetailing",
+      "berkeley-services-7": "b_jnwdetailing",
+      "concord-services-7": "b_diabloautodetailing",
+      "berkeley-services-19": "b_perfectnineevents",
+      "brentwood-goods-2": "b_xnoodledumpling",
+      "napa-goods-12": "b_themodelbakery",
+      "el-cerrito-goods-2": "b_larbthaitapas",
+      "el-cerrito-services-8": "b_ubreakifix",
+      "petaluma-services-12": "b_townfuturistmedia",
+      "san-mateo-goods-2": "b_phodenguyen",
+      "milpitas-goods-2": "b_intlkitchen",
+      "walnut-creek-goods-10": "b_maymayscravings",
+      "vacaville-goods-6": "b_banhmixpress",
+      "vacaville-goods-12": "b_emyscannoli",
+      "benicia-goods-0": "b_beniciagrill",
+      "crockett-goods-19": "b_majesticboutique",
+      "oakland-goods-14": "b_suptealab",
+      "san-francisco-goods-2": "b_houseofthai",
+      "san-francisco-goods-11": "b_pollyann",
+      "san-francisco-goods-12": "b_udessertstory",
+      "san-leandro-goods-4": "b_kaisendon",
+      "san-leandro-goods-9": "b_lavanta",
+      "berkeley-goods-1": "b_soltaqueria",
+      "benicia-goods-12": "b_onehousebakery",
+      "foster-city-goods-6": "b_sandwichmonkey",
+      "oakland-goods-10": "b_senorsisig",
+      "oakland-goods-13": "b_jollycafe",
+      "oakland-goods-16": "b_donutfarm",
+      "walnut-creek-goods-11": "b_milkyflakes",
+      "martinez-goods-14": "b_bobertea",
+      "redwood-city-goods-5": "b_pizzeriacardamomo",
+      "danville-goods-5": "b_greatimpasta",
+      "brentwood-goods-3": "b_chutneys",
+      "concord-goods-12": "b_frenchspot",
+      "walnut-creek-services-15": "b_joybound",
+      "san-ramon-services-2": "b_bodylinesdayspa",
+      "pleasanton-services-0": "b_solasalons",
+      "fremont-services-5": "b_hybridworkz",
+      "san-rafael-goods-12": "b_bakedblooms",
+      "richmond-goods-11": "b_wafflescream",
+      "richmond-goods-14": "b_boba",
+      "philadelphia-services-14": "b_allisdogwalking",
+      "san-pablo-services-0": "b_magicjuans",
+      "beasty-services2-5": "b_noctilucente",
+      "beasty-services2-6": "b_curio",
+      "san-francisco-goods-5": "b_stellapastry",
+      "san-francisco-services-12": "b_isnappedphotobooths",
+      "beasty-services2-7": "b_jenuinefitness",
+      "benicia-goods-14": "b_quicklybenicia",
+      "richmond-goods-2": "b_salathai",
+      "brentwood-goods-10": "b_houseofsilog",
+      "beasty-goods2-4": "b_smashburgersbros",
+      "beasty-services2-8": "b_interchiro",
+      "sacramento-goods-23": "b_1upretro",
+      "berkeley-goods-11": "b_scoopnchill",
+      "oakland-goods-1": "b_alpastorpapi",
+      "richmond-services-19": "b_bayareacharters",
+      "concord-services-19": "b_rocknjump",
+      "vallejo-services-7": "b_paintgo",
+      "beasty-goods2-0": "b_santaclarasuperkitchen",
+      "beasty-goods2-1": "b_willybillysmokedmeat",
+      "beasty-goods2-2": "b_redchili",
+      "beasty-goods2-3": "b_rainsplates",
+      "beasty-services2-1": "b_adzeela",
+      "beasty-services2-2": "b_allyvirtual",
+      "beasty-services2-3": "b_eaglepetgrooming",
+      "beasty-services2-4": "b_rocketmctow",
+      "benicia-goods2-0": "b_chiquoandeva",
+      "concord-goods2-0": "b_cajuncrackn",
+      "san-jose-services-19": "b_bloomballoon",
+      "san-francisco-goods-8": "b_brasabros",
+      "san-francisco-services2-0": "b_yesmoment",
+      "pleasanton-goods-5": "b_gayninetiespizza",
+      "san-francisco-services-19": "b_bayareacharters",
+      "el-cerrito-services-6": "b_hightechcaraudio",
+      "concord-goods-14": "b_breaktimetea",
+      "vallejo-goods-0": "b_babsdeltadiner",
+      "antioch-goods-6": "b_simplysoups",
+      "antioch-goods-0": "b_macsoldhouse",
+      "oakland-goods-0": "b_cafenoiroak",
+      "oakland-goods-5": "b_philomenapizza",
+      "oakland-services-19": "b_jumpandroll",
+      "oakland-goods-8": "b_luckythreeseven",
+      "beasty-online-12": "b_goldenstateballerz",
+      "beasty-services2-9": "b_unitedcurbpainting",
+      "beasty-services2-10": "b_classycanines",
+      "castro-valley-services-14": "b_classycanines",
+      "pleasanton-services-23": "b_oneillssignature",
+      "walnut-creek-services-4": "b_trufusionwalnutcreek",
+      "santa-rosa-services-19": "b_camachospartyrentals",
+      "fairfield-goods-0": "b_boucajun",
+      "milpitas-services-19": "b_bloomballoon",
+      "brentwood-services-4": "b_yogasixbrentwood",
+      "beasty-online-11": "b_macstalgia",
+      "berkeley-services-14": "b_healthyspotberkeley",
+      "san-mateo-goods-5": "b_barrelbistro",
+      "oakley-services-20": "b_bayareapowerwash",
+      "newark-services-5": "b_almasautotires",
+      "brentwood-services-14": "b_gofrette",
+      "beasty-goods2-5": "b_fornopiombo",
+      "american-canyon-goods-5": "b_fornopiombo",
+      "concord-services-4": "b_urbanair",
+      "petaluma-services-4": "b_playland707",
+      "brentwood-goods-15": "b_chipcookies",
+      "brentwood-goods2-1": "b_eightacres",
+      "antioch-goods2-0": "b_laslomasribpalace",
+      "lafayette-goods-0": "b_kababburger",
+      "pinole-goods-10": "b_sweetpipers",
+      "pleasant-hill-goods-0": "b_royaleeatery",
+      "san-ramon-goods-0": "b_onehousebistro",
+      "dublin-goods-12": "b_mimischocolates",
+      "san-francisco-goods-13": "b_thefarmacy",
+      "san-ramon-goods-1": "b_ricoricotaco",
+      "san-ramon-goods-3": "b_khaki",
+      "pleasant-hill-goods-10": "b_islafilipino",
+      "san-francisco-services-21": "b_jacdreamscapes",
+      "concord-services-13": "b_flowersvalley",
+      "santa-rosa-services-17": "b_funcloudevents",
+      "san-francisco-services-13": "b_petalandpebbles",
+      "santa-clara-goods-16": "b_stansdonutshop",
+      "oakland-goods-2": "b_cambodianstreetfood",
+      "fremont-goods-2": "b_houseofraha",
+      "concord-goods-0": "b_ofieskitchen",
+      "oakland-goods2-0": "b_aulounge",
+      "san-francisco-goods2-0": "b_hdpartysf",
+      "walnut-creek-services2-0": "b_petbutlerwalnutcreek",
+      "fairfield-services2-0": "b_pjsjunkremoval",
+      "beasty-services2-0": "b_happybaypaws",
+      "pleasant-hill-goods2-0": "b_thehangoutbreakfast",
+      "walnut-creek-goods2-0": "b_thehangoutbreakfast",
+      "concord-goods-10": "b_papiclaryskitchen",
+      "san-jose-goods-14": "b_crushedlemonade",
+      "santa-clara-goods-12": "b_bloomzephyr",
+      "beasty-services2-11": "b_andrewshinlaw",
+      "san-mateo-goods-11": "b_heyyogurt",
+      "san-francisco-services-5": "b_goldenautomuffler",
+      "antioch-services-7": "b_cleanasere",
+      "fremont-services-7": "b_doubletakeautospa",
+      "pleasanton-goods-9": "b_oasiswinelounge",
+      "vallejo-services2-0": "b_antonioshauling",
+      "san-francisco-services2-1": "b_affinageboards",
+      "antioch-services-23": "b_serranoturflandscape",
+      "beasty-individuals-0": "b_nayagreen",
+      "concord-goods-2": "b_lovethai",
+      "beasty-online-0": "b_facetfine",
+      "beasty-individuals-1": "b_lyricsborn",
+      "beasty-individuals-2": "b_plo",
+      "beasty-online-17": "b_pawddle",
+      "pleasanton-services-22": "b_aglowoutdoorlighting",
+      "concord-goods-5": "b_fireslicepizza",
+      "las-vegas-services-15": "b_cryocanine",
+      "beasty-online-9": "b_lavishpaws",
+      "beasty-services2-12": "b_pouraonwheels",
+      "berkeley-goods-12": "b_milkcloudbakery",
+      "beasty-services2-13": "b_mrmhomeservices",
+      "beasty-goods2-6": "b_phoshodough",
+      "san-francisco-goods-9": "b_karamsf",
+      "san-francisco-services2-2": "b_emporiumsf",
+      "daly-city-goods-5": "b_kingswcpizza",
+      "beasty-online-19": "b_petersdesigncompany",
+      "beasty-online-18": "b_tinywheels",
+      "beasty-online-13": "b_fruitsbyheart",
+      "san-francisco-services2-3": "b_thebubblehouse",
+      "san-francisco-services2-4": "b_totspotsoftplay",
+      "san-francisco-services2-5": "b_momentus",
+      "san-francisco-services2-6": "b_olesiacakestudio",
+      "beasty-online-14": "b_glowpaws",
+      "beasty-online-15": "b_drypup",
+      "beasty-online-16": "b_puppiepack",
+      "martinez-goods-6": "b_paulosausage",
+      "brentwood-goods2-3": "b_paulosausage",
+      "benicia-goods2-1": "b_traballosbackyardbbq",
+      "beasty-individuals-3": "b_eatwithsie",
+      "petaluma-goods-0": "b_griffodistillery",
+      "san-pablo-goods-0": "b_rockincrawfish",
+      "oakley-services-7": "b_eastbaytinting",
+      "beasty-individuals-4": "b_alfreshko",
+      "beasty-individuals-5": "b_lloyddevera",
+      "san-jose-goods-0": "b_doughburger",
+      "san-francisco-goods2-1": "b_asianbox",
+      "benicia-goods2-2": "b_sipsbottleemporium",
+      "alameda-services-0": "b_bayareabrewboat",
+      "san-francisco-goods2-2": "b_statebirdprovisions",
+      "beasty-individuals-6": "b_larryjune",
+      "beasty-online-1": "b_midnightorganic",
+      "beasty-individuals-7": "b_nickydiamonds",
+      "beasty-online-2": "b_diamondsupplyco",
+      "beasty-individuals-8": "b_showbanga",
+      "beasty-individuals-9": "b_iamsu",
+      "beasty-individuals-10": "b_beastmode",
+      "san-francisco-services-4": "b_beatdropfitness",
+      "rohnert-park-services-12": "b_foursmedia",
+      "oakland-services2-0": "b_sinmexautobody",
+      "san-francisco-services2-7": "b_palacegames",
+      "san-francisco-services2-8": "b_sugarmurals",
+      "concord-services2-0": "b_transformfxfitness",
+      "walnut-creek-services2-1": "b_crossfitsweatshop",
+      "richmond-services2-0": "b_plarkplayspace",
+      "beasty-services2-14": "b_audioaccessoriesmobile",
+      "beasty-goods2-7": "b_crayone",
+      "beasty-goods2-8": "b_citybachi",
+      "san-jose-goods2-0": "b_jackiesplace",
+      "beasty-individuals-11": "b_richierich",
+      "beasty-individuals-12": "b_mbnel",
+      "beasty-services2-15": "b_rywire",
+      "beasty-services2-16": "b_pacificpetgrooming",
+      "san-bruno-services-7": "b_mcar",
+      "san-francisco-goods-1": "b_underdogscantina",
+      "dublin-goods2-0": "b_biryaniz",
+      "beasty-goods2-9": "b_poofofalchemy",
+      "san-jose-services-6": "b_audioaccessoriesmobile",
+      "san-bruno-services-14": "b_pacificpetgrooming",
+      "beasty-individuals-13": "b_crayone",
+      "beasty-goods2-10": "b_glasshouzz",
+      "walnut-creek-goods2-1": "b_thesweetspot",
+      "san-francisco-goods2-3": "b_gyroking",
+      "beasty-services2-17": "b_baymemoriesbooth",
+      "oakland-goods2-1": "b_tayho",
+      "oakland-goods2-2": "b_kungfumala",
+      "dublin-goods2-1": "b_baithak",
+      "san-francisco-goods2-4": "b_ruaymitr",
+      "beasty-individuals-14": "b_djlex",
+      "redwood-city-goods-10": "b_pamilya",
+      "union-city-goods-0": "b_firebunz",
+      "belmont-services-1": "b_valenails",
+      "beasty-services2-18": "b_beautybybellez",
+      "beasty-goods2-11": "b_pawsnug",
+      "san-jose-services-14": "b_theyappyhourclub",
+      "san-francisco-goods2-5": "b_pinkonion",
+      "san-ramon-goods-9": "b_alorasocial",
+      "napa-services-0": "b_napapedalcrusher",
+      "richmond-goods-0": "b_johnnyboi",
+      "napa-goods-10": "b_carabao",
+      "brentwood-goods-13": "b_brunchandbloom",
+      "pittsburg-services-7": "b_autodesignpro",
+      "san-ramon-services-7": "b_precisionshine",
+      "sunol-services-0": "b_ellistonvineyards",
+      "pinole-goods-12": "b_butterpecan",
+      "emeryville-goods-12": "b_butterpecan",
+      "pleasant-hill-goods-12": "b_butterpecan",
+      "fairfield-goods-12": "b_butterpecan",
+      "vallejo-goods-12": "b_butterpecan",
+      "hayward-goods-12": "b_butterpecan",
+      "antioch-goods-12": "b_butterpecan",
+      "oakland-goods2-3": "b_delahcoffee",
+      "san-francisco-goods2-6": "b_portofperiperisf",
+      "berkeley-goods2-0": "b_udessertstory",
+      "beasty-online-20": "b_weasy",
+      "beasty-online-21": "b_seatmate",
+      "beasty-online-22": "b_houndsy",
+      "fremont-services-0": "b_thecompanybarber",
+      "union-city-services-0": "b_thecompanybarberunioncity",
+      "brentwood-services-22": "b_screenking",
+      "san-francisco-goods2-7": "b_sweetestsound",
+      "san-jose-goods-13": "b_coba",
+      "cupertino-goods-9": "b_persiankabobs",
+      "sunnyvale-goods-2": "b_eatmorepho",
+      "san-jose-goods2-1": "b_hellagoodburger",
+      "alameda-goods-0": "b_shakashack",
+      "concord-goods-7": "b_mrsramen",
+      "antioch-services-22": "b_baysidefencing",
+      "san-ramon-goods-5": "b_empirestatepizza",
+      "san-lorenzo-goods-2": "b_rubenhibachigrill",
+      "san-francisco-goods2-8": "b_loveburn",
+      "alamo-services-2": "b_thetoxalamo",
+      "orinda-services-0": "b_ethosofcalifornia",
+      "beasty-online-23": "b_overlyhiphop",
+      "fairfield-goods-1": "b_gourmetburritos",
+      "beasty-individuals-15": "b_nanacasas",
+      "pleasanton-goods-1": "b_elranchogrande",
+      "antioch-goods2-1": "b_dadsbbq",
+      "albany-goods-14": "b_tonysstyle",
+      "san-jose-goods-12": "b_caitlynssweets",
+      "antioch-services-21": "b_armentalandscape",
+      "beasty-goods2-12": "b_walkfree",
+      "santa-clara-services-14": "b_lushspaw",
+      "san-jose-services2-0": "b_lushspaw",
+      "san-jose-services2-1": "b_bayareaeventlights",
+      "daly-city-goods-10": "b_russfamkitchen",
+      "pittsburg-goods-3": "b_pijjaparadisepittsburg",
+      "livermore-goods-3": "b_pijjaparadiselivermore",
+      "union-city-goods-8": "b_chikindripunioncity",
+      "san-jose-goods2-2": "b_chikindripsanjose",
+      "oakland-services2-1": "b_calipartybus",
+      "newark-goods-2": "b_phonationnewark",
+      "alameda-goods-2": "b_phonationalameda",
+      "san-francisco-goods2-9": "b_phonationsf",
+      "pittsburg-goods-8": "b_houseofwings",
+      "beasty-services2-19": "b_tastinpeachy",
+      "redwood-city-goods-4": "b_sushinaloa",
+      "san-jose-goods-2": "b_kusanuyghurcuisinesanjose",
+      "milpitas-goods2-0": "b_kusanbazaarmilpitas",
+      "mountain-view-goods-2": "b_kusanbazaarmountainview",
+      "walnut-creek-services-1": "b_varnishnailboutiquewalnutcreek",
+      "antioch-services-1": "b_varnishnailboutiqueantioch",
+      "berkeley-services-4": "b_bodyrokberkeley",
+      "alamo-services-4": "b_bodyrokalamo",
+      "oakland-services-4": "b_bodyrokoakland",
+      "alameda-goods2-0": "b_bhanmaevane",
+      "union-city-services2-0": "b_jollyrogerland",
+      "walnut-creek-goods2-2": "b_paradanewperu",
+      "beasty-goods2-13": "b_goodcompenny",
+      "livermore-goods-14": "b_bobaclub",
+      "alameda-goods-12": "b_doodlecakes",
+      "walnut-creek-goods-15": "b_chipcookies",
+      "dublin-goods-15": "b_chipcookies",
+      "beasty-individuals-16": "b_housingauthority",
+      "beasty-individuals-17": "b_e40",
+      "beasty-individuals-18": "b_grando",
+      "vacaville-goods-4": "b_yosushivacaville",
+      "alameda-goods2-1": "b_moxiesteakhouse",
+      "brisbane-goods-0": "b_7milehouse",
+      "oakland-goods-7": "b_belly",
+      "san-jose-goods-5": "b_wowmiapizza",
+      "brentwood-goods-6": "b_saladmakers",
+      "petaluma-goods2-0": "b_streetsocial",
+      "concord-goods2-1": "b_alivekitchen",
+      "walnut-creek-goods2-3": "b_alivekitchen",
+      "lafayette-goods2-0": "b_alivekitchen",
+      "livermore-services-14": "b_bratpakdogkamp",
+      "martinez-goods-5": "b_sliceitpizza",
+      "berkeley-goods-0": "b_doghausberkeley",
+      "daly-city-goods-8": "b_piwings",
+      "oakland-goods2-4": "b_pizzaponte",
+      "beasty-services2-20": "b_claireandersonhomes",
+      "beasty-services2-21": "b_drcomicsmrgames",
+      "beasty-services2-22": "b_romantraileriron",
+      "beasty-services2-23": "b_georgeprolandscape",
+      "beasty-services2-24": "b_1850properties",
+      "san-jose-services2-3": "b_abvethebasics",
+      "pittsburg-services-3": "b_blackcrowntattoo",
+      "redwood-city-goods-11": "b_cravingz",
+      "beasty-online-3": "b_siacollective",
+      "fremont-goods-0": "b_billyroysburgerco",
+      "fremont-goods-13": "b_skilletzcafe",
+      "hayward-services-7": "b_garageworks",
+      "newark-goods-13": "b_thebreezecafe",
+      "union-city-goods-10": "b_macsbyicky",
+      "union-city-goods-2": "b_theune",
+      "fremont-goods2-0": "b_theyakitoribar",
+      "san-leandro-goods-13": "b_goldbeansanleandro",
+      "pleasanton-goods-13": "b_goldbeanpleasanton",
+      "berkeley-goods2-2": "b_goldbeandurant",
+      "berkeley-goods2-3": "b_goldbeanhearst",
+      "oakland-goods2-5": "b_daughterthai",
+      "pinole-goods-1": "b_mexihibachi",
+      "san-francisco-goods2-10": "b_gumbosocial",
+      "beasty-online-6": "b_looki",
+      "san-francisco-goods-4": "b_sushiuma",
+      "newark-goods2-0": "b_acekingbbq",
+      "san-francisco-goods2-11": "b_harborviewsf",
+      "palo-alto-goods2-0": "b_theseabyash",
+      "san-bruno-goods-1": "b_marymar",
+      "san-lorenzo-goods-1": "b_tacosmireynitasanlorenzo",
+      "hayward-goods-1": "b_tacosmireynitahayward",
+      "san-jose-goods-1": "b_tacosmireynitasanjose",
+      "fremont-goods-1": "b_tacosmireynitafremont",
+      "san-francisco-goods2-12": "b_turtletower",
+      "pleasant-hill-goods-7": "b_plazacafepleasanthill",
+      "san-jose-services-3": "b_honepiercing",
+      "berkeley-services2-0": "b_cyclebarberkeley",
+      "san-ramon-services-4": "b_rumbleboxingsanramon",
+      "belmont-goods-4": "b_trufflepokebelmont",
+      "burlingame-goods-4": "b_trufflepokeburlingame",
+      "south-san-francisco-goods-4": "b_trufflepokessf",
+      "san-mateo-goods-4": "b_trufflepokesanmateo",
+      "richmond-goods2-0": "b_balompie",
+      "san-jose-goods2-3": "b_paperplanesj",
+      "berkeley-services2-1": "b_benchmarkclimbingberkeley",
+      "san-francisco-services2-9": "b_benchmarkclimbingsf",
+      "san-francisco-goods-6": "b_deliboard",
+      "richmond-goods2-1": "b_brazucaacai",
+      "san-rafael-services-4": "b_gravityvaultmarin",
+      "lafayette-goods2-1": "b_batchandbrine",
+      "beasty-online-4": "b_pupcup",
+      "walnut-creek-goods-2": "b_thaithanioishi",
+      "milpitas-goods-13": "b_brewandbanhmi",
+      "oakland-goods-4": "b_delageoakland",
+      "livermore-goods2-0": "b_tajmahallivermore",
+      "san-francisco-goods2-13": "b_shodaisf",
+      "san-leandro-goods-14": "b_thirsteasanleandro",
+      "san-francisco-goods2-14": "b_zandypekingduck",
+      "oakland-services-0": "b_bibosalon",
+      "oakland-goods2-6": "b_pizzadeliandgrill",
+      "berkeley-goods2-1": "b_calburger",
+      "brentwood-goods2-0": "b_roasteateryco",
+      "brentwood-goods2-2": "b_dimsumbasket",
+      "brentwood-services2-0": "b_brentwoodrehabpt",
+      "san-rafael-goods-11": "b_doublerainbowcafe",
+      "san-francisco-services2-10": "b_studiofloras",
+      "petaluma-goods-6": "b_thelocalpetaluma",
+      "berkeley-goods-9": "b_milelimitberkeley",
+      "livermore-goods-11": "b_dumontlivermore",
+      "oakland-goods-12": "b_realcutiepies",
+      "daly-city-goods-2": "b_kankiin",
+      "san-francisco-goods-0": "b_lovelysburgerssf",
+      "oakland-goods2-7": "b_lovelysburgersoakland",
+      "san-francisco-goods-16": "b_whackdonuts",
+      "san-francisco-goods2-15": "b_goldengatemarketdeli",
+      "san-francisco-goods2-16": "b_mochicasf",
+      "dublin-goods-1": "b_taqueriaaztecadublin",
+      "dublin-goods-2": "b_eastbaybuffet",
+      "oakland-goods2-8": "b_lachicharronadacolombiana",
+      "richmond-goods-5": "b_goldpiepizza",
+      "oakland-goods2-9": "b_tadaramen",
+      "san-francisco-goods2-17": "b_barsprezzatura",
+      "san-jose-goods2-4": "b_poorhousebistro",
+      "albany-goods-4": "b_sakanasushialbany",
+      "emeryville-goods-5": "b_pizzagallery",
+      "napa-goods-0": "b_napayard",
+      "san-jose-goods2-5": "b_mimosaswillowglen",
+      "danville-services2-0": "b_dreamlandartplay",
+      "san-bruno-goods2-0": "b_cajunbowlsanbruno",
+      "san-mateo-goods2-0": "b_cajunbowlsanmateo",
+      "walnut-creek-goods-4": "b_okepokewalnutcreek",
+      "san-rafael-goods-13": "b_sanaacafe",
+      "alameda-goods-5": "b_pastapelican",
+      "sunnyvale-goods-14": "b_almadessert",
+      "albany-goods2-0": "b_brezoalbany",
+      "walnut-creek-goods-1": "b_tacoswalnutcreek",
+      "san-leandro-goods-2": "b_yummyyummyhibachisanleandro",
+      "oakland-goods2-12": "b_yummyyummyhibachi73rd",
+      "oakland-goods2-13": "b_yummyyummyhibachipiedmont",
+      "foster-city-goods2-0": "b_toastintown",
+      "antioch-services-4": "b_barrebeat",
+      "oakland-goods2-10": "b_nossooakland",
+      "san-leandro-goods-1": "b_elportalsanleandro",
+      "san-francisco-goods2-18": "b_kitavasf",
+      "oakland-goods2-11": "b_kitavaoakland",
+      "albany-goods2-1": "b_kitavaalbany",
+      "walnut-creek-goods2-4": "b_kitavawalnutcreek",
+      "union-city-services-4": "b_betweentheplants",
+      "vacaville-goods2-0": "b_pampasvacaville",
+      "walnut-creek-services2-2": "b_essencebjj",
+      "newark-goods-12": "b_dripdesserthouse",
+      "san-francisco-services-16": "b_regentthaimassage",
+      "san-francisco-goods2-19": "b_holbrookhouse",
+      "santa-rosa-goods-7": "b_seoultotokyokitchen",
+      "san-jose-services2-2": "b_bustdownco",
+      "newark-services-0": "b_jazzbraids",
+      "concord-services-0": "b_caballerosbarberlounge",
+      "antioch-services-19": "b_moaeventsrentals",
+      "south-san-francisco-goods-2": "b_hlpeninsulasouthsf",
+      "burlingame-goods-2": "b_hlpeninsulapearl",
+      "castro-valley-goods-2": "b_hlpeninsulacastrovalley",
+      "burlingame-goods2-0": "b_hlpeninsulagarden",
+      "milpitas-goods2-1": "b_hlpeninsulamilpitas",
+      "santa-clara-goods-9": "b_thehalalcartel",
+      "antioch-goods2-2": "b_thecozyoven",
+      "beasty-goods2-14": "b_sincitypits",
+      "beasty-goods2-15": "b_tonysstyle",
+      "beasty-goods2-16": "b_luckythreeseven",
+      "berkeley-goods-13": "b_penelopescoffeeberkeley",
+      "san-francisco-goods2-20": "b_penelopescoffeesf",
+      "foster-city-goods-13": "b_penelopescoffeefostercity",
+      "san-mateo-goods-13": "b_penelopescoffeesanmateo",
+      "daly-city-goods-13": "b_penelopescoffeedalycity",
+      "san-francisco-goods2-21": "b_catchsf",
+      "san-francisco-goods2-22": "b_yanksing",
+      "livermore-goods-9": "b_demitristaverna",
+      "dublin-goods-8": "b_cheriessouthernkitchen",
+      "oakley-services-14": "b_woofgangbakeryoakley",
+      "berkeley-services-3": "b_oldcrowtattoo",
+      "san-francisco-services-3": "b_rakanitattoo",
+      "fremont-goods-7": "b_hungrycow",
+      "san-francisco-goods2-23": "b_longbridgepizza",
+      "burlingame-goods-0": "b_maverickjacksburlingame",
+      "san-mateo-goods-0": "b_maverickjackssanmateo",
+      "daly-city-goods-1": "b_losagavesdalycity",
+      "san-francisco-goods2-24": "b_alushecoffee",
+      "san-francisco-goods2-25": "b_fourchairs",
+      "sausalito-goods-0": "b_napavalleyburgersausalito",
+      "mountain-view-goods-9": "b_narrestaurant",
+      "san-francisco-goods2-26": "b_peachespatties",
+      "san-ramon-goods2-0": "b_theshishgrill",
+      "oakland-goods2-14": "b_sandbaroakland",
+      "san-francisco-services2-11": "b_mattahn",
+      "walnut-creek-services-3": "b_inkfromtatooine",
+      "richmond-services-3": "b_pauldomingo",
+      "livermore-services-3": "b_twodollarcowboy",
+      "san-francisco-services2-12": "b_aberrationstudio",
+      "walnut-creek-services2-3": "b_impowersportsperformance",
+      "walnut-creek-services2-4": "b_naileditstudio",
+      "concord-services2-1": "b_corenestpilates",
+      "concord-services2-2": "b_contracostafitness",
+      "oakland-goods2-15": "b_carlyleschickenwings",
+      "berkeley-services2-2": "b_bascotacafe",
+      "san-francisco-goods2-27": "b_curiobar",
+      "milpitas-goods-4": "b_wagyugrillmilpitas",
+      "milpitas-goods-7": "b_meattimeyakiniku",
+      "san-jose-goods2-6": "b_wagyumastersanjose",
+      "newark-goods-7": "b_kingkatsulandnewark",
+      "newark-goods2-1": "b_littlesheepnewark",
+      "san-francisco-goods-3": "b_bollywoodpizzasf",
+      "livermore-goods2-1": "b_bollywoodpizzalivermore",
+      "santa-clara-goods2-0": "b_basqhaus",
+      "beasty-goods2-17": "b_veganmob",
+      "beasty-boutiques-9": "b_elemonkey",
+      "beasty-goods2-18": "b_breadwinners",
+      "beasty-goods2-19": "b_winkydinkydogs",
+      "beasty-goods2-20": "b_lovelysburgerssf",
+      "beasty-boutiques-0": "b_midnighttheories",
+      "beasty-whips-9": "b_metersf",
+      "beasty-whips-10": "b_mrcheeze408",
+      "beasty-services2-25": "b_frankjrenglish",
+      "el-cerrito-goods2-0": "b_brasilbistro",
+      "walnut-creek-goods2-5": "b_myofrozenyogurtwalnutcreek",
+      "san-ramon-services-14": "b_thehubpackanimals",
+      "san-jose-goods-11": "b_paletaplaneta",
+      "san-jose-goods-4": "b_mazasanjose",
+      "belmont-goods-5": "b_divinoristorante",
+      "hayward-goods-3": "b_favoriteindianrestaurant",
+      "fremont-goods-8": "b_portofperiperifremont",
+      "castro-valley-services-4": "b_domartialarts",
+      "redwood-city-goods-9": "b_zadnagrill",
+      "palo-alto-goods-2": "b_yayoipaloalto",
+      "cupertino-goods-2": "b_yayoicupertino",
+      "san-mateo-goods-7": "b_yayoisanmateo",
+      "union-city-goods-1": "b_tacospapo",
+      "union-city-goods-12": "b_doughweime",
+      "union-city-goods-13": "b_konthegounioncity",
+      "union-city-goods2-0": "b_backyardbayou",
+      "union-city-goods2-1": "b_goldenbayseafoodharbor",
+      "union-city-goods2-2": "b_sanhonorepanaderia",
+      "union-city-services-1": "b_themoonnails",
+      "union-city-services2-1": "b_thehotspotstudiosunioncity",
+      "union-city-services2-2": "b_thelionsmanebarbershop",
+      "union-city-services2-3": "b_jasnailspa",
+      "petaluma-goods-11": "b_honeypotgelato",
+      "walnut-creek-goods-5": "b_northitaliawalnutcreek",
+      "walnut-creek-goods2-6": "b_galpaogauchowalnutcreek",
+      "walnut-creek-goods2-7": "b_havanawalnutcreek",
+      "walnut-creek-goods2-8": "b_litawalnutcreek",
+      "santa-rosa-goods2-0": "b_shadyoakbrewing",
+      "emeryville-goods2-0": "b_robbensrestaurant",
+      "oakland-goods2-16": "b_understory",
+      "oakland-goods2-17": "b_townbiznesshibachi",
+      "oakland-goods2-18": "b_brundospices",
+      "oakland-services2-2": "b_fourfortyfourevents",
+      "el-cerrito-goods2-1": "b_pakaoma",
+      "berkeley-goods-6": "b_calialley",
+      "berkeley-goods-2": "b_praawthai",
+      "berkeley-goods-5": "b_rosepizzeriaberkeley",
+      "san-francisco-goods2-28": "b_rosepizzeriasanfrancisco",
+      "berkeley-goods2-4": "b_hinodeyaramenberkeley",
+      "berkeley-goods2-5": "b_thaitableberkeley",
+      "san-francisco-goods2-29": "b_yuanbaojiaozisanfrancisco",
+      "burlingame-goods2-1": "b_yuanbaojiaoziburlingame",
+      "san-francisco-goods2-30": "b_pineapplekingbakerysanfrancisco",
+      "san-francisco-goods2-31": "b_tonyspizzanapoletana",
+      "san-francisco-goods2-32": "b_qspecialtycoffeesanfrancisco",
+      "san-francisco-goods2-33": "b_rglounge",
+      "redwood-city-goods2-0": "b_alhambrairishhouse",
+      "san-rafael-services2-0": "b_absolutevolleyballclub",
+      "beasty-goods2-21": "b_kopibarandbakery",
+      "berkeley-goods2-6": "b_kopibarandbakery",
+      "los-gatos-goods-10": "b_thecats",
+      "san-jose-goods2-7": "b_stickyricethai",
+      "san-jose-goods2-8": "b_bluepagoda",
+      "san-jose-goods2-9": "b_tempurakanekohannosuke",
+      "santa-clara-goods-7": "b_masteroh",
+      "san-jose-goods-6": "b_sourdougheatery",
+      "santa-clara-goods-4": "b_ranteijapanesecuisine",
+      "san-jose-services-0": "b_sjpropercuts",
+      "san-jose-goods2-10": "b_phohanoisanjose",
+      "cupertino-goods2-0": "b_phohanoicupertino",
+      "palo-alto-goods2-1": "b_phohanoipaloalto",
+      "milpitas-goods2-2": "b_phohanoimilpitas",
+      "fremont-goods2-1": "b_phohanoifremont",
+      "livermore-goods-0": "b_calikidburgerslivermore",
+      "pleasant-hill-goods2-1": "b_calikidburgerspleasanthill",
+      "dublin-goods-7": "b_goldendonkatsudublin",
+      "fremont-goods2-2": "b_katsufactory",
+      "fremont-goods2-3": "b_wadayafremont",
+      "fremont-services2-0": "b_missionhillsswim",
+      "pleasanton-services-19": "b_ampmode",
+      "walnut-creek-goods2-9": "b_burma2",
+      "brentwood-goods-11": "b_handelsbrentwood",
+      "walnut-creek-goods2-10": "b_handelswalnutcreek",
+      "livermore-goods2-2": "b_handelslivermore",
+      "brentwood-goods2-4": "b_johnsicecream",
+      "richmond-goods2-2": "b_theburgerspotco",
+      "vallejo-goods2-0": "b_budsburgers",
+      "newark-goods2-2": "b_shibamcoffeenewark",
+      "beasty-online-7": "b_droneshow",
+      "beasty-online-5": "b_bottomline",
+      "beasty-online-8": "b_stevesmobilesecurity",
+      "beasty-cooks-6": "b_ryecookin",
+      "beasty-meats-0": "b_nomads",
+      "beasty-sweets-0": "b_gregorysgourmetdesserts",
+      "oakland-goods2-19": "b_gregorysgourmetdesserts",
+      "beasty-services2-26": "b_souvamobilepetgrooming",
+      "beasty-services2-27": "b_kindbubbles",
+      "beasty-services2-28": "b_precisionautoservice",
+      "san-leandro-services-5": "b_precisionautoservice",
+      "beasty-cooks-7": "b_tuetwaydabae",
+      "beasty-foodies-1": "b_grando",
+      "beasty-online-10": "b_sandiwa",
+      "beasty-coffee-9": "b_grindcafe707",
+      "beasty-coffee-10": "b_delahcoffee",
+      "beasty-foodtrucks-0": "b_ofieskitchen",
+      "walnut-creek-goods2-11": "b_hakashisushibar",
+      "san-jose-goods2-11": "b_ginzasushi",
+      "martinez-goods-1": "b_tacosdonchai",
+      "san-francisco-goods2-34": "b_kiyomicaphe",
+      "hayward-services-2": "b_snatchedbychinita",
+      "san-francisco-goods2-35": "b_sidewalkjuice",
+      "beasty-cooks-8": "b_thetastebud",
+      "san-francisco-goods2-36": "b_gada",
+      "richmond-goods-1": "b_elagaveazul",
+      "milpitas-goods2-3": "b_seawagyuhouse",
+      "redwood-city-goods2-1": "b_vestarwc",
+      "berkeley-goods2-8": "b_shattuckandbutter",
+      "san-mateo-goods2-1": "b_kodawarisushi",
+      "san-jose-goods2-12": "b_comtamthienhuong",
+      "san-francisco-goods2-38": "b_fusiondumpling",
+      "brentwood-services2-1": "b_createdbyyou",
+      "beasty-cooks-9": "b_chefmike",
+      "beasty-coffee-2": "b_sanaacafehayward",
+      "hayward-goods-13": "b_sanaacafehayward",
+      "hercules-goods-13": "b_homcoffee",
+      "beasty-sweets-23": "b_macsbyicky",
+      "beasty-goods2-22": "b_kickinflavorsfremont",
+      "fremont-goods2-4": "b_kickinflavorsfremont",
+      "milpitas-goods2-4": "b_kickinflavorsmilpitas",
+      "beasty-services2-29": "b_felixprimecleaning",
+      "union-city-goods2-3": "b_dagoodvibes",
+      "concord-goods2-2": "b_cafenapolina",
+      "beasty-ayce-3": "b_hungrycow",
+      "beasty-eats-20": "b_hungrycow",
+      "daly-city-goods2-0": "b_cafe86dalycity",
+      "menlo-park-goods-2": "b_drunkenmonk",
+      "suisun-city-goods-0": "b_gstacks",
+      "union-city-goods2-4": "b_oceanoysterbarunioncity",
+      "redwood-city-goods2-2": "b_oceanoysterbarredwoodcity",
+      "san-ramon-services2-0": "b_shiftarcade",
+      "san-mateo-goods2-2": "b_risewoodfiresanmateo",
+      "santa-clara-goods-5": "b_risewoodfiresantaclara",
+      "burlingame-goods-5": "b_risepizzeria",
+      "santa-clara-goods-0": "b_katsuburgersantaclara",
+      "sunnyvale-goods-5": "b_sohpizza",
+      "danville-goods2-0": "b_romanapizzeria",
+      "san-jose-goods2-13": "b_tonocoffeeproject",
+      "oakland-goods2-21": "b_addisoakland",
+      "san-francisco-goods2-39": "b_merkadosf",
+      "beasty-foodtrucks-5": "b_endlesssummersweets",
+      "beasty-sweets-8": "b_endlesssummersweets",
+      "beasty-goods2-23": "b_cafecarrusel",
+      "santa-rosa-goods2-1": "b_cafecarrusel",
+      "pleasanton-goods-6": "b_theolivemarket",
+      "walnut-creek-goods2-12": "b_sasawalnutcreek",
+      "san-ramon-services-5": "b_dsbodyshop",
+      "beasty-foodtrucks-6": "b_sundripevents",
+      "oakland-goods2-22": "b_gofresh",
+      "santa-rosa-goods2-2": "b_jalounge",
+      "beasty-individuals-19": "b_cheeenoh",
+      "beasty-juice-0": "b_gofresh",
+      "beasty-bars-0": "b_jalounge",
+      "beasty-ayce-6": "b_islafilipino",
+      "san-jose-goods2-14": "b_supremecrabayce",
+      "san-jose-goods2-15": "b_sixthstreetburger",
+      "oakland-goods2-23": "b_tartsdefeybesse",
+      "beasty-sweets-14": "b_tartsdefeybesse",
+      "oakland-goods-6": "b_nawahmarket",
+      "petaluma-goods-5": "b_stefanossolarpizzapetaluma",
+      "san-rafael-goods-5": "b_stefanossolarpizzasanrafael",
+      "san-francisco-goods2-37": "b_brendasfrenchsoulfood",
+      "south-san-francisco-goods-10": "b_karilagan",
+      "berkeley-goods2-7": "b_zutonfourth",
+      "santa-rosa-services-12": "b_visionmediaproduction",
+      "beasty-pets-0": "b_kinglou",
+      "oakland-goods2-20": "b_mamasboypizza",
+      "walnut-creek-goods2-13": "b_manakishoven",
+      "san-francisco-goods2-40": "b_poesiasf",
+      "san-francisco-goods2-41": "b_doloresdeluxe",
+      "beasty-bars-1": "b_wilfredslounge",
+      "beasty-games-0": "b_supersavagegames",
+      "fairfield-goods-7": "b_frymazing",
+      "oakland-goods2-24": "b_dmonaghans",
+      "beasty-bars-2": "b_dmonaghans",
+      "antioch-goods2-3": "b_wtfantioch",
+      "oakley-goods2-0": "b_wtfoakley",
+      "oakland-goods2-25": "b_crazyblockcheesecakes",
+      "beasty-goods2-24": "b_crazyblockcheesecakes",
+      "beasty-bars-3": "b_parliamentbrewing",
+      "rohnert-park-goods2-0": "b_parliamentbrewing",
+      "fremont-goods2-5": "b_lucyscrepes",
+      "santa-clara-goods2-1": "b_hironorisantaclara",
+      "oakland-goods2-26": "b_titosbarriochino",
+      "south-san-francisco-goods2-0": "b_cafedecasassf",
+      "san-francisco-goods2-42": "b_cafedecasasf",
+      "brentwood-goods-5": "b_slicehousebrentwood",
+      "beasty-goods2-25": "b_slicehousebrentwood",
+      "san-jose-goods2-16": "b_boxingdept",
+      "beasty-boutiques-1": "b_boxingdept",
+      "beasty-bars-4": "b_thefatlady",
+      "oakland-goods2-27": "b_thefatlady",
+      "san-jose-goods-7": "b_baekjeongsanjose",
+      "beasty-goods2-26": "b_baekjeongsanjose",
+      "castro-valley-goods-12": "b_onescafebakery",
+      "san-jose-goods2-17": "b_lacaphe",
+      "fremont-goods2-6": "b_lacaphe",
+      "martinez-services-0": "b_unstrippedsalon",
+      "hayward-goods2-0": "b_cheesecakelabsf",
+      "beasty-goods2-27": "b_cheesecakelabsf",
+      "san-jose-goods2-18": "b_soulsip",
+      "berkeley-goods2-9": "b_worldofhoagies",
+      "beasty-goods2-28": "b_worldofhoagies",
+      "beasty-bars-5": "b_normanrosetavern",
+      "danville-services-4": "b_encoremovement",
+      "oakland-services-1": "b_polishedonpark",
+      "beasty-health-0": "b_radiantmedspa",
+      "fremont-services-2": "b_radiantmedspa",
+      "danville-goods-11": "b_cuppayodanville",
+      "beasty-goods2-29": "b_cuppayodanville",
+      "oakland-services2-3": "b_dpshauling",
+      "beasty-services2-30": "b_dpshauling",
+      "bay-area-services2-0": "b_mattsmotivatedmovers",
+      "beasty-services2-31": "b_mattsmotivatedmovers",
+      "san-francisco-goods2-43": "b_molinaridelicatessen",
+      "beasty-goods2-30": "b_molinaridelicatessen",
+      "san-francisco-goods2-44": "b_bakefections",
+      "beasty-bakery-12": "b_bakefections",
+      "fremont-goods2-7": "b_dopepho",
+      "beasty-goods2-31": "b_dopepho",
+      "san-ramon-goods-2": "b_mdumpling",
+      "san-jose-goods2-19": "b_pizzacasamia",
+      "beasty-goods2-32": "b_pizzacasamia",
+      "berkeley-goods2-10": "b_funkyelephant",
+      "beasty-goods2-33": "b_funkyelephant",
+      "redwood-city-goods-2": "b_kemurijapanesebaru",
+      "beasty-goods2-34": "b_kemurijapanesebaru",
+      "san-francisco-goods2-45": "b_thebreakfastclubsf",
+      "beasty-goods2-35": "b_thebreakfastclubsf",
+      "martinez-goods-2": "b_homethaicafe",
+      "beasty-goods2-36": "b_homethaicafe",
+      "oakland-goods2-28": "b_acrekitchenandbar",
+      "beasty-goods2-37": "b_acrekitchenandbar",
+      "berkeley-goods2-11": "b_broccellars",
+      "daly-city-services-12": "b_hamafilmxkonokaraokeserramonte",
+      "beasty-services2-32": "b_hamafilmxkonokaraokeserramonte",
+      "antioch-goods-8": "b_wingbros",
+      "beasty-goods2-38": "b_wingbros",
+      "beasty-goods2-39": "b_mitchellsicecream",
+      "san-jose-goods2-20": "b_smokingpigbbqsanjose",
+      "beasty-goods2-40": "b_smokingpigbbqsanjose",
+      "san-francisco-goods2-46": "b_outtasightpizza",
+      "beasty-goods2-41": "b_outtasightpizza",
+      "san-mateo-services2-0": "b_gamaride",
+      "beasty-games-7": "b_gamaride",
+      "walnut-creek-goods2-14": "b_hickrypit",
+      "beasty-goods2-42": "b_hickrypit",
+      "livermore-goods2-3": "b_lenocturne",
+      "san-francisco-goods2-47": "b_champagarden",
+      "beasty-goods2-43": "b_champagarden",
+      "burlingame-goods2-2": "b_pattysdiner",
+      "beasty-goods2-44": "b_pattysdiner",
+      "san-francisco-goods-10": "b_laughingmonknopa",
+      "san-jose-goods2-21": "b_pinkelementcafe",
+      "san-jose-goods2-22": "b_phonow",
+      "beasty-goods2-45": "b_phonow",
+      "concord-goods2-3": "b_sugarplumcoffeeshop",
+      "beasty-goods2-46": "b_sugarplumcoffeeshop",
+      "hercules-goods2-0": "b_powderkegpub",
+      "beasty-goods2-47": "b_powderkegpub",
+      "berkeley-goods2-12": "b_myomyberkeley",
+      "beasty-goods2-48": "b_myomyberkeley",
+      "san-francisco-goods2-48": "b_therollsf",
+      "beasty-goods2-49": "b_therollsf",
+      "berkeley-goods2-13": "b_northbeachpizzaberkeley",
+      "beasty-goods2-50": "b_northbeachpizzaberkeley",
+      "beasty-goods2-51": "b_phohoa",
+      "concord-goods2-4": "b_crabboilandthings",
+      "fairfield-goods-4": "b_wasabiudonandkatsubar",
+      "beasty-goods2-52": "b_wasabiudonandkatsubar",
+      "rohnert-park-goods-1": "b_donjulioslatingrill",
+      "beasty-goods2-53": "b_donjulioslatingrill",
+      "pleasant-hill-goods-9": "b_gottaeattapita",
+      "beasty-goods2-54": "b_gottaeattapita",
+      "oakland-goods2-29": "b_elsazon",
+      "beasty-goods2-55": "b_elsazon",
+      "san-francisco-goods2-49": "b_montereypizzaandasianzap",
+      "beasty-goods2-56": "b_montereypizzaandasianzap",
+      "san-bruno-goods-10": "b_indaandmely",
+      "beasty-goods2-57": "b_indaandmely",
+      "millbrae-goods-5": "b_spinningdough",
+      "beasty-goods2-58": "b_spinningdough",
+      "san-jose-goods2-23": "b_phodaily",
+      "beasty-goods2-59": "b_phodaily",
+      "concord-goods-13": "b_mazehsandwichandcafe",
+      "berkeley-goods2-14": "b_littleplearnthaikitchen",
+      "beasty-goods2-60": "b_littleplearnthaikitchen",
+      "brentwood-goods-14": "b_hwanyeong",
+      "beasty-goods2-61": "b_hwanyeong",
+      "san-jose-goods2-24": "b_izumirevolvingsushi",
+      "beasty-goods2-62": "b_izumirevolvingsushi",
+      "newark-goods-10": "b_timog",
+      "beasty-ayce-7": "b_eastbaybuffet",
+      "beasty-cooks-10": "b_indaandmely",
+      "south-san-francisco-goods-9": "b_sofragrill",
+      "beasty-goods2-63": "b_sofragrill",
+      "beasty-goods2-64": "b_flourandwaterpizzeria",
+      "concord-goods-15": "b_devilandangeldesserts",
+      "berkeley-goods2-15": "b_headsandtailsbarbecue",
+      "beasty-goods2-65": "b_headsandtailsbarbecue",
+      "danville-goods-4": "b_kibosushidanville",
+      "beasty-goods2-66": "b_kibosushidanville",
+      "hayward-goods2-1": "b_shellshockseafoodhouse",
+      "beasty-goods2-67": "b_shellshockseafoodhouse",
+      "beasty-catering-7": "b_koreanpapiskitchen",
+      "beasty-cooks-11": "b_koreanpapiskitchen",
+      "oakland-goods2-30": "b_agaveuptown",
+      "beasty-goods2-68": "b_agaveuptown",
+      "san-francisco-goods2-50": "b_oceansubs",
+      "beasty-goods2-69": "b_oceansubs",
+      "oakland-goods2-31": "b_dimondhalaleatery",
+      "beasty-goods2-70": "b_dimondhalaleatery",
+      "oakland-goods2-32": "b_fasttimesburgers",
+      "beasty-goods2-71": "b_fasttimesburgers",
+      "oakland-goods2-33": "b_lococos",
+      "beasty-goods2-72": "b_lococos",
+      "concord-goods-6": "b_spicyjoisbanhmiandlaostreetfood",
+      "beasty-goods2-73": "b_spicyjoisbanhmiandlaostreetfood",
+      "berkeley-goods2-16": "b_yumemori",
+      "beasty-coffee-19": "b_yumemori",
+      "beasty-ayce-10": "b_favoriteindianrestaurant",
+      "fairfield-services2-1": "b_westcoastsips",
+      "beasty-catering-8": "b_westcoastsips",
+      "beasty-catering-9": "b_cleansipsmocktails",
+      "beasty-cooks-12": "b_westcoastsips",
+      "beasty-cooks-13": "b_cleansipsmocktails",
+      "beasty-foodtrucks-13": "b_westcoastsips",
+      "beasty-foodtrucks-14": "b_cleansipsmocktails",
+      "beasty-ayce-12": "b_wagyumastersanjose",
+      "livermore-goods2-4": "b_meadowlarkdairylivermore",
+      "san-francisco-goods2-51": "b_maggieandmacs",
+      "beasty-goods2-74": "b_maggieandmacs",
+      "pleasanton-goods-2": "b_chubbycattlebbqpleasanton",
+      "san-francisco-goods2-52": "b_lamarcebicheria",
+      "beasty-goods2-75": "b_lamarcebicheria",
+      "san-francisco-goods2-53": "b_bourbonsteaksanfrancisco",
+      "beasty-goods2-76": "b_bourbonsteaksanfrancisco",
+      "san-francisco-goods2-54": "b_theeighthrule",
+      "beasty-goods2-77": "b_theeighthrule",
+      "san-francisco-goods2-55": "b_harrisrestaurant",
+      "san-francisco-goods2-56": "b_blindbutcher",
+      "emeryville-goods-9": "b_simurghbakery",
+      "oakland-goods2-34": "b_innenaskitchen",
+      "beasty-goods2-78": "b_innenaskitchen",
+      "san-jose-services2-4": "b_calik9",
+      "newark-goods2-3": "b_legendhotpotgrill",
+      "daly-city-goods-4": "b_dalybuffet",
+      "fremont-goods-4": "b_sake2meaycesushi",
+      "concord-goods-4": "b_fusionbuffetconcord",
+      "fremont-goods2-8": "b_kakunasushi",
+      "beasty-goods2-79": "b_jaythecheesecakequeen",
+      "sunnyvale-goods-7": "b_garlichighsunnyvale",
+      "san-francisco-goods2-57": "b_epicsteak",
+      "san-francisco-goods2-58": "b_lunettecambodia",
+      "san-francisco-goods2-59": "b_frescasf",
+      "san-francisco-goods2-60": "b_earlytorisesf",
+      "oakland-goods2-35": "b_tacososcar",
+      "oakland-goods2-36": "b_squarepieguys",
+      "oakland-goods2-37": "b_chefsmelly",
+      "beasty-cooks-14": "b_chefsmelly",
+      "beasty-catering-10": "b_chefsmelly",
+      "beasty-goods2-80": "b_tacososcar",
+      "beasty-goods2-81": "b_lunettecambodia",
+      "beasty-goods2-82": "b_squarepieguys",
+      "beasty-goods2-83": "b_frescasf",
+      "beasty-goods2-84": "b_thesweetspot",
+      "south-san-francisco-goods2-1": "b_thienlyhouse",
+      "beasty-goods2-85": "b_thienlyhouse",
+      "san-mateo-goods2-3": "b_kajikensanmateo",
+      "san-mateo-goods2-4": "b_tasteofshaxian",
+      "beasty-ramen-7": "b_kajikensanmateo",
+      "beasty-ramen-8": "b_tasteofshaxian",
+      "fremont-goods2-9": "b_dindingdumplinghousefremont",
+      "san-francisco-goods2-61": "b_originlabcoffeematcha",
+      "san-leandro-goods-10": "b_parekoylutongpinoy",
+      "beasty-goods2-86": "b_parekoylutongpinoy",
+      "beasty-pits-1": "b_gemcitykennels",
+      "beasty-bbq-0": "b_woogakoreanbbq",
+      "san-jose-goods2-25": "b_yamibowl",
+      "beasty-goods2-87": "b_yamibowl",
+      "berkeley-goods2-17": "b_wikiwikihawaiianbbq",
+      "beasty-goods2-88": "b_wikiwikihawaiianbbq",
+      "sunnyvale-goods2-0": "b_mumuhotpotsunnyvale",
+      "cupertino-goods-7": "b_woogakoreanbbq",
+      "berkeley-goods2-18": "b_bingecoffeehouse",
+      "oakland-goods2-38": "b_houseofphin",
+      "beasty-steakhouse-9": "b_theseabyash",
+      "san-francisco-goods2-62": "b_hotpotbay",
+      "castro-valley-goods2-0": "b_urbanmatchacastrovalley",
+      "beasty-coffee-23": "b_urbanmatchacastrovalley",
+      "san-jose-goods2-26": "b_tleafgreensanjose",
+      "beasty-goods2-89": "b_tleafgreensanjose",
+      "richmond-goods2-3": "b_raizesdobrasil",
+      "beasty-goods2-90": "b_raizesdobrasil",
+      "beasty-diner-22": "b_raizesdobrasil",
+      "san-francisco-goods2-63": "b_houseofprimerib",
+      "beasty-steakhouse-10": "b_houseofprimerib",
+      "beasty-cooks-15": "b_chefreina",
+      "beasty-vegan-0": "b_laughingmonknopa",
+      "beasty-vegan-1": "b_chefreina",
+      "beasty-pits-2": "b_scpargos",
+      "san-leandro-goods2-0": "b_tapsilogexpress",
+      "beasty-goods2-91": "b_tapsilogexpress",
+      "hayward-goods2-2": "b_unitedmexicanbarandgrill",
+      "beasty-goods2-93": "b_unitedmexicanbarandgrill",
+      "oakland-goods2-40": "b_nokaramen",
+      "beasty-ramen-10": "b_nokaramen",
+      "capitola-goods-2": "b_yakitoritoriman",
+      "beasty-yakitori-0": "b_yakitoritoriman",
+      "union-city-goods2-5": "b_royalrootcafe",
+      "beasty-goods2-92": "b_royalrootcafe",
+      "beasty-bakery-14": "b_royalrootcafe",
+      "oakland-goods2-39": "b_ramenshop",
+      "beasty-ramen-9": "b_ramenshop",
+      "san-leandro-goods2-1": "b_sansanteahouse",
+      "beasty-goods2-94": "b_sansanteahouse",
+      "beasty-foodies2-0": "b_foodiezarinanawabi",
+      "beasty-foodies2-1": "b_foodiehungry4munchies",
+      "beasty-foodies2-2": "b_foodiejbrenes",
+      "beasty-foodies2-3": "b_foodiesimplydorothy",
+      "beasty-foodies2-4": "b_foodieacoupleofcooks",
+      "beasty-foodies2-5": "b_foodiejantrinanicole",
+      "beasty-foodies2-6": "b_foodiechriscorpz",
+      "beasty-foodies2-7": "b_foodiethealamedapulse",
+      "beasty-foodies2-8": "b_foodiebayareamunchies510",
+      "beasty-foodies2-9": "b_foodievictoriapham17",
+      "beasty-foodies2-10": "b_foodiefoodieberrie",
+      "beasty-foodies2-11": "b_foodiesamserved",
+      "beasty-foodies2-12": "b_foodieareweeatingyet",
+      "beasty-foodies2-13": "b_foodiesiusvision",
+      "beasty-foodies2-14": "b_foodiearianasade",
+      "beasty-foodies2-15": "b_foodiebayareafooddreamz",
+      "beasty-foodies2-16": "b_foodiebayareafoodz",
+      "beasty-foodies2-17": "b_foodiebestbayareafood",
+      "beasty-foodies2-18": "b_foodieannnaeats",
+      "beasty-foodies2-19": "b_foodieugcwithfrances",
+      "beasty-foodies2-20": "b_foodieeatwithsie",
+      "beasty-foodies2-21": "b_foodiedaeatzwitbri",
+      "beasty-foodies2-22": "b_foodiethetastebud",
+      "beasty-foodies2-23": "b_foodiedariananthony",
+      "beasty-foodies2-24": "b_foodiecharweeezy",
+      "beasty-foodies2-25": "b_foodiemukbangyourmama",
+      "beasty-foodies2-26": "b_foodiewanderingstefany",
+      "beasty-foodies2-27": "b_foodielifebyvivien",
+      "beasty-foodies2-28": "b_foodieandrelucas",
+      "beasty-foodies2-29": "b_foodieshrimpfriedroice",
+      "beasty-foodies2-30": "b_foodiecynlacson",
+      "beasty-foodies2-31": "b_foodiealexytravels",
+      "beasty-foodies2-32": "b_foodieandygravs",
+      "beasty-foodies2-33": "b_foodielivingvivalakillah",
+      "beasty-foodies2-34": "b_foodieeighty6ix",
+      "beasty-foodies2-35": "b_foodiemayakayofficial",
+      "beasty-foodies2-36": "b_foodiebayareamagandaeats",
+      "beasty-foodies2-37": "b_foodieforkmeetsfood",
+      "beasty-foodies2-38": "b_foodiefoodiesnflightss",
+      "beasty-foodies2-39": "b_foodiecarlaylayyy",
+      "beasty-foodies2-40": "b_foodieshuatangco",
+      "beasty-foodies2-41": "b_foodiejennyhomeloans",
+      "beasty-foodies2-42": "b_foodiewthellydanyelly",
+      "beasty-foodies2-43": "b_foodiethekhaysie",
+      "beasty-foodies2-44": "b_foodiesophiaxbayarea",
+      "beasty-foodies2-45": "b_foodiesierraeats8",
+      "beasty-foodies2-46": "b_foodieyosiiiifoodie",
+      "beasty-foodies2-47": "b_foodieivkicks",
+      "beasty-foodies2-48": "b_foodieitsslydiia",
+      "beasty-foodies2-49": "b_foodiestartingfiresevrywhere",
+      "beasty-foodies2-50": "b_foodiebylizettexo",
+      "beasty-foodies2-51": "b_foodieazteced",
+      "beasty-foodies2-52": "b_foodiebrianthebarber",
+      "beasty-foodies2-53": "b_foodienickk",
+      "beasty-foodies2-54": "b_foodiejamesbaylife",
+      "beasty-foodies2-55": "b_foodieshesvibinhigh",
+      "beasty-foodies2-56": "b_foodieimadoniseats",
+      "beasty-foodies2-57": "b_foodiemzzjuxtaposition",
+      "beasty-foodies2-58": "b_foodieyourglobalfoodiebff",
+      "beasty-foodies2-59": "b_foodiedchangshangry",
+      "beasty-foodies2-60": "b_foodiebayareafoodiesan",
+      "beasty-foodies2-61": "b_foodiefelicitythefoodie",
+      "beasty-foodies2-62": "b_foodietrinhdoesthings",
+      "beasty-foodies2-63": "b_foodietrulyathi",
+      "beasty-foodies2-64": "b_foodiesmackinfood",
+      "beasty-foodies2-65": "b_foodiejetsetjanine",
+      "beasty-foodies2-66": "b_foodiedroolingbae",
+      "beasty-foodies2-67": "b_foodiekvbitesandgo",
+      "beasty-foodies2-68": "b_foodiestunnaman02",
+      "beasty-foodies2-69": "b_foodiesavorwithcoral",
+      "beasty-foodies2-70": "b_foodiefirstdibsbayarea",
+      "beasty-foodies2-71": "b_foodiemargsout",
+      "beasty-foodies2-72": "b_foodieyogetasworld",
+      "beasty-foodies2-73": "b_foodieitsmayrazambrano",
+      "beasty-foodies2-74": "b_foodieyourtraveldaddy",
+      "beasty-foodies2-75": "b_foodiethesauceboss",
+      "beasty-foodies2-76": "b_foodiehellalocalmo",
+      "beasty-foodies2-77": "b_foodiethesnobbiefoodie",
+      "beasty-foodies2-78": "b_foodiekatfoodsf",
+      "beasty-foodies2-79": "b_foodiecharlikestoeat",
+      "beasty-foodies2-80": "b_foodiehellahansel",
+      "beasty-foodies2-81": "b_foodiegeraldfermin",
+      "beasty-foodies2-82": "b_foodiepimchanyum",
+      "beasty-foodies2-83": "b_foodiebayareawilson",
+      "beasty-foodies2-84": "b_foodiewhatthejessi",
+      "beasty-foodies2-85": "b_foodiefoodgiveness",
+      "beasty-foodies2-86": "b_foodieasideofsweet",
+      "beasty-foodies2-87": "b_foodietashamalan",
+      "beasty-foodies2-88": "b_foodiecamemzmin",
+      "beasty-foodies2-89": "b_foodieventurewithkelly",
+      "beasty-foodies2-90": "b_foodiecookwithhenny",
+      "beasty-foodies2-91": "b_foodieaemerieedance",
+      "beasty-foodies2-92": "b_foodiegreatonezfoodreview",
+      "beasty-foodies2-93": "b_foodiemrsmackreviews",
+      "beasty-foodies2-94": "b_foodiebpeats",
+      "beasty-foodies2-95": "b_foodieerinlovesfun",
+      "beasty-foodies2-96": "b_foodielovelivermore",
+      "beasty-foodies2-97": "b_foodiebayareafoodieadventures",
+      "beasty-foodies2-98": "b_foodieexplorewithtaka",
+      "beasty-foodies2-99": "b_foodiethehautesheet",
+      "beasty-foodies2-100": "b_foodiehumminglion",
+      "beasty-foodies2-101": "b_foodiesiliconvalleyfoodies",
+      "beasty-foodies2-102": "b_foodiewhatarethechances",
+      "beasty-foodies2-103": "b_foodiejacksdiningroom",
+      "beasty-foodies2-104": "b_foodiekatwalksf",
+      "beasty-foodies2-105": "b_foodieyulmool",
+      "beasty-foodies2-106": "b_foodiebarstoolsports",
+      "beasty-foodies2-107": "b_foodiexopinsta",
+      "beasty-foodies2-108": "b_foodieandreweatsinsf",
+      "beasty-foodies2-109": "b_foodielovemissfit",
+      "beasty-foodies2-110": "b_foodiechloechomps",
+      "beasty-foodies2-111": "b_foodierealtorandreviewer",
+      "beasty-foodies2-112": "b_foodiexoaramarie",
+      "beasty-foodies2-113": "b_foodiefoodiedreams",
+      "beasty-foodies2-114": "b_foodieeatswithkath",
+      "beasty-foodies2-115": "b_foodieeatswithfoodie",
+      "beasty-foodies2-116": "b_foodiejensintec",
+      "beasty-foodies2-117": "b_foodiesnackateriansf",
+      "beasty-foodies2-118": "b_foodieapoorvasharma1",
+      "beasty-foodies2-119": "b_foodievolhacreative",
+      "beasty-foodies2-120": "b_foodiebobaaddict",
+      "beasty-foodies2-121": "b_foodiefeedhappiness",
+      "beasty-foodies2-122": "b_foodieruthannesturman",
+      "beasty-foodies2-123": "b_foodielarryjunetfm",
+      "beasty-foodies2-124": "b_foodieeileenhuynher",
+      "beasty-foodies2-125": "b_foodiecreatewithcv",
+      "beasty-foodies2-126": "b_foodiealohastephanie",
+      "beasty-foodies2-127": "b_foodiezoegabon",
+      "beasty-foodies2-128": "b_foodiemartiwantsmore",
+      "beasty-foodies2-129": "b_foodiebyhillaryn",
+      "beasty-foodies2-130": "b_foodiealyeatscali",
+      "beasty-foodies2-131": "b_foodiebayareafoodies",
+      "beasty-foodies2-132": "b_foodiemoniicamichelle",
+      "beasty-foodies2-133": "b_foodieryanbyryanchua",
+      "beasty-foodies2-134": "b_foodiecestalmoco",
+      "beasty-foodies2-135": "b_foodiehangrypotato",
+      "beasty-foodies2-136": "b_foodiemelsotel",
+      "beasty-foodies2-137": "b_foodiesanleandroeats",
+      "beasty-teas-0": "b_sansanteahouse",
+      "beasty-teas-1": "b_chichasanchenberkeley",
+      "berkeley-goods-14": "b_chichasanchenberkeley",
+      "beasty-goods2-95": "b_chichasanchenberkeley",
+      "beasty-coffee-0": "b_jollycafe",
+      "beasty-coffee-1": "b_brewandbanhmi",
+      "beasty-coffee-3": "b_penelopescoffeeberkeley",
+      "beasty-coffee-4": "b_alushecoffee",
+      "beasty-coffee-5": "b_bascotacafe",
+      "beasty-coffee-6": "b_goldbeanpleasanton",
+      "beasty-coffee-7": "b_qspecialtycoffeesanfrancisco",
+      "beasty-coffee-8": "b_shibamcoffeenewark",
+      "beasty-coffee-11": "b_kiyomicaphe",
+      "beasty-coffee-12": "b_homcoffee",
+      "beasty-coffee-13": "b_cafe86dalycity",
+      "beasty-coffee-14": "b_tonocoffeeproject",
+      "beasty-coffee-15": "b_lacaphe",
+      "beasty-coffee-16": "b_soulsip",
+      "beasty-coffee-17": "b_pinkelementcafe",
+      "beasty-coffee-18": "b_mazehsandwichandcafe",
+      "beasty-coffee-20": "b_originlabcoffeematcha",
+      "beasty-coffee-21": "b_bingecoffeehouse",
+      "beasty-coffee-22": "b_houseofphin",
+      "san-jose-goods2-27": "b_saigonsocialcafe",
+      "hayward-goods2-3": "b_nobibihayward",
+      "san-francisco-goods2-64": "b_magicdonuts",
+      "san-jose-goods2-28": "b_insomnibar",
+      "beasty-goods2-96": "b_saigonsocialcafe",
+      "beasty-goods2-97": "b_nobibihayward",
+      "beasty-goods2-98": "b_magicdonuts",
+      "beasty-goods2-99": "b_insomnibar",
+      "beasty-foodies2-138": "b_foodiebroitsva",
+      "beasty-foodies2-139": "b_foodiefatashfoodie",
+      "beasty-foodies2-140": "b_foodiefoodieshots",
+      "beasty-foodies2-141": "b_foodiekitkatvales",
+      "beasty-cooks-5": "b_lolcatering",
+      "beasty-catering-6": "b_lolcatering",
+      "beasty-teas-21": "b_boba",
+      "beasty-cooks-16": "b_insomnibar",
+      "beasty-catering-11": "b_insomnibar",
+      "beasty-teas-22": "b_saigonsocialcafe",
+      "beasty-teas-23": "b_insomnibar",
+      "bay-area-goods2-0": "b_inkwallco",
+      "beasty-services2-33": "b_inkwallco",
+      "san-francisco-goods2-65": "b_subsinc",
+      "beasty-goods2-100": "b_subsinc",
+      "beasty-whips-11": "b_rywire",
+      "beasty-foodies2-142": "b_foodiefoodwookie",
+      "concord-services2-3": "b_lovittsbjj",
+      "beasty-games-1": "b_drcomicsmrgames",
+      "beasty-games-2": "b_1upretro",
+      "beasty-games-3": "b_ampmode",
+      "beasty-games-4": "b_emporiumsf",
+      "beasty-games-5": "b_shiftarcade",
+      "beasty-games-6": "b_highscores",
+      "beasty-tattoo-0": "b_oldcrowtattoo",
+      "beasty-tattoo-1": "b_rakanitattoo",
+      "beasty-tattoo-2": "b_mattahn",
+      "beasty-tattoo-3": "b_inkfromtatooine",
+      "beasty-tattoo-4": "b_pauldomingo",
+      "beasty-tattoo-5": "b_twodollarcowboy",
+      "beasty-tattoo-6": "b_blackcrowntattoo",
+      "beasty-tattoo-7": "b_kerushatattoo",
+      "beasty-athletes-0": "b_beastmode",
+      "beasty-ai-0": "b_looki",
+      "beasty-ai-1": "b_omerarielyai",
+      "beasty-ai-2": "b_korychester",
+      "beasty-ai-3": "b_kyvoraai",
+      "beasty-ai-4": "b_stgdesignz",
+      "beasty-ai-5": "b_daurenaltynbek",
+      "beasty-ai-6": "b_ismailseval",
+      "beasty-ai-7": "b_momerfarooq",
+      "beasty-artists-0": "b_macstalgia",
+      "beasty-artists-1": "b_frank2artistic",
+      "beasty-artists-2": "b_nayagreen",
+      "beasty-artists-3": "b_lyricsborn",
+      "beasty-artists-4": "b_sugarmurals",
+      "beasty-artists-5": "b_gonzaloyesca",
+      "beasty-artists-6": "b_cheeenoh",
+      "beasty-artists-7": "b_inkwallco",
+      "beasty-dancers-0": "b_housingauthority",
+      "beasty-dancers-1": "b_lilhawaii",
+      "beasty-dancers-2": "b_cheeenoh",
+      "beasty-dancers-3": "b_kaleiaolivia",
+      "beasty-donations-0": "b_eatlearnplay",
+      "beasty-djs-0": "b_djrevroc",
+      "beasty-djs-1": "b_djlex",
+      "beasty-cooks-0": "b_santaclarasuperkitchen",
+      "beasty-cooks-1": "b_rubenhibachigrill",
+      "beasty-cooks-2": "b_tastinpeachy",
+      "beasty-cooks-3": "b_emyscannoli",
+      "beasty-cooks-4": "b_abvethebasics",
+      "beasty-cooks-17": "b_subsinc",
+      "beasty-foodies-0": "b_foodiefestusfeasts",
+      "beasty-foodies-2": "b_foodiefoodandsachi",
+      "beasty-foodies-3": "b_foodiehungerefordiy",
+      "beasty-foodies-4": "b_foodiejustmostie",
+      "beasty-foodies-5": "b_foodiecapturedbysado",
+      "beasty-foodies-6": "b_foodieallieeats",
+      "beasty-foodies-7": "b_foodieseekeasyeats",
+      "beasty-foodies-8": "b_foodieorangeginger",
+      "beasty-foodies-9": "b_foodieantoinetterzz",
+      "beasty-foodies-10": "b_foodietakeoutwithtuck",
+      "beasty-foodies-11": "b_foodiechefmelissaking",
+      "beasty-foodies-12": "b_foodiecelineeats",
+      "beasty-foodies-13": "b_foodiegrubwitmike",
+      "beasty-foodies-14": "b_foodiesinglecatm0m",
+      "beasty-foodies-15": "b_foodiekimjsseats",
+      "beasty-foodies-16": "b_foodieoaktowngrubhub",
+      "beasty-foodies-17": "b_foodiethespoonlist",
+      "beasty-foodies-18": "b_foodiesherryeatworld",
+      "beasty-foodies-19": "b_foodiebooziebrunch",
+      "beasty-foodies-20": "b_foodiehungrydanz",
+      "beasty-foodies-21": "b_foodieiamnikkieg",
+      "beasty-foodies-22": "b_foodiejaneethefoodie",
+      "beasty-foodies-23": "b_foodiepeggyshoo",
+      "beasty-realtors-0": "b_claireandersonhomes",
+      "beasty-realtors-1": "b_1850properties",
+      "beasty-podcast-0": "b_goodpizzzapodcast",
+      "beasty-media-0": "b_overlyhiphop",
+      "beasty-media-1": "b_foursmedia",
+      "beasty-media-2": "b_visionmediaproduction",
+      "beasty-media-3": "b_goodpizzzapodcast",
+      "beasty-photographers-0": "b_townfuturistmedia",
+      "beasty-photographers-1": "b_isnappedphotobooths",
+      "beasty-photographers-2": "b_aberrationstudio",
+      "beasty-photographers-3": "b_momentus",
+      "beasty-photographers-4": "b_baymemoriesbooth",
+      "beasty-photographers-5": "b_thehendrys",
+      "beasty-photographers-6": "b_hamafilmxkonokaraokeserramonte",
+      "beasty-automotive-0": "b_almasautotires",
+      "beasty-automotive-1": "b_paintgo",
+      "beasty-automotive-2": "b_germanautosport",
+      "beasty-automotive-3": "b_hightechcaraudio",
+      "beasty-automotive-4": "b_winterwhitecarwash",
+      "beasty-automotive-5": "b_jdiautodetailing",
+      "beasty-automotive-6": "b_jnwdetailing",
+      "beasty-automotive-7": "b_diabloautodetailing",
+      "beasty-automotive-8": "b_garageworks",
+      "beasty-automotive-9": "b_precisionautoservice",
+      "beasty-automotive-10": "b_goldenautomuffler",
+      "beasty-automotive-11": "b_cleanasere",
+      "beasty-automotive-12": "b_doubletakeautospa",
+      "beasty-automotive-13": "b_eastbaytinting",
+      "beasty-automotive-14": "b_sinmexautobody",
+      "beasty-automotive-15": "b_audioaccessoriesmobile",
+      "beasty-automotive-16": "b_mcar",
+      "beasty-automotive-17": "b_autodesignpro",
+      "beasty-automotive-18": "b_precisionshine",
+      "beasty-automotive-19": "b_clearvisionheadlights",
+      "beasty-automotive-20": "b_wiseupnshine",
+      "beasty-automotive-21": "b_goldenbaydetailing",
+      "beasty-automotive-22": "b_dsbodyshop",
+      "beasty-pits-0": "b_sincitypits",
+      "beasty-pets-1": "b_gofrette",
+      "beasty-pets-2": "b_classycanines",
+      "beasty-pets-3": "b_healthyspotberkeley",
+      "beasty-pets-4": "b_petshowgrooming",
+      "beasty-pets-5": "b_happybaypaws",
+      "beasty-pets-6": "b_walkfree",
+      "beasty-pets-7": "b_lushspaw",
+      "beasty-pets-8": "b_eaglepetgrooming",
+      "beasty-pets-9": "b_bratpakdogkamp",
+      "beasty-pets-10": "b_woofgangbakeryoakley",
+      "beasty-pets-11": "b_thehubpackanimals",
+      "beasty-pets-12": "b_souvamobilepetgrooming",
+      "beasty-pets-13": "b_petbutlerwalnutcreek",
+      "beasty-pets-14": "b_allisdogwalking",
+      "beasty-pets-15": "b_pawddle",
+      "beasty-pets-16": "b_lavishpaws",
+      "beasty-pets-17": "b_tinywheels",
+      "beasty-pets-18": "b_glowpaws",
+      "beasty-pets-19": "b_pupcup",
+      "beasty-pets-20": "b_drypup",
+      "beasty-pets-21": "b_puppiepack",
+      "beasty-pets-22": "b_pacificpetgrooming",
+      "beasty-pets-23": "b_pawsnug",
+      "beasty-gyms-0": "b_trufusionwalnutcreek",
+      "beasty-gyms-1": "b_yogasixbrentwood",
+      "beasty-gyms-2": "b_jenuinefitness",
+      "beasty-gyms-3": "b_bodyrokberkeley",
+      "beasty-gyms-4": "b_rumbleboxingsanramon",
+      "beasty-gyms-5": "b_benchmarkclimbingberkeley",
+      "beasty-gyms-6": "b_gravityvaultmarin",
+      "beasty-gyms-7": "b_barrebeat",
+      "beasty-gyms-8": "b_betweentheplants",
+      "beasty-gyms-9": "b_corenestpilates",
+      "beasty-gyms-10": "b_contracostafitness",
+      "beasty-gyms-11": "b_domartialarts",
+      "beasty-gyms-12": "b_beatdropfitness",
+      "beasty-gyms-13": "b_transformfxfitness",
+      "beasty-gyms-14": "b_crossfitsweatshop",
+      "beasty-gyms-15": "b_arenaofkleos",
+      "beasty-gyms-16": "b_encoremovement",
+      "beasty-gyms-17": "b_lovittsbjj",
+      "beasty-barbershops-0": "b_luckybarbershop",
+      "beasty-barbershops-1": "b_ethosofcalifornia",
+      "beasty-barbershops-2": "b_magicjuans",
+      "beasty-barbershops-3": "b_caballerosbarberlounge",
+      "beasty-barbershops-4": "b_thelionsmanebarbershop",
+      "beasty-barbershops-5": "b_sjpropercuts",
+      "beasty-barbershops-6": "b_thecompanybarber",
+      "beasty-salons-0": "b_solasalons",
+      "beasty-salons-1": "b_varnishnailboutiquewalnutcreek",
+      "beasty-salons-2": "b_bibosalon",
+      "beasty-salons-3": "b_jazzbraids",
+      "beasty-salons-4": "b_themoonnails",
+      "beasty-salons-5": "b_jasnailspa",
+      "beasty-salons-6": "b_valenails",
+      "beasty-salons-7": "b_beautybybellez",
+      "beasty-salons-8": "b_unstrippedsalon",
+      "beasty-salons-9": "b_tipmepretty",
+      "beasty-salons-10": "b_polishedonpark",
+      "beasty-ayce-0": "b_harumiayce",
+      "beasty-ayce-1": "b_wagyugrillmilpitas",
+      "beasty-ayce-2": "b_littlesheepnewark",
+      "beasty-ayce-4": "b_nikuyastonegrill",
+      "beasty-ayce-5": "b_supremecrabayce",
+      "beasty-ayce-8": "b_crabboilandthings",
+      "beasty-ayce-9": "b_timog",
+      "beasty-ayce-11": "b_chubbycattlebbqpleasanton",
+      "beasty-ayce-13": "b_legendhotpotgrill",
+      "beasty-ayce-14": "b_dalybuffet",
+      "beasty-ayce-15": "b_sake2meaycesushi",
+      "beasty-ayce-16": "b_fusionbuffetconcord",
+      "beasty-ayce-17": "b_kakunasushi",
+      "beasty-foodtrucks-1": "b_vostokshawarma",
+      "beasty-foodtrucks-2": "b_aromaconcessions",
+      "beasty-foodtrucks-3": "b_mijaliscotaquizas",
+      "beasty-foodtrucks-4": "b_dinosgreekfoodtruck",
+      "beasty-foodtrucks-7": "b_birrialokaa",
+      "beasty-foodtrucks-8": "b_pezcow",
+      "beasty-foodtrucks-9": "b_elsazon",
+      "beasty-foodtrucks-10": "b_slangingdoughpizza",
+      "beasty-foodtrucks-11": "b_minipiratedonuts",
+      "beasty-foodtrucks-12": "b_koreanpapiskitchen",
+      "beasty-bakery-0": "b_themodelbakery",
+      "beasty-bakery-1": "b_onehousebakery",
+      "beasty-bakery-2": "b_frenchspot",
+      "beasty-bakery-3": "b_stellapastry",
+      "beasty-bakery-4": "b_doughweime",
+      "beasty-bakery-5": "b_sanhonorepanaderia",
+      "beasty-bakery-6": "b_pineapplekingbakerysanfrancisco",
+      "beasty-bakery-7": "b_gregorysgourmetdesserts",
+      "beasty-bakery-8": "b_milkcloudbakery",
+      "beasty-bakery-9": "b_butterpecan",
+      "beasty-bakery-10": "b_tartsdefeybesse",
+      "beasty-bakery-11": "b_onescafebakery",
+      "beasty-bakery-13": "b_simurghbakery",
+      "beasty-bakery-15": "b_sansanteahouse",
+      "beasty-bakery-16": "b_saigonsocialcafe",
+      "beasty-bakery-17": "b_magicdonuts",
+      "beasty-juice-1": "b_sidewalkjuice",
+      "beasty-juice-2": "b_freshfueljuicery",
+      "beasty-bars-6": "b_barrelbistro",
+      "beasty-bars-7": "b_7milehouse",
+      "beasty-bars-8": "b_balompie",
+      "beasty-bars-9": "b_paperplanesj",
+      "beasty-bars-10": "b_milelimitberkeley",
+      "beasty-bars-11": "b_napayard",
+      "beasty-bars-12": "b_nossooakland",
+      "beasty-bars-13": "b_holbrookhouse",
+      "beasty-bars-14": "b_shadyoakbrewing",
+      "beasty-bars-15": "b_aulounge",
+      "beasty-bars-16": "b_underdogscantina",
+      "beasty-bars-17": "b_wtfantioch",
+      "beasty-bars-18": "b_wtfoakley",
+      "beasty-bars-19": "b_broccellars",
+      "beasty-bars-20": "b_thenewhlounge",
+      "beasty-bars-21": "b_lenocturne",
+      "beasty-bars-22": "b_laughingmonknopa",
+      "beasty-bars-23": "b_vinniesbarandgrill",
+      "beasty-events-0": "b_camachospartyrentals",
+      "beasty-events-1": "b_bloomballoon",
+      "beasty-events-2": "b_moaeventsrentals",
+      "beasty-events-3": "b_kindbubbles",
+      "beasty-events-4": "b_funcloudevents",
+      "beasty-events-5": "b_nolastcallbartending",
+      "beasty-events-6": "b_pouraonwheels",
+      "beasty-events-7": "b_thebubblehouse",
+      "beasty-events-8": "b_totspotsoftplay",
+      "beasty-events-9": "b_sundripevents",
+      "beasty-youth-0": "b_dreamlandartplay",
+      "beasty-youth-1": "b_absolutevolleyballclub",
+      "beasty-youth-2": "b_funcloudevents",
+      "beasty-youth-3": "b_eatlearnplay",
+      "beasty-youth-4": "b_lovittsbjj",
+      "beasty-froyo-0": "b_myofrozenyogurtwalnutcreek",
+      "beasty-froyo-1": "b_heyyogurt",
+      "beasty-froyo-2": "b_cuppayodanville",
+      "beasty-catering-0": "b_santaclarasuperkitchen",
+      "beasty-catering-1": "b_rubenhibachigrill",
+      "beasty-catering-2": "b_tastinpeachy",
+      "beasty-catering-3": "b_emyscannoli",
+      "beasty-catering-4": "b_abvethebasics",
+      "beasty-catering-5": "b_indaandmely",
+      "beasty-catering-12": "b_subsinc",
+      "beasty-hotpot-0": "b_hungrycow",
+      "beasty-hotpot-1": "b_littlesheepnewark",
+      "beasty-hotpot-2": "b_kungfumala",
+      "beasty-hotpot-3": "b_legendhotpotgrill",
+      "beasty-hotpot-4": "b_mumuhotpotsunnyvale",
+      "beasty-hotpot-5": "b_hotpotbay",
+      "beasty-bbq-1": "b_downtownbbq",
+      "beasty-bbq-2": "b_willybillysmokedmeat",
+      "beasty-bbq-3": "b_dadsbbq",
+      "beasty-bbq-4": "b_laslomasribpalace",
+      "beasty-bbq-5": "b_acekingbbq",
+      "beasty-bbq-6": "b_roasteateryco",
+      "beasty-bbq-7": "b_hungrycow",
+      "beasty-bbq-8": "b_wagyugrillmilpitas",
+      "beasty-bbq-9": "b_meattimeyakiniku",
+      "beasty-bbq-10": "b_thecats",
+      "beasty-bbq-11": "b_traballosbackyardbbq",
+      "beasty-bbq-12": "b_aromaconcessions",
+      "beasty-bbq-13": "b_seawagyuhouse",
+      "beasty-bbq-14": "b_crazyblockcheesecakes",
+      "beasty-bbq-15": "b_baekjeongsanjose",
+      "beasty-bbq-16": "b_smokingpigbbqsanjose",
+      "beasty-bbq-17": "b_hickrypit",
+      "beasty-bbq-18": "b_headsandtailsbarbecue",
+      "beasty-bbq-19": "b_chubbycattlebbqpleasanton",
+      "beasty-bbq-20": "b_legendhotpotgrill",
+      "beasty-bbq-21": "b_dalybuffet",
+      "beasty-bbq-22": "b_fusionbuffetconcord",
+      "beasty-bbq-23": "b_yamibowl",
+      "beasty-dimsum-0": "b_xnoodledumpling",
+      "beasty-dimsum-1": "b_zandypekingduck",
+      "beasty-dimsum-2": "b_dimsumbasket",
+      "beasty-dimsum-3": "b_hlpeninsulasouthsf",
+      "beasty-dimsum-4": "b_hlpeninsulapearl",
+      "beasty-dimsum-5": "b_hlpeninsulagarden",
+      "beasty-dimsum-6": "b_yanksing",
+      "beasty-dimsum-7": "b_goldenbayseafoodharbor",
+      "beasty-dimsum-8": "b_yuanbaojiaozisanfrancisco",
+      "beasty-dimsum-9": "b_mdumpling",
+      "beasty-dimsum-10": "b_tasteofshaxian",
+      "beasty-dimsum-11": "b_dindingdumplinghousefremont",
+      "beasty-ramen-0": "b_mrsramen",
+      "beasty-ramen-1": "b_tadaramen",
+      "beasty-ramen-2": "b_yosushivacaville",
+      "beasty-ramen-3": "b_hinodeyaramenberkeley",
+      "beasty-ramen-4": "b_wadayafremont",
+      "beasty-ramen-5": "b_hironorisantaclara",
+      "beasty-ramen-6": "b_garlichighsunnyvale",
+      "beasty-steakhouse-0": "b_chiquoandeva",
+      "beasty-steakhouse-1": "b_macsoldhouse",
+      "beasty-steakhouse-2": "b_moxiesteakhouse",
+      "beasty-steakhouse-3": "b_pampasvacaville",
+      "beasty-steakhouse-4": "b_galpaogauchowalnutcreek",
+      "beasty-steakhouse-5": "b_bourbonsteaksanfrancisco",
+      "beasty-steakhouse-6": "b_harrisrestaurant",
+      "beasty-steakhouse-7": "b_blindbutcher",
+      "beasty-steakhouse-8": "b_epicsteak",
+      "beasty-diner-0": "b_thehangoutbreakfast",
+      "beasty-diner-1": "b_beniciagrill",
+      "beasty-diner-2": "b_shakashack",
+      "beasty-diner-3": "b_babsdeltadiner",
+      "beasty-diner-4": "b_kankiin",
+      "beasty-diner-5": "b_mimosaswillowglen",
+      "beasty-diner-6": "b_toastintown",
+      "beasty-diner-7": "b_alushecoffee",
+      "beasty-diner-8": "b_fourchairs",
+      "beasty-diner-9": "b_curiobar",
+      "beasty-diner-10": "b_skilletzcafe",
+      "beasty-diner-11": "b_thebreezecafe",
+      "beasty-diner-12": "b_grindcafe707",
+      "beasty-diner-13": "b_brunchandbloom",
+      "beasty-diner-14": "b_shattuckandbutter",
+      "beasty-diner-15": "b_cafecarrusel",
+      "beasty-diner-16": "b_thebreakfastclubsf",
+      "beasty-diner-17": "b_hickrypit",
+      "beasty-diner-18": "b_pattysdiner",
+      "beasty-diner-19": "b_sugarplumcoffeeshop",
+      "beasty-diner-20": "b_simurghbakery",
+      "beasty-diner-21": "b_earlytorisesf",
+      "beasty-health-1": "b_bodylinesdayspa",
+      "beasty-vegan-2": "b_donutfarm",
+      "beasty-vegan-3": "b_whackdonuts",
+      "beasty-vegan-4": "b_veganmob",
+      "beasty-yakitori-1": "b_tadaramen",
+      "beasty-yakitori-2": "b_littlesheepnewark",
+      "beasty-yakitori-3": "b_theyakitoribar",
+      "beasty-yakitori-4": "b_kodawarisushi",
+      "beasty-yakitori-5": "b_drunkenmonk",
+      "beasty-teas-2": "b_bobertea",
+      "beasty-teas-3": "b_breaktimetea",
+      "beasty-teas-4": "b_suptealab",
+      "beasty-teas-5": "b_quicklybenicia",
+      "beasty-teas-6": "b_bobaclub",
+      "beasty-teas-7": "b_thirsteasanleandro",
+      "beasty-teas-8": "b_dumontlivermore",
+      "beasty-teas-9": "b_almadessert",
+      "beasty-teas-10": "b_penelopescoffeeberkeley",
+      "beasty-teas-11": "b_bascotacafe",
+      "beasty-teas-12": "b_konthegounioncity",
+      "beasty-teas-13": "b_lacaphe",
+      "beasty-teas-14": "b_soulsip",
+      "beasty-teas-15": "b_pinkelementcafe",
+      "beasty-teas-16": "b_hwanyeong",
+      "beasty-teas-17": "b_yumemori",
+      "beasty-teas-18": "b_originlabcoffeematcha",
+      "beasty-teas-19": "b_bingecoffeehouse",
+      "beasty-teas-20": "b_urbanmatchacastrovalley",
+      "beasty-eats-2": "b_xnoodledumpling",
+      "beasty-eats-7": "b_demitristaverna",
+      "beasty-eats-8": "b_greatimpasta",
+      "beasty-eats-9": "b_lucyscrepes",
+      "beasty-eats-12": "b_mrsramen",
+      "beasty-eats-19": "b_chiquoandeva",
+      "beasty-sweets-1": "b_donutfarm",
+      "beasty-sweets-2": "b_bobertea",
+      "beasty-sweets-4": "b_wafflescream",
+      "beasty-sweets-7": "b_themodelbakery",
+      "beasty-sweets-9": "b_sidewalkjuice",
+      "beasty-sweets-11": "b_basqhaus",
+      "beasty-sweets-13": "b_bakedblooms",
+      "beasty-sweets-16": "b_scoopnchill",
+      "beasty-sweets-19": "b_udessertstory",
+      "beasty-sweets-20": "b_maymayscravings",
+      "beasty-sweets-22": "b_paletaplaneta"
+    }
+  },
+  "held": [
+    {
+      "request": "DEfXWJAS-TT — Downtown BBQ Clip",
+      "reason": "Exact post and January 6, 2025 caption verified in signed-in Chrome. Anonymous download reports audience restriction; observed-media export also fails. Original credited link is seated on Downtown BBQ; no fabricated local film.",
+      "creator": "arrowi3",
+      "posted_by": "downtownbarbecue"
+    },
+    {
+      "request": "CwD8utAosUv — Backyard Mediocre",
+      "reason": "Exact August 17, 2023 post by bayarea_fooddreamz with richmondbackyard verified in Chrome; anonymous media download unavailable. Credited original review link is seated; local cut held."
+    },
+    {
+      "request": "Red Eye Barbecue on BBQ category",
+      "reason": "All 24 BBQ spots already occupied; preserve occupants. Santa Rosa More goods and BEASTY More eats carry the listing."
+    },
+    {
+      "request": "Supply Co / Goods discussion",
+      "reason": "Separate future-project conversation, not a BEASTY listing, app build or outbound communication request."
+    }
+  ],
+  "portraits": [
+    "daeatzwitbri",
+    "festusfeasts",
+    "foodandsachi",
+    "hungere.for.diy",
+    "peterlyagent",
+    "imadoniseats",
+    "justmostie",
+    "wthellydanyelly"
+  ],
+  "notes": [
+    "Repeated De97hK7vvNH belongs to Half Moon Play, not Peek-a-Boo Factory; one cut only.",
+    "Tag Shanna: outdoorideaswithkids credited with direct profile link on Peek-a-Boo.",
+    "County Flood hours take precedence over map screenshot. Museum October event, Backyard 2025 event and older review promotions disclosed as archival.",
+    "Peek calendar conflicts with static hours, Half Moon Sunday changes, Orchard harvest season and KidTopia coming-soon package are disclosed.",
+    "Jin Pot website afternoon typo resolved by own IG hours; current website phone chosen over older PDF phone. Alcohol-inclusive Ultimate package excluded, not repriced.",
+    "United menu and phone from Oakland ChowNow, not chain catering text line or frozen wholesale collection.",
+    "Original supplied artwork downloaded or cropped without redrawing. Eight requested Foodie icon changes and Kings badge included.",
+    "leonbuilds.org is the operator’s own domain and excluded as a new listing.",
+    "No unrelated affiliate work, outbound messages, forms, waivers, accounts or transactions."
+  ]
+}

@@ -155,6 +155,8 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   /* Glenn, 30 Oct 10:59 am: "New Category / B i P / BEAST in PEACE".
      No entries supplied yet; manual placement only. */
   { kind: 'bip', heading: 'B i P', about: 'BEAST in PEACE', wall: wall('bip') },
+  /* Glenn, November 1: family outings, explicitly curated across several venue types. */
+  { kind: 'parks', heading: 'Parks/Playgrounds', about: 'Parks, playgrounds and family places', wall: wall('parks') },
 ]
 
 /** Every category page holds his twenty-four. */

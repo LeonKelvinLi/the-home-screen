@@ -345,4 +345,8 @@ export const CITY_PAGES = [
   'Millbrae',
   // Glenn, 29 Oct 6:55 pm, Toriman: Capitola • Eats. No landmark photo sent.
   'Capitola',
+  // Batch 85: requested family venues in their own cities.
+  'Half Moon Bay',
+  'Rancho Cordova',
+  'Camino',
 ] as const

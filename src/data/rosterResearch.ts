@@ -6281,10 +6281,12 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: No phone number in the text of their site or the profile Glenn sent.
   */
   'el-portal-san-leandro': {
+    phone: "510-878-7954",
+    email: "elportalrestaurant@hotmail.com",
     address: "2028 Lewelling Blvd, San Leandro, CA",
     hours: "Mon-Fri 9am-10pm; brunch buffet Sat-Sun 9am-5:30pm",
     instagram: "elportalsanleandro",
-    cuisine: "Mexican & seafood",
+    cuisine: "Mexican & seafood, AYCE brunch buffet",
     tagline: "Mexican plates and seafood on Lewelling, with a weekend brunch buffet",
     sections: [
       { name: "Appetizers / Botanas", items: [

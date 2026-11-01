@@ -67,6 +67,7 @@ export const CATEGORY_GLYPHS: Record<string, CategoryGlyph> = {
   juice: { paths: ['M6 8h12l-1.5 13h-9Z', 'M6.6 13h10.8', 'M12 8l2.5-6H18'] },
   bars: { paths: ['M4 4h16l-8 9Z', 'M7 7h10', 'M12 13v8', 'M8 21h8'] },
   events: { paths: ['M4 6h16v15H4Z', 'M4 10.5h16', 'M8 3v5', 'M16 3v5', 'M12 13l1.2 2.4 2.6.4-1.9 1.8.5 2.6-2.4-1.3-2.4 1.3.5-2.6-1.9-1.8 2.6-.4Z'] },
+  parks: { paths: ['M3 21V4h14v17', 'M3 5h14', 'M8 5v8', 'M6 14h4', 'M17 11l4 10', 'M15 21h8'] },
   youth: { paths: [ring(7, 5, 2), 'M7 7v7', 'M3 3.5L7 9l4-5.5', 'M4.5 21L7 14l2.5 7', ring(17, 5, 2), 'M17 7v7', 'M13 3.5L17 9l4-5.5', 'M14.5 21L17 14l2.5 7'] },
 }
 

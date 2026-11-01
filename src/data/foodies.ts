@@ -44,16 +44,18 @@ export interface FoodiePage {
   label: string
   /** An existing page that is this creator's (Grand-O's), instead of a new one. */
   brand?: string
+  /** Original profile artwork supplied for this creator. */
+  icon?: string
 }
 
 const reel = (code: string) => `https://www.instagram.com/reel/${code}/`
 
 const TOP_FOODIE_PAGES: FoodiePage[] = [
-  { handle: 'festusfeasts', name: 'Festus Ezeli', label: 'Festus' },
+  { handle: 'festusfeasts', icon: "foodie-festusfeasts-v85", name: 'Festus Ezeli', label: 'Festus' },
   { handle: 'thesnacksensei', name: 'Grand-O', label: 'Grand-O', brand: 'b_grando' },
-  { handle: 'foodandsachi', name: 'Sachi', label: 'Sachi' },
-  { handle: 'hungere.for.diy', name: 'Hunger E for DIY', label: 'Hunger E' },
-  { handle: 'justmostie', name: 'Mostie', label: 'Mostie' },
+  { handle: 'foodandsachi', icon: "foodie-foodandsachi-v85", name: 'Sachi', label: 'Sachi' },
+  { handle: 'hungere.for.diy', icon: "foodie-hungere-for-diy-v85", name: 'Hunger E for DIY', label: 'Hunger E' },
+  { handle: 'justmostie', icon: "foodie-justmostie-v85", name: 'Mostie', label: 'Mostie' },
   { handle: 'capturedbysado', name: 'capturedbysado', label: 'Sado' },
   { handle: 'allie.eats', name: 'Allie Tong', label: 'Allie Tong' },
   { handle: 'seekeasyeats', name: 'Seekeasy', label: 'Seekeasy' },
@@ -186,7 +188,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "eatwithsie"
   },
   {
-    "handle": "daeatzwitbri",
+    "handle": "daeatzwitbri", icon: "foodie-daeatzwitbri-v85",
     "name": "@daeatzwitbri",
     "label": "daeatzwitbri"
   },
@@ -291,7 +293,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "jenny.home.loans"
   },
   {
-    "handle": "wthellydanyelly",
+    "handle": "wthellydanyelly", icon: "foodie-wthellydanyelly-v85",
     "name": "@wthellydanyelly",
     "label": "wthellydanyelly"
   },
@@ -361,7 +363,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "shesvibinhigh"
   },
   {
-    "handle": "imadoniseats",
+    "handle": "imadoniseats", icon: "foodie-imadoniseats-v85",
     "name": "@imadoniseats",
     "label": "imadoniseats"
   },
@@ -774,7 +776,14 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "fat_ash_foodie", "name": "Ash", "label": "Ash"},
   {"handle": "_foodieshots_", "name": "Joann Ha", "label": "Joann Ha"},
   {"handle": "kitkatvales", "name": "@kitkatvales", "label": "kitkatvales"},
-  { handle: 'foodwookie', name: 'FoodWookie', label: 'FoodWookie' }
+  { handle: 'foodwookie', name: 'FoodWookie', label: 'FoodWookie' },
+  {"handle": "kangofrealty", "name": "@kangofrealty", "label": "kangofrealty"},
+  {"handle": "sonomacountyliving", "name": "@sonomacountyliving", "label": "sonomacountyliving"},
+  {"handle": "lovecartier25", "name": "@lovecartier25", "label": "lovecartier25"},
+  {"handle": "foodelaventures", "name": "@foodelaventures", "label": "foodelaventures"},
+  {"handle": "fedoramaelle", "name": "@fedoramaelle", "label": "fedoramaelle"},
+  {"handle": "foodie_travel_happiness", "name": "@foodie_travel_happiness", "label": "foodie_travel_happiness"},
+  {"handle": "peterlyagent", icon: "foodie-peterlyagent-v85", "name": "Peter Ly", "label": "Peter Ly"},
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -1019,6 +1028,33 @@ export const OTHER_REVIEWS: OtherReview[] = [
   /* Batch 84, Glenn: Heavy Hitter. Grand-O keeps his existing page. */
   { by: 'thesnacksensei', place: 'Subs Inc.', city: 'San Francisco', brand: 'b_subsinc', reel: reel('DfK5OdlSYrJ'), clip: true },
 
+  /* Batch 85 — original Glenn tags are provenance, not BEASTY ratings. */
+  // Glenn: Clip
+  {"by": "miks_outdoors", "place": "Bay Area Discovery Museum", "city": "Sausalito", "brand": "b_bayareadiscoverymuseum", "reel": "https://www.instagram.com/reel/DeHetb-KJi-/", "clip": true, "credit": "Filmed by @miks_outdoors · Archival October Goblin Jamboree footage; the event has ended."},
+  // Glenn: Clip / Tag Shanna
+  {"by": "outdoorideaswithkids", "place": "Peek-a-Boo Factory — Rancho Cordova", "city": "Rancho Cordova", "brand": "b_peekaboofactoryrc", "reel": "https://www.instagram.com/reel/DchaQ5ZPMAz/", "clip": true, "credit": "Filmed by Shanna · @outdoorideaswithkids"},
+  // Glenn: Clip
+  {"by": "outdoorideaswithkids", "place": "El Dorado Orchards", "city": "Camino", "brand": "b_eldoradoorchards", "reel": "https://www.instagram.com/reel/DevA1QXvtAr/", "clip": true, "credit": "Filmed by @outdoorideaswithkids · Seasonal harvest visit; weather and dates can change."},
+  // Glenn: Clip
+  {"by": "truly_athi", "place": "Lakewood Park", "city": "Sunnyvale", "brand": "b_lakewoodpark", "reel": "https://www.instagram.com/reel/Dcqu-CkvNfy/", "clip": true},
+  // Glenn: Newbie
+  {"by": "sonomacountyliving", "place": "Red Eye Barbecue", "city": "Santa Rosa", "brand": "b_redeyebarbecue", "reel": "https://www.instagram.com/reel/DdcJ0ICPTlh/", "clip": true, "credit": "Filmed by @sonomacountyliving · Hosted menu-preview review; food was provided, as the creator discloses."},
+  // Glenn: Newbie
+  {"by": "lovecartier25", "place": "Jin Pot Shabu House", "city": "San Francisco", "brand": "b_jinpotshabuhouse", "reel": "https://www.instagram.com/reel/DZ73122Jj0Q/", "clip": true, "credit": "Filmed by @lovecartier25 · Hosted visit, disclosed by the creator."},
+  // Glenn: Mediocre
+  {"by": "hungere.for.diy", "place": "United Dumplings — Oakland", "city": "Oakland", "brand": "b_uniteddumplingsoakland", "reel": "https://www.instagram.com/reel/DfNCcelSeUT/", "clip": true},
+  // Glenn: Heavy Hitter
+  {"by": "fedoramaelle", "place": "United Dumplings — Oakland", "city": "Oakland", "brand": "b_uniteddumplingsoakland", "reel": "https://www.instagram.com/reel/De3KeuWTmRO/", "clip": true},
+  // Glenn: Newbie
+  {"by": "foodie_travel_happiness", "place": "The Backyard — Richmond", "city": "Richmond", "brand": "b_therichmondbackyard", "reel": "https://www.instagram.com/reel/DAwd7foumEg/", "clip": true, "credit": "Filmed by @foodie_travel_happiness · Archival 2024 visit; confirm current menu and events."},
+  // Glenn: Foodie
+  {"by": "peterlyagent", "place": "El Portal Mexican Restaurant", "city": "San Leandro", "brand": "b_elportalsanleandro", "reel": "https://www.instagram.com/reel/Da1oeItBNd3/", "clip": true, "credit": "Filmed by @peterlyagent · Archival oyster review; confirm current specials and prices with the restaurant."},
+  // Glenn: Heavy Hitter
+  {"by": "foodandsachi", "place": "El Portal Mexican Restaurant", "city": "San Leandro", "brand": "b_elportalsanleandro", "reel": "https://www.instagram.com/reel/DXaKrrREnjH/", "clip": true, "credit": "Filmed by @foodandsachi · Archival April review; menu prices and promotions may have changed."},
+  // Glenn: Mediocre
+  {"by": "aztec.ed", "place": "El Portal Mexican Restaurant", "city": "San Leandro", "brand": "b_elportalsanleandro", "reel": "https://www.instagram.com/reel/DXDFiGkAbCn/", "clip": true, "credit": "Filmed by @aztec.ed · Archival April review; confirm current specials with the restaurant."},
+  // Glenn: Mediocre. Original post verified; local media copy held.
+  {"by": "bayarea_fooddreamz", "place": "The Backyard \u2014 Richmond", "city": "Richmond", "brand": "b_therichmondbackyard", "reel": "https://www.instagram.com/reel/CwD8utAosUv/", "credit": "Archival August 17, 2023 visit. Watch the original post on Instagram."},
 ]
 
 /*
@@ -1034,6 +1070,7 @@ export const FOODIE_SEED: LocalSeed[] = FOODIE_PAGES.filter((f) => !f.brand).map
   cuisine: 'Food reviewer',
   tagline: `Bay Area food reviews, @${f.handle}`,
   color: PALETTE[i % PALETTE.length],
+  icon: f.icon,
   prep: 0,
   category: 'Foodie',
   logoTemplate: 'wordmark',

@@ -810,6 +810,7 @@ MOTIFS = {
     "bars": m_bars,
     "events": m_events,
     "youth": m_youth,
+    "parks": m_youth,
     "pits": m_pits,
     "pets": m_pets,
     "models": m_models,

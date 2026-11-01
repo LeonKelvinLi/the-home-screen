@@ -3943,18 +3943,8 @@ export const LOCAL_SEED: LocalSeed[] = [
     tagline: 'Brazilian and West Coast pizza on Mission Street.',
     color: '#080404|#F7F1E3',
     prep: 0,
-    /*
-      NO ICON YET, AND IT IS NOT AN OVERSIGHT. Their site's header "logo" is a
-      1200px illustration of a bear on a scooter crossing the Golden Gate — at
-      tile size it reads as a cropped photograph, not a mark. Their real
-      circular badge exists on the restaurant wall and on the delivery box
-      inside that illustration, but is published nowhere as a file. Ask them for
-      it; the app draws its own mark until then.
-
-      Italian is the nearest of the twenty-four and it is not a good fit: there
-      is no pizza category and no Brazilian one, and Brazilian is what they lead
-      with — feijoada, picanha, catupiry, brigadeiro, açaí.
-    */
+    // Glenn supplied the original circular badge on November 1 (IMG_8733).
+    icon: 'kings-wc-pizza-v85',
     logoTemplate: 'badge',
     logoFace: 'slab',
     logoInitials: 'KP',
@@ -61060,6 +61050,2638 @@ export const LOCAL_SEED: LocalSeed[] = [
       "href": "https://www.instagram.com/reel/DdexmHaqiQ3/",
       "credit": "AI-generated fan film · Posted by @mo.x2.ai",
       "platform": "Instagram"
+    }
+  },
+
+  /* Batch 85 — Glenn, November 1. Primary sources and holds: docs/BATCH-85.md. */
+  {
+    "slug": "flood-park",
+    "name": "Flood Park",
+    "label": "Flood Park",
+    "cuisine": "Park, inclusive playground",
+    "tagline": "An inclusive playground, courts, picnic areas and pump track in Menlo Park.",
+    "color": "#233429",
+    "icon": "flood-park",
+    "prep": 0,
+    "category": "Parks/Playgrounds",
+    "items": [],
+    "site": "https://www.smcgov.org/parks/flood-park",
+    "address": "215 Bay Rd, Menlo Park, CA 94025",
+    "phone": "650-363-4022",
+    "contactOnly": "Visit the county park website for facilities, closures and picnic reservations.",
+    "panels": [
+      {
+        "head": "Park hours",
+        "body": [
+          "Opens daily at 8 am. County seasonal schedule: closes at 6 pm October 12–November 1, 2026; closes at 5 pm November 2, 2026–February 2027. Map screenshots may show older hours."
+        ],
+        "links": [
+          {
+            "label": "Current county hours",
+            "href": "https://www.smcgov.org/parks/flood-park-hours"
+          }
+        ]
+      },
+      {
+        "head": "Playground and facilities",
+        "body": [
+          "Inclusive playground, sports courts, picnic areas and pump track. The county says the playground is open; the ribbon cutting is November 10. Check the county for closures and reservation availability."
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/flood-park.mp4",
+      "poster": "/clips/flood-park-poster.webp",
+      "href": "https://www.instagram.com/reel/DfL8ZCWJG0q/",
+      "credit": "Filmed by @polynesianmomx3",
+      "platform": "Instagram",
+      "by": "polynesianmomx3"
+    }
+  },
+  {
+    "slug": "bay-area-discovery-museum",
+    "name": "Bay Area Discovery Museum",
+    "label": "Discovery Museum",
+    "cuisine": "Children’s museum, family play",
+    "tagline": "Hands-on discovery and outdoor play for ages 0–8 at Fort Baker.",
+    "color": "#233429",
+    "icon": "bay-area-discovery-museum",
+    "prep": 0,
+    "category": "Parks/Playgrounds",
+    "items": [],
+    "site": "https://bayareadiscoverymuseum.org/plan-your-visit/",
+    "address": "557 McReynolds Rd, Sausalito, CA 94965",
+    "phone": "415-339-3900",
+    "email": "contact@badm.org",
+    "instagram": "bayareadiscoverymuseum",
+    "quoteOnly": "Buy tickets from the museum. Special events have separate prices and terms.",
+    "groups": [
+      {
+        "name": "General admission",
+        "items": [
+          [
+            "Child (ages 1–17)",
+            "",
+            2500
+          ],
+          [
+            "Adult (18–64)",
+            "",
+            2500
+          ],
+          [
+            "Senior (65+)",
+            "",
+            2300
+          ]
+        ]
+      },
+      {
+        "name": "Admission programs",
+        "items": [
+          [
+            "EBT / SNAP / WIC admission (up to 4 people)",
+            "",
+            500
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Visiting hours",
+        "body": [
+          "Wednesday–Friday 10 am–4 pm; Saturday 9 am–4 pm; Sunday 10 am–4 pm. Closed Monday–Tuesday during the school year. The second Thursday of each month closes at 3 pm. Members-only early access is separate."
+        ]
+      },
+      {
+        "head": "Tickets and families",
+        "body": [
+          "Children under 1 enter free. Ages 0–8 are the museum’s intended audience. Adult supervision is required; one adult per five children. Free parking and an on-site café. Discounts have eligibility requirements; check the museum before booking."
+        ]
+      },
+      {
+        "head": "October films",
+        "body": [
+          "These Goblin Jamboree films are archival October footage. That event has ended. General admission prices do not apply to special events."
+        ],
+        "links": [
+          {
+            "label": "Current visit details and tickets",
+            "href": "https://bayareadiscoverymuseum.org/plan-your-visit/"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/bay-area-discovery-museum.mp4",
+      "poster": "/clips/bay-area-discovery-museum-poster.webp",
+      "href": "https://www.instagram.com/reel/DeIy_IyJv2i/",
+      "credit": "Filmed by @polynesianmomx3 · Archival October Goblin Jamboree footage; the event has ended. Check current museum tickets.",
+      "platform": "Instagram",
+      "by": "polynesianmomx3"
+    }
+  },
+  {
+    "slug": "half-moon-play",
+    "name": "Half Moon Play",
+    "label": "Half Moon Play",
+    "cuisine": "Indoor playground, family play",
+    "tagline": "Indoor play and parties for children ages 0–9 in Half Moon Bay.",
+    "color": "#233429",
+    "icon": "half-moon-play",
+    "prep": 0,
+    "category": "Parks/Playgrounds",
+    "items": [],
+    "site": "https://thehalfmoonplay.com/",
+    "address": "50 Cabrillo Hwy N, Suite B4A, Half Moon Bay, CA 94019",
+    "phone": "650-729-3015",
+    "email": "info@thehalfmoonplay.com",
+    "instagram": "halfmoonplay",
+    "quoteOnly": "Check current hours and arrange admission or parties directly with Half Moon Play.",
+    "groups": [
+      {
+        "name": "Daily admission",
+        "items": [
+          [
+            "Child — Monday–Thursday",
+            "",
+            1600
+          ],
+          [
+            "Child — Friday–Sunday and holidays",
+            "",
+            1800
+          ],
+          [
+            "Additional adult",
+            "",
+            500
+          ],
+          [
+            "Grip socks",
+            "",
+            300
+          ]
+        ]
+      },
+      {
+        "name": "Monthly membership",
+        "items": [
+          [
+            "First child",
+            "",
+            10000
+          ],
+          [
+            "Sibling",
+            "",
+            7500
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Hours and Sunday changes",
+        "body": [
+          "Monday–Thursday 10 am–6 pm; Friday 10 am–7 pm; Saturday 9 am–7 pm. Sunday is listed as 9 am–6 pm, with a notice that Sundays will soon be private parties only. Confirm before traveling."
+        ]
+      },
+      {
+        "head": "Play and membership",
+        "body": [
+          "A pre-walker is free with a paid child; one adult per family is included with daily admission. Grip socks are required. Membership includes one two-hour visit each day and two adults; additional adults are $5. Members receive the operator’s published 15% birthday-party discount; confirm terms directly."
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/half-moon-play.mp4",
+      "poster": "/clips/half-moon-play-poster.webp",
+      "href": "https://www.instagram.com/reel/De97hK7vvNH/",
+      "credit": "Posted by @halfmoonplay",
+      "platform": "Instagram"
+    }
+  },
+  {
+    "slug": "peek-a-boo-factory-rc",
+    "name": "Peek-a-Boo Factory — Rancho Cordova",
+    "label": "Peek-a-Boo Factory",
+    "cuisine": "Indoor playground, ninja play",
+    "tagline": "Three levels of play, a toddler area and an obstacle course in Rancho Cordova.",
+    "color": "#233429",
+    "icon": "peek-a-boo-factory-rc",
+    "prep": 0,
+    "category": "Parks/Playgrounds",
+    "items": [],
+    "site": "https://www.peekaboofactory.com/rancho-cordova/",
+    "address": "11270 Sanders Dr, Suite A, Rancho Cordova, CA 95742",
+    "phone": "916-586-7500",
+    "email": "ranchocordova@peekaboofactory.com",
+    "instagram": "peekaboofactory_rc",
+    "quoteOnly": "Confirm the daily calendar and book directly. Party food below is the operator’s tray/package menu.",
+    "groups": [
+      {
+        "name": "Admission",
+        "items": [
+          [
+            "Child (one adult included)",
+            "",
+            2000
+          ],
+          [
+            "Additional adult",
+            "",
+            500
+          ],
+          [
+            "Under 1 (free with paid sibling)",
+            "",
+            1600
+          ],
+          [
+            "Last-hour pass",
+            "",
+            1600
+          ],
+          [
+            "Required brand grip socks",
+            "",
+            300
+          ],
+          [
+            "Weekday group admission (8+ children; non-holiday)",
+            "",
+            1800
+          ]
+        ]
+      },
+      {
+        "name": "Passes and monthly membership",
+        "items": [
+          [
+            "5-visit pass",
+            "",
+            9500
+          ],
+          [
+            "10-visit pass",
+            "",
+            18000
+          ],
+          [
+            "Weekday membership — first child",
+            "",
+            11500
+          ],
+          [
+            "Weekday membership — sibling",
+            "",
+            4500
+          ],
+          [
+            "All-week membership — first child",
+            "",
+            15500
+          ],
+          [
+            "All-week membership — sibling",
+            "",
+            6000
+          ]
+        ]
+      },
+      {
+        "name": "Party food packages",
+        "items": [
+          [
+            "Pizza package — 2 XL cheese pizzas and 10 juices",
+            "",
+            5600
+          ],
+          [
+            "24 bone-in wings and 10 juices",
+            "",
+            4600
+          ]
+        ]
+      },
+      {
+        "name": "Party pizzas",
+        "items": [
+          [
+            "XL 16-inch cheese (double cut)",
+            "",
+            2400
+          ],
+          [
+            "XL one-topping",
+            "",
+            2700
+          ],
+          [
+            "Pizza Guys Combo",
+            "",
+            3200
+          ],
+          [
+            "Buffalo Chicken",
+            "",
+            3200
+          ],
+          [
+            "Beef Taco",
+            "",
+            3200
+          ],
+          [
+            "Artichoke Fiesta",
+            "",
+            3200
+          ],
+          [
+            "Spinach Garlic Chicken",
+            "",
+            3200
+          ],
+          [
+            "Classic Vegetarian",
+            "",
+            3200
+          ],
+          [
+            "Hawaiian Delight",
+            "",
+            3200
+          ],
+          [
+            "Texas BBQ",
+            "",
+            3200
+          ],
+          [
+            "Garlic Lovers",
+            "",
+            3200
+          ],
+          [
+            "All Meat",
+            "",
+            3200
+          ]
+        ]
+      },
+      {
+        "name": "Party salad trays",
+        "items": [
+          [
+            "Garden",
+            "",
+            3000
+          ],
+          [
+            "Mediterranean",
+            "",
+            3000
+          ],
+          [
+            "Antipasto",
+            "",
+            3800
+          ],
+          [
+            "Chicken Bacon Ranch",
+            "",
+            3800
+          ],
+          [
+            "Spinach Tomato Bacon",
+            "",
+            3800
+          ],
+          [
+            "Crispy Chicken",
+            "",
+            3800
+          ]
+        ]
+      },
+      {
+        "name": "Party pasta trays",
+        "items": [
+          [
+            "Cheese Marinara",
+            "",
+            4000
+          ],
+          [
+            "Sausage Marinara",
+            "",
+            4800
+          ],
+          [
+            "Creamy Pesto Chicken",
+            "",
+            4800
+          ],
+          [
+            "Pollo Rustico Chicken",
+            "",
+            4800
+          ]
+        ]
+      },
+      {
+        "name": "Party appetizers",
+        "items": [
+          [
+            "Chicken wings (24)",
+            "",
+            3800
+          ],
+          [
+            "Boneless wings (24)",
+            "",
+            2600
+          ],
+          [
+            "Muncheez (20)",
+            "",
+            2000
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Check the daily calendar",
+        "body": [
+          "The live calendar and the static hours/rates page publish different closing times. Confirm today’s hours before traveling."
+        ],
+        "links": [
+          {
+            "label": "Hours, rates and calendar",
+            "href": "https://www.peekaboofactory.com/rancho-cordova/hours-rates/"
+          }
+        ]
+      },
+      {
+        "head": "Play rules and passes",
+        "body": [
+          "Grip socks and waivers are required. Passes may be shared by siblings only and are nonrefundable and nontransferable. Membership requires at least one month. Arrange admission and any waiver with the venue."
+        ]
+      },
+      {
+        "head": "Shanna’s visit",
+        "body": [
+          "Family-outing film by Shanna, @outdoorideaswithkids, as requested by Glenn."
+        ],
+        "links": [
+          {
+            "label": "Shanna · outdoorideaswithkids",
+            "href": "https://www.instagram.com/outdoorideaswithkids/"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/peek-a-boo-factory-rc.mp4",
+      "poster": "/clips/peek-a-boo-factory-rc-poster.webp",
+      "href": "https://www.instagram.com/reel/DdpX7qVB39_/",
+      "credit": "Filmed by @amber.in.norcal",
+      "platform": "Instagram",
+      "by": "amber.in.norcal"
+    }
+  },
+  {
+    "slug": "el-dorado-orchards",
+    "name": "El Dorado Orchards",
+    "label": "El Dorado Orchards",
+    "cuisine": "Family farm, seasonal train ride",
+    "tagline": "Harvest-season train rides, a craft fair and picnic grounds in Camino.",
+    "color": "#233429",
+    "icon": "el-dorado-orchards",
+    "prep": 0,
+    "category": "Parks/Playgrounds",
+    "items": [],
+    "site": "https://www.eldoradoorchards.com/",
+    "address": "2881 North Canyon Rd, Camino, CA 95709",
+    "phone": "530-391-2152",
+    "instagram": "eldoradoorchards",
+    "contactOnly": "Seasonal family farm. Buy train tickets on site; no current fare is published on the official website.",
+    "panels": [
+      {
+        "head": "Seasonal visits",
+        "body": [
+          "The farm lists Friday–Sunday 9 am–5 pm during harvest season. This is not a year-round schedule. Confirm operating dates before traveling. Rain or damp tracks can stop train service."
+        ],
+        "links": [
+          {
+            "label": "Train ride information",
+            "href": "https://www.eldoradoorchards.com/train-ride.html"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/el-dorado-orchards.mp4",
+      "poster": "/clips/el-dorado-orchards-poster.webp",
+      "href": "https://www.instagram.com/reel/DeR5OQ2vVdw/",
+      "credit": "Filmed by @duhhhh_13 · Seasonal harvest visit; confirm the farm and train schedule before traveling.",
+      "platform": "Instagram",
+      "by": "duhhhh_13"
+    }
+  },
+  {
+    "slug": "lakewood-park",
+    "name": "Lakewood Park",
+    "label": "Lakewood Park",
+    "cuisine": "Park, inclusive playground",
+    "tagline": "An outer-space inclusive playground, sports courts and picnic areas in Sunnyvale.",
+    "color": "#233429",
+    "icon": "lakewood-park",
+    "prep": 0,
+    "category": "Parks/Playgrounds",
+    "items": [],
+    "site": "https://www.sunnyvale.ca.gov/Home/Components/FacilityDirectory/FacilityDirectory/50/260",
+    "address": "834 Lakechime Dr, Sunnyvale, CA 94089",
+    "phone": "408-730-7350",
+    "hours": "Daily 6am–9pm",
+    "contactOnly": "Check the City of Sunnyvale for park facilities, reservations and closures.",
+    "panels": [
+      {
+        "head": "Park facilities",
+        "body": [
+          "Inclusive playground, ballfields, basketball and tennis courts, picnic areas, skate ramps and pathways. Park hours are 6 am–9 pm; court lighting can run until 10 pm."
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/lakewood-park.mp4",
+      "poster": "/clips/lakewood-park-poster.webp",
+      "href": "https://www.instagram.com/reel/Ddh3Td-hD9e/",
+      "credit": "Filmed by @ishadiaries_",
+      "platform": "Instagram",
+      "by": "ishadiaries_"
+    }
+  },
+  {
+    "slug": "ricky-baba",
+    "name": "Ricky Baba",
+    "label": "Ricky Baba",
+    "cuisine": "AI video creator",
+    "tagline": "Unofficial AI animation and nostalgic fan stories by @rickybaba.",
+    "color": "#233429",
+    "icon": "ricky-baba",
+    "prep": 0,
+    "category": "AI",
+    "items": [],
+    "instagram": "rickybaba",
+    "contactOnly": "Visual/art director Ricky Baba creates unofficial AI fan films. The featured fictional Dhalsim story was made with ChatGPT Images, Seedance, Photoshop and DaVinci Resolve. It is not affiliated with or endorsed by Capcom or Street Fighter. Contact the creator on Instagram; no service prices are published.",
+    "clip": {
+      "src": "/clips/ricky-baba.mp4",
+      "poster": "/clips/ricky-baba-poster.webp",
+      "href": "https://www.instagram.com/reel/Deu20_8xxbg/",
+      "credit": "Posted by @rickybaba · AI-generated Street Fighter fan story; fictional footage.",
+      "platform": "Instagram"
+    }
+  },
+  {
+    "slug": "red-eye-barbecue",
+    "name": "Red Eye Barbecue",
+    "label": "Red Eye Barbecue",
+    "cuisine": "Barbecue, BBQ",
+    "tagline": "Smoked meats, sandwiches and sides at Epicenter in Santa Rosa.",
+    "color": "#233429",
+    "icon": "red-eye-barbecue",
+    "prep": 0,
+    "category": "Barbecue",
+    "items": [
+      [
+        "Beef cheek (each)",
+        "",
+        2400
+      ],
+      [
+        "Brisket (half lb; Saturday–Sunday)",
+        "",
+        2000
+      ],
+      [
+        "Beef ribs (per lb; Saturday–Sunday)",
+        "",
+        4400
+      ],
+      [
+        "Pork sausage (each)",
+        "",
+        1100
+      ],
+      [
+        "Pork spare ribs — 3 bones",
+        "",
+        1300
+      ],
+      [
+        "Pork spare ribs — 6 bones",
+        "",
+        2500
+      ],
+      [
+        "Pork spare ribs — 12 bones",
+        "",
+        4800
+      ],
+      [
+        "Pork belly (each)",
+        "",
+        1600
+      ],
+      [
+        "Chicken wings — 5 pieces",
+        "",
+        1100
+      ],
+      [
+        "Chicken wings — 10 pieces",
+        "",
+        2000
+      ],
+      [
+        "Half chicken (availability varies)",
+        "",
+        1800
+      ],
+      [
+        "Turkey breast (half lb; availability varies)",
+        "",
+        1600
+      ]
+    ],
+    "site": "https://www.redeyebarbecue.com/",
+    "address": "3215 Coffey Lane, Santa Rosa, CA 95403",
+    "phone": "707-757-9041",
+    "email": "info@visitepicenter.com",
+    "instagram": "redeye_barbecue",
+    "quoteOnly": "Order or confirm availability directly with Red Eye Barbecue. Prices are from its own published menus.",
+    "sections": [
+      {
+        "name": "Smoked meats",
+        "items": [
+          [
+            "Beef cheek (each)",
+            "",
+            2400
+          ],
+          [
+            "Brisket (half lb; Saturday–Sunday)",
+            "",
+            2000
+          ],
+          [
+            "Beef ribs (per lb; Saturday–Sunday)",
+            "",
+            4400
+          ],
+          [
+            "Pork sausage (each)",
+            "",
+            1100
+          ],
+          [
+            "Pork spare ribs — 3 bones",
+            "",
+            1300
+          ],
+          [
+            "Pork spare ribs — 6 bones",
+            "",
+            2500
+          ],
+          [
+            "Pork spare ribs — 12 bones",
+            "",
+            4800
+          ],
+          [
+            "Pork belly (each)",
+            "",
+            1600
+          ],
+          [
+            "Chicken wings — 5 pieces",
+            "",
+            1100
+          ],
+          [
+            "Chicken wings — 10 pieces",
+            "",
+            2000
+          ],
+          [
+            "Half chicken (availability varies)",
+            "",
+            1800
+          ],
+          [
+            "Turkey breast (half lb; availability varies)",
+            "",
+            1600
+          ]
+        ]
+      },
+      {
+        "name": "Sides",
+        "items": [
+          [
+            "Roasted potato salad",
+            "",
+            600
+          ],
+          [
+            "Coleslaw",
+            "",
+            500
+          ],
+          [
+            "Beans (lentils)",
+            "",
+            500
+          ],
+          [
+            "Mac and cheese",
+            "",
+            600
+          ],
+          [
+            "Cheddar cornbread",
+            "",
+            700
+          ],
+          [
+            "Chips and queso",
+            "",
+            1100
+          ],
+          [
+            "Fried Oaxaca cheese",
+            "",
+            1400
+          ],
+          [
+            "Tallow fries",
+            "",
+            800
+          ],
+          [
+            "House greens",
+            "",
+            1200
+          ],
+          [
+            "Caesar salad",
+            "",
+            1200
+          ]
+        ]
+      },
+      {
+        "name": "In hands",
+        "items": [
+          [
+            "Smoked burger",
+            "",
+            1900
+          ],
+          [
+            "Fried chicken sando",
+            "",
+            1800
+          ],
+          [
+            "Pulled pork smash",
+            "",
+            1800
+          ],
+          [
+            "Sausage hoagie",
+            "",
+            1600
+          ],
+          [
+            "Smoked bird wrap",
+            "",
+            1600
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "Banana pudding",
+            "",
+            1000
+          ],
+          [
+            "Cornmeal butter cookies (2)",
+            "",
+            500
+          ]
+        ]
+      },
+      {
+        "name": "Kids meals",
+        "items": [
+          [
+            "Dino nuggets and fries",
+            "",
+            750
+          ],
+          [
+            "Hamburger and fries",
+            "",
+            750
+          ],
+          [
+            "Cheeseburger and fries",
+            "",
+            750
+          ],
+          [
+            "Mini corn dog bites and fries",
+            "",
+            750
+          ],
+          [
+            "Kids pizza — cheese or pepperoni",
+            "",
+            750
+          ]
+        ]
+      },
+      {
+        "name": "Kids drinks — no refills",
+        "items": [
+          [
+            "Milk",
+            "",
+            350
+          ],
+          [
+            "Chocolate milk",
+            "",
+            350
+          ],
+          [
+            "Apple juice",
+            "",
+            350
+          ],
+          [
+            "Orange juice",
+            "",
+            350
+          ],
+          [
+            "12 oz soda",
+            "",
+            200
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Kitchen and venue hours",
+        "body": [
+          "Barbecue service starts at noon. Venue hours: Monday–Thursday noon–10 pm; Friday noon–midnight; Saturday 11 am–midnight; Sunday 9 am–10 pm. Monday–Thursday and Sunday kitchen closes at 9 pm. Confirm Friday event-dependent kitchen closing."
+        ]
+      },
+      {
+        "head": "Menu availability",
+        "body": [
+          "Full menu Wednesday–Sunday; Monday–Tuesday limited menu includes beef cheek, sausage, wings, turkey and the published sides, sandwiches and desserts. Brisket and beef ribs are Saturday–Sunday only; other meats can sell out. Add sausage to chips and queso for $6 or smoked chicken to a salad for $6. Kids meals for adults add $2; swap fries for yogurt or applesauce for $1."
+        ],
+        "links": [
+          {
+            "label": "Current menus",
+            "href": "https://www.redeyebarbecue.com/pages/menu"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/red-eye-barbecue.mp4",
+      "poster": "/clips/red-eye-barbecue-poster.webp",
+      "href": "https://www.instagram.com/reel/DdjxjlcBDPD/",
+      "credit": "Filmed by @kangofrealty",
+      "platform": "Instagram",
+      "by": "kangofrealty"
+    }
+  },
+  {
+    "slug": "jin-pot-shabu-house",
+    "name": "Jin Pot Shabu House",
+    "label": "Jin Pot",
+    "cuisine": "Hot pot, shabu shabu, AYCE",
+    "tagline": "Individual hot pots and all-you-can-eat shabu in San Francisco’s Richmond District.",
+    "color": "#233429",
+    "icon": "jin-pot-shabu-house",
+    "prep": 0,
+    "category": "Hot Pot",
+    "items": [
+      [
+        "Supreme AYCE — per person",
+        "",
+        4500
+      ],
+      [
+        "Children ages 4–9",
+        "",
+        1655
+      ]
+    ],
+    "site": "https://www.jinpotshabu.com/",
+    "address": "5158 Geary Blvd, San Francisco, CA 94118",
+    "phone": "415-379-4539",
+    "instagram": "jinpotshabu",
+    "hours": "Mon–Thu 5–9pm · Fri 4:30–9:30pm · Sat–Sun 11:30am–2pm & 4:30–9:30pm",
+    "quoteOnly": "Reserve or order directly with Jin Pot. Confirm current prices and AYCE conditions with the restaurant.",
+    "sections": [
+      {
+        "name": "Supreme AYCE",
+        "items": [
+          [
+            "Supreme AYCE — per person",
+            "",
+            4500
+          ],
+          [
+            "Children ages 4–9",
+            "",
+            1655
+          ]
+        ]
+      },
+      {
+        "name": "Starters",
+        "items": [
+          [
+            "Edamame",
+            "",
+            700
+          ],
+          [
+            "Housemade golden kimchi",
+            "",
+            700
+          ],
+          [
+            "Takoyaki fries",
+            "",
+            700
+          ],
+          [
+            "Chicken karaage",
+            "",
+            900
+          ],
+          [
+            "Spicy garlic edamame",
+            "",
+            800
+          ],
+          [
+            "Jin salad",
+            "",
+            700
+          ],
+          [
+            "Fried fish ball",
+            "",
+            700
+          ],
+          [
+            "Fried tofu",
+            "",
+            700
+          ],
+          [
+            "Gyoza",
+            "",
+            800
+          ]
+        ]
+      },
+      {
+        "name": "Broths",
+        "items": [
+          [
+            "House special spicy mala",
+            "",
+            600
+          ],
+          [
+            "Nagoya miso",
+            "",
+            600
+          ],
+          [
+            "Fresh tomato",
+            "",
+            600
+          ],
+          [
+            "Spicy kimchi",
+            "",
+            600
+          ],
+          [
+            "Sukiyaki",
+            "",
+            600
+          ],
+          [
+            "Organic soy milk and miso",
+            "",
+            600
+          ],
+          [
+            "Thai tom yum",
+            "",
+            700
+          ],
+          [
+            "Spicy garlic organic soy milk miso",
+            "",
+            700
+          ],
+          [
+            "Umami sea kelp",
+            "",
+            500
+          ],
+          [
+            "Healthy mushroom soup",
+            "",
+            600
+          ],
+          [
+            "Tonkotsu pork bone",
+            "",
+            600
+          ],
+          [
+            "Spicy garlic miso",
+            "",
+            600
+          ],
+          [
+            "Szechuan spicy pickled cabbage",
+            "",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Protein",
+        "items": [
+          [
+            "Premium Wagyu Kobe beef",
+            "",
+            1900
+          ],
+          [
+            "Premium lean Wagyu Kobe beef",
+            "",
+            1900
+          ],
+          [
+            "100% Kurobuta pork",
+            "",
+            1800
+          ],
+          [
+            "Premium Black Angus",
+            "",
+            1900
+          ],
+          [
+            "Chicken breasts",
+            "",
+            1500
+          ],
+          [
+            "New Zealand lamb shoulder",
+            "",
+            1900
+          ],
+          [
+            "Seafood deluxe",
+            "",
+            2700
+          ],
+          [
+            "Shrimp",
+            "",
+            800
+          ],
+          [
+            "Mussels",
+            "",
+            800
+          ],
+          [
+            "Fish fillets",
+            "",
+            800
+          ]
+        ]
+      },
+      {
+        "name": "Specialties",
+        "items": [
+          [
+            "Cilantro and Wagyu dumpling",
+            "",
+            800
+          ],
+          [
+            "Housemade shrimp paste",
+            "",
+            800
+          ]
+        ]
+      },
+      {
+        "name": "Special tsumire",
+        "items": [
+          [
+            "Black fungus",
+            "",
+            625
+          ],
+          [
+            "Fresh sweet corn",
+            "",
+            625
+          ],
+          [
+            "Negi scallion",
+            "",
+            625
+          ],
+          [
+            "Black garlic",
+            "",
+            625
+          ],
+          [
+            "Yellow curry",
+            "",
+            625
+          ]
+        ]
+      },
+      {
+        "name": "Vegetables",
+        "items": [
+          [
+            "Bok choy",
+            "",
+            495
+          ],
+          [
+            "Lettuce",
+            "",
+            395
+          ],
+          [
+            "Baby corn",
+            "",
+            395
+          ],
+          [
+            "Kabocha squash",
+            "",
+            495
+          ],
+          [
+            "Broccoli",
+            "",
+            495
+          ],
+          [
+            "Napa cabbage",
+            "",
+            495
+          ],
+          [
+            "Spinach",
+            "",
+            495
+          ],
+          [
+            "Fresh daikon",
+            "",
+            395
+          ],
+          [
+            "Dried seaweed",
+            "",
+            395
+          ],
+          [
+            "Carrot",
+            "",
+            495
+          ],
+          [
+            "Vegetable combo",
+            "",
+            1295
+          ]
+        ]
+      },
+      {
+        "name": "Mushrooms",
+        "items": [
+          [
+            "King mushroom",
+            "",
+            625
+          ],
+          [
+            "Black fungus",
+            "",
+            425
+          ],
+          [
+            "Shiitake",
+            "",
+            625
+          ],
+          [
+            "Mushroom medley",
+            "",
+            895
+          ]
+        ]
+      },
+      {
+        "name": "Soy and tempura",
+        "items": [
+          [
+            "Fresh tofu",
+            "",
+            625
+          ],
+          [
+            "Sponge tofu",
+            "",
+            625
+          ],
+          [
+            "Fish ball",
+            "",
+            600
+          ],
+          [
+            "Fish tofu",
+            "",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Rice and noodles",
+        "items": [
+          [
+            "Steamed rice",
+            "",
+            200
+          ],
+          [
+            "Ramen",
+            "",
+            355
+          ],
+          [
+            "Flour noodles",
+            "",
+            355
+          ],
+          [
+            "Thick vermicelli",
+            "",
+            355
+          ],
+          [
+            "Shirataki",
+            "",
+            355
+          ],
+          [
+            "Raw egg",
+            "",
+            155
+          ],
+          [
+            "Udon",
+            "",
+            355
+          ],
+          [
+            "Vermicelli",
+            "",
+            275
+          ],
+          [
+            "Quail egg",
+            "",
+            455
+          ]
+        ]
+      },
+      {
+        "name": "Nonalcoholic drinks",
+        "items": [
+          [
+            "Fresh watermelon juice (pitcher)",
+            "",
+            1075
+          ],
+          [
+            "Matcha milk (glass)",
+            "",
+            625
+          ],
+          [
+            "Coke / Sprite / Diet Coke / Sunkist",
+            "",
+            300
+          ],
+          [
+            "Lemon black tea",
+            "",
+            550
+          ],
+          [
+            "Apple sparkling",
+            "",
+            350
+          ],
+          [
+            "Plum juice",
+            "",
+            450
+          ],
+          [
+            "Lemonade",
+            "",
+            450
+          ],
+          [
+            "Iced unsweet matcha tea",
+            "",
+            450
+          ],
+          [
+            "San Pellegrino",
+            "",
+            500
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "AYCE conditions",
+        "body": [
+          "The published menu lists a 90-minute limit, one AYCE option for the entire party, no takeout and charges for wasted food. Children under 3 are listed free, ages 4–9 have a child price and ages 10+ pay regular price; ask about age 3. Parties of six or more have a 20% taxable service charge. Confirm all terms with the restaurant."
+        ]
+      },
+      {
+        "head": "Menus and film prices",
+        "body": [
+          "The older promotional film shows a different price from the currently linked menu. Confirm current prices directly. The alcohol-inclusive Ultimate package and alcoholic drinks are not offered through BEASTY."
+        ],
+        "links": [
+          {
+            "label": "Restaurant’s full menu PDF",
+            "href": "https://drive.google.com/file/d/1iMI8ikswyjUCzP04wZrOdKACVxTtydX9/view"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/jin-pot-shabu-house.mp4",
+      "poster": "/clips/jin-pot-shabu-house-poster.webp",
+      "href": "https://www.instagram.com/reel/DDGQCfsTrBs/",
+      "credit": "Posted by @jinpotshabu",
+      "platform": "Instagram"
+    },
+    "clips": [
+      {
+        "src": "/clips/jin-pot-heavy-hitter.mp4",
+        "poster": "/clips/jin-pot-heavy-hitter-poster.webp",
+        "href": "https://www.instagram.com/reel/DdtsLQts3Rn/",
+        "credit": "Posted by @jinpotshabu · Older promotional repost; prices in the video differ from the current published menu. Confirm with Jin Pot.",
+        "platform": "Instagram"
+      }
+    ]
+  },
+  {
+    "slug": "mikes-pastry-shop",
+    "name": "Mike’s Pastry Shop",
+    "label": "Mike’s Pastry Shop",
+    "cuisine": "Bakery, pastries, sweets",
+    "tagline": "Cakes and pastries on A Street in Antioch.",
+    "color": "#233429",
+    "icon": "mikes-pastry-shop",
+    "prep": 0,
+    "category": "Sweets",
+    "items": [],
+    "address": "1872 A St, Antioch, CA",
+    "phone": "925-757-3333",
+    "instagram": "themikespastryshop",
+    "needsSite": true,
+    "hours": "Tue–Sat 7am–3pm",
+    "contactOnly": "Contact Mike’s Pastry Shop for cakes, pastries, custom orders and current prices."
+  },
+  {
+    "slug": "kidtopia-dublin",
+    "name": "KidTopia — Dublin",
+    "label": "KidTopia",
+    "cuisine": "Indoor playground, family play",
+    "tagline": "Indoor play, parties and memberships for ages 6 months–12 years in Dublin.",
+    "color": "#233429",
+    "icon": "kidtopia-dublin",
+    "prep": 0,
+    "category": "Parks/Playgrounds",
+    "items": [],
+    "site": "https://dublin.kidtopia.zone/",
+    "address": "7871 Amador Valley Blvd, Dublin, CA 94568",
+    "phone": "925-361-7036",
+    "email": "support_dublin@kidtopia.zone",
+    "instagram": "kidtopia_dublin",
+    "quoteOnly": "Book directly with KidTopia. Confirm current slots and complete any required waiver with the venue.",
+    "groups": [
+      {
+        "name": "Open play",
+        "items": [
+          [
+            "Child — weekday unlimited play",
+            "",
+            1800
+          ],
+          [
+            "Child — weekend/holiday two-hour slot",
+            "",
+            2000
+          ],
+          [
+            "Adult",
+            "",
+            500
+          ],
+          [
+            "Grip socks",
+            "",
+            300
+          ],
+          [
+            "Party-guest grip socks",
+            "",
+            150
+          ]
+        ]
+      },
+      {
+        "name": "Party package 1 — 4 kids + 4 adults",
+        "items": [
+          [
+            "Mon–Fri (3 hours)",
+            "",
+            12500
+          ],
+          [
+            "Friday 5–8 pm",
+            "",
+            13500
+          ],
+          [
+            "Sat–Sun (2 hours)",
+            "",
+            14500
+          ]
+        ]
+      },
+      {
+        "name": "Party package 2 — 8 kids + 8 adults",
+        "items": [
+          [
+            "Mon–Fri (3 hours)",
+            "",
+            22500
+          ],
+          [
+            "Friday 5–8 pm",
+            "",
+            25500
+          ],
+          [
+            "Sat–Sun (2 hours)",
+            "",
+            27500
+          ]
+        ]
+      },
+      {
+        "name": "Party package 4 — 15 kids + 15 adults",
+        "items": [
+          [
+            "Mon–Fri (3 hours)",
+            "",
+            39500
+          ],
+          [
+            "Friday 5–8 pm",
+            "",
+            42500
+          ],
+          [
+            "Sat–Sun (2 hours)",
+            "",
+            47500
+          ]
+        ]
+      },
+      {
+        "name": "Party package 5 — 25 kids + 25 adults",
+        "items": [
+          [
+            "Mon–Fri (3 hours)",
+            "",
+            62000
+          ],
+          [
+            "Friday 5–8 pm",
+            "",
+            65000
+          ],
+          [
+            "Sat–Sun (2 hours)",
+            "",
+            69500
+          ]
+        ]
+      },
+      {
+        "name": "Passes and memberships",
+        "items": [
+          [
+            "10-visit loyalty pass",
+            "",
+            17500
+          ],
+          [
+            "Weekday membership — monthly",
+            "",
+            10000
+          ],
+          [
+            "Weekday membership — sibling monthly",
+            "",
+            8500
+          ],
+          [
+            "All-week membership — monthly",
+            "",
+            11000
+          ],
+          [
+            "All-week membership — sibling monthly",
+            "",
+            9500
+          ],
+          [
+            "Annual membership",
+            "",
+            99900
+          ],
+          [
+            "Annual membership — sibling",
+            "",
+            89900
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Hours and sessions",
+        "body": [
+          "Weekdays 10 am–7:30 pm. Weekend slots: 10 am–noon, 12:30–2:30 pm, 3–5 pm, 5:30–7:30 pm. Socks and waivers are required."
+        ]
+      },
+      {
+        "head": "Party details",
+        "body": [
+          "Birthday child and parents are included. Packages include a private room and host, child juice and water. Bring food and cake without a fee; drinks must be purchased from KidTopia. Extra children cost $18 weekdays or $20 weekends, extra adults $5. Package 3 is marked coming soon."
+        ]
+      },
+      {
+        "head": "Pass and membership terms",
+        "body": [
+          "The 10-visit pass does not expire; siblings may share it, using one visit per child. It includes up to two adults per visit, weekday full-day play or one weekend slot. Memberships renew manually, without automatic billing; active terms cannot be frozen or canceled. Private parties and selected holidays are excluded. Confirm terms before buying."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "united-dumplings-oakland",
+    "name": "United Dumplings — Oakland",
+    "label": "United Dumplings",
+    "cuisine": "Chinese dumplings, dim sum",
+    "tagline": "Soup dumplings, pot stickers and handmade dumplings on College Avenue.",
+    "color": "#233429",
+    "icon": "united-dumplings-oakland",
+    "prep": 0,
+    "category": "Dim Sum",
+    "items": [
+      [
+        "L1. Happy Family Cucumber",
+        "",
+        995
+      ],
+      [
+        "L3. Vegetarian Spring Rolls",
+        "",
+        995
+      ],
+      [
+        "R1. Five Spice Crispy Silken Tofu",
+        "",
+        1595
+      ],
+      [
+        "R10. Mongolian Beef",
+        "",
+        1995
+      ],
+      [
+        "R2. Sauteed Green String Bean",
+        "",
+        1795
+      ],
+      [
+        "R3. Sweet & Spicy Chicken Wings",
+        "",
+        1895
+      ],
+      [
+        "R5. Sauteed Pea Shoots with Garlic",
+        "",
+        1795
+      ],
+      [
+        "R7. Crispy Golden Calamari",
+        "",
+        1995
+      ],
+      [
+        "R8. Fried Mushroom Tempura",
+        "",
+        1695
+      ],
+      [
+        "R9. Chinese Broccoli with Garlic Sauce",
+        "",
+        1795
+      ],
+      [
+        "R111. Sichuan Chicken",
+        "",
+        1995
+      ],
+      [
+        "R112. Mapo Tofu",
+        "",
+        1995
+      ]
+    ],
+    "site": "https://www.uniteddumplings.com/",
+    "address": "6247 College Ave, Oakland, CA 94618",
+    "phone": "510-817-4070",
+    "instagram": "uniteddumplings",
+    "hours": "Mon & Wed–Sun 11am–2:30pm & 4:30–9pm · Tue 4:30–9pm",
+    "quoteOnly": "Order directly from United Dumplings’ Oakland menu. Pickup prices can change.",
+    "orderUrl": "https://www.chownow.com/order/27291/locations/56767",
+    "sections": [
+      {
+        "name": "Pairs well with dumplings",
+        "items": [
+          [
+            "L1. Happy Family Cucumber",
+            "",
+            995
+          ],
+          [
+            "L3. Vegetarian Spring Rolls",
+            "",
+            995
+          ],
+          [
+            "R1. Five Spice Crispy Silken Tofu",
+            "",
+            1595
+          ],
+          [
+            "R10. Mongolian Beef",
+            "",
+            1995
+          ],
+          [
+            "R2. Sauteed Green String Bean",
+            "",
+            1795
+          ],
+          [
+            "R3. Sweet & Spicy Chicken Wings",
+            "",
+            1895
+          ],
+          [
+            "R5. Sauteed Pea Shoots with Garlic",
+            "",
+            1795
+          ],
+          [
+            "R7. Crispy Golden Calamari",
+            "",
+            1995
+          ],
+          [
+            "R8. Fried Mushroom Tempura",
+            "",
+            1695
+          ],
+          [
+            "R9. Chinese Broccoli with Garlic Sauce",
+            "",
+            1795
+          ],
+          [
+            "R111. Sichuan Chicken",
+            "",
+            1995
+          ],
+          [
+            "R112. Mapo Tofu",
+            "",
+            1995
+          ]
+        ]
+      },
+      {
+        "name": "Dumplings and her cousins",
+        "items": [
+          [
+            "J0. Sichuan Wonton in Red Oil (8)",
+            "",
+            1295
+          ],
+          [
+            "J1. Grandma's Pork Dumplings (12)",
+            "",
+            1495
+          ],
+          [
+            "J3. Korean BBQ Beef Dumplings (12)",
+            "",
+            1495
+          ],
+          [
+            "J4. Chicken Mushroom Truffle Dumplings (12)",
+            "",
+            1595
+          ],
+          [
+            "J5. Vegetarian Dumplings (12)",
+            "",
+            1495
+          ],
+          [
+            "J7. Shrimp Dumplings (3)",
+            "",
+            1395
+          ],
+          [
+            "J8. Siu Mai (3)",
+            "",
+            1395
+          ],
+          [
+            "J9. Chinese BBQ Pork Bao (3)",
+            "",
+            1495
+          ]
+        ]
+      },
+      {
+        "name": "Soup dumplings (XLB)",
+        "items": [
+          [
+            "X1. Pork Soup Dumplings (6)",
+            "",
+            1395
+          ],
+          [
+            "X2. Chicken Soup Dumplings (6)",
+            "",
+            1395
+          ],
+          [
+            "X6. Crab and Pork Soup Dumplings (6)",
+            "",
+            1895
+          ],
+          [
+            "X5. Sichuan Mala Pork Soup Dumplings (6)",
+            "",
+            1495
+          ],
+          [
+            "X7. Vegetarian Soup Dumplings (6)",
+            "",
+            1695
+          ],
+          [
+            "X8. Five Treasure Soup Dumplings (5)",
+            "",
+            1395
+          ]
+        ]
+      },
+      {
+        "name": "Mini pan-fried buns",
+        "items": [
+          [
+            "Q1. Mini Pan-fried Pork Bun (6)",
+            "",
+            1595
+          ],
+          [
+            "Q5. Mini Pan-fried Spicy Pork Bun (6)",
+            "",
+            1595
+          ],
+          [
+            "Q9. Mini Pan-fried Curry Beef Bun (6)",
+            "",
+            1695
+          ]
+        ]
+      },
+      {
+        "name": "Noodles",
+        "items": [
+          [
+            "M1. California Beef Noodle Soup",
+            "",
+            1795
+          ],
+          [
+            "M2. Sichuan Dan Dan Noodles",
+            "",
+            1795
+          ],
+          [
+            "M2V. Vegetarian Dan Dan Noodles",
+            "",
+            1695
+          ],
+          [
+            "M5. Vegetarian Stir-Fried Noodles",
+            "",
+            1795
+          ],
+          [
+            "M6. Flat Rice Noodles with Beef",
+            "",
+            1695
+          ]
+        ]
+      },
+      {
+        "name": "Pot stickers",
+        "items": [
+          [
+            "S1. Grandma's Pork Pot Stickers (5)",
+            "",
+            1295
+          ],
+          [
+            "S5. Vegetarian Pot Stickers (5)",
+            "",
+            1295
+          ],
+          [
+            "S7. Lobster Pot Stickers (5)",
+            "",
+            1795
+          ]
+        ]
+      },
+      {
+        "name": "Rice",
+        "items": [
+          [
+            "F1. Singapore Curry Chicken Fried Rice",
+            "",
+            1795
+          ],
+          [
+            "F2. Kimchi Fried Rice",
+            "",
+            1795
+          ],
+          [
+            "F3. Vegetarian Fried Rice",
+            "",
+            1795
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "T2. Sesame Balls With Red Bean Paste (5)",
+            "",
+            995
+          ],
+          [
+            "T5. Steamed Egg Custard Bao (3)",
+            "",
+            1295
+          ],
+          [
+            "T7. Steamed Lotus Seed Paste Bao (3)",
+            "",
+            1495
+          ],
+          [
+            "T6. Steamed Red Bean Paste Bao (3)",
+            "",
+            1295
+          ]
+        ]
+      },
+      {
+        "name": "Nonalcoholic drinks",
+        "items": [
+          [
+            "Apple juice",
+            "",
+            500
+          ],
+          [
+            "Coca Cola",
+            "",
+            500
+          ],
+          [
+            "Diet Coke",
+            "",
+            500
+          ],
+          [
+            "Orange juice",
+            "",
+            500
+          ],
+          [
+            "Sprite",
+            "",
+            500
+          ],
+          [
+            "Bottled water",
+            "",
+            500
+          ],
+          [
+            "Sparkling water",
+            "",
+            700
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Oakland location",
+        "body": [
+          "This page and pickup menu are for Oakland, not the Bernal Heights or Marina locations. Tuesday lunch is closed. Catering, frozen and wholesale inquiries use Hello@Uniteddumplings.com; the store phone above is the Oakland number."
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/united-dumplings-oakland.mp4",
+      "poster": "/clips/united-dumplings-oakland-poster.webp",
+      "href": "https://www.instagram.com/reel/DemcqSWzmgm/",
+      "credit": "Filmed by @foodelaventures · Filmed by @foodelaventures; reposted by @uniteddumplings.",
+      "platform": "Instagram",
+      "by": "foodelaventures"
+    }
+  },
+  {
+    "slug": "black-forest-kitchen",
+    "name": "Black Forest Kitchen",
+    "label": "Black Forest Kitchen",
+    "cuisine": "German döner, halal",
+    "tagline": "Döner sandwiches, bowls and plant-based options at Forage Kitchen in Oakland.",
+    "color": "#233429",
+    "icon": "black-forest-kitchen",
+    "prep": 0,
+    "category": "Eats",
+    "items": [
+      [
+        "The Don (Döner Original)",
+        "",
+        1699
+      ],
+      [
+        "Döner’Rito",
+        "",
+        2000
+      ],
+      [
+        "Super Döner’ish — plant-based",
+        "",
+        1900
+      ],
+      [
+        "Slim’bo Slice (Döner Salad)",
+        "",
+        1799
+      ],
+      [
+        "Döner Box",
+        "",
+        2100
+      ]
+    ],
+    "site": "https://blackforestkitchen.square.site/?location=LD6NTJQ6DN2F9",
+    "address": "478 25th St, Oakland, CA 94612",
+    "phone": "510-680-3063",
+    "email": "contact@theblackforestkitchen.com",
+    "instagram": "theblackforestkitchen",
+    "dietary": [
+      "Halal"
+    ],
+    "quoteOnly": "Order from Black Forest Kitchen’s own Square menu. Sale prices and limited-stock items can change.",
+    "sections": [
+      {
+        "name": "BFK menu",
+        "items": [
+          [
+            "The Don (Döner Original)",
+            "",
+            1699
+          ],
+          [
+            "Döner’Rito",
+            "",
+            2000
+          ],
+          [
+            "Super Döner’ish — plant-based",
+            "",
+            1900
+          ],
+          [
+            "Slim’bo Slice (Döner Salad)",
+            "",
+            1799
+          ],
+          [
+            "Döner Box",
+            "",
+            2100
+          ]
+        ]
+      },
+      {
+        "name": "Limited secret menu",
+        "items": [
+          [
+            "Chef’Don con Fusión",
+            "",
+            2100
+          ],
+          [
+            "Don King — beef and lamb (low stock)",
+            "",
+            2099
+          ]
+        ]
+      },
+      {
+        "name": "Sides and add-ons",
+        "items": [
+          [
+            "Extra garlic sauce",
+            "",
+            250
+          ],
+          [
+            "Extra spicy sauce",
+            "",
+            250
+          ],
+          [
+            "Preztel Mini",
+            "",
+            649
+          ],
+          [
+            "OG Fries (low stock)",
+            "",
+            900
+          ],
+          [
+            "Side fries",
+            "",
+            650
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Pickup and menu",
+        "body": [
+          "Pickup location is Forage Kitchen, 478 25th St. The restaurant describes its food as 100% halal; this is its own dietary description. The live menu’s beverage section currently has no listed items. Confirm the pickup window when ordering."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "the-richmond-backyard",
+    "name": "The Backyard — Richmond",
+    "label": "The Backyard",
+    "cuisine": "Burgers, sandwiches, outdoor eats",
+    "tagline": "An outdoor food garden with burgers, music and room to gather in Richmond.",
+    "color": "#233429",
+    "icon": "the-richmond-backyard",
+    "prep": 0,
+    "category": "Eats",
+    "items": [
+      [
+        "Backyard Single",
+        "",
+        1500
+      ],
+      [
+        "Backyard Double",
+        "",
+        1700
+      ],
+      [
+        "Santa Fe Single",
+        "",
+        1600
+      ],
+      [
+        "Santa Fe Double",
+        "",
+        1800
+      ],
+      [
+        "Marina Bay Single",
+        "",
+        1800
+      ],
+      [
+        "Marina Bay Double",
+        "",
+        2000
+      ],
+      [
+        "Point Richmond Patty — all vegan",
+        "",
+        1800
+      ],
+      [
+        "Sliders",
+        "",
+        2200
+      ],
+      [
+        "Philly Steak",
+        "",
+        1968
+      ],
+      [
+        "Point Molate Salad",
+        "",
+        1500
+      ],
+      [
+        "Bratwurst",
+        "",
+        1400
+      ]
+    ],
+    "site": "https://www.richmondbackyard.com/",
+    "address": "205 Cutting Blvd, Richmond, CA 94804",
+    "phone": "510-323-6708",
+    "email": "richmondbackyard@gmail.com",
+    "instagram": "richmondbackyard",
+    "hours": "Thu–Sun 11:30am–7pm",
+    "quoteOnly": "Order directly from The Backyard. Current Toast pickup prices are shown; events and seasonal availability can change.",
+    "orderUrl": "https://order.toasttab.com/online/the-backyard-205-cutting-blvd",
+    "sections": [
+      {
+        "name": "Lunch",
+        "items": [
+          [
+            "Backyard Single",
+            "",
+            1500
+          ],
+          [
+            "Backyard Double",
+            "",
+            1700
+          ],
+          [
+            "Santa Fe Single",
+            "",
+            1600
+          ],
+          [
+            "Santa Fe Double",
+            "",
+            1800
+          ],
+          [
+            "Marina Bay Single",
+            "",
+            1800
+          ],
+          [
+            "Marina Bay Double",
+            "",
+            2000
+          ],
+          [
+            "Point Richmond Patty — all vegan",
+            "",
+            1800
+          ],
+          [
+            "Sliders",
+            "",
+            2200
+          ],
+          [
+            "Philly Steak",
+            "",
+            1968
+          ],
+          [
+            "Point Molate Salad",
+            "",
+            1500
+          ],
+          [
+            "Bratwurst",
+            "",
+            1400
+          ]
+        ]
+      },
+      {
+        "name": "Kids menu",
+        "items": [
+          [
+            "Kids cheese burger",
+            "",
+            1000
+          ],
+          [
+            "Kids hot dog",
+            "",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Beverages",
+        "items": [
+          [
+            "Apple juice",
+            "",
+            325
+          ],
+          [
+            "Arnold Palmer",
+            "",
+            300
+          ],
+          [
+            "Bottle soft drinks",
+            "",
+            350
+          ],
+          [
+            "Coffee (from)",
+            "",
+            300,
+            null,
+            "from $3"
+          ],
+          [
+            "Diet Coke / Sprite can",
+            "",
+            325
+          ],
+          [
+            "Ginger ale",
+            "",
+            350
+          ],
+          [
+            "Hot cocoa",
+            "",
+            350
+          ],
+          [
+            "Iced coffee",
+            "",
+            350
+          ],
+          [
+            "Iced mocha coffee",
+            "",
+            350
+          ],
+          [
+            "Iced tea",
+            "",
+            300
+          ],
+          [
+            "Jarritos",
+            "",
+            375
+          ],
+          [
+            "Kern’s",
+            "",
+            325
+          ],
+          [
+            "Kombucha",
+            "",
+            525
+          ],
+          [
+            "Lemonade",
+            "",
+            300
+          ],
+          [
+            "Milk",
+            "",
+            375
+          ],
+          [
+            "Orange juice",
+            "",
+            350
+          ],
+          [
+            "Pellegrino soda",
+            "",
+            375
+          ],
+          [
+            "Pellegrino water (from)",
+            "",
+            300,
+            null,
+            "from $3"
+          ],
+          [
+            "Poppi",
+            "",
+            350
+          ],
+          [
+            "Smartwater bottle",
+            "",
+            375
+          ],
+          [
+            "Tea",
+            "",
+            300
+          ]
+        ]
+      },
+      {
+        "name": "Sides and snacks",
+        "items": [
+          [
+            "Fries",
+            "",
+            375
+          ],
+          [
+            "Tots",
+            "",
+            525
+          ],
+          [
+            "Garlic tots",
+            "",
+            850
+          ],
+          [
+            "Wild fries",
+            "",
+            800
+          ],
+          [
+            "Wild tots",
+            "",
+            950
+          ],
+          [
+            "Chips",
+            "",
+            275
+          ],
+          [
+            "Pup patty — beef, dogs only",
+            "",
+            500
+          ],
+          [
+            "Add vegan patty",
+            "",
+            400
+          ],
+          [
+            "Side balsamic salad",
+            "",
+            600
+          ],
+          [
+            "Side avocado",
+            "",
+            275
+          ],
+          [
+            "Side bacon",
+            "",
+            300
+          ],
+          [
+            "Side burger patty",
+            "",
+            400
+          ],
+          [
+            "Sliced toast",
+            "",
+            275
+          ],
+          [
+            "Add vegan cheese",
+            "",
+            200
+          ]
+        ]
+      },
+      {
+        "name": "Ice cream",
+        "items": [
+          [
+            "Vanilla ice cream sandwich",
+            "",
+            450
+          ],
+          [
+            "Neapolitan ice cream sandwich",
+            "",
+            450
+          ],
+          [
+            "Cookies and cream ice cream sandwich",
+            "",
+            550
+          ],
+          [
+            "Vanilla cup",
+            "",
+            250
+          ],
+          [
+            "Chocolate cup",
+            "",
+            250
+          ],
+          [
+            "Rainbow sherbert cup",
+            "",
+            250
+          ],
+          [
+            "Häagen-Dazs milk chocolate",
+            "",
+            650
+          ],
+          [
+            "Häagen-Dazs milk chocolate and almond",
+            "",
+            650
+          ],
+          [
+            "Ice cream popsicle",
+            "",
+            375
+          ],
+          [
+            "Trolli Pop",
+            "",
+            575
+          ]
+        ]
+      },
+      {
+        "name": "Seasonal pumpkins",
+        "items": [
+          [
+            "Small",
+            "",
+            1500
+          ],
+          [
+            "Medium",
+            "",
+            2000
+          ],
+          [
+            "Large",
+            "",
+            2500
+          ],
+          [
+            "X-large",
+            "",
+            3000
+          ]
+        ]
+      },
+      {
+        "name": "Seasonal drinks",
+        "items": [
+          [
+            "Far West apple juice",
+            "",
+            1000
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Hours and events",
+        "body": [
+          "The 2026 season lists Thursday–Sunday 11:30 am–7 pm. Check the venue for current events and seasonal changes. Bri’s film shows a 2025 Kool John day party; that event has ended."
+        ]
+      },
+      {
+        "head": "Menu notes",
+        "body": [
+          "Coffee and Pellegrino water are starting prices. Toast lists a 3% credit-card surcharge. Seasonal pumpkins may change availability; confirm directly. Alcohol is not offered through BEASTY."
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/the-richmond-backyard.mp4",
+      "poster": "/clips/the-richmond-backyard-poster.webp",
+      "href": "https://www.instagram.com/reel/DOEMYNjEYww/",
+      "credit": "Filmed by @daeatzwitbri · Archival 2025 Kool John day-party visit; that event has ended. No upcoming event date is promised.",
+      "platform": "Instagram",
+      "by": "daeatzwitbri"
     }
   },
 ]

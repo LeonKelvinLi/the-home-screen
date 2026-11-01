@@ -141,6 +141,7 @@ export const ROSTER_SEED: LocalSeed[] = [
   */
   seed('downtown-bbq', 'Downtown BBQ', 'Downtown BBQ', 'Barbecue', '#1E3055', {
     icon: 'downtown-bbq',
+    clips: [{ href: 'https://www.instagram.com/reel/DEfXWJAS-TT/', credit: 'Filmed by @arrowi3 · Posted by @downtownbarbecue · January 6, 2025. Watch the original post on Instagram.', platform: 'Instagram' }],
     logoTemplate: 'badge', logoGlyph: 'flame', logoLines: ['DOWNTOWN BBQ'], logoFace: 'slab',
     site: 'https://downtownbarbecue.co',
     address: '610 3rd St, Santa Rosa, CA',
@@ -151,9 +152,9 @@ export const ROSTER_SEED: LocalSeed[] = [
       follower count around it, which the muted loop cannot carry.
     */
     clip: {
-      src: '/clips/downtown-bbq.mp4',
-      poster: '/clips/downtown-bbq-poster.webp',
-      href: 'https://www.instagram.com/reel/DYvfsi_TWcd/',
+      src: '/clips/downtown-bbq-bts-v85.mp4',
+      poster: '/clips/downtown-bbq-bts-v85-poster.webp',
+      href: 'https://www.instagram.com/reel/DcEmSpeBTu9/',
       credit: 'Filmed by Downtown Barbecue',
       platform: 'Instagram',
     },
@@ -3321,6 +3322,7 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
   /* El Portal, "San Leandro • Goods" — the open Mexican seat, their own menu. */
   seed('el-portal-san-leandro', 'El Portal Mexican Restaurant', 'El Portal', 'Mexican & seafood', '#8A4A1E', {
+    clip: { src: '/clips/el-portal-buffet.mp4', poster: '/clips/el-portal-buffet-poster.webp', href: 'https://www.instagram.com/reel/DfNJ2ebMp0_/', credit: 'Posted by @elportalsanleandro', platform: 'Instagram' },
     icon: 'el-portal-san-leandro',
     logoTemplate: 'wordmark', logoLines: ['EL', 'PORTAL'], logoFace: 'script',
     site: 'https://www.elportalrest.com/',
