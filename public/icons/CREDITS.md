@@ -322,3 +322,11 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `insomnibar.webp` | [Their own @insomnibar profile artwork](https://www.instagram.com/insomnibar/) | Downloaded original image, resized to 512×512 without redrawing or changing its aspect ratio. No story ring or screenshot controls. |
 
 Existing source images with baked rounded corners are unchanged. BrandLogo fills only their empty upper fold window with their measured paper colour; see `src/ios/pagePaper.ts`. Intentional circular art (Quickly Benicia, Polly Ann) is preserved.
+
+## Batch 84 — October 31, 2026
+
+| `ink-wall-co.webp` | [Original own artwork](https://inkwallco.net/) | Resized to 512×512 preserving aspect ratio; transparent artwork composited on a plain background. No redrawing, controls, story ring or generated substitute. |
+| `subs-inc.webp` | [Original own artwork](https://www.subsincsf.com/wp-content/uploads/2026/09/logo_2_white-280x280.png) | Resized to 512×512 preserving aspect ratio; transparent artwork composited on a plain background. No redrawing, controls, story ring or generated substitute. |
+| `ismail-seval.webp` | [Original own artwork](https://www.instagram.com/yapayzekaserisi/) | Resized to 512×512 preserving aspect ratio; transparent artwork composited on a plain background. No redrawing, controls, story ring or generated substitute. |
+| `lovitts-bjj.webp` | [Original own artwork](https://www.lovittsbjj.com/assets/images/logo.png) | Resized to 512×512 preserving aspect ratio; transparent artwork composited on a plain background. No redrawing, controls, story ring or generated substitute. |
+| `m-omer-farooq.webp` | [Own @mo.x2.ai portrait](https://www.instagram.com/mo.x2.ai/) | Downloaded original image; resized to 512×512 preserving aspect ratio; no story ring or redrawing. |

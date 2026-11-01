@@ -773,7 +773,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "broitsva", "name": "Va", "label": "Va"},
   {"handle": "fat_ash_foodie", "name": "Ash", "label": "Ash"},
   {"handle": "_foodieshots_", "name": "Joann Ha", "label": "Joann Ha"},
-  {"handle": "kitkatvales", "name": "@kitkatvales", "label": "kitkatvales"}
+  {"handle": "kitkatvales", "name": "@kitkatvales", "label": "kitkatvales"},
+  { handle: 'foodwookie', name: 'FoodWookie', label: 'FoodWookie' }
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -1015,6 +1016,9 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "_foodieshots_", "place": "Insomnibar", "reel": "https://www.instagram.com/reel/DdzgPZ1y1XV/", "city": "San Jose", "brand": "b_insomnibar", "clip": true},
   // Mediocre / Foodie
   {"by": "kitkatvales", "place": "Insomnibar", "reel": "https://www.instagram.com/reel/Ddp1yP8SqXK/", "city": "San Jose", "brand": "b_insomnibar", "clip": true},
+  /* Batch 84, Glenn: Heavy Hitter. Grand-O keeps his existing page. */
+  { by: 'thesnacksensei', place: 'Subs Inc.', city: 'San Francisco', brand: 'b_subsinc', reel: reel('DfK5OdlSYrJ'), clip: true },
+
 ]
 
 /*

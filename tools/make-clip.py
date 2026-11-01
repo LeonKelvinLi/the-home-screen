@@ -38,7 +38,7 @@ CLIPS = 'public/clips'
 
 # The page's video window is a 9:16 phone frame. Fill it, then crop the
 # overflow, so a landscape or square reel is never letterboxed.
-FRAME = 'scale=540:960:force_original_aspect_ratio=increase,crop=540:960,format=yuv420p'
+FRAME = 'scale=540:960:force_original_aspect_ratio=increase,crop=540:960,setsar=1,format=yuv420p'
 
 # H.264 Main 4.0 + AAC plays on every phone browser; faststart puts the index
 # at the front so the clip starts before it has finished downloading.

@@ -2080,4 +2080,13 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-teas-22': 'b_saigonsocialcafe',
   'beasty-teas-23': 'b_insomnibar',
 
+  /* Batch 84: all earlier occupants stay; Bay Area already exists. */
+  'bay-area-goods2-0': 'b_inkwallco',
+  'beasty-services2-33': 'b_inkwallco',
+  'san-francisco-goods2-65': 'b_subsinc',
+  'beasty-goods2-100': 'b_subsinc',
+  'beasty-whips-11': 'b_rywire',
+  'beasty-foodies2-142': 'b_foodiefoodwookie',
+
+  'concord-services2-3': 'b_lovittsbjj', // Gym named spot remains Urban Air’s.
 }

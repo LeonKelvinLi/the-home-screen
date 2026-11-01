@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { ItemSheet } from './ItemSheet'
-import { BrandLogo } from '../ios/BrandLogo'
+import { BrandLogoZoom } from './BrandLogoZoom'
 import { HalalMark, isHalal } from '../ios/HalalMark'
 import { BrandClip } from './BrandClip'
 import { ItemThumb } from '../ios/ItemThumb'
@@ -438,11 +438,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                 the icon on the home screen; this is the one place with room
                 for the whole thing.
               */}
-              {brand.pageMark ? (
-                <img className="brand-hero-wordmark" src={brand.pageMark} alt={brand.name} />
-              ) : (
-                <BrandLogo logo={brand.logo} size={78} />
-              )}
+              <BrandLogoZoom key={brand.id} name={brand.name} logo={brand.logo} pageMark={brand.pageMark} />
             </div>
             {/* No <h1> here: the nav large title already states the name, and
                 two headings is the thing that reads as a web page. */}

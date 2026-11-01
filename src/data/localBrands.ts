@@ -60345,4 +60345,721 @@ export const LOCAL_SEED: LocalSeed[] = [
     }
   },
 
+  /* Batch 84 — Glenn, October 31, 2026. */
+  {
+    "slug": "ink-wall-co",
+    "name": "Ink Wall Co.",
+    "label": "Ink Wall Co.",
+    "cuisine": "Direct-to-wall UV printing & murals",
+    "tagline": "Murals, logos and brand graphics printed directly onto walls on site.",
+    "color": "#111111",
+    "icon": "ink-wall-co",
+    "prep": 0,
+    "category": "Wall printing",
+    "items": [],
+    "phone": "(279) 200-3490",
+    "email": "info@inkwallco.com",
+    "site": "https://inkwallco.net/",
+    "instagram": "inkwallco",
+    "contactOnly": "Direct-to-wall printing for businesses across Sacramento and the Bay Area. Send a photo, rough dimensions and your artwork to request a design proof and quote. No prices are published.",
+    "siteCta": "Their work and quote form",
+    "panels": [
+      {
+        "head": "Service area",
+        "body": [
+          "Sacramento and the Bay Area, from their own Instagram. They print on site; no walk-in address or opening hours are published."
+        ]
+      },
+      {
+        "head": "What they print",
+        "body": [
+          "Full-color murals, logos and brand graphics on drywall, concrete, wood, tile, glass and metal.",
+          "Offices, shops, restaurants, hotels, schools, dental offices, salons and studios."
+        ],
+        "links": [
+          {
+            "label": "Their portfolio",
+            "href": "https://inkwallco.net/#work"
+          }
+        ]
+      },
+      {
+        "head": "How it works",
+        "body": [
+          "Send a photo of the space, rough dimensions and your logo or artwork. Approve their design proof before they print on site. They advertise same-day installation; confirm timing and surface suitability in your quote."
+        ],
+        "links": [
+          {
+            "label": "Request a quote",
+            "href": "https://inkwallco.net/#quote"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "subs-inc",
+    "name": "Subs Inc.",
+    "label": "Subs Inc.",
+    "cuisine": "Sandwiches, salads, ice cream & catering",
+    "tagline": "Made in Noe Valley: custom subs, signature sandwiches, salads and ice cream.",
+    "color": "#111111",
+    "icon": "subs-inc",
+    "prep": 0,
+    "category": "Sandwiches",
+    "items": [],
+    "sections": [
+      {
+        "name": "Build Your Own Sub",
+        "items": [
+          [
+            "Roast Turkey",
+            "",
+            1499,
+            null,
+            "from $14.99"
+          ],
+          [
+            "Roast Beef",
+            "",
+            1499,
+            null,
+            "from $14.99"
+          ],
+          [
+            "Roast Chicken",
+            "",
+            1499,
+            null,
+            "from $14.99"
+          ],
+          [
+            "Hot Pastrami",
+            "",
+            1499,
+            null,
+            "from $14.99"
+          ],
+          [
+            "Salami",
+            "",
+            1499,
+            null,
+            "from $14.99"
+          ],
+          [
+            "Black Forest Ham",
+            "",
+            1499,
+            null,
+            "from $14.99"
+          ],
+          [
+            "Mortadella",
+            "",
+            1499,
+            null,
+            "from $14.99"
+          ],
+          [
+            "Tuna",
+            "",
+            1499,
+            null,
+            "from $14.99"
+          ],
+          [
+            "2 Meat Combo",
+            "",
+            1499,
+            null,
+            "from $14.99"
+          ]
+        ]
+      },
+      {
+        "name": "Vegetarian Subs",
+        "items": [
+          [
+            "Avocado & Cheese",
+            "Mustard, mayo, lettuce, tomato, onion, oil and vinegar.",
+            1499,
+            null,
+            "from $14.99"
+          ],
+          [
+            "Mozza-licious!",
+            "Fresh mozzarella, pesto, tomato, spring mix and balsamic vinaigrette.",
+            1499,
+            null,
+            "from $14.99"
+          ],
+          [
+            "The Noe",
+            "Roasted eggplant, red peppers, onions, provolone, pesto, spring mix and tomato.",
+            1499,
+            null,
+            "from $14.99"
+          ],
+          [
+            "Eggplant Parm",
+            "Roasted eggplant, marinara and Parmesan.",
+            1499,
+            null,
+            "from $14.99"
+          ]
+        ]
+      },
+      {
+        "name": "Signature Subs",
+        "items": [
+          [
+            "T.B.A",
+            "Turkey, bacon, avocado, provolone, mustard, mayo, lettuce, tomato, onion, oil and vinegar.",
+            1699,
+            null,
+            "from $16.99"
+          ],
+          [
+            "Matt Cain",
+            "Salami, ham, mortadella, provolone, mustard, mayo, lettuce, tomato, onion, oil and vinegar.",
+            1699,
+            null,
+            "from $16.99"
+          ],
+          [
+            "Godfather",
+            "Pastrami, turkey, provolone, mustard, mayo, lettuce, tomato, onion and horseradish sauce.",
+            1699,
+            null,
+            "from $16.99"
+          ],
+          [
+            "Pastrami Rami",
+            "Hot pastrami, Swiss, coleslaw, Thousand Island and pickles.",
+            1599,
+            null,
+            "from $15.99"
+          ],
+          [
+            "Cali Reuben",
+            "Pastrami or turkey, Swiss, house sauerkraut, pickles, Thousand Island or spicy mustard.",
+            1599,
+            null,
+            "from $15.99"
+          ],
+          [
+            "El Cubano",
+            "House-roasted pork, ham, Swiss, mustard, garlic spread and pickles.",
+            1599,
+            null,
+            "from $15.99"
+          ],
+          [
+            "Southwest Beef Melt",
+            "Roast beef, grilled onions, red peppers, Pepper Jack and chipotle mayo.",
+            1599,
+            null,
+            "from $15.99"
+          ],
+          [
+            "Joe Dimaggio",
+            "Beef and pork meatballs, marinara and provolone.",
+            1599,
+            null,
+            "from $15.99"
+          ],
+          [
+            "Chicken Parm",
+            "Roasted chicken, provolone and marinara.",
+            1599,
+            null,
+            "from $15.99"
+          ],
+          [
+            "Buffalo Chicken",
+            "Roasted chicken, buffalo sauce, coleslaw, Pepper Jack, ranch and pickles.",
+            1599,
+            null,
+            "from $15.99"
+          ],
+          [
+            "BBQ Beef",
+            "Roast beef, BBQ sauce, Cheddar, grilled onions, mayo, lettuce and tomato.",
+            1599,
+            null,
+            "from $15.99"
+          ],
+          [
+            "BBQ Chicken",
+            "Roast chicken, BBQ sauce, Cheddar, grilled onions, mayo, lettuce and tomato.",
+            1599,
+            null,
+            "from $15.99"
+          ],
+          [
+            "BLT with Avocado",
+            "Bacon, lettuce, tomato, mayo and avocado.",
+            1599,
+            null,
+            "from $15.99"
+          ],
+          [
+            "Gobbler",
+            "Turkey, cranberry sauce, Cheddar, mayo, lettuce and tomato.",
+            1599,
+            null,
+            "from $15.99"
+          ],
+          [
+            "BBQ Pulled Pork",
+            "",
+            1599,
+            null,
+            "from $15.99"
+          ],
+          [
+            "Chicken Bacon Avocado",
+            "",
+            1699,
+            null,
+            "from $16.99"
+          ],
+          [
+            "Cheese Pizza",
+            "",
+            800,
+            null,
+            "from $8.00"
+          ],
+          [
+            "Salami and Cheese Pizza",
+            "",
+            800,
+            null,
+            "from $8.00"
+          ]
+        ]
+      },
+      {
+        "name": "Salads",
+        "items": [
+          [
+            "Garden Salad",
+            "Romaine, tomato, cucumber and onion.",
+            900
+          ],
+          [
+            "Side of Tuna Salad",
+            "",
+            800
+          ]
+        ]
+      },
+      {
+        "name": "Drinks",
+        "items": [
+          [
+            "Mexican Coke",
+            "",
+            400
+          ],
+          [
+            "Coca-Cola, Can",
+            "",
+            250
+          ],
+          [
+            "Diet Coke, Can",
+            "",
+            250
+          ],
+          [
+            "Coca-Cola Zero Sugar, Can",
+            "",
+            250
+          ],
+          [
+            "Dr. Pepper can",
+            "",
+            250
+          ],
+          [
+            "7up can",
+            "",
+            250
+          ],
+          [
+            "Ginger Ale can",
+            "",
+            250
+          ],
+          [
+            "Mug root beer can",
+            "",
+            250
+          ],
+          [
+            "Bottled Water",
+            "",
+            200
+          ],
+          [
+            "Mineral Water",
+            "",
+            250
+          ],
+          [
+            "Coconut Water",
+            "",
+            300
+          ],
+          [
+            "Pure Leaf Tea",
+            "",
+            250
+          ],
+          [
+            "Arizona",
+            "",
+            250
+          ],
+          [
+            "Gatorade",
+            "",
+            250
+          ],
+          [
+            "Spindrift lemon",
+            "",
+            250
+          ],
+          [
+            "Spindrift Lime",
+            "",
+            250
+          ],
+          [
+            "Spindrift grapefruit",
+            "",
+            250
+          ],
+          [
+            "San Pelegrino Aranchata",
+            "",
+            300
+          ]
+        ]
+      },
+      {
+        "name": "Chips and Snacks",
+        "items": [
+          [
+            "Sea Salt chips",
+            "",
+            250
+          ],
+          [
+            "BBQ chips",
+            "",
+            250
+          ],
+          [
+            "Salt and Vinegar chips",
+            "",
+            250
+          ],
+          [
+            "Jalapeño Chips",
+            "",
+            250
+          ],
+          [
+            "Maui Onion",
+            "",
+            250
+          ],
+          [
+            "Sour Cream and onion Chips",
+            "",
+            250
+          ],
+          [
+            "Sun chips",
+            "",
+            250
+          ],
+          [
+            "Chocolate Chip Cookies",
+            "",
+            150
+          ]
+        ]
+      },
+      {
+        "name": "Ice Cream",
+        "items": [
+          [
+            "Junior Scoops",
+            "",
+            525
+          ],
+          [
+            "Single Scoops",
+            "",
+            625
+          ],
+          [
+            "Double Scoops",
+            "",
+            875
+          ],
+          [
+            "Pints",
+            "",
+            1075
+          ],
+          [
+            "2 Pints",
+            "",
+            2000
+          ],
+          [
+            "Floats",
+            "",
+            935
+          ]
+        ]
+      }
+    ],
+    "address": "1300 Castro St, San Francisco, CA 94114",
+    "phone": "(415) 648-4256",
+    "email": "info@sfsubsinc.com",
+    "site": "https://www.subsincsf.com/",
+    "orderUrl": "https://order.toasttab.com/online/subs-inc-1300-castro-st",
+    "instagram": "subsinc",
+    "hours": "Daily 10:30am–5pm",
+    "panels": [
+      { "head": "Contact", "links": [{ "label": "Email Subs Inc.", "href": "mailto:info@sfsubsinc.com" }] },
+      {
+        "head": "Menu and ordering",
+        "body": [
+          "Full available menu checked on their own Toast page October 31. Sandwich and pizza prices marked “from” vary with size and options. Choose those on their ordering page.",
+          "Their Toast checkout lists a 3% credit-card surcharge. Availability and final prices are confirmed there. Super Gobbler, Greek Salad, apple juice and Kinder Bueno were sold out at the check."
+        ],
+        "links": [
+          {
+            "label": "Their full ordering menu",
+            "href": "https://order.toasttab.com/online/subs-inc-1300-castro-st"
+          }
+        ]
+      },
+      {
+        "head": "Catering",
+        "body": [
+          "The shop also caters. Ask the team about your event and current catering options."
+        ],
+        "links": [
+          {
+            "label": "Catering information",
+            "href": "https://www.subsincsf.com/catering/"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/subs-inc.mp4",
+      "poster": "/clips/subs-inc-poster.webp",
+      "href": "https://www.instagram.com/reel/C7Vq6ayOShB/",
+      "credit": "Filmed by @foodwookie",
+      "platform": "Instagram",
+      "by": "foodwookie"
+    }
+  },
+
+  /* Refetch: Glenn’s 20:36–20:39 sends. */
+  {
+    "slug": "ismail-seval",
+    "name": "İsmail Seval",
+    "label": "İsmail Seval",
+    "cuisine": "AI video creator",
+    "tagline": "AI-made short films and cinematic edits by @yapayzekaserisi.",
+    "color": "#87C9E0",
+    "icon": "ismail-seval",
+    "prep": 0,
+    "category": "AI",
+    "items": [],
+    "instagram": "yapayzekaserisi",
+    "site": "https://yapayzekaserisi.com/",
+    "email": "yapayzekaserisi@hotmail.com",
+    "siteCta": "Creator website",
+    "contactOnly": "Digital creator @yapayzekaserisi makes AI-powered short videos and cinematic edits. The featured fantasy film is AI-generated, as its creator explicitly states. Contact the creator for collaborations; no service prices are published.",
+    "clip": {
+      "src": "/clips/ismail-seval.mp4",
+      "poster": "/clips/ismail-seval-poster.webp",
+      "href": "https://www.instagram.com/reel/DcrUt2-vGff/",
+      "credit": "AI-generated · Posted by @yapayzekaserisi",
+      "platform": "Instagram"
+    }
+  },
+  {
+    "slug": "lovitts-bjj",
+    "name": "Lovitt’s BJJ",
+    "label": "Lovitt’s BJJ",
+    "cuisine": "Brazilian jiu-jitsu, youth martial arts & fitness",
+    "tagline": "Kids and adult Brazilian jiu-jitsu, Muay Thai and private training in Concord.",
+    "color": "#FFFFFF",
+    "icon": "lovitts-bjj",
+    "prep": 0,
+    "category": "Martial arts",
+    "items": [],
+    "address": "2190 Solano Way, Concord, CA 94520",
+    "phone": "(415) 559-1404",
+    "email": "Markangelolovitt@lovittsjiujitsu.com",
+    "site": "https://www.lovittsbjj.com/",
+    "siteCta": "Programs and schedule",
+    "quoteOnly": "These are the school’s published membership and drop-in rates. Contact Lovitt’s directly to confirm the class, current schedule and enrollment; enrollment and payments are handled by the school.",
+    "groups": [
+      {
+        "name": "Adult BJJ",
+        "items": [
+          [
+            "Monthly",
+            "Month-to-month; unlimited adult classes.",
+            21500,
+            "$215/month"
+          ],
+          [
+            "Yearly commitment",
+            "Per month with a 12-month commitment; unlimited classes and a BJJ gi.",
+            17500,
+            "$175/month"
+          ],
+          [
+            "Drop-in",
+            "One class.",
+            3000
+          ]
+        ]
+      },
+      {
+        "name": "Kids BJJ",
+        "items": [
+          [
+            "Monthly",
+            "Month-to-month; unlimited kids classes.",
+            19000,
+            "$190/month"
+          ],
+          [
+            "Yearly commitment",
+            "Per month with a 12-month commitment; unlimited kids classes and a BJJ gi.",
+            15000,
+            "$150/month"
+          ],
+          [
+            "Drop-in",
+            "One kids class.",
+            3000
+          ]
+        ]
+      },
+      {
+        "name": "Women's self-defense",
+        "items": [
+          [
+            "Monthly unlimited",
+            "Self-defense and fitness classes.",
+            12000,
+            "$120/month"
+          ],
+          [
+            "Drop-in class",
+            "One class.",
+            3000
+          ]
+        ]
+      },
+      {
+        "name": "Muay Thai",
+        "items": [
+          [
+            "Monthly unlimited",
+            "All Muay Thai classes.",
+            12000,
+            "$120/month"
+          ],
+          [
+            "Drop-in class",
+            "One class.",
+            3000
+          ]
+        ]
+      },
+      {
+        "name": "Personal training",
+        "items": [
+          [
+            "Monthly package",
+            "Four one-on-one sessions per month.",
+            30000,
+            "$300/month"
+          ],
+          [
+            "Single session",
+            "One hour of private instruction.",
+            7500
+          ]
+        ]
+      }
+    ],
+    "clip": {"src": "/clips/lovitts-bjj.mp4", "poster": "/clips/lovitts-bjj-poster.webp", "href": "https://www.instagram.com/p/DcTpqOnArSH/", "credit": "Posted by @c.lovittsjujitzuof · Archival youth-class post; age bands differ from the current website. Confirm with the school.", "platform": "Instagram"},
+    "panels": [
+      {
+        "head": "Programs",
+        "body": [
+          "Brazilian jiu-jitsu for tiny kids ages 4–5, kids ages 7–12, older youth ages 13+, and adults, plus Muay Thai and private instruction. Ask the school which group is appropriate for your child."
+        ]
+      },
+      {
+        "head": "Class schedule",
+        "body": [
+          "Class times vary by program. Their home page and schedule disagree on weekend opening hours; confirm with the school before visiting. The published schedule includes a Sunday open mat."
+        ],
+        "links": [
+          {
+            "label": "Current class schedule",
+            "href": "https://www.lovittsbjj.com/schedule"
+          },
+          {
+            "label": "Membership details",
+            "href": "https://www.lovittsbjj.com/pricing"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "slug": "m-omer-farooq",
+    "name": "M Omer Farooq",
+    "label": "M Omer Farooq",
+    "cuisine": "AI video creator",
+    "tagline": "AI action fan films by Dubai-based creator @mo.x2.ai.",
+    "color": "#142426",
+    "icon": "m-omer-farooq",
+    "prep": 0,
+    "category": "AI",
+    "items": [],
+    "email": "omerfarooq002@gmail.com",
+    "instagram": "mo.x2.ai",
+    "contactOnly": "Dubai-based digital creator @mo.x2.ai makes AI action fan films. The featured Ken and Ryu vs Bison film was created with Seedance via Dreamina, according to its caption. This is an unofficial AI fan film, not live footage. Contact the creator for business inquiries; no service rates are published.",
+    "clip": {
+      "src": "/clips/m-omer-farooq.mp4",
+      "poster": "/clips/m-omer-farooq-poster.webp",
+      "href": "https://www.instagram.com/reel/DdexmHaqiQ3/",
+      "credit": "AI-generated fan film · Posted by @mo.x2.ai",
+      "platform": "Instagram"
+    }
+  },
 ]

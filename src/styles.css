@@ -14298,3 +14298,17 @@ a.owner-act {
 .reel-promo-actions { margin-top: auto; padding-top: 5px; display: grid; gap: 12px; }
 .reel-promo-cta { display: block; border: 0; border-radius: 8px; padding: 14px 16px; background: #171717; color: #fff; text-align: center; font: 700 13px Inter, system-ui, sans-serif; text-decoration: none; cursor: pointer; }
 .reel-promo-download { color: inherit; font-size: 11px; text-align: center; text-underline-offset: 3px; padding: 3px; }
+
+/* Original artwork in a top-layer viewer, built only on tap. Native dialog
+   supplies focus trapping, Escape and background inertness; no phone blur. */
+.brand-logo-zoom-trigger { display: block; width: 100%; padding: 0; border: 0; background: transparent; color: inherit; cursor: zoom-in; }
+.brand-logo-zoom-trigger:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
+.brand-logo-dialog { position: fixed; inset: 0; margin: 0; padding: 24px; border: 0; width: 100vw; height: 100svh; max-width: none; max-height: none; box-sizing: border-box; background: rgba(15,16,20,.96); color: #fff; }
+.brand-logo-dialog[open] { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px; }
+.brand-logo-dialog::backdrop { background: rgba(15,16,20,.6); }
+.brand-logo-close { position: absolute; top: max(20px, env(safe-area-inset-top)); right: 20px; width: 44px; height: 44px; border: 1px solid #777; border-radius: 50%; background: #29292e; color: #fff; font-size: 30px; line-height: 1; cursor: pointer; }
+.brand-logo-large { display: flex; align-items: center; justify-content: center; max-width: 100%; padding: 0; border: 0; background: transparent; cursor: zoom-out; }
+.brand-logo-large img { display: block; width: min(80vw, 420px); height: auto; max-height: 65svh; object-fit: contain; }
+.brand-logo-large svg { max-width: 80vw; height: auto; }
+.brand-logo-dialog p { margin: 0; font-size: 13px; color: #ddd; }
+.brand-logo-dialog button:focus-visible { outline: 3px solid #f5d928; outline-offset: 5px; }

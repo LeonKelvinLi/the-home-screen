@@ -1001,4 +1001,10 @@ export const ADDED_ON: Record<string, string> = {
   b_foodiefatashfoodie: '2026-10-31',
   b_foodiefoodieshots: '2026-10-31',
   b_foodiekitkatvales: '2026-10-31',
+  b_inkwallco: '2026-10-31',
+  b_subsinc: '2026-10-31',
+  b_foodiefoodwookie: '2026-10-31',
+  b_ismailseval: '2026-10-31',
+  b_lovittsbjj: '2026-10-31',
+  b_momerfarooq: '2026-10-31',
 }
