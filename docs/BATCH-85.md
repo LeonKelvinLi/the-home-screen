@@ -55,4 +55,19 @@ Local TypeScript/build passed. Data audit: **0 errors**, 161 historical warnings
 
 Gap check: **555 business domains, 17 unmatched**. All new business domains are represented; unmatched includes 16 historical external/tool domains and the operator’s leonbuilds.org, which is not a new listing.
 
-Production deployment, live checks and actual Chrome phone-layout verification are pending; results will be appended in the verification commit.
+### Production
+
+Release **`17e400a`** is live at **https://beastypages.com**, Render deploy **`dep-dbjo3e2vcj2c73f7ag3g`**, completed **November 1, 2026, 10:23:39 am PST**. At **10:23:50 am**, the new Mostie icon matched SHA-256 `cbb70ddbad6a8ec60fa41f6fb68c72ab11669ccbed77fea6e326521f61f50e0e`, and `/api/health` returned **HTTP 200** with `{"ok":true}`.
+
+- Live Chromium and iPhone WebKit: **321 Batch 85 checks passed each**, exit 0. All 26 supplied films advance from their proper business/review panels, with original audio and attribution. Complete menus, every new seat, all 1,532 preserved seats, artwork, original logo viewers, held source links and bounded Watch playback pass.
+- `BASE=https://beastypages.com node tools/audit-iphone-entry.mjs`: **16 checks passed**, exit 0, including stalled loading, repeated green Enter presses, no document restart, no JavaScript error or WebKit crash.
+- `node tools/live-verify.mjs --skip-roster`: **PASS**, exit 0. Historical roster walk skipped; the new and updated pages are covered by this batch’s dedicated audit.
+- Final local iPhone WebKit also passed **321 checks**, exit 0. The extra five category-navigation checks confirm Search, seven curated tiles, 320-pixel fit, More pages and correct business opening. A focused production rerun passed all five again and verified the actual Parks wallpaper after Search’s closing transition. The screenshot was refreshed after that transition; audit now waits for the settled view.
+
+**Actual Chrome at 393×852:** fresh deployed page, two green Enter presses with return to landing between attempts, and a visible home grid at exactly 393-pixel content width. Opened all 14 new pages and enlarged/restored every original 512×512 icon; none overflowed. Opened all eight requested Foodie icon viewers, Kings’ supplied badge, Backyard’s complete 63-row menu and El Portal’s preserved 172-row menu with AYCE type line. Bri’s Backyard film visibly advanced at 540×960 with `paused=false` and `muted=false`. No BEASTY console errors. Temporary viewport restored and owned task tab closed.
+
+Phone screenshots were inspected, including the settled Parks/Playgrounds grid with seven original venue icons and its own wallpaper. Local artifact: `.verify/batch85-live-chromium/parks.png`.
+
+The automated gated navigation/feed checks use a browser-only synthetic member response; they create no production account or session cookie. Actual Chrome checks cover public entry and listing pages. This proves Chrome phone-layout and iPhone WebKit behavior; physical iPhone Mirroring was not rerun.
+
+Closing thread refetch: **173 messages**, unchanged from the release snapshot, through Glenn’s **9:42 am PST** icon update (last Leon reaction 9:44). All listing and reel requests through that cutoff are seated live or explicitly held above. No product files changed after the release; this verification commit contains this document and the stronger navigation/screenshot wait only.
