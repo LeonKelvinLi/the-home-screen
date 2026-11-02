@@ -416,3 +416,16 @@ Existing source images with baked rounded corners are unchanged. BrandLogo fills
 | `foodie-maya-munches-v87.webp` | https://www.instagram.com/maya_munches/ | Original artwork resampled to 512×512; aspect preserved, no story ring or redesign. |
 | `foodie-dchangshangry-v87.webp` | https://www.instagram.com/dchangshangry/ | Original artwork resampled to 512×512; aspect preserved, no story ring or redesign. |
 | `easy-breezy.webp` | Glenn’s 2026-11-02 10:45 PST original artwork attachment IMG_8894.jpeg; https://www.instagram.com/easybreezyofficial/ | Original artwork resampled to 512×512; aspect preserved, no story ring or redesign. |
+
+## Batch 88 — November 2, 2026
+
+| File | Original source | Treatment |
+| --- | --- | --- |
+| `foodie-mukbangyourmama-v88.webp` | [@mukbangyourmama](https://www.instagram.com/mukbangyourmama/) | Original 421×421 artwork, resampled to 512×512 with aspect preserved; no story ring or redraw. |
+| `foodie-cestalmoco-v88.webp` | [@cestalmoco](https://www.instagram.com/cestalmoco/) | Original 1080×1080 artwork, resampled to 512×512 with aspect preserved; no story ring or redraw. |
+| `foodie-preet-khatrii-v88.webp` | [@preet.khatrii](https://www.instagram.com/preet.khatrii/) | Original 1080×1080 artwork, resampled to 512×512 with aspect preserved; no story ring or redraw. |
+| `foodie-kogumahs-v88.webp` | [@kogumahs](https://www.instagram.com/kogumahs/) | Original 1080×1080 artwork, resampled to 512×512 with aspect preserved; no story ring or redraw. |
+| `bibim-grill.webp` | [@bibimgrill.usa](https://www.instagram.com/bibimgrill.usa/) | Original 781×781 artwork, resampled to 512×512 with aspect preserved; no story ring or redraw. |
+| `foodie-nurse-danamae-v88.webp` | [@nurse.danamae](https://www.instagram.com/nurse.danamae/) | Original 1080×1080 artwork, resampled to 512×512 with aspect preserved; no story ring or redraw. |
+| `foodie-kimoni-eatss-v88.webp` | [@kimoni.eatss](https://www.instagram.com/kimoni.eatss/) | Original 1080×1080 artwork, resampled to 512×512 with aspect preserved; no story ring or redraw. |
+| `foodie-livingvivalakillah-v88.webp` | [@livingvivalakillah](https://www.instagram.com/livingvivalakillah/) | Original 1080×1080 artwork, resampled to 512×512 with aspect preserved; no story ring or redraw. |

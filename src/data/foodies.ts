@@ -214,7 +214,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "mukbangyourmama",
     "name": "@mukbangyourmama",
-    "label": "mukbangyourmama"
+    "label": "mukbangyourmama", "icon": "foodie-mukbangyourmama-v88"
   },
   {
     "handle": "wanderingstefany",
@@ -254,7 +254,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "livingvivalakillah",
     "name": "@livingvivalakillah",
-    "label": "livingvivalakillah"
+    "label": "livingvivalakillah", "icon": "foodie-livingvivalakillah-v88"
   },
   {
     "handle": "eighty6ix_", icon: "foodie-eighty6ix-v86",
@@ -759,7 +759,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "cestalmoco",
     "name": "@cestalmoco",
-    "label": "cestalmoco"
+    "label": "cestalmoco", "icon": "foodie-cestalmoco-v88"
   },
   {
     "handle": "hangrypotato",
@@ -812,6 +812,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "dodo__eats", "name": "Evan", "label": "Evan", "icon": "foodie-dodo-eats-v86"},
   // Glenn: update icon / Foodie; first requested page for this handle.
   {"handle": "maya_munches", "name": "Maya Waldman • SF Foodie", "label": "Maya", "icon": "foodie-maya-munches-v87"},
+  // Batch 88 — append new reviewers without moving existing pages.
+  {"handle": "preet.khatrii", "name": "Preet", "label": "Preet", "icon": "foodie-preet-khatrii-v88"},
+  {"handle": "kogumahs", "name": "Sinai", "label": "Sinai", "icon": "foodie-kogumahs-v88"},
+  {"handle": "nurse.danamae", "name": "Dana Mae", "label": "Dana Mae", "icon": "foodie-nurse-danamae-v88"},
+  {"handle": "kimoni.eatss", "name": "Kimball & Monica", "label": "Kimoni", "icon": "foodie-kimoni-eatss-v88"},
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -1143,6 +1148,28 @@ export const OTHER_REVIEWS: OtherReview[] = [
   /* Batch 87 — Clip / Newbie; Clip / update icon / Foodie. */
   {"by": "maya_munches", "place": "Easy Breezy", "city": "San Francisco", "brand": "b_easybreezy", "reel": "https://www.instagram.com/reel/DXYA3bzjOTc/", "clip": true, "credit": "Filmed by @maya_munches · Filmed at the Sunset shop, 718 Irving Street; confirm current flavors and prices."},
   {"by": "dchangshangry", "place": "Easy Breezy", "city": "Walnut Creek", "brand": "b_easybreezy", "reel": "https://www.instagram.com/reel/DeZeeGbzfoV/", "clip": true, "credit": "Filmed by @dchangshangry · Filmed at the Walnut Creek shop, 1387 N. Main Street; flavors rotate."},
+
+  /* Batch 88 — each original request and its disposition are in docs/BATCH-88.md. */
+  // Glenn: Clip / update icon
+  {"by": "mukbangyourmama", "place": "Chip Cookies", "city": "Walnut Creek", "brand": "b_chipcookies", "reel": "https://www.instagram.com/reel/DfDEvHYPLyF/", "credit": "Filmed by @mukbangyourmama · Walnut Creek shop, 2335 Oak Grove Road; the original review includes the creator’s mixed impressions.", "clip": true},
+  // Glenn: Clip / Newbie
+  {"by": "dodo__eats", "place": "Alma Dessert", "city": "Sunnyvale", "brand": "b_almadessert", "reel": "https://www.instagram.com/reel/DfBinzDBcOc/", "credit": "Filmed by @dodo__eats · Hosted visit, disclosed by the creator; filmed at 165 S Murphy Avenue, Suite D. Review prices are archival.", "clip": true},
+  // Glenn: Clip / Newbie
+  {"by": "dodo__eats", "place": "Pho Ha Noi", "city": "San Jose", "brand": "b_phohanoisanjose", "reel": "https://www.instagram.com/reel/DenwYdOtZ79/", "credit": "Filmed by @dodo__eats · Hosted visit, disclosed by the creator; Vietnam Town, 969 Story Road, Unit 6048. Review prices are archival.", "clip": true},
+  // Glenn: Clip / Newbie
+  {"by": "wakeyeats", "place": "Soulsip", "city": "San Jose", "brand": "b_soulsip", "reel": "https://www.instagram.com/reel/DeMwwnKNzt2/", "credit": "Filmed by @wakeyeats · Hosted visit, disclosed by the creator, with @dodo__eats; 2002 Alum Rock Avenue. Confirm current hours and flavors.", "clip": true},
+  // Glenn: Clip / Newbie / Foodie
+  {"by": "preet.khatrii", "place": "Soulsip", "city": "San Jose", "brand": "b_soulsip", "reel": "https://www.instagram.com/reel/DeyQjQ-uMx_/", "credit": "Filmed by @preet.khatrii · Banana pudding matcha and tiramisu cake matcha review at SoulSip, San Jose.", "clip": true},
+  // Glenn: Clip / update icon
+  {"by": "cestalmoco", "place": "Soulsip", "city": "San Jose", "brand": "b_soulsip", "reel": "https://www.instagram.com/reel/DenfhiyJCt5/", "credit": "Posted by @cestalmoco · this excerpt covers only SoulSip. The full post tours several late-night San Jose stops.", "clip": true},
+  // Glenn: Clip / Newbie Newbie / Foodie
+  {"by": "kogumahs", "place": "Soulsip", "city": "San Jose", "brand": "b_soulsip", "reel": "https://www.instagram.com/reel/DeZ_DocBSQS/", "credit": "Filmed by @kogumahs · SoulSip matcha review, San Jose; confirm current flavors.", "clip": true},
+  // Glenn: Clip / Foodie / Newbie Newbie
+  {"by": "livingvivalakillah", "place": "Bibim Grill", "city": "Dublin", "brand": "b_bibimgrill", "reel": "https://www.instagram.com/reel/DfP6YgRN04H/", "credit": "Filmed by @livingvivalakillah · 3742 Fallon Road, Dublin; confirm current choices and final bowl price.", "clip": true},
+  // Glenn: Clip / Newbie / Foodie
+  {"by": "nurse.danamae", "place": "Soulsip", "city": "San Jose", "brand": "b_soulsip", "reel": "https://www.instagram.com/reel/DeH8zrghsHo/", "credit": "Hosted visit, disclosed by the creator. Watch the original review on Instagram."},
+  // Glenn: Clip / update icon
+  {"by": "kimoni.eatss", "place": "Soulsip", "city": "San Jose", "brand": "b_soulsip", "reel": "https://www.instagram.com/reel/Dd_-OAaz_-D/", "credit": "The original October 4 promotion has ended. Watch the original review on Instagram."},
 ]
 
 /*

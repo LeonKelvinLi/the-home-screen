@@ -2217,4 +2217,12 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-172': 'b_foodiemayamunches',
   'beasty-sweets-12': 'b_easybreezy',
   'beasty-vegan-4': 'b_veganmob',
+
+  /* Batch 88 — append only; existing category spots stay. */
+  'dublin-goods2-2': 'b_bibimgrill',
+  'beasty-goods2-117': 'b_bibimgrill',
+  'beasty-foodies2-173': 'b_foodiepreetkhatrii',
+  'beasty-foodies2-174': 'b_foodiekogumahs',
+  'beasty-foodies2-175': 'b_foodienursedanamae',
+  'beasty-foodies2-176': 'b_foodiekimonieatss',
 }

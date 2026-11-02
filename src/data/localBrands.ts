@@ -66548,4 +66548,133 @@ export const LOCAL_SEED: LocalSeed[] = [
       }
     ]
   },
+
+  /* Batch 88 — own Dublin menu, November 2. */
+  {
+    "slug": "bibim-grill",
+    "name": "Bibim Grill",
+    "label": "Bibim Grill",
+    "cuisine": "Korean rice and noodle bowls",
+    "tagline": "Build-your-own Korean bowls, signature bowls and drinks on Fallon Road in Dublin.",
+    "color": "#F6EDE0",
+    "icon": "bibim-grill",
+    "prep": 0,
+    "category": "Korean",
+    "site": "https://bibimgrillusa.com/",
+    "orderUrl": "https://bibimgrillusa.com/order/bibim-grill-3742-fallon-road",
+    "address": "3742 Fallon Rd, Dublin, CA 94568",
+    "phone": "925-248-2281",
+    "hours": "Daily 11am–9pm",
+    "instagram": "bibimgrill.usa",
+    "quoteOnly": "Order directly from Bibim Grill. Build-your-own prices are bases with required protein charges added separately; signature bowl prices are listed as published. Confirm choices and final price in the restaurant’s menu.",
+    "items": [],
+    "sections": [
+      {
+        "name": "Build your own bowls",
+        "items": [
+          [
+            "Build Your Own Bowl",
+            "Published base price; required full protein adds $1.75–$5.50. Choose 1–2 bases and 1–4 sauces. Final price depends on choices.",
+            1150,
+            null,
+            "$11.50 base"
+          ],
+          [
+            "Build Your Own Half & Half Bowl",
+            "Published base price; choose two half proteins, each adding $0.88–$2.75. Final price depends on choices.",
+            1150,
+            null,
+            "$11.50 base"
+          ]
+        ]
+      },
+      {
+        "name": "Signature bowls",
+        "items": [
+          [
+            "Korean Spicy Chicken Bowl",
+            "Purple rice and mixed greens; Korean spicy chicken; hot corn, black beans, peppers and onion; carrot, kimchi, pickled radish, fishcake, cucumber, cheese and nori sesame; non-spicy teriyaki, olive basil vinaigrette and yum yum.",
+            1325
+          ],
+          [
+            "Ceviche Shrimp Bowl",
+            "White rice and mixed greens; cold ceviche shrimp; hot corn, black beans, peppers and onion; bean sprout, jalapeno, onion, kimchi, cucumber and cheese; jalapeno ranch and olive basil vinaigrette.",
+            1595
+          ],
+          [
+            "Bulgogi Beef Bowl",
+            "Purple rice and japchae noodles; bulgogi beef; hot corn, peppers and onion; carrot, kimchi, pickled radish, fishcake, cucumber, cheese and nori sesame; gochujang.",
+            1595
+          ],
+          [
+            "Garlic Chicken & Steak Bowl (Spicy)",
+            "Purple rice and mixed greens; smoked garlic chicken and USDA Prime flat iron steak; hot corn, black beans, peppers and onion; carrot, onion, cucumber, fishcake, cheese and nori sesame; extra-spicy teriyaki, olive basil vinaigrette and signature lava.",
+            1695
+          ]
+        ]
+      },
+      {
+        "name": "Drinks",
+        "items": [
+          [
+            "Pepsi",
+            "",
+            280
+          ],
+          [
+            "Diet Pepsi",
+            "",
+            280
+          ],
+          [
+            "Orange Crush",
+            "",
+            280
+          ],
+          [
+            "Gatorade Lemon Lime",
+            "",
+            280
+          ],
+          [
+            "Gatorade Cool Blue",
+            "",
+            280
+          ],
+          [
+            "Gatorade Fruit Punch",
+            "",
+            280
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Build-your-own choices and protein charges",
+        "body": [
+          "Base, choose 1–2: purple rice (wild rice healthy grain), white rice, japchae noodles or supergreen salad. The published bowl base is $11.50; a protein choice is required and charged separately.",
+          "Full protein: smoked garlic chicken +$1.75; Korean spicy chicken +$1.75; bulgogi beef +$4.50; cold ceviche shrimp +$4.50; steak +$5.50. The menu describes both chicken choices as halal.",
+          "Half & half: choose two half proteins. Half smoked garlic chicken +$0.88; half Korean spicy chicken +$0.88; half bulgogi beef +$2.25; half ceviche shrimp +$2.25; half steak +$2.75. These charges are added to the $11.50 base, not complete bowl prices."
+        ]
+      },
+      {
+        "head": "Toppings and sauces",
+        "body": [
+          "Optional toppings: hot black beans, hot peppers and onions, hot roasted corn; mixed greens, spinach, pickled radish, carrots, bean sprouts, shiitake mushroom, jalapeno, sweet onion, kimchi, cucumber, fishcake, cheese, dried onion crisps, nori sesame mix and garlic crisps. Hot sunny egg adds $1.50.",
+          "Choose 1–4 sauces: non-spicy combo (teriyaki, olive basil vinaigrette, yum yum); spicy combo (teriyaki, olive basil vinaigrette, jalapeno ranch); extra-spicy combo (teriyaki, olive basil vinaigrette, signature lava); yum yum, teriyaki, olive basil vinaigrette, signature lava, jalapeno ranch, gochujang, spicy mayo or sweet & chili. No sauce and sauce on the side are also published choices."
+        ],
+        "links": [
+          {
+            "label": "Restaurant allergy information",
+            "href": "https://bibimgrillusa.com/allergy-list"
+          },
+          {
+            "label": "Current bowl menu and options",
+            "href": "https://bibimgrillusa.com/menu/bibim-grill-3742-fallon-road"
+          }
+        ]
+      }
+    ]
+  },
 ]
