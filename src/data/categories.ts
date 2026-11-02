@@ -161,6 +161,8 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'travel', heading: 'Travel', about: 'Museums, destinations and places to explore', wall: wall('travel') },
   { kind: 'sushi', heading: 'Sushi', about: 'Sushi, sashimi and Japanese sushi restaurants', wall: wall('sushi'), test: /\bsushi\b|sashimi/i },
   { kind: 'cakes', heading: 'Cakes', about: 'Cake shops, celebration cakes and custom cakes', wall: wall('cakes'), test: /\bcakes?\b|patisserie/i, not: /decorating|classes|workshop|crab cake/i },
+  /* Glenn, November 2: kennels of any breed; Grande Kennels opens the page. */
+  { kind: 'kennels', heading: 'Kennels', about: 'Dog kennels and breeders of every breed', wall: wall('kennels'), test: /\bkennels?\b|\bbreeders?\b/i },
 ]
 
 /** Every category page holds his twenty-four. */

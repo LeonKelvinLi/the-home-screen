@@ -66385,4 +66385,167 @@ export const LOCAL_SEED: LocalSeed[] = [
       }
     ]
   },
+
+  /* Batch 87 — Glenn, November 2. Sources: docs/BATCH-87.md. */
+  {
+    "slug": "grande-kennels",
+    "name": "Grande Kennels",
+    "label": "Grande Kennels",
+    "cuisine": "Cane Corso kennel and breeder",
+    "tagline": "Cane Corso kennel and stud service in the Bay Area, Northern California.",
+    "color": "#122219",
+    "icon": "grande-kennels",
+    "prep": 0,
+    "category": "Pets",
+    "instagram": "grande_kennels",
+    "contactOnly": "Contact Grande Kennels on Instagram for current services and availability. The profile identifies the Bay Area, Northern California; no public street address or prices are published.",
+    "items": [],
+    "panels": [
+      {
+        "head": "About Grande Kennels",
+        "body": [
+          "Cane Corso kennel and stud service. The business’s own profile links @lagrandedelabanda."
+        ],
+        "links": [
+          {
+            "label": "Grande Kennels on Instagram",
+            "href": "https://www.instagram.com/grande_kennels/"
+          },
+          {
+            "label": "Cynthia on BEASTY",
+            "href": "/?b=b_foodielagrandedelabanda"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "easy-breezy",
+    "name": "Easy Breezy",
+    "label": "Easy Breezy",
+    "cuisine": "Frozen yogurt, custard and vegan soft serve",
+    "tagline": "Rotating frozen yogurt, custard and vegan soft serve at six Bay Area shops.",
+    "color": "#89CFD1",
+    "icon": "easy-breezy",
+    "prep": 0,
+    "category": "Sweets",
+    "site": "https://www.easy-breezy.com/",
+    "instagram": "easybreezyofficial",
+    "address": "718 Irving St, San Francisco, CA 94122",
+    "phone": "415-213-5990",
+    "email": "info@easy-breezy.com",
+    "hours": "Mon–Wed 1–9pm; Thu–Fri 1–10pm; Sat noon–10pm; Sun noon–9pm",
+    "quoteOnly": "Food flavors rotate; ask your shop for current prices and availability. The separate price list is for mailed gift cards and merchandise, not yogurt. The business publishes a 4.5% service fee.",
+    "items": [],
+    "panels": [
+      {
+        "head": "Rotating flavors — checked November 2",
+        "body": [
+          "S'mores — Low Fat — Contains Gluten — Yogurt, Marshmallow Creme, Unsweetened Cocoa Powder, Graham Cracker Crumbs",
+          "Pumpkin Custard — Gluten-Free — Full Fat — w/Egg — Custard, Pure Pumpkin, Cinnamon, Pumpkin Pie Spices",
+          "Queen Tahini (Vegan) — Vegan — Low Fat — Gluten-Free — w/Sesame — Cashew Milk, Pure Sesame Paste",
+          "Cookies n Creamboat (Vegan) — Vegan — Med Fat — w/Gluten — Coconut Milk, Lots of Oreos, Vanilla Extract, Marshmallow Creme",
+          "Vanilla Custard — Full Fat — Gluten-Free — w/Egg — High Buttermilk Fat Vanilla Ice Cream w/Pasteurized Egg Yolk Whipped In",
+          "Vanilla Bean Yogurt/Vegan Vanilla (Los Gatos and WCreek only) — Non Fat — Gluten-Free — Low Fat — Yogurt, Italian Vanilla Bean Delipaste, Organic Hemp Protein/Cassava Root, Vanilla Extract",
+          "Chocolate Custard/Choco Milk Yogurt — Gluten-Free — Full Fat — Low Fat — Custard, Unsweetened Cocoa Powder/Yogurt, Unsweetened Cocoa Powder, Choc Milk Powder",
+          "Original Tart — Non Fat — Gluten-Free — Our Original Tart Yogurt, Nothing Added",
+          "These are the eight published flavor cards, not a promise of stock at every branch. Ask the shop about ingredients and current flavors."
+        ],
+        "links": [
+          {
+            "label": "Current flavors",
+            "href": "https://www.easy-breezy.com/#flavors"
+          },
+          {
+            "label": "Ingredients and nutrition",
+            "href": "https://www.easy-breezy.com/nutritional-information-easy-breezy"
+          }
+        ]
+      },
+      {
+        "head": "Locations and hours",
+        "body": [
+          "Corte Madera 119 Corte Madera Town Center Corte Madera , CA 94925 415-886-8925 Mon - Wed: 11am - 8pm\nThu - Sat: 11am - 9pm\nSun: 11am - 8pm",
+          "Los Gatos 307 N. Santa Cruz Avenue Los Gatos , CA 95030 408-827-4411 Mon - Wed: 1pm - 9pm\nThu - Fri: 1pm - 10pm\nSat: Noon - 10pm\nSun: Noon - 9pm",
+          "Noe Valley 4028 24th Street San Francisco , CA 94114 415-932-6084 Mon - Wed: Noon - 9pm\nThu - Fri: Noon - 10pm\nSat: 11am - 10pm\nSun: 11am - 9pm",
+          "Sunset 718 Irving Street San Francisco , CA 94122 415-213-5990 Mon - Wed 1pm - 9pm\nThu - Fri: 1pm - 10pm\nSat: Noon - 10pm\nSun: Noon - 9pm",
+          "Walnut Creek 1387 N. Main Street Walnut Creek , CA 94596 925-546-5078 Mon - Wed: 1pm - 9pm\nThu - Fri: 1pm - 10pm\nSat: Noon - 10pm\nSun: Noon - 9pm",
+          "West Portal 44 West Portal Avenue San Francisco , CA 94127 415-834-8021 Mon - Wed: Noon - 9pm\nThu - Fri: Noon - 10pm\nSat: 11am - 10pm\nSun: 11am - 9pm",
+          "Maya’s film shows Sunset; Dan’s film shows Walnut Creek. The main address and call button on this page are Sunset."
+        ],
+        "links": [
+          {
+            "label": "Current six shops",
+            "href": "https://www.easy-breezy.com/#locations"
+          }
+        ]
+      },
+      {
+        "head": "Shop and published promotions",
+        "body": [
+          "Gift cards are physical cards sent by USPS, not email gift cards. The website lists $25, $50 and $100 options. Online merchandise prices include US shipping; confirm stock and size availability directly.",
+          "The business publishes a 4.5% service fee. Promotions cannot be stacked. Confirm eligibility and current offers with the shop."
+        ],
+        "links": [
+          {
+            "label": "Easy Breezy website and shop",
+            "href": "https://www.easy-breezy.com/"
+          },
+          {
+            "label": "Contact Easy Breezy",
+            "href": "https://www.easy-breezy.com/contact-us-easy-breezy"
+          }
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "name": "Online shop — gift cards & merchandise",
+        "items": [
+          [
+            "Gift Card (Physical card mailed to customer via USPS)",
+            "Physical gift card, USPS delivery; $25, $50 or $100. Confirm stock on the shop.",
+            2500,
+            null,
+            "from $25"
+          ],
+          [
+            "Adult Tee (Teal)",
+            "Published shop price includes shipping within the US. Sizes: XSmall, Small, Medium, X-Large. Confirm stock on the shop.",
+            3800,
+            null,
+            "$38"
+          ],
+          [
+            "Adult Tee (Gray)",
+            "Published shop price includes shipping within the US. Sizes: Small, Large. Confirm stock on the shop.",
+            3800,
+            null,
+            "$38"
+          ],
+          [
+            "Kids Tee",
+            "Published shop price includes shipping within the US. Sizes: 2T, 4T, 6T, 8T, 10, 12. Confirm stock on the shop.",
+            3800,
+            null,
+            "$38"
+          ],
+          [
+            "Adult Tee (White)",
+            "Published shop price includes shipping within the US. Sizes: X-Large. Confirm stock on the shop.",
+            3800,
+            null,
+            "$38"
+          ],
+          [
+            "Adult Tee (Light Blue)",
+            "Published shop price includes shipping within the US. Sizes: X-Small, Small. Confirm stock on the shop.",
+            3800,
+            null,
+            "$38"
+          ]
+        ]
+      }
+    ]
+  },
 ]

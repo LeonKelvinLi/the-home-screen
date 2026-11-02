@@ -407,3 +407,12 @@ Existing source images with baked rounded corners are unchanged. BrandLogo fills
 | `foodie-karaxhuynh-v86.webp` | [@karaxhuynh](https://www.instagram.com/karaxhuynh/) | Original profile artwork, resized only. 512×512. |
 | `foodie-wakeyeats-v86.webp` | [@wakeyeats](https://www.instagram.com/wakeyeats/) | Original profile artwork, resized only. 512×512. |
 | `foodie-dodo-eats-v86.webp` | [@dodo__eats](https://www.instagram.com/dodo__eats/) | Original profile artwork, resized only. 512×512. |
+
+## Batch 87 — November 2, 2026
+
+| File | Original source | Treatment |
+| --- | --- | --- |
+| `grande-kennels.webp` | https://www.instagram.com/grande_kennels/ | Original artwork resampled to 512×512; aspect preserved, no story ring or redesign. |
+| `foodie-maya-munches-v87.webp` | https://www.instagram.com/maya_munches/ | Original artwork resampled to 512×512; aspect preserved, no story ring or redesign. |
+| `foodie-dchangshangry-v87.webp` | https://www.instagram.com/dchangshangry/ | Original artwork resampled to 512×512; aspect preserved, no story ring or redesign. |
+| `easy-breezy.webp` | Glenn’s 2026-11-02 10:45 PST original artwork attachment IMG_8894.jpeg; https://www.instagram.com/easybreezyofficial/ | Original artwork resampled to 512×512; aspect preserved, no story ring or redesign. |

@@ -440,6 +440,14 @@ export const CATEGORY_OVERFLOW: SlotPage[] = [{
   about: 'More food reviewers and creators',
   yellow: true,
   categories: Array.from({ length: Math.max(24, Math.ceil(MORE_FOODIE_PAGES.length / 24) * 24) }, (_, i) => ({ n: i + 1, name: 'Foodie', label: 'Available' })),
+}, {
+  /* Pets' original 24 stay; Glenn also requested Grande Kennels on Pets. */
+  kind: 'pets2',
+  parent: 'pets',
+  heading: 'More pets',
+  about: 'More pet businesses',
+  yellow: true,
+  categories: Array.from({ length: 24 }, (_, i) => ({ n: i + 1, name: 'Pets', label: 'Available' })),
 }]
 
 /*

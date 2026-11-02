@@ -301,6 +301,17 @@ def m_pits(rng):
     return composite(img, over, blur=2)
 
 
+def m_kennels(rng):
+    img = gradient('#081b17', '#202316')
+    over, d = layer()
+    for x, y, r in [(W*.3, H*.28, 190), (W*.72, H*.57, 150), (W*.32, H*.83, 120)]:
+        d.line([(x-r*1.3, y), (x, y-r), (x+r*1.3, y)], fill=rgba('#b6cf97', .24), width=12)
+        d.line([(x-r, y-r*.2), (x-r, y+r), (x+r, y+r), (x+r, y-r*.2)], fill=rgba('#b6cf97', .2), width=10)
+        d.arc((x-r*.3, y+r*.1, x+r*.3, y+r*.7), 180, 360, fill=rgba('#e9d99e', .24), width=10)
+        d.line([(x-r*.3, y+r*.4), (x-r*.3, y+r), (x+r*.3, y+r), (x+r*.3, y+r*.4)], fill=rgba('#e9d99e', .24), width=10)
+    return composite(img, over, blur=3)
+
+
 def m_pets(rng):
     img = gradient("#071a1f", "#0f2f36")
     img = glow(img, W * 0.35, H * 0.3, 1100, "#0891b2", 0.4)
@@ -849,6 +860,7 @@ MOTIFS = {
     "sushi": m_sushi,
     "cakes": m_cakes,
     "pits": m_pits,
+    "kennels": m_kennels,
     "pets": m_pets,
     "models": m_models,
     "meats": m_meats,

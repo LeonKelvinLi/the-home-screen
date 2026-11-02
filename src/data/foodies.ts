@@ -383,8 +383,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   },
   {
     "handle": "dchangshangry",
-    "name": "@dchangshangry",
-    "label": "dchangshangry"
+    "name": "Dan | Your Bay Area Foodie Explorer",
+    "label": "Dan", "icon": "foodie-dchangshangry-v87"
   },
   {
     "handle": "bayarea.foodie.san",
@@ -810,6 +810,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "karaxhuynh", "name": "Kara Huynh", "label": "Kara", "icon": "foodie-karaxhuynh-v86"},
   {"handle": "wakeyeats", "name": "Weiqi", "label": "Weiqi", "icon": "foodie-wakeyeats-v86"},
   {"handle": "dodo__eats", "name": "Evan", "label": "Evan", "icon": "foodie-dodo-eats-v86"},
+  // Glenn: update icon / Foodie; first requested page for this handle.
+  {"handle": "maya_munches", "name": "Maya Waldman • SF Foodie", "label": "Maya", "icon": "foodie-maya-munches-v87"},
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -1137,6 +1139,10 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "karaxhuynh", "place": "Chez Maeju", "city": "Oakland", "brand": "b_chezmaeju", "reel": "https://www.instagram.com/reel/DeHlBF3B8FI/", "credit": "Watch the original review on Instagram."},
   // Glenn: Newbie / Foodie; local copy held at four films
   {"by": "dodo__eats", "place": "Chez Maeju", "city": "Oakland", "brand": "b_chezmaeju", "reel": "https://www.instagram.com/reel/DeAHK8ogWsD/", "credit": "Hosted visit, disclosed by the creator. Watch the original review on Instagram."},
+
+  /* Batch 87 — Clip / Newbie; Clip / update icon / Foodie. */
+  {"by": "maya_munches", "place": "Easy Breezy", "city": "San Francisco", "brand": "b_easybreezy", "reel": "https://www.instagram.com/reel/DXYA3bzjOTc/", "clip": true, "credit": "Filmed by @maya_munches · Filmed at the Sunset shop, 718 Irving Street; confirm current flavors and prices."},
+  {"by": "dchangshangry", "place": "Easy Breezy", "city": "Walnut Creek", "brand": "b_easybreezy", "reel": "https://www.instagram.com/reel/DeZeeGbzfoV/", "clip": true, "credit": "Filmed by @dchangshangry · Filmed at the Walnut Creek shop, 1387 N. Main Street; flavors rotate."},
 ]
 
 /*

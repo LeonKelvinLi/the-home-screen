@@ -677,3 +677,10 @@ Downtown BBQ’s original `downtown-bbq.mp4` remains only as an archived file/cr
 | `review-Dd_0JF5Nq2B.mp4` and `review-Dd_0JF5Nq2B-poster.webp` | [@wakeyeats](https://www.instagram.com/reel/Dd_0JF5Nq2B/), posted 2026-10-02T08:36:57-07:00 | Glenn: Watch / Newbie / Foodie. Excerpt 0–8.914s. Original audio retained. Hosted soft-opening visit, disclosed by the creator; confirm current hours. |
 
 HolyShred’s own dish film is shared on San Francisco and Palo Alto, once in Watch. Source-only links DXnM3fcj5vE (Polly Ann), DcrSbmKyksH and De5qAHvieL7 (Simplycake) retain original reviewer credit while local copies are held at the four-film limit. DecT_ZRPBzz is a Foodie-only source link. Details: docs/BATCH-86.md.
+
+## Batch 87 — November 2, 2026
+
+| Local film and poster | Source and Pacific post date | Request and excerpt |
+| --- | --- | --- |
+| `review-DXYA3bzjOTc.mp4` and `review-DXYA3bzjOTc-poster.webp` | [@maya_munches](https://www.instagram.com/reel/DXYA3bzjOTc/), posted 2026-04-20T18:28:00-07:00 | Glenn: Clip / Newbie. Excerpt 0–15s. Original audio retained; 540×960, square pixels. Filmed by @maya_munches · Filmed at the Sunset shop, 718 Irving Street; confirm current flavors and prices. |
+| `review-DeZeeGbzfoV.mp4` and `review-DeZeeGbzfoV-poster.webp` | [@dchangshangry](https://www.instagram.com/reel/DeZeeGbzfoV/), posted 2026-10-12T07:45:07-07:00 | Glenn: Clip / update icon / Foodie. Excerpt 0–15s. Original audio retained; 540×960, square pixels. Filmed by @dchangshangry · Filmed at the Walnut Creek shop, 1387 N. Main Street; flavors rotate. |

@@ -2206,4 +2206,15 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-169': 'b_foodiekaraxhuynh',
   'beasty-foodies2-170': 'b_foodiewakeyeats',
   'beasty-foodies2-171': 'b_foodiedodoeats',
+
+  /* Batch 87: keep every earlier seat; append only. Pets is full. */
+  'beasty-kennels-0': 'b_grandekennels',
+  'beasty-pets2-0': 'b_grandekennels',
+  'san-francisco-goods2-69': 'b_easybreezy',
+  'walnut-creek-goods2-15': 'b_easybreezy',
+  'beasty-goods2-116': 'b_easybreezy',
+  'beasty-froyo-3': 'b_easybreezy',
+  'beasty-foodies2-172': 'b_foodiemayamunches',
+  'beasty-sweets-12': 'b_easybreezy',
+  'beasty-vegan-4': 'b_veganmob',
 }
