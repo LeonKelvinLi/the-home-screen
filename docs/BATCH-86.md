@@ -103,6 +103,12 @@ Local Chromium and iPhone WebKit each passed **421 Batch 86 checks**, exit 0: al
 
 The iPhone entry regression passed **16 checks**, exit 0, including a deliberately delayed app module, repeated green Enter presses, no document reload, no JavaScript error and no WebKit process crash. Category screenshots were inspected; Travel, Sushi and Cakes show their correct icons and separate wallpapers.
 
-Production verification is pending the Render deploy.
+Production release **eaed3a807631af92786be2febb238864581c4b46** became live on Render at **2026-11-02 10:34:39 PST** (deploy `dep-dbkdbpdckfvc73beqsd0`). At 10:34:52 PST, `/api/health` returned HTTP 200 and the new Andrew icon matched SHA-256 `ec23cb03f43c46c029e363286061ce2e8129ef54cac74a3cf4592e3da68ff693`. The transient HTTP 502 during the service restart cleared when the deploy became live.
+
+Against **https://beastypages.com**, Chromium and iPhone WebKit each passed **421 checks**, the iPhone entry regression passed **16 checks**, and `node tools/live-verify.mjs --skip-roster` passed. The batch audit uses a browser-only synthetic membership response; no production account or database fixture was created.
+
+Actual user Chrome at **393×852** also verified both green entry paths, all ten new business pages and their enlarged/restored original logos, Chronic Tacos’ full 59-item menu and Ginza’s full 91-item menu without horizontal overflow. Andrew, Fedora, Jessa, Cynthia and Tiffany portraits opened at original size and restored correctly. Tiffany’s initial missed click was resolved using the visible logo control. Automated live audits verified all 35 portraits and all 34 advancing films. iPhone Mirroring remained locked behind the Mac Touch ID prompt, so this is Chrome plus iPhone WebKit proof, not a completed physical-iPhone test.
+
+New Glenn requests after this batch’s 10:14 PST cutoff are tracked separately in Batch 87, beginning with Grande Kennels and the new Kennels category.
 
 Gap check: **562 business domains, 17 unmatched**. All new business domains are represented. Unmatched are 16 historical external/tool domains and the operator’s leonbuilds.org; none is a new Batch 86 listing.
