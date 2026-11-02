@@ -1213,7 +1213,7 @@ export const OTHER_REVIEWS: OtherReview[] = [
   // Glenn: Clip / Foodie / Mediocre
   {"by": "liltiffyvert", "place": "NaYa Dessert Cafe", "brand": "b_nayadessertcafe", "reel": "https://www.instagram.com/reel/DeNPxiISX3z/", "credit": "Filmed by @liltiffyvert · Invited visit disclosed by the creator. Filmed at the Davis branch; the SF menu prices on the listing do not represent Davis prices.", "city": "Davis", "clip": true},
   // Glenn: Clip / Foodie / Newbie
-  {"by": "jovana.camberos", "place": "NaYa Dessert Cafe", "brand": "b_nayadessertcafe", "reel": "https://www.instagram.com/reel/DVxPfFGEfNz/", "credit": "Filmed by @jovana.camberos · The on-screen title identifies San Francisco; the exact SF branch is not stated. Confirm current menu and availability.", "city": "San Francisco", "clip": true},
+  {"by": "jovana.camberos", "place": "NaYa Dessert Cafe", "brand": "b_nayadessertcafe", "reel": "https://www.instagram.com/reel/DVxPfFGEfNz/", "credit": "Filmed by @jovana.camberos · Filmed at the Geary Boulevard branch in San Francisco, identified by the storefront shown in the video. Confirm current menu and availability.", "city": "San Francisco", "clip": true},
 ]
 
 /*
