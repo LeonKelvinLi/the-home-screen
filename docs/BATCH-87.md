@@ -31,7 +31,7 @@ The separate six-row **online shop** price list covers the physical gift card (f
 
 Maya and Dan’s original 1080px public profile images were checked against Glenn’s requested screenshots before resampling; Easy Breezy’s supplied original image and Grande’s original 1080px artwork were similarly checked. Credits are in `public/icons/CREDITS.md`. The research manifest is `research/roster/batch87.json`.
 
-Gap check: **563 business domains, 17 unmatched**; Easy Breezy is represented. The same 16 historical tool/external domains plus operator leonbuilds.org remain unmatched. No new Batch 87 website is missing. No outbound communication, accounts, reservations or purchase was submitted. Protected affiliate files/worktree are untouched.
+Gap check: **563 business domains, 17 unmatched**; Easy Breezy is represented. The same 17 earlier domains remain unmatched; their historical disposition is outside this batch’s scope. No new Batch 87 website is missing. No outbound communication, accounts, reservations or purchase was submitted. Protected affiliate files/worktree are untouched.
 
 ## Verification
 

@@ -2225,4 +2225,20 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-174': 'b_foodiekogumahs',
   'beasty-foodies2-175': 'b_foodienursedanamae',
   'beasty-foodies2-176': 'b_foodiekimonieatss',
+
+  /* Batch 89 — append only; NaYa fills the open Shaved ice spot. */
+  'union-city-goods2-6': 'b_matzipunioncity',
+  'beasty-goods2-118': 'b_matzipunioncity',
+  'beasty-korean-0': 'b_matzipunioncity',
+  'san-francisco-goods2-70': 'b_nayadessertcafe',
+  'san-jose-goods2-30': 'b_nayadessertcafe',
+  'san-mateo-goods2-5': 'b_nayadessertcafe',
+  'beasty-sweets-5': 'b_nayadessertcafe',
+  'beasty-foodies2-177': 'b_foodiethehabibizeat',
+  'beasty-foodies2-178': 'b_foodieeatwithbooboo',
+  'beasty-foodies2-179': 'b_foodiebayareafoodogram',
+  'beasty-foodies2-180': 'b_foodielubtoeat',
+  'beasty-foodies2-181': 'b_foodiethismajourney',
+  'beasty-foodies2-182': 'b_foodiesummerishungry',
+  'beasty-foodies2-183': 'b_foodiejustfeediris',
 }

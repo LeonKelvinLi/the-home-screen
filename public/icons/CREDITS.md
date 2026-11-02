@@ -429,3 +429,19 @@ Existing source images with baked rounded corners are unchanged. BrandLogo fills
 | `foodie-nurse-danamae-v88.webp` | [@nurse.danamae](https://www.instagram.com/nurse.danamae/) | Original 1080×1080 artwork, resampled to 512×512 with aspect preserved; no story ring or redraw. |
 | `foodie-kimoni-eatss-v88.webp` | [@kimoni.eatss](https://www.instagram.com/kimoni.eatss/) | Original 1080×1080 artwork, resampled to 512×512 with aspect preserved; no story ring or redraw. |
 | `foodie-livingvivalakillah-v88.webp` | [@livingvivalakillah](https://www.instagram.com/livingvivalakillah/) | Original 1080×1080 artwork, resampled to 512×512 with aspect preserved; no story ring or redraw. |
+
+## Batch 89 — November 2, 2026
+
+| File | Original source | Treatment |
+| --- | --- | --- |
+| `foodie-thehabibizeat-v89.webp` | [thehabibizeat](https://www.instagram.com/thehabibizeat/) | Original 1077×1077, resampled to 512×512. Aspect preserved; no redraw or story ring. |
+| `foodie-eatwithbooboo-v89.webp` | [eatwithbooboo](https://www.instagram.com/eatwithbooboo/) | Original 1080×1080, resampled to 512×512. Aspect preserved; no redraw or story ring. |
+| `foodie-bayarea-foodogram-v89.webp` | [bayarea_foodogram](https://www.instagram.com/bayarea_foodogram/) | Original 1024×1024, resampled to 512×512. Aspect preserved; no redraw or story ring. |
+| `foodie-thesnobbiefoodie-v89.webp` | [thesnobbiefoodie](https://www.instagram.com/thesnobbiefoodie/) | Original 1080×1080, resampled to 512×512. Aspect preserved; no redraw or story ring. |
+| `foodie-lub-to-eat-v89.webp` | [lub.to.eat](https://www.instagram.com/lub.to.eat/) | Original 729×729, resampled to 512×512. Aspect preserved; no redraw or story ring. |
+| `foodie-thismajourney-v89.webp` | [thismajourney](https://www.instagram.com/thismajourney/) | Original 494×494, resampled to 512×512. Aspect preserved; no redraw or story ring. |
+| `foodie-summer-ishungry-v89.webp` | [summer.ishungry](https://www.instagram.com/summer.ishungry/) | Original 1080×1080, resampled to 512×512. Aspect preserved; no redraw or story ring. |
+| `foodie-justfeediris-v89.webp` | [justfeediris](https://www.instagram.com/justfeediris/) | Original 1080×1080, resampled to 512×512. Aspect preserved; no redraw or story ring. |
+| `foodie-hangrypotato-v89.webp` | [hangrypotato](https://www.instagram.com/hangrypotato/) | Original 1080×1080, resampled to 512×512. Aspect preserved; no redraw or story ring. |
+| `matzip-union-city.webp` | [matzipkoreanrestaurant](https://www.instagram.com/matzipkoreanrestaurant/) | Original 1080×1080, resampled to 512×512. Aspect preserved; no redraw or story ring. |
+| `naya-dessert-cafe.webp` | [naya_dessertcafe](https://static.wixstatic.com/media/3e582a_989ee5e609614247abef650c749ab14c~mv2.png) | Original 1912×1912, resampled to 512×512. Own website transparent original on the website’s blush background. |

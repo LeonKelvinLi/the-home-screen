@@ -72,6 +72,7 @@ export const CATEGORY_GLYPHS: Record<string, CategoryGlyph> = {
   sushi: { paths: ['M3 12c0-3 4-5 9-5s9 2 9 5v5H3Z', 'M8 8v9', 'M16 8v9', 'M3 12h18', 'M5 3l13 2', 'M5 5l13 2'] },
   cakes: { paths: ['M3 11h18v10H3Z', 'M3 15c2 3 4-3 6 0s4-3 6 0 4-3 6 0', 'M8 11V7', 'M16 11V7', 'M8 4v1', 'M16 4v1'] },
   kennels: { paths: ['M2 11 12 3l10 8', 'M5 9v12h14V9', 'M9 21v-6a3 3 0 0 1 6 0v6'] },
+  korean: { paths: ['M3 12h18c0 5-4 9-9 9s-9-4-9-9Z', 'M8 7c-2-2 2-3 0-5', 'M15 7c-2-2 2-3 0-5', 'M14 10l7-7', 'M17 10l6-6'] },
   youth: { paths: [ring(7, 5, 2), 'M7 7v7', 'M3 3.5L7 9l4-5.5', 'M4.5 21L7 14l2.5 7', ring(17, 5, 2), 'M17 7v7', 'M13 3.5L17 9l4-5.5', 'M14.5 21L17 14l2.5 7'] },
 }
 

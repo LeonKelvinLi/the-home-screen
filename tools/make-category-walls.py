@@ -301,6 +301,18 @@ def m_pits(rng):
     return composite(img, over, blur=2)
 
 
+def m_korean(rng):
+    img = gradient('#250e12', '#161b21')
+    over, d = layer()
+    for x, y, r in [(W*.32, H*.28, 190), (W*.72, H*.58, 145), (W*.33, H*.84, 110)]:
+        d.arc((x-r, y-r, x+r, y+r), 0, 180, fill=rgba('#e6bc79', .24), width=12)
+        d.line((x-r, y, x+r, y), fill=rgba('#e6bc79', .24), width=10)
+        for dx in (-.3, .3):
+            curve(d, [(x+dx*r+15*math.sin(t/24), y-r*.6-t) for t in range(0, int(r*.7), 4)], rgba('#edc9ac', .2), 8)
+        d.line((x+r*.4, y-r*.3, x+r*1.2, y-r*1.2), fill=rgba('#e6bc79', .2), width=7)
+    return composite(img, over, blur=3)
+
+
 def m_kennels(rng):
     img = gradient('#081b17', '#202316')
     over, d = layer()
@@ -861,6 +873,7 @@ MOTIFS = {
     "cakes": m_cakes,
     "pits": m_pits,
     "kennels": m_kennels,
+    "korean": m_korean,
     "pets": m_pets,
     "models": m_models,
     "meats": m_meats,

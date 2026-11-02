@@ -66677,4 +66677,1369 @@ export const LOCAL_SEED: LocalSeed[] = [
       }
     ]
   },
+
+  /* Batch 89 — own restaurant menus; details and conflicts in docs/BATCH-89.md. */
+  {
+    "slug": "matzip-union-city",
+    "name": "Matzip — Union City",
+    "label": "Matzip",
+    "cuisine": "Korean restaurant",
+    "tagline": "Korean street-food favorites, fried chicken, hot pots, kimbap and noodle dishes in Union City.",
+    "color": "#E9D3AA",
+    "icon": "matzip-union-city",
+    "prep": 0,
+    "category": "Korean",
+    "site": "https://matzipunioncity.com/",
+    "orderUrl": "https://matzip.menu11.com/unioncity/order",
+    "instagram": "matzipkoreanrestaurant",
+    "address": "33592 Alvarado Niles Rd, Union City, CA 94587",
+    "phone": "510-429-1252",
+    "hours": "Mon–Fri 11am–2:30pm, 5–8:30pm; Sat–Sun 11am–9pm",
+    "quoteOnly": "Order directly from Matzip. Published menu sizes and prices are shown; confirm options, availability and catering details in the restaurant’s menu.",
+    "items": [],
+    "sections": [
+      {
+        "name": "Starters",
+        "items": [
+          [
+            "Fried Dumplings",
+            "Crispy pan-fried dumplings-choice of beef or kimchi filling",
+            995
+          ],
+          [
+            "Fried Seaweed Rolls",
+            "Crispy fried seaweed rolls with glass noodle",
+            995
+          ],
+          [
+            "Menbosha",
+            "Deep-fried shrimp toast, crispy outside and juicy inside",
+            1095
+          ],
+          [
+            "Fries",
+            "Golden Fried potato sticks",
+            995
+          ],
+          [
+            "Assorted Pancake",
+            "Korean savory pancakes with 2 kimch,2 potato,and 2 seafood piece",
+            1295
+          ],
+          [
+            "Japchae",
+            "Glass noodle with vegetables and soy sauce",
+            1395
+          ],
+          [
+            "Corn Cheese",
+            "Sweet corn baked with melted cheese",
+            995
+          ],
+          [
+            "Shrimp Tempura",
+            "Shrimp Tempura",
+            1395
+          ]
+        ]
+      },
+      {
+        "name": "Korean Fried Chicken",
+        "items": [
+          [
+            "Original (7 Pcs)",
+            "SMALL (7pcs) ORIGIANL CRISPY CHICKEN (NO SAUCE)",
+            1695
+          ],
+          [
+            "Original Chicken (14 Pcs)",
+            "LARGE (14pcs)  ORIGIANL CRISPY CHICKEN (NO SAUCE).",
+            2995
+          ],
+          [
+            "Sweet&mild (7 Pcs)",
+            "SMALL (7pcs) of FRIED CHICKEN WITH SWEET & MILD SAUCE",
+            1795
+          ],
+          [
+            "Sweet&mild (14 Pcs)",
+            "LARGE (14 pcs) FRIED CHICKEN WITH SWEET & MILD SAUCE",
+            3295
+          ],
+          [
+            "Hot & Spicy (7 Pcs)",
+            "SMALL (7pcs). FRIED CHICKEN WITH HOT & SPICY SAUCE",
+            1795
+          ],
+          [
+            "Hot & Spicy (14 Pcs)",
+            "LARGE (14pcs). FRIED CHICKEN WITH HOT & SPICY SAUCE.",
+            3295
+          ],
+          [
+            "Soy & Garlic Chicken (7 Pcs)",
+            "SMALL (7pcs).FRIED CHICKEN WITH SOY AND GARLIC SAUCE.",
+            1795
+          ],
+          [
+            "Soy & Garlic (14 Pcs)",
+            "LARGE(14pcs).FRIED CHICKEN WITH SOY AND GARLIC SAUCE.",
+            3295
+          ],
+          [
+            "Honey & Cheese  (7 Pcs)",
+            "SMALL(7pcs). FRIED CHICKEN WITH HONEY AND CHEESE FLAVOR.",
+            1795
+          ],
+          [
+            "Honey & Cheese (14 Pcs)",
+            "LARGE(14pcs).FRIED CHICKEN WITH HONEY AND CHEESE FLAVOR.",
+            3295
+          ],
+          [
+            "Supream (7 Pcs )",
+            "SMALL(7 pcs). FRIED CHICKEN WITH SPICY SAUCE OF SUPREAM LEVEL.",
+            1795
+          ],
+          [
+            "Supream (14 Pcs)",
+            "SMALL(14 pcs). FRIED CHICKEN WITH SPICY SAUCE OF SUPREAM LEVEL.",
+            3295
+          ],
+          [
+            "Super Spicy (7 Pcs)",
+            "SMALL(7 pcs). FRIED CHICKEN WITH SUPER SPICY SAUCE.",
+            1895
+          ],
+          [
+            "Super Spicy (14 Pcs)",
+            "LARGE(14 pcs). FRIED CHICKEN WITH SUPER SPICY SAUCE.",
+            3495
+          ],
+          [
+            "Popcorn Chicken",
+            "POPCORN CHICKEN WITH CHOICE OF ANY SAUCE!",
+            1795
+          ]
+        ]
+      },
+      {
+        "name": "K - Hot Pot",
+        "items": [
+          [
+            "Budae Jjigae",
+            "Spicy korean stew with sausage, ham, tofu, and vegetables Served with two bowls of rice.",
+            5095
+          ],
+          [
+            "Kimchi Dumpling Jeongol",
+            "Hot Pot with Kimchi, dumpling and vegetables in savory broth Served with two bowls of rice.",
+            5095
+          ],
+          [
+            "Bulgogi Jeongol",
+            "Beef bulgogi hot pot with vegetables in a rich broth Served with two bowls of rice.",
+            5595
+          ],
+          [
+            "Haemul Jeongol",
+            "Seafood (Shrimp, mussle, crab, squid) and vegetables with spicy broth Served with two bowls of rice.",
+            6995
+          ],
+          [
+            "Catering Wings (80Pcs)",
+            "",
+            17600
+          ]
+        ]
+      },
+      {
+        "name": "Tteok Bok Ee",
+        "items": [
+          [
+            "Original Tteok-Bok-Ki",
+            "",
+            1795
+          ],
+          [
+            "Rose Tteok-Bok-Ki",
+            "",
+            1995
+          ],
+          [
+            "Cream Tteok-Bok-Ki",
+            "",
+            1995
+          ]
+        ]
+      },
+      {
+        "name": "Kimbap",
+        "items": [
+          [
+            "Classic Kimbap",
+            "",
+            1095
+          ],
+          [
+            "Beef Kimbap",
+            "",
+            1295
+          ],
+          [
+            "Cheese Kimbap",
+            "",
+            1295
+          ],
+          [
+            "Spicy Pepper Kimbap",
+            "",
+            1295
+          ],
+          [
+            "Big Sausage Kimbap",
+            "",
+            1295
+          ],
+          [
+            "Spicy Anchovy Kimbap",
+            "",
+            1295
+          ]
+        ]
+      },
+      {
+        "name": "Noodle",
+        "items": [
+          [
+            "Jajang Myeon",
+            "Homemade black bean sauce with noodle",
+            1495
+          ],
+          [
+            "Jjampong",
+            "Noodle in a rich and firery chili broth with shrimp, squid, mussel and fresh vegetables",
+            1695
+          ],
+          [
+            "Udon",
+            "Udon noodles with vegetables and fishcake in a delicate soy-dashi broth",
+            1795
+          ],
+          [
+            "Ramen",
+            "Korean Style ramen in a bold savory chili broth",
+            1495
+          ],
+          [
+            "Hot Stone Jjajang",
+            "",
+            2995
+          ]
+        ]
+      },
+      {
+        "name": "Rice",
+        "items": [
+          [
+            "Fried Rice",
+            "Korean Style fried rice with vegetables and savory seasoning. Add cheese or Spam for extra.",
+            1495
+          ],
+          [
+            "Bibimbap",
+            "Classic Korean rice bowl with fresh vegetables, egg and chili paste.",
+            1795
+          ],
+          [
+            "Deopbap",
+            "Steamed rice topped with your choice of protein, vegetables, egg and house made sauce.",
+            1895
+          ]
+        ]
+      },
+      {
+        "name": "Special Menu",
+        "items": [
+          [
+            "K-Retro Prok Cutlet",
+            "Breaded and deep fried pork cutlet served crispy and golden",
+            1995
+          ],
+          [
+            "Cream Udon",
+            "Pan-tossed Udon in a silky garlic cream sauce with seasonal ingredients.",
+            1995
+          ],
+          [
+            "Seafood Stir-Fried Udon",
+            "Pan-tossed Udon in a silky garlic spicy sauce with seafood and seasonal ingredients.",
+            2395
+          ],
+          [
+            "Spicy Pork Bulgogi",
+            "Tender sliced pork wok-fired in a rich, homemade chili sauce",
+            1995
+          ],
+          [
+            "Beef Bulgogi With Vegi",
+            "Pan fried bean sprout with bulgogi beef",
+            2195
+          ]
+        ]
+      },
+      {
+        "name": "Extra And Drink",
+        "items": [
+          [
+            "Side Of Rice",
+            "",
+            300
+          ],
+          [
+            "Side Of Noodle",
+            "",
+            500
+          ],
+          [
+            "Can Soda",
+            "",
+            275
+          ],
+          [
+            "Iced Tea (Sweet)",
+            "",
+            495
+          ],
+          [
+            "Extra Sauce",
+            "",
+            150
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Contact and service hours",
+        "body": [
+          "Website and linked ordering menu: 510-429-1252. The restaurant’s Instagram also lists 341-249-7472.",
+          "Weekday lunch closes at 2:30pm, with dinner from 5pm. Saturday and Sunday are continuous 11am–9pm."
+        ],
+        "links": [
+          {
+            "label": "Instagram-listed alternate phone",
+            "href": "tel:3412497472"
+          },
+          {
+            "label": "Restaurant profile",
+            "href": "https://www.instagram.com/matzipkoreanrestaurant/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "naya-dessert-cafe",
+    "name": "NaYa Dessert Cafe",
+    "label": "NaYa Dessert",
+    "cuisine": "Thai desserts and bingsu",
+    "tagline": "Asian-inspired desserts, bingsu, toast, crepes and savory snacks, with five listed Northern California locations.",
+    "color": "#F3C4B5",
+    "icon": "naya-dessert-cafe",
+    "prep": 0,
+    "category": "Sweets",
+    "site": "https://www.nayadessertcafe.com/",
+    "instagram": "naya_dessertcafe",
+    "address": "535 Octavia St, San Francisco, CA 94102",
+    "phone": "415-926-8638",
+    "email": "nayacafeoctavia@gmail.com",
+    "hours": "Daily noon–11pm (Octavia)",
+    "orderUrl": "https://order.nayadessertcafe-octavia.com/",
+    "quoteOnly": "The price-list sections name their branch: Octavia or Geary. Use the matching branch’s ordering link below; menus and availability differ. Other locations have their own menus.",
+    "items": [],
+    "sections": [
+      {
+        "name": "Octavia · Curry",
+        "items": [
+          [
+            "Fried Chicken Curry",
+            "Fried Chicken with Japanese Curry.",
+            1899
+          ],
+          [
+            "Crispy Squid Tentacle Curry",
+            "Fried Squid tentacle with Japanese Curry.",
+            1999
+          ],
+          [
+            "Pork Katsu Curry",
+            "Pork Katsu with Japanese Curry.",
+            1899
+          ],
+          [
+            "Potato Croquettes Curry",
+            "Potato Croquettes with Japanese Curry.",
+            1799
+          ]
+        ]
+      },
+      {
+        "name": "Octavia · NaYa Toasted",
+        "items": [
+          [
+            "Golden Toasted",
+            "Choose 1 ice cream, fresh strawberry, and clover honey sauce.",
+            1299
+          ],
+          [
+            "Kaya Toasted",
+            "Pandan kaya sauce, young coconut, banana, almond, and vanilla ice cream.",
+            1999
+          ],
+          [
+            "Salted Egg Custard Toasted",
+            "Salted egg custard sauce, vanilla ice cream, fresh strawberry.",
+            1999
+          ],
+          [
+            "Chocolate Toasted",
+            "Nutella, chocolate sauce, banana, vanilla ice cream.",
+            1399
+          ],
+          [
+            "Matcha Toasted",
+            "",
+            1699
+          ],
+          [
+            "Thai Tea Toasted",
+            "On top with Thai tea Sauce, Oreo and Thai tea ice cream.",
+            1399
+          ],
+          [
+            "Ovaltine Toasted",
+            "Ovaltine powder, condensed milk, oreo, vanilla ice cream.",
+            1399
+          ]
+        ]
+      },
+      {
+        "name": "Octavia · NaYa Bingsu",
+        "items": [
+          [
+            "Mango Tango Large",
+            "Milk shave ice favor with fresh mango, sweet sticky rice, mango sauce, toasted sesame.",
+            1999
+          ],
+          [
+            "Melon Snow Small",
+            "Milk shave ice favor with toasted almond, melon sauce",
+            1299
+          ],
+          [
+            "Melon Snow Large",
+            "Milk shave ice favor with fresh melon, vanilla ice cream, toasted almond, melon sauce (16oz doesn't come with vanilla ice cream)",
+            1899
+          ],
+          [
+            "Thai Tea Bingsu Large",
+            "Thai Milk Tea Shaved Ice, Crystal Boba, Toasted Almond.",
+            1899
+          ],
+          [
+            "Ovaltine Volcano",
+            "Milk shave ice favor with bread, cornflake, oreo, ovaltine powder.",
+            1799
+          ],
+          [
+            "Double Strawberry Small",
+            "",
+            1299
+          ],
+          [
+            "Double Strawberry Large",
+            "",
+            1899
+          ],
+          [
+            "Royal Milk Tea Bingsu Small",
+            "Royal milk tea shave ice favor with toasted almond, brown sugar, crystal boba.",
+            1299
+          ],
+          [
+            "Royal Milk Tea Bingsu Large",
+            "Royal milk tea shave ice favor with toasted almond, brown sugar, crystal boba.",
+            1899
+          ],
+          [
+            "Salted Egg Yolk Bualoi Bingsu",
+            "",
+            1999
+          ],
+          [
+            "Bingsu Side",
+            "",
+            999
+          ]
+        ]
+      },
+      {
+        "name": "Octavia · Naya Crepe",
+        "items": [
+          [
+            "Japanese Soft Crepe",
+            "Choose 2 filling.",
+            1299
+          ],
+          [
+            "Ice Cream Crepe",
+            "Choose 2 filling and 1 ice cream.",
+            1599
+          ],
+          [
+            "Ferrero Crepe",
+            "Ferrero, banana, strawberry, secret rolled crepe, choose 2 ice cream.",
+            1899
+          ],
+          [
+            "Mango Sticky Rice Crepe",
+            "Fresh mango, sweet sticky rice, fresh mango sauce, toasted almond, sesame, coconut ice cream, coconut sauce.",
+            1899
+          ],
+          [
+            "The Black Thai Tea",
+            "Coconut charcoal crepe, Thai tea ice cream, Thai tea custard sauce, Oreo whipped cream.",
+            1899
+          ]
+        ]
+      },
+      {
+        "name": "Octavia · Croffle",
+        "items": [
+          [
+            "Matcha Red Bean Croffle",
+            "",
+            1599
+          ],
+          [
+            "Strawberry & Cream Croffle",
+            "",
+            1599
+          ],
+          [
+            "Salted Egg Croffle",
+            "",
+            1699
+          ],
+          [
+            "Banoffee Croffle",
+            "",
+            1599
+          ]
+        ]
+      },
+      {
+        "name": "Octavia · Dessert",
+        "items": [
+          [
+            "Salted Chocolate Lava",
+            "",
+            1599
+          ],
+          [
+            "Thai Tea Chocolate Lava",
+            "",
+            1599
+          ],
+          [
+            "Mango Sticky Rice no ice",
+            "",
+            1799
+          ],
+          [
+            "Hokkaido Mille Crepe Cake",
+            "15 layer of homemade Japanese soft crepes, Hokkaido fluffy milk cream, homemade strawberry sauce, fresh strawberry.",
+            1499
+          ],
+          [
+            "Mango Sticky Rice Ice cream",
+            "Mango Sticky Rice, Mango Sauce, Coconut Sauce(add $2 for coconut ice cream)",
+            1799
+          ],
+          [
+            "Steamed Bread w/ Pandan",
+            "Choice of pandan sauce, thai tea sauce or both.",
+            1399
+          ],
+          [
+            "Thai Tea Crepe Cake",
+            "15 layer of homemade Thai Tea soft crepes, Thai Milk Tea fluffy  cream, homemade Thai Tea custard sauce, crystal boba.",
+            1499
+          ],
+          [
+            "Green Tea Pudding",
+            "",
+            1499
+          ]
+        ]
+      },
+      {
+        "name": "Octavia · Small",
+        "items": [
+          [
+            "Bacon Wrap Sausage",
+            "",
+            999
+          ],
+          [
+            "Fried Fish Ball",
+            "(ลูกชิ้นปลาทอด)",
+            999
+          ],
+          [
+            "Takoyaki",
+            "",
+            1099
+          ],
+          [
+            "Fried Potato Croquettes",
+            "",
+            999
+          ],
+          [
+            "Fried Squid Tentacles",
+            "(หนวดหมึกทอด)",
+            1399
+          ],
+          [
+            "Purple Yam Tempura",
+            "",
+            999
+          ]
+        ]
+      },
+      {
+        "name": "Octavia · Savory Crepe",
+        "items": [
+          [
+            "Ham & Cheese Crepe",
+            "Ham, Cheese, Tomato, Spicy mayo.",
+            1399
+          ],
+          [
+            "Fried Chicken Crepe",
+            "Cheese, onion, tomato, cabbage and spicy mayo.",
+            1699
+          ],
+          [
+            "Tako Crepe",
+            "Bonito, special okonomiyaki sauce, and Japanese mayo.",
+            1499
+          ],
+          [
+            "Bangkok Crepe",
+            "Please choose 2 topping 12.99 , 3 topping 13.99",
+            1399
+          ]
+        ]
+      },
+      {
+        "name": "Octavia · Hot Drink",
+        "items": [
+          [
+            "Hot Gyokuro",
+            "",
+            499
+          ],
+          [
+            "Hot Ginger Tea",
+            "Fresh Ginger Hot Tea.",
+            599
+          ],
+          [
+            "Hot Ovaltine",
+            "",
+            699
+          ],
+          [
+            "Hot Fresh Milk",
+            "",
+            699
+          ],
+          [
+            "Hot Royal Milk Tea",
+            "",
+            799
+          ],
+          [
+            "Hot Matcha Latte",
+            "",
+            699
+          ],
+          [
+            "Hot Thai tea Latte",
+            "",
+            799
+          ],
+          [
+            "Hot Vietnamese Coffee",
+            "",
+            799
+          ],
+          [
+            "Hot Latte",
+            "",
+            599
+          ],
+          [
+            "Hot Americano",
+            "",
+            499
+          ],
+          [
+            "Hot Espresso",
+            "",
+            399
+          ],
+          [
+            "Naya Butter Cookie Latte",
+            "",
+            799
+          ]
+        ]
+      },
+      {
+        "name": "Octavia · Cold Drink",
+        "items": [
+          [
+            "Iced Royal Milk Tea",
+            "",
+            699
+          ],
+          [
+            "Iced Thai Tea",
+            "",
+            699
+          ],
+          [
+            "Ice Matcha latte",
+            "",
+            699
+          ],
+          [
+            "Fresh Soda",
+            "Yuzu, lemongrass-pineapple, honeydew, strawberry.",
+            699
+          ],
+          [
+            "Iced Lychee Tea",
+            "",
+            699
+          ],
+          [
+            "Iced Nom-Yen",
+            "Fresh milk, sala flavor.",
+            699
+          ],
+          [
+            "Iced Ovaltine",
+            "",
+            699
+          ],
+          [
+            "Iced Vietnamese",
+            "",
+            799
+          ],
+          [
+            "Iced Tea",
+            "",
+            499
+          ],
+          [
+            "Iced Latte",
+            "",
+            599
+          ],
+          [
+            "Iced Americano",
+            "",
+            499
+          ],
+          [
+            "Iced Espresso",
+            "",
+            399
+          ],
+          [
+            "Naya Iced Coffee",
+            "",
+            799
+          ],
+          [
+            "Black Sugar  Iced Coffee",
+            "",
+            799
+          ],
+          [
+            "Yuzu Matcha",
+            "",
+            799
+          ],
+          [
+            "Yuzu Iced Coffee",
+            "",
+            799
+          ],
+          [
+            "Coconut Milk Iced Coffee",
+            "",
+            799
+          ]
+        ]
+      },
+      {
+        "name": "Octavia · Icream",
+        "items": [
+          [
+            "Scoop Thai Tea",
+            "",
+            699
+          ],
+          [
+            "Scoop Vanilla",
+            "",
+            699
+          ],
+          [
+            "Scoop Chocolate",
+            "",
+            699
+          ],
+          [
+            "Scoop Coconut",
+            "",
+            699
+          ],
+          [
+            "Scoop Matcha",
+            "",
+            699
+          ]
+        ]
+      },
+      {
+        "name": "Geary · Small",
+        "items": [
+          [
+            "Sai Oua",
+            "Grilled northern style spicy thai sausage.",
+            1199
+          ],
+          [
+            "Moo Ping",
+            "Thai style marinated 3 pork skewers served with sticky rice.",
+            1299
+          ],
+          [
+            "Bacon Wrap Sausage",
+            "(ไส้กรอกพันเบคอนทอด)",
+            899
+          ],
+          [
+            "Fried Fish Ball",
+            "",
+            899
+          ],
+          [
+            "Takoyaki",
+            "",
+            999
+          ],
+          [
+            "Fish Ball Explosion",
+            "Very crispy fried fish ball.",
+            1199
+          ],
+          [
+            "Fried Squid Tentacles",
+            "",
+            1299
+          ],
+          [
+            "Kor Moo Yang",
+            "MOM style marinated pork shoulder served with sticky rice.",
+            1399
+          ]
+        ]
+      },
+      {
+        "name": "Geary · Salad",
+        "items": [
+          [
+            "Yum Ma Ma",
+            "Mama noodle, minced pork, shrimp, fish ball, onion, cilantro, chili lime dressing.",
+            1799
+          ]
+        ]
+      },
+      {
+        "name": "Geary · Noodle And Rice",
+        "items": [
+          [
+            "Udon Tom Yum",
+            "Udon noodle, thai hot & sour soup, lemongrass, galanga, mushroom, onion, cilantro and choice of meat.",
+            1699
+          ],
+          [
+            "Pad Se-Ew",
+            "Pan fried rice noodles, Chinese broccoli, egg, black soy sauce and choice of meat.",
+            1699
+          ],
+          [
+            "Rad Na Mee Krob",
+            "Shrimp, crispy egg noodles , chinese broccoli, gravy sauce.",
+            1899
+          ],
+          [
+            "Spaghetti Sai Oua",
+            "Thai sausage, pan fried spaghetti, onion, bell peppers, garlic chili basil sauce.",
+            1999
+          ],
+          [
+            "Spaghetti Tom Yum Sauce",
+            "Pan fried spaghetti, prawns, cilantro, tom-yum chili sauce.",
+            1999
+          ],
+          [
+            "Fried Rice",
+            "Fried rice, egg, onion, sweet chili sauce and choice of meat.",
+            1799
+          ],
+          [
+            "Thai Spicy Basil",
+            "Bell paper, onion, spicy basil garlic sauce, rice ground pork, white rice and choice of ground pork, chicken, shrimp or crispy chicken.",
+            1699
+          ],
+          [
+            "BBQ Chicken Over Rice",
+            "Grilled marinated chicken, sweet chili sauce, white rice.",
+            1799
+          ],
+          [
+            "Kao Ka Tem",
+            "Choice of your meat stir-fried with garlic pepper sauce, white rice.",
+            1699
+          ]
+        ]
+      },
+      {
+        "name": "Geary · Croffle",
+        "items": [
+          [
+            "Croffle Green Tea",
+            "",
+            1599
+          ],
+          [
+            "Croffle Strawberry",
+            "",
+            1599
+          ],
+          [
+            "Croffle Salted Egg",
+            "",
+            1699
+          ],
+          [
+            "Croffle Matcha Red Bean",
+            "",
+            1599
+          ],
+          [
+            "Croffle Banoffee",
+            "",
+            1599
+          ],
+          [
+            "Plain Croffle",
+            "",
+            999
+          ],
+          [
+            "--Hold--",
+            "",
+            0
+          ]
+        ]
+      },
+      {
+        "name": "Geary · Naya Toast",
+        "items": [
+          [
+            "Kaya Toast",
+            "Serves with pandan custard sauce, young coconut, banana, almond and vanilla ice cream.",
+            1899
+          ],
+          [
+            "Salted Egg Custard Toasted",
+            "Serves with salted egg custard sauce, strawberry and vanilla ice cream.",
+            1899
+          ],
+          [
+            "Golden Toasted",
+            "Serves with fresh strawberry, clover honey sauce and choice of your ice cream favor.",
+            1199
+          ],
+          [
+            "Chocolate Toast",
+            "Serves with Nutella, chocolate sauce, banana and vanilla ice cream",
+            1299
+          ],
+          [
+            "Thai Tea Toasted",
+            "Serves with Thai Tea sauce on top, oreo and Thai Tea Ice Cream.",
+            1299
+          ],
+          [
+            "Ovaltine Toasted",
+            "On top with condensed milk serves with oreo, ovaltine powder and and vanilla ice cream.",
+            1299
+          ],
+          [
+            "Matcha Toast",
+            "Serves with A grade green tea powder in homemade green tea sauce and green tea ice cream.",
+            1599
+          ]
+        ]
+      },
+      {
+        "name": "Geary · Naya Bingsu",
+        "items": [
+          [
+            "Mango Tango",
+            "Milk shave ice serve  with fresh mango, sweet sticky rice, toasted sesame, mango sauce.",
+            1899
+          ],
+          [
+            "Durian Bingsu",
+            "Milk shave ice serve  with durian sauce, durian meat, sweet sticky rice and toasted almond.",
+            2099
+          ],
+          [
+            "Double Strawberry",
+            "Milk shave ice serve  with fresh strawberry, butter toasted bread, homemade strawberry sauce.",
+            1799
+          ],
+          [
+            "Ovaltine Bingsu",
+            "Milk shave ice serve  with bread, cornflake, oreo, ovaltine powder.",
+            1699
+          ],
+          [
+            "Melon Snow",
+            "Milk shave ice serve  with fresh melon, vanilla ice cream, toasted almond, melon sauce.",
+            1699
+          ],
+          [
+            "Bingsu Side",
+            "",
+            999
+          ],
+          [
+            "Salted Egg Bingsu",
+            "Rich salted egg yolk sauce, chewy rice balls, almond crumble.",
+            1999
+          ]
+        ]
+      },
+      {
+        "name": "Geary · Naya Style Dessert",
+        "items": [
+          [
+            "Sweet Corn",
+            "",
+            899
+          ],
+          [
+            "Grass Jelly Brown Sugar Syrup",
+            "Grass Jelly With Whole Cane Sugar.",
+            899
+          ],
+          [
+            "Banana Nutella Rolls",
+            "Deep fried banana nutella roll, condensed milk, vanilla ice cream, ovaltine powder.",
+            1299
+          ],
+          [
+            "Salted Egg Lava Chocolate Cake",
+            "Chocolate cake with a salted egg custard center, served with vanilla ice cream, fresh strawberry.",
+            1599
+          ],
+          [
+            "Thai Tea Lava Chocolate Cake",
+            "Warm chocolate cake, strawberry, oreo, thai tea ice cream.",
+            1599
+          ],
+          [
+            "Steam Bread with Custard Dip",
+            "Choice of thai tea sauce or pandan sauce.",
+            1399
+          ],
+          [
+            "Bolan Parfait",
+            "Buko ( baby coconut ) ice-cream, sweet sticky rice, bread, palm seed, taro candy, toasted almond, corn.",
+            1299
+          ],
+          [
+            "Mango Sticky Rice",
+            "Mango Sticky Rice, Mango Sauce, Coconut Sauce(add $2 for coconut ice cream)",
+            1799
+          ],
+          [
+            "Bua loi",
+            "(บัวลอยงาดำ) Warm sweet toasted sesame dumplings, ginkgo seed, glass jelly, crystal boba, taro serve with warm ginger tea, fresh milk or thai-tea.",
+            1499
+          ],
+          [
+            "Mango Sticky Rice with Coconut Ice Cream",
+            "Fresh mango, sticky rice, coconut sauce, mayo sauce, coconut ice cream.",
+            1799
+          ],
+          [
+            "Hokkaido Mille Crepe Cake",
+            "12 layer of homemade Japanese crepes, hokkaido fluffy milk cream, homemade strawberry sauce, fresh stawberry.",
+            1499
+          ],
+          [
+            "Thai Tea Crepe Cake",
+            "15 layer of ThaiTea soft crepes, thai milk tea fluffy cream, extra delicious with ThaiTea Custard Sauce.",
+            1499
+          ],
+          [
+            "Fried Vanilla Ball",
+            "",
+            1199
+          ],
+          [
+            "Green Tea Banana Pudding",
+            "",
+            1499
+          ],
+          [
+            "Ube Cheese Cake",
+            "",
+            1599
+          ]
+        ]
+      },
+      {
+        "name": "Geary · Naya Crepe",
+        "items": [
+          [
+            "The Black Thai Tea",
+            "Coconut charcoal crepe, thai tea ice cream, thai tea custard sauce, oreo, whipped cream, foi thong (Golden Egg Yolk Threads)",
+            1799
+          ],
+          [
+            "Ferrero Crepe",
+            "Ferrero, banana, strawberry, secret rolled crepe, whipping cream, choose 2 ice cream.",
+            1899
+          ],
+          [
+            "Mango Sticky Rice Crepe",
+            "Fresh mango, toasted almond, fresh mango sauce, whipping cream, sweet sticky rice, coconut ice cream.",
+            1799
+          ],
+          [
+            "Japanese Soft Crepe",
+            "Choose 2 filling, whipping cream.",
+            1199
+          ],
+          [
+            "Ice-Cream Crepe",
+            "Choose 2 filling in the filling selection, whipping cream and 1 ice cream.",
+            1599
+          ],
+          [
+            "Thai Crepe : mini 5pcs",
+            "Pandan-kaya custard, egg custard, sausage - ground pork - egg, chili paste - shredded pork, red bean paste.",
+            999
+          ]
+        ]
+      },
+      {
+        "name": "Geary · Naya Roti",
+        "items": [
+          [
+            "Cha-Thai Roti",
+            "Fried roti serves with thai tea sauce, thai tea ice cream.",
+            1399
+          ],
+          [
+            "Ovaltine Roti",
+            "Fried roti serves with ovaltine powder, vanilla ice cream, condensed milk .",
+            1399
+          ],
+          [
+            "Roti Banana",
+            "Fried roti serves with condensed milk with banana and two scope of vanilla ice cream.",
+            1399
+          ],
+          [
+            "Roti Egg & Banana",
+            "Fried roti and egg serves with condensed milk with banana and two scope of vanilla ice cream.",
+            1499
+          ],
+          [
+            "Green Tea Roti",
+            "Fried roti serves with green tea sauce, green tea ice cream.",
+            1499
+          ]
+        ]
+      },
+      {
+        "name": "Geary · Ice-Cream",
+        "items": [
+          [
+            "Thai Tea Ice Cream",
+            "",
+            699
+          ],
+          [
+            "Coconut Ice Cream",
+            "",
+            699
+          ],
+          [
+            "Green Tea Ice Cream",
+            "",
+            699
+          ],
+          [
+            "Vanilla Ice Cream",
+            "",
+            699
+          ],
+          [
+            "Chocolate Ice Cream",
+            "",
+            699
+          ]
+        ]
+      },
+      {
+        "name": "Geary · Beverage",
+        "items": [
+          [
+            "Hot Gyokuro Green Tea",
+            "",
+            399
+          ],
+          [
+            "Hot Fresh Milk",
+            "",
+            699
+          ],
+          [
+            "Hot Royal Milk Tea",
+            "",
+            699
+          ],
+          [
+            "Hot Ovaltin",
+            "",
+            699
+          ],
+          [
+            "Hot Matcha Latte",
+            "",
+            699
+          ],
+          [
+            "Hot Thai Tea Latte",
+            "",
+            699
+          ],
+          [
+            "Hot Ginger Tea",
+            "",
+            499
+          ],
+          [
+            "Iced Royal Milk Tea(cold)",
+            "",
+            699
+          ],
+          [
+            "Iced Thai Tea",
+            "",
+            699
+          ],
+          [
+            "Yuzu Fresh Soda",
+            "",
+            699
+          ],
+          [
+            "Iced Jasmine Tea",
+            "",
+            499
+          ],
+          [
+            "Nom-Yen",
+            "",
+            699
+          ],
+          [
+            "Iced Ovantin",
+            "",
+            699
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Locations and branch ordering",
+        "body": [
+          "Octavia / Hayes Valley: 535 Octavia St, San Francisco, CA 94102; 415-926-8638. Daily noon–11pm, confirmed by the current ordering page.",
+          "Geary / Inner Richmond: 5338 Geary Blvd, San Francisco, CA 94121; 415-213-5308. Mon–Fri 5pm–midnight; Sat–Sun noon–midnight, confirmed by the current ordering page.",
+          "San Jose: 919 Story Rd, Suite 1152, San Jose, CA 95122; 408-359-6395. Sun–Wed noon–midnight; Thu–Sat noon–1am.",
+          "Davis: 620 4th St, Davis, CA 95616; 530-760-5303. Mon–Thu noon–11pm; Fri–Sun noon–midnight.",
+          "San Mateo: 30 E 3rd Ave, San Mateo, CA 94401; 650-200-6550. The website’s sections disagree on weekday opening time; call for current hours."
+        ],
+        "links": [
+          {
+            "label": "Order Octavia",
+            "href": "https://order.nayadessertcafe-octavia.com/"
+          },
+          {
+            "label": "Order Geary",
+            "href": "https://order.nayadessertcafe-geary.com/"
+          },
+          {
+            "label": "Order San Jose",
+            "href": "https://order.nayadessertcafe-sanjose.com/"
+          },
+          {
+            "label": "Order Davis",
+            "href": "https://order.nayadessertcafe-davis.com/"
+          },
+          {
+            "label": "Call San Mateo",
+            "href": "tel:6502006550"
+          }
+        ]
+      },
+      {
+        "head": "Branch menus",
+        "body": [
+          "The price lists apply to Octavia and Geary. For San Jose and Davis, use their branch ordering pages; call San Mateo for its current menu and hours.",
+          "The shop’s San Mateo opening announcement remains on the website; call that branch before visiting."
+        ]
+      }
+    ]
+  },
 ]

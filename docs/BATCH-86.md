@@ -111,4 +111,4 @@ Actual user Chrome at **393×852** also verified both green entry paths, all ten
 
 New Glenn requests after this batch’s 10:14 PST cutoff are tracked separately in Batch 87, beginning with Grande Kennels and the new Kennels category.
 
-Gap check: **562 business domains, 17 unmatched**. All new business domains are represented. Unmatched are 16 historical external/tool domains and the operator’s leonbuilds.org; none is a new Batch 86 listing.
+Gap check: **562 business domains, 17 unmatched**. All new business domains are represented. The 17 unmatched domains predate this batch; none is a new Batch 86 listing. Their historical disposition is outside this batch’s scope.

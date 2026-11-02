@@ -163,6 +163,8 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'cakes', heading: 'Cakes', about: 'Cake shops, celebration cakes and custom cakes', wall: wall('cakes'), test: /\bcakes?\b|patisserie/i, not: /decorating|classes|workshop|crab cake/i },
   /* Glenn, November 2: kennels of any breed; Grande Kennels opens the page. */
   { kind: 'kennels', heading: 'Kennels', about: 'Dog kennels and breeders of every breed', wall: wall('kennels'), test: /\bkennels?\b|\bbreeders?\b/i },
+  /* Glenn, November 2: Korean opens with Matzip in Union City. */
+  { kind: 'korean', heading: 'Korean', about: 'Korean restaurants and Korean street food', wall: wall('korean'), test: /korean|kimbap|tteok|bulgogi/i },
 ]
 
 /** Every category page holds his twenty-four. */

@@ -474,7 +474,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "thesnobbiefoodie",
     "name": "@thesnobbiefoodie",
-    "label": "thesnobbiefoodie"
+    "label": "thesnobbiefoodie", "icon": "foodie-thesnobbiefoodie-v89"
   },
   {
     "handle": "katfoodsf",
@@ -764,7 +764,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "hangrypotato",
     "name": "@hangrypotato",
-    "label": "hangrypotato"
+    "label": "hangrypotato", "icon": "foodie-hangrypotato-v89"
   },
   {
     "handle": "melsotel",
@@ -817,6 +817,14 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "kogumahs", "name": "Sinai", "label": "Sinai", "icon": "foodie-kogumahs-v88"},
   {"handle": "nurse.danamae", "name": "Dana Mae", "label": "Dana Mae", "icon": "foodie-nurse-danamae-v88"},
   {"handle": "kimoni.eatss", "name": "Kimball & Monica", "label": "Kimoni", "icon": "foodie-kimoni-eatss-v88"},
+  // Batch 89 — append newcomers; earlier Foodie positions are fixed.
+  {"handle": "thehabibizeat", "name": "The Habibiz Eat", "label": "Habibiz", "icon": "foodie-thehabibizeat-v89"},
+  {"handle": "eatwithbooboo", "name": "Eat with Booboo", "label": "Booboo", "icon": "foodie-eatwithbooboo-v89"},
+  {"handle": "bayarea_foodogram", "name": "Lavanya & Deepthi", "label": "Foodogram", "icon": "foodie-bayarea-foodogram-v89"},
+  {"handle": "lub.to.eat", "name": "Lub Lub", "label": "Lub Lub", "icon": "foodie-lub-to-eat-v89"},
+  {"handle": "thismajourney", "name": "Denise", "label": "Denise", "icon": "foodie-thismajourney-v89"},
+  {"handle": "summer.ishungry", "name": "Summer", "label": "Summer", "icon": "foodie-summer-ishungry-v89"},
+  {"handle": "justfeediris", "name": "Iris", "label": "Iris", "icon": "foodie-justfeediris-v89"},
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -1170,6 +1178,30 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "nurse.danamae", "place": "Soulsip", "city": "San Jose", "brand": "b_soulsip", "reel": "https://www.instagram.com/reel/DeH8zrghsHo/", "credit": "Hosted visit, disclosed by the creator. Watch the original review on Instagram."},
   // Glenn: Clip / update icon
   {"by": "kimoni.eatss", "place": "Soulsip", "city": "San Jose", "brand": "b_soulsip", "reel": "https://www.instagram.com/reel/Dd_-OAaz_-D/", "credit": "The original October 4 promotion has ended. Watch the original review on Instagram."},
+
+  /* Batch 89 — Glenn’s tags and all copy holds are recorded in docs/BATCH-89.md. */
+  // Glenn: Clip / Newbie Newbie / Foodie
+  {"by": "thehabibizeat", "place": "Bibim Grill", "city": "Dublin", "reel": "https://www.instagram.com/reel/DfNcnsRypa9/", "credit": "Filmed by @thehabibizeat · The menu describes only the two chicken proteins as halal, not every protein.", "brand": "b_bibimgrill", "clip": true},
+  // Glenn: Clip / Foodie / Newbie
+  {"by": "eatwithbooboo", "place": "Bibim Grill", "city": "Dublin", "reel": "https://www.instagram.com/reel/DfL6t5IgEzR/", "credit": "Filmed by @eatwithbooboo · Invited visit disclosed by the creator. The original mentions a limited promotion; confirm directly.", "brand": "b_bibimgrill", "clip": true},
+  // Glenn: Clip / Foodie / Mediocre
+  {"by": "bayarea_foodogram", "place": "Bibim Grill", "city": "Dublin", "reel": "https://www.instagram.com/reel/DfLNFVSy7sp/", "credit": "Filmed by @bayarea_foodogram · The original mentions a limited November 5 promotion; confirm directly.", "brand": "b_bibimgrill", "clip": true},
+  // Glenn: Clip
+  {"by": "mukbangyourmama", "place": "Slice House — Castro Valley", "city": "Castro Valley", "reel": "https://www.instagram.com/reel/DfQBdF-BDY5/", "credit": "Filmed by @mukbangyourmama · Filmed at Castro Valley; this is not the Brentwood listing.", "clip": true},
+  // Glenn: Clip / Foodie / Newbie
+  {"by": "summer.ishungry", "place": "Binge Coffee House", "city": "Berkeley", "reel": "https://www.instagram.com/reel/DeIym1UyuPJ/", "credit": "Filmed by @summer.ishungry · Seasonal pumpkin special at the 2528A Durant Avenue shop. @bingecoffeehouse is tagged on the original collaborative post; confirm current availability.", "brand": "b_bingecoffeehouse", "clip": true},
+  // Glenn: Clip / Foodie / Newbie Newbie
+  {"by": "justfeediris", "place": "Binge Coffee House", "city": "Berkeley", "reel": "https://www.instagram.com/reel/DcC8E_pxUwm/", "credit": "Filmed by @justfeediris · Berkeley coffee, matcha and banh mi review.", "brand": "b_bingecoffeehouse", "clip": true},
+  // Glenn: Clip / Foodie / Newbie
+  {"by": "hangrypotato", "place": "Matzip — Union City", "city": "Union City", "reel": "https://www.instagram.com/reel/DfOSCjHBKPY/", "credit": "Filmed by @hangrypotato · Invited visit disclosed by the creator; confirm current menu prices.", "brand": "b_matzipunioncity", "clip": true},
+  // Glenn: Clip / update icon / Mediocre
+  {"by": "thesnobbiefoodie", "place": "Bibim Grill", "city": "Dublin", "reel": "https://www.instagram.com/reel/DfGZWFXpfX8/", "credit": "The October promotion in the original has ended. Watch the original review on Instagram.", "brand": "b_bibimgrill"},
+  // Glenn: Clip / update icon / Newbie
+  {"by": "lub.to.eat", "place": "Bibim Grill", "city": "Dublin", "reel": "https://www.instagram.com/reel/DfDFR78P2Hi/", "credit": "The October promotion in the original has ended. Watch the original review on Instagram.", "brand": "b_bibimgrill"},
+  // Glenn: Link only
+  {"by": "hungere.for.diy", "place": "Bibim Grill", "city": "Dublin", "reel": "https://www.instagram.com/reel/DfCmQ2EpPsr/", "credit": "Watch the original review on Instagram.", "brand": "b_bibimgrill"},
+  // Glenn: Clip / Foodie / Newbie
+  {"by": "thismajourney", "place": "Bibim Grill", "city": "Dublin", "reel": "https://www.instagram.com/reel/DfALmKdtaig/", "credit": "Watch the original review on Instagram.", "brand": "b_bibimgrill"},
 ]
 
 /*

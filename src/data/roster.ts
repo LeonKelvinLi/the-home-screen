@@ -2793,6 +2793,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      roof on Ygnacio Valley Road, on Walnut Creek's open Asian food seat. The
      menu is their own pickup ordering page. */
   seed('thai-thani-oishi', 'Thai Thani and Oishi', 'Thai Thani', 'Thai & sushi', '#702573', {
+    clip: {"src": "/clips/thai-thani-oishi-v89.mp4", "poster": "/clips/thai-thani-oishi-v89-poster.webp", "href": "https://www.instagram.com/p/DX7d7KkgOMp/", "credit": "Posted by @thaithaniandoishi · Business’s own video. The later cancelled portrait IMG_8927 is not used.", "platform": "Instagram"},
     icon: 'thai-thani-oishi',
     logoTemplate: 'wordmark', logoLines: ['Thai Thani'], logoFace: 'slab',
     site: 'https://www.thaithanioishi.com/',
