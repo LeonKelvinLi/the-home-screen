@@ -157,6 +157,10 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'bip', heading: 'B i P', about: 'BEAST in PEACE', wall: wall('bip') },
   /* Glenn, November 1: family outings, explicitly curated across several venue types. */
   { kind: 'parks', heading: 'Parks/Playgrounds', about: 'Parks, playgrounds and family places', wall: wall('parks') },
+  /* Glenn, November 1–2: Blackhawk, Ginza SF and Simplycake. Append to More pages. */
+  { kind: 'travel', heading: 'Travel', about: 'Museums, destinations and places to explore', wall: wall('travel') },
+  { kind: 'sushi', heading: 'Sushi', about: 'Sushi, sashimi and Japanese sushi restaurants', wall: wall('sushi'), test: /\bsushi\b|sashimi/i },
+  { kind: 'cakes', heading: 'Cakes', about: 'Cake shops, celebration cakes and custom cakes', wall: wall('cakes'), test: /\bcakes?\b|patisserie/i, not: /decorating|classes|workshop|crab cake/i },
 ]
 
 /** Every category page holds his twenty-four. */

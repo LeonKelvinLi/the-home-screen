@@ -4314,6 +4314,8 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'olesia-cake-studio',
+    clip: {"src": "/clips/olesia-team-event-v86.mp4", "poster": "/clips/olesia-team-event-v86-poster.webp", "href": "https://www.instagram.com/reel/De-OlS9Awuh/", "credit": "Posted by @olesia_cake_studio", "platform": "Instagram"},
+
     icon: 'olesia-cake-studio',
     name: 'Olesia Cake Studio',
     label: 'Olesia Cake',
@@ -9550,6 +9552,10 @@ export const LOCAL_SEED: LocalSeed[] = [
   */
   {
     slug: 'omer-ariely-ai',
+    icon: "this-aint-canon-v86",
+    instagram: "thisaintcanon",
+    clips: [{"src": "/clips/this-aint-canon-v86.mp4", "poster": "/clips/this-aint-canon-v86-poster.webp", "href": "https://www.instagram.com/reel/DfNqpmXFeVF/", "credit": "Posted by @thisaintcanon · AI-generated fictional movie parody; not live footage or an endorsed production.", "platform": "Instagram"}],
+
     name: 'omer.ariely.ai',
     label: 'Omer Ariely',
     cuisine: 'AI video creator',
@@ -63683,5 +63689,2700 @@ export const LOCAL_SEED: LocalSeed[] = [
       "platform": "Instagram",
       "by": "daeatzwitbri"
     }
+  },
+
+  /* Batch 86 — Glenn, November 1–2. Sources and holds: docs/BATCH-86.md. */
+  {
+    "slug": "chronic-tacos-danville",
+    "name": "Chronic Tacos — Danville",
+    "label": "Chronic Tacos",
+    "cuisine": "Mexican tacos and burritos",
+    "tagline": "California-style tacos, burritos, bowls and loaded fries on Diablo Road.",
+    "color": "#211C21",
+    "icon": "chronic-tacos-danville",
+    "prep": 0,
+    "category": "Mexican",
+    "items": [],
+    "site": "https://www.chronictacos.com/restaurant/danville/420-diablo-rd",
+    "orderUrl": "https://www.oftendining.com/app/chronictacos/?store_id=6886#s:menu.php?store_id=15247&menu_id=-2&type_id=101&direct=1",
+    "address": "420 Diablo Rd, Danville, CA 94526",
+    "phone": "925-344-6500",
+    "hours": "Daily 10am–8pm",
+    "instagram": "chronictacos",
+    "quoteOnly": "Order from the Danville restaurant. Published regular-size prices are shown; options and availability are confirmed in its ordering menu.",
+    "clip": {
+      "src": "/clips/chronic-tacos-danville.mp4",
+      "poster": "/clips/chronic-tacos-danville-poster.webp",
+      "href": "https://www.instagram.com/reel/DaJR0QuSWm0/",
+      "credit": "Filmed by @k.smokeskitchen · Hosted visit, disclosed by the creator.",
+      "platform": "Instagram",
+      "by": "k.smokeskitchen"
+    },
+    "sections": [
+      {
+        "name": "Tacos",
+        "items": [
+          [
+            "2 Taco Plate",
+            "",
+            1199
+          ],
+          [
+            "Taco a la Carte",
+            "",
+            499
+          ],
+          [
+            "Vegetarian Taco a la Carte",
+            "",
+            499
+          ],
+          [
+            "Potato Taco",
+            "",
+            420
+          ]
+        ]
+      },
+      {
+        "name": "Burritos",
+        "items": [
+          [
+            "Burrito",
+            "",
+            1199
+          ],
+          [
+            "Vegetarian Burrito",
+            "",
+            1199
+          ],
+          [
+            "Surf & Turf Burrito",
+            "",
+            1699
+          ],
+          [
+            "California Burrito",
+            "",
+            1599
+          ],
+          [
+            "Bean & Cheese Burrito",
+            "",
+            999
+          ]
+        ]
+      },
+      {
+        "name": "Small Burritos",
+        "items": [
+          [
+            "Small Burrito",
+            "",
+            899
+          ],
+          [
+            "Vegetarian Small Burrito",
+            "",
+            899
+          ],
+          [
+            "Small Bean & Cheese Burrito",
+            "",
+            799
+          ]
+        ]
+      },
+      {
+        "name": "Bowls",
+        "items": [
+          [
+            "Bowl-rito",
+            "",
+            1199
+          ],
+          [
+            "Vegetarian Bowl-rito",
+            "",
+            1199
+          ]
+        ]
+      },
+      {
+        "name": "Quesadillas",
+        "items": [
+          [
+            "Cheese Quesadilla",
+            "",
+            1199
+          ],
+          [
+            "Quesadilla",
+            "",
+            1199
+          ]
+        ]
+      },
+      {
+        "name": "Chronic Fries",
+        "items": [
+          [
+            "Chronic Fries",
+            "",
+            1599
+          ],
+          [
+            "Vegetarian Chronic Fries",
+            "",
+            1599
+          ]
+        ]
+      },
+      {
+        "name": "Breakfast",
+        "items": [
+          [
+            "Breakfast 2 Taco Plate",
+            "",
+            1199
+          ],
+          [
+            "Breakfast Bowl-rito",
+            "",
+            1199
+          ],
+          [
+            "Breakfast Burrito",
+            "",
+            1199
+          ],
+          [
+            "Breakfast Small Burrito",
+            "",
+            899
+          ],
+          [
+            "Breakfast Taco a la Carte",
+            "",
+            499
+          ],
+          [
+            "Vegetarian Breakfast Bowl-rito",
+            "",
+            1199
+          ],
+          [
+            "Vegetarian Breakfast Burrito",
+            "",
+            1199
+          ],
+          [
+            "Vegetarian Breakfast Small Burrito",
+            "",
+            899
+          ],
+          [
+            "Vegetarian Breakfast Taco a la Carte",
+            "",
+            499
+          ]
+        ]
+      },
+      {
+        "name": "Sides",
+        "items": [
+          [
+            "Chips & Guacamole",
+            "",
+            395
+          ],
+          [
+            "Chips & Salsa",
+            "",
+            275
+          ],
+          [
+            "Side Salsa",
+            "3.25 oz",
+            100
+          ],
+          [
+            "Side Sour Cream",
+            "3 oz",
+            100
+          ],
+          [
+            "Side Baja Sauce",
+            "3 oz",
+            50
+          ],
+          [
+            "Side Guacamole",
+            "3.25 oz",
+            250
+          ],
+          [
+            "Beans — 8 oz",
+            "",
+            195
+          ],
+          [
+            "Beans — 16 oz",
+            "",
+            325
+          ],
+          [
+            "Rice — 8 oz",
+            "",
+            195
+          ],
+          [
+            "Rice — 16 oz",
+            "",
+            325
+          ],
+          [
+            "Potato Tots",
+            "18 pieces",
+            325
+          ],
+          [
+            "Queso",
+            "3.25 oz",
+            250
+          ],
+          [
+            "Chips & Queso",
+            "",
+            395
+          ],
+          [
+            "Tots & Queso",
+            "",
+            475
+          ]
+        ]
+      },
+      {
+        "name": "Dessert",
+        "items": [
+          [
+            "Churros",
+            "8 bites with caramel sauce",
+            420
+          ]
+        ]
+      },
+      {
+        "name": "Drinks",
+        "items": [
+          [
+            "Coca-Cola — regular",
+            "Regular-size fountain drink",
+            325
+          ],
+          [
+            "Diet Coke — regular",
+            "Regular-size fountain drink",
+            325
+          ],
+          [
+            "Sprite — regular",
+            "Regular-size fountain drink",
+            325
+          ],
+          [
+            "Powerade Mountain Berry",
+            "20 oz",
+            400
+          ],
+          [
+            "Monster Energy Original",
+            "16 oz",
+            499
+          ],
+          [
+            "Dasani Water",
+            "Bottle",
+            250
+          ],
+          [
+            "Mexican Coke",
+            "12 oz",
+            375
+          ],
+          [
+            "Unsweet Iced Tea — regular",
+            "",
+            325
+          ],
+          [
+            "Sweet Iced Tea — regular",
+            "",
+            325
+          ],
+          [
+            "Raspberry Iced Tea — regular",
+            "",
+            325
+          ],
+          [
+            "Coca-Cola Bottle",
+            "20 oz",
+            375
+          ],
+          [
+            "Sprite Bottle",
+            "20 oz",
+            375
+          ],
+          [
+            "Coke Zero Bottle",
+            "20 oz",
+            350
+          ],
+          [
+            "Diet Coke Bottle",
+            "20 oz",
+            375
+          ]
+        ]
+      },
+      {
+        "name": "Family Taco Kit",
+        "items": [
+          [
+            "Family Taco Kit",
+            "Taco bar for four: choice of two proteins, rice, beans, tortillas, cheese, chips, pico and salsas.",
+            4999
+          ]
+        ]
+      },
+      {
+        "name": "Combo upgrades",
+        "items": [
+          [
+            "Chips, Salsa & Drink",
+            "",
+            399
+          ],
+          [
+            "Chips, Queso & Drink",
+            "",
+            519
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "blackhawk-museum",
+    "name": "Blackhawk Museum",
+    "label": "Blackhawk",
+    "cuisine": "Museum and cultural exhibits",
+    "tagline": "Automobiles, nature and cultural galleries at Blackhawk Plaza.",
+    "color": "#211C21",
+    "icon": "blackhawk-museum",
+    "prep": 0,
+    "category": "Travel",
+    "items": [],
+    "site": "https://blackhawkmuseum.org/",
+    "orderUrl": "https://blackhawkmuseum.ticketing.veevartapp.com/tickets/view/list",
+    "address": "3700 Blackhawk Plaza Circle, Danville, CA 94506",
+    "phone": "925-736-2280",
+    "email": "info@blackhawkmuseum.org",
+    "hours": "Fri–Sun 10am–5pm; Mon–Thu closed",
+    "instagram": "blackhawkmuseum",
+    "quoteOnly": "Purchase admission or membership directly from the museum. General admission covers all five exhibits; special events may have separate tickets.",
+    "groups": [
+      {
+        "name": "General admission",
+        "items": [
+          [
+            "Adult",
+            "Admission for one adult; includes all five museum exhibits.",
+            2000
+          ],
+          [
+            "Senior, Student, Veteran",
+            "Published discounted general admission category.",
+            1500
+          ],
+          [
+            "Children Under 6",
+            "Complimentary admission for children under six. The site does not say six and under.",
+            0,
+            "Free"
+          ]
+        ]
+      },
+      {
+        "name": "Annual memberships",
+        "items": [
+          [
+            "Individual",
+            "One member and one guest for one year; one member card, event offers and member invitations.",
+            12000,
+            "$120 / year"
+          ],
+          [
+            "Family / Dual",
+            "Two members and two guests for one year; two member cards, event offers and member invitations.",
+            18000,
+            "$180 / year"
+          ],
+          [
+            "Individual (Senior 65+)",
+            "One member age 65+ and one guest for one year.",
+            7500,
+            "$75 / year"
+          ],
+          [
+            "Family / Dual (Senior 65+)",
+            "Two members age 65+ and two guests for one year.",
+            15000,
+            "$150 / year"
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Plan your visit",
+        "body": [
+          "Guided tours Saturday and Sunday at 1pm and 2pm. Café Friday–Sunday 10am–3pm. Allow about two hours; three designated parking areas are free.",
+          "Admission tickets are nonrefundable. Date transfers may be requested at least 48 hours ahead, subject to availability.",
+          "Current child admission is free for children under six. Confirm eligibility directly; the older review uses different wording."
+        ],
+        "links": [
+          {
+            "label": "Current admission and policies",
+            "href": "https://blackhawkmuseum.org/admission/"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/blackhawk-museum.mp4",
+      "poster": "/clips/blackhawk-museum-poster.webp",
+      "href": "https://www.instagram.com/reel/DE3q-xyvVem/",
+      "credit": "Filmed by @anjali_wandersoul · Archival visit; current museum admission and hours are listed separately.",
+      "platform": "Instagram",
+      "by": "anjali_wandersoul"
+    }
+  },
+  {
+    "slug": "monster-pho",
+    "name": "Monster Pho",
+    "label": "Monster Pho",
+    "cuisine": "Vietnamese pho and noodles",
+    "tagline": "Monster-themed Vietnamese soups, rice plates and pandan waffles on 40th Street in Oakland.",
+    "color": "#211C21",
+    "icon": "monster-pho",
+    "prep": 0,
+    "category": "Vietnamese",
+    "items": [],
+    "site": "https://www.monsterpho.com/",
+    "orderUrl": "https://doordash.com/store/monster-pho-oakland-7475",
+    "address": "360 40th St, Oakland, CA 94609",
+    "phone": "510-788-4459",
+    "hours": "Wed–Sun 10am–8pm; Mon–Tue closed",
+    "instagram": "monsterpho",
+    "quoteOnly": "Order directly through the restaurant’s linked service. Pho has two published price options; confirm the option and current availability when ordering.",
+    "clip": {
+      "src": "/clips/monster-pho.mp4",
+      "poster": "/clips/monster-pho-poster.webp",
+      "href": "https://www.instagram.com/reel/DeDDmPPAtTZ/",
+      "credit": "Posted by @monsterpho",
+      "platform": "Instagram"
+    },
+    "sections": [
+      {
+        "name": "Pho soup",
+        "items": [
+          [
+            "Beef Pho",
+            "Choose up to three: brisket, rare steak, flank, tendon, meatballs or tripe. Two published price options; sizes are not specified.",
+            1900,
+            null,
+            "$19 / $20"
+          ],
+          [
+            "Chicken Pho",
+            "Chicken-bone broth. Two published price options; sizes are not specified.",
+            1900,
+            null,
+            "$19 / $20"
+          ],
+          [
+            "Vegetable Pho",
+            "Vegetable broth, vegetables and tofu. Two published price options; sizes are not specified.",
+            1900,
+            null,
+            "$19 / $20"
+          ],
+          [
+            "Monster Pho Combo",
+            "Brisket, flank, meatballs, rare steak, tendon and tripe.",
+            2500
+          ],
+          [
+            "Bun Bo Hue",
+            "Spicy beef and lemongrass noodle soup.",
+            2500
+          ]
+        ]
+      },
+      {
+        "name": "Appetizers",
+        "items": [
+          [
+            "Fresh Spring Rolls",
+            "Beef, pork, shrimp, chicken or tofu.",
+            1600
+          ],
+          [
+            "Fried Tofu",
+            "Lemongrass marinade.",
+            1500
+          ],
+          [
+            "Potstickers",
+            "Vegetables or chicken.",
+            1500
+          ],
+          [
+            "Imperial Rolls",
+            "Pork and shrimp or vegetarian.",
+            1700
+          ],
+          [
+            "Banh Mi Sandwich",
+            "Beef, pork, chicken or tofu.",
+            1800
+          ],
+          [
+            "Chicken Wings",
+            "Crispy fried.",
+            1900
+          ]
+        ]
+      },
+      {
+        "name": "Plates & noodles",
+        "items": [
+          [
+            "Vermicelli Noodles",
+            "Choice of grilled chicken, beef, pork, shrimp, imperial rolls or tofu.",
+            2500
+          ],
+          [
+            "Monster Vermicelli Combo",
+            "Grilled proteins and imperial roll.",
+            2900
+          ],
+          [
+            "Rice Plates",
+            "Steamed rice, egg, pickled vegetables and choice of protein.",
+            2500
+          ],
+          [
+            "Monster Rice Combo",
+            "Chicken, beef, pork, shrimp and fried egg.",
+            2900
+          ],
+          [
+            "Greens",
+            "Mom’s vinaigrette and choice of protein.",
+            2500
+          ]
+        ]
+      },
+      {
+        "name": "Drinks & sweets",
+        "items": [
+          [
+            "Vietnamese Coffee",
+            "Hot or cold with condensed milk.",
+            800
+          ],
+          [
+            "Green Monster Iced Tea",
+            "",
+            800
+          ],
+          [
+            "Thai Iced Tea / Mint Passionade / Winter Melon Pandan Tea / Ginger Lemonade",
+            "Choice of one; grouped together at $8 on the restaurant’s menu.",
+            800
+          ],
+          [
+            "Vietnamese Coffee Flan",
+            "Flan and coffee syrup.",
+            700
+          ],
+          [
+            "White Summer",
+            "Fruit, jellies, milk and shaved ice.",
+            1000
+          ],
+          [
+            "Pandan Leaf Coconut Waffle",
+            "With vanilla ice cream.",
+            1800
+          ],
+          [
+            "Fried Banana + Ice Cream",
+            "Condensed milk drizzle.",
+            1300
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ginza-sushi-sf",
+    "name": "Ginza Sushi & Sake — San Francisco",
+    "label": "Ginza SF",
+    "cuisine": "Japanese sushi and sashimi",
+    "tagline": "Sushi, sashimi, signature rolls and Japanese entrées on Haight Street.",
+    "color": "#211C21",
+    "icon": "ginza-sushi-sf",
+    "prep": 0,
+    "category": "Sushi",
+    "items": [],
+    "site": "https://www.ginzasanfrancisco.com/",
+    "orderUrl": "https://www.ginzasanfrancisco.com/online-ordering-2",
+    "address": "1793 Haight St, San Francisco, CA 94117",
+    "phone": "415-742-0552",
+    "email": "ginzasanfrancisco@gmail.com",
+    "hours": "Daily noon–10pm",
+    "instagram": "ginzasanfrancisco",
+    "sections": [
+      {
+        "name": "APPETIZERS",
+        "items": [
+          [
+            "Edamame",
+            "salted or garlic - soy sauce",
+            699
+          ],
+          [
+            "Nesu Agedashi Tofu",
+            "crusted silken tofu, bonito flakes, seaweed and fresh grated daikon with tentsuyu sauce",
+            1299
+          ],
+          [
+            "Chicken Kara-age",
+            "japanese style popcorn chicken",
+            1099
+          ],
+          [
+            "Gyoza",
+            "pan-fried vegetable dumplings, served with ponzu sauce",
+            999
+          ],
+          [
+            "Shrimp & Veggie Tempura",
+            "shrimps & vegetable served with tentsuyu sauce",
+            1299
+          ],
+          [
+            "Tomodashi Tartare",
+            "maguro tuna and salmon tartare, avocado, black tobiko, citrus ponzu and spicy oil, served with gyoza chips",
+            1999
+          ],
+          [
+            "Skirt Steak Oroshi",
+            "skirt steak tataki, yuzu kosho - pon, turnip oroshi",
+            1799
+          ],
+          [
+            "Hamachi Carpaccio",
+            "seared hamachi, crispy onion, yuzu vinaigrette",
+            2099
+          ],
+          [
+            "Usuzukuri Salmon",
+            "thin sliced salmon sashimi, served with ponzu truffle sauce",
+            1899
+          ],
+          [
+            "Sake Kama",
+            "Grilled Salmon Collar served with ponzu sauce",
+            895
+          ],
+          [
+            "Bluefin tataki",
+            "pan seared bluefin sashimi, sesame seed, topped with wasabi mayo, scallion and tobiko",
+            1699
+          ],
+          [
+            "Crispy Rice Spicy Tuna (4pcs)",
+            "crispy rice, spicy tuna, jalapeno",
+            1599
+          ],
+          [
+            "T.A.T.S",
+            "deep-fried jalapeno with cream cheese, spicy tuna, sweet sauce, spicy mayo and tobiko",
+            1599
+          ]
+        ]
+      },
+      {
+        "name": "SALADS",
+        "items": [
+          [
+            "Seaweed Salad",
+            "",
+            799
+          ],
+          [
+            "Cucumber Sesame",
+            "",
+            899
+          ],
+          [
+            "Spicy Maguro Salad",
+            "akami tuna, avocado, english cucumber, spring mixed, scallian with house kimchi spicy dressing",
+            1799
+          ]
+        ]
+      },
+      {
+        "name": "SUSHI & SASHIMI",
+        "items": [
+          [
+            "Moriawase",
+            "chef's choice nigiri and sashimi selection Published options: Small(Sushi 6pcs, Sashimi 6pcs) $49.99.",
+            4999,
+            null,
+            "$49.99 · Small(Sushi 6pcs, Sashimi 6pcs)"
+          ],
+          [
+            "Premium Tokubetsu Sashimi Matsu",
+            "5 kinds of premium sashimi (10 pieces)",
+            5699
+          ],
+          [
+            "Tokubetsu Sashimi Matsu",
+            "5 kinds sashimi (10 pieces)",
+            3599
+          ],
+          [
+            "Nigiri Tasting",
+            "chef’s selection of seven kinds of seasonal sushi of the day",
+            3299
+          ],
+          [
+            "Takumi Don",
+            "premium artisan sashimi over seasoned sushi rice, elegantly garnished with a touch of soy",
+            3999
+          ],
+          [
+            "Kiseki Don",
+            "chef’s choice sashimi, served over rice",
+            3299
+          ],
+          [
+            "Spicy Salmon Don",
+            "salmon sashimi, spicy salmon, avocado served over sushi rice",
+            3099
+          ],
+          [
+            "Spicy Maguro Don",
+            "Tuna sashimi, spicy tuna, avocado served over sushi rice",
+            3199
+          ],
+          [
+            "Bluefin Zuke Don",
+            "Soy-Marinated bluefin tuna sashimi, severed over sushi rice.",
+            3199
+          ],
+          [
+            "Toro - Blue Fin Belly(Seasonal)",
+            "Published options: Sushi (2 pcs) $16.99; Sashimi (6 pcs) $35.",
+            1699,
+            null,
+            "$16.99–$35"
+          ],
+          [
+            "Buri Toro - Yellowtail Belly",
+            "Published options: Sushi (2 pcs) $9.99; Sashimi (5 pcs) $21.99.",
+            999,
+            null,
+            "$9.99–$21.99"
+          ],
+          [
+            "Hon Maguro - Bluefin Tuna",
+            "Published options: Sushi (2 pcs) $9.99; Sashimi (5 pcs) $20.99.",
+            999,
+            null,
+            "$9.99–$20.99"
+          ],
+          [
+            "Beni Toro - Seared Salmon Belly",
+            "Published options: Sushi (2 pcs) $9.99; Sashimi (5 pcs) $21.99.",
+            999,
+            null,
+            "$9.99–$21.99"
+          ],
+          [
+            "Umi Masu -Ocean trout /Scotland Salmon",
+            "Published options: Sushi $9.99; Sashimi $22.99.",
+            999,
+            null,
+            "$9.99–$22.99"
+          ],
+          [
+            "Sake - Salmon",
+            "Published options: Sushi (2 pcs) $7.99; Sashimi (5 pcs) $16.99.",
+            799,
+            null,
+            "$7.99–$16.99"
+          ],
+          [
+            "Unagi - Fresh Water Eel",
+            "Published options: Sushi (2 pcs) $8.99; Sashimi (5 pcs) $20.99.",
+            899,
+            null,
+            "$8.99–$20.99"
+          ],
+          [
+            "Hamachi - Yellowtail",
+            "Published options: Sushi (2 pcs) $8.99; Sashimi (5 pcs) $19.99.",
+            899,
+            null,
+            "$8.99–$19.99"
+          ],
+          [
+            "Botanebi - Sweet Shrimp",
+            "Published options: Sushi (2 pcs) $10.99; Sashimi (5 pcs) $23.99.",
+            1099,
+            null,
+            "$10.99–$23.99"
+          ],
+          [
+            "Hirame - Halibut",
+            "Published options: Sashimi (5 pcs) $23.99; Sushi (2pcs) $10.99.",
+            1099,
+            null,
+            "$10.99–$23.99"
+          ],
+          [
+            "Shima Aji - Strip-jack",
+            "Published options: Sashimi (5 pcs) $23.99; Sushi (2 pcs) $10.99.",
+            1099,
+            null,
+            "$10.99–$23.99"
+          ],
+          [
+            "Mushi Ebi - Tiger Prawn",
+            "Sushi (2 pcs)",
+            699
+          ],
+          [
+            "Hotate - Hokkaido Scallop",
+            "Published options: Sushi (2 pcs) $9.99; Sashimi (5 pcs) $18.99.",
+            999,
+            null,
+            "$9.99–$18.99"
+          ],
+          [
+            "Uni - Sea Urchin (seasonal)",
+            "Published options: Sushi (2 pcs) $16.99; Sashimi $29.99.",
+            1699,
+            null,
+            "$16.99–$29.99"
+          ],
+          [
+            "Ikura - Salmon Roe",
+            "Published options: Sushi (2 pcs) $9.99; Sashimi (5 pcs) $20.99.",
+            999,
+            null,
+            "$9.99–$20.99"
+          ],
+          [
+            "Tobiko - Flying Fish Roe",
+            "Published options: Sushi (2 pcs) $6.99; Sashimi $13.99.",
+            699,
+            null,
+            "$6.99–$13.99"
+          ]
+        ]
+      },
+      {
+        "name": "CHEF SIGNATURE ROLLS",
+        "items": [
+          [
+            "Ginza Roll",
+            "yellowtail, cucumber, kaiware, topped with seared yellowtail, avocado, jalapeno, spicy aioli, quid ink tobiko",
+            1999
+          ],
+          [
+            "Akairo Roll",
+            "tuna, crab, avocado wrapped with seared scallop, ginza style spicy sauce, green onion and tobiko",
+            1799
+          ],
+          [
+            "Kazan Roll",
+            "crab, avocado, cucumber roll with salmon wrapped & baked then topped with house special tobiko cream sauce",
+            1699
+          ],
+          [
+            "Kaiyo Roll",
+            "spicy tuna, cucumber, topped with salmon, yellowtail, fried potato, green onion, squid ink tobiko and house special sauce",
+            1799
+          ],
+          [
+            "Daburu Roll",
+            "salmon, cucumber, kaiware, topped with salmon, sliced lemon, micro cilantro and yuzu tobiko",
+            1699
+          ],
+          [
+            "Suisei Roll",
+            "fried crab, avocado, cucumber roll topped with unagi sauce, green onion and tobiko",
+            1499
+          ],
+          [
+            "Surf & Turf Roll",
+            "rib - eye steak, shrimp tempura, asparagus, garlic chip",
+            1799
+          ],
+          [
+            "Kaiju Roll",
+            "soft shell crab tempura, crab meat, cucumber, kaiware, tobiko, kombu paper, yuzu cream sauce",
+            1799
+          ],
+          [
+            "Umi Roll",
+            "baked hokkaido scallops, crab, avocado, parmesan cream sauce",
+            1799
+          ],
+          [
+            "Keiryo",
+            "cucumber skin, salmon, tuna, avocado, tobiko, yuzu vinaigrette",
+            1899
+          ],
+          [
+            "Bara Roll",
+            "maguro, spicy tuna, avocado, pickle ginger, kaiware, mango, squid ink tobiko, spicy cream sauce",
+            1999
+          ],
+          [
+            "Ebi roll",
+            "shrimp tempura, cucumber, avocado topped with snow crab meat, mushi ebi, crunch, honey spicy mayo sauce and tobiko",
+            1799
+          ],
+          [
+            "Spicy Neigi Toro",
+            "Spicy neigi toro, cucumber, kaiware topped with real wasabi pickle.",
+            2099
+          ],
+          [
+            "Kogane",
+            "Deep-fried roll with salmon, cream cheese,tobiko,green onion and sesame, drizzled with sweet unagi sauce",
+            1599
+          ]
+        ]
+      },
+      {
+        "name": "CLASSIC ROLLS",
+        "items": [
+          [
+            "California Roll",
+            "snow crab meat, imitation crab, avocado, cucumber",
+            999
+          ],
+          [
+            "Spicy Tuna Roll",
+            "spicy tuna and kaiware",
+            999
+          ],
+          [
+            "Dragon Roll",
+            "shrimp tempura, cucumber wrapped with eel, avocado and tobiko on top",
+            1799
+          ],
+          [
+            "Rainbow Roll",
+            "assorted fish over shrimp tempura, tobiko and avocado",
+            1899
+          ],
+          [
+            "Salmon Skin Roll",
+            "grilled salmon skin, cucumber, gobo, kaiware & ponzu",
+            799
+          ],
+          [
+            "Philadelphia Roll",
+            "salmon, cream cheese & cucumber",
+            999
+          ]
+        ]
+      },
+      {
+        "name": "VEGETABLE ROLLS",
+        "items": [
+          [
+            "Jiyugaoka Roll",
+            "sweet yam tempura, cucumber wrapped with mango, momiji oroshi, cilantro",
+            1299
+          ],
+          [
+            "Kyoto Roll",
+            "inari, cucumber, topped with avocado, kaiware and special cream sauce",
+            1299
+          ],
+          [
+            "Yamato",
+            "sesame soy paper, tempura tofu, enoki, green onion, inari",
+            1199
+          ],
+          [
+            "Izanami",
+            "soy paper, yukari(red shiso flake), asparagus, cucumber, gobo (pickled veggie), takuan(pickled radish), jalapeno, kaiware",
+            1299
+          ],
+          [
+            "Kouya",
+            "tempura carrot, eggplant, cucumber, toasted sesame, walnut, our house secret miso sauce",
+            1099
+          ],
+          [
+            "Avocado Roll",
+            "avocado and toasted sesame",
+            699
+          ],
+          [
+            "Kappa Roll",
+            "Cucumber and toasted sesame",
+            699
+          ],
+          [
+            "Oshinko Roll",
+            "pickled radish and toasted sesame",
+            699
+          ]
+        ]
+      },
+      {
+        "name": "ENTREES",
+        "items": [
+          [
+            "Tori Ginger Chicken",
+            "japanese style sauteed chicken with asparagus, mushroom in ginger soy sauce",
+            1799
+          ],
+          [
+            "Gyu Steak",
+            "grilled rib-eye steak serve on hot stone topped with shitake mushroom sauce",
+            2099
+          ],
+          [
+            "Salmon Miso Cream Sauce",
+            "pan seared salmon with seasonal vegetables in miso-cream sauce reduction",
+            2099
+          ],
+          [
+            "Garlic Butter Scallops",
+            "seared hokkaido scallops and einoki mushroom garlic soy sauce",
+            2099
+          ],
+          [
+            "Tofu Steak",
+            "tofu(lightly battered) sauteed with asparagus, shitake mushroom and ginger-soy reduction",
+            1699
+          ],
+          [
+            "Rib-Eye Steak Kare Rice",
+            "grilled rib-eye steak serve with potato, carrot, tokyo style curry sauce, tamanishiki steamed rice",
+            2099
+          ],
+          [
+            "Scallop Udon Soup",
+            "hokkaido scallop, prawns tempura, wakame, green onion, shoyu broth",
+            2099
+          ]
+        ]
+      },
+      {
+        "name": "Side Order",
+        "items": [
+          [
+            "White Rice",
+            "",
+            299
+          ],
+          [
+            "Sushi Rice",
+            "",
+            399
+          ],
+          [
+            "Miso Soup",
+            "",
+            399
+          ],
+          [
+            "House Salad",
+            "",
+            899
+          ],
+          [
+            "Wasabi",
+            "",
+            100
+          ],
+          [
+            "Ginger",
+            "",
+            100
+          ],
+          [
+            "Spicy Mayo",
+            "",
+            100
+          ],
+          [
+            "Eel sauce",
+            "",
+            100
+          ],
+          [
+            "Ponzu sauce",
+            "",
+            100
+          ]
+        ]
+      },
+      {
+        "name": "DESSERTS",
+        "items": [
+          [
+            "Ginza Fried Vanilla Ball",
+            "vanilla ice cream tossed in our secret coating then deep fried to perfection",
+            1099
+          ],
+          [
+            "Hokkaido Mille Crepe",
+            "12 layer of vanilla crepes, hokkaido fluffy milk cream, homemade strawberry sauce",
+            1199
+          ]
+        ]
+      },
+      {
+        "name": "Nonalcoholic beverages",
+        "items": [
+          [
+            "Lychee Iced Tea",
+            "",
+            599
+          ],
+          [
+            "Yuzu Lemonade",
+            "",
+            699
+          ],
+          [
+            "Regular Iced Tea",
+            "",
+            350
+          ],
+          [
+            "Soda",
+            "Published choices: coke, sprite, diet coke.",
+            300
+          ]
+        ]
+      }
+    ],
+    "quoteOnly": "Order from Ginza’s Haight Street menu. Serving sizes and sushi/sashimi price options are retained; confirm current options and availability directly.",
+    "clip": {
+      "src": "/clips/ginza-sushi-sf.mp4",
+      "poster": "/clips/ginza-sushi-sf-poster.webp",
+      "href": "https://www.instagram.com/reel/DYVsTAjpEZP/",
+      "credit": "Filmed by @wafflebam · Filmed at 1793 Haight St, San Francisco.",
+      "platform": "Instagram",
+      "by": "wafflebam"
+    }
+  },
+  {
+    "slug": "ume-tea-san-jose",
+    "name": "UMe Tea — San Jose",
+    "label": "UMe Tea",
+    "cuisine": "Boba milk tea and sweets",
+    "tagline": "Boba, matcha, fruit tea and snacks at four San Jose locations.",
+    "color": "#211C21",
+    "icon": "ume-tea",
+    "prep": 0,
+    "category": "Boba",
+    "items": [],
+    "site": "https://umetea.com/en/stores",
+    "orderUrl": "https://umeteaca.square.site/?location=LJ4FFH98Y7PJW",
+    "address": "2067 Camden Ave, San Jose, CA 95124",
+    "phone": "669-329-1489",
+    "email": "info@umeteaca.com",
+    "hours": "Camden Park: daily 11am–9pm",
+    "instagram": "umetea",
+    "sections": [
+      {
+        "name": "Milk Tea",
+        "items": [
+          [
+            "Brown Sugar Boba Premium Oolong Milk Tea",
+            "",
+            595
+          ],
+          [
+            "Black Milk Tea w/ Taro & Boba",
+            "",
+            625
+          ],
+          [
+            "Black Milk Tea w/ Taro & Mochi",
+            "",
+            625
+          ],
+          [
+            "Brown Sugar Boba & Mochi Black Milk Tea",
+            "",
+            595
+          ],
+          [
+            "Champaca Fresh Milk Tea 白兰鲜奶茶",
+            "",
+            595
+          ],
+          [
+            "Crème Brûlée Thai Tea",
+            "",
+            595
+          ],
+          [
+            "Oreo Crème Brûlée Boba Oolong Milk Tea",
+            "",
+            625
+          ],
+          [
+            "Sticky Rice Black Milk Tea 血糯米奶茶",
+            "",
+            545
+          ],
+          [
+            "UMe Boba Milk Tea",
+            "",
+            595
+          ]
+        ]
+      },
+      {
+        "name": "Matcha",
+        "items": [
+          [
+            "Uji Strawberry Matcha Latte",
+            "Uji matcha layered with fresh strawberry — a seasonal favorite.",
+            625
+          ],
+          [
+            "Uji Matcha Boba Latte",
+            "",
+            625
+          ],
+          [
+            "Uji Matcha Mango Latte",
+            "",
+            625
+          ]
+        ]
+      },
+      {
+        "name": "Fruit Tea",
+        "items": [
+          [
+            "Grape Green Tea w/ Tea Jelly",
+            "",
+            595
+          ],
+          [
+            "Jumbo Mandarin Iced Tea (32oz)",
+            "",
+            888
+          ],
+          [
+            "Lychee & Watermelon Green Tea",
+            "",
+            645
+          ],
+          [
+            "Mandarin Iced Tea 橘子冰茶",
+            "",
+            695
+          ],
+          [
+            "Passion Fruit & Watermelon Green Tea",
+            "",
+            645
+          ],
+          [
+            "Passion Fruit Green Tea w/ Boba & Lychee Jelly",
+            "",
+            625
+          ],
+          [
+            "UMe Mega Fruit Tea",
+            "",
+            895
+          ]
+        ]
+      },
+      {
+        "name": "Snacks",
+        "items": [
+          [
+            "Popcorn Chicken",
+            "",
+            995
+          ],
+          [
+            "Curly Fries",
+            "",
+            599
+          ],
+          [
+            "Fried Mini Octopus 炸八爪鱼",
+            "",
+            799
+          ],
+          [
+            "Fried Tofu",
+            "",
+            895
+          ],
+          [
+            "Mini Chicken Strips",
+            "",
+            899
+          ],
+          [
+            "Sizzling Pork Sausage 鲜肉滋滋肠",
+            "",
+            599
+          ],
+          [
+            "UMe Cheese Ball",
+            "",
+            899
+          ],
+          [
+            "UMe Crispy Chicken Nuggets",
+            "",
+            895
+          ],
+          [
+            "UMe Fire Wings",
+            "",
+            895
+          ],
+          [
+            "UMe Snack Bucket",
+            "",
+            1799
+          ]
+        ]
+      },
+      {
+        "name": "Yogurt",
+        "items": [
+          [
+            "Guava Strawberry Sticky Rice Yogurt 芭乐莓莓血糯米酸奶",
+            "",
+            695
+          ],
+          [
+            "Guava Strawberry Yogurt Slushie 芭乐莓莓酸奶",
+            "",
+            695
+          ],
+          [
+            "Kale White Rice Yogurt 原叶白糯米酸奶",
+            "",
+            699
+          ],
+          [
+            "Mango White Rice Yogurt 芒芒白糯米酸奶",
+            "",
+            699
+          ],
+          [
+            "Mango Yogurt (Slushie)",
+            "",
+            695
+          ],
+          [
+            "Oat Burst Sticky Rice Yogurt 血糯米酸奶",
+            "",
+            695
+          ],
+          [
+            "Peach White Rice Yogurt 桃桃白糯米酸奶",
+            "",
+            699
+          ]
+        ]
+      },
+      {
+        "name": "Mango",
+        "items": [
+          [
+            "Coco Mango",
+            "",
+            625
+          ],
+          [
+            "Coco Mango Jasmine Bloom 山茶生椰芒芒",
+            "",
+            625
+          ]
+        ]
+      },
+      {
+        "name": "Coconut",
+        "items": [
+          [
+            "Coconut Cha Cha Bowl 泡鲁达",
+            "",
+            799
+          ],
+          [
+            "Mango Coconut Twilight",
+            "",
+            695
+          ]
+        ]
+      },
+      {
+        "name": "UME Merchandise",
+        "items": [
+          [
+            "Bunny Plush Charm",
+            "",
+            599
+          ],
+          [
+            "UMe Bunny Blind Box",
+            "",
+            1599
+          ],
+          [
+            "UMe Cotton Candy Tote 棉花糖包",
+            "",
+            1499
+          ],
+          [
+            "UMe Daydream Cloud Mug",
+            "",
+            1599
+          ],
+          [
+            "UMe Mandarin Tote Bag",
+            "",
+            299
+          ]
+        ]
+      }
+    ],
+    "quoteOnly": "These are UMe’s published chain-menu prices. Choose your San Jose store to confirm local prices, modifiers and availability; the main order link opens Camden Park.",
+    "panels": [
+      {
+        "head": "San Jose locations",
+        "body": [
+          "Camden Park — 2067 Camden Ave, San Jose, CA 95124 · +1 669-329-1489",
+          "North Park Plaza — 1704 Oakland Rd Ste 300, San Jose, CA 95131-3826 · +1 669-342-2574",
+          "San Jose Almaden — 4750 Almaden Expy Ste 136, San Jose, CA 95118 · +1 408-869-1455",
+          "Willow Glen — 1228 Lincoln Ave, San Jose, CA 95125-3026 · +1 510-573-7679",
+          "Camden Park: daily 11am–9pm. North Park: Sun–Thu 11am–10pm, Fri–Sat until 10:30pm. Almaden and Willow Glen: Sun–Thu 11am–9:30pm, Fri–Sat until 10pm."
+        ],
+        "links": [
+          {
+            "label": "Camden Park store and hours",
+            "href": "https://umetea.com/en/stores/san-jose-camden-park"
+          },
+          {
+            "label": "North Park Plaza store and hours",
+            "href": "https://umetea.com/en/stores/san-jose-north-park"
+          },
+          {
+            "label": "San Jose Almaden store and hours",
+            "href": "https://umetea.com/en/stores/san-jose-almaden"
+          },
+          {
+            "label": "Willow Glen store and hours",
+            "href": "https://umetea.com/en/stores/san-jose-willow-glen"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/ume-tea.mp4",
+      "poster": "/clips/ume-tea-poster.webp",
+      "href": "https://www.instagram.com/reel/DehZGniPZY4/",
+      "credit": "Posted by @umetea · Archival October 15 You Me Day promotion; the one-day offer has ended.",
+      "platform": "Instagram"
+    }
+  },
+  {
+    "slug": "brothers-bbq-san-leandro",
+    "name": "Brothers BBQ (Hyungjae)",
+    "label": "Brothers BBQ",
+    "cuisine": "Korean BBQ and tofu hot pot",
+    "tagline": "Family-operated Korean barbecue, tofu soup and comfort dishes on Davis Street.",
+    "color": "#211C21",
+    "icon": "brothers-bbq-san-leandro",
+    "prep": 0,
+    "category": "Hot Pot",
+    "items": [],
+    "address": "1292 Davis St, San Leandro, CA 94577",
+    "phone": "510-568-4795",
+    "email": "gipark3891@gmail.com",
+    "hours": "Daily 11am–10pm",
+    "instagram": "hyungjae_brothersbbq",
+    "needsSite": true,
+    "contactOnly": "Korean barbecue, tofu soup and traditional Korean dishes. Contact the restaurant for its current menu and prices. Lunch combos are listed Monday–Friday 11am–3pm on its own profile.",
+    "clip": {
+      "src": "/clips/brothers-bbq-san-leandro.mp4",
+      "poster": "/clips/brothers-bbq-san-leandro-poster.webp",
+      "href": "https://www.instagram.com/reel/DRkePNTkksw/",
+      "credit": "Filmed by @wafflebam · Archival Thanksgiving review; confirm holiday opening directly.",
+      "platform": "Instagram",
+      "by": "wafflebam"
+    }
+  },
+  {
+    "slug": "holyshred-sf",
+    "name": "HolyShred — San Francisco",
+    "label": "HolyShred",
+    "cuisine": "Thai chicken, noodles and rice",
+    "tagline": "Thai chicken dishes, noodles, rice bowls and sauces in San Francisco.",
+    "color": "#211C21",
+    "icon": "holyshred",
+    "prep": 0,
+    "category": "Thai",
+    "items": [],
+    "site": "https://www.holyshred.co/",
+    "address": "829 Geary St, San Francisco, CA 94109",
+    "email": "padpad@holyshred.co",
+    "instagram": "holyshred.thai",
+    "orderUrl": "https://www.doordash.com/store/36714881",
+    "sections": [
+      {
+        "name": "Featured San Francisco dishes",
+        "items": [
+          [
+            "Shredded Chicken Noodles",
+            "",
+            1350
+          ],
+          [
+            "Charcoal-Grilled BBQ Chicken Noodles",
+            "",
+            1520
+          ],
+          [
+            "OG Pad Thai & Hatyai Crispy Chicken",
+            "",
+            1465
+          ],
+          [
+            "Thai Tea",
+            "8 oz",
+            495
+          ],
+          [
+            "Bangkok Pepper Tofu",
+            "",
+            525
+          ],
+          [
+            "Hatyai Crispy Chicken Rice",
+            "",
+            1520
+          ]
+        ]
+      }
+    ],
+    "quoteOnly": "Featured prices from HolyShred’s own website. Open the San Francisco branch menu for the full current selection.",
+    "panels": [
+      {
+        "head": "Hours and branch contact",
+        "body": [
+          "Published website and branch schedules differ. Confirm today’s service and pickup times directly.",
+          "General text inquiries: 408-210-7799."
+        ],
+        "links": [
+          {
+            "label": "Current branch menu and service times",
+            "href": "https://www.doordash.com/store/36714881"
+          },
+          {
+            "label": "HolyShred locations",
+            "href": "https://www.holyshred.co/"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/holyshred.mp4",
+      "poster": "/clips/holyshred-poster.webp",
+      "href": "https://www.instagram.com/reel/Dd5GvcEhSDf/",
+      "credit": "Posted by @holyshred.thai · Own-account dish film; the caption says it is available at all HolyShred locations.",
+      "platform": "Instagram"
+    }
+  },
+  {
+    "slug": "holyshred-palo-alto",
+    "name": "HolyShred — Palo Alto",
+    "label": "HolyShred",
+    "cuisine": "Thai chicken, noodles and rice",
+    "tagline": "Thai chicken dishes, noodles, rice bowls and sauces in Palo Alto.",
+    "color": "#211C21",
+    "icon": "holyshred",
+    "prep": 0,
+    "category": "Thai",
+    "items": [],
+    "site": "https://www.holyshred.co/",
+    "address": "3924 El Camino Real, Palo Alto, CA 94306",
+    "email": "padpad@holyshred.co",
+    "instagram": "holyshred.thai",
+    "orderUrl": "https://pos.chowbus.com/online-ordering/store/HolyShred/50216",
+    "sections": [
+      {
+        "name": "Noodles",
+        "items": [
+          [
+            "Bangkok Pepper Tofu Noodles",
+            "Thin vermicelli noodles in our signature tangy-savory sauce, topped with Bangkok pepper tofu and spicy shallots. Finished with our spicy grilled pepper sauce for the perfect bite.",
+            1688,
+            null,
+            "from $16.88"
+          ],
+          [
+            "Hatyai Crispy Chicken Noodles",
+            "Thin vermicelli noodles in our signature tangy-savory sauce, topped with Hatyai crispy chicken and spicy fried shallots. Finished with our bold, layered house sauce for the perfect bite.",
+            1520,
+            null,
+            "from $15.20"
+          ],
+          [
+            "Charcoal-Grilled Bbq Chicken Noodles",
+            "Thin vermicelli noodles in our signature tangy-savory sauce, topped with charcoal-grilled BBQ chicken and spicy fried shallots. Finished with our bold, layered house sauce for the perfect bite.",
+            1520,
+            null,
+            "from $15.20"
+          ],
+          [
+            "Shredded Chicken Noodles",
+            "Thin vermicelli noodles in our signature tangy-savory sauce, topped with tender shredded chicken and crispy spicy chicharrón. Finished with our bold, layered house sauce for the perfect bite.",
+            1350,
+            null,
+            "from $13.50"
+          ]
+        ]
+      },
+      {
+        "name": "Rice",
+        "items": [
+          [
+            "Hatyai Crispy Chicken Rice",
+            "Hatyai-style crispy chicken thigh over fragrant jasmine rice, topped with aromatic spicy fried shallots. Served with Smoky Chili Jaew and Thai Sweet Chili for the perfect finish.",
+            1520,
+            null,
+            "from $15.20"
+          ],
+          [
+            "Charcoal-Grilled Bbq Chicken Rice",
+            "Tender grilled BBQ chicken thigh over fragrant jasmine rice. Served with Smoky Chili Jaew and House Mayo for the perfect finish.",
+            1520,
+            null,
+            "from $15.20"
+          ],
+          [
+            "Green Curry Hatyai Crispy Chicken Rice",
+            "Hatyai-style crispy chicken thigh over fragrant jasmine rice plus a rich Thai green curry for deep aroma and full-bodied flavor in every bite.",
+            1625,
+            null,
+            "from $16.25"
+          ],
+          [
+            "Green Curry Charcoal-Grilled Bbq Chicken Rice",
+            "Charcoal-Grilled BBQ Chicken thigh served over fragrant jasmine rice, paired with a rich Thai green curry for deep aroma and full-bodied flavor in every bite.",
+            1625,
+            null,
+            "from $16.25"
+          ],
+          [
+            "Charcoal-Grilled Chicken Satay Garlic Rice",
+            "Succulent, golden-grilled chicken thighs steeped in an aromatic blend of turmeric, cumin, and rich coconut milk curry. Served alongside fragrant garlic rice, comes with a rich, savory peanut dipping sauce.",
+            1625,
+            null,
+            "from $16.25"
+          ],
+          [
+            "Thai Chili Lime Crispy Chicken Rice",
+            "Crispy fried chicken over jasmine rice, tossed with tangy Thai larb seasoning, toasted rice powder, chili, lime, red onion, and fresh herbs.",
+            1520,
+            null,
+            "from $15.20"
+          ],
+          [
+            "Charcoal-Grilled Bbq Chicken Garlic Rice",
+            "Tender, smoky charcoal-grilled chicken glazed in a savory BBQ marinade. Served alongside aromatic garlic rice and topped with crispy shallots for a perfect balance of flame-grilled flavor and crunch. Comes with Chilli Jaew Sauce and House Mayo Sauce.",
+            1520,
+            null,
+            "from $15.20"
+          ],
+          [
+            "Hatyai Crispy Chicken Garlic Rice",
+            "Southern Thai-style fried chicken, famously crunchy and seasoned with coriander and cumin. Paired with fragrant garlic rice and a generous topping of crispy fried shallots for an authentic, savory bite. Comes with Chilli Jaew Sauce and House Mayo Sauce.",
+            1520,
+            null,
+            "from $15.20"
+          ],
+          [
+            "Bangkok Pepper Tofu With Garlic Rice (Vegan)",
+            "Crispy golden tofu seasoned with bold white pepper and garlic. Topped with crunchy fried shallots. Served with garlic rice for a perfect texture. Comes with Thai Sweet Chilli Sauce. Contains: Tofu, Corn Starch, Sugar, MSG, Salt, White Pepper, Canola Oil , Dried Chilli, Fried Shallot, Rice, Garlic, Turmeric",
+            1350,
+            null,
+            "from $13.50"
+          ]
+        ]
+      },
+      {
+        "name": "Salad",
+        "items": [
+          [
+            "Hatyai Crispy Chicken Salad",
+            "Hatyai-style crispy chicken thigh over fresh lettuce, sweet corn, and shredded carrots — finished with aromatic spicy fried shallots. Served with Smoky Chili Jaew and Grilled Pepper Mayo for a bright, balanced finish.",
+            1565,
+            null,
+            "from $15.65"
+          ],
+          [
+            "Shredded Chicken Salad",
+            "Tender shredded chicken tossed in our signature tangy-savory dressing, topped with crispy spicy chicharrón. Finished with our bold, layered house sauce for the perfect bite.",
+            1465,
+            null,
+            "from $14.65"
+          ],
+          [
+            "Charcoal-Grilled Bbq Chicken Salad",
+            "Juicy charcoal-grilled BBQ chicken thigh served over crisp fresh lettuce, sweet corn, and shredded carrots. Finished with aromatic fried garlic and paired with Smoky Chili Jaew and House Mayo for a bold, smoky, and perfectly balanced bite.",
+            1565,
+            null,
+            "from $15.65"
+          ]
+        ]
+      },
+      {
+        "name": "Add-Ons",
+        "items": [
+          [
+            "House Signature Sauce",
+            "Our signature blend coats every strand in bold, layered flavor — perfectly paired with Mee Gai Cheek, our Shredded Chicken Noodles (Dry).",
+            75
+          ],
+          [
+            "Bangkok Pepper Tofu",
+            "Golden fried tofu glazed with Thai chili and pepper — crisp on the outside, bursting with bold, savory heat.",
+            495
+          ],
+          [
+            "House Mayo",
+            "A bold, aromatic mayo infused with our House Sauce — best paired with fresh greens or a simple side salad.",
+            75
+          ],
+          [
+            "Smoky Chili Jaew Sauce",
+            "",
+            75
+          ],
+          [
+            "Spicy Chicharrón (25G)",
+            "Crispy, fiery pork crackling on top, bold and aromatic",
+            250
+          ],
+          [
+            "Grilled Pepper Mayo",
+            "",
+            75
+          ],
+          [
+            "Spicy Grilled Pepper Sauce",
+            "",
+            75
+          ],
+          [
+            "Sriracha",
+            "",
+            75
+          ],
+          [
+            "Thai Sweet Chilli Sauce",
+            "",
+            75
+          ],
+          [
+            "Green Curry Sauce (3.5 Oz)",
+            "Fragrant Thai herbs and creamy coconut milk come together in a rich, aromatic green curry sauce.",
+            350
+          ],
+          [
+            "Peanut Satay Sauce (3.5 Oz)",
+            "Rich and creamy, with nutty peanut flavor and a smooth, savory finish.",
+            350
+          ],
+          [
+            "Extra Rice",
+            "",
+            350
+          ],
+          [
+            "Extra Garlic Rice",
+            "",
+            350
+          ],
+          [
+            "Extra Salad",
+            "",
+            350
+          ]
+        ]
+      },
+      {
+        "name": "Snack & Beverages",
+        "items": [
+          [
+            "Thai Craft Tea",
+            "",
+            495
+          ],
+          [
+            "Pandan Refresher",
+            "",
+            495
+          ],
+          [
+            "Water",
+            "",
+            200
+          ],
+          [
+            "Canada Dry Ginger Ale",
+            "",
+            250
+          ],
+          [
+            "Sprite Lemon Lime",
+            "",
+            250
+          ],
+          [
+            "Dr Pepper",
+            "",
+            250
+          ],
+          [
+            "Diet Coke",
+            "",
+            250
+          ],
+          [
+            "Sugar Free Peach Soda",
+            "",
+            495
+          ],
+          [
+            "Black Tea",
+            "",
+            495
+          ]
+        ]
+      }
+    ],
+    "quoteOnly": "Current Palo Alto menu from the restaurant’s own linked ordering page. Plus-marked dishes are starting prices; options can change the total.",
+    "panels": [
+      {
+        "head": "Hours and branch contact",
+        "body": [
+          "Published website and branch schedules differ. Confirm today’s service and pickup times directly.",
+          "General text inquiries: 408-210-7799."
+        ],
+        "links": [
+          {
+            "label": "Current branch menu and service times",
+            "href": "https://pos.chowbus.com/online-ordering/store/HolyShred/50216"
+          },
+          {
+            "label": "HolyShred locations",
+            "href": "https://www.holyshred.co/"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/holyshred.mp4",
+      "poster": "/clips/holyshred-poster.webp",
+      "href": "https://www.instagram.com/reel/Dd5GvcEhSDf/",
+      "credit": "Posted by @holyshred.thai · Own-account dish film; the caption says it is available at all HolyShred locations.",
+      "platform": "Instagram"
+    },
+    "phone": "650-223-9737"
+  },
+  {
+    "slug": "simply-cake-bakery",
+    "name": "Simplycake Bakery",
+    "label": "Simplycake",
+    "cuisine": "Taiwanese bakery and celebration cakes",
+    "tagline": "Handcrafted Taiwanese breads, celebration cakes, pastries, coffee and tea on East 3rd Avenue.",
+    "color": "#211C21",
+    "icon": "simply-cake-bakery",
+    "prep": 0,
+    "category": "Cakes",
+    "items": [],
+    "site": "https://www.simplycakebakery.com/",
+    "address": "132 E 3rd Ave, San Mateo, CA 94401",
+    "phone": "650-348-2888",
+    "email": "hello@simplycakebakery.com",
+    "hours": "Tue–Sun 10am–9pm",
+    "instagram": "simplycakebakery",
+    "orderUrl": "https://ordersimplycake.square.site",
+    "sections": [
+      {
+        "name": "Savory Breads",
+        "items": [
+          [
+            "BBQ Pork Bun",
+            "Soft bun with BBQ pork and cheese.",
+            280
+          ],
+          [
+            "BBQ Skewers",
+            "Beef smokies and beef pepperoni in Danish pastry.",
+            699
+          ],
+          [
+            "French Toast Sando",
+            "Toast with ham, pork sung, cheddar and mozzarella.",
+            550
+          ],
+          [
+            "Garlic Breadstick",
+            "Garlic-and-herb breadstick.",
+            260
+          ],
+          [
+            "Ham and Egg",
+            "Soft bun with ham and egg.",
+            240
+          ],
+          [
+            "Hot Dog Cheesy Bun",
+            "Hot dog in soft bread with cheese and herbs.",
+            265
+          ],
+          [
+            "Pizza Bun",
+            "Tomato, mozzarella, herbs and bacon in a bun.",
+            330
+          ],
+          [
+            "Plain Milk Bun",
+            "Plain sweet milk bun.",
+            150
+          ],
+          [
+            "Pork Sung Roll",
+            "Pork sung, house mayo and green onion.",
+            285
+          ],
+          [
+            "Pork Sung Sausage Bread",
+            "Sausage and pork sung in soft bread.",
+            399
+          ],
+          [
+            "Pork Sung Walnut",
+            "House mayo, pork sung and crushed walnuts.",
+            330
+          ],
+          [
+            "Seaweed Pork Sung Bun",
+            "Seaweed and shredded pork bun.",
+            300
+          ],
+          [
+            "Spicy Dog Wasabi Bun",
+            "Spicy beef sausage with wasabi spread.",
+            330
+          ]
+        ]
+      },
+      {
+        "name": "Sweet Breads",
+        "items": [
+          [
+            "Chocolate Delight",
+            "Sweet bun with chocolate cream and dark chocolate shavings.",
+            260
+          ],
+          [
+            "Coconut Horn",
+            "Swirled bun with sweet coconut filling.",
+            235
+          ],
+          [
+            "Cream Caterpillar Bun",
+            "Ridged soft bun with creamy filling.",
+            325
+          ],
+          [
+            "Custard Bun",
+            "Custard-filled bun.",
+            225
+          ],
+          [
+            "Danish Pineapple bun",
+            "Danish pastry with pineapple-bun topping and sliced almonds.",
+            450
+          ],
+          [
+            "Durian Pull Apart bread",
+            "Pull-apart bread with durian filling.",
+            575
+          ],
+          [
+            "Hong Kong Style Pineapple Bun",
+            "Sweet bun with a crisp pineapple-style topping.",
+            180
+          ],
+          [
+            "Milk Raisin Bun",
+            "Milk bun with raisins.",
+            235
+          ],
+          [
+            "Pineapple Overload",
+            "Crisp bun with pineapple filling.",
+            285
+          ],
+          [
+            "Pork Sung and Red Bean Rolls",
+            "Pork sung and red bean rolls.",
+            899
+          ],
+          [
+            "Pork Sung and Taro Rolls",
+            "Pork sung and taro rolls.",
+            899
+          ],
+          [
+            "Powdered Sugar Bun",
+            "Milk-cream filling and powdered sugar.",
+            275
+          ],
+          [
+            "Purple Yam Bun",
+            "Purple yam bun.",
+            260
+          ],
+          [
+            "Simply Cheese Bun",
+            "Cheese-filled bun.",
+            275
+          ],
+          [
+            "Simply Crumble Pie",
+            "Toast crumbs, custard, raisins and milk.",
+            275
+          ],
+          [
+            "Stuffed Creme Brulee Toast",
+            "Toast with crème brûlée filling and caramelized sugar crust.",
+            450
+          ],
+          [
+            "Taiwanese Red Bean Bun",
+            "Red bean-filled bun with powdered sugar.",
+            275
+          ],
+          [
+            "To-Taro",
+            "Taro filling and sliced almond topping.",
+            275
+          ],
+          [
+            "Walnut Nocturne Crunch",
+            "Cuttlefish-ink dough, golden cheese filling, walnuts and powdered sugar.",
+            650
+          ],
+          [
+            "Yogurt Custard Bread",
+            "Soft bread with yogurt custard filling.",
+            425
+          ]
+        ]
+      },
+      {
+        "name": "Mousse Cakes",
+        "items": [
+          [
+            "Mango Mousse Cake",
+            "Mango mousse and sponge cake. Published options: 4 inch $22; 6 inch $34.75; 8 inch $47; 10 inch $69.",
+            2200,
+            null,
+            "$22–$69"
+          ],
+          [
+            "Strawberry Mousse Cake",
+            "Strawberry mousse and sponge cake. Published options: 4 inch $22; 6 inch $34.75; 8 inch $47; 10 inch $69.",
+            2200,
+            null,
+            "$22–$69"
+          ],
+          [
+            "Blueberry Mousse Cake",
+            "Blueberry mousse and sponge cake. Published options: 4 inch $22; 6 inch $34.75; 8 inch $47; 10 inch $69.",
+            2200,
+            null,
+            "$22–$69"
+          ],
+          [
+            "Matcha Mousse",
+            "Matcha mousse and sponge cake. Published options: 4 inch $22; 6 inch $34.75; 8 inch $47; 10 inch $69.",
+            2200,
+            null,
+            "$22–$69"
+          ],
+          [
+            "Tiramisu",
+            "Mascarpone mousse, espresso-soaked sponge and cocoa. Published options: 4 inch $22; 6 inch $34.75; 8 inch $47; 10 inch $69.",
+            2200,
+            null,
+            "$22–$69"
+          ],
+          [
+            "Mango Cheesecake",
+            "Mango cheesecake over sponge with fresh mango. Published options: 4 inch $22; 6 inch $34.75; 8 inch $47; 10 inch $69.",
+            2200,
+            null,
+            "$22–$69"
+          ],
+          [
+            "Valrhona Chocolate Mousse Cake",
+            "Valrhona chocolate mousse and sponge cake. Published options: 4 inch $22; 6 inch $34.75; 8 inch $47; 10 inch $69.",
+            2200,
+            null,
+            "$22–$69"
+          ],
+          [
+            "Mocha Mousse",
+            "Espresso mousse and chocolate layers. Published options: 4 inch $22; 6 inch $34.75; 8 inch $47; 10 inch $69.",
+            2200,
+            null,
+            "$22–$69"
+          ]
+        ]
+      },
+      {
+        "name": "Sponge Cakes",
+        "items": [
+          [
+            "Mango Sponge Cake",
+            "Mango-filled sponge cake topped with fresh mango. Published options: 4 inch $20; 6 inch $31.75; 8 inch $43; 10 inch $65.",
+            2000,
+            null,
+            "$20–$65"
+          ],
+          [
+            "Strawberry Sponge Cake",
+            "Strawberry-filled sponge cake topped with strawberries. Published options: 4 inch $20; 6 inch $31.75; 8 inch $43; 10 inch $65.",
+            2000,
+            null,
+            "$20–$65"
+          ],
+          [
+            "Mixed Fruit Sponge Cake",
+            "Sponge cake with cream, strawberry, mango and honeydew. Published options: 4 inch $20; 6 inch $31.75; 8 inch $43; 10 inch $65.",
+            2000,
+            null,
+            "$20–$65"
+          ],
+          [
+            "Chocolate Sponge Cake",
+            "Valrhona chocolate sponge and whipped chocolate cream. Published options: 4 inch $20; 6 inch $31.75; 8 inch $43; 10 inch $65.",
+            2000,
+            null,
+            "$20–$65"
+          ],
+          [
+            "Chestnut Sponge Cake",
+            "Sponge cake with chestnut cream. Published options: 4 inch $22; 6 inch $34.75; 8 inch $47; 10 inch $69.",
+            2200,
+            null,
+            "$22–$69"
+          ],
+          [
+            "Coffee Sponge Cake",
+            "Coffee sponge cake with coffee cream. Published options: 4 inch $20; 6 inch $31.75; 8 inch $43; 10 inch $65.",
+            2000,
+            null,
+            "$20–$65"
+          ]
+        ]
+      },
+      {
+        "name": "Simplycake Specials",
+        "items": [
+          [
+            "New York Cheesecake",
+            "Cheesecake with lemon zest over a sponge cake base. Published options: 6 inch $33.50; 8 inch $45.50; 10 inch $63.",
+            3350,
+            null,
+            "$33.50–$63"
+          ]
+        ]
+      },
+      {
+        "name": "Tea",
+        "items": [
+          [
+            "Hot Tea",
+            "",
+            500
+          ],
+          [
+            "Lemon Black Tea",
+            "",
+            500
+          ],
+          [
+            "Green Tea",
+            "",
+            525
+          ],
+          [
+            "Hong Kong Style Milk Tea",
+            "",
+            500
+          ],
+          [
+            "Ying Yang",
+            "",
+            500
+          ],
+          [
+            "Smashed Lime",
+            "",
+            500
+          ]
+        ]
+      },
+      {
+        "name": "Coffee",
+        "items": [
+          [
+            "Medium Roast Coffee",
+            "",
+            300
+          ],
+          [
+            "Dark Roast Coffee",
+            "",
+            300
+          ]
+        ]
+      },
+      {
+        "name": "Other",
+        "items": [
+          [
+            "Hot Chocolate",
+            "Hot chocolate made with Moonstruck Chocolate Co. chocolate.",
+            500
+          ],
+          [
+            "Milk",
+            "",
+            300
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "Chocolate Cake Roll",
+            "Valrhona chocolate cake roll.",
+            330
+          ],
+          [
+            "Coffee Cake Roll",
+            "Coffee sponge roll with cream and tiger-skin wrapping.",
+            330
+          ],
+          [
+            "Lemon Cake Roll",
+            "Sponge roll with lemon cream and tiger-skin pattern.",
+            330
+          ],
+          [
+            "Matcha Cake Roll",
+            "Matcha cake roll.",
+            330
+          ],
+          [
+            "Mango Cake Roll",
+            "Mango cake roll.",
+            330
+          ],
+          [
+            "Japanese Cheesecake",
+            "Light Japanese-style cheesecake.",
+            285
+          ],
+          [
+            "Half Baked Trio",
+            "Cheesecake over thin sponge, lemon zest and caramelized crust.",
+            685
+          ],
+          [
+            "Honey Castella Cake",
+            "Honey-sweetened castella cake.",
+            290
+          ],
+          [
+            "Hokkaido Sponge Cake",
+            "Soft sponge cake with vanilla cream.",
+            600
+          ],
+          [
+            "Sea Salt Sponge cake",
+            "Sponge cake topped with sea salt whipped cream.",
+            1000
+          ],
+          [
+            "Salted Cheese Loaf",
+            "Cheesecake loaf with Parmesan.",
+            575
+          ],
+          [
+            "Pork Sung BBs",
+            "Small cakes with sweet cream sauce and pork sung coating.",
+            1250
+          ],
+          [
+            "Coconut Cake",
+            "Small sponge rolls with coconut filling.",
+            475
+          ],
+          [
+            "Mini Chocolate Cupcakes",
+            "Bag of mini chocolate cupcakes.",
+            525
+          ],
+          [
+            "Taro Snowy Cake",
+            "Taro-filled cake dusted with powdered sugar. The listed dessert is $6.99; celebration sizes are listed separately without prices.",
+            699
+          ],
+          [
+            "Cream Pancake",
+            "Cream-filled crêpe; durian or mango flavors.",
+            425
+          ],
+          [
+            "Simplycake",
+            "Cake with pork sung in the batter and on top.",
+            1200
+          ],
+          [
+            "Souffle",
+            "Strawberry or mango soufflé.",
+            1200
+          ]
+        ]
+      },
+      {
+        "name": "Biscuits and Tarts",
+        "items": [
+          [
+            "Coconut Biscuit",
+            "Coconut biscuits.",
+            425
+          ],
+          [
+            "Sesame Biscuit",
+            "White-sesame biscuits.",
+            425
+          ],
+          [
+            "Almond Biscuit",
+            "Almond biscuits.",
+            475
+          ],
+          [
+            "Po Tat",
+            "Caramelized egg-custard tart.",
+            295
+          ],
+          [
+            "Coconut Tart",
+            "Coconut-filled tart.",
+            265
+          ],
+          [
+            "Walnut Tart",
+            "Caramelized walnut tart with powdered sugar.",
+            285
+          ],
+          [
+            "Lava Cheese Tart",
+            "Molten cheese tart.",
+            300
+          ],
+          [
+            "Madeleines",
+            "Small French sponge cakes.",
+            399
+          ],
+          [
+            "Mochi Cookie (original sesame)",
+            "Chewy mochi cookie with black sesame.",
+            1099
+          ],
+          [
+            "Coconut Bites",
+            "Small coconut bites.",
+            599
+          ],
+          [
+            "Pineapple Cake",
+            "Taiwanese pastry with pineapple filling.",
+            250
+          ],
+          [
+            "Simply Shortbread Cookies",
+            "Buttery, nutty shortbread cookies.",
+            799
+          ]
+        ]
+      },
+      {
+        "name": "Toast Bread",
+        "items": [
+          [
+            "Matcha Toast",
+            "Matcha toast bread with raisins.",
+            375
+          ],
+          [
+            "White Toast Bread",
+            "Sweet milk or sea salt toast bread.",
+            350
+          ],
+          [
+            "Sticky Rice Toast",
+            "Toast bread with sticky rice.",
+            525
+          ],
+          [
+            "Sesame Toast",
+            "Black-sesame toast bread.",
+            525
+          ],
+          [
+            "Butter Toast",
+            "Butter-flavored toast bread.",
+            435
+          ],
+          [
+            "Taro Loaf",
+            "Taro-swirled loaf topped with almonds.",
+            525
+          ],
+          [
+            "Custard Loaf",
+            "Loaf with custard filling.",
+            525
+          ],
+          [
+            "Pork Sung Loaf",
+            "Loaf with shredded pork floss.",
+            525
+          ],
+          [
+            "Chocolate Loaf",
+            "Chocolate-swirled loaf with roasted almonds.",
+            525
+          ],
+          [
+            "CD Croissant",
+            "Buttery layered croissant.",
+            600
+          ],
+          [
+            "Hand Pulled Croissant",
+            "Hand-pulled croissant.",
+            1000
+          ]
+        ]
+      }
+    ],
+    "quoteOnly": "Order cakes directly from Simplycake with three business days’ notice. Published sizes and price options are retained. Large and custom cakes, plus unpriced items, are confirmed by phone or orders@simplycakebakery.com.",
+    "panels": [
+      {
+        "head": "More bakery items",
+        "body": [
+          "Hokkaido Milk Bread — Soft Hokkaido milk bread with creamy filling.",
+          "Chocolate Crunch Cake — Hazelnut chocolate crunch cake. Website labels tree nuts.",
+          "Vanilla Crunch Cake — Vanilla crunch cake. Website labels tree nuts.",
+          "Hokkaido Sponge Cake (celebration size) — Celebration-sized sponge cake with Hokkaido milk cream.",
+          "Sea Salt Sponge Cake (celebration size) — Celebration-sized sea salt sponge cake.",
+          "Taro Snowy Cake (celebration size) — Celebration-sized taro cake.",
+          "Box Cake — Cake served in a box.",
+          "Strawberry Mousse, Mango Mousse — Listed cake-slice flavors: strawberry mousse or mango mousse.",
+          "Blueberry Mousse, Matcha Mousse, Chocolate Mousse — Listed cake-slice flavors: blueberry, matcha or chocolate mousse.",
+          "Durian Mille Crêpe, Matcha Mille Crêpe — Listed cake-slice flavors: durian or matcha mille crêpe.",
+          "Japanese Fresh Milk Cake — Soft fresh-milk cake.",
+          "Caramelized Chiffon Cheesecake — Caramelized top over chiffon cheesecake.",
+          "Crème Brulee — Custard with caramelized sugar crust.",
+          "Hokkaido Cream Puff — Cream-filled puff pastry.",
+          "Mini Vanilla Cupcakes — Mini vanilla cupcakes.",
+          "Dan Tat — Flaky egg-custard tart.",
+          "Mo Cheesy — Cheddar mochi balls.",
+          "Chocolate Drizzy — Chocolate-filled mochi balls with chocolate drizzle.",
+          "Chocolate Block Crispies — Chocolate, nuts and sesame crispies.",
+          "Wife Cake — Flaky pastry with winter melon filling.",
+          "Eggyolk Pastry — Layered pastry with salted egg yolk filling."
+        ],
+        "links": [
+          {
+            "label": "Complete current bakery menu",
+            "href": "https://www.simplycakebakery.com/menus"
+          }
+        ]
+      },
+      {
+        "head": "Cake orders",
+        "body": [
+          "Cakes and bulk orders: orders@simplycakebakery.com. General inquiries: hello@simplycakebakery.com.",
+          "Online cake orders require three business days. Ask directly about 12-inch, sheet and custom cakes.",
+          "The bakery says all products contain egg, and mousse cakes contain porcine gelatin. Confirm ingredients for your needs."
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/simply-cake-bakery.mp4",
+      "poster": "/clips/simply-cake-bakery-poster.webp",
+      "href": "https://www.instagram.com/reel/De2YbEdSe3w/",
+      "credit": "Posted by @simplycakebakery",
+      "platform": "Instagram"
+    }
+  },
+  {
+    "slug": "chez-maeju",
+    "name": "Chez Maeju",
+    "label": "Chez Maeju",
+    "cuisine": "Korean fermentation kitchen",
+    "tagline": "Seasonal Korean cooking and house-fermented jang in Oakland’s Rockridge neighborhood.",
+    "color": "#211C21",
+    "icon": "chez-maeju",
+    "prep": 0,
+    "category": "Korean",
+    "items": [],
+    "site": "https://chezmaeju.com/",
+    "address": "6200 Claremont Ave, Oakland, CA 94618",
+    "phone": "510-338-3572",
+    "email": "team@chezmaeju.com",
+    "hours": "Sun, Mon, Wed 5–9pm; Thu–Sat 5–10pm; Tue closed",
+    "instagram": "chezmaeju",
+    "contactOnly": "The seasonal dinner menu lists dishes without prices. Contact the restaurant for current prices, availability and soft-opening hours.",
+    "panels": [
+      {
+        "head": "Appetizers",
+        "body": [
+          "Garden Crudités & Jang Trio — Seasonal organic crudités · trio of house-fermented Korean sauces — caramelized apple gochujang, sesame doenjang cream, perilla ssamjang",
+          "Crispy Snowflake Dumpling — Handmade shrimp & pork dumplings finished with a delicate, lacy crisp skirt",
+          "Mung Bean Pancake — Crispy pancake of house-ground mung beans, pork & kimchi",
+          "Crispy Baby Back Ribs — 4 pcs or 6 pcs · citrus-gochujang chili or garlic-soy glaze",
+          "Lava Lime Chicken Wings — 8 pcs · fried chicken wings tossed in a buttery spicy sauce with lime · spicy"
+        ]
+      },
+      {
+        "head": "Seafood & Meat",
+        "body": [
+          "Grilled Pacific Mackerel Fillet — Grilled mackerel with house-fermented gochujang glaze · served with rice and side dishes",
+          "Tteokgalbi & Grilled Rice Cake — Grilled beef patties seasoned with a savory soy marinade, served with grilled mochi · served with rice and side dishes",
+          "Grilled Beef Short Ribs — Cross-cut beef short ribs marinated with Korean pear and savory soy · served with rice and side dishes",
+          "Grilled Beef Bulgogi — Beef marinated with Korean pear and savory soy · served with rice and side dishes",
+          "Grilled Spicy Pork — Pork marinated in a spicy gochujang sauce · spicy · served with rice and side dishes",
+          "Grilled Chicken — Chicken marinated with Korean pear and savory soy · served with rice and side dishes",
+          "Bossam — Slow-cooked pork belly with lettuce wraps, radish kimchi and house-made ssamjang",
+          "Hwe Muchim * — Fresh seasonal fish with sesame leaves in a makgeoli-gochujang vinaigrette · spicy",
+          "Ganjang Gejang, Crab * — Raw crab marinated in savory soy sauce, served with fish roe rice bowl · limited availability",
+          "Ganjang Saeujang, Prawn * — Raw prawns marinated in savory soy sauce, served with fish roe rice bowl"
+        ]
+      },
+      {
+        "head": "Specialty Kimchi",
+        "body": [
+          "Tomato Kimchi",
+          "Olive Kimchi",
+          "Fresh Kimchi Salad, Geotjeori — Seasonal organic lettuce lightly dressed in a vibrant Korean chili vinaigrette"
+        ]
+      },
+      {
+        "head": "Bap · Noodle · Stew",
+        "body": [
+          "Seasonal Vegetable Dolsot Bibimbap or Bibimbap — Seasonal vegetables and a fried egg over crispy rice, served with gochujang · add tofu, bulgogi, chicken, spicy pork or spicy seafood",
+          "Trio Mushroom Japchae — Sweet potato glass noodles stir-fried with three varieties of mushrooms and seasonal vegetables · add bulgogi",
+          "Perilla Oil Buckwheat Noodles — Chilled buckwheat noodles tossed in cold-pressed perilla oil, savory seaweed, and toasted sesame",
+          "Beef Brisket Ramen — Rich, savory broth with brisket and flame-seared vegetables · spicy or mild",
+          "Soontofu Stew — House-fermented chili paste with silken tofu stew with egg · spicy or mild · choose beef, seafood or mushroom-veggie · served with rice and side dishes",
+          "Doenjang Jjigae — Rich, house-fermented soybean paste stew simmered with tender beef, vegetables & tofu · served with rice and side dishes"
+        ]
+      },
+      {
+        "head": "Extra",
+        "body": [
+          "Steamed Rice"
+        ]
+      },
+      {
+        "head": "Dessert",
+        "body": [
+          "Yakgwa Ice Cream Sundae — Vanilla ice cream with yakgwa & sweet red bean",
+          "Sujeonggwa, Korean Cinnamon Ginger Punch — Chilled cinnamon-ginger punch served with walnut-filled persimmon rolls and pine nuts"
+        ]
+      },
+      {
+        "head": "Reservations and events",
+        "body": [
+          "Published soft-opening hours may expand. Book online for up to six; email the restaurant for larger groups and private events.",
+          "Some seafood is served raw; dishes and availability change with the season. Ask the kitchen about ingredients."
+        ],
+        "links": [
+          {
+            "label": "Restaurant reservations",
+            "href": "https://chezmaeju.com/book"
+          },
+          {
+            "label": "Current dinner menu",
+            "href": "https://chezmaeju.com/menu"
+          }
+        ]
+      }
+    ]
   },
 ]

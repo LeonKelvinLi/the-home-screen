@@ -888,7 +888,12 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: '1042 Marina Blvd, San Leandro',
   }),
   seed('polly-ann', 'Polly Ann Ice Cream', 'Polly Ann', 'Ice cream', '#C0335E', {
-    icon: 'polly-ann',
+    clip: {"src": "/clips/polly-ann-affogato.mp4", "poster": "/clips/polly-ann-affogato-poster.webp", "href": "https://www.instagram.com/reel/DSf9qv8knSW/", "credit": "Posted by @pollyann.sf", "platform": "Instagram"},
+    instagram: "pollyann.sf",
+    phone: "415-664-2472",
+    panels: [{"head": "Locations in the reviews", "body": ["The Noriega shop is at 3138 Noriega Street. Jenn’s review was filmed at the 120 Pine Street pop-up; confirm its current dates with Polly Ann."]}],
+
+    icon: 'polly-ann-v86',
     logoTemplate: 'monogram', logoInitials: 'PA', logoFace: 'script',
     site: 'https://www.pollyann.com/',
     address: '3138 Noriega St, San Francisco',
@@ -950,6 +955,8 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: '3 Plaza View Ln, Foster City',
   }),
   seed('senor-sisig', 'Señor Sisig', 'Señor Sisig', 'Filipino', '#B0201F', {
+    clip: {"src": "/clips/senor-sisig-plo-v86.mp4", "poster": "/clips/senor-sisig-plo-v86-poster.webp", "href": "https://www.instagram.com/reel/Cr_O_ivO36E/", "credit": "Posted by @senorsisig · Archival May 2023 P-Lo commercial. The May 8–14 burrito promotion and May 13 show have ended.", "platform": "Instagram"},
+
     icon: 'senor-sisig',
     logoTemplate: 'monogram', logoInitials: 'SS', logoFace: 'condensed',
     site: 'https://www.senorsisig.com/',
@@ -1193,6 +1200,8 @@ export const ROSTER_SEED: LocalSeed[] = [
      flagged to him. Every fact below is from their own site or bio; Dad's
      menu and photos are from their own ordering page. */
   seed('dads-bbq', "Dad's BBQ", "Dad's BBQ", 'Mississippi-style BBQ', '#B8121B', {
+    clip: {"src": "/clips/dads-bbq-turkeys-v86.mp4", "poster": "/clips/dads-bbq-turkeys-v86-poster.webp", "href": "https://www.instagram.com/reel/DfNtuGlgKN4/", "credit": "Posted by @dadsbbqca · Holiday turkey preparation; contact the restaurant for availability.", "platform": "Instagram"},
+
     icon: 'dads-bbq',
     logoTemplate: 'badge', logoLines: ["DAD'S", 'BBQ'], logoFace: 'slab',
     site: 'https://dadsbbqco.com/',

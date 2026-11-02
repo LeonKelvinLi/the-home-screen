@@ -40,8 +40,12 @@ export interface OtherReview {
 
 export interface FoodiePage {
   handle: string
+  /** Current profile when the stable page key belongs to an earlier handle. */
+  instagram?: string
   name: string
   label: string
+  /** Curated travel/music creators need not claim food reviewing as a profession. */
+  cuisine?: string
   /** An existing page that is this creator's (Grand-O's), instead of a new one. */
   brand?: string
   /** Original profile artwork supplied for this creator. */
@@ -56,9 +60,9 @@ const TOP_FOODIE_PAGES: FoodiePage[] = [
   { handle: 'foodandsachi', icon: "foodie-foodandsachi-v85", name: 'Sachi', label: 'Sachi' },
   { handle: 'hungere.for.diy', icon: "foodie-hungere-for-diy-v85", name: 'Hunger E for DIY', label: 'Hunger E' },
   { handle: 'justmostie', icon: "foodie-justmostie-v85", name: 'Mostie', label: 'Mostie' },
-  { handle: 'capturedbysado', name: 'capturedbysado', label: 'Sado' },
-  { handle: 'allie.eats', name: 'Allie Tong', label: 'Allie Tong' },
-  { handle: 'seekeasyeats', name: 'Seekeasy', label: 'Seekeasy' },
+  { handle: 'capturedbysado', icon: "foodie-capturedbysado-v86", name: 'capturedbysado', label: 'Sado' },
+  { handle: 'allie.eats', icon: "foodie-allie-eats-v86", name: 'Allie Tong', label: 'Allie Tong' },
+  { handle: 'seekeasyeats', icon: "foodie-whofedandrew-v86", instagram: 'whofedandrew', name: 'Andrew Greenstein', label: 'Andrew' },
   { handle: 'orangeginger', name: 'Liz Maw', label: 'Liz Maw' },
   { handle: 'antoinetterzz', name: 'antoinetterzz', label: 'Antoinette' },
   { handle: 'takeoutwithtuck', name: 'The Honest Reviewer', label: 'Tuck' },
@@ -74,7 +78,7 @@ const TOP_FOODIE_PAGES: FoodiePage[] = [
   { handle: 'hungrydanz', name: 'Dan', label: 'Dan' },
   { handle: 'iamnikkieg', name: 'Nikkie G', label: 'Nikkie G' },
   { handle: 'janeethefoodie', name: 'Jane', label: 'Jane' },
-  { handle: 'peggy_shoo', name: 'peggy xu', label: 'Peggy' },
+  { handle: 'peggy_shoo', icon: "foodie-peggy-shoo-v86", name: 'peggy xu', label: 'Peggy' },
 ]
 
 /* Glenn, 30 Oct 8:26 am: a yellow page for the extended number of foodies.
@@ -108,7 +112,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "acoupleofcooks"
   },
   {
-    "handle": "jantrinanicole",
+    "handle": "jantrinanicole", icon: "foodie-jantrinanicole-v86",
     "name": "@jantrinanicole",
     "label": "jantrinanicole"
   },
@@ -123,7 +127,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "thealamedapulse"
   },
   {
-    "handle": "bayareamunchies510",
+    "handle": "bayareamunchies510", icon: "foodie-bayareamunchies510-v86",
     "name": "@bayareamunchies510",
     "label": "bayareamunchies510"
   },
@@ -203,7 +207,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "dariananthony_"
   },
   {
-    "handle": "charweeezy",
+    "handle": "charweeezy", icon: "foodie-charweeezy-v86",
     "name": "@charweeezy",
     "label": "charweeezy"
   },
@@ -253,7 +257,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "livingvivalakillah"
   },
   {
-    "handle": "eighty6ix_",
+    "handle": "eighty6ix_", icon: "foodie-eighty6ix-v86",
     "name": "@eighty6ix_",
     "label": "eighty6ix_"
   },
@@ -388,7 +392,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "bayarea.foodie.san"
   },
   {
-    "handle": "felicitythefoodie",
+    "handle": "felicitythefoodie", icon: "foodie-felicitythefoodie-v86",
     "name": "@felicitythefoodie",
     "label": "felicitythefoodie"
   },
@@ -483,7 +487,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "charlikestoeat"
   },
   {
-    "handle": "hellahansel",
+    "handle": "hellahansel", icon: "foodie-hellahansel-v86",
     "name": "@hellahansel",
     "label": "hellahansel"
   },
@@ -508,7 +512,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "whatthejessi_"
   },
   {
-    "handle": "foodgiveness",
+    "handle": "foodgiveness", icon: "foodie-foodgiveness-v86",
     "name": "@foodgiveness",
     "label": "foodgiveness"
   },
@@ -588,7 +592,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "humminglion"
   },
   {
-    "handle": "siliconvalley.foodies",
+    "handle": "siliconvalley.foodies", icon: "foodie-siliconvalley-foodies-v86",
     "name": "@siliconvalley.foodies",
     "label": "siliconvalley.foodies"
   },
@@ -781,9 +785,31 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "sonomacountyliving", "name": "@sonomacountyliving", "label": "sonomacountyliving"},
   {"handle": "lovecartier25", "name": "@lovecartier25", "label": "lovecartier25"},
   {"handle": "foodelaventures", "name": "@foodelaventures", "label": "foodelaventures"},
-  {"handle": "fedoramaelle", "name": "@fedoramaelle", "label": "fedoramaelle"},
+  {"handle": "fedoramaelle", icon: "foodie-fedoramaelle-v86", "name": "@fedoramaelle", "label": "fedoramaelle"},
   {"handle": "foodie_travel_happiness", "name": "@foodie_travel_happiness", "label": "foodie_travel_happiness"},
   {"handle": "peterlyagent", icon: "foodie-peterlyagent-v85", "name": "Peter Ly", "label": "Peter Ly"},
+  {"handle": "k.smokeskitchen", "name": "K. Smokes Kitchen", "label": "K. Smokes", "icon": "foodie-k-smokeskitchen-v86"},
+  {"handle": "tysf.qods", "name": "@tysf.qods", "label": "tysf.qods", "icon": "foodie-tysf-qods-v86"},
+  {"handle": "ilisaeatssf", "name": "@ilisaeatssf", "label": "ilisaeatssf", "icon": "foodie-ilisaeatssf-v86"},
+  {"handle": "tundemodupee", "name": "Tunde Modupe", "label": "Tunde", "icon": "foodie-tundemodupee-v86"},
+  {"handle": "wafflebam", "name": "@wafflebam", "label": "Wafflebam", "icon": "foodie-wafflebam-v86"},
+  {"handle": "goyuliiago", "name": "@goyuliiago", "label": "goyuliiago", "icon": "foodie-goyuliiago-v86"},
+  {"handle": "jamiebeoutside", "name": "@jamiebeoutside", "label": "Jamie", "icon": "foodie-jamiebeoutside-v86"},
+  {"handle": "pastrywithjenn", "name": "Jenn Yee", "label": "Jenn", "icon": "foodie-pastrywithjenn-v86"},
+  {"handle": "anjali_wandersoul", "name": "@anjali_wandersoul", "label": "Anjali", "icon": "foodie-anjali-wandersoul-v86", "cuisine": "Travel creator"},
+  {"handle": "travelwtiff", "name": "@travelwtiff", "label": "Tiffany", "icon": "foodie-travelwtiff-v86"},
+  {"handle": "gabriiellas", "name": "@gabriiellas", "label": "gabriiellas", "icon": "foodie-gabriiellas-v86"},
+  {"handle": "ploinsanfrancisco", "name": "P-LO | SF Bay Area Food + Travel", "label": "P-LO SF", "icon": "foodie-ploinsanfrancisco-v86"},
+  {"handle": "piscesprincesspriya", "name": "Priya", "label": "Priya", "icon": "foodie-piscesprincesspriya-v86"},
+  {"handle": "d_baylock_", "name": "DateNight | D", "label": "DateNight D", "icon": "foodie-d-baylock-v86"},
+  {"handle": "hallojessa", "name": "Jessa Dee Carino", "label": "Jessa", "icon": "foodie-hallojessa-v86"},
+  {"handle": "lagrandedelabanda", "name": "Cynthia La Grande Silva", "label": "La Grande", "icon": "foodie-lagrandedelabanda-v86", "cuisine": "Singer, songwriter and food visits"},
+  {"handle": "chaudownfood", "name": "Angie", "label": "Angie", "icon": "foodie-chaudownfood-v86"},
+  {"handle": "_emwong_", "name": "Emma Wong-Stephens", "label": "Emma", "icon": "foodie-emwong-v86"},
+  {"handle": "phoebe8food", "name": "Phoebe", "label": "Phoebe", "icon": "foodie-phoebe8food-v86"},
+  {"handle": "karaxhuynh", "name": "Kara Huynh", "label": "Kara", "icon": "foodie-karaxhuynh-v86"},
+  {"handle": "wakeyeats", "name": "Weiqi", "label": "Weiqi", "icon": "foodie-wakeyeats-v86"},
+  {"handle": "dodo__eats", "name": "Evan", "label": "Evan", "icon": "foodie-dodo-eats-v86"},
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -1055,6 +1081,62 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "aztec.ed", "place": "El Portal Mexican Restaurant", "city": "San Leandro", "brand": "b_elportalsanleandro", "reel": "https://www.instagram.com/reel/DXDFiGkAbCn/", "clip": true, "credit": "Filmed by @aztec.ed · Archival April review; confirm current specials with the restaurant."},
   // Glenn: Mediocre. Original post verified; local media copy held.
   {"by": "bayarea_fooddreamz", "place": "The Backyard \u2014 Richmond", "city": "Richmond", "brand": "b_therichmondbackyard", "reel": "https://www.instagram.com/reel/CwD8utAosUv/", "credit": "Archival August 17, 2023 visit. Watch the original post on Instagram."},
+
+  /* Batch 86 — Glenn tags retained as provenance. */
+  // Glenn: Clip
+  {"by": "hungere.for.diy", "place": "Monster Pho", "city": "Oakland", "brand": "b_monsterpho", "reel": "https://www.instagram.com/reel/C7DgtQlL1g1/", "clip": true, "credit": "Filmed by @hungere.for.diy · Filmed at 360 40th St, Oakland."},
+  // Glenn: Clip
+  {"by": "tundemodupee", "place": "Monster Pho", "city": "Oakland", "brand": "b_monsterpho", "reel": "https://www.instagram.com/reel/Dew5mRjT-NS/", "clip": true, "credit": "Filmed by @tundemodupee · Filmed in Oakland."},
+  // Glenn: Clip
+  {"by": "edmunchthefoodie", "place": "Monster Pho", "city": "Oakland", "brand": "b_monsterpho", "reel": "https://www.instagram.com/reel/DXQV7WHApNF/", "clip": true, "credit": "Filmed by @edmunchthefoodie · Filmed at 360 40th St, Oakland."},
+  // Glenn: Clip
+  {"by": "wafflebam", "place": "Wasabi Udon & Katsu Bar", "city": "Fairfield", "brand": "b_wasabiudonandkatsubar", "reel": "https://www.instagram.com/reel/DWcaNmCkgr7/", "clip": true, "credit": "Filmed by @wafflebam · Filmed at Wasabi, 1500 Oliver Rd, Fairfield; this is not Ginza in San Francisco."},
+  // Glenn: Clip
+  {"by": "wafflebam", "place": "UMe Tea — San Jose", "city": "San Jose", "brand": "b_umeteasanjose", "reel": "https://www.instagram.com/reel/DRn2GMACRVC/", "clip": true, "credit": "Filmed by @wafflebam · UMe chain review; the caption does not identify the filmed store. San Jose locations are listed separately."},
+  // Glenn: Heavy Hitter
+  {"by": "felicitythefoodie", "place": "Brothers BBQ (Hyungjae)", "city": "San Leandro", "brand": "b_brothersbbqsanleandro", "reel": "https://www.instagram.com/reel/DTUgi24ieMC/", "clip": true, "credit": "Filmed by @felicitythefoodie"},
+  // Glenn: Newbie / Foodie
+  {"by": "fedoramaelle", "place": "Brothers BBQ (Hyungjae)", "city": "San Leandro", "brand": "b_brothersbbqsanleandro", "reel": "https://www.instagram.com/reel/DS1EFntCSee/", "clip": true, "credit": "Filmed by @fedoramaelle"},
+  // Glenn: Clip
+  {"by": "wafflebam", "place": "HolyShred — San Francisco", "city": "San Francisco", "brand": "b_holyshredsf", "reel": "https://www.instagram.com/reel/DQMpZKICUrY/", "clip": true, "credit": "Filmed by @wafflebam · Filmed at the San Francisco location. Archival opening BOGO promotion has ended."},
+  // Glenn: Heavy Hitter
+  {"by": "siliconvalley.foodies", "place": "HolyShred — Palo Alto", "city": "Palo Alto", "brand": "b_holyshredpaloalto", "reel": "https://www.instagram.com/reel/DeQOde-o0oS/", "clip": true, "credit": "Filmed by @siliconvalley.foodies · Filmed at the Palo Alto location."},
+  // Glenn: Newbie / Foodie
+  {"by": "goyuliiago", "place": "HolyShred — Palo Alto", "city": "Palo Alto", "brand": "b_holyshredpaloalto", "reel": "https://www.instagram.com/reel/DeZ5vR8P1oG/", "clip": true, "credit": "Filmed by @goyuliiago · Filmed at the Palo Alto location. Confirm current hours rather than the older caption schedule."},
+  // Glenn: Clip / update Peggy icon
+  {"by": "peggy_shoo", "place": "Polly Ann Ice Cream", "city": "San Francisco", "brand": "b_pollyann", "reel": "https://www.instagram.com/reel/Dd4OmIuvKVI/", "clip": true, "credit": "Filmed by @peggy_shoo · Original Noriega location; the page lists locations separately."},
+  // Glenn: Clip / Foodie
+  {"by": "jamiebeoutside", "place": "Polly Ann Ice Cream", "city": "San Francisco", "brand": "b_pollyann", "reel": "https://www.instagram.com/reel/DeMVsZuOD7E/", "clip": true, "credit": "Filmed by @jamiebeoutside · Filmed at the Noriega location."},
+  // Glenn: Heavy Hitter / Foodie
+  {"by": "pastrywithjenn", "place": "Polly Ann Ice Cream", "city": "San Francisco", "brand": "b_pollyann", "reel": "https://www.instagram.com/reel/DbWyx0whmoz/", "clip": true, "credit": "Filmed by @pastrywithjenn · Filmed at the 120 Pine St pop-up, not the Noriega shop. Confirm current pop-up dates."},
+  // Glenn: Heavy Hitter
+  {"by": "travelwtiff", "place": "Simplycake Bakery", "city": "San Mateo", "brand": "b_simplycakebakery", "reel": "https://www.instagram.com/reel/DdzwmdyhLQo/", "clip": true, "credit": "Posted by @travelwtiff · Posted by @travelwtiff; features @d_baylock_ reviewing the charcoal walnut cheese bread."},
+  // Glenn: Newbie / Foodie
+  {"by": "ploinsanfrancisco", "place": "Simplycake Bakery", "city": "San Mateo", "brand": "b_simplycakebakery", "reel": "https://www.instagram.com/reel/DfGwmkmhPPx/", "clip": true, "credit": "Filmed by @ploinsanfrancisco · Sponsored visit; the creator labels the post #ad."},
+  // Glenn: Foodie
+  {"by": "piscesprincesspriya", "place": "Simplycake Bakery", "city": "San Mateo", "brand": "b_simplycakebakery", "reel": "https://www.instagram.com/reel/DefEVwFvYql/", "clip": true, "credit": "Filmed by @piscesprincesspriya · This excerpt covers Simplycake; the original also features Molly Tea and Izumi Matcha."},
+  // Glenn: Foodie
+  {"by": "lagrandedelabanda", "place": "Innena's Kitchen", "city": "Oakland", "brand": "b_innenaskitchen", "reel": "https://www.instagram.com/reel/DfPul8TBIma/", "clip": true, "credit": "Filmed by @lagrandedelabanda · Review by @lagrandedelabanda, reposted by @innenaskitchen."},
+  // Glenn: Foodie only; no local clip requested
+  {"by": "gabriiellas", "place": "Yogurt Shack", "city": "Lafayette", "reel": "https://www.instagram.com/reel/DecT_ZRPBzz/"},
+  // Glenn: Clip / icon; local copy held at four films per page
+  {"by": "foodgiveness", "place": "Polly Ann Ice Cream", "city": "San Francisco", "brand": "b_pollyann", "reel": "https://www.instagram.com/reel/DXnM3fcj5vE/", "credit": "Original Noriega shop review. Watch the original post on Instagram."},
+  // Glenn: Clip / update icon; local copy held at four films per page
+  {"by": "d_baylock_", "place": "Simplycake Bakery", "city": "San Mateo", "brand": "b_simplycakebakery", "reel": "https://www.instagram.com/reel/DcrSbmKyksH/", "credit": "Watch the original review on Instagram."},
+  // Glenn: Clip / Foodie / zoom icon; local copy held at four films per page
+  {"by": "hallojessa", "place": "Simplycake Bakery", "city": "San Mateo", "brand": "b_simplycakebakery", "reel": "https://www.instagram.com/reel/De5qAHvieL7/", "credit": "Watch the original review on Instagram."},
+  // Glenn: Newbie / Foodie
+  {"by": "chaudownfood", "place": "Chez Maeju", "city": "Oakland", "brand": "b_chezmaeju", "reel": "https://www.instagram.com/reel/DfGSjNXRKXo/", "clip": true, "credit": "Filmed by @chaudownfood · Hosted collaboration, disclosed by the creator."},
+  // Glenn: Heavy Hitter / Foodie
+  {"by": "_emwong_", "place": "Chez Maeju", "city": "Oakland", "brand": "b_chezmaeju", "reel": "https://www.instagram.com/reel/De0mq8ap2Fa/", "clip": true, "credit": "Filmed by @_emwong_"},
+  // Glenn: Newbie / Foodie
+  {"by": "phoebe8food", "place": "Chez Maeju", "city": "Oakland", "brand": "b_chezmaeju", "reel": "https://www.instagram.com/reel/DefrbSLtXxV/", "clip": true, "credit": "Filmed by @phoebe8food · Review prices are archival; confirm current prices with the restaurant."},
+  // Glenn: Watch / Newbie / Foodie
+  {"by": "wakeyeats", "place": "Chez Maeju", "city": "Oakland", "brand": "b_chezmaeju", "reel": "https://www.instagram.com/reel/Dd_0JF5Nq2B/", "clip": true, "credit": "Filmed by @wakeyeats · Hosted soft-opening visit, disclosed by the creator; confirm current hours."},
+  // Glenn: Newbie / Foodie; local copy held at four films
+  {"by": "karaxhuynh", "place": "Chez Maeju", "city": "Oakland", "brand": "b_chezmaeju", "reel": "https://www.instagram.com/reel/DeHlBF3B8FI/", "credit": "Watch the original review on Instagram."},
+  // Glenn: Newbie / Foodie; local copy held at four films
+  {"by": "dodo__eats", "place": "Chez Maeju", "city": "Oakland", "brand": "b_chezmaeju", "reel": "https://www.instagram.com/reel/DeAHK8ogWsD/", "credit": "Hosted visit, disclosed by the creator. Watch the original review on Instagram."},
 ]
 
 /*
@@ -1067,15 +1149,16 @@ export const FOODIE_SEED: LocalSeed[] = FOODIE_PAGES.filter((f) => !f.brand).map
   slug: `foodie-${f.handle.replace(/[^a-z0-9]+/g, '-')}`,
   name: f.name,
   label: f.label,
-  cuisine: 'Food reviewer',
-  tagline: `Bay Area food reviews, @${f.handle}`,
+  cuisine: f.cuisine ?? 'Food reviewer',
+  tagline: `${f.cuisine ? 'Reviews and visits' : 'Bay Area food reviews'}, @${f.instagram ?? f.handle}`,
   color: PALETTE[i % PALETTE.length],
   icon: f.icon,
+  instagram: f.instagram,
   prep: 0,
   category: 'Foodie',
   logoTemplate: 'wordmark',
   logoLines: [f.label],
   logoFace: 'script',
-  contactOnly: `${f.name} reviews Bay Area food on Instagram as @${f.handle}. The places reviewed are below: open one to watch the review, or to go to that business on BEASTY. BEASTY has not spoken to them yet: this spot is held, not taken.`,
+  contactOnly: `${f.name} ${f.cuisine ? 'shares reviews and visits' : 'reviews Bay Area food'} on Instagram as @${f.instagram ?? f.handle}. The places reviewed are below: open one to watch the review, or to go to that business on BEASTY. BEASTY has not spoken to them yet: this spot is held, not taken.`,
   items: [],
 }))

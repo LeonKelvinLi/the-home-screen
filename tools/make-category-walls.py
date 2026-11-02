@@ -454,6 +454,40 @@ def m_coffee(rng):
     return composite(img, over, blur=6)
 
 
+def m_travel(rng):
+    img = gradient('#081b28', '#152d30')
+    over, d = layer()
+    for x, y, r in [(W*.35, H*.3, 230), (W*.72, H*.62, 180), (W*.3, H*.85, 135)]:
+        d.ellipse((x-r, y-r, x+r, y+r), outline=rgba('#7dd3c7', .24), width=10)
+        for f in (.35, .7):
+            d.ellipse((x-r*f, y-r, x+r*f, y+r), outline=rgba('#7dd3c7', .16), width=6)
+        d.line((x-r, y, x+r, y), fill=rgba('#bae6fd', .2), width=8)
+        d.arc((x-r, y-r*.5, x+r, y+r*.5), 0, 360, fill=rgba('#bae6fd', .16), width=6)
+    return composite(img, over, blur=3)
+
+
+def m_sushi(rng):
+    img = gradient('#241414', '#101e1d')
+    over, d = layer()
+    for x, y, r in [(W*.32, H*.3, 170), (W*.7, H*.57, 140), (W*.35, H*.82, 120)]:
+        d.rounded_rectangle((x-r, y-r*.5, x+r, y+r*.5), radius=55, outline=rgba('#fda4af', .24), width=12)
+        d.rectangle((x-r*.24, y-r*.5, x+r*.24, y+r*.5), outline=rgba('#86bda5', .25), width=10)
+        for k in (-1, 1):
+            d.line((x-r, y-r*(1+k*.12), x+r*1.3, y-r*(.6+k*.12)), fill=rgba('#fde6bc', .2), width=7)
+    return composite(img, over, blur=3)
+
+
+def m_cakes(rng):
+    img = gradient('#23131e', '#271d13')
+    over, d = layer()
+    for x, y, r in [(W*.33, H*.3, 180), (W*.7, H*.58, 140), (W*.34, H*.84, 110)]:
+        d.rounded_rectangle((x-r, y-r*.45, x+r, y+r*.65), radius=30, outline=rgba('#f9a8d4', .25), width=10)
+        d.line((x-r, y+r*.1, x+r, y+r*.1), fill=rgba('#f9a8d4', .2), width=8)
+        d.line((x, y-r*.45, x, y-r*.95), fill=rgba('#fde6bc', .25), width=10)
+        d.ellipse((x-12, y-r*1.18, x+12, y-r*1.03), fill=rgba('#fbbf24', .3))
+    return composite(img, over, blur=3)
+
+
 def m_bakery(rng):
     # Glenn, 2026-10-11: "add a New category for BEASTY • Bakery". Oven light from
     # below, loaves scored across the top, flour dusting the dark.
@@ -811,6 +845,9 @@ MOTIFS = {
     "events": m_events,
     "youth": m_youth,
     "parks": m_youth,
+    "travel": m_travel,
+    "sushi": m_sushi,
+    "cakes": m_cakes,
     "pits": m_pits,
     "pets": m_pets,
     "models": m_models,

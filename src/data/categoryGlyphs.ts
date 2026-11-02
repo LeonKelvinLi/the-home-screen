@@ -68,6 +68,9 @@ export const CATEGORY_GLYPHS: Record<string, CategoryGlyph> = {
   bars: { paths: ['M4 4h16l-8 9Z', 'M7 7h10', 'M12 13v8', 'M8 21h8'] },
   events: { paths: ['M4 6h16v15H4Z', 'M4 10.5h16', 'M8 3v5', 'M16 3v5', 'M12 13l1.2 2.4 2.6.4-1.9 1.8.5 2.6-2.4-1.3-2.4 1.3.5-2.6-1.9-1.8 2.6-.4Z'] },
   parks: { paths: ['M3 21V4h14v17', 'M3 5h14', 'M8 5v8', 'M6 14h4', 'M17 11l4 10', 'M15 21h8'] },
+  travel: { paths: ['M3 4l6 2 6-2 6 2v14l-6-2-6 2-6-2Z', 'M9 6v14', 'M15 4v14'] },
+  sushi: { paths: ['M3 12c0-3 4-5 9-5s9 2 9 5v5H3Z', 'M8 8v9', 'M16 8v9', 'M3 12h18', 'M5 3l13 2', 'M5 5l13 2'] },
+  cakes: { paths: ['M3 11h18v10H3Z', 'M3 15c2 3 4-3 6 0s4-3 6 0 4-3 6 0', 'M8 11V7', 'M16 11V7', 'M8 4v1', 'M16 4v1'] },
   youth: { paths: [ring(7, 5, 2), 'M7 7v7', 'M3 3.5L7 9l4-5.5', 'M4.5 21L7 14l2.5 7', ring(17, 5, 2), 'M17 7v7', 'M13 3.5L17 9l4-5.5', 'M14.5 21L17 14l2.5 7'] },
 }
 

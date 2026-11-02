@@ -19716,14 +19716,6 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     instagram: "senorsisig",
     cuisine: "Filipino fusion",
     tagline: "'From Sisig Burritos to Sinigang Wings, we remix traditional Filipino",
-    photos: [
-      {"src":"/food/senor-sisig-site-2-lg.webp","alt":"","credit":"Their own photo, from senorsisig.com"},
-      {"src":"/food/senor-sisig-site-3-lg.webp","alt":"","credit":"Their own photo, from senorsisig.com"},
-      {"src":"/food/senor-sisig-site-4-lg.webp","alt":"","credit":"Their own photo, from senorsisig.com"},
-      {"src":"/food/senor-sisig-site-5-lg.webp","alt":"","credit":"Their own photo, from senorsisig.com"},
-      {"src":"/food/senor-sisig-site-7-lg.webp","alt":"","credit":"Their own photo, from senorsisig.com"},
-      {"src":"/food/senor-sisig-site-8-lg.webp","alt":"","credit":"Their own photo, from senorsisig.com"},
-    ],
     contactOnly: "'From Sisig Burritos to Sinigang Wings, we remix traditional Filipino. The menu page lists every item with no prices — sisig tacos, burritos, fries, nachos, rice bowls, the Crispy Sinigang Wings — and prices live only inside their ordering flow.",
   },
 

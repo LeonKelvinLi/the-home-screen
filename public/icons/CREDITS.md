@@ -356,3 +356,54 @@ Existing source images with baked rounded corners are unchanged. BrandLogo fills
 | `the-richmond-backyard.webp` | [Original supplied artwork](https://www.instagram.com/richmondbackyard/) | 512×512, aspect ratio preserved. Lakewood park entrance and Kings badge cropped from Glenn’s IMG_8732 / IMG_8733; other originals downloaded from own profiles/sites. No redrawing or story rings. |
 | `flood-park.webp` | [Original supplied artwork](https://www.smcgov.org/parks/flood-park) | 512×512, aspect ratio preserved. Lakewood park entrance and Kings badge cropped from Glenn’s IMG_8732 / IMG_8733; other originals downloaded from own profiles/sites. No redrawing or story rings. |
 | `kidtopia-dublin.webp` | [Original supplied artwork](https://www.instagram.com/kidtopia_dublin/) | 512×512, aspect ratio preserved. Lakewood park entrance and Kings badge cropped from Glenn’s IMG_8732 / IMG_8733; other originals downloaded from own profiles/sites. No redrawing or story rings. |
+
+## Batch 86 — November 2, 2026
+
+| File | Original source | Treatment |
+| --- | --- | --- |
+| `chronic-tacos-danville.webp` | [@chronictacos](https://www.instagram.com/chronictacos/) | Original profile artwork, resized only. 512×512. |
+| `blackhawk-museum.webp` | [@blackhawkmuseum](https://www.instagram.com/blackhawkmuseum/) | Original profile artwork, resized only. 512×512. |
+| `monster-pho.webp` | [@monsterpho](https://www.instagram.com/monsterpho/) | Original profile artwork, resized only. 512×512. |
+| `ginza-sushi-sf.webp` | [@ginzasanfrancisco](https://www.instagram.com/ginzasanfrancisco/) | Original profile artwork, resized only. 512×512. |
+| `ume-tea.webp` | [@umetea](https://www.instagram.com/umetea/) | Glenn-supplied original bunny artwork; aspect ratio preserved. 512×512. |
+| `brothers-bbq-san-leandro.webp` | [@hyungjae_brothersbbq](https://www.instagram.com/hyungjae_brothersbbq/) | Original profile artwork, resized only. 512×512. |
+| `holyshred.webp` | [@holyshred.thai](https://www.instagram.com/holyshred.thai/) | Glenn-supplied original red wordmark on charcoal. 512×512. |
+| `this-aint-canon-v86.webp` | [@thisaintcanon](https://www.instagram.com/thisaintcanon/) | Original profile artwork, resized only. 512×512. |
+| `foodie-whofedandrew-v86.webp` | [@whofedandrew](https://www.instagram.com/whofedandrew/) | Original profile artwork, resized only. 512×512. |
+| `foodie-k-smokeskitchen-v86.webp` | [@k.smokeskitchen](https://www.instagram.com/k.smokeskitchen/) | Original profile artwork, resized only. 512×512. |
+| `foodie-tysf-qods-v86.webp` | [@tysf.qods](https://www.instagram.com/tysf.qods/) | Original profile artwork, resized only. 512×512. |
+| `foodie-ilisaeatssf-v86.webp` | [@ilisaeatssf](https://www.instagram.com/ilisaeatssf/) | Original profile artwork, resized only. 512×512. |
+| `foodie-capturedbysado-v86.webp` | [@capturedbysado](https://www.instagram.com/capturedbysado/) | Original profile artwork, resized only. 512×512. |
+| `foodie-allie-eats-v86.webp` | [@allie.eats](https://www.instagram.com/allie.eats/) | Original profile artwork, resized only. 512×512. |
+| `foodie-bayareamunchies510-v86.webp` | [@bayareamunchies510](https://www.instagram.com/bayareamunchies510/) | Original profile artwork, resized only. 512×512. |
+| `foodie-tundemodupee-v86.webp` | [@tundemodupee](https://www.instagram.com/tundemodupee/) | Original profile artwork, resized only. 512×512. |
+| `foodie-charweeezy-v86.webp` | [@charweeezy](https://www.instagram.com/charweeezy/) | Original profile artwork, resized only. 512×512. |
+| `foodie-jantrinanicole-v86.webp` | [@jantrinanicole](https://www.instagram.com/jantrinanicole/) | Original profile artwork, resized only. 512×512. |
+| `foodie-hellahansel-v86.webp` | [@hellahansel](https://www.instagram.com/hellahansel/) | Original profile artwork, resized only. 512×512. |
+| `foodie-eighty6ix-v86.webp` | [@eighty6ix_](https://www.instagram.com/eighty6ix_/) | Original profile artwork, resized only. 512×512. |
+| `foodie-felicitythefoodie-v86.webp` | [@felicitythefoodie](https://www.instagram.com/felicitythefoodie/) | Original profile artwork, resized only. 512×512. |
+| `foodie-wafflebam-v86.webp` | [@wafflebam](https://www.instagram.com/wafflebam/) | Original profile artwork, resized only. 512×512. |
+| `foodie-fedoramaelle-v86.webp` | [@fedoramaelle](https://www.instagram.com/fedoramaelle/) | Original portrait cropped closer as Glenn requested. 512×512. |
+| `foodie-siliconvalley-foodies-v86.webp` | [@siliconvalley.foodies](https://www.instagram.com/siliconvalley.foodies/) | Original profile artwork, resized only. 512×512. |
+| `foodie-goyuliiago-v86.webp` | [@goyuliiago](https://www.instagram.com/goyuliiago/) | Original profile artwork, resized only. 512×512. |
+| `foodie-peggy-shoo-v86.webp` | [@peggy_shoo](https://www.instagram.com/peggy_shoo/) | Original profile artwork, resized only. 512×512. |
+| `foodie-jamiebeoutside-v86.webp` | [@jamiebeoutside](https://www.instagram.com/jamiebeoutside/) | Original profile artwork, resized only. 512×512. |
+| `foodie-pastrywithjenn-v86.webp` | [@pastrywithjenn](https://www.instagram.com/pastrywithjenn/) | Original profile artwork, resized only. 512×512. |
+| `foodie-anjali-wandersoul-v86.webp` | [@anjali_wandersoul](https://www.instagram.com/anjali_wandersoul/) | Original profile artwork, resized only. 512×512. |
+| `foodie-foodgiveness-v86.webp` | [@foodgiveness](https://www.instagram.com/foodgiveness/) | Original profile artwork, resized only. 512×512. |
+| `foodie-travelwtiff-v86.webp` | [@travelwtiff](https://www.instagram.com/travelwtiff/) | Original profile artwork, resized only. 512×512. |
+| `foodie-gabriiellas-v86.webp` | [@gabriiellas](https://www.instagram.com/gabriiellas/) | Original profile artwork, resized only. 512×512. |
+| `simply-cake-bakery.webp` | [@simplycakebakery](https://www.instagram.com/simplycakebakery/) | Original profile artwork, resized only. 512×512. |
+| `foodie-ploinsanfrancisco-v86.webp` | [@ploinsanfrancisco](https://www.instagram.com/ploinsanfrancisco/) | Original profile artwork, resized only. 512×512. |
+| `foodie-piscesprincesspriya-v86.webp` | [@piscesprincesspriya](https://www.instagram.com/piscesprincesspriya/) | Original profile artwork, resized only. 512×512. |
+| `foodie-d-baylock-v86.webp` | [@d_baylock_](https://www.instagram.com/d_baylock_/) | Original profile artwork, resized only. 512×512. |
+| `foodie-hallojessa-v86.webp` | [@hallojessa](https://www.instagram.com/hallojessa/) | Original portrait cropped closer as Glenn requested. 512×512. |
+| `foodie-lagrandedelabanda-v86.webp` | [@lagrandedelabanda](https://www.instagram.com/lagrandedelabanda/) | Original profile artwork, resized only. 512×512. |
+| `polly-ann-v86.webp` | [@pollyann.sf](https://www.instagram.com/pollyann.sf/) | Glenn-supplied original red cone badge, cropped out of Photos UI. 512×512. |
+| `chez-maeju.webp` | [@chezmaeju](https://www.instagram.com/chezmaeju/) | Original profile artwork, resized only. 512×512. |
+| `foodie-chaudownfood-v86.webp` | [@chaudownfood](https://www.instagram.com/chaudownfood/) | Original profile artwork, resized only. 512×512. |
+| `foodie-emwong-v86.webp` | [@_emwong_](https://www.instagram.com/_emwong_/) | Original profile artwork, resized only. 512×512. |
+| `foodie-phoebe8food-v86.webp` | [@phoebe8food](https://www.instagram.com/phoebe8food/) | Original profile artwork, resized only. 512×512. |
+| `foodie-karaxhuynh-v86.webp` | [@karaxhuynh](https://www.instagram.com/karaxhuynh/) | Original profile artwork, resized only. 512×512. |
+| `foodie-wakeyeats-v86.webp` | [@wakeyeats](https://www.instagram.com/wakeyeats/) | Original profile artwork, resized only. 512×512. |
+| `foodie-dodo-eats-v86.webp` | [@dodo__eats](https://www.instagram.com/dodo__eats/) | Original profile artwork, resized only. 512×512. |

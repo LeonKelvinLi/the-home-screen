@@ -48,14 +48,14 @@ const BUSINESS_REELS: Reel[] = BRANDS.flatMap((b) => [b.clip, ...(b.clips ?? [])
   creator's own page when it is not.
 */
 const foodiePage = (handle: string) => {
-  const f = FOODIE_PAGES.find((x) => x.handle === handle)
+  const f = FOODIE_PAGES.find((x) => x.handle === handle || x.instagram === handle)
   return f ? (f.brand ?? `b_foodie${f.handle.replace(/[^a-z0-9]/g, '')}`) : undefined
 }
 const REVIEW_REELS: Reel[] = OTHER_REVIEWS.flatMap((r) => {
   const code = r.clip ? /\/reel\/([^/]+)\//.exec(r.reel)?.[1] : undefined
   const opens = r.brand ?? foodiePage(r.by)
   if (!code || !opens) return []
-  const who = FOODIE_PAGES.find((f) => f.handle === r.by)?.name ?? `@${r.by}`
+  const who = FOODIE_PAGES.find((f) => f.handle === r.by || f.instagram === r.by)?.name ?? `@${r.by}`
   return [{
     brandId: opens,
     name: r.place,

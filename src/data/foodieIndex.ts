@@ -32,7 +32,8 @@ export interface Review {
 const NOT_A_REVIEWER = new Set(['bollywoodpizzausa', 'marketing_kings'])
 
 const byId = new Map(BRANDS.map((b) => [b.id, b]))
-const nameOf = new Map(FOODIE_PAGES.map((f) => [f.handle, f.name]))
+const nameOf = new Map(FOODIE_PAGES.flatMap((f) => [[f.handle, f.name] as const, ...(f.instagram ? [[f.instagram, f.name] as const] : [])]))
+const stableHandle = (handle: string) => FOODIE_PAGES.find((f) => f.handle === handle || f.instagram === handle)?.handle ?? handle
 const cityOf = (b: Brand) => (b.address?.match(/,\s*([^,]+),\s*CA\b/)?.[1] ?? undefined)
 
 const ALL: Review[] = [
@@ -64,7 +65,7 @@ const ALL: Review[] = [
 ]
 
 /** A creator's reviews, newest business pages first, then the linked ones. */
-export const reviewsBy = (handle: string): Review[] => ALL.filter((r) => r.by === handle)
+export const reviewsBy = (handle: string): Review[] => ALL.filter((r) => stableHandle(r.by) === stableHandle(handle))
 
 /** Every creator's review of one business. */
 export const reviewsOf = (brandId: string): Review[] => ALL.filter((r) => r.brand?.id === brandId)
@@ -75,6 +76,6 @@ export const foodieOfBrand = (brandId: string): string | undefined =>
 
 /** The BEASTY page of a creator, when they have one. */
 export const pageOfFoodie = (handle: string): string | undefined => {
-  const f = FOODIE_PAGES.find((x) => x.handle === handle)
+  const f = FOODIE_PAGES.find((x) => x.handle === handle || x.instagram === handle)
   return f ? (f.brand ?? `b_foodie${f.handle.replace(/[^a-z0-9]/g, '')}`) : undefined
 }
