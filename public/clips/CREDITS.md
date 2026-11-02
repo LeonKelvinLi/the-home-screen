@@ -714,3 +714,12 @@ SoulSip local copies DeH8zrghsHo (@nurse.danamae) and Dd_-OAaz_-D (@kimoni.eatss
 | `thai-thani-oishi-v89.mp4` and `thai-thani-oishi-v89-poster.webp` | [@thaithaniandoishi](https://www.instagram.com/p/DX7d7KkgOMp/), posted 2026-05-04T12:53:26-07:00 | Glenn: Watch. Excerpt 0–15s. Original audio; 540×960 square pixels. Posted by @thaithaniandoishi · Business’s own video. The later cancelled portrait IMG_8927 is not used. |
 
 Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remain credited on business and creator pages while local copies are held at the four-film limit. Details: docs/BATCH-89.md.
+
+## Batch 90 — November 2, 2026
+
+| Local film and poster | Source and Pacific post date | Request and excerpt |
+| --- | --- | --- |
+| `review-DeNPxiISX3z.mp4` and `review-DeNPxiISX3z-poster.webp` | [@liltiffyvert](https://www.instagram.com/reel/DeNPxiISX3z/), posted 2026-10-07T13:47:04-07:00 | Glenn: Clip / Foodie / Mediocre. Excerpt 0–15s. Original audio; 540×960 square pixels. Filmed by @liltiffyvert · Invited visit disclosed by the creator. Filmed at the Davis branch; the SF menu prices on the listing do not represent Davis prices. |
+| `review-DVxPfFGEfNz.mp4` and `review-DVxPfFGEfNz-poster.webp` | [@jovana.camberos](https://www.instagram.com/reel/DVxPfFGEfNz/), posted 2026-03-11T20:33:12-07:00 | Glenn: Clip / Foodie / Newbie. Excerpt 0–15s. Original audio; 540×960 square pixels. Filmed by @jovana.camberos · The on-screen title identifies San Francisco; the exact SF branch is not stated. Confirm current menu and availability. |
+
+[Hee Jin’s original San Mateo review](https://www.instagram.com/reel/De8TxUbOfCI/) remains linked on the business and creator pages. Local copy held under the creator’s explicit permission notice. No unused MP4 published.

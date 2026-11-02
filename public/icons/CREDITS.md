@@ -445,3 +445,12 @@ Existing source images with baked rounded corners are unchanged. BrandLogo fills
 | `foodie-hangrypotato-v89.webp` | [hangrypotato](https://www.instagram.com/hangrypotato/) | Original 1080×1080, resampled to 512×512. Aspect preserved; no redraw or story ring. |
 | `matzip-union-city.webp` | [matzipkoreanrestaurant](https://www.instagram.com/matzipkoreanrestaurant/) | Original 1080×1080, resampled to 512×512. Aspect preserved; no redraw or story ring. |
 | `naya-dessert-cafe.webp` | [naya_dessertcafe](https://static.wixstatic.com/media/3e582a_989ee5e609614247abef650c749ab14c~mv2.png) | Original 1912×1912, resampled to 512×512. Own website transparent original on the website’s blush background. |
+
+## Batch 90 — November 2, 2026
+
+| File | Original source | Treatment |
+| --- | --- | --- |
+| `foodie-liltiffyvert-v90.webp` | [@liltiffyvert](https://www.instagram.com/liltiffyvert/) | Original 1080×1080, resampled to 512×512 with aspect preserved; no redraw or story ring. |
+| `foodie-jovana-camberos-v90.webp` | [@jovana.camberos](https://www.instagram.com/jovana.camberos/) | Original 1080×1080, resampled to 512×512 with aspect preserved; no redraw or story ring. |
+
+Hee Jin’s supplied portrait is held pending permission under her profile’s explicit no-repost notice; her directory page uses a monogram and links to the original profile.

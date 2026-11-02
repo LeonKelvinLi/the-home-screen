@@ -2241,4 +2241,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-181': 'b_foodiethismajourney',
   'beasty-foodies2-182': 'b_foodiesummerishungry',
   'beasty-foodies2-183': 'b_foodiejustfeediris',
+
+  // Batch 90 — append three creators; every earlier seat remains.
+  'beasty-foodies2-184': 'b_foodiehungryhungryheejin',
+  'beasty-foodies2-185': 'b_foodieliltiffyvert',
+  'beasty-foodies2-186': 'b_foodiejovanacamberos',
 }

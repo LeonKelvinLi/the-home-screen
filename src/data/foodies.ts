@@ -825,6 +825,10 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "thismajourney", "name": "Denise", "label": "Denise", "icon": "foodie-thismajourney-v89"},
   {"handle": "summer.ishungry", "name": "Summer", "label": "Summer", "icon": "foodie-summer-ishungry-v89"},
   {"handle": "justfeediris", "name": "Iris", "label": "Iris", "icon": "foodie-justfeediris-v89"},
+  // Batch 90 — original-image permission hold for Hee Jin is in docs/BATCH-90.md.
+  {"handle": "hungryhungryheejin", "instagram": "hungryhungryheejin", "name": "Hee Jin", "label": "Hee Jin"},
+  {"handle": "liltiffyvert", "instagram": "liltiffyvert", "name": "Tiffany Tran", "label": "Tiffany", "icon": "foodie-liltiffyvert-v90"},
+  {"handle": "jovana.camberos", "instagram": "jovana.camberos", "name": "@jovana.camberos", "label": "Jovana", "icon": "foodie-jovana-camberos-v90"},
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -1202,6 +1206,14 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "hungere.for.diy", "place": "Bibim Grill", "city": "Dublin", "reel": "https://www.instagram.com/reel/DfCmQ2EpPsr/", "credit": "Watch the original review on Instagram.", "brand": "b_bibimgrill"},
   // Glenn: Clip / Foodie / Newbie
   {"by": "thismajourney", "place": "Bibim Grill", "city": "Dublin", "reel": "https://www.instagram.com/reel/DfALmKdtaig/", "credit": "Watch the original review on Instagram.", "brand": "b_bibimgrill"},
+
+  /* Batch 90 — late NaYa requests; branch credits retained. */
+  // Glenn: Clip / Heavy Hitter / Fasho
+  {"by": "hungryhungryheejin", "place": "NaYa Dessert Cafe", "brand": "b_nayadessertcafe", "reel": "https://www.instagram.com/reel/De8TxUbOfCI/", "credit": "Original San Mateo review by @hungryhungryheejin. Watch on Instagram.", "city": "San Mateo"},
+  // Glenn: Clip / Foodie / Mediocre
+  {"by": "liltiffyvert", "place": "NaYa Dessert Cafe", "brand": "b_nayadessertcafe", "reel": "https://www.instagram.com/reel/DeNPxiISX3z/", "credit": "Filmed by @liltiffyvert · Invited visit disclosed by the creator. Filmed at the Davis branch; the SF menu prices on the listing do not represent Davis prices.", "city": "Davis", "clip": true},
+  // Glenn: Clip / Foodie / Newbie
+  {"by": "jovana.camberos", "place": "NaYa Dessert Cafe", "brand": "b_nayadessertcafe", "reel": "https://www.instagram.com/reel/DVxPfFGEfNz/", "credit": "Filmed by @jovana.camberos · The on-screen title identifies San Francisco; the exact SF branch is not stated. Confirm current menu and availability.", "city": "San Francisco", "clip": true},
 ]
 
 /*
