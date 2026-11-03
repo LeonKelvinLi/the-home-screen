@@ -71,7 +71,15 @@ try {
     if (codes.length) {
       for (const code of codes) {
         const by = batch.posts.find(post => post.code === code).by
-        await page.locator('.foodie-review-head', { hasText: '@' + by }).click()
+        const review = page.locator('.foodie-review-head', { hasText: '@' + by })
+        await review.scrollIntoViewIfNeeded()
+        await review.click()
+        const expanded = review.and(page.locator('[aria-expanded="true"]'))
+        // WebKit can consume the first tap while the phone sheet finishes opening.
+        if (!await expanded.waitFor({ state: 'visible', timeout: 1500 }).then(() => true, () => false)) {
+          if (await review.getAttribute('aria-expanded') === 'false') await review.click()
+          await expanded.waitFor({ state: 'visible' })
+        }
         const video = page.locator(`video[src$="review-${code}.mp4"]`).first()
         await video.scrollIntoViewIfNeeded()
         await video.evaluate(v => { v.preload = 'metadata'; v.load() })
