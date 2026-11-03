@@ -2280,7 +2280,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-191': 'b_foodietastewithrach',
   'beasty-foodies2-192': 'b_foodiefoodiswhyimbroke',
   'beasty-foodies2-193': 'b_foodiekeneats',
-  'beasty-foodies2-194': 'b_foodiee40',
+  'beasty-foodies2-194': 'b_e40',
   'beasty-foodies2-195': 'b_foodiemamamarquez888',
   'beasty-foodies2-196': 'b_foodiesisicooksandeats',
   'beasty-foodies2-197': 'b_foodiereelkevo',

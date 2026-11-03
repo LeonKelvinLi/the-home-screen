@@ -515,7 +515,7 @@ const nine = swipe.map((l) => l.replace(/^Page \d+ of \d+, BEASTY, /, '')).filte
 console.log('home swipe    :', JSON.stringify({ pages: swipeTotal, first: nine }))
 /* 2026-10-05: BEASTY • Pages first, then the nine. */
 if (nine.join(',') !== 'Pages,More pages,Eats,Sweets,AYCE,Goods,Services,Online,Individuals,Tattoo,Automotive') fails.push(`the home screen's first pages read ${nine.join(', ')}`)
-if (!swipeTotal || swipeTotal > 20) fails.push(`the home screen swipe is ${swipeTotal} pages long; the cities should only come from Search`)
+if (!swipeTotal || swipe.some(label => !/^Page \d+ of \d+, BEASTY, /.test(label))) fails.push('the home screen swipe contains a page outside BEASTY; cities should only come from Search')
 /* A Foodies review's own copy is served (its name is built in code, so it is not in the bundle). */
 {
   const r = await fetch(`${base}/clips/review-DduKTl4hokY.mp4`, { method: 'HEAD' }).catch(() => null)

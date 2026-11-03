@@ -823,7 +823,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "tastewith.rach", "instagram": "tastewith.rach", "name": "rachel🍴bay area, ca 🇵🇭", "label": "rachel🍴bay", "icon": "foodie-tastewithrach-v92"},
   {"handle": "foodiswhyimbroke", "instagram": "foodiswhyimbroke", "name": "Yen Kim Phan", "label": "Yen", "icon": "foodie-foodiswhyimbroke-v92"},
   {"handle": "keneats_", "instagram": "keneats_", "name": "kenya // sf bay area foodie 😋", "label": "kenya", "icon": "foodie-keneats-v92"},
-  {"handle": "e40", "instagram": "e40", "name": "E40 Mogul 🥂🎩", "label": "E40"},
+  {"handle": "e40", "name": "E-40", "label": "E-40", "brand": "b_e40"},
   {"handle": "mamamarquez888", "instagram": "mamamarquez888", "name": "Megan Marquez", "label": "Megan", "icon": "foodie-mamamarquez-v92"},
   {"handle": "sisicooksandeats", "instagram": "sisicooksandeats", "name": "$i$i 🐐 THE GOAT", "label": "$i$i", "icon": "foodie-sisicooks-v92"},
   {"handle": "reelkevo", "instagram": "reelkevo", "name": "Kevin", "label": "Kevin", "icon": "foodie-reelkevo-v92"},
