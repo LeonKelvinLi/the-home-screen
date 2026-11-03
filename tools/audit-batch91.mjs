@@ -34,11 +34,11 @@ const open=async id=>{await p.goto(base+'/?b='+id,{waitUntil:'domcontentloaded'}
 const film=async(v)=>{
  await v.scrollIntoViewIfNeeded();await v.evaluate(v=>{v.preload='metadata';v.load()});const handle=await v.elementHandle()
  try{
-  await p.waitForFunction(v=>v.readyState>=1,handle,{timeout:30000})
+  await p.waitForFunction(v=>v.readyState>=1,handle,{timeout:30000,polling:100})
   const fig=v.locator('xpath=ancestor::figure')
   if(await fig.count())await fig.getByRole('button',{name:'Turn the sound on',exact:true}).click()
   else if(await v.evaluate(v=>v.paused)){if(iphone)await v.click();else await v.press('Space')}
-  await p.waitForFunction(v=>v.readyState>=2&&v.currentTime>.05&&!v.paused,handle,{timeout:30000})
+  await p.waitForFunction(v=>v.readyState>=2&&v.currentTime>.05&&!v.paused,handle,{timeout:30000,polling:100})
  }catch(e){console.log('media diagnostic',await v.evaluate(v=>({src:v.currentSrc,ready:v.readyState,network:v.networkState,paused:v.paused,time:v.currentTime,error:v.error?.message,rect:{y:v.getBoundingClientRect().y,h:v.getBoundingClientRect().height}})));await shot('media-failure');throw e}
  const d=await v.evaluate(v=>({w:v.videoWidth,h:v.videoHeight,d:v.duration}));return d.w===540&&d.h===960&&d.d>0
 }
