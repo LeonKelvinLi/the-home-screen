@@ -454,3 +454,10 @@ Existing source images with baked rounded corners are unchanged. BrandLogo fills
 | `foodie-jovana-camberos-v90.webp` | [@jovana.camberos](https://www.instagram.com/jovana.camberos/) | Original 1080×1080, resampled to 512×512 with aspect preserved; no redraw or story ring. |
 
 Hee Jin’s supplied portrait is held pending permission under her profile’s explicit no-repost notice; her directory page uses a monogram and links to the original profile.
+
+## Batch 91 — November 2, 2026
+
+| File | Original source | Treatment |
+| --- | --- | --- |
+| `taqueria-el-chacho.webp` | [@taqueriaelchacho](https://www.instagram.com/taqueriaelchacho/) | Original 1080×1080, resampled to 512×512 with aspect preserved; no redraw or story ring. |
+| `foodie-aztec-ed-v91.webp` | [@aztec.ed](https://www.instagram.com/aztec.ed/) | Original 1080×1080, resampled to 512×512 with aspect preserved; no redraw or story ring. |

@@ -344,8 +344,10 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "aztec.ed",
     "name": "@aztec.ed",
-    "label": "aztec.ed"
-  },
+    "label": "aztec.ed",
+    "icon": "foodie-aztec-ed-v91",
+    "instagram": "aztec.ed"
+},
   {
     "handle": "brianthebarber",
     "name": "@brianthebarber",
@@ -1214,6 +1216,14 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "liltiffyvert", "place": "NaYa Dessert Cafe", "brand": "b_nayadessertcafe", "reel": "https://www.instagram.com/reel/DeNPxiISX3z/", "credit": "Filmed by @liltiffyvert · Invited visit disclosed by the creator. Filmed at the Davis branch; the SF menu prices on the listing do not represent Davis prices.", "city": "Davis", "clip": true},
   // Glenn: Clip / Foodie / Newbie
   {"by": "jovana.camberos", "place": "NaYa Dessert Cafe", "brand": "b_nayadessertcafe", "reel": "https://www.instagram.com/reel/DVxPfFGEfNz/", "credit": "Filmed by @jovana.camberos · Filmed at the Geary Boulevard branch in San Francisco, identified by the storefront shown in the video. Confirm current menu and availability.", "city": "San Francisco", "clip": true},
+
+  /* Batch 91 — existing creator pages retain their earlier reviews. */
+  // Glenn: Clip / Newbie
+  {"by": "justfeediris", "place": "Funky Elephant", "brand": "b_funkyelephant", "reel": "https://www.instagram.com/reel/DfKUkZESzhe/", "credit": "Filmed by @justfeediris · Berkeley branch, identified by the on-screen title and the tagged @funky.elephant account.", "city": "Berkeley", "clip": true},
+  // Glenn: Clip / Newbie
+  {"by": "justfeediris", "place": "U Dessert Story", "brand": "b_udessertstory", "reel": "https://www.instagram.com/reel/DfNjbJ8NfrY/", "credit": "Filmed by @justfeediris · Berkeley branch, identified by the on-screen title. The listing also represents the San Francisco shop; confirm branch menus and availability.", "city": "Berkeley", "clip": true},
+  // Glenn: Clip / Heavy Hitter / Update icon
+  {"by": "aztec.ed", "place": "Taqueria El Chacho", "brand": "b_taqueriaelchacho", "reel": "https://www.instagram.com/reel/DfBR9qRMuEF/", "credit": "Filmed by @aztec.ed · Oakland truck at 569 High St. This review advertises a Wednesday $2-taco special; confirm current promotions directly. The promotional price is not the regular menu price.", "city": "Oakland", "clip": true},
 ]
 
 /*

@@ -723,3 +723,12 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-DVxPfFGEfNz.mp4` and `review-DVxPfFGEfNz-poster.webp` | [@jovana.camberos](https://www.instagram.com/reel/DVxPfFGEfNz/), posted 2026-03-11T20:33:12-07:00 | Glenn: Clip / Foodie / Newbie. Excerpt 0–15s. Original audio; 540×960 square pixels. Filmed by @jovana.camberos · Filmed at the Geary Boulevard branch in San Francisco, identified by the storefront shown in the video. Confirm current menu and availability. |
 
 [Hee Jin’s original San Mateo review](https://www.instagram.com/reel/De8TxUbOfCI/) remains linked on the business and creator pages. Local copy held under the creator’s explicit permission notice. No unused MP4 published.
+
+## Batch 91 — November 2, 2026
+
+| Local film and poster | Source and Pacific post date | Request and excerpt |
+| --- | --- | --- |
+| `review-DfKUkZESzhe.mp4` and `review-DfKUkZESzhe-poster.webp` | [@justfeediris](https://www.instagram.com/reel/DfKUkZESzhe/), posted 2026-10-31T07:00:06-07:00 | Glenn: Clip / Newbie. Excerpt 0–15s. Original audio; 540×960 square pixels. Filmed by @justfeediris · Berkeley branch, identified by the on-screen title and the tagged @funky.elephant account. |
+| `review-DfNjbJ8NfrY.mp4` and `review-DfNjbJ8NfrY-poster.webp` | [@justfeediris](https://www.instagram.com/reel/DfNjbJ8NfrY/), posted 2026-11-01T12:10:56-08:00 | Glenn: Clip / Newbie. Excerpt 0–15s. Original audio; 540×960 square pixels. Filmed by @justfeediris · Berkeley branch, identified by the on-screen title. The listing also represents the San Francisco shop; confirm branch menus and availability. |
+| `review-DfBR9qRMuEF.mp4` and `review-DfBR9qRMuEF-poster.webp` | [@aztec.ed](https://www.instagram.com/reel/DfBR9qRMuEF/), posted 2026-10-27T18:46:58-07:00 | Glenn: Clip / Heavy Hitter / Update icon. Excerpt 0–15s. Original audio; 540×960 square pixels. Filmed by @aztec.ed · Oakland truck at 569 High St. This review advertises a Wednesday $2-taco special; confirm current promotions directly. The promotional price is not the regular menu price. |
+| `taqueria-el-chacho.mp4` and `taqueria-el-chacho-poster.webp` | [@taqueriaelchacho](https://www.instagram.com/reel/De3DzhBIz1B/), posted 2026-10-23T19:28:36-07:00 | Glenn: Watch. Excerpt 0–11.933s. Original audio; 540×960 square pixels. Posted by @taqueriaelchacho · Business’s own Oakland video, at 569 High St. |

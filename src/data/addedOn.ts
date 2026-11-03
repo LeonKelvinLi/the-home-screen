@@ -1090,4 +1090,7 @@ export const ADDED_ON: Record<string, string> = {
   b_foodiehungryhungryheejin: '2026-11-02',
   b_foodieliltiffyvert: '2026-11-02',
   b_foodiejovanacamberos: '2026-11-02',
+
+  // Batch 91, November 2.
+  b_taqueriaelchacho: '2026-11-02',
 }

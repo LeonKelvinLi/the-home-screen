@@ -2246,4 +2246,12 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-184': 'b_foodiehungryhungryheejin',
   'beasty-foodies2-185': 'b_foodieliltiffyvert',
   'beasty-foodies2-186': 'b_foodiejovanacamberos',
+
+  // Batch 91 — append El Chacho; no earlier seat moves.
+  'oakland-goods2-45': 'b_taqueriaelchacho',
+  'santa-clara-goods2-2': 'b_taqueriaelchacho',
+  'beasty-goods2-119': 'b_taqueriaelchacho',
+  'beasty-foodtrucks-15': 'b_taqueriaelchacho',
+  'beasty-catering-13': 'b_taqueriaelchacho',
+  'beasty-cooks-18': 'b_taqueriaelchacho',
 }

@@ -68042,4 +68042,159 @@ export const LOCAL_SEED: LocalSeed[] = [
       }
     ]
   },
+
+  /* Batch 91 — own catering form and current truck profile; see docs/BATCH-91.md. */
+  {
+    "slug": "taqueria-el-chacho",
+    "name": "Taqueria El Chacho",
+    "label": "El Chacho",
+    "cuisine": "Mexican food truck and catering",
+    "tagline": "Tacos, burritos, quesadillas, mulitas and tortas, with current truck locations in Oakland and Santa Clara.",
+    "color": "#339B14",
+    "icon": "taqueria-el-chacho",
+    "prep": 0,
+    "category": "Food truck",
+    "site": "https://docs.google.com/forms/d/e/1FAIpQLSebOsCaJZ9gqPijtBFqmrHIwy7uatba0PBcsOjKKr2M0NRv3g/viewform",
+    "siteCta": "Catering request form",
+    "needsSite": true,
+    "instagram": "taqueriaelchacho",
+    "address": "569 High St, Oakland, CA",
+    "phone": "323-975-5948",
+    "hours": "Daily 6pm–midnight",
+    "quoteOnly": "Ask the truck for current individual prices and specials. Catering prices below are whole-event totals for the stated guest count, not per-person prices. Book directly with the business.",
+    "items": [],
+    "sections": [
+      {
+        "name": "Street food · ask current prices",
+        "items": [
+          [
+            "Tacos",
+            "Ask the truck for current fillings, availability and individual price.",
+            0,
+            null,
+            "Ask"
+          ],
+          [
+            "Burritos",
+            "Ask the truck for current fillings, availability and individual price.",
+            0,
+            null,
+            "Ask"
+          ],
+          [
+            "Quesadillas",
+            "Ask the truck for current fillings, availability and individual price.",
+            0,
+            null,
+            "Ask"
+          ],
+          [
+            "Mulitas",
+            "Ask the truck for current fillings, availability and individual price.",
+            0,
+            null,
+            "Ask"
+          ],
+          [
+            "Tortas",
+            "Ask the truck for current fillings, availability and individual price.",
+            0,
+            null,
+            "Ask"
+          ]
+        ]
+      },
+      {
+        "name": "Catering packages · whole event",
+        "items": [
+          [
+            "Option A — 50 guests / 3 hours",
+            "Tacos and salsa bar. Carne asada, chorizo, chicken and al pastor from the trompo. Whole-event total.",
+            150000
+          ],
+          [
+            "Option B — 50 guests / 3 hours",
+            "Tacos, burritos and salsa bar. Carne asada, chorizo, chicken and al pastor from the trompo. Whole-event total.",
+            200000
+          ],
+          [
+            "Option C — 100 guests / 4 hours",
+            "Tacos, burritos, quesadillas, mulitas and salsa bar. Nine meats: Carne asada, al pastor from the trompo, chicken, buche, cabeza, tripa, suadero, chorizo and lengua. Whole-event total.",
+            300000
+          ]
+        ]
+      },
+      {
+        "name": "Optional catering drinks · 5-gallon jug",
+        "items": [
+          [
+            "Horchata — 5-gallon jug",
+            "Optional catering add-on; one 5-gallon jug.",
+            10000
+          ],
+          [
+            "Jamaica — 5-gallon jug",
+            "Optional catering add-on; one 5-gallon jug.",
+            10000
+          ],
+          [
+            "Strawberry Horchata — 5-gallon jug",
+            "Optional catering add-on; one 5-gallon jug.",
+            10000
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Locations and hours",
+        "body": [
+          "Oakland: 569 High St, Oakland, CA. Primary listing and the location in both supplied El Chacho videos.",
+          "Santa Clara: 3570 El Camino Real, Santa Clara, CA.",
+          "The current business profile lists both locations with daily 6pm–midnight hours. Confirm the current truck location before visiting."
+        ],
+        "links": [
+          {
+            "label": "Current truck posts",
+            "href": "https://www.instagram.com/taqueriaelchacho/"
+          },
+          {
+            "label": "Santa Clara directions",
+            "href": "https://maps.apple.com/?q=Taqueria%20El%20Chacho%2C%203570%20El%20Camino%20Real%2C%20Santa%20Clara%2C%20CA"
+          }
+        ]
+      },
+      {
+        "head": "Catering and booking",
+        "body": [
+          "The business accepts catering events for at least 50 guests, including small events, corporate events and weddings.",
+          "A 50% deposit is required to book directly with the business. Confirm the event location, date, availability and final quote before booking.",
+          "Option C includes nine meat choices: Carne asada, al pastor from the trompo, chicken, buche, cabeza, tripa, suadero, chorizo and lengua.",
+          "The linked form is for catering inquiries. It is not an individual-food ordering checkout."
+        ],
+        "links": [
+          {
+            "label": "Request catering from El Chacho",
+            "href": "https://docs.google.com/forms/d/e/1FAIpQLSebOsCaJZ9gqPijtBFqmrHIwy7uatba0PBcsOjKKr2M0NRv3g/viewform"
+          }
+        ]
+      },
+      {
+        "head": "Prices and specials",
+        "body": [
+          "The five street-food rows name published offerings; no current standard individual prices were verified. Ask the truck for current prices and availability.",
+          "All three catering package totals and all three 5-gallon drink add-on choices are reproduced from the business’s linked catering form.",
+          "The supplied creator review advertises a Wednesday $2-taco special in Oakland. Newer profile posts mention both trucks. Check the business’s current post for location, date and promotion rules.",
+          "Phone 323-975-5948 is printed on the branded truck visible in the supplied review."
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/taqueria-el-chacho.mp4",
+      "poster": "/clips/taqueria-el-chacho-poster.webp",
+      "href": "https://www.instagram.com/reel/De3DzhBIz1B/",
+      "credit": "Posted by @taqueriaelchacho · Business’s own Oakland video, at 569 High St.",
+      "platform": "Instagram"
+    }
+  },
 ]
