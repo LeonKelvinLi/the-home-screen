@@ -1093,4 +1093,13 @@ export const ADDED_ON: Record<string, string> = {
 
   // Batch 91, November 2.
   b_taqueriaelchacho: '2026-11-02',
+  // Batch 92
+  b_capheviet: '2026-11-02',
+  b_mrdewies: '2026-11-02',
+  b_pigletandco: '2026-11-02',
+  b_tsujitasanjose: '2026-11-02',
+  b_ubebae: '2026-11-03',
+  b_moonlightcafecart: '2026-11-03',
+  b_alwaysyoursbakerycafe: '2026-11-03',
+
 }

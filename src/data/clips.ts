@@ -11,7 +11,7 @@
  */
 import { BRANDS } from './brands'
 import type { Logo } from './brands'
-import { FOODIE_PAGES, OTHER_REVIEWS } from './foodies'
+import { FOODIE_PAGES, OTHER_REVIEWS, reviewPostCode } from './foodies'
 
 export interface Reel {
   brandId: string
@@ -52,7 +52,7 @@ const foodiePage = (handle: string) => {
   return f ? (f.brand ?? `b_foodie${f.handle.replace(/[^a-z0-9]/g, '')}`) : undefined
 }
 const REVIEW_REELS: Reel[] = OTHER_REVIEWS.flatMap((r) => {
-  const code = r.clip ? /\/reel\/([^/]+)\//.exec(r.reel)?.[1] : undefined
+  const code = r.clip ? reviewPostCode(r.reel) : undefined
   const opens = r.brand ?? foodiePage(r.by)
   if (!code || !opens) return []
   const who = FOODIE_PAGES.find((f) => f.handle === r.by || f.instagram === r.by)?.name ?? `@${r.by}`

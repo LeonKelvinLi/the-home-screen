@@ -970,11 +970,15 @@ export const ROSTER_SEED: LocalSeed[] = [
       'the only route here is the phone number from their own Instagram header.',
   }),
   seed('donut-farm', 'Donut Farm', 'Donut Farm', 'Organic donuts', '#1A1A1E', {
+    icon: 'donut-farm-berkeley',
+    address: '3278 Adeline St, Berkeley, CA 94703',
+    phone: '510-879-6980',
+    instagram: 'donutfarmoakland',
+    hours: 'Thu–Sun 7:30am–3pm; weekend brunch 9am–2pm',
     site: 'https://donutfarmberkeley.com/',
     logoTemplate: 'monogram', logoInitials: 'DF', logoFace: 'grotesk',
     contactOnly:
-      'Sent 2026-08-12 with "no website yet". Their own Instagram lists shops on Adeline St ' +
-      'and Gilman St; the operator filed them under Oakland, so that is where they sit.',
+      'See Donut Farm’s site for current flavors, the brunch menu and its other Berkeley counter.',
   }),
   seed('milky-flakes', 'Milky Flakes', 'Milky Flakes', 'Sweet treats', '#C8912A', {
     logoTemplate: 'monogram', logoInitials: 'MF', logoFace: 'script',
@@ -985,6 +989,7 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
   seed('bober-tea', 'Bober Tea & Mochi', 'Bober Tea', 'Boba and mochi donuts', '#C2508A', {
     site: 'https://boberteaus.com/',
+    icon: 'bober-tea-v92',
     logoTemplate: 'monogram', logoInitials: 'BT', logoFace: 'grotesk',
     phone: '279-900-8046',
     address: '1029 Arnold Dr, Suite 10, Martinez',
@@ -4444,6 +4449,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      seat of their kind, so the yellow sheet. Galpão's and North Italia's
      screenshots never reached this Mac, so their tiles are drawn. */
   seed('north-italia-walnut-creek', 'North Italia', 'North Italia', 'Italian', '#1F2A30', {
+    icon: 'north-italia-walnut-creek',
     logoTemplate: 'wordmark', logoLines: ['NORTH', 'ITALIA'], logoFace: 'slab',
     tagline: 'Handmade pasta and pizza on Locust Street',
     site: 'https://www.northitalia.com/locations/north-italia-walnut-creek-ca/',

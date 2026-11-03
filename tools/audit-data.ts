@@ -25,7 +25,7 @@ import { CITY_PLACEMENTS } from '../src/data/placements'
 import { CITY_PAGES } from '../src/data/cities'
 import { BEASTY_CATEGORIES, CATEGORY_KINDS, CATEGORY_SPOTS } from '../src/data/categories'
 import { CATEGORY_PLACEMENTS } from '../src/data/categorySeats'
-import { PAGE_KINDS, HOME_PAGES, CATEGORY_OVERFLOW, categoriesFor } from '../src/data/slots'
+import { PAGE_KINDS, HOME_PAGES, ALL_BEASTY_PAGES, CATEGORY_OVERFLOW, categoriesFor } from '../src/data/slots'
 import { ARCHIVE_DAYS, currentNews, archivedNews, dayLabel, upcoming } from '../src/data/news'
 import {
   GOODS_CATEGORIES,
@@ -35,7 +35,7 @@ import {
   INDIVIDUAL_SPOTS, BOUTIQUE_SPOTS, EATS_CATEGORIES, SWEETS_CATEGORIES,
 } from '../src/data/slots'
 import { BEASTY_EATS_ROSTER, BEASTY_SERVICES_ROSTER, ROSTER_SEED } from '../src/data/roster'
-import { OTHER_REVIEWS } from '../src/data/foodies'
+import { OTHER_REVIEWS, reviewPostCode } from '../src/data/foodies'
 import { ONLINE_FILLS } from '../src/data/onlineFills'
 import { LOCAL_SEED } from '../src/data/localBrands'
 import { ALL_APPS, DOCK_SETS, APP_GROUPS } from '../src/apps/registry'
@@ -94,7 +94,8 @@ for (const [key, id] of Object.entries(CITY_PLACEMENTS)) {
   const [, city, kind, nRaw] = m
   const n = Number(nRaw)
   if (city !== 'beasty' && !citySlugs.has(city)) err(`placement ${key} names a city with no page`)
-  if (n >= KINDS[kind]) err(`placement ${key} is index ${n}, past the ${KINDS[kind]} spots on that page`)
+  const capacity = city === 'beasty' ? ALL_BEASTY_PAGES.find(p => p.kind === kind)?.categories.length ?? KINDS[kind] : KINDS[kind]
+  if (n >= capacity) err(`placement ${key} is index ${n}, past the ${capacity} spots on that page`)
   if (!ids.has(id)) err(`placement ${key} points at ${id}, which is not a brand`)
   seatOf.set(id, [...(seatOf.get(id) ?? []), key])
 }
@@ -365,8 +366,8 @@ for (const b of BRANDS) {
   }
   for (const r of OTHER_REVIEWS) {
     if (!r.clip) continue
-    const code = /\/reel\/([^/]+)\//.exec(r.reel)?.[1]
-    if (!code) { err(`OTHER_REVIEWS ${r.place}: clip: true but no reel code in ${r.reel}`); continue }
+    const code = reviewPostCode(r.reel)
+    if (!code) { err(`OTHER_REVIEWS ${r.place}: clip: true but no Instagram post code in ${r.reel}`); continue }
     if (!existsSync(join(ROOT_DIR, 'public', 'clips', `review-${code}.mp4`))) err(`OTHER_REVIEWS ${r.place}: public/clips/review-${code}.mp4 is missing`)
     if (!r.brand) continue
     if (!brandById(r.brand)) err(`OTHER_REVIEWS ${r.place}: brand ${r.brand} does not exist`)

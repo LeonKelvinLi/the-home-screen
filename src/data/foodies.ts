@@ -53,6 +53,7 @@ export interface FoodiePage {
 }
 
 const reel = (code: string) => `https://www.instagram.com/reel/${code}/`
+export const reviewPostCode = (href: string) => /\/(?:reel|p)\/([\w-]+)\//.exec(href)?.[1]
 
 const TOP_FOODIE_PAGES: FoodiePage[] = [
   { handle: 'festusfeasts', icon: "foodie-festusfeasts-v85", name: 'Festus Ezeli', label: 'Festus' },
@@ -196,11 +197,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "@daeatzwitbri",
     "label": "daeatzwitbri"
   },
-  {
-    "handle": "thetastebud",
-    "name": "@thetastebud",
-    "label": "thetastebud"
-  },
+  {"handle": "thetastebud", "name": "@thetastebud", "label": "thetastebud", "icon": "foodie-thetastebud-v92"},
   {
     "handle": "dariananthony_",
     "name": "@dariananthony_",
@@ -281,11 +278,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "@foodiesnflightss",
     "label": "foodiesnflightss"
   },
-  {
-    "handle": "carlaylayyy",
-    "name": "@carlaylayyy",
-    "label": "carlaylayyy"
-  },
+  {"handle": "carlaylayyy", "name": "Carla Charisse", "label": "Carla", "instagram": "carlacharisse_", "icon": "foodie-carlacharisse-v92"},
   {
     "handle": "shua.tangco",
     "name": "@shua.tangco",
@@ -378,11 +371,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "@mzz.juxtaposition",
     "label": "mzz.juxtaposition"
   },
-  {
-    "handle": "yourglobalfoodiebff",
-    "name": "@yourglobalfoodiebff",
-    "label": "yourglobalfoodiebff"
-  },
+  {"handle": "yourglobalfoodiebff", "name": "@yourglobalfoodiebff", "label": "yourglobalfoodiebff", "icon": "foodie-globalbff-v92"},
   {
     "handle": "dchangshangry",
     "name": "Dan | Your Bay Area Foodie Explorer",
@@ -628,11 +617,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "@xo.pinsta",
     "label": "xo.pinsta"
   },
-  {
-    "handle": "andreweatsinsf",
-    "name": "@andreweatsinsf",
-    "label": "andreweatsinsf"
-  },
+  {"handle": "andreweatsinsf", "name": "@andreweatsinsf", "label": "andreweatsinsf", "icon": "foodie-andrew-v92"},
   {
     "handle": "lovemissfit",
     "name": "@lovemissfit",
@@ -779,7 +764,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "SL Eats"
   },
   {"handle": "broitsva", "name": "Va", "label": "Va"},
-  {"handle": "fat_ash_foodie", "name": "Ash", "label": "Ash"},
+  {"handle": "fat_ash_foodie", "name": "Ash", "label": "Ash", "icon": "foodie-fatash-v92"},
   {"handle": "_foodieshots_", "name": "Joann Ha", "label": "Joann Ha"},
   {"handle": "kitkatvales", "name": "@kitkatvales", "label": "kitkatvales"},
   { handle: 'foodwookie', name: 'FoodWookie', label: 'FoodWookie' },
@@ -831,6 +816,21 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "hungryhungryheejin", "instagram": "hungryhungryheejin", "name": "Hee Jin", "label": "Hee Jin"},
   {"handle": "liltiffyvert", "instagram": "liltiffyvert", "name": "Tiffany Tran", "label": "Tiffany", "icon": "foodie-liltiffyvert-v90"},
   {"handle": "jovana.camberos", "instagram": "jovana.camberos", "name": "@jovana.camberos", "label": "Jovana", "icon": "foodie-jovana-camberos-v90"},
+  {"handle": "sulli_eats", "instagram": "sulli_eats", "name": "𑣲𝓢𝓾𝓵𝓵𝓲 𓎩 ꜱꜰ ʙᴀʏ ᴀʀᴇᴀ ꜰᴏᴏᴅɪᴇ/ʜᴏᴍᴇᴄᴏᴏᴋꜱ", "label": "𑣲𝓢𝓾𝓵𝓵𝓲", "icon": "foodie-sulli-eats-v92"},
+  {"handle": "baygirlseat", "instagram": "baygirlseat", "name": "Amandy", "label": "Amandy", "icon": "foodie-baygirlseat-v92"},
+  {"handle": "phamamiii", "instagram": "phamamiii", "name": "Diane Pham", "label": "Diane", "icon": "foodie-phamamiii-v92"},
+  {"handle": "heraldh", "instagram": "heraldh", "name": "Herald John", "label": "Herald", "icon": "foodie-heraldh-v92"},
+  {"handle": "tastewith.rach", "instagram": "tastewith.rach", "name": "rachel🍴bay area, ca 🇵🇭", "label": "rachel🍴bay", "icon": "foodie-tastewithrach-v92"},
+  {"handle": "foodiswhyimbroke", "instagram": "foodiswhyimbroke", "name": "Yen Kim Phan", "label": "Yen", "icon": "foodie-foodiswhyimbroke-v92"},
+  {"handle": "keneats_", "instagram": "keneats_", "name": "kenya // sf bay area foodie 😋", "label": "kenya", "icon": "foodie-keneats-v92"},
+  {"handle": "e40", "instagram": "e40", "name": "E40 Mogul 🥂🎩", "label": "E40"},
+  {"handle": "mamamarquez888", "instagram": "mamamarquez888", "name": "Megan Marquez", "label": "Megan", "icon": "foodie-mamamarquez-v92"},
+  {"handle": "sisicooksandeats", "instagram": "sisicooksandeats", "name": "$i$i 🐐 THE GOAT", "label": "$i$i", "icon": "foodie-sisicooks-v92"},
+  {"handle": "reelkevo", "instagram": "reelkevo", "name": "Kevin", "label": "Kevin", "icon": "foodie-reelkevo-v92"},
+  {"handle": "myrealtoralexbradeis", "instagram": "myrealtoralexbradeis", "name": "Alex Bradeis", "label": "Alex", "icon": "foodie-alexbradeis-v92"},
+  {"handle": "rollingwithdeneats", "instagram": "rollingwithdeneats", "name": "Denise", "label": "Denise", "icon": "foodie-denise-v92"},
+  {"handle": "rowbot408", "instagram": "rowbot408", "name": "𝐑 𝐎 𝐖 📻💕🇵🇭", "label": "𝐑", "cuisine": "Event host and creator"},
+  {"handle": "revrocrichboy", "instagram": "revrocrichboy", "name": "Ricardo Vicente", "label": "Ricardo", "icon": "foodie-revrocrichboy-v92", "cuisine": "Print shop and creator"},
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -1224,6 +1224,44 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "justfeediris", "place": "U Dessert Story", "brand": "b_udessertstory", "reel": "https://www.instagram.com/reel/DfNjbJ8NfrY/", "credit": "Filmed by @justfeediris · Berkeley branch, identified by the on-screen title. The listing also represents the San Francisco shop; confirm branch menus and availability.", "city": "Berkeley", "clip": true},
   // Glenn: Clip / Heavy Hitter / Update icon
   {"by": "aztec.ed", "place": "Taqueria El Chacho", "brand": "b_taqueriaelchacho", "reel": "https://www.instagram.com/reel/DfBR9qRMuEF/", "credit": "Filmed by @aztec.ed · Oakland truck at 569 High St. This review advertises a Wednesday $2-taco special; confirm current promotions directly. The promotional price is not the regular menu price.", "city": "Oakland", "clip": true},
+  {"by": "carlacharisse_", "place": "Cà Phê Việt", "city": "San Francisco", "brand": "b_capheviet", "reel": "https://www.instagram.com/reel/DfQpxP_OrNs/", "credit": "Original by @carlacharisse_.", "clip": true},
+  {"by": "sulli_eats", "place": "Cà Phê Việt", "city": "San Francisco", "brand": "b_capheviet", "reel": "https://www.instagram.com/reel/Dbo-XCziORS/", "credit": "Original by @sulli_eats.", "clip": true},
+  {"by": "baygirlseat", "place": "Cà Phê Việt", "city": "San Francisco", "brand": "b_capheviet", "reel": "https://www.instagram.com/p/DbFRtWJFCq4/?img_index=4", "credit": "Original by @baygirlseat. Carousel slide 4, with no audio in the original.", "clip": true},
+  {"by": "phamamiii", "place": "Mr. Dewie’s Cashew Creamery", "city": "Albany", "brand": "b_mrdewies", "reel": "https://www.instagram.com/reel/DcKukITsvL8/", "credit": "Original by @phamamiii.", "clip": true},
+  {"by": "heraldh", "place": "Mr. Dewie’s Cashew Creamery", "city": "Albany", "brand": "b_mrdewies", "reel": "https://www.instagram.com/reel/DNETLY6zdwr/", "credit": "Original by @heraldh. Filmed at the Walnut Creek scoop shop. Check current flavors with the shop.", "clip": true},
+  {"by": "thesnobbiefoodie", "place": "Mr. Dewie’s Cashew Creamery", "city": "Albany", "brand": "b_mrdewies", "reel": "https://www.instagram.com/reel/DJzk1MxxACw/", "credit": "Original by @thesnobbiefoodie. Filmed at the Walnut Creek scoop shop. Check current flavors with the shop.", "clip": true},
+  {"by": "tastewith.rach", "place": "Mr. Dewie’s Cashew Creamery", "city": "Albany", "brand": "b_mrdewies", "reel": "https://www.instagram.com/reel/DT88ZKwEhhy/", "credit": "Original by @tastewith.rach."},
+  {"by": "thetastebud", "place": "Piglet & Co.", "city": "San Francisco", "brand": "b_pigletandco", "reel": "https://www.instagram.com/reel/DfQyIxvTeZI/", "credit": "Original by @thetastebud.", "clip": true},
+  {"by": "foodiswhyimbroke", "place": "Piglet & Co.", "city": "San Francisco", "brand": "b_pigletandco", "reel": "https://www.instagram.com/reel/DHrx8JryfkT/", "credit": "Original by @foodiswhyimbroke.", "clip": true},
+  {"by": "fat_ash_foodie", "place": "Tsujita Artisan Noodle · San Jose", "city": "San Jose", "brand": "b_tsujitasanjose", "reel": "https://www.instagram.com/reel/DfQ3_1YpBRz/", "credit": "Original by @fat_ash_foodie.", "clip": true},
+  {"by": "kimoni.eatss", "place": "Tsujita Artisan Noodle · San Jose", "city": "San Jose", "brand": "b_tsujitasanjose", "reel": "https://www.instagram.com/reel/DLIjnupS6XR/", "credit": "Original by @kimoni.eatss.", "clip": true},
+  {"by": "festusfeasts", "place": "The Lumpia Company", "city": "Oakland", "brand": "b_lumpiacompany", "reel": "https://www.instagram.com/reel/DfGBXamN_aC/", "credit": "Original by @festusfeasts.", "clip": true},
+  {"by": "keneats_", "place": "The Lumpia Company", "city": "Oakland", "brand": "b_lumpiacompany", "reel": "https://www.instagram.com/reel/DcuDfqbyThI/", "credit": "Original by @keneats_. Filmed at Oracle Park in San Francisco.", "clip": true},
+  {"by": "e40", "place": "The Lumpia Company", "city": "Oakland", "brand": "b_lumpiacompany", "reel": "https://www.instagram.com/reel/CZRo4pQj4qy/", "credit": "Original by @e40.", "clip": true},
+  {"by": "mamamarquez888", "place": "The Lumpia Company", "city": "Oakland", "brand": "b_lumpiacompany", "reel": "https://www.instagram.com/reel/DBeJjCNPq0g/", "credit": "Original by @mamamarquez888.", "clip": true},
+  {"by": "andreweatsinsf", "place": "The Lumpia Company", "city": "Oakland", "brand": "b_lumpiacompany", "reel": "https://www.instagram.com/reel/C_Bvy9cydR-/", "credit": "Original by @andreweatsinsf. Filmed at Oracle Park in San Francisco."},
+  {"by": "sisicooksandeats", "place": "East Bay Buffet", "city": "Dublin", "brand": "b_eastbaybuffet", "reel": "https://www.instagram.com/reel/DfRFIHuSfnA/", "credit": "Original by @sisicooksandeats.", "clip": true},
+  {"by": "sisicooksandeats", "place": "Moonlight Café", "city": "Bay Area", "brand": "b_moonlightcafecart", "reel": "https://www.instagram.com/reel/Dea5edeyxnG/", "credit": "Original by @sisicooksandeats.", "clip": true},
+  {"by": "yourglobalfoodiebff", "place": "Always Yours Bakery Cafe", "city": "Castro Valley", "brand": "b_alwaysyoursbakerycafe", "reel": "https://www.instagram.com/reel/DLqjuSmy4lo/", "credit": "Original by @yourglobalfoodiebff.", "clip": true},
+  {"by": "sisicooksandeats", "place": "Always Yours Bakery Cafe", "city": "Castro Valley", "brand": "b_alwaysyoursbakerycafe", "reel": "https://www.instagram.com/reel/Dd8ANmUyPMd/", "credit": "Original by @sisicooksandeats.", "clip": true},
+  {"by": "sisicooksandeats", "place": "North Italia · Walnut Creek", "city": "Walnut Creek", "brand": "b_northitaliawalnutcreek", "reel": "https://www.instagram.com/reel/DdIgGFoSgn7/", "credit": "Original by @sisicooksandeats.", "clip": true},
+  {"by": "eatwithsie", "place": "North Italia · Walnut Creek", "city": "Walnut Creek", "brand": "b_northitaliawalnutcreek", "reel": "https://www.instagram.com/reel/DWUb9PzAZ1e/", "credit": "Original by @eatwithsie. The creator disclosed a partnership or invitation.", "clip": true},
+  {"by": "fedoramaelle", "place": "North Italia · Walnut Creek", "city": "Walnut Creek", "brand": "b_northitaliawalnutcreek", "reel": "https://www.instagram.com/reel/DWMxzGTEnrn/", "credit": "Original by @fedoramaelle.", "clip": true},
+  {"by": "mukbangyourmama", "place": "North Italia · Walnut Creek", "city": "Walnut Creek", "brand": "b_northitaliawalnutcreek", "reel": "https://www.instagram.com/reel/DWURO76BlTw/", "credit": "Original by @mukbangyourmama.", "clip": true},
+  {"by": "andreweatsinsf", "place": "North Italia · Walnut Creek", "city": "Walnut Creek", "brand": "b_northitaliawalnutcreek", "reel": "https://www.instagram.com/reel/DWXI_sAEmYS/", "credit": "Original by @andreweatsinsf. The creator disclosed a partnership or invitation."},
+  {"by": "reelkevo", "place": "Donut Farm · Berkeley", "city": "Berkeley", "brand": "b_donutfarm", "reel": "https://www.instagram.com/reel/DaZB5L1Sytt/", "credit": "Original by @reelkevo.", "clip": true},
+  {"by": "heraldh", "place": "Donut Farm · Berkeley", "city": "Berkeley", "brand": "b_donutfarm", "reel": "https://www.instagram.com/reel/DaTQnC-qJEA/", "credit": "Original by @heraldh.", "clip": true},
+  {"by": "myrealtoralexbradeis", "place": "Donut Farm · Berkeley", "city": "Berkeley", "brand": "b_donutfarm", "reel": "https://www.instagram.com/reel/DVDBfJXjoVU/", "credit": "Original by @myrealtoralexbradeis.", "clip": true},
+  {"by": "rollingwithdeneats", "place": "Bober Tea & Mochi Dough", "city": "Martinez", "brand": "b_bobertea", "reel": "https://www.instagram.com/reel/C8LtnOPN4Bq/", "credit": "Original by @rollingwithdeneats. The creator disclosed a partnership or invitation.", "clip": true},
+  {"by": "rollingwithdeneats", "place": "Bober Tea & Mochi Dough", "city": "Martinez", "brand": "b_bobertea", "reel": "https://www.instagram.com/reel/C57QFmHLTtE/", "credit": "Original by @rollingwithdeneats.", "clip": true},
+  {"by": "felicitythefoodie", "place": "Macs by Icky", "city": "Union City", "brand": "b_macsbyicky", "reel": "https://www.instagram.com/reel/C2tu5NTLqDa/", "credit": "Original by @felicitythefoodie.", "clip": true},
+  {"by": "rowbot408", "place": "Top of the Hill Festival", "city": "Daly City", "reel": "https://www.instagram.com/reel/Desrzn9s1VC/", "credit": "Original by @rowbot408.", "clip": true},
+  {"by": "revrocrichboy", "place": "POD DTG", "city": "Pinole", "brand": "b_poddtg", "reel": "https://www.instagram.com/reel/DdpL1X7yKrr/", "credit": "Original by @revrocrichboy.", "clip": true},
+  {"by": "revrocrichboy", "place": "POD DTG", "city": "Pinole", "brand": "b_poddtg", "reel": "https://www.instagram.com/reel/DXSgcMpEsU0/", "credit": "Original by @revrocrichboy.", "clip": true},
+  {"by": "revrocrichboy", "place": "POD DTG", "city": "Pinole", "brand": "b_poddtg", "reel": "https://www.instagram.com/reel/DUpKLiyEcEY/", "credit": "Original by @revrocrichboy.", "clip": true},
+  {"by": "revrocrichboy", "place": "POD DTG", "city": "Pinole", "brand": "b_poddtg", "reel": "https://www.instagram.com/reel/DDfKABWyHij/", "credit": "Original by @revrocrichboy.", "clip": true},
+  {"by": "andreweatsinsf", "place": "Gao Viet Kitchen", "city": "San Francisco", "brand": "b_gaovietkitchen", "reel": "https://www.instagram.com/reel/C0zzpVTSTx3/", "credit": "Original by @andreweatsinsf. Filmed at the San Francisco Sunset location.", "clip": true},
+  {"by": "grubwitmike", "place": "Gao Viet Kitchen", "city": "San Francisco", "brand": "b_gaovietkitchen", "reel": "https://www.instagram.com/reel/CsOubherntT/", "credit": "Original by @grubwitmike. Filmed at the San Francisco Sunset location.", "clip": true},
 ]
 
 /*

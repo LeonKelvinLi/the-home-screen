@@ -461,3 +461,31 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | --- | --- | --- |
 | `taqueria-el-chacho.webp` | [@taqueriaelchacho](https://www.instagram.com/taqueriaelchacho/) | Original 1080×1080, resampled to 512×512 with aspect preserved; no redraw or story ring. |
 | `foodie-aztec-ed-v91.webp` | [@aztec.ed](https://www.instagram.com/aztec.ed/) | Original 1080×1080, resampled to 512×512 with aspect preserved; no redraw or story ring. |
+| `ca-phe-viet` | https://www.instagram.com/capheviet.sf/ | Public profile artwork, resized to 512 px |
+| `foodie-carlacharisse-v92` | https://www.instagram.com/carlacharisse_/ | Public profile artwork, resized to 512 px |
+| `foodie-sulli-eats-v92` | https://www.instagram.com/sulli_eats/ | Public profile artwork, resized to 512 px |
+| `foodie-baygirlseat-v92` | https://www.instagram.com/baygirlseat/ | Public profile artwork, resized to 512 px |
+| `mr-dewies` | Glenn’s supplied screenshot IMG_8969 | Public profile artwork, resized to 512 px |
+| `foodie-phamamiii-v92` | Glenn’s supplied screenshot IMG_8976 | Public profile artwork, resized to 512 px |
+| `foodie-heraldh-v92` | Glenn’s supplied screenshot IMG_8977 | Public profile artwork, resized to 512 px |
+| `foodie-tastewithrach-v92` | Glenn’s supplied screenshot IMG_8978 | Public profile artwork, resized to 512 px |
+| `piglet-and-co` | Glenn’s supplied screenshot IMG_8980 | Public profile artwork, resized to 512 px |
+| `foodie-thetastebud-v92` | Glenn’s supplied screenshot IMG_8984 | Public profile artwork, resized to 512 px |
+| `foodie-foodiswhyimbroke-v92` | Glenn’s supplied screenshot IMG_8985 | Public profile artwork, resized to 512 px |
+| `tsujita-san-jose` | Glenn’s supplied screenshot IMG_8988 | Public profile artwork, resized to 512 px |
+| `foodie-fatash-v92` | Glenn’s supplied screenshot IMG_8991 | Public profile artwork, resized to 512 px |
+| `ube-bae` | Glenn’s supplied screenshot IMG_9003 | Public profile artwork, resized to 512 px |
+| `foodie-keneats-v92` | Glenn’s supplied screenshot IMG_9007 | Public profile artwork, resized to 512 px |
+| `foodie-mamamarquez-v92` | Glenn’s supplied screenshot IMG_9010 | Public profile artwork, resized to 512 px |
+| `foodie-andrew-v92` | Glenn’s supplied screenshot IMG_9011 | Public profile artwork, resized to 512 px |
+| `foodie-sisicooks-v92` | Glenn’s supplied screenshot IMG_9022 | Public profile artwork, resized to 512 px |
+| `moonlight-cafe-cart` | Glenn’s supplied screenshot IMG_9023 | Public profile artwork, resized to 512 px |
+| `always-yours-bakery-cafe` | Glenn’s supplied screenshot IMG_9026 | Public profile artwork, resized to 512 px |
+| `foodie-globalbff-v92` | Glenn’s supplied screenshot IMG_9029 | Public profile artwork, resized to 512 px |
+| `north-italia-walnut-creek` | Glenn’s supplied screenshot IMG_9030 | Public profile artwork, resized to 512 px |
+| `donut-farm-berkeley` | Glenn’s supplied screenshot IMG_9034 | Public profile artwork, resized to 512 px |
+| `foodie-reelkevo-v92` | Glenn’s supplied screenshot IMG_9035 | Public profile artwork, resized to 512 px |
+| `foodie-alexbradeis-v92` | Glenn’s supplied screenshot IMG_9036 | Public profile artwork, resized to 512 px |
+| `bober-tea-v92` | Glenn’s supplied screenshot IMG_9038 | Public profile artwork, resized to 512 px |
+| `foodie-denise-v92` | Glenn’s supplied screenshot IMG_9039 | Public profile artwork, resized to 512 px |
+| `foodie-revrocrichboy-v92` | Glenn’s supplied screenshot IMG_9040 | Public profile artwork, resized to 512 px |

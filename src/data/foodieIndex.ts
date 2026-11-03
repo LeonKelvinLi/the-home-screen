@@ -8,7 +8,7 @@
 */
 import { BRANDS } from './brands'
 import type { Brand } from './brands'
-import { FOODIE_PAGES, OTHER_REVIEWS } from './foodies'
+import { FOODIE_PAGES, OTHER_REVIEWS, reviewPostCode } from './foodies'
 
 export interface Review {
   /** The creator's Instagram handle, no @. */
@@ -57,7 +57,7 @@ const ALL: Review[] = [
     credit: r.credit,
     ...(r.clip
       ? (() => {
-          const code = /\/reel\/([^/]+)\//.exec(r.reel)?.[1]
+          const code = reviewPostCode(r.reel)
           return code ? { src: `/clips/review-${code}.mp4`, poster: `/clips/review-${code}-poster.webp` } : {}
         })()
       : {}),

@@ -414,7 +414,10 @@ export const BEASTY_SHEETS: SlotPage[] = [
      that position. Cities are untouched by it, exactly as Online is. */
   { kind: 'individuals', heading: 'Individuals', categories: INDIVIDUAL_SPOTS },
   /* The yellow sheet behind Eats holds the food that overflowed it. */
-  { ...SLOT_PAGES[2], heading: 'More eats' },
+  { ...SLOT_PAGES[2], heading: 'More eats', categories: [
+    ...OPEN_SPOTS,
+    ...Array.from({ length: 24 }, (_, i) => ({ n: OPEN_SPOTS.length + i + 1, name: 'Open', label: 'Available' })),
+  ] },
   SLOT_PAGES[3],
 ]
 
@@ -448,6 +451,13 @@ export const CATEGORY_OVERFLOW: SlotPage[] = [{
   about: 'More pet businesses',
   yellow: true,
   categories: Array.from({ length: 24 }, (_, i) => ({ n: i + 1, name: 'Pets', label: 'Available' })),
+}, {
+  kind: 'coffee2',
+  parent: 'coffee',
+  heading: 'More cafes',
+  about: 'More cafes and coffee shops',
+  yellow: true,
+  categories: Array.from({ length: 24 }, (_, i) => ({ n: i + 1, name: 'Café', label: 'Available' })),
 }]
 
 /*

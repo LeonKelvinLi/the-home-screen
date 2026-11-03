@@ -1434,7 +1434,15 @@ export const LOCAL_SEED: LocalSeed[] = [
     name: 'POD DTG',
     label: 'POD DTG',
     cuisine: 'Print on demand',
-    tagline: 'Print on demand.',
+    tagline: 'Custom garment printing, embroidery and screen printing.',
+    instagram: 'poddtg',
+    phone: '510-275-9412',
+    email: 'info@poddtg.com',
+    panels: [{ head: 'Printing accounts', links: [
+      { label: 'POD DTG', href: 'https://www.instagram.com/poddtg/' },
+      { label: 'The Trend Area', href: 'https://www.instagram.com/thetrendarea/' },
+      { label: 'Ricardo Vicente', href: 'https://www.instagram.com/revrocrichboy/' },
+    ] }],
     color: '#0A0A0A',
     icon: 'pod-dtg',
     prep: 0,
@@ -68196,5 +68204,409 @@ export const LOCAL_SEED: LocalSeed[] = [
       "credit": "Posted by @taqueriaelchacho · Business’s own Oakland video, at 569 High St.",
       "platform": "Instagram"
     }
+  },
+  /* Batch 92 */
+  {
+    "slug": "ca-phe-viet",
+    "name": "Cà Phê Việt",
+    "label": "Cà Phê Việt",
+    "cuisine": "Vietnamese café and bánh mì",
+    "tagline": "Vietnamese phin coffee, fruit drinks and bánh mì in SoMa.",
+    "color": "#252028",
+    "prep": 0,
+    "category": "Café",
+    "site": "https://www.caphe-viet.com/",
+    "items": [],
+    "instagram": "capheviet.sf",
+    "icon": "ca-phe-viet",
+    "address": "121 New Montgomery St, San Francisco, CA 94105",
+    "phone": "229-829-0811",
+    "hours": "Mon–Sat 9am–6pm; Sun opens 10am",
+    "quoteOnly": "Check the café for availability and Sunday closing time.",
+    "sections": [
+      {
+        "name": "Phin Coffee",
+        "items": [
+          [
+            "cappuccino (phin)",
+            "Straus Milk",
+            600
+          ],
+          [
+            "Classic Vietnamese Coffee",
+            "",
+            750
+          ],
+          [
+            "Salted Cream Coffee",
+            "",
+            800
+          ],
+          [
+            "Black Sesame Coffee",
+            "roasted · Condensed Milk",
+            800
+          ],
+          [
+            "Ube Coffee",
+            "purple yam · Condensed Milk",
+            800
+          ],
+          [
+            "Coconut Cream Coffee",
+            "",
+            800
+          ],
+          [
+            "Egg Coffee",
+            "hanoi style",
+            850
+          ]
+        ]
+      },
+      {
+        "name": "Pour Over",
+        "items": [
+          [
+            "Good Morning Vietnam",
+            "cocoa · roasted",
+            650
+          ],
+          [
+            "Da Lat Region",
+            "chocolate",
+            650
+          ],
+          [
+            "Hazelnut",
+            "hazelnut · caramel",
+            650
+          ]
+        ]
+      },
+      {
+        "name": "Exotic Fruit Beverages",
+        "items": [
+          [
+            "dragon fruit juice",
+            "Aloe Vera",
+            700
+          ],
+          [
+            "Guava Fruit Juice",
+            "ALOE VERA",
+            700
+          ]
+        ]
+      },
+      {
+        "name": "Bánh Mì",
+        "items": [
+          [
+            "Grilled Chicken",
+            "",
+            1295
+          ],
+          [
+            "Grilled Pork",
+            "",
+            1295
+          ],
+          [
+            "Cold Cut Combo",
+            "",
+            1395
+          ],
+          [
+            "Tofu Truffle Pâté",
+            "",
+            1295
+          ]
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "head": "Visit Cà Phê Việt",
+        "body": [
+          "121 New Montgomery Street is the open café.",
+          "The business lists 418 Sutter Street as coming soon.",
+          "The website and profile give different Sunday closing times. Call to confirm."
+        ],
+        "links": [
+          {
+            "label": "Official menu",
+            "href": "https://www.caphe-viet.com/menu"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "mr-dewies",
+    "name": "Mr. Dewie’s Cashew Creamery",
+    "label": "Mr. Dewie’s",
+    "cuisine": "Cashew ice cream",
+    "tagline": "Cashew ice cream at four East Bay scoop shops, with a Cashew Cafe in Albany.",
+    "color": "#252028",
+    "prep": 0,
+    "category": "Ice cream",
+    "site": "https://www.mrdewies.com/",
+    "items": [
+      [
+        "Cashew ice cream",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ],
+      [
+        "Ice cream sandwiches",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ],
+      [
+        "Bon bons",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ],
+      [
+        "Albany Cashew Cafe baked goods",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ]
+    ],
+    "instagram": "mrdewies",
+    "address": "1116 Solano Ave, Albany, CA 94706",
+    "phone": "510-225-9534",
+    "email": "info@mrdewies.com",
+    "quoteOnly": "Ask each shop for its current menu and scoop prices.",
+    "panels": [
+      {
+        "head": "Scoop shops",
+        "body": [
+          "Albany: 1116 Solano Ave · 510-225-9534",
+          "Emeryville: 5959 Shellmound St · 510-350-8171",
+          "Oakland: 4184 Piedmont Ave · 510-858-5991",
+          "Walnut Creek: 1521 Cypress St",
+          "Check the official location map for branch hours."
+        ]
+      }
+    ],
+    "icon": "mr-dewies",
+    "clip": {
+      "href": "https://www.instagram.com/reel/De_J0MKC1gH/",
+      "credit": "Original by @mrdewies.",
+      "platform": "Instagram",
+      "src": "/clips/review-De_J0MKC1gH.mp4",
+      "poster": "/clips/review-De_J0MKC1gH-poster.webp"
+    }
+  },
+  {
+    "slug": "piglet-and-co",
+    "name": "Piglet & Co.",
+    "label": "Piglet & Co.",
+    "cuisine": "Asian comfort food restaurant",
+    "tagline": "Taiwanese and night-market influences in a seasonal Mission District menu.",
+    "color": "#252028",
+    "prep": 0,
+    "category": "Restaurant",
+    "site": "https://www.pigletandco.com/",
+    "items": [
+      [
+        "Classics tasting menu",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ],
+      [
+        "Midnight Market tasting menu",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ],
+      [
+        "Sunday brunch",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ]
+    ],
+    "instagram": "pigletxco.sf",
+    "address": "2170 Mission St, San Francisco, CA",
+    "email": "dining@pigletandco.com",
+    "hours": "Wed–Thu 5–9pm; Fri–Sat 5–9:30pm; Sun brunch 11am–sold out",
+    "quoteOnly": "Seasonal menus change. See the restaurant for current menus and reservation prices.",
+    "icon": "piglet-and-co",
+    "clip": {
+      "href": "https://www.instagram.com/reel/DZ8hyy_h0iR/",
+      "credit": "Original by @fortpointbeer.",
+      "platform": "Instagram",
+      "src": "/clips/review-DZ8hyy_h0iR.mp4",
+      "poster": "/clips/review-DZ8hyy_h0iR-poster.webp"
+    }
+  },
+  {
+    "slug": "tsujita-san-jose",
+    "name": "Tsujita Artisan Noodle · San Jose",
+    "label": "Tsujita",
+    "cuisine": "Japanese ramen and tsukemen",
+    "tagline": "Ramen and dipping noodles at Strawberry Park Shopping Center.",
+    "color": "#252028",
+    "prep": 0,
+    "category": "Ramen",
+    "site": "https://www.tsujita.com/san-jose-ca",
+    "items": [
+      [
+        "Tsukemen",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ],
+      [
+        "Ramen",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ],
+      [
+        "Spicy chashu ramen",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ]
+    ],
+    "instagram": "tsujitasj",
+    "address": "4330 Moorpark Ave, San Jose, CA 95129",
+    "hours": "Mon–Thu 11am–2pm, 5–9pm; Fri 11am–2pm, 5–9:30pm; Sat–Sun 11am–9pm",
+    "quoteOnly": "See the San Jose grand menu and pickup links on the official page.",
+    "icon": "tsujita-san-jose",
+    "clip": {
+      "href": "https://www.instagram.com/reel/DcEVP5VPZN-/",
+      "credit": "Original by @tsujitasj.",
+      "platform": "Instagram",
+      "src": "/clips/review-DcEVP5VPZN-.mp4",
+      "poster": "/clips/review-DcEVP5VPZN--poster.webp"
+    }
+  },
+  {
+    "slug": "ube-bae",
+    "name": "Ube Bae",
+    "label": "Ube Bae",
+    "cuisine": "Filipino desserts and catering",
+    "tagline": "Bay Area dessert catering with ube cheesecake, mochi and cookies.",
+    "color": "#252028",
+    "prep": 0,
+    "category": "Catering",
+    "site": "https://ubebae.com/",
+    "items": [
+      [
+        "Ube Churro Cheesecake",
+        "9 × 13 inch",
+        4400
+      ],
+      [
+        "Ube Royale",
+        "See the official shop for size and availability.",
+        4400
+      ],
+      [
+        "Ube Bae Cookies",
+        "36 cookies",
+        4800
+      ]
+    ],
+    "instagram": "theubebae",
+    "quoteOnly": "Online prices are for the stated product. Contact Ube Bae for event catering quotes.",
+    "icon": "ube-bae",
+    "clip": {
+      "href": "https://www.instagram.com/reel/DW9wdF0Ejlm/",
+      "credit": "Original by @festusfeasts.",
+      "platform": "Instagram",
+      "src": "/clips/review-DW9wdF0Ejlm.mp4",
+      "poster": "/clips/review-DW9wdF0Ejlm-poster.webp"
+    }
+  },
+  {
+    "slug": "moonlight-cafe-cart",
+    "name": "Moonlight Café",
+    "label": "Moonlight Café",
+    "cuisine": "Mobile coffee cart",
+    "tagline": "Bay Area mobile coffee cart serving espresso and specialty lattes.",
+    "color": "#252028",
+    "prep": 0,
+    "category": "Mobile cart",
+    "site": "https://www.instagram.com/moonlightcafe.ca/",
+    "items": [],
+    "instagram": "moonlightcafe.ca",
+    "needsSite": true,
+    "contactOnly": "Check the cart’s Instagram for its next pop-up or contact it for event availability.",
+    "icon": "moonlight-cafe-cart",
+    "clip": {
+      "href": "https://www.instagram.com/reel/Ddh674FK9bb/",
+      "credit": "Original by @blissthebaywolf.",
+      "platform": "Instagram",
+      "src": "/clips/review-Ddh674FK9bb.mp4",
+      "poster": "/clips/review-Ddh674FK9bb-poster.webp"
+    }
+  },
+  {
+    "slug": "always-yours-bakery-cafe",
+    "name": "Always Yours Bakery Cafe",
+    "label": "Always Yours",
+    "cuisine": "Asian-inspired bakery and desserts",
+    "tagline": "Macarons, Asian-inspired desserts, drinks and custom cakes in Castro Valley.",
+    "color": "#252028",
+    "prep": 0,
+    "category": "Bakery",
+    "site": "https://www.alwaysyoursbakerycafe.com/",
+    "items": [
+      [
+        "Macarons",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ],
+      [
+        "Japanese soufflé cheesecake",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ],
+      [
+        "Custom cakes",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ],
+      [
+        "Banana pudding Vietnamese coffee",
+        "Check current availability and price with the business.",
+        0,
+        null,
+        "Ask"
+      ]
+    ],
+    "instagram": "alwaysyoursbakerycafe",
+    "address": "20634 Rustic Drive, Castro Valley, CA 94546",
+    "phone": "510-363-8736",
+    "hours": "Mon–Thu noon–7pm; Fri–Sun 11am–7pm",
+    "quoteOnly": "See the bakery’s current menu and custom-order options.",
+    "icon": "always-yours-bakery-cafe"
   },
 ]
