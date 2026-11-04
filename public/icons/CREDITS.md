@@ -489,3 +489,4 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `bober-tea-v92` | Glenn’s supplied screenshot IMG_9038 | Public profile artwork, resized to 512 px |
 | `foodie-denise-v92` | Glenn’s supplied screenshot IMG_9039 | Public profile artwork, resized to 512 px |
 | `foodie-revrocrichboy-v92` | Glenn’s supplied screenshot IMG_9040 | Public profile artwork, resized to 512 px |
+| `foodie-siliconvalley-foodies-v93` | Glenn’s supplied screenshot IMG_9095 | Rachel Ahn’s profile photo, cropped and resized to 512 px |

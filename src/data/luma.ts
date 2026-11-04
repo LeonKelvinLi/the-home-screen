@@ -301,6 +301,7 @@ export const ICON_LUMA: Record<string, number> = {
   'foodie-reelkevo-v92': 0.218,
   'foodie-revrocrichboy-v92': 0.4022,
   'foodie-siliconvalley-foodies-v86': 0.2478,
+  'foodie-siliconvalley-foodies-v93': 0.3105,
   'foodie-sisicooks-v92': 0.17,
   'foodie-sulli-eats-v92': 0.2884,
   'foodie-summer-ishungry-v89': 0.1817,

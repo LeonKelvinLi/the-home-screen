@@ -1942,7 +1942,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       'for Honda and Porsche builds. They are on BEASTY rather than on a city page because ' +
       'they ship rather than serve a counter; products and pricing are on their own site.',
     /* Batch 84: own-account SEMA build posts; original YouTube film stays. */
-    clips: [{"src": "/clips/rywire-toyo-sema.mp4", "poster": "/clips/rywire-toyo-sema-poster.webp", "href": "https://www.instagram.com/reel/DfJAxg7vn1V/", "credit": "Posted by @toyotires", "platform": "Instagram"}, {"src": "/clips/rywire-sema-startup.mp4", "poster": "/clips/rywire-sema-startup-poster.webp", "href": "https://www.instagram.com/reel/Dew9d_nOSSY/", "credit": "Posted by @rywire_motorsport", "platform": "Instagram"}],
+    clips: [{"src": "/clips/rywire-toyo-sema.mp4", "poster": "/clips/rywire-toyo-sema-poster.webp", "href": "https://www.instagram.com/reel/DfJAxg7vn1V/", "credit": "Posted by @toyotires", "platform": "Instagram"}, {"src": "/clips/rywire-sema-startup.mp4", "poster": "/clips/rywire-sema-startup-poster.webp", "href": "https://www.instagram.com/reel/Dew9d_nOSSY/", "credit": "Posted by @rywire_motorsport", "platform": "Instagram"}, {"src": "/clips/rywire-charis-sema.mp4", "poster": "/clips/rywire-charis-sema-poster.webp", "href": "https://www.instagram.com/reel/DfSv-KeyxZp/", "credit": "Interview by @thecharisculture with Ryan of @rywire_motorsport at SEMA 2026.", "platform": "Instagram"}],
 
   }),
   seed('emys-cannoli', 'Emy’s Cannoli', 'Emy’s Cann…', 'Cannoli, mobile', '#5C3210', {

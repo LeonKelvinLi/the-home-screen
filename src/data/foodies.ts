@@ -583,7 +583,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "humminglion"
   },
   {
-    "handle": "siliconvalley.foodies", icon: "foodie-siliconvalley-foodies-v86",
+    "handle": "siliconvalley.foodies", icon: "foodie-siliconvalley-foodies-v93",
     "name": "@siliconvalley.foodies",
     "label": "siliconvalley.foodies"
   },
@@ -1262,6 +1262,12 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "revrocrichboy", "place": "POD DTG", "city": "Pinole", "brand": "b_poddtg", "reel": "https://www.instagram.com/reel/DDfKABWyHij/", "credit": "Original by @revrocrichboy.", "clip": true},
   {"by": "andreweatsinsf", "place": "Gao Viet Kitchen", "city": "San Francisco", "brand": "b_gaovietkitchen", "reel": "https://www.instagram.com/reel/C0zzpVTSTx3/", "credit": "Original by @andreweatsinsf. Filmed at the San Francisco Sunset location.", "clip": true},
   {"by": "grubwitmike", "place": "Gao Viet Kitchen", "city": "San Francisco", "brand": "b_gaovietkitchen", "reel": "https://www.instagram.com/reel/CsOubherntT/", "credit": "Original by @grubwitmike. Filmed at the San Francisco Sunset location.", "clip": true},
+
+  // Batch 93: four reviews of Wooga in Cupertino.
+  {"by": "mukbangyourmama", "place": "Wooga Korean BBQ", "city": "Cupertino", "brand": "b_woogakoreanbbq", "reel": "https://www.instagram.com/reel/DfSoOhmBrml/", "credit": "Filmed by @mukbangyourmama at Wooga Korean BBQ in Cupertino.", "clip": true},
+  {"by": "hungrydanz", "place": "Wooga Korean BBQ", "city": "Cupertino", "brand": "b_woogakoreanbbq", "reel": "https://www.instagram.com/reel/C9eFnN0xsUE/", "credit": "Filmed by @hungrydanz at Wooga Korean BBQ in Cupertino.", "clip": true},
+  {"by": "charlikestoeat", "place": "Wooga Korean BBQ", "city": "Cupertino", "brand": "b_woogakoreanbbq", "reel": "https://www.instagram.com/reel/DAPRm7FyDNW/", "credit": "Filmed by @charlikestoeat at Wooga Korean BBQ in Cupertino.", "clip": true},
+  {"by": "siliconvalley.foodies", "place": "Wooga Korean BBQ", "city": "Cupertino", "brand": "b_woogakoreanbbq", "reel": "https://www.instagram.com/reel/C-EVou-PSMY/", "credit": "Filmed by @siliconvalley.foodies at Wooga Korean BBQ in Cupertino.", "clip": true},
 ]
 
 /*
