@@ -4774,7 +4774,7 @@ export const ROSTER_SEED: LocalSeed[] = [
   /* San Francisco • Coffee */
   seed('q-specialty-coffee-san-francisco', 'Q Specialty Coffee', 'Q Coffee', 'Specialty coffee roaster and', '#4C4C4C', {
     icon: 'q-specialty-coffee-san-francisco',
-    tagline: 'Specialty coffee roaster and cafe, in San Francisco',
+    tagline: 'Specialty coffee and matcha in Laurel Heights and at 405 Howard St, Suite 140, in SoMa.',
     site: 'https://www.qspecialtycoffee.com/',
     tier: 1,
   }),

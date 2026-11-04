@@ -167,6 +167,10 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'kennels', heading: 'Kennels', about: 'Dog kennels and breeders of every breed', wall: wall('kennels'), test: /\bkennels?\b|\bbreeders?\b/i },
   /* Glenn, November 2: Korean opens with Matzip in Union City. */
   { kind: 'korean', heading: 'Korean', about: 'Korean restaurants and Korean street food', wall: wall('korean'), test: /korean|kimbap|tteok|bulgogi/i },
+  // Glenn, November 4: Lemon Crab, Smack Burgers and Arirang open these pages.
+  { kind: 'seafood', heading: 'Seafood/Crab Boil', about: 'Seafood restaurants and Cajun crab boils', wall: wall('sushi'), test: /seafood boil|crab boil|cajun seafood|seafood restaurant|oyster bar/i },
+  { kind: 'burgers', heading: 'Burgers/Hot Dogs', about: 'Burger joints, smash burgers and hot dog shops', wall: wall('diner'), test: /burgers?|hot[ -]?dogs?/i, not: /catering/i },
+  { kind: 'koreanbbq', heading: 'Korean BBQ', about: 'Korean barbecue and Korean grill restaurants', wall: wall('bbq'), test: /korean (bbq|barbecue)|\bkbbq\b/i },
 ]
 
 /** Every category page holds his twenty-four. */

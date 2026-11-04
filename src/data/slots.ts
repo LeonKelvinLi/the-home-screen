@@ -458,6 +458,13 @@ export const CATEGORY_OVERFLOW: SlotPage[] = [{
   about: 'More cafes and coffee shops',
   yellow: true,
   categories: Array.from({ length: 24 }, (_, i) => ({ n: i + 1, name: 'Café', label: 'Available' })),
+}, {
+  kind: 'bbq2',
+  parent: 'bbq',
+  heading: 'More BBQ',
+  about: 'More barbecue and smokehouses',
+  yellow: true,
+  categories: Array.from({ length: 24 }, (_, i) => ({ n: i + 1, name: 'BBQ', label: 'Available' })),
 }]
 
 /*

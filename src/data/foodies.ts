@@ -234,7 +234,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "shrimpfriedroice",
     "name": "@shrimpfriedroice",
-    "label": "shrimpfriedroice"
+    "label": "shrimpfriedroice", "icon": "foodie-shrimpfriedroice-v97"
   },
   {
     "handle": "_cynlacson",
@@ -403,7 +403,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "smackinfood",
     "name": "@smackinfood",
-    "label": "smackinfood"
+    "label": "smackinfood", "icon": "foodie-smackinfood-v97"
   },
   {
     "handle": "jetsetjanine",
@@ -593,7 +593,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "_whatarethechances_",
     "name": "@_whatarethechances_",
-    "label": "_whatarethechances_"
+    "label": "_whatarethechances_", "icon": "foodie-whatarethechances-v97"
   },
   {
     "handle": "jacksdiningroom",
@@ -654,7 +654,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "eatswithfoodie",
     "name": "@eatswithfoodie",
-    "label": "eatswithfoodie"
+    "label": "eatswithfoodie", "icon": "foodie-eatswithfoodie-v97"
   },
   {
     "handle": "jensintec",
@@ -843,6 +843,17 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "agnespittioni", "name": "Agnes Pittioni", "label": "Agnes", "icon": "foodie-agnespittioni-v94", "instagram": "agnespittioni"},
   {"handle": "j00diefoodie", "name": "J00die Foodie", "label": "J00die Foodie", "icon": "foodie-j00diefoodie-v94", "instagram": "j00diefoodie"},
   {"handle": "erica.sorelle", "name": "Erica Sorelle", "label": "Erica", "icon": "foodie-erica-sorelle-v94", "instagram": "erica.sorelle"},
+  // Batch 97.
+  {"handle": "aliasharrief", "name": "@aliasharrief", "label": "aliasharrief", "icon": "foodie-aliasharrief-v97"},
+  {"handle": "chelchomps", "name": "@chelchomps", "label": "chelchomps"},
+  {"handle": "monicaplatt", "name": "@monicaplatt", "label": "monicaplatt", "icon": "foodie-monicaplatt-v97"},
+  {"handle": "carlosbradley", "name": "@carlosbradley", "label": "carlosbradley", "icon": "foodie-carlosbradley-v97"},
+  {"handle": "imsarahchaz", "name": "@imsarahchaz", "label": "imsarahchaz", "icon": "foodie-imsarahchaz-v97"},
+  {"handle": "irenedony", "name": "@irenedony", "label": "irenedony", "icon": "foodie-irenedony-v97"},
+  {"handle": "biteswithnatalia", "name": "@biteswithnatalia", "label": "biteswithnatalia", "icon": "foodie-biteswithnatalia-v97"},
+  {"handle": "laurenlovessfood", "name": "@laurenlovessfood", "label": "laurenlovessfood", "icon": "foodie-laurenlovessfood-v97"},
+  {"handle": "lisaaaaletseat", "name": "@lisaaaaletseat", "label": "lisaaaaletseat", "icon": "foodie-lisaaaaletseat-v97"},
+  {"handle": "mattiasblanco", "name": "@mattiasblanco", "label": "mattiasblanco", "icon": "foodie-mattiasblanco-v97"},
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -1297,6 +1308,36 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'foodieberrie', place: 'Uncle Cha Fusion Cafe', city: 'Milpitas', brand: 'b_unclechafusioncafe', reel: reel('DfThLPzx4Yd'), credit: 'Filmed by @foodieberrie at Uncle Cha Fusion Cafe in Milpitas.', clip: true },
   // Batch 96: keep Bibim Grill's four inline films and publish this excerpt on Denise's page and Watch.
   { by: 'thismajourney', place: 'Bibim Grill', city: 'Dublin', brand: 'b_bibimgrill', reel: reel('DfTJrTyNHVN'), credit: 'Filmed by @thismajourney at Bibim Grill in Dublin. The original mentions a limited soft-opening promotion; confirm any offers with the restaurant.', clip: 'creator' },
+  // Batch 97.
+  {"by": "aliasharrief", "place": "Fikscue Craft Barbecue", "city": "Alameda", "brand": "b_fikscuealameda", "reel": "https://www.instagram.com/reel/De72TEoP0t9/", "credit": "Filmed by @aliasharrief at Fikscue Craft Barbecue in Alameda.", "clip": true},
+  {"by": "smackinfood", "place": "Lemon Crab", "city": "Hayward", "brand": "b_lemoncrabhayward", "reel": "https://www.instagram.com/reel/DfVKoBVp_H-/", "credit": "Filmed by @smackinfood at Lemon Crab in Hayward.", "clip": true},
+  {"by": "bayareamunchies510", "place": "Lemon Crab", "city": "Richmond", "brand": "b_lemoncrabhayward", "reel": "https://www.instagram.com/reel/DeiXImexmzZ/", "credit": "Filmed by @bayareamunchies510 at Lemon Crab in Richmond.", "clip": true},
+  {"by": "chelchomps", "place": "Lemon Crab", "city": "Hayward", "brand": "b_lemoncrabhayward", "reel": "https://www.instagram.com/reel/DcHnHrNvdLB/", "credit": "Filmed by @chelchomps at Lemon Crab in Hayward.", "clip": true},
+  {"by": "grubwitmike", "place": "Lemon Crab", "city": "Hayward", "brand": "b_lemoncrabhayward", "reel": "https://www.instagram.com/reel/DUCUNAgkbY8/", "credit": "Filmed by @grubwitmike at Lemon Crab in Hayward.", "clip": true},
+  {"by": "livingvivalakillah", "place": "Legend Hotpot & Grill", "city": "Newark", "brand": "b_legendhotpotgrill", "reel": "https://www.instagram.com/reel/DfVMPhPS2dJ/", "credit": "Filmed by @livingvivalakillah at Legend Hotpot & Grill in Newark.", "clip": true},
+  {"by": "thesnacksensei", "place": "Smack Burgers", "city": "San Leandro", "brand": "b_smackburgerssanleandro", "reel": "https://www.instagram.com/reel/DVO690gkkQg/", "credit": "Archival breakfast review by Grand-O. Check current availability.", "clip": true},
+  {"by": "livingvivalakillah", "place": "Smack Burgers", "city": "San Leandro", "brand": "b_smackburgerssanleandro", "reel": "https://www.instagram.com/reel/DfFtZeYpCkT/", "credit": "Filmed by @livingvivalakillah at Smack Burgers in San Leandro.", "clip": true},
+  {"by": "melsotel", "place": "Smack Burgers", "city": "San Leandro", "brand": "b_smackburgerssanleandro", "reel": "https://www.instagram.com/reel/DTytdIxAT8y/", "credit": "Filmed by @melsotel at Smack Burgers in San Leandro.", "clip": "creator"},
+  {"by": "bayarea_fooddreamz", "place": "Smack Burgers", "city": "San Leandro", "brand": "b_smackburgerssanleandro", "reel": "https://www.instagram.com/reel/DL3NyWBhSXc/", "credit": "Filmed by @bayarea_fooddreamz at Smack Burgers in San Leandro.", "clip": true},
+  {"by": "shrimpfriedroice", "place": "Smack Burgers", "city": "San Leandro", "brand": "b_smackburgerssanleandro", "reel": "https://www.instagram.com/reel/Db-tFWOAWJB/", "credit": "Filmed by @shrimpfriedroice at Smack Burgers in San Leandro.", "clip": "creator"},
+  {"by": "monicaplatt", "place": "Smack Burgers", "city": "San Leandro", "brand": "b_smackburgerssanleandro", "reel": "https://www.instagram.com/reel/DZETMc1IaVt/", "credit": "Filmed by @monicaplatt at Smack Burgers in San Leandro.", "clip": "creator"},
+  {"by": "carlosbradley", "place": "Smack Burgers", "city": "San Leandro", "brand": "b_smackburgerssanleandro", "reel": "https://www.instagram.com/reel/DXfGeg9gW1a/", "credit": "Filmed by @carlosbradley at Smack Burgers in San Leandro.", "clip": "creator"},
+  {"by": "sfchronicle_food", "place": "Smack Burgers", "city": "San Leandro", "brand": "b_smackburgerssanleandro", "reel": "https://www.instagram.com/reel/DVRcl0KiRZs/", "credit": "Breakfast burrito coverage by Cesar Hernandez for @sfchronicle_food. Check current breakfast availability.", "clip": true},
+  {"by": "imsarahchaz", "place": "Q Specialty Coffee — Howard Street", "city": "San Francisco", "brand": "b_qspecialtycoffeesanfrancisco", "reel": "https://www.instagram.com/reel/DfTn17sJdkM/", "credit": "Filmed by @imsarahchaz at 405 Howard St. Hosted soft-opening visit, disclosed by the creator.", "clip": true},
+  {"by": "thesnobbiefoodie", "place": "Arirang Tofu & BBQ", "city": "Pleasanton", "brand": "b_arirangtofubbq", "reel": "https://www.instagram.com/reel/Dc_i4jqplwb/", "credit": "Filmed by @thesnobbiefoodie at Arirang Tofu & BBQ in Pleasanton.", "clip": "creator"},
+  {"by": "irenedony", "place": "Arirang Tofu & BBQ", "city": "Pleasanton", "brand": "b_arirangtofubbq", "reel": "https://www.instagram.com/reel/DctQVBpNLZ-/", "credit": "Filmed by @irenedony at Arirang Tofu & BBQ in Pleasanton.", "clip": "creator"},
+  {"by": "_whatarethechances_", "place": "Arirang Tofu & BBQ", "city": "Pleasanton", "brand": "b_arirangtofubbq", "reel": "https://www.instagram.com/reel/DciD-vdIUAW/", "credit": "Filmed by @_whatarethechances_ at Arirang Tofu & BBQ in Pleasanton.", "clip": true},
+  {"by": "biteswithnatalia", "place": "Arirang Tofu & BBQ", "city": "Pleasanton", "brand": "b_arirangtofubbq", "reel": "https://www.instagram.com/reel/DcMKdy2s6KW/", "credit": "Filmed by @biteswithnatalia at Arirang Tofu & BBQ in Pleasanton.", "clip": "creator"},
+  {"by": "hungere.for.diy", "place": "Arirang Tofu & BBQ", "city": "Pleasanton", "brand": "b_arirangtofubbq", "reel": "https://www.instagram.com/reel/DcLxPQlB7I2/", "credit": "Filmed by @hungere.for.diy at Arirang Tofu & BBQ in Pleasanton.", "clip": true},
+  {"by": "eatswithfoodie", "place": "Arirang Tofu & BBQ", "city": "Pleasanton", "brand": "b_arirangtofubbq", "reel": "https://www.instagram.com/reel/DcJ2__kyfw6/", "credit": "Filmed by @eatswithfoodie at Arirang Tofu & BBQ in Pleasanton.", "clip": true},
+  {"by": "wafflebam", "place": "Arirang Tofu & BBQ", "city": "Pleasanton", "brand": "b_arirangtofubbq", "reel": "https://www.instagram.com/reel/Db14djWAUlp/", "credit": "Filmed by @wafflebam at Arirang Tofu & BBQ in Pleasanton.", "clip": "creator"},
+  {"by": "laurenlovessfood", "place": "Arirang Tofu & BBQ", "city": "Pleasanton", "brand": "b_arirangtofubbq", "reel": "https://www.instagram.com/reel/DfSjsEXvqPs/", "credit": "Filmed by @laurenlovessfood at Arirang Tofu & BBQ in Pleasanton.", "clip": true},
+  {"by": "phodailysj", "place": "Pho Daily", "city": "San Jose", "brand": "b_phodaily", "reel": "https://www.instagram.com/reel/DfVbROChLBB/", "credit": "Filmed by @aztec.ed and posted by @phodailysj.", "clip": true},
+  {"by": "lisaaaaletseat", "place": "Chez Maeju", "city": "Oakland", "brand": "b_chezmaeju", "reel": "https://www.instagram.com/reel/DfRHf08tRQA/", "credit": "Filmed by @lisaaaaletseat at Chez Maeju in Oakland.", "clip": "creator"},
+  {"by": "lisaaaaletseat", "place": "Q Specialty Coffee — Howard Street", "city": "San Francisco", "brand": "b_qspecialtycoffeesanfrancisco", "reel": "https://www.instagram.com/reel/DfS3yDvyZ5g/", "credit": "Filmed by @lisaaaaletseat at 405 Howard St during the November 2026 soft opening.", "clip": true},
+  {"by": "lisaaaaletseat", "place": "Broderick Roadhouse", "city": "Walnut Creek", "brand": "b_broderickwalnutcreek", "reel": "https://www.instagram.com/reel/DfBBrlzPCB_/", "credit": "Filmed by @lisaaaaletseat at Broderick Roadhouse in Walnut Creek.", "clip": true},
+  {"by": "mattiasblanco", "place": "Dolores Deluxe", "city": "San Francisco", "brand": "b_doloresdeluxe", "reel": "https://www.instagram.com/reel/DfVeLs0Bst2/", "credit": "Filmed by @mattiasblanco. The featured sandwich was a special. See the shop’s current menu.", "clip": true},
+  {"by": "sfstandard", "place": "Dolores Deluxe", "city": "San Francisco", "brand": "b_doloresdeluxe", "reel": "https://www.instagram.com/reel/DPtgAR7D9YZ/", "credit": "The San Francisco Standard’s 2025 profile of Dolores Deluxe and founder Ramzi Budayr, posted by @sfstandard.", "clip": true},
 ]
 
 /*

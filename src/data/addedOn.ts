@@ -1117,4 +1117,22 @@ export const ADDED_ON: Record<string, string> = {
 
   // Batch 95
   b_unclechafusioncafe: '2026-11-04',
+
+  // Batch 97
+  b_fikscuealameda: '2026-11-04',
+  b_lemoncrabhayward: '2026-11-04',
+  b_smackburgerssanleandro: '2026-11-04',
+  b_smackburgerssanjose: '2026-11-04',
+  b_broderickwalnutcreek: '2026-11-04',
+  b_arirangtofubbq: '2026-11-04',
+  b_foodiealiasharrief: '2026-11-04',
+  b_foodiechelchomps: '2026-11-04',
+  b_foodiemonicaplatt: '2026-11-04',
+  b_foodiecarlosbradley: '2026-11-04',
+  b_foodieimsarahchaz: '2026-11-04',
+  b_foodieirenedony: '2026-11-04',
+  b_foodiebiteswithnatalia: '2026-11-04',
+  b_foodielaurenlovessfood: '2026-11-04',
+  b_foodielisaaaaletseat: '2026-11-04',
+  b_foodiemattiasblanco: '2026-11-04',
 }

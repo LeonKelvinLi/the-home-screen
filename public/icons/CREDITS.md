@@ -507,3 +507,21 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `uncle-cha-fusion-cafe` | Glenn’s supplied screenshot IMG_9196 | Uncle Cha’s profile mark, cropped and resized to 512 px |
 | `foodie-foodieberrie-v95` | Glenn’s supplied screenshot IMG_9200 | Foodieberrie’s profile portrait, cropped and resized to 512 px |
 | `foodie-thismajourney-v96` | Glenn’s supplied screenshot IMG_9204.PNG | Denise’s profile portrait, cropped and resized to 512 px |
+| `fikscue-alameda` | Glenn’s supplied screenshot IMG_9224.png | Supplied artwork cropped and resized to 512 px |
+| `foodie-aliasharrief-v97` | Glenn’s supplied screenshot IMG_9228.png | Supplied artwork cropped and resized to 512 px |
+| `lemon-crab-hayward` | Glenn’s supplied screenshot IMG_9232.png | Supplied artwork cropped and resized to 512 px |
+| `foodie-smackinfood-v97` | Glenn’s supplied screenshot IMG_9240.PNG | Supplied artwork cropped and resized to 512 px |
+| `foodie-shrimpfriedroice-v97` | Glenn’s supplied screenshot IMG_9257.PNG | Supplied artwork cropped and resized to 512 px |
+| `foodie-monicaplatt-v97` | Glenn’s supplied screenshot IMG_9260.png | Supplied artwork cropped and resized to 512 px |
+| `foodie-carlosbradley-v97` | Glenn’s supplied screenshot IMG_9261.PNG | Supplied artwork cropped and resized to 512 px |
+| `foodie-imsarahchaz-v97` | Glenn’s supplied screenshot IMG_9265.PNG | Supplied artwork cropped and resized to 512 px |
+| `arirang-tofu-bbq` | Glenn’s supplied screenshot IMG_9267.png | Supplied artwork cropped and resized to 512 px |
+| `foodie-irenedony-v97` | Glenn’s supplied screenshot IMG_9273.png | Supplied artwork cropped and resized to 512 px |
+| `foodie-whatarethechances-v97` | Glenn’s supplied screenshot IMG_9275.PNG | Supplied artwork cropped and resized to 512 px |
+| `foodie-biteswithnatalia-v97` | Glenn’s supplied screenshot IMG_9277.png | Supplied artwork cropped and resized to 512 px |
+| `foodie-eatswithfoodie-v97` | Glenn’s supplied screenshot IMG_9279.PNG | Supplied artwork cropped and resized to 512 px |
+| `foodie-laurenlovessfood-v97` | Glenn’s supplied screenshot IMG_9281.png | Supplied artwork cropped and resized to 512 px |
+| `foodie-lisaaaaletseat-v97` | Glenn’s supplied screenshot IMG_9286.png | Supplied artwork cropped and resized to 512 px |
+| `foodie-mattiasblanco-v97` | Glenn’s supplied screenshot IMG_9299.png | Supplied artwork cropped and resized to 512 px |
+| `smack-burgers` | Glenn’s supplied screenshot IMG_9251.png | Supplied artwork cropped and resized to 512 px |
+| `broderick-walnut-creek` | [Broderick’s official wordmark](https://www.broderickwalnutcreek.com/) | Official wordmark on a solid black background, as requested by Glenn |

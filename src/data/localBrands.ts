@@ -68750,4 +68750,220 @@ export const LOCAL_SEED: LocalSeed[] = [
       }],
     }],
   },
+  // Batch 97 — Glenn’s November 4 afternoon listings.
+  {
+    "slug": "fikscue-alameda",
+    "name": "Fikscue Craft Barbecue",
+    "label": "Fikscue",
+    "cuisine": "Halal Indo-Tex barbecue",
+    "tagline": "Texas-style smoked meats and Indonesian cooking on Park Street.",
+    "color": "#241D1B",
+    "icon": "fikscue-alameda",
+    "address": "1708 Park St, Suite 120, Alameda, CA 94501",
+    "prep": 0,
+    "category": "BBQ",
+    "items": [],
+    "panels": [
+      {
+        "head": "Barbecue and Indonesian food",
+        "body": [
+          "Fikscue serves halal Texas-style barbecue and Indonesian dishes. Its site is being rebuilt. Check its Instagram for the Alameda menu, service hours and sellouts."
+        ],
+        "links": [
+          {
+            "label": "Fikscue on Instagram",
+            "href": "https://www.instagram.com/fikscue/"
+          }
+        ]
+      }
+    ],
+    "site": "https://www.fikscue.com/",
+    "dietary": [
+      "Halal"
+    ],
+    "contactOnly": "Alameda service runs Wednesday–Sunday according to Fikscue’s profile. Check their latest posts before visiting."
+  },
+  {
+    "slug": "lemon-crab-hayward",
+    "name": "Lemon Crab",
+    "label": "Lemon Crab",
+    "cuisine": "Cajun seafood boil",
+    "tagline": "Seafood boils, garlic noodles and shrimp rolls on Mission Boulevard.",
+    "color": "#241D1B",
+    "icon": "lemon-crab-hayward",
+    "address": "24458 Mission Blvd, Hayward, CA 94544",
+    "prep": 0,
+    "category": "Seafood boil",
+    "items": [],
+    "panels": [
+      {
+        "head": "Menu and ordering",
+        "body": [
+          "The Hayward menu includes seafood boils, garlic noodles and fried baskets."
+        ],
+        "links": [
+          {
+            "label": "Lemon Crab menu",
+            "href": "https://lemoncrab.us/menu/"
+          },
+          {
+            "label": "Hayward ordering",
+            "href": "https://lemoncrab.us/order-now/"
+          }
+        ]
+      },
+      {
+        "head": "Richmond location",
+        "body": [
+          "1400 Macdonald Ave, Richmond, CA 94801. Check this location’s page for its own hours and menu."
+        ],
+        "links": [
+          {
+            "label": "Lemon Crab Richmond on Instagram",
+            "href": "https://www.instagram.com/lemoncrab_richmond/"
+          }
+        ]
+      }
+    ],
+    "site": "https://lemoncrab.us/",
+    "orderUrl": "https://lemoncrab.us/order-now/",
+    "phone": "(510) 398-8869",
+    "hours": "Mon and Wed–Sun noon–9pm, closed Tue",
+    "contactOnly": "See Lemon Crab’s own menu and ordering links below."
+  },
+  {
+    "slug": "smack-burgers-san-leandro",
+    "name": "Smack Burgers",
+    "label": "Smack Burgers",
+    "cuisine": "Smash burgers and shakes",
+    "tagline": "Smash burgers, beef-tallow fries and shakes on West Juana Avenue.",
+    "color": "#241D1B",
+    "icon": "smack-burgers",
+    "address": "160 W Juana Ave, San Leandro, CA 94577",
+    "prep": 0,
+    "category": "Burgers",
+    "items": [],
+    "panels": [
+      {
+        "head": "Menu and locations",
+        "body": [
+          "San Leandro is open seven days according to Smack Burgers. The San Jose truck has its own schedule. Check the shop’s posts for breakfast service."
+        ],
+        "links": [
+          {
+            "label": "Smack Burgers online ordering",
+            "href": "https://www.smackburgers.com/"
+          },
+          {
+            "label": "Smack Burgers on Instagram",
+            "href": "https://www.instagram.com/smackburgers/"
+          }
+        ]
+      }
+    ],
+    "site": "https://www.smackburgers.com/",
+    "phone": "(510) 690-3902",
+    "contactOnly": "See the restaurant’s ordering page and profile for the current menu and schedule."
+  },
+  {
+    "slug": "smack-burgers-san-jose",
+    "name": "Smack Burgers",
+    "label": "Smack Burgers",
+    "cuisine": "Smash burger truck",
+    "tagline": "The Saturday Smack Burgers truck at 101 East Alma Avenue.",
+    "color": "#241D1B",
+    "icon": "smack-burgers",
+    "address": "101 E Alma Ave, San Jose, CA 95112",
+    "prep": 0,
+    "category": "Burgers",
+    "items": [],
+    "panels": [
+      {
+        "head": "Menu and locations",
+        "body": [
+          "The restaurant’s profile lists the San Jose truck on Saturdays. The San Leandro shop is open seven days."
+        ],
+        "links": [
+          {
+            "label": "San Jose pickup menu",
+            "href": "https://smack-burgers.square.site/"
+          },
+          {
+            "label": "Smack Burgers on Instagram",
+            "href": "https://www.instagram.com/smackburgers/"
+          }
+        ]
+      }
+    ],
+    "site": "https://www.smackburgers.com/",
+    "orderUrl": "https://smack-burgers.square.site/",
+    "hours": "Sat noon–8pm",
+    "contactOnly": "Check the San Jose pickup menu and the truck’s latest schedule before visiting."
+  },
+  {
+    "slug": "arirang-tofu-bbq",
+    "name": "Arirang Tofu & BBQ",
+    "label": "Arirang",
+    "cuisine": "Korean BBQ and tofu stews",
+    "tagline": "Korean comfort food, galbi and tofu stews on Santa Rita Road.",
+    "color": "#241D1B",
+    "icon": "arirang-tofu-bbq",
+    "address": "1807 Santa Rita Rd, Ste F, Pleasanton, CA 94566",
+    "prep": 0,
+    "category": "Korean BBQ",
+    "items": [],
+    "panels": [
+      {
+        "head": "Restaurant and menu",
+        "body": [
+          "Arirang serves Korean BBQ short ribs, soft tofu stews and banchan. See its Instagram for current menu details."
+        ],
+        "links": [
+          {
+            "label": "Arirang on Instagram",
+            "href": "https://www.instagram.com/arirang.pleasanton/"
+          }
+        ]
+      }
+    ],
+    "instagram": "arirang.pleasanton",
+    "needsSite": true,
+    "hours": "Daily 11am–9pm",
+    "contactOnly": "Message the restaurant or visit in person for the current menu."
+  },
+  {
+    "slug": "broderick-walnut-creek",
+    "name": "Broderick Roadhouse",
+    "label": "Broderick",
+    "cuisine": "Burgers and hot dogs",
+    "tagline": "Specialty burgers, loaded fries and weekend brunch on Bonanza Street.",
+    "color": "#241D1B",
+    "icon": "broderick-walnut-creek",
+    "address": "1548 Bonanza St, Walnut Creek, CA 94596",
+    "prep": 0,
+    "category": "Burgers",
+    "items": [],
+    "panels": [
+      {
+        "head": "Menus and hours",
+        "body": [
+          "The restaurant’s menu includes the Poblano Outlaw Burger, duck burger and Johnny Cash hot dog."
+        ],
+        "links": [
+          {
+            "label": "Broderick’s current menus",
+            "href": "https://www.broderickwalnutcreek.com/menus/"
+          },
+          {
+            "label": "Broderick’s hours and location",
+            "href": "https://www.broderickwalnutcreek.com/location/broderick/"
+          }
+        ]
+      }
+    ],
+    "site": "https://www.broderickwalnutcreek.com/",
+    "phone": "(925) 945-6960",
+    "hours": "Mon–Thu 11:30am–9pm, Fri 11am–10pm, Sat 10am–10pm, Sun 10am–8pm",
+    "contactOnly": "See Broderick’s menus for the current selection."
+  },
 ]

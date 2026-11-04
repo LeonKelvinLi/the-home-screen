@@ -2307,4 +2307,27 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   // Batch 95
   'milpitas-goods2-5': 'b_unclechafusioncafe',
   'beasty-goods2-122': 'b_unclechafusioncafe',
+
+  // Batch 97
+  'alameda-goods2-2': 'b_fikscuealameda',
+  'beasty-bbq2-0': 'b_fikscuealameda',
+  'hayward-goods2-4': 'b_lemoncrabhayward',
+  'beasty-seafood-0': 'b_lemoncrabhayward',
+  'san-leandro-goods-0': 'b_smackburgerssanleandro',
+  'san-jose-goods2-32': 'b_smackburgerssanjose',
+  'beasty-burgers-0': 'b_smackburgerssanleandro',
+  'beasty-burgers-1': 'b_broderickwalnutcreek',
+  'pleasanton-goods-7': 'b_arirangtofubbq',
+  'beasty-koreanbbq-0': 'b_arirangtofubbq',
+  'walnut-creek-goods-0': 'b_broderickwalnutcreek',
+  'beasty-foodies2-210': 'b_foodiealiasharrief',
+  'beasty-foodies2-211': 'b_foodiechelchomps',
+  'beasty-foodies2-212': 'b_foodiemonicaplatt',
+  'beasty-foodies2-213': 'b_foodiecarlosbradley',
+  'beasty-foodies2-214': 'b_foodieimsarahchaz',
+  'beasty-foodies2-215': 'b_foodieirenedony',
+  'beasty-foodies2-216': 'b_foodiebiteswithnatalia',
+  'beasty-foodies2-217': 'b_foodielaurenlovessfood',
+  'beasty-foodies2-218': 'b_foodielisaaaaletseat',
+  'beasty-foodies2-219': 'b_foodiemattiasblanco',
 }

@@ -1,0 +1,663 @@
+{
+  "cutoff": "2026-11-04T15:05:00-08:00",
+  "listings": [
+    {
+      "slug": "fikscue-alameda",
+      "name": "Fikscue Craft Barbecue",
+      "label": "Fikscue",
+      "cuisine": "Halal Indo-Tex barbecue",
+      "tagline": "Texas-style smoked meats and Indonesian cooking on Park Street.",
+      "color": "#241D1B",
+      "icon": "fikscue-alameda",
+      "address": "1708 Park St, Suite 120, Alameda, CA 94501",
+      "prep": 0,
+      "category": "BBQ",
+      "items": [],
+      "panels": [
+        {
+          "head": "Barbecue and Indonesian food",
+          "body": [
+            "Fikscue serves halal Texas-style barbecue and Indonesian dishes. Its site is being rebuilt. Check its Instagram for the Alameda menu, service hours and sellouts."
+          ],
+          "links": [
+            {
+              "label": "Fikscue on Instagram",
+              "href": "https://www.instagram.com/fikscue/"
+            }
+          ]
+        }
+      ],
+      "site": "https://www.fikscue.com/",
+      "dietary": [
+        "Halal"
+      ],
+      "contactOnly": "Alameda service runs Wednesday–Sunday according to Fikscue’s profile. Check their latest posts before visiting."
+    },
+    {
+      "slug": "lemon-crab-hayward",
+      "name": "Lemon Crab",
+      "label": "Lemon Crab",
+      "cuisine": "Cajun seafood boil",
+      "tagline": "Seafood boils, garlic noodles and shrimp rolls on Mission Boulevard.",
+      "color": "#241D1B",
+      "icon": "lemon-crab-hayward",
+      "address": "24458 Mission Blvd, Hayward, CA 94544",
+      "prep": 0,
+      "category": "Seafood boil",
+      "items": [],
+      "panels": [
+        {
+          "head": "Menu and ordering",
+          "body": [
+            "The Hayward menu includes seafood boils, garlic noodles and fried baskets."
+          ],
+          "links": [
+            {
+              "label": "Lemon Crab menu",
+              "href": "https://lemoncrab.us/menu/"
+            },
+            {
+              "label": "Hayward ordering",
+              "href": "https://lemoncrab.us/order-now/"
+            }
+          ]
+        },
+        {
+          "head": "Richmond location",
+          "body": [
+            "1400 Macdonald Ave, Richmond, CA 94801. Check this location’s page for its own hours and menu."
+          ],
+          "links": [
+            {
+              "label": "Lemon Crab Richmond on Instagram",
+              "href": "https://www.instagram.com/lemoncrab_richmond/"
+            }
+          ]
+        }
+      ],
+      "site": "https://lemoncrab.us/",
+      "orderUrl": "https://lemoncrab.us/order-now/",
+      "phone": "(510) 398-8869",
+      "hours": "Mon and Wed–Sun noon–9pm, closed Tue",
+      "contactOnly": "See Lemon Crab’s own menu and ordering links below."
+    },
+    {
+      "slug": "smack-burgers-san-leandro",
+      "name": "Smack Burgers",
+      "label": "Smack Burgers",
+      "cuisine": "Smash burgers and shakes",
+      "tagline": "Smash burgers, beef-tallow fries and shakes on West Juana Avenue.",
+      "color": "#241D1B",
+      "icon": "smack-burgers",
+      "address": "160 W Juana Ave, San Leandro, CA 94577",
+      "prep": 0,
+      "category": "Burgers",
+      "items": [],
+      "panels": [
+        {
+          "head": "Menu and locations",
+          "body": [
+            "San Leandro is open seven days according to Smack Burgers. The San Jose truck has its own schedule. Check the shop’s posts for breakfast service."
+          ],
+          "links": [
+            {
+              "label": "Smack Burgers online ordering",
+              "href": "https://www.smackburgers.com/"
+            },
+            {
+              "label": "Smack Burgers on Instagram",
+              "href": "https://www.instagram.com/smackburgers/"
+            }
+          ]
+        }
+      ],
+      "site": "https://www.smackburgers.com/",
+      "phone": "(510) 690-3902",
+      "contactOnly": "See the restaurant’s ordering page and profile for the current menu and schedule."
+    },
+    {
+      "slug": "smack-burgers-san-jose",
+      "name": "Smack Burgers",
+      "label": "Smack Burgers",
+      "cuisine": "Smash burger truck",
+      "tagline": "The Saturday Smack Burgers truck at 101 East Alma Avenue.",
+      "color": "#241D1B",
+      "icon": "smack-burgers",
+      "address": "101 E Alma Ave, San Jose, CA 95112",
+      "prep": 0,
+      "category": "Burgers",
+      "items": [],
+      "panels": [
+        {
+          "head": "Menu and locations",
+          "body": [
+            "The restaurant’s profile lists the San Jose truck on Saturdays. The San Leandro shop is open seven days."
+          ],
+          "links": [
+            {
+              "label": "San Jose pickup menu",
+              "href": "https://smack-burgers.square.site/"
+            },
+            {
+              "label": "Smack Burgers on Instagram",
+              "href": "https://www.instagram.com/smackburgers/"
+            }
+          ]
+        }
+      ],
+      "site": "https://www.smackburgers.com/",
+      "orderUrl": "https://smack-burgers.square.site/",
+      "hours": "Sat noon–8pm",
+      "contactOnly": "Check the San Jose pickup menu and the truck’s latest schedule before visiting."
+    },
+    {
+      "slug": "arirang-tofu-bbq",
+      "name": "Arirang Tofu & BBQ",
+      "label": "Arirang",
+      "cuisine": "Korean BBQ and tofu stews",
+      "tagline": "Korean comfort food, galbi and tofu stews on Santa Rita Road.",
+      "color": "#241D1B",
+      "icon": "arirang-tofu-bbq",
+      "address": "1807 Santa Rita Rd, Ste F, Pleasanton, CA 94566",
+      "prep": 0,
+      "category": "Korean BBQ",
+      "items": [],
+      "panels": [
+        {
+          "head": "Restaurant and menu",
+          "body": [
+            "Arirang serves Korean BBQ short ribs, soft tofu stews and banchan. See its Instagram for current menu details."
+          ],
+          "links": [
+            {
+              "label": "Arirang on Instagram",
+              "href": "https://www.instagram.com/arirang.pleasanton/"
+            }
+          ]
+        }
+      ],
+      "instagram": "arirang.pleasanton",
+      "needsSite": true,
+      "hours": "Daily 11am–9pm",
+      "contactOnly": "Message the restaurant or visit in person for the current menu."
+    },
+    {
+      "slug": "broderick-walnut-creek",
+      "name": "Broderick Roadhouse",
+      "label": "Broderick",
+      "cuisine": "Burgers and hot dogs",
+      "tagline": "Specialty burgers, loaded fries and weekend brunch on Bonanza Street.",
+      "color": "#241D1B",
+      "icon": "broderick-walnut-creek",
+      "address": "1548 Bonanza St, Walnut Creek, CA 94596",
+      "prep": 0,
+      "category": "Burgers",
+      "items": [],
+      "panels": [
+        {
+          "head": "Menus and hours",
+          "body": [
+            "The restaurant’s menu includes the Poblano Outlaw Burger, duck burger and Johnny Cash hot dog."
+          ],
+          "links": [
+            {
+              "label": "Broderick’s current menus",
+              "href": "https://www.broderickwalnutcreek.com/menus/"
+            },
+            {
+              "label": "Broderick’s hours and location",
+              "href": "https://www.broderickwalnutcreek.com/location/broderick/"
+            }
+          ]
+        }
+      ],
+      "site": "https://www.broderickwalnutcreek.com/",
+      "phone": "(925) 945-6960",
+      "hours": "Mon–Thu 11:30am–9pm, Fri 11am–10pm, Sat 10am–10pm, Sun 10am–8pm",
+      "contactOnly": "See Broderick’s menus for the current selection."
+    }
+  ],
+  "placements": {
+    "alameda-goods2-2": "b_fikscuealameda",
+    "beasty-bbq2-0": "b_fikscuealameda",
+    "hayward-goods2-4": "b_lemoncrabhayward",
+    "beasty-seafood-0": "b_lemoncrabhayward",
+    "san-leandro-goods-0": "b_smackburgerssanleandro",
+    "san-jose-goods2-32": "b_smackburgerssanjose",
+    "beasty-burgers-0": "b_smackburgerssanleandro",
+    "beasty-burgers-1": "b_broderickwalnutcreek",
+    "pleasanton-goods-7": "b_arirangtofubbq",
+    "beasty-koreanbbq-0": "b_arirangtofubbq",
+    "walnut-creek-goods-0": "b_broderickwalnutcreek",
+    "beasty-foodies2-210": "b_foodiealiasharrief",
+    "beasty-foodies2-211": "b_foodiechelchomps",
+    "beasty-foodies2-212": "b_foodiemonicaplatt",
+    "beasty-foodies2-213": "b_foodiecarlosbradley",
+    "beasty-foodies2-214": "b_foodieimsarahchaz",
+    "beasty-foodies2-215": "b_foodieirenedony",
+    "beasty-foodies2-216": "b_foodiebiteswithnatalia",
+    "beasty-foodies2-217": "b_foodielaurenlovessfood",
+    "beasty-foodies2-218": "b_foodielisaaaaletseat",
+    "beasty-foodies2-219": "b_foodiemattiasblanco"
+  },
+  "categories": {
+    "seafood": "Seafood/Crab Boil",
+    "burgers": "Burgers/Hot Dogs",
+    "koreanbbq": "Korean BBQ"
+  },
+  "posts": [
+    {
+      "code": "De72TEoP0t9",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/De72TEoP0t9/",
+      "disposition": "local film",
+      "slug": "review-De72TEoP0t9",
+      "brand": "b_fikscuealameda",
+      "by": "aliasharrief",
+      "place": "Fikscue Craft Barbecue",
+      "city": "Alameda",
+      "request": "Clip this video plz / Halal / Foodie / Heavy Hitter",
+      "excerpt": "1s-16s of 34s",
+      "posted": "2026-10-25"
+    },
+    {
+      "code": "DfVKoBVp_H-",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DfVKoBVp_H-/",
+      "disposition": "local film",
+      "slug": "review-DfVKoBVp_H-",
+      "brand": "b_lemoncrabhayward",
+      "by": "smackinfood",
+      "place": "Lemon Crab",
+      "city": "Hayward",
+      "request": "Clip this video plz / Foodie / Heavy Hitter / Please update icon pic",
+      "excerpt": "0s-12s of 12s",
+      "posted": "2026-11-04"
+    },
+    {
+      "code": "DeiXImexmzZ",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DeiXImexmzZ/",
+      "disposition": "local film",
+      "slug": "review-DeiXImexmzZ",
+      "brand": "b_lemoncrabhayward",
+      "by": "bayareamunchies510",
+      "place": "Lemon Crab",
+      "city": "Richmond",
+      "request": "Clip this video plz",
+      "excerpt": "1s-16s of 80s",
+      "posted": "2026-10-16"
+    },
+    {
+      "code": "DcHnHrNvdLB",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DcHnHrNvdLB/",
+      "disposition": "local film",
+      "slug": "review-DcHnHrNvdLB",
+      "brand": "b_lemoncrabhayward",
+      "by": "chelchomps",
+      "place": "Lemon Crab",
+      "city": "Hayward",
+      "request": "Clip this video plz",
+      "excerpt": "5s-20s of 20s",
+      "posted": "2026-08-16"
+    },
+    {
+      "code": "DUCUNAgkbY8",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DUCUNAgkbY8/",
+      "disposition": "local film",
+      "slug": "review-DUCUNAgkbY8",
+      "brand": "b_lemoncrabhayward",
+      "by": "grubwitmike",
+      "place": "Lemon Crab",
+      "city": "Hayward",
+      "request": "Clip this video plz / Heavy Hitter",
+      "excerpt": "2s-17s of 79s",
+      "posted": "2026-01-28"
+    },
+    {
+      "code": "DfVMPhPS2dJ",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DfVMPhPS2dJ/",
+      "disposition": "local film",
+      "slug": "review-DfVMPhPS2dJ",
+      "brand": "b_legendhotpotgrill",
+      "by": "livingvivalakillah",
+      "place": "Legend Hotpot & Grill",
+      "city": "Newark",
+      "request": "Clip this video plz",
+      "excerpt": "15s-30s of 64s",
+      "posted": "2026-11-04"
+    },
+    {
+      "code": "DVO690gkkQg",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DVO690gkkQg/",
+      "disposition": "local film",
+      "slug": "review-DVO690gkkQg",
+      "brand": "b_smackburgerssanleandro",
+      "by": "thesnacksensei",
+      "place": "Smack Burgers",
+      "city": "San Leandro",
+      "request": "Clip this video plz / Heavy Hitter",
+      "excerpt": "3s-18s of 78s",
+      "posted": "2026-02-26"
+    },
+    {
+      "code": "DfFtZeYpCkT",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DfFtZeYpCkT/",
+      "disposition": "local film",
+      "slug": "review-DfFtZeYpCkT",
+      "brand": "b_smackburgerssanleandro",
+      "by": "livingvivalakillah",
+      "place": "Smack Burgers",
+      "city": "San Leandro",
+      "request": "Clip this video plz / Newbie",
+      "excerpt": "1s-16s of 20s",
+      "posted": "2026-10-29"
+    },
+    {
+      "code": "DTytdIxAT8y",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DTytdIxAT8y/",
+      "disposition": "creator and Watch film",
+      "slug": "review-DTytdIxAT8y",
+      "brand": "b_smackburgerssanleandro",
+      "by": "melsotel",
+      "place": "Smack Burgers",
+      "city": "San Leandro",
+      "request": "Clip this video plz / Newbie",
+      "excerpt": "3s-18s of 136s",
+      "posted": "2026-01-22"
+    },
+    {
+      "code": "DL3NyWBhSXc",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DL3NyWBhSXc/",
+      "disposition": "local film",
+      "slug": "review-DL3NyWBhSXc",
+      "brand": "b_smackburgerssanleandro",
+      "by": "bayarea_fooddreamz",
+      "place": "Smack Burgers",
+      "city": "San Leandro",
+      "request": "Clip this video plz / Heavy Hitter",
+      "excerpt": "3s-18s of 41s",
+      "posted": "2025-07-08"
+    },
+    {
+      "code": "Db-tFWOAWJB",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/Db-tFWOAWJB/",
+      "disposition": "creator and Watch film",
+      "slug": "review-Db-tFWOAWJB",
+      "brand": "b_smackburgerssanleandro",
+      "by": "shrimpfriedroice",
+      "place": "Smack Burgers",
+      "city": "San Leandro",
+      "request": "Clip this video plz / Please update icon pic / Mediocre",
+      "excerpt": "2s-17s of 117s",
+      "posted": "2026-08-13"
+    },
+    {
+      "code": "DZETMc1IaVt",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DZETMc1IaVt/",
+      "disposition": "creator and Watch film",
+      "slug": "review-DZETMc1IaVt",
+      "brand": "b_smackburgerssanleandro",
+      "by": "monicaplatt",
+      "place": "Smack Burgers",
+      "city": "San Leandro",
+      "request": "Clip this video plz / Foodie / Newbie",
+      "excerpt": "89s-104s of 106s",
+      "posted": "2026-06-02"
+    },
+    {
+      "code": "DXfGeg9gW1a",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DXfGeg9gW1a/",
+      "disposition": "creator and Watch film",
+      "slug": "review-DXfGeg9gW1a",
+      "brand": "b_smackburgerssanleandro",
+      "by": "carlosbradley",
+      "place": "Smack Burgers",
+      "city": "San Leandro",
+      "request": "Clip this video plz / Foodie / Heavy Hitter",
+      "excerpt": "5s-20s of 60s",
+      "posted": "2026-04-23"
+    },
+    {
+      "code": "DVRcl0KiRZs",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DVRcl0KiRZs/",
+      "disposition": "local film",
+      "slug": "review-DVRcl0KiRZs",
+      "brand": "b_smackburgerssanleandro",
+      "by": "sfchronicle_food",
+      "place": "Smack Burgers",
+      "city": "San Leandro",
+      "request": "Clip this video plz / Fasho / Mediocre",
+      "excerpt": "1s-16s of 38s",
+      "posted": "2026-02-27"
+    },
+    {
+      "code": "DfTn17sJdkM",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DfTn17sJdkM/",
+      "disposition": "local film",
+      "slug": "review-DfTn17sJdkM",
+      "brand": "b_qspecialtycoffeesanfrancisco",
+      "by": "imsarahchaz",
+      "place": "Q Specialty Coffee — Howard Street",
+      "city": "San Francisco",
+      "request": "Clip this video plz / Please update icon pic",
+      "excerpt": "1s-16s of 23s",
+      "posted": "2026-11-04"
+    },
+    {
+      "code": "Dc_i4jqplwb",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/Dc_i4jqplwb/",
+      "disposition": "creator and Watch film",
+      "slug": "review-Dc_i4jqplwb",
+      "brand": "b_arirangtofubbq",
+      "by": "thesnobbiefoodie",
+      "place": "Arirang Tofu & BBQ",
+      "city": "Pleasanton",
+      "request": "Clip this video plz",
+      "excerpt": "9s-24s of 24s",
+      "posted": "2026-09-07"
+    },
+    {
+      "code": "DctQVBpNLZ-",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DctQVBpNLZ-/",
+      "disposition": "creator and Watch film",
+      "slug": "review-DctQVBpNLZ-",
+      "brand": "b_arirangtofubbq",
+      "by": "irenedony",
+      "place": "Arirang Tofu & BBQ",
+      "city": "Pleasanton",
+      "request": "Clip this video plz / Foodie / Mediocre",
+      "excerpt": "2s-17s of 27s",
+      "posted": "2026-08-31"
+    },
+    {
+      "code": "DciD-vdIUAW",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DciD-vdIUAW/",
+      "disposition": "local film",
+      "slug": "review-DciD-vdIUAW",
+      "brand": "b_arirangtofubbq",
+      "by": "_whatarethechances_",
+      "place": "Arirang Tofu & BBQ",
+      "city": "Pleasanton",
+      "request": "Clip this video plz / Please update icon pic",
+      "excerpt": "3s-18s of 35s",
+      "posted": "2026-08-27"
+    },
+    {
+      "code": "DcMKdy2s6KW",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DcMKdy2s6KW/",
+      "disposition": "creator and Watch film",
+      "slug": "review-DcMKdy2s6KW",
+      "brand": "b_arirangtofubbq",
+      "by": "biteswithnatalia",
+      "place": "Arirang Tofu & BBQ",
+      "city": "Pleasanton",
+      "request": "Clip this video plz / Foodie / Newbie",
+      "excerpt": "7s-22s of 67s",
+      "posted": "2026-08-18"
+    },
+    {
+      "code": "DcLxPQlB7I2",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DcLxPQlB7I2/",
+      "disposition": "local film",
+      "slug": "review-DcLxPQlB7I2",
+      "brand": "b_arirangtofubbq",
+      "by": "hungere.for.diy",
+      "place": "Arirang Tofu & BBQ",
+      "city": "Pleasanton",
+      "request": "Clip this video plz",
+      "excerpt": "3s-18s of 38s",
+      "posted": "2026-08-18"
+    },
+    {
+      "code": "DcJ2__kyfw6",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DcJ2__kyfw6/",
+      "disposition": "local film",
+      "slug": "review-DcJ2__kyfw6",
+      "brand": "b_arirangtofubbq",
+      "by": "eatswithfoodie",
+      "place": "Arirang Tofu & BBQ",
+      "city": "Pleasanton",
+      "request": "Clip this video plz / Foodie / Newbie",
+      "excerpt": "16s-31s of 35s",
+      "posted": "2026-08-17"
+    },
+    {
+      "code": "Db14djWAUlp",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/Db14djWAUlp/",
+      "disposition": "creator and Watch film",
+      "slug": "review-Db14djWAUlp",
+      "brand": "b_arirangtofubbq",
+      "by": "wafflebam",
+      "place": "Arirang Tofu & BBQ",
+      "city": "Pleasanton",
+      "request": "Clip this video plz",
+      "excerpt": "3s-18s of 47s",
+      "posted": "2026-08-10"
+    },
+    {
+      "code": "DfSjsEXvqPs",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DfSjsEXvqPs/",
+      "disposition": "local film",
+      "slug": "review-DfSjsEXvqPs",
+      "brand": "b_arirangtofubbq",
+      "by": "laurenlovessfood",
+      "place": "Arirang Tofu & BBQ",
+      "city": "Pleasanton",
+      "request": "Clip this video plz / Foodie / Newbie",
+      "excerpt": "0s-11s of 11s",
+      "posted": "2026-11-03"
+    },
+    {
+      "code": "DfVbROChLBB",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DfVbROChLBB/",
+      "disposition": "local film",
+      "slug": "review-DfVbROChLBB",
+      "brand": "b_phodaily",
+      "by": "phodailysj",
+      "place": "Pho Daily",
+      "city": "San Jose",
+      "request": "Clip this video plz / Heavy Hitter",
+      "excerpt": "9s-24s of 38s",
+      "posted": "2026-11-04"
+    },
+    {
+      "code": "DfRHf08tRQA",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DfRHf08tRQA/",
+      "disposition": "creator and Watch film",
+      "slug": "review-DfRHf08tRQA",
+      "brand": "b_chezmaeju",
+      "by": "lisaaaaletseat",
+      "place": "Chez Maeju",
+      "city": "Oakland",
+      "request": "Clip this video plz / Foodie / Newbie",
+      "excerpt": "0s-5s of 5s",
+      "posted": "2026-11-03"
+    },
+    {
+      "code": "DfS3yDvyZ5g",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DfS3yDvyZ5g/",
+      "disposition": "local film",
+      "slug": "review-DfS3yDvyZ5g",
+      "brand": "b_qspecialtycoffeesanfrancisco",
+      "by": "lisaaaaletseat",
+      "place": "Q Specialty Coffee — Howard Street",
+      "city": "San Francisco",
+      "request": "Clip this video plz",
+      "excerpt": "0s-8s of 8s",
+      "posted": "2026-11-03"
+    },
+    {
+      "code": "DfBBrlzPCB_",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DfBBrlzPCB_/",
+      "disposition": "local film",
+      "slug": "review-DfBBrlzPCB_",
+      "brand": "b_broderickwalnutcreek",
+      "by": "lisaaaaletseat",
+      "place": "Broderick Roadhouse",
+      "city": "Walnut Creek",
+      "request": "Clip this video plz",
+      "excerpt": "1s-16s of 25s",
+      "posted": "2026-10-27"
+    },
+    {
+      "code": "DfVeLs0Bst2",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DfVeLs0Bst2/",
+      "disposition": "local film",
+      "slug": "review-DfVeLs0Bst2",
+      "brand": "b_doloresdeluxe",
+      "by": "mattiasblanco",
+      "place": "Dolores Deluxe",
+      "city": "San Francisco",
+      "request": "Clip this video plz / Foodie / Mediocre",
+      "excerpt": "3s-18s of 50s",
+      "posted": "2026-11-04"
+    },
+    {
+      "code": "DPtgAR7D9YZ",
+      "batch": 97,
+      "source": "https://www.instagram.com/reel/DPtgAR7D9YZ/",
+      "disposition": "local film",
+      "slug": "review-DPtgAR7D9YZ",
+      "brand": "b_doloresdeluxe",
+      "by": "sfstandard",
+      "place": "Dolores Deluxe",
+      "city": "San Francisco",
+      "request": "Watch this video clip",
+      "excerpt": "74s-89s of 100s",
+      "posted": "2025-10-12"
+    }
+  ],
+  "sourceNotes": {
+    "Fikscue": "Glenn’s IMG_9226.png contains the restaurant’s own Alameda address, halal claim and service days.",
+    "Smack Burgers": "IMG_9247.png shows both locations and operating days from the business. IMG_9254.PNG gives the San Leandro phone. The supplied Square link is the San Jose menu.",
+    "Arirang": "IMG_9269.png shows the restaurant’s address and opening hours. Suite F is from IMG_9272.PNG and the on-location creator captions.",
+    "Q Specialty Coffee": "https://wesanfrancisco.com/news/2026/10/28/q-specialty-coffee-soma-opening",
+    "Lemon Crab Richmond": "https://richmondstandard.com/community/2026/10/23/rich-dish-lemon-crab-brings-a-fresh-catch-to-downtown-richmond/"
+  }
+}
