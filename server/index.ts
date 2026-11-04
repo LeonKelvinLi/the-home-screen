@@ -2253,8 +2253,8 @@ function manageLinkFor(member: { email: string | null }): string | null {
 /** A Stripe price id to the tier it pays for, from the environment (not secrets). */
 function tierOfPrice(price: string | undefined): 'pass' | 'diamond' | 'recruiter' | null {
   if (!price) return null
-  if (price === process.env.STRIPE_PRICE_PASS) return 'pass'
-  if (price === process.env.STRIPE_PRICE_DIAMOND) return 'diamond'
+  if (price === process.env.STRIPE_PRICE_PASS || price === process.env.STRIPE_PRICE_PASS_LEGACY) return 'pass'
+  if (price === process.env.STRIPE_PRICE_DIAMOND || price === process.env.STRIPE_PRICE_DIAMOND_LEGACY) return 'diamond'
   if (price === process.env.STRIPE_PRICE_RECRUITER) return 'recruiter'
   return null
 }

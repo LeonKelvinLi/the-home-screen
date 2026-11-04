@@ -186,7 +186,7 @@ export interface LocalSeed {
    * name, and a mockup that looks identical to an agreed one is how a customer
    * ends up asking a counter to honour something nobody promised.
    */
-  offers?: { welcome?: string; loyalty?: string; mock?: boolean; collab?: string }
+  offers?: { welcome?: string; loyalty?: string; mock?: boolean; collab?: string; proposedSponsor?: string }
   /**
    * Priced work that is QUOTED, not bought. Suppresses add-to-cart everywhere.
    * The string explains how to actually start.
@@ -3313,7 +3313,7 @@ export const LOCAL_SEED: LocalSeed[] = [
        Let's just pretty much make heads shots the standard for these icons."
        Cut from the post of his he sent (p_lo with EMPIRE, "Stadium Anthems"),
        above the caption. A new file name, so no cache keeps the old logo. */
-    icon: 'p-lo-2',
+    icon: 'p-lo-v94',
     name: 'P-Lo',
     label: 'P-Lo',
     cuisine: 'Rapper and producer',
@@ -6863,6 +6863,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   {
     slug: 'kung-fu-mala',
     /* -2: the first crop cut off the bottom of their round logo (2026-10-06). */
+    clip: {"src": "/clips/review-DUFY2LokW4X.mp4", "poster": "/clips/review-DUFY2LokW4X-poster.webp", "href": "https://www.instagram.com/reel/DUFY2LokW4X/", "credit": "Posted by @kungfumala.", "platform": "Instagram"},
     icon: 'kung-fu-mala-2',
     /* Their own profile sets it in both scripts: KUNG FU MALA 쿵푸마라. */
     name: 'Kung Fu Mala',
@@ -68608,5 +68609,121 @@ export const LOCAL_SEED: LocalSeed[] = [
     "hours": "Mon–Thu noon–7pm; Fri–Sun 11am–7pm",
     "quoteOnly": "See the bakery’s current menu and custom-order options.",
     "icon": "always-yours-bakery-cafe"
+  },
+  /* Batch 94 */
+  {
+    "slug": "meso-customs",
+    "name": "MESO Customs",
+    "label": "MESO Customs",
+    "cuisine": "Toyota accessories",
+    "tagline": "Toyota truck accessories designed in Yuba City.",
+    "color": "#151515",
+    "prep": 0,
+    "category": "Whips",
+    "site": "https://mesocustoms.com/",
+    "instagram": "mesocustoms",
+    "icon": "meso-customs-v94",
+    "items": [],
+    "panels": [
+      {
+        "head": "Shop and support",
+        "body": [
+          "Online parts and accessories for Toyota trucks."
+        ],
+        "links": [
+          {
+            "label": "Shop MESO Customs",
+            "href": "https://mesocustoms.com/collections/all"
+          },
+          {
+            "label": "Product support",
+            "href": "https://mesocustoms.com/pages/contact"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/review-DfTPrsNxffm.mp4",
+      "poster": "/clips/review-DfTPrsNxffm-poster.webp",
+      "href": "https://www.instagram.com/reel/DfTPrsNxffm/",
+      "credit": "Filmed by @tacomalifestyle. MESO Customs’ TX1 build at SEMA 2026.",
+      "platform": "Instagram"
+    },
+    "contactOnly": "Browse current products, fitment and availability in the MESO Customs store."
+  },
+  {
+    "slug": "jessica-domingo",
+    "name": "Jessica Domingo",
+    "label": "Jessica Domingo",
+    "cuisine": "Singer, songwriter and producer",
+    "tagline": "Music and production by Jessica Domingo.",
+    "color": "#294460",
+    "prep": 0,
+    "category": "Artist",
+    "site": "https://jessicadomingo.com/",
+    "instagram": "jessicaadomingo",
+    "icon": "jessica-domingo-v94",
+    "items": [],
+    "panels": [
+      {
+        "head": "Music",
+        "links": [
+          {
+            "label": "Blue Fantasy and JDOM Serenades",
+            "href": "https://jessicadomingo.com/"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/review-DfTMPILPwHz.mp4",
+      "poster": "/clips/review-DfTMPILPwHz-poster.webp",
+      "href": "https://www.instagram.com/reel/DfTMPILPwHz/",
+      "credit": "Posted by @jessicaadomingo.",
+      "platform": "Instagram"
+    },
+    "clips": [
+      {
+        "src": "/clips/review-DKLNFHrSR7j.mp4",
+        "poster": "/clips/review-DKLNFHrSR7j-poster.webp",
+        "href": "https://www.instagram.com/reel/DKLNFHrSR7j/",
+        "credit": "“Fine Wine” by Jessica Domingo. Creative direction and editing by Jessica Domingo, cinematography by @iameurasian.",
+        "platform": "Instagram"
+      }
+    ],
+    "contactOnly": "See the official links for releases and performances."
+  },
+  {
+    "slug": "netta-brielle",
+    "name": "Netta Brielle",
+    "label": "Netta Brielle",
+    "cuisine": "Singer, songwriter and performer",
+    "tagline": "Music and performances by Netta Brielle.",
+    "color": "#312238",
+    "prep": 0,
+    "category": "Artist",
+    "site": "https://linktr.ee/NettaBrielle",
+    "instagram": "nettabrielle",
+    "icon": "netta-brielle-v94",
+    "items": [],
+    "panels": [
+      {
+        "head": "Music and performances",
+        "links": [
+          {
+            "label": "Netta Brielle’s official links",
+            "href": "https://linktr.ee/NettaBrielle"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/review-Ddj1gx7zNZV.mp4",
+      "poster": "/clips/review-Ddj1gx7zNZV-poster.webp",
+      "href": "https://www.instagram.com/reel/Ddj1gx7zNZV/",
+      "credit": "Netta Brielle at Office Hours Festival R&B Night, filmed by @theofficehoursstudio.",
+      "platform": "Instagram"
+    },
+    "contactOnly": "See the official links for releases and performances."
   },
 ]

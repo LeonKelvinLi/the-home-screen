@@ -6,6 +6,7 @@ import { HalalMark, isHalal } from '../ios/HalalMark'
 import { BrandClip } from './BrandClip'
 import { ItemThumb } from '../ios/ItemThumb'
 import { brandById } from '../data/brands'
+import { CITY_PAGES } from '../data/cities'
 import { citiesOf, seatsOf } from '../data/seats'
 import { FoodieReviews } from './FoodieReviews'
 import { foodieOfBrand, reviewsBy, reviewsOf } from '../data/foodieIndex'
@@ -514,7 +515,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
 
           {brand.address && (
             <div className="brand-where">
-              <p className="brand-address">{brand.address}</p>
+              <p className="brand-address">{formatStreetAddress(brand.address)}</p>
               {tier >= 2 && (
               <a
                 className="btn-secondary brand-directions"
@@ -819,6 +820,9 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                     {brand.offers.collab && (
                       <span className="brand-offer-collab">{brand.offers.collab}</span>
                     )}
+                    {brand.offers.proposedSponsor && (
+                      <span className="brand-offer-sponsor">× {brand.offers.proposedSponsor}</span>
+                    )}
                   </span>
                   <span className="brand-offer-body">{brand.offers.welcome}</span>
                   <span className="brand-offer-when">First visit, once.</span>
@@ -829,6 +833,9 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                   <span className="brand-offer-head">
                     <Gem size={15} />
                     Loyalty offer
+                    {brand.offers.proposedSponsor && (
+                      <span className="brand-offer-sponsor">× {brand.offers.proposedSponsor}</span>
+                    )}
                   </span>
                   <span className="brand-offer-body">{brand.offers.loyalty}</span>
                   <span className="brand-offer-when">
@@ -836,6 +843,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                   </span>
                 </div>
               )}
+              {brand.offers.proposedSponsor && <p className="brand-offer-when">Proposed sponsorship</p>}
               {!brand.offers.mock && (
                 <button className="brand-offer-cta" onClick={() => api.openApp('sys.members')}>
                   About BEASTY members
@@ -1097,6 +1105,17 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
  * to the business's own pin where it knows it. Both are encoded — an
  * unencoded "2190 Contra Costa Blvd, Pleasant Hill" breaks on its comma.
  */
+/** Present a street and locality on separate lines, using the published address. */
+function formatStreetAddress(address: string): string {
+  if (!/^(?:\d|P\.?\s*O\.?\s+Box\b)/i.test(address)) return address
+  const parts = address.match(/^(.+),\s*([^,\n]+?,\s*[A-Z]{2}(?:\s+\d{5}(?:-\d{4})?)?)$/)
+    ?? address.match(/^(.+),\s*([^,\n]+)$/)
+  if (!parts) return address
+  const [, street, locality] = parts
+  if (!locality.includes(',') && !CITY_PAGES.some(city => city === locality.trim())) return address
+  return `${street.replace(/,\s*(?=(?:suite|ste\.?|unit|apt\.?|#)\s*\w)/gi, ' ')}\n${locality.trim().replace(/,\s*/, ', ')}`
+}
+
 function mapsHref(address: string, name: string): string {
   const q = encodeURIComponent(`${name}, ${address}`)
   const apple =

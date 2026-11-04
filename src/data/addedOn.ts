@@ -1102,4 +1102,17 @@ export const ADDED_ON: Record<string, string> = {
   b_moonlightcafecart: '2026-11-03',
   b_alwaysyoursbakerycafe: '2026-11-03',
 
+  // Batch 94
+  b_mesocustoms: '2026-11-03',
+  b_jessicadomingo: '2026-11-03',
+  b_nettabrielle: '2026-11-04',
+  b_foodiebayareakulture: '2026-11-04',
+  b_foodiekatdazzzle: '2026-11-03',
+  b_foodiequeenfoode: '2026-11-04',
+  b_foodiecindydreamtravel: '2026-11-04',
+  b_foodieyummylouey: '2026-11-04',
+  b_foodieagnespittioni: '2026-11-04',
+  b_foodiej00diefoodie: '2026-11-04',
+  b_foodieericasorelle: '2026-11-04',
+
 }

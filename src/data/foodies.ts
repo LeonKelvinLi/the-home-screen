@@ -32,8 +32,8 @@ export interface OtherReview {
   /** A business on BEASTY, when it is one. */
   brand?: string
   reel: string
-  /** A 15-second copy BEASTY plays, /clips/review-<code>.mp4, where one is cut. */
-  clip?: boolean
+  /** A local film. 'creator' plays on Foodies and Watch and links to the original from the business. */
+  clip?: boolean | 'creator'
   /** Source attribution when the posting account differs from the reviewer. */
   credit?: string
 }
@@ -50,6 +50,7 @@ export interface FoodiePage {
   brand?: string
   /** Original profile artwork supplied for this creator. */
   icon?: string
+  glow?: true
 }
 
 const reel = (code: string) => `https://www.instagram.com/reel/${code}/`
@@ -66,9 +67,9 @@ const TOP_FOODIE_PAGES: FoodiePage[] = [
   { handle: 'seekeasyeats', icon: "foodie-whofedandrew-v86", instagram: 'whofedandrew', name: 'Andrew Greenstein', label: 'Andrew' },
   { handle: 'orangeginger', name: 'Liz Maw', label: 'Liz Maw' },
   { handle: 'antoinetterzz', name: 'antoinetterzz', label: 'Antoinette' },
-  { handle: 'takeoutwithtuck', name: 'The Honest Reviewer', label: 'Tuck' },
+  { handle: 'bayarea.kulture', instagram: 'bayarea.kulture', name: 'Bay Area Kulture', label: 'Bay Area Kulture', cuisine: 'Bay Area food and culture', icon: 'foodie-bayarea-kulture-v94', glow: true },
   { handle: 'chefmelissaking', name: 'Melissa King', label: 'Melissa King' },
-  { handle: 'celineeats', name: 'celine', label: 'Celine' },
+  { handle: 'celineeats', instagram: 'celineeats', name: 'celine', label: 'Celine', icon: 'foodie-celineeats-v94' },
   { handle: 'grubwitmike', name: 'Grubwitmike', label: 'Grubwitmike' },
   { handle: 'singlecatm0m', name: 'Tiffany', label: 'Tiffany' },
   { handle: 'kimjsseats', name: 'Where Jess at', label: 'Jess' },
@@ -831,6 +832,15 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "rollingwithdeneats", "instagram": "rollingwithdeneats", "name": "Denise", "label": "Denise", "icon": "foodie-denise-v92"},
   {"handle": "rowbot408", "instagram": "rowbot408", "name": "𝐑 𝐎 𝐖 📻💕🇵🇭", "label": "𝐑", "cuisine": "Event host and creator"},
   {"handle": "revrocrichboy", "instagram": "revrocrichboy", "name": "Ricardo Vicente", "label": "Ricardo", "icon": "foodie-revrocrichboy-v92", "cuisine": "Print shop and creator"},
+  // Batch 94: Tuck moves to More Foodies when Bay Area Kulture takes the center seat.
+  { handle: 'takeoutwithtuck', name: 'The Honest Reviewer', label: 'Tuck' },
+  {"handle": "kat.dazzzle", "name": "Kat", "label": "Kat", "icon": "foodie-kat-dazzzle-v94", "instagram": "kat.dazzzle"},
+  {"handle": "queen.food.e", "name": "Queen Food E", "label": "Queen Food E", "icon": "foodie-queen-food-e-v94", "instagram": "queen.food.e"},
+  {"handle": "cindydreamtravel", "name": "Cindy", "label": "Cindy", "icon": "foodie-cindydreamtravel-v94", "instagram": "cindydreamtravel"},
+  {"handle": "yummylouey", "name": "Yummy Louey", "label": "Yummy Louey", "icon": "foodie-yummylouey-v94", "instagram": "yummylouey"},
+  {"handle": "agnespittioni", "name": "Agnes Pittioni", "label": "Agnes", "icon": "foodie-agnespittioni-v94", "instagram": "agnespittioni"},
+  {"handle": "j00diefoodie", "name": "J00die Foodie", "label": "J00die Foodie", "icon": "foodie-j00diefoodie-v94", "instagram": "j00diefoodie"},
+  {"handle": "erica.sorelle", "name": "Erica Sorelle", "label": "Erica", "icon": "foodie-erica-sorelle-v94", "instagram": "erica.sorelle"},
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -1268,6 +1278,19 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "hungrydanz", "place": "Wooga Korean BBQ", "city": "Cupertino", "brand": "b_woogakoreanbbq", "reel": "https://www.instagram.com/reel/C9eFnN0xsUE/", "credit": "Filmed by @hungrydanz at Wooga Korean BBQ in Cupertino.", "clip": true},
   {"by": "charlikestoeat", "place": "Wooga Korean BBQ", "city": "Cupertino", "brand": "b_woogakoreanbbq", "reel": "https://www.instagram.com/reel/DAPRm7FyDNW/", "credit": "Filmed by @charlikestoeat at Wooga Korean BBQ in Cupertino.", "clip": true},
   {"by": "siliconvalley.foodies", "place": "Wooga Korean BBQ", "city": "Cupertino", "brand": "b_woogakoreanbbq", "reel": "https://www.instagram.com/reel/C-EVou-PSMY/", "credit": "Filmed by @siliconvalley.foodies at Wooga Korean BBQ in Cupertino.", "clip": true},
+
+  // Batch 94: Pinole, San Francisco and Oakland reviews.
+  {"by": "kat.dazzzle", "place": "Sweet Pipers", "city": "Pinole", "brand": "b_sweetpipers", "reel": "https://www.instagram.com/reel/DfTfpVfgT8A/", "credit": "Filmed by @kat.dazzzle at Sweet Pipers in Pinole.", "clip": true},
+  {"by": "celineeats", "place": "Dolores Deluxe", "city": "San Francisco", "brand": "b_doloresdeluxe", "reel": "https://www.instagram.com/reel/DfTbab1iKXB/", "credit": "Filmed by @celineeats. The Bon Voyage sandwich was a limited special.", "clip": true},
+  {"by": "grubwitmike", "place": "Brasa Bros", "city": "San Francisco", "brand": "b_brasabros", "reel": "https://www.instagram.com/reel/DNWwiHiRGof/", "credit": "Filmed by @grubwitmike at Brasa Bros. Paid promotion disclosed by the creator.", "clip": true},
+  {"by": "thesnacksensei", "place": "Brasa Bros", "city": "San Francisco", "brand": "b_brasabros", "reel": "https://www.instagram.com/reel/DM_pOd2vqSh/", "credit": "Filmed by @thesnacksensei at Brasa Bros. Archival August 2025 opening review.", "clip": "creator"},
+  {"by": "startingfiresevrywhere", "place": "Brasa Bros", "city": "San Francisco", "brand": "b_brasabros", "reel": "https://www.instagram.com/reel/De5AERCRDzW/", "credit": "Filmed by @startingfiresevrywhere at Brasa Bros.", "clip": true},
+  {"by": "queen.food.e", "place": "Brasa Bros", "city": "San Francisco", "brand": "b_brasabros", "reel": "https://www.instagram.com/reel/DdJzWT-vPYh/", "credit": "Filmed by @queen.food.e at Brasa Bros.", "clip": true},
+  {"by": "cindydreamtravel", "place": "Brasa Bros", "city": "San Francisco", "brand": "b_brasabros", "reel": "https://www.instagram.com/reel/Dcgpc6tgSRY/", "credit": "Filmed by @cindydreamtravel at Brasa Bros.", "clip": "creator"},
+  {"by": "yummylouey", "place": "Kung Fu Mala", "city": "Oakland", "brand": "b_kungfumala", "reel": "https://www.instagram.com/reel/DYptgDShjz-/", "credit": "Filmed by @yummylouey at Kung Fu Mala in Oakland.", "clip": true},
+  {"by": "agnespittioni", "place": "Kung Fu Mala", "city": "Oakland", "brand": "b_kungfumala", "reel": "https://www.instagram.com/reel/DNRiXHzytGH/", "credit": "Filmed by @agnespittioni at Kung Fu Mala in Oakland.", "clip": true},
+  {"by": "j00diefoodie", "place": "Kung Fu Mala", "city": "Oakland", "brand": "b_kungfumala", "reel": "https://www.instagram.com/reel/DLQNvevPcKj/", "credit": "Filmed by @j00diefoodie at Kung Fu Mala in Oakland.", "clip": true},
+  {"by": "erica.sorelle", "place": "Nawah Market & Deli", "city": "Oakland", "brand": "b_nawahmarket", "reel": "https://www.instagram.com/reel/DfTXXJzM3pw/", "credit": "Filmed by @erica.sorelle at Nawah Market & Deli in Oakland.", "clip": true},
 ]
 
 /*
@@ -1284,12 +1307,13 @@ export const FOODIE_SEED: LocalSeed[] = FOODIE_PAGES.filter((f) => !f.brand).map
   tagline: `${f.cuisine ? 'Reviews and visits' : 'Bay Area food reviews'}, @${f.instagram ?? f.handle}`,
   color: PALETTE[i % PALETTE.length],
   icon: f.icon,
+  glow: f.glow,
   instagram: f.instagram,
   prep: 0,
   category: 'Foodie',
   logoTemplate: 'wordmark',
   logoLines: [f.label],
   logoFace: 'script',
-  contactOnly: `${f.name} ${f.cuisine ? 'shares reviews and visits' : 'reviews Bay Area food'} on Instagram as @${f.instagram ?? f.handle}. The places reviewed are below: open one to watch the review, or to go to that business on BEASTY. BEASTY has not spoken to them yet: this spot is held, not taken.`,
+  contactOnly: `${f.name} ${f.cuisine ? 'shares reviews and visits' : 'reviews Bay Area food'} on Instagram as @${f.instagram ?? f.handle}. The places reviewed are below. Open one to watch the review or visit the business on BEASTY.`,
   items: [],
 }))

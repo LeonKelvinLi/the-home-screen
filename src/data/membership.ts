@@ -20,8 +20,7 @@
  *   $39 - (9 / 3) x $10 = $9    exactly the number he wrote on the BIGGIE card
  *   $59 - (12 / 3) x $10 = $19  exactly the number he wrote on the BEASTY card
  *
- * (Both prices have since moved: BIGGIE PASS to $29.99 on 23 October and BEASTY PASS to
- * $39.99 on 26 October, so a full set of referrals now makes either month free.)
+ * On 4 November, Glenn restored these monthly prices for new subscriptions.
  *
  * So `monthly` stays his real price and the discounted figure is DERIVED below
  * rather than typed, because two numbers that must agree and are entered twice
@@ -110,10 +109,7 @@ export const TIERS: Tier[] = [
     nameLead: 'BIGGIE',
     nameTail: 'PASS',
     mark: 'ribbon',
-    /* $29.99 from 2026-10-23 (Leon: "change price to $29.99 for user instead
-       of 39.99"). It was Glenn's $39. The referral cap stays $30, so a member
-       who refers 9 pays nothing next month rather than being owed money. */
-    monthly: 29.99,
+    monthly: 39,
     honours: 'the Loyalty offer',
     discountCap: 30,
     discountCapReferrals: 9,
@@ -141,10 +137,7 @@ export const TIERS: Tier[] = [
     nameLead: 'BEASTY',
     nameTail: 'PASS',
     mark: 'gem',
-    /* $39.99 from 2026-10-26 (Glenn: "Since the membership fee is now 29 and 39"; Leon: "change
-       the $59"), as BIGGIE PASS went from his $29 to $29.99. It was his $59. The referral cap stays
-       $40, so a member who refers 12 pays nothing next month. */
-    monthly: 39.99,
+    monthly: 59,
     honours: 'both the Loyalty and Welcome offers',
     discountCap: 40,
     discountCapReferrals: 12,
@@ -202,12 +195,6 @@ export const TIERS: Tier[] = [
  */
 export const fullyReferredPrice = (t: Tier) => Math.max(0, Math.round((t.monthly - t.discountCap) * 100) / 100)
 
-/*
-  A full set of referrals can now cover the whole month: at $29.99 the $30 cap
-  makes 9 referrals a free month. The floor above is what stops that ever
-  reading as BEASTY owing the member money; the check below keeps the floor
-  honest, so a cap set far past the price is still caught.
-*/
 for (const t of TIERS) {
   if (t.discountCap - t.monthly >= 1) {
     throw new Error(

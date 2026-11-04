@@ -1,5 +1,14 @@
 # Stripe: what is built, and what only Glenn can do
 
+## Monthly pass prices from 4 November 2026
+
+| Pass | Current price ID | Public checkout |
+|---|---|---|
+| BIGGIE PASS, $39/month | `price_1UY6WqBsUW5lMOxSKdXAzvZn` | [BIGGIE checkout](https://buy.stripe.com/6oUaEW4ZA8mhg5r59Ebsc03) |
+| BEASTY PASS, $59/month | `price_1UY6XKBsUW5lMOxSiV2RCd4L` | [BEASTY checkout](https://buy.stripe.com/5kQ7sKfEegSNaL77hMbsc04) |
+
+Render’s monthly payment links and current price IDs use the values above. The previous price IDs in the October table are stored as `STRIPE_PRICE_PASS_LEGACY` and `STRIPE_PRICE_DIAMOND_LEGACY` for existing Stripe subscriptions and events. Both new checkout links accept promotion codes and return to `/?joined=1`.
+
 ## Live, 26 October 2026
 
 Leon: "done stripe is set create all and make membership work". Built in Glenn's live Stripe account **Beastyh2oco** (`acct_1LIyv8BsUW5lMOxS`, public name BEASTY H2O Company), driven in Chrome; none of it needed a secret key.

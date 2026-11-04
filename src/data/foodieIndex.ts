@@ -26,6 +26,8 @@ export interface Review {
   poster?: string
   /** Original reviewer and posting-account credit for a repost. */
   credit?: string
+  /** Play the excerpt from the creator's page and Watch. */
+  creatorClip?: boolean
 }
 
 /* Accounts that posted a business's own film: they are the business, not a reviewer. */
@@ -55,6 +57,7 @@ const ALL: Review[] = [
     brand: r.brand ? byId.get(r.brand) : undefined,
     href: r.reel,
     credit: r.credit,
+    ...(r.clip === 'creator' ? { creatorClip: true } : {}),
     ...(r.clip
       ? (() => {
           const code = reviewPostCode(r.reel)
@@ -68,7 +71,9 @@ const ALL: Review[] = [
 export const reviewsBy = (handle: string): Review[] => ALL.filter((r) => stableHandle(r.by) === stableHandle(handle))
 
 /** Every creator's review of one business. */
-export const reviewsOf = (brandId: string): Review[] => ALL.filter((r) => r.brand?.id === brandId)
+export const reviewsOf = (brandId: string): Review[] => ALL
+  .filter((r) => r.brand?.id === brandId)
+  .map((r) => r.creatorClip ? { ...r, src: undefined, poster: undefined } : r)
 
 /** The handle whose BEASTY page this is, if it is a foodie's. */
 export const foodieOfBrand = (brandId: string): string | undefined =>

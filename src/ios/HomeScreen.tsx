@@ -113,6 +113,7 @@ const categoryApp = (kind: string): AppDef[] => {
       icon: <CategoryIcon kind={kind} thumb={thumbFor(page)} />,
       kind: 'system' as const,
       tint: '#1C1C1E',
+      ...(kind === 'foodies' ? { glow: true as const } : {}),
     },
   ]
 }
@@ -1265,7 +1266,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
                   badge={badgeFor(app.id)}
                   badgeWhat={app.id === 'sys.profile' ? (badgeFor(app.id) === 1 ? 'friend request' : 'friend requests') : undefined}
                   mobile={app.mobile}
-                  noSite={app.noSite}
+                  noSite={page.kind === 'foodies' || page.kind === 'foodies2' ? undefined : app.noSite}
                   glow={app.glow}
                   size={page.tile ?? screen.iconSize}
                   onOpen={(rect) => {

@@ -205,6 +205,7 @@ export interface Brand {
      * Yard x @TheSnackSensei".
      */
     collab?: string
+    proposedSponsor?: string
   }
   /**
    * Line above the menu. Every partner carries one: the list is a curated
@@ -448,6 +449,7 @@ interface Seed {
      * Yard x @TheSnackSensei".
      */
     collab?: string
+    proposedSponsor?: string
   }
   groups?: ServiceGroup[]
   /**

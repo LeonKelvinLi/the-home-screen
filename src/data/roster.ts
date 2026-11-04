@@ -1353,6 +1353,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     offers: {
       welcome: '15% off when you spend $50 or more, on your first visit.',
       loyalty: '10% off when you spend $50 or more.',
+      proposedSponsor: '@bayarea.kulture',
     },
     photos: [
       {
@@ -1457,10 +1458,11 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://yes-moment.com/',
   }),
   seed('brasa-bros', 'Brasa Bros', 'Brasa Bros', 'Peruvian rotisserie chicken', '#C24A18', {
-    icon: 'brasa-bros',
+    icon: 'brasa-bros-v94',
     logoTemplate: 'monogram', logoInitials: 'BB', logoFace: 'condensed',
     site: 'https://www.brasa-bros.com/',
-    address: '1001 S Van Ness Ave, San Francisco',
+    orderUrl: 'https://order.toasttab.com/online/brasa-bros',
+    clip: {"src": "/clips/review-DfS22QEAS9l.mp4", "poster": "/clips/review-DfS22QEAS9l-poster.webp", "href": "https://www.instagram.com/p/DfS22QEAS9l/", "credit": "Posted by @brasa.bros.", "platform": "Instagram"},
   }),
 
 

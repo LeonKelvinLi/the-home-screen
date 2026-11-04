@@ -2289,4 +2289,19 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-200': 'b_foodierowbot408',
   'beasty-foodies2-201': 'b_foodierevrocrichboy',
 
+  // Batch 94
+  'beasty-whips-12': 'b_mesocustoms',
+  'beasty-individuals-20': 'b_jessicadomingo',
+  'beasty-individuals-21': 'b_nettabrielle',
+  'beasty-goods2-121': 'b_brasabros',
+  'beasty-foodies-10': 'b_foodiebayareakulture',
+  'beasty-foodies2-202': 'b_foodietakeoutwithtuck',
+  'beasty-foodies2-203': 'b_foodiekatdazzzle',
+  'beasty-foodies2-204': 'b_foodiequeenfoode',
+  'beasty-foodies2-205': 'b_foodiecindydreamtravel',
+  'beasty-foodies2-206': 'b_foodieyummylouey',
+  'beasty-foodies2-207': 'b_foodieagnespittioni',
+  'beasty-foodies2-208': 'b_foodiej00diefoodie',
+  'beasty-foodies2-209': 'b_foodieericasorelle',
+
 }

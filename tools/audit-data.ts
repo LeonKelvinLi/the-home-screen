@@ -352,10 +352,8 @@ for (const b of BRANDS) {
 }
 
 /*
-  THREE FILMS A PAGE AT MOST. Glenn, 2026-10-24: "Clip this video plz (3rd)
-  limit 3 per affiliate". A page's films are its own (`clip`) and the second
-  reviews played under it (OTHER_REVIEWS with that brand and a cut copy), each
-  of which must exist on disk.
+  Count the business's own films and the reviews played on its page. A
+  creator's exclusive excerpt still needs a file and a valid business link.
 */
 {
   const films = new Map<string, number>()
@@ -371,7 +369,7 @@ for (const b of BRANDS) {
     if (!existsSync(join(ROOT_DIR, 'public', 'clips', `review-${code}.mp4`))) err(`OTHER_REVIEWS ${r.place}: public/clips/review-${code}.mp4 is missing`)
     if (!r.brand) continue
     if (!brandById(r.brand)) err(`OTHER_REVIEWS ${r.place}: brand ${r.brand} does not exist`)
-    films.set(r.brand, (films.get(r.brand) ?? 0) + 1)
+    if (r.clip !== 'creator') films.set(r.brand, (films.get(r.brand) ?? 0) + 1)
   }
   /* Four since 2026-10-27: their own film ("Watch their video") and three foodie reviews, Glenn: "I'm trying
      to balance the three food reviewers with one heavy hitter, someone mediocre and a new food reviewer";

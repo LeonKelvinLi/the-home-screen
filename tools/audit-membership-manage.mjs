@@ -24,6 +24,7 @@ const WHSEC = 'whsec_local_audit_only'
 const LINK = { pass: 'https://buy.stripe.com/test_pass', diamond: 'https://buy.stripe.com/test_diamond', recruiter: 'https://buy.stripe.com/test_recruiter' }
 const PORTAL = 'https://billing.stripe.com/p/login/test_portal'
 const PRICE = { pass: 'price_audit_pass', diamond: 'price_audit_diamond', recruiter: 'price_audit_recruiter' }
+const LEGACY_PRICE = { pass: 'price_audit_pass_legacy', diamond: 'price_audit_diamond_legacy' }
 
 const LOG = '/tmp/beasty-manage-audit.log'
 try { rmSync(LOG) } catch {}
@@ -39,6 +40,7 @@ const srv = spawn(process.execPath, ['--import', 'tsx', 'server/index.ts'], {
     STRIPE_PAYMENT_LINK_PASS: LINK.pass, STRIPE_PAYMENT_LINK_DIAMOND: LINK.diamond, STRIPE_PAYMENT_LINK_RECRUITER: LINK.recruiter,
     STRIPE_PORTAL_URL: PORTAL,
     STRIPE_PRICE_PASS: PRICE.pass, STRIPE_PRICE_DIAMOND: PRICE.diamond, STRIPE_PRICE_RECRUITER: PRICE.recruiter,
+    STRIPE_PRICE_PASS_LEGACY: LEGACY_PRICE.pass, STRIPE_PRICE_DIAMOND_LEGACY: LEGACY_PRICE.diamond,
   },
 })
 const base = `http://localhost:${port}`
@@ -100,6 +102,10 @@ check('…and changes nothing until Stripe confirms', a.tier === 'pass' && a.tie
 await hook('customer.subscription.updated', sub(CUS_PASS, PRICE.diamond))
 a = await me()
 check('Stripe’s switch makes them BEASTY PASS, still active', a.tier === 'diamond' && a.tierStatus === 'active')
+await hook('customer.subscription.updated', sub(CUS_PASS, LEGACY_PRICE.pass))
+check('an older BIGGIE price still maps to BIGGIE PASS', (await me()).tier === 'pass')
+await hook('customer.subscription.updated', sub(CUS_PASS, LEGACY_PRICE.diamond))
+check('an older BEASTY price still maps to BEASTY PASS', (await me()).tier === 'diamond')
 await hook('customer.subscription.updated', sub('cus_somebody_else', PRICE.pass))
 check('another customer’s switch leaves them alone', (await me()).tier === 'diamond')
 

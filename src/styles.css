@@ -3907,6 +3907,7 @@ textarea {
   font-size: 14px;
   line-height: 1.35;
   color: var(--muted);
+  white-space: pre-line;
 }
 
 .brand-cities {
@@ -4638,23 +4639,26 @@ textarea {
 .brand-offer-head {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 6px;
-  font-size: 13px;
+  font-size: 20pt;
   font-weight: 800;
   letter-spacing: 0.01em;
   color: #f6d800;
 }
 
 .brand-offer-body {
-  font-size: 13.5px;
-  line-height: 1.45;
+  font-size: 20pt;
+  line-height: 1.3;
   color: rgba(255, 255, 255, 0.9);
 }
 
 /* The condition, never smaller than the offer is generous. */
 .brand-offer-when {
-  font-size: 11.5px;
-  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+  font-size: 20pt;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .brand-offer-cta {
@@ -4663,7 +4667,7 @@ textarea {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.12);
   color: #fff;
-  font-size: 12.5px;
+  font-size: 20pt;
   font-weight: 700;
   min-height: 38px;
 }
@@ -7172,7 +7176,7 @@ textarea {
   padding: 9px 11px;
   border-radius: 10px;
   background: rgba(255, 149, 0, 0.16);
-  font-size: 12.5px;
+  font-size: 20pt;
   line-height: 1.45;
   font-weight: 650;
   color: #8a3d00;
@@ -7204,14 +7208,16 @@ textarea {
   margin-left: 4px;
   font-weight: 700;
   color: #ff8a80;
-  /* Whole or not at all: on a narrow page it drops under "Welcome offer"
-     rather than squeezing both onto two lines each. */
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
-/* The head wraps as whole pieces; see .brand-offer-collab. */
-.brand-offer-head:has(.brand-offer-collab) {
-  flex-wrap: wrap;
+.brand-offer-sponsor {
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.brand-offers.is-mock .brand-offer-sponsor {
+  color: #6d5900;
 }
 
 .brand-offer-title {

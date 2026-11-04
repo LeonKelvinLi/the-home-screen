@@ -83,7 +83,7 @@ export const CATEGORY_GLYPHS: Record<string, CategoryGlyph> = {
  */
 export const PAGES_TILES: string[] = [
   'eats', 'sweets', 'ayce', 'coffee', 'bakery', 'foodtrucks',
-  'boutiques', 'services', 'online', 'individuals', 'tattoo', 'barbershops',
+  'boutiques', 'services', 'online', 'individuals', 'foodies', 'barbershops',
   'salons', 'gyms', 'automotive', 'whips', 'realtors', 'photographers',
-  'djs', 'artists', 'cooks', 'foodies', 'ai', 'athletes',
+  'djs', 'artists', 'cooks', 'tattoo', 'ai', 'athletes',
 ]
