@@ -149,7 +149,7 @@ for (const [id, want, expect] of [
   /* Glenn, 2026-10-16: the requested creator film upgrades this to a whole page. */
   ['b_acekingbbq', 'Ace King BBQ', { call: '510-323-4987', reviewBy: 'victoria.pham17' }],
   ['b_harborviewsf', 'Harborview Restaurant & Bar', { free: true, call: '(415) 399-1200' }],
-  ['b_theseabyash', "The Sea by Alexander's Steakhouse", { free: true, call: '(650) 213-1111' }],
+  ['b_theseabyash', "The Sea by Alexander's Steakhouse", { full: true, call: '(650) 213-1111' }],
   ['b_looki', 'Looki', { quote: true, photos: 1 }],
   ['b_bayareaeventlights', 'Bay Area Event Lights', { call: '(408) 502-7229', free: true }],
   /* The 2026-09-09 menu sweep: fifteen menus read from the businesses' own pages. */
@@ -202,7 +202,7 @@ for (const [id, want, expect] of [
   ['b_thaithanioishi', 'Thai Thani and Oishi', { rows: 225, hours: "Sun-Thu 11am-9pm", call: "(925) 954-8385" }],
   ['b_brewandbanhmi', 'Brew & Banh Mi Cafe', { rows: 16, hours: "Sun-Thu 7am-8pm", call: "(408) 649-3006" }],
   ['b_delageoakland', 'Delage', { rows: 32, hours: "Mon-Sat: lunch 11am-3pm", call: "(510) 823-2050" }],
-  ['b_tajmahallivermore', 'Taj Mahal', { free: true, call: "(925) 533-8057" }],
+  ['b_tajmahallivermore', 'Taj Mahal', { full: true, call: "(925) 533-8057" }],
   ['b_shodaisf', 'Yakiniku Shodai', { free: true, call: "(415) 757-0201" }],
   ['b_thirsteasanleandro', 'ThirsTea', { rows: 147, call: "(510) 567-3014" }],
   ['b_zandypekingduck', 'Z & Y Peking Duck', { free: true, call: "(415) 986-1899" }],
@@ -359,11 +359,13 @@ for (const [id, want, expect] of [
   const got = await p.evaluate(() => {
     const txt = (sel) => document.querySelector(sel)?.textContent?.replace(/\s+/g, ' ').trim() ?? ''
     const q = document.querySelector('.brand-quote-note')
+    const quoteStyle = q ? getComputedStyle(q) : null
     return {
       title: txt('h1'),
       hours: txt('.brand-hours'),
       rows: document.querySelectorAll('.menu-row').length,
-      quotePad: q ? Math.round(q.getBoundingClientRect().left) : null,
+      quotePad: quoteStyle ? parseFloat(quoteStyle.paddingLeft) : null,
+      quoteBackground: quoteStyle?.backgroundColor,
       /* A page with a full menu draws no contact block — the number sits in
          its own row under the address — so the check reads the whole page. */
       call: txt('.brand-contact') + ' ' + (document.body?.innerText || '').replace(/\s+/g, ' '),
@@ -374,11 +376,12 @@ for (const [id, want, expect] of [
       reviewBar: txt('.brand-clip-drop .menu-picks-bar'),
     }
   })
-  console.log(`${id.padEnd(22)}: ${got.title} | ${got.hours || '-'} | ${got.rows} rows${got.quotePad !== null ? ` | note at x=${got.quotePad}` : ''}`)
+  console.log(`${id.padEnd(22)}: ${got.title} | ${got.hours || '-'} | ${got.rows} rows${got.quotePad !== null ? ` | note padding ${got.quotePad}px` : ''}`)
   if (got.title !== want) fails.push(`${id} shows "${got.title}", expected "${want}"`)
   if (expect.hours && !got.hours.startsWith(expect.hours)) fails.push(`${id} hours read "${got.hours}", expected "${expect.hours}…"`)
   if (expect.rows && got.rows < expect.rows) fails.push(`${id} shows ${got.rows} rows, expected ${expect.rows}`)
-  if (expect.quote && (got.quotePad === null || got.quotePad < 12)) fails.push(`${id}: the quote note is ${got.quotePad === null ? 'missing' : 'unstyled, at x=' + got.quotePad}`)
+  if (expect.quote && (got.quotePad === null || got.quotePad < 12 || got.quoteBackground === 'rgba(0, 0, 0, 0)')) fails.push(`${id}: the quote note is ${got.quotePad === null ? 'missing' : 'missing its padding or background'}`)
+  if (expect.full && (got.free || !got.menuBar)) fails.push(`${id}: the full listing should show its menu`)
   if (expect.call && !got.call.includes(expect.call)) fails.push(`${id}: the contact card does not carry ${expect.call}`)
   if (expect.photos && got.photos < expect.photos) fails.push(`${id}: ${got.photos} pictures in the strip, expected ${expect.photos}`)
   if (expect.free && !got.free) fails.push(`${id}: a yellow-sheet spot should be drawn as the free Tier 1 listing`)
