@@ -780,7 +780,7 @@ for (const [s, what] of [
   ['Do they come back?', 'plain words for cohorts in the CRM'],
   ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
   ['glow:"blue",beastyOwner:!0', "the Nipsey blue glow and the owner flag on Janelle's page"],
-  ['icon:"p-lo-2"', "P-Lo's headshot"],
+  ['icon:"p-lo-v94"', "P-Lo's current artwork"],
   ['icon-glow-blue', 'the Nipsey blue keyframes'],
   /* 2026-09-21, 10:17 to 10:40 pm: headshots for seven more Individuals, and
      E-40's page on seat 18 of the sheet. */

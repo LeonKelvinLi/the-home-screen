@@ -17,4 +17,6 @@ The proposed creator discounts and free introductory month await a confirmed cam
 
 ## Verification
 
-The placement comparison against Batch 93 found 12 additional seats and the requested single Foodies reassignment. The production verification is recorded after deployment.
+The placement comparison against Batch 93 found 12 additional seats and the requested Foodies reassignment. Render first served `6fc7a09` at 8:15:40 a.m. Pacific. The combined release `b6a6cdb`, including Brasa Bros’ visible Toast link and Batch 95, went live at 8:24:31 a.m. Pacific. It returned HTTP 200 and served the new Uncle Cha icon with the expected SHA-256 at 8:24:46 a.m.
+
+Live Chrome and iPhone WebKit played all 17 clips muted, matched all 14 icon files, opened the Toast link panel, checked the Foodies tiles, and verified both 20 pt offer text and the address at a 320 px viewport. The membership cards and both public Stripe checkout pages showed exactly $39 and $59 per month. Both checkouts offered promotion codes. Stripe saved the new plan-switch prices in the customer portal. Local membership tests verified tier mapping for both legacy price IDs. Production exposes email as its sign-in channel.

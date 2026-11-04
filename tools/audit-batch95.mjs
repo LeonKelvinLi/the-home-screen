@@ -53,6 +53,13 @@ async function checkArtwork(path) {
   assert.equal(hash(Buffer.from(await response.arrayBuffer())), hash(readFileSync('public' + path)), path)
 }
 
+async function expand(button) {
+  await button.scrollIntoViewIfNeeded()
+  if (await button.getAttribute('aria-expanded') === 'true') return
+  await button.click()
+  if (await button.getAttribute('aria-expanded') === 'false') await button.click()
+}
+
 try {
   if (server) {
     for (let i = 0; i < 120; i++) {
@@ -64,10 +71,10 @@ try {
   await page.getByRole('heading', { name: post.place, exact: true }).waitFor({ timeout: 20000 })
   assert.equal(await page.locator('.brand-address').textContent(), '408 Barber Lane\nMilpitas, CA 95035')
   await checkArtwork('/icons/uncle-cha-fusion-cafe.webp')
-  await page.getByRole('button', { name: 'Menu and ordering', exact: true }).click()
+  await expand(page.getByRole('button', { name: 'Menu and ordering', exact: true }))
   assert.equal(await page.getByRole('link', { name: /menu on Uber Eats/ }).getAttribute('href'), batch.listings[0].menu)
   const review = page.locator('.foodie-review-head', { hasText: '@foodieberrie' })
-  await review.click()
+  await expand(review)
   const video = page.locator(`video.foodie-review-video[src="${clip}"]`)
   await video.waitFor()
   await video.evaluate(async v => { v.muted = true; await v.play() })
@@ -76,7 +83,7 @@ try {
   await page.getByRole('button', { name: 'See @foodieberrie’s page', exact: true }).click()
   await page.getByRole('heading', { name: '@foodieberrie', exact: true }).waitFor()
   await checkArtwork('/icons/foodie-foodieberrie-v95.webp')
-  await page.locator('.foodie-review-head', { hasText: post.place }).click()
+  await expand(page.locator('.foodie-review-head', { hasText: post.place }))
   assert(await page.getByRole('button', { name: `Open ${post.place} on BEASTY` }).isVisible())
   assert.deepEqual(errors, [])
   console.log(`PASS Batch 95 on ${iphone ? 'iPhone WebKit' : 'Chrome'}: both seats, menu, artwork, creator link and silent playback`)
