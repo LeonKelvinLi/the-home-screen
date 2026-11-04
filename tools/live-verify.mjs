@@ -20,7 +20,7 @@ const i = args.indexOf('--url')
 const base = i !== -1 ? args[i + 1] : 'https://beastypages.com'
 
 const fails = []
-const b = await chromium.launch()
+const b = await chromium.launch({ args: ['--mute-audio', '--disable-quic'] })
 const p = await b.newPage({ viewport: { width: 393, height: 852 }, deviceScaleFactor: 2 })
 
 // ---- Glenn's bug, on the live site --------------------------------------

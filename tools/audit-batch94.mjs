@@ -110,6 +110,10 @@ try {
   const ids = new Set(batch.posts.map(p => p.disposition === 'creator and Watch film' ? pageOfFoodie(p.by) : p.brand))
   for (const id of ids) {
     await openBrand(id)
+    if (id === 'b_brasabros') {
+      await expand(page.getByRole('button', { name: 'Order online', exact: true }))
+      assert.equal(await page.getByRole('link', { name: 'Order from Brasa Bros on Toast' }).getAttribute('href'), brandById(id).orderUrl)
+    }
     let ownOpened = false
     for (const post of batch.posts.filter(p => (p.disposition === 'creator and Watch film' ? pageOfFoodie(p.by) : p.brand) === id)) {
       console.log('checking', id, post.code)
@@ -168,9 +172,8 @@ try {
   assert.equal(await page.locator('a[href="https://www.instagram.com/bayarea.kulture/"]').count(), 1)
   await page.goto(base + '/members', { waitUntil: 'domcontentloaded' })
   await page.locator('.members-plans').waitFor({ timeout: 20000 })
-  const plans = await page.locator('.members-plans').innerText()
-  assert.match(plans, /\$39\b/)
-  assert.match(plans, /\$59\b/)
+  const prices = await page.locator('.members-plans .members-plan-price').allTextContents()
+  assert.deepEqual(prices.map(price => price.trim()), ['$39/month', '$59/month'])
   assert.deepEqual(errors, [])
   console.log(`PASS Batch 94 on ${iphone ? 'iPhone WebKit' : process.env.CHROME ? 'Chrome phone viewport' : 'Chromium phone viewport'}: ${batch.posts.length} silent films, ${icons.length} icon files, 320px offers and the Foodies layout`)
 } finally {

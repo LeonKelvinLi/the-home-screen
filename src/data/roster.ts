@@ -1462,6 +1462,10 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'monogram', logoInitials: 'BB', logoFace: 'condensed',
     site: 'https://www.brasa-bros.com/',
     orderUrl: 'https://order.toasttab.com/online/brasa-bros',
+    panels: [{
+      head: 'Order online',
+      links: [{ label: 'Order from Brasa Bros on Toast', href: 'https://order.toasttab.com/online/brasa-bros' }],
+    }],
     clip: {"src": "/clips/review-DfS22QEAS9l.mp4", "poster": "/clips/review-DfS22QEAS9l-poster.webp", "href": "https://www.instagram.com/p/DfS22QEAS9l/", "credit": "Posted by @brasa.bros.", "platform": "Instagram"},
   }),
 
