@@ -1,0 +1,33 @@
+{
+  "cutoff": "2026-11-04T08:11:00-08:00",
+  "posts": [
+    {
+      "code": "DfThLPzx4Yd",
+      "batch": 95,
+      "source": "https://www.instagram.com/reel/DfThLPzx4Yd/",
+      "disposition": "local film",
+      "slug": "review-DfThLPzx4Yd",
+      "brand": "b_unclechafusioncafe",
+      "by": "foodieberrie",
+      "request": "Clip / Foodie / Newbie",
+      "received": "2026-11-04 08:11",
+      "place": "Uncle Cha Fusion Cafe",
+      "credit": "Filmed by @foodieberrie at Uncle Cha Fusion Cafe in Milpitas.",
+      "start": 0
+    }
+  ],
+  "placements": {
+    "milpitas-goods2-5": "b_unclechafusioncafe",
+    "beasty-goods2-122": "b_unclechafusioncafe"
+  },
+  "listings": [
+    {
+      "brand": "b_unclechafusioncafe",
+      "source": "https://www.instagram.com/unclecha2025/",
+      "address": "408 Barber Lane, Milpitas, CA 95035",
+      "directorySource": "https://eservices.sccgov.org/FacilityInspection/Home/ShowDetail/PR0330806",
+      "menu": "https://www.ubereats.com/store/uncle-cha-fusion-cafe/bgt9T_vWWLGq4F3Ay_Ol1w",
+      "request": "Milpitas • Eats / BEASTY • Eats / Needs website pilot"
+    }
+  ]
+}

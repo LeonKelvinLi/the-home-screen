@@ -2304,4 +2304,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-208': 'b_foodiej00diefoodie',
   'beasty-foodies2-209': 'b_foodieericasorelle',
 
+  // Batch 95
+  'milpitas-goods2-5': 'b_unclechafusioncafe',
+  'beasty-goods2-122': 'b_unclechafusioncafe',
 }

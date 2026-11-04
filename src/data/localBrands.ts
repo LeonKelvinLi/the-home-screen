@@ -68726,4 +68726,28 @@ export const LOCAL_SEED: LocalSeed[] = [
     },
     "contactOnly": "See the official links for releases and performances."
   },
+  {
+    slug: 'uncle-cha-fusion-cafe',
+    name: 'Uncle Cha Fusion Cafe',
+    label: 'Uncle Cha',
+    cuisine: 'Hong Kong-style Cantonese restaurant',
+    tagline: 'Hong Kong café dishes and fusion rice bowls in Milpitas.',
+    color: '#A4C78E',
+    icon: 'uncle-cha-fusion-cafe',
+    prep: 0,
+    category: 'Restaurant',
+    address: '408 Barber Lane, Milpitas, CA 95035',
+    instagram: 'unclecha2025',
+    needsSite: true,
+    contactOnly: 'See their current menu and ordering hours on Uber Eats.',
+    items: [],
+    panels: [{
+      head: 'Menu and ordering',
+      body: ['The menu includes sizzling plates, baked rice, noodle dishes, fusion bowls and Hong Kong café desserts.'],
+      links: [{
+        label: 'See Uncle Cha’s menu on Uber Eats',
+        href: 'https://www.ubereats.com/store/uncle-cha-fusion-cafe/bgt9T_vWWLGq4F3Ay_Ol1w',
+      }],
+    }],
+  },
 ]

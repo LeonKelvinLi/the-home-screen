@@ -141,7 +141,9 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "foodieberrie",
     "name": "@foodieberrie",
-    "label": "foodieberrie"
+    "label": "foodieberrie",
+    "instagram": "foodieberrie",
+    "icon": "foodie-foodieberrie-v95"
   },
   {
     "handle": "samserved",
@@ -1291,6 +1293,8 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "agnespittioni", "place": "Kung Fu Mala", "city": "Oakland", "brand": "b_kungfumala", "reel": "https://www.instagram.com/reel/DNRiXHzytGH/", "credit": "Filmed by @agnespittioni at Kung Fu Mala in Oakland.", "clip": true},
   {"by": "j00diefoodie", "place": "Kung Fu Mala", "city": "Oakland", "brand": "b_kungfumala", "reel": "https://www.instagram.com/reel/DLQNvevPcKj/", "credit": "Filmed by @j00diefoodie at Kung Fu Mala in Oakland.", "clip": true},
   {"by": "erica.sorelle", "place": "Nawah Market & Deli", "city": "Oakland", "brand": "b_nawahmarket", "reel": "https://www.instagram.com/reel/DfTXXJzM3pw/", "credit": "Filmed by @erica.sorelle at Nawah Market & Deli in Oakland.", "clip": true},
+  // Batch 95: the follow-up that arrived during the Batch 94 deploy.
+  { by: 'foodieberrie', place: 'Uncle Cha Fusion Cafe', city: 'Milpitas', brand: 'b_unclechafusioncafe', reel: reel('DfThLPzx4Yd'), credit: 'Filmed by @foodieberrie at Uncle Cha Fusion Cafe in Milpitas.', clip: true },
 ]
 
 /*
