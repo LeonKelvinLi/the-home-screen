@@ -11,3 +11,13 @@ The batch covers every site request from 12:14 through 3:05 p.m. Pacific. It add
 The other reels link to Legend Hotpot & Grill, Q Specialty Coffee’s new Howard Street café, Pho Daily, Chez Maeju and Dolores Deluxe. Once a business has four inline films, the other excerpts play in Watch and on the creator’s page. The business still links to those original reels.
 
 [Batch intake](../research/roster/batch97.json) · [Source ledger](../research/roster/b86-b97-coverage.json)
+
+## Live verification
+
+Render deployed `3f6a42b34e79ec76c8ef4ff64e48ea62046bf3bb` at 3:24:43 p.m. Pacific on November 4. During the restart the public endpoint briefly returned HTTP 502. At 3:25:14 p.m. it returned HTTP 200 and the new Broderick icon matched its committed SHA-256.
+
+Chrome and iPhone WebKit passed the six listing and four category route checks and played representative excerpts silently. Chrome also opened each city tile and returned to the matching address. All 16 iPhone entry checks passed. All 582 Watch URLs returned HTTP 206 with valid MP4 headers. The 29 new posters and 13 creator icons matched their committed files. The production build passed and the data audit reported zero errors.
+
+The live catalog matches 627 of 676 distinct Instagram post IDs from the available thread archive. All 29 new sources are present. The November 3 archive report had flagged `DcwX_gsjwbd`, but the exact Precision Auto Service post was verified live under “The shops” on MeterSF. The other 49 older Instagram exceptions still match the [historical report](GLENN-COVERAGE-2026-11-03.md).
+
+The general live site verification passed with the historical roster walk covered by the November 3 audit. A final Messages read found no further sends after the 3:05 p.m. cutoff.
