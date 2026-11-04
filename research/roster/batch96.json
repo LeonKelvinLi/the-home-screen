@@ -1,0 +1,39 @@
+{
+  "cutoff": "2026-11-04T09:22:00-08:00",
+  "posts": [
+    {
+      "code": "DfTJrTyNHVN",
+      "batch": 96,
+      "source": "https://www.instagram.com/reel/DfTJrTyNHVN/",
+      "disposition": "creator and Watch film",
+      "slug": "review-DfTJrTyNHVN",
+      "brand": "b_bibimgrill",
+      "by": "thismajourney",
+      "request": "Clip / Update icon / Newbie",
+      "received": "2026-11-04 08:40",
+      "place": "Bibim Grill",
+      "credit": "Filmed by @thismajourney at Bibim Grill in Dublin. The original mentions a limited soft-opening promotion; confirm any offers with the restaurant.",
+      "start": 18
+    }
+  ],
+  "placements": {
+    "dublin-goods2-2": "b_bibimgrill",
+    "beasty-goods2-117": "b_bibimgrill",
+    "beasty-foodies2-181": "b_foodiethismajourney"
+  },
+  "artwork": [
+    {
+      "brand": "b_foodiethismajourney",
+      "icon": "foodie-thismajourney-v96",
+      "source": "IMG_9204.PNG"
+    }
+  ],
+  "changes": [
+    {
+      "received": "2026-11-04 09:22",
+      "brand": "b_empirestatepizza",
+      "request": "Smaller offer text so each heading and sponsor fit on the same line",
+      "source": "IMG_9210.PNG"
+    }
+  ]
+}

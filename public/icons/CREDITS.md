@@ -506,3 +506,4 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-bayarea-kulture-v94` | Glenn’s supplied screenshot IMG_9187 | Bay Area Kulture’s Golden Gate Bridge artwork, cropped and resized to 512 px |
 | `uncle-cha-fusion-cafe` | Glenn’s supplied screenshot IMG_9196 | Uncle Cha’s profile mark, cropped and resized to 512 px |
 | `foodie-foodieberrie-v95` | Glenn’s supplied screenshot IMG_9200 | Foodieberrie’s profile portrait, cropped and resized to 512 px |
+| `foodie-thismajourney-v96` | Glenn’s supplied screenshot IMG_9204.PNG | Denise’s profile portrait, cropped and resized to 512 px |

@@ -832,7 +832,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                 <div className="brand-offer">
                   <span className="brand-offer-head">
                     <Gem size={15} />
-                    Loyalty offer
+                    <span className="brand-offer-title">Loyalty offer</span>
                     {brand.offers.proposedSponsor && (
                       <span className="brand-offer-sponsor">× {brand.offers.proposedSponsor}</span>
                     )}

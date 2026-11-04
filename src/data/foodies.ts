@@ -812,7 +812,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "eatwithbooboo", "name": "Eat with Booboo", "label": "Booboo", "icon": "foodie-eatwithbooboo-v89"},
   {"handle": "bayarea_foodogram", "name": "Lavanya & Deepthi", "label": "Foodogram", "icon": "foodie-bayarea-foodogram-v89"},
   {"handle": "lub.to.eat", "name": "Lub Lub", "label": "Lub Lub", "icon": "foodie-lub-to-eat-v89"},
-  {"handle": "thismajourney", "name": "Denise", "label": "Denise", "icon": "foodie-thismajourney-v89"},
+  {"handle": "thismajourney", "name": "Denise", "label": "Denise", "icon": "foodie-thismajourney-v96"},
   {"handle": "summer.ishungry", "name": "Summer", "label": "Summer", "icon": "foodie-summer-ishungry-v89"},
   {"handle": "justfeediris", "name": "Iris", "label": "Iris", "icon": "foodie-justfeediris-v89"},
   // Batch 90 — original-image permission hold for Hee Jin is in docs/BATCH-90.md.
@@ -1295,6 +1295,8 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "erica.sorelle", "place": "Nawah Market & Deli", "city": "Oakland", "brand": "b_nawahmarket", "reel": "https://www.instagram.com/reel/DfTXXJzM3pw/", "credit": "Filmed by @erica.sorelle at Nawah Market & Deli in Oakland.", "clip": true},
   // Batch 95: the follow-up that arrived during the Batch 94 deploy.
   { by: 'foodieberrie', place: 'Uncle Cha Fusion Cafe', city: 'Milpitas', brand: 'b_unclechafusioncafe', reel: reel('DfThLPzx4Yd'), credit: 'Filmed by @foodieberrie at Uncle Cha Fusion Cafe in Milpitas.', clip: true },
+  // Batch 96: keep Bibim Grill's four inline films and publish this excerpt on Denise's page and Watch.
+  { by: 'thismajourney', place: 'Bibim Grill', city: 'Dublin', brand: 'b_bibimgrill', reel: reel('DfTJrTyNHVN'), credit: 'Filmed by @thismajourney at Bibim Grill in Dublin. The original mentions a limited soft-opening promotion; confirm any offers with the restaurant.', clip: 'creator' },
 ]
 
 /*

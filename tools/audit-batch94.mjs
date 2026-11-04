@@ -147,10 +147,14 @@ try {
   assert.equal(await page.locator('.brand-offer-sponsor').count(), 2)
   assert.equal(await page.getByText('Proposed sponsorship', { exact: true }).count(), 1)
   const offer = await page.locator('.brand-offers').evaluate(el => ({
-    sizes: Array.from(el.querySelectorAll('.brand-offer-head, .brand-offer-body, .brand-offer-when, .brand-offer-cta'), node => parseFloat(getComputedStyle(node).fontSize)),
+    headingRows: Array.from(el.querySelectorAll('.brand-offer-head'), head => {
+      const title = head.querySelector('.brand-offer-title').getBoundingClientRect()
+      const sponsor = head.querySelector('.brand-offer-sponsor').getBoundingClientRect()
+      return Math.abs(title.top - sponsor.top) < 1 && sponsor.left >= title.right
+    }),
     overflow: el.scrollWidth - el.clientWidth,
   }))
-  assert(offer.sizes.every(size => Math.abs(size - 26.667) < 0.1), JSON.stringify(offer))
+  assert.deepEqual(offer.headingRows, [true, true])
   assert(offer.overflow <= 1, JSON.stringify(offer))
 
   await page.setViewportSize({ width: 393, height: 852 })
