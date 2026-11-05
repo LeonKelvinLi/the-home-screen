@@ -1,0 +1,344 @@
+{
+  "cutoff": "2026-11-05T11:09:00-08:00",
+  "listings": [
+    {
+      "slug": "bay-area-crumbs",
+      "name": "Bay Area Crumbs",
+      "label": "Bay Area Crumbs",
+      "cuisine": "Chunky gourmet cookies and bakery",
+      "tagline": "Pittsburg-made cookies with local pickup and nationwide shipping.",
+      "color": "#F0CF63",
+      "icon": "bay-area-crumbs",
+      "prep": 0,
+      "category": "Cookies",
+      "site": "https://bayareacrumbs.com/",
+      "orderUrl": "https://bayareacrumbs.com/collections/all",
+      "address": "Pittsburg, CA",
+      "items": [],
+      "sections": [
+        {
+          "name": "Cookies",
+          "items": [
+            [
+              "Fun Funfetti — Mini’s",
+              "",
+              300
+            ],
+            [
+              "Fun Funfetti — Regular",
+              "",
+              600
+            ],
+            [
+              "Ube Cookies n Cream — Mini’s",
+              "",
+              300
+            ],
+            [
+              "Ube Cookies n Cream — Regular",
+              "",
+              600
+            ],
+            [
+              "Banana Pudding Cookie — Mini’s",
+              "",
+              300
+            ],
+            [
+              "Banana Pudding Cookie — Regular",
+              "",
+              600
+            ],
+            [
+              "Circus Animal — Mini’s",
+              "",
+              300
+            ],
+            [
+              "Circus Animal — Regular",
+              "",
+              600
+            ],
+            [
+              "Cookies n' Dream — Mini’s",
+              "",
+              300
+            ],
+            [
+              "Cookies n' Dream — Regular",
+              "",
+              600
+            ],
+            [
+              "Lotus Biscoff — Mini’s",
+              "",
+              300
+            ],
+            [
+              "Lotus Biscoff — Regular",
+              "",
+              600
+            ],
+            [
+              "Give me S'more — Mini’s",
+              "",
+              300
+            ],
+            [
+              "Give me S'more — Regular",
+              "",
+              600
+            ],
+            [
+              "Good Ole Classic — Mini’s",
+              "",
+              300
+            ],
+            [
+              "Good Ole Classic — Regular",
+              "",
+              600
+            ]
+          ]
+        },
+        {
+          "name": "More sweets",
+          "items": [
+            [
+              "Cinnamon Rolls — 4 pack / Cinnamon",
+              "",
+              2000
+            ],
+            [
+              "Cinnamon Rolls — 6 pack / Cinnamon",
+              "",
+              3000
+            ],
+            [
+              "Cinnamon Rolls — 8 pack / Cinnamon",
+              "",
+              4000
+            ],
+            [
+              "Bay Area Crumb Cupcakes — Banana Pudding / 6",
+              "",
+              2100
+            ],
+            [
+              "Bay Area Crumb Cupcakes — Banana Pudding / 12",
+              "",
+              3500
+            ],
+            [
+              "Banana Pudding — Classic / Large (12 oz)",
+              "",
+              1000
+            ],
+            [
+              "Banana Pudding — Cake Loaded / Large (12 oz)",
+              "",
+              1400
+            ],
+            [
+              "Banana Pudding — Fruit Loaded / Large (12 oz)",
+              "",
+              1400
+            ]
+          ]
+        }
+      ],
+      "quoteOnly": "Prices are from Bay Area Crumbs’ online shop. Place orders there to choose local pickup or shipping.",
+      "siteNote": "The bakery arranges Pittsburg pickup after ordering. Its cookies are made with shared equipment that handles dairy, peanuts, soy, tree nuts, wheat and gluten.",
+      "panels": [
+        {
+          "head": "Ordering and pickup",
+          "body": [
+            "Order from the bakery’s shop for local pickup or nationwide shipping. The bakery confirms the pickup location, date and time after ordering."
+          ],
+          "links": [
+            {
+              "label": "Bay Area Crumbs online shop",
+              "href": "https://bayareacrumbs.com/collections/all"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "code": "Dc3-EnZh8Gm",
+      "batch": 99,
+      "source": "https://www.instagram.com/reel/Dc3-EnZh8Gm/",
+      "disposition": "local film",
+      "slug": "review-Dc3-EnZh8Gm",
+      "brand": "b_thehangoutbreakfast",
+      "by": "queen.food.e",
+      "excerpt": "4s-19s of 50s",
+      "request": "Clip this video plz"
+    },
+    {
+      "code": "DcTuRDNMJ78",
+      "batch": 99,
+      "source": "https://www.instagram.com/reel/DcTuRDNMJ78/",
+      "disposition": "local film",
+      "slug": "review-DcTuRDNMJ78",
+      "brand": "b_sugarplumcoffeeshop",
+      "by": "queen.food.e",
+      "excerpt": "12s-27s of 36s",
+      "request": "Clip this video plz"
+    },
+    {
+      "code": "DbB3rily7fZ",
+      "batch": 99,
+      "source": "https://www.instagram.com/reel/DbB3rily7fZ/",
+      "disposition": "local film",
+      "slug": "review-DbB3rily7fZ",
+      "brand": "b_calikidburgerspleasanthill",
+      "by": "queen.food.e",
+      "excerpt": "1s-16s of 29s",
+      "request": "Clip this video plz"
+    },
+    {
+      "code": "DaRK8hTPUld",
+      "batch": 99,
+      "source": "https://www.instagram.com/reel/DaRK8hTPUld/",
+      "disposition": "local film",
+      "slug": "review-DaRK8hTPUld",
+      "brand": "b_bayareacrumbs",
+      "by": "queen.food.e",
+      "excerpt": "1s-16s of 16s",
+      "request": "Clip this video plz"
+    },
+    {
+      "code": "DfWyuCSt2bS",
+      "batch": 99,
+      "source": "https://www.instagram.com/reel/DfWyuCSt2bS/",
+      "disposition": "local film",
+      "slug": "review-DfWyuCSt2bS",
+      "brand": "b_doloresdeluxe",
+      "by": "mzz.juxtaposition",
+      "excerpt": "3s-18s of 121s",
+      "request": "Clip this video plz / @doloresdeluxe / Foodie / Heavy Hitter"
+    },
+    {
+      "code": "DfTAGm3vA1q",
+      "batch": 99,
+      "source": "https://www.instagram.com/reel/DfTAGm3vA1q/",
+      "disposition": "local film",
+      "slug": "review-DfTAGm3vA1q",
+      "brand": "b_russfamkitchen",
+      "by": "mzz.juxtaposition",
+      "excerpt": "18s-33s of 114s",
+      "request": "Clip this video plz"
+    }
+  ],
+  "placements": {
+    "bay-area-goods2-3": "b_bayareacrumbs",
+    "beasty-cookies-0": "b_bayareacrumbs"
+  },
+  "removals": [
+    {
+      "slug": "eat",
+      "id": "b_eat"
+    },
+    {
+      "slug": "smash-burgers-bros",
+      "id": "b_smashburgersbros"
+    },
+    {
+      "slug": "lucky-barbershop",
+      "id": "b_luckybarbershop"
+    },
+    {
+      "slug": "frank-jr-english",
+      "id": "b_frankjrenglish"
+    },
+    {
+      "slug": "bob-valentines-electric",
+      "id": "b_bobvalentineselectric"
+    },
+    {
+      "slug": "santa-clara-super-kitchen",
+      "id": "b_santaclarasuperkitchen"
+    },
+    {
+      "slug": "vending-enterprise",
+      "id": "b_vendingenterprise"
+    }
+  ],
+  "updatedIcons": [
+    "/icons/foodie-mzz-juxtaposition-v99.webp",
+    "/icons/bodyrok-v99.webp",
+    "/icons/healthy-spot-berkeley-v99.webp",
+    "/icons/foodie-foodwookie-v99.webp",
+    "/icons/tonys-style-v99.webp",
+    "/icons/harumi-v99.webp",
+    "/icons/jenuine-fitness-v99.webp",
+    "/icons/brasa-bros-v99.webp",
+    "/icons/al-pastor-papi-v99.webp",
+    "/icons/delage-v99.webp",
+    "/icons/north-italia-v99.webp",
+    "/icons/chikin-drip-v99.webp",
+    "/icons/foodie-grubwitmike-v99.webp"
+  ],
+  "sourceNotes": {
+    "Healthy Spot": "Linktree’s current description confirms the Berkeley pet shop. Glenn supplied the replacement Linktree URL and Instagram handle.",
+    "Bay Area Crumbs": "Cookie and dessert variants and prices read from https://bayareacrumbs.com/products.json?limit=100. Gift cards omitted. Shop FAQ arranges pickup after checkout.",
+    "Delage": "IMG_9370.jpeg is Glenn’s final correction at 10:42 p.m. on November 4. The marked-up IMG_9371.png is replaced by that clean source.",
+    "Removals": "Six page screenshots at 10:08 p.m. identify Smash Burgers Bros, EAT, Lucky Barbershop, Frank Jr. English, Bob Valentine’s and Santa Clara Super Kitchen. Vending Enterprise is separately removed at 10:26 p.m. EAT is also removed from the BEASTY dock."
+  },
+  "preservedPlacements": {
+    "beasty-cooks-1": "b_rubenhibachigrill",
+    "beasty-cooks-2": "b_tastinpeachy",
+    "beasty-cooks-3": "b_emyscannoli",
+    "beasty-cooks-4": "b_abvethebasics",
+    "beasty-cooks-17": "b_subsinc",
+    "beasty-barbershops-1": "b_ethosofcalifornia",
+    "beasty-barbershops-2": "b_magicjuans",
+    "beasty-barbershops-3": "b_caballerosbarberlounge",
+    "beasty-barbershops-4": "b_thelionsmanebarbershop",
+    "beasty-barbershops-5": "b_sjpropercuts",
+    "beasty-barbershops-6": "b_thecompanybarber",
+    "beasty-catering-1": "b_rubenhibachigrill",
+    "beasty-catering-2": "b_tastinpeachy",
+    "beasty-catering-3": "b_emyscannoli",
+    "beasty-catering-4": "b_abvethebasics",
+    "beasty-catering-5": "b_indaandmely",
+    "beasty-catering-12": "b_subsinc",
+    "beasty-burgers-3": "b_chefjeffssmashburger",
+    "beasty-burgers-4": "b_doghausberkeley",
+    "beasty-burgers-5": "b_calburger",
+    "beasty-burgers-6": "b_lovelysburgerssf",
+    "beasty-burgers-7": "b_maverickjacksburlingame",
+    "beasty-burgers-8": "b_napavalleyburgersausalito",
+    "beasty-burgers-9": "b_billyroysburgerco",
+    "beasty-burgers-10": "b_calialley",
+    "beasty-burgers-11": "b_calikidburgerslivermore",
+    "beasty-burgers-12": "b_theburgerspotco",
+    "beasty-burgers-13": "b_budsburgers",
+    "beasty-burgers-14": "b_topdog",
+    "beasty-burgers-15": "b_theyardbrentwood",
+    "beasty-burgers-16": "b_ofieskitchen",
+    "beasty-burgers-17": "b_doughburger",
+    "beasty-burgers-18": "b_firebunz",
+    "beasty-burgers-19": "b_johnnyboi",
+    "beasty-burgers-20": "b_hellagoodburger",
+    "beasty-burgers-21": "b_katsuburgersantaclara",
+    "beasty-burgers-22": "b_sixthstreetburger",
+    "beasty-burgers-23": "b_dimondhalaleatery"
+  },
+  "removedPlacements": {
+    "beasty-services-2": "b_luckybarbershop",
+    "beasty-services-8": "b_eat",
+    "beasty-services-10": "b_bobvalentineselectric",
+    "beasty-services-15": "b_vendingenterprise",
+    "beasty-goods2-4": "b_smashburgersbros",
+    "beasty-goods2-0": "b_santaclarasuperkitchen",
+    "beasty-services2-25": "b_frankjrenglish",
+    "beasty-cooks-0": "b_santaclarasuperkitchen",
+    "beasty-barbershops-0": "b_luckybarbershop",
+    "beasty-catering-0": "b_santaclarasuperkitchen",
+    "beasty-burgers-2": "b_smashburgersbros"
+  }
+}

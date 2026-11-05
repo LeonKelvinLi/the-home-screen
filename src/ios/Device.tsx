@@ -175,7 +175,9 @@ export function Device({ renderApp, openOnMount }: Props) {
 
   const openApp = useCallback(
     (id: string, rect?: IconRect) => {
-      setBackToGrid(!!rect && appById(id)?.kind === 'brand')
+      const opened = appById(id)
+      if (!opened) return
+      setBackToGrid(!!rect && opened.kind === 'brand')
       generation.current++
       clearTimers()
       /* The buttons Glenn asked to see on the dashboard (2026-10-03): "will it
@@ -194,8 +196,7 @@ export function Device({ renderApp, openOnMount }: Props) {
         every open goes through — the grid, the dock, the switcher, the landing
         keypad and Search all end here.
       */
-      const opened = appById(id)
-      if (opened?.kind === 'brand') {
+      if (opened.kind === 'brand') {
         const b = brandById(id)
         if (b) {
           rememberVisit({

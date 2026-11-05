@@ -190,7 +190,6 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'benicia-goods-14': 'b_quicklybenicia', //   Boba shop
   'richmond-goods-2': 'b_salathai', //         Asian food
   'brentwood-goods-10': 'b_houseofsilog', //   Filipino food
-  'beasty-goods2-4': 'b_smashburgersbros',
   'beasty-services2-8': 'b_interchiro',
   /* 1-Up Retro opens Sacramento. Toy shop is the closest of his 24 — a game
      store is not on the list, and widening a category for one seat would
@@ -227,7 +226,6 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     numbered city spot is a claim that a business is IN that city — the yellow
     sheets claim nothing but that they are on his list.
   */
-  'beasty-goods2-0': 'b_santaclarasuperkitchen',
   'beasty-goods2-1': 'b_willybillysmokedmeat',
   'beasty-goods2-2': 'b_redchili',
   'beasty-goods2-3': 'b_rainsplates', //  from BEASTY • Eats, 2026-10-05 (Banh Mi Oven went up to Eats' banh mi spot)
@@ -1258,7 +1256,6 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      then the top and bottom rows: 1, 2, 21, 22, 0, 3, 20, 23. */
   'beasty-whips-9': 'b_metersf',
   'beasty-whips-10': 'b_mrcheeze408', //                           @theshedbuilt's reel of his Mugen CRX
-  'beasty-services2-25': 'b_frankjrenglish', //                     from BEASTY • Services 5, for Bust Down & Co.
   'el-cerrito-goods2-0': 'b_brasilbistro', //                      no Brazilian seat; yellow sheet, Tier 1
   'walnut-creek-goods2-5': 'b_myofrozenyogurtwalnutcreek', //      Ice cream shop is Milky Flakes'; yellow sheet, Tier 1
   'san-ramon-services-14': 'b_thehubpackanimals', //               Pet grooming and walking: a gym for dogs
@@ -2349,4 +2346,47 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-226': 'b_foodiejanniners',
   'beasty-foodies2-227': 'b_foodiekelsyannn',
   'beasty-foodies2-228': 'b_foodiefoodadventures21',
+
+  // Batch 99
+  'bay-area-goods2-3': 'b_bayareacrumbs',
+  'beasty-cookies-0': 'b_bayareacrumbs',
+  // Preserve the category seats around Glenn’s removals.
+  'beasty-cooks-1': 'b_rubenhibachigrill',
+  'beasty-cooks-2': 'b_tastinpeachy',
+  'beasty-cooks-3': 'b_emyscannoli',
+  'beasty-cooks-4': 'b_abvethebasics',
+  'beasty-cooks-17': 'b_subsinc',
+  'beasty-barbershops-1': 'b_ethosofcalifornia',
+  'beasty-barbershops-2': 'b_magicjuans',
+  'beasty-barbershops-3': 'b_caballerosbarberlounge',
+  'beasty-barbershops-4': 'b_thelionsmanebarbershop',
+  'beasty-barbershops-5': 'b_sjpropercuts',
+  'beasty-barbershops-6': 'b_thecompanybarber',
+  'beasty-catering-1': 'b_rubenhibachigrill',
+  'beasty-catering-2': 'b_tastinpeachy',
+  'beasty-catering-3': 'b_emyscannoli',
+  'beasty-catering-4': 'b_abvethebasics',
+  'beasty-catering-5': 'b_indaandmely',
+  'beasty-catering-12': 'b_subsinc',
+  'beasty-burgers-3': 'b_chefjeffssmashburger',
+  'beasty-burgers-4': 'b_doghausberkeley',
+  'beasty-burgers-5': 'b_calburger',
+  'beasty-burgers-6': 'b_lovelysburgerssf',
+  'beasty-burgers-7': 'b_maverickjacksburlingame',
+  'beasty-burgers-8': 'b_napavalleyburgersausalito',
+  'beasty-burgers-9': 'b_billyroysburgerco',
+  'beasty-burgers-10': 'b_calialley',
+  'beasty-burgers-11': 'b_calikidburgerslivermore',
+  'beasty-burgers-12': 'b_theburgerspotco',
+  'beasty-burgers-13': 'b_budsburgers',
+  'beasty-burgers-14': 'b_topdog',
+  'beasty-burgers-15': 'b_theyardbrentwood',
+  'beasty-burgers-16': 'b_ofieskitchen',
+  'beasty-burgers-17': 'b_doughburger',
+  'beasty-burgers-18': 'b_firebunz',
+  'beasty-burgers-19': 'b_johnnyboi',
+  'beasty-burgers-20': 'b_hellagoodburger',
+  'beasty-burgers-21': 'b_katsuburgersantaclara',
+  'beasty-burgers-22': 'b_sixthstreetburger',
+  'beasty-burgers-23': 'b_dimondhalaleatery',
 }

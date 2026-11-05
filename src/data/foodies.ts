@@ -70,7 +70,7 @@ const TOP_FOODIE_PAGES: FoodiePage[] = [
   { handle: 'bayarea.kulture', instagram: 'bayarea.kulture', name: 'Bay Area Kulture', label: 'Bay Area Kulture', cuisine: 'Bay Area food and culture', icon: 'foodie-bayarea-kulture-v94', glow: true },
   { handle: 'chefmelissaking', name: 'Melissa King', label: 'Melissa King' },
   { handle: 'celineeats', instagram: 'celineeats', name: 'celine', label: 'Celine', icon: 'foodie-celineeats-v94' },
-  { handle: 'grubwitmike', name: 'Grubwitmike', label: 'Grubwitmike' },
+  { handle: 'grubwitmike', name: 'Grubwitmike', label: 'Grubwitmike', icon: 'foodie-grubwitmike-v99' },
   { handle: 'singlecatm0m', name: 'Tiffany', label: 'Tiffany' },
   { handle: 'kimjsseats', name: 'Where Jess at', label: 'Jess' },
   { handle: 'oaktowngrubhub', name: 'NowThatLooksGooD', label: 'Oaktown Grub' },
@@ -371,7 +371,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "mzz.juxtaposition",
     "name": "@mzz.juxtaposition",
-    "label": "mzz.juxtaposition"
+    "label": "mzz.juxtaposition",
+    "icon": "foodie-mzz-juxtaposition-v99"
   },
   {"handle": "yourglobalfoodiebff", "name": "@yourglobalfoodiebff", "label": "yourglobalfoodiebff", "icon": "foodie-globalbff-v92"},
   {
@@ -768,7 +769,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "fat_ash_foodie", "name": "Ash", "label": "Ash", "icon": "foodie-fatash-v92"},
   {"handle": "_foodieshots_", "name": "Joann Ha", "label": "Joann Ha", "icon": "foodie-foodieshots-v98"},
   {"handle": "kitkatvales", "name": "@kitkatvales", "label": "kitkatvales"},
-  { handle: 'foodwookie', name: 'FoodWookie', label: 'FoodWookie', "icon": "foodie-foodwookie-v98"},
+  { handle: 'foodwookie', name: 'FoodWookie', label: 'FoodWookie', "icon": "foodie-foodwookie-v99"},
   {"handle": "kangofrealty", "name": "@kangofrealty", "label": "kangofrealty"},
   {"handle": "sonomacountyliving", "name": "@sonomacountyliving", "label": "sonomacountyliving"},
   {"handle": "lovecartier25", "name": "@lovecartier25", "label": "lovecartier25"},
@@ -1370,6 +1371,13 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "foodie_travel_happiness", "place": "Ushiya Grill", "city": "Milpitas", "brand": "b_ushiyagrill", "reel": "https://www.instagram.com/reel/Dclhds1O7CC/", "clip": true, "credit": "Filmed by @foodie_travel_happiness at Ushiya Grill in Milpitas. Confirm current AYCE courses and prices with the restaurant."},
   {"by": "_foodieshots_", "place": "Ushiya Grill", "city": "Milpitas", "brand": "b_ushiyagrill", "reel": "https://www.instagram.com/reel/DcRZaziR2SP/", "clip": true, "credit": "Filmed by @_foodieshots_ at Ushiya Grill in Milpitas. Confirm current AYCE courses and prices with the restaurant."},
   {"by": "dodo__eats", "place": "Ushiya Grill", "city": "Milpitas", "brand": "b_ushiyagrill", "reel": "https://www.instagram.com/reel/DcPvluTNCFx/", "clip": "creator", "credit": "Filmed by @dodo__eats at Ushiya Grill in Milpitas. Confirm current AYCE courses and prices with the restaurant."},
+  // Batch 99.
+  {"by": "queen.food.e", "place": "The Hangout", "city": "Walnut Creek", "brand": "b_thehangoutbreakfast", "reel": "https://www.instagram.com/reel/Dc3-EnZh8Gm/", "clip": true, "credit": "Filmed by @queen.food.e at The Hangout in Walnut Creek."},
+  {"by": "queen.food.e", "place": "Sugar Plum Coffee Shop", "city": "Concord", "brand": "b_sugarplumcoffeeshop", "reel": "https://www.instagram.com/reel/DcTuRDNMJ78/", "clip": true, "credit": "Filmed by @queen.food.e at Sugar Plum Coffee Shop in Concord."},
+  {"by": "queen.food.e", "place": "CaliKid Burgers ’n Shakes", "city": "Pleasant Hill", "brand": "b_calikidburgerspleasanthill", "reel": "https://www.instagram.com/reel/DbB3rily7fZ/", "clip": true, "credit": "Filmed by @queen.food.e at CaliKid Burgers ’n Shakes in Pleasant Hill."},
+  {"by": "queen.food.e", "place": "Bay Area Crumbs", "city": "Pittsburg", "brand": "b_bayareacrumbs", "reel": "https://www.instagram.com/reel/DaRK8hTPUld/", "clip": true, "credit": "Filmed by @queen.food.e at Bay Area Crumbs in Pittsburg."},
+  {"by": "mzz.juxtaposition", "place": "Dolores Deluxe", "city": "San Francisco", "brand": "b_doloresdeluxe", "reel": "https://www.instagram.com/reel/DfWyuCSt2bS/", "clip": true, "credit": "Filmed by @mzz.juxtaposition at Dolores Deluxe in San Francisco."},
+  {"by": "mzz.juxtaposition", "place": "Russ Fam Kitchen", "city": "Daly City", "brand": "b_russfamkitchen", "reel": "https://www.instagram.com/reel/DfTAGm3vA1q/", "clip": true, "credit": "Ilocos empanada review by @mzz.juxtaposition at Russ Fam Kitchen."},
 ]
 
 /*

@@ -283,9 +283,7 @@ for (const [id, want, expect] of [
   ['b_thehalalcartel', 'The Halal Cartel', { hours: 'Daily 11am-11pm' }],
   ['b_thecozyoven', 'The Cozy Oven', { free: true }],
   ['b_chutneys', 'Chutneys', { hours: 'Mon-Fri 11am-9pm', call: '(925) 434-5555' }],
-  /* 2026-09-21 evening: Vending Enterprise on BEASTY • Services 16, and Dr.
-     Comics on the yellow sheet behind it with its own site's facts. */
-  ['b_vendingenterprise', 'Vending Enterprise', { hours: 'Mon-Sat 8am-5pm', call: '415-523-5963' }],
+  /* Glenn removed Vending Enterprise on November 4. */
   ['b_drcomicsmrgames', 'Dr. Comics and Mr. Games', { hours: 'Mon 11am-6pm', call: '(510) 601-7800' }],
   /* 2026-09-21, late evening: Penelope's five shops, Catch, Brasil Bistro,
      MYO and The Hub. */
@@ -634,7 +632,6 @@ for (const s of ['Glennmalicdem78', 'leondragon3798', 'splk3798', 'Richmond, Cal
    yellow sheet, the Online seat is empty again, and Janelle's tile carries
    the pink glow and the owner's exemption from the red ring. */
 for (const [s, what] of [
-  ['"b_petshowgrooming","b_vendingenterprise","b_rosebarycarcare"', 'Vending Enterprise in BEASTY • Services 16'],
   ['"beasty-services2-21":"b_drcomicsmrgames"', 'Dr. Comics on the BEASTY services yellow sheet'],
   /* 2026-09-22, 9:28 pm: ABVE the Basics beside Bay Area Event Lights. */
   ['"san-jose-services2-3":"b_abvethebasics"', "ABVE the Basics on San Jose's yellow Services sheet"],
@@ -771,7 +768,6 @@ for (const [s, what] of [
   ['heading:"Eats"', 'BEASTY \u2022 Eats, the first sheet'],
   ['kind:"boutiques",heading:"Goods"', 'the new BEASTY \u2022 Goods sheet'],
   ['"beasty-boutiques-9":"b_elemonkey"', 'Elemonkey in the centre of BEASTY \u2022 Goods'],
-  ['"beasty-services2-25":"b_frankjrenglish"', 'Frank Jr. English to the BEASTY Services yellow sheet'],
   /* 2026-09-25 afternoon: Glenn's four landing and home-screen asks. */
   ['dialer-key-flip', 'the Sign in key flipping to SIGN UP'],
   ['spotlight-sweep', 'the moving glow on Search'],

@@ -69083,4 +69083,168 @@ export const LOCAL_SEED: LocalSeed[] = [
     "phone": "(669) 260-2988",
     "needsSite": true
   },
+  // Batch 99 — November 5.
+  {
+    "slug": "bay-area-crumbs",
+    "name": "Bay Area Crumbs",
+    "label": "Bay Area Crumbs",
+    "cuisine": "Chunky gourmet cookies and bakery",
+    "tagline": "Pittsburg-made cookies with local pickup and nationwide shipping.",
+    "color": "#F0CF63",
+    "icon": "bay-area-crumbs",
+    "prep": 0,
+    "category": "Cookies",
+    "site": "https://bayareacrumbs.com/",
+    "orderUrl": "https://bayareacrumbs.com/collections/all",
+    "address": "Pittsburg, CA",
+    "items": [],
+    "sections": [
+      {
+        "name": "Cookies",
+        "items": [
+          [
+            "Fun Funfetti — Mini’s",
+            "",
+            300
+          ],
+          [
+            "Fun Funfetti — Regular",
+            "",
+            600
+          ],
+          [
+            "Ube Cookies n Cream — Mini’s",
+            "",
+            300
+          ],
+          [
+            "Ube Cookies n Cream — Regular",
+            "",
+            600
+          ],
+          [
+            "Banana Pudding Cookie — Mini’s",
+            "",
+            300
+          ],
+          [
+            "Banana Pudding Cookie — Regular",
+            "",
+            600
+          ],
+          [
+            "Circus Animal — Mini’s",
+            "",
+            300
+          ],
+          [
+            "Circus Animal — Regular",
+            "",
+            600
+          ],
+          [
+            "Cookies n' Dream — Mini’s",
+            "",
+            300
+          ],
+          [
+            "Cookies n' Dream — Regular",
+            "",
+            600
+          ],
+          [
+            "Lotus Biscoff — Mini’s",
+            "",
+            300
+          ],
+          [
+            "Lotus Biscoff — Regular",
+            "",
+            600
+          ],
+          [
+            "Give me S'more — Mini’s",
+            "",
+            300
+          ],
+          [
+            "Give me S'more — Regular",
+            "",
+            600
+          ],
+          [
+            "Good Ole Classic — Mini’s",
+            "",
+            300
+          ],
+          [
+            "Good Ole Classic — Regular",
+            "",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "More sweets",
+        "items": [
+          [
+            "Cinnamon Rolls — 4 pack / Cinnamon",
+            "",
+            2000
+          ],
+          [
+            "Cinnamon Rolls — 6 pack / Cinnamon",
+            "",
+            3000
+          ],
+          [
+            "Cinnamon Rolls — 8 pack / Cinnamon",
+            "",
+            4000
+          ],
+          [
+            "Bay Area Crumb Cupcakes — Banana Pudding / 6",
+            "",
+            2100
+          ],
+          [
+            "Bay Area Crumb Cupcakes — Banana Pudding / 12",
+            "",
+            3500
+          ],
+          [
+            "Banana Pudding — Classic / Large (12 oz)",
+            "",
+            1000
+          ],
+          [
+            "Banana Pudding — Cake Loaded / Large (12 oz)",
+            "",
+            1400
+          ],
+          [
+            "Banana Pudding — Fruit Loaded / Large (12 oz)",
+            "",
+            1400
+          ]
+        ]
+      }
+    ],
+    "quoteOnly": "Prices are from Bay Area Crumbs’ online shop. Place orders there to choose local pickup or shipping.",
+    "siteNote": "The bakery arranges Pittsburg pickup after ordering. Its cookies are made with shared equipment that handles dairy, peanuts, soy, tree nuts, wheat and gluten.",
+    "panels": [
+      {
+        "head": "Ordering and pickup",
+        "body": [
+          "Order from the bakery’s shop for local pickup or nationwide shipping. The bakery confirms the pickup location, date and time after ordering."
+        ],
+        "links": [
+          {
+            "label": "Bay Area Crumbs online shop",
+            "href": "https://bayareacrumbs.com/collections/all"
+          }
+        ]
+      }
+    ]
+  },
 ]

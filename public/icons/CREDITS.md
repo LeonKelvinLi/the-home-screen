@@ -546,3 +546,17 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-food-adventures21-v98` | Glenn’s supplied screenshot IMG_9346.png | Profile artwork cropped and resized to 512 px |
 | `foodie-foodie-travel-happiness-v98` | Glenn’s supplied screenshot IMG_9347.PNG | Profile artwork cropped and resized to 512 px |
 | `bibim-grill-v98` | Glenn’s supplied IMG_9352.PNG | Original green Bibim Grill mark on its supplied cream background, cropped and resized to 512 px |
+| `brasa-bros-v99` | Glenn’s supplied IMG_9365.png | Original artwork cropped and fitted to 512 px |
+| `healthy-spot-berkeley-v99` | Glenn’s supplied IMG_9366.png | Original artwork cropped and fitted to 512 px |
+| `al-pastor-papi-v99` | Glenn’s supplied IMG_9368.jpeg | Original artwork cropped and fitted to 512 px |
+| `north-italia-v99` | Glenn’s supplied IMG_9369.jpeg | Original artwork cropped and fitted to 512 px |
+| `delage-v99` | Glenn’s supplied IMG_9370.jpeg | Original artwork cropped and fitted to 512 px |
+| `foodie-foodwookie-v99` | Glenn’s supplied IMG_9373.jpeg | Original artwork cropped and fitted to 512 px |
+| `bodyrok-v99` | Glenn’s supplied IMG_9377.png | Original artwork cropped and fitted to 512 px |
+| `jenuine-fitness-v99` | Glenn’s supplied IMG_9379.PNG | Original artwork cropped and fitted to 512 px |
+| `harumi-v99` | Glenn’s supplied IMG_9383.PNG | Original artwork cropped and fitted to 512 px |
+| `chikin-drip-v99` | Glenn’s supplied IMG_9385.png | Original artwork cropped and fitted to 512 px |
+| `tonys-style-v99` | Glenn’s supplied IMG_9390.PNG | Original artwork cropped and fitted to 512 px |
+| `foodie-grubwitmike-v99` | Glenn’s supplied IMG_9421.png | Original artwork cropped and fitted to 512 px |
+| `foodie-mzz-juxtaposition-v99` | Glenn’s supplied IMG_9407.PNG | Creator portrait cropped and resized to 512 px |
+| `bay-area-crumbs` | [Bay Area Crumbs official shop](https://bayareacrumbs.com/) | Original shop logo fitted to 512 px |

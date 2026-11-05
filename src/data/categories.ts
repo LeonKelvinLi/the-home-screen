@@ -171,6 +171,8 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'seafood', heading: 'Seafood/Crab Boil', about: 'Seafood restaurants and Cajun crab boils', wall: wall('sushi'), test: /seafood boil|crab boil|cajun seafood|seafood restaurant|oyster bar/i },
   { kind: 'burgers', heading: 'Burgers/Hot Dogs', about: 'Burger joints, smash burgers and hot dog shops', wall: wall('diner'), test: /burgers?|hot[ -]?dogs?/i, not: /catering/i },
   { kind: 'koreanbbq', heading: 'Korean BBQ', about: 'Korean barbecue and Korean grill restaurants', wall: wall('bbq'), test: /korean (bbq|barbecue)|\bkbbq\b/i },
+  // Glenn, November 5: Bay Area Crumbs opens Cookies.
+  { kind: 'cookies', heading: 'Cookies', about: 'Cookie shops and cookie bakers', wall: wall('bakery'), test: /cookies?/i },
 ]
 
 /** Every category page holds his twenty-four. */

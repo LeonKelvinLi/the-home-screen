@@ -185,12 +185,8 @@ export const ROSTER_SEED: LocalSeed[] = [
       'Dine-in, take out or delivery, 11am to 9pm daily, with happy hour from 3 to 6 — their ' +
       'own words. The menu and prices are on their site rather than repeated here.',
   }),
-  seed('eat', 'EAT', 'EAT', '', '#2F2F31', {
-    logoInitials: 'EAT', logoFace: 'slab',
-  }),
-  seed('smash-burgers-bros', 'Smash Burgers Bros', 'Smash Bros', 'Smash burgers', '#7A2E12', {
-    logoTemplate: 'glyph-word', logoGlyph: 'burger', logoLines: ['SMASH'],
-  }),
+  /* Removed at Glenn’s request, November 4, 2026. */
+  /* Removed at Glenn’s request, November 4, 2026. */
   seed('meadowlark-dairy', 'Meadowlark Dairy', 'Meadowlark', 'Drive-thru dairy', '#1F5FA6', {
     /* Their own badge since 2026-10-26 (Glenn: "Please update icon"); a new file name so no
        phone keeps the old tile from its cache, as with Harumi. */
@@ -220,7 +216,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     /* "Please update icon for this place" — Glenn, 2026-10-15, with a screenshot of
        their profile picture (the 晴海 mark) and @zarina.nawabi's reel ("Clip this video
        plz"). A new file name so no phone keeps the old tile from its cache. */
-    icon: 'harumi-ayce-2',
+    icon: 'harumi-v99',
     clip: {
       src: '/clips/harumi-ayce.mp4',
       poster: '/clips/harumi-ayce-poster.webp',
@@ -476,8 +472,9 @@ export const ROSTER_SEED: LocalSeed[] = [
     address below is the Berkeley one, since that is the page they sit on.
   */
   seed('healthy-spot-berkeley', 'Healthy Spot Berkeley', 'Healthy Spot', 'Pet store and grooming', '#3E9B3E', {
-    icon: 'healthy-spot-berkeley',
-    site: 'https://linktr.ee/healthyspotnorcal',
+    icon: 'healthy-spot-berkeley-v99',
+    site: 'https://linktr.ee/healthyspotberkeley',
+    instagram: 'healthyspot_berkeley',
     siteCta: 'Open their links',
     address: '1510 Walnut St, Berkeley, CA',
     contactOnly:
@@ -514,13 +511,8 @@ export const ROSTER_SEED: LocalSeed[] = [
   seed('roman-trailer-iron', 'Roman Trailer & Iron Work', 'Roman Iron', 'Trailer and iron work', '#3B3B3F', {
     logoTemplate: 'band', logoLines: ['ROMAN', 'IRON WORK'], logoFace: 'condensed',
   }),
-  seed('lucky-barbershop', 'Lucky Barbershop', 'Lucky Barber', 'Barbershop', '#14532D', {
-    /* Script over a small-caps line — the classic barbershop pairing. */
-    logoTemplate: 'wordmark', logoLines: ['Lucky', 'BARBERSHOP'], logoFace: 'script',
-  }),
-  seed('frank-jr-english', 'Frank Jr. English', 'Frank Jr.', 'General contractor', '#4B3A2A', {
-    logoInitials: 'FJ', logoFace: 'slab',
-  }),
+  /* Removed at Glenn’s request, November 4, 2026. */
+  /* Removed at Glenn’s request, November 4, 2026. */
   /*
     Filled out 2026-08-20 from their own site and listing — "update on BEASTY &
     Vallejo • Services. Please add directions as well."
@@ -573,9 +565,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://gasberkeleyrepair.com/',
     logoTemplate: 'badge', logoLines: ['GERMAN AUTO'], logoFace: 'condensed',
   }),
-  seed('bob-valentines-electric', "Bob Valentine's", "Bob Valentine's", 'Electrician', '#B36A00', {
-    logoTemplate: 'wordmark', logoLines: ['BOB', 'VALENTINE\u2019S'], logoFace: 'slab',
-  }),
+  /* Removed at Glenn’s request, November 4, 2026. */
   seed('high-tech-car-audio', 'High Tech Car Audio', 'High Tech', 'Car audio', '#232A5C', {
     logoTemplate: 'band', logoLines: ['HIGH TECH', 'CAR AUDIO'], logoFace: 'condensed',
   }),
@@ -1063,11 +1053,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     is also the honest place for them: he gave no city for any of these, and a
     numbered city spot is a claim about where a business is.
   */
-  seed('santa-clara-super-kitchen', 'Santa Clara Super Kitchen', 'Super Kitchen', 'Kitchen', '#7A2A1E', {
-    icon: 'santa-clara-super-kitchen',
-    logoTemplate: 'monogram', logoInitials: 'SK', logoFace: 'condensed',
-    site: 'https://santaclarasuperkitchen.com/',
-  }),
+  /* Removed at Glenn’s request, November 4, 2026. */
   seed('willy-billy-smoked-meat', 'Willy Billy Smoked Meat', 'Willy Billy', 'Smoked meat', '#4A2416', {
     icon: 'willy-billy-smoked-meat',
     logoTemplate: 'monogram', logoInitials: 'WB', logoFace: 'slab',
@@ -1137,10 +1123,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.vagaro.com/ethosofcalifornia',
     siteCta: 'Book on Vagaro',
   }),
-  seed('vending-enterprise', 'Vending Enterprise', 'Vending Ent.', 'Vending machines', '#0F4C3A', {
-    logoTemplate: 'band', logoLines: ['VENDING', 'ENTERPRISE'], logoFace: 'condensed',
-    site: 'https://sites.google.com/vendingenterprise.net/vendingenterprise/home',
-  }),
+  /* Removed at Glenn’s request, November 4, 2026. */
   seed('overly-hiphop', 'Overly Hip Hop', 'Overly', 'Media company', '#111111', {
     icon: 'overly-hiphop',
     logoTemplate: 'wordmark', logoLines: ['OVERLY'], logoFace: 'condensed',
@@ -1213,7 +1196,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     siteCta: 'Order online',
   }),
   seed('tonys-style', "Tony's Style", "Tony's Style", 'Chicken wings', '#1B0F3A', {
-    icon: 'tonys-style',
+    icon: 'tonys-style-v99',
     logoTemplate: 'wordmark', logoLines: ["TONY'S", 'STYLE'], logoFace: 'script',
     site: 'https://www.instagram.com/tonysstyles/',
     siteCta: 'Message them on Instagram',
@@ -1271,14 +1254,14 @@ export const ROSTER_SEED: LocalSeed[] = [
   seed('chikin-drip-union-city', 'Chikin Drip', 'Chikin Drip', 'Nashville hot chicken', '#E8621A', {
     /* Halal on their own pages — the standard mark, his ask of 2026-09-18. */
     dietary: ['Halal'],
-    icon: 'chikin-drip',
+    icon: 'chikin-drip-v99',
     logoTemplate: 'wordmark', logoLines: ['CHIKIN', 'DRIP'], logoFace: 'condensed',
     site: 'https://www.chikindrip.com/',
   }),
   seed('chikin-drip-san-jose', 'Chikin Drip', 'Chikin Drip', 'Nashville hot chicken', '#E8621A', {
     /* Halal on their own pages — the standard mark, his ask of 2026-09-18. */
     dietary: ['Halal'],
-    icon: 'chikin-drip',
+    icon: 'chikin-drip-v99',
     logoTemplate: 'wordmark', logoLines: ['CHIKIN', 'DRIP'], logoFace: 'condensed',
     site: 'https://www.chikindrip.com/',
   }),
@@ -1458,7 +1441,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://yes-moment.com/',
   }),
   seed('brasa-bros', 'Brasa Bros', 'Brasa Bros', 'Peruvian rotisserie chicken', '#C24A18', {
-    icon: 'brasa-bros-v94',
+    icon: 'brasa-bros-v99',
     logoTemplate: 'monogram', logoInitials: 'BB', logoFace: 'condensed',
     site: 'https://www.brasa-bros.com/',
     orderUrl: 'https://order.toasttab.com/online/brasa-bros',
@@ -1683,7 +1666,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       'celebrations, serving the Bay Area and San Joaquin County. Nothing is priced here.',
   }),
   seed('jenuine-fitness', 'Jenuine Fitness', 'Jenuine Fit', 'Gym', '#1A1A1C', {
-    icon: 'jenuine-fitness',
+    icon: 'jenuine-fitness-v99',
     logoTemplate: 'monogram', logoInitials: 'JF', logoFace: 'condensed',
     site: 'https://jenuinefitness.com/',
     /* "Please add directions" — this is the field the Directions button reads. */
@@ -1905,7 +1888,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     a word with him in case he meant a second location.
   */
   seed('al-pastor-papi', 'Al Pastor Papi', 'Al Pastor Papi', 'Mexican grill', '#E8197F', {
-    icon: 'al-pastor-papi',
+    icon: 'al-pastor-papi-v99',
     logoTemplate: 'monogram', logoInitials: 'AP', logoFace: 'condensed',
     site: 'https://www.alpastorpapisf.com/',
     address: '232 O’Farrell St, San Francisco, CA',
@@ -2034,19 +2017,19 @@ export const ROSTER_SEED: LocalSeed[] = [
      they open. One price list at all four, and no hours published anywhere,
      only class schedules. Rockridge is in Oakland, so it shares that seat. */
   seed('bodyrok-berkeley', 'BODYROK East Bay', 'BODYROK', 'Reformer Pilates', '#111111', {
-    icon: 'bodyrok',
+    icon: 'bodyrok-v99',
     logoTemplate: 'wordmark', logoLines: ['BODYROK'], logoFace: 'condensed',
     site: 'https://bodyrok.com/studios/',
     siteCta: 'Book a class',
   }),
   seed('bodyrok-alamo', 'BODYROK East Bay', 'BODYROK', 'Reformer Pilates', '#111111', {
-    icon: 'bodyrok',
+    icon: 'bodyrok-v99',
     logoTemplate: 'wordmark', logoLines: ['BODYROK'], logoFace: 'condensed',
     site: 'https://bodyrok.com/studios/',
     siteCta: 'Book a class',
   }),
   seed('bodyrok-oakland', 'BODYROK East Bay', 'BODYROK', 'Reformer Pilates', '#111111', {
-    icon: 'bodyrok',
+    icon: 'bodyrok-v99',
     logoTemplate: 'wordmark', logoLines: ['BODYROK'], logoFace: 'condensed',
     site: 'https://bodyrok.com/studios/',
     siteCta: 'Book a class',
@@ -2823,7 +2806,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      are samples (the fish changes daily); the omakase is a seat at the
      counter, so it is named in the note rather than sold as pickup. */
   seed('delage-oakland', 'Delage', 'Delage', 'Sushi & omakase', '#732B2F', {
-    icon: 'delage-oakland',
+    icon: 'delage-v99',
     logoTemplate: 'wordmark', logoLines: ['DELAGE'], logoFace: 'slab',
     site: 'https://www.delagesushi.com/',
     siteCta: 'See their menus',
@@ -4455,7 +4438,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      seat of their kind, so the yellow sheet. Galpão's and North Italia's
      screenshots never reached this Mac, so their tiles are drawn. */
   seed('north-italia-walnut-creek', 'North Italia', 'North Italia', 'Italian', '#1F2A30', {
-    icon: 'north-italia-walnut-creek',
+    icon: 'north-italia-v99',
     logoTemplate: 'wordmark', logoLines: ['NORTH', 'ITALIA'], logoFace: 'slab',
     tagline: 'Handmade pasta and pizza on Locust Street',
     site: 'https://www.northitalia.com/locations/north-italia-walnut-creek-ca/',
@@ -5333,7 +5316,7 @@ export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
      Trailer & Iron Work moves to the yellow sheet (data/placements.ts) and
      Janelle's sister's business takes the seat. */
   'b_thebeaudegabymaine', //    2  The BeauDega by Maine (was Roman Trailer & Iron work)
-  'b_luckybarbershop', //       3  Lucky barbershop
+  null, //       3  Lucky barbershop
   'b_poddtg', //                4  POD DTG
   /* "Bump Bust down Billy's page to BEASTY • Services & bump Frank Jr. to yellow
      pages", 2026-09-30: Bust Down & Co. from BEASTY • Eats 24, Frank Jr. English
@@ -5342,9 +5325,9 @@ export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
   'b_paintgo', //               6  PaintGo
   'b_ubreakifix', //            7  uBreakiFix
   'b_marinabaymedia', //        8  Marina Bay Media
-  'b_eat', //                   9  EAT (also goods #10 — same business, his call)
+  null, //                   9  EAT (also goods #10 — same business, his call)
   'b_germanautosport', //       10 German Auto Sport
-  'b_bobvalentineselectric', // 11 Bob Valentine's electrician
+  null, // 11 Bob Valentine's electrician
   /* Bay Area Charters takes this seat, on his 2026-08-14 note: put it on the
      BEASTY page "in place of high-tech audio. You can move high-tech audio to
      the El Cerrito page." High Tech Car Audio is seated there now, on the Car
@@ -5358,7 +5341,7 @@ export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
      Janelle's page, where it was her link, and off the Online sheet, which is
      for brands that ship; Dr. Comics and Mr. Games went to the yellow sheet
      in data/placements.ts. */
-  'b_vendingenterprise', //     16 Vending Enterprise (was Dr. Comics and Mr. Games)
+  null, //     16 Vending Enterprise (was Dr. Comics and Mr. Games)
   'b_rosebarycarcare', //       17 Rosebary Car Care
   'b_highscores', //            18 High Scores arcade
   /* His #19 repeated Ding DongToGo, already seated at #1, and was left open
