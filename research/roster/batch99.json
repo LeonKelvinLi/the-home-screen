@@ -1,5 +1,5 @@
 {
-  "cutoff": "2026-11-05T11:09:00-08:00",
+  "cutoff": "2026-11-05T11:24:00-08:00",
   "listings": [
     {
       "slug": "bay-area-crumbs",
@@ -340,5 +340,13 @@
     "beasty-barbershops-0": "b_luckybarbershop",
     "beasty-catering-0": "b_santaclarasuperkitchen",
     "beasty-burgers-2": "b_smashburgersbros"
-  }
+  },
+  "followUps": [
+    {
+      "at": "2026-11-05T11:24:00-08:00",
+      "request": "Prioritize BSTY GOODS and use Mercari as a template.",
+      "disposition": "awaiting design notes",
+      "reason": "Glenn said he will start the notes today, replying to Leon’s request for the website brief."
+    }
+  ]
 }
