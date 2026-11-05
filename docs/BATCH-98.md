@@ -13,3 +13,13 @@ The existing @acoupleofcooks Cardamomo film is retained. The separate DdAZclrNJu
 Bibim Grill uses Glenn’s replacement green mark. Icons on business pages and in their enlargement use the rounded iOS treatment. The directory’s folded tiles keep their existing appearance.
 
 [Batch intake](../research/roster/batch98.json) · [Source ledger](../research/roster/b86-b98-coverage.json)
+
+## Live verification
+
+Render deployed d28e810e60258353ee09d1d7fd69033fbd434042 at 9:09:18 p.m. Pacific on November 4. The service returned HTTP 502 during its restart. Public health returned HTTP 200 and the replacement Bibim Grill icon matched its committed SHA-256 at 9:09:37 p.m.
+
+Chrome and iPhone WebKit passed the three listings, four category routes, rounded business-page headers and image enlargements, generated-logo enlargement, muted playback and creator-overflow playback. All three city tiles opened the matching business page. All 16 iPhone entry checks passed. All 605 Watch files returned HTTP 206 with valid MP4 signatures. The 18 updated artwork files and 23 new posters matched their committed hashes. The three restaurant icons also matched their committed files.
+
+The first WebKit attempt timed out navigating to Search. The next stalled while awaiting the media play promise. The audit now checks time advancement with a bounded wait, and the complete WebKit rerun passed. The general live site audit passed, with the historical roster walk covered by the November 3 audit. Render reported no application errors in the checked post-deploy interval.
+
+The thread archive has 700 distinct Instagram IDs. The live bundle matches 650, including all 24 actionable post IDs in this batch. The remaining 50 consist of Glenn’s newly disregarded send and the 49 older exceptions already documented after Batch 97. The final thread read found no further sends after the 8:27 p.m. cutoff.

@@ -74,9 +74,9 @@ async function expand(button) {
 async function play(code) {
   const video = page.locator(`video[src="/clips/review-${code}.mp4"]`)
   await video.waitFor()
-  await video.evaluate(async video => {
+  await video.evaluate(video => {
     video.muted = true
-    await video.play()
+    void video.play()
   })
   await page.waitForFunction(video => video.muted && video.currentTime > 0.1, await video.elementHandle())
   await video.evaluate(video => video.pause())
@@ -124,6 +124,7 @@ try {
     const index = reviewsOf(post.brand).findIndex(review => review.href === post.source)
     await expand(page.locator('.foodie-review-head').nth(index))
     await play(code)
+    console.log('ok silent playback', code)
   }
   const overflow = batch.posts.find(post => post.code === 'Dctq7K_t7yi')
   await openBrand(overflow.brand)
