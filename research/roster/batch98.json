@@ -1,0 +1,440 @@
+{
+  "cutoff": "2026-11-04T20:27:00-08:00",
+  "listings": [
+    {
+      "slug": "qpot-san-jose",
+      "name": "Q-Pot Korean BBQ & Hot Pot",
+      "label": "Q-Pot",
+      "cuisine": "AYCE Korean BBQ and hot pot",
+      "address": "1610 E Capitol Expy, San Jose, CA 95121",
+      "tagline": "All-you-can-eat Korean barbecue and individual hot pots on East Capitol Expressway.",
+      "color": "#241D1B",
+      "icon": "qpot-san-jose",
+      "prep": 0,
+      "category": "Restaurant",
+      "items": [],
+      "contactOnly": "See the restaurant’s menu and contact links for current service.",
+      "panels": [
+        {
+          "head": "Menu and dining",
+          "body": [
+            "Q-Pot offers all-you-can-eat Korean BBQ and hot pot. See its current menu for the available courses and prices."
+          ],
+          "links": [
+            {
+              "label": "Q-Pot’s current menu",
+              "href": "https://www.qpotsanjose.com/menu/"
+            }
+          ]
+        }
+      ],
+      "site": "https://www.qpotsanjose.com/",
+      "phone": "(669) 235-9511",
+      "email": "qpot.sanjose@gmail.com",
+      "hours": "Sun–Thu 11am–10pm, Fri–Sat 11am–11pm"
+    },
+    {
+      "slug": "sushi-umami-milpitas",
+      "name": "Sushi Umami",
+      "label": "Sushi Umami",
+      "cuisine": "Japanese sushi and sashimi",
+      "address": "1747 N Milpitas Blvd, Milpitas, CA 95035",
+      "tagline": "Sushi, sashimi, specialty rolls and Japanese dishes on North Milpitas Boulevard.",
+      "color": "#241D1B",
+      "icon": "sushi-umami-milpitas",
+      "prep": 0,
+      "category": "Restaurant",
+      "items": [],
+      "contactOnly": "See the restaurant’s menu and contact links for current service.",
+      "panels": [
+        {
+          "head": "Menu and ordering",
+          "body": [
+            "Sushi Umami serves chef’s-choice sushi, sashimi, specialty rolls and Japanese entrées."
+          ],
+          "links": [
+            {
+              "label": "Sushi Umami’s menu and ordering",
+              "href": "https://www.sushiumami.net/"
+            }
+          ]
+        },
+        {
+          "head": "Opening hours",
+          "body": [
+            "Monday–Thursday 11:30am–2:30pm and 5–9:30pm.",
+            "Friday–Saturday 11:30am–3pm and 5–10:30pm.",
+            "Sunday 11:30am–3pm and 5–9:30pm."
+          ],
+          "links": []
+        }
+      ],
+      "site": "https://www.sushiumami.net/",
+      "phone": "(510) 820-6025",
+      "needsSite": true
+    },
+    {
+      "slug": "ushiya-grill",
+      "name": "Ushiya Grill",
+      "label": "Ushiya",
+      "cuisine": "AYCE Japanese yakiniku BBQ",
+      "address": "1792 N Milpitas Blvd, Milpitas, CA 95035",
+      "tagline": "All-you-can-eat Japanese yakiniku with signature and premium wagyu options.",
+      "color": "#241D1B",
+      "icon": "ushiya-grill",
+      "prep": 0,
+      "category": "Restaurant",
+      "items": [],
+      "contactOnly": "See the restaurant’s menu and contact links for current service.",
+      "panels": [
+        {
+          "head": "Menu and reservations",
+          "body": [
+            "Ushiya serves all-you-can-eat Japanese yakiniku. The menu and available courses are on its official website."
+          ],
+          "links": [
+            {
+              "label": "Ushiya Grill’s menus",
+              "href": "https://ushiyagrill.com/"
+            },
+            {
+              "label": "Ushiya Grill reservations",
+              "href": "https://resy.com/cities/milpitas-ca/venues/ushiya-grill"
+            }
+          ]
+        },
+        {
+          "head": "Opening hours",
+          "body": [
+            "Monday–Thursday 11:30am–2:30pm and 5:30–10pm.",
+            "Friday 11:30am–2:30pm and 4:30–10:30pm.",
+            "Saturday 11:30am–10:30pm. Sunday 11:30am–10pm."
+          ],
+          "links": []
+        }
+      ],
+      "site": "https://ushiyagrill.com/",
+      "phone": "(669) 260-2988",
+      "needsSite": true
+    }
+  ],
+  "placements": {
+    "san-jose-goods2-33": "b_qpotsanjose",
+    "beasty-hotpot-8": "b_qpotsanjose",
+    "beasty-korean-19": "b_qpotsanjose",
+    "beasty-koreanbbq-6": "b_qpotsanjose",
+    "milpitas-goods2-6": "b_sushiumamimilpitas",
+    "beasty-sushi2-0": "b_sushiumamimilpitas",
+    "milpitas-goods2-7": "b_ushiyagrill",
+    "beasty-ayce-20": "b_ushiyagrill",
+    "beasty-foodies2-220": "b_foodiedeazylee",
+    "beasty-foodies2-221": "b_foodiejceeats",
+    "beasty-foodies2-222": "b_foodieedmunchthefoodie",
+    "beasty-foodies2-223": "b_foodiemonaeatsnearby",
+    "beasty-foodies2-224": "b_foodielynniethefoodie",
+    "beasty-foodies2-225": "b_foodiebayareafoodiecrew",
+    "beasty-foodies2-226": "b_foodiejanniners",
+    "beasty-foodies2-227": "b_foodiekelsyannn",
+    "beasty-foodies2-228": "b_foodiefoodadventures21"
+  },
+  "posts": [
+    {
+      "code": "DfVmG5ixQCf",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DfVmG5ixQCf/",
+      "disposition": "local film",
+      "slug": "review-DfVmG5ixQCf",
+      "brand": "b_udessertstory",
+      "by": "hungrydanz",
+      "request": "Clip this video plz / Foodie / Newbie",
+      "excerpt": "2s-17s of 23s"
+    },
+    {
+      "code": "DfVqeDTsnUX",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DfVqeDTsnUX/",
+      "disposition": "local film",
+      "slug": "review-DfVqeDTsnUX",
+      "brand": "b_easybreezy",
+      "by": "maya_munches",
+      "request": "Clip this video plz towards the end",
+      "excerpt": "36s-44s of 44s"
+    },
+    {
+      "code": "DfSs3-RyNHj",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DfSs3-RyNHj/",
+      "disposition": "local film",
+      "slug": "review-DfSs3-RyNHj",
+      "brand": "b_qpotsanjose",
+      "by": "carlosbradley",
+      "request": "Clip this video plz",
+      "excerpt": "2s-17s of 65s"
+    },
+    {
+      "code": "DesXChGvkWe",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DesXChGvkWe/",
+      "disposition": "local film",
+      "slug": "review-DesXChGvkWe",
+      "brand": "b_qpotsanjose",
+      "by": "deazylee",
+      "request": "Clip this video plz",
+      "excerpt": "0s-8s of 8s"
+    },
+    {
+      "code": "DeAGmDROIVb",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DeAGmDROIVb/",
+      "disposition": "local film",
+      "slug": "review-DeAGmDROIVb",
+      "brand": "b_qpotsanjose",
+      "by": "jc.eeats",
+      "request": "Clip this video plz / Foodie / Heavy Hitter",
+      "excerpt": "0s-13s of 13s"
+    },
+    {
+      "code": "Dd-RwgACGoE",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/Dd-RwgACGoE/",
+      "disposition": "local film",
+      "slug": "review-Dd-RwgACGoE",
+      "brand": "b_qpotsanjose",
+      "by": "edmunchthefoodie",
+      "request": "Clip this video plz / Foodie / Mediocre",
+      "excerpt": "5s-20s of 20s"
+    },
+    {
+      "code": "Dctq7K_t7yi",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/Dctq7K_t7yi/",
+      "disposition": "creator and Watch film",
+      "slug": "review-Dctq7K_t7yi",
+      "brand": "b_qpotsanjose",
+      "by": "orangeginger",
+      "request": "Clip this video plz / Foodie / Mediocre",
+      "excerpt": "5s-20s of 22s"
+    },
+    {
+      "code": "DfFp0KcAv0E",
+      "batch": 98,
+      "source": "https://www.instagram.com/p/DfFp0KcAv0E/",
+      "disposition": "local film",
+      "slug": "review-DfFp0KcAv0E",
+      "brand": "b_milelimitberkeley",
+      "by": "hungrydanz",
+      "request": "Clip this video plz",
+      "excerpt": "0s-15s of 30s"
+    },
+    {
+      "code": "DfWFWKHtAcu",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DfWFWKHtAcu/",
+      "disposition": "local film",
+      "slug": "review-DfWFWKHtAcu",
+      "brand": "b_mumuhotpotsunnyvale",
+      "by": "jovana.camberos",
+      "request": "Clip this video plz / Foodie",
+      "excerpt": "11s-26s of 61s"
+    },
+    {
+      "code": "DfSyBodSf-v",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DfSyBodSf-v/",
+      "disposition": "local film",
+      "slug": "review-DfSyBodSf-v",
+      "brand": "b_pizzeriacardamomo",
+      "by": "kimoni.eatss",
+      "request": "Clip this video plz",
+      "excerpt": "0s-15s of 15s"
+    },
+    {
+      "code": "DfEMN85RiCx",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DfEMN85RiCx/",
+      "disposition": "local film",
+      "slug": "review-DfEMN85RiCx",
+      "brand": "b_pizzeriacardamomo",
+      "by": "foodwookie",
+      "request": "Clip this video plz / Foodie / Newbie",
+      "excerpt": "11s-26s of 54s"
+    },
+    {
+      "code": "De3NCDFORm5",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/De3NCDFORm5/",
+      "disposition": "local film",
+      "slug": "review-De3NCDFORm5",
+      "brand": "b_pizzeriacardamomo",
+      "by": "drooling.bae",
+      "request": "Clip this video plz / Heavy Hitter",
+      "excerpt": "2s-17s of 24s"
+    },
+    {
+      "code": "Desx4zGycIU",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/Desx4zGycIU/",
+      "disposition": "creator and Watch film",
+      "slug": "review-Desx4zGycIU",
+      "brand": "b_pizzeriacardamomo",
+      "by": "monaeatsnearby",
+      "request": "Clip this video plz / Foodie / Heavy Hitter",
+      "excerpt": "4s-19s of 119s"
+    },
+    {
+      "code": "Dc7CF8iy_0a",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/Dc7CF8iy_0a/",
+      "disposition": "creator and Watch film",
+      "slug": "review-Dc7CF8iy_0a",
+      "brand": "b_pizzeriacardamomo",
+      "by": "lynniethefoodie",
+      "request": "Clip this video plz / Please update icon pic",
+      "excerpt": "5s-20s of 20s"
+    },
+    {
+      "code": "DfWEtUwBFk0",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DfWEtUwBFk0/",
+      "disposition": "local film",
+      "slug": "review-DfWEtUwBFk0",
+      "brand": "b_sushiumamimilpitas",
+      "by": "karaxhuynh",
+      "request": "Clip this video plz",
+      "excerpt": "0s-10s of 10s"
+    },
+    {
+      "code": "DbwtXO6xrAq",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DbwtXO6xrAq/",
+      "disposition": "local film",
+      "slug": "review-DbwtXO6xrAq",
+      "brand": "b_sushiumamimilpitas",
+      "by": "_foodieshots_",
+      "request": "Clip this video plz / Foodie / Mediocre",
+      "excerpt": "1s-16s of 29s"
+    },
+    {
+      "code": "DaofEQWyxUI",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DaofEQWyxUI/",
+      "disposition": "local film",
+      "slug": "review-DaofEQWyxUI",
+      "brand": "b_sushiumamimilpitas",
+      "by": "bayareafoodiecrew",
+      "request": "Clip this video plz / Foodie / Heavy Hitter",
+      "excerpt": "5s-20s of 51s"
+    },
+    {
+      "code": "DZ6UsplR1V6",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DZ6UsplR1V6/",
+      "disposition": "local film",
+      "slug": "review-DZ6UsplR1V6",
+      "brand": "b_sushiumamimilpitas",
+      "by": "janniners",
+      "request": "Clip this video plz / Foodie / Heavy Hitter",
+      "excerpt": "6s-21s of 28s"
+    },
+    {
+      "code": "DfV75JatiuT",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DfV75JatiuT/",
+      "disposition": "local film",
+      "slug": "review-DfV75JatiuT",
+      "brand": "b_ushiyagrill",
+      "by": "kelsy.annn",
+      "request": "Clip this video plz / Foodie / Newbie",
+      "excerpt": "0s-15s of 15s"
+    },
+    {
+      "code": "DeeqpsRJiTH",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DeeqpsRJiTH/",
+      "disposition": "local film",
+      "slug": "review-DeeqpsRJiTH",
+      "brand": "b_ushiyagrill",
+      "by": "food_adventures21",
+      "request": "Clip this video plz / Foodie / Newbie",
+      "excerpt": "1s-16s of 26s"
+    },
+    {
+      "code": "Dclhds1O7CC",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/Dclhds1O7CC/",
+      "disposition": "local film",
+      "slug": "review-Dclhds1O7CC",
+      "brand": "b_ushiyagrill",
+      "by": "foodie_travel_happiness",
+      "request": "Clip this video plz / Foodie / Newbie",
+      "excerpt": "2s-17s of 18s"
+    },
+    {
+      "code": "DcRZaziR2SP",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DcRZaziR2SP/",
+      "disposition": "local film",
+      "slug": "review-DcRZaziR2SP",
+      "brand": "b_ushiyagrill",
+      "by": "_foodieshots_",
+      "request": "Clip this video plz / Please update icon pic",
+      "excerpt": "22s-37s of 43s"
+    },
+    {
+      "code": "DcPvluTNCFx",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DcPvluTNCFx/",
+      "disposition": "creator and Watch film",
+      "slug": "review-DcPvluTNCFx",
+      "brand": "b_ushiyagrill",
+      "by": "dodo__eats",
+      "request": "Clip this video plz",
+      "excerpt": "0s-13s of 13s"
+    },
+    {
+      "code": "DdAZclrNJu-",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DdAZclrNJu-/",
+      "disposition": "disregarded",
+      "reason": "Glenn followed this Watch request with “Disregard” at 4:34 p.m. Pacific."
+    },
+    {
+      "code": "DeXPu11oz2S",
+      "batch": 98,
+      "source": "https://www.instagram.com/reel/DeXPu11oz2S/",
+      "disposition": "already live",
+      "slug": "pizzeria-cardamomo",
+      "brand": "b_pizzeriacardamomo",
+      "by": "acoupleofcooks",
+      "request": "Clip this video plz ⏎ Foodie  ⏎ Newbie",
+      "reason": "Existing Cardamomo primary film, creator review and Watch entry are retained."
+    }
+  ],
+  "imageUpdates": [
+    "Bibim Grill",
+    "foodie-jc-eeats-v98",
+    "foodie-monaeatsnearby-v98",
+    "foodie-hungrydanz-v98",
+    "foodie-kelsy-annn-v98",
+    "foodie-food-adventures21-v98",
+    "foodie-lynniethefoodie-v98",
+    "foodie-foodieshots-v98",
+    "foodie-jovana-camberos-v98",
+    "foodie-foodwookie-v98",
+    "foodie-orangeginger-v98",
+    "foodie-bayareafoodiecrew-v98",
+    "foodie-drooling-bae-v98",
+    "foodie-janniners-v98",
+    "foodie-edmunchthefoodie-v98",
+    "foodie-acoupleofcooks-v98",
+    "foodie-foodie-travel-happiness-v98",
+    "foodie-deazylee-v98"
+  ],
+  "sourceNotes": {
+    "Q-Pot": "Homepage and Glenn’s screenshot agree on closing at 10pm Sun–Thu and 11pm Fri–Sat. Menu footer says 11pm daily and the profile says 10pm daily. Homepage schedule is used.",
+    "Sushi Umami": "https://www.sushiumami.net/ confirms the supplied address, telephone and hours. The website-pilot flag is retained at Glenn’s request.",
+    "Ushiya Grill": "https://ushiyagrill.com/ publishes menus and hours. IMG_9344.png confirms its phone. The website-pilot flag is retained at Glenn’s request.",
+    "Maya": "The requested end segment at 36–43.767 seconds shows Easy Breezy. The earlier segment is Boiling Hot Pot and is excluded from this excerpt.",
+    "Logo treatment": "Rounded icon on business-page hero and zoom. Grid keeps the existing folded-page treatment."
+  }
+}

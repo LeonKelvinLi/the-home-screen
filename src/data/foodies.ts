@@ -65,7 +65,7 @@ const TOP_FOODIE_PAGES: FoodiePage[] = [
   { handle: 'capturedbysado', icon: "foodie-capturedbysado-v86", name: 'capturedbysado', label: 'Sado' },
   { handle: 'allie.eats', icon: "foodie-allie-eats-v86", name: 'Allie Tong', label: 'Allie Tong' },
   { handle: 'seekeasyeats', icon: "foodie-whofedandrew-v86", instagram: 'whofedandrew', name: 'Andrew Greenstein', label: 'Andrew' },
-  { handle: 'orangeginger', name: 'Liz Maw', label: 'Liz Maw' },
+  { handle: 'orangeginger', name: 'Liz Maw', label: 'Liz Maw', "icon": "foodie-orangeginger-v98"},
   { handle: 'antoinetterzz', name: 'antoinetterzz', label: 'Antoinette' },
   { handle: 'bayarea.kulture', instagram: 'bayarea.kulture', name: 'Bay Area Kulture', label: 'Bay Area Kulture', cuisine: 'Bay Area food and culture', icon: 'foodie-bayarea-kulture-v94', glow: true },
   { handle: 'chefmelissaking', name: 'Melissa King', label: 'Melissa King' },
@@ -77,7 +77,7 @@ const TOP_FOODIE_PAGES: FoodiePage[] = [
   { handle: 'thespoonlist', name: 'The Spoon List', label: 'Spoon List' },
   { handle: 'sherryeatworld', name: 'Sherry Shi', label: 'Sherry Shi' },
   { handle: 'booziebrunch', name: 'Novi Mitchell', label: 'Novi' },
-  { handle: 'hungrydanz', name: 'Dan', label: 'Dan' },
+  { handle: 'hungrydanz', name: 'Dan', label: 'Dan', "icon": "foodie-hungrydanz-v98"},
   { handle: 'iamnikkieg', name: 'Nikkie G', label: 'Nikkie G' },
   { handle: 'janeethefoodie', name: 'Jane', label: 'Jane' },
   { handle: 'peggy_shoo', icon: "foodie-peggy-shoo-v86", name: 'peggy xu', label: 'Peggy' },
@@ -111,8 +111,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "acoupleofcooks",
     "name": "@acoupleofcooks",
-    "label": "acoupleofcooks"
-  },
+    "label": "acoupleofcooks", "icon": "foodie-acoupleofcooks-v98"},
   {
     "handle": "jantrinanicole", icon: "foodie-jantrinanicole-v86",
     "name": "@jantrinanicole",
@@ -413,8 +412,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "drooling.bae",
     "name": "@drooling.bae",
-    "label": "drooling.bae"
-  },
+    "label": "drooling.bae", "icon": "foodie-drooling-bae-v98"},
   {
     "handle": "kvbitesandgo",
     "name": "@kvbitesandgo",
@@ -768,15 +766,15 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   },
   {"handle": "broitsva", "name": "Va", "label": "Va"},
   {"handle": "fat_ash_foodie", "name": "Ash", "label": "Ash", "icon": "foodie-fatash-v92"},
-  {"handle": "_foodieshots_", "name": "Joann Ha", "label": "Joann Ha"},
+  {"handle": "_foodieshots_", "name": "Joann Ha", "label": "Joann Ha", "icon": "foodie-foodieshots-v98"},
   {"handle": "kitkatvales", "name": "@kitkatvales", "label": "kitkatvales"},
-  { handle: 'foodwookie', name: 'FoodWookie', label: 'FoodWookie' },
+  { handle: 'foodwookie', name: 'FoodWookie', label: 'FoodWookie', "icon": "foodie-foodwookie-v98"},
   {"handle": "kangofrealty", "name": "@kangofrealty", "label": "kangofrealty"},
   {"handle": "sonomacountyliving", "name": "@sonomacountyliving", "label": "sonomacountyliving"},
   {"handle": "lovecartier25", "name": "@lovecartier25", "label": "lovecartier25"},
   {"handle": "foodelaventures", "name": "@foodelaventures", "label": "foodelaventures"},
   {"handle": "fedoramaelle", icon: "foodie-fedoramaelle-v86", "name": "@fedoramaelle", "label": "fedoramaelle"},
-  {"handle": "foodie_travel_happiness", "name": "@foodie_travel_happiness", "label": "foodie_travel_happiness"},
+  {"handle": "foodie_travel_happiness", "name": "@foodie_travel_happiness", "label": "foodie_travel_happiness", "icon": "foodie-foodie-travel-happiness-v98"},
   {"handle": "peterlyagent", icon: "foodie-peterlyagent-v85", "name": "Peter Ly", "label": "Peter Ly"},
   {"handle": "k.smokeskitchen", "name": "K. Smokes Kitchen", "label": "K. Smokes", "icon": "foodie-k-smokeskitchen-v86"},
   {"handle": "tysf.qods", "name": "@tysf.qods", "label": "tysf.qods", "icon": "foodie-tysf-qods-v86"},
@@ -818,7 +816,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   // Batch 90 — original-image permission hold for Hee Jin is in docs/BATCH-90.md.
   {"handle": "hungryhungryheejin", "instagram": "hungryhungryheejin", "name": "Hee Jin", "label": "Hee Jin"},
   {"handle": "liltiffyvert", "instagram": "liltiffyvert", "name": "Tiffany Tran", "label": "Tiffany", "icon": "foodie-liltiffyvert-v90"},
-  {"handle": "jovana.camberos", "instagram": "jovana.camberos", "name": "@jovana.camberos", "label": "Jovana", "icon": "foodie-jovana-camberos-v90"},
+  {"handle": "jovana.camberos", "instagram": "jovana.camberos", "name": "@jovana.camberos", "label": "Jovana", "icon": "foodie-jovana-camberos-v98"},
   {"handle": "sulli_eats", "instagram": "sulli_eats", "name": "𑣲𝓢𝓾𝓵𝓵𝓲 𓎩 ꜱꜰ ʙᴀʏ ᴀʀᴇᴀ ꜰᴏᴏᴅɪᴇ/ʜᴏᴍᴇᴄᴏᴏᴋꜱ", "label": "𑣲𝓢𝓾𝓵𝓵𝓲", "icon": "foodie-sulli-eats-v92"},
   {"handle": "baygirlseat", "instagram": "baygirlseat", "name": "Amandy", "label": "Amandy", "icon": "foodie-baygirlseat-v92"},
   {"handle": "phamamiii", "instagram": "phamamiii", "name": "Diane Pham", "label": "Diane", "icon": "foodie-phamamiii-v92"},
@@ -854,6 +852,16 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "laurenlovessfood", "name": "@laurenlovessfood", "label": "laurenlovessfood", "icon": "foodie-laurenlovessfood-v97"},
   {"handle": "lisaaaaletseat", "name": "@lisaaaaletseat", "label": "lisaaaaletseat", "icon": "foodie-lisaaaaletseat-v97"},
   {"handle": "mattiasblanco", "name": "@mattiasblanco", "label": "mattiasblanco", "icon": "foodie-mattiasblanco-v97"},
+  // Batch 98.
+  {"handle": "deazylee", "name": "@deazylee", "label": "deazylee", "icon": "foodie-deazylee-v98"},
+  {"handle": "jc.eeats", "name": "@jc.eeats", "label": "jc.eeats", "icon": "foodie-jc-eeats-v98"},
+  {"handle": "edmunchthefoodie", "name": "@edmunchthefoodie", "label": "edmunchthefoodie", "icon": "foodie-edmunchthefoodie-v98"},
+  {"handle": "monaeatsnearby", "name": "@monaeatsnearby", "label": "monaeatsnearby", "icon": "foodie-monaeatsnearby-v98"},
+  {"handle": "lynniethefoodie", "name": "@lynniethefoodie", "label": "lynniethefoodie", "icon": "foodie-lynniethefoodie-v98"},
+  {"handle": "bayareafoodiecrew", "name": "@bayareafoodiecrew", "label": "bayareafoodiecrew", "icon": "foodie-bayareafoodiecrew-v98"},
+  {"handle": "janniners", "name": "@janniners", "label": "janniners", "icon": "foodie-janniners-v98"},
+  {"handle": "kelsy.annn", "name": "@kelsy.annn", "label": "kelsy.annn", "icon": "foodie-kelsy-annn-v98"},
+  {"handle": "food_adventures21", "name": "@food_adventures21", "label": "food_adventures21", "icon": "foodie-food-adventures21-v98"},
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -1338,6 +1346,30 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "lisaaaaletseat", "place": "Broderick Roadhouse", "city": "Walnut Creek", "brand": "b_broderickwalnutcreek", "reel": "https://www.instagram.com/reel/DfBBrlzPCB_/", "credit": "Filmed by @lisaaaaletseat at Broderick Roadhouse in Walnut Creek.", "clip": true},
   {"by": "mattiasblanco", "place": "Dolores Deluxe", "city": "San Francisco", "brand": "b_doloresdeluxe", "reel": "https://www.instagram.com/reel/DfVeLs0Bst2/", "credit": "Filmed by @mattiasblanco. The featured sandwich was a special. See the shop’s current menu.", "clip": true},
   {"by": "sfstandard", "place": "Dolores Deluxe", "city": "San Francisco", "brand": "b_doloresdeluxe", "reel": "https://www.instagram.com/reel/DPtgAR7D9YZ/", "credit": "The San Francisco Standard’s 2025 profile of Dolores Deluxe and founder Ramzi Budayr, posted by @sfstandard.", "clip": true},
+  // Batch 98. Glenn’s ratings and icon requests are recorded in the batch roster.
+  {"by": "hungrydanz", "place": "U Dessert Story", "city": "San Francisco", "brand": "b_udessertstory", "reel": "https://www.instagram.com/reel/DfVmG5ixQCf/", "clip": true, "credit": "Filmed by @hungrydanz at U Dessert Story in San Francisco."},
+  {"by": "maya_munches", "place": "Easy Breezy", "city": "San Francisco", "brand": "b_easybreezy", "reel": "https://www.instagram.com/reel/DfVqeDTsnUX/", "clip": true, "credit": "Filmed by @maya_munches. Easy Breezy is the final stop in the original multi-stop review. Excerpt from the end, as requested by Glenn."},
+  {"by": "carlosbradley", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/DfSs3-RyNHj/", "clip": true, "credit": "Filmed by @carlosbradley at Q-Pot Korean BBQ & Hot Pot in San Jose. Prices in the original review may be dated. See Q-Pot’s current menu."},
+  {"by": "deazylee", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/DesXChGvkWe/", "clip": true, "credit": "Filmed by @deazylee at Q-Pot Korean BBQ & Hot Pot in San Jose. Prices in the original review may be dated. See Q-Pot’s current menu."},
+  {"by": "jc.eeats", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/DeAGmDROIVb/", "clip": true, "credit": "Filmed by @jc.eeats at Q-Pot Korean BBQ & Hot Pot in San Jose. Prices in the original review may be dated. See Q-Pot’s current menu."},
+  {"by": "edmunchthefoodie", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/Dd-RwgACGoE/", "clip": true, "credit": "Filmed by @edmunchthefoodie at Q-Pot Korean BBQ & Hot Pot in San Jose. Prices in the original review may be dated. See Q-Pot’s current menu."},
+  {"by": "orangeginger", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/Dctq7K_t7yi/", "clip": "creator", "credit": "Filmed by @orangeginger at Q-Pot Korean BBQ & Hot Pot in San Jose. Prices in the original review may be dated. See Q-Pot’s current menu."},
+  {"by": "hungrydanz", "place": "Mile Limit", "city": "Berkeley", "brand": "b_milelimitberkeley", "reel": "https://www.instagram.com/p/DfFp0KcAv0E/", "clip": true, "credit": "Review by @hungrydanz, posted by @milelimit. Glenn identified Dan as the reviewer."},
+  {"by": "jovana.camberos", "place": "Mumu Hot Pot", "city": "Bay Area", "brand": "b_mumuhotpotsunnyvale", "reel": "https://www.instagram.com/reel/DfWFWKHtAcu/", "clip": true, "credit": "Filmed by @jovana.camberos. The original names several Mumu Hot Pot locations; this opens BEASTY’s Sunnyvale listing."},
+  {"by": "kimoni.eatss", "place": "Pizzeria Cardamomo", "city": "Redwood City", "brand": "b_pizzeriacardamomo", "reel": "https://www.instagram.com/reel/DfSyBodSf-v/", "clip": true, "credit": "Filmed by @kimoni.eatss at Pizzeria Cardamomo in Redwood City."},
+  {"by": "foodwookie", "place": "Pizzeria Cardamomo", "city": "Redwood City", "brand": "b_pizzeriacardamomo", "reel": "https://www.instagram.com/reel/DfEMN85RiCx/", "clip": true, "credit": "Filmed by @foodwookie at Pizzeria Cardamomo in Redwood City."},
+  {"by": "drooling.bae", "place": "Pizzeria Cardamomo", "city": "Redwood City", "brand": "b_pizzeriacardamomo", "reel": "https://www.instagram.com/reel/De3NCDFORm5/", "clip": true, "credit": "Filmed by @drooling.bae at Pizzeria Cardamomo in Redwood City."},
+  {"by": "monaeatsnearby", "place": "Pizzeria Cardamomo", "city": "Redwood City", "brand": "b_pizzeriacardamomo", "reel": "https://www.instagram.com/reel/Desx4zGycIU/", "clip": "creator", "credit": "Filmed by @monaeatsnearby at Pizzeria Cardamomo in Redwood City."},
+  {"by": "lynniethefoodie", "place": "Pizzeria Cardamomo", "city": "Redwood City", "brand": "b_pizzeriacardamomo", "reel": "https://www.instagram.com/reel/Dc7CF8iy_0a/", "clip": "creator", "credit": "Filmed by @lynniethefoodie at Pizzeria Cardamomo in Redwood City."},
+  {"by": "karaxhuynh", "place": "Sushi Umami", "city": "Milpitas", "brand": "b_sushiumamimilpitas", "reel": "https://www.instagram.com/reel/DfWEtUwBFk0/", "clip": true, "credit": "Filmed by @karaxhuynh at Sushi Umami in Milpitas. Posted by @karaxhuynh."},
+  {"by": "_foodieshots_", "place": "Sushi Umami", "city": "Milpitas", "brand": "b_sushiumamimilpitas", "reel": "https://www.instagram.com/reel/DbwtXO6xrAq/", "clip": true, "credit": "Filmed by @_foodieshots_ at Sushi Umami in Milpitas."},
+  {"by": "bayareafoodiecrew", "place": "Sushi Umami", "city": "Milpitas", "brand": "b_sushiumamimilpitas", "reel": "https://www.instagram.com/reel/DaofEQWyxUI/", "clip": true, "credit": "Filmed by @bayareafoodiecrew at Sushi Umami in Milpitas."},
+  {"by": "janniners", "place": "Sushi Umami", "city": "Milpitas", "brand": "b_sushiumamimilpitas", "reel": "https://www.instagram.com/reel/DZ6UsplR1V6/", "clip": true, "credit": "Filmed by @janniners at Sushi Umami in Milpitas."},
+  {"by": "kelsy.annn", "place": "Ushiya Grill", "city": "Milpitas", "brand": "b_ushiyagrill", "reel": "https://www.instagram.com/reel/DfV75JatiuT/", "clip": true, "credit": "Filmed by @kelsy.annn at Ushiya Grill in Milpitas. Confirm current AYCE courses and prices with the restaurant."},
+  {"by": "food_adventures21", "place": "Ushiya Grill", "city": "Milpitas", "brand": "b_ushiyagrill", "reel": "https://www.instagram.com/reel/DeeqpsRJiTH/", "clip": true, "credit": "Filmed by @food_adventures21 at Ushiya Grill in Milpitas. Confirm current AYCE courses and prices with the restaurant."},
+  {"by": "foodie_travel_happiness", "place": "Ushiya Grill", "city": "Milpitas", "brand": "b_ushiyagrill", "reel": "https://www.instagram.com/reel/Dclhds1O7CC/", "clip": true, "credit": "Filmed by @foodie_travel_happiness at Ushiya Grill in Milpitas. Confirm current AYCE courses and prices with the restaurant."},
+  {"by": "_foodieshots_", "place": "Ushiya Grill", "city": "Milpitas", "brand": "b_ushiyagrill", "reel": "https://www.instagram.com/reel/DcRZaziR2SP/", "clip": true, "credit": "Filmed by @_foodieshots_ at Ushiya Grill in Milpitas. Confirm current AYCE courses and prices with the restaurant."},
+  {"by": "dodo__eats", "place": "Ushiya Grill", "city": "Milpitas", "brand": "b_ushiyagrill", "reel": "https://www.instagram.com/reel/DcPvluTNCFx/", "clip": "creator", "credit": "Filmed by @dodo__eats at Ushiya Grill in Milpitas. Confirm current AYCE courses and prices with the restaurant."},
 ]
 
 /*

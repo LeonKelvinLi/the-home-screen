@@ -525,3 +525,24 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-mattiasblanco-v97` | Glenn’s supplied screenshot IMG_9299.png | Supplied artwork cropped and resized to 512 px |
 | `smack-burgers` | Glenn’s supplied screenshot IMG_9251.png | Supplied artwork cropped and resized to 512 px |
 | `broderick-walnut-creek` | [Broderick’s official wordmark](https://www.broderickwalnutcreek.com/) | Official wordmark on a solid black background, as requested by Glenn |
+| `qpot-san-jose` | Glenn’s supplied screenshot IMG_9312.png | Profile artwork cropped and resized to 512 px |
+| `sushi-umami-milpitas` | Glenn’s supplied screenshot IMG_9337.png | Profile artwork cropped and resized to 512 px |
+| `ushiya-grill` | Glenn’s supplied screenshot IMG_9342.png | Profile artwork cropped and resized to 512 px |
+| `foodie-hungrydanz-v98` | Glenn’s supplied screenshot IMG_9305.png | Profile artwork cropped and resized to 512 px |
+| `foodie-deazylee-v98` | Glenn’s supplied screenshot IMG_9318.png | Profile artwork cropped and resized to 512 px |
+| `foodie-jc-eeats-v98` | Glenn’s supplied screenshot IMG_9319.png | Profile artwork cropped and resized to 512 px |
+| `foodie-edmunchthefoodie-v98` | Glenn’s supplied screenshot IMG_9321.png | Profile artwork cropped and resized to 512 px |
+| `foodie-orangeginger-v98` | Glenn’s supplied screenshot IMG_9324.png | Profile artwork cropped and resized to 512 px |
+| `foodie-jovana-camberos-v98` | Glenn’s supplied screenshot IMG_9330.PNG | Profile artwork cropped and resized to 512 px |
+| `foodie-foodwookie-v98` | Glenn’s supplied screenshot IMG_9332.PNG | Profile artwork cropped and resized to 512 px |
+| `foodie-drooling-bae-v98` | Glenn’s supplied screenshot IMG_9333.png | Profile artwork cropped and resized to 512 px |
+| `foodie-monaeatsnearby-v98` | Glenn’s supplied screenshot IMG_9334.png | Profile artwork cropped and resized to 512 px |
+| `foodie-acoupleofcooks-v98` | Glenn’s supplied screenshot IMG_9335.PNG | Profile artwork cropped and resized to 512 px |
+| `foodie-lynniethefoodie-v98` | Glenn’s supplied screenshot IMG_9336.PNG | Profile artwork cropped and resized to 512 px |
+| `foodie-foodieshots-v98` | Glenn’s supplied screenshot IMG_9348.PNG | Profile artwork cropped and resized to 512 px |
+| `foodie-bayareafoodiecrew-v98` | Glenn’s supplied screenshot IMG_9340.png | Profile artwork cropped and resized to 512 px |
+| `foodie-janniners-v98` | Glenn’s supplied screenshot IMG_9341.png | Profile artwork cropped and resized to 512 px |
+| `foodie-kelsy-annn-v98` | Glenn’s supplied screenshot IMG_9345.PNG | Profile artwork cropped and resized to 512 px |
+| `foodie-food-adventures21-v98` | Glenn’s supplied screenshot IMG_9346.png | Profile artwork cropped and resized to 512 px |
+| `foodie-foodie-travel-happiness-v98` | Glenn’s supplied screenshot IMG_9347.PNG | Profile artwork cropped and resized to 512 px |
+| `bibim-grill-v98` | Glenn’s supplied IMG_9352.PNG | Original green Bibim Grill mark on its supplied cream background, cropped and resized to 512 px |

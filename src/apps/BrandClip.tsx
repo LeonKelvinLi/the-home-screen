@@ -214,7 +214,7 @@ export function BrandClip({ clip, logo, brand }: { clip: Clip; logo: Logo; brand
       {/* Their mark, oversized and running off two edges, as a poster crops one
           rather than centring it on a plate. */}
       <span className="clip-mark" aria-hidden="true">
-        <BrandLogo logo={logo} size={230} />
+        <BrandLogo logo={logo} size={230} rounded />
       </span>
 
       {/* The only thing here that says "video" without pretending to be a frame

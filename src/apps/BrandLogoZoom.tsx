@@ -25,17 +25,17 @@ export function BrandLogoZoom({ name, logo, pageMark }: { name: string; logo: Lo
       onClick={() => setOpen(true)}>
       {pageMark
         ? <img className="brand-hero-wordmark" src={pageMark} alt={name} />
-        : <BrandLogo logo={logo} size={78} />}
+        : <BrandLogo logo={logo} size={78} rounded />}
     </button>
     {open && createPortal(
       <dialog ref={dialog} className="brand-logo-dialog" aria-label={`${name} logo`}
         onCancel={event => { event.preventDefault(); setOpen(false) }}
         onClick={event => { if (event.target === event.currentTarget) setOpen(false) }}>
         <button type="button" className="brand-logo-close" aria-label={`Close enlarged ${name} logo`} onClick={() => setOpen(false)}>×</button>
-        <button type="button" className="brand-logo-large" style={{ background: logo.bg.includes('|') ? `linear-gradient(135deg, ${logo.bg.split('|').join(',')})` : logo.bg }} aria-label={`Restore ${name} logo size`} onClick={() => setOpen(false)}>
+        <button type="button" className={pageMark ? 'brand-logo-large' : 'brand-logo-large is-rounded'} style={{ background: logo.bg.includes('|') ? `linear-gradient(135deg, ${logo.bg.split('|').join(',')})` : logo.bg }} aria-label={`Restore ${name} logo size`} onClick={() => setOpen(false)}>
           {pageMark || logo.imageUrl
             ? <img src={pageMark ?? logo.imageUrl} alt={name} />
-            : <BrandLogo logo={logo} size={280} masked={false} />}
+            : <BrandLogo logo={logo} size={280} rounded />}
         </button>
         <p>Tap the logo to return</p>
       </dialog>, document.body)}

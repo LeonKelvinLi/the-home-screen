@@ -5,7 +5,7 @@ import { PAGE_ICON_PATH } from './pageIcon'
 import { readableOn } from './contrast'
 import type { Logo } from '../data/brands'
 
-/** Renders the original brand artwork in BEASTY's folded-page frame.
+/** Renders brand artwork in a folded-page or rounded-square frame.
  * `masked={false}` leaves in-app artwork unframed. The frame and its fold
  * are vector geometry, independent of the vendor's source image. */
 
@@ -63,6 +63,8 @@ interface Props {
   size?: number
   /** Icon tiles get the squircle; in-app headers can render the mark alone. */
   masked?: boolean
+  /** Business-page artwork uses an iOS-style rounded square. */
+  rounded?: boolean
   /**
    * Stretch to the parent instead of `size`. Only the home grid wants this,
    * where the tile edge changes with the device class. Applying it globally
@@ -72,13 +74,14 @@ interface Props {
   fill?: boolean
 }
 
-export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Props) {
+export function BrandLogo({ logo, size = 60, masked = true, rounded = false, fill = false }: Props) {
   const { from, to, flat } = parseBg(logo.bg)
   const id = uid(logo)
   const face = FACE[logo.face ?? 'grotesk']
   const accent = logo.accent ?? logo.fg
-  const paper = masked ? pagePaper(logo.imageUrl) : undefined
-  const clip = `clip-${id}`
+  const paper = masked && !rounded ? pagePaper(logo.imageUrl) : undefined
+  const outline = rounded ? 'M24 0H76C94 0 100 6 100 24V76C100 94 94 100 76 100H24C6 100 0 94 0 76V24C0 6 6 0 24 0Z' : PAGE_ICON_PATH
+  const clip = `clip-${id}${rounded ? '-rounded' : ''}`
   const grad = `grad-${id}`
   /*
     A monogram with no strapline was still laying out for one: the initials sat
@@ -115,7 +118,7 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
     >
       <defs>
         <clipPath id={clip}>
-          <path d={PAGE_ICON_PATH} />
+          <path d={outline} />
         </clipPath>
         <linearGradient id={grad} x1="0" y1="0" x2="0.35" y2="1">
           <stop offset="0%" stopColor={from} />
@@ -344,9 +347,9 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
         )}
 
         {/* Every tile needs an edge against the wallpaper — see `edge` above. */}
-        <path d={PAGE_ICON_PATH} fill="none" stroke={edge} strokeWidth="1" />
+        <path d={outline} fill="none" stroke={edge} strokeWidth="1" />
       </g>
-      {masked && <PageFold />}
+      {masked && !rounded && <PageFold />}
     </svg>
   )
 }

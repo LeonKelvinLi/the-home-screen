@@ -66566,7 +66566,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     "cuisine": "Korean rice and noodle bowls",
     "tagline": "Build-your-own Korean bowls, signature bowls and drinks on Fallon Road in Dublin.",
     "color": "#F6EDE0",
-    "icon": "bibim-grill",
+    "icon": "bibim-grill-v98",
     "prep": 0,
     "category": "Korean",
     "site": "https://bibimgrillusa.com/",
@@ -68965,5 +68965,122 @@ export const LOCAL_SEED: LocalSeed[] = [
     "phone": "(925) 945-6960",
     "hours": "Mon–Thu 11:30am–9pm, Fri 11am–10pm, Sat 10am–10pm, Sun 10am–8pm",
     "contactOnly": "See Broderick’s menus for the current selection."
+  },
+  // Batch 98 — November 4 evening.
+  {
+    "slug": "qpot-san-jose",
+    "name": "Q-Pot Korean BBQ & Hot Pot",
+    "label": "Q-Pot",
+    "cuisine": "AYCE Korean BBQ and hot pot",
+    "address": "1610 E Capitol Expy, San Jose, CA 95121",
+    "tagline": "All-you-can-eat Korean barbecue and individual hot pots on East Capitol Expressway.",
+    "color": "#241D1B",
+    "icon": "qpot-san-jose",
+    "prep": 0,
+    "category": "Restaurant",
+    "items": [],
+    "contactOnly": "See the restaurant’s menu and contact links for current service.",
+    "panels": [
+      {
+        "head": "Menu and dining",
+        "body": [
+          "Q-Pot offers all-you-can-eat Korean BBQ and hot pot. See its current menu for the available courses and prices."
+        ],
+        "links": [
+          {
+            "label": "Q-Pot’s current menu",
+            "href": "https://www.qpotsanjose.com/menu/"
+          }
+        ]
+      }
+    ],
+    "site": "https://www.qpotsanjose.com/",
+    "phone": "(669) 235-9511",
+    "email": "qpot.sanjose@gmail.com",
+    "hours": "Sun–Thu 11am–10pm, Fri–Sat 11am–11pm"
+  },
+  {
+    "slug": "sushi-umami-milpitas",
+    "name": "Sushi Umami",
+    "label": "Sushi Umami",
+    "cuisine": "Japanese sushi and sashimi",
+    "address": "1747 N Milpitas Blvd, Milpitas, CA 95035",
+    "tagline": "Sushi, sashimi, specialty rolls and Japanese dishes on North Milpitas Boulevard.",
+    "color": "#241D1B",
+    "icon": "sushi-umami-milpitas",
+    "prep": 0,
+    "category": "Restaurant",
+    "items": [],
+    "contactOnly": "See the restaurant’s menu and contact links for current service.",
+    "panels": [
+      {
+        "head": "Menu and ordering",
+        "body": [
+          "Sushi Umami serves chef’s-choice sushi, sashimi, specialty rolls and Japanese entrées."
+        ],
+        "links": [
+          {
+            "label": "Sushi Umami’s menu and ordering",
+            "href": "https://www.sushiumami.net/"
+          }
+        ]
+      },
+      {
+        "head": "Opening hours",
+        "body": [
+          "Monday–Thursday 11:30am–2:30pm and 5–9:30pm.",
+          "Friday–Saturday 11:30am–3pm and 5–10:30pm.",
+          "Sunday 11:30am–3pm and 5–9:30pm."
+        ],
+        "links": []
+      }
+    ],
+    "site": "https://www.sushiumami.net/",
+    "phone": "(510) 820-6025",
+    "needsSite": true
+  },
+  {
+    "slug": "ushiya-grill",
+    "name": "Ushiya Grill",
+    "label": "Ushiya",
+    "cuisine": "AYCE Japanese yakiniku BBQ",
+    "address": "1792 N Milpitas Blvd, Milpitas, CA 95035",
+    "tagline": "All-you-can-eat Japanese yakiniku with signature and premium wagyu options.",
+    "color": "#241D1B",
+    "icon": "ushiya-grill",
+    "prep": 0,
+    "category": "Restaurant",
+    "items": [],
+    "contactOnly": "See the restaurant’s menu and contact links for current service.",
+    "panels": [
+      {
+        "head": "Menu and reservations",
+        "body": [
+          "Ushiya serves all-you-can-eat Japanese yakiniku. The menu and available courses are on its official website."
+        ],
+        "links": [
+          {
+            "label": "Ushiya Grill’s menus",
+            "href": "https://ushiyagrill.com/"
+          },
+          {
+            "label": "Ushiya Grill reservations",
+            "href": "https://resy.com/cities/milpitas-ca/venues/ushiya-grill"
+          }
+        ]
+      },
+      {
+        "head": "Opening hours",
+        "body": [
+          "Monday–Thursday 11:30am–2:30pm and 5:30–10pm.",
+          "Friday 11:30am–2:30pm and 4:30–10:30pm.",
+          "Saturday 11:30am–10:30pm. Sunday 11:30am–10pm."
+        ],
+        "links": []
+      }
+    ],
+    "site": "https://ushiyagrill.com/",
+    "phone": "(669) 260-2988",
+    "needsSite": true
   },
 ]
