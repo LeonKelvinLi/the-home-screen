@@ -1,6 +1,6 @@
 # Glenn’s November 6 product questions
 
-Source: IMG_9527.PNG, sent at 8:52 a.m. Pacific. These are product follow-ups separate from the completed directory/media sync in Batches 100–101.
+Source: IMG_9527.PNG, sent at 8:52 a.m. Pacific. At 9:09 a.m., Glenn liked Leon’s reply promising the newsfeed/ads and affiliate profile as future work. These are product follow-ups separate from the completed directory/media sync in Batches 100–101.
 
 ## Affiliate news and calendar submissions
 

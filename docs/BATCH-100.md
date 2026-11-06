@@ -19,3 +19,15 @@ Glenn’s 11:49 a.m. BSTY GOODS notes specify a Mercari-style marketplace, A-1 t
 ## Verification
 
 The data audit passes with zero errors. A complete comparison against the prior catalog confirms no surviving old seat moved or disappeared. The production build and local Chrome and iPhone WebKit audits passed, including all new menus, artwork, city links, categories and muted clips. All 19 new encodes have H.264 video and AAC audio at 540×960, at most 15 seconds. Production verification will be recorded after deployment.
+
+## Live release
+
+Render deployed `d144d2abf50bcbfd75178c669c174e485bf19041` in `dep-dbn0j6tckfvc7396nq80`, reaching live at 9:17:19 a.m. Pacific on November 6. The persistent-disk restart returned HTTP 502 during rollout; health and new artwork were verified after recovery. Production uses entry `/assets/index-DVUNT0qt.js`; its asset hash differs from the local build, so deployment identity was verified using Render’s commit plus the live source catalog and exact artwork hashes.
+
+Both batch audits pass on production Chrome and iPhone WebKit, including menus, artwork, city navigation, categories and muted playback. All 630 Watch files return HTTP 206 with valid MP4 headers. All 16 iPhone entry regressions pass, including a stalled app module and repeated return/enter cycles. No application errors appeared in the checked Render logs after readiness.
+
+Visible connected Chrome checks at 393×852 and 320×740 passed Maillards’ 37-row menu and muted advancing review, Boba search and JK Cafe navigation, Stanford’s 55-row menu with “Ask shop” prices, five-location details, and the green Call/Enter flow into home. No horizontal overflow or console errors were observed. The temporary viewport was reset and the test tab closed.
+
+The deployed catalog contains 675 of 725 distinct Instagram IDs from the available Messages archive. All 19 new sources are present; the same 49 older exceptions and one disregarded send remain documented. New artwork and all 19 posters match their committed SHA-256 hashes.
+
+The full `tools/live-verify.mjs` production audit passed, including its historical roster walk. A final Messages refetch reached Glenn’s 9:09 a.m. reaction; no later listing or video request was present. The 18 domain-gap findings are the earlier unrelated, held or deliberately removed domains; all newly requested business sites are represented.
