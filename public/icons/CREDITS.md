@@ -560,3 +560,21 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-grubwitmike-v99` | Glenn’s supplied IMG_9421.png | Original artwork cropped and fitted to 512 px |
 | `foodie-mzz-juxtaposition-v99` | Glenn’s supplied IMG_9407.PNG | Creator portrait cropped and resized to 512 px |
 | `bay-area-crumbs` | [Bay Area Crumbs official shop](https://bayareacrumbs.com/) | Original shop logo fitted to 512 px |
+
+| `v-pho` | Glenn’s supplied IMG_9451.png, November 5, 2026 | Original artwork or profile portrait cropped and fitted to 512 px |
+| `master-oh-v100` | Glenn’s supplied IMG_9457.png, November 5, 2026 | Original artwork or profile portrait cropped and fitted to 512 px |
+| `chahalo-berkeley` | Glenn’s supplied IMG_9461.png, November 5, 2026 | Original artwork or profile portrait cropped and fitted to 512 px |
+| `maillards` | Glenn’s supplied IMG_9470.PNG, November 5, 2026 | Original artwork or profile portrait cropped and fitted to 512 px |
+| `riceful-berkeley` | Glenn’s supplied IMG_9480.PNG, November 5, 2026 | Original artwork or profile portrait cropped and fitted to 512 px |
+| `halal-street-newark` | Glenn’s supplied IMG_9486.PNG, November 5, 2026 | Original artwork or profile portrait cropped and fitted to 512 px |
+| `champ-onigiri` | Glenn’s supplied IMG_9481.png, November 5, 2026 | Original artwork or profile portrait cropped and fitted to 512 px |
+| `foodie-taratastessf-v100` | Glenn’s supplied IMG_9472.PNG, November 5, 2026 | Original artwork or profile portrait cropped and fitted to 512 px |
+| `foodie-alwayshannegry-v100` | Glenn’s supplied IMG_9475.png, November 5, 2026 | Original artwork or profile portrait cropped and fitted to 512 px |
+| `foodie-rainmoreturely-v100` | Glenn’s supplied IMG_9484.png, November 5, 2026 | Original artwork or profile portrait cropped and fitted to 512 px |
+| `foodie-zia-hazrati-v100` | Glenn’s supplied IMG_9487.PNG, November 5, 2026 | Original artwork or profile portrait cropped and fitted to 512 px |
+| `foodie-bennyeats-bayarea-v100` | Glenn’s supplied IMG_9488.png, November 5, 2026 | Original artwork or profile portrait cropped and fitted to 512 px |
+
+| `jk-cafe-boba-donuts` | Glenn’s supplied IMG_9515.png, November 6, 2026 | Original artwork cropped and resized to 512 px |
+| `world-wrapps` | Glenn’s supplied IMG_9517.png, World Wrapps’ own app artwork | Original artwork cropped and resized to 512 px |
+| `foodie-jourdyn-lynn-v101` | Glenn’s supplied IMG_9525.PNG | Profile portrait cropped and resized to 512 px |
+| `foodie-bayeatss-v101` | [@bayeatss official Instagram profile](https://www.instagram.com/bayeatss/) | Original public profile portrait downloaded in signed-in Chrome; supplied IMG_9526.png was unavailable on disk |

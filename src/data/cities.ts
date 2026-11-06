@@ -349,4 +349,9 @@ export const CITY_PAGES = [
   'Half Moon Bay',
   'Rancho Cordova',
   'Camino',
+  // Glenn’s V Pho request, November 5. No licensed landmark was supplied.
+  'Campbell',
+  // Glenn’s World Wrapps request, November 6. Stanford’s shop address is in Palo Alto.
+  'Stanford',
+  'Corte Madera',
 ] as const

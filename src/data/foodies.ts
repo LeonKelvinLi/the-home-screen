@@ -863,6 +863,15 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {"handle": "janniners", "name": "@janniners", "label": "janniners", "icon": "foodie-janniners-v98"},
   {"handle": "kelsy.annn", "name": "@kelsy.annn", "label": "kelsy.annn", "icon": "foodie-kelsy-annn-v98"},
   {"handle": "food_adventures21", "name": "@food_adventures21", "label": "food_adventures21", "icon": "foodie-food-adventures21-v98"},
+  // Batch 100.
+  {"handle": "taratastessf", "name": "@taratastessf", "label": "taratastessf", "icon": "foodie-taratastessf-v100"},
+  {"handle": "alwayshannegry", "name": "@alwayshannegry", "label": "alwayshannegry", "icon": "foodie-alwayshannegry-v100"},
+  {"handle": "rainmoreturely", "name": "@rainmoreturely", "label": "rainmoreturely", "icon": "foodie-rainmoreturely-v100"},
+  {"handle": "zia_hazrati", "name": "@zia_hazrati", "label": "zia_hazrati", "icon": "foodie-zia-hazrati-v100"},
+  {"handle": "bennyeats.bayarea", "name": "@bennyeats.bayarea", "label": "bennyeats.bayarea", "icon": "foodie-bennyeats-bayarea-v100"},
+  // Batch 101.
+  {"handle": "jourdyn.lynn", "name": "@jourdyn.lynn", "label": "jourdyn.lynn", "icon": "foodie-jourdyn-lynn-v101"},
+  {"handle": "bayeatss", "name": "Kristine", "label": "Kristine", "icon": "foodie-bayeatss-v101"},
 ]
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
@@ -1378,6 +1387,26 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "queen.food.e", "place": "Bay Area Crumbs", "city": "Pittsburg", "brand": "b_bayareacrumbs", "reel": "https://www.instagram.com/reel/DaRK8hTPUld/", "clip": true, "credit": "Filmed by @queen.food.e at Bay Area Crumbs in Pittsburg."},
   {"by": "mzz.juxtaposition", "place": "Dolores Deluxe", "city": "San Francisco", "brand": "b_doloresdeluxe", "reel": "https://www.instagram.com/reel/DfWyuCSt2bS/", "clip": true, "credit": "Filmed by @mzz.juxtaposition at Dolores Deluxe in San Francisco."},
   {"by": "mzz.juxtaposition", "place": "Russ Fam Kitchen", "city": "Daly City", "brand": "b_russfamkitchen", "reel": "https://www.instagram.com/reel/DfTAGm3vA1q/", "clip": true, "credit": "Ilocos empanada review by @mzz.juxtaposition at Russ Fam Kitchen."},
+  // Batch 100.
+  {"by": "_foodieshots_", "place": "V Pho", "city": "Campbell", "brand": "b_vpho", "reel": "https://www.instagram.com/reel/DfSmtNEhdNn/", "clip": true, "credit": "Filmed by @_foodieshots_ at V Pho in Campbell."},
+  {"by": "_foodieshots_", "place": "Master Oh", "city": "Santa Clara", "brand": "b_masteroh", "reel": "https://www.instagram.com/reel/De-CdUISqLp/", "clip": true, "credit": "Filmed by @_foodieshots_ at Master Oh in Santa Clara."},
+  {"by": "_foodieshots_", "place": "Chahalo Berkeley", "city": "Berkeley", "brand": "b_chahaloberkeley", "reel": "https://www.instagram.com/reel/Dexq2IcxgNp/", "clip": true, "credit": "Filmed by @_foodieshots_ at Chahalo Berkeley in Berkeley."},
+  {"by": "_foodieshots_", "place": "Pho Ha Noi", "city": "San Jose", "brand": "b_phohanoisanjose", "reel": "https://www.instagram.com/reel/DekOiRNPKMs/", "clip": true, "credit": "Filmed by @_foodieshots_ at Pho Ha Noi in San Jose. Check current prices and promotions directly."},
+  {"by": "thesnacksensei", "place": "Maillards", "city": "San Francisco", "brand": "b_maillards", "reel": "https://www.instagram.com/reel/DfYlac-IYZU/", "clip": true, "credit": "Filmed by @thesnacksensei at Maillards in San Francisco."},
+  {"by": "taratastessf", "place": "Maillards", "city": "San Francisco", "brand": "b_maillards", "reel": "https://www.instagram.com/reel/DXr08B8iUub/", "clip": true, "credit": "Filmed by @taratastessf at Maillards in San Francisco."},
+  {"by": "alwayshannegry", "place": "Maillards", "city": "San Francisco", "brand": "b_maillards", "reel": "https://www.instagram.com/reel/DXgUEmJiHp1/", "clip": true, "credit": "Filmed by @alwayshannegry at Maillards in San Francisco."},
+  {"by": "grubwitmike", "place": "Maillards", "city": "San Francisco", "brand": "b_maillards", "reel": "https://www.instagram.com/reel/DUmV_9IDzJb/", "clip": true, "credit": "Filmed by @grubwitmike at Maillards in San Francisco."},
+  {"by": "rainmoreturely", "place": "Little Sheep", "city": "Newark", "brand": "b_littlesheepnewark", "reel": "https://www.instagram.com/reel/DeYS4LtPOgA/", "clip": true, "credit": "Filmed by @rainmoreturely at Little Sheep in Newark."},
+  {"by": "rainmoreturely", "place": "Champ Onigiri", "city": "San Jose", "brand": "b_champonigiri", "reel": "https://www.instagram.com/reel/DUxLrT1D7_-/", "clip": true, "credit": "Filmed by @rainmoreturely at Champ Onigiri in San Jose. Sponsored visit disclosed by the creator."},
+  {"by": "zia_hazrati", "place": "Halal Street Hot Pot", "city": "Newark", "brand": "b_halalstreetnewark", "reel": "https://www.instagram.com/reel/DfYOfuHgu_4/", "clip": true, "credit": "Filmed by @zia_hazrati at Halal Street Hot Pot in Newark. Check current prices and promotions directly."},
+  {"by": "bennyeats.bayarea", "place": "Little Sheep", "city": "Newark", "brand": "b_littlesheepnewark", "reel": "https://www.instagram.com/reel/Dc2NSyjOQlH/", "clip": true, "credit": "Filmed by @bennyeats.bayarea at Little Sheep in Newark. Check current prices and promotions directly."},
+  {"by": "eatwithbooboo", "place": "Hungry Cow", "city": "Fremont", "brand": "b_hungrycow", "reel": "https://www.instagram.com/reel/DfY4w-IA5ej/", "clip": true, "credit": "Filmed by @eatwithbooboo at Hungry Cow in Fremont."},
+  // Batch 101.
+  {"by": "justmostie", "place": "JK Cafe & Boba Donuts", "city": "Pittsburg", "brand": "b_jkcafebobadonuts", "reel": "https://www.instagram.com/reel/DfYchDyTPNV/", "clip": true, "credit": "Filmed by @justmostie at JK Cafe & Boba Donuts in Pittsburg."},
+  {"by": "bayarea_fooddreamz", "place": "Innena’s Kitchen", "city": "Oakland", "brand": "b_innenaskitchen", "reel": "https://www.instagram.com/reel/DfYKf3FBJyO/", "clip": true, "credit": "Filmed by @bayarea_fooddreamz at Innena’s Kitchen in Oakland."},
+  {"by": "bayareamunchies510", "place": "Innena’s Kitchen", "city": "Oakland", "brand": "b_innenaskitchen", "reel": "https://www.instagram.com/reel/DenQqB6vpKk/", "clip": true, "credit": "Filmed by @bayareamunchies510 at Innena’s Kitchen in Oakland."},
+  {"by": "jourdyn.lynn", "place": "World Wrapps", "city": "Corte Madera", "brand": "b_worldwrappscortemadera", "reel": "https://www.instagram.com/reel/DfXjdE4tu24/", "clip": true, "credit": "Filmed by @jourdyn.lynn at World Wrapps in Corte Madera."},
+  {"by": "bayeatss", "place": "World Wrapps", "city": "Bay Area", "brand": "b_worldwrappscortemadera", "reel": "https://www.instagram.com/reel/DfVnXm7vXlq/", "clip": true, "credit": "World Wrapps rice-paper wrap review by @bayeatss. The caption does not identify the branch."},
 ]
 
 /*

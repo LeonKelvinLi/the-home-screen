@@ -4853,8 +4853,8 @@ export const ROSTER_SEED: LocalSeed[] = [
     },
   }),
   /* Santa Clara • Eats */
-  seed('master-oh', 'Master Oh', 'Master Oh', 'Korean, known for raw marina', '#4C4C4B', {
-    icon: 'master-oh',
+  seed('master-oh', 'Master Oh', 'Master Oh', 'Korean seafood restaurant', '#4C4C4B', {
+    icon: 'master-oh-v100',
     tagline: 'Korean, known for raw marinated seafood, in Santa Clara',
     site: 'https://master-oh.com/',
     orderUrl: 'https://masterohs.menu11.com/sc/order',

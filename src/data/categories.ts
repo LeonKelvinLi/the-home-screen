@@ -139,6 +139,12 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'dimsum', heading: 'Dim Sum', about: 'Dim sum, dumplings and soup buns', wall: wall('dimsum'), test: /dim[ -]?sum|dumplings?|xiao[ -]?long[ -]?bao/i },
   { kind: 'icecream', heading: 'Ice Cream', about: 'Independent ice cream shops', wall: wall('sweets') },
   { kind: 'mobilecart', heading: 'Mobile Cart', about: 'Mobile food and drink carts', wall: wall('coffee') },
+  // Glenn, November 5: Pho and Onigiri, each searchable as its own category.
+  { kind: 'pho', heading: 'Pho', about: 'Vietnamese pho and noodle soups', wall: wall('ramen'), test: /\bph[oở]\b/i },
+  // Glenn, November 6: separate Donuts and Boba pages, with JK Cafe & Boba.
+  { kind: 'donuts', heading: 'Donuts', about: 'Donut shops and doughnuts', wall: wall('bakery'), test: /donut|doughnut/i },
+  { kind: 'boba', heading: 'Boba', about: 'Boba and bubble tea shops', wall: wall('teas'), test: /boba|bubble tea|milk tea/i },
+  { kind: 'onigiri', heading: 'Onigiri', about: 'Japanese onigiri and rice sandwiches', wall: wall('sushi'), test: /onigiri/i },
   { kind: 'ramen', heading: 'Ramen', about: 'Ramen shops', wall: wall('ramen'), test: /ramen/i },
   { kind: 'steakhouse', heading: 'Steakhouse', about: 'Steakhouses and chophouses', wall: wall('steakhouse'), test: /steak ?house|chop ?house/i },
   /* "New category BEASTY • Breakfast/diner. Or just • diner" — Glenn, 2026-10-22, 8:56 pm.

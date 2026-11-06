@@ -1145,4 +1145,20 @@ export const ADDED_ON: Record<string, string> = {
 
   // Batch 99
   b_bayareacrumbs: '2026-11-05',
+
+  // Batch 100
+  b_vpho: '2026-11-05',
+  b_chahaloberkeley: '2026-11-05',
+  b_maillards: '2026-11-05',
+  b_ricefulberkeley: '2026-11-05',
+  b_champonigiri: '2026-11-05',
+  b_halalstreetnewark: '2026-11-05',
+
+  // Batch 101
+  b_jkcafebobadonuts: '2026-11-06',
+  b_worldwrappssanramon: '2026-11-06',
+  b_worldwrappsstanford: '2026-11-06',
+  b_worldwrappssanfrancisco: '2026-11-06',
+  b_worldwrappscortemadera: '2026-11-06',
+  b_worldwrappssantaclara: '2026-11-06',
 }

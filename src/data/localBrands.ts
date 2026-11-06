@@ -45525,6 +45525,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       "name": "Innena's Kitchen",
       "label": "Innena's",
       "cuisine": "Cambodian kathiew noodle soup",
+      "clip": {"src": "/clips/review-DfQnRl2hg3t.mp4", "poster": "/clips/review-DfQnRl2hg3t-poster.webp", "href": "https://www.instagram.com/reel/DfQnRl2hg3t/", "credit": "Promotional montage posted by @innenaskitchen, including guest footage.", "platform": "Instagram"},
       "color": "#241C1D",
       "icon": "innenas-kitchen",
       "tagline": "Cambodian kathiew noodle soup with a twist of Nena's flavor, on Fruitvale Avenue in Oakland: a home kitchen that went viral and opened its own storefront.",
@@ -69242,6 +69243,4252 @@ export const LOCAL_SEED: LocalSeed[] = [
           {
             "label": "Bay Area Crumbs online shop",
             "href": "https://bayareacrumbs.com/collections/all"
+          }
+        ]
+      }
+    ]
+  },
+  // Batch 100 — November 5 evening.
+  {
+    "slug": "v-pho",
+    "name": "V Pho",
+    "label": "V Pho",
+    "cuisine": "Vietnamese pho",
+    "tagline": "Build-your-own pho, noodle soups and Vietnamese plates in Campbell.",
+    "color": "#D2C472",
+    "icon": "v-pho",
+    "prep": 0,
+    "category": "Vietnamese pho",
+    "items": [],
+    "site": "https://v-pho.com/",
+    "address": "930 W Hamilton Ave, Ste 110, Campbell, CA 95008",
+    "phone": "(408) 378-2234",
+    "email": "hello@v-pho.com",
+    "hours": "Daily 11am–3pm, 5–10:30pm",
+    "sections": [
+      {
+        "name": "Appetizers",
+        "items": [
+          [
+            "Egg Rolls (4)",
+            "",
+            1150
+          ],
+          [
+            "Spring Rolls (4)",
+            "",
+            1100
+          ],
+          [
+            "Golden Ocean Rolls (3)",
+            "",
+            1060
+          ],
+          [
+            "Saigon Wings",
+            "",
+            1170
+          ],
+          [
+            "Wings Wings",
+            "",
+            1170
+          ],
+          [
+            "Golden Wonton Crisps",
+            "",
+            1150
+          ],
+          [
+            "Avocado Cheese Rangoon",
+            "",
+            1060
+          ],
+          [
+            "Fried Tofu",
+            "",
+            1060
+          ],
+          [
+            "Calamari",
+            "",
+            1350
+          ],
+          [
+            "Crispy Mushroom",
+            "",
+            1100
+          ],
+          [
+            "Cajun French Fries",
+            "",
+            1060
+          ],
+          [
+            "Pot Stickers (5)",
+            "",
+            1070
+          ],
+          [
+            "Butterfly Shrimp",
+            "",
+            1210
+          ],
+          [
+            "Mozzarella Cheese Sticks",
+            "",
+            1000
+          ],
+          [
+            "Butter Corn",
+            "",
+            1080
+          ],
+          [
+            "Zucchini Sticks",
+            "",
+            1000
+          ],
+          [
+            "The Vien Club",
+            "",
+            1080
+          ],
+          [
+            "V-Tastic Sampler",
+            "",
+            1770
+          ]
+        ]
+      },
+      {
+        "name": "Dim sum",
+        "items": [
+          [
+            "Shanghai Pork Dumplings (6)",
+            "",
+            800
+          ],
+          [
+            "Shrimp & Bamboo Ha Gao (4)",
+            "",
+            780
+          ],
+          [
+            "Pork / Chicken Siu Mai (4)",
+            "",
+            780
+          ],
+          [
+            "Chicken Bun (3)",
+            "",
+            850
+          ],
+          [
+            "Vegetable Bun (3)",
+            "",
+            850
+          ],
+          [
+            "Charsiu Pork Bun (3)",
+            "",
+            850
+          ],
+          [
+            "Steamed Dim Sum Platter (5)",
+            "",
+            1230
+          ]
+        ]
+      },
+      {
+        "name": "Banh mi",
+        "items": [
+          [
+            "Five Spices Beef Sandwich",
+            "",
+            1300
+          ],
+          [
+            "Vietnamese Grilled Sandwich",
+            "",
+            1250
+          ]
+        ]
+      },
+      {
+        "name": "Pho and noodle soups",
+        "items": [
+          [
+            "Rib Bone Pho",
+            "",
+            1900
+          ],
+          [
+            "Dry Pho",
+            "",
+            1850
+          ],
+          [
+            "Hu Tieu / Hu Tieu Mi",
+            "",
+            1790
+          ],
+          [
+            "Sour Pho",
+            "",
+            1880
+          ],
+          [
+            "Rare Flap Meat Pho",
+            "",
+            1780
+          ],
+          [
+            "Free Range Chicken Pho",
+            "",
+            1800
+          ],
+          [
+            "House Combination Pho",
+            "",
+            1800
+          ],
+          [
+            "Shrimp Pho",
+            "",
+            1790
+          ],
+          [
+            "Vegetarian Pho",
+            "",
+            1780
+          ],
+          [
+            "No Meat Pho",
+            "",
+            1600
+          ],
+          [
+            "Chicken Pho",
+            "",
+            1780
+          ],
+          [
+            "Seafood Pho",
+            "",
+            1880
+          ],
+          [
+            "Wonton and Egg Noodle",
+            "",
+            1800
+          ],
+          [
+            "Wonton Soup",
+            "",
+            1800
+          ],
+          [
+            "Vietnamese Spicy Noodle Soup",
+            "",
+            1790
+          ],
+          [
+            "Beef Stew",
+            "",
+            2500
+          ]
+        ]
+      },
+      {
+        "name": "DIY pho",
+        "items": [
+          [
+            "Thin noodles — two proteins",
+            "",
+            1790
+          ],
+          [
+            "Fresh noodles — two proteins",
+            "",
+            1950
+          ]
+        ]
+      },
+      {
+        "name": "Rice plates",
+        "items": [
+          [
+            "Supreme Shaken Beef Fried Rice",
+            "",
+            2210
+          ],
+          [
+            "Crispy Chicken Fried Rice",
+            "",
+            2100
+          ],
+          [
+            "Grilled Meat & Egg Rice",
+            "",
+            1780
+          ],
+          [
+            "Vietnamese Shaken Beef",
+            "",
+            1880
+          ],
+          [
+            "Korean BBQ Short Ribs",
+            "",
+            1950
+          ],
+          [
+            "Orange Chicken",
+            "",
+            1760
+          ],
+          [
+            "House Fried Rice",
+            "",
+            1760
+          ],
+          [
+            "Green Glow Rice",
+            "",
+            1780
+          ]
+        ]
+      },
+      {
+        "name": "Noodle plates",
+        "items": [
+          [
+            "Rice Noodles Vermicelli",
+            "",
+            1770
+          ],
+          [
+            "Stir Fried Beef Vermicelli",
+            "",
+            1780
+          ],
+          [
+            "Garlic Noodles",
+            "",
+            1780
+          ],
+          [
+            "Shake-Shake Garlic Noodles",
+            "",
+            2110
+          ],
+          [
+            "Beef Stir-Fry Noodles",
+            "",
+            1790
+          ]
+        ]
+      },
+      {
+        "name": "Smoothies",
+        "items": [
+          [
+            "Blueberry Smoothie",
+            "",
+            750
+          ],
+          [
+            "Avocado Smoothie",
+            "",
+            750
+          ],
+          [
+            "Strawnana Smoothie",
+            "",
+            750
+          ],
+          [
+            "Taro Smoothie",
+            "",
+            750
+          ],
+          [
+            "Mango Smoothie",
+            "",
+            750
+          ],
+          [
+            "Coco Smoothie",
+            "",
+            750
+          ],
+          [
+            "Strawberry Smoothie",
+            "",
+            750
+          ]
+        ]
+      },
+      {
+        "name": "Fresh drinks",
+        "items": [
+          [
+            "Squeezed Orange Juice",
+            "",
+            750
+          ],
+          [
+            "Fresh Coconut Juice",
+            "",
+            750
+          ],
+          [
+            "Snowy Lemonade",
+            "",
+            880
+          ],
+          [
+            "Lemonade",
+            "",
+            500
+          ],
+          [
+            "Strawberry Lemonade",
+            "",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Boba tea",
+        "items": [
+          [
+            "V-Milk Tea",
+            "",
+            750
+          ],
+          [
+            "Cheesy Cloud Milk Tea",
+            "",
+            750
+          ],
+          [
+            "Thai Boba Ice Tea",
+            "",
+            750
+          ],
+          [
+            "Peach Tea",
+            "",
+            750
+          ],
+          [
+            "Lychee Tea",
+            "",
+            750
+          ],
+          [
+            "Green Apple Tea",
+            "",
+            750
+          ],
+          [
+            "Honeydew Tea",
+            "",
+            750
+          ],
+          [
+            "Pink Berry Pop",
+            "",
+            750
+          ],
+          [
+            "Tropical Twist",
+            "",
+            750
+          ],
+          [
+            "Mango Tea",
+            "",
+            750
+          ],
+          [
+            "Guava Glow",
+            "",
+            750
+          ],
+          [
+            "Peachy Mango Pop",
+            "",
+            750
+          ]
+        ]
+      },
+      {
+        "name": "Lunch special",
+        "items": [
+          [
+            "Chicken Pho — 11am–3pm",
+            "",
+            1299
+          ]
+        ]
+      }
+    ],
+    "orderUrl": "https://www.doordash.com/store/vpho-campbell-25055662/",
+    "quoteOnly": "Menu prices are from V Pho. Order directly with the restaurant or its delivery partners.",
+    "panels": [
+      {
+        "head": "Menu and ordering",
+        "body": [
+          "Last calls and takeaway orders finish 15 minutes before closing. DIY pho includes two proteins; shrimp and fish ball with roe add $1, squid adds $1.50. Selected vegetables add $1.",
+          "Drink toppings: boba +$0.50, crystal boba +$1, mango, strawberry, rainbow, lychee or coffee jelly +$0.75. The published chicken pho lunch special is $12.99 from 11am to 3pm."
+        ],
+        "links": [
+          {
+            "label": "V Pho full menu",
+            "href": "https://v-pho.com/menu/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "chahalo-berkeley",
+    "name": "Chahalo Berkeley",
+    "label": "Chahalo Berkeley",
+    "cuisine": "Boba, tea and matcha",
+    "tagline": "Milk teas, fruit drinks, handmade boba and matcha in Berkeley.",
+    "color": "#ED6500",
+    "icon": "chahalo-berkeley",
+    "prep": 0,
+    "category": "Boba, tea and matcha",
+    "items": [],
+    "site": "https://pos.chowbus.com/online-ordering/store/Chahalo-Berkeley/23921",
+    "siteCta": "Menu and ordering",
+    "address": "2041 University Ave, Berkeley, CA 94704",
+    "phone": "(510) 990-5536",
+    "email": "chahaloucb@gmail.com",
+    "sections": [
+      {
+        "name": "Signature Drinks",
+        "items": [
+          [
+            "osmanthus oolong milk tea",
+            "",
+            649
+          ]
+        ]
+      },
+      {
+        "name": "Whole Leaf Brewed Milk Tea Series",
+        "items": [
+          [
+            "jasmine green milk tea",
+            "",
+            649
+          ],
+          [
+            "roasted oolong milk tea",
+            "",
+            649
+          ],
+          [
+            "dark milk tea",
+            "",
+            649
+          ],
+          [
+            "grape flavored oolong milk tea",
+            "",
+            649
+          ],
+          [
+            "jasmine green milk tea(oat milk)",
+            "",
+            749
+          ],
+          [
+            "roasted oolong milk tea (oat milk)",
+            "",
+            749
+          ],
+          [
+            "osmanthus oolong milk tea (oat milk)",
+            "",
+            749
+          ],
+          [
+            "mango fruit milk w. roasted oolong tea",
+            "",
+            749
+          ],
+          [
+            "chahalo black milk tea",
+            "",
+            649
+          ]
+        ]
+      },
+      {
+        "name": "Tea Frappe Series",
+        "items": [
+          [
+            "chahalo black milk tea frappe",
+            "",
+            749
+          ],
+          [
+            "jasmine green milk tea frappe with matcha",
+            "",
+            749
+          ]
+        ]
+      },
+      {
+        "name": "Pure Tea Series",
+        "items": [
+          [
+            "jasmine green tea",
+            "",
+            449
+          ],
+          [
+            "chahalo black tea",
+            "",
+            449
+          ],
+          [
+            "chahalo black tea w cheese foam",
+            "",
+            599
+          ]
+        ]
+      },
+      {
+        "name": "Handmade Boba Series",
+        "items": [
+          [
+            "osmanthus oolong milk tea with handmade boba",
+            "",
+            699
+          ],
+          [
+            "rock oolong milk tea with handmade boba",
+            "",
+            699
+          ],
+          [
+            "fresh milk with handmade boba",
+            "",
+            749
+          ],
+          [
+            "matcha latte with handmade boba",
+            "",
+            799
+          ]
+        ]
+      },
+      {
+        "name": "Perfume Lemon Tea Series",
+        "items": [
+          [
+            "jasmine lemon green tea",
+            "",
+            499
+          ],
+          [
+            "fresh roasted oolong lemon tea",
+            "",
+            499
+          ]
+        ]
+      },
+      {
+        "name": "Coconut Series",
+        "items": [
+          [
+            "coconut water with pistachio cheese foam",
+            "",
+            749
+          ]
+        ]
+      },
+      {
+        "name": "Matcha Series",
+        "items": [
+          [
+            "matcha latte",
+            "",
+            649
+          ],
+          [
+            "matcha latte extra",
+            "",
+            749
+          ]
+        ]
+      },
+      {
+        "name": "Seasonal Specials",
+        "items": [
+          [
+            "changan fresh lychee oolong milk tea",
+            "",
+            749
+          ],
+          [
+            "chahalo lychee smoothie",
+            "",
+            779
+          ],
+          [
+            "iced lychee jasmine lemon tea",
+            "",
+            699
+          ],
+          [
+            "grape flavored mulbery roasted tea",
+            "",
+            749
+          ],
+          [
+            "orchid scented mango smoothie",
+            "",
+            779
+          ],
+          [
+            "peach jasmine green ice tea",
+            "",
+            749
+          ],
+          [
+            "peach strawberry jasmine green slush w. cheese foam",
+            "",
+            799
+          ]
+        ]
+      },
+      {
+        "name": "Holiday Limited",
+        "items": [
+          [
+            "pumpkin gloom",
+            "",
+            749
+          ],
+          [
+            "strawberry sparkle",
+            "",
+            699
+          ]
+        ]
+      }
+    ],
+    "quoteOnly": "Base prices are from the Berkeley shop’s Chowbus menu. Options can add to the price.",
+    "panels": [
+      {
+        "head": "Visit Chahalo",
+        "body": [
+          "The Berkeley shop is at 2041 University Avenue. Its profile and ordering page agree on this address."
+        ],
+        "links": [
+          {
+            "label": "Chahalo Berkeley on Instagram",
+            "href": "https://www.instagram.com/chahaloberkeley/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "maillards",
+    "name": "Maillards",
+    "label": "Maillards",
+    "cuisine": "Smash burgers",
+    "tagline": "Smash burgers at the Noriega counter and Outer Sunset Farmers Market.",
+    "color": "#F4E7CC",
+    "icon": "maillards",
+    "prep": 0,
+    "category": "Smash burgers",
+    "items": [],
+    "site": "https://www.maillardssf.com/",
+    "address": "3821 Noriega St, San Francisco, CA 94122",
+    "email": "info@maillardssf.com",
+    "sections": [
+      {
+        "name": "Noriega counter — burgers",
+        "items": [
+          [
+            "Maillards — Single",
+            "",
+            1000
+          ],
+          [
+            "Maillards — Double",
+            "",
+            1200
+          ],
+          [
+            "Spicy Maillards — Single",
+            "",
+            1100
+          ],
+          [
+            "Spicy Maillards — Double",
+            "",
+            1300
+          ],
+          [
+            "Bird’s Eye — Single",
+            "",
+            1100
+          ],
+          [
+            "Bird’s Eye — Double",
+            "",
+            1300
+          ],
+          [
+            "OTL — Single",
+            "",
+            1100
+          ],
+          [
+            "OTL — Double",
+            "",
+            1300
+          ]
+        ]
+      },
+      {
+        "name": "Noriega counter — sandwiches",
+        "items": [
+          [
+            "Chicken Tender Sando",
+            "",
+            1000
+          ],
+          [
+            "Sourdough Grilled Cheese",
+            "",
+            900
+          ]
+        ]
+      },
+      {
+        "name": "Noriega counter — bites and salad",
+        "items": [
+          [
+            "Chicken Bites",
+            "",
+            1000
+          ],
+          [
+            "Cauliflower Bites",
+            "",
+            1000
+          ],
+          [
+            "Garlic Crunch Caesar",
+            "",
+            1000
+          ]
+        ]
+      },
+      {
+        "name": "Noriega counter — fries and sauces",
+        "items": [
+          [
+            "Natural-Cut Fries",
+            "",
+            500
+          ],
+          [
+            "Maillards Sauce",
+            "",
+            50
+          ],
+          [
+            "Moroccan Spiced Honey Sauce",
+            "",
+            50
+          ],
+          [
+            "Comeback Sauce",
+            "",
+            50
+          ],
+          [
+            "Herbed Ranch Sauce",
+            "",
+            50
+          ],
+          [
+            "Smoked Jalapeño Aioli Sauce",
+            "",
+            50
+          ]
+        ]
+      },
+      {
+        "name": "Noriega counter — soft serve",
+        "items": [
+          [
+            "Dabble Cup",
+            "",
+            600
+          ],
+          [
+            "Cookies ’n’ Cream Mix It",
+            "",
+            700
+          ],
+          [
+            "Midnight Brownie Mix It",
+            "",
+            800
+          ],
+          [
+            "Summer Cheesecake Mix It",
+            "",
+            800
+          ]
+        ]
+      },
+      {
+        "name": "Sunday farmers market",
+        "items": [
+          [
+            "Maillards — Single",
+            "",
+            1000
+          ],
+          [
+            "Maillards — Double",
+            "",
+            1200
+          ],
+          [
+            "Spicy Maillards — Single",
+            "",
+            1100
+          ],
+          [
+            "Spicy Maillards — Double",
+            "",
+            1300
+          ],
+          [
+            "The Box — double burger, fries, drink and sauce",
+            "",
+            1800
+          ],
+          [
+            "Breakfast Sammie — 9–11am",
+            "",
+            1000
+          ],
+          [
+            "Natural-Cut Fries",
+            "",
+            500
+          ],
+          [
+            "OliPop",
+            "",
+            300
+          ],
+          [
+            "Topo Chico",
+            "",
+            300
+          ],
+          [
+            "Maillards Sauce",
+            "",
+            50
+          ],
+          [
+            "Moroccan Spiced Honey Sauce",
+            "",
+            50
+          ],
+          [
+            "Comeback Sauce",
+            "",
+            50
+          ],
+          [
+            "Herbed Ranch Sauce",
+            "",
+            50
+          ],
+          [
+            "Smoked Jalapeño Aioli Sauce",
+            "",
+            50
+          ]
+        ]
+      }
+    ],
+    "quoteOnly": "Prices are from Maillards’ own menu. The counter and Sunday farmers market have different selections.",
+    "panels": [
+      {
+        "head": "Counter and Sunday market",
+        "body": [
+          "Noriega counter: 3821 Noriega St, San Francisco.",
+          "Outer Sunset Farmers Market: 1994 37th Ave, San Francisco. Sundays 9am–2pm, until sold out."
+        ],
+        "links": [
+          {
+            "label": "Maillards menu and current hours",
+            "href": "https://www.maillardssf.com/#menu"
+          }
+        ]
+      }
+    ],
+    "siteNote": "The website lists Wednesday through Sunday counter hours; Glenn’s newer profile screenshot says Tuesdays are now open. Confirm the current schedule directly."
+  },
+  {
+    "slug": "riceful-berkeley",
+    "name": "Riceful",
+    "label": "Riceful",
+    "cuisine": "Japanese onigiri",
+    "tagline": "Okinawa-style rice sandwiches, rice bowls, udon and curry in Berkeley.",
+    "color": "#FFFFFF",
+    "icon": "riceful-berkeley",
+    "prep": 0,
+    "category": "Japanese onigiri",
+    "items": [],
+    "site": "https://bericeful.com/",
+    "orderUrl": "https://order.snackpass.co/Riceful-5e9a3e1bb184de00ce20a392",
+    "address": "2435 Durant Ave, Berkeley, CA 94704",
+    "email": "bericeful@gmail.com",
+    "hours": "Mon–Fri 9:30am–8:30pm; Sat–Sun 10:30am–8pm",
+    "sections": [
+      {
+        "name": "Onigiri",
+        "items": [
+          [
+            "Teriyaki Chicken",
+            "Teriyaki chicken skewer, lettuce, egg, mayo, unagi sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Unagi",
+            "Unagi (marinated eel fish), lettuce, egg, spam, mayo, house sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Soft-shell Crab",
+            "Soft-shell crab, egg, lettuce, crab mix, mayo, unagi sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pork-Boy",
+            "Pork katsu, cheese or lettuce, egg, spam, mayo, katsu sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Simmered Beef",
+            "Simmered beef with cooked sweet onion, lettuce, egg, spam",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ebi Katsu",
+            "Shrimp katsu, crab mix, egg, katsu sauce, mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Belly Belly",
+            "Soft cooked bacon, cheese or lettuce, egg, spam, mayo, sweet chili sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Go Cal",
+            "Crab mix with tobiko, egg, spam, house sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Golden Go Cal",
+            "Crab mix with tobiko, egg, spam, salted egg yolk sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Porksung",
+            "Porksung, egg, spam, house sauce, mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Classic Okinawa",
+            "Egg, spam, house sauce, mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Double Double",
+            "Egg x2, spam x2, house sauce, mayo or spicy mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Aji Fish",
+            "Fried aji fish, lettuce, egg, spam, mayo, house sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tempura Shrimp",
+            "Shrimp tempura, lettuce, egg, spam, mayo, house sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Double Shrimps",
+            "Shrimp tempura x2, lettuce, egg, spam, house sauce, mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ika Geso",
+            "Calamari skewer, seaweed salad, egg, spam, mayo, sweet chili sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Seaweed Salad",
+            "Seaweed salad, egg, spam, mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Golden Double Shrimp",
+            "Shrimp tempura x2, crab salad, egg, spam, salted egg yolk sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chicken Katsu",
+            "Chicken katsu, seaweed salad, egg, mayo, katsu sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Grilled Salmon",
+            "Grilled salmon, egg, spam, unagi sauce, house sauce, mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Korokke",
+            "Korokke (potato cake), lettuce, egg, mayo, ketchup",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "The Hotdog",
+            "Pineapple sausage, cheese or lettuce, egg, spam, mayo, ketchup",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Fried Tofu",
+            "Fried tofu, lettuce, egg, mayo, house sauce",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Curry Onigiri",
+        "items": [
+          [
+            "Pork-boy",
+            "Pork katsu, egg, spam, Japanese curry sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chicken Katsu",
+            "Chicken katsu, egg, spam, Japanese curry sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Double Shrimp",
+            "Tempura shrimp x2, egg, spam, Japanese curry sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Classic",
+            "Egg, spam, Japanese curry sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Korokke",
+            "Korokke (potato cake), egg, Japanese curry sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tofu",
+            "Fried tofu, egg, Japanese curry sauce",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Purple Rice Onigiri (Limited)",
+        "items": [
+          [
+            "Purple Pork-Boy",
+            "Purple rice, pork katsu, seaweed salad, egg, spam, taro paste (contain egg)",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Purple Ebi Katsu",
+            "Purple rice, shrimp katsu, crab mix, egg, spam, taro paste (contain egg)",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Purple Porksung",
+            "Purple rice, Porksung, egg, spam, taro paste (contain egg)",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Purple Go Cal",
+            "Purple rice, crab mix with tobiko, egg, spam, taro paste (contain egg)",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Family Bundle",
+        "items": [
+          [
+            "Veggie Bundle",
+            "Curry Korokke Onigiri, Korokke Onigiri, Seaweed Salad Onigiri, Curry Fried Tofu Onigiri, Fried Tofu Onigiri (all with eggs & no spam)",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Seafood Bundle",
+            "Ebi Katsu Onigiri, Double Shrimp Onigiri, Grilled Salmon Onigiri, Aji Fish Onigiri, Go Cal Onigiri",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Meat Bundle",
+            "Hotdog Onigiri, Cheese Pork-Boy Onigiri, Simmered Beef Onigiri, Chicken Katsu Onigiri, Porksung Onigiri",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Donburi",
+        "items": [
+          [
+            "Unagidon",
+            "Unagi (marinated eel fish), corn, cucumber, ginger, mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Teriyaki Chicken Don",
+            "Teriyaki chicken, corn, seaweed salad, unagi sauce, mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Gyudon",
+            "Simmered beef with sweet onion, corn, ginger, mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pork Katsudon",
+            "Pork katsu, corn, seaweed salad, katsu sauce, mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chicken Katsudon",
+            "Chicken katsu, crab mix, seaweed salad, katsu sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Grilled Salmon Don",
+            "Grilled salmon, egg, seaweed salad, unagi sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "SPAM Don",
+            "Rice bowl with SPAM x3, seaweed salad, cucumber, mayo corn",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tofudon",
+            "Fried tofu, seaweed salad, corn, house sauce, mayo",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Curry Donburi",
+        "items": [
+          [
+            "Pork Katsudon",
+            "Pork katsu, corn, cucumber, ginger, grape tomatoes, Japanese curry",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chicken Katsudon",
+            "Chicken katsu, corn, cucumber, ginger, grape tomatoes, Japanese curry",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Shrimp Tempuradon",
+            "Tempura shrimp, corn, grape tomatoes, Japanese curry",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ebi Katsudon",
+            "Fried shrimp cutlets, corn, cucumber, ginger, grape tomatoes, Japanese curry",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Korokke Don",
+            "Fried potato cakes, corn, cucumber, ginger, grape tomatoes, Japanese curry",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Udon",
+        "items": [
+          [
+            "Chicken Katsu",
+            "Udon, chicken katsu, tempura crisps, corn, seaweed broth",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pork Katsu",
+            "Udon, pork katsu, tempura crisps, corn, seaweed broth",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Shrimp Tempura",
+            "Udon, shrimp tempura x2, tempura crisps, corn, seaweed broth",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Korokke",
+            "Udon, korokke x2, tempura crisps, corn, seaweed broth",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tofu",
+            "Udon, tofu x2, tempura crisps, corn, seaweed broth",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Spam",
+            "Udon, spam, tempura crisps, corn, seaweed broth",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Side",
+        "items": [
+          [
+            "Spring Mix Salad",
+            "Lettuce, cherry tomato, corn, cucumber, Japanese salad dressing (contains egg, sesame, wheat)",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Edamame",
+            "Tender young soybeans in their pods, lightly salted",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Seaweed Salad",
+            "Fresh seaweed with sesame seeds and a light dressing",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Fried Tofu",
+            "Crispy fried tofu x3, served with house sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Teriyaki Chicken Skewers",
+            "Grilled chicken skewers x3 glazed with teriyaki sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Aji Fish",
+            "Crispy fried aji fish x3, served with mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Jumbo Tempura Shrimp",
+            "Crispy golden-battered jumbo shrimp x4, served with mayo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ebi Katsu",
+            "Shrimp cake x3 with katsu sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ika Skewer",
+            "Crispy-fried squid pieces on skewers, served with sweet chili sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pineapple Hotdog",
+            "Hot dogs wrapped in sweet pineapple-infused bun x4, served with ketchup",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Korokke",
+            "Potato cake x3 with ketchup",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "House Made Drinks",
+        "items": [
+          [
+            "Coconut Milk",
+            "Non-dairy creamer, fixed sugar, ice",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Coconut Milk Tea",
+            "Non-dairy creamer, fixed sugar, ice",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Lemon Ice Black Tea",
+            "Fixed sugar, ice",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Green Thai Milk Tea",
+            "Non-dairy creamer, fixed sugar, ice",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Strawberry Milk",
+            "Non-dairy creamer, fixed sugar, ice",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      }
+    ],
+    "quoteOnly": "Riceful publishes these dishes without prices. Check the shop’s ordering page for current prices.",
+    "panels": [
+      {
+        "head": "Menu and catering",
+        "links": [
+          {
+            "label": "Riceful full menu",
+            "href": "https://bericeful.com/menu.html"
+          },
+          {
+            "label": "Riceful catering",
+            "href": "https://bericeful.com/cater.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "champ-onigiri",
+    "name": "Champ Onigiri",
+    "label": "Champ Onigiri",
+    "cuisine": "Japanese onigiri",
+    "tagline": "Onigiri and sandwiches at the Santa Teresa shop in San Jose.",
+    "color": "#FFFFFF",
+    "icon": "champ-onigiri",
+    "prep": 0,
+    "category": "Japanese onigiri",
+    "items": [],
+    "address": "6229 Santa Teresa Blvd, San Jose, CA 95119",
+    "phone": "(408) 420-0920",
+    "email": "akinaifoods@gmail.com",
+    "hours": "Daily 10am–2pm",
+    "contactOnly": "Ask the shop for its current onigiri selection and prices.",
+    "panels": [
+      {
+        "head": "Onigiri shop",
+        "body": [
+          "The shop’s supplied Instagram profile advertises onigiri and sandwiches, open daily from 10am to 2pm. This is its daytime onigiri service; Ramen Champ’s dinner menu is separate."
+        ],
+        "links": [
+          {
+            "label": "Champ Onigiri on Instagram",
+            "href": "https://www.instagram.com/champ_onigiri/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "halal-street-newark",
+    "name": "Halal Street Hot Pot",
+    "label": "Halal Street Hot Pot",
+    "cuisine": "Halal AYCE hot pot",
+    "tagline": "Hot pot, Xinjiang dishes and roasted lamb in Newark.",
+    "color": "#E61E2B",
+    "icon": "halal-street-newark",
+    "prep": 0,
+    "category": "Halal AYCE hot pot",
+    "items": [],
+    "site": "https://halalstreethotpotxinjiangcuisine.com/newark/",
+    "needsSite": true,
+    "address": "5605 Mowry School Rd, Newark, CA 94560",
+    "phone": "(510) 335-3333",
+    "orderUrl": "https://pos.chowbus.com/online-ordering/store/restaurant/21046",
+    "sections": [
+      {
+        "name": "Popular Items 热销菜",
+        "items": [
+          [
+            "lamb kebab (3)",
+            "",
+            1998
+          ],
+          [
+            "xinjiang big plate chicken (bone-in)",
+            "",
+            2198
+          ],
+          [
+            "baked bun (4)",
+            "",
+            1598
+          ],
+          [
+            "traditional uyghur bread",
+            "",
+            698
+          ],
+          [
+            "lamb polo",
+            "",
+            1898
+          ],
+          [
+            "handmade yogurt",
+            "",
+            598
+          ]
+        ]
+      },
+      {
+        "name": "Roasted Lamb Series 烤全羊系列",
+        "items": [
+          [
+            "roasted lamb (1lb)",
+            "",
+            3800
+          ],
+          [
+            "roasted whole lamb rear leg",
+            "",
+            16800
+          ],
+          [
+            "roasted whole lamb front leg",
+            "",
+            12800
+          ],
+          [
+            "roasted lamb rack",
+            "",
+            15800
+          ],
+          [
+            "half rack of lamb",
+            "",
+            8800
+          ],
+          [
+            "roast half lamb",
+            "",
+            49900
+          ],
+          [
+            "whole lamb roast",
+            "",
+            89900
+          ]
+        ]
+      },
+      {
+        "name": "Drink Menu 饮品菜单",
+        "items": [
+          [
+            "xinjiang kawasaki",
+            "",
+            598
+          ],
+          [
+            "coke",
+            "",
+            299
+          ],
+          [
+            "diet coke",
+            "",
+            299
+          ],
+          [
+            "sprite",
+            "",
+            299
+          ],
+          [
+            "gaiwan tea",
+            "",
+            698
+          ],
+          [
+            "grape pellet juice",
+            "",
+            598
+          ],
+          [
+            "sparkling plum juice",
+            "",
+            449
+          ],
+          [
+            "herbal plum juice",
+            "",
+            399
+          ],
+          [
+            "roasted coconut milk",
+            "",
+            469
+          ],
+          [
+            "mango pomelo sago",
+            "",
+            469
+          ]
+        ]
+      }
+    ],
+    "quoteOnly": "Takeaway prices are from the restaurant’s Chowbus menu. Contact the restaurant for current dine-in hot pot pricing.",
+    "panels": [
+      {
+        "head": "Hot pot and takeaway",
+        "body": [
+          "All-you-can-eat hot pot and Xinjiang dishes. The review mentions a Friday dinner promotion; confirm its date and availability directly."
+        ],
+        "links": [
+          {
+            "label": "Halal Street menu and ordering",
+            "href": "https://pos.chowbus.com/online-ordering/store/restaurant/21046"
+          },
+          {
+            "label": "Halal Street on Instagram",
+            "href": "https://www.instagram.com/halalstreet2023/"
+          }
+        ]
+      }
+    ]
+  },
+  // Batch 101 — November 6 morning.
+  {
+    "slug": "jk-cafe-boba-donuts",
+    "name": "JK Cafe & Boba Donuts",
+    "label": "JK Cafe & Boba",
+    "cuisine": "Donuts, boba and coffee",
+    "tagline": "Donuts, boba, coffee and Vietnamese and croissant sandwiches in Pittsburg.",
+    "color": "#A32630",
+    "icon": "jk-cafe-boba-donuts",
+    "prep": 0,
+    "category": "Donuts and boba",
+    "items": [],
+    "address": "2120 Railroad Ave, Ste 102, Pittsburg, CA 94565",
+    "phone": "(925) 528-6036",
+    "contactOnly": "Visit or call the shop for its current menu and prices.",
+    "panels": [
+      {
+        "head": "Donuts, drinks and sandwiches",
+        "body": [
+          "The shop’s supplied profile lists boba, coffee, donuts, Vietnamese sandwiches and croissant sandwiches."
+        ],
+        "links": [
+          {
+            "label": "JK Cafe & Boba Donuts on Instagram",
+            "href": "https://www.instagram.com/jkcafebobadonuts/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "world-wrapps-san-ramon",
+    "name": "World Wrapps",
+    "label": "World Wrapps",
+    "cuisine": "Globally inspired wraps and bowls",
+    "tagline": "Globally inspired wraps, rice-paper wraps, salads and bowls in San Ramon.",
+    "color": "#C54C30",
+    "icon": "world-wrapps",
+    "prep": 0,
+    "category": "Wraps and bowls",
+    "items": [],
+    "sections": [
+      {
+        "name": "NEW! Rice paper Wrapps",
+        "items": [
+          [
+            "Bangkok Basil Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Umami Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Satay Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "WW Loaded Protein Bowls",
+        "items": [
+          [
+            "WW Loaded Protein Bowl",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "World Salads",
+        "items": [
+          [
+            "Chinese Chopped",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Peanut Noodle Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Greek Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Side Caesar Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Fries & Sides",
+        "items": [
+          [
+            "WW Loaded Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Papas Bravas",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Classic Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tortilla Chips With Housemade Guacamole",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tortilla Chips With Bravas Sauce",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Side Housemade Guacamole",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chips",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Surf & Turf",
+        "items": [
+          [
+            "Burrito Brava Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri Steak & Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Bulgogi Steak With Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Thai Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki Steak & Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Wrapps & Bowls",
+        "items": [
+          [
+            "Thai",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Caesar Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Samurai Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Burrito Brava",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Nori Wrapps & Bowls",
+        "items": [
+          [
+            "Spicy Tuna",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Furikake Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Bulgogi",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Hawaiian Poke",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Vegetarian/Vegan",
+        "items": [
+          [
+            "Beyond Bulgogi",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Kids Nori Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri Vegan",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Papas Bravas",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Burrito Brava Vegetarian",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Thai Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Kids",
+        "items": [
+          [
+            "Burrito",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Kids Nori Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Teriyaki Wrapp Or Bowl",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Homemade Beverages",
+        "items": [
+          [
+            "Watermelon Agua Fresca",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ube Horchata",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pineapple Mint Agua Fresca",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Strawberry Lemonade",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Organic Iced Tea",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Mint Kale-Aid",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "Valrhona Chocolate Chunk Brownie",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ube Rice Krispy Treat",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Matcha Rice Krispy Treat",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Double Chocolate Chip Cookie",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      }
+    ],
+    "site": "https://worldwrapps.com/",
+    "address": "6000 Bollinger Canyon Rd, Suite 1512, San Ramon, CA 94583",
+    "phone": "(925) 415-3063",
+    "email": "info@worldwrapps.com",
+    "hours": "Daily 11am–9pm",
+    "quoteOnly": "The restaurant publishes this menu without prices. Choose a location in its ordering system to see current prices.",
+    "orderUrl": "https://order.incentivio.com/c/worldwrapps/locations/sanramon",
+    "panels": [
+      {
+        "head": "Menu and five locations",
+        "body": [
+          "San Ramon: 6000 Bollinger Canyon Rd, Suite 1512, San Ramon, CA 94583 · (925) 415-3063",
+          "Stanford: 180 El Camino Real, Unit 240-C, Palo Alto, CA 94304 · (650) 384-6302",
+          "San Francisco: 2105 Chestnut St, San Francisco, CA 94123 · (415) 654-5313",
+          "Corte Madera: 208 Corte Madera Town Center, Corte Madera, CA 94925 · (415) 927-3663",
+          "Santa Clara: 3125 Mission College Blvd, Santa Clara, CA 95054 · (408) 486-9727"
+        ],
+        "links": [
+          {
+            "label": "World Wrapps full menu",
+            "href": "https://worldwrapps.com/#menu"
+          },
+          {
+            "label": "World Wrapps locations and ordering",
+            "href": "https://worldwrapps.com/locations/"
+          },
+          {
+            "label": "World Wrapps reviews on BEASTY",
+            "href": "https://beastypages.com/?b=b_worldwrappscortemadera"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "world-wrapps-stanford",
+    "name": "World Wrapps",
+    "label": "World Wrapps",
+    "cuisine": "Globally inspired wraps and bowls",
+    "tagline": "Globally inspired wraps, rice-paper wraps, salads and bowls in Stanford.",
+    "color": "#C54C30",
+    "icon": "world-wrapps",
+    "prep": 0,
+    "category": "Wraps and bowls",
+    "items": [],
+    "sections": [
+      {
+        "name": "NEW! Rice paper Wrapps",
+        "items": [
+          [
+            "Bangkok Basil Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Umami Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Satay Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "WW Loaded Protein Bowls",
+        "items": [
+          [
+            "WW Loaded Protein Bowl",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "World Salads",
+        "items": [
+          [
+            "Chinese Chopped",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Peanut Noodle Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Greek Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Side Caesar Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Fries & Sides",
+        "items": [
+          [
+            "WW Loaded Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Papas Bravas",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Classic Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tortilla Chips With Housemade Guacamole",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tortilla Chips With Bravas Sauce",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Side Housemade Guacamole",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chips",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Surf & Turf",
+        "items": [
+          [
+            "Burrito Brava Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri Steak & Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Bulgogi Steak With Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Thai Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki Steak & Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Wrapps & Bowls",
+        "items": [
+          [
+            "Thai",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Caesar Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Samurai Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Burrito Brava",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Nori Wrapps & Bowls",
+        "items": [
+          [
+            "Spicy Tuna",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Furikake Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Bulgogi",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Hawaiian Poke",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Vegetarian/Vegan",
+        "items": [
+          [
+            "Beyond Bulgogi",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Kids Nori Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri Vegan",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Papas Bravas",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Burrito Brava Vegetarian",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Thai Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Kids",
+        "items": [
+          [
+            "Burrito",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Kids Nori Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Teriyaki Wrapp Or Bowl",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Homemade Beverages",
+        "items": [
+          [
+            "Watermelon Agua Fresca",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ube Horchata",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pineapple Mint Agua Fresca",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Strawberry Lemonade",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Organic Iced Tea",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Mint Kale-Aid",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "Valrhona Chocolate Chunk Brownie",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ube Rice Krispy Treat",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Matcha Rice Krispy Treat",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Double Chocolate Chip Cookie",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      }
+    ],
+    "site": "https://worldwrapps.com/",
+    "address": "180 El Camino Real, Unit 240-C, Palo Alto, CA 94304",
+    "phone": "(650) 384-6302",
+    "email": "info@worldwrapps.com",
+    "hours": "Daily 11am–9pm",
+    "quoteOnly": "The restaurant publishes this menu without prices. Choose a location in its ordering system to see current prices.",
+    "orderUrl": "https://order.incentivio.com/c/worldwrapps/locations/stanford",
+    "panels": [
+      {
+        "head": "Menu and five locations",
+        "body": [
+          "San Ramon: 6000 Bollinger Canyon Rd, Suite 1512, San Ramon, CA 94583 · (925) 415-3063",
+          "Stanford: 180 El Camino Real, Unit 240-C, Palo Alto, CA 94304 · (650) 384-6302",
+          "San Francisco: 2105 Chestnut St, San Francisco, CA 94123 · (415) 654-5313",
+          "Corte Madera: 208 Corte Madera Town Center, Corte Madera, CA 94925 · (415) 927-3663",
+          "Santa Clara: 3125 Mission College Blvd, Santa Clara, CA 95054 · (408) 486-9727"
+        ],
+        "links": [
+          {
+            "label": "World Wrapps full menu",
+            "href": "https://worldwrapps.com/#menu"
+          },
+          {
+            "label": "World Wrapps locations and ordering",
+            "href": "https://worldwrapps.com/locations/"
+          },
+          {
+            "label": "World Wrapps reviews on BEASTY",
+            "href": "https://beastypages.com/?b=b_worldwrappscortemadera"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "world-wrapps-san-francisco",
+    "name": "World Wrapps",
+    "label": "World Wrapps",
+    "cuisine": "Globally inspired wraps and bowls",
+    "tagline": "Globally inspired wraps, rice-paper wraps, salads and bowls in San Francisco.",
+    "color": "#C54C30",
+    "icon": "world-wrapps",
+    "prep": 0,
+    "category": "Wraps and bowls",
+    "items": [],
+    "sections": [
+      {
+        "name": "NEW! Rice paper Wrapps",
+        "items": [
+          [
+            "Bangkok Basil Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Umami Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Satay Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "WW Loaded Protein Bowls",
+        "items": [
+          [
+            "WW Loaded Protein Bowl",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "World Salads",
+        "items": [
+          [
+            "Chinese Chopped",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Peanut Noodle Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Greek Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Side Caesar Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Fries & Sides",
+        "items": [
+          [
+            "WW Loaded Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Papas Bravas",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Classic Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tortilla Chips With Housemade Guacamole",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tortilla Chips With Bravas Sauce",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Side Housemade Guacamole",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chips",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Surf & Turf",
+        "items": [
+          [
+            "Burrito Brava Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri Steak & Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Bulgogi Steak With Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Thai Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki Steak & Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Wrapps & Bowls",
+        "items": [
+          [
+            "Thai",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Caesar Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Samurai Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Burrito Brava",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Nori Wrapps & Bowls",
+        "items": [
+          [
+            "Spicy Tuna",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Furikake Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Bulgogi",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Hawaiian Poke",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Vegetarian/Vegan",
+        "items": [
+          [
+            "Beyond Bulgogi",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Kids Nori Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri Vegan",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Papas Bravas",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Burrito Brava Vegetarian",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Thai Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Kids",
+        "items": [
+          [
+            "Burrito",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Kids Nori Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Teriyaki Wrapp Or Bowl",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Homemade Beverages",
+        "items": [
+          [
+            "Watermelon Agua Fresca",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ube Horchata",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pineapple Mint Agua Fresca",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Strawberry Lemonade",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Organic Iced Tea",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Mint Kale-Aid",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "Valrhona Chocolate Chunk Brownie",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ube Rice Krispy Treat",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Matcha Rice Krispy Treat",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Double Chocolate Chip Cookie",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      }
+    ],
+    "site": "https://worldwrapps.com/",
+    "address": "2105 Chestnut St, San Francisco, CA 94123",
+    "phone": "(415) 654-5313",
+    "email": "info@worldwrapps.com",
+    "hours": "Daily 11am–9pm",
+    "quoteOnly": "The restaurant publishes this menu without prices. Choose a location in its ordering system to see current prices.",
+    "orderUrl": "https://order.incentivio.com/c/worldwrapps/locations/chestnut",
+    "panels": [
+      {
+        "head": "Menu and five locations",
+        "body": [
+          "San Ramon: 6000 Bollinger Canyon Rd, Suite 1512, San Ramon, CA 94583 · (925) 415-3063",
+          "Stanford: 180 El Camino Real, Unit 240-C, Palo Alto, CA 94304 · (650) 384-6302",
+          "San Francisco: 2105 Chestnut St, San Francisco, CA 94123 · (415) 654-5313",
+          "Corte Madera: 208 Corte Madera Town Center, Corte Madera, CA 94925 · (415) 927-3663",
+          "Santa Clara: 3125 Mission College Blvd, Santa Clara, CA 95054 · (408) 486-9727"
+        ],
+        "links": [
+          {
+            "label": "World Wrapps full menu",
+            "href": "https://worldwrapps.com/#menu"
+          },
+          {
+            "label": "World Wrapps locations and ordering",
+            "href": "https://worldwrapps.com/locations/"
+          },
+          {
+            "label": "World Wrapps reviews on BEASTY",
+            "href": "https://beastypages.com/?b=b_worldwrappscortemadera"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "world-wrapps-corte-madera",
+    "name": "World Wrapps",
+    "label": "World Wrapps",
+    "cuisine": "Globally inspired wraps and bowls",
+    "tagline": "Globally inspired wraps, rice-paper wraps, salads and bowls in Corte Madera.",
+    "color": "#C54C30",
+    "icon": "world-wrapps",
+    "prep": 0,
+    "category": "Wraps and bowls",
+    "items": [],
+    "sections": [
+      {
+        "name": "NEW! Rice paper Wrapps",
+        "items": [
+          [
+            "Bangkok Basil Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Umami Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Satay Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "WW Loaded Protein Bowls",
+        "items": [
+          [
+            "WW Loaded Protein Bowl",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "World Salads",
+        "items": [
+          [
+            "Chinese Chopped",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Peanut Noodle Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Greek Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Side Caesar Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Fries & Sides",
+        "items": [
+          [
+            "WW Loaded Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Papas Bravas",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Classic Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tortilla Chips With Housemade Guacamole",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tortilla Chips With Bravas Sauce",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Side Housemade Guacamole",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chips",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Surf & Turf",
+        "items": [
+          [
+            "Burrito Brava Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri Steak & Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Bulgogi Steak With Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Thai Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki Steak & Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Wrapps & Bowls",
+        "items": [
+          [
+            "Thai",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Caesar Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Samurai Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Burrito Brava",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Nori Wrapps & Bowls",
+        "items": [
+          [
+            "Spicy Tuna",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Furikake Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Bulgogi",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Hawaiian Poke",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Vegetarian/Vegan",
+        "items": [
+          [
+            "Beyond Bulgogi",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Kids Nori Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri Vegan",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Papas Bravas",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Burrito Brava Vegetarian",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Thai Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Kids",
+        "items": [
+          [
+            "Burrito",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Kids Nori Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Teriyaki Wrapp Or Bowl",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Homemade Beverages",
+        "items": [
+          [
+            "Watermelon Agua Fresca",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ube Horchata",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pineapple Mint Agua Fresca",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Strawberry Lemonade",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Organic Iced Tea",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Mint Kale-Aid",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "Valrhona Chocolate Chunk Brownie",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ube Rice Krispy Treat",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Matcha Rice Krispy Treat",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Double Chocolate Chip Cookie",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      }
+    ],
+    "site": "https://worldwrapps.com/",
+    "address": "208 Corte Madera Town Center, Corte Madera, CA 94925",
+    "phone": "(415) 927-3663",
+    "email": "info@worldwrapps.com",
+    "hours": "Daily 11am–9pm",
+    "quoteOnly": "The restaurant publishes this menu without prices. Choose a location in its ordering system to see current prices.",
+    "orderUrl": "https://order.incentivio.com/c/worldwrapps/locations/cortemadera",
+    "panels": [
+      {
+        "head": "Menu and five locations",
+        "body": [
+          "San Ramon: 6000 Bollinger Canyon Rd, Suite 1512, San Ramon, CA 94583 · (925) 415-3063",
+          "Stanford: 180 El Camino Real, Unit 240-C, Palo Alto, CA 94304 · (650) 384-6302",
+          "San Francisco: 2105 Chestnut St, San Francisco, CA 94123 · (415) 654-5313",
+          "Corte Madera: 208 Corte Madera Town Center, Corte Madera, CA 94925 · (415) 927-3663",
+          "Santa Clara: 3125 Mission College Blvd, Santa Clara, CA 95054 · (408) 486-9727"
+        ],
+        "links": [
+          {
+            "label": "World Wrapps full menu",
+            "href": "https://worldwrapps.com/#menu"
+          },
+          {
+            "label": "World Wrapps locations and ordering",
+            "href": "https://worldwrapps.com/locations/"
+          },
+          {
+            "label": "World Wrapps reviews on BEASTY",
+            "href": "https://beastypages.com/?b=b_worldwrappscortemadera"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "world-wrapps-santa-clara",
+    "name": "World Wrapps",
+    "label": "World Wrapps",
+    "cuisine": "Globally inspired wraps and bowls",
+    "tagline": "Globally inspired wraps, rice-paper wraps, salads and bowls in Santa Clara.",
+    "color": "#C54C30",
+    "icon": "world-wrapps",
+    "prep": 0,
+    "category": "Wraps and bowls",
+    "items": [],
+    "sections": [
+      {
+        "name": "NEW! Rice paper Wrapps",
+        "items": [
+          [
+            "Bangkok Basil Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Umami Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Satay Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "WW Loaded Protein Bowls",
+        "items": [
+          [
+            "WW Loaded Protein Bowl",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "World Salads",
+        "items": [
+          [
+            "Chinese Chopped",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Peanut Noodle Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Greek Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Side Caesar Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Fries & Sides",
+        "items": [
+          [
+            "WW Loaded Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Papas Bravas",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Classic Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tortilla Chips With Housemade Guacamole",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tortilla Chips With Bravas Sauce",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Side Housemade Guacamole",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chips",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Surf & Turf",
+        "items": [
+          [
+            "Burrito Brava Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri Steak & Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Bulgogi Steak With Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Thai Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala Steak & Shrimp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki Steak & Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Wrapps & Bowls",
+        "items": [
+          [
+            "Thai",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Caesar Salad",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Samurai Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Burrito Brava",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Nori Wrapps & Bowls",
+        "items": [
+          [
+            "Spicy Tuna",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Furikake Salmon",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Bulgogi",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Hawaiian Poke",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Vegetarian/Vegan",
+        "items": [
+          [
+            "Beyond Bulgogi",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Kids Nori Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Masala Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Argentina Chimichurri Vegan",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tikka Fries",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Papas Bravas",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Burrito Brava Vegetarian",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Thai Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Island Teriyaki Tofu",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Kids",
+        "items": [
+          [
+            "Burrito",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Kids Nori Wrapp",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Teriyaki Wrapp Or Bowl",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Homemade Beverages",
+        "items": [
+          [
+            "Watermelon Agua Fresca",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ube Horchata",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pineapple Mint Agua Fresca",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Strawberry Lemonade",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Organic Iced Tea",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Mint Kale-Aid",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          [
+            "Valrhona Chocolate Chunk Brownie",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ube Rice Krispy Treat",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Matcha Rice Krispy Treat",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Double Chocolate Chip Cookie",
+            "Protein choices and formats vary by dish; see the restaurant’s menu.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      }
+    ],
+    "site": "https://worldwrapps.com/",
+    "address": "3125 Mission College Blvd, Santa Clara, CA 95054",
+    "phone": "(408) 486-9727",
+    "email": "info@worldwrapps.com",
+    "hours": "Daily 11am–9pm",
+    "quoteOnly": "The restaurant publishes this menu without prices. Choose a location in its ordering system to see current prices.",
+    "orderUrl": "https://order.incentivio.com/c/worldwrapps/locations/santaclara",
+    "panels": [
+      {
+        "head": "Menu and five locations",
+        "body": [
+          "San Ramon: 6000 Bollinger Canyon Rd, Suite 1512, San Ramon, CA 94583 · (925) 415-3063",
+          "Stanford: 180 El Camino Real, Unit 240-C, Palo Alto, CA 94304 · (650) 384-6302",
+          "San Francisco: 2105 Chestnut St, San Francisco, CA 94123 · (415) 654-5313",
+          "Corte Madera: 208 Corte Madera Town Center, Corte Madera, CA 94925 · (415) 927-3663",
+          "Santa Clara: 3125 Mission College Blvd, Santa Clara, CA 95054 · (408) 486-9727"
+        ],
+        "links": [
+          {
+            "label": "World Wrapps full menu",
+            "href": "https://worldwrapps.com/#menu"
+          },
+          {
+            "label": "World Wrapps locations and ordering",
+            "href": "https://worldwrapps.com/locations/"
+          },
+          {
+            "label": "World Wrapps reviews on BEASTY",
+            "href": "https://beastypages.com/?b=b_worldwrappscortemadera"
           }
         ]
       }
