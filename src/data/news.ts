@@ -36,6 +36,8 @@ export interface NewsItem {
    * about an upcoming future event, that event will be posted on the calendar".
    */
   eventDate?: string
+  /** Published local event time, carried into Calendar instead of “All day”. */
+  eventTime?: string
 }
 
 /** What each kind is called on screen, and the colour it carries. */
@@ -51,6 +53,19 @@ export const KIND_LABEL: Record<NewsKind, string> = {
 }
 
 const ITEMS: NewsItem[] = [
+  // Curated from the organizer’s site Glenn sent on November 6.
+  {
+    "date": "2026-11-06",
+    "kind": "event",
+    "headline": "Dinner With Ike at Gary Danko on November 17",
+    "body": "Ike Shehadeh hosts Food & Philosophy at Restaurant Gary Danko, 800 North Point Street at Hyde in San Francisco, Tuesday November 17, 5:30–8:30 p.m. A $395 seat includes a multi-course dinner and small-group conversation. The organizer sells tickets through its own website; check there for current availability and terms.",
+    "eventDate": "2026-11-17",
+    "eventTime": "5:30–8:30 p.m. Pacific",
+    "authorId": "b_dinnerwithike",
+    "brands": [
+      "b_dinnerwithike"
+    ]
+  },
   {
     /*
       FROM THEIR OWN POSTS: ThirsTea San Leandro's Instagram, in his

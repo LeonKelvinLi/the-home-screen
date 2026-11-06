@@ -2435,4 +2435,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-goods2-123': 'b_worldwrappscortemadera',
   'beasty-foodies2-234': 'b_foodiejourdynlynn',
   'beasty-foodies2-235': 'b_foodiebayeatss',
+
+  // Batch 102
+  'san-francisco-services2-13': 'b_dinnerwithike',
+  'beasty-events-10': 'b_dinnerwithike',
 }

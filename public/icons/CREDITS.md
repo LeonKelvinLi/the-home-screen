@@ -578,3 +578,5 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `world-wrapps` | Glenn’s supplied IMG_9517.png, World Wrapps’ own app artwork | Original artwork cropped and resized to 512 px |
 | `foodie-jourdyn-lynn-v101` | Glenn’s supplied IMG_9525.PNG | Profile portrait cropped and resized to 512 px |
 | `foodie-bayeatss-v101` | [@bayeatss official Instagram profile](https://www.instagram.com/bayeatss/) | Original public profile portrait downloaded in signed-in Chrome; supplied IMG_9526.png was unavailable on disk |
+
+| `dinner-with-ike.webp` | [Dinner With Ike](https://dinnerwithike.com/) | Ike Shehadeh’s 264×264 portrait embedded in the organizer’s own event page, retrieved November 6, 2026. Converted to WebP without retouching. |

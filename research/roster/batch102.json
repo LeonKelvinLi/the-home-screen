@@ -1,0 +1,88 @@
+{
+  "cutoff": "2026-11-06T10:22:00-08:00",
+  "listings": [
+    {
+      "slug": "dinner-with-ike",
+      "name": "Dinner With Ike",
+      "label": "Dinner With Ike",
+      "cuisine": "Food & Philosophy dinner event",
+      "tagline": "A multi-course dinner and small-group conversation with Ike Shehadeh at Gary Danko in San Francisco.",
+      "color": "#602F25",
+      "icon": "dinner-with-ike",
+      "prep": 0,
+      "category": "Dinner event",
+      "items": [],
+      "site": "https://dinnerwithike.com/",
+      "address": "Restaurant Gary Danko, 800 North Point Street at Hyde, San Francisco, CA",
+      "contactOnly": "November 17, 2026, 5:30–8:30 p.m. · $395 per seat. Tickets are sold by the organizer through the event details below.",
+      "siteNote": "This is a one-night event hosted by Ike Shehadeh, founder of Ike’s Love & Sandwiches. Gary Danko is the venue. Check the organizer’s page for current availability.",
+      "panels": [
+        {
+          "head": "November 17 dinner and tickets",
+          "body": [
+            "Tuesday, November 17, 2026 · 5:30–8:30 p.m. Pacific at Restaurant Gary Danko, 800 North Point Street at Hyde in San Francisco.",
+            "$395 per seat, including a multi-course dinner and the Food & Philosophy conversation with Ike Shehadeh. Each ticket covers one person.",
+            "A small private table for conversation about decision-making, momentum, personal growth and building a business. The organizer describes the evening as a conversation, rather than a business seminar.",
+            "Business-casual dress. Tell the organizer about dietary restrictions after booking. The organizer states that all ticket sales are final. Current availability and checkout are on the organizer’s site."
+          ],
+          "links": [
+            {
+              "label": "Dinner With Ike event details",
+              "href": "https://dinnerwithike.com/"
+            },
+            {
+              "label": "Tickets from the organizer · $395",
+              "href": "https://square.link/u/XfLUfFfC"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "placements": {
+    "san-francisco-services2-13": "b_dinnerwithike",
+    "beasty-events-10": "b_dinnerwithike"
+  },
+  "posts": [],
+  "creators": [],
+  "updatedIcons": [
+    "/icons/dinner-with-ike.webp"
+  ],
+  "news": [
+    {
+      "date": "2026-11-06",
+      "kind": "event",
+      "headline": "Dinner With Ike at Gary Danko on November 17",
+      "body": "Ike Shehadeh hosts Food & Philosophy at Restaurant Gary Danko, 800 North Point Street at Hyde in San Francisco, Tuesday November 17, 5:30–8:30 p.m. A $395 seat includes a multi-course dinner and small-group conversation. The organizer sells tickets through its own website; check there for current availability and terms.",
+      "eventDate": "2026-11-17",
+      "brands": [
+        "b_dinnerwithike"
+      ],
+      "eventTime": "5:30–8:30 p.m. Pacific",
+      "authorId": "b_dinnerwithike"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://dinnerwithike.com/?st-lid=20198531",
+      "sent": "2026-11-06T10:22:00-08:00",
+      "by": "Glenn",
+      "disposition": "New event listing, San Francisco More services, BEASTY Events, News and Calendar"
+    },
+    {
+      "url": "https://dinnerwithike.com/",
+      "verified": "2026-11-06",
+      "facts": "Rendered organizer page and its CONFIG show Tue, Nov 17 and 5:30–8:30 PM; ticket $395, venue/address, host, inclusions, dress and final-sale terms. November 17 falls on Tuesday in the current year, 2026. No organizer phone or email published; neither is invented. Availability is linked rather than copied as a live seat count."
+    },
+    {
+      "url": "https://square.link/u/XfLUfFfC",
+      "verified": "2026-11-06",
+      "facts": "Organizer’s published Square checkout link; GET resolves to Food & Philosophy Dinner - Ike Shehadeh Mission. No checkout or purchase performed."
+    }
+  ],
+  "sourceNotes": {
+    "gapCheck": "The loose prefix matcher incorrectly counted dinnerwithike.com as represented because dinnerwith occurs in an older unrelated dinner-with-a-DJ description. This send was reconciled directly against the catalog and is now explicitly seeded.",
+    "noMedia": "No new Instagram posts, video requests or attachments after Batch 101. All earlier film dispositions are retained.",
+    "followups": "Earlier affiliate self-service requirements and deferred advertising remain documented in GLENN-FOLLOWUPS-2026-11-06.md."
+  }
+}

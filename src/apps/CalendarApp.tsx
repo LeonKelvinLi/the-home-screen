@@ -90,6 +90,7 @@ export function CalendarApp({ api }: { api: ShellApi }) {
         .map((n) => ({
           id: `news:${n.date}:${n.headline}`,
           date: n.eventDate!,
+          time: n.eventTime,
           brandId: n.authorId ?? '',
           title: n.headline,
           detail: n.body,

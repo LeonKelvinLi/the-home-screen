@@ -73494,4 +73494,43 @@ export const LOCAL_SEED: LocalSeed[] = [
       }
     ]
   },
+  // Batch 102 — Glenn’s November 6, 10:22 a.m. event link.
+  {
+    "slug": "dinner-with-ike",
+    "name": "Dinner With Ike",
+    "label": "Dinner With Ike",
+    "cuisine": "Food & Philosophy dinner event",
+    "tagline": "A multi-course dinner and small-group conversation with Ike Shehadeh at Gary Danko in San Francisco.",
+    "color": "#602F25",
+    "icon": "dinner-with-ike",
+    "prep": 0,
+    "category": "Dinner event",
+    "items": [],
+    "site": "https://dinnerwithike.com/",
+    "address": "Restaurant Gary Danko, 800 North Point Street at Hyde, San Francisco, CA",
+    "contactOnly": "November 17, 2026, 5:30–8:30 p.m. · $395 per seat. Tickets are sold by the organizer through the event details below.",
+    "siteNote": "This is a one-night event hosted by Ike Shehadeh, founder of Ike’s Love & Sandwiches. Gary Danko is the venue. Check the organizer’s page for current availability.",
+    "panels": [
+      {
+        "head": "November 17 dinner and tickets",
+        "body": [
+          "Tuesday, November 17, 2026 · 5:30–8:30 p.m. Pacific at Restaurant Gary Danko, 800 North Point Street at Hyde in San Francisco.",
+          "$395 per seat, including a multi-course dinner and the Food & Philosophy conversation with Ike Shehadeh. Each ticket covers one person.",
+          "A small private table for conversation about decision-making, momentum, personal growth and building a business. The organizer describes the evening as a conversation, rather than a business seminar.",
+          "Business-casual dress. Tell the organizer about dietary restrictions after booking. The organizer states that all ticket sales are final. Current availability and checkout are on the organizer’s site."
+        ],
+        "links": [
+          {
+            "label": "Dinner With Ike event details",
+            "href": "https://dinnerwithike.com/"
+          },
+          {
+            "label": "Tickets from the organizer · $395",
+            "href": "https://square.link/u/XfLUfFfC"
+          }
+        ]
+      }
+    ]
+  },
+
 ]

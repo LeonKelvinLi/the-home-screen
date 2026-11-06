@@ -190,6 +190,7 @@ export const ICON_LUMA: Record<string, number> = {
   'din-ding-dumpling-house-fremont': 0.1104,
   'ding-dong': 0.7351,
   'dingdongtogo': 0.7341,
+  'dinner-with-ike': 0.3411,
   'dinos-greek-food-truck': 0.2057,
   'divino-ristorante': 0.1575,
   'dj-lex': 0.8958,
