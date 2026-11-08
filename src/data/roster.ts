@@ -5125,7 +5125,7 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
   /* BEASTY • Services */
   seed('souva-mobile-pet-grooming', 'Souva Mobile Pet Grooming', 'Souva', 'Mobile pet grooming', '#4E4E36', {
-    icon: 'souva-mobile-pet-grooming',
+    icon: 'souva-mobile-pet-grooming-v105',
     tagline: 'Mobile pet grooming',
     site: 'https://www.souvagrooming.com',
     clip: {

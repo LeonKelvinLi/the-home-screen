@@ -633,3 +633,7 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `vegan-mob-v105.webp` | Glenn’s supplied IMG_9750.jpeg, November 7, 2026 | Original artwork enlarged to fit; phone borders and unrelated wallpaper footer omitted. |
 | `phosho-dough-v105.webp` | Glenn’s supplied IMG_9753.png, November 7, 2026 | Original artwork enlarged to fit; phone borders and unrelated wallpaper footer omitted. |
 | `foodie-martiebautista-v105.webp` | Glenn’s supplied IMG_9742.png, November 7, 2026 | Original @martiebautista portrait cropped and fitted. |
+
+| `always-yours-bakery-cafe-v105.webp` | Glenn’s supplied IMG_9755.png, November 7, 2026 | Original logo enlarged and fitted; phone borders removed. |
+| `nobibi-hayward-v105.webp` | Glenn’s supplied IMG_9758.png, November 7, 2026 | Original logo enlarged and fitted; phone borders removed. |
+| `souva-mobile-pet-grooming-v105.webp` | Glenn’s supplied IMG_9760.PNG, November 7, 2026 | Original logo enlarged and fitted; phone borders removed. |

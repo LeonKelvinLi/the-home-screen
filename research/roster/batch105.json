@@ -1,5 +1,5 @@
 {
-  "cutoff": "2026-11-07T20:15:38-08:00",
+  "cutoff": "2026-11-07T20:30:33-08:00",
   "listings": [
     {
       "slug": "paku-sf",
@@ -1367,7 +1367,10 @@
     "/icons/diamond-supply-co-v105.webp",
     "/icons/vegan-mob-v105.webp",
     "/icons/phosho-dough-v105.webp",
-    "/icons/foodie-martiebautista-v105.webp"
+    "/icons/foodie-martiebautista-v105.webp",
+    "/icons/always-yours-bakery-cafe-v105.webp",
+    "/icons/nobibi-hayward-v105.webp",
+    "/icons/souva-mobile-pet-grooming-v105.webp"
   ],
   "updatedBrands": [
     "b_saladmakers",
@@ -1375,7 +1378,10 @@
     "b_qpotsanjose",
     "b_diamondsupplyco",
     "b_veganmob",
-    "b_phoshodough"
+    "b_phoshodough",
+    "b_alwaysyoursbakerycafe",
+    "b_nobibihayward",
+    "b_souvamobilepetgrooming"
   ],
   "news": [
     {
@@ -2799,7 +2805,8 @@
     "Noncatalog": "The Apple Store marketing photos and “Leave them like this” refer to the photographed displays, not a request to change the website. No external message was sent. Salad Makers and Wiggle Rumps supplied art replaces their existing icons.",
     "Noka review": "Dfcqyhzxh_9 reviews existing NōKA Ramen & Bar (b_nokaramen), whose accented name needs normalized matching. Its fourth distinct business film also plays on @lisaaaaletseat and Watch.",
     "Foodie ordering": "New Heavy Hitter tags promote @booziebrunch and @thekhaysie into the existing heavy-hitter block. Ronnie Banks and MsAshleyVee remain first; the original front 24 stay in place. All creators remain reachable.",
-    "Late requests": "Through 8:15 p.m.: @martiebautista’s supplied portrait and Ace King BBQ reel are added. Q-Pot’s supplied swirl exactly matches its existing logo, enlarged to fill the tile. Diamond Supply Co, Vegan Mob and Phosho Dough receive their supplied logos. Vegan Mob moves from BEASTY More eats seat 17 into Food Trucks seat 17, retaining its separate Vegan category; all other existing non-foodie seats are unchanged."
+    "Late requests": "Through 8:15 p.m.: @martiebautista’s supplied portrait and Ace King BBQ reel are added. Q-Pot’s supplied swirl exactly matches its existing logo, enlarged to fill the tile. Diamond Supply Co, Vegan Mob and Phosho Dough receive their supplied logos. Vegan Mob moves from BEASTY More eats seat 17 into Food Trucks seat 17, retaining its separate Vegan category; all other existing non-foodie seats are unchanged.",
+    "Latest logos": "8:21, 8:26 and 8:30 p.m. requests: Always Yours Bakery Cafe, Nobibi Hayward and Souva Mobile Pet Grooming receive their supplied original logos enlarged within the icon, with phone letterboxing removed. Existing pages, menu data and seats are reused."
   },
   "removedPlacements": {
     "beasty-goods2-17": "b_veganmob"

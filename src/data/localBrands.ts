@@ -59222,7 +59222,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     "cuisine": "Soft-serve ice cream, boba, tea & coffee",
     "tagline": "Soft-serve creations, milk teas and matcha at the Hayward shop.",
     "color": "#F3CCD8",
-    "icon": "nobibi-hayward",
+    "icon": "nobibi-hayward-v105",
     "prep": 0,
     "category": "Ice cream & tea",
     "items": [],
@@ -68608,7 +68608,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     "phone": "510-363-8736",
     "hours": "Mon–Thu noon–7pm; Fri–Sun 11am–7pm",
     "quoteOnly": "See the bakery’s current menu and custom-order options.",
-    "icon": "always-yours-bakery-cafe"
+    "icon": "always-yours-bakery-cafe-v105"
   },
   /* Batch 94 */
   {

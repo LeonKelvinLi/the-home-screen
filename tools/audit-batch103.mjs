@@ -67,7 +67,12 @@ export async function auditBatch(number) {
   async function fits() { assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)) }
   async function open(id) {
     await page.goto(base + '/?b=' + id, { waitUntil: 'domcontentloaded', timeout: 45000 })
-    await page.getByRole('heading', { name: brandById(id).name, exact: true }).waitFor(); await fits()
+    await page.getByRole('heading', { name: brandById(id).name, exact: true }).waitFor()
+    await page.waitForFunction(() => {
+      const window = document.querySelector('.app-window')
+      return window && getComputedStyle(window).willChange === 'auto'
+    })
+    await fits()
   }
   async function expand(button) {
     await button.scrollIntoViewIfNeeded()
@@ -159,6 +164,7 @@ export async function auditBatch(number) {
       await category('Food Trucks', 'Vegan Mob')
       await open('b_nonosdoughnutsberkeley')
       await page.getByRole('button', { name: 'Home', exact: true }).click()
+      await page.locator('.app-window').waitFor({ state: 'hidden' })
       await page.getByRole('button', { name: 'News', exact: true }).click()
       await page.getByRole('heading', { name: 'Nono’s Doughnuts announces November 12 grand opening', exact: true }).waitFor()
       await page.getByRole('button', { name: 'Open the calendar', exact: true }).click()
