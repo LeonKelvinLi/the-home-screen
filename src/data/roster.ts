@@ -683,14 +683,10 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: '755 Baywood Dr, Petaluma',
   }),
   seed('the-hangout-breakfast', 'The Hangout', 'The Hangout', 'Breakfast', '#12263F', {
+    icon: "hangout-v107",
+    clip: {"src": "/clips/review-DQvcVxYiau3.mp4", "poster": "/clips/review-DQvcVxYiau3-poster.webp", "href": "https://www.instagram.com/reel/DQvcVxYiau3/", "credit": "Published by @thehangoutbayarea. The business\u2019s own film, requested behind its logo.", "platform": "Instagram"},
     // Their own mark, not a generated monogram — the header logo fetched from their site: https://static.wixstatic.com/media/4498e5_d17e57814acd47d6829b1586449b2574~mv2.png
-    /*
-      THEIR REAL LOGO IS NOT USED HERE. the-hangout.webp is their genuine mark,
-      fetched from their own site — which is exactly why it does not go on a
-      tile for a business that has agreed nothing. Their artwork on a seat the
-      app calls taken reads as a partnership to anyone who sees it, including
-      them. The file stays in public/icons ready for the moment they say yes.
-    */
+    /* Owner’s published logo refreshed with both requested locations, Nov 8. */
     site: 'https://www.thehangoutbreakfast.com/',
     contactOnly:
       'Breakfast and brunch, two locations: 2217 Morello Ave, Pleasant Hill (925 671-9925) ' +

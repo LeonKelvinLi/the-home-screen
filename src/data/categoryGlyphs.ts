@@ -16,6 +16,7 @@ export interface CategoryGlyph {
 const ring = (cx: number, cy: number, r: number) => `M${cx - r} ${cy}a${r} ${r} 0 1 0 ${2 * r} 0a${r} ${r} 0 1 0 ${-2 * r} 0`
 
 export const CATEGORY_GLYPHS: Record<string, CategoryGlyph> = {
+  massage: { paths: ['M3 17h18', 'M5 17v4', 'M19 17v4', 'M8 13h10l3 4', 'M5 8l4 3', 'M11 6l-1 5', 'M18 6l-1 5'], dots: [[5, 13, 2]] },
   ceviche: { paths: ['M3 13h18', 'M4 13a8 8 0 0 0 16 0', 'M9 21h6', 'M7 9c3-4 7-4 10 0-3 3-7 3-10 0Z', 'm17 9 4-3v6Z', 'M4 5h4', 'M6 3v4'] },
   bip: { paths: ['M5 21V9a7 7 0 0 1 14 0v12Z', 'M3 21h18'], text: 'BIP' },
   teas: { paths: ['M6 7h12l-1.5 14h-9Z', 'M5 7h14', 'M13 7l2-5h4', 'M7 13h10'], dots: [[10, 17, 0.9], [14, 18, 0.9], [12, 15, 0.9]] },

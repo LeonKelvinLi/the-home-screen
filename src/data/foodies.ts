@@ -278,7 +278,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "instagram": "baygirlseat",
     "name": "Amandy",
     "label": "Amandy",
-    "icon": "foodie-baygirlseat-v92"
+    "icon": "foodie-baygirlseat-v107"
   },
   {
     "handle": "heraldh",
@@ -406,7 +406,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "zeyno.ern",
     "name": "@zeyno.ern",
     "label": "zeyno.ern",
-    "icon": "foodie-zeyno-ern-v103"
+    "icon": "foodie-zeyno-ern-v107"
   },
   {
     "handle": "booziebrunch",
@@ -418,6 +418,18 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "@thekhaysie",
     "label": "thekhaysie",
     "icon": "foodie-thekhaysie-v105"
+  },
+  {
+    "handle": "kelmeleats",
+    "name": "Kel & Mel | San Francisco Food, Fun, & Travel",
+    "label": "kelmeleats",
+    "icon": "foodie-kelmeleats-v107"
+  },
+  {
+    "handle": "courtneylyneaa",
+    "name": "Courtney Lynea | Bay Area Influencer",
+    "label": "courtneylyneaa",
+    "icon": "foodie-courtneylyneaa-v107"
   },
   {
     "handle": "hungere.for.diy",
@@ -649,7 +661,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "lifebyvivien",
     "name": "@lifebyvivien",
-    "label": "lifebyvivien"
+    "label": "lifebyvivien",
+    "icon": "foodie-lifebyvivien-v107"
   },
   {
     "handle": "andre___lucas",
@@ -1000,7 +1013,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "lovemissfit",
     "name": "@lovemissfit",
-    "label": "lovemissfit"
+    "label": "lovemissfit",
+    "icon": "foodie-lovemissfit-v107"
   },
   {
     "handle": "chloe_chomps",
@@ -1551,7 +1565,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "food_adventures21",
     "name": "@food_adventures21",
     "label": "food_adventures21",
-    "icon": "foodie-food-adventures21-v98"
+    "icon": "foodie-food-adventures21-v107"
   },
   {
     "handle": "taratastessf",
@@ -1643,12 +1657,78 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "kevinberkeleyfoodr",
     "icon": "foodie-kevinberkeleyfoodreviews-v105"
   },
-  {"handle": "martiebautista", "name": "Martie Bautista-Johnson", "label": "Martie Bautista", "icon": "foodie-martiebautista-v105"},
-  {"handle": "badies.af", "name": "@badies.af", "label": "badies.af", "icon": "foodie-badies-af-v106"},
-  {"handle": "sjfoodgram", "name": "@sjfoodgram", "label": "sjfoodgram", "icon": "foodie-sjfoodgram-v106"},
-  {"handle": "tiensmunchies", "name": "@tiensmunchies", "label": "tiensmunchies", "icon": "foodie-tiensmunchies-v106"},
-  {"handle": "alexisbaybe_", "name": "@alexisbaybe_", "label": "alexisbaybe_", "icon": "foodie-alexisbaybe-v106"},
-  {"handle": "dyannaluna", "name": "@dyannaluna", "label": "dyannaluna", "icon": "foodie-dyannaluna-v106"}
+  {
+    "handle": "martiebautista",
+    "name": "Martie Bautista-Johnson",
+    "label": "Martie Bautista",
+    "icon": "foodie-martiebautista-v105"
+  },
+  {
+    "handle": "badies.af",
+    "name": "@badies.af",
+    "label": "badies.af",
+    "icon": "foodie-badies-af-v106"
+  },
+  {
+    "handle": "sjfoodgram",
+    "name": "@sjfoodgram",
+    "label": "sjfoodgram",
+    "icon": "foodie-sjfoodgram-v106"
+  },
+  {
+    "handle": "tiensmunchies",
+    "name": "@tiensmunchies",
+    "label": "tiensmunchies",
+    "icon": "foodie-tiensmunchies-v106"
+  },
+  {
+    "handle": "alexisbaybe_",
+    "name": "@alexisbaybe_",
+    "label": "alexisbaybe_",
+    "icon": "foodie-alexisbaybe-v106"
+  },
+  {
+    "handle": "dyannaluna",
+    "name": "@dyannaluna",
+    "label": "dyannaluna",
+    "icon": "foodie-dyannaluna-v106"
+  },
+  {
+    "handle": "sapphiesofire",
+    "name": "S💎pphire Divine | Whims & Wanderlust 💫✨",
+    "label": "sapphiesofire",
+    "icon": "foodie-sapphiesofire-v107"
+  },
+  {
+    "handle": "kimmmpossxble",
+    "name": "🫧🇹🇭HOLOGRAPHIC SEA SIAN 🇹🇷🫧",
+    "label": "kimmmpossxble",
+    "icon": "foodie-kimmmpossxble-v107"
+  },
+  {
+    "handle": "staycation.sfbayarea",
+    "name": "Jax📍Everything SF | Bay Area  🇵🇭",
+    "label": "staycation.sfbayar",
+    "icon": "foodie-staycation-sfbayarea-v107"
+  },
+  {
+    "handle": "swooningspoon",
+    "name": "Kunal Thadani",
+    "label": "swooningspoon",
+    "icon": "foodie-swooningspoon-v107"
+  },
+  {
+    "handle": "vvveats",
+    "name": "V ◦ sf & nyc ◦ food & lifestyle",
+    "label": "vvveats",
+    "icon": "foodie-vvveats-v107"
+  },
+  {
+    "handle": "el.kattt",
+    "name": "Kat",
+    "label": "el.kattt",
+    "icon": "foodie-el-kattt-v107"
+  }
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -2140,7 +2220,7 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "carlosbradley", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/DfSs3-RyNHj/", "clip": true, "credit": "Filmed by @carlosbradley at Q-Pot Korean BBQ & Hot Pot in San Jose. Prices in the original review may be dated. See Q-Pot’s current menu."},
   {"by": "deazylee", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/DesXChGvkWe/", "clip": true, "credit": "Filmed by @deazylee at Q-Pot Korean BBQ & Hot Pot in San Jose. Prices in the original review may be dated. See Q-Pot’s current menu."},
   {"by": "jc.eeats", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/DeAGmDROIVb/", "clip": true, "credit": "Filmed by @jc.eeats at Q-Pot Korean BBQ & Hot Pot in San Jose. Prices in the original review may be dated. See Q-Pot’s current menu."},
-  {"by": "edmunchthefoodie", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/Dd-RwgACGoE/", "clip": true, "credit": "Filmed by @edmunchthefoodie at Q-Pot Korean BBQ & Hot Pot in San Jose. Prices in the original review may be dated. See Q-Pot’s current menu."},
+  {"by": "edmunchthefoodie", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/Dd-RwgACGoE/", "clip": "creator", "credit": "Filmed by @edmunchthefoodie at Q-Pot Korean BBQ & Hot Pot in San Jose. Prices in the original review may be dated. See Q-Pot’s current menu."},
   {"by": "orangeginger", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/Dctq7K_t7yi/", "clip": "creator", "credit": "Filmed by @orangeginger at Q-Pot Korean BBQ & Hot Pot in San Jose. Prices in the original review may be dated. See Q-Pot’s current menu."},
   {"by": "hungrydanz", "place": "Mile Limit", "city": "Berkeley", "brand": "b_milelimitberkeley", "reel": "https://www.instagram.com/p/DfFp0KcAv0E/", "clip": true, "credit": "Review by @hungrydanz, posted by @milelimit. Glenn identified Dan as the reviewer."},
   {"by": "jovana.camberos", "place": "Mumu Hot Pot", "city": "Bay Area", "brand": "b_mumuhotpotsunnyvale", "reel": "https://www.instagram.com/reel/DfWFWKHtAcu/", "clip": true, "credit": "Filmed by @jovana.camberos. The original names several Mumu Hot Pot locations; this opens BEASTY’s Sunnyvale listing."},
@@ -2258,6 +2338,33 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "bayarea_fooddreamz", "place": "Waterfall Cevicheria", "city": "San Francisco", "brand": "b_waterfallcevicheriasf", "reel": "https://www.instagram.com/reel/DWAFpcvknyy/", "clip": true, "credit": "Filmed by @bayarea_fooddreamz at Waterfall Cevicheria, San Francisco. Additional films play on Foodies and Watch when the four-film business limit is reached."},
   {"by": "dyannaluna", "place": "Waterfall Cevicheria", "city": "San Francisco", "brand": "b_waterfallcevicheriasf", "reel": "https://www.instagram.com/reel/DR4wxEhkVYG/", "clip": true, "credit": "Filmed by @dyannaluna at Waterfall Cevicheria, San Francisco. Additional films play on Foodies and Watch when the four-film business limit is reached."},
 
+  // Batch 107.
+  {"by": "wthellydanyelly", "place": "Siam Orchid Traditional Thai Massage", "city": "Walnut Creek", "brand": "b_siamorchidwalnutcreek", "reel": "https://www.instagram.com/reel/DfcwBigtSfW/", "clip": true, "credit": "Filmed by @wthellydanyelly at Siam Orchid Traditional Thai Massage."},
+  {"by": "foodieberrie", "place": "Siam Orchid Traditional Thai Massage", "city": "Walnut Creek", "brand": "b_siamorchidwalnutcreek", "reel": "https://www.instagram.com/reel/DfQfEJJRGfP/", "clip": true, "credit": "Filmed by @foodieberrie at Siam Orchid Traditional Thai Massage."},
+  {"by": "sapphiesofire", "place": "Siam Orchid Traditional Thai Massage", "city": "Walnut Creek", "brand": "b_siamorchidwalnutcreek", "reel": "https://www.instagram.com/reel/De5QhWbv8_J/", "clip": true, "credit": "Filmed by @sapphiesofire at Siam Orchid Traditional Thai Massage."},
+  {"by": "kelmeleats", "place": "Siam Orchid Traditional Thai Massage", "city": "San Francisco", "brand": "b_siamorchidsfpolk", "reel": "https://www.instagram.com/reel/DfTK4BCRRxJ/", "clip": true, "credit": "Filmed by @kelmeleats at Siam Orchid Traditional Thai Massage. The caption identifies San Francisco, without specifying Polk or Taylor."},
+  {"by": "sapphiesofire", "place": "Broderick Roadhouse", "city": "Walnut Creek", "brand": "b_broderickwalnutcreek", "reel": "https://www.instagram.com/reel/DfM8lGkhq-7/", "clip": true, "credit": "Filmed by @sapphiesofire at Broderick Roadhouse."},
+  {"by": "grubwitmike", "place": "The Meat Wagon", "city": "Bay Area", "brand": "b_themeatwagon", "reel": "https://www.instagram.com/reel/Dec90xTRGYi/", "clip": true, "credit": "Filmed by @grubwitmike at The Meat Wagon."},
+  {"by": "kimmmpossxble", "place": "Creole Caviar", "city": "Oakland truck stop", "brand": "b_creolecaviar", "reel": "https://www.instagram.com/reel/DeAt3ADpMbA/", "clip": true, "credit": "Filmed by @kimmmpossxble at Creole Caviar. The caption identifies an Oakland truck stop; check the operator’s current schedule."},
+  {"by": "courtneylyneaa", "place": "The Hangout", "city": "Walnut Creek", "brand": "b_thehangoutbreakfast", "reel": "https://www.instagram.com/reel/DfcqwQROrup/", "clip": true, "credit": "Filmed by @courtneylyneaa at The Hangout."},
+  {"by": "staycation.sfbayarea", "place": "The Hangout", "city": "Walnut Creek / Pleasant Hill", "brand": "b_thehangoutbreakfast", "reel": "https://www.instagram.com/reel/DXSlC_YEk-5/", "clip": true, "credit": "Filmed by @staycation.sfbayarea at The Hangout. The caption mentions both Hangout branches; filming location is not specified. Linked to the chain’s Walnut Creek page."},
+  {"by": "swooningspoon", "place": "The Hangout", "city": "Walnut Creek", "brand": "b_thehangoutbreakfast", "reel": "https://www.instagram.com/reel/DNR8AT0RYCp/", "clip": "creator", "credit": "Filmed by @swooningspoon at The Hangout."},
+  {"by": "dchangshangry", "place": "The Hangout", "city": "Walnut Creek / Pleasant Hill", "brand": "b_thehangoutbreakfast", "reel": "https://www.instagram.com/reel/DMuMbrJu5zl/", "clip": "creator", "credit": "Filmed by @dchangshangry at The Hangout. The caption mentions both Hangout branches; filming location is not specified. Linked to the chain’s Walnut Creek page."},
+  {"by": "food_adventures21", "place": "The Hangout", "city": "Pleasant Hill", "brand": "b_thehangoutpleasanthill", "reel": "https://www.instagram.com/reel/DblXox7pT_f/", "clip": true, "credit": "Filmed by @food_adventures21 at The Hangout."},
+  {"by": "bayarea_fooddreamz", "place": "The Hangout", "city": "Pleasant Hill", "brand": "b_thehangoutpleasanthill", "reel": "https://www.instagram.com/reel/DOwnJO3Ep39/", "clip": true, "credit": "Filmed by @bayarea_fooddreamz at The Hangout."},
+  {"by": "hungere.for.diy", "place": "Wooga Korean BBQ", "city": "Cupertino", "brand": "b_woogakoreanbbq", "reel": "https://www.instagram.com/reel/DffBOm6psGI/", "clip": "creator", "credit": "Filmed by @hungere.for.diy at Wooga Korean BBQ."},
+  {"by": "thesnobbiefoodie", "place": "Wooga Korean BBQ", "city": "Cupertino", "brand": "b_woogakoreanbbq", "reel": "https://www.instagram.com/reel/DfDkZhMJksf/", "clip": "creator", "credit": "Filmed by @thesnobbiefoodie at Wooga Korean BBQ."},
+  {"by": "hangrypotato", "place": "Wooga Korean BBQ", "city": "Cupertino", "brand": "b_woogakoreanbbq", "reel": "https://www.instagram.com/reel/De-yovMgl_v/", "clip": "creator", "credit": "Filmed by @hangrypotato at Wooga Korean BBQ."},
+  {"by": "baygirlseat", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/DbrvXU2oqKZ/", "clip": "creator", "credit": "Filmed by @baygirlseat at Q-Pot Korean BBQ & Hot Pot."},
+  {"by": "foodieberrie", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/Danp0G2xKH-/", "clip": "creator", "credit": "Filmed by @foodieberrie at Q-Pot Korean BBQ & Hot Pot."},
+  {"by": "zeyno.ern", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/DZVqd_3yNyq/", "clip": "creator", "credit": "Filmed by @zeyno.ern at Q-Pot Korean BBQ & Hot Pot. Its caption says KPot, but the opening storefront sign clearly identifies Q-Pot."},
+  {"by": "vvveats", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/DYqeGaKuUwY/", "clip": "creator", "credit": "Filmed by @vvveats at Q-Pot Korean BBQ & Hot Pot."},
+  {"by": "_whatarethechances_", "place": "Q-Pot Korean BBQ & Hot Pot", "city": "San Jose", "brand": "b_qpotsanjose", "reel": "https://www.instagram.com/reel/DcK_1GvIcxg/", "clip": "creator", "credit": "Filmed by @_whatarethechances_ at Q-Pot Korean BBQ & Hot Pot."},
+  {"by": "cestalmoco", "place": "Korean BBQ", "city": "Bay Area", "reel": "https://www.instagram.com/reel/DYDXEWPyOxY/", "clip": true, "credit": "Filmed by @cestalmoco at Korean BBQ. The caption does not identify the restaurant, so no business-page association is invented."},
+  {"by": "lifebyvivien", "place": "Little Sheep", "city": "Newark", "brand": "b_littlesheepnewark", "reel": "https://www.instagram.com/reel/De-CONYSkUA/", "clip": true, "credit": "Filmed by @lifebyvivien at Little Sheep."},
+
+  // Glenn, Nov 8: Foodie / Newbie; four business films retained, additional review on creator and Watch.
+  {"by": "el.kattt", "place": "Brunch & Bloom", "city": "Brentwood", "brand": "b_brunchandbloom", "reel": "https://www.instagram.com/reel/Da2-j8eqwor/", "clip": "creator", "credit": "Filmed by @el.kattt at Brunch & Bloom, Brentwood."},
 ]
 
 /*

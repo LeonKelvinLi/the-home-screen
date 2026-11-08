@@ -649,3 +649,23 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-tiensmunchies-v106.webp` | Glenn’s supplied IMG_9777.png, November 7, 2026 | Original @tiensmunchies portrait cropped and fitted. |
 | `foodie-alexisbaybe-v106.webp` | Glenn’s supplied IMG_9786.png, November 7, 2026 | Original @alexisbaybe_ portrait cropped and fitted. |
 | `foodie-dyannaluna-v106.webp` | Glenn’s supplied IMG_9787.PNG, November 7, 2026 | Original @dyannaluna portrait cropped and fitted. |
+
+| `siam-orchid-v107.webp` | [Owner’s original logo](https://static.wixstatic.com/media/228a5a_bc0435d2a4f8412b899c621dfb8f7177~mv2.png) | Original published logo, fitted. Supplied IMG_9796–9798 originals were unavailable; independently verified owner art used. |
+| `the-meat-wagon-v107.webp` | [Owner’s original logo](https://themeatwagon.net/cdn/shop/files/MagicEraser_250409_155113_2.png?v=1751936668&width=400) | Original header logo fitted. |
+| `hangout-v107.webp` | [Owner’s original logo](https://static.wixstatic.com/media/4498e5_d17e57814acd47d6829b1586449b2574~mv2.png) | Original mark shared by the two actual locations; directory artwork is not an affiliation claim. |
+| `creole-caviar-v107.webp` | Glenn’s supplied IMG_9809.PNG, November 8, 2026 | Original business artwork cropped and fitted; phone borders removed. |
+| `lo-cocos-v107.webp` | Glenn’s supplied IMG_9818.PNG, November 8, 2026 | Original business artwork cropped and fitted; phone borders removed. |
+| `foodie-kelmeleats-v107.webp` | Glenn’s supplied IMG_9799.png, November 8, 2026 | Original @kelmeleats portrait cropped and fitted. |
+| `foodie-sapphiesofire-v107.webp` | Glenn’s supplied IMG_9801.PNG, November 8, 2026 | Original @sapphiesofire portrait cropped and fitted. |
+| `foodie-kimmmpossxble-v107.webp` | Glenn’s supplied IMG_9811.png, November 8, 2026 | Original @kimmmpossxble portrait cropped and fitted. |
+| `foodie-courtneylyneaa-v107.webp` | Glenn’s supplied IMG_9821.png, November 8, 2026 | Original @courtneylyneaa portrait cropped and fitted. |
+| `foodie-food-adventures21-v107.webp` | Glenn’s supplied IMG_9822.PNG, November 8, 2026 | Original @food_adventures21 portrait cropped and fitted. |
+| `foodie-staycation-sfbayarea-v107.webp` | Glenn’s supplied IMG_9824.PNG, November 8, 2026 | Original @staycation.sfbayarea portrait cropped and fitted. |
+| `foodie-swooningspoon-v107.webp` | Glenn’s supplied IMG_9825.png, November 8, 2026 | Original @swooningspoon portrait cropped and fitted. |
+| `foodie-baygirlseat-v107.webp` | Glenn’s supplied IMG_9826.png, November 8, 2026 | Original @baygirlseat portrait cropped and fitted. |
+| `foodie-zeyno-ern-v107.webp` | Glenn’s supplied IMG_9827.PNG, November 8, 2026 | Original @zeyno.ern portrait cropped and fitted. |
+| `foodie-vvveats-v107.webp` | Glenn’s supplied IMG_9828.png, November 8, 2026 | Original @vvveats portrait cropped and fitted. |
+| `foodie-lifebyvivien-v107.webp` | Glenn’s supplied IMG_9829.png, November 8, 2026 | Original @lifebyvivien portrait cropped and fitted. |
+| `brunch-and-bloom-v107.webp` | Glenn’s supplied IMG_9834.png, November 8, 2026 | Original business logo cropped and fitted; phone borders removed. |
+| `foodie-lovemissfit-v107.webp` | Glenn’s supplied IMG_9837.png, November 8, 2026 | Original portrait cropped and fitted; phone borders removed. |
+| `foodie-el-kattt-v107.webp` | Glenn’s supplied IMG_9838.png, November 8, 2026 | Original portrait cropped and fitted; phone borders removed. |

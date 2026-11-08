@@ -437,6 +437,10 @@ export const CATEGORY_PAGES: SlotPage[] = BEASTY_CATEGORIES.map((c) => ({
 /* Glenn, 30 Oct: yellow pages for the foodies beyond the original 24.
    Global seat indexes survive pagination and changing phone heights. */
 export const CATEGORY_OVERFLOW: SlotPage[] = [{
+  /* Glenn, Nov 8: Lo Coco's joins Pizza after its original 24, preserving every seat. */
+  kind: 'pizza2', parent: 'pizza', heading: 'More pizza', about: 'More pizza restaurants', yellow: true,
+  categories: Array.from({ length: 24 }, (_, i) => ({ n: i + 1, name: 'Pizza', label: 'Available' })),
+}, {
   /* The original Breakfast/Diner sheet is full; Sweet Maple joins without moving it. */
   kind: 'diner2', parent: 'diner', heading: 'More breakfast/diner', about: 'More breakfast and brunch restaurants', yellow: true,
   categories: Array.from({ length: 24 }, (_, i) => ({ n: i + 1, name: 'Breakfast/Diner', label: 'Available' })),

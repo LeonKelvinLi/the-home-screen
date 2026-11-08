@@ -49,7 +49,8 @@ export async function auditBatch(number) {
     assert.equal(brandById('b_pakusf').needsSite, true)
     assert.equal(brandById('b_saladmakers').logo.imageUrl, '/icons/salad-makers-v105.webp')
     assert.equal(brandById('b_classycanines').logo.imageUrl, '/icons/classy-canines-v105.webp')
-    for (const [i, f] of batch.foodieOrder.entries()) assert.equal(ALL_PLACEMENTS[i < 24 ? 'beasty-foodies-' + i : 'beasty-foodies2-' + (i - 24)], f.brand)
+    for (const [i, f] of batch.foodieOrder.slice(0, 24).entries()) assert.equal(ALL_PLACEMENTS['beasty-foodies-' + i], f.brand)
+    for (const f of batch.foodieOrder) assert(brandById(f.brand), f.handle)
   }
   const live = process.env.BASE, db = live ? null : await freshTestDb('batch' + number)
   const port = live ? 0 : await new Promise(resolve => {
@@ -119,9 +120,14 @@ export async function auditBatch(number) {
       }
       const seat = Object.entries(batch.placements).find(([s, b]) => b === id && !s.startsWith('beasty-'))?.[0]
       assert(seat, id)
-      const city = seat.replace(/-goods2?-\d+$/, '').split('-').map(s => s[0].toUpperCase() + s.slice(1)).join(' ')
-      await page.getByRole('button', { name: 'Go to the ' + city + (seat.includes('-goods2-') ? ' More goods' : ' Goods') + ' page', exact: true }).click()
-      await page.locator('.brand-body').waitFor({ state: 'hidden' }); await icon(listing.name).waitFor()
+      const city = seat.replace(/-(?:goods|services)2?-\d+$/, '').split('-').map(s => s[0].toUpperCase() + s.slice(1)).join(' ')
+      const kind = seat.includes('-services') ? 'services' : 'goods'
+      const cityPage = seat.includes('-' + kind + '2-') ? 'More ' + kind : kind[0].toUpperCase() + kind.slice(1)
+      await page.getByRole('button', { name: 'Go to the ' + city + ' ' + cityPage + ' page', exact: true }).click()
+      await page.locator('.brand-body').waitFor({ state: 'hidden' })
+      const cityIcon = icon(listing.name)
+      if (await cityIcon.count() > 1) await cityIcon.filter({ hasText: listing.label }).waitFor()
+      else await cityIcon.waitFor()
       console.log('ok listing, menu and city', id, count)
     }
     for (const post of active) {
@@ -137,7 +143,8 @@ export async function auditBatch(number) {
       if (index >= 0) await expand(page.locator('.foodie-review-head').nth(index))
       else await expand(page.getByRole('button', { name: 'Watch their video', exact: true }))
       const video = page.locator((index < 0 ? '.brand-clip-drop ' : '') + 'video[src="/clips/' + post.slug + '.mp4"]')
-      await video.waitFor(); await video.evaluate(v => { v.muted = true; void v.play() })
+      await video.waitFor(); await video.scrollIntoViewIfNeeded()
+      await video.evaluate(async v => { v.muted = true; await v.play().catch(e => { if (e.name !== 'AbortError') throw e }) })
       await page.waitForFunction(v => v.muted && v.currentTime > .1 && !v.error, await video.elementHandle(), { timeout: 20000 })
       await video.evaluate(v => v.pause())
       const r = await fetch(base + '/clips/' + post.slug + '-poster.webp'); assert(r.ok)
@@ -166,6 +173,26 @@ export async function auditBatch(number) {
       await page.getByRole('textbox', { name: 'Dishes, businesses, categories, cities' }).fill('Home of Chicken and Waffles')
       assert.equal(await page.locator('.search-brand').count(), 0)
       for (const id of ['b_plazacafepleasanthill', 'b_hansangtofumilpitas']) {
+        await open(id)
+        const hero = page.locator('.brand-film video')
+        await hero.waitFor()
+        assert.equal(await hero.evaluate(v => v.muted), true)
+      }
+    } else if (number === 107) {
+      await category('Massage/Therapy', 'Siam Orchid Traditional Thai Massage')
+      await category('Meats', 'The Meat Wagon')
+      await category('Food Trucks', 'Creole Caviar')
+      await category('Catering', 'Creole Caviar')
+      await category('Pizza')
+      await page.getByRole('button', { name: 'Next page', exact: true }).click()
+      await icon("Lo Coco's").waitFor()
+      await open('b_thehangoutbreakfast')
+      await expand(page.getByRole('button', { name: 'Menu · 104 items', exact: true }))
+      assert.equal(await page.locator('.menu-row').count(), 104)
+      await open('b_brunchandbloom')
+      await expand(page.getByRole('button', { name: 'Menu · 60 items', exact: true }))
+      assert.equal(await page.locator('.menu-row').count(), 60)
+      for (const id of ['b_qpotsanjose', 'b_lococos', 'b_themeatwagon', 'b_thehangoutbreakfast', 'b_thehangoutpleasanthill', 'b_brunchandbloom']) {
         await open(id)
         const hero = page.locator('.brand-film video')
         await hero.waitFor()

@@ -7574,8 +7574,9 @@ export const LOCAL_SEED: LocalSeed[] = [
   {
     slug: 'brunch-and-bloom',
     /* Glenn, 2026-10-27, 8:29 pm: "Please update icon and add clip", with their profile picture. */
-    icon: 'brunch-and-bloom',
-    clip: { src: '/clips/brunch-and-bloom.mp4', poster: '/clips/brunch-and-bloom-poster.webp', href: 'https://www.instagram.com/reel/De4jwJIT1yf/', credit: 'Posted by @brunchandbloomcafe', platform: 'Instagram' },
+    icon: 'brunch-and-bloom-v107',
+    clip: {"src": "/clips/review-De4mZsQTDJ3.mp4", "poster": "/clips/review-De4mZsQTDJ3-poster.webp", "href": "https://www.instagram.com/reel/De4mZsQTDJ3/", "credit": "Published by @brunchandbloomcafe. The business\u2019s own film, requested behind its logo.", "platform": "Instagram"},
+    clips: [{"src": "/clips/brunch-and-bloom.mp4", "poster": "/clips/brunch-and-bloom-poster.webp", "href": "https://www.instagram.com/reel/De4jwJIT1yf/", "credit": "Posted by @brunchandbloomcafe", "platform": "Instagram"}],
     hours: 'Every day 8am–3pm',
     /* An ampersand, which is how they write it everywhere. His note said "and". */
     name: 'Brunch & Bloom',
@@ -7606,72 +7607,383 @@ export const LOCAL_SEED: LocalSeed[] = [
       The suite number comes from their own Instagram; the Clover address
       record omits it.
     */
+    siteNote: "Full owner-published menu refreshed November 8, with duplicate category appearances shown once. Espresso is published at $0 with no usable base price, so its price is held. Sold-out Shake and the branded cup are omitted; published packaged retail coffee is included.",
     items: [],
-    /* Their whole published menu, read from https://brunchandbloom.cloveronline.com/ on 2026-09-04 with their own photos; sections as they publish them. */
+    /* Their whole published menu, refreshed from https://brunchandbloom.cloveronline.com/menu/all on 2026-11-08; original matching food photos retained; sections as they publish them. */
     sections: [
-      { name: "Brunch plates", items: [
-        ["Garden Shakshuka", "", 1800, "brunchandbloom-garden-shakshuka"],
-        ["Bloom Breakfast Sammie", "", 1500],
-        ["Istanbul Morning", "", 1800],
-        ["Sunrise Street Tacos", "", 1600],
-        ["Golden Harvest Hash", "", 1900],
-        ["Brunch & Bloom Classic", "", 1700],
-        ["Tropical Morning Chia", "", 1200],
-      ] },
-      { name: "Toasts", items: [
-        ["Cali Avocado Toast", "", 1600],
-        ["Coastal Lox Toast", "", 1900],
-        ["Parisian French Toast", "", 1600, "brunchandbloom-parisian-french-toast"],
-        ["Peanut Butter Blossom Toast", "", 1500],
-        ["Tuscan Morning Toast", "", 1700],
-      ] },
-      { name: "Paninis & Melts", items: [
-        ["Turkey Garden Panini", "", 1700],
-        ["Triple Cheese Melt", "", 1500],
-        ["Irish Corned Beef Panini", "", 1800, "brunchandbloom-irish-corned-beef-panini"],
-        ["Southwest Chicken Panini", "", 1800],
-        ["Garden Avocado Pesto Panini", "", 1700],
-      ] },
-      { name: "Sammies", items: [
-        ["California Turkey Sammie", "", 1800],
-        ["Smoky Hot Chicken Sammie", "", 1800],
-        ["Italian Garden Sammie", "", 1700],
-      ] },
-      { name: "Salads & Soup", items: [
-        ["Bloom Chopped Salad", "", 1700],
-        ["Orchard Cobb Salad", "", 1800],
-        ["Creamy Tomato Soup", "", 800],
-      ] },
-      { name: "Waffles", items: [
-        ["California Breakfast Waffle", "", 1800],
-      ] },
-      { name: "For the Little Ones", items: [
-        ["Little Fry Up", "", 1000],
-        ["Grilled Cheese Louise", "", 1000],
-        ["Pb & Banana Toastie", "", 1000],
-      ] },
-      { name: "Coffee & Espresso", items: [
-        ["Drip Coffee", "", 400],
-        ["Cappuccino", "", 600],
-        ["Café Americano", "", 500],
-        ["Caramel Latte", "", 700],
-        ["Chai Tea Latte", "", 700],
-        ["Golden Morning Latte", "", 700],
-        ["Lavender Latte", "", 700],
-        ["Vanilla Latte", "", 700],
-      ] },
-      { name: "Seasonal Lattes", items: [
-        ["Matcha Latte", "", 700],
-      ] },
-      { name: "Cold Drinks", items: [
-        ["Rasberry Lemonade", "", 600],
-        ["Mint Lemonade", "", 600],
-        ["Classic Lemonade", "", 500],
-        ["Lavender Lemonade", "", 600],
-      ] },
-      { name: "Hot Tea", items: [
-        ["Hot Tea", "", 600],
-      ] },
+      {
+        "name": "Bloom Brunch",
+        "items": [
+          [
+            "Garden Shakshuka",
+            "",
+            1800,
+            "brunchandbloom-garden-shakshuka"
+          ],
+          [
+            "Bloom Breakfast Sammie",
+            "",
+            1500
+          ],
+          [
+            "Istanbul Morning",
+            "",
+            1800
+          ],
+          [
+            "Sunrise Street Tacos",
+            "",
+            1600
+          ],
+          [
+            "Golden Harvest Hash",
+            "",
+            1900
+          ],
+          [
+            "Brunch & Bloom Classic",
+            "",
+            1700
+          ],
+          [
+            "Berry Blossom Overnight Oats",
+            "",
+            1200
+          ],
+          [
+            "Tropical Morning Chia",
+            "",
+            1200
+          ]
+        ]
+      },
+      {
+        "name": "Toasts",
+        "items": [
+          [
+            "Cali Avocado Toast",
+            "",
+            1600
+          ],
+          [
+            "Coastal Lox Toast",
+            "",
+            1900
+          ],
+          [
+            "Berry Blossom Ricotta Toast",
+            "",
+            1500
+          ],
+          [
+            "Parisian French Toast",
+            "",
+            1600,
+            "brunchandbloom-parisian-french-toast"
+          ],
+          [
+            "Peanut Butter Blossom Toast",
+            "",
+            1500
+          ],
+          [
+            "Tuscan Morning Toast",
+            "",
+            1700
+          ]
+        ]
+      },
+      {
+        "name": "Paninis & Melts",
+        "items": [
+          [
+            "Turkey Garden Panini",
+            "",
+            1700
+          ],
+          [
+            "Triple Cheese Melt",
+            "",
+            1500
+          ],
+          [
+            "Irish Corned Beef Panini",
+            "",
+            1800,
+            "brunchandbloom-irish-corned-beef-panini"
+          ],
+          [
+            "Southwest Chicken Panini",
+            "",
+            1800
+          ],
+          [
+            "Garden Avocado Pesto Panini",
+            "",
+            1700
+          ]
+        ]
+      },
+      {
+        "name": "Sammies",
+        "items": [
+          [
+            "California Turkey Sammie",
+            "",
+            1800
+          ],
+          [
+            "Smoky Hot Chicken Sammie",
+            "",
+            1800
+          ],
+          [
+            "Italian Garden Sammie",
+            "",
+            1700
+          ]
+        ]
+      },
+      {
+        "name": "Salads & Soup",
+        "items": [
+          [
+            "Bloom Chopped Salad",
+            "",
+            1700
+          ],
+          [
+            "Orchard Cobb Salad",
+            "",
+            1800
+          ],
+          [
+            "Creamy Tomato Soup",
+            "",
+            800
+          ]
+        ]
+      },
+      {
+        "name": "Waffles",
+        "items": [
+          [
+            "Bloom Berry Waffle",
+            "",
+            1600
+          ],
+          [
+            "Hawaian Mochi Waffle",
+            "",
+            1700
+          ],
+          [
+            "California Breakfast Waffle",
+            "",
+            1800
+          ]
+        ]
+      },
+      {
+        "name": "For The Little Ones",
+        "items": [
+          [
+            "Little Fry Up",
+            "",
+            1000
+          ],
+          [
+            "Grilled Cheese Louise",
+            "",
+            1000
+          ],
+          [
+            "Pb & Banana Toastie",
+            "",
+            1000
+          ]
+        ]
+      },
+      {
+        "name": "Extras",
+        "items": [
+          [
+            "Avocado",
+            "",
+            300
+          ],
+          [
+            "Organic Pastured Egg",
+            "",
+            500
+          ],
+          [
+            "Turkey Bacon (2 Pcs)",
+            "",
+            400
+          ],
+          [
+            "Chicken Sausage(2Pcs)",
+            "",
+            400
+          ],
+          [
+            "Chicken Breast",
+            "",
+            600
+          ],
+          [
+            "Turkey",
+            "",
+            400
+          ],
+          [
+            "Smoked Salmon",
+            "",
+            1000
+          ],
+          [
+            "Seasonal Fruit Salad",
+            "",
+            800
+          ],
+          [
+            "Toast, Butter",
+            "",
+            200
+          ]
+        ]
+      },
+      {
+        "name": "Coffee & Espresso",
+        "items": [
+          [
+            "Drip Coffee",
+            "",
+            400
+          ],
+          [
+            "Cappuccino",
+            "",
+            600
+          ],
+          [
+            "Café Americano",
+            "",
+            500
+          ],
+          [
+            "Banana Bread Latte",
+            "",
+            700
+          ],
+          [
+            "Biscoff Latte",
+            "",
+            700
+          ],
+          [
+            "Caramel Latte",
+            "",
+            700
+          ],
+          [
+            "Chai Tea Latte",
+            "",
+            700
+          ],
+          [
+            "Golden Morning Latte",
+            "",
+            700
+          ],
+          [
+            "Lavender Latte",
+            "",
+            700
+          ]
+        ]
+      },
+      {
+        "name": "Signature Lattes",
+        "items": [
+          [
+            "Vanilla Latte",
+            "",
+            700
+          ]
+        ]
+      },
+      {
+        "name": "Seasonal Lattes",
+        "items": [
+          [
+            "Matcha Latte",
+            "",
+            700
+          ]
+        ]
+      },
+      {
+        "name": "Cold Drinks",
+        "items": [
+          [
+            "Rasberry Lemonade",
+            "",
+            600
+          ],
+          [
+            "Mint Lemonade",
+            "",
+            600
+          ],
+          [
+            "Classic Lemonade",
+            "",
+            500
+          ],
+          [
+            "Lavender Lemonade",
+            "",
+            600
+          ],
+          [
+            "Bottle Water",
+            "",
+            400
+          ],
+          [
+            "Apple Juice",
+            "",
+            400
+          ]
+        ]
+      },
+      {
+        "name": "Hot Tea",
+        "items": [
+          [
+            "Hot Tea",
+            "",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Retail",
+        "items": [
+          [
+            "Perennial Coffee",
+            "",
+            2499
+          ],
+          [
+            "Big Trouble Coffee",
+            "",
+            1799
+          ]
+        ]
+      }
     ],
     photos: [
       { src: '/food/brunch-and-bloom-site-2-lg.webp', alt: "product image", credit: "Their own photo, from brunchandbloom.cloveronline.com" },
@@ -7680,7 +7992,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       { src: '/food/brunch-and-bloom-site-5-lg.webp', alt: "product image", credit: "Their own photo, from brunchandbloom.cloveronline.com" },
       { src: '/food/brunch-and-bloom-site-6-lg.webp', alt: "product image", credit: "Their own photo, from brunchandbloom.cloveronline.com" },
     ],
-    /* Their whole published menu, read from https://brunchandbloom.cloveronline.com/ on 2026-09-04 with their own photos; sections as they publish them. */
+    /* Their whole published menu, refreshed from https://brunchandbloom.cloveronline.com/menu/all on 2026-11-08; original matching food photos retained; sections as they publish them. */
   },
   {
     slug: 'johnny-boi',
@@ -41406,12 +41718,13 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
       "slug": "lo-cocos",
+      "clip": {"src": "/clips/review-DfdU98CMtEd.mp4", "poster": "/clips/review-DfdU98CMtEd-poster.webp", "href": "https://www.instagram.com/p/DfdU98CMtEd/", "credit": "Published by @lococospiedmont. The business\u2019s own film, requested behind its logo.", "platform": "Instagram"},
       "name": "Lo Coco's",
       "label": "Lo Coco's",
       "cuisine": "Handmade pasta & pizza",
       "tagline": "Family-run Sicilian Italian on Piedmont Avenue: Giovanni Lo Coco's light, chewy pizza crust from 1966, two dozen numbered pizzas, handmade ravioli and tortelloni, and meatballs in their famous sugo.",
       "color": "#000000",
-      "icon": "lo-cocos",
+      "icon": "lo-cocos-v107",
       "prep": 0,
       "category": "Italian",
       "items": [],
@@ -68969,6 +69282,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   // Batch 98 — November 4 evening.
   {
     "slug": "qpot-san-jose",
+      "clip": {"src": "/clips/review-DUuD6P6kc4p.mp4", "poster": "/clips/review-DUuD6P6kc4p-poster.webp", "href": "https://www.instagram.com/reel/DUuD6P6kc4p/", "credit": "Published by @qpotsanjose. The business\u2019s own film, requested behind its logo.", "platform": "Instagram"},
     "name": "Q-Pot Korean BBQ & Hot Pot",
     "label": "Q-Pot",
     "cuisine": "AYCE Korean BBQ and hot pot",
@@ -81997,6 +82311,1678 @@ export const LOCAL_SEED: LocalSeed[] = [
           {
             "label": "Published profile contact",
             "href": "mailto:leoguapo4455@gmail.com"
+          }
+        ]
+      }
+    ]
+  },
+
+  // Batch 107 — November 8 morning.
+  {
+    "slug": "siam-orchid-walnut-creek",
+    "name": "Siam Orchid Traditional Thai Massage",
+    "label": "Siam Orchid WC",
+    "cuisine": "Massage and bodywork · Walnut Creek",
+    "tagline": "Traditional Thai massage and bodywork at Siam Orchid’s Walnut Creek location.",
+    "color": "#374C43",
+    "icon": "siam-orchid-v107",
+    "prep": 0,
+    "category": "Massage and bodywork · Walnut Creek",
+    "items": [],
+    "site": "https://www.siamorchidsf.com/",
+    "address": "1535 Olympic Blvd, 2nd Floor, Walnut Creek, CA",
+    "phone": "(925) 433-6969",
+    "hours": "Daily 10am–9pm",
+    "sections": [
+      {
+        "name": "Published massage services",
+        "items": [
+          [
+            "Traditional Thai-Massage — 1 hour",
+            "",
+            13000
+          ],
+          [
+            "Traditional Thai-Massage — 1 hour 30 min",
+            "",
+            18000
+          ],
+          [
+            "Traditional Thai-Massage — 2 hours",
+            "",
+            23000
+          ],
+          [
+            "Swedish Thai-Massage — 1 hour",
+            "",
+            13000
+          ],
+          [
+            "Swedish Thai-Massage — 1 hour 30 min",
+            "",
+            18000
+          ],
+          [
+            "Swedish Thai-Massage — 2 hours",
+            "",
+            23000
+          ],
+          [
+            "Siam Orchid Retreat Massage — 1 hour",
+            "",
+            15000
+          ],
+          [
+            "Siam Orchid Retreat Massage — 1 hour 30 min",
+            "",
+            20000
+          ],
+          [
+            "Siam Orchid Retreat Massage — 2 hours",
+            "",
+            25000
+          ],
+          [
+            "Pra Kob Massage — 1 hour",
+            "",
+            15000
+          ],
+          [
+            "Pra Kob Massage — 1 hour 30 min",
+            "",
+            20000
+          ],
+          [
+            "Pra Kob Massage — 2 hours",
+            "",
+            25000
+          ],
+          [
+            "Thai Aroma Massage — 1 hour",
+            "",
+            13000
+          ],
+          [
+            "Thai Aroma Massage — 1 hour 30 min",
+            "",
+            18000
+          ],
+          [
+            "Thai Aroma Massage — 2 hours",
+            "",
+            23000
+          ],
+          [
+            "Siam Orchid Signature Balm Massage — 1 hour",
+            "",
+            13000
+          ],
+          [
+            "Siam Orchid Signature Balm Massage — 1 hour 30 min",
+            "",
+            18000
+          ],
+          [
+            "Siam Orchid Signature Balm Massage — 2 hours",
+            "",
+            23000
+          ],
+          [
+            "Four Hands Massage — 1 hour",
+            "",
+            23000
+          ],
+          [
+            "Four Hands Massage — 1 hour 30 min",
+            "",
+            29000
+          ],
+          [
+            "Four Hands Massage — 2 hours",
+            "",
+            38000
+          ],
+          [
+            "Siam Orchid Ritual — 1 hour",
+            "",
+            14000
+          ],
+          [
+            "Siam Orchid Ritual — 1 hour 30 min",
+            "",
+            19000
+          ],
+          [
+            "Siam Orchid Ritual — 2 hours",
+            "",
+            24000
+          ],
+          [
+            "Deep Tissue Massage — 1 hour",
+            "",
+            14000
+          ],
+          [
+            "Deep Tissue Massage — 1 hour 30 min",
+            "",
+            19000
+          ],
+          [
+            "Deep Tissue Massage — 2 hours",
+            "",
+            24000
+          ],
+          [
+            "Hot Stone Massage — 1 hour",
+            "By appointment only.",
+            15000
+          ],
+          [
+            "Hot Stone Massage — 1 hour 30 min",
+            "By appointment only.",
+            20000
+          ],
+          [
+            "Hot Stone Massage — 2 hours",
+            "By appointment only.",
+            25000
+          ],
+          [
+            "Pregnancy Massage — 1 hour",
+            "By appointment only.",
+            15000
+          ],
+          [
+            "Pregnancy Massage — 1 hour 30 min",
+            "By appointment only.",
+            20000
+          ],
+          [
+            "Thai Aroma Herbal Massage — 1 hour",
+            "",
+            15000
+          ],
+          [
+            "Thai Aroma Herbal Massage — 1 hour 30 min",
+            "",
+            20000
+          ],
+          [
+            "Thai Aroma Herbal Massage — 2 hours",
+            "",
+            25000
+          ],
+          [
+            "Foot Reflexology Massage — 30 minutes",
+            "",
+            8000
+          ],
+          [
+            "Foot Reflexology Massage — 60 minutes",
+            "",
+            13000
+          ],
+          [
+            "Office Syndrome Massage — 30 minutes",
+            "",
+            8000
+          ],
+          [
+            "Office Syndrome Massage — 60 minutes",
+            "",
+            13000
+          ]
+        ]
+      }
+    ],
+    "orderUrl": "https://www.siamorchidsf.com/book-now-at-walnut-creek",
+    "siteNote": "The owner’s common services page publishes these duration/price options alongside its three San Francisco/Walnut Creek locations. Confirm availability and appointment-only treatments with the selected branch. The separately linked luxury spa in San Mateo is not this branch.",
+    "panels": [
+      {
+        "head": "Branches and booking",
+        "body": [
+          "San Francisco: 39 Polk St · (415) 872-9645; 518 Taylor St · (415) 636-8405. Walnut Creek: 1535 Olympic Blvd, 2nd Floor · (925) 433-6969.",
+          "The San Francisco review identifies the city but not Polk or Taylor. No filming branch is invented."
+        ],
+        "links": [
+          {
+            "label": "Published services and prices",
+            "href": "https://www.siamorchidsf.com/services"
+          },
+          {
+            "label": "All three locations",
+            "href": "https://www.siamorchidsf.com/locations"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "siam-orchid-sf-polk",
+    "name": "Siam Orchid Traditional Thai Massage",
+    "label": "Siam Orchid Polk",
+    "cuisine": "Massage and bodywork · Polk Street",
+    "tagline": "Traditional Thai massage and bodywork at Siam Orchid’s Polk Street location.",
+    "color": "#374C43",
+    "icon": "siam-orchid-v107",
+    "prep": 0,
+    "category": "Massage and bodywork · Polk Street",
+    "items": [],
+    "site": "https://www.siamorchidsf.com/",
+    "address": "39 Polk St, San Francisco, CA",
+    "phone": "(415) 872-9645",
+    "hours": "Daily 10am–9pm",
+    "sections": [
+      {
+        "name": "Published massage services",
+        "items": [
+          [
+            "Traditional Thai-Massage — 1 hour",
+            "",
+            13000
+          ],
+          [
+            "Traditional Thai-Massage — 1 hour 30 min",
+            "",
+            18000
+          ],
+          [
+            "Traditional Thai-Massage — 2 hours",
+            "",
+            23000
+          ],
+          [
+            "Swedish Thai-Massage — 1 hour",
+            "",
+            13000
+          ],
+          [
+            "Swedish Thai-Massage — 1 hour 30 min",
+            "",
+            18000
+          ],
+          [
+            "Swedish Thai-Massage — 2 hours",
+            "",
+            23000
+          ],
+          [
+            "Siam Orchid Retreat Massage — 1 hour",
+            "",
+            15000
+          ],
+          [
+            "Siam Orchid Retreat Massage — 1 hour 30 min",
+            "",
+            20000
+          ],
+          [
+            "Siam Orchid Retreat Massage — 2 hours",
+            "",
+            25000
+          ],
+          [
+            "Pra Kob Massage — 1 hour",
+            "",
+            15000
+          ],
+          [
+            "Pra Kob Massage — 1 hour 30 min",
+            "",
+            20000
+          ],
+          [
+            "Pra Kob Massage — 2 hours",
+            "",
+            25000
+          ],
+          [
+            "Thai Aroma Massage — 1 hour",
+            "",
+            13000
+          ],
+          [
+            "Thai Aroma Massage — 1 hour 30 min",
+            "",
+            18000
+          ],
+          [
+            "Thai Aroma Massage — 2 hours",
+            "",
+            23000
+          ],
+          [
+            "Siam Orchid Signature Balm Massage — 1 hour",
+            "",
+            13000
+          ],
+          [
+            "Siam Orchid Signature Balm Massage — 1 hour 30 min",
+            "",
+            18000
+          ],
+          [
+            "Siam Orchid Signature Balm Massage — 2 hours",
+            "",
+            23000
+          ],
+          [
+            "Four Hands Massage — 1 hour",
+            "",
+            23000
+          ],
+          [
+            "Four Hands Massage — 1 hour 30 min",
+            "",
+            29000
+          ],
+          [
+            "Four Hands Massage — 2 hours",
+            "",
+            38000
+          ],
+          [
+            "Siam Orchid Ritual — 1 hour",
+            "",
+            14000
+          ],
+          [
+            "Siam Orchid Ritual — 1 hour 30 min",
+            "",
+            19000
+          ],
+          [
+            "Siam Orchid Ritual — 2 hours",
+            "",
+            24000
+          ],
+          [
+            "Deep Tissue Massage — 1 hour",
+            "",
+            14000
+          ],
+          [
+            "Deep Tissue Massage — 1 hour 30 min",
+            "",
+            19000
+          ],
+          [
+            "Deep Tissue Massage — 2 hours",
+            "",
+            24000
+          ],
+          [
+            "Hot Stone Massage — 1 hour",
+            "By appointment only.",
+            15000
+          ],
+          [
+            "Hot Stone Massage — 1 hour 30 min",
+            "By appointment only.",
+            20000
+          ],
+          [
+            "Hot Stone Massage — 2 hours",
+            "By appointment only.",
+            25000
+          ],
+          [
+            "Pregnancy Massage — 1 hour",
+            "By appointment only.",
+            15000
+          ],
+          [
+            "Pregnancy Massage — 1 hour 30 min",
+            "By appointment only.",
+            20000
+          ],
+          [
+            "Thai Aroma Herbal Massage — 1 hour",
+            "",
+            15000
+          ],
+          [
+            "Thai Aroma Herbal Massage — 1 hour 30 min",
+            "",
+            20000
+          ],
+          [
+            "Thai Aroma Herbal Massage — 2 hours",
+            "",
+            25000
+          ],
+          [
+            "Foot Reflexology Massage — 30 minutes",
+            "",
+            8000
+          ],
+          [
+            "Foot Reflexology Massage — 60 minutes",
+            "",
+            13000
+          ],
+          [
+            "Office Syndrome Massage — 30 minutes",
+            "",
+            8000
+          ],
+          [
+            "Office Syndrome Massage — 60 minutes",
+            "",
+            13000
+          ]
+        ]
+      }
+    ],
+    "orderUrl": "https://www.siamorchidsf.com/book-now",
+    "siteNote": "The owner’s common services page publishes these duration/price options alongside its three San Francisco/Walnut Creek locations. Confirm availability and appointment-only treatments with the selected branch. The separately linked luxury spa in San Mateo is not this branch.",
+    "panels": [
+      {
+        "head": "Branches and booking",
+        "body": [
+          "San Francisco: 39 Polk St · (415) 872-9645; 518 Taylor St · (415) 636-8405. Walnut Creek: 1535 Olympic Blvd, 2nd Floor · (925) 433-6969.",
+          "The San Francisco review identifies the city but not Polk or Taylor. No filming branch is invented."
+        ],
+        "links": [
+          {
+            "label": "Published services and prices",
+            "href": "https://www.siamorchidsf.com/services"
+          },
+          {
+            "label": "All three locations",
+            "href": "https://www.siamorchidsf.com/locations"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "siam-orchid-sf-taylor",
+    "name": "Siam Orchid Traditional Thai Massage",
+    "label": "Siam Orchid Taylor",
+    "cuisine": "Massage and bodywork · Taylor Street",
+    "tagline": "Traditional Thai massage and bodywork at Siam Orchid’s Taylor Street location.",
+    "color": "#374C43",
+    "icon": "siam-orchid-v107",
+    "prep": 0,
+    "category": "Massage and bodywork · Taylor Street",
+    "items": [],
+    "site": "https://www.siamorchidsf.com/",
+    "address": "518 Taylor St, San Francisco, CA",
+    "phone": "(415) 636-8405",
+    "hours": "Daily 10am–9pm",
+    "sections": [
+      {
+        "name": "Published massage services",
+        "items": [
+          [
+            "Traditional Thai-Massage — 1 hour",
+            "",
+            13000
+          ],
+          [
+            "Traditional Thai-Massage — 1 hour 30 min",
+            "",
+            18000
+          ],
+          [
+            "Traditional Thai-Massage — 2 hours",
+            "",
+            23000
+          ],
+          [
+            "Swedish Thai-Massage — 1 hour",
+            "",
+            13000
+          ],
+          [
+            "Swedish Thai-Massage — 1 hour 30 min",
+            "",
+            18000
+          ],
+          [
+            "Swedish Thai-Massage — 2 hours",
+            "",
+            23000
+          ],
+          [
+            "Siam Orchid Retreat Massage — 1 hour",
+            "",
+            15000
+          ],
+          [
+            "Siam Orchid Retreat Massage — 1 hour 30 min",
+            "",
+            20000
+          ],
+          [
+            "Siam Orchid Retreat Massage — 2 hours",
+            "",
+            25000
+          ],
+          [
+            "Pra Kob Massage — 1 hour",
+            "",
+            15000
+          ],
+          [
+            "Pra Kob Massage — 1 hour 30 min",
+            "",
+            20000
+          ],
+          [
+            "Pra Kob Massage — 2 hours",
+            "",
+            25000
+          ],
+          [
+            "Thai Aroma Massage — 1 hour",
+            "",
+            13000
+          ],
+          [
+            "Thai Aroma Massage — 1 hour 30 min",
+            "",
+            18000
+          ],
+          [
+            "Thai Aroma Massage — 2 hours",
+            "",
+            23000
+          ],
+          [
+            "Siam Orchid Signature Balm Massage — 1 hour",
+            "",
+            13000
+          ],
+          [
+            "Siam Orchid Signature Balm Massage — 1 hour 30 min",
+            "",
+            18000
+          ],
+          [
+            "Siam Orchid Signature Balm Massage — 2 hours",
+            "",
+            23000
+          ],
+          [
+            "Four Hands Massage — 1 hour",
+            "",
+            23000
+          ],
+          [
+            "Four Hands Massage — 1 hour 30 min",
+            "",
+            29000
+          ],
+          [
+            "Four Hands Massage — 2 hours",
+            "",
+            38000
+          ],
+          [
+            "Siam Orchid Ritual — 1 hour",
+            "",
+            14000
+          ],
+          [
+            "Siam Orchid Ritual — 1 hour 30 min",
+            "",
+            19000
+          ],
+          [
+            "Siam Orchid Ritual — 2 hours",
+            "",
+            24000
+          ],
+          [
+            "Deep Tissue Massage — 1 hour",
+            "",
+            14000
+          ],
+          [
+            "Deep Tissue Massage — 1 hour 30 min",
+            "",
+            19000
+          ],
+          [
+            "Deep Tissue Massage — 2 hours",
+            "",
+            24000
+          ],
+          [
+            "Hot Stone Massage — 1 hour",
+            "By appointment only.",
+            15000
+          ],
+          [
+            "Hot Stone Massage — 1 hour 30 min",
+            "By appointment only.",
+            20000
+          ],
+          [
+            "Hot Stone Massage — 2 hours",
+            "By appointment only.",
+            25000
+          ],
+          [
+            "Pregnancy Massage — 1 hour",
+            "By appointment only.",
+            15000
+          ],
+          [
+            "Pregnancy Massage — 1 hour 30 min",
+            "By appointment only.",
+            20000
+          ],
+          [
+            "Thai Aroma Herbal Massage — 1 hour",
+            "",
+            15000
+          ],
+          [
+            "Thai Aroma Herbal Massage — 1 hour 30 min",
+            "",
+            20000
+          ],
+          [
+            "Thai Aroma Herbal Massage — 2 hours",
+            "",
+            25000
+          ],
+          [
+            "Foot Reflexology Massage — 30 minutes",
+            "",
+            8000
+          ],
+          [
+            "Foot Reflexology Massage — 60 minutes",
+            "",
+            13000
+          ],
+          [
+            "Office Syndrome Massage — 30 minutes",
+            "",
+            8000
+          ],
+          [
+            "Office Syndrome Massage — 60 minutes",
+            "",
+            13000
+          ]
+        ]
+      }
+    ],
+    "orderUrl": "https://www.siamorchidsf.com/book-now-at-taylor",
+    "siteNote": "The owner’s common services page publishes these duration/price options alongside its three San Francisco/Walnut Creek locations. Confirm availability and appointment-only treatments with the selected branch. The separately linked luxury spa in San Mateo is not this branch.",
+    "panels": [
+      {
+        "head": "Branches and booking",
+        "body": [
+          "San Francisco: 39 Polk St · (415) 872-9645; 518 Taylor St · (415) 636-8405. Walnut Creek: 1535 Olympic Blvd, 2nd Floor · (925) 433-6969.",
+          "The San Francisco review identifies the city but not Polk or Taylor. No filming branch is invented."
+        ],
+        "links": [
+          {
+            "label": "Published services and prices",
+            "href": "https://www.siamorchidsf.com/services"
+          },
+          {
+            "label": "All three locations",
+            "href": "https://www.siamorchidsf.com/locations"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "the-meat-wagon",
+    "name": "The Meat Wagon",
+    "label": "Meat Wagon",
+    "cuisine": "Mobile butcher food truck and meat shop",
+    "tagline": "Butcher cuts, seafood and meat boxes from a shop on wheels serving the Peninsula.",
+    "color": "#374C43",
+    "icon": "the-meat-wagon-v107",
+    "prep": 0,
+    "category": "Mobile butcher food truck and meat shop",
+    "items": [],
+    "site": "https://themeatwagon.net/",
+    "address": "1601 S El Camino Real, San Mateo, CA",
+    "phone": "(925) 872-6686",
+    "email": "danny@themeatwagon.net",
+    "sections": [
+      {
+        "name": "Butcher catalog",
+        "items": [
+          [
+            "Tri-tip (1 pc)",
+            "1 piece is approximately 2 lbs.",
+            2998
+          ],
+          [
+            "Chicken Thigh Meat",
+            "1 lb",
+            550
+          ],
+          [
+            "Halal Chicken Breast",
+            "1 lb",
+            529
+          ],
+          [
+            "Antibiotic Free Chicken Breast",
+            "1 lb",
+            949
+          ],
+          [
+            "Chicken Breast",
+            "1 lb",
+            550
+          ],
+          [
+            "Chicken Fajitas",
+            "2 lbs",
+            1300
+          ],
+          [
+            "Chicken Wings",
+            "2 lbs",
+            550
+          ],
+          [
+            "Halal Chicken Thigh Meat",
+            "1 lbs",
+            529
+          ],
+          [
+            "Antibiotic Free Chicken Thigh Meat",
+            "1 lb",
+            999
+          ],
+          [
+            "Berkshire Pork Chops",
+            "Pasture raised 0.75 lbs",
+            974
+          ],
+          [
+            "Berkshire Ground Pork",
+            "Pasture raised 1 lb",
+            529
+          ],
+          [
+            "Ground Turkey",
+            "1 lb",
+            859
+          ],
+          [
+            "Halal Ground Chicken",
+            "1 lb",
+            599
+          ],
+          [
+            "Antibiotic Free Ground Chicken",
+            "1 lb",
+            1075
+          ],
+          [
+            "Ground Chicken",
+            "1 lb",
+            650
+          ],
+          [
+            "Halal Lamb Rack",
+            "0.9 lb",
+            2339
+          ],
+          [
+            "Halal Ground Lamb",
+            "1 lb",
+            1100
+          ],
+          [
+            "Berkshire Baby Back Ribs (1 pc)",
+            "Pasture raised 1 piece is approximately 2 lbs.",
+            3234
+          ],
+          [
+            "Berkshire Bacon",
+            "Pasture Raised 0.5 lb",
+            999
+          ],
+          [
+            "Beef Stew (2 lbs)",
+            "Average weight: 2 lbs",
+            1998
+          ],
+          [
+            "Halal Lamb Stew",
+            "1 lb",
+            1395
+          ],
+          [
+            "Halal Lamb Shanks",
+            "0.9 lb",
+            1013
+          ],
+          [
+            "Halal Lamb Chops",
+            "0.5 lb",
+            675
+          ],
+          [
+            "Beef Choice Ribeye (16 oz)",
+            "Average weight: 16 oz",
+            2899
+          ],
+          [
+            "Beef Fajitas",
+            "2 lbs",
+            2350
+          ],
+          [
+            "Ground Beef 90/10",
+            "90/10 1 lb",
+            979
+          ],
+          [
+            "Beef Choice NY Steak 16 oz",
+            "16 oz",
+            2399
+          ],
+          [
+            "Beef Choice Top Sirloin Steak (8 oz)",
+            "Average weight: 8 oz",
+            699
+          ],
+          [
+            "Grass-fed Ground Beef",
+            "80/20 1 lb",
+            1299
+          ],
+          [
+            "Korean Short Ribs (2 lbs)",
+            "Average 2 lbs",
+            3398
+          ],
+          [
+            "Beef Choice Chuck Roast (2 lbs)",
+            "Average weight: 2 lbs",
+            2398
+          ],
+          [
+            "Beef Choice Porterhouse (3 lbs)",
+            "Average weight: 3 lbs",
+            6450
+          ],
+          [
+            "Beef Choice Filet Mignon (8 oz)",
+            "Average weight: 8 oz",
+            1750
+          ],
+          [
+            "Beef Choice Tomahawk (40 oz)",
+            "Average weight: 40 oz",
+            7248
+          ],
+          [
+            "Boneless Short Ribs (2 lbs)",
+            "Average 2 lbs",
+            3998
+          ],
+          [
+            "RPD Shrimp",
+            "Raw, peeled and deveined 16/20, 2 lbs",
+            2100
+          ],
+          [
+            "Maine Lobster Tails",
+            "0.28 lbs",
+            1000
+          ],
+          [
+            "Oxtail (2 lbs)",
+            "Average 2 lbs",
+            2798
+          ]
+        ]
+      },
+      {
+        "name": "Boxes and bundles",
+        "items": [
+          [
+            "The Beef Box",
+            "Cut fresh, never frozen, straight from our family's USDA-certified supply chain. This is the box for people who take their beef seriously. 4 USDA Choice Ribeye Steaks, 12oz each 2 USDA Choice NY Strip",
+            24500
+          ],
+          [
+            "The Chicken and Beef Box",
+            "A mix of USDA Choice and Prime beef and antibiotic-free chicken, cut fresh and delivered straight from our family's supply chain — no frozen, no shortcuts. 2 USDA Choice Ribeye Steaks, 12oz each Groun",
+            18900
+          ],
+          [
+            "The Mixed Box",
+            "Beef, chicken, and pork in one box — fresh-cut and sourced through our own family supply chain, so you know exactly where it's coming from. 2 USDA Choice Ribeye Steaks, 12oz each Ground Beef 90/10 (2 ",
+            19900
+          ],
+          [
+            "The Big Box",
+            "Our biggest box, for the biggest appetites. Beef, chicken, and pork, all fresh-cut off the same family supply chain we've trusted for decades. 4 USDA Choice Ribeye Steaks, 12oz each 2 USDA Choice NY S",
+            29900
+          ]
+        ]
+      },
+      {
+        "name": "2026 Thanksgiving preorders",
+        "items": [
+          [
+            "The Thanksgiving Box",
+            "Preorder by November 22, 2026. Pickup November 23 or 25; choose the slot and confirm availability in the owner’s shop.",
+            19500
+          ],
+          [
+            "The Thanksgiving Turkey Box — Mary's Free Range, Antibiotic Free (14-18 lb)",
+            "Preorder by November 22, 2026. Pickup November 23 or 25; choose the slot and confirm availability in the owner’s shop.",
+            7499
+          ],
+          [
+            "The Thanksgiving Turkey Box — Mary's Organic (14-18 lb)",
+            "Preorder by November 22, 2026. Pickup November 23 or 25; choose the slot and confirm availability in the owner’s shop.",
+            11499
+          ]
+        ]
+      }
+    ],
+    "orderUrl": "https://themeatwagon.net/collections/all",
+    "clip": {
+      "src": "/clips/review-DfVNr8wg3eT.mp4",
+      "poster": "/clips/review-DfVNr8wg3eT-poster.webp",
+      "href": "https://www.instagram.com/p/DfVNr8wg3eT/",
+      "credit": "Published by @themeatwagon_. The business’s own film, requested behind its logo.",
+      "platform": "Instagram"
+    },
+    "siteNote": "The listed San Mateo address is a scheduled truck stop, not a daily walk-in storefront. The supplied profile lists Monday/Wednesday/Friday there, Thursday Brisbane Farmers Market, Saturday Redwood City Farmers Market and Sunday Belmont Farmers Market; check the owner’s current schedule before visiting. Prices use the owner’s published package/variant listings; weights vary by product and stock changes in its own shop. Seasonal Thanksgiving items are explicitly dated 2026, with November 22 ordering deadline and November 23/25 pickup choices.",
+    "panels": [
+      {
+        "head": "Truck schedule and butcher shop",
+        "body": [],
+        "links": [
+          {
+            "label": "Current truck schedule",
+            "href": "https://themeatwagon.net/pages/market-schedule"
+          },
+          {
+            "label": "Owner’s truck menu",
+            "href": "https://themeatwagon.net/pages/menu"
+          },
+          {
+            "label": "Contact The Meat Wagon",
+            "href": "https://themeatwagon.net/pages/contact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "creole-caviar",
+    "name": "Creole Caviar",
+    "label": "Creole Caviar",
+    "cuisine": "Creole food truck and catering",
+    "tagline": "Chef Aerial’s Southern cooking, food truck and catering across the Bay Area.",
+    "color": "#374C43",
+    "icon": "creole-caviar-v107",
+    "prep": 0,
+    "category": "Creole food truck and catering",
+    "items": [],
+    "site": "https://creolecaviar.com/",
+    "address": "Antioch, CA 94531 · Bay Area service",
+    "phone": "(510) 820-4602",
+    "contactOnly": "Contact Creole Caviar for its current truck menu, event schedule and catering quote.",
+    "siteNote": "The owner publishes its main-office city as Antioch and serves the Bay Area. The supplied review was filmed at an Oakland truck stop; it is not treated as a permanent Oakland storefront. A complete current priced food menu was not published on the verified owner site.",
+    "panels": [
+      {
+        "head": "Food truck and catering",
+        "body": [
+          "Corporate events, festivals, private events and bereavement hospitality are advertised by the owner. Contact the operator for scope, availability and prices."
+        ],
+        "links": [
+          {
+            "label": "Owner’s website and quote form",
+            "href": "https://creolecaviar.com/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "the-hangout-pleasant-hill",
+    "name": "The Hangout",
+    "label": "Hangout PH",
+    "cuisine": "Breakfast and brunch café",
+    "tagline": "Thai-inspired breakfast and brunch at The Hangout in Pleasant Hill.",
+    "color": "#374C43",
+    "icon": "hangout-v107",
+    "prep": 0,
+    "category": "Breakfast and brunch café",
+    "items": [],
+    "site": "https://www.thehangoutbreakfast.com/",
+    "address": "2217 Morello Ave, Pleasant Hill, CA 94523",
+    "phone": "(925) 671-9925",
+    "hours": "Daily 8am–3pm",
+    "sections": [
+      {
+        "name": "Bites",
+        "items": [
+          [
+            "Avocado Toast",
+            "Strawberries, Basil, Fresh mozzarella and Mixed greens. (Add $3 for Egg)",
+            1400
+          ],
+          [
+            "Salmon Avocado Toast",
+            "Cherry Tomato, Pickled shallot, Capers and Mixed greens. (Add $3 for Egg)",
+            1600
+          ],
+          [
+            "Fries with Rosemary",
+            "",
+            800
+          ],
+          [
+            "Chick Pops",
+            "Crispy Fried Chicken and Bite Waffle.",
+            1300
+          ],
+          [
+            "Mixed Berries Parfait",
+            "Greek Yogurt, Granola, Almond and Mixed berries.",
+            1100
+          ],
+          [
+            "Morning Poutine",
+            "Fries, Bacon, Fried egg, Pepper jack cheese and Curry & gravy sauce mixed.",
+            1300
+          ],
+          [
+            "Healthy Pig",
+            "Brussels sprouts, Parmesan and Bacon jam.",
+            1200
+          ],
+          [
+            "Boneless Fried Chicken & Fries",
+            "Served with Spicy mayo and Pickles.",
+            1800
+          ]
+        ]
+      },
+      {
+        "name": "Eggs Any Style",
+        "items": [
+          [
+            "Two Eggs Any Style",
+            "",
+            1500
+          ],
+          [
+            "Two Eggs Add 3 Bacon or 3 Ham or 2 CK Apple or 2 Pork Wine or 1 Fried Chicken",
+            "",
+            2000
+          ]
+        ]
+      },
+      {
+        "name": "Scramble & Omelettes",
+        "items": [
+          [
+            "The Hangout Omelette",
+            "Bacon, Avocado, Tomato, Cheddar and Homemade bacon jam.",
+            2500
+          ],
+          [
+            "Western Scramble",
+            "Black forest ham, Scallion, Cheddar and Homemade bacon jam.",
+            2200
+          ],
+          [
+            "Sausage Scramble",
+            "CK Apple sausage, Spinach, Onion and Cheddar cheese.",
+            2200
+          ],
+          [
+            "Italian Piggy Scramble",
+            "Pork wine sausage, Cherry tomato, Onion, Scallion and Cheddar cheese.",
+            2200
+          ],
+          [
+            "Farmer Scramble (V) (Tofu) (No Eggs)",
+            "Tofu, Baby kale, Onion, Mushroom, Tomato and Bell pepper.",
+            2000
+          ],
+          [
+            "Trio Scramble",
+            "Bacon, CK Apple sausage, Pork wine sausage, Basil and Cheddar cheese.",
+            2300
+          ],
+          [
+            "Under the Sea Omelette",
+            "Smoked salmon, Crab, Tiger prawn, Bacon, Bell pepper and Pepper jack.",
+            3200
+          ]
+        ]
+      },
+      {
+        "name": "Between Bread & Bun",
+        "items": [
+          [
+            "BEC (Ciabatta)",
+            "Bacon, Eggs and Cheddar.",
+            1700
+          ],
+          [
+            "BLT (Ciabatta)",
+            "Bacon, Romaine, Tomato and Pepper jack.",
+            1700
+          ],
+          [
+            "Ham Cheese (Wheat)",
+            "Ham, Romaine, Tomato and Cheddar.",
+            1700
+          ],
+          [
+            "Rainbow Impossible Burger (V) (Brioche Bun)",
+            "Bell pepper, Avocado, Romaine and Tomato.",
+            1700
+          ],
+          [
+            "California Burger (Brioche Bun)",
+            "Beef patty, Romaine, Avocado, Tomato, Cheddar and Bacon jam.",
+            2000
+          ],
+          [
+            "Crispy Chicken Burger (Brioche Bun)",
+            "Crispy chicken, Tomato and Spring mix.",
+            2000
+          ],
+          [
+            "Fat Boy Burger (Brioche Bun)",
+            "(Wasabi spread) Beef patty, Bacon, Fried egg, Fried onion, Pickled ginger and Pepper jack.",
+            2100
+          ],
+          [
+            "Ultimate Bacon Burger (Brioche Bun)",
+            "Beef patty, Bacon, Tomato, Cheddar and Bacon jam.",
+            2000
+          ],
+          [
+            "Teriyaki Chicken Burger (Brioche Bun)",
+            "Grilled chicken, Pineapple and Teriyaki sauce.",
+            2000
+          ]
+        ]
+      },
+      {
+        "name": "The Hangout’s Specialty",
+        "items": [
+          [
+            "Hangover",
+            "Stir fried Italian noodle, Basil, Bell pepper, Onion, Mushroom, CK Apple, Bacon and Fried egg.",
+            2200
+          ],
+          [
+            "Garlic Noodle with Crispy Chicken",
+            "Stir fried spaghetti, Garlic, Scallion and Parmesan. (Add $5 to substitute 8 Tiger prawns, Add $3 for Egg)",
+            2300
+          ],
+          [
+            "Loco Moco",
+            "Beef patty & rice, Bell Pepper, Mushroom, Onion, Fried egg and Curry & gravy sauce mixed.",
+            2300
+          ],
+          [
+            "Chick Katsu Curry",
+            "Crispy Chicken & rice, Fried Yukon, Fried egg and Curry & gravy sauce mixed.",
+            2300
+          ],
+          [
+            "Gai Gra Prow",
+            "Ground Chicken, Basil, Onion, Bell pepper, Garlic, pepper and Fried egg over Rice. (Add $5 to substitute 8 Tiger prawns)",
+            2200
+          ],
+          [
+            "Crispy Chicken & Waffle",
+            "Crispy chicken over Belgian waffle served with Homemade spicy maple syrup.",
+            2400
+          ]
+        ]
+      },
+      {
+        "name": "Poached Eggs Benedict",
+        "items": [
+          [
+            "Florentine Benedict",
+            "Sauteed spinach, Tomato, Parmesan and Hollandaise.",
+            1900
+          ],
+          [
+            "Flying Pig Benedict",
+            "Bacon, Baby kale, Tomato, Avocado and Hollandaise.",
+            2100
+          ],
+          [
+            "Black Forest Benedict",
+            "Black Forest ham, Tomato, Asparagus and Hollandaise.",
+            2100
+          ],
+          [
+            "Sausage Benedict",
+            "CK Apple sausage, Bell pepper, Onion and Spicy Hollandaise.",
+            2100
+          ],
+          [
+            "Piggy Benedict",
+            "Pork wine sausage, green onion and Hollandaise.",
+            2100
+          ],
+          [
+            "Crispy Chicken Benedict",
+            "Crispy chicken, Cherry tomato, Red bell pepper, Onion and Spicy Hollandaise.",
+            2400
+          ],
+          [
+            "Crab Benedict",
+            "Crab, Cherry tomato, Avocado, Parmesan and Hollandaise.",
+            3200
+          ],
+          [
+            "49er. Benedict",
+            "Smoked salmon, Avocado, Capers and Wasabi Hollandaise.",
+            2100
+          ]
+        ]
+      },
+      {
+        "name": "Pancakes & French Toast",
+        "items": [
+          [
+            "Sunrise French Toast",
+            "",
+            1600
+          ],
+          [
+            "Berry Lover Toast",
+            "Mixed berries mascarpone stuffed with Homemade strawberry sauce and Cornflake.",
+            2000
+          ],
+          [
+            "Buttermilk Pancake",
+            "",
+            1700
+          ],
+          [
+            "Choco Banana Butter Milk Pancake",
+            "Served with Homemade choco sauce, Caramelized banana and Almond.",
+            1900
+          ],
+          [
+            "Lemon Creme Anglaise Pancake",
+            "",
+            1900
+          ],
+          [
+            "Cha Thai Pancake",
+            "Thai tea pancake served with Homemade Thai Tea Sauce.",
+            1900
+          ],
+          [
+            "Ube Pancake",
+            "Purple yam pancake with Homemade purple yam sauce.",
+            1900
+          ],
+          [
+            "Classic Waffle",
+            "",
+            1600
+          ],
+          [
+            "Monster Hotcakes",
+            "1 French toast, 3 Pancakes (Butter milk, Cha thai, Ube), 2 Eggs, 3 Bacon or 3 Ham or 2 CK Apple or 2 Pork wine or 2 Fried chicken.",
+            3200
+          ]
+        ]
+      },
+      {
+        "name": "Salad",
+        "items": [
+          [
+            "Avocado Salad",
+            "Cherry tomato, Orange, Spring mix, Sliced almonds, Champagne vinaigrette.",
+            1600
+          ],
+          [
+            "Smoked Salmon Salad",
+            "Cherry tomato, Spring mix, Romaine, Pickled shallot, Capers and Wasabi dressing.",
+            2000
+          ],
+          [
+            "Crispy Chicken Salad",
+            "Crispy chicken, Avocado, Romaine, Cherry tomato, Pickled shallot, Parmesan and Sriracha dressing.",
+            2100
+          ]
+        ]
+      },
+      {
+        "name": "Kid’s Menu",
+        "items": [
+          [
+            "Butter milk Pancake with Mixed fruits",
+            "",
+            1200
+          ],
+          [
+            "Grilled cheese with fries",
+            "",
+            1200
+          ],
+          [
+            "One Scrambled Egg with Bacon, fries",
+            "",
+            1200
+          ],
+          [
+            "Fried Chicken & Fries",
+            "",
+            1200
+          ]
+        ]
+      },
+      {
+        "name": "Side",
+        "items": [
+          [
+            "Two Eggs",
+            "",
+            700
+          ],
+          [
+            "Chicken or Pork sausage",
+            "",
+            700
+          ],
+          [
+            "Avocado",
+            "",
+            400
+          ],
+          [
+            "Pancake",
+            "",
+            700
+          ],
+          [
+            "Potato",
+            "",
+            600
+          ],
+          [
+            "Crispy Chicken",
+            "",
+            1200
+          ],
+          [
+            "Toast (2)",
+            "",
+            500
+          ],
+          [
+            "Mixed fruits",
+            "",
+            600
+          ],
+          [
+            "Bacon",
+            "",
+            700
+          ],
+          [
+            "Ham",
+            "",
+            700
+          ],
+          [
+            "Homemade bacon jam",
+            "",
+            500
+          ],
+          [
+            "Hollandaise sauce",
+            "",
+            300
+          ],
+          [
+            "Waffle",
+            "",
+            800
+          ],
+          [
+            "Chocolate sauce, Lemon Creme Anglaise, Cha Thai sauce, Ube sauce",
+            "",
+            300
+          ]
+        ]
+      },
+      {
+        "name": "Coffee",
+        "items": [
+          [
+            "Coffee (Refill)",
+            "",
+            400
+          ],
+          [
+            "Latte",
+            "",
+            600
+          ],
+          [
+            "Caramel Macchiato",
+            "",
+            800
+          ],
+          [
+            "Dirty Chai",
+            "",
+            900
+          ],
+          [
+            "Dirty Matcha",
+            "",
+            900
+          ],
+          [
+            "Dirty Turmeric Latte",
+            "",
+            900
+          ],
+          [
+            "Dirty Violet Latte",
+            "(Butterfly pea with Lavender syrup)",
+            900
+          ],
+          [
+            "Ice White Mocha Caramel",
+            "",
+            800
+          ],
+          [
+            "Ice Black Tiger",
+            "(Black Sugar, Oat Milk)",
+            800
+          ],
+          [
+            "Espresso",
+            "",
+            400
+          ],
+          [
+            "Americano",
+            "",
+            400
+          ],
+          [
+            "Cappuccino",
+            "",
+            600
+          ],
+          [
+            "Mocha",
+            "",
+            700
+          ],
+          [
+            "Thai Tea Espresso",
+            "",
+            900
+          ],
+          [
+            "Ube Espresso",
+            "",
+            900
+          ]
+        ]
+      },
+      {
+        "name": "Drinks (without Coffee)",
+        "items": [
+          [
+            "Hot Chocolate",
+            "",
+            600
+          ],
+          [
+            "Matcha Latte",
+            "",
+            700
+          ],
+          [
+            "Chai Tea Latte",
+            "",
+            700
+          ],
+          [
+            "Turmeric Spice Latte",
+            "",
+            700
+          ],
+          [
+            "Butterfly Pea Latte (Lavender syrup)",
+            "",
+            700
+          ],
+          [
+            "Ube Latte (Purple Yam)",
+            "",
+            700
+          ],
+          [
+            "Black Sugar Matcha",
+            "",
+            700
+          ],
+          [
+            "Iced Strawberry Matcha",
+            "",
+            700
+          ],
+          [
+            "Tea (Tea taste)",
+            "English Breakfast, Earl Gray, Chamomile Citron Tea (Herbal tea) or Jasmine Green Tea.",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Beverages",
+        "items": [
+          [
+            "Coke / Diet Coke / Sprite",
+            "",
+            400
+          ],
+          [
+            "Apple juice",
+            "",
+            500
+          ],
+          [
+            "Cranberry juice",
+            "",
+            500
+          ],
+          [
+            "Fresh Squeezed Orange juice",
+            "",
+            700
+          ],
+          [
+            "Fresh Raspberry lemonade",
+            "",
+            600
+          ],
+          [
+            "Black Iced Tea (Refill)",
+            "",
+            600
+          ],
+          [
+            "Arnold Palmer",
+            "",
+            600
+          ],
+          [
+            "San Pellegrino",
+            "",
+            400
+          ],
+          [
+            "Thai Iced Tea",
+            "",
+            800
+          ],
+          [
+            "Nom Yen",
+            "Thai sala-flavored syrup and Milk topped with Whipped Cream.",
+            700
+          ],
+          [
+            "Sparkling Red",
+            "Thai sala cider flavored syrup and Soda water.",
+            700
+          ]
+        ]
+      }
+    ],
+    "orderUrl": "https://www.thehangoutbreakfast.com/menu?menu=pleasant-hill#1",
+    "clip": {
+      "src": "/clips/review-DQvcVxYiau3.mp4",
+      "poster": "/clips/review-DQvcVxYiau3-poster.webp",
+      "href": "https://www.instagram.com/reel/DQvcVxYiau3/",
+      "credit": "Published by @thehangoutbayarea. The business’s own film, requested behind its logo.",
+      "platform": "Instagram"
+    },
+    "siteNote": "Prices and options are from the owner’s separate Pleasant Hill menu, not transferred from Walnut Creek. Cocktail/beer/wine sections and alcoholic Fresh Morning drinks are omitted. The owner’s promotional film represents the chain; it does not identify a filming branch.",
+    "panels": [
+      {
+        "head": "Two Hangout locations",
+        "body": [
+          "Pleasant Hill: 2217 Morello Ave · (925) 671-9925 · daily 8am–3pm. Walnut Creek: 1908 Tice Valley Blvd, Suite A · (925) 546-3122 · weekdays 8am–2:30pm, weekends 8am–3pm."
+        ],
+        "links": [
+          {
+            "label": "Pleasant Hill menu",
+            "href": "https://www.thehangoutbreakfast.com/menu?menu=pleasant-hill#1"
+          },
+          {
+            "label": "Walnut Creek menu",
+            "href": "https://www.thehangoutbreakfast.com/menu"
           }
         ]
       }

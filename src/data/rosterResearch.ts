@@ -23068,87 +23068,591 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       {"src":"/food/the-hangout-breakfast-site-2-lg.webp","alt":"Walnut Creek","credit":"Their own photo, from thehangoutbreakfast.com"},
     ],
     sections: [
-      { name: "Menu", items: [
-        ["Loco Moco","Beef patty & rice, bell, mushroom, onion, fried egg and curry & gravy sauce mixed",2300],
-        ["Gai Gra Prow","Ground chicken, basil, onion, bell, garlic, pepper, and fried egg over rice.",2200],
-        ["Chick Pops","Crispy fried chicken and bite waffle",1400,"the-hangout-breakfast-chick-pops"],
-        ["Ube Pancake","Fluffy purple yam pancakes topped with fresh strawberries, blueberries, and grapes, served with a side of ube sauce.",2000],
-        ["SIDE Bacon","Crispy, savory bacon strips, perfectly rendered for a delicious crunch.",700],
-        ["The Hangout Omelet","Bacon, avocado, tomato, Cheddar, and homemade bacon jam",2600],
-        ["Sausage Scramble","CK apple sausage, spinach, onion, and Cheddar cheese",2300],
-        ["Side Two Eggs","Choice of two eggs: Up, Over Easy, Over Medium, Over Hard, Poached, Poached Medium, Poached Hard, Scrambled, Egg Whites, or No Egg.",700],
-        ["Buttermilk Pancake","Fluffy buttermilk pancakes topped with fresh strawberries, blueberries, grapes, a dollop of butter, and a dusting of powdered sugar. Syrup served on the side.",1800],
-        ["Garlic Noodles","Garlic Noodles Green onion, Parmesan cheese Choice of meat Crispy Chicken or Tiger prawns",2300],
-        ["Chicken & Waffle","Served with homemade spicy maple syrup",2500],
-        ["Side Pancake","A single pancake, often served as a delightful complement to any meal.",700],
-        ["Salmon Avocado Toast","Cherry tomato, pickled shallot, and caper",1700,"the-hangout-breakfast-salmon-avocado-toast"],
-        ["Avocado Toast","Strawberries, basil, and fresh mozzarella",1500,"the-hangout-breakfast-avocado-toast"],
-        ["Morning Poutine","Fries, bacon, fried egg, Pepper Jack cheese, curry & gravy sauce mixed",1400],
-        ["Mixed Berries Parfait","Greek yogurt, granola, almond, and mixed berries",1200],
-        ["Rosemary Fries","Crispy potato wedges seasoned with fresh rosemary.",900],
-        ["Healthy Pig","Brussels sprouts, Parmesan, and bacon jam",1300],
-        ["Two Eggs Any Style","Variety of styles. Accompanied by a choice of crispy potato, fries, mixed greens, or mixed fruits. Select wheat toast, ciabatta, English muffin",1600],
-        ["Western Scramble","Bacon, avocado, tomato, Cheddar, homemade bacon jam",2300],
-        ["Italian Piggy Scramble","Pork wine sausage, cherry tomato, onion, scallion, cheddar",2300],
-        ["Trio Scramble","Bacon, CK apple sausage, pork wine sausage, basil, and Cheddar cheese",2400],
-        ["Farmer Scramble","Tofu, baby kale, onion, mushroom, tomato and bell pepper",2100],
-        ["Under the Sea Omelet","Smoked salmon, crab, tiger prawn, bacon, bell pepper, and Pepper Jack",3300],
-        ["Crab Benedict","Crab, cherry tomato, avocado, Parmesan, and hollandaise",3300],
-        ["Flying Pig Benedict","Bacon, baby kale, tomato, avocado, and hollandaise",2200],
-        ["49Er Benedict","Smoked salmon, avocado, capers, and wasabi hollandaise",2200],
-        ["Black Forest Benedict","Black Forest Ham, tomato, asparagus , hollandaise",2200],
-        ["Sausage Benedict","CK apple sausage, bell, onion, and spicy hollandaise",2200],
-        ["Crispy Chicken Benedict","Cherry tomato, red bell pepper, onion, and spicy hollandaise",2500],
-        ["Florentine Benedict","Sautéed spinach, tomato, Parmesan, and hollandaise",2000],
-        ["Hangover","Stir-fried Italian noodle, basil, bell, onion, mushroom, CK apple, bacon, and fried egg",2200,"the-hangout-breakfast-hangover"],
-        ["Chick Katsu Curry","Crispy chicken & rice, fried Yukon, fried egg and curry & gravy sauce mixed",2400],
-        ["Choco Banana Pancake","Served with homemade chocolate sauce and almond",2000],
-        ["Monster Hotcakes","1 French toast , 3 Pancakes, 2 Eggs, 3 Bacon, or Ham, or 2 Chicken apple, or GarlicPork wine",3300],
-        ["Lemon Creme Anglaise Pancake","Served with homemade lemon cream anglaise",2000],
-        ["Classic Waffle","Golden waffle topped with fresh strawberries, blueberries, grapes, orange slices, and a sprig of rosemary, lightly dusted with powdered sugar",1700],
-        ["Sunrise French Toast","Thick slices of French toast topped with assorted fresh berries, grapes, and orange slices, dusted with powdered sugar.",1700],
-        ["Cha Thai Pancake","Served with homemade Thai tea sauce",2000],
-        ["Berries Lover Toast","Mixed berries mascarpone stuffed with homemade strawberry sauce and cornflake",2100],
-        ["California Burger","Beef patty, romaine, avocado, tomato, Cheddar, and bacon jam",2100],
-        ["Terriyaki chicken burger","Crispy potato, French fries, mixed greens, mixed fruits, or no side.",2100],
-        ["Fat Boy Burger","Beef patty, bacon, fried egg, fried onion, pickled ginger, and Pepper Jack",2200],
-        ["Rainbow Burger","Bell peppers, avocado, romaine, and tomato",1800],
-        ["Chicken Burger","Crispy CK, tomato, and spring mix",2100],
-        ["Ultimate Bacon Burger","Beef patty, romaine, avocado, tomato, Cheddar, and bacon jam",2200],
-        ["BLT","Bacon, romaine, tomato, and Pepper Jack",1800],
-        ["Ham cheese Sandwich","Wheat toast, Bacon, eggs, and Cheddar",1800],
-        ["BEC","Bacon, eggs, and Cheddar",1800],
-        ["Smoked Salmon Salad","Cherry tomato, spring mix, romaine, pickled shallot, caper, and wasabi dressing",2100],
-        ["Avocado Salad","Cherry tomato, baby kale, orange, spring mix, slice almond, and champagne vinaigrette",1700],
-        ["Crispy Chicken Salad","Crispy CK, avocado, romaine, cherry tomato, pickled shallot, Parmesan, and sriracha dressing",2200],
-        ["Grilled Cheese with Fries","Cheese sandwich served with fries. Choice of drink: Apple Juice or Milk.",1300],
-        ["KID Pancake","Pancake with choice of Apple Juice or Milk.",1300],
-        ["KID Scrambled","Scrambled eggs. Option of Apple Juice or Milk.",1300],
-        ["Side Toast","Choice of wheat, ciabatta, English muffin, or gluten-free toast.",500],
-        ["SIDE Potato","Potatoes prepared in a style complementary to American cuisine, typically seasoned and served as a simple yet satisfying accompaniment.",600],
-        ["Side Pork Sausage","Pork sausage, typically prepared and served as a side dish, offering a simple yet satisfying complement to any meal.",700],
-        ["SIDE Waffle","A single Belgian-style waffle, typically served with honey butter and maple syrup.",800],
-        ["Side Crispy Chicken","Boneless chicken pieces, seasoned and deep fried for a crispy finish.",1200],
-        ["Side Patty","Rare, Medium Rare, Medium, Medium Well, or Well Done.",900],
-        ["Side Salmon","This dish features a carefully prepared portion of salmon, typically seasoned and cooked to enhance its natural flavors.",700],
-        ["Side Ham","Side portion of sliced ham, typically served as an accompaniment.",700],
-        ["Side Curry","Aromatic spices combined to create a rich, savory curry sauce, typically served as a complement to main dishes.",500],
-        ["Mixed Fruits","A medley of fresh-cut fruits, typically including strawberries, kiwi, oranges, and blackberries, offering a refreshing complement to any meal.",600],
-        ["Side Salad","Fresh Green Salad: A Crisp, Refreshing Side Dish",500],
-        ["Side Banana","A freshly sourced banana, typically served as a light and simple complement to any meal.",500],
-        ["Homemade Bacon Jam","A savory blend of slow-cooked bacon, caramelized onions, and a hint of sweetness, typically spread on toast or used to enhance dishes.",500],
-        ["Side CK Apple","Sliced apples, typically served as a simple, refreshing accompaniment.",700],
-        ["Side 1 Eggs","Sunny-side up, over easy, medium, hard, poached, scrambled, whites only, or none.",350],
-        ["Side Strawberry sauce","A sweet and tangy sauce made with fresh strawberries, typically served as a complement to desserts or as a flavorful addition to various dishes.",300],
-        ["SIDE Thai Tea Sauce","Inspired by the aromatic and refreshing qualities of Thai tea, this sauce combines its creamy sweetness with a hint of spice, perfect for enhancing any dish.",300],
-        ["SIDE Chocolate Sauce","Rich and velvety chocolate sauce, often served to complement a variety of desserts.",300],
-        ["Side Rice","Seasoned steamed grains, perfect as a side.",400],
-        ["Avocado","Fresh and creamy fruit with a rich taste, perfect for adding a touch of luxury to any dish.",400,"the-hangout-breakfast-avocado"],
-        ["Side Ube Sauce","A vibrant, sweet sauce made from purple yam, often enhancing desserts or adding a unique twist to savory dishes.",300],
-        ["Side Hollandaise","A velvety blend of butter, egg yolks, and lemon juice, often complemented with a hint of dijon mustard for a smooth and rich taste.",300],
-        ["SIDE Lemon Sauce","A tangy accompaniment made with fresh lemon juice, typically includes a blend of herbs and spices to enhance its flavor.",300],
-        ["Ube Espresso","Dirty ube combines the unique taste of ube (purple yam) with the boldness of espresso, typically served as a warm beverage.",900],
-      ] },
+      {
+        "name": "Bites",
+        "items": [
+          [
+            "Avocado Toast",
+            "Strawberries, Basil, Fresh mozzarella and Mixed greens. (Add $3 for Egg)",
+            1400
+          ],
+          [
+            "Salmon Avocado Toast",
+            "Cherry Tomato, Pickled shallot, Capers and Mixed greens. (Add $3 for Egg)",
+            1600
+          ],
+          [
+            "Fries with Rosemary",
+            "",
+            800
+          ],
+          [
+            "Chick Pops",
+            "Crispy Fried Chicken and Bite Waffle.",
+            1300
+          ],
+          [
+            "Mixed Berries Parfait",
+            "Greek Yogurt, Granola, Almond and Mixed berries.",
+            1100
+          ],
+          [
+            "Morning Poutine",
+            "Fries, Bacon, Fried egg, Pepper jack cheese and Curry & gravy sauce mixed.",
+            1300
+          ],
+          [
+            "Healthy Pig",
+            "Brussels sprouts, Parmesan and Bacon jam.",
+            1200
+          ],
+          [
+            "Boneless Fried Chicken & Fries",
+            "Served with Spicy mayo and Pickles.",
+            1800
+          ]
+        ]
+      },
+      {
+        "name": "Egg Any Style",
+        "items": [
+          [
+            "Two Eggs Any Style",
+            "",
+            1500
+          ],
+          [
+            "Two Eggs Add 3 Bacon or 3 Ham or 2 CK Apple or 2 Pork Wine or 1 Fried Chicken",
+            "",
+            2000
+          ]
+        ]
+      },
+      {
+        "name": "Scramble & Omelettes",
+        "items": [
+          [
+            "The Hangout Omelette",
+            "Bacon, Avocado, Tomato, Cheddar and Homemade bacon jam.",
+            2500
+          ],
+          [
+            "Western Scramble",
+            "Black forest ham, Scallion, Cheddar and Homemade bacon jam.",
+            2200
+          ],
+          [
+            "Sausage Scramble",
+            "CK Apple sausage, Spinach, Onion and Cheddar cheese.",
+            2200
+          ],
+          [
+            "Italian Piggy Scramble",
+            "Pork wine sausage, Cherry tomato, Onion, Scallion and Cheddar cheese.",
+            2200
+          ],
+          [
+            "Farmer Scramble (V) (Tofu) (No Eggs)",
+            "Tofu, Baby kale, Onion, Mushroom, Tomato and Bell pepper.",
+            2000
+          ],
+          [
+            "Trio Scramble",
+            "Bacon, CK Apple sausage, Pork wine sausage, Basil and Cheddar cheese.",
+            2300
+          ],
+          [
+            "Under the Sea Omelet",
+            "Smoked salmon, Crab, Tiger prawn, Bacon, Bell pepper and Pepper jack.",
+            3200
+          ]
+        ]
+      },
+      {
+        "name": "Between Bread & Bun",
+        "items": [
+          [
+            "BEC (Ciabatta)",
+            "Bacon, Eggs and Cheddar.",
+            1700
+          ],
+          [
+            "BLT (Ciabatta)",
+            "Bacon, Romaine, Tomato and Pepper jack.",
+            1700
+          ],
+          [
+            "Ham Cheese (Wheat)",
+            "Ham, Romaine, Tomato and Cheddar.",
+            1700
+          ],
+          [
+            "Rainbow Impossible Burger (V) (Brioche Bun)",
+            "Bell pepper, Avocado, Romaine and Tomato.",
+            1700
+          ],
+          [
+            "California Burger (Brioche Bun)",
+            "Beef patty, Romaine, Avocado, Tomato, Cheddar and Bacon jam.",
+            2000
+          ],
+          [
+            "Crispy Chicken Burger (Brioche Bun)",
+            "Crispy chicken, Tomato and Spring mix.",
+            2000
+          ],
+          [
+            "Fat Boy Burger (Brioche Bun)",
+            "(Wasabi spread) Beef patty, Bacon, Fried egg, Fried onion, Pickled ginger and Pepper jack.",
+            2100
+          ],
+          [
+            "Ultimate Bacon Burger (Brioche Bun)",
+            "Beef patty, Bacon, Tomato, Cheddar and Bacon jam.",
+            2000
+          ],
+          [
+            "Teriyaki Chicken Burger (Brioche Bun)",
+            "Grilled chicken, Pineapple and Teriyaki sauce.",
+            2000
+          ]
+        ]
+      },
+      {
+        "name": "The Hangout’s Specialty",
+        "items": [
+          [
+            "Hangover",
+            "Stir fried Italian noodle, Basil, Bell pepper, Onion, Mushroom, CK Apple, Bacon and Fried egg",
+            2200
+          ],
+          [
+            "Garlic Noodle with Crispy Chicken",
+            "Stir fried spaghetti, Garlic, Scallion and Parmesan. (Add $5 to substitute 8 Tiger prawns, Add $3 for Egg)",
+            2300
+          ],
+          [
+            "Loco Moco",
+            "Beef patty & rice, Bell Pepper, Mushroom, Onion, Fried egg and Curry & gravy sauce mixed.",
+            2300
+          ],
+          [
+            "Chick Katsu Curry",
+            "Crispy Chicken & rice, Fried Yukon, Fried egg and Curry & gravy sauce mixed.",
+            2300
+          ],
+          [
+            "Gai Gra Prow",
+            "Grounded Chicken, Basil, Onion, Bell pepper, Garlic, pepper and Fried egg over Rice. (Add $5 to substitute 8 Tiger prawns)",
+            2200
+          ],
+          [
+            "Crispy Chicken & Waffle",
+            "Crispy chicken over Belgian waffle served with Homemade spicy maple syrup.",
+            2400
+          ]
+        ]
+      },
+      {
+        "name": "Poached Eggs Benedict",
+        "items": [
+          [
+            "Florentine Benedict",
+            "Sauteed spinach, Tomato, Parmesan and Hollandaise.",
+            1900
+          ],
+          [
+            "Flying Pig Benedict",
+            "Bacon, Baby kale, Tomato, Avocado and Hollandaise.",
+            2100
+          ],
+          [
+            "Black Forest Benedict",
+            "Black Forest ham, Tomato, Asparagus and Hollandaise.",
+            2100
+          ],
+          [
+            "Sausage Benedict",
+            "CK Apple sausage, Bell pepper, Onion and Spicy Hollandaise.",
+            2100
+          ],
+          [
+            "Piggy Benedict",
+            "Pork wine sausage, green onion and Hollandaise.",
+            2100
+          ],
+          [
+            "Crispy Chicken Benedict",
+            "Crispy chicken, Cherry tomato, Red bell pepper, Onion and Spicy Hollandaise.",
+            2400
+          ],
+          [
+            "Crab Benedict",
+            "Crab, Cherry tomato, Avocado, Parmesan and Hollandaise.",
+            3200
+          ],
+          [
+            "49er Benedict",
+            "Smoked salmon, Avocado, Capers and Wasabi Hollandaise.",
+            2100
+          ]
+        ]
+      },
+      {
+        "name": "Pancakes & French Toast",
+        "items": [
+          [
+            "Sunrise French Toast",
+            "",
+            1600
+          ],
+          [
+            "Berry Lover Toast",
+            "Mixed berries mascarpone stuffed with Homemade strawberry sauce and Cornflake.",
+            2000
+          ],
+          [
+            "Buttermilk Pancake",
+            "",
+            1700
+          ],
+          [
+            "Choco Banana Butter Milk Pancake",
+            "Served with Homemade choco sauce, Caramelized banana and Almond.",
+            1900
+          ],
+          [
+            "Lemon Creme Anglaise Pancake",
+            "",
+            1900
+          ],
+          [
+            "Cha Thai Pancake",
+            "Thai tea pancake served with Homemade Thai Tea Sauce.",
+            1900
+          ],
+          [
+            "Ube Pancake",
+            "Purple yam pancake with Homemade purple yam sauce.",
+            1900
+          ],
+          [
+            "Classic Waffle",
+            "",
+            1600
+          ],
+          [
+            "Monster Hotcakes",
+            "1 French toast, 3 Pancakes (Butter milk, Cha thai, Ube), 2 Eggs, 3 Bacon or 3 Ham or 2 CK Apple or 2 Pork wine or 2 Fried chicken",
+            3200
+          ]
+        ]
+      },
+      {
+        "name": "Salad",
+        "items": [
+          [
+            "Avocado Salad",
+            "Cherry tomato, Orange, Spring mix, Sliced almonds, Champagne vinaigrette.",
+            1600
+          ],
+          [
+            "Smoked Salmon Salad",
+            "Cherry tomato, Spring mix, Romaine, Pickled shallot, Capers and Wasabi dressing.",
+            2000
+          ],
+          [
+            "Crispy Chicken Salad",
+            "Crispy chicken, Avocado, Romaine, Cherry tomato, Pickled shallot, Parmesan and Sriracha dressing.",
+            2100
+          ]
+        ]
+      },
+      {
+        "name": "Kid’s Menu",
+        "items": [
+          [
+            "Butter milk Pancake with Mixed fruits",
+            "",
+            1200
+          ],
+          [
+            "Grilled cheese with fries",
+            "",
+            1200
+          ],
+          [
+            "One Scrambled Egg with Bacon, fries",
+            "",
+            1200
+          ],
+          [
+            "Fried Chicken & Fries",
+            "",
+            1200
+          ]
+        ]
+      },
+      {
+        "name": "Side",
+        "items": [
+          [
+            "Two Eggs",
+            "",
+            700
+          ],
+          [
+            "Chicken or Pork sausage",
+            "",
+            700
+          ],
+          [
+            "Avocado",
+            "",
+            400
+          ],
+          [
+            "Pancake",
+            "",
+            700
+          ],
+          [
+            "Potato",
+            "",
+            600
+          ],
+          [
+            "Crispy Chicken",
+            "",
+            1200
+          ],
+          [
+            "Toast (2)",
+            "",
+            500
+          ],
+          [
+            "Mixed fruits",
+            "",
+            600
+          ],
+          [
+            "Bacon / Ham",
+            "",
+            700
+          ],
+          [
+            "Homemade bacon jam",
+            "",
+            500
+          ],
+          [
+            "Hollandaise sauce",
+            "",
+            300
+          ],
+          [
+            "Waffle",
+            "",
+            800
+          ],
+          [
+            "Chocolate sauce, Lemon Creme Anglaise, Cha Thai sauce or Ube sauce",
+            "",
+            300
+          ]
+        ]
+      },
+      {
+        "name": "Coffee",
+        "items": [
+          [
+            "Coffee (Refill)",
+            "",
+            400
+          ],
+          [
+            "Latte",
+            "",
+            600
+          ],
+          [
+            "Caramel Macchiato",
+            "",
+            800
+          ],
+          [
+            "Dirty Chai",
+            "",
+            900
+          ],
+          [
+            "Dirty Matcha",
+            "",
+            900
+          ],
+          [
+            "Dirty Turmeric Latte",
+            "",
+            900
+          ],
+          [
+            "Dirty Violet Latte (Butterfly pea with Lavender syrup)",
+            "",
+            900
+          ],
+          [
+            "Ice White Mocha Caramel",
+            "",
+            800
+          ],
+          [
+            "Ice Black Tiger (Black Sugar, Oat Milk)",
+            "",
+            800
+          ],
+          [
+            "Espresso",
+            "",
+            400
+          ],
+          [
+            "Americano",
+            "",
+            400
+          ],
+          [
+            "Cappuccino",
+            "",
+            600
+          ],
+          [
+            "Mocha",
+            "",
+            700
+          ],
+          [
+            "Thai Tea Espresso",
+            "",
+            900
+          ],
+          [
+            "Ube Espresso",
+            "",
+            900
+          ]
+        ]
+      },
+      {
+        "name": "Drinks (without Coffee)",
+        "items": [
+          [
+            "Hot Chocolate",
+            "",
+            600
+          ],
+          [
+            "Matcha Latte",
+            "",
+            700
+          ],
+          [
+            "Chai Tea Latte",
+            "",
+            700
+          ],
+          [
+            "Turmeric Spice Latte",
+            "",
+            700
+          ],
+          [
+            "Butterfly Pea Latte (Lavender syrup)",
+            "",
+            700
+          ],
+          [
+            "Ube Latte (Purple Yam)",
+            "",
+            700
+          ],
+          [
+            "Black Sugar Matcha",
+            "",
+            700
+          ],
+          [
+            "Iced Strawberry Matcha",
+            "",
+            700
+          ],
+          [
+            "Tea (Tea taste)",
+            "English Breakfast, Earl Gray, Chamomile Citron Tea (Herbal tea) or Jasmine Green Tea.",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Beverages",
+        "items": [
+          [
+            "Coke / Diet Coke / Sprite",
+            "",
+            400
+          ],
+          [
+            "Apple juice",
+            "",
+            500
+          ],
+          [
+            "Cranberry juice",
+            "",
+            500
+          ],
+          [
+            "Fresh Squeezed Orange juice",
+            "",
+            700
+          ],
+          [
+            "Fresh Raspberry lemonade",
+            "",
+            600
+          ],
+          [
+            "Black Iced Tea (Refill)",
+            "",
+            600
+          ],
+          [
+            "Arnold Palmer",
+            "",
+            600
+          ],
+          [
+            "San Pellegrino",
+            "",
+            400
+          ],
+          [
+            "Thai Iced Tea",
+            "",
+            800
+          ],
+          [
+            "Nom Yen",
+            "Thai sala-flavored syrup and Milk topped with Whipped Cream.",
+            700
+          ],
+          [
+            "Sparkling Red",
+            "Thai sala cider flavored syrup and Soda water.",
+            700
+          ]
+        ]
+      }
     ],
     siteNote: "Prices and photos are from their own site.",
   },

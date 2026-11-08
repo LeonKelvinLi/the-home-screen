@@ -190,6 +190,7 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   // Glenn, November 5: Bay Area Crumbs opens Cookies.
   { kind: 'cookies', heading: 'Cookies', about: 'Cookie shops and cookie bakers', wall: wall('bakery'), test: /cookies?/i },
   { kind: 'ceviche', heading: 'Ceviche', about: 'Ceviche, aguachile and cevicherias', wall: wall('sushi'), test: /cevich|cebich/i },
+  { kind: 'massage', heading: 'Massage/Therapy', about: 'Massage therapists and bodywork', wall: wall('health'), test: /massage|bodywork/i },
 ]
 
 /** Every category page holds his twenty-four. */

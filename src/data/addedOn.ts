@@ -1191,4 +1191,12 @@ export const ADDED_ON: Record<string, string> = {
   // Batch 106
   b_hansangtofumilpitas: '2026-11-07',
   b_waterfallcevicheriasf: '2026-11-07',
+
+  // Batch 107
+  b_siamorchidwalnutcreek: '2026-11-08',
+  b_siamorchidsfpolk: '2026-11-08',
+  b_siamorchidsftaylor: '2026-11-08',
+  b_themeatwagon: '2026-11-08',
+  b_creolecaviar: '2026-11-08',
+  b_thehangoutpleasanthill: '2026-11-08',
 }
