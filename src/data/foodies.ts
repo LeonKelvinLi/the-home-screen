@@ -2237,7 +2237,7 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "habibimocha", "place": "MT Music BBQ & Bar", "city": "Richmond", "brand": "b_mtmusicrichmond", "reel": "https://www.instagram.com/reel/DfaOWE2OSUf/", "clip": true, "credit": "Posted by @habibimocha at MT Music BBQ & Bar, Richmond."},
   {"by": "thekhaysie", "place": "MT Music BBQ & Bar", "city": "Richmond", "brand": "b_mtmusicrichmond", "reel": "https://www.instagram.com/reel/DfQjK8pCKBQ/", "clip": true, "credit": "Posted by @thekhaysie at MT Music BBQ & Bar, Richmond."},
   {"by": "wthellydanyelly", "place": "MT Music BBQ & Bar", "city": "Richmond", "brand": "b_mtmusicrichmond", "reel": "https://www.instagram.com/reel/DecEKVBt1Kg/", "clip": true, "credit": "Posted by @wthellydanyelly at MT Music BBQ & Bar, Richmond."},
-  {"by": "lisaaaaletseat", "place": "Noka Ramen", "city": "Oakland", "reel": "https://www.instagram.com/reel/Dfcqyhzxh_9/", "clip": true, "credit": "Noka Ramen review posted by @lisaaaaletseat. The restaurant has no existing BEASTY business page; this requested review plays on the creator page and Watch."},
+  {"by": "lisaaaaletseat", "place": "NōKA Ramen & Bar", "city": "Oakland", "brand": "b_nokaramen", "reel": "https://www.instagram.com/reel/Dfcqyhzxh_9/", "clip": true, "credit": "Filmed by @lisaaaaletseat at NōKA Ramen & Bar in Oakland."},
 
   {"by": "martiebautista", "place": "Ace King BBQ", "city": "Newark", "brand": "b_acekingbbq", "reel": "https://www.instagram.com/reel/DfYiyfCxYxs/", "clip": "creator", "credit": "Filmed by @martiebautista at Ace King BBQ in Newark. Plays on the creator page and Watch; the business retains its four existing films."},
 ]

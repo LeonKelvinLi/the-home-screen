@@ -44,6 +44,7 @@ export async function auditBatch(number) {
     assert(!reviewsOf('b_seriousdumpling').some(r => r.href.includes('DQKo2NEEipZ')))
   }
   if (number === 105) {
+    assert(reviewsOf('b_nokaramen').some(r => r.href.includes('Dfcqyhzxh_9') && r.src))
     assert.equal(brandById('b_pakusf').needsSite, true)
     assert.equal(brandById('b_saladmakers').logo.imageUrl, '/icons/salad-makers-v105.webp')
     assert.equal(brandById('b_classycanines').logo.imageUrl, '/icons/classy-canines-v105.webp')
