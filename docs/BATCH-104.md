@@ -12,4 +12,4 @@ Source ledger: [batch research](../research/roster/batch104.json), [coverage](..
 
 ## Verification
 
-Build and data audit pass with zero errors. Local Chrome and iPhone WebKit audits pass all new pages, menus, city/category seats, exact artwork, muted playback and phone-width overflow checks. All pre-existing non-foodie seats remain unchanged. Production results will be recorded after deployment.
+Build and data audit pass with zero errors. Local Chrome and iPhone WebKit audits pass all new pages, menus, city/category seats, exact artwork, muted playback and phone-width overflow checks. All pre-existing non-foodie seats remain unchanged. Production Chrome and iPhone WebKit audits both pass. Exact serving revision, archive/media checks and the completed historical audit are recorded in [November 8 verification](GLENN-COVERAGE-2026-11-08.md).

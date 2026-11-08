@@ -1,0 +1,103 @@
+{
+  "base": "https://beastypages.com",
+  "messagesThrough": "2026-11-08T10:56:36.444130-08:00",
+  "catalogRelease": {
+    "commit": "2d74245189a5d5851ae186331826157decf82561",
+    "deploy": "dep-dbocpddg1s2s738dbs2g",
+    "providerFinishedAt": "2026-11-08T19:34:46.011046Z",
+    "publicReadyAt": "2026-11-08T19:34:58.504618+00:00",
+    "entry": "/assets/index-2pfZ0XYE.js",
+    "health": {
+      "ok": true
+    }
+  },
+  "historicalAudit": {
+    "command": "node tools/live-verify.mjs",
+    "skippedRoster": false,
+    "historicalBusinessPages": 239,
+    "name": "full-live",
+    "exit": 0,
+    "finishedAt": "2026-11-08T19:49:03.334236+00:00"
+  },
+  "archive": {
+    "uniqueInstagramIds": 826,
+    "matched": 775,
+    "olderDocumentedExceptions": 49,
+    "withdrawnOrSuperseded": 2,
+    "activeNewSources": 100,
+    "exactIconHashes": 82,
+    "exactPosterHashes": 100,
+    "watchFiles": 730
+  },
+  "visibleChrome": {
+    "widths": [
+      393,
+      320
+    ],
+    "greenEntry": "passed",
+    "BipAndClosedSearch": "passed",
+    "SiamMenu39": "passed",
+    "MeatMenu45AndMutedHero": "passed",
+    "HangoutPleasantHill105AndWalnutCreek104": "passed",
+    "BrunchBloom60AndNewMutedHero": "passed",
+    "QPotOwnMutedHero": "passed",
+    "CreoleContactAndLogo": "passed",
+    "LoCocoCompleteLogoAndMutedHero": "passed",
+    "overflow": false,
+    "videoSound": "muted",
+    "consoleErrors": [],
+    "temporaryViewportReset": true,
+    "ownedTabsClosed": true
+  },
+  "servicePriceListFollowup": {
+    "commit": "6fb27c8d2eaf875ba52f1393becea2d94d362f50",
+    "deploy": "dep-dbod31o473hc73ag7asg",
+    "status": "live",
+    "providerFinishedAt": "2026-11-08T19:54:50.603903Z",
+    "readyAt": "2026-11-08T19:55:06.138805+00:00",
+    "previousEntry": "/assets/index-2pfZ0XYE.js",
+    "entry": "/assets/index-JZwjyIia.js",
+    "health": {
+      "ok": true
+    },
+    "readOnlyRowsPerBranch": 39,
+    "orderingButtons": 0,
+    "directBookingLinks": true,
+    "visibleChromeWidths": [
+      393,
+      320
+    ],
+    "visibleChromePassed": true
+  },
+  "schemaVersion": 1,
+  "completedChecks": [
+    {
+      "name": "final-live-chrome",
+      "exit": 0,
+      "finishedAt": "2026-11-08T19:56:45.076162+00:00"
+    },
+    {
+      "name": "final-live-webkit",
+      "exit": 0,
+      "finishedAt": "2026-11-08T19:59:48.912832+00:00"
+    },
+    {
+      "name": "final-archive",
+      "exit": 0,
+      "finishedAt": "2026-11-08T19:55:27.815213+00:00"
+    },
+    {
+      "name": "final-price-and-regression",
+      "exit": 0,
+      "finishedAt": "2026-11-08T19:56:48.634777+00:00"
+    }
+  ],
+  "webKitRetry": "The first final full-batch WebKit run timed out navigating to Search after its film checks, without a JavaScript error or crash. The full rerun and all 16 iPhone entry checks passed.",
+  "lastMessagesRefetchAt": "2026-11-08T19:56:17.704435+00:00",
+  "checkScopes": {
+    "final-live-chrome": "BASE=https://beastypages.com ALL_REELS=1 node tools/audit-batch107.mjs",
+    "final-live-webkit": "BASE=https://beastypages.com BROWSER=webkit node tools/audit-batch107.mjs; node tools/audit-iphone-entry.mjs",
+    "final-archive": "Fresh compiled-bundle reconciliation of every archived Instagram ID; SHA-256 checks of all updated artwork/posters.",
+    "final-price-and-regression": "All three read-only service price lists and booking/contact links in Chrome and iPhone WebKit, then node tools/live-verify.mjs --skip-roster."
+  }
+}

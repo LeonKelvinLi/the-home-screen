@@ -12,4 +12,4 @@ Sushi Uma, SupTea Lab and Quickly Benicia receive their supplied logos. Hansang 
 
 ## Verification
 
-Build and data audit pass with zero errors. Both local Chrome and iPhone WebKit audits pass the two pages, all menus, thirteen silent films, ten exact artwork files, city/category seats, BIP header, removal from active search, hero-film placement and 393/320-pixel overflow checks. Every pre-existing logical seat is unchanged. Production evidence will be recorded after deployment.
+Build and data audit pass with zero errors. Both local Chrome and iPhone WebKit audits pass the two pages, all menus, thirteen silent films, ten exact artwork files, city/category seats, BIP header, removal from active search, hero-film placement and 393/320-pixel overflow checks. Every pre-existing logical seat is unchanged. Production Chrome and iPhone WebKit audits both pass, including the BIP header and closed-listing search check. Exact release and historical-audit evidence is recorded in [November 8 verification](GLENN-COVERAGE-2026-11-08.md).
