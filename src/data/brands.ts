@@ -786,7 +786,7 @@ const SEED: Seed[] = [
     siteNote:
       'Their links also live at linktr.ee/veganmob1. Their own site gives two other addresses — 9 Grand Ave, Oakland and 1199 El Camino Real, San Bruno — so it is worth asking which room is open.',
     cuisine: 'Plant-based BBQ', tagline: 'Plant-based BBQ and soul food',
-    color: '#3C9D3C', icon: 'vegan-mob', prep: 16, category: 'Menu',
+    color: '#3C9D3C', icon: 'vegan-mob-v105', prep: 16, category: 'Menu',
     items: [
       ['Mob Plate', 'Their published price, from', 2530],
       ['Combo Plate', 'Their published price', 4400],

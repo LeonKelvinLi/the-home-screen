@@ -21,6 +21,7 @@ export async function auditBatch(number) {
   const { reviewsBy, reviewsOf, pageOfFoodie } = await tsImport('../src/data/foodieIndex.ts', import.meta.url)
   const { REELS } = await tsImport('../src/data/clips.ts', import.meta.url)
   for (const [seat, id] of Object.entries(batch.placements)) assert.equal(ALL_PLACEMENTS[seat], id, seat)
+  for (const [seat, id] of Object.entries(batch.removedPlacements ?? {})) assert.notEqual(ALL_PLACEMENTS[seat], id, seat)
   const active = batch.posts.filter(p => p.slug)
   for (const p of active) assert.equal(REELS.filter(r => r.href === p.source).length, 1, p.code)
   assert.equal(REELS.filter(r => r.href?.includes('DTnoBTMES1u')).length, 0)
@@ -32,13 +33,21 @@ export async function auditBatch(number) {
   if (number === 103) {
     assert.equal(ALL_PLACEMENTS['beasty-foodies-0'], 'b_foodieronniebanks')
     assert.equal(ALL_PLACEMENTS['beasty-foodies-1'], 'b_foodiemsashleyvee')
-    for (const [i, f] of batch.foodieOrder.entries()) assert.equal(ALL_PLACEMENTS[i < 24 ? 'beasty-foodies-' + i : 'beasty-foodies2-' + (i - 24)], f.brand)
+    // Later batches may promote newly tagged heavy hitters within the overflow.
+    for (const [i, f] of batch.foodieOrder.slice(0, 24).entries()) assert.equal(ALL_PLACEMENTS['beasty-foodies-' + i], f.brand)
+    for (const f of batch.foodieOrder) assert(brandById(f.brand), f.handle)
     const shared = reviewsBy('msashleyvee')
     assert.equal(shared.length, 2)
     assert(shared.every(r => r.by === 'mr.gaoviet' && r.src && r.credit.includes('@msashleyvee')))
     assert.equal(brandById('b_cajuncrackn').logo.imageUrl, '/icons/cajun-crackn-v103.webp')
     assert(reviewsOf('b_seriousdumpling').some(r => r.href.includes('DKue7toxsdq')))
     assert(!reviewsOf('b_seriousdumpling').some(r => r.href.includes('DQKo2NEEipZ')))
+  }
+  if (number === 105) {
+    assert.equal(brandById('b_pakusf').needsSite, true)
+    assert.equal(brandById('b_saladmakers').logo.imageUrl, '/icons/salad-makers-v105.webp')
+    assert.equal(brandById('b_classycanines').logo.imageUrl, '/icons/classy-canines-v105.webp')
+    for (const [i, f] of batch.foodieOrder.entries()) assert.equal(ALL_PLACEMENTS[i < 24 ? 'beasty-foodies-' + i : 'beasty-foodies2-' + (i - 24)], f.brand)
   }
   const live = process.env.BASE, db = live ? null : await freshTestDb('batch' + number)
   const port = live ? 0 : await new Promise(resolve => {
@@ -50,6 +59,7 @@ export async function auditBatch(number) {
   const base = live || 'http://127.0.0.1:' + port, iphone = process.env.BROWSER === 'webkit'
   const browser = await (iphone ? webkit : chromium).launch(iphone ? {} : { args: ['--mute-audio', '--disable-quic'] })
   const page = await browser.newPage({ ...(iphone ? devices['iPhone 13'] : {}), viewport: { width: 393, height: 852 } })
+  if (number === 105) await page.clock.install({ time: new Date('2026-11-07T12:00:00-08:00') })
   const errors = []
   page.on('pageerror', e => errors.push(String(e))); page.on('crash', () => errors.push('browser process crashed'))
   const hash = b => createHash('sha256').update(b).digest('hex')
@@ -81,6 +91,10 @@ export async function auditBatch(number) {
       const r = await fetch(base + path); assert(r.ok, path)
       assert.equal(hash(Buffer.from(await r.arrayBuffer())), hash(readFileSync('public' + path)), path)
     }
+    for (const id of batch.updatedBrands ?? []) {
+      await open(id)
+      await page.locator('.brand-logo-zoom-trigger image[href="' + brandById(id).logo.imageUrl + '"]').waitFor()
+    }
     for (const listing of batch.listings) {
       const id = 'b_' + listing.slug.replace(/[^a-z0-9]/g, '')
       await open(id)
@@ -91,7 +105,7 @@ export async function auditBatch(number) {
         assert.equal(await page.locator('.menu-row').count(), count)
         assert.equal(await page.locator('.menu-row-price').filter({ hasText: '$0.00' }).count(), 0)
         for (const section of listing.sections) assert(await page.locator('.menu-row').filter({ hasText: section.items[0][0] }).count() > 0)
-      } else assert.match(await page.locator('.brand-body').innerText(), /current menu|full current menu/i)
+      } else assert((await page.locator('.brand-body').innerText()).replace(/\s+/g, ' ').includes(listing.contactOnly.replace(/\s+/g, ' ')))
       for (const panel of listing.panels ?? []) {
         await expand(page.getByRole('button', { name: panel.head, exact: true }))
         for (const link of panel.links ?? []) assert.equal(await page.getByRole('link', { name: link.label, exact: true }).getAttribute('href'), link.href)
@@ -105,6 +119,7 @@ export async function auditBatch(number) {
     }
     for (const post of active) {
       let owner = post.brand, index = reviewsOf(owner).findIndex(r => r.href === post.source)
+      if (post.playOn) { owner = post.playOn; index = reviewsBy(post.by).findIndex(r => r.href === post.source) }
       const review = index >= 0 ? reviewsOf(owner)[index] : null
       if (review && !review.src) {
         const handle = post.by === 'mr.gaoviet' ? 'msashleyvee' : post.by
@@ -130,12 +145,25 @@ export async function auditBatch(number) {
     if (number === 103) {
       await category('Fried Chicken', 'Aburaya'); await category('Pizza', 'Via Mia Pizza'); await category('Dumplings', 'Serious Dumpling')
       await category('Foodies', 'Ronnie Banks'); await icon('MsAshleyVee').waitFor()
-    } else {
+    } else if (number === 104) {
       await category('Sandwiches', 'Oink & Oscar')
       await category('Breakfast/Diner')
       // The original 24 stay on page one; the new chain is on the linked overflow.
       await page.getByRole('button', { name: 'Next page', exact: true }).click()
       await icon('Sweet Maple').waitFor()
+    } else {
+      await category('Poke', 'Paku'); await category('Cupcakes', 'Batter ’N Icing')
+      await category('Peruvian', 'Lucuma Kitchen & Bar'); await category('Jamaican', 'Sweet Fingers Jamaican Restaurant & Bar')
+      await category('Donuts', 'Nono’s Doughnuts & Cafe')
+      await category('Food Trucks', 'Vegan Mob')
+      await open('b_nonosdoughnutsberkeley')
+      await page.getByRole('button', { name: 'Home', exact: true }).click()
+      await page.getByRole('button', { name: 'News', exact: true }).click()
+      await page.getByRole('heading', { name: 'Nono’s Doughnuts announces November 12 grand opening', exact: true }).waitFor()
+      await page.getByRole('button', { name: 'Open the calendar', exact: true }).click()
+      await page.getByRole('button', { name: /^12 November(?:,|$)/ }).click()
+      await page.locator('.cal-event').filter({ hasText: 'Nono’s Doughnuts announces' }).click()
+      await page.getByRole('heading', { name: 'Nono’s Doughnuts & Cafe', exact: true }).waitFor()
     }
     await page.setViewportSize({ width: 320, height: 740 }); await fits()
     const paths = process.env.ALL_REELS ? [...new Set(REELS.map(r => r.src))] : active.map(p => '/clips/' + p.slug + '.mp4')

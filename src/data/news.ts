@@ -53,6 +53,18 @@ export const KIND_LABEL: Record<NewsKind, string> = {
 }
 
 const ITEMS: NewsItem[] = [
+  // From Glenn’s supplied shop profile, November 7.
+  {
+    "date": "2026-11-07",
+    "kind": "opening",
+    "headline": "Nono’s Doughnuts announces November 12 grand opening",
+    "body": "Nono’s Doughnuts & Cafe at 2514 Bancroft Way in Berkeley announces its November 12, 2026 grand opening after a November 5 soft opening. Check the shop’s published profile for offers, hours and availability.",
+    "authorId": "b_nonosdoughnutsberkeley",
+    "brands": [
+      "b_nonosdoughnutsberkeley"
+    ],
+    "eventDate": "2026-11-12"
+  },
   // Curated from the organizer’s site Glenn sent on November 6.
   {
     "date": "2026-11-06",

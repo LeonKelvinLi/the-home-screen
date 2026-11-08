@@ -143,6 +143,11 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'pho', heading: 'Pho', about: 'Vietnamese pho and noodle soups', wall: wall('ramen'), test: /\bph[oở]\b/i },
   // Glenn, November 6: separate Donuts and Boba pages, with JK Cafe & Boba.
   // Glenn, November 6–7: distinct searchable sheets; Dim Sum keeps its existing seats.
+  // Glenn, November 7: each requested cuisine gets its own searchable category.
+  { kind: 'poke', heading: 'Poke', about: 'Poke bowls and poke shops', wall: wall('sushi'), test: /pok[eé]|pok[eé] bowls/i },
+  { kind: 'cupcakes', heading: 'Cupcakes', about: 'Cupcake shops and custom cupcakes', wall: wall('bakery'), test: /cupcakes?|cupcakery/i },
+  { kind: 'peruvian', heading: 'Peruvian', about: 'Peruvian restaurants and ceviche', wall: wall('diner'), test: /peruvian|cevicher/i },
+  { kind: 'jamaican', heading: 'Jamaican', about: 'Jamaican restaurants and jerk cooking', wall: wall('bbq'), test: /jamaican|jerk chicken/i },
   { kind: 'friedchicken', heading: 'Fried Chicken', about: 'Fried chicken shops and sandwiches', wall: wall('diner'), test: /fried chicken|hot chicken|chicken wings/i },
   { kind: 'pizza', heading: 'Pizza', about: 'Pizzerias and pizza shops', wall: wall('bakery'), test: /pizza|pizzeria/i },
   { kind: 'dumplings', heading: 'Dumplings', about: 'Dumplings, soup dumplings and potstickers', wall: wall('dimsum'), test: /dumplings?|xiao[ -]?long[ -]?bao|sheng[ -]?jian/i },

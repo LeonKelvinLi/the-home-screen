@@ -3724,10 +3724,8 @@ export const LOCAL_SEED: LocalSeed[] = [
   {
     /* "Phosho Dough", one word — their own title tag and logo. */
     slug: 'phosho-dough',
-    /* NO ICON FILE. The only logo they publish is 132x132, a JPEG, and on a
-       baked-in white square — upscaling it would look muddy and the white
-       cannot be keyed out. The app draws its own mark on their green until
-       they send artwork. */
+    icon: 'phosho-dough-v105',
+    /* Glenn supplied larger original artwork on November 7, 2026. */
     logoTemplate: 'badge',
     logoFace: 'grotesk',
     logoInitials: 'PD',
@@ -5281,6 +5279,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'diamond-supply-co',
+    icon: 'diamond-supply-co-v105',
     name: 'Diamond Supply Co',
     label: 'Diamond Supply',
     cuisine: 'Skate and streetwear',
@@ -5297,9 +5296,9 @@ export const LOCAL_SEED: LocalSeed[] = [
       variant names. It is not linked from anywhere in this app. He sent the
       real one on 08-28 and that is what is here.
 
-      NOTHING IS PRICED AND THERE IS NO ICON, because their real store returns
-      403 to everything — no catalogue, no logo file, no brand colours could be
-      read. Filling that gap from a reseller or an aggregator is exactly how the
+      NOTHING IS PRICED, because their real store returns
+      403 to everything — no catalogue could be read. Glenn later supplied
+      their logo on November 7, 2026. Filling that gap from a reseller or an aggregator is exactly how the
       counterfeit would have got in, so it stays empty until they publish or
       somebody asks them.
     */
@@ -5309,7 +5308,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     site: 'https://www.diamondsupplyco.com/',
     siteCta: 'See their store',
     contactOnly:
-      'The skate and streetwear brand Nicky Diamonds founded, which began in skateboard hardware. Their store does not serve its pages to anything but a browser, so nothing is priced here and no artwork of theirs is used. BEASTY has not spoken to them: this spot is held, not taken.',
+      'The skate and streetwear brand Nicky Diamonds founded, which began in skateboard hardware. Their store does not serve its pages to anything but a browser, so nothing is priced here. Glenn supplied their icon artwork on November 7. BEASTY has not spoken to them: this spot is held, not taken.',
     items: [],
   },
   {
@@ -68976,7 +68975,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     "address": "1610 E Capitol Expy, San Jose, CA 95121",
     "tagline": "All-you-can-eat Korean barbecue and individual hot pots on East Capitol Expressway.",
     "color": "#241D1B",
-    "icon": "qpot-san-jose",
+    "icon": "qpot-san-jose-v105",
     "prep": 0,
     "category": "Restaurant",
     "items": [],
@@ -79966,6 +79965,1139 @@ export const LOCAL_SEED: LocalSeed[] = [
           {
             "label": "Walnut Creek review",
             "href": "https://beastypages.com/?b=b_sweetmaplewalnutcreek"
+          }
+        ]
+      }
+    ]
+  },
+
+  // Batch 105 — November 7 through 8:15 p.m.
+  {
+    "slug": "paku-sf",
+    "name": "Paku",
+    "label": "Paku",
+    "cuisine": "Japanese-inspired poke, inari and shave ice",
+    "tagline": "Poke, inari sushi, shave ice and drinks on Ocean Avenue.",
+    "color": "#355B50",
+    "icon": "paku-sf-v105",
+    "prep": 0,
+    "category": "Japanese-inspired poke, inari and shave ice",
+    "items": [],
+    "address": "1250 Ocean Ave, San Francisco, CA",
+    "email": "info@pakusf.com",
+    "needsSite": true,
+    "contactOnly": "Contact the shop for its current menu, prices and hours.",
+    "panels": [
+      {
+        "head": "Paku and website pilot",
+        "body": [
+          "Glenn requested this shop for the website pilot. Its supplied profile confirms poke, inari, shave ice, drinks, address and email; no complete owner price list or phone was verified."
+        ],
+        "links": [
+          {
+            "label": "Paku’s published profile",
+            "href": "https://www.instagram.com/paku.sf/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "nonos-doughnuts-berkeley",
+    "name": "Nono’s Doughnuts & Cafe",
+    "label": "Nono’s Doughnuts",
+    "cuisine": "Brioche doughnuts and café",
+    "tagline": "Brioche doughnuts and café favorites across from UC Berkeley.",
+    "color": "#355B50",
+    "icon": "nonos-doughnuts-berkeley-v105",
+    "prep": 0,
+    "category": "Brioche doughnuts and café",
+    "items": [],
+    "address": "2514 Bancroft Way, Berkeley, CA",
+    "contactOnly": "Visit the shop or its published profile for current doughnuts, prices and hours.",
+    "panels": [
+      {
+        "head": "November 12 grand opening",
+        "body": [
+          "The supplied shop profile announces a November 5 soft opening and a November 12, 2026 grand opening. Ask the shop for the day’s offers and availability. No opening time or complete price list was verified."
+        ],
+        "links": [
+          {
+            "label": "Nono’s Doughnuts & Cafe profile",
+            "href": "https://www.instagram.com/nonosdoughnuts/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "batter-n-icing-danville",
+    "name": "Batter ’N Icing",
+    "label": "Batter ’N Icing",
+    "cuisine": "Gourmet cupcakes and custom cakes",
+    "tagline": "Signature cupcakes, seasonal flavors and celebration cakes in Danville.",
+    "color": "#355B50",
+    "icon": "batter-n-icing-danville-v105",
+    "prep": 0,
+    "category": "Gourmet cupcakes and custom cakes",
+    "items": [],
+    "site": "https://batternicing.com/",
+    "address": "95 Railroad Ave, Danville, CA 94526",
+    "phone": "(925) 965-0333",
+    "email": "info.dn@batternicing.com",
+    "hours": "Mon–Sat 10am–6pm; Sun pre-order pickup 10am–noon",
+    "sections": [
+      {
+        "name": "Signature daily cupcake flavors",
+        "items": [
+          [
+            "Chocolate Cream",
+            "Decadent chocolate cake filled with our signature vanilla buttercream topped with our signature fudge frosting with a dollop of buttercream. Also available in GLUTEN FREE",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Peanut Buttercup",
+            "Chocolate cake with peanut butter cream cheese frosting topped with Reese’s peanut butter cups. Also available in GLUTEN FREE",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Caramel Crunch",
+            "Chocolate cake with caramel buttercream topped with drizzles of caramel, garnished with sea salt and a pretzel. Also available in GLUTEN FREE",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Cookies 'N Cream",
+            "Chocolate cake with our signature oreo vanilla buttercream topped with oreo cookies",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pink Chocolate",
+            "Chocolate cake with our signature pink vanilla buttercream garnished with sugar crystals. Also available in GLUTEN FREE",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Vanilla 'N Chocolate",
+            "Vanilla bean cake topped with our signature chocolate buttercream and chocolate curls. Also available in GLUTEN FREE",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chocoholic",
+            "Chocolate cake topped with our signature chocolate buttercream & chocolate curls.Also available in GLUTEN FREE",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Birthday Cake",
+            "Vanilla bean cake with vanilla bean buttercream rolled in . Also available in GLUTEN FREE",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Hot Fudge Sundae",
+            "Chocolate cake filled with fudge topped with signature vanilla buttercream frosting, roasted peanuts, drizzled with fudge, whipped topping and a maraschino cherry on top,Also available in GLUTEN FREE",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Lemon Drop",
+            "Vanilla bean cake filled with Lemon curd topped with lemon buttercream, whipped cream and more lemon curd. Also available in GLUTEN FREE",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pink Vanilla",
+            "Vanilla bean cake with our signature pink vanilla buttercream garnished with sugar crystals. Also available in GLUTEN FREE",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Famous Red Velvet",
+            "Grandma’s red velvet cake with our signature cream cheese frosting and red velvet crumbs",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "November seasonal flavors · selected days",
+        "items": [
+          [
+            "Apple Crisp",
+            "Available everyday in November",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pumpkin Cookie Dough",
+            "Mondays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pecan Sandie",
+            "Tuesdays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chocolate Bourbon Pecan Pie",
+            "Wednesdays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chocolate Churro",
+            "Thursdays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pumpkin Nutella",
+            "Fridays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Millionaire Pie",
+            "Fridays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pumpkin Cinnamon Roll",
+            "Saturdays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Boston Cream Pie",
+            "Saturdays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Cinnamon Sugar Coffee Cake",
+            "Mondays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Misssissippi Mud Pie",
+            "Tuesdays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pumpkin Cheesecake",
+            "Wednesdays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Neopolitan",
+            "Thursdays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Boston Cream Pie",
+            "Fridays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Carrot Cake",
+            "Fridays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Carrot Cake",
+            "Saturdays",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Bear Claw",
+            "Saturdays",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      }
+    ],
+    "quoteOnly": "The shop publishes these cupcake flavors without a complete price list. Ask for current regular, custom and catering prices.",
+    "orderUrl": "https://order.spoton.com/so-batter-n-icing-21385/danville-ca/BL-BC1D-2C2B-B6DD",
+    "panels": [
+      {
+        "head": "Cupcakes, custom orders and locations",
+        "body": [
+          "Signature flavors are published for both shops; seasonal flavors run on selected November days. Sunday-only Pleasant Hill flavors are not copied to Danville.",
+          "Danville: 95 Railroad Ave · (925) 965-0333. Pleasant Hill: 65 B Crescent Drive · (925) 332-7212. Glenn requested the Danville page."
+        ],
+        "links": [
+          {
+            "label": "Published cupcake flavors",
+            "href": "https://batternicing.com/cupcakes/"
+          },
+          {
+            "label": "Custom cupcakes",
+            "href": "https://batternicing.com/custom-cupcakes/"
+          },
+          {
+            "label": "Custom cake options",
+            "href": "https://batternicing.com/cakes/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "lucuma-kitchen-oakland",
+    "name": "Lucuma Kitchen & Bar",
+    "label": "Lucuma",
+    "cuisine": "Modern Peruvian restaurant",
+    "tagline": "Modern Peruvian dishes, weekend brunch and weekday happy hour in Uptown Oakland.",
+    "color": "#355B50",
+    "icon": "lucuma-kitchen-oakland-v105",
+    "prep": 0,
+    "category": "Modern Peruvian restaurant",
+    "items": [],
+    "site": "https://www.lucumakitchen.com/",
+    "address": "1700 Franklin St, Oakland, CA 94612",
+    "phone": "(510) 607-8110",
+    "email": "hola@lucumakitchen.com",
+    "hours": "Mon–Thu 11am–9pm; Fri 11am–9:30pm; Sat 10am–9:30pm; Sun 10am–9pm",
+    "sections": [
+      {
+        "name": "Menu · Crudo",
+        "items": [
+          [
+            "Causa Criolla",
+            "Traditional Peruvian potato cake, aji amarillo, avocado, lime.\nCamarones: Shrimp, squid ink, mayo \nPollo: Chicken, mayo\nVeggie [GF . DF . VEG] Beet, carrot, pea, mayo\nAcevichada: Fresh catch, Maki style causa, acevichada sauce \nPulpo Anticuchero: Octopus, aji panca, sweet potato causa",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Palta Rellena",
+            "Whole avocado, chicken or crab meat, lime, mayo, botija olive",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pulpo Al Olivo",
+            "Sliced octopus in lime olive sauce, avocado",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Cremoso",
+            "Fresh catch, secret house leche de tigre, aji limo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chinito",
+            "Ahi tuna, nori, kion, sweet & spicy chili sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Verde",
+            "Catch of the day, cilantro leche de tigre, sweet potato, choclo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Mixto",
+            "Mix of shellfish & fresh fish, leche de tigre, lime, rocoto",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tropical",
+            "Shrimp, rocoto, pineapple, leche de tigre",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Hongos",
+            "Market fresh mix mushroom, cilantro, spinach leche de tigre",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Leche de Tigre",
+            "Fish, shellfish, rocoto, aji amarillo, ginger, onion, lime juice",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tiradito Clasico",
+            "Wild salmon, classic creamy aji amarillo, spicy rocoto, Peruvian corn",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tiradoto Conchitas",
+            "Scallops, aji amarillo leche de tigre, onion, corn, avocado\n\\",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tiradito Maracuyá",
+            "Flambéed ahi tuna, passion fruit sauce, avocado, cilantro, corn",
+            2500
+          ],
+          [
+            "Mix Chips",
+            "",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Menu · Chiquitos",
+        "items": [
+          [
+            "Tequeñitos",
+            "Crispy cheese [VEG] or lomo & cheese wontons, guacamole, passion fruit sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Yucca Fries",
+            "Crispy fried yucca, salsa pollera",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Choclo con Queso",
+            "Baby corn, ocopa sauce, queso fresco",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Papa a la Huancaina",
+            "Pave potato in a classic aji amarillo Peruvian sauce",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Ensalada César",
+            "Romaine lettuce, toasted quinoa, house vinagrette, parmesan cheese, croutons. Add chicken.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Coliflor",
+            "House-marinated cauliflower, hummus pureé, chimichurri",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Crispy Camarones",
+            "Coconut shrimp, passionfruit sauce, tricolor quinoa",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Conchitas a la Parmesana",
+            "Shell scallops, broiled parmesan cheese, chimichurri",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Empanadas de la Casa",
+            "Chicken, beef, or mushroom [VEG]",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pulpo a la Parrila",
+            "Grilled octopus, aji panca, chimichurri, beans",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Asado de Mamita",
+            "Short ribs, aji panca sauce, green mashed potato",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Chuletas",
+            "Lamb chops, pave potato cake, chimichurri",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Antichuchos de Corazón",
+            "Classic Peruvian beef hearts skewers, pave potato, choclo",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Costillas de Chancho",
+            "BBQ pork spare ribs, sweet potato mash",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Menu · Los Grandes",
+        "items": [
+          [
+            "Bistec a la Pobre",
+            "Tacu tacu topped with Hanger beef steak, plantains, fried egg, salsa criolla",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Aji de Gallina",
+            "A Peruvian classic reinvented. Shredded chicken in creamy aji amarillo, gnocchi, white rice",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Lomo Saltado",
+            "Classic Peruvian stir-fried beef, soy sauce, onions, tomatoes, cilantro, home fries, white rice",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Arroz Norteno",
+            "Cilantro & spinach rice, pork belly skewers, aji amarillo, ocopa, salsa criolla",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Paella Peruana de Tierra",
+            "Aji Panca Peruvian-style paella, linguisa & chicken, arborio rice",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pescado a lo Macho",
+            "Fresh catch of the day, shellfish mix, aji panca sauce, coconut rice",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Salmon Andino con Hongos",
+            "Oven-roasted wild salmon, mushrooms, ginger, lime onion sauce",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Brunch · Brunch",
+        "items": [
+          [
+            "Lucuma French Toast",
+            "Brioche marinated in lucuma custard topped with lucuma whipped cream & berries",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Tamalito Peruano con Huevos",
+            "House made classic pork tamale, salsa criolla, scrambled eggs",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pan con Chicharron",
+            "Classic Peruvian pork sandwich, sweet potato, salsa criolla, aioli",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Pan con Hongos",
+            "Mushroom sandwich, aioli, salsa criolla",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Croissant Relleno",
+            "Croissant, scrambled eggs, pollera sauce, sunflower seeds, arugula, avocado\nAdd house salchicha huachana pork sausage",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Arroz Tapado",
+            "Classic Peruvian dish of layered beef and rice, sweet fried plantains, fried egg",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Salchipapa",
+            "Mix of potatoes, chicken, salchicha huachana, linguisa, cheese, fried eggs",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Omelette de la Casa",
+            "Mushrooms, spinach, onions, peppers, cheese, salsa pollera, side of Inkan potatoes \nAdd house salchicha huachana pork sausage\nAdd bacon",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Brunch · Brunch Café",
+        "items": [
+          [
+            "Incan Gold Latte",
+            "Hot or iced - Discover the captivating flavor of Peru’s “Gold of the Incas” in this exquisite latte. Made with our velvety, house-made lucuma manjar (boasting notes of maple, sweet potato, and caramel), and your choice of espresso or premium ceremonial grade matcha.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "El Picarone Latte",
+            "Hot or iced - Inspired by a beloved Peruvian classic, this unique latte features a rich, warming house-made syrup of anise, cinnamon, clove, aromatic fig leaves, and sweet piloncillo. Blended with your choice of espresso or premium ceremonial grade matcha for a deeply comforting, subtly spiced treat that transports you straight to the streets of Lima.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Kion Latte",
+            "Hot or iced - Your new go-to pick-me-up! This lively, Peruvian-inspired latte features our warming ginger syrup, bringing a vibrant, zesty kick to every sip. Prepared with your choice of a bold double shot of espresso or premium ceremonial grade matcha.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Nube Dorado Latte",
+            "Iced - Indulge in a cloud of Peruvian sunshine. This exquisite iced treat features our rich, creamy lucuma manjar expertly blended with your choice of espresso or premium ceremonial grade matcha and milk. It’s crowned with a luxurious, house-made lucuma cold foam.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Into Oro Latte",
+            "Iced - The refreshing twist on your iced coffee! Starts with a base of freshly squeezed orange juice, then perfectly topped with a luxurious, airy espresso cold foam.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Classic Coffees",
+            "Americano, Cappucino, Latte, Matcha Latte, Flat White, Machiato, Doppio, Solo. \nMatcha provided by Asha Tea House.",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      },
+      {
+        "name": "Dessert · Postres",
+        "items": [
+          [
+            "Affogato",
+            "Lucuma ice cream and fresh pulled double espresso",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Alfajores",
+            "Soft cookies filled with dulce de leche. Made by Fabiola.",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "El Turrón",
+            "Anise cheesecake topped with golden anise sauce and Peruvian candies",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Inca Gold Tiramisu",
+            "Lucuma infused mascarpone, ladyfingers cookies, espresso, coffee liquor",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Toasted Passion",
+            "Frozen passion fruit mousse, cookie crumble, \ntoasted meringue",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Combinado Limeño",
+            "Arroz con leche, mazamorra",
+            0,
+            null,
+            "Ask shop"
+          ],
+          [
+            "Picarones",
+            "Classic Inkan donuts, golden anise sauce",
+            0,
+            null,
+            "Ask shop"
+          ]
+        ]
+      }
+    ],
+    "quoteOnly": "The published food menus mostly omit prices. Ask the restaurant for the current price of any item marked Ask shop.",
+    "orderUrl": "https://www.lucumakitchen.com/order-online",
+    "siteNote": "Named items are from the restaurant’s own main, brunch and dessert menus. Brunch is weekends 10am–2:30pm, and weekday happy hour is 3–5:30pm. Cocktail and nightcap sections are omitted.",
+    "panels": [
+      {
+        "head": "Menus and visits",
+        "body": [],
+        "links": [
+          {
+            "label": "Lucuma menus",
+            "href": "https://www.lucumakitchen.com/menu"
+          },
+          {
+            "label": "Contact and hours",
+            "href": "https://www.lucumakitchen.com/contact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "mt-music-richmond",
+    "name": "MT Music BBQ & Bar",
+    "label": "MT Music",
+    "cuisine": "Asian BBQ and karaoke restaurant",
+    "tagline": "Asian dining and private karaoke at Pacific East Mall in Richmond.",
+    "color": "#355B50",
+    "icon": "mt-music-richmond-v105",
+    "prep": 0,
+    "category": "Asian BBQ and karaoke restaurant",
+    "items": [],
+    "site": "https://www.mtmusicrestaurant.net/",
+    "address": "3288 Pierce St, A105, Richmond, CA 94804",
+    "phone": "(510) 898-1076",
+    "email": "mtmusicrestaurant@gmail.com",
+    "hours": "Tue–Thu 5pm–midnight; Fri–Sun noon–midnight",
+    "contactOnly": "Contact MT Music for its current food menu, prices and karaoke availability.",
+    "siteNote": "Glenn requested Richmond Eats and BEASTY Hot Pot. The shop’s own site describes Asian BBQ and private karaoke; its supplied profile publishes the listed Tuesday–Sunday hours. A complete priced food menu was not verified.",
+    "panels": [
+      {
+        "head": "Dining and karaoke",
+        "body": [],
+        "links": [
+          {
+            "label": "MT Music’s own website",
+            "href": "https://www.mtmusicrestaurant.net/"
+          },
+          {
+            "label": "Karaoke booking information",
+            "href": "https://www.mtmusicrestaurant.net/book-online"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "sweet-fingers-oakland",
+    "name": "Sweet Fingers Jamaican Restaurant & Bar",
+    "label": "Sweet Fingers",
+    "cuisine": "Jamaican restaurant and bar",
+    "tagline": "Chef Clive Barnes’ Jamaican restaurant at 1707 Telegraph Avenue in Uptown Oakland.",
+    "color": "#355B50",
+    "icon": "sweet-fingers-oakland-v105",
+    "prep": 0,
+    "category": "Jamaican restaurant and bar",
+    "items": [],
+    "site": "https://sweetfingersrestaurant.com/",
+    "address": "1707 Telegraph Ave, Oakland, CA 94612",
+    "phone": "(510) 553-9869",
+    "email": "info@sweetfingersrestaurant.com",
+    "hours": "Sun–Thu noon–10pm; Fri–Sat noon–midnight",
+    "sections": [
+      {
+        "name": "Meat Entre",
+        "items": [
+          [
+            "Curry Goat Large Plate",
+            "Tender Savory Award Winning Curry Goat",
+            4500
+          ],
+          [
+            "Curry Goat Small Plate",
+            "Tender Savory Award Winning Goat served with veggies and rice and beans",
+            2300
+          ]
+        ]
+      },
+      {
+        "name": "Chicken Entre",
+        "items": [
+          [
+            "Award Winning Jerk Chicken Large Plate",
+            "Award Winning Jerk Chicken",
+            3100
+          ],
+          [
+            "Jerk Chicken Small Plate",
+            "Award Winning Jerk Chicken Small Plate",
+            1700
+          ],
+          [
+            "Curry Chicken Large Plate",
+            "Flavorful Curry Stew Chicken",
+            3300
+          ],
+          [
+            "Curry Chicken Small Plate",
+            "Flavorful Curry Chicken stewed served with veggies rice and peas and plantains",
+            1800
+          ],
+          [
+            "Brown Stew Chicken Large Plate",
+            "Chef Clive's Special Brown Stew Chicken",
+            3300
+          ],
+          [
+            "Brown Stew Chicken Small Plate",
+            "Brown Stew Chicken served with rice and peas and plantain",
+            1800
+          ]
+        ]
+      },
+      {
+        "name": "Seafood Entree",
+        "items": [
+          [
+            "Salmon Large Plate",
+            "Salmon Styles\nJerk, Brown Stew and Curry",
+            4300
+          ],
+          [
+            "Salmon Small Plate",
+            "Salmon Styles\nJerk, Brown Stew and Curry",
+            2000
+          ],
+          [
+            "Shrimp Large Plate",
+            "Fried Shrimp Sautéed with Vegetables and secret Seasonings\nShrimp Styles\nJerk, Curry and Coconut",
+            4000
+          ],
+          [
+            "Shrimp Small Plate",
+            "Fried Shrimp Sautéed with vegetables and secret Seasoning",
+            1900
+          ],
+          [
+            "Snapper Fillet Large Plate",
+            "Fried and Sautéed with vegetables\nStyles: Jerk, Brown Stew and Curry\nBrown Stew Snapper Fillet in. photo",
+            4000
+          ],
+          [
+            "Snapper Fillet Small Plate",
+            "Fried and sautéed with vegetables and secret seasoning\nSnapper Styles\nJerk, Brown Stew and Curry",
+            1900
+          ],
+          [
+            "Whole Fish",
+            "Comes with rice and peas, veggies and plantains\nEscovitch in Picture",
+            4500
+          ]
+        ]
+      },
+      {
+        "name": "Vegetarian",
+        "items": [
+          [
+            "Tofu Large Plate",
+            "Firm Tofu fried and sautéed with vegetables and Secret Seasonings\nJerk, Curry or Barbecue",
+            3000
+          ],
+          [
+            "Tofu Small Plate",
+            "Firm, Fried Tofu sautéed with vegetables\nJerk Curry or Barbecue",
+            1600
+          ],
+          [
+            "Stew Vegetable Large Plate",
+            "Medley of vegetables with cabbage sautéed with coconut milk and secret seasonings.",
+            2500
+          ],
+          [
+            "Stew Vegetable Small Plate",
+            "Vegetable Medley and cabbage sautéed with coconut milk and secret seasonings",
+            1200
+          ]
+        ]
+      },
+      {
+        "name": "Appetizers",
+        "items": [
+          [
+            "Jamaican Patties",
+            "Traditional baked dough pastry filled with Beef, Chicken or Vegetables",
+            800
+          ],
+          [
+            "Soup",
+            "Soup of the Day- Call to find out.",
+            700
+          ],
+          [
+            "Shrimp",
+            "Shimp Appetizer 7 Shrimp Choose your style- Jerk, Curry or Coconut",
+            1700
+          ]
+        ]
+      },
+      {
+        "name": "Sides",
+        "items": [
+          [
+            "Cornbread",
+            "Chef Clive's Corn bread is special. Sweeter spices and a slight pudding on the bottom.",
+            700
+          ],
+          [
+            "House Salad",
+            "fresh bed of greens, cucumbers and tomatoes",
+            1000
+          ],
+          [
+            "Fried Festival",
+            "Two pieces of festival in one order. Sweet fried Cornmeal and flour. A Jamaican treat that compliments most any meal.",
+            500
+          ],
+          [
+            "Steam Rice",
+            "",
+            700
+          ],
+          [
+            "Rice and Peas (Beans)",
+            "Rice and \"Peas\" with thyme and other Jamaican seasonings- Coconut milk",
+            700
+          ],
+          [
+            "Fried Plantain",
+            "Fried Sweet Ripe Plantains",
+            1100
+          ],
+          [
+            "Chef Clive's Scotch Bonnet Sauce",
+            "Chef Clive's fire hot and flavorful homemade Pepper Sauce",
+            200
+          ],
+          [
+            "Chef Clive's Jerk Sauce",
+            "Chef Clives exclusive home made Jerk Sauce- does include bone marrow and meat renderings.",
+            200
+          ],
+          [
+            "coco bread",
+            "Yam, potatoe, Cho Cho, Carrots",
+            900
+          ]
+        ]
+      },
+      {
+        "name": "Chef Specials",
+        "items": [
+          [
+            "Ackee N Salt Fish",
+            "Jamaican National Dish!",
+            4700
+          ]
+        ]
+      },
+      {
+        "name": "Soft Drinks",
+        "items": [
+          [
+            "Bottled Water",
+            "Pure and refreshing bottled water",
+            200
+          ],
+          [
+            "Fountain Sodas",
+            "Coke, cranberry, ginger ale, soda water, sprite, tonic water",
+            300
+          ],
+          [
+            "Jamaican Soda",
+            "Imported Soda from Jamaica",
+            600
+          ],
+          [
+            "Lion Ginger Beer",
+            "A vibrant fusion of ginger and pineapple, delivering a fiery yet sweet experience",
+            900
+          ],
+          [
+            "Organic Beetroot Carrot Juice",
+            "",
+            1000
+          ],
+          [
+            "Organic Sea-moss Strawberry",
+            "",
+            800
+          ],
+          [
+            "Organic Seamoss Pineapple",
+            "Infused with organic sea moss and pineapple for a refreshing soda",
+            1000
+          ],
+          [
+            "Sorrel*",
+            "Intense and sweet drink made from hibiscus flower",
+            900
+          ],
+          [
+            "Sweet Finger Punch",
+            "Blend of our homemade Sorrel and Gingerbeer. Non Alcoholic",
+            900
+          ],
+          [
+            "Organic Seamoss Strawberry",
+            "Made with fresh organic Strawberry and infused with seamoss!",
+            1000
+          ]
+        ]
+      },
+      {
+        "name": "Jamaican Dessert",
+        "items": [
+          [
+            "Jamaican Style Sweet Potato Pudding",
+            "Sweet potato jamaican bread pudding",
+            1000
+          ],
+          [
+            "Sweet Fingers Jamaican Rum Cake",
+            "Homemade Black Rum Cake made with Jamaican Rum for flavor. Best when served warm",
+            1000
+          ]
+        ]
+      }
+    ],
+    "orderUrl": "https://sweetfingersrestaurant.com/menu",
+    "siteNote": "Menu, prices, store hours and contact details are published for the Uptown Oakland location. The supplied promotional film announces its November 6 grand opening; that date is past, not an upcoming event.",
+    "clip": {
+      "src": "/clips/review-DfN-hTsBaNH.mp4",
+      "poster": "/clips/review-DfN-hTsBaNH-poster.webp",
+      "href": "https://www.instagram.com/reel/DfN-hTsBaNH/",
+      "credit": "Promotional message from Chef Clive, posted by @sweetfingersjamaican.",
+      "platform": "Instagram"
+    }
+  },
+  {
+    "slug": "khao-tiew-sf",
+    "name": "Khao Tiew",
+    "label": "Khao Tiew",
+    "cuisine": "Thai restaurant",
+    "tagline": "Thai cooking on Claremont Boulevard in San Francisco.",
+    "color": "#355B50",
+    "icon": "khao-tiew-sf-v105",
+    "prep": 0,
+    "category": "Thai restaurant",
+    "items": [],
+    "site": "https://khaotiew.square.site/",
+    "address": "272 Claremont Blvd, San Francisco, CA",
+    "contactOnly": "Use the shop’s own menu page for the current selection, prices and hours.",
+    "panels": [
+      {
+        "head": "Menu and seating",
+        "body": [
+          "The supplied profile says no new reservations are accepted, while existing confirmed reservations are honored. Other guests are walk-ins, first come, first served. Check with the shop for changes.",
+          "The Square page exposes menu categories, but a complete current item/price list could not be verified. No phone or hours were invented."
+        ],
+        "links": [
+          {
+            "label": "Khao Tiew’s own menu page",
+            "href": "https://khaotiew.square.site/"
           }
         ]
       }

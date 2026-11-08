@@ -1,0 +1,2808 @@
+{
+  "cutoff": "2026-11-07T20:15:38-08:00",
+  "listings": [
+    {
+      "slug": "paku-sf",
+      "name": "Paku",
+      "label": "Paku",
+      "cuisine": "Japanese-inspired poke, inari and shave ice",
+      "tagline": "Poke, inari sushi, shave ice and drinks on Ocean Avenue.",
+      "color": "#355B50",
+      "icon": "paku-sf-v105",
+      "prep": 0,
+      "category": "Japanese-inspired poke, inari and shave ice",
+      "items": [],
+      "address": "1250 Ocean Ave, San Francisco, CA",
+      "email": "info@pakusf.com",
+      "needsSite": true,
+      "contactOnly": "Contact the shop for its current menu, prices and hours.",
+      "panels": [
+        {
+          "head": "Paku and website pilot",
+          "body": [
+            "Glenn requested this shop for the website pilot. Its supplied profile confirms poke, inari, shave ice, drinks, address and email; no complete owner price list or phone was verified."
+          ],
+          "links": [
+            {
+              "label": "Paku’s published profile",
+              "href": "https://www.instagram.com/paku.sf/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nonos-doughnuts-berkeley",
+      "name": "Nono’s Doughnuts & Cafe",
+      "label": "Nono’s Doughnuts",
+      "cuisine": "Brioche doughnuts and café",
+      "tagline": "Brioche doughnuts and café favorites across from UC Berkeley.",
+      "color": "#355B50",
+      "icon": "nonos-doughnuts-berkeley-v105",
+      "prep": 0,
+      "category": "Brioche doughnuts and café",
+      "items": [],
+      "address": "2514 Bancroft Way, Berkeley, CA",
+      "contactOnly": "Visit the shop or its published profile for current doughnuts, prices and hours.",
+      "panels": [
+        {
+          "head": "November 12 grand opening",
+          "body": [
+            "The supplied shop profile announces a November 5 soft opening and a November 12, 2026 grand opening. Ask the shop for the day’s offers and availability. No opening time or complete price list was verified."
+          ],
+          "links": [
+            {
+              "label": "Nono’s Doughnuts & Cafe profile",
+              "href": "https://www.instagram.com/nonosdoughnuts/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "batter-n-icing-danville",
+      "name": "Batter ’N Icing",
+      "label": "Batter ’N Icing",
+      "cuisine": "Gourmet cupcakes and custom cakes",
+      "tagline": "Signature cupcakes, seasonal flavors and celebration cakes in Danville.",
+      "color": "#355B50",
+      "icon": "batter-n-icing-danville-v105",
+      "prep": 0,
+      "category": "Gourmet cupcakes and custom cakes",
+      "items": [],
+      "site": "https://batternicing.com/",
+      "address": "95 Railroad Ave, Danville, CA 94526",
+      "phone": "(925) 965-0333",
+      "email": "info.dn@batternicing.com",
+      "hours": "Mon–Sat 10am–6pm; Sun pre-order pickup 10am–noon",
+      "sections": [
+        {
+          "name": "Signature daily cupcake flavors",
+          "items": [
+            [
+              "Chocolate Cream",
+              "Decadent chocolate cake filled with our signature vanilla buttercream topped with our signature fudge frosting with a dollop of buttercream. Also available in GLUTEN FREE",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Peanut Buttercup",
+              "Chocolate cake with peanut butter cream cheese frosting topped with Reese’s peanut butter cups. Also available in GLUTEN FREE",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Caramel Crunch",
+              "Chocolate cake with caramel buttercream topped with drizzles of caramel, garnished with sea salt and a pretzel. Also available in GLUTEN FREE",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Cookies 'N Cream",
+              "Chocolate cake with our signature oreo vanilla buttercream topped with oreo cookies",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Pink Chocolate",
+              "Chocolate cake with our signature pink vanilla buttercream garnished with sugar crystals. Also available in GLUTEN FREE",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Vanilla 'N Chocolate",
+              "Vanilla bean cake topped with our signature chocolate buttercream and chocolate curls. Also available in GLUTEN FREE",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Chocoholic",
+              "Chocolate cake topped with our signature chocolate buttercream & chocolate curls.Also available in GLUTEN FREE",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Birthday Cake",
+              "Vanilla bean cake with vanilla bean buttercream rolled in . Also available in GLUTEN FREE",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Hot Fudge Sundae",
+              "Chocolate cake filled with fudge topped with signature vanilla buttercream frosting, roasted peanuts, drizzled with fudge, whipped topping and a maraschino cherry on top,Also available in GLUTEN FREE",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Lemon Drop",
+              "Vanilla bean cake filled with Lemon curd topped with lemon buttercream, whipped cream and more lemon curd. Also available in GLUTEN FREE",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Pink Vanilla",
+              "Vanilla bean cake with our signature pink vanilla buttercream garnished with sugar crystals. Also available in GLUTEN FREE",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Famous Red Velvet",
+              "Grandma’s red velvet cake with our signature cream cheese frosting and red velvet crumbs",
+              0,
+              null,
+              "Ask shop"
+            ]
+          ]
+        },
+        {
+          "name": "November seasonal flavors · selected days",
+          "items": [
+            [
+              "Apple Crisp",
+              "Available everyday in November",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Pumpkin Cookie Dough",
+              "Mondays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Pecan Sandie",
+              "Tuesdays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Chocolate Bourbon Pecan Pie",
+              "Wednesdays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Chocolate Churro",
+              "Thursdays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Pumpkin Nutella",
+              "Fridays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Millionaire Pie",
+              "Fridays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Pumpkin Cinnamon Roll",
+              "Saturdays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Boston Cream Pie",
+              "Saturdays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Cinnamon Sugar Coffee Cake",
+              "Mondays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Misssissippi Mud Pie",
+              "Tuesdays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Pumpkin Cheesecake",
+              "Wednesdays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Neopolitan",
+              "Thursdays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Boston Cream Pie",
+              "Fridays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Carrot Cake",
+              "Fridays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Carrot Cake",
+              "Saturdays",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Bear Claw",
+              "Saturdays",
+              0,
+              null,
+              "Ask shop"
+            ]
+          ]
+        }
+      ],
+      "quoteOnly": "The shop publishes these cupcake flavors without a complete price list. Ask for current regular, custom and catering prices.",
+      "orderUrl": "https://order.spoton.com/so-batter-n-icing-21385/danville-ca/BL-BC1D-2C2B-B6DD",
+      "panels": [
+        {
+          "head": "Cupcakes, custom orders and locations",
+          "body": [
+            "Signature flavors are published for both shops; seasonal flavors run on selected November days. Sunday-only Pleasant Hill flavors are not copied to Danville.",
+            "Danville: 95 Railroad Ave · (925) 965-0333. Pleasant Hill: 65 B Crescent Drive · (925) 332-7212. Glenn requested the Danville page."
+          ],
+          "links": [
+            {
+              "label": "Published cupcake flavors",
+              "href": "https://batternicing.com/cupcakes/"
+            },
+            {
+              "label": "Custom cupcakes",
+              "href": "https://batternicing.com/custom-cupcakes/"
+            },
+            {
+              "label": "Custom cake options",
+              "href": "https://batternicing.com/cakes/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lucuma-kitchen-oakland",
+      "name": "Lucuma Kitchen & Bar",
+      "label": "Lucuma",
+      "cuisine": "Modern Peruvian restaurant",
+      "tagline": "Modern Peruvian dishes, weekend brunch and weekday happy hour in Uptown Oakland.",
+      "color": "#355B50",
+      "icon": "lucuma-kitchen-oakland-v105",
+      "prep": 0,
+      "category": "Modern Peruvian restaurant",
+      "items": [],
+      "site": "https://www.lucumakitchen.com/",
+      "address": "1700 Franklin St, Oakland, CA 94612",
+      "phone": "(510) 607-8110",
+      "email": "hola@lucumakitchen.com",
+      "hours": "Mon–Thu 11am–9pm; Fri 11am–9:30pm; Sat 10am–9:30pm; Sun 10am–9pm",
+      "sections": [
+        {
+          "name": "Menu · Crudo",
+          "items": [
+            [
+              "Causa Criolla",
+              "Traditional Peruvian potato cake, aji amarillo, avocado, lime.\nCamarones: Shrimp, squid ink, mayo \nPollo: Chicken, mayo\nVeggie [GF . DF . VEG] Beet, carrot, pea, mayo\nAcevichada: Fresh catch, Maki style causa, acevichada sauce \nPulpo Anticuchero: Octopus, aji panca, sweet potato causa",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Palta Rellena",
+              "Whole avocado, chicken or crab meat, lime, mayo, botija olive",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Pulpo Al Olivo",
+              "Sliced octopus in lime olive sauce, avocado",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Cremoso",
+              "Fresh catch, secret house leche de tigre, aji limo",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Chinito",
+              "Ahi tuna, nori, kion, sweet & spicy chili sauce",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Verde",
+              "Catch of the day, cilantro leche de tigre, sweet potato, choclo",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Mixto",
+              "Mix of shellfish & fresh fish, leche de tigre, lime, rocoto",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Tropical",
+              "Shrimp, rocoto, pineapple, leche de tigre",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Hongos",
+              "Market fresh mix mushroom, cilantro, spinach leche de tigre",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Leche de Tigre",
+              "Fish, shellfish, rocoto, aji amarillo, ginger, onion, lime juice",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Tiradito Clasico",
+              "Wild salmon, classic creamy aji amarillo, spicy rocoto, Peruvian corn",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Tiradoto Conchitas",
+              "Scallops, aji amarillo leche de tigre, onion, corn, avocado\n\\",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Tiradito Maracuyá",
+              "Flambéed ahi tuna, passion fruit sauce, avocado, cilantro, corn",
+              2500
+            ],
+            [
+              "Mix Chips",
+              "",
+              0,
+              null,
+              "Ask shop"
+            ]
+          ]
+        },
+        {
+          "name": "Menu · Chiquitos",
+          "items": [
+            [
+              "Tequeñitos",
+              "Crispy cheese [VEG] or lomo & cheese wontons, guacamole, passion fruit sauce",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Yucca Fries",
+              "Crispy fried yucca, salsa pollera",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Choclo con Queso",
+              "Baby corn, ocopa sauce, queso fresco",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Papa a la Huancaina",
+              "Pave potato in a classic aji amarillo Peruvian sauce",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Ensalada César",
+              "Romaine lettuce, toasted quinoa, house vinagrette, parmesan cheese, croutons. Add chicken.",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Coliflor",
+              "House-marinated cauliflower, hummus pureé, chimichurri",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Crispy Camarones",
+              "Coconut shrimp, passionfruit sauce, tricolor quinoa",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Conchitas a la Parmesana",
+              "Shell scallops, broiled parmesan cheese, chimichurri",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Empanadas de la Casa",
+              "Chicken, beef, or mushroom [VEG]",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Pulpo a la Parrila",
+              "Grilled octopus, aji panca, chimichurri, beans",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Asado de Mamita",
+              "Short ribs, aji panca sauce, green mashed potato",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Chuletas",
+              "Lamb chops, pave potato cake, chimichurri",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Antichuchos de Corazón",
+              "Classic Peruvian beef hearts skewers, pave potato, choclo",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Costillas de Chancho",
+              "BBQ pork spare ribs, sweet potato mash",
+              0,
+              null,
+              "Ask shop"
+            ]
+          ]
+        },
+        {
+          "name": "Menu · Los Grandes",
+          "items": [
+            [
+              "Bistec a la Pobre",
+              "Tacu tacu topped with Hanger beef steak, plantains, fried egg, salsa criolla",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Aji de Gallina",
+              "A Peruvian classic reinvented. Shredded chicken in creamy aji amarillo, gnocchi, white rice",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Lomo Saltado",
+              "Classic Peruvian stir-fried beef, soy sauce, onions, tomatoes, cilantro, home fries, white rice",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Arroz Norteno",
+              "Cilantro & spinach rice, pork belly skewers, aji amarillo, ocopa, salsa criolla",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Paella Peruana de Tierra",
+              "Aji Panca Peruvian-style paella, linguisa & chicken, arborio rice",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Pescado a lo Macho",
+              "Fresh catch of the day, shellfish mix, aji panca sauce, coconut rice",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Salmon Andino con Hongos",
+              "Oven-roasted wild salmon, mushrooms, ginger, lime onion sauce",
+              0,
+              null,
+              "Ask shop"
+            ]
+          ]
+        },
+        {
+          "name": "Brunch · Brunch",
+          "items": [
+            [
+              "Lucuma French Toast",
+              "Brioche marinated in lucuma custard topped with lucuma whipped cream & berries",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Tamalito Peruano con Huevos",
+              "House made classic pork tamale, salsa criolla, scrambled eggs",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Pan con Chicharron",
+              "Classic Peruvian pork sandwich, sweet potato, salsa criolla, aioli",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Pan con Hongos",
+              "Mushroom sandwich, aioli, salsa criolla",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Croissant Relleno",
+              "Croissant, scrambled eggs, pollera sauce, sunflower seeds, arugula, avocado\nAdd house salchicha huachana pork sausage",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Arroz Tapado",
+              "Classic Peruvian dish of layered beef and rice, sweet fried plantains, fried egg",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Salchipapa",
+              "Mix of potatoes, chicken, salchicha huachana, linguisa, cheese, fried eggs",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Omelette de la Casa",
+              "Mushrooms, spinach, onions, peppers, cheese, salsa pollera, side of Inkan potatoes \nAdd house salchicha huachana pork sausage\nAdd bacon",
+              0,
+              null,
+              "Ask shop"
+            ]
+          ]
+        },
+        {
+          "name": "Brunch · Brunch Café",
+          "items": [
+            [
+              "Incan Gold Latte",
+              "Hot or iced - Discover the captivating flavor of Peru’s “Gold of the Incas” in this exquisite latte. Made with our velvety, house-made lucuma manjar (boasting notes of maple, sweet potato, and caramel), and your choice of espresso or premium ceremonial grade matcha.",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "El Picarone Latte",
+              "Hot or iced - Inspired by a beloved Peruvian classic, this unique latte features a rich, warming house-made syrup of anise, cinnamon, clove, aromatic fig leaves, and sweet piloncillo. Blended with your choice of espresso or premium ceremonial grade matcha for a deeply comforting, subtly spiced treat that transports you straight to the streets of Lima.",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Kion Latte",
+              "Hot or iced - Your new go-to pick-me-up! This lively, Peruvian-inspired latte features our warming ginger syrup, bringing a vibrant, zesty kick to every sip. Prepared with your choice of a bold double shot of espresso or premium ceremonial grade matcha.",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Nube Dorado Latte",
+              "Iced - Indulge in a cloud of Peruvian sunshine. This exquisite iced treat features our rich, creamy lucuma manjar expertly blended with your choice of espresso or premium ceremonial grade matcha and milk. It’s crowned with a luxurious, house-made lucuma cold foam.",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Into Oro Latte",
+              "Iced - The refreshing twist on your iced coffee! Starts with a base of freshly squeezed orange juice, then perfectly topped with a luxurious, airy espresso cold foam.",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Classic Coffees",
+              "Americano, Cappucino, Latte, Matcha Latte, Flat White, Machiato, Doppio, Solo. \nMatcha provided by Asha Tea House.",
+              0,
+              null,
+              "Ask shop"
+            ]
+          ]
+        },
+        {
+          "name": "Dessert · Postres",
+          "items": [
+            [
+              "Affogato",
+              "Lucuma ice cream and fresh pulled double espresso",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Alfajores",
+              "Soft cookies filled with dulce de leche. Made by Fabiola.",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "El Turrón",
+              "Anise cheesecake topped with golden anise sauce and Peruvian candies",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Inca Gold Tiramisu",
+              "Lucuma infused mascarpone, ladyfingers cookies, espresso, coffee liquor",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Toasted Passion",
+              "Frozen passion fruit mousse, cookie crumble, \ntoasted meringue",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Combinado Limeño",
+              "Arroz con leche, mazamorra",
+              0,
+              null,
+              "Ask shop"
+            ],
+            [
+              "Picarones",
+              "Classic Inkan donuts, golden anise sauce",
+              0,
+              null,
+              "Ask shop"
+            ]
+          ]
+        }
+      ],
+      "quoteOnly": "The published food menus mostly omit prices. Ask the restaurant for the current price of any item marked Ask shop.",
+      "orderUrl": "https://www.lucumakitchen.com/order-online",
+      "siteNote": "Named items are from the restaurant’s own main, brunch and dessert menus. Brunch is weekends 10am–2:30pm, and weekday happy hour is 3–5:30pm. Cocktail and nightcap sections are omitted.",
+      "panels": [
+        {
+          "head": "Menus and visits",
+          "body": [],
+          "links": [
+            {
+              "label": "Lucuma menus",
+              "href": "https://www.lucumakitchen.com/menu"
+            },
+            {
+              "label": "Contact and hours",
+              "href": "https://www.lucumakitchen.com/contact"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mt-music-richmond",
+      "name": "MT Music BBQ & Bar",
+      "label": "MT Music",
+      "cuisine": "Asian BBQ and karaoke restaurant",
+      "tagline": "Asian dining and private karaoke at Pacific East Mall in Richmond.",
+      "color": "#355B50",
+      "icon": "mt-music-richmond-v105",
+      "prep": 0,
+      "category": "Asian BBQ and karaoke restaurant",
+      "items": [],
+      "site": "https://www.mtmusicrestaurant.net/",
+      "address": "3288 Pierce St, A105, Richmond, CA 94804",
+      "phone": "(510) 898-1076",
+      "email": "mtmusicrestaurant@gmail.com",
+      "hours": "Tue–Thu 5pm–midnight; Fri–Sun noon–midnight",
+      "contactOnly": "Contact MT Music for its current food menu, prices and karaoke availability.",
+      "siteNote": "Glenn requested Richmond Eats and BEASTY Hot Pot. The shop’s own site describes Asian BBQ and private karaoke; its supplied profile publishes the listed Tuesday–Sunday hours. A complete priced food menu was not verified.",
+      "panels": [
+        {
+          "head": "Dining and karaoke",
+          "body": [],
+          "links": [
+            {
+              "label": "MT Music’s own website",
+              "href": "https://www.mtmusicrestaurant.net/"
+            },
+            {
+              "label": "Karaoke booking information",
+              "href": "https://www.mtmusicrestaurant.net/book-online"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sweet-fingers-oakland",
+      "name": "Sweet Fingers Jamaican Restaurant & Bar",
+      "label": "Sweet Fingers",
+      "cuisine": "Jamaican restaurant and bar",
+      "tagline": "Chef Clive Barnes’ Jamaican restaurant at 1707 Telegraph Avenue in Uptown Oakland.",
+      "color": "#355B50",
+      "icon": "sweet-fingers-oakland-v105",
+      "prep": 0,
+      "category": "Jamaican restaurant and bar",
+      "items": [],
+      "site": "https://sweetfingersrestaurant.com/",
+      "address": "1707 Telegraph Ave, Oakland, CA 94612",
+      "phone": "(510) 553-9869",
+      "email": "info@sweetfingersrestaurant.com",
+      "hours": "Sun–Thu noon–10pm; Fri–Sat noon–midnight",
+      "sections": [
+        {
+          "name": "Meat Entre",
+          "items": [
+            [
+              "Curry Goat Large Plate",
+              "Tender Savory Award Winning Curry Goat",
+              4500
+            ],
+            [
+              "Curry Goat Small Plate",
+              "Tender Savory Award Winning Goat served with veggies and rice and beans",
+              2300
+            ]
+          ]
+        },
+        {
+          "name": "Chicken Entre",
+          "items": [
+            [
+              "Award Winning Jerk Chicken Large Plate",
+              "Award Winning Jerk Chicken",
+              3100
+            ],
+            [
+              "Jerk Chicken Small Plate",
+              "Award Winning Jerk Chicken Small Plate",
+              1700
+            ],
+            [
+              "Curry Chicken Large Plate",
+              "Flavorful Curry Stew Chicken",
+              3300
+            ],
+            [
+              "Curry Chicken Small Plate",
+              "Flavorful Curry Chicken stewed served with veggies rice and peas and plantains",
+              1800
+            ],
+            [
+              "Brown Stew Chicken Large Plate",
+              "Chef Clive's Special Brown Stew Chicken",
+              3300
+            ],
+            [
+              "Brown Stew Chicken Small Plate",
+              "Brown Stew Chicken served with rice and peas and plantain",
+              1800
+            ]
+          ]
+        },
+        {
+          "name": "Seafood Entree",
+          "items": [
+            [
+              "Salmon Large Plate",
+              "Salmon Styles\nJerk, Brown Stew and Curry",
+              4300
+            ],
+            [
+              "Salmon Small Plate",
+              "Salmon Styles\nJerk, Brown Stew and Curry",
+              2000
+            ],
+            [
+              "Shrimp Large Plate",
+              "Fried Shrimp Sautéed with Vegetables and secret Seasonings\nShrimp Styles\nJerk, Curry and Coconut",
+              4000
+            ],
+            [
+              "Shrimp Small Plate",
+              "Fried Shrimp Sautéed with vegetables and secret Seasoning",
+              1900
+            ],
+            [
+              "Snapper Fillet Large Plate",
+              "Fried and Sautéed with vegetables\nStyles: Jerk, Brown Stew and Curry\nBrown Stew Snapper Fillet in. photo",
+              4000
+            ],
+            [
+              "Snapper Fillet Small Plate",
+              "Fried and sautéed with vegetables and secret seasoning\nSnapper Styles\nJerk, Brown Stew and Curry",
+              1900
+            ],
+            [
+              "Whole Fish",
+              "Comes with rice and peas, veggies and plantains\nEscovitch in Picture",
+              4500
+            ]
+          ]
+        },
+        {
+          "name": "Vegetarian",
+          "items": [
+            [
+              "Tofu Large Plate",
+              "Firm Tofu fried and sautéed with vegetables and Secret Seasonings\nJerk, Curry or Barbecue",
+              3000
+            ],
+            [
+              "Tofu Small Plate",
+              "Firm, Fried Tofu sautéed with vegetables\nJerk Curry or Barbecue",
+              1600
+            ],
+            [
+              "Stew Vegetable Large Plate",
+              "Medley of vegetables with cabbage sautéed with coconut milk and secret seasonings.",
+              2500
+            ],
+            [
+              "Stew Vegetable Small Plate",
+              "Vegetable Medley and cabbage sautéed with coconut milk and secret seasonings",
+              1200
+            ]
+          ]
+        },
+        {
+          "name": "Appetizers",
+          "items": [
+            [
+              "Jamaican Patties",
+              "Traditional baked dough pastry filled with Beef, Chicken or Vegetables",
+              800
+            ],
+            [
+              "Soup",
+              "Soup of the Day- Call to find out.",
+              700
+            ],
+            [
+              "Shrimp",
+              "Shimp Appetizer 7 Shrimp Choose your style- Jerk, Curry or Coconut",
+              1700
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "Cornbread",
+              "Chef Clive's Corn bread is special. Sweeter spices and a slight pudding on the bottom.",
+              700
+            ],
+            [
+              "House Salad",
+              "fresh bed of greens, cucumbers and tomatoes",
+              1000
+            ],
+            [
+              "Fried Festival",
+              "Two pieces of festival in one order. Sweet fried Cornmeal and flour. A Jamaican treat that compliments most any meal.",
+              500
+            ],
+            [
+              "Steam Rice",
+              "",
+              700
+            ],
+            [
+              "Rice and Peas (Beans)",
+              "Rice and \"Peas\" with thyme and other Jamaican seasonings- Coconut milk",
+              700
+            ],
+            [
+              "Fried Plantain",
+              "Fried Sweet Ripe Plantains",
+              1100
+            ],
+            [
+              "Chef Clive's Scotch Bonnet Sauce",
+              "Chef Clive's fire hot and flavorful homemade Pepper Sauce",
+              200
+            ],
+            [
+              "Chef Clive's Jerk Sauce",
+              "Chef Clives exclusive home made Jerk Sauce- does include bone marrow and meat renderings.",
+              200
+            ],
+            [
+              "coco bread",
+              "Yam, potatoe, Cho Cho, Carrots",
+              900
+            ]
+          ]
+        },
+        {
+          "name": "Chef Specials",
+          "items": [
+            [
+              "Ackee N Salt Fish",
+              "Jamaican National Dish!",
+              4700
+            ]
+          ]
+        },
+        {
+          "name": "Soft Drinks",
+          "items": [
+            [
+              "Bottled Water",
+              "Pure and refreshing bottled water",
+              200
+            ],
+            [
+              "Fountain Sodas",
+              "Coke, cranberry, ginger ale, soda water, sprite, tonic water",
+              300
+            ],
+            [
+              "Jamaican Soda",
+              "Imported Soda from Jamaica",
+              600
+            ],
+            [
+              "Lion Ginger Beer",
+              "A vibrant fusion of ginger and pineapple, delivering a fiery yet sweet experience",
+              900
+            ],
+            [
+              "Organic Beetroot Carrot Juice",
+              "",
+              1000
+            ],
+            [
+              "Organic Sea-moss Strawberry",
+              "",
+              800
+            ],
+            [
+              "Organic Seamoss Pineapple",
+              "Infused with organic sea moss and pineapple for a refreshing soda",
+              1000
+            ],
+            [
+              "Sorrel*",
+              "Intense and sweet drink made from hibiscus flower",
+              900
+            ],
+            [
+              "Sweet Finger Punch",
+              "Blend of our homemade Sorrel and Gingerbeer. Non Alcoholic",
+              900
+            ],
+            [
+              "Organic Seamoss Strawberry",
+              "Made with fresh organic Strawberry and infused with seamoss!",
+              1000
+            ]
+          ]
+        },
+        {
+          "name": "Jamaican Dessert",
+          "items": [
+            [
+              "Jamaican Style Sweet Potato Pudding",
+              "Sweet potato jamaican bread pudding",
+              1000
+            ],
+            [
+              "Sweet Fingers Jamaican Rum Cake",
+              "Homemade Black Rum Cake made with Jamaican Rum for flavor. Best when served warm",
+              1000
+            ]
+          ]
+        }
+      ],
+      "orderUrl": "https://sweetfingersrestaurant.com/menu",
+      "siteNote": "Menu, prices, store hours and contact details are published for the Uptown Oakland location. The supplied promotional film announces its November 6 grand opening; that date is past, not an upcoming event.",
+      "clip": {
+        "src": "/clips/review-DfN-hTsBaNH.mp4",
+        "poster": "/clips/review-DfN-hTsBaNH-poster.webp",
+        "href": "https://www.instagram.com/reel/DfN-hTsBaNH/",
+        "credit": "Promotional message from Chef Clive, posted by @sweetfingersjamaican.",
+        "platform": "Instagram"
+      }
+    },
+    {
+      "slug": "khao-tiew-sf",
+      "name": "Khao Tiew",
+      "label": "Khao Tiew",
+      "cuisine": "Thai restaurant",
+      "tagline": "Thai cooking on Claremont Boulevard in San Francisco.",
+      "color": "#355B50",
+      "icon": "khao-tiew-sf-v105",
+      "prep": 0,
+      "category": "Thai restaurant",
+      "items": [],
+      "site": "https://khaotiew.square.site/",
+      "address": "272 Claremont Blvd, San Francisco, CA",
+      "contactOnly": "Use the shop’s own menu page for the current selection, prices and hours.",
+      "panels": [
+        {
+          "head": "Menu and seating",
+          "body": [
+            "The supplied profile says no new reservations are accepted, while existing confirmed reservations are honored. Other guests are walk-ins, first come, first served. Check with the shop for changes.",
+            "The Square page exposes menu categories, but a complete current item/price list could not be verified. No phone or hours were invented."
+          ],
+          "links": [
+            {
+              "label": "Khao Tiew’s own menu page",
+              "href": "https://khaotiew.square.site/"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "code": "DfWHrVUSpFn",
+      "batch": 105,
+      "source": "https://www.instagram.com/reel/DfWHrVUSpFn/",
+      "disposition": "local film",
+      "slug": "review-DfWHrVUSpFn",
+      "brand": "b_pakusf",
+      "by": "summer.ishungry",
+      "request": [
+        {
+          "at": "2026-11-07 09:07:53.706980",
+          "request": "Clip this video plz \nPlease update icon pic"
+        }
+      ],
+      "excerpt": "16s-31s of 33s"
+    },
+    {
+      "code": "DfThSHUtrVK",
+      "batch": 105,
+      "source": "https://www.instagram.com/reel/DfThSHUtrVK/",
+      "disposition": "local film",
+      "slug": "review-DfThSHUtrVK",
+      "brand": "b_nonosdoughnutsberkeley",
+      "by": "oliviiacai",
+      "request": [
+        {
+          "at": "2026-11-07 09:12:34.632254",
+          "request": "Clip this video plz\nFoodie \nNewbie"
+        }
+      ],
+      "excerpt": "9s-24s of 37s"
+    },
+    {
+      "code": "DfN0cv3hA1C",
+      "batch": 105,
+      "source": "https://www.instagram.com/reel/DfN0cv3hA1C/",
+      "disposition": "local film",
+      "slug": "review-DfN0cv3hA1C",
+      "brand": "b_nonosdoughnutsberkeley",
+      "by": "kevinberkeleyfoodreviews",
+      "request": [
+        {
+          "at": "2026-11-07 09:39:21.442900",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "excerpt": "4s-19s of 58s"
+    },
+    {
+      "code": "Dfadd8FP4oT",
+      "batch": 105,
+      "source": "https://www.instagram.com/reel/Dfadd8FP4oT/",
+      "disposition": "local film",
+      "slug": "review-Dfadd8FP4oT",
+      "brand": "b_nonosdoughnutsberkeley",
+      "by": "thekhaysie",
+      "request": [
+        {
+          "at": "2026-11-07 17:12:54.911393",
+          "request": "Clip this video plz"
+        }
+      ],
+      "excerpt": "1s-16s of 83s"
+    },
+    {
+      "code": "DfAkb2XvzKn",
+      "batch": 105,
+      "source": "https://www.instagram.com/reel/DfAkb2XvzKn/",
+      "disposition": "local film",
+      "slug": "review-DfAkb2XvzKn",
+      "brand": "b_lucumakitchenoakland",
+      "by": "booziebrunch",
+      "request": [
+        {
+          "at": "2026-11-07 16:07:05.706257",
+          "request": "Clip this video plz \nHeavy Hitter"
+        }
+      ],
+      "excerpt": "13s-28s of 40s"
+    },
+    {
+      "code": "Dfdai5EPSq4",
+      "batch": 105,
+      "source": "https://www.instagram.com/reel/Dfdai5EPSq4/",
+      "disposition": "local film",
+      "slug": "review-Dfdai5EPSq4",
+      "brand": "b_mtmusicrichmond",
+      "by": "rollingwithdeneats",
+      "request": [
+        {
+          "at": "2026-11-07 16:40:39.464869",
+          "request": "Clip this video plz"
+        }
+      ],
+      "excerpt": "3s-18s of 19s"
+    },
+    {
+      "code": "DfaOWE2OSUf",
+      "batch": 105,
+      "source": "https://www.instagram.com/reel/DfaOWE2OSUf/",
+      "disposition": "local film",
+      "slug": "review-DfaOWE2OSUf",
+      "brand": "b_mtmusicrichmond",
+      "by": "habibimocha",
+      "request": [
+        {
+          "at": "2026-11-07 16:46:51.344350",
+          "request": "Clip this video plz"
+        }
+      ],
+      "excerpt": "0s-13s of 13s"
+    },
+    {
+      "code": "DfQjK8pCKBQ",
+      "batch": 105,
+      "source": "https://www.instagram.com/reel/DfQjK8pCKBQ/",
+      "disposition": "local film",
+      "slug": "review-DfQjK8pCKBQ",
+      "brand": "b_mtmusicrichmond",
+      "by": "thekhaysie",
+      "request": [
+        {
+          "at": "2026-11-07 16:47:31.333813",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter"
+        }
+      ],
+      "excerpt": "9s-24s of 27s"
+    },
+    {
+      "code": "DecEKVBt1Kg",
+      "batch": 105,
+      "source": "https://www.instagram.com/reel/DecEKVBt1Kg/",
+      "disposition": "local film",
+      "slug": "review-DecEKVBt1Kg",
+      "brand": "b_mtmusicrichmond",
+      "by": "wthellydanyelly",
+      "request": [
+        {
+          "at": "2026-11-07 16:48:09.061929",
+          "request": "Clip this video plz"
+        },
+        {
+          "at": "2026-11-07 16:48:51.124956",
+          "request": "Clip this video plz"
+        }
+      ],
+      "excerpt": "8s-23s of 28s"
+    },
+    {
+      "code": "DfN-hTsBaNH",
+      "batch": 105,
+      "source": "https://www.instagram.com/reel/DfN-hTsBaNH/",
+      "disposition": "local film",
+      "slug": "review-DfN-hTsBaNH",
+      "brand": "b_sweetfingersoakland",
+      "by": "sweetfingersjamaican",
+      "request": [
+        {
+          "at": "2026-11-07 17:11:01.342157",
+          "request": "Watch this video clip"
+        }
+      ],
+      "excerpt": "21s-36s of 45s"
+    },
+    {
+      "code": "Dfcqyhzxh_9",
+      "batch": 105,
+      "source": "https://www.instagram.com/reel/Dfcqyhzxh_9/",
+      "disposition": "local film on creator and Watch; restaurant not separately requested",
+      "slug": "review-Dfcqyhzxh_9",
+      "brand": "b_foodielisaaaaletseat",
+      "playOn": "b_foodielisaaaaletseat",
+      "by": "lisaaaaletseat",
+      "request": [
+        {
+          "at": "2026-11-07 09:46:45.341454",
+          "request": "Clip this video plz \nPlease update icon pic"
+        }
+      ],
+      "excerpt": "0s-11s of 11s"
+    },
+    {
+      "code": "DfYiyfCxYxs",
+      "batch": 105,
+      "source": "https://www.instagram.com/reel/DfYiyfCxYxs/",
+      "disposition": "local film on creator and Watch; existing four business films retained",
+      "slug": "review-DfYiyfCxYxs",
+      "brand": "b_acekingbbq",
+      "by": "martiebautista",
+      "excerpt": "29s-44s of 70s",
+      "request": [
+        {
+          "at": "2026-11-07T19:53:57-08:00",
+          "request": "Clip this video plz\nFoodie\nNewbie"
+        }
+      ]
+    }
+  ],
+  "placements": {
+    "san-francisco-goods2-79": "b_pakusf",
+    "berkeley-goods2-23": "b_nonosdoughnutsberkeley",
+    "danville-goods2-1": "b_batternicingdanville",
+    "oakland-goods2-48": "b_lucumakitchenoakland",
+    "richmond-goods2-5": "b_mtmusicrichmond",
+    "oakland-goods2-49": "b_sweetfingersoakland",
+    "san-francisco-goods2-80": "b_khaotiewsf",
+    "beasty-poke-0": "b_pakusf",
+    "beasty-cupcakes-0": "b_batternicingdanville",
+    "beasty-peruvian-0": "b_lucumakitchenoakland",
+    "beasty-jamaican-0": "b_sweetfingersoakland",
+    "beasty-donuts-7": "b_nonosdoughnutsberkeley",
+    "beasty-hotpot-10": "b_mtmusicrichmond",
+    "beasty-goods2-124": "b_khaotiewsf",
+    "beasty-foodtrucks-17": "b_veganmob"
+  },
+  "updatedIcons": [
+    "/icons/foodie-summer-ishungry-v105.webp",
+    "/icons/foodie-oliviiacai-v105.webp",
+    "/icons/foodie-kevinberkeleyfoodreviews-v105.webp",
+    "/icons/foodie-lisaaaaletseat-v105.webp",
+    "/icons/foodie-thekhaysie-v105.webp",
+    "/icons/paku-sf-v105.webp",
+    "/icons/nonos-doughnuts-berkeley-v105.webp",
+    "/icons/batter-n-icing-danville-v105.webp",
+    "/icons/lucuma-kitchen-oakland-v105.webp",
+    "/icons/mt-music-richmond-v105.webp",
+    "/icons/sweet-fingers-oakland-v105.webp",
+    "/icons/khao-tiew-sf-v105.webp",
+    "/icons/salad-makers-v105.webp",
+    "/icons/classy-canines-v105.webp",
+    "/icons/qpot-san-jose-v105.webp",
+    "/icons/diamond-supply-co-v105.webp",
+    "/icons/vegan-mob-v105.webp",
+    "/icons/phosho-dough-v105.webp",
+    "/icons/foodie-martiebautista-v105.webp"
+  ],
+  "updatedBrands": [
+    "b_saladmakers",
+    "b_classycanines",
+    "b_qpotsanjose",
+    "b_diamondsupplyco",
+    "b_veganmob",
+    "b_phoshodough"
+  ],
+  "news": [
+    {
+      "date": "2026-11-07",
+      "kind": "opening",
+      "headline": "Nono’s Doughnuts announces November 12 grand opening",
+      "body": "Nono’s Doughnuts & Cafe at 2514 Bancroft Way in Berkeley announces its November 12, 2026 grand opening after a November 5 soft opening. Check the shop’s published profile for offers, hours and availability.",
+      "authorId": "b_nonosdoughnutsberkeley",
+      "brands": [
+        "b_nonosdoughnutsberkeley"
+      ],
+      "eventDate": "2026-11-12"
+    }
+  ],
+  "foodieOrder": [
+    {
+      "handle": "ronniebanks",
+      "brand": "b_foodieronniebanks",
+      "score": 3
+    },
+    {
+      "handle": "msashleyvee",
+      "brand": "b_foodiemsashleyvee",
+      "score": 3
+    },
+    {
+      "handle": "feed_happiness_",
+      "brand": "b_foodiefeedhappiness",
+      "score": 2
+    },
+    {
+      "handle": "ashleyveats",
+      "brand": "b_foodieashleyveats",
+      "score": 2
+    },
+    {
+      "handle": "blurgotti",
+      "brand": "b_foodieblurgotti",
+      "score": 2
+    },
+    {
+      "handle": "sebascastroficial",
+      "brand": "b_foodiesebascastroficial",
+      "score": 2
+    },
+    {
+      "handle": "festusfeasts",
+      "brand": "b_foodiefestusfeasts",
+      "score": 1
+    },
+    {
+      "handle": "thesnacksensei",
+      "brand": "b_grando",
+      "score": 1
+    },
+    {
+      "handle": "foodandsachi",
+      "brand": "b_foodiefoodandsachi",
+      "score": 1
+    },
+    {
+      "handle": "grubwitmike",
+      "brand": "b_foodiegrubwitmike",
+      "score": 1
+    },
+    {
+      "handle": "hungry4munchies",
+      "brand": "b_foodiehungry4munchies",
+      "score": 1
+    },
+    {
+      "handle": "bayarea_fooddreamz",
+      "brand": "b_foodiebayareafooddreamz",
+      "score": 1
+    },
+    {
+      "handle": "eatwithsie",
+      "brand": "b_foodieeatwithsie",
+      "score": 1
+    },
+    {
+      "handle": "daeatzwitbri",
+      "brand": "b_foodiedaeatzwitbri",
+      "score": 1
+    },
+    {
+      "handle": "thetastebud",
+      "brand": "b_foodiethetastebud",
+      "score": 1
+    },
+    {
+      "handle": "aztec.ed",
+      "brand": "b_foodieazteced",
+      "score": 1
+    },
+    {
+      "handle": "imadoniseats",
+      "brand": "b_foodieimadoniseats",
+      "score": 1
+    },
+    {
+      "handle": "mzz.juxtaposition",
+      "brand": "b_foodiemzzjuxtaposition",
+      "score": 1
+    },
+    {
+      "handle": "yourglobalfoodiebff",
+      "brand": "b_foodieyourglobalfoodiebff",
+      "score": 1
+    },
+    {
+      "handle": "felicitythefoodie",
+      "brand": "b_foodiefelicitythefoodie",
+      "score": 1
+    },
+    {
+      "handle": "trinhdoesthings",
+      "brand": "b_foodietrinhdoesthings",
+      "score": 1
+    },
+    {
+      "handle": "smackinfood",
+      "brand": "b_foodiesmackinfood",
+      "score": 1
+    },
+    {
+      "handle": "drooling.bae",
+      "brand": "b_foodiedroolingbae",
+      "score": 1
+    },
+    {
+      "handle": "thesauceboss_",
+      "brand": "b_foodiethesauceboss",
+      "score": 1
+    },
+    {
+      "handle": "bayarea.foodie.adventures",
+      "brand": "b_foodiebayareafoodieadventures",
+      "score": 1
+    },
+    {
+      "handle": "siliconvalley.foodies",
+      "brand": "b_foodiesiliconvalleyfoodies",
+      "score": 1
+    },
+    {
+      "handle": "jacksdiningroom",
+      "brand": "b_foodiejacksdiningroom",
+      "score": 1
+    },
+    {
+      "handle": "andreweatsinsf",
+      "brand": "b_foodieandreweatsinsf",
+      "score": 1
+    },
+    {
+      "handle": "eatswithkath",
+      "brand": "b_foodieeatswithkath",
+      "score": 1
+    },
+    {
+      "handle": "cestalmoco",
+      "brand": "b_foodiecestalmoco",
+      "score": 1
+    },
+    {
+      "handle": "kangofrealty",
+      "brand": "b_foodiekangofrealty",
+      "score": 1
+    },
+    {
+      "handle": "fedoramaelle",
+      "brand": "b_foodiefedoramaelle",
+      "score": 1
+    },
+    {
+      "handle": "pastrywithjenn",
+      "brand": "b_foodiepastrywithjenn",
+      "score": 1
+    },
+    {
+      "handle": "travelwtiff",
+      "brand": "b_foodietravelwtiff",
+      "score": 1
+    },
+    {
+      "handle": "_emwong_",
+      "brand": "b_foodieemwong",
+      "score": 1
+    },
+    {
+      "handle": "kimoni.eatss",
+      "brand": "b_foodiekimonieatss",
+      "score": 1
+    },
+    {
+      "handle": "baygirlseat",
+      "brand": "b_foodiebaygirlseat",
+      "score": 1
+    },
+    {
+      "handle": "heraldh",
+      "brand": "b_foodieheraldh",
+      "score": 1
+    },
+    {
+      "handle": "foodiswhyimbroke",
+      "brand": "b_foodiefoodiswhyimbroke",
+      "score": 1
+    },
+    {
+      "handle": "keneats_",
+      "brand": "b_foodiekeneats",
+      "score": 1
+    },
+    {
+      "handle": "e40",
+      "brand": "b_e40",
+      "score": 1
+    },
+    {
+      "handle": "mamamarquez888",
+      "brand": "b_foodiemamamarquez888",
+      "score": 1
+    },
+    {
+      "handle": "reelkevo",
+      "brand": "b_foodiereelkevo",
+      "score": 1
+    },
+    {
+      "handle": "rollingwithdeneats",
+      "brand": "b_foodierollingwithdeneats",
+      "score": 1
+    },
+    {
+      "handle": "agnespittioni",
+      "brand": "b_foodieagnespittioni",
+      "score": 1
+    },
+    {
+      "handle": "j00diefoodie",
+      "brand": "b_foodiej00diefoodie",
+      "score": 1
+    },
+    {
+      "handle": "aliasharrief",
+      "brand": "b_foodiealiasharrief",
+      "score": 1
+    },
+    {
+      "handle": "carlosbradley",
+      "brand": "b_foodiecarlosbradley",
+      "score": 1
+    },
+    {
+      "handle": "jc.eeats",
+      "brand": "b_foodiejceeats",
+      "score": 1
+    },
+    {
+      "handle": "monaeatsnearby",
+      "brand": "b_foodiemonaeatsnearby",
+      "score": 1
+    },
+    {
+      "handle": "bayareafoodiecrew",
+      "brand": "b_foodiebayareafoodiecrew",
+      "score": 1
+    },
+    {
+      "handle": "janniners",
+      "brand": "b_foodiejanniners",
+      "score": 1
+    },
+    {
+      "handle": "alwayshannegry",
+      "brand": "b_foodiealwayshannegry",
+      "score": 1
+    },
+    {
+      "handle": "rainmoreturely",
+      "brand": "b_foodierainmoreturely",
+      "score": 1
+    },
+    {
+      "handle": "_wheresthefoodat",
+      "brand": "b_foodiewheresthefoodat",
+      "score": 1
+    },
+    {
+      "handle": "sfbayfood",
+      "brand": "b_foodiesfbayfood",
+      "score": 1
+    },
+    {
+      "handle": "zeyno.ern",
+      "brand": "b_foodiezeynoern",
+      "score": 1
+    },
+    {
+      "handle": "booziebrunch",
+      "brand": "b_foodiebooziebrunch",
+      "score": 1
+    },
+    {
+      "handle": "thekhaysie",
+      "brand": "b_foodiethekhaysie",
+      "score": 1
+    },
+    {
+      "handle": "hungere.for.diy",
+      "brand": "b_foodiehungerefordiy",
+      "score": 0
+    },
+    {
+      "handle": "justmostie",
+      "brand": "b_foodiejustmostie",
+      "score": 0
+    },
+    {
+      "handle": "capturedbysado",
+      "brand": "b_foodiecapturedbysado",
+      "score": 0
+    },
+    {
+      "handle": "allie.eats",
+      "brand": "b_foodieallieeats",
+      "score": 0
+    },
+    {
+      "handle": "seekeasyeats",
+      "brand": "b_foodieseekeasyeats",
+      "score": 0
+    },
+    {
+      "handle": "orangeginger",
+      "brand": "b_foodieorangeginger",
+      "score": 0
+    },
+    {
+      "handle": "antoinetterzz",
+      "brand": "b_foodieantoinetterzz",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.kulture",
+      "brand": "b_foodiebayareakulture",
+      "score": 0
+    },
+    {
+      "handle": "chefmelissaking",
+      "brand": "b_foodiechefmelissaking",
+      "score": 0
+    },
+    {
+      "handle": "celineeats",
+      "brand": "b_foodiecelineeats",
+      "score": 0
+    },
+    {
+      "handle": "singlecatm0m",
+      "brand": "b_foodiesinglecatm0m",
+      "score": 0
+    },
+    {
+      "handle": "kimjsseats",
+      "brand": "b_foodiekimjsseats",
+      "score": 0
+    },
+    {
+      "handle": "oaktowngrubhub",
+      "brand": "b_foodieoaktowngrubhub",
+      "score": 0
+    },
+    {
+      "handle": "thespoonlist",
+      "brand": "b_foodiethespoonlist",
+      "score": 0
+    },
+    {
+      "handle": "sherryeatworld",
+      "brand": "b_foodiesherryeatworld",
+      "score": 0
+    },
+    {
+      "handle": "hungrydanz",
+      "brand": "b_foodiehungrydanz",
+      "score": 0
+    },
+    {
+      "handle": "iamnikkieg",
+      "brand": "b_foodieiamnikkieg",
+      "score": 0
+    },
+    {
+      "handle": "janeethefoodie",
+      "brand": "b_foodiejaneethefoodie",
+      "score": 0
+    },
+    {
+      "handle": "peggy_shoo",
+      "brand": "b_foodiepeggyshoo",
+      "score": 0
+    },
+    {
+      "handle": "zarina.nawabi",
+      "brand": "b_foodiezarinanawabi",
+      "score": 0
+    },
+    {
+      "handle": "jbrenes_",
+      "brand": "b_foodiejbrenes",
+      "score": 0
+    },
+    {
+      "handle": "simply_dorothy_",
+      "brand": "b_foodiesimplydorothy",
+      "score": 0
+    },
+    {
+      "handle": "acoupleofcooks",
+      "brand": "b_foodieacoupleofcooks",
+      "score": 0
+    },
+    {
+      "handle": "jantrinanicole",
+      "brand": "b_foodiejantrinanicole",
+      "score": 0
+    },
+    {
+      "handle": "chris.corpz",
+      "brand": "b_foodiechriscorpz",
+      "score": 0
+    },
+    {
+      "handle": "thealamedapulse",
+      "brand": "b_foodiethealamedapulse",
+      "score": 0
+    },
+    {
+      "handle": "bayareamunchies510",
+      "brand": "b_foodiebayareamunchies510",
+      "score": 0
+    },
+    {
+      "handle": "victoria.pham17",
+      "brand": "b_foodievictoriapham17",
+      "score": 0
+    },
+    {
+      "handle": "foodieberrie",
+      "brand": "b_foodiefoodieberrie",
+      "score": 0
+    },
+    {
+      "handle": "samserved",
+      "brand": "b_foodiesamserved",
+      "score": 0
+    },
+    {
+      "handle": "areweeatingyet",
+      "brand": "b_foodieareweeatingyet",
+      "score": 0
+    },
+    {
+      "handle": "siusvision",
+      "brand": "b_foodiesiusvision",
+      "score": 0
+    },
+    {
+      "handle": "arianasade",
+      "brand": "b_foodiearianasade",
+      "score": 0
+    },
+    {
+      "handle": "bayareafoodz",
+      "brand": "b_foodiebayareafoodz",
+      "score": 0
+    },
+    {
+      "handle": "bestbayareafood",
+      "brand": "b_foodiebestbayareafood",
+      "score": 0
+    },
+    {
+      "handle": "annna_eats",
+      "brand": "b_foodieannnaeats",
+      "score": 0
+    },
+    {
+      "handle": "ugc.with.frances",
+      "brand": "b_foodieugcwithfrances",
+      "score": 0
+    },
+    {
+      "handle": "dariananthony_",
+      "brand": "b_foodiedariananthony",
+      "score": 0
+    },
+    {
+      "handle": "charweeezy",
+      "brand": "b_foodiecharweeezy",
+      "score": 0
+    },
+    {
+      "handle": "mukbangyourmama",
+      "brand": "b_foodiemukbangyourmama",
+      "score": 0
+    },
+    {
+      "handle": "wanderingstefany",
+      "brand": "b_foodiewanderingstefany",
+      "score": 0
+    },
+    {
+      "handle": "lifebyvivien",
+      "brand": "b_foodielifebyvivien",
+      "score": 0
+    },
+    {
+      "handle": "andre___lucas",
+      "brand": "b_foodieandrelucas",
+      "score": 0
+    },
+    {
+      "handle": "shrimpfriedroice",
+      "brand": "b_foodieshrimpfriedroice",
+      "score": 0
+    },
+    {
+      "handle": "_cynlacson",
+      "brand": "b_foodiecynlacson",
+      "score": 0
+    },
+    {
+      "handle": "alexytravels",
+      "brand": "b_foodiealexytravels",
+      "score": 0
+    },
+    {
+      "handle": "andygravs",
+      "brand": "b_foodieandygravs",
+      "score": 0
+    },
+    {
+      "handle": "livingvivalakillah",
+      "brand": "b_foodielivingvivalakillah",
+      "score": 0
+    },
+    {
+      "handle": "eighty6ix_",
+      "brand": "b_foodieeighty6ix",
+      "score": 0
+    },
+    {
+      "handle": "mayakay.official",
+      "brand": "b_foodiemayakayofficial",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.maganda.eats",
+      "brand": "b_foodiebayareamagandaeats",
+      "score": 0
+    },
+    {
+      "handle": "forkmeetsfood",
+      "brand": "b_foodieforkmeetsfood",
+      "score": 0
+    },
+    {
+      "handle": "foodiesnflightss",
+      "brand": "b_foodiefoodiesnflightss",
+      "score": 0
+    },
+    {
+      "handle": "carlaylayyy",
+      "brand": "b_foodiecarlaylayyy",
+      "score": 0
+    },
+    {
+      "handle": "shua.tangco",
+      "brand": "b_foodieshuatangco",
+      "score": 0
+    },
+    {
+      "handle": "jenny.home.loans",
+      "brand": "b_foodiejennyhomeloans",
+      "score": 0
+    },
+    {
+      "handle": "wthellydanyelly",
+      "brand": "b_foodiewthellydanyelly",
+      "score": 0
+    },
+    {
+      "handle": "sophiaxbayarea",
+      "brand": "b_foodiesophiaxbayarea",
+      "score": 0
+    },
+    {
+      "handle": "sierra.eats.8",
+      "brand": "b_foodiesierraeats8",
+      "score": 0
+    },
+    {
+      "handle": "yo_siiii_foodie",
+      "brand": "b_foodieyosiiiifoodie",
+      "score": 0
+    },
+    {
+      "handle": "ivkicks",
+      "brand": "b_foodieivkicks",
+      "score": 0
+    },
+    {
+      "handle": "itsslydiia",
+      "brand": "b_foodieitsslydiia",
+      "score": 0
+    },
+    {
+      "handle": "startingfiresevrywhere",
+      "brand": "b_foodiestartingfiresevrywhere",
+      "score": 0
+    },
+    {
+      "handle": "bylizettexo",
+      "brand": "b_foodiebylizettexo",
+      "score": 0
+    },
+    {
+      "handle": "brianthebarber",
+      "brand": "b_foodiebrianthebarber",
+      "score": 0
+    },
+    {
+      "handle": "ni.ckk_",
+      "brand": "b_foodienickk",
+      "score": 0
+    },
+    {
+      "handle": "jamesbaylife",
+      "brand": "b_foodiejamesbaylife",
+      "score": 0
+    },
+    {
+      "handle": "shesvibinhigh",
+      "brand": "b_foodieshesvibinhigh",
+      "score": 0
+    },
+    {
+      "handle": "dchangshangry",
+      "brand": "b_foodiedchangshangry",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.foodie.san",
+      "brand": "b_foodiebayareafoodiesan",
+      "score": 0
+    },
+    {
+      "handle": "truly_athi",
+      "brand": "b_foodietrulyathi",
+      "score": 0
+    },
+    {
+      "handle": "jetsetjanine",
+      "brand": "b_foodiejetsetjanine",
+      "score": 0
+    },
+    {
+      "handle": "kvbitesandgo",
+      "brand": "b_foodiekvbitesandgo",
+      "score": 0
+    },
+    {
+      "handle": "stunnaman02",
+      "brand": "b_foodiestunnaman02",
+      "score": 0
+    },
+    {
+      "handle": "savorwithcoral",
+      "brand": "b_foodiesavorwithcoral",
+      "score": 0
+    },
+    {
+      "handle": "firstdibs.bayarea",
+      "brand": "b_foodiefirstdibsbayarea",
+      "score": 0
+    },
+    {
+      "handle": "margs.out",
+      "brand": "b_foodiemargsout",
+      "score": 0
+    },
+    {
+      "handle": "yogetasworld",
+      "brand": "b_foodieyogetasworld",
+      "score": 0
+    },
+    {
+      "handle": "itsmayrazambrano",
+      "brand": "b_foodieitsmayrazambrano",
+      "score": 0
+    },
+    {
+      "handle": "your_travel_daddy",
+      "brand": "b_foodieyourtraveldaddy",
+      "score": 0
+    },
+    {
+      "handle": "hella._local.mo",
+      "brand": "b_foodiehellalocalmo",
+      "score": 0
+    },
+    {
+      "handle": "thesnobbiefoodie",
+      "brand": "b_foodiethesnobbiefoodie",
+      "score": 0
+    },
+    {
+      "handle": "katfoodsf",
+      "brand": "b_foodiekatfoodsf",
+      "score": 0
+    },
+    {
+      "handle": "charlikestoeat",
+      "brand": "b_foodiecharlikestoeat",
+      "score": 0
+    },
+    {
+      "handle": "hellahansel",
+      "brand": "b_foodiehellahansel",
+      "score": 0
+    },
+    {
+      "handle": "geraldfermin",
+      "brand": "b_foodiegeraldfermin",
+      "score": 0
+    },
+    {
+      "handle": "pimchanyum",
+      "brand": "b_foodiepimchanyum",
+      "score": 0
+    },
+    {
+      "handle": "bayareawilson",
+      "brand": "b_foodiebayareawilson",
+      "score": 0
+    },
+    {
+      "handle": "whatthejessi_",
+      "brand": "b_foodiewhatthejessi",
+      "score": 0
+    },
+    {
+      "handle": "foodgiveness",
+      "brand": "b_foodiefoodgiveness",
+      "score": 0
+    },
+    {
+      "handle": "asideofsweet",
+      "brand": "b_foodieasideofsweet",
+      "score": 0
+    },
+    {
+      "handle": "tasha.malan",
+      "brand": "b_foodietashamalan",
+      "score": 0
+    },
+    {
+      "handle": "camemzmin",
+      "brand": "b_foodiecamemzmin",
+      "score": 0
+    },
+    {
+      "handle": "venturewithkelly",
+      "brand": "b_foodieventurewithkelly",
+      "score": 0
+    },
+    {
+      "handle": "cookwithhenny",
+      "brand": "b_foodiecookwithhenny",
+      "score": 0
+    },
+    {
+      "handle": "_aemeriee.dance",
+      "brand": "b_foodieaemerieedance",
+      "score": 0
+    },
+    {
+      "handle": "greatonezfoodreview",
+      "brand": "b_foodiegreatonezfoodreview",
+      "score": 0
+    },
+    {
+      "handle": "mr.smackreviews",
+      "brand": "b_foodiemrsmackreviews",
+      "score": 0
+    },
+    {
+      "handle": "bp__eats",
+      "brand": "b_foodiebpeats",
+      "score": 0
+    },
+    {
+      "handle": "erinlovesfun",
+      "brand": "b_foodieerinlovesfun",
+      "score": 0
+    },
+    {
+      "handle": "lovelivermore",
+      "brand": "b_foodielovelivermore",
+      "score": 0
+    },
+    {
+      "handle": "explorewithtaka",
+      "brand": "b_foodieexplorewithtaka",
+      "score": 0
+    },
+    {
+      "handle": "thehautesheet",
+      "brand": "b_foodiethehautesheet",
+      "score": 0
+    },
+    {
+      "handle": "humminglion",
+      "brand": "b_foodiehumminglion",
+      "score": 0
+    },
+    {
+      "handle": "_whatarethechances_",
+      "brand": "b_foodiewhatarethechances",
+      "score": 0
+    },
+    {
+      "handle": "katwalksf",
+      "brand": "b_foodiekatwalksf",
+      "score": 0
+    },
+    {
+      "handle": "yulmoo_l",
+      "brand": "b_foodieyulmool",
+      "score": 0
+    },
+    {
+      "handle": "barstoolsports",
+      "brand": "b_foodiebarstoolsports",
+      "score": 0
+    },
+    {
+      "handle": "xo.pinsta",
+      "brand": "b_foodiexopinsta",
+      "score": 0
+    },
+    {
+      "handle": "lovemissfit",
+      "brand": "b_foodielovemissfit",
+      "score": 0
+    },
+    {
+      "handle": "chloe_chomps",
+      "brand": "b_foodiechloechomps",
+      "score": 0
+    },
+    {
+      "handle": "realtorandreviewer",
+      "brand": "b_foodierealtorandreviewer",
+      "score": 0
+    },
+    {
+      "handle": "xoaramarie",
+      "brand": "b_foodiexoaramarie",
+      "score": 0
+    },
+    {
+      "handle": "foodie.dreams",
+      "brand": "b_foodiefoodiedreams",
+      "score": 0
+    },
+    {
+      "handle": "eatswithfoodie",
+      "brand": "b_foodieeatswithfoodie",
+      "score": 0
+    },
+    {
+      "handle": "jensintec",
+      "brand": "b_foodiejensintec",
+      "score": 0
+    },
+    {
+      "handle": "snackateriansf",
+      "brand": "b_foodiesnackateriansf",
+      "score": 0
+    },
+    {
+      "handle": "apoorva_sharma1",
+      "brand": "b_foodieapoorvasharma1",
+      "score": 0
+    },
+    {
+      "handle": "volha_creative",
+      "brand": "b_foodievolhacreative",
+      "score": 0
+    },
+    {
+      "handle": "boba._.addict",
+      "brand": "b_foodiebobaaddict",
+      "score": 0
+    },
+    {
+      "handle": "ruthannesturman",
+      "brand": "b_foodieruthannesturman",
+      "score": 0
+    },
+    {
+      "handle": "larryjunetfm",
+      "brand": "b_foodielarryjunetfm",
+      "score": 0
+    },
+    {
+      "handle": "eileenhuynher",
+      "brand": "b_foodieeileenhuynher",
+      "score": 0
+    },
+    {
+      "handle": "createwithcv",
+      "brand": "b_foodiecreatewithcv",
+      "score": 0
+    },
+    {
+      "handle": "aloha_stephanie",
+      "brand": "b_foodiealohastephanie",
+      "score": 0
+    },
+    {
+      "handle": "zoegabon",
+      "brand": "b_foodiezoegabon",
+      "score": 0
+    },
+    {
+      "handle": "martiwantsmore",
+      "brand": "b_foodiemartiwantsmore",
+      "score": 0
+    },
+    {
+      "handle": "byhillaryn",
+      "brand": "b_foodiebyhillaryn",
+      "score": 0
+    },
+    {
+      "handle": "aly_eats_cali",
+      "brand": "b_foodiealyeatscali",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.foodies",
+      "brand": "b_foodiebayareafoodies",
+      "score": 0
+    },
+    {
+      "handle": "moniica.michelle",
+      "brand": "b_foodiemoniicamichelle",
+      "score": 0
+    },
+    {
+      "handle": "ryanbyryanchua",
+      "brand": "b_foodieryanbyryanchua",
+      "score": 0
+    },
+    {
+      "handle": "hangrypotato",
+      "brand": "b_foodiehangrypotato",
+      "score": 0
+    },
+    {
+      "handle": "melsotel",
+      "brand": "b_foodiemelsotel",
+      "score": 0
+    },
+    {
+      "handle": "sanleandroeats",
+      "brand": "b_foodiesanleandroeats",
+      "score": 0
+    },
+    {
+      "handle": "broitsva",
+      "brand": "b_foodiebroitsva",
+      "score": 0
+    },
+    {
+      "handle": "fat_ash_foodie",
+      "brand": "b_foodiefatashfoodie",
+      "score": 0
+    },
+    {
+      "handle": "_foodieshots_",
+      "brand": "b_foodiefoodieshots",
+      "score": 0
+    },
+    {
+      "handle": "kitkatvales",
+      "brand": "b_foodiekitkatvales",
+      "score": 0
+    },
+    {
+      "handle": "foodwookie",
+      "brand": "b_foodiefoodwookie",
+      "score": 0
+    },
+    {
+      "handle": "sonomacountyliving",
+      "brand": "b_foodiesonomacountyliving",
+      "score": 0
+    },
+    {
+      "handle": "lovecartier25",
+      "brand": "b_foodielovecartier25",
+      "score": 0
+    },
+    {
+      "handle": "foodelaventures",
+      "brand": "b_foodiefoodelaventures",
+      "score": 0
+    },
+    {
+      "handle": "foodie_travel_happiness",
+      "brand": "b_foodiefoodietravelhappiness",
+      "score": 0
+    },
+    {
+      "handle": "peterlyagent",
+      "brand": "b_foodiepeterlyagent",
+      "score": 0
+    },
+    {
+      "handle": "k.smokeskitchen",
+      "brand": "b_foodieksmokeskitchen",
+      "score": 0
+    },
+    {
+      "handle": "tysf.qods",
+      "brand": "b_foodietysfqods",
+      "score": 0
+    },
+    {
+      "handle": "ilisaeatssf",
+      "brand": "b_foodieilisaeatssf",
+      "score": 0
+    },
+    {
+      "handle": "tundemodupee",
+      "brand": "b_foodietundemodupee",
+      "score": 0
+    },
+    {
+      "handle": "wafflebam",
+      "brand": "b_foodiewafflebam",
+      "score": 0
+    },
+    {
+      "handle": "goyuliiago",
+      "brand": "b_foodiegoyuliiago",
+      "score": 0
+    },
+    {
+      "handle": "jamiebeoutside",
+      "brand": "b_foodiejamiebeoutside",
+      "score": 0
+    },
+    {
+      "handle": "anjali_wandersoul",
+      "brand": "b_foodieanjaliwandersoul",
+      "score": 0
+    },
+    {
+      "handle": "gabriiellas",
+      "brand": "b_foodiegabriiellas",
+      "score": 0
+    },
+    {
+      "handle": "ploinsanfrancisco",
+      "brand": "b_foodieploinsanfrancisco",
+      "score": 0
+    },
+    {
+      "handle": "piscesprincesspriya",
+      "brand": "b_foodiepiscesprincesspriya",
+      "score": 0
+    },
+    {
+      "handle": "d_baylock_",
+      "brand": "b_foodiedbaylock",
+      "score": 0
+    },
+    {
+      "handle": "hallojessa",
+      "brand": "b_foodiehallojessa",
+      "score": 0
+    },
+    {
+      "handle": "lagrandedelabanda",
+      "brand": "b_foodielagrandedelabanda",
+      "score": 0
+    },
+    {
+      "handle": "chaudownfood",
+      "brand": "b_foodiechaudownfood",
+      "score": 0
+    },
+    {
+      "handle": "phoebe8food",
+      "brand": "b_foodiephoebe8food",
+      "score": 0
+    },
+    {
+      "handle": "karaxhuynh",
+      "brand": "b_foodiekaraxhuynh",
+      "score": 0
+    },
+    {
+      "handle": "wakeyeats",
+      "brand": "b_foodiewakeyeats",
+      "score": 0
+    },
+    {
+      "handle": "dodo__eats",
+      "brand": "b_foodiedodoeats",
+      "score": 0
+    },
+    {
+      "handle": "maya_munches",
+      "brand": "b_foodiemayamunches",
+      "score": 0
+    },
+    {
+      "handle": "preet.khatrii",
+      "brand": "b_foodiepreetkhatrii",
+      "score": 0
+    },
+    {
+      "handle": "kogumahs",
+      "brand": "b_foodiekogumahs",
+      "score": 0
+    },
+    {
+      "handle": "nurse.danamae",
+      "brand": "b_foodienursedanamae",
+      "score": 0
+    },
+    {
+      "handle": "thehabibizeat",
+      "brand": "b_foodiethehabibizeat",
+      "score": 0
+    },
+    {
+      "handle": "eatwithbooboo",
+      "brand": "b_foodieeatwithbooboo",
+      "score": 0
+    },
+    {
+      "handle": "bayarea_foodogram",
+      "brand": "b_foodiebayareafoodogram",
+      "score": 0
+    },
+    {
+      "handle": "lub.to.eat",
+      "brand": "b_foodielubtoeat",
+      "score": 0
+    },
+    {
+      "handle": "thismajourney",
+      "brand": "b_foodiethismajourney",
+      "score": 0
+    },
+    {
+      "handle": "summer.ishungry",
+      "brand": "b_foodiesummerishungry",
+      "score": 0
+    },
+    {
+      "handle": "justfeediris",
+      "brand": "b_foodiejustfeediris",
+      "score": 0
+    },
+    {
+      "handle": "hungryhungryheejin",
+      "brand": "b_foodiehungryhungryheejin",
+      "score": 0
+    },
+    {
+      "handle": "liltiffyvert",
+      "brand": "b_foodieliltiffyvert",
+      "score": 0
+    },
+    {
+      "handle": "jovana.camberos",
+      "brand": "b_foodiejovanacamberos",
+      "score": 0
+    },
+    {
+      "handle": "sulli_eats",
+      "brand": "b_foodiesullieats",
+      "score": 0
+    },
+    {
+      "handle": "phamamiii",
+      "brand": "b_foodiephamamiii",
+      "score": 0
+    },
+    {
+      "handle": "tastewith.rach",
+      "brand": "b_foodietastewithrach",
+      "score": 0
+    },
+    {
+      "handle": "sisicooksandeats",
+      "brand": "b_foodiesisicooksandeats",
+      "score": 0
+    },
+    {
+      "handle": "myrealtoralexbradeis",
+      "brand": "b_foodiemyrealtoralexbradeis",
+      "score": 0
+    },
+    {
+      "handle": "rowbot408",
+      "brand": "b_foodierowbot408",
+      "score": 0
+    },
+    {
+      "handle": "revrocrichboy",
+      "brand": "b_foodierevrocrichboy",
+      "score": 0
+    },
+    {
+      "handle": "takeoutwithtuck",
+      "brand": "b_foodietakeoutwithtuck",
+      "score": 0
+    },
+    {
+      "handle": "kat.dazzzle",
+      "brand": "b_foodiekatdazzzle",
+      "score": 0
+    },
+    {
+      "handle": "queen.food.e",
+      "brand": "b_foodiequeenfoode",
+      "score": 0
+    },
+    {
+      "handle": "cindydreamtravel",
+      "brand": "b_foodiecindydreamtravel",
+      "score": 0
+    },
+    {
+      "handle": "yummylouey",
+      "brand": "b_foodieyummylouey",
+      "score": 0
+    },
+    {
+      "handle": "erica.sorelle",
+      "brand": "b_foodieericasorelle",
+      "score": 0
+    },
+    {
+      "handle": "chelchomps",
+      "brand": "b_foodiechelchomps",
+      "score": 0
+    },
+    {
+      "handle": "monicaplatt",
+      "brand": "b_foodiemonicaplatt",
+      "score": 0
+    },
+    {
+      "handle": "imsarahchaz",
+      "brand": "b_foodieimsarahchaz",
+      "score": 0
+    },
+    {
+      "handle": "irenedony",
+      "brand": "b_foodieirenedony",
+      "score": 0
+    },
+    {
+      "handle": "biteswithnatalia",
+      "brand": "b_foodiebiteswithnatalia",
+      "score": 0
+    },
+    {
+      "handle": "laurenlovessfood",
+      "brand": "b_foodielaurenlovessfood",
+      "score": 0
+    },
+    {
+      "handle": "lisaaaaletseat",
+      "brand": "b_foodielisaaaaletseat",
+      "score": 0
+    },
+    {
+      "handle": "mattiasblanco",
+      "brand": "b_foodiemattiasblanco",
+      "score": 0
+    },
+    {
+      "handle": "deazylee",
+      "brand": "b_foodiedeazylee",
+      "score": 0
+    },
+    {
+      "handle": "edmunchthefoodie",
+      "brand": "b_foodieedmunchthefoodie",
+      "score": 0
+    },
+    {
+      "handle": "lynniethefoodie",
+      "brand": "b_foodielynniethefoodie",
+      "score": 0
+    },
+    {
+      "handle": "kelsy.annn",
+      "brand": "b_foodiekelsyannn",
+      "score": 0
+    },
+    {
+      "handle": "food_adventures21",
+      "brand": "b_foodiefoodadventures21",
+      "score": 0
+    },
+    {
+      "handle": "taratastessf",
+      "brand": "b_foodietaratastessf",
+      "score": 0
+    },
+    {
+      "handle": "zia_hazrati",
+      "brand": "b_foodieziahazrati",
+      "score": 0
+    },
+    {
+      "handle": "bennyeats.bayarea",
+      "brand": "b_foodiebennyeatsbayarea",
+      "score": 0
+    },
+    {
+      "handle": "jourdyn.lynn",
+      "brand": "b_foodiejourdynlynn",
+      "score": 0
+    },
+    {
+      "handle": "bayeatss",
+      "brand": "b_foodiebayeatss",
+      "score": 0
+    },
+    {
+      "handle": "charlize_tse",
+      "brand": "b_foodiecharlizetse",
+      "score": 0
+    },
+    {
+      "handle": "eatwith_ange",
+      "brand": "b_foodieeatwithange",
+      "score": 0
+    },
+    {
+      "handle": "habibimocha",
+      "brand": "b_foodiehabibimocha",
+      "score": 0
+    },
+    {
+      "handle": "maddyeats.sfbay",
+      "brand": "b_foodiemaddyeatssfbay",
+      "score": 0
+    },
+    {
+      "handle": "mr.bayareafoodie",
+      "brand": "b_foodiemrbayareafoodie",
+      "score": 0
+    },
+    {
+      "handle": "soysupli",
+      "brand": "b_foodiesoysupli",
+      "score": 0
+    },
+    {
+      "handle": "thehungrycurator",
+      "brand": "b_foodiethehungrycurator",
+      "score": 0
+    },
+    {
+      "handle": "withlovelysss",
+      "brand": "b_foodiewithlovelysss",
+      "score": 0
+    },
+    {
+      "handle": "oliviiacai",
+      "brand": "b_foodieoliviiacai",
+      "score": 0
+    },
+    {
+      "handle": "kevinberkeleyfoodreviews",
+      "brand": "b_foodiekevinberkeleyfoodreviews",
+      "score": 0
+    },
+    {
+      "handle": "martiebautista",
+      "brand": "b_foodiemartiebautista",
+      "score": 0
+    }
+  ],
+  "sourceNotes": {
+    "Paku": "Supplied shop profile confirms address/email and poke, inari, shave ice and drinks. Glenn explicitly requests a website pilot; needsSite is set. No phone or independently verified complete owner price list is invented.",
+    "Nono": "Supplied shop profile confirms address, November 5 soft opening and November 12 grand opening. No complete menu/phone/hours verified. Three distinct clips attach to this page, including Dfadd8FP4oT sent immediately after Sweet Fingers but whose caption is Nono’s.",
+    "Batter": "Own cupcakes page publishes daily flavors and November weekday specials without full prices. Danville’s own hours/phone and supplied email are used. Sunday Pleasant Hill-only flavors omitted; other branch appears in the information panel only.",
+    "Lucuma": "Own website main/brunch/dessert menus give 56 food/nonalcohol items, mostly unpriced. Ask shop is explicit. Cocktail/nightcap sections omitted. Public hola@ email is used; the supplied private email-compose screenshot is not copied.",
+    "MT Music": "Own website confirms Richmond address, phone/email, BBQ and karaoke; supplied profile gives Tuesday–Sunday hours. No complete priced food menu verified. Glenn’s Hot Pot placement is retained as his curated category choice.",
+    "Sweet Fingers": "Own current Uptown Oakland ordering menu publishes 44 entries, store hours and contact details. Own promotional film is dated; November 6 opening is not presented as an upcoming event.",
+    "Khao Tiew": "Supplied profile confirms address and walk-in announcement. Own Square site exposes menu categories but not a reliably retrievable current item/price list. No phone or hours invented.",
+    "Duplicates": "DecEKVBt1Kg was sent twice at 16:48, processed once.",
+    "Noncatalog": "The Apple Store marketing photos and “Leave them like this” refer to the photographed displays, not a request to change the website. No external message was sent. Salad Makers and Wiggle Rumps supplied art replaces their existing icons.",
+    "Noka review": "Dfcqyhzxh_9 reviews Noka Ramen. The supplied request is a film and creator-icon update; the review is available through @lisaaaaletseat and Watch without inventing a restaurant page.",
+    "Foodie ordering": "New Heavy Hitter tags promote @booziebrunch and @thekhaysie into the existing heavy-hitter block. Ronnie Banks and MsAshleyVee remain first; the original front 24 stay in place. All creators remain reachable.",
+    "Late requests": "Through 8:15 p.m.: @martiebautista’s supplied portrait and Ace King BBQ reel are added. Q-Pot’s supplied swirl exactly matches its existing logo, enlarged to fill the tile. Diamond Supply Co, Vegan Mob and Phosho Dough receive their supplied logos. Vegan Mob moves from BEASTY More eats seat 17 into Food Trucks seat 17, retaining its separate Vegan category; all other existing non-foodie seats are unchanged."
+  },
+  "removedPlacements": {
+    "beasty-goods2-17": "b_veganmob"
+  }
+}

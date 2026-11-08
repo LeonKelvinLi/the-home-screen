@@ -612,3 +612,24 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-soysupli-v104.webp` | Glenn’s supplied IMG_9633.png, November 7, 2026 | Original @soysupli profile portrait, cropped and fitted to the icon. |
 | `foodie-charlize-tse-v104.webp` | Glenn’s supplied IMG_9634.png, November 7, 2026 | Original @charlize_tse profile portrait, cropped and fitted to the icon. |
 | `foodie-chaudownfood-v104.webp` | Glenn’s supplied IMG_9635.png, November 7, 2026 | Original @chaudownfood profile portrait, cropped and fitted to the icon. |
+
+| `foodie-summer-ishungry-v105.webp` | Glenn’s supplied IMG_9648.PNG, November 7, 2026 | Original @summer.ishungry profile artwork cropped and fitted. |
+| `foodie-oliviiacai-v105.webp` | Glenn’s supplied IMG_9652.png, November 7, 2026 | Original @oliviiacai profile artwork cropped and fitted. |
+| `foodie-kevinberkeleyfoodreviews-v105.webp` | Glenn’s supplied IMG_9653.png, November 7, 2026 | Original @kevinberkeleyfoodreviews profile artwork cropped and fitted. |
+| `foodie-lisaaaaletseat-v105.webp` | Glenn’s supplied IMG_9654.PNG, November 7, 2026 | Original @lisaaaaletseat profile artwork cropped and fitted. |
+| `foodie-thekhaysie-v105.webp` | Glenn’s supplied IMG_9712.png, November 7, 2026 | Original @thekhaysie profile artwork cropped and fitted. |
+| `paku-sf-v105.webp` | Glenn’s supplied IMG_9647.PNG, November 7, 2026 | Original business artwork fitted; phone letterboxing removed. |
+| `nonos-doughnuts-berkeley-v105.webp` | Glenn’s supplied IMG_9651.png, November 7, 2026 | Original business artwork fitted; phone letterboxing removed. |
+| `batter-n-icing-danville-v105.webp` | Glenn’s supplied IMG_9663.png, November 7, 2026 | Original business artwork fitted; phone letterboxing removed. |
+| `lucuma-kitchen-oakland-v105.webp` | Glenn’s supplied IMG_9705.png, November 7, 2026 | Original business artwork fitted; phone letterboxing removed. |
+| `mt-music-richmond-v105.webp` | Glenn’s supplied IMG_9709.png, November 7, 2026 | Original business artwork fitted; phone letterboxing removed. |
+| `sweet-fingers-oakland-v105.webp` | Glenn’s supplied IMG_9731.png, November 7, 2026 | Original business artwork fitted; phone letterboxing removed. |
+| `khao-tiew-sf-v105.webp` | Glenn’s supplied IMG_9740.png, November 7, 2026 | Original business artwork fitted; phone letterboxing removed. |
+| `salad-makers-v105.webp` | Glenn’s supplied IMG_9696.png, November 7, 2026 | Original business artwork fitted; phone letterboxing removed. |
+| `classy-canines-v105.webp` | Glenn’s supplied IMG_9698.png, November 7, 2026 | Original business artwork fitted; phone letterboxing removed. |
+
+| `qpot-san-jose-v105.webp` | Glenn’s supplied IMG_9746.PNG, November 7, 2026 | Original artwork enlarged to fit; phone borders and unrelated wallpaper footer omitted. |
+| `diamond-supply-co-v105.webp` | Glenn’s supplied IMG_9748.JPG, November 7, 2026 | Original artwork enlarged to fit; phone borders and unrelated wallpaper footer omitted. |
+| `vegan-mob-v105.webp` | Glenn’s supplied IMG_9750.jpeg, November 7, 2026 | Original artwork enlarged to fit; phone borders and unrelated wallpaper footer omitted. |
+| `phosho-dough-v105.webp` | Glenn’s supplied IMG_9753.png, November 7, 2026 | Original artwork enlarged to fit; phone borders and unrelated wallpaper footer omitted. |
+| `foodie-martiebautista-v105.webp` | Glenn’s supplied IMG_9742.png, November 7, 2026 | Original @martiebautista portrait cropped and fitted. |

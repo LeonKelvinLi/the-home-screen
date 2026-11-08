@@ -409,6 +409,17 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "icon": "foodie-zeyno-ern-v103"
   },
   {
+    "handle": "booziebrunch",
+    "name": "Novi Mitchell",
+    "label": "Novi"
+  },
+  {
+    "handle": "thekhaysie",
+    "name": "@thekhaysie",
+    "label": "thekhaysie",
+    "icon": "foodie-thekhaysie-v105"
+  },
+  {
     "handle": "hungere.for.diy",
     "icon": "foodie-hungere-for-diy-v85",
     "name": "Hunger E for DIY",
@@ -495,11 +506,6 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "sherryeatworld",
     "name": "Sherry Shi",
     "label": "Sherry Shi"
-  },
-  {
-    "handle": "booziebrunch",
-    "name": "Novi Mitchell",
-    "label": "Novi"
   },
   {
     "handle": "hungrydanz",
@@ -725,11 +731,6 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "icon": "foodie-wthellydanyelly-v85",
     "name": "@wthellydanyelly",
     "label": "wthellydanyelly"
-  },
-  {
-    "handle": "thekhaysie",
-    "name": "@thekhaysie",
-    "label": "thekhaysie"
   },
   {
     "handle": "sophiaxbayarea",
@@ -1357,7 +1358,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "summer.ishungry",
     "name": "Summer",
     "label": "Summer",
-    "icon": "foodie-summer-ishungry-v89"
+    "icon": "foodie-summer-ishungry-v105"
   },
   {
     "handle": "justfeediris",
@@ -1514,7 +1515,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "lisaaaaletseat",
     "name": "@lisaaaaletseat",
     "label": "lisaaaaletseat",
-    "icon": "foodie-lisaaaaletseat-v97"
+    "icon": "foodie-lisaaaaletseat-v105"
   },
   {
     "handle": "mattiasblanco",
@@ -1629,7 +1630,20 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "@withlovelysss",
     "label": "withlovelysss",
     "icon": "foodie-withlovelysss-v103"
-  }
+  },
+  {
+    "handle": "oliviiacai",
+    "name": "@oliviiacai",
+    "label": "oliviiacai",
+    "icon": "foodie-oliviiacai-v105"
+  },
+  {
+    "handle": "kevinberkeleyfoodreviews",
+    "name": "@kevinberkeleyfoodreviews",
+    "label": "kevinberkeleyfoodr",
+    "icon": "foodie-kevinberkeleyfoodreviews-v105"
+  },
+  {"handle": "martiebautista", "name": "Martie Bautista-Johnson", "label": "Martie Bautista", "icon": "foodie-martiebautista-v105"}
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -2213,6 +2227,19 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "festusfeasts", "place": "Sweet Maple", "city": "Bay Area", "brand": "b_sweetmaplesanfrancisco", "reel": "https://www.instagram.com/reel/DO18vuKEpwq/", "clip": true, "credit": "Sweet Maple review by @festusfeasts with Monique Billings. The caption does not identify the branch; linked to the chain’s San Francisco page."},
   {"by": "thesnobbiefoodie", "place": "Sweet Maple", "city": "Walnut Creek", "brand": "b_sweetmaplewalnutcreek", "reel": "https://www.instagram.com/reel/DHjDsXfpm3C/", "clip": true, "credit": "Filmed by @thesnobbiefoodie at Sweet Maple in Walnut Creek."},
 
+  // Batch 105.
+  {"by": "summer.ishungry", "place": "Paku", "city": "San Francisco", "brand": "b_pakusf", "reel": "https://www.instagram.com/reel/DfWHrVUSpFn/", "clip": true, "credit": "Posted by @summer.ishungry at Paku, San Francisco."},
+  {"by": "oliviiacai", "place": "Nono’s Doughnuts & Cafe", "city": "Berkeley", "brand": "b_nonosdoughnutsberkeley", "reel": "https://www.instagram.com/reel/DfThSHUtrVK/", "clip": true, "credit": "Posted by @oliviiacai at Nono’s Doughnuts & Cafe, Berkeley."},
+  {"by": "kevinberkeleyfoodreviews", "place": "Nono’s Doughnuts & Cafe", "city": "Berkeley", "brand": "b_nonosdoughnutsberkeley", "reel": "https://www.instagram.com/reel/DfN0cv3hA1C/", "clip": true, "credit": "Posted by @kevinberkeleyfoodreviews at Nono’s Doughnuts & Cafe, Berkeley."},
+  {"by": "thekhaysie", "place": "Nono’s Doughnuts & Cafe", "city": "Berkeley", "brand": "b_nonosdoughnutsberkeley", "reel": "https://www.instagram.com/reel/Dfadd8FP4oT/", "clip": true, "credit": "Posted by @thekhaysie at Nono’s Doughnuts & Cafe, Berkeley."},
+  {"by": "booziebrunch", "place": "Lucuma Kitchen & Bar", "city": "Oakland", "brand": "b_lucumakitchenoakland", "reel": "https://www.instagram.com/reel/DfAkb2XvzKn/", "clip": true, "credit": "Posted by @booziebrunch at Lucuma Kitchen & Bar, Oakland."},
+  {"by": "rollingwithdeneats", "place": "MT Music BBQ & Bar", "city": "Richmond", "brand": "b_mtmusicrichmond", "reel": "https://www.instagram.com/reel/Dfdai5EPSq4/", "clip": true, "credit": "Posted by @rollingwithdeneats at MT Music BBQ & Bar, Richmond."},
+  {"by": "habibimocha", "place": "MT Music BBQ & Bar", "city": "Richmond", "brand": "b_mtmusicrichmond", "reel": "https://www.instagram.com/reel/DfaOWE2OSUf/", "clip": true, "credit": "Posted by @habibimocha at MT Music BBQ & Bar, Richmond."},
+  {"by": "thekhaysie", "place": "MT Music BBQ & Bar", "city": "Richmond", "brand": "b_mtmusicrichmond", "reel": "https://www.instagram.com/reel/DfQjK8pCKBQ/", "clip": true, "credit": "Posted by @thekhaysie at MT Music BBQ & Bar, Richmond."},
+  {"by": "wthellydanyelly", "place": "MT Music BBQ & Bar", "city": "Richmond", "brand": "b_mtmusicrichmond", "reel": "https://www.instagram.com/reel/DecEKVBt1Kg/", "clip": true, "credit": "Posted by @wthellydanyelly at MT Music BBQ & Bar, Richmond."},
+  {"by": "lisaaaaletseat", "place": "Noka Ramen", "city": "Oakland", "reel": "https://www.instagram.com/reel/Dfcqyhzxh_9/", "clip": true, "credit": "Noka Ramen review posted by @lisaaaaletseat. The restaurant has no existing BEASTY business page; this requested review plays on the creator page and Watch."},
+
+  {"by": "martiebautista", "place": "Ace King BBQ", "city": "Newark", "brand": "b_acekingbbq", "reel": "https://www.instagram.com/reel/DfYiyfCxYxs/", "clip": "creator", "credit": "Filmed by @martiebautista at Ace King BBQ in Newark. Plays on the creator page and Watch; the business retains its four existing films."},
 ]
 
 /*

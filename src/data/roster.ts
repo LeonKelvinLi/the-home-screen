@@ -344,7 +344,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       'They take bookings by text on 530-360-1105. Nothing is priced here yet.',
   }),
   seed('classy-canines', "Classy Canine's Wiggle Rumps", 'Wiggle Rumps', 'Pet grooming', '#F6D9E4', {
-    icon: 'classy-canines',
+    icon: 'classy-canines-v105',
     site: 'https://www.classycanineswigglerumps.com/',
     address: '2602 Castro Valley Blvd, Castro Valley, CA',
     contactOnly:
@@ -2200,7 +2200,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      close at different hours, so none are carried. The mark is their disc,
      cut from his screenshot of their site. */
   seed('salad-makers', 'Salad Makers', 'Salad Makers', 'Salads, wraps & sandwiches', '#2F7D32', {
-    icon: 'salad-makers',
+    icon: 'salad-makers-v105',
     logoTemplate: 'wordmark', logoLines: ['Salad', 'Makers'], logoFace: 'script',
     site: 'https://www.saladmakers.net/',
     siteCta: 'Order online',
