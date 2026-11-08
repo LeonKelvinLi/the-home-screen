@@ -350,6 +350,8 @@ export const CITY_PAGES = [
   'Rancho Cordova',
   'Camino',
   // Glenn’s V Pho request, November 5. No licensed landmark was supplied.
+  // Glenn’s Via Mia Pizza request, November 6.
+  'Morgan Hill',
   'Campbell',
   // Glenn’s World Wrapps request, November 6. Stanford’s shop address is in Palo Alto.
   'Stanford',

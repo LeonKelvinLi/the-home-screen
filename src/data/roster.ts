@@ -1428,7 +1428,9 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
   seed('cajun-crack-n', 'Cajun Crack N', 'Cajun Crack N', 'Cajun seafood boil', '#A3241A', {
     logoTemplate: 'monogram', logoInitials: 'CC', logoFace: 'slab',
-    site: 'https://m.yelp.com/biz/cajun-crack-n-concord-concord-2',
+    site: 'https://cajuncracknca.com/concord',
+    icon: 'cajun-crackn-v103',
+    clip: {"src": "/clips/review-DcW0BJMyE4s.mp4", "poster": "/clips/review-DcW0BJMyE4s-poster.webp", "href": "https://www.instagram.com/reel/DcW0BJMyE4s/", "credit": "Promotional film posted by @cajuncracknconcord.", "platform": "Instagram"},
     contactOnly:
       'Sent 2026-08-16 with "needs website" — the Yelp page above is what they have. Nothing ' +
       'else is listed.',

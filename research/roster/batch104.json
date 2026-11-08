@@ -1,0 +1,2454 @@
+{
+  "cutoff": "2026-11-07T08:19:00-08:00",
+  "listings": [
+    {
+      "slug": "oink-oscar",
+      "name": "Oink & Oscar",
+      "label": "Oink & Oscar",
+      "cuisine": "Sandwiches and house-made meats",
+      "tagline": "House-made porkstrami, specialty sandwiches and build-your-own sandos in SoMa.",
+      "color": "#283F40",
+      "icon": "oink-oscar",
+      "prep": 0,
+      "category": "Sandwiches and house-made meats",
+      "items": [],
+      "site": "https://www.oinkandoscar.com/",
+      "address": "87 Yerba Buena Lane, San Francisco, CA 94103",
+      "phone": "(415) 795-3218",
+      "email": "info@oinkandoscar.com",
+      "sections": [
+        {
+          "name": "HOUSE SPECIAL SANDOS",
+          "items": [
+            [
+              "1962",
+              "Smoked Ham, Porkstrami and Cheddar, sweet bacon jam, giardiniera, and crinkle cut, housemade pickles",
+              1995
+            ],
+            [
+              "Anglin Stack",
+              "Porkstrami, Salami. Hot Coppa, \r\nProvolone, sweet red pepper relish, Oscar sauce",
+              1995
+            ],
+            [
+              "County Fair",
+              "Roast Pork with Roast Beef, sharp cheddar, sweet red pepper relish, house mayo",
+              1995
+            ],
+            [
+              "Hog Wild",
+              "Herb Roast Pork, Provolone and Pepper Jack, arugula-basil pesto, spicy giardiniera",
+              1995
+            ],
+            [
+              "Oscar's Wild",
+              "Porkstrami, Bacon, and Smoked Gouda, \r\nhot honey butter, crinkle cut pickles, Oscar sauce",
+              1995
+            ],
+            [
+              "Rubenesque",
+              "Porkstrami, Swiss and Smoked Gouda,  \r\nryed sauerkraut, crinkle cut pickles, comeback sauce",
+              1995
+            ],
+            [
+              "Salvatore",
+              "Porkstrami, Salami, Cappy, Mortadella, \r\nProvolone, olive relish, comeback sauce  and toasted sesame",
+              1995
+            ],
+            [
+              "The Morris Method",
+              "Porkstrami, Bacon and Cheddar, \r\ntangy bbq mustard, pickled jalapeños and crinkle cut pickles",
+              1995
+            ],
+            [
+              "Three Little Pigs",
+              "Herb Roast Pork, Porkstrami, Bacon,\r\nsmoked Gouda, sweet bacon jam, our pickled jalapeños",
+              1995
+            ],
+            [
+              "Yardbird- Turkey",
+              "Housemade Roast Turkey, Pepper Jack, Arugula-basil pesto, giardiniera, hot honey butter",
+              1995
+            ],
+            [
+              "Yard Boss- beef",
+              "Housemade Roast Beef and Cheddar,\r\nOscar Sauce, crinkle cut pickles, hot honey butter",
+              1995
+            ]
+          ]
+        },
+        {
+          "name": "BUILD YOUR OWN (non-veg)",
+          "items": [
+            [
+              "Build Your Own",
+              "Choose your meat, cheese, selection of housemade sauces and pickled items, etc",
+              1695
+            ]
+          ]
+        },
+        {
+          "name": "VEGAN/VEGETARIAN SANDOS",
+          "items": [
+            [
+              "Build Your Own (v)",
+              "Served with choice of bread, meats, cheese, shredded iceberg and arugula; tomato, red onion, house vinaigrette",
+              1595
+            ],
+            [
+              "Prime Roots Americanata (v)",
+              "Prime Roots smoked vegan ham & vegan turkey with provolone, olive relish, roasted red peppers, comeback sauce, sesame",
+              1940
+            ],
+            [
+              "Prime Roots Yardbird (v)",
+              "Prime Roots roasted turkey with smoked gouda and provolone, housemade mayo, arugula-basil pesto and pickled jalapeños.",
+              1940
+            ]
+          ]
+        },
+        {
+          "name": "CHIPS",
+          "items": [
+            [
+              "KETTLE BBQ BACKYARD",
+              "",
+              275
+            ],
+            [
+              "KETTLE HONEY DIJON",
+              "",
+              275
+            ],
+            [
+              "KETTLE JALAPENO",
+              "",
+              275
+            ],
+            [
+              "KETTLE KRINKLE SALT&PPR",
+              "",
+              275
+            ],
+            [
+              "KETTLE SALT & VINEGAR",
+              "",
+              275
+            ],
+            [
+              "KETTLE SEA SALT",
+              "",
+              275
+            ],
+            [
+              "ZAPP'S BBQ",
+              "",
+              200
+            ],
+            [
+              "ZAPP'S JALAPEÑO",
+              "",
+              200
+            ],
+            [
+              "ZAPP'S ORIGINAL",
+              "",
+              200
+            ],
+            [
+              "ZAPP'S SALT & VINEGAR",
+              "",
+              200
+            ],
+            [
+              "ZAPP'S VOODOO",
+              "",
+              200
+            ],
+            [
+              "ZAPP'S VOODOO HEAT",
+              "",
+              200
+            ]
+          ]
+        },
+        {
+          "name": "SALADS & SIDES",
+          "items": [
+            [
+              "1/2 pt Slaw",
+              "",
+              300
+            ]
+          ]
+        },
+        {
+          "name": "CANDIES",
+          "items": [
+            [
+              "ABBA-ZABBA",
+              "",
+              350
+            ],
+            [
+              "BIG CHERRY",
+              "BIG CHERRY - MILK CHOC & PEANUTS",
+              300
+            ],
+            [
+              "BIT-O-HONEY",
+              "BIT-O-HONEY PEG BAG",
+              300
+            ],
+            [
+              "BLACK COW CANDY BAR",
+              "BLACK COW CANDY BAR",
+              350
+            ],
+            [
+              "BONOMO TURKISH TAFFY - BANANA",
+              "BONOMO TURKISH TAFFY - BANANA",
+              300
+            ],
+            [
+              "BONOMO TURKISH TAFFY - CHOCOLATE",
+              "BONOMO TURKISH TAFFY - CHOCOLATE",
+              300
+            ],
+            [
+              "BONOMO TURKISH TAFFY - STRAWBERRY",
+              "BONOMO TURKISH TAFFY - STRAWBERRY",
+              300
+            ],
+            [
+              "BOSTON BAKED BEANS",
+              "FERRARA BOSTON BAKED BEANS CHANGEMAKER",
+              200
+            ],
+            [
+              "BOYER JIMMIE STIX",
+              "BOYER JIMMIE STIX (MILK CHOC PEANUT BUTTER PRETZEL STIX)",
+              175
+            ],
+            [
+              "BOYER PEANUT BUTTER CUP",
+              "BOYER PEANUT BUTTER CUP - BUTTERSCOTCH SMOOTHIE",
+              175
+            ],
+            [
+              "C. HOWARDS GUAVA CANDY",
+              "C. HOWARDS GUAVA CANDY IN DISPLAY",
+              175
+            ],
+            [
+              "C. HOWARDS LEMON MINTS",
+              "C. HOWARDS LEMON MINTS IN DISPLAY",
+              175
+            ],
+            [
+              "C. HOWARDS PEPPERMINT MINTS",
+              "C. HOWARDS PEPPERMINT MINTS IN DISPLAY",
+              175
+            ],
+            [
+              "C. HOWARDS SPEARMINT MINTS",
+              "C. HOWARDS SPEARMINT MINTS IN DISPLAY",
+              175
+            ],
+            [
+              "C. HOWARDS VIOLET GUM",
+              "C. HOWARDS VIOLET SCENTED GUM IN DISPLAY",
+              175
+            ],
+            [
+              "C. HOWARDS VIOLET MINTS",
+              "C. HOWARDS VIOLET MINTS IN DISPLAY",
+              175
+            ],
+            [
+              "CANDY CIGARETTES",
+              "CANDY CIGARETTES",
+              100
+            ],
+            [
+              "CHICK-O-STICK",
+              "CHICK-O-STICK NATURAL COUNTER BOX",
+              250
+            ],
+            [
+              "CITRUS DELIGHTS - MEYER LEMON",
+              "CITRUS DELIGHTS - MEYER LEMON",
+              300
+            ],
+            [
+              "CITRUS DELIGHTS - SEVILLE ORANGE",
+              "CITRUS DELIGHTS - SEVILLE ORANGE",
+              300
+            ],
+            [
+              "CLAEYS -CINNAMON",
+              "CLAEYS OLD FASHIONED HARD CANDY PEG BAG-CINNAMON DISPLAY",
+              539
+            ],
+            [
+              "CLAEYS -GREEN APPLE",
+              "CLAEYS OLD FASHIONED HARD CANDY PEG BAG-GREEN APPLE DISPLAY",
+              539
+            ],
+            [
+              "CLAEYS -HOREHOUND",
+              "CLAEYS OLD FASHIONED HARD CANDY PEG BAG-HOREHOUND DISPLAY",
+              539
+            ],
+            [
+              "CLAEYS -LEMON DROP",
+              "CLAEYS OLD FASHIONED HARD CANDY PEG BAG-LEMON DROP DISPLAY",
+              539
+            ],
+            [
+              "CLAEYS -LICORICE",
+              "CLAEYS OLD FASHIONED HARD CANDY PEG BAG-LICORICE DISPLAY",
+              539
+            ],
+            [
+              "CLAEYS -RASPBERRY",
+              "CLAEYS OLD FASHIONED HARD CANDY PEG BAG-RASPBERRY DISPLAY",
+              539
+            ],
+            [
+              "CLAEYS -ROOT BEER",
+              "CLAEYS OLD FASHIONED HARD CANDY PEG BAG-ROOT BEER DISPLAY",
+              539
+            ],
+            [
+              "CLAEYS -SASSAFRAS",
+              "CLAEYS OLD FASHIONED HARD CANDY PEG BAG-SASSAFRAS DISPLAY",
+              539
+            ],
+            [
+              "CLAEYS -WATERMELON",
+              "CLAEYS OLD FASHIONED HARD CANDY PEG BAG-WATERMELON DISPLAY",
+              539
+            ],
+            [
+              "CLAEYS -WILD CHERRY",
+              "CLAEYS OLD FASHIONED HARD CANDY PEG BAG-WILD CHERRY DISPLAY",
+              539
+            ],
+            [
+              "COW TALES - CARAMEL APPLE",
+              "GOETZE COW TALES - CARAMEL APPLE",
+              125
+            ],
+            [
+              "COW TALES - CARAMEL BROWNIE",
+              "GOETZE COW TALES - CARAMEL BROWNIE",
+              125
+            ],
+            [
+              "COW TALES - HONEY BUN",
+              "GOETZE COW TALES - HONEY BUN",
+              125
+            ],
+            [
+              "COW TALES - STRAWBERRY SMOOTHIE",
+              "GOETZE COW TALES - STRAWBERRY SMOOTHIE",
+              125
+            ],
+            [
+              "COW TALES - VANILLA (CARAMEL)",
+              "GOETZE COW TALES - VANILLA (CARAMEL)",
+              125
+            ],
+            [
+              "GUM- BEEMANS",
+              "NOSTALGIA GUM - S/F BEEMANS (20 PCS)",
+              250
+            ],
+            [
+              "GUM - BLACK JACK",
+              "NOSTALGIA GUM - S/F BLACK JACK (20 PCS)",
+              250
+            ],
+            [
+              "GUM - CLOVE",
+              "NOSTALGIA GUM - S/F CLOVE (20 PCS)",
+              250
+            ],
+            [
+              "GUM- TEABERRY",
+              "NOSTALGIA GUM - S/F TEABERRY (20 PCS)",
+              250
+            ],
+            [
+              "HAMMOND'S BOURBON PECAN- MILK CHOC",
+              "",
+              550
+            ],
+            [
+              "HAMMOND'S COCNUT CREAM PIE- MILK CHOC",
+              "",
+              550
+            ],
+            [
+              "HAMMOND'S COOKIES & CREAM- MILK CHOC",
+              "",
+              550
+            ],
+            [
+              "HAMMOND'S LEMON MERINGUE- WHITE CHOC",
+              "",
+              550
+            ],
+            [
+              "HAMMOND'S MINT CHIP- DARK CHOC",
+              "",
+              550
+            ],
+            [
+              "HAMMOND'S PB & J SANDWICH DARK CHOC",
+              "",
+              550
+            ],
+            [
+              "HAMMOND'S PEANUT BUTTER CUP- DARK",
+              "",
+              550
+            ],
+            [
+              "HAMMOND'S PIGS N TATERS- MILK CHOC",
+              "",
+              550
+            ],
+            [
+              "HAMMOND'S SEA SIDE CARAMEL- MILK CHOC",
+              "",
+              550
+            ],
+            [
+              "HAMMOND'S SMORE'S- MILK CHOC",
+              "",
+              550
+            ],
+            [
+              "HAMMOND'S SODA POP! (FIZZY POPPING)- MILK CHOC",
+              "",
+              550
+            ],
+            [
+              "HAMMOND'S TOFFEE BRITTLE- DARK CHOC",
+              "",
+              550
+            ],
+            [
+              "HERSHEYS NOSTALGIA BAR- W/ ALMONDS",
+              "HERSHEYS NOSTALGIA BAR - MILK CHOCOLATE W/ ALMONDS",
+              550
+            ],
+            [
+              "HERSHEYS NOSTALGIA BAR - MILK CHOCOLATE",
+              "",
+              550
+            ],
+            [
+              "IDAHO SPUD BAR",
+              "IDAHO SPUD BARIN DISPLAY",
+              350
+            ],
+            [
+              "JELLY BELLY BAG",
+              "JELLY BELLY BAG - ASSORTED BAG",
+              250
+            ],
+            [
+              "JELLY BELLY BOOZLED",
+              "JELLY BELLY BEAN BOOZLED PEG BAG - 7TH EDITION",
+              300
+            ],
+            [
+              "LEMONHEAD's",
+              "FERRARA LEMONHEAD CHANGEMAKER",
+              200
+            ],
+            [
+              "LIFESAVERS",
+              "LIFESAVERS HARD CANDY ROLL - 5 FLAVOR",
+              200
+            ],
+            [
+              "LONG BOYS COCONUT BAR",
+              "LONG BOYS COCONUT BAR",
+              300
+            ],
+            [
+              "NECCO WAFERS ORIGINAL",
+              "NECCO WAFERS ORIGINAL",
+              300
+            ],
+            [
+              "NECCO CHOCOLATE WAFERS",
+              "",
+              300
+            ],
+            [
+              "RIFFS BACON - SWEET & SPICY",
+              "RIFFS BACON ON THE GO - SWEET & SPICY",
+              350
+            ],
+            [
+              "ROCK CANDY - BLACK (BLACK CHERRY)",
+              "ROCK CANDY - BLACK (BLACK CHERRY)",
+              160
+            ],
+            [
+              "ROCK CANDY - BLUE (BLUE RASPBERRY)",
+              "ROCK CANDY - BLUE (BLUE RASPBERRY)",
+              160
+            ],
+            [
+              "ROCK CANDY - BROWN (ROOT BEER)",
+              "ROCK CANDY - BROWN (ROOT BEER)",
+              160
+            ],
+            [
+              "ROCK CANDY - GREEN (GREEN APPLE)",
+              "ROCK CANDY - GREEN (GREEN APPLE)",
+              160
+            ],
+            [
+              "ROCK CANDY - LIGHT BLUE (COTTON CANDY)",
+              "ROCK CANDY - LIGHT BLUE (COTTON CANDY)",
+              160
+            ],
+            [
+              "ROCK CANDY - LIGHT GREEN (WATERMELON)",
+              "ROCK CANDY - LIGHT GREEN (WATERMELON)",
+              160
+            ],
+            [
+              "ROCK CANDY - ORANGE (ORANGE)",
+              "ROCK CANDY - ORANGE (ORANGE)",
+              160
+            ],
+            [
+              "ROCK CANDY - PINK (CHERRY)",
+              "ROCK CANDY - PINK (CHERRY)",
+              160
+            ],
+            [
+              "ROCK CANDY - PURPLE (GRAPE)",
+              "ROCK CANDY - PURPLE (GRAPE)",
+              160
+            ],
+            [
+              "ROCK CANDY - RED (STRAWBERRY)",
+              "ROCK CANDY - RED (STRAWBERRY)",
+              160
+            ],
+            [
+              "ROCK CANDY - WHITE (PLAIN)",
+              "ROCK CANDY - WHITE (PLAIN)",
+              160
+            ],
+            [
+              "ROCK CANDY - YELLOW (BANANA)",
+              "ROCK CANDY - YELLOW (BANANA)",
+              160
+            ],
+            [
+              "STICK CANDY - BIRTHDAY CAKE",
+              "STICK CANDY - BIRTHDAY CAKE",
+              75
+            ],
+            [
+              "STICK CANDY - BLUEBERRY",
+              "STICK CANDY - BLUEBERRY",
+              75
+            ],
+            [
+              "STICK CANDY - BUBBLEGUM",
+              "STICK CANDY - BUBBLEGUM",
+              75
+            ],
+            [
+              "STICK CANDY - BUTTERSCOTCH",
+              "STICK CANDY - BUTTERSCOTCH",
+              75
+            ],
+            [
+              "STICK CANDY - CHERRY",
+              "STICK CANDY - CHERRY",
+              75
+            ],
+            [
+              "STICK CANDY - CINNAMON",
+              "STICK CANDY - CINNAMON",
+              75
+            ],
+            [
+              "STICK CANDY - COTTON CANDY",
+              "STICK CANDY - COTTON CANDY",
+              75
+            ],
+            [
+              "STICK CANDY - GRAPE",
+              "STICK CANDY - GRAPE",
+              75
+            ],
+            [
+              "STICK CANDY - LEMON",
+              "STICK CANDY - LEMON",
+              75
+            ],
+            [
+              "STICK CANDY - ORANGE",
+              "STICK CANDY - ORANGE",
+              75
+            ],
+            [
+              "STICK CANDY - PEACHES & CREAM",
+              "STICK CANDY - PEACHES & CREAM",
+              75
+            ],
+            [
+              "STICK CANDY - PINA COLADA",
+              "STICK CANDY - PINA COLADA",
+              75
+            ],
+            [
+              "STICK CANDY - ROOT BEER",
+              "STICK CANDY - ROOT BEER",
+              75
+            ],
+            [
+              "STICK CANDY - SOUR APPLE",
+              "STICK CANDY - SOUR APPLE",
+              75
+            ],
+            [
+              "STICK CANDY - TUTTI-FRUTTI",
+              "STICK CANDY - TUTTI-FRUTTI",
+              75
+            ],
+            [
+              "STICK CANDY - WATERMELON",
+              "STICK CANDY - WATERMELON",
+              75
+            ],
+            [
+              "WHATCHAMACALLIT",
+              "",
+              350
+            ]
+          ]
+        },
+        {
+          "name": "SODAS & WATERS",
+          "items": [
+            [
+              "AMERICANA - BLACK CHERRY SODA",
+              "AMERICANA - BLACK CHERRY SODA",
+              550
+            ],
+            [
+              "AMERICANA - HONEY CREAM SODA",
+              "AMERICANA - HONEY CREAM SODA",
+              550
+            ],
+            [
+              "AMERICANA - HUCKLEBERRY SODA",
+              "AMERICANA - HUCKLEBERRY SODA",
+              550
+            ],
+            [
+              "AMERICANA ORANGE CREAM",
+              "",
+              550
+            ],
+            [
+              "AMERICANA- CHERRY SODA",
+              "",
+              550
+            ],
+            [
+              "AMERICANA- ROOT BEER",
+              "",
+              550
+            ],
+            [
+              "BAZOOKA BUBBLE GUM SODA",
+              "BAZOOKA BUBBLE GUM SODA",
+              550
+            ],
+            [
+              "BOYLAN BIRCH BEER SODA",
+              "",
+              550
+            ],
+            [
+              "BOYLAN BLACK CHERRY",
+              "",
+              550
+            ],
+            [
+              "BOYLAN CANE COLA",
+              "",
+              550
+            ],
+            [
+              "BOYLAN CREAMY RED BIRCH BEER SODA",
+              "",
+              550
+            ],
+            [
+              "BOYLAN CRÈME",
+              "",
+              550
+            ],
+            [
+              "BOYLAN DIET BLACK CHERRY",
+              "",
+              550
+            ],
+            [
+              "BOYLAN DIET COLA",
+              "",
+              550
+            ],
+            [
+              "BOYLAN DIET CREME SODA",
+              "",
+              550
+            ],
+            [
+              "BOYLAN DIET ROOT BEER",
+              "",
+              550
+            ],
+            [
+              "BOYLAN DR. BOYLAN",
+              "",
+              550
+            ],
+            [
+              "BOYLAN GINGER ALE",
+              "",
+              550
+            ],
+            [
+              "BOYLAN GRAPE SODA",
+              "",
+              550
+            ],
+            [
+              "BOYLAN ORANGE SODA",
+              "",
+              550
+            ],
+            [
+              "BOYLAN ROOT BEER",
+              "",
+              550
+            ],
+            [
+              "BOYLAN SHIRLEY TEMPLE",
+              "",
+              550
+            ],
+            [
+              "BOYLAN SPARKLING LEMONADE",
+              "",
+              550
+            ],
+            [
+              "BUBBLE UP SODA",
+              "",
+              425
+            ],
+            [
+              "C. HOWARD'S Guava Soda",
+              "",
+              450
+            ],
+            [
+              "C. HOWARD'S Lemon Soda",
+              "",
+              450
+            ],
+            [
+              "Canned- Coca-Cola",
+              "",
+              300
+            ],
+            [
+              "Canned- Diet Coke",
+              "",
+              300
+            ],
+            [
+              "Canned- Sprite",
+              "",
+              300
+            ],
+            [
+              "DR. PEPPER BOTTLE",
+              "",
+              600
+            ],
+            [
+              "DUBLIN - ORANGE DREAM (CREAM) SODA",
+              "DUBLIN - ORANGE DREAM (CREAM) SODA",
+              550
+            ],
+            [
+              "DUBLIN - RETRO GRAPE SODA",
+              "DUBLIN - RETRO GRAPE SODA",
+              550
+            ],
+            [
+              "DUBLIN - TEXAS ROOT BEER",
+              "DUBLIN - TEXAS ROOT BEER",
+              550
+            ],
+            [
+              "FAYGO ORANGE SODA",
+              "",
+              475
+            ],
+            [
+              "FAYGO ROCK & RYE",
+              "",
+              475
+            ],
+            [
+              "FAYGO ROOT BEER",
+              "",
+              475
+            ],
+            [
+              "FENTIMANS CHERRY COLA",
+              "",
+              600
+            ],
+            [
+              "FENTIMANS CURIOSITY COLA",
+              "",
+              600
+            ],
+            [
+              "FENTIMANS GINGER BEER",
+              "",
+              600
+            ],
+            [
+              "FENTIMANS ROSE LEMONADE",
+              "",
+              600
+            ],
+            [
+              "FENTIMANS VICTORIAN LEMONADE",
+              "",
+              600
+            ],
+            [
+              "LESTER'S Fixins Pickle Soda",
+              "",
+              400
+            ],
+            [
+              "MOXIE SODA",
+              "",
+              475
+            ],
+            [
+              "TEJAVA BLACK TEA",
+              "Unsweetened black tea",
+              500
+            ],
+            [
+              "WATER, SPARKLING - SARATOGA",
+              "",
+              550
+            ],
+            [
+              "WATER, STILL- SARATOGA",
+              "",
+              550
+            ],
+            [
+              "WATER- CRYSTAL GEYSER 8oz",
+              "",
+              130
+            ],
+            [
+              "WILDWONDER CHERRY LEMONADE",
+              "",
+              575
+            ],
+            [
+              "WILDWONDER GUAVA ROSE",
+              "",
+              575
+            ],
+            [
+              "WILDWONDER RASPBERRY LYCHEE",
+              "",
+              575
+            ],
+            [
+              "ZOTZ SODA BLUE RASPBERRY",
+              "ZOTZ SODA BLUE RASPBERRY",
+              550
+            ],
+            [
+              "ZOTZ SODA CHERRY",
+              "ZOTZ SODA CHERRY",
+              550
+            ],
+            [
+              "ZOTZ SODA WATERMELON",
+              "ZOTZ SODA WATERMELON",
+              550
+            ]
+          ]
+        }
+      ],
+      "orderUrl": "https://direct.chownow.com/order/43262/locations/65177",
+      "siteNote": "Menu and prices are from the ordering page linked by the shop’s website. Beer and wine are omitted. Customizing a sandwich can change its base price."
+    },
+    {
+      "slug": "sweet-maple-san-francisco",
+      "name": "Sweet Maple",
+      "label": "Sweet Maple",
+      "cuisine": "Breakfast and brunch diner",
+      "tagline": "Breakfast and brunch with Millionaire’s Bacon in San Francisco.",
+      "color": "#283F40",
+      "icon": "sweet-maple-v104",
+      "prep": 0,
+      "category": "Breakfast and brunch diner",
+      "items": [],
+      "site": "https://www.sweetmaplesf.com/menu-san-francisco",
+      "address": "2101 Sutter Street, San Francisco, CA 94115",
+      "phone": "(415) 655-9169",
+      "email": "eat@sweetmaplesf.com",
+      "hours": "Mon–Fri 8am–2:30pm; Sat–Sun 8am–3pm",
+      "sections": [
+        {
+          "name": "Breakfast",
+          "items": [
+            [
+              "Farm Fresh Eggs Plate",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1800,
+              null,
+              "from"
+            ]
+          ]
+        },
+        {
+          "name": "Scrambles",
+          "items": [
+            [
+              "Snowed Spinach",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2200
+            ],
+            [
+              "Frisco",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ],
+            [
+              "Camaron",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2800
+            ],
+            [
+              "South of the Border",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ],
+            [
+              "Bulgogi",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2800
+            ]
+          ]
+        },
+        {
+          "name": "Test Kitchen Specials",
+          "items": [
+            [
+              "Pimped Shin Cupbop",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2700
+            ],
+            [
+              "Morning Tacos",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2700
+            ],
+            [
+              "SM Omurice",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2700
+            ]
+          ]
+        },
+        {
+          "name": "Soufflegg Skillets",
+          "items": [
+            [
+              "Savory Skillet",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2800
+            ],
+            [
+              "Gardena Skillet",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ],
+            [
+              "Francis Skillet",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2700
+            ],
+            [
+              "Athenian",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2300
+            ],
+            [
+              "Marguerite",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2500
+            ],
+            [
+              "Bay Bottom",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              3900
+            ],
+            [
+              "Hass",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ],
+            [
+              "Asparagus",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2900
+            ]
+          ]
+        },
+        {
+          "name": "Benedict & Friends",
+          "items": [
+            [
+              "Original",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2200
+            ],
+            [
+              "Hemingway",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2900
+            ],
+            [
+              "Oscar",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              3900
+            ],
+            [
+              "Florentine",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2200
+            ],
+            [
+              "Blackstone",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2900
+            ]
+          ]
+        },
+        {
+          "name": "Maple Plates",
+          "items": [
+            [
+              "Marnier",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1800
+            ],
+            [
+              "SMSF Pancakes",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1800
+            ],
+            [
+              "Big Hip",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1800
+            ],
+            [
+              "Strawberry Nutella Crepe",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1700
+            ]
+          ]
+        },
+        {
+          "name": "Healthy Choice Combos",
+          "items": [
+            [
+              "Chicken Rancheros",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              3100
+            ],
+            [
+              "Open Face",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              3100
+            ],
+            [
+              "Primavera",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              3100
+            ]
+          ]
+        },
+        {
+          "name": "Kid's Menu",
+          "items": [
+            [
+              "Pancake",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1400
+            ],
+            [
+              "One Egg Scrambled",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1400
+            ],
+            [
+              "Grilled Cheese",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1400
+            ]
+          ]
+        },
+        {
+          "name": "Sensibles",
+          "items": [
+            [
+              "Sensibles",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1000
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "Toast",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              500
+            ],
+            [
+              "Applewood Smoked Bacon",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "Chicken-Mango Sausage",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              900
+            ],
+            [
+              "Chicken-curry Sausage",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              900
+            ],
+            [
+              "Fresh Salsa",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              400
+            ],
+            [
+              "Hollandaise",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              300
+            ],
+            [
+              "Sweet Potato Tater Puffs",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "One French Toast",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "Two Eggs",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              600
+            ],
+            [
+              "Millionaire's Bacon",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1600
+            ],
+            [
+              "Pork-lime Sausage",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              900
+            ],
+            [
+              "Herb Roasted Potato Medley",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              600
+            ],
+            [
+              "Avocado",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              400
+            ],
+            [
+              "Potato Wedges",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              600
+            ],
+            [
+              "One Pancake",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ]
+          ]
+        },
+        {
+          "name": "Coffee",
+          "items": [
+            [
+              "Coffee",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              550
+            ],
+            [
+              "Americano",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              650
+            ],
+            [
+              "Cappuccino",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              750
+            ],
+            [
+              "Salted Caramel Macchiato",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              950
+            ],
+            [
+              "Espresso Martini (Soju)",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1600
+            ],
+            [
+              "Espresso",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              550
+            ],
+            [
+              "Latte",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              750
+            ],
+            [
+              "Mocha",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              850
+            ],
+            [
+              "Dirty Chai Latte (Soju)",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1050
+            ],
+            [
+              "Non-Espresso based drinks",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ]
+          ]
+        },
+        {
+          "name": "Tea Forte Collection",
+          "items": [
+            [
+              "Jasmine Green",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "Earl Grey",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "White Ginger Pear",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "English Breakfast",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "Chamomile Citron",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "Citrus Mint",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ]
+          ]
+        }
+      ],
+      "siteNote": "These are the items and base prices verified on this branch’s published menu. Some sections could not be retrieved completely; use the official menu for the full selection, current prices and customizations. Prices marked from depend on the plate option. Alcohol is omitted.",
+      "panels": [
+        {
+          "head": "Four Bay Area locations and menus",
+          "body": [
+            "San Francisco: 2101 Sutter Street, San Francisco, CA 94115 · (415) 655-9169",
+            "Palo Alto: 150 University Ave, Palo Alto, CA 94301 · (650) 521-0764",
+            "Cupertino: 20010 Stevens Creek Blvd, Cupertino, CA 95014 · (408) 216-0759",
+            "Walnut Creek: 1523 Giammona Dr, Walnut Creek, CA 94596 · (925) 546-0029"
+          ],
+          "links": [
+            {
+              "label": "San Francisco menu",
+              "href": "https://www.sweetmaplesf.com/menu-san-francisco"
+            },
+            {
+              "label": "Palo Alto menu",
+              "href": "https://www.sweetmaplesf.com/menu-palo-alto"
+            },
+            {
+              "label": "Cupertino menu",
+              "href": "https://www.sweetmaplesf.com/menu-cupertino"
+            },
+            {
+              "label": "Walnut Creek menu",
+              "href": "https://www.sweetmaplesf.com/menu-walnut-creek"
+            }
+          ]
+        },
+        {
+          "head": "Sweet Maple films",
+          "body": [
+            "The Festus Ezeli review does not identify a branch in its caption. It is linked from the San Francisco chain page; the Walnut Creek review identifies its location."
+          ],
+          "links": [
+            {
+              "label": "Sweet Maple chain review",
+              "href": "https://beastypages.com/?b=b_sweetmaplesanfrancisco"
+            },
+            {
+              "label": "Walnut Creek review",
+              "href": "https://beastypages.com/?b=b_sweetmaplewalnutcreek"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sweet-maple-palo-alto",
+      "name": "Sweet Maple",
+      "label": "Sweet Maple",
+      "cuisine": "Breakfast and brunch diner",
+      "tagline": "Breakfast and brunch with Millionaire’s Bacon in Palo Alto.",
+      "color": "#283F40",
+      "icon": "sweet-maple-v104",
+      "prep": 0,
+      "category": "Breakfast and brunch diner",
+      "items": [],
+      "site": "https://www.sweetmaplesf.com/menu-palo-alto",
+      "address": "150 University Ave, Palo Alto, CA 94301",
+      "phone": "(650) 521-0764",
+      "email": "sweetmaplepaloalto@gmail.com",
+      "hours": "Daily 8:30am–2:30pm",
+      "sections": [
+        {
+          "name": "Egg Story",
+          "items": [
+            [
+              "Farm Fresh Eggs Plate",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1700,
+              null,
+              "from"
+            ]
+          ]
+        },
+        {
+          "name": "Scrambles & Omelettes",
+          "items": [
+            [
+              "Hass Omelette",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2400
+            ],
+            [
+              "Spinach Scramble",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2200
+            ],
+            [
+              "Sweet Maple Scramble",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2700
+            ],
+            [
+              "Bay Bottom Omelette",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              3400
+            ],
+            [
+              "Frisco Scramble",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2400
+            ]
+          ]
+        },
+        {
+          "name": "Kitchen Special",
+          "items": [
+            [
+              "Sizzling Stonepot",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600,
+              null,
+              "from"
+            ],
+            [
+              "Loco Moco",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ],
+            [
+              "Breaky Tacos with Brussel Potato Medley",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2400
+            ],
+            [
+              "Chicken Croffle",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ],
+            [
+              "Pimped Up Ramyun",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2500
+            ],
+            [
+              "Tornado Galbi Omurice",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ],
+            [
+              "Morning Thai Cioppino",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              3200
+            ]
+          ]
+        },
+        {
+          "name": "Burgers",
+          "items": [
+            [
+              "Vermont Cheeseburger",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2100
+            ],
+            [
+              "One Percenter Burger",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ],
+            [
+              "California Burger",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2300
+            ],
+            [
+              "Impossible Burger",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2400
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches",
+          "items": [
+            [
+              "BLTA Sandwich",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2200
+            ],
+            [
+              "Grilled Cheese Sandwich",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1900
+            ],
+            [
+              "Chicken Sandwich",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2300
+            ]
+          ]
+        },
+        {
+          "name": "Kid's Menu",
+          "items": [
+            [
+              "Pancake",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1500
+            ],
+            [
+              "One Egg Scrambled",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1500
+            ],
+            [
+              "Grilled Cheese",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1500
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "Toast",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              500
+            ],
+            [
+              "Two Eggs",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              600
+            ],
+            [
+              "Boneless Crispy Chicken",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              900
+            ],
+            [
+              "Pork-Lime Sausage",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "Pico De Gallo",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              400
+            ],
+            [
+              "Rice",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              400
+            ],
+            [
+              "Hollandaise",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              600
+            ],
+            [
+              "Mixed Fruit",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "One French Toast",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "Grilled Prawns",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "Impossible Beef Patty",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "Maple Syrup",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              400
+            ],
+            [
+              "Gluten-Free Toast",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              600
+            ],
+            [
+              "Applewood Smoked Bacon",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "Chicken-Mango Sausage",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "Brussel Potato Medley",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "Roasted Salsa",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              400
+            ],
+            [
+              "Avocado",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              300
+            ],
+            [
+              "French Fries",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "One Pancake",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "Grilled Chicken Breast",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              900
+            ],
+            [
+              "Beef Patty",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "One Croffle",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "Smoked Salmon",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              900
+            ]
+          ]
+        },
+        {
+          "name": "Coffee",
+          "items": [
+            [
+              "Coffee",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              450
+            ],
+            [
+              "Americano",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              550
+            ],
+            [
+              "Chai Latte",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "Cappuccino",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              650
+            ],
+            [
+              "Hot Chocolate",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              550
+            ],
+            [
+              "Espresso",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              450
+            ],
+            [
+              "Latte",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              650
+            ],
+            [
+              "Vanilla Latte",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              750
+            ],
+            [
+              "Caramel Macchiato",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              750
+            ],
+            [
+              "Mocha",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              750
+            ]
+          ]
+        },
+        {
+          "name": "Baristra's Favorite",
+          "items": [
+            [
+              "Oat Matcha Latte",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              750
+            ],
+            [
+              "Dirty Ube Latte",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              900
+            ],
+            [
+              "Ube Cold Brew Coffee",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              900
+            ],
+            [
+              "Frosty Lime Shaken Espresso",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "Ube Latte",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              750
+            ],
+            [
+              "Coco Matcha Bliss",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              950
+            ],
+            [
+              "Cold Brew Coffee",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              600
+            ],
+            [
+              "Nutty Affogato",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              950
+            ]
+          ]
+        },
+        {
+          "name": "Tea Forte Collection",
+          "items": [
+            [
+              "English Breakfast",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "Green Mango Peach",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "Chamomile Citron",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "Tea of The Moment",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "Earl Grey",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "Moroccan Mint",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ],
+            [
+              "Blueberry Merlot",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              700
+            ]
+          ]
+        },
+        {
+          "name": "Beverages",
+          "items": [
+            [
+              "Coke",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              450
+            ],
+            [
+              "7-Up",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              450
+            ],
+            [
+              "Passion Fruit Iced Tea",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              600
+            ],
+            [
+              "Cranberry Juice",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              500
+            ],
+            [
+              "Sparkling Water",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              800
+            ],
+            [
+              "Diet Coke",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              450
+            ],
+            [
+              "Ginger Beer",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              600
+            ],
+            [
+              "Apple Juice",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              500
+            ],
+            [
+              "Fresh Raspberry Lemonade",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              600
+            ],
+            [
+              "Milk",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              500
+            ]
+          ]
+        },
+        {
+          "name": "Freshly Squeezed Juice",
+          "items": [
+            [
+              "Orange Juice",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              750
+            ]
+          ]
+        },
+        {
+          "name": "Crafted Mocktails",
+          "items": [
+            [
+              "Virgin BLue Lagoon",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1200
+            ],
+            [
+              "Watermelon Fizz",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1200
+            ],
+            [
+              "Mornng Shake",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1200
+            ],
+            [
+              "Sparkling Citrus Pear Mojito",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1200
+            ],
+            [
+              "Malibu Surprise",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1200
+            ]
+          ]
+        }
+      ],
+      "siteNote": "These are the items and base prices verified on this branch’s published menu. Some sections could not be retrieved completely; use the official menu for the full selection, current prices and customizations. Prices marked from depend on the plate option. Alcohol is omitted.",
+      "panels": [
+        {
+          "head": "Four Bay Area locations and menus",
+          "body": [
+            "San Francisco: 2101 Sutter Street, San Francisco, CA 94115 · (415) 655-9169",
+            "Palo Alto: 150 University Ave, Palo Alto, CA 94301 · (650) 521-0764",
+            "Cupertino: 20010 Stevens Creek Blvd, Cupertino, CA 95014 · (408) 216-0759",
+            "Walnut Creek: 1523 Giammona Dr, Walnut Creek, CA 94596 · (925) 546-0029"
+          ],
+          "links": [
+            {
+              "label": "San Francisco menu",
+              "href": "https://www.sweetmaplesf.com/menu-san-francisco"
+            },
+            {
+              "label": "Palo Alto menu",
+              "href": "https://www.sweetmaplesf.com/menu-palo-alto"
+            },
+            {
+              "label": "Cupertino menu",
+              "href": "https://www.sweetmaplesf.com/menu-cupertino"
+            },
+            {
+              "label": "Walnut Creek menu",
+              "href": "https://www.sweetmaplesf.com/menu-walnut-creek"
+            }
+          ]
+        },
+        {
+          "head": "Sweet Maple films",
+          "body": [
+            "The Festus Ezeli review does not identify a branch in its caption. It is linked from the San Francisco chain page; the Walnut Creek review identifies its location."
+          ],
+          "links": [
+            {
+              "label": "Sweet Maple chain review",
+              "href": "https://beastypages.com/?b=b_sweetmaplesanfrancisco"
+            },
+            {
+              "label": "Walnut Creek review",
+              "href": "https://beastypages.com/?b=b_sweetmaplewalnutcreek"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sweet-maple-cupertino",
+      "name": "Sweet Maple",
+      "label": "Sweet Maple",
+      "cuisine": "Breakfast and brunch diner",
+      "tagline": "Breakfast and brunch with Millionaire’s Bacon in Cupertino.",
+      "color": "#283F40",
+      "icon": "sweet-maple-v104",
+      "prep": 0,
+      "category": "Breakfast and brunch diner",
+      "items": [],
+      "site": "https://www.sweetmaplesf.com/menu-cupertino",
+      "address": "20010 Stevens Creek Blvd, Cupertino, CA 95014",
+      "phone": "(408) 216-0759",
+      "email": "sweetmaplecupertino@gmail.com",
+      "hours": "Daily 8am–2:30pm",
+      "contactOnly": "Use this location’s official menu or call the shop for its full current menu and prices.",
+      "panels": [
+        {
+          "head": "Four Bay Area locations and menus",
+          "body": [
+            "San Francisco: 2101 Sutter Street, San Francisco, CA 94115 · (415) 655-9169",
+            "Palo Alto: 150 University Ave, Palo Alto, CA 94301 · (650) 521-0764",
+            "Cupertino: 20010 Stevens Creek Blvd, Cupertino, CA 95014 · (408) 216-0759",
+            "Walnut Creek: 1523 Giammona Dr, Walnut Creek, CA 94596 · (925) 546-0029"
+          ],
+          "links": [
+            {
+              "label": "San Francisco menu",
+              "href": "https://www.sweetmaplesf.com/menu-san-francisco"
+            },
+            {
+              "label": "Palo Alto menu",
+              "href": "https://www.sweetmaplesf.com/menu-palo-alto"
+            },
+            {
+              "label": "Cupertino menu",
+              "href": "https://www.sweetmaplesf.com/menu-cupertino"
+            },
+            {
+              "label": "Walnut Creek menu",
+              "href": "https://www.sweetmaplesf.com/menu-walnut-creek"
+            }
+          ]
+        },
+        {
+          "head": "Sweet Maple films",
+          "body": [
+            "The Festus Ezeli review does not identify a branch in its caption. It is linked from the San Francisco chain page; the Walnut Creek review identifies its location."
+          ],
+          "links": [
+            {
+              "label": "Sweet Maple chain review",
+              "href": "https://beastypages.com/?b=b_sweetmaplesanfrancisco"
+            },
+            {
+              "label": "Walnut Creek review",
+              "href": "https://beastypages.com/?b=b_sweetmaplewalnutcreek"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sweet-maple-walnut-creek",
+      "name": "Sweet Maple",
+      "label": "Sweet Maple",
+      "cuisine": "Breakfast and brunch diner",
+      "tagline": "Breakfast and brunch with Millionaire’s Bacon in Walnut Creek.",
+      "color": "#283F40",
+      "icon": "sweet-maple-v104",
+      "prep": 0,
+      "category": "Breakfast and brunch diner",
+      "items": [],
+      "site": "https://www.sweetmaplesf.com/menu-walnut-creek",
+      "address": "1523 Giammona Dr, Walnut Creek, CA 94596",
+      "phone": "(925) 546-0029",
+      "email": "sweetmaplewalnutcreek@gmail.com",
+      "hours": "Daily 8am–2:30pm",
+      "sections": [
+        {
+          "name": "Egg Plates",
+          "items": [
+            [
+              "Two Eggs Any Style",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1700
+            ],
+            [
+              "with Chicken Mango Sausage",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2200
+            ],
+            [
+              "with Applewood Smoked Bacon",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2200
+            ],
+            [
+              "with Millionaire's Bacon",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2500
+            ]
+          ]
+        },
+        {
+          "name": "Scrambles & Omelettes",
+          "items": [
+            [
+              "Hass Omelette",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2400
+            ],
+            [
+              "Spinach Scramble",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2300
+            ],
+            [
+              "Sweet Maple Scramble",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ],
+            [
+              "Bay Bottom Omelette",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              3400
+            ],
+            [
+              "Frisco Scramble",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2400
+            ]
+          ]
+        },
+        {
+          "name": "Soufflegg Skillets",
+          "items": [
+            [
+              "Gardena",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2400
+            ],
+            [
+              "Savory",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ],
+            [
+              "Francis",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2500
+            ]
+          ]
+        },
+        {
+          "name": "Small Bites",
+          "items": [
+            [
+              "Crispy Brussel Sprouts",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1500
+            ],
+            [
+              "Petite Pancake",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1500
+            ],
+            [
+              "Korean Fried Chicken",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1600
+            ],
+            [
+              "Yogurt Fruit Salad",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1400
+            ],
+            [
+              "Earl Grey Blueberry Croffle",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1600
+            ]
+          ]
+        },
+        {
+          "name": "Millionaire's Bacon®",
+          "items": [
+            [
+              "Millionaire's Bacon®",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1500
+            ],
+            [
+              "Millionaire's Bacon FLIGHTS",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2400
+            ],
+            [
+              "Millionaire's Candy® (GF)",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1300
+            ]
+          ]
+        },
+        {
+          "name": "Kid's Menu",
+          "items": [
+            [
+              "Mini Pancake",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              1600
+            ]
+          ]
+        },
+        {
+          "name": "Benedict & Friends",
+          "items": [
+            [
+              "Florentine",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2200
+            ],
+            [
+              "Oscar",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              3400
+            ],
+            [
+              "Blackstone",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ],
+            [
+              "Galbi",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              3400
+            ]
+          ]
+        },
+        {
+          "name": "Kitchen Specials",
+          "items": [
+            [
+              "Sizzling Stonepot",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2700
+            ],
+            [
+              "Tornado Galbi Omurice",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ],
+            [
+              "Pimped Up Ramyun",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2600
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches",
+          "items": [
+            [
+              "BLTA Sandwich",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2300
+            ],
+            [
+              "Crab Sandwich",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              3200
+            ],
+            [
+              "Chicken Sandwich",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2300
+            ]
+          ]
+        },
+        {
+          "name": "Smashed Burgers",
+          "items": [
+            [
+              "Mexicali Burger",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2300
+            ],
+            [
+              "Jam Juicy Lucy Burger",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2400
+            ],
+            [
+              "Balsamic Burger",
+              "See the restaurant’s branch menu for ingredients and customization.",
+              2300
+            ]
+          ]
+        }
+      ],
+      "siteNote": "These are the items and base prices verified on this branch’s published menu. Some sections could not be retrieved completely; use the official menu for the full selection, current prices and customizations. Prices marked from depend on the plate option. Alcohol is omitted.",
+      "panels": [
+        {
+          "head": "Four Bay Area locations and menus",
+          "body": [
+            "San Francisco: 2101 Sutter Street, San Francisco, CA 94115 · (415) 655-9169",
+            "Palo Alto: 150 University Ave, Palo Alto, CA 94301 · (650) 521-0764",
+            "Cupertino: 20010 Stevens Creek Blvd, Cupertino, CA 95014 · (408) 216-0759",
+            "Walnut Creek: 1523 Giammona Dr, Walnut Creek, CA 94596 · (925) 546-0029"
+          ],
+          "links": [
+            {
+              "label": "San Francisco menu",
+              "href": "https://www.sweetmaplesf.com/menu-san-francisco"
+            },
+            {
+              "label": "Palo Alto menu",
+              "href": "https://www.sweetmaplesf.com/menu-palo-alto"
+            },
+            {
+              "label": "Cupertino menu",
+              "href": "https://www.sweetmaplesf.com/menu-cupertino"
+            },
+            {
+              "label": "Walnut Creek menu",
+              "href": "https://www.sweetmaplesf.com/menu-walnut-creek"
+            }
+          ]
+        },
+        {
+          "head": "Sweet Maple films",
+          "body": [
+            "The Festus Ezeli review does not identify a branch in its caption. It is linked from the San Francisco chain page; the Walnut Creek review identifies its location."
+          ],
+          "links": [
+            {
+              "label": "Sweet Maple chain review",
+              "href": "https://beastypages.com/?b=b_sweetmaplesanfrancisco"
+            },
+            {
+              "label": "Walnut Creek review",
+              "href": "https://beastypages.com/?b=b_sweetmaplewalnutcreek"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "code": "DfajuVqPPwz",
+      "batch": 104,
+      "source": "https://www.instagram.com/reel/DfajuVqPPwz/",
+      "disposition": "local film on creator and Watch; linked from business",
+      "slug": "review-DfajuVqPPwz",
+      "brand": "b_woogakoreanbbq",
+      "by": "orangeginger",
+      "postingAccount": "orangeginger",
+      "request": [
+        {
+          "at": "2026-11-06 21:27:40.818124",
+          "request": "Clip this video plz"
+        }
+      ],
+      "excerpt": "9s-24s of 24s"
+    },
+    {
+      "code": "Dc4s0cuQVen",
+      "batch": 104,
+      "source": "https://www.instagram.com/reel/Dc4s0cuQVen/",
+      "disposition": "local film",
+      "slug": "review-Dc4s0cuQVen",
+      "brand": "b_oinkoscar",
+      "by": "goyuliiago",
+      "postingAccount": "goyuliiago",
+      "request": [
+        {
+          "at": "2026-11-07 06:49:56.149934",
+          "request": "Clip this video plz \nPlease update icon pic"
+        }
+      ],
+      "excerpt": "16s-31s of 63s"
+    },
+    {
+      "code": "DdCQPY-siua",
+      "batch": 104,
+      "source": "https://www.instagram.com/reel/DdCQPY-siua/",
+      "disposition": "local film",
+      "slug": "review-DdCQPY-siua",
+      "brand": "b_oinkoscar",
+      "by": "soysupli",
+      "postingAccount": "soysupli",
+      "request": [
+        {
+          "at": "2026-11-07 06:52:20.176452",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "excerpt": "3s-18s of 54s"
+    },
+    {
+      "code": "Dfar3N3vTHy",
+      "batch": 104,
+      "source": "https://www.instagram.com/reel/Dfar3N3vTHy/",
+      "disposition": "local film",
+      "slug": "review-Dfar3N3vTHy",
+      "brand": "b_kankiin",
+      "by": "charlize_tse",
+      "postingAccount": "kan_kiin",
+      "request": [
+        {
+          "at": "2026-11-07 08:07:48.856249",
+          "request": "Clip this video plz \nFoodie \nNewbie Newbie"
+        }
+      ],
+      "excerpt": "5s-20s of 39s"
+    },
+    {
+      "code": "DfBMdwmJuwa",
+      "batch": 104,
+      "source": "https://www.instagram.com/reel/DfBMdwmJuwa/",
+      "disposition": "local film",
+      "slug": "review-DfBMdwmJuwa",
+      "brand": "b_kankiin",
+      "by": "chaudownfood",
+      "postingAccount": "chaudownfood",
+      "request": [
+        {
+          "at": "2026-11-07 08:08:29.815313",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "excerpt": "0s-11s of 11s"
+    },
+    {
+      "code": "DeNoQSSNzu8",
+      "batch": 104,
+      "source": "https://www.instagram.com/reel/DeNoQSSNzu8/",
+      "disposition": "local film",
+      "slug": "review-DeNoQSSNzu8",
+      "brand": "b_kankiin",
+      "by": "phoebe8food",
+      "postingAccount": "phoebe8food",
+      "request": [
+        {
+          "at": "2026-11-07 08:11:12.979053",
+          "request": "Clip this video plz"
+        }
+      ],
+      "excerpt": "0s-13s of 13s"
+    },
+    {
+      "code": "DO18vuKEpwq",
+      "batch": 104,
+      "source": "https://www.instagram.com/reel/DO18vuKEpwq/",
+      "disposition": "local film",
+      "slug": "review-DO18vuKEpwq",
+      "brand": "b_sweetmaplesanfrancisco",
+      "by": "festusfeasts",
+      "postingAccount": "festusfeasts",
+      "request": [
+        {
+          "at": "2026-11-07 08:19:37.300181",
+          "request": "Clip this video plz"
+        }
+      ],
+      "excerpt": "53s-68s of 160s"
+    },
+    {
+      "code": "DHjDsXfpm3C",
+      "batch": 104,
+      "source": "https://www.instagram.com/reel/DHjDsXfpm3C/",
+      "disposition": "local film",
+      "slug": "review-DHjDsXfpm3C",
+      "brand": "b_sweetmaplewalnutcreek",
+      "by": "thesnobbiefoodie",
+      "postingAccount": "thesnobbiefoodie",
+      "request": [
+        {
+          "at": "2026-11-07 08:19:55.796388",
+          "request": "Clip this video plz"
+        }
+      ],
+      "excerpt": "5s-20s of 22s"
+    }
+  ],
+  "placements": {
+    "san-francisco-goods2-77": "b_oinkoscar",
+    "san-francisco-goods2-78": "b_sweetmaplesanfrancisco",
+    "palo-alto-goods2-3": "b_sweetmaplepaloalto",
+    "cupertino-goods2-1": "b_sweetmaplecupertino",
+    "walnut-creek-goods2-16": "b_sweetmaplewalnutcreek",
+    "beasty-sandwiches-0": "b_oinkoscar",
+    "beasty-diner2-0": "b_sweetmaplesanfrancisco"
+  },
+  "updatedIcons": [
+    "/icons/oink-oscar.webp",
+    "/icons/sweet-maple-v104.webp",
+    "/icons/foodie-goyuliiago-v104.webp",
+    "/icons/foodie-soysupli-v104.webp",
+    "/icons/foodie-charlize-tse-v104.webp",
+    "/icons/foodie-chaudownfood-v104.webp"
+  ],
+  "sourceNotes": {
+    "Oink & Oscar": "Own website links directly to ChowNow restaurant 43262/65177. Full published menu except beer/wine; supplied contact screenshot confirms address, phone and email.",
+    "Sweet Maple": "Supplied location screenshots verify four Bay Area addresses/contacts/hours. Own branch menu pages provide verified named items and base prices; incomplete sections are held. Cupertino menu retrieval returned a challenge and no reliable priced menu; contact-only, no prices transferred from other branches.",
+    "Kan Kiin": "Dfar3N3vTHy is posted by the restaurant, with caption photographer credit @charlize_tse matching the supplied creator portrait. The restaurant’s existing page is retained.",
+    "Location attribution": "Festus’s Sweet Maple caption does not specify a branch. It is linked from the San Francisco chain page without claiming the visit was there. @thesnobbiefoodie explicitly identifies Walnut Creek."
+  },
+  "updatedBrands": [
+    "b_kankiin",
+    "b_woogakoreanbbq"
+  ]
+}

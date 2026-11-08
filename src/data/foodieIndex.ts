@@ -28,6 +28,8 @@ export interface Review {
   credit?: string
   /** Play the excerpt from the creator's page and Watch. */
   creatorClip?: boolean
+  /** People featured in a post whose original posting credit stays intact. */
+  featuring?: string[]
 }
 
 /* Accounts that posted a business's own film: they are the business, not a reviewer. */
@@ -57,6 +59,7 @@ const ALL: Review[] = [
     brand: r.brand ? byId.get(r.brand) : undefined,
     href: r.reel,
     credit: r.credit,
+    featuring: r.featuring,
     ...(r.clip === 'creator' ? { creatorClip: true } : {}),
     ...(r.clip
       ? (() => {
@@ -68,7 +71,9 @@ const ALL: Review[] = [
 ]
 
 /** A creator's reviews, newest business pages first, then the linked ones. */
-export const reviewsBy = (handle: string): Review[] => ALL.filter((r) => stableHandle(r.by) === stableHandle(handle))
+export const reviewsBy = (handle: string): Review[] => ALL.filter((r) =>
+  stableHandle(r.by) === stableHandle(handle) || r.featuring?.some((guest) => stableHandle(guest) === stableHandle(handle)),
+)
 
 /** Every creator's review of one business. */
 export const reviewsOf = (brandId: string): Review[] => ALL

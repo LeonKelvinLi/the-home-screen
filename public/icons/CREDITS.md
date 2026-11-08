@@ -580,3 +580,35 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-bayeatss-v101` | [@bayeatss official Instagram profile](https://www.instagram.com/bayeatss/) | Original public profile portrait downloaded in signed-in Chrome; supplied IMG_9526.png was unavailable on disk |
 
 | `dinner-with-ike.webp` | [Dinner With Ike](https://dinnerwithike.com/) | Ike Shehadeh’s 264×264 portrait embedded in the organizer’s own event page, retrieved November 6, 2026. Converted to WebP without retouching. |
+
+| `aburaya-oakland.webp` | Glenn’s supplied IMG_9561.PNG, November 6, 2026 | Original business artwork cropped and fitted without redrawing. |
+| `crabby-crabby-newark.webp` | Glenn’s supplied IMG_9577.png, November 6, 2026 | Original business artwork cropped and fitted without redrawing. |
+| `absteak-san-francisco.webp` | Glenn’s supplied IMG_9612.png, November 6, 2026 | Original business artwork cropped and fitted without redrawing. |
+| `via-mia-pizza.webp` | Glenn’s supplied IMG_9588.png, November 6, 2026 | Original business artwork cropped and fitted without redrawing. |
+| `serious-dumpling.webp` | Glenn’s supplied IMG_9605.png, November 6, 2026 | Original business artwork cropped and fitted without redrawing. |
+| `cajun-crackn-v103.webp` | Glenn’s supplied IMG_9592.png, November 6, 2026 | Original business artwork cropped and fitted without redrawing. |
+| `flats-burgers.webp` | Glenn’s supplied IMG_9617.png, November 6, 2026 | Original business artwork cropped and fitted without redrawing. |
+| `oink-oscar.webp` | Glenn’s supplied IMG_9626.PNG, November 7, 2026 | Original business artwork cropped and fitted without redrawing. |
+| `sweet-maple-v104.webp` | Glenn’s supplied IMG_9639.PNG, November 7, 2026 | Original business artwork cropped and fitted without redrawing. |
+| `foodie-withlovelysss-v103.webp` | Glenn’s supplied IMG_9567.png, November 6, 2026 | Original @withlovelysss profile portrait, cropped and fitted to the icon. |
+| `foodie-sebascastroficial-v103.webp` | Glenn’s supplied IMG_9578.PNG, November 6, 2026 | Original @sebascastroficial profile portrait, cropped and fitted to the icon. |
+| `foodie-mr-bayareafoodie-v103.webp` | Glenn’s supplied IMG_9589.png, November 6, 2026 | Original @mr.bayareafoodie profile portrait, cropped and fitted to the icon. |
+| `foodie-rollingwithdeneats-v103.webp` | Glenn’s supplied IMG_9590.png, November 6, 2026 | Original @rollingwithdeneats profile portrait, cropped and fitted to the icon. |
+| `foodie-blurgotti-v103.webp` | Glenn’s supplied IMG_9595.png, November 6, 2026 | Original @blurgotti profile portrait, cropped and fitted to the icon. |
+| `foodie-ronniebanks-v103.webp` | Glenn’s supplied IMG_9596.png, November 6, 2026 | Original @ronniebanks profile portrait, cropped and fitted to the icon. |
+| `foodie-zeyno-ern-v103.webp` | Glenn’s supplied IMG_9597.PNG, November 6, 2026 | Original @zeyno.ern profile portrait, cropped and fitted to the icon. |
+| `foodie-habibimocha-v103.webp` | Glenn’s supplied IMG_9598.png, November 6, 2026 | Original @habibimocha profile portrait, cropped and fitted to the icon. |
+| `foodie-msashleyvee-v103.webp` | Glenn’s supplied IMG_9599.PNG, November 6, 2026 | Original @msashleyvee profile portrait, cropped and fitted to the icon. |
+| `foodie-ashleyveats-v103.webp` | Glenn’s supplied IMG_9606.png, November 6, 2026 | Original @ashleyveats profile portrait, cropped and fitted to the icon. |
+| `foodie-sfbayfood-v103.webp` | Glenn’s supplied IMG_9607.png, November 6, 2026 | Original @sfbayfood profile portrait, cropped and fitted to the icon. |
+| `foodie-feed-happiness-v103.webp` | Glenn’s supplied IMG_9608.PNG, November 6, 2026 | Original @feed_happiness_ profile portrait, cropped and fitted to the icon. |
+| `foodie-agnespittioni-v103.webp` | Glenn’s supplied IMG_9618.PNG, November 6, 2026 | Original @agnespittioni profile portrait, cropped and fitted to the icon. |
+| `foodie-tastewith-rach-v103.webp` | Glenn’s supplied IMG_9619.PNG, November 6, 2026 | Original @tastewith.rach profile portrait, cropped and fitted to the icon. |
+| `foodie-thehungrycurator-v103.webp` | Glenn’s supplied IMG_9620.png, November 6, 2026 | Original @thehungrycurator profile portrait, cropped and fitted to the icon. |
+| `foodie-eatwith-ange-v103.webp` | Glenn’s supplied IMG_9621.png, November 6, 2026 | Original @eatwith_ange profile portrait, cropped and fitted to the icon. |
+| `foodie-wheresthefoodat-v103.webp` | Glenn’s supplied IMG_9622.PNG, November 6, 2026 | Original @_wheresthefoodat profile portrait, cropped and fitted to the icon. |
+| `foodie-maddyeats-sfbay-v103.webp` | Glenn’s supplied IMG_9623.png, November 6, 2026 | Original @maddyeats.sfbay profile portrait, cropped and fitted to the icon. |
+| `foodie-goyuliiago-v104.webp` | Glenn’s supplied IMG_9632.PNG, November 7, 2026 | Original @goyuliiago profile portrait, cropped and fitted to the icon. |
+| `foodie-soysupli-v104.webp` | Glenn’s supplied IMG_9633.png, November 7, 2026 | Original @soysupli profile portrait, cropped and fitted to the icon. |
+| `foodie-charlize-tse-v104.webp` | Glenn’s supplied IMG_9634.png, November 7, 2026 | Original @charlize_tse profile portrait, cropped and fitted to the icon. |
+| `foodie-chaudownfood-v104.webp` | Glenn’s supplied IMG_9635.png, November 7, 2026 | Original @chaudownfood profile portrait, cropped and fitted to the icon. |

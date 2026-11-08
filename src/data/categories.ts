@@ -142,6 +142,11 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   // Glenn, November 5: Pho and Onigiri, each searchable as its own category.
   { kind: 'pho', heading: 'Pho', about: 'Vietnamese pho and noodle soups', wall: wall('ramen'), test: /\bph[oở]\b/i },
   // Glenn, November 6: separate Donuts and Boba pages, with JK Cafe & Boba.
+  // Glenn, November 6–7: distinct searchable sheets; Dim Sum keeps its existing seats.
+  { kind: 'friedchicken', heading: 'Fried Chicken', about: 'Fried chicken shops and sandwiches', wall: wall('diner'), test: /fried chicken|hot chicken|chicken wings/i },
+  { kind: 'pizza', heading: 'Pizza', about: 'Pizzerias and pizza shops', wall: wall('bakery'), test: /pizza|pizzeria/i },
+  { kind: 'dumplings', heading: 'Dumplings', about: 'Dumplings, soup dumplings and potstickers', wall: wall('dimsum'), test: /dumplings?|xiao[ -]?long[ -]?bao|sheng[ -]?jian/i },
+  { kind: 'sandwiches', heading: 'Sandwiches', about: 'Sandwich shops, subs and delis', wall: wall('diner'), test: /sandwich|\bsubs?\b|\bdelicatessen\b|\bdeli\b|banh mi/i },
   { kind: 'donuts', heading: 'Donuts', about: 'Donut shops and doughnuts', wall: wall('bakery'), test: /donut|doughnut/i },
   { kind: 'boba', heading: 'Boba', about: 'Boba and bubble tea shops', wall: wall('teas'), test: /boba|bubble tea|milk tea/i },
   { kind: 'onigiri', heading: 'Onigiri', about: 'Japanese onigiri and rice sandwiches', wall: wall('sushi'), test: /onigiri/i },

@@ -16,7 +16,7 @@
      second review of one that is: OTHER_REVIEWS below, each a link to the
      post. The facts are the post's own caption (place and city).
 
-  The first 24 FOODIE_PAGES keep their original rank. The remaining creators
+  The first 24 FOODIE_PAGES reflect Glenn’s November 6 heavy-hitter requests. Other creators
   have pages on the yellow More foodies sheets, requested 30 October.
   Names are what each account calls itself. Grand-O already has a page on
   Individuals, so @thesnacksensei's reviews go on it instead of a second one.
@@ -36,6 +36,8 @@ export interface OtherReview {
   clip?: boolean | 'creator'
   /** Source attribution when the posting account differs from the reviewer. */
   credit?: string
+  /** Featured creators share this credited film without duplicating it in Watch. */
+  featuring?: string[]
 }
 
 export interface FoodiePage {
@@ -56,47 +58,475 @@ export interface FoodiePage {
 const reel = (code: string) => `https://www.instagram.com/reel/${code}/`
 export const reviewPostCode = (href: string) => /\/(?:reel|p)\/([\w-]+)\//.exec(href)?.[1]
 
+// Glenn, November 6: move Ronnie Banks and MsAshleyVee to the front,
+// then bring the explicitly tagged heavy hitters toward the first page.
 const TOP_FOODIE_PAGES: FoodiePage[] = [
-  { handle: 'festusfeasts', icon: "foodie-festusfeasts-v85", name: 'Festus Ezeli', label: 'Festus' },
-  { handle: 'thesnacksensei', name: 'Grand-O', label: 'Grand-O', brand: 'b_grando' },
-  { handle: 'foodandsachi', icon: "foodie-foodandsachi-v85", name: 'Sachi', label: 'Sachi' },
-  { handle: 'hungere.for.diy', icon: "foodie-hungere-for-diy-v85", name: 'Hunger E for DIY', label: 'Hunger E' },
-  { handle: 'justmostie', icon: "foodie-justmostie-v85", name: 'Mostie', label: 'Mostie' },
-  { handle: 'capturedbysado', icon: "foodie-capturedbysado-v86", name: 'capturedbysado', label: 'Sado' },
-  { handle: 'allie.eats', icon: "foodie-allie-eats-v86", name: 'Allie Tong', label: 'Allie Tong' },
-  { handle: 'seekeasyeats', icon: "foodie-whofedandrew-v86", instagram: 'whofedandrew', name: 'Andrew Greenstein', label: 'Andrew' },
-  { handle: 'orangeginger', name: 'Liz Maw', label: 'Liz Maw', "icon": "foodie-orangeginger-v98"},
-  { handle: 'antoinetterzz', name: 'antoinetterzz', label: 'Antoinette' },
-  { handle: 'bayarea.kulture', instagram: 'bayarea.kulture', name: 'Bay Area Kulture', label: 'Bay Area Kulture', cuisine: 'Bay Area food and culture', icon: 'foodie-bayarea-kulture-v94', glow: true },
-  { handle: 'chefmelissaking', name: 'Melissa King', label: 'Melissa King' },
-  { handle: 'celineeats', instagram: 'celineeats', name: 'celine', label: 'Celine', icon: 'foodie-celineeats-v94' },
-  { handle: 'grubwitmike', name: 'Grubwitmike', label: 'Grubwitmike', icon: 'foodie-grubwitmike-v99' },
-  { handle: 'singlecatm0m', name: 'Tiffany', label: 'Tiffany' },
-  { handle: 'kimjsseats', name: 'Where Jess at', label: 'Jess' },
-  { handle: 'oaktowngrubhub', name: 'NowThatLooksGooD', label: 'Oaktown Grub' },
-  { handle: 'thespoonlist', name: 'The Spoon List', label: 'Spoon List' },
-  { handle: 'sherryeatworld', name: 'Sherry Shi', label: 'Sherry Shi' },
-  { handle: 'booziebrunch', name: 'Novi Mitchell', label: 'Novi' },
-  { handle: 'hungrydanz', name: 'Dan', label: 'Dan', "icon": "foodie-hungrydanz-v98"},
-  { handle: 'iamnikkieg', name: 'Nikkie G', label: 'Nikkie G' },
-  { handle: 'janeethefoodie', name: 'Jane', label: 'Jane' },
-  { handle: 'peggy_shoo', icon: "foodie-peggy-shoo-v86", name: 'peggy xu', label: 'Peggy' },
-]
-
-/* Glenn, 30 Oct 8:26 am: a yellow page for the extended number of foodies.
-   Keep the original 24 and every existing seat. These source handles have
-   food reviews already in the index; their display names are not guessed.
-   Append new creators here so the overflow keeps its seat numbers. */
-export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
-    "handle": "zarina.nawabi",
-    "name": "@zarina.nawabi",
-    "label": "zarina.nawabi"
+    "handle": "ronniebanks",
+    "name": "Ronnie Banks",
+    "label": "Ronnie Banks",
+    "icon": "foodie-ronniebanks-v103"
+  },
+  {
+    "handle": "msashleyvee",
+    "name": "MsAshleyVee",
+    "label": "Ashley Vee",
+    "icon": "foodie-msashleyvee-v103"
+  },
+  {
+    "handle": "feed_happiness_",
+    "name": "@feed_happiness_",
+    "label": "feed_happiness_",
+    "icon": "foodie-feed-happiness-v103"
+  },
+  {
+    "handle": "ashleyveats",
+    "name": "@ashleyveats",
+    "label": "ashleyveats",
+    "icon": "foodie-ashleyveats-v103"
+  },
+  {
+    "handle": "blurgotti",
+    "name": "@blurgotti",
+    "label": "blurgotti",
+    "icon": "foodie-blurgotti-v103"
+  },
+  {
+    "handle": "sebascastroficial",
+    "name": "@sebascastroficial",
+    "label": "sebascastroficial",
+    "icon": "foodie-sebascastroficial-v103"
+  },
+  {
+    "handle": "festusfeasts",
+    "icon": "foodie-festusfeasts-v85",
+    "name": "Festus Ezeli",
+    "label": "Festus"
+  },
+  {
+    "handle": "thesnacksensei",
+    "name": "Grand-O",
+    "label": "Grand-O",
+    "brand": "b_grando"
+  },
+  {
+    "handle": "foodandsachi",
+    "icon": "foodie-foodandsachi-v85",
+    "name": "Sachi",
+    "label": "Sachi"
+  },
+  {
+    "handle": "grubwitmike",
+    "name": "Grubwitmike",
+    "label": "Grubwitmike",
+    "icon": "foodie-grubwitmike-v99"
   },
   {
     "handle": "hungry4munchies",
     "name": "@hungry4munchies",
     "label": "hungry4munchies"
+  },
+  {
+    "handle": "bayarea_fooddreamz",
+    "name": "@bayarea_fooddreamz",
+    "label": "bayarea_fooddreamz"
+  },
+  {
+    "handle": "eatwithsie",
+    "name": "@eatwithsie",
+    "label": "eatwithsie"
+  },
+  {
+    "handle": "daeatzwitbri",
+    "icon": "foodie-daeatzwitbri-v85",
+    "name": "@daeatzwitbri",
+    "label": "daeatzwitbri"
+  },
+  {
+    "handle": "thetastebud",
+    "name": "@thetastebud",
+    "label": "thetastebud",
+    "icon": "foodie-thetastebud-v92"
+  },
+  {
+    "handle": "aztec.ed",
+    "name": "@aztec.ed",
+    "label": "aztec.ed",
+    "icon": "foodie-aztec-ed-v91",
+    "instagram": "aztec.ed"
+  },
+  {
+    "handle": "imadoniseats",
+    "icon": "foodie-imadoniseats-v85",
+    "name": "@imadoniseats",
+    "label": "imadoniseats"
+  },
+  {
+    "handle": "mzz.juxtaposition",
+    "name": "@mzz.juxtaposition",
+    "label": "mzz.juxtaposition",
+    "icon": "foodie-mzz-juxtaposition-v99"
+  },
+  {
+    "handle": "yourglobalfoodiebff",
+    "name": "@yourglobalfoodiebff",
+    "label": "yourglobalfoodiebff",
+    "icon": "foodie-globalbff-v92"
+  },
+  {
+    "handle": "felicitythefoodie",
+    "icon": "foodie-felicitythefoodie-v86",
+    "name": "@felicitythefoodie",
+    "label": "felicitythefoodie"
+  },
+  {
+    "handle": "trinhdoesthings",
+    "name": "@trinhdoesthings",
+    "label": "trinhdoesthings"
+  },
+  {
+    "handle": "smackinfood",
+    "name": "@smackinfood",
+    "label": "smackinfood",
+    "icon": "foodie-smackinfood-v97"
+  },
+  {
+    "handle": "drooling.bae",
+    "name": "@drooling.bae",
+    "label": "drooling.bae",
+    "icon": "foodie-drooling-bae-v98"
+  },
+  {
+    "handle": "thesauceboss_",
+    "name": "@thesauceboss_",
+    "label": "thesauceboss_"
+  }
+]
+
+/** Everyone else remains reachable on the yellow More foodies sheets. */
+export const MORE_FOODIE_PAGES: FoodiePage[] = [
+  {
+    "handle": "bayarea.foodie.adventures",
+    "name": "@bayarea.foodie.adventures",
+    "label": "bayarea.foodie.adventures"
+  },
+  {
+    "handle": "siliconvalley.foodies",
+    "icon": "foodie-siliconvalley-foodies-v93",
+    "name": "@siliconvalley.foodies",
+    "label": "siliconvalley.foodies"
+  },
+  {
+    "handle": "jacksdiningroom",
+    "name": "@jacksdiningroom",
+    "label": "jacksdiningroom"
+  },
+  {
+    "handle": "andreweatsinsf",
+    "name": "@andreweatsinsf",
+    "label": "andreweatsinsf",
+    "icon": "foodie-andrew-v92"
+  },
+  {
+    "handle": "eatswithkath",
+    "name": "@eatswithkath",
+    "label": "eatswithkath"
+  },
+  {
+    "handle": "cestalmoco",
+    "name": "@cestalmoco",
+    "label": "cestalmoco",
+    "icon": "foodie-cestalmoco-v88"
+  },
+  {
+    "handle": "kangofrealty",
+    "name": "@kangofrealty",
+    "label": "kangofrealty"
+  },
+  {
+    "handle": "fedoramaelle",
+    "icon": "foodie-fedoramaelle-v86",
+    "name": "@fedoramaelle",
+    "label": "fedoramaelle"
+  },
+  {
+    "handle": "pastrywithjenn",
+    "name": "Jenn Yee",
+    "label": "Jenn",
+    "icon": "foodie-pastrywithjenn-v86"
+  },
+  {
+    "handle": "travelwtiff",
+    "name": "@travelwtiff",
+    "label": "Tiffany",
+    "icon": "foodie-travelwtiff-v86"
+  },
+  {
+    "handle": "_emwong_",
+    "name": "Emma Wong-Stephens",
+    "label": "Emma",
+    "icon": "foodie-emwong-v86"
+  },
+  {
+    "handle": "kimoni.eatss",
+    "name": "Kimball & Monica",
+    "label": "Kimoni",
+    "icon": "foodie-kimoni-eatss-v88"
+  },
+  {
+    "handle": "baygirlseat",
+    "instagram": "baygirlseat",
+    "name": "Amandy",
+    "label": "Amandy",
+    "icon": "foodie-baygirlseat-v92"
+  },
+  {
+    "handle": "heraldh",
+    "instagram": "heraldh",
+    "name": "Herald John",
+    "label": "Herald",
+    "icon": "foodie-heraldh-v92"
+  },
+  {
+    "handle": "foodiswhyimbroke",
+    "instagram": "foodiswhyimbroke",
+    "name": "Yen Kim Phan",
+    "label": "Yen",
+    "icon": "foodie-foodiswhyimbroke-v92"
+  },
+  {
+    "handle": "keneats_",
+    "instagram": "keneats_",
+    "name": "kenya // sf bay area foodie 😋",
+    "label": "kenya",
+    "icon": "foodie-keneats-v92"
+  },
+  {
+    "handle": "e40",
+    "name": "E-40",
+    "label": "E-40",
+    "brand": "b_e40"
+  },
+  {
+    "handle": "mamamarquez888",
+    "instagram": "mamamarquez888",
+    "name": "Megan Marquez",
+    "label": "Megan",
+    "icon": "foodie-mamamarquez-v92"
+  },
+  {
+    "handle": "reelkevo",
+    "instagram": "reelkevo",
+    "name": "Kevin",
+    "label": "Kevin",
+    "icon": "foodie-reelkevo-v92"
+  },
+  {
+    "handle": "rollingwithdeneats",
+    "instagram": "rollingwithdeneats",
+    "name": "Denise",
+    "label": "Denise",
+    "icon": "foodie-rollingwithdeneats-v103"
+  },
+  {
+    "handle": "agnespittioni",
+    "name": "Agnes Pittioni",
+    "label": "Agnes",
+    "icon": "foodie-agnespittioni-v103",
+    "instagram": "agnespittioni"
+  },
+  {
+    "handle": "j00diefoodie",
+    "name": "J00die Foodie",
+    "label": "J00die Foodie",
+    "icon": "foodie-j00diefoodie-v94",
+    "instagram": "j00diefoodie"
+  },
+  {
+    "handle": "aliasharrief",
+    "name": "@aliasharrief",
+    "label": "aliasharrief",
+    "icon": "foodie-aliasharrief-v97"
+  },
+  {
+    "handle": "carlosbradley",
+    "name": "@carlosbradley",
+    "label": "carlosbradley",
+    "icon": "foodie-carlosbradley-v97"
+  },
+  {
+    "handle": "jc.eeats",
+    "name": "@jc.eeats",
+    "label": "jc.eeats",
+    "icon": "foodie-jc-eeats-v98"
+  },
+  {
+    "handle": "monaeatsnearby",
+    "name": "@monaeatsnearby",
+    "label": "monaeatsnearby",
+    "icon": "foodie-monaeatsnearby-v98"
+  },
+  {
+    "handle": "bayareafoodiecrew",
+    "name": "@bayareafoodiecrew",
+    "label": "bayareafoodiecrew",
+    "icon": "foodie-bayareafoodiecrew-v98"
+  },
+  {
+    "handle": "janniners",
+    "name": "@janniners",
+    "label": "janniners",
+    "icon": "foodie-janniners-v98"
+  },
+  {
+    "handle": "alwayshannegry",
+    "name": "@alwayshannegry",
+    "label": "alwayshannegry",
+    "icon": "foodie-alwayshannegry-v100"
+  },
+  {
+    "handle": "rainmoreturely",
+    "name": "@rainmoreturely",
+    "label": "rainmoreturely",
+    "icon": "foodie-rainmoreturely-v100"
+  },
+  {
+    "handle": "_wheresthefoodat",
+    "name": "@_wheresthefoodat",
+    "label": "_wheresthefoodat",
+    "icon": "foodie-wheresthefoodat-v103"
+  },
+  {
+    "handle": "sfbayfood",
+    "name": "@sfbayfood",
+    "label": "sfbayfood",
+    "icon": "foodie-sfbayfood-v103"
+  },
+  {
+    "handle": "zeyno.ern",
+    "name": "@zeyno.ern",
+    "label": "zeyno.ern",
+    "icon": "foodie-zeyno-ern-v103"
+  },
+  {
+    "handle": "hungere.for.diy",
+    "icon": "foodie-hungere-for-diy-v85",
+    "name": "Hunger E for DIY",
+    "label": "Hunger E"
+  },
+  {
+    "handle": "justmostie",
+    "icon": "foodie-justmostie-v85",
+    "name": "Mostie",
+    "label": "Mostie"
+  },
+  {
+    "handle": "capturedbysado",
+    "icon": "foodie-capturedbysado-v86",
+    "name": "capturedbysado",
+    "label": "Sado"
+  },
+  {
+    "handle": "allie.eats",
+    "icon": "foodie-allie-eats-v86",
+    "name": "Allie Tong",
+    "label": "Allie Tong"
+  },
+  {
+    "handle": "seekeasyeats",
+    "icon": "foodie-whofedandrew-v86",
+    "instagram": "whofedandrew",
+    "name": "Andrew Greenstein",
+    "label": "Andrew"
+  },
+  {
+    "handle": "orangeginger",
+    "name": "Liz Maw",
+    "label": "Liz Maw",
+    "icon": "foodie-orangeginger-v98"
+  },
+  {
+    "handle": "antoinetterzz",
+    "name": "antoinetterzz",
+    "label": "Antoinette"
+  },
+  {
+    "handle": "bayarea.kulture",
+    "instagram": "bayarea.kulture",
+    "name": "Bay Area Kulture",
+    "label": "Bay Area Kulture",
+    "cuisine": "Bay Area food and culture",
+    "icon": "foodie-bayarea-kulture-v94",
+    "glow": true
+  },
+  {
+    "handle": "chefmelissaking",
+    "name": "Melissa King",
+    "label": "Melissa King"
+  },
+  {
+    "handle": "celineeats",
+    "instagram": "celineeats",
+    "name": "celine",
+    "label": "Celine",
+    "icon": "foodie-celineeats-v94"
+  },
+  {
+    "handle": "singlecatm0m",
+    "name": "Tiffany",
+    "label": "Tiffany"
+  },
+  {
+    "handle": "kimjsseats",
+    "name": "Where Jess at",
+    "label": "Jess"
+  },
+  {
+    "handle": "oaktowngrubhub",
+    "name": "NowThatLooksGooD",
+    "label": "Oaktown Grub"
+  },
+  {
+    "handle": "thespoonlist",
+    "name": "The Spoon List",
+    "label": "Spoon List"
+  },
+  {
+    "handle": "sherryeatworld",
+    "name": "Sherry Shi",
+    "label": "Sherry Shi"
+  },
+  {
+    "handle": "booziebrunch",
+    "name": "Novi Mitchell",
+    "label": "Novi"
+  },
+  {
+    "handle": "hungrydanz",
+    "name": "Dan",
+    "label": "Dan",
+    "icon": "foodie-hungrydanz-v98"
+  },
+  {
+    "handle": "iamnikkieg",
+    "name": "Nikkie G",
+    "label": "Nikkie G"
+  },
+  {
+    "handle": "janeethefoodie",
+    "name": "Jane",
+    "label": "Jane"
+  },
+  {
+    "handle": "peggy_shoo",
+    "icon": "foodie-peggy-shoo-v86",
+    "name": "peggy xu",
+    "label": "Peggy"
+  },
+  {
+    "handle": "zarina.nawabi",
+    "name": "@zarina.nawabi",
+    "label": "zarina.nawabi"
   },
   {
     "handle": "jbrenes_",
@@ -111,9 +541,12 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "acoupleofcooks",
     "name": "@acoupleofcooks",
-    "label": "acoupleofcooks", "icon": "foodie-acoupleofcooks-v98"},
+    "label": "acoupleofcooks",
+    "icon": "foodie-acoupleofcooks-v98"
+  },
   {
-    "handle": "jantrinanicole", icon: "foodie-jantrinanicole-v86",
+    "handle": "jantrinanicole",
+    "icon": "foodie-jantrinanicole-v86",
     "name": "@jantrinanicole",
     "label": "jantrinanicole"
   },
@@ -128,7 +561,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "thealamedapulse"
   },
   {
-    "handle": "bayareamunchies510", icon: "foodie-bayareamunchies510-v86",
+    "handle": "bayareamunchies510",
+    "icon": "foodie-bayareamunchies510-v86",
     "name": "@bayareamunchies510",
     "label": "bayareamunchies510"
   },
@@ -165,11 +599,6 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "arianasade"
   },
   {
-    "handle": "bayarea_fooddreamz",
-    "name": "@bayarea_fooddreamz",
-    "label": "bayarea_fooddreamz"
-  },
-  {
     "handle": "bayareafoodz",
     "name": "@bayareafoodz",
     "label": "bayareafoodz"
@@ -190,30 +619,21 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "ugc.with.frances"
   },
   {
-    "handle": "eatwithsie",
-    "name": "@eatwithsie",
-    "label": "eatwithsie"
-  },
-  {
-    "handle": "daeatzwitbri", icon: "foodie-daeatzwitbri-v85",
-    "name": "@daeatzwitbri",
-    "label": "daeatzwitbri"
-  },
-  {"handle": "thetastebud", "name": "@thetastebud", "label": "thetastebud", "icon": "foodie-thetastebud-v92"},
-  {
     "handle": "dariananthony_",
     "name": "@dariananthony_",
     "label": "dariananthony_"
   },
   {
-    "handle": "charweeezy", icon: "foodie-charweeezy-v86",
+    "handle": "charweeezy",
+    "icon": "foodie-charweeezy-v86",
     "name": "@charweeezy",
     "label": "charweeezy"
   },
   {
     "handle": "mukbangyourmama",
     "name": "@mukbangyourmama",
-    "label": "mukbangyourmama", "icon": "foodie-mukbangyourmama-v88"
+    "label": "mukbangyourmama",
+    "icon": "foodie-mukbangyourmama-v88"
   },
   {
     "handle": "wanderingstefany",
@@ -233,7 +653,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "shrimpfriedroice",
     "name": "@shrimpfriedroice",
-    "label": "shrimpfriedroice", "icon": "foodie-shrimpfriedroice-v97"
+    "label": "shrimpfriedroice",
+    "icon": "foodie-shrimpfriedroice-v97"
   },
   {
     "handle": "_cynlacson",
@@ -253,10 +674,12 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "livingvivalakillah",
     "name": "@livingvivalakillah",
-    "label": "livingvivalakillah", "icon": "foodie-livingvivalakillah-v88"
+    "label": "livingvivalakillah",
+    "icon": "foodie-livingvivalakillah-v88"
   },
   {
-    "handle": "eighty6ix_", icon: "foodie-eighty6ix-v86",
+    "handle": "eighty6ix_",
+    "icon": "foodie-eighty6ix-v86",
     "name": "@eighty6ix_",
     "label": "eighty6ix_"
   },
@@ -280,7 +703,13 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "@foodiesnflightss",
     "label": "foodiesnflightss"
   },
-  {"handle": "carlaylayyy", "name": "Carla Charisse", "label": "Carla", "instagram": "carlacharisse_", "icon": "foodie-carlacharisse-v92"},
+  {
+    "handle": "carlaylayyy",
+    "name": "Carla Charisse",
+    "label": "Carla",
+    "instagram": "carlacharisse_",
+    "icon": "foodie-carlacharisse-v92"
+  },
   {
     "handle": "shua.tangco",
     "name": "@shua.tangco",
@@ -292,7 +721,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "jenny.home.loans"
   },
   {
-    "handle": "wthellydanyelly", icon: "foodie-wthellydanyelly-v85",
+    "handle": "wthellydanyelly",
+    "icon": "foodie-wthellydanyelly-v85",
     "name": "@wthellydanyelly",
     "label": "wthellydanyelly"
   },
@@ -337,13 +767,6 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "bylizettexo"
   },
   {
-    "handle": "aztec.ed",
-    "name": "@aztec.ed",
-    "label": "aztec.ed",
-    "icon": "foodie-aztec-ed-v91",
-    "instagram": "aztec.ed"
-},
-  {
     "handle": "brianthebarber",
     "name": "@brianthebarber",
     "label": "brianthebarber"
@@ -364,21 +787,10 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "shesvibinhigh"
   },
   {
-    "handle": "imadoniseats", icon: "foodie-imadoniseats-v85",
-    "name": "@imadoniseats",
-    "label": "imadoniseats"
-  },
-  {
-    "handle": "mzz.juxtaposition",
-    "name": "@mzz.juxtaposition",
-    "label": "mzz.juxtaposition",
-    "icon": "foodie-mzz-juxtaposition-v99"
-  },
-  {"handle": "yourglobalfoodiebff", "name": "@yourglobalfoodiebff", "label": "yourglobalfoodiebff", "icon": "foodie-globalbff-v92"},
-  {
     "handle": "dchangshangry",
     "name": "Dan | Your Bay Area Foodie Explorer",
-    "label": "Dan", "icon": "foodie-dchangshangry-v87"
+    "label": "Dan",
+    "icon": "foodie-dchangshangry-v87"
   },
   {
     "handle": "bayarea.foodie.san",
@@ -386,34 +798,15 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "bayarea.foodie.san"
   },
   {
-    "handle": "felicitythefoodie", icon: "foodie-felicitythefoodie-v86",
-    "name": "@felicitythefoodie",
-    "label": "felicitythefoodie"
-  },
-  {
-    "handle": "trinhdoesthings",
-    "name": "@trinhdoesthings",
-    "label": "trinhdoesthings"
-  },
-  {
     "handle": "truly_athi",
     "name": "@truly_athi",
     "label": "truly_athi"
-  },
-  {
-    "handle": "smackinfood",
-    "name": "@smackinfood",
-    "label": "smackinfood", "icon": "foodie-smackinfood-v97"
   },
   {
     "handle": "jetsetjanine",
     "name": "@jetsetjanine",
     "label": "jetsetjanine"
   },
-  {
-    "handle": "drooling.bae",
-    "name": "@drooling.bae",
-    "label": "drooling.bae", "icon": "foodie-drooling-bae-v98"},
   {
     "handle": "kvbitesandgo",
     "name": "@kvbitesandgo",
@@ -455,11 +848,6 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "your_travel_daddy"
   },
   {
-    "handle": "thesauceboss_",
-    "name": "@thesauceboss_",
-    "label": "thesauceboss_"
-  },
-  {
     "handle": "hella._local.mo",
     "name": "@hella._local.mo",
     "label": "hella._local.mo"
@@ -467,7 +855,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "thesnobbiefoodie",
     "name": "@thesnobbiefoodie",
-    "label": "thesnobbiefoodie", "icon": "foodie-thesnobbiefoodie-v89"
+    "label": "thesnobbiefoodie",
+    "icon": "foodie-thesnobbiefoodie-v89"
   },
   {
     "handle": "katfoodsf",
@@ -480,7 +869,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "charlikestoeat"
   },
   {
-    "handle": "hellahansel", icon: "foodie-hellahansel-v86",
+    "handle": "hellahansel",
+    "icon": "foodie-hellahansel-v86",
     "name": "@hellahansel",
     "label": "hellahansel"
   },
@@ -505,7 +895,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "whatthejessi_"
   },
   {
-    "handle": "foodgiveness", icon: "foodie-foodgiveness-v86",
+    "handle": "foodgiveness",
+    "icon": "foodie-foodgiveness-v86",
     "name": "@foodgiveness",
     "label": "foodgiveness"
   },
@@ -565,11 +956,6 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "lovelivermore"
   },
   {
-    "handle": "bayarea.foodie.adventures",
-    "name": "@bayarea.foodie.adventures",
-    "label": "bayarea.foodie.adventures"
-  },
-  {
     "handle": "explorewithtaka",
     "name": "@explorewithtaka",
     "label": "explorewithtaka"
@@ -585,19 +971,10 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "humminglion"
   },
   {
-    "handle": "siliconvalley.foodies", icon: "foodie-siliconvalley-foodies-v93",
-    "name": "@siliconvalley.foodies",
-    "label": "siliconvalley.foodies"
-  },
-  {
     "handle": "_whatarethechances_",
     "name": "@_whatarethechances_",
-    "label": "_whatarethechances_", "icon": "foodie-whatarethechances-v97"
-  },
-  {
-    "handle": "jacksdiningroom",
-    "name": "@jacksdiningroom",
-    "label": "jacksdiningroom"
+    "label": "_whatarethechances_",
+    "icon": "foodie-whatarethechances-v97"
   },
   {
     "handle": "katwalksf",
@@ -619,7 +996,6 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "@xo.pinsta",
     "label": "xo.pinsta"
   },
-  {"handle": "andreweatsinsf", "name": "@andreweatsinsf", "label": "andreweatsinsf", "icon": "foodie-andrew-v92"},
   {
     "handle": "lovemissfit",
     "name": "@lovemissfit",
@@ -646,14 +1022,10 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "foodie.dreams"
   },
   {
-    "handle": "eatswithkath",
-    "name": "@eatswithkath",
-    "label": "eatswithkath"
-  },
-  {
     "handle": "eatswithfoodie",
     "name": "@eatswithfoodie",
-    "label": "eatswithfoodie", "icon": "foodie-eatswithfoodie-v97"
+    "label": "eatswithfoodie",
+    "icon": "foodie-eatswithfoodie-v97"
   },
   {
     "handle": "jensintec",
@@ -679,11 +1051,6 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "handle": "boba._.addict",
     "name": "@boba._.addict",
     "label": "boba._.addict"
-  },
-  {
-    "handle": "feed_happiness_",
-    "name": "@feed_happiness_",
-    "label": "feed_happiness_"
   },
   {
     "handle": "ruthannesturman",
@@ -746,14 +1113,10 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "ryanbyryanchua"
   },
   {
-    "handle": "cestalmoco",
-    "name": "@cestalmoco",
-    "label": "cestalmoco", "icon": "foodie-cestalmoco-v88"
-  },
-  {
     "handle": "hangrypotato",
     "name": "@hangrypotato",
-    "label": "hangrypotato", "icon": "foodie-hangrypotato-v89"
+    "label": "hangrypotato",
+    "icon": "foodie-hangrypotato-v89"
   },
   {
     "handle": "melsotel",
@@ -765,114 +1128,510 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "San Leandro Eats",
     "label": "SL Eats"
   },
-  {"handle": "broitsva", "name": "Va", "label": "Va"},
-  {"handle": "fat_ash_foodie", "name": "Ash", "label": "Ash", "icon": "foodie-fatash-v92"},
-  {"handle": "_foodieshots_", "name": "Joann Ha", "label": "Joann Ha", "icon": "foodie-foodieshots-v98"},
-  {"handle": "kitkatvales", "name": "@kitkatvales", "label": "kitkatvales"},
-  { handle: 'foodwookie', name: 'FoodWookie', label: 'FoodWookie', "icon": "foodie-foodwookie-v99"},
-  {"handle": "kangofrealty", "name": "@kangofrealty", "label": "kangofrealty"},
-  {"handle": "sonomacountyliving", "name": "@sonomacountyliving", "label": "sonomacountyliving"},
-  {"handle": "lovecartier25", "name": "@lovecartier25", "label": "lovecartier25"},
-  {"handle": "foodelaventures", "name": "@foodelaventures", "label": "foodelaventures"},
-  {"handle": "fedoramaelle", icon: "foodie-fedoramaelle-v86", "name": "@fedoramaelle", "label": "fedoramaelle"},
-  {"handle": "foodie_travel_happiness", "name": "@foodie_travel_happiness", "label": "foodie_travel_happiness", "icon": "foodie-foodie-travel-happiness-v98"},
-  {"handle": "peterlyagent", icon: "foodie-peterlyagent-v85", "name": "Peter Ly", "label": "Peter Ly"},
-  {"handle": "k.smokeskitchen", "name": "K. Smokes Kitchen", "label": "K. Smokes", "icon": "foodie-k-smokeskitchen-v86"},
-  {"handle": "tysf.qods", "name": "@tysf.qods", "label": "tysf.qods", "icon": "foodie-tysf-qods-v86"},
-  {"handle": "ilisaeatssf", "name": "@ilisaeatssf", "label": "ilisaeatssf", "icon": "foodie-ilisaeatssf-v86"},
-  {"handle": "tundemodupee", "name": "Tunde Modupe", "label": "Tunde", "icon": "foodie-tundemodupee-v86"},
-  {"handle": "wafflebam", "name": "@wafflebam", "label": "Wafflebam", "icon": "foodie-wafflebam-v86"},
-  {"handle": "goyuliiago", "name": "@goyuliiago", "label": "goyuliiago", "icon": "foodie-goyuliiago-v86"},
-  {"handle": "jamiebeoutside", "name": "@jamiebeoutside", "label": "Jamie", "icon": "foodie-jamiebeoutside-v86"},
-  {"handle": "pastrywithjenn", "name": "Jenn Yee", "label": "Jenn", "icon": "foodie-pastrywithjenn-v86"},
-  {"handle": "anjali_wandersoul", "name": "@anjali_wandersoul", "label": "Anjali", "icon": "foodie-anjali-wandersoul-v86", "cuisine": "Travel creator"},
-  {"handle": "travelwtiff", "name": "@travelwtiff", "label": "Tiffany", "icon": "foodie-travelwtiff-v86"},
-  {"handle": "gabriiellas", "name": "@gabriiellas", "label": "gabriiellas", "icon": "foodie-gabriiellas-v86"},
-  {"handle": "ploinsanfrancisco", "name": "P-LO | SF Bay Area Food + Travel", "label": "P-LO SF", "icon": "foodie-ploinsanfrancisco-v86"},
-  {"handle": "piscesprincesspriya", "name": "Priya", "label": "Priya", "icon": "foodie-piscesprincesspriya-v86"},
-  {"handle": "d_baylock_", "name": "DateNight | D", "label": "DateNight D", "icon": "foodie-d-baylock-v86"},
-  {"handle": "hallojessa", "name": "Jessa Dee Carino", "label": "Jessa", "icon": "foodie-hallojessa-v86"},
-  {"handle": "lagrandedelabanda", "name": "Cynthia La Grande Silva", "label": "La Grande", "icon": "foodie-lagrandedelabanda-v86", "cuisine": "Singer, songwriter and food visits"},
-  {"handle": "chaudownfood", "name": "Angie", "label": "Angie", "icon": "foodie-chaudownfood-v86"},
-  {"handle": "_emwong_", "name": "Emma Wong-Stephens", "label": "Emma", "icon": "foodie-emwong-v86"},
-  {"handle": "phoebe8food", "name": "Phoebe", "label": "Phoebe", "icon": "foodie-phoebe8food-v86"},
-  {"handle": "karaxhuynh", "name": "Kara Huynh", "label": "Kara", "icon": "foodie-karaxhuynh-v86"},
-  {"handle": "wakeyeats", "name": "Weiqi", "label": "Weiqi", "icon": "foodie-wakeyeats-v86"},
-  {"handle": "dodo__eats", "name": "Evan", "label": "Evan", "icon": "foodie-dodo-eats-v86"},
-  // Glenn: update icon / Foodie; first requested page for this handle.
-  {"handle": "maya_munches", "name": "Maya Waldman • SF Foodie", "label": "Maya", "icon": "foodie-maya-munches-v87"},
-  // Batch 88 — append new reviewers without moving existing pages.
-  {"handle": "preet.khatrii", "name": "Preet", "label": "Preet", "icon": "foodie-preet-khatrii-v88"},
-  {"handle": "kogumahs", "name": "Sinai", "label": "Sinai", "icon": "foodie-kogumahs-v88"},
-  {"handle": "nurse.danamae", "name": "Dana Mae", "label": "Dana Mae", "icon": "foodie-nurse-danamae-v88"},
-  {"handle": "kimoni.eatss", "name": "Kimball & Monica", "label": "Kimoni", "icon": "foodie-kimoni-eatss-v88"},
-  // Batch 89 — append newcomers; earlier Foodie positions are fixed.
-  {"handle": "thehabibizeat", "name": "The Habibiz Eat", "label": "Habibiz", "icon": "foodie-thehabibizeat-v89"},
-  {"handle": "eatwithbooboo", "name": "Eat with Booboo", "label": "Booboo", "icon": "foodie-eatwithbooboo-v89"},
-  {"handle": "bayarea_foodogram", "name": "Lavanya & Deepthi", "label": "Foodogram", "icon": "foodie-bayarea-foodogram-v89"},
-  {"handle": "lub.to.eat", "name": "Lub Lub", "label": "Lub Lub", "icon": "foodie-lub-to-eat-v89"},
-  {"handle": "thismajourney", "name": "Denise", "label": "Denise", "icon": "foodie-thismajourney-v96"},
-  {"handle": "summer.ishungry", "name": "Summer", "label": "Summer", "icon": "foodie-summer-ishungry-v89"},
-  {"handle": "justfeediris", "name": "Iris", "label": "Iris", "icon": "foodie-justfeediris-v89"},
-  // Batch 90 — original-image permission hold for Hee Jin is in docs/BATCH-90.md.
-  {"handle": "hungryhungryheejin", "instagram": "hungryhungryheejin", "name": "Hee Jin", "label": "Hee Jin"},
-  {"handle": "liltiffyvert", "instagram": "liltiffyvert", "name": "Tiffany Tran", "label": "Tiffany", "icon": "foodie-liltiffyvert-v90"},
-  {"handle": "jovana.camberos", "instagram": "jovana.camberos", "name": "@jovana.camberos", "label": "Jovana", "icon": "foodie-jovana-camberos-v98"},
-  {"handle": "sulli_eats", "instagram": "sulli_eats", "name": "𑣲𝓢𝓾𝓵𝓵𝓲 𓎩 ꜱꜰ ʙᴀʏ ᴀʀᴇᴀ ꜰᴏᴏᴅɪᴇ/ʜᴏᴍᴇᴄᴏᴏᴋꜱ", "label": "𑣲𝓢𝓾𝓵𝓵𝓲", "icon": "foodie-sulli-eats-v92"},
-  {"handle": "baygirlseat", "instagram": "baygirlseat", "name": "Amandy", "label": "Amandy", "icon": "foodie-baygirlseat-v92"},
-  {"handle": "phamamiii", "instagram": "phamamiii", "name": "Diane Pham", "label": "Diane", "icon": "foodie-phamamiii-v92"},
-  {"handle": "heraldh", "instagram": "heraldh", "name": "Herald John", "label": "Herald", "icon": "foodie-heraldh-v92"},
-  {"handle": "tastewith.rach", "instagram": "tastewith.rach", "name": "rachel🍴bay area, ca 🇵🇭", "label": "rachel🍴bay", "icon": "foodie-tastewithrach-v92"},
-  {"handle": "foodiswhyimbroke", "instagram": "foodiswhyimbroke", "name": "Yen Kim Phan", "label": "Yen", "icon": "foodie-foodiswhyimbroke-v92"},
-  {"handle": "keneats_", "instagram": "keneats_", "name": "kenya // sf bay area foodie 😋", "label": "kenya", "icon": "foodie-keneats-v92"},
-  {"handle": "e40", "name": "E-40", "label": "E-40", "brand": "b_e40"},
-  {"handle": "mamamarquez888", "instagram": "mamamarquez888", "name": "Megan Marquez", "label": "Megan", "icon": "foodie-mamamarquez-v92"},
-  {"handle": "sisicooksandeats", "instagram": "sisicooksandeats", "name": "$i$i 🐐 THE GOAT", "label": "$i$i", "icon": "foodie-sisicooks-v92"},
-  {"handle": "reelkevo", "instagram": "reelkevo", "name": "Kevin", "label": "Kevin", "icon": "foodie-reelkevo-v92"},
-  {"handle": "myrealtoralexbradeis", "instagram": "myrealtoralexbradeis", "name": "Alex Bradeis", "label": "Alex", "icon": "foodie-alexbradeis-v92"},
-  {"handle": "rollingwithdeneats", "instagram": "rollingwithdeneats", "name": "Denise", "label": "Denise", "icon": "foodie-denise-v92"},
-  {"handle": "rowbot408", "instagram": "rowbot408", "name": "𝐑 𝐎 𝐖 📻💕🇵🇭", "label": "𝐑", "cuisine": "Event host and creator"},
-  {"handle": "revrocrichboy", "instagram": "revrocrichboy", "name": "Ricardo Vicente", "label": "Ricardo", "icon": "foodie-revrocrichboy-v92", "cuisine": "Print shop and creator"},
-  // Batch 94: Tuck moves to More Foodies when Bay Area Kulture takes the center seat.
-  { handle: 'takeoutwithtuck', name: 'The Honest Reviewer', label: 'Tuck' },
-  {"handle": "kat.dazzzle", "name": "Kat", "label": "Kat", "icon": "foodie-kat-dazzzle-v94", "instagram": "kat.dazzzle"},
-  {"handle": "queen.food.e", "name": "Queen Food E", "label": "Queen Food E", "icon": "foodie-queen-food-e-v94", "instagram": "queen.food.e"},
-  {"handle": "cindydreamtravel", "name": "Cindy", "label": "Cindy", "icon": "foodie-cindydreamtravel-v94", "instagram": "cindydreamtravel"},
-  {"handle": "yummylouey", "name": "Yummy Louey", "label": "Yummy Louey", "icon": "foodie-yummylouey-v94", "instagram": "yummylouey"},
-  {"handle": "agnespittioni", "name": "Agnes Pittioni", "label": "Agnes", "icon": "foodie-agnespittioni-v94", "instagram": "agnespittioni"},
-  {"handle": "j00diefoodie", "name": "J00die Foodie", "label": "J00die Foodie", "icon": "foodie-j00diefoodie-v94", "instagram": "j00diefoodie"},
-  {"handle": "erica.sorelle", "name": "Erica Sorelle", "label": "Erica", "icon": "foodie-erica-sorelle-v94", "instagram": "erica.sorelle"},
-  // Batch 97.
-  {"handle": "aliasharrief", "name": "@aliasharrief", "label": "aliasharrief", "icon": "foodie-aliasharrief-v97"},
-  {"handle": "chelchomps", "name": "@chelchomps", "label": "chelchomps"},
-  {"handle": "monicaplatt", "name": "@monicaplatt", "label": "monicaplatt", "icon": "foodie-monicaplatt-v97"},
-  {"handle": "carlosbradley", "name": "@carlosbradley", "label": "carlosbradley", "icon": "foodie-carlosbradley-v97"},
-  {"handle": "imsarahchaz", "name": "@imsarahchaz", "label": "imsarahchaz", "icon": "foodie-imsarahchaz-v97"},
-  {"handle": "irenedony", "name": "@irenedony", "label": "irenedony", "icon": "foodie-irenedony-v97"},
-  {"handle": "biteswithnatalia", "name": "@biteswithnatalia", "label": "biteswithnatalia", "icon": "foodie-biteswithnatalia-v97"},
-  {"handle": "laurenlovessfood", "name": "@laurenlovessfood", "label": "laurenlovessfood", "icon": "foodie-laurenlovessfood-v97"},
-  {"handle": "lisaaaaletseat", "name": "@lisaaaaletseat", "label": "lisaaaaletseat", "icon": "foodie-lisaaaaletseat-v97"},
-  {"handle": "mattiasblanco", "name": "@mattiasblanco", "label": "mattiasblanco", "icon": "foodie-mattiasblanco-v97"},
-  // Batch 98.
-  {"handle": "deazylee", "name": "@deazylee", "label": "deazylee", "icon": "foodie-deazylee-v98"},
-  {"handle": "jc.eeats", "name": "@jc.eeats", "label": "jc.eeats", "icon": "foodie-jc-eeats-v98"},
-  {"handle": "edmunchthefoodie", "name": "@edmunchthefoodie", "label": "edmunchthefoodie", "icon": "foodie-edmunchthefoodie-v98"},
-  {"handle": "monaeatsnearby", "name": "@monaeatsnearby", "label": "monaeatsnearby", "icon": "foodie-monaeatsnearby-v98"},
-  {"handle": "lynniethefoodie", "name": "@lynniethefoodie", "label": "lynniethefoodie", "icon": "foodie-lynniethefoodie-v98"},
-  {"handle": "bayareafoodiecrew", "name": "@bayareafoodiecrew", "label": "bayareafoodiecrew", "icon": "foodie-bayareafoodiecrew-v98"},
-  {"handle": "janniners", "name": "@janniners", "label": "janniners", "icon": "foodie-janniners-v98"},
-  {"handle": "kelsy.annn", "name": "@kelsy.annn", "label": "kelsy.annn", "icon": "foodie-kelsy-annn-v98"},
-  {"handle": "food_adventures21", "name": "@food_adventures21", "label": "food_adventures21", "icon": "foodie-food-adventures21-v98"},
-  // Batch 100.
-  {"handle": "taratastessf", "name": "@taratastessf", "label": "taratastessf", "icon": "foodie-taratastessf-v100"},
-  {"handle": "alwayshannegry", "name": "@alwayshannegry", "label": "alwayshannegry", "icon": "foodie-alwayshannegry-v100"},
-  {"handle": "rainmoreturely", "name": "@rainmoreturely", "label": "rainmoreturely", "icon": "foodie-rainmoreturely-v100"},
-  {"handle": "zia_hazrati", "name": "@zia_hazrati", "label": "zia_hazrati", "icon": "foodie-zia-hazrati-v100"},
-  {"handle": "bennyeats.bayarea", "name": "@bennyeats.bayarea", "label": "bennyeats.bayarea", "icon": "foodie-bennyeats-bayarea-v100"},
-  // Batch 101.
-  {"handle": "jourdyn.lynn", "name": "@jourdyn.lynn", "label": "jourdyn.lynn", "icon": "foodie-jourdyn-lynn-v101"},
-  {"handle": "bayeatss", "name": "Kristine", "label": "Kristine", "icon": "foodie-bayeatss-v101"},
+  {
+    "handle": "broitsva",
+    "name": "Va",
+    "label": "Va"
+  },
+  {
+    "handle": "fat_ash_foodie",
+    "name": "Ash",
+    "label": "Ash",
+    "icon": "foodie-fatash-v92"
+  },
+  {
+    "handle": "_foodieshots_",
+    "name": "Joann Ha",
+    "label": "Joann Ha",
+    "icon": "foodie-foodieshots-v98"
+  },
+  {
+    "handle": "kitkatvales",
+    "name": "@kitkatvales",
+    "label": "kitkatvales"
+  },
+  {
+    "handle": "foodwookie",
+    "name": "FoodWookie",
+    "label": "FoodWookie",
+    "icon": "foodie-foodwookie-v99"
+  },
+  {
+    "handle": "sonomacountyliving",
+    "name": "@sonomacountyliving",
+    "label": "sonomacountyliving"
+  },
+  {
+    "handle": "lovecartier25",
+    "name": "@lovecartier25",
+    "label": "lovecartier25"
+  },
+  {
+    "handle": "foodelaventures",
+    "name": "@foodelaventures",
+    "label": "foodelaventures"
+  },
+  {
+    "handle": "foodie_travel_happiness",
+    "name": "@foodie_travel_happiness",
+    "label": "foodie_travel_happiness",
+    "icon": "foodie-foodie-travel-happiness-v98"
+  },
+  {
+    "handle": "peterlyagent",
+    "icon": "foodie-peterlyagent-v85",
+    "name": "Peter Ly",
+    "label": "Peter Ly"
+  },
+  {
+    "handle": "k.smokeskitchen",
+    "name": "K. Smokes Kitchen",
+    "label": "K. Smokes",
+    "icon": "foodie-k-smokeskitchen-v86"
+  },
+  {
+    "handle": "tysf.qods",
+    "name": "@tysf.qods",
+    "label": "tysf.qods",
+    "icon": "foodie-tysf-qods-v86"
+  },
+  {
+    "handle": "ilisaeatssf",
+    "name": "@ilisaeatssf",
+    "label": "ilisaeatssf",
+    "icon": "foodie-ilisaeatssf-v86"
+  },
+  {
+    "handle": "tundemodupee",
+    "name": "Tunde Modupe",
+    "label": "Tunde",
+    "icon": "foodie-tundemodupee-v86"
+  },
+  {
+    "handle": "wafflebam",
+    "name": "@wafflebam",
+    "label": "Wafflebam",
+    "icon": "foodie-wafflebam-v86"
+  },
+  {
+    "handle": "goyuliiago",
+    "name": "@goyuliiago",
+    "label": "goyuliiago",
+    "icon": "foodie-goyuliiago-v104"
+  },
+  {
+    "handle": "jamiebeoutside",
+    "name": "@jamiebeoutside",
+    "label": "Jamie",
+    "icon": "foodie-jamiebeoutside-v86"
+  },
+  {
+    "handle": "anjali_wandersoul",
+    "name": "@anjali_wandersoul",
+    "label": "Anjali",
+    "icon": "foodie-anjali-wandersoul-v86",
+    "cuisine": "Travel creator"
+  },
+  {
+    "handle": "gabriiellas",
+    "name": "@gabriiellas",
+    "label": "gabriiellas",
+    "icon": "foodie-gabriiellas-v86"
+  },
+  {
+    "handle": "ploinsanfrancisco",
+    "name": "P-LO | SF Bay Area Food + Travel",
+    "label": "P-LO SF",
+    "icon": "foodie-ploinsanfrancisco-v86"
+  },
+  {
+    "handle": "piscesprincesspriya",
+    "name": "Priya",
+    "label": "Priya",
+    "icon": "foodie-piscesprincesspriya-v86"
+  },
+  {
+    "handle": "d_baylock_",
+    "name": "DateNight | D",
+    "label": "DateNight D",
+    "icon": "foodie-d-baylock-v86"
+  },
+  {
+    "handle": "hallojessa",
+    "name": "Jessa Dee Carino",
+    "label": "Jessa",
+    "icon": "foodie-hallojessa-v86"
+  },
+  {
+    "handle": "lagrandedelabanda",
+    "name": "Cynthia La Grande Silva",
+    "label": "La Grande",
+    "icon": "foodie-lagrandedelabanda-v86",
+    "cuisine": "Singer, songwriter and food visits"
+  },
+  {
+    "handle": "chaudownfood",
+    "name": "Angie",
+    "label": "Angie",
+    "icon": "foodie-chaudownfood-v104"
+  },
+  {
+    "handle": "phoebe8food",
+    "name": "Phoebe",
+    "label": "Phoebe",
+    "icon": "foodie-phoebe8food-v86"
+  },
+  {
+    "handle": "karaxhuynh",
+    "name": "Kara Huynh",
+    "label": "Kara",
+    "icon": "foodie-karaxhuynh-v86"
+  },
+  {
+    "handle": "wakeyeats",
+    "name": "Weiqi",
+    "label": "Weiqi",
+    "icon": "foodie-wakeyeats-v86"
+  },
+  {
+    "handle": "dodo__eats",
+    "name": "Evan",
+    "label": "Evan",
+    "icon": "foodie-dodo-eats-v86"
+  },
+  {
+    "handle": "maya_munches",
+    "name": "Maya Waldman • SF Foodie",
+    "label": "Maya",
+    "icon": "foodie-maya-munches-v87"
+  },
+  {
+    "handle": "preet.khatrii",
+    "name": "Preet",
+    "label": "Preet",
+    "icon": "foodie-preet-khatrii-v88"
+  },
+  {
+    "handle": "kogumahs",
+    "name": "Sinai",
+    "label": "Sinai",
+    "icon": "foodie-kogumahs-v88"
+  },
+  {
+    "handle": "nurse.danamae",
+    "name": "Dana Mae",
+    "label": "Dana Mae",
+    "icon": "foodie-nurse-danamae-v88"
+  },
+  {
+    "handle": "thehabibizeat",
+    "name": "The Habibiz Eat",
+    "label": "Habibiz",
+    "icon": "foodie-thehabibizeat-v89"
+  },
+  {
+    "handle": "eatwithbooboo",
+    "name": "Eat with Booboo",
+    "label": "Booboo",
+    "icon": "foodie-eatwithbooboo-v89"
+  },
+  {
+    "handle": "bayarea_foodogram",
+    "name": "Lavanya & Deepthi",
+    "label": "Foodogram",
+    "icon": "foodie-bayarea-foodogram-v89"
+  },
+  {
+    "handle": "lub.to.eat",
+    "name": "Lub Lub",
+    "label": "Lub Lub",
+    "icon": "foodie-lub-to-eat-v89"
+  },
+  {
+    "handle": "thismajourney",
+    "name": "Denise",
+    "label": "Denise",
+    "icon": "foodie-thismajourney-v96"
+  },
+  {
+    "handle": "summer.ishungry",
+    "name": "Summer",
+    "label": "Summer",
+    "icon": "foodie-summer-ishungry-v89"
+  },
+  {
+    "handle": "justfeediris",
+    "name": "Iris",
+    "label": "Iris",
+    "icon": "foodie-justfeediris-v89"
+  },
+  {
+    "handle": "hungryhungryheejin",
+    "instagram": "hungryhungryheejin",
+    "name": "Hee Jin",
+    "label": "Hee Jin"
+  },
+  {
+    "handle": "liltiffyvert",
+    "instagram": "liltiffyvert",
+    "name": "Tiffany Tran",
+    "label": "Tiffany",
+    "icon": "foodie-liltiffyvert-v90"
+  },
+  {
+    "handle": "jovana.camberos",
+    "instagram": "jovana.camberos",
+    "name": "@jovana.camberos",
+    "label": "Jovana",
+    "icon": "foodie-jovana-camberos-v98"
+  },
+  {
+    "handle": "sulli_eats",
+    "instagram": "sulli_eats",
+    "name": "𑣲𝓢𝓾𝓵𝓵𝓲 𓎩 ꜱꜰ ʙᴀʏ ᴀʀᴇᴀ ꜰᴏᴏᴅɪᴇ/ʜᴏᴍᴇᴄᴏᴏᴋꜱ",
+    "label": "𑣲𝓢𝓾𝓵𝓵𝓲",
+    "icon": "foodie-sulli-eats-v92"
+  },
+  {
+    "handle": "phamamiii",
+    "instagram": "phamamiii",
+    "name": "Diane Pham",
+    "label": "Diane",
+    "icon": "foodie-phamamiii-v92"
+  },
+  {
+    "handle": "tastewith.rach",
+    "instagram": "tastewith.rach",
+    "name": "rachel🍴bay area, ca 🇵🇭",
+    "label": "rachel🍴bay",
+    "icon": "foodie-tastewith-rach-v103"
+  },
+  {
+    "handle": "sisicooksandeats",
+    "instagram": "sisicooksandeats",
+    "name": "$i$i 🐐 THE GOAT",
+    "label": "$i$i",
+    "icon": "foodie-sisicooks-v92"
+  },
+  {
+    "handle": "myrealtoralexbradeis",
+    "instagram": "myrealtoralexbradeis",
+    "name": "Alex Bradeis",
+    "label": "Alex",
+    "icon": "foodie-alexbradeis-v92"
+  },
+  {
+    "handle": "rowbot408",
+    "instagram": "rowbot408",
+    "name": "𝐑 𝐎 𝐖 📻💕🇵🇭",
+    "label": "𝐑",
+    "cuisine": "Event host and creator"
+  },
+  {
+    "handle": "revrocrichboy",
+    "instagram": "revrocrichboy",
+    "name": "Ricardo Vicente",
+    "label": "Ricardo",
+    "icon": "foodie-revrocrichboy-v92",
+    "cuisine": "Print shop and creator"
+  },
+  {
+    "handle": "takeoutwithtuck",
+    "name": "The Honest Reviewer",
+    "label": "Tuck"
+  },
+  {
+    "handle": "kat.dazzzle",
+    "name": "Kat",
+    "label": "Kat",
+    "icon": "foodie-kat-dazzzle-v94",
+    "instagram": "kat.dazzzle"
+  },
+  {
+    "handle": "queen.food.e",
+    "name": "Queen Food E",
+    "label": "Queen Food E",
+    "icon": "foodie-queen-food-e-v94",
+    "instagram": "queen.food.e"
+  },
+  {
+    "handle": "cindydreamtravel",
+    "name": "Cindy",
+    "label": "Cindy",
+    "icon": "foodie-cindydreamtravel-v94",
+    "instagram": "cindydreamtravel"
+  },
+  {
+    "handle": "yummylouey",
+    "name": "Yummy Louey",
+    "label": "Yummy Louey",
+    "icon": "foodie-yummylouey-v94",
+    "instagram": "yummylouey"
+  },
+  {
+    "handle": "erica.sorelle",
+    "name": "Erica Sorelle",
+    "label": "Erica",
+    "icon": "foodie-erica-sorelle-v94",
+    "instagram": "erica.sorelle"
+  },
+  {
+    "handle": "chelchomps",
+    "name": "@chelchomps",
+    "label": "chelchomps"
+  },
+  {
+    "handle": "monicaplatt",
+    "name": "@monicaplatt",
+    "label": "monicaplatt",
+    "icon": "foodie-monicaplatt-v97"
+  },
+  {
+    "handle": "imsarahchaz",
+    "name": "@imsarahchaz",
+    "label": "imsarahchaz",
+    "icon": "foodie-imsarahchaz-v97"
+  },
+  {
+    "handle": "irenedony",
+    "name": "@irenedony",
+    "label": "irenedony",
+    "icon": "foodie-irenedony-v97"
+  },
+  {
+    "handle": "biteswithnatalia",
+    "name": "@biteswithnatalia",
+    "label": "biteswithnatalia",
+    "icon": "foodie-biteswithnatalia-v97"
+  },
+  {
+    "handle": "laurenlovessfood",
+    "name": "@laurenlovessfood",
+    "label": "laurenlovessfood",
+    "icon": "foodie-laurenlovessfood-v97"
+  },
+  {
+    "handle": "lisaaaaletseat",
+    "name": "@lisaaaaletseat",
+    "label": "lisaaaaletseat",
+    "icon": "foodie-lisaaaaletseat-v97"
+  },
+  {
+    "handle": "mattiasblanco",
+    "name": "@mattiasblanco",
+    "label": "mattiasblanco",
+    "icon": "foodie-mattiasblanco-v97"
+  },
+  {
+    "handle": "deazylee",
+    "name": "@deazylee",
+    "label": "deazylee",
+    "icon": "foodie-deazylee-v98"
+  },
+  {
+    "handle": "edmunchthefoodie",
+    "name": "@edmunchthefoodie",
+    "label": "edmunchthefoodie",
+    "icon": "foodie-edmunchthefoodie-v98"
+  },
+  {
+    "handle": "lynniethefoodie",
+    "name": "@lynniethefoodie",
+    "label": "lynniethefoodie",
+    "icon": "foodie-lynniethefoodie-v98"
+  },
+  {
+    "handle": "kelsy.annn",
+    "name": "@kelsy.annn",
+    "label": "kelsy.annn",
+    "icon": "foodie-kelsy-annn-v98"
+  },
+  {
+    "handle": "food_adventures21",
+    "name": "@food_adventures21",
+    "label": "food_adventures21",
+    "icon": "foodie-food-adventures21-v98"
+  },
+  {
+    "handle": "taratastessf",
+    "name": "@taratastessf",
+    "label": "taratastessf",
+    "icon": "foodie-taratastessf-v100"
+  },
+  {
+    "handle": "zia_hazrati",
+    "name": "@zia_hazrati",
+    "label": "zia_hazrati",
+    "icon": "foodie-zia-hazrati-v100"
+  },
+  {
+    "handle": "bennyeats.bayarea",
+    "name": "@bennyeats.bayarea",
+    "label": "bennyeats.bayarea",
+    "icon": "foodie-bennyeats-bayarea-v100"
+  },
+  {
+    "handle": "jourdyn.lynn",
+    "name": "@jourdyn.lynn",
+    "label": "jourdyn.lynn",
+    "icon": "foodie-jourdyn-lynn-v101"
+  },
+  {
+    "handle": "bayeatss",
+    "name": "Kristine",
+    "label": "Kristine",
+    "icon": "foodie-bayeatss-v101"
+  },
+  {
+    "handle": "charlize_tse",
+    "name": "@charlize_tse",
+    "label": "charlize_tse",
+    "icon": "foodie-charlize-tse-v104"
+  },
+  {
+    "handle": "eatwith_ange",
+    "name": "@eatwith_ange",
+    "label": "eatwith_ange",
+    "icon": "foodie-eatwith-ange-v103"
+  },
+  {
+    "handle": "habibimocha",
+    "name": "@habibimocha",
+    "label": "habibimocha",
+    "icon": "foodie-habibimocha-v103"
+  },
+  {
+    "handle": "maddyeats.sfbay",
+    "name": "@maddyeats.sfbay",
+    "label": "maddyeats.sfbay",
+    "icon": "foodie-maddyeats-sfbay-v103"
+  },
+  {
+    "handle": "mr.bayareafoodie",
+    "name": "@mr.bayareafoodie",
+    "label": "mr.bayareafoodie",
+    "icon": "foodie-mr-bayareafoodie-v103"
+  },
+  {
+    "handle": "soysupli",
+    "name": "@soysupli",
+    "label": "soysupli",
+    "icon": "foodie-soysupli-v104"
+  },
+  {
+    "handle": "thehungrycurator",
+    "name": "@thehungrycurator",
+    "label": "thehungrycurator",
+    "icon": "foodie-thehungrycurator-v103"
+  },
+  {
+    "handle": "withlovelysss",
+    "name": "@withlovelysss",
+    "label": "withlovelysss",
+    "icon": "foodie-withlovelysss-v103"
+  }
 ]
+
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
 
 /** Reviews that are not a film on a business page. */
@@ -1407,6 +2166,53 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "bayareamunchies510", "place": "Innena’s Kitchen", "city": "Oakland", "brand": "b_innenaskitchen", "reel": "https://www.instagram.com/reel/DenQqB6vpKk/", "clip": true, "credit": "Filmed by @bayareamunchies510 at Innena’s Kitchen in Oakland."},
   {"by": "jourdyn.lynn", "place": "World Wrapps", "city": "Corte Madera", "brand": "b_worldwrappscortemadera", "reel": "https://www.instagram.com/reel/DfXjdE4tu24/", "clip": true, "credit": "Filmed by @jourdyn.lynn at World Wrapps in Corte Madera."},
   {"by": "bayeatss", "place": "World Wrapps", "city": "Bay Area", "brand": "b_worldwrappscortemadera", "reel": "https://www.instagram.com/reel/DfVnXm7vXlq/", "clip": true, "credit": "World Wrapps rice-paper wrap review by @bayeatss. The caption does not identify the branch."},
+  // Batches 103–104. Additional films beyond four remain on the creator and Watch.
+  {"by": "withlovelysss", "place": "Aburaya", "city": "Oakland", "brand": "b_aburayaoakland", "reel": "https://www.instagram.com/reel/DfaSfDzNzqq/", "clip": true, "credit": "Filmed by @withlovelysss at Aburaya in Oakland."},
+  {"by": "thesnacksensei", "place": "Crabby Crabby Newark", "city": "Newark", "brand": "b_crabbycrabbynewark", "reel": "https://www.instagram.com/reel/Dfaqmzevn3f/", "clip": true, "credit": "Filmed by @thesnacksensei at Crabby Crabby Newark in Newark."},
+  {"by": "sebascastroficial", "place": "Crabby Crabby Newark", "city": "Newark", "brand": "b_crabbycrabbynewark", "reel": "https://www.instagram.com/reel/Deuaz1UokI_/", "clip": true, "credit": "Filmed by @sebascastroficial at Crabby Crabby Newark in Newark."},
+  {"by": "mr.bayareafoodie", "place": "Via Mia Pizza", "city": "Morgan Hill", "brand": "b_viamiapizza", "reel": "https://www.instagram.com/reel/DVagsFijsYT/", "clip": true, "credit": "Filmed by @mr.bayareafoodie at Via Mia Pizza in Morgan Hill."},
+  {"by": "rollingwithdeneats", "place": "Via Mia Pizza", "city": "Morgan Hill", "brand": "b_viamiapizza", "reel": "https://www.instagram.com/reel/DU4aKCVCdHZ/", "clip": true, "credit": "Filmed by @rollingwithdeneats at Via Mia Pizza in Morgan Hill."},
+  {"by": "grubwitmike", "place": "Cajun Crack N", "city": "Concord", "brand": "b_cajuncrackn", "reel": "https://www.instagram.com/reel/Dbegh6YvISu/", "clip": true, "credit": "Filmed by @grubwitmike at Cajun Crack N in Concord."},
+  {"by": "blurgotti", "place": "Cajun Crack N", "city": "Concord", "brand": "b_cajuncrackn", "reel": "https://www.instagram.com/reel/DYSjeZFvJq5/", "clip": "creator", "credit": "Filmed by @blurgotti at Cajun Crack N in Concord."},
+  {"by": "eatwithsie", "place": "Cajun Crack N", "city": "Concord", "brand": "b_cajuncrackn", "reel": "https://www.instagram.com/reel/DbrAChCBmlg/", "clip": "creator", "credit": "Filmed by @eatwithsie at Cajun Crack N in Concord."},
+  {"by": "jantrinanicole", "place": "Cajun Crack N", "city": "Concord", "brand": "b_cajuncrackn", "reel": "https://www.instagram.com/reel/Da6Go3-yTOF/", "clip": "creator", "credit": "Filmed by @jantrinanicole at Cajun Crack N in Concord."},
+  {"by": "ronniebanks", "place": "Cajun Crack N", "city": "Concord", "brand": "b_cajuncrackn", "reel": "https://www.instagram.com/reel/DZdf8vkS4mu/", "clip": true, "credit": "Filmed by @ronniebanks at Cajun Crack N in Concord."},
+  {"by": "zeyno.ern", "place": "Cajun Crack N", "city": "Concord", "brand": "b_cajuncrackn", "reel": "https://www.instagram.com/reel/DXXRD0CP_Ve/", "clip": "creator", "credit": "Filmed by @zeyno.ern at Cajun Crack N in Concord."},
+  {"by": "habibimocha", "place": "Cajun Crack N", "city": "Concord", "brand": "b_cajuncrackn", "reel": "https://www.instagram.com/reel/DVwi4SVEp4f/", "clip": "creator", "credit": "Filmed by @habibimocha at Cajun Crack N in Concord."},
+  {"by": "thesnacksensei", "place": "Cajun Crack N", "city": "Concord", "brand": "b_cajuncrackn", "reel": "https://www.instagram.com/reel/DRnnwfkksWa/", "clip": true, "credit": "Filmed by @thesnacksensei at Cajun Crack N in Concord."},
+  {"by": "mr.gaoviet", "place": "Gao Viet Kitchen", "city": "San Francisco", "brand": "b_gaovietkitchen", "reel": "https://www.instagram.com/reel/DQKo2NEEipZ/", "clip": "creator", "credit": "Posted by @mr.gaoviet at Gao Viet Kitchen, featuring @msashleyvee and @nikkysnoww. The posting account retains the source credit.", "featuring": ["msashleyvee"]},
+  {"by": "mr.gaoviet", "place": "Gao Viet Kitchen", "city": "San Francisco", "brand": "b_gaovietkitchen", "reel": "https://www.instagram.com/reel/DPrJc_ukbxS/", "clip": "creator", "credit": "Posted by @mr.gaoviet at Gao Viet Kitchen, featuring @msashleyvee and @nikkysnoww. The posting account retains the source credit.", "featuring": ["msashleyvee"]},
+  {"by": "ashleyveats", "place": "Serious Dumpling", "city": "San Jose", "brand": "b_seriousdumpling", "reel": "https://www.instagram.com/reel/DP6uV55D13g/", "clip": true, "credit": "Filmed by @ashleyveats at Serious Dumpling in San Jose."},
+  {"by": "sfbayfood", "place": "Serious Dumpling", "city": "San Jose", "brand": "b_seriousdumpling", "reel": "https://www.instagram.com/reel/DegSz5xCDIV/", "clip": true, "credit": "Filmed by @sfbayfood at Serious Dumpling in San Jose."},
+  {"by": "foodandsachi", "place": "Serious Dumpling", "city": "San Jose", "brand": "b_seriousdumpling", "reel": "https://www.instagram.com/reel/DeaVCJ8PUYz/", "clip": true, "credit": "Filmed by @foodandsachi at Serious Dumpling in San Jose."},
+  {"by": "orangeginger", "place": "Serious Dumpling", "city": "San Jose", "brand": "b_seriousdumpling", "reel": "https://www.instagram.com/reel/Ddu0yvsNAIJ/", "clip": "creator", "credit": "Filmed by @orangeginger at Serious Dumpling in San Jose."},
+  {"by": "feed_happiness_", "place": "Serious Dumpling", "city": "San Jose", "brand": "b_seriousdumpling", "reel": "https://www.instagram.com/reel/DcQLXq-y-RN/", "clip": true, "credit": "Filmed by @feed_happiness_ at Serious Dumpling in San Jose."},
+  {"by": "ashleyveats", "place": "Serious Dumpling", "city": "San Jose", "brand": "b_seriousdumpling", "reel": "https://www.instagram.com/reel/DKue7toxsdq/", "clip": "creator", "credit": "Filmed by @ashleyveats at Serious Dumpling in San Jose."},
+  {"by": "ashleyveats", "place": "ABSteak San Francisco", "city": "San Francisco", "brand": "b_absteaksanfrancisco", "reel": "https://www.instagram.com/reel/DLqiBYFyNcL/", "clip": true, "credit": "Filmed by @ashleyveats at ABSteak San Francisco in San Francisco."},
+  {"by": "andreweatsinsf", "place": "ABSteak San Francisco", "city": "San Francisco", "brand": "b_absteaksanfrancisco", "reel": "https://www.instagram.com/reel/DR0-AbnEYhd/", "clip": true, "credit": "Filmed by @andreweatsinsf at ABSteak San Francisco in San Francisco."},
+  {"by": "yourglobalfoodiebff", "place": "ABSteak San Francisco", "city": "San Francisco", "brand": "b_absteaksanfrancisco", "reel": "https://www.instagram.com/reel/DRLb_CLjzyb/", "clip": true, "credit": "Filmed by @yourglobalfoodiebff at ABSteak San Francisco in San Francisco."},
+  {"by": "andreweatsinsf", "place": "ABSteak San Francisco", "city": "San Francisco", "brand": "b_absteaksanfrancisco", "reel": "https://www.instagram.com/reel/DA9Z8xhKLKG/", "clip": true, "credit": "Filmed by @andreweatsinsf at ABSteak San Francisco in San Francisco."},
+  {"by": "agnespittioni", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DLqUKTvhWwF/", "clip": true, "credit": "Filmed by @agnespittioni at Flats Burgers in San Francisco."},
+  {"by": "yourglobalfoodiebff", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DIuj2KzObRo/", "clip": true, "credit": "Filmed by @yourglobalfoodiebff at Flats Burgers in San Francisco."},
+  {"by": "taratastessf", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DH1YmF7yVXY/", "clip": "creator", "credit": "Filmed by @taratastessf at Flats Burgers in San Francisco."},
+  {"by": "charlikestoeat", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DHpZ4bvOQeV/", "clip": "creator", "credit": "Filmed by @charlikestoeat at Flats Burgers in San Francisco."},
+  {"by": "imadoniseats", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DHOr11dyPWA/", "clip": true, "credit": "Filmed by @imadoniseats at Flats Burgers in San Francisco."},
+  {"by": "tastewith.rach", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DGj9Mc1x7Wl/", "clip": "creator", "credit": "Filmed by @tastewith.rach at Flats Burgers in San Francisco."},
+  {"by": "celineeats", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DGcAU9aPXVR/", "clip": "creator", "credit": "Filmed by @celineeats at Flats Burgers in San Francisco."},
+  {"by": "thehungrycurator", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DGOz7fvSViA/", "clip": "creator", "credit": "Filmed by @thehungrycurator at Flats Burgers in San Francisco."},
+  {"by": "eatwith_ange", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DGBpC1JyYmG/", "clip": "creator", "credit": "Filmed by @eatwith_ange at Flats Burgers in San Francisco."},
+  {"by": "_wheresthefoodat", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DEQ-sOwveS2/", "clip": true, "credit": "Filmed by @_wheresthefoodat at Flats Burgers in San Francisco."},
+  {"by": "_whatarethechances_", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DD7UYOvPjfL/", "clip": "creator", "credit": "Filmed by @_whatarethechances_ at Flats Burgers in San Francisco."},
+  {"by": "maddyeats.sfbay", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DfTf65DB3E-/", "clip": "creator", "credit": "Filmed by @maddyeats.sfbay at Flats Burgers in San Francisco."},
+  {"by": "orangeginger", "place": "Wooga Korean BBQ", "city": "Cupertino", "brand": "b_woogakoreanbbq", "reel": "https://www.instagram.com/reel/DfajuVqPPwz/", "clip": "creator", "credit": "Filmed by @orangeginger at Wooga Korean BBQ in Cupertino."},
+  {"by": "goyuliiago", "place": "Oink & Oscar", "city": "San Francisco", "brand": "b_oinkoscar", "reel": "https://www.instagram.com/reel/Dc4s0cuQVen/", "clip": true, "credit": "Filmed by @goyuliiago at Oink & Oscar in San Francisco."},
+  {"by": "soysupli", "place": "Oink & Oscar", "city": "San Francisco", "brand": "b_oinkoscar", "reel": "https://www.instagram.com/reel/DdCQPY-siua/", "clip": true, "credit": "Filmed by @soysupli at Oink & Oscar in San Francisco."},
+  {"by": "charlize_tse", "place": "Kan Kiin", "city": "Daly City", "brand": "b_kankiin", "reel": "https://www.instagram.com/reel/Dfar3N3vTHy/", "clip": true, "credit": "Filmed by @charlize_tse; posted by @kan_kiin as a restaurant collaboration."},
+  {"by": "chaudownfood", "place": "Kan Kiin", "city": "Daly City", "brand": "b_kankiin", "reel": "https://www.instagram.com/reel/DfBMdwmJuwa/", "clip": true, "credit": "Filmed by @chaudownfood at Kan Kiin in Daly City."},
+  {"by": "phoebe8food", "place": "Kan Kiin", "city": "Daly City", "brand": "b_kankiin", "reel": "https://www.instagram.com/reel/DeNoQSSNzu8/", "clip": true, "credit": "Filmed by @phoebe8food at Kan Kiin in Daly City."},
+  {"by": "festusfeasts", "place": "Sweet Maple", "city": "Bay Area", "brand": "b_sweetmaplesanfrancisco", "reel": "https://www.instagram.com/reel/DO18vuKEpwq/", "clip": true, "credit": "Sweet Maple review by @festusfeasts with Monique Billings. The caption does not identify the branch; linked to the chain’s San Francisco page."},
+  {"by": "thesnobbiefoodie", "place": "Sweet Maple", "city": "Walnut Creek", "brand": "b_sweetmaplewalnutcreek", "reel": "https://www.instagram.com/reel/DHjDsXfpm3C/", "clip": true, "credit": "Filmed by @thesnobbiefoodie at Sweet Maple in Walnut Creek."},
+
 ]
 
 /*
