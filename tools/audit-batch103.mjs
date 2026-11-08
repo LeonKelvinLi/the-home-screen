@@ -111,6 +111,7 @@ export async function auditBatch(number) {
       if (count) {
         await expand(page.getByRole('button', { name: (listing.quoteOnly ? 'Price list' : 'Menu') + ' · ' + count + ' items', exact: true }))
         assert.equal(await page.locator('.menu-row').count(), count)
+        if (listing.quoteOnly) assert.equal(await page.locator('button.menu-row').count(), 0, id + ' price list cannot order')
         assert.equal(await page.locator('.menu-row-price').filter({ hasText: '$0.00' }).count(), 0)
         for (const section of listing.sections) assert(await page.locator('.menu-row').filter({ hasText: section.items[0][0] }).count() > 0)
       } else assert((await page.locator('.brand-body').innerText()).replace(/\s+/g, ' ').includes(listing.contactOnly.replace(/\s+/g, ' ')))

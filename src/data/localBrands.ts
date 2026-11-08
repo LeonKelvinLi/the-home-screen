@@ -82320,6 +82320,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   // Batch 107 — November 8 morning.
   {
     "slug": "siam-orchid-walnut-creek",
+    "quoteOnly": "Published services and prices. Book directly with the selected Siam Orchid branch; the provider confirms availability and appointment-only treatments.",
     "name": "Siam Orchid Traditional Thai Massage",
     "label": "Siam Orchid WC",
     "cuisine": "Massage and bodywork · Walnut Creek",
@@ -82535,7 +82536,6 @@ export const LOCAL_SEED: LocalSeed[] = [
         ]
       }
     ],
-    "orderUrl": "https://www.siamorchidsf.com/book-now-at-walnut-creek",
     "siteNote": "The owner’s common services page publishes these duration/price options alongside its three San Francisco/Walnut Creek locations. Confirm availability and appointment-only treatments with the selected branch. The separately linked luxury spa in San Mateo is not this branch.",
     "panels": [
       {
@@ -82545,6 +82545,10 @@ export const LOCAL_SEED: LocalSeed[] = [
           "The San Francisco review identifies the city but not Polk or Taylor. No filming branch is invented."
         ],
         "links": [
+          {
+            "label": "Book this branch",
+            "href": "https://www.siamorchidsf.com/book-now-at-walnut-creek"
+          },
           {
             "label": "Published services and prices",
             "href": "https://www.siamorchidsf.com/services"
@@ -82559,6 +82563,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     "slug": "siam-orchid-sf-polk",
+    "quoteOnly": "Published services and prices. Book directly with the selected Siam Orchid branch; the provider confirms availability and appointment-only treatments.",
     "name": "Siam Orchid Traditional Thai Massage",
     "label": "Siam Orchid Polk",
     "cuisine": "Massage and bodywork · Polk Street",
@@ -82774,7 +82779,6 @@ export const LOCAL_SEED: LocalSeed[] = [
         ]
       }
     ],
-    "orderUrl": "https://www.siamorchidsf.com/book-now",
     "siteNote": "The owner’s common services page publishes these duration/price options alongside its three San Francisco/Walnut Creek locations. Confirm availability and appointment-only treatments with the selected branch. The separately linked luxury spa in San Mateo is not this branch.",
     "panels": [
       {
@@ -82784,6 +82788,10 @@ export const LOCAL_SEED: LocalSeed[] = [
           "The San Francisco review identifies the city but not Polk or Taylor. No filming branch is invented."
         ],
         "links": [
+          {
+            "label": "Book this branch",
+            "href": "https://www.siamorchidsf.com/book-now"
+          },
           {
             "label": "Published services and prices",
             "href": "https://www.siamorchidsf.com/services"
@@ -82798,6 +82806,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     "slug": "siam-orchid-sf-taylor",
+    "quoteOnly": "Published services and prices. Book directly with the selected Siam Orchid branch; the provider confirms availability and appointment-only treatments.",
     "name": "Siam Orchid Traditional Thai Massage",
     "label": "Siam Orchid Taylor",
     "cuisine": "Massage and bodywork · Taylor Street",
@@ -83013,7 +83022,6 @@ export const LOCAL_SEED: LocalSeed[] = [
         ]
       }
     ],
-    "orderUrl": "https://www.siamorchidsf.com/book-now-at-taylor",
     "siteNote": "The owner’s common services page publishes these duration/price options alongside its three San Francisco/Walnut Creek locations. Confirm availability and appointment-only treatments with the selected branch. The separately linked luxury spa in San Mateo is not this branch.",
     "panels": [
       {
@@ -83023,6 +83031,10 @@ export const LOCAL_SEED: LocalSeed[] = [
           "The San Francisco review identifies the city but not Polk or Taylor. No filming branch is invented."
         ],
         "links": [
+          {
+            "label": "Book this branch",
+            "href": "https://www.siamorchidsf.com/book-now-at-taylor"
+          },
           {
             "label": "Published services and prices",
             "href": "https://www.siamorchidsf.com/services"

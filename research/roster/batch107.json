@@ -218,7 +218,6 @@
           ]
         }
       ],
-      "orderUrl": "https://www.siamorchidsf.com/book-now-at-walnut-creek",
       "siteNote": "The owner’s common services page publishes these duration/price options alongside its three San Francisco/Walnut Creek locations. Confirm availability and appointment-only treatments with the selected branch. The separately linked luxury spa in San Mateo is not this branch.",
       "panels": [
         {
@@ -229,6 +228,10 @@
           ],
           "links": [
             {
+              "label": "Book this branch",
+              "href": "https://www.siamorchidsf.com/book-now-at-walnut-creek"
+            },
+            {
               "label": "Published services and prices",
               "href": "https://www.siamorchidsf.com/services"
             },
@@ -238,7 +241,8 @@
             }
           ]
         }
-      ]
+      ],
+      "quoteOnly": "Published services and prices. Book directly with the selected Siam Orchid branch; the provider confirms availability and appointment-only treatments."
     },
     {
       "slug": "siam-orchid-sf-polk",
@@ -457,7 +461,6 @@
           ]
         }
       ],
-      "orderUrl": "https://www.siamorchidsf.com/book-now",
       "siteNote": "The owner’s common services page publishes these duration/price options alongside its three San Francisco/Walnut Creek locations. Confirm availability and appointment-only treatments with the selected branch. The separately linked luxury spa in San Mateo is not this branch.",
       "panels": [
         {
@@ -468,6 +471,10 @@
           ],
           "links": [
             {
+              "label": "Book this branch",
+              "href": "https://www.siamorchidsf.com/book-now"
+            },
+            {
               "label": "Published services and prices",
               "href": "https://www.siamorchidsf.com/services"
             },
@@ -477,7 +484,8 @@
             }
           ]
         }
-      ]
+      ],
+      "quoteOnly": "Published services and prices. Book directly with the selected Siam Orchid branch; the provider confirms availability and appointment-only treatments."
     },
     {
       "slug": "siam-orchid-sf-taylor",
@@ -696,7 +704,6 @@
           ]
         }
       ],
-      "orderUrl": "https://www.siamorchidsf.com/book-now-at-taylor",
       "siteNote": "The owner’s common services page publishes these duration/price options alongside its three San Francisco/Walnut Creek locations. Confirm availability and appointment-only treatments with the selected branch. The separately linked luxury spa in San Mateo is not this branch.",
       "panels": [
         {
@@ -707,6 +714,10 @@
           ],
           "links": [
             {
+              "label": "Book this branch",
+              "href": "https://www.siamorchidsf.com/book-now-at-taylor"
+            },
+            {
               "label": "Published services and prices",
               "href": "https://www.siamorchidsf.com/services"
             },
@@ -716,7 +727,8 @@
             }
           ]
         }
-      ]
+      ],
+      "quoteOnly": "Published services and prices. Book directly with the selected Siam Orchid branch; the provider confirms availability and appointment-only treatments."
     },
     {
       "slug": "the-meat-wagon",
@@ -4284,7 +4296,7 @@
     }
   ],
   "sourceNotes": {
-    "Siam": "The three supplied original screenshots IMG_9796–9798 were no longer present at their Messages attachment paths. The owner’s site independently verifies all three SF/WC branches, phones, daily 10–9 hours and shared 39-variant tariff. Owner logo used. No prices copied from the distinct San Mateo luxury spa. San Francisco review does not name Polk/Taylor; canonical Polk page states that limit.",
+    "Siam": "The three supplied original screenshots IMG_9796–9798 were no longer present at their Messages attachment paths. The owner’s site independently verifies all three SF/WC branches, phones, daily 10–9 hours and shared 39-variant tariff. Owner logo used. No prices copied from the distinct San Mateo luxury spa. San Francisco review does not name Polk/Taylor; canonical Polk page states that limit. Service rows are read-only price lists with direct booking/contact, not food-order/cart buttons.",
     "Hangout": "Separate owner menus verified: WC104 and PH105 food/soft-drink variants after excluding the alcoholic Fresh Morning section and other alcohol sections. Existing Walnut Creek contact/hours agree with current owner page. The new Pleasant Hill page has its own address, phone, hours and menu. Chain promo serves both pages without claiming a filming branch. Glenn’s prospective offer is not published as an agreed discount.",
     "Meat Wagon": "45 exact food package/variant prices from the owner’s public Shopify catalog; merchandise omitted, Turkey pickup slots deduplicated to two actual variants with dated2026 preorder notes. San Mateo is a scheduled truck stop. Profile’s recurring city/market days are linked to the owner schedule, with no invented hours.",
     "Creole": "Owner publishes Antioch main-office city, Bay Area service and phone/quote form, without a complete priced menu. Contact-only menu hold explicit. Oakland review is a truck stop, not a permanent location.",
