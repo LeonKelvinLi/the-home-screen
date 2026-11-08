@@ -669,3 +669,5 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `brunch-and-bloom-v107.webp` | Glenn’s supplied IMG_9834.png, November 8, 2026 | Original business logo cropped and fitted; phone borders removed. |
 | `foodie-lovemissfit-v107.webp` | Glenn’s supplied IMG_9837.png, November 8, 2026 | Original portrait cropped and fitted; phone borders removed. |
 | `foodie-el-kattt-v107.webp` | Glenn’s supplied IMG_9838.png, November 8, 2026 | Original portrait cropped and fitted; phone borders removed. |
+| `foodie-almightyalondra-v108.webp` | Glenn’s supplied IMG_9841.png, November 8, 2026 | Original @almightyalondra portrait cropped and fitted; phone/blurred borders removed. |
+| `foodie-bayareafoodz-v108.webp` | Glenn’s supplied IMG_9843.PNG, November 8, 2026 | Original @bayareafoodz mark cropped and fitted; phone/blurred borders removed. |

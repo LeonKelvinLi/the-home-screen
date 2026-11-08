@@ -2555,4 +2555,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-265': 'b_foodieswooningspoon',
   'beasty-foodies2-266': 'b_foodievvveats',
   'beasty-foodies2-267': 'b_foodieelkattt',
+  // Batch 108 — add Ice Cream seats and the new Foodie; every prior seat retained.
+  'beasty-sweets-16': 'b_scoopnchill', // Preserve its original automatic Sweets seat alongside Ice Cream.
+  'beasty-icecream-1': 'b_scoopnchill',
+  'beasty-icecream-2': 'b_meadowlarkdairy',
+  'beasty-foodies2-268': 'b_foodiealmightyalondra',
+
 }

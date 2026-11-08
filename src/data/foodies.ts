@@ -619,7 +619,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "bayareafoodz",
     "name": "@bayareafoodz",
-    "label": "bayareafoodz"
+    "label": "bayareafoodz",
+    "icon": "foodie-bayareafoodz-v108"
   },
   {
     "handle": "bestbayareafood",
@@ -1728,6 +1729,12 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "Kat",
     "label": "el.kattt",
     "icon": "foodie-el-kattt-v107"
+  },
+  {
+    "handle": "almightyalondra",
+    "name": "@almightyalondra",
+    "label": "almightyalondra",
+    "icon": "foodie-almightyalondra-v108"
   }
 ]
 
@@ -2365,6 +2372,12 @@ export const OTHER_REVIEWS: OtherReview[] = [
 
   // Glenn, Nov 8: Foodie / Newbie; four business films retained, additional review on creator and Watch.
   {"by": "el.kattt", "place": "Brunch & Bloom", "city": "Brentwood", "brand": "b_brunchandbloom", "reel": "https://www.instagram.com/reel/Da2-j8eqwor/", "clip": "creator", "credit": "Filmed by @el.kattt at Brunch & Bloom, Brentwood."},
+  // Batch 108 — Glenn, November 8 afternoon. Repost accounts retain their posting credit.
+  {"by": "almightyalondra", "place": "Scoop N Chill", "city": "Berkeley", "brand": "b_scoopnchill", "reel": "https://www.instagram.com/reel/DfakL3GvOwL/", "clip": true, "credit": "Review by @almightyalondra at Scoop N Chill, Berkeley. Posted by @scoopnchillberkeley."},
+  {"by": "lovemissfit", "place": "Scoop N Chill", "city": "Berkeley", "brand": "b_scoopnchill", "reel": "https://www.instagram.com/reel/DdLPY1UOL7T/", "clip": true, "credit": "Review by @lovemissfit at Scoop N Chill, Berkeley."},
+  {"by": "bayareafoodz", "place": "Scoop N Chill", "city": "Berkeley", "brand": "b_scoopnchill", "reel": "https://www.instagram.com/reel/DcM5vOUM5Uo/", "clip": true, "credit": "Review by @bayareafoodz at Scoop N Chill, Berkeley. Posted by @scoopnchillberkeley."},
+
+  {"by": "sisicooksandeats", "place": "Scoop N Chill", "city": "Berkeley", "brand": "b_scoopnchill", "reel": "https://www.instagram.com/reel/DbKVDKcyf-l/", "clip": true, "credit": "Review by @sisicooksandeats at Scoop N Chill, Berkeley."},
 ]
 
 /*

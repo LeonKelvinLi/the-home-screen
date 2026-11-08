@@ -179,6 +179,24 @@ export async function auditBatch(number) {
         await hero.waitFor()
         assert.equal(await hero.evaluate(v => v.muted), true)
       }
+    } else if (number === 108) {
+      assert.equal(ALL_PLACEMENTS['beasty-sweets-16'], 'b_scoopnchill')
+      const reviews = reviewsOf('b_scoopnchill')
+      assert.equal(reviews.length, 4)
+      for (const [handle, code] of [['almightyalondra', 'DfakL3GvOwL'], ['bayareafoodz', 'DcM5vOUM5Uo']]) {
+        const review = reviews.find(r => r.by === handle && r.href.includes(code))
+        assert(review?.src && review.credit.includes('Posted by @scoopnchillberkeley.'))
+        assert(reviewsBy(handle).some(r => r.href.includes(code) && r.src))
+      }
+      assert.equal(brandById('b_scoopnchill').clip, undefined, 'Reviews are not owner hero films')
+      await category('Ice Cream', 'Scoop N Chill')
+      await icon('Meadowlark Dairy').waitFor()
+      await icon('Scoop N Chill').click()
+      await page.getByRole('heading', { name: 'Scoop N Chill', exact: true }).waitFor()
+      assert.equal(await page.locator('.foodie-review-head').count(), 4)
+      await page.getByRole('button', { name: 'Go to the Berkeley Goods page', exact: true }).click()
+      await page.locator('.brand-body').waitFor({ state: 'hidden' })
+      await icon('Scoop N Chill').waitFor()
     } else if (number === 107) {
       await category('Massage/Therapy', 'Siam Orchid Traditional Thai Massage')
       await category('Meats', 'The Meat Wagon')
