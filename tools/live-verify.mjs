@@ -753,7 +753,7 @@ for (const [s, what] of [
   ['"san-francisco-goods-3":"b_bollywoodpizzasf"', 'Bollywood Pizza on San Francisco Indian'],
   ['"livermore-goods2-1":"b_bollywoodpizzalivermore"', 'Bollywood Pizza on Livermore More goods'],
   ['"santa-clara-goods2-0":"b_basqhaus"', 'Basq Haus on Santa Clara More goods'],
-  ['"beasty-goods2-17":"b_veganmob"', 'Vegan Mob bumped to BEASTY More goods'],
+  ['"beasty-foodtrucks-17":"b_veganmob"', 'Vegan Mob moved to BEASTY Food Trucks'],
   ['/clips/king-katsu-land.mp4', "@kimjsseats's review on King Katsu Land's page"],
   ['/clips/house-of-silog.mp4', "@justmostie's review on House of Silog's page"],
   ['/clips/basq-haus.mp4', "@hungrydanz's review on Basq Haus's page"],

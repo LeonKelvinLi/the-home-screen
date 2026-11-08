@@ -34,6 +34,7 @@ export function CategoryIcon({ kind, thumb }: { kind: string; thumb: string | nu
           {g.dots?.map(([cx, cy, r]) => (
             <circle key={`${cx},${cy}`} cx={cx} cy={cy} r={r} fill="#fff" stroke="none" />
           ))}
+          {g.text && <text x="12" y="16" textAnchor="middle" fontSize="5.5" fontWeight="700" fontFamily="Arial, sans-serif" fill="#fff" stroke="none">{g.text}</text>}
         </svg>
       )}
     </span>

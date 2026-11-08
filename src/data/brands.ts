@@ -1313,7 +1313,9 @@ export const BRANDS: Brand[] = [
     ...(rosterOnly ? { rosterOnly: true as const } : {}),
   })),
   ...SEED.map(fromSeed),
-]
+// Glenn, Nov 7: remove the closed Home of Chicken and Waffles from active pages.
+// Keep its source seed and closure history intact.
+].filter((brand) => brand.id !== 'b_homeofchickenandwaffles')
 
 /**
  * Each business is independent and is paid separately.

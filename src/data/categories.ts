@@ -172,7 +172,7 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'teas', heading: 'Teas/Boba/Matcha', about: 'Tea houses, boba, milk tea and matcha shops', wall: wall('teas'), test: /\bboba\b|bubble tea|milk tea|\bmatcha\b|\bteas?\b/i },
   /* Glenn, 30 Oct 10:59 am: "New Category / B i P / BEAST in PEACE".
      No entries supplied yet; manual placement only. */
-  { kind: 'bip', heading: 'B i P', about: 'BEAST in PEACE', wall: wall('bip') },
+  { kind: 'bip', heading: 'BIP', about: 'BEAST in PEACE', wall: wall('bip') },
   /* Glenn, November 1: family outings, explicitly curated across several venue types. */
   { kind: 'parks', heading: 'Parks/Playgrounds', about: 'Parks, playgrounds and family places', wall: wall('parks') },
   /* Glenn, November 1–2: Blackhawk, Ginza SF and Simplycake. Append to More pages. */
@@ -189,6 +189,7 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'koreanbbq', heading: 'Korean BBQ', about: 'Korean barbecue and Korean grill restaurants', wall: wall('bbq'), test: /korean (bbq|barbecue)|\bkbbq\b/i },
   // Glenn, November 5: Bay Area Crumbs opens Cookies.
   { kind: 'cookies', heading: 'Cookies', about: 'Cookie shops and cookie bakers', wall: wall('bakery'), test: /cookies?/i },
+  { kind: 'ceviche', heading: 'Ceviche', about: 'Ceviche, aguachile and cevicherias', wall: wall('sushi'), test: /cevich|cebich/i },
 ]
 
 /** Every category page holds his twenty-four. */

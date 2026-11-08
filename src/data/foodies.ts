@@ -1643,7 +1643,12 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "kevinberkeleyfoodr",
     "icon": "foodie-kevinberkeleyfoodreviews-v105"
   },
-  {"handle": "martiebautista", "name": "Martie Bautista-Johnson", "label": "Martie Bautista", "icon": "foodie-martiebautista-v105"}
+  {"handle": "martiebautista", "name": "Martie Bautista-Johnson", "label": "Martie Bautista", "icon": "foodie-martiebautista-v105"},
+  {"handle": "badies.af", "name": "@badies.af", "label": "badies.af", "icon": "foodie-badies-af-v106"},
+  {"handle": "sjfoodgram", "name": "@sjfoodgram", "label": "sjfoodgram", "icon": "foodie-sjfoodgram-v106"},
+  {"handle": "tiensmunchies", "name": "@tiensmunchies", "label": "tiensmunchies", "icon": "foodie-tiensmunchies-v106"},
+  {"handle": "alexisbaybe_", "name": "@alexisbaybe_", "label": "alexisbaybe_", "icon": "foodie-alexisbaybe-v106"},
+  {"handle": "dyannaluna", "name": "@dyannaluna", "label": "dyannaluna", "icon": "foodie-dyannaluna-v106"}
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -2240,6 +2245,19 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "lisaaaaletseat", "place": "NōKA Ramen & Bar", "city": "Oakland", "brand": "b_nokaramen", "reel": "https://www.instagram.com/reel/Dfcqyhzxh_9/", "clip": true, "credit": "Filmed by @lisaaaaletseat at NōKA Ramen & Bar in Oakland."},
 
   {"by": "martiebautista", "place": "Ace King BBQ", "city": "Newark", "brand": "b_acekingbbq", "reel": "https://www.instagram.com/reel/DfYiyfCxYxs/", "clip": "creator", "credit": "Filmed by @martiebautista at Ace King BBQ in Newark. Plays on the creator page and Watch; the business retains its four existing films."},
+  // Batch 106.
+  {"by": "eatwithbooboo", "place": "Plaza Cafe", "city": "Pleasant Hill", "brand": "b_plazacafepleasanthill", "reel": "https://www.instagram.com/reel/Dfd9SqQA7Ew/", "clip": true, "credit": "Filmed by @eatwithbooboo at Plaza Cafe, Pleasant Hill. Additional films play on Foodies and Watch when the four-film business limit is reached."},
+  {"by": "victoria.pham17", "place": "Hansang Tofu", "city": "Milpitas", "brand": "b_hansangtofumilpitas", "reel": "https://www.instagram.com/reel/DfQeYDFsj3C/", "clip": true, "credit": "Filmed by @victoria.pham17 at Hansang Tofu, Milpitas. Additional films play on Foodies and Watch when the four-film business limit is reached."},
+  {"by": "hallojessa", "place": "Hansang Tofu", "city": "Milpitas", "brand": "b_hansangtofumilpitas", "reel": "https://www.instagram.com/reel/Dfd2oEICJjj/", "clip": true, "credit": "Filmed by @hallojessa at Hansang Tofu, Milpitas. Additional films play on Foodies and Watch when the four-film business limit is reached."},
+  {"by": "eatswithfoodie", "place": "Hansang Tofu", "city": "Milpitas", "brand": "b_hansangtofumilpitas", "reel": "https://www.instagram.com/reel/DfFGNKqMsKM/", "clip": true, "credit": "Filmed by @eatswithfoodie at Hansang Tofu, Milpitas. Additional films play on Foodies and Watch when the four-film business limit is reached."},
+  {"by": "badies.af", "place": "Hansang Tofu", "city": "Milpitas", "brand": "b_hansangtofumilpitas", "reel": "https://www.instagram.com/reel/DdjXNbjpXSI/", "clip": "creator", "credit": "Filmed by @badies.af at Hansang Tofu, Milpitas. Additional films play on Foodies and Watch when the four-film business limit is reached."},
+  {"by": "drooling.bae", "place": "Hansang Tofu", "city": "Milpitas", "brand": "b_hansangtofumilpitas", "reel": "https://www.instagram.com/reel/DdIG4FdOr4J/", "clip": "creator", "credit": "Filmed by @drooling.bae at Hansang Tofu, Milpitas. Additional films play on Foodies and Watch when the four-film business limit is reached."},
+  {"by": "sjfoodgram", "place": "Hansang Tofu", "city": "Milpitas", "brand": "b_hansangtofumilpitas", "reel": "https://www.instagram.com/reel/DbW5HvnpD40/", "clip": "creator", "credit": "Filmed by @sjfoodgram at Hansang Tofu, Milpitas. Additional films play on Foodies and Watch when the four-film business limit is reached."},
+  {"by": "tiensmunchies", "place": "Hansang Tofu", "city": "Milpitas", "brand": "b_hansangtofumilpitas", "reel": "https://www.instagram.com/reel/DbTwCR9ytgb/", "clip": "creator", "credit": "Filmed by @tiensmunchies at Hansang Tofu, Milpitas. Additional films play on Foodies and Watch when the four-film business limit is reached."},
+  {"by": "alexisbaybe_", "place": "Waterfall Cevicheria", "city": "San Francisco", "brand": "b_waterfallcevicheriasf", "reel": "https://www.instagram.com/reel/DcrPe2GPTLD/", "clip": true, "credit": "Filmed by @alexisbaybe_ at Waterfall Cevicheria, San Francisco. Additional films play on Foodies and Watch when the four-film business limit is reached."},
+  {"by": "bayarea_fooddreamz", "place": "Waterfall Cevicheria", "city": "San Francisco", "brand": "b_waterfallcevicheriasf", "reel": "https://www.instagram.com/reel/DWAFpcvknyy/", "clip": true, "credit": "Filmed by @bayarea_fooddreamz at Waterfall Cevicheria, San Francisco. Additional films play on Foodies and Watch when the four-film business limit is reached."},
+  {"by": "dyannaluna", "place": "Waterfall Cevicheria", "city": "San Francisco", "brand": "b_waterfallcevicheriasf", "reel": "https://www.instagram.com/reel/DR4wxEhkVYG/", "clip": true, "credit": "Filmed by @dyannaluna at Waterfall Cevicheria, San Francisco. Additional films play on Foodies and Watch when the four-film business limit is reached."},
+
 ]
 
 /*

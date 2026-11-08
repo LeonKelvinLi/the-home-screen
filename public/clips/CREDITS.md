@@ -936,3 +936,17 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-Dfcqyhzxh_9.mp4` and `review-Dfcqyhzxh_9-poster.webp` | [@lisaaaaletseat](https://www.instagram.com/reel/Dfcqyhzxh_9/) | Posted 20261107. Excerpt 0s-11s of 11s. Glenn’s requests: Clip this video plz  / Please update icon pic |
 
 | `review-DfYiyfCxYxs.mp4` and `review-DfYiyfCxYxs-poster.webp` | [@martiebautista](https://www.instagram.com/reel/DfYiyfCxYxs/) | Posted 2026-11-06. Excerpt 29s-44s of 70s. Glenn: Clip this video plz / Foodie / Newbie. |
+
+| `review-Dfd9SqQA7Ew.mp4` and `review-Dfd9SqQA7Ew-poster.webp` | [@eatwithbooboo](https://www.instagram.com/reel/Dfd9SqQA7Ew/) | Posted 20261108. Excerpt 0s-10s of 10s. Glenn: Clip this video plz |
+| `review-DfLo8eVTNe9.mp4` and `review-DfLo8eVTNe9-poster.webp` | [@plazacafe_pleasanthill](https://www.instagram.com/reel/DfLo8eVTNe9/) | Posted 20261101. Excerpt 0s-13s of 13s. Glenn: Watch this video clip |
+| `review-DfQeYDFsj3C.mp4` and `review-DfQeYDFsj3C-poster.webp` | [@victoria.pham17](https://www.instagram.com/reel/DfQeYDFsj3C/) | Posted 20261102. Excerpt 66s-81s of 116s. Glenn: Clip this video plz |
+| `review-Dfd2oEICJjj.mp4` and `review-Dfd2oEICJjj-poster.webp` | [@hallojessa](https://www.instagram.com/reel/Dfd2oEICJjj/) | Posted 20261108. Excerpt 7s-22s of 24s. Glenn: Clip this video plz |
+| `review-DfYEuSgjaxk.mp4` and `review-DfYEuSgjaxk-poster.webp` | [@hansangtofu_milpitas](https://www.instagram.com/reel/DfYEuSgjaxk/) | Posted 20261105. Excerpt 0s-11s of 11s. Glenn: Watch this video clip |
+| `review-DfFGNKqMsKM.mp4` and `review-DfFGNKqMsKM-poster.webp` | [@eatswithfoodie](https://www.instagram.com/reel/DfFGNKqMsKM/) | Posted 20261029. Excerpt 2s-17s of 19s. Glenn: Clip this video plz |
+| `review-DdjXNbjpXSI.mp4` and `review-DdjXNbjpXSI-poster.webp` | [@badies.af](https://www.instagram.com/reel/DdjXNbjpXSI/) | Posted 20260921. Excerpt 22s-37s of 46s. Glenn: Clip this video plz  / Foodie / Mediocre |
+| `review-DdIG4FdOr4J.mp4` and `review-DdIG4FdOr4J-poster.webp` | [@drooling.bae](https://www.instagram.com/reel/DdIG4FdOr4J/) | Posted 20260911. Excerpt 1s-16s of 23s. Glenn: Clip this video plz |
+| `review-DbW5HvnpD40.mp4` and `review-DbW5HvnpD40-poster.webp` | [@sjfoodgram](https://www.instagram.com/reel/DbW5HvnpD40/) | Posted 20260729. Excerpt 1s-16s of 23s. Glenn: Clip this video plz  / Foodie  / Mediocre |
+| `review-DbTwCR9ytgb.mp4` and `review-DbTwCR9ytgb-poster.webp` | [@tiensmunchies](https://www.instagram.com/reel/DbTwCR9ytgb/) | Posted 20260727. Excerpt 8s-23s of 24s. Glenn: Clip this video plz  / Foodie  / Newbie |
+| `review-DcrPe2GPTLD.mp4` and `review-DcrPe2GPTLD-poster.webp` | [@alexisbaybe_](https://www.instagram.com/reel/DcrPe2GPTLD/) | Posted 20260830. Excerpt 0s-13s of 13s. Glenn: Clip this video plz  / Foodie / Newbie |
+| `review-DWAFpcvknyy.mp4` and `review-DWAFpcvknyy-poster.webp` | [@bayarea_fooddreamz](https://www.instagram.com/reel/DWAFpcvknyy/) | Posted 20260317. Excerpt 5s-20s of 31s. Glenn: Clip this video plz  / Heavy Hitter |
+| `review-DR4wxEhkVYG.mp4` and `review-DR4wxEhkVYG-poster.webp` | [@dyannaluna](https://www.instagram.com/reel/DR4wxEhkVYG/) | Posted 20251205. Excerpt 8s-23s of 25s. Glenn: Clip this video plz  / Foodie / Mediocre |

@@ -81104,4 +81104,903 @@ export const LOCAL_SEED: LocalSeed[] = [
     ]
   },
 
+  // Batch 106 — November 7 evening.
+  {
+    "slug": "hansang-tofu-milpitas",
+    "name": "Hansang Tofu",
+    "label": "Hansang Tofu",
+    "cuisine": "Korean restaurant and tofu soup",
+    "tagline": "Korean comfort food, tofu soups, BBQ and fried chicken in Milpitas.",
+    "color": "#603F30",
+    "icon": "hansang-tofu-milpitas-v106",
+    "prep": 0,
+    "category": "Korean",
+    "items": [],
+    "sections": [
+      {
+        "name": "APPETIZER",
+        "items": [
+          [
+            "1.TTOEK BOK EE (떡볶이)",
+            "Braised rice cake,sliced fish cake and vegetables with sicy paste.",
+            1899
+          ],
+          [
+            "2.Calamari TTOEK BOK EE (오징어 떡볶이)",
+            "Braised rice cake,sliced fish cake, squid and vegetalbe with spicy paste.",
+            2199
+          ],
+          [
+            "4.Seafood Pancake (해물파전)",
+            "Korean style seafood(shrimp and Squid) pancake",
+            2199
+          ],
+          [
+            "5.Kimchi Pa Jeon (김치 파전)",
+            "Korean style kimchi pancake.",
+            2099
+          ],
+          [
+            "6.Jap Chae (잡채)",
+            "Stir fried glass noodle with vegetables",
+            1799
+          ],
+          [
+            "7.Man Doo (군 만두)",
+            "Fried Dumplings",
+            999
+          ],
+          [
+            "Chicken Radish (치킨 무)",
+            "",
+            300
+          ],
+          [
+            "Ban Chan $5",
+            "ONE SET OF SIDE DISH.",
+            500
+          ],
+          [
+            "Ban Chan $8",
+            "ONE SET OF SIDE DISH.",
+            800
+          ],
+          [
+            "Ban Chan $12",
+            "ONE SET OF SIDE DISH.",
+            1200
+          ],
+          [
+            "Add Rice (밥추가)",
+            "",
+            250
+          ]
+        ]
+      },
+      {
+        "name": "FRIED CHICKEN",
+        "items": [
+          [
+            "8.HALF / Original Fried Chicken ((S)후라이트 치킨)",
+            "Half (8pcs) / Original Fried Chicken ( No Chicken )",
+            1999
+          ],
+          [
+            "8.WHOLE / Original Fried Chicken ((L)후라이트 치킨)",
+            "Whole(16pcs)-Origianl Fried Chicken (No Sauce)",
+            3599
+          ],
+          [
+            "9.HALF / Sweet&Mild Fried Chicken ((S)양념치킨)",
+            "HALF (8pcs)- Sweet & Mild Fried Chicken (mild)",
+            2099
+          ],
+          [
+            "9.WHOLE / Sweet&mild Fried Chicken ((L)양념치킨)",
+            "WHOLE(16pcs)- Sweet & Mild Fried Chicken (Mild)",
+            3699
+          ],
+          [
+            "10.HALF / Superme Frid Chicken ((S)슈프림 치킨)",
+            "HALF(8pcs)-Superme Fried Chicken (Medium Spicy)",
+            2099
+          ],
+          [
+            "10.WHOLE / Supreme Fried Chicken ((L)슈프림 치킨)",
+            "WHOLE(16pcs)-Superme Fried Chicken (Medium Spicy)",
+            3699
+          ],
+          [
+            "11.HALF / Hot&Spicy Fried Chicken ((S)불닭 치킨)",
+            "HALF(8pcs)- Hot & Spicy Fried Chicken (Spicy)",
+            2099
+          ],
+          [
+            "11.WHOLE / Hot&Spicy Fried Chicken ((L)불닭 치킨)",
+            "WHOLE(16pcs)-Hot & Spicy Fried Chicken (Spicy)",
+            3699
+          ],
+          [
+            "12.HALF / Soy&Garlic Fried Chicken ((S)간장 치킨)",
+            "HALF(8pcs)-Soy & Garlic Fried Chicken",
+            2099
+          ],
+          [
+            "12.WHOLE / Soy&Garlic Fried Chicken ((L)간장 키친)",
+            "WHOLE(16pcs)-Soy & Garlic Fried Chicken",
+            3699
+          ],
+          [
+            "13.HALF / Bbu-ring-Kle Frid Chicken ((S)뿌링클 치킨)",
+            "HALF(8pcs)-Bbu-ring-Kle Fried Chicken",
+            2099
+          ],
+          [
+            "13.WHOLE / Bbu-Ring-Kle Rried Chicken ((L)뿌링클 치킨)",
+            "WHOLE(16pcs)-Soy & Garlic Fried Chicken",
+            3699
+          ],
+          [
+            "14.HALF / Chcken Wings ((S)닭 날개)",
+            "HALF (8pcs) Pick on of Sauces ; Original,Sweet & Mild, Supereme, Hot & Spicy, Soy & Garlic, Bbu-Ring-Kle",
+            1899
+          ],
+          [
+            "14.WHOLE / Chicken Wings ((L)닭 날개)",
+            "WHOLE (16pcs) Pick on of Sauces ; Original,Sweet & Mild, Supereme, Hot & Spicy, Soy & Garlic, Bbu-Ring-Kle",
+            3599
+          ],
+          [
+            "15.Popcorn Chicken (팝콘 치킨)",
+            "(16oz) Pick on of Sauces ; Original,Sweet & Mild, Supereme, Hot & Spicy, Soy & Garlic, Bbu-Ring-Kle",
+            1899
+          ],
+          [
+            "Add Sauce (소스 추가)",
+            "",
+            300
+          ]
+        ]
+      },
+      {
+        "name": "TOFU SOUP",
+        "items": [
+          [
+            "16.Beef ToFu Soup (소고기 순두부)",
+            "Please Choose Spicy Level ; Not Spicy ,Mild ,Med ,Spicy or Extra Spicy.",
+            2099
+          ],
+          [
+            "17.Pork Tofu Soup (돼지고기 순두부)",
+            "Please Choose Spicy Level ; Not Spicy ,Mild ,Med ,Spicy or Extra Spicy.",
+            2099
+          ],
+          [
+            "18.Ckicken ToFu Soup (닭고기 순두부)",
+            "Please Choose Spicy Level ; Not Spicy ,Mild ,Med ,Spicy or Extra Spicy.",
+            2099
+          ],
+          [
+            "19.Seafood ToFu Soup (해물 순두부)",
+            "Please Choose Spicy Level ; Not Spicy ,Mild ,Med ,Spicy or Extra Spicy.",
+            2099
+          ],
+          [
+            "20.Combination ToFu Soup (섞어 순두부)",
+            "Please Choose Spicy Level ; Not Spicy ,Mild ,Med ,Spicy or Extra Spicy.",
+            2099
+          ],
+          [
+            "21.Mushroom Tofu Soup (버섯 순두부)",
+            "Please Choose Spicy Level ; Not Spicy ,Mild ,Med ,Spicy or Extra Spicy.",
+            2099
+          ],
+          [
+            "22.Vegetable Tofu Soup (야채 순두부)",
+            "Please Choose Spicy Level ; Not Spicy ,Mild ,Med ,Spicy or Extra Spicy.",
+            2099
+          ],
+          [
+            "23.KimChi Tofu Soup (김치 순두부)",
+            "Please Choose Spicy Level ; Not Spicy ,Mild ,Med ,Spicy or Extra Spicy. Choose one ; beef,pork or chicken",
+            2099
+          ],
+          [
+            "24.Dumpling Tofu Soup (만두 순두부)",
+            "Please Choose Spicy Level ; Not Spicy ,Mild ,Med ,Spicy or Extra Spicy.",
+            2099
+          ],
+          [
+            "25.Ham & Cheese (햄 치즈 순두부)",
+            "Please Choose Spicy Level ; Not Spicy ,Mild ,Med ,Spicy or Extra Spicy.",
+            2099
+          ],
+          [
+            "26.Seafood & Noodle (해물 우동 순두부)",
+            "Please Choose Spicy Level ; Not Spicy ,Mild ,Med ,Spicy or Extra Spicy.",
+            2299
+          ]
+        ]
+      },
+      {
+        "name": "LUNCH / KOREAN BBQ",
+        "items": [
+          [
+            "27.Gal-Bi L (점심 갈비)",
+            "Grilled marinated beef short ribs.",
+            2399
+          ],
+          [
+            "28.Dwae-Ji Moksal Gu EE L (점심돼지목살구이)",
+            "Grilled marinated Pork with Soy Sauce .",
+            2199
+          ],
+          [
+            "29.Bulgogi L (점심 불고기)",
+            "Grilled Marinated beef.",
+            2199
+          ],
+          [
+            "30.Dwae-Ji Bulgogi L (점심 돼지 불고기)",
+            "Spicy grilled marinated Pork.",
+            2199
+          ],
+          [
+            "31.Dak Bulgogi L (점심 매운 닭구이)",
+            "Spicy grilled marinated chicken",
+            2099
+          ],
+          [
+            "32.Teiyaki Chicken L (점심 테리야끼 치킨)",
+            "Grilled chicken thigh with teriyaki sauce",
+            2099
+          ],
+          [
+            "33.Ojingeo Bokkeum L (점심 오징어 볶음)",
+            "Stir-fired squid with vegetables in red chili sauce",
+            2199
+          ],
+          [
+            "34.Go-Deung-Eor-Gu-EE L (점심 고등어 구이)",
+            "Grilled sea-salted mackerel.",
+            1999
+          ]
+        ]
+      },
+      {
+        "name": "Stew",
+        "items": [
+          [
+            "43.Gal Bi Tang (갈비탕)",
+            "Clear broth with beef short-rib,scallion, egg, and glass noodle.",
+            2699
+          ],
+          [
+            "44.Yuk Gae Jang (육개장)",
+            "Spicy beef broth with shredded brisket ,mungbean sprout, scallion,fern.egg,and glass noodle.",
+            2299
+          ],
+          [
+            "45.KimChi Jji Gee (김치찌개)",
+            "Spicy kimchi stew with pork and tofu.",
+            2299
+          ],
+          [
+            "46.TTeok Guk (떡국)",
+            "Mild stew braised with rice cake beef ,scallion and egg",
+            1999
+          ],
+          [
+            "47.Tteok ManDoo Guk (떡만두국)",
+            "Mild stew braised with rice cake beef ,scallion ,egg and dumpling.",
+            2099
+          ],
+          [
+            "48.SamGaeTang (삼계탕)",
+            "Cornish hen stuffed with ginseng ,sticky rice , dried dates, chestnuts, garlic ginger and scallion. Korean ginseng Chicken soup.",
+            2799
+          ]
+        ]
+      },
+      {
+        "name": "KOREAN BBQ",
+        "items": [
+          [
+            "27.Gal-Bi (갈비)",
+            "Grilled marinated beef short ribs.",
+            3799
+          ],
+          [
+            "28.Dwae-Ji Moksal Gu EE (돼지 목살구이)",
+            "Grilled marinated Pork with Galbi Sauce .",
+            3199
+          ],
+          [
+            "29.Bulgogi (불고기)",
+            "Grilled Marinated beef.",
+            3199
+          ],
+          [
+            "30.Dwae-Ji Bulgogi (돼지 불고기)",
+            "Spicy grilled marinated Pork.",
+            3199
+          ],
+          [
+            "31.Dak Bulgogi (매운 닭구이)",
+            "Spicy grilled marinated chicken",
+            2999
+          ],
+          [
+            "32.Teiyaki Chicken (테리야끼 치킨)",
+            "Grilled chicken thigh with teriyaki sauce",
+            2999
+          ],
+          [
+            "33.Ojingeo Bokkeum (오징어 볶음)",
+            "Stir-fired squid with vegetables in red chili sauce",
+            3099
+          ],
+          [
+            "34.Go-Deung-Eo-Gu-EE (고등어 구이)",
+            "Grilled sea-salted mackerel.",
+            2599
+          ]
+        ]
+      },
+      {
+        "name": "SPECIAL COMBO",
+        "items": [
+          [
+            "35.Galbi + Tofu Soup (갈비 + 순두부)",
+            "Enjoy korean BBQ with Tofu Soup. Your choice of beef,pork,chicken,seafood ,combination.mushroom,vegetalbe,kimchi,dumpling and ham&cheese and please choose spicy level form not spicy ,mild , med, spichy or extra spicy for tofu soup.",
+            4099
+          ],
+          [
+            "36.Grill Pork Galbi + Tofu Soup (돼지목살구이  + 순두부)",
+            "Enjoy korean BBQ with Tofu Soup. Your choice of beef,pork,chicken,seafood ,combination.mushroom,vegetalbe,kimchi,dumpling and ham&cheese and please choose spicy level form not spicy ,mild , med, spichy or extra spicy for tofu soup.",
+            3799
+          ],
+          [
+            "37.Bulgogi + Tofu Soup (불고기 + 순두부)",
+            "Enjoy korean BBQ with Tofu Soup. Your choice of beef,pork,chicken,seafood ,combination.mushroom,vegetalbe,kimchi,dumpling and ham&cheese and please choose spicy level form not spicy ,mild , med, spichy or extra spicy for tofu soup.",
+            3799
+          ],
+          [
+            "38.Dwae-Ji Bulgogi +Tofu Soup (돼지불고기 + 순두부)",
+            "Enjoy korean BBQ with Tofu Soup. Your choice of beef,pork,chicken,seafood ,combination.mushroom,vegetalbe,kimchi,dumpling and ham&cheese and please choose spicy level form not spicy ,mild , med, spichy or extra spicy for tofu soup.",
+            3699
+          ],
+          [
+            "39.Galbi + Mul Naeng Myun (갈비 + 물냉면)",
+            "Enjoy korean BBQ with Buckwheat noodle with icy beef borth",
+            4399
+          ],
+          [
+            "40.Galbi + Bi Bim Naeng Myun (갈비 + 비빔냉면)",
+            "Enjoy korean BBQ with Cold buckwheat noodle with spicy pepper paste.",
+            4399
+          ],
+          [
+            "41.Dal Bulgogi + Tofu Soup (닭불고기 + 순두부)",
+            "Enjoy korean BBQ with Tofu Soup. Your choice of beef,pork,chicken,seafood ,combination.mushroom,vegetalbe,kimchi,dumpling and ham&cheese and please choose spicy level form not spicy ,mild , med, spichy or extra spicy for tofu soup.",
+            3599
+          ],
+          [
+            "42.Teriyaki Chicken + Tofu Soup (테리야끼 치킨 + 순두부)",
+            "Enjoy korean BBQ with Tofu Soup. Your choice of beef,pork,chicken,seafood ,combination.mushroom,vegetalbe,kimchi,dumpling and ham&cheese and please choose spicy level form not spicy ,mild , med, spichy or extra spicy for tofu soup.",
+            3599
+          ],
+          [
+            "43.Ojingeo Bokkeum + Tofu Soup (오징어 볶음 + 순두부)",
+            "Stir-fired squid with vegetables in red chili sauce. Tofu Soup. Your choice of beef,pork,chicken,seafood ,combination.mushroom,vegetalbe,kimchi,dumpling and ham&cheese and please choose spicy level form not spicy ,mild , med, spichy or extra spicy for tofu soup.",
+            3699
+          ]
+        ]
+      },
+      {
+        "name": "NOODLE",
+        "items": [
+          [
+            "52.Ramen (라면)",
+            "Curly flour noodles with vegetables and scallion in vegetable broth . Choose one of proteins- beef,pork,chicken,seafood,kimchi or tofu",
+            1899
+          ],
+          [
+            "53.Mul-Naeng-Myun (물냉면)",
+            "Buckwheat noodle with icy beef borth",
+            1999
+          ],
+          [
+            "54.Bim-Bim Naeng_myun (비빔 냉면)",
+            "Cold buckwheat noodle with spicy pepper paste.",
+            2099
+          ]
+        ]
+      },
+      {
+        "name": "HANSANG SPECIALS",
+        "items": [
+          [
+            "49.Spicy Galbi JJim (매운갈비찜)",
+            "Maritate original korean spicy sauce with kabocha, rice cake and mushroom.",
+            4299
+          ]
+        ]
+      },
+      {
+        "name": "RICE BOWL",
+        "items": [
+          [
+            "54.Bibimbap (비빕밥)",
+            "A bed of rice with spinach,mushroom,radish,julienned carrots, bean sprout and assorted vegetables. Topped with your choice of protein and fried egg.",
+            1999
+          ],
+          [
+            "55.DolSot Bibimbap (돌솥 비빔밥)",
+            "Rice topped with assorted vegetables served in a hot stone pot with your choice.Beef ,Pork, chicken or Tofu",
+            2299
+          ],
+          [
+            "56.HaeMul DolSot BiBimBap (해물돌솥 비빔밥)",
+            "Stir-fried rice with fried egg with Seafood.",
+            2599
+          ],
+          [
+            "57.Korean Fried Rice (볶음밥)",
+            "Stir-fried rice with fried egg and scallion . Choice of kimchi,spam ,chicken or bulgogi. /+$2.00 for kimchi & spam,kimchi&chicken and kimchi&bulgogi",
+            2099
+          ],
+          [
+            "58.Ton Katsu (돈까스)",
+            "",
+            1999
+          ],
+          [
+            "59.Ton Katsu w Cheese (치즈돈까스)",
+            "",
+            2199
+          ]
+        ]
+      },
+      {
+        "name": "DRINKS",
+        "items": [
+          [
+            "1. Soda",
+            "",
+            250
+          ]
+        ]
+      }
+    ],
+    "site": "https://hansangtofumilpitas.com/",
+    "orderUrl": "https://hansangtofumilpitas.menu11.com/milpitas/order",
+    "address": "57 N Milpitas Blvd, Milpitas, CA 95035",
+    "phone": "(408) 770-2107",
+    "hours": "Daily 11:30am–9pm",
+    "needsSite": true,
+    "clip": {
+      "src": "/clips/review-DfYEuSgjaxk.mp4",
+      "poster": "/clips/review-DfYEuSgjaxk-poster.webp",
+      "href": "https://www.instagram.com/reel/DfYEuSgjaxk/",
+      "credit": "Posted by @hansangtofu_milpitas. Glenn requested this as the business film behind its logo.",
+      "platform": "Instagram"
+    },
+    "siteNote": "Prices are from the online ordering menu linked by the restaurant’s own website. Lunch and dinner BBQ remain separate published sections. Options and additions may cost extra. Glenn requested the website pilot; an existing official site is also linked."
+  },
+  {
+    "slug": "waterfall-cevicheria-sf",
+    "name": "Waterfall Cevicheria",
+    "label": "Waterfall",
+    "cuisine": "Mexican seafood, ceviche and aguachile",
+    "tagline": "Ceviche, aguachile, tacos and seafood on Potrero Avenue in San Francisco.",
+    "color": "#243B3E",
+    "icon": "waterfall-cevicheria-sf-v106",
+    "prep": 0,
+    "category": "Mexican seafood",
+    "items": [],
+    "sections": [
+      {
+        "name": "Ceviche",
+        "items": [
+          [
+            "Ceviche Tradicional",
+            "",
+            2200
+          ],
+          [
+            "Tuna Ceviche",
+            "Tuna, avocado, red bell pepper, lemon cucumber sauce.",
+            2000
+          ],
+          [
+            "Shrimp Ceviche",
+            "Shrimp, tomato, cucumber, onion, jalapeno, and cilantro.",
+            2000
+          ],
+          [
+            "Scallops Ceviche",
+            "Cilantro, greens, serrano sauce, radish served on a shell.",
+            2000
+          ],
+          [
+            "Coconut Ceviche",
+            "Shrimp, scallops, octopus, pineapple, served on coconut.",
+            2400
+          ],
+          [
+            "Vuelve A La Vida",
+            "",
+            3500
+          ],
+          [
+            "Chan Chan Ceviche",
+            "",
+            2000
+          ],
+          [
+            "Mango Tower",
+            "",
+            2000
+          ],
+          [
+            "Mixed Ceviche",
+            "Shrimp, octopus, scallops",
+            2200
+          ],
+          [
+            "Shrimp Cocktail",
+            "",
+            2000
+          ]
+        ]
+      },
+      {
+        "name": "Tacos Y Tortas",
+        "items": [
+          [
+            "Fish Taco",
+            "Fresh white fish with sauce.",
+            650
+          ],
+          [
+            "Lunch Box 2",
+            "",
+            1400
+          ],
+          [
+            "Lunch Box 1",
+            "Small Shrimp Ceviche and 1 crispy fish taco",
+            1400
+          ],
+          [
+            "Pescador Taco",
+            "Jumbo fried shrimp tacos with house sauce and spices.",
+            600
+          ],
+          [
+            "Fish Torta",
+            "",
+            1600
+          ],
+          [
+            "Octopus Taco",
+            "",
+            900
+          ],
+          [
+            "Shrimp Taco",
+            "",
+            650
+          ],
+          [
+            "Crispy Tacos",
+            "Crispy tacos with chili de arbol sauce, avocado, onions, and cilantro.",
+            1400
+          ],
+          [
+            "Shrimp Torta",
+            "",
+            1600
+          ]
+        ]
+      },
+      {
+        "name": "Oysters",
+        "items": [
+          [
+            "Oyster Ceviche",
+            "Order 1 day in advance to ensure freshness.",
+            550
+          ],
+          [
+            "Hawaiian Oyster",
+            "",
+            450
+          ],
+          [
+            "Oyster",
+            "Order 1 day in advance to ensure freshness.",
+            350
+          ],
+          [
+            "Oyster Shot",
+            "",
+            450
+          ],
+          [
+            "Shrimp Shot",
+            "",
+            450
+          ]
+        ]
+      },
+      {
+        "name": "Aguachile",
+        "items": [
+          [
+            "Tuna Aguachile",
+            "",
+            2200
+          ],
+          [
+            "Aguachile Trio",
+            "",
+            3200
+          ],
+          [
+            "Negro Aguachile",
+            "Shrimp, scallops, tuna, dry seed peppers sauce, onions, cucumber, mango slices.",
+            2000
+          ],
+          [
+            "Mango Habanero Aguachile",
+            "Shrimp, onions, cucumber, and mango.",
+            2000
+          ],
+          [
+            "Plato Marisquero",
+            "",
+            3500
+          ],
+          [
+            "Verde Aguachile",
+            "Shrimp, octopus, onions, cucumber, serrano and jalapeno sauce.",
+            2000
+          ]
+        ]
+      },
+      {
+        "name": "Tostadas",
+        "items": [
+          [
+            "Fish Tostada",
+            "",
+            1400
+          ],
+          [
+            "Mix Tostada Special",
+            "",
+            1800
+          ],
+          [
+            "Aguachile Tostada",
+            "",
+            1400
+          ],
+          [
+            "Tuna Tostada",
+            "",
+            1600
+          ],
+          [
+            "Shrimp Tostada",
+            "",
+            1400
+          ],
+          [
+            "Tostada Macha",
+            "",
+            1600
+          ]
+        ]
+      },
+      {
+        "name": "Snacks",
+        "items": [
+          [
+            "Tropical Fruit",
+            "Mango, pineapple, cucumber with your choice of lemon, salt, and dried red pepper sauce.",
+            800
+          ],
+          [
+            "Avocado",
+            "",
+            250
+          ],
+          [
+            "Fried Calamari",
+            "",
+            1400
+          ],
+          [
+            "Wings",
+            "",
+            1600
+          ],
+          [
+            "Sweet Potato Fries",
+            "",
+            700
+          ],
+          [
+            "Chicken Tenders",
+            "",
+            1000
+          ],
+          [
+            "Chips And Salsa",
+            "",
+            150
+          ],
+          [
+            "Fish And Chips",
+            "",
+            1600
+          ],
+          [
+            "Mozzarela Sticks",
+            "",
+            1000
+          ],
+          [
+            "Guacamole",
+            "",
+            800
+          ],
+          [
+            "French Fries",
+            "",
+            700
+          ]
+        ]
+      },
+      {
+        "name": "Deserts",
+        "items": [
+          [
+            "Choco Flan",
+            "",
+            600
+          ],
+          [
+            "Tres Leches",
+            "",
+            800
+          ]
+        ]
+      },
+      {
+        "name": "From The Oven",
+        "items": [
+          [
+            "Caldo De Jaiba",
+            "",
+            2500
+          ],
+          [
+            "Camarones Al Ajillo",
+            "",
+            2200
+          ],
+          [
+            "Botana Grande",
+            "",
+            11000
+          ],
+          [
+            "Botana Para 2",
+            "",
+            7500
+          ],
+          [
+            "Camarones A La Diabla",
+            "",
+            2200
+          ]
+        ]
+      },
+      {
+        "name": "Drinks",
+        "items": [
+          [
+            "Sparkling Water",
+            "",
+            400
+          ],
+          [
+            "Sprite",
+            "",
+            400
+          ],
+          [
+            "Rusa",
+            "",
+            500
+          ],
+          [
+            "Fanta",
+            "",
+            400
+          ],
+          [
+            "Lemonade",
+            "",
+            400
+          ],
+          [
+            "Jarrito",
+            "",
+            400
+          ],
+          [
+            "Diet Coke",
+            "",
+            300
+          ],
+          [
+            "Agua Fresca (Large)",
+            "",
+            900
+          ],
+          [
+            "Coke",
+            "",
+            400
+          ],
+          [
+            "Squirt",
+            "",
+            400
+          ],
+          [
+            "Agua Fresca",
+            "",
+            400
+          ],
+          [
+            "Jumex",
+            "",
+            350
+          ]
+        ]
+      }
+    ],
+    "site": "https://doloreswaterfall.com/",
+    "orderUrl": "https://doloreswaterfall.com/",
+    "address": "1000 Potrero Ave, San Francisco, CA 94110",
+    "phone": "(415) 658-7134",
+    "email": "waterfallcevicheria.info@gmail.com",
+    "siteNote": "Food and soft-drink prices come from the restaurant’s live ordering page, including expanded menu sections. Micheladas and gift cards are omitted. Restaurant hours are held: the supplied profile says Monday closed, while the website footer publishes Monday–Tuesday noon–8pm, Wednesday–Saturday noon–10pm and Sunday noon–9pm. Confirm with the shop. Its website advertises a 4% credit-card service fee.",
+    "panels": [
+      {
+        "head": "Published contacts and hours",
+        "body": [
+          "The owner website publishes waterfallcevicheria.info@gmail.com; the supplied Instagram profile shows leoguapo4455@gmail.com. The phone agrees across both sources.",
+          "The website’s footer and supplied profile disagree on Monday opening; ordering hours are not substituted for restaurant hours."
+        ],
+        "links": [
+          {
+            "label": "Owner contact page",
+            "href": "https://doloreswaterfall.com/contact/"
+          },
+          {
+            "label": "Published profile contact",
+            "href": "mailto:leoguapo4455@gmail.com"
+          }
+        ]
+      }
+    ]
+  },
+
 ]

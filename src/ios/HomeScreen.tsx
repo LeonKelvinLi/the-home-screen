@@ -557,7 +557,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
           })
           out.push({
             city: cityName,
-            section: slotPage.heading,
+            section: slotPage.kind === 'bip' ? 'BEAST IN PEACE' : slotPage.heading,
             kind: slotPage.kind,
             seatOf,
             tile: slotTile,

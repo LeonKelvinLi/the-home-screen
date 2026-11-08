@@ -22,6 +22,7 @@ export async function auditBatch(number) {
   const { REELS } = await tsImport('../src/data/clips.ts', import.meta.url)
   for (const [seat, id] of Object.entries(batch.placements)) assert.equal(ALL_PLACEMENTS[seat], id, seat)
   for (const [seat, id] of Object.entries(batch.removedPlacements ?? {})) assert.notEqual(ALL_PLACEMENTS[seat], id, seat)
+  for (const id of batch.removedBrands ?? []) assert.equal(brandById(id), undefined, id)
   const active = batch.posts.filter(p => p.slug)
   for (const p of active) assert.equal(REELS.filter(r => r.href === p.source).length, 1, p.code)
   assert.equal(REELS.filter(r => r.href?.includes('DTnoBTMES1u')).length, 0)
@@ -157,7 +158,20 @@ export async function auditBatch(number) {
       // The original 24 stay on page one; the new chain is on the linked overflow.
       await page.getByRole('button', { name: 'Next page', exact: true }).click()
       await icon('Sweet Maple').waitFor()
-    } else {
+    } else if (number === 106) {
+      await category('Ceviche', 'Waterfall Cevicheria')
+      await category('BIP')
+      await page.getByText('BEASTY · BEAST IN PEACE', { exact: true }).waitFor()
+      await page.goto(base + '/search', { waitUntil: 'domcontentloaded' })
+      await page.getByRole('textbox', { name: 'Dishes, businesses, categories, cities' }).fill('Home of Chicken and Waffles')
+      assert.equal(await page.locator('.search-brand').count(), 0)
+      for (const id of ['b_plazacafepleasanthill', 'b_hansangtofumilpitas']) {
+        await open(id)
+        const hero = page.locator('.brand-film video')
+        await hero.waitFor()
+        assert.equal(await hero.evaluate(v => v.muted), true)
+      }
+    } else if (number === 105) {
       await category('Poke', 'Paku'); await category('Cupcakes', 'Batter ’N Icing')
       await category('Peruvian', 'Lucuma Kitchen & Bar'); await category('Jamaican', 'Sweet Fingers Jamaican Restaurant & Bar')
       await category('Donuts', 'Nono’s Doughnuts & Cafe')

@@ -2521,4 +2521,15 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodtrucks-17': 'b_veganmob',
   'beasty-foodies2-254': 'b_foodiemartiebautista',
 
+
+  // Batch 106
+  'milpitas-goods2-8': 'b_hansangtofumilpitas',
+  'san-francisco-goods2-81': 'b_waterfallcevicheriasf',
+  'beasty-korean-21': 'b_hansangtofumilpitas',
+  'beasty-ceviche-0': 'b_waterfallcevicheriasf',
+  'beasty-foodies2-255': 'b_foodiebadiesaf',
+  'beasty-foodies2-256': 'b_foodiesjfoodgram',
+  'beasty-foodies2-257': 'b_foodietiensmunchies',
+  'beasty-foodies2-258': 'b_foodiealexisbaybe',
+  'beasty-foodies2-259': 'b_foodiedyannaluna',
 }

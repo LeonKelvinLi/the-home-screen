@@ -10,12 +10,14 @@
 export interface CategoryGlyph {
   paths: string[]
   dots?: [number, number, number][]
+  text?: string
 }
 
 const ring = (cx: number, cy: number, r: number) => `M${cx - r} ${cy}a${r} ${r} 0 1 0 ${2 * r} 0a${r} ${r} 0 1 0 ${-2 * r} 0`
 
 export const CATEGORY_GLYPHS: Record<string, CategoryGlyph> = {
-  bip: { paths: [ring(12, 12, 9), 'M12 3v18', 'M12 12l-6.4 6.4', 'M12 12l6.4 6.4'] },
+  ceviche: { paths: ['M3 13h18', 'M4 13a8 8 0 0 0 16 0', 'M9 21h6', 'M7 9c3-4 7-4 10 0-3 3-7 3-10 0Z', 'm17 9 4-3v6Z', 'M4 5h4', 'M6 3v4'] },
+  bip: { paths: ['M5 21V9a7 7 0 0 1 14 0v12Z', 'M3 21h18'], text: 'BIP' },
   teas: { paths: ['M6 7h12l-1.5 14h-9Z', 'M5 7h14', 'M13 7l2-5h4', 'M7 13h10'], dots: [[10, 17, 0.9], [14, 18, 0.9], [12, 15, 0.9]] },
   yakitori: { paths: ['M4 21 19 6', 'm6 12 6 6', 'm10 8 6 6', 'm14 4 6 6', 'M3 17c-1-1 0-2 1-1l4 4c1 1 0 2-1 1Z'] },
   vegan: { paths: ['M5 19c-4-9 2-15 16-16 0 14-6 20-14 16', 'M3 21 16 8', 'M8 16v-5', 'M8 16h5'] },

@@ -637,3 +637,15 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `always-yours-bakery-cafe-v105.webp` | Glenn’s supplied IMG_9755.png, November 7, 2026 | Original logo enlarged and fitted; phone borders removed. |
 | `nobibi-hayward-v105.webp` | Glenn’s supplied IMG_9758.png, November 7, 2026 | Original logo enlarged and fitted; phone borders removed. |
 | `souva-mobile-pet-grooming-v105.webp` | Glenn’s supplied IMG_9760.PNG, November 7, 2026 | Original logo enlarged and fitted; phone borders removed. |
+
+| `sushi-uma-v106.webp` | Glenn’s supplied IMG_9762.png, November 7, 2026 | Original Sushi Uma artwork cropped and fitted, phone borders removed. |
+| `suptea-lab-v106.webp` | Glenn’s supplied IMG_9765.png, November 7, 2026 | Original SupTea Lab artwork cropped and fitted, phone borders removed. |
+
+| `quickly-benicia-v106.webp` | Glenn’s supplied IMG_9768.png, November 7, 2026 | Original artwork cropped and fitted; phone borders removed. |
+| `hansang-tofu-milpitas-v106.webp` | Glenn’s supplied IMG_9774.png, November 7, 2026 | Original artwork cropped and fitted; phone borders removed. |
+| `waterfall-cevicheria-sf-v106.webp` | Glenn’s supplied IMG_9785.png, November 7, 2026 | Original artwork cropped and fitted; phone borders removed. |
+| `foodie-badies-af-v106.webp` | Glenn’s supplied IMG_9775.png, November 7, 2026 | Original @badies.af portrait cropped and fitted. |
+| `foodie-sjfoodgram-v106.webp` | Glenn’s supplied IMG_9776.png, November 7, 2026 | Original @sjfoodgram portrait cropped and fitted. |
+| `foodie-tiensmunchies-v106.webp` | Glenn’s supplied IMG_9777.png, November 7, 2026 | Original @tiensmunchies portrait cropped and fitted. |
+| `foodie-alexisbaybe-v106.webp` | Glenn’s supplied IMG_9786.png, November 7, 2026 | Original @alexisbaybe_ portrait cropped and fitted. |
+| `foodie-dyannaluna-v106.webp` | Glenn’s supplied IMG_9787.PNG, November 7, 2026 | Original @dyannaluna portrait cropped and fitted. |

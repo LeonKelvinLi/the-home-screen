@@ -1633,6 +1633,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://diabloautodetailing.com/',
   }),
   seed('suptea-lab', 'SupTea Lab', 'SupTea Lab', 'Boba tea', '#8A6A2F', {
+    icon: 'suptea-lab-v106',
     logoTemplate: 'monogram', logoInitials: 'ST', logoFace: 'condensed',
     site: 'https://suptealaboakland.square.site/',
     address: '3349 Grand Ave, Oakland',
@@ -1747,7 +1748,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     the city and page written under it, and each keeps its own artwork.
   */
   seed('quickly-benicia', 'Quickly Benicia', 'Quickly', 'Boba tea', '#F08A1E', {
-    icon: 'quickly-benicia',
+    icon: 'quickly-benicia-v106',
     logoTemplate: 'monogram', logoInitials: 'Q', logoFace: 'condensed',
     site: 'https://www.quicklybenicia.com/',
     /* "Mock up discount. This restaurant, my boy owns a BENICIA." — his note,
@@ -2538,6 +2539,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      outlined as siteless; a redesign is the pitch. No mark of theirs was
      sent, so the tile is drawn. */
   seed('sushi-uma', 'Sushi Uma', 'Sushi Uma', 'Japanese sushi', '#9E2A2B', {
+    icon: 'sushi-uma-v106',
     logoTemplate: 'monogram', logoInitials: 'SU', logoFace: 'slab',
     site: 'https://www.thesushiuma.com/',
     siteCta: 'Order pickup',
@@ -2640,6 +2642,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      template (the Masa case: an ordering platform on their own domain, a map
      of Los Angeles on its info page), so the red outline stays. */
   seed('plaza-cafe-pleasant-hill', 'Plaza Cafe', 'Plaza Cafe', 'Breakfast & Korean food', '#3D270F', {
+    clip: {"src": "/clips/review-DfLo8eVTNe9.mp4", "poster": "/clips/review-DfLo8eVTNe9-poster.webp", "href": "https://www.instagram.com/reel/DfLo8eVTNe9/", "credit": "Posted by @plazacafe_pleasanthill. Glenn requested this as the business film behind its logo.", "platform": "Instagram"},
     icon: 'plaza-cafe-pleasant-hill',
     logoTemplate: 'wordmark', logoLines: ['PLAZA', 'CAFE'], logoFace: 'slab',
     site: 'https://plazapleasanthill.com/',
