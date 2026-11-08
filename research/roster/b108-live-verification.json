@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "base": "https://beastypages.com",
+  "messagesThrough": "2026-11-08T12:29:11.474954-08:00",
+  "newMessages": 11,
+  "release": {
+    "commit": "043994d1fcc0d565423b0bf17966ee6a49d5d724",
+    "deploy": "dep-dbodsni9lscs73cu7980",
+    "status": "live",
+    "providerFinishedAt": "2026-11-08T20:50:19.154835Z",
+    "publicReadyAt": "2026-11-08T20:50:37.550262+00:00",
+    "entry": "/assets/index-iJARVs21.js",
+    "health": {
+      "ok": true
+    },
+    "verifiedArtwork": {
+      "path": "/icons/foodie-bayareafoodz-v108.webp",
+      "sha256": "9063da2260ad98b842d209c00c8bcfa952cd3f36efca90a9b972197c400d75a3"
+    }
+  },
+  "batch": {
+    "newBusinesses": 0,
+    "newFoodies": 1,
+    "newFilms": 4,
+    "films": [
+      "DfakL3GvOwL",
+      "DdLPY1UOL7T",
+      "DcM5vOUM5Uo",
+      "DbKVDKcyf-l"
+    ],
+    "allNewFilmsPublished": true,
+    "newFilmsHeld": 0,
+    "previousSeatsPreserved": true,
+    "first24FoodiesPreserved": true,
+    "existingMenuAndContactsRetained": true
+  },
+  "archive": {
+    "uniqueInstagramIds": 830,
+    "matched": 779,
+    "olderDocumentedExceptions": 49,
+    "withdrawnOrSuperseded": 2,
+    "activeNewSourcesBatches103Through108": 104,
+    "exactIconHashes": 84,
+    "exactPosterHashes": 104,
+    "watchFilesWithValidMp4ByteRanges": 734,
+    "allWatchFilmsIndividuallyPlayed": false,
+    "newFilmsPlayedInBothEngines": 4
+  },
+  "visibleChrome": {
+    "viewports": [
+      {
+        "width": 393,
+        "height": 852
+      },
+      {
+        "width": 320,
+        "height": 740
+      }
+    ],
+    "greenEntry": "passed",
+    "iceCreamThreeBusinesses": "passed",
+    "scoopFourReviewsAndExisting92ItemMenu": "passed",
+    "originalRepostAttribution": "passed",
+    "newAlondraPortraitAndReviewPage": "passed",
+    "updatedBayAreaFoodzArtworkAndReview": "passed",
+    "creatorBusinessNavigation": "passed",
+    "reviewPlayback": {
+      "muted": true,
+      "readyState": 4,
+      "firstObservedSeconds": 3.978161,
+      "laterObservedSeconds": 9.418172,
+      "mediaError": null
+    },
+    "horizontalOverflow": false,
+    "consoleErrors": [],
+    "temporaryViewportReset": true,
+    "ownedTabsClosed": true
+  },
+  "iphoneEntry": {
+    "engine": "WebKit",
+    "emulated": true,
+    "physicalMirroringTested": false,
+    "passedChecks": 16,
+    "stalledModuleAndRepeatedEntry": "passed",
+    "reloadOrCrash": false
+  },
+  "completedChecks": [
+    {
+      "name": "live-chrome",
+      "exit": 0,
+      "finishedAt": "2026-11-08T20:51:07.168458+00:00"
+    },
+    {
+      "name": "live-webkit",
+      "exit": 0,
+      "finishedAt": "2026-11-08T20:51:12.375343+00:00"
+    },
+    {
+      "name": "archive-live",
+      "exit": 0,
+      "finishedAt": "2026-11-08T20:51:01.645386+00:00"
+    },
+    {
+      "name": "full-live",
+      "exit": 0,
+      "finishedAt": "2026-11-08T21:04:05.190946+00:00"
+    }
+  ],
+  "checkScopes": {
+    "live-chrome": "BASE=https://beastypages.com ALL_REELS=1 node tools/audit-batch108.mjs",
+    "live-webkit": "BASE=https://beastypages.com BROWSER=webkit node tools/audit-batch108.mjs; node tools/audit-iphone-entry.mjs",
+    "archive-live": "Production-bundle reconciliation of every archived Instagram ID and SHA-256 checks of all 84 updated icons and 104 posters.",
+    "full-live": "node tools/live-verify.mjs, including the full 239 historical business pages."
+  },
+  "historicalAudit": {
+    "status": "passed",
+    "skippedRoster": false,
+    "historicalBusinessPages": 239,
+    "name": "full-live",
+    "exit": 0,
+    "finishedAt": "2026-11-08T21:04:05.190946+00:00"
+  },
+  "qaAudio": "muted",
+  "protectedAffiliateFilesAndWorktreeTouched": false,
+  "messagesCommentsCallsBookingsSent": false,
+  "localChecks": {
+    "build": "passed",
+    "dataAuditErrors": 0,
+    "dataAuditExistingWarnings": 203,
+    "chromeBatch": "passed",
+    "iphoneWebKitBatch": "passed"
+  }
+}

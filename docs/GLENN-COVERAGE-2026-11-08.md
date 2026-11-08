@@ -1,5 +1,7 @@
 # Glenn intake reconciliation — November 8, 2026
 
+This record retains the morning cutoff. [The afternoon continuation through 12:29:11 p.m.](GLENN-COVERAGE-2026-11-08-AFTERNOON.md) adds Batch 108 and its release evidence.
+
 The full available Glenn-only Messages archive was refetched and reconciled, including the new tail through November 8 at 10:56:36 a.m. Pacific. Batches 103–107 add 27 business/location pages, 32 creator pages, 100 active new local films, 82 original logo/portrait files, ten categories, linked More breakfast/diner and More pizza sheets, and Morgan Hill’s city sheet. Five repeated source links in Batch 107 reuse their existing files/reviews. Superseded `DTnoBTMES1u` is excluded in favor of Glenn’s replacement `DRnnwfkksWa`.
 
 All 100 active new source IDs appear in the compiled site. The full archive contains 826 unique Instagram IDs, of which 775 match. The remaining 51 are 49 older exceptions from [November 3 coverage](GLENN-COVERAGE-2026-11-03.md), after excluding the since-resolved Meter/Precision post `DcwX_gsjwbd`, plus explicitly disregarded `DdAZclrNJu-` and superseded `DTnoBTMES1u`. They are not claimed as live. The domain checker reports 592 candidate business sites and the same 18 documented unmatched hostnames; canonical alternatives, tool links, deliberately removed listings and genuine older holds retain their individual dispositions.
