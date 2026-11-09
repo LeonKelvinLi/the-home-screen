@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "base": "https://beastypages.com",
+  "messagesThrough": "2026-11-08T17:13:38.955334-08:00",
+  "newMessages": 3,
+  "release": {
+    "commit": "71e1ead2c22e5a99e28a680138ee5deacb950694",
+    "deploy": "dep-dboi2ah42hec73df58a0",
+    "status": "live",
+    "providerFinishedAt": "2026-11-09T01:39:23.741363Z",
+    "publicReadyAt": "2026-11-09T01:39:37.708350+00:00",
+    "entry": "/assets/index-BYzJjgqO.js",
+    "health": {
+      "ok": true
+    },
+    "verifiedArtwork": {
+      "path": "/icons/foodie-bvddiebri-v110.webp",
+      "sha256": "ae24f08f577e6c03a6c7c0dfc32eccc56093a3be9a200cf58bb2c55e46debb03"
+    }
+  },
+  "batch": {
+    "newBusinesses": 0,
+    "newFoodies": 1,
+    "newFilms": 1,
+    "newFilmsHeld": 0,
+    "source": "https://www.instagram.com/reel/Dffgm_FBlGk/",
+    "creator": "bvddiebri",
+    "business": "b_simplycakebakery",
+    "giftedCollaborationDisclosed": true,
+    "creatorClipPreservesFourFilmLimit": true,
+    "excerptStartSeconds": 11,
+    "excerptEndSeconds": 26,
+    "previousDataComparison": {
+      "allPreviousSeatsPreserved": true,
+      "first24FoodiesPreserved": true,
+      "unchangedPriorBrandRecords": 1235,
+      "simplycakeBusinessDataUnchanged": true,
+      "newSeats": [
+        [
+          "beasty-foodies2-272",
+          "b_foodiebvddiebri"
+        ]
+      ],
+      "brands": 1236,
+      "foodies": 297,
+      "watch": 745,
+      "priorBrandsSha256": "4410c905e675dbdf80f7ab91964c086201e19ee459921ee6c487cb6efdc1e49a",
+      "currentPriorBrandsSha256": "4410c905e675dbdf80f7ab91964c086201e19ee459921ee6c487cb6efdc1e49a",
+      "priorPlacementsSha256": "b27464db6d88235ab7e11fe2288fb19c0c88b462f17245e64d4bc563ed63654e",
+      "currentPriorPlacementsSha256": "b27464db6d88235ab7e11fe2288fb19c0c88b462f17245e64d4bc563ed63654e"
+    }
+  },
+  "archive": {
+    "uniqueInstagramIds": 841,
+    "matchedInCompiledBuild": 790,
+    "olderDocumentedExceptions": 49,
+    "withdrawnOrSuperseded": 2,
+    "activeNewSourcesBatches103Through110": 115,
+    "updatedIconFilesToHash": 91,
+    "activeFilmPostersToHash": 115,
+    "watchFiles": 745,
+    "allWatchFilmsIndividuallyPlayed": false,
+    "matchedInProduction": 790,
+    "exactIconHashesPassed": 91,
+    "exactPosterHashesPassed": 115,
+    "watchMp4ByteRangesPassed": 745,
+    "newFilmPlayedInBothLiveEngines": true
+  },
+  "localChecks": {
+    "build": "passed",
+    "dataAuditErrors": 0,
+    "dataAuditExistingWarnings": 203,
+    "dataAuditNotes": 377,
+    "chromeBatch": "passed",
+    "iphoneWebKitBatch": "passed",
+    "allPrevious1235BrandRecordsUnchanged": "passed",
+    "allPreviousPlacementsUnchanged": "passed",
+    "archiveReconciliation": "passed",
+    "videoEncoding": "H.264 yuv420p / AAC, 15.0 seconds"
+  },
+  "historicalAudit": {
+    "status": "passed_on_previous_release",
+    "repeatedOnThisRelease": false,
+    "sourceImplementation": "d4574562eaf44c736e82fa664b9a51f7ae33672f",
+    "sourceVerificationCommit": "66e888a56db1e2441323feadbe25fac9959253e5",
+    "historicalBusinessPages": 239,
+    "exit": 0,
+    "finishedAt": "2026-11-09T00:52:51.537286+00:00",
+    "basis": "Every prior brand record and placement is unchanged. This release adds one creator and creator-only review; site-wide functional/bundle/access checks are rerun on the new release."
+  },
+  "completedChecks": [
+    {
+      "name": "live-chrome",
+      "exit": 0,
+      "finishedAt": "2026-11-09T01:40:00.204938+00:00"
+    },
+    {
+      "name": "live-webkit",
+      "exit": 0,
+      "finishedAt": "2026-11-09T01:40:08.270698+00:00"
+    },
+    {
+      "name": "archive-live",
+      "exit": 0,
+      "finishedAt": "2026-11-09T01:40:04.763435+00:00"
+    },
+    {
+      "name": "sitewide-live",
+      "exit": 0,
+      "finishedAt": "2026-11-09T01:41:15.427046+00:00"
+    }
+  ],
+  "checkScopes": {
+    "live-chrome": "BASE=https://beastypages.com ALL_REELS=1 node tools/audit-batch110.mjs",
+    "live-webkit": "BASE=https://beastypages.com BROWSER=webkit node tools/audit-batch110.mjs; node tools/audit-iphone-entry.mjs",
+    "archive-live": "Full production archive reconciliation and SHA-256 checks of all 91 updated icons and 115 active film posters.",
+    "sitewide-live": "node tools/live-verify.mjs --skip-roster; historical roster walk explicitly not repeated."
+  },
+  "visibleChrome": {
+    "status": "passed",
+    "viewports": [
+      {
+        "width": 393,
+        "height": 852
+      },
+      {
+        "width": 320,
+        "height": 740
+      }
+    ],
+    "greenEntryAndHome": "passed",
+    "simplycakeSixReviewRowsAndGiftedDisclosure": "passed",
+    "simplycakeToBriNavigation": "passed",
+    "suppliedBriPortrait": "passed",
+    "briMoreFoodiesSeat": "present",
+    "newReviewPlayback": {
+      "muted": true,
+      "firstSeconds": 0,
+      "laterSeconds": 10.446665,
+      "readyState": 4,
+      "paused": false,
+      "mediaError": null
+    },
+    "horizontalOverflow": false,
+    "consoleErrors": [],
+    "temporaryViewportReset": true,
+    "ownedTabsClosed": true
+  },
+  "qaAudio": "muted",
+  "protectedAffiliateFilesAndWorktreeTouched": false,
+  "unrelatedBSTYGoodsDraftsTouched": false,
+  "messagesCommentsCallsBookingsOrdersSent": false,
+  "iphoneEntry": {
+    "engine": "WebKit",
+    "emulated": true,
+    "physicalMirroringTested": false,
+    "passedChecks": 16,
+    "stalledModuleAndRepeatedEntry": "passed",
+    "reloadOrCrash": false
+  },
+  "sitewideAudit": {
+    "skippedHistoricalRoster": true,
+    "name": "sitewide-live",
+    "exit": 0,
+    "finishedAt": "2026-11-09T01:41:15.427046+00:00"
+  }
+}
