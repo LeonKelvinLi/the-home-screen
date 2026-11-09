@@ -84001,4 +84001,586 @@ export const LOCAL_SEED: LocalSeed[] = [
     ]
   },
 
+  // Batch 109 — Glenn, November 8 afternoon; verified owner menus and branch credits.
+  {
+    "slug": "the-baked-bear",
+    "name": "The Baked Bear",
+    "label": "Baked Bear",
+    "cuisine": "Custom ice cream, cookies and desserts",
+    "tagline": "Custom cookies + ice cream in San Francisco",
+    "color": "#0d0f10",
+    "icon": "the-baked-bear-v109",
+    "prep": 0,
+    "category": "Ice Cream",
+    "items": [],
+    "sections": [
+      {
+        "name": "Custom Ice Cream Sandwiches",
+        "items": [
+          [
+            "Brownie Ice Cream Sandwich",
+            "",
+            1250
+          ],
+          [
+            "Custom Cookie Sandwich",
+            "",
+            1150
+          ],
+          [
+            "Vegan/GF Fudgy Brownie Cookie Sandwich",
+            "",
+            1250
+          ],
+          [
+            "Vegan Gluten Free Chocolate Chip Cookie Sandwich",
+            "",
+            1250
+          ],
+          [
+            "Mini Ice Cream Sandwich 3-pack",
+            "",
+            1695
+          ]
+        ]
+      },
+      {
+        "name": "Cookies",
+        "items": [
+          [
+            "Custom 6 Cookie Box",
+            "",
+            1695
+          ],
+          [
+            "1 Cookie",
+            "",
+            350
+          ],
+          [
+            "Custom Dozen Cookie Box",
+            "",
+            3295
+          ],
+          [
+            "Vegan/GF Fudgy Brownie Cookie Sandwich",
+            "",
+            1250
+          ],
+          [
+            "Brownie",
+            "",
+            450
+          ]
+        ]
+      },
+      {
+        "name": "Ice Cream Scoops",
+        "items": [
+          [
+            "Brownie Bear Bowl",
+            "",
+            1295
+          ],
+          [
+            "Choc Chip Cookie Bear Bowl",
+            "",
+            1295
+          ]
+        ]
+      },
+      {
+        "name": "Drinks",
+        "items": [
+          [
+            "Rockstar Energy Drink",
+            "",
+            695
+          ],
+          [
+            "Vitamin Water",
+            "",
+            525
+          ],
+          [
+            "Diet Coke-Soda",
+            "",
+            495
+          ],
+          [
+            "Monster Energy Drink",
+            "",
+            695
+          ],
+          [
+            "Snapple Drink",
+            "",
+            495
+          ],
+          [
+            "Milk",
+            "",
+            495
+          ],
+          [
+            "Sprite",
+            "",
+            495
+          ],
+          [
+            "Red Bull Energy Drink",
+            "",
+            695
+          ],
+          [
+            "Bottled Water",
+            "",
+            395
+          ],
+          [
+            "Honest Tea",
+            "",
+            425
+          ],
+          [
+            "Coke-Soda",
+            "",
+            495
+          ],
+          [
+            "Starbucks Frappuccino Drink",
+            "",
+            525
+          ]
+        ]
+      },
+      {
+        "name": "Pints",
+        "items": [
+          [
+            "Bear Batter Pint",
+            "",
+            1495
+          ],
+          [
+            "Blackberry Crumble Pint",
+            "",
+            1495
+          ],
+          [
+            "Cookie Dough Pint",
+            "",
+            1495
+          ],
+          [
+            "Cookies & Cream Pint",
+            "",
+            1495
+          ],
+          [
+            "Mint Chip Pint",
+            "",
+            1495
+          ],
+          [
+            "Old Fashioned Vanilla Pint",
+            "",
+            1495
+          ],
+          [
+            "Vegan Chocolate Chip Pint",
+            "",
+            1495
+          ],
+          [
+            "Toasted S'mores Pint",
+            "",
+            1495
+          ],
+          [
+            "Mud Pie Pint",
+            "",
+            1495
+          ],
+          [
+            "Caramel Pretzel Fudge Pint",
+            "",
+            1495
+          ],
+          [
+            "Milk & Cookies Pint",
+            "",
+            1495
+          ]
+        ]
+      }
+    ],
+    "site": "https://www.thebakedbear.com/locations/san-francisco/",
+    "orderUrl": "https://order.online/store/the-baked-bear-san-francisco-69841/?hideModal=true&pickup=true",
+    "address": "303 Columbus Ave, San Francisco, CA 94133",
+    "phone": "(415) 993-2327",
+    "email": "sanfrancisco@thebakedbear.com",
+    "hours": "Sun–Thu 11am–12am, Fri–Sat 11am–2am",
+    "siteNote": "Menu and prices are from the Columbus Avenue ordering page linked by The Baked Bear. Hours and contact details are from their official location page. Other-location reviews are identified in their credits.",
+    "panels": [
+      {
+        "head": "Other locations",
+        "body": [
+          "Chase Center — 680 Terry A Francois Blvd, Space 26, San Francisco, CA 94158. Grand-O’s review was filmed here, rather than at Columbus Avenue."
+        ],
+        "links": [
+          {
+            "label": "Chase Center shop",
+            "href": "https://www.thebakedbear.com/locations/chase-center/"
+          },
+          {
+            "label": "All Baked Bear locations",
+            "href": "https://www.thebakedbear.com/locations/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "arsicault-bakery",
+    "name": "Arsicault Bakery",
+    "label": "Arsicault",
+    "cuisine": "French bakery, croissants, pastries and bread",
+    "tagline": "French pastries and bread in San Francisco",
+    "color": "#00553c",
+    "icon": "arsicault-bakery-v109",
+    "prep": 0,
+    "category": "Bakery",
+    "items": [],
+    "sections": [
+      {
+        "name": "Daily pastries",
+        "items": [
+          [
+            "Plain Croissant",
+            "",
+            500
+          ],
+          [
+            "Chocolate Croissant",
+            "",
+            600
+          ],
+          [
+            "Ham & Cheese Croissant",
+            "",
+            725
+          ],
+          [
+            "Almond Croissant",
+            "",
+            600
+          ],
+          [
+            "Chocolate Almond Croissant",
+            "",
+            675
+          ],
+          [
+            "Blackberry Almond Hazelnut Croissant",
+            "",
+            675
+          ],
+          [
+            "Kouign Amann",
+            "",
+            550
+          ],
+          [
+            "Raisin Kouign",
+            "",
+            600
+          ],
+          [
+            "Morning Bun",
+            "",
+            550
+          ],
+          [
+            "Savory Scone",
+            "",
+            550
+          ],
+          [
+            "Cranberry Coconut Scone",
+            "",
+            450
+          ],
+          [
+            "Chocolate Chip Cookie",
+            "",
+            450
+          ],
+          [
+            "Vegetarian Galette",
+            "",
+            650
+          ],
+          [
+            "Apple Turnover",
+            "",
+            700
+          ],
+          [
+            "Palmier",
+            "",
+            550
+          ],
+          [
+            "Monkey Bread",
+            "",
+            550
+          ]
+        ]
+      },
+      {
+        "name": "Coffee bar",
+        "items": [
+          [
+            "Espresso",
+            "",
+            400
+          ],
+          [
+            "Espresso Macchiato",
+            "",
+            475
+          ],
+          [
+            "Cortado",
+            "",
+            475
+          ],
+          [
+            "Cappuccino",
+            "",
+            500
+          ],
+          [
+            "Latte: Small",
+            "",
+            550
+          ],
+          [
+            "Latte: Large",
+            "",
+            600
+          ],
+          [
+            "Vanilla Latte: Small",
+            "",
+            600
+          ],
+          [
+            "Vanilla Latte: Large",
+            "",
+            650
+          ],
+          [
+            "Mocha: Small",
+            "",
+            650
+          ],
+          [
+            "Mocha: Large",
+            "",
+            700
+          ],
+          [
+            "Drip: Small",
+            "",
+            350
+          ],
+          [
+            "Drip: Large",
+            "",
+            400
+          ],
+          [
+            "Au Lait: Small",
+            "",
+            450
+          ],
+          [
+            "Au Lait: Large",
+            "",
+            500
+          ],
+          [
+            "Americano",
+            "",
+            400
+          ],
+          [
+            "Cold Brew: Small",
+            "",
+            500
+          ],
+          [
+            "Cold Brew: Large",
+            "",
+            550
+          ],
+          [
+            "Tea",
+            "",
+            275
+          ],
+          [
+            "Tea Latte",
+            "",
+            375
+          ]
+        ]
+      },
+      {
+        "name": "Small bites",
+        "items": [
+          [
+            "Financier",
+            "",
+            1200
+          ],
+          [
+            "Shortbread Cookies",
+            "",
+            1000
+          ],
+          [
+            "Chocolate Shortbread Cookies",
+            "",
+            1200
+          ],
+          [
+            "Caramelized Puff Pastry",
+            "",
+            1000
+          ]
+        ]
+      },
+      {
+        "name": "Quiche",
+        "items": [
+          [
+            "Bacon Onion",
+            "",
+            1000
+          ],
+          [
+            "Mushroom",
+            "",
+            1000
+          ],
+          [
+            "Refrigerated Whole Bacon Onion",
+            "",
+            8000
+          ],
+          [
+            "Refrigerated Whole Mushroom",
+            "",
+            8000
+          ]
+        ]
+      },
+      {
+        "name": "Bread",
+        "items": [
+          [
+            "Baguette",
+            "",
+            500
+          ],
+          [
+            "Sourdough Country Bread",
+            "",
+            900
+          ],
+          [
+            "Walnut Sourdough",
+            "",
+            1100
+          ]
+        ]
+      },
+      {
+        "name": "Sandwiches",
+        "items": [
+          [
+            "The Parisian",
+            "Butter, ham, sea salt",
+            1400
+          ],
+          [
+            "The Londoner",
+            "Butter, ham, sea salt, orange marmalade",
+            1500
+          ],
+          [
+            "The Mediterranean",
+            "Homemade garlic aioli, ham, oven roasted tomatoes, sea salt",
+            1600
+          ],
+          [
+            "The Vegetarian",
+            "Homemade garlic aioli, roasted cauliflower, oven roasted tomatoes, arugula, sea salt",
+            1500
+          ],
+          [
+            "Add Aged Comté Cheese",
+            "Sandwich add-on",
+            200
+          ]
+        ]
+      }
+    ],
+    "site": "https://arsicault-bakery.com/",
+    "address": "87 McAllister Street, San Francisco, CA",
+    "phone": "(415) 926-5155",
+    "email": "info@arsicault-bakery.com",
+    "hours": "Daily 8am–3pm",
+    "siteNote": "The menu and prices below are the official Civic Center menu, matching the McAllister phone number Glenn supplied. Other branches have their own menus. Reviews with an unidentified branch describe the bakery rather than claiming this location.",
+    "clip": {
+      "src": "/clips/arsicault-bakery-v109.mp4",
+      "poster": "/clips/arsicault-bakery-v109-poster.webp",
+      "href": "https://www.instagram.com/reel/CtjxpYdM2Ro/",
+      "platform": "Instagram",
+      "credit": "Original by @arsicaultbakery, June 16, 2023. Archival kouign amann preparation; the post’s dated event is not a current offer."
+    },
+    "panels": [
+      {
+        "head": "Locations and menus",
+        "body": [
+          "Civic Center — 87 McAllister Street; (415) 926-5155. Daily 8am–3pm.",
+          "Inner Richmond — 397 Arguello Blvd; (415) 750-9460. Mon–Fri 8am–3pm, Sat–Sun 8am–3:30pm.",
+          "Mission Bay — 1070 Bridgeview Way Unit B; (415) 374-7310. Daily 8am–3pm.",
+          "All locations close on Thanksgiving Day, Christmas Day and New Year’s Day."
+        ],
+        "links": [
+          {
+            "label": "Civic Center menu",
+            "href": "https://arsicault-bakery.com/menus/mcallister/"
+          },
+          {
+            "label": "Inner Richmond menu",
+            "href": "https://arsicault-bakery.com/menus/arguello/"
+          },
+          {
+            "label": "Mission Bay menu",
+            "href": "https://arsicault-bakery.com/menus/missionrock/"
+          },
+          {
+            "label": "Official locations and hours",
+            "href": "https://arsicault-bakery.com/locations/"
+          }
+        ]
+      }
+    ]
+  },
+
 ]

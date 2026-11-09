@@ -1735,6 +1735,24 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "@almightyalondra",
     "label": "almightyalondra",
     "icon": "foodie-almightyalondra-v108"
+  },
+  {
+    "handle": "unwntedtv",
+    "name": "IZZY",
+    "label": "IZZY",
+    "icon": "foodie-unwntedtv-v109"
+  },
+  {
+    "handle": "awesomejuliee",
+    "name": "@awesomejuliee",
+    "label": "awesomejuliee",
+    "icon": "foodie-awesomejuliee-v109"
+  },
+  {
+    "handle": "keyanajoooon",
+    "name": "@keyanajoooon",
+    "label": "keyanajoooon",
+    "icon": "foodie-keyanajoooon-v109"
   }
 ]
 
@@ -2377,7 +2395,17 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "lovemissfit", "place": "Scoop N Chill", "city": "Berkeley", "brand": "b_scoopnchill", "reel": "https://www.instagram.com/reel/DdLPY1UOL7T/", "clip": true, "credit": "Review by @lovemissfit at Scoop N Chill, Berkeley."},
   {"by": "bayareafoodz", "place": "Scoop N Chill", "city": "Berkeley", "brand": "b_scoopnchill", "reel": "https://www.instagram.com/reel/DcM5vOUM5Uo/", "clip": true, "credit": "Review by @bayareafoodz at Scoop N Chill, Berkeley. Posted by @scoopnchillberkeley."},
 
-  {"by": "sisicooksandeats", "place": "Scoop N Chill", "city": "Berkeley", "brand": "b_scoopnchill", "reel": "https://www.instagram.com/reel/DbKVDKcyf-l/", "clip": true, "credit": "Review by @sisicooksandeats at Scoop N Chill, Berkeley."},
+  {"by": "sisicooksandeats", "place": "Scoop N Chill", "city": "Berkeley", "brand": "b_scoopnchill", "reel": "https://www.instagram.com/reel/DbKVDKcyf-l/", "clip": "creator", "credit": "Review by @sisicooksandeats at Scoop N Chill, Berkeley."},
+  // Batch 109 — Glenn tags: IZZY Newbie; awesomejuliee Mediocre; keyanajoooon Heavy Hitter.
+  {"by": "thesnacksensei", "place": "The Baked Bear", "city": "San Francisco", "brand": "b_thebakedbear", "reel": "https://www.instagram.com/reel/DJapgu5pCj9/", "clip": true, "credit": "Review by @thesnacksensei at The Baked Bear, Chase Center, 680 Terry A Francois Blvd, San Francisco. This is another branch of the Columbus Avenue business shown here."},
+  {"by": "unwntedtv", "place": "The Baked Bear", "city": "San Francisco", "brand": "b_thebakedbear", "reel": "https://www.instagram.com/reel/DT_rN8lk6XZ/", "clip": true, "credit": "Review by @unwntedtv at The Baked Bear in San Francisco. The caption does not identify a branch."},
+  {"by": "festusfeasts", "place": "Arsicault Bakery", "city": "San Francisco", "brand": "b_arsicaultbakery", "reel": "https://www.instagram.com/reel/DQnL-OOEp7Y/", "clip": true, "credit": "Review by @festusfeasts at Arsicault Bakery, Mission Bay. This is another branch of the Civic Center business shown here."},
+  {"by": "awesomejuliee", "place": "Arsicault Bakery", "city": "San Francisco", "brand": "b_arsicaultbakery", "reel": "https://www.instagram.com/reel/DV_hublk6ZA/", "clip": true, "credit": "Review by @awesomejuliee of Arsicault Bakery in San Francisco; branch unspecified in the caption."},
+  {"by": "keyanajoooon", "place": "Arsicault Bakery", "city": "San Francisco", "brand": "b_arsicaultbakery", "reel": "https://www.instagram.com/reel/DTOxk2aj3HE/", "clip": true, "credit": "Review by @keyanajoooon of Arsicault Bakery in San Francisco; branch unspecified in the caption."},
+  {"by": "charlikestoeat", "place": "Arsicault Bakery", "city": "San Francisco", "brand": "b_arsicaultbakery", "reel": "https://www.instagram.com/reel/DTJ7UZ4Fz_4/", "clip": "creator", "credit": "@charlikestoeat discusses Arsicault croissants while dining at Atelier Crenn. The footage is not filmed at Arsicault, and no Michelin status is claimed for the bakery."},
+  {"by": "eatswithkath", "place": "Arsicault Bakery", "city": "San Francisco", "brand": "b_arsicaultbakery", "reel": "https://www.instagram.com/reel/DRi4rO9EXOT/", "clip": "creator", "credit": "Review by @eatswithkath of Arsicault Bakery, Mission Bay. This is another branch of the Civic Center business shown here."},
+  {"by": "charlikestoeat", "place": "Arsicault Bakery", "city": "San Francisco", "brand": "b_arsicaultbakery", "reel": "https://www.instagram.com/reel/DN9ZjY0AWdD/", "clip": "creator", "credit": "Cookie comparison by @charlikestoeat featuring Arsicault, b.patisserie and Spruce. The excerpt focuses on Arsicault; the complete original compares all three. No branch is specified."},
+
 ]
 
 /*

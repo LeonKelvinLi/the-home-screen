@@ -671,3 +671,9 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-el-kattt-v107.webp` | Glenn’s supplied IMG_9838.png, November 8, 2026 | Original portrait cropped and fitted; phone borders removed. |
 | `foodie-almightyalondra-v108.webp` | Glenn’s supplied IMG_9841.png, November 8, 2026 | Original @almightyalondra portrait cropped and fitted; phone/blurred borders removed. |
 | `foodie-bayareafoodz-v108.webp` | Glenn’s supplied IMG_9843.PNG, November 8, 2026 | Original @bayareafoodz mark cropped and fitted; phone/blurred borders removed. |
+| `scoop-n-chill-v109.webp` | Glenn’s supplied IMG_9845.jpeg, November 8, 2026 | Original business mark fitted in full; surrounding phone/empty space removed. |
+| `the-baked-bear-v109.webp` | Glenn’s supplied IMG_9847.PNG, November 8, 2026 | Original business mark fitted in full; surrounding phone/empty space removed. |
+| `arsicault-bakery-v109.webp` | Glenn’s supplied IMG_9857.PNG, November 8, 2026 | Original profile image cropped and fitted; phone/blurred border removed. |
+| `foodie-unwntedtv-v109.webp` | Glenn’s supplied IMG_9850.png, November 8, 2026 | Original profile image cropped and fitted; phone/blurred border removed. |
+| `foodie-awesomejuliee-v109.webp` | Glenn’s supplied IMG_9858.png, November 8, 2026 | Original profile image cropped and fitted; phone/blurred border removed. |
+| `foodie-keyanajoooon-v109.webp` | Glenn’s supplied IMG_9859.png, November 8, 2026 | Original profile image cropped and fitted; phone/blurred border removed. |

@@ -1871,7 +1871,9 @@ export const ROSTER_SEED: LocalSeed[] = [
       'a week, in their own words. Stock changes daily and is not listed here.',
   }),
   seed('scoop-n-chill', 'Scoop N Chill', 'Scoop N Chill', 'Gelato and ice cream', '#F4A8C0', {
-    icon: 'scoop-n-chill',
+    icon: 'scoop-n-chill-v109',
+    // Glenn, November 8: supplied mark and the business’s own film.
+    clip: {"src": "/clips/scoop-n-chill-v109.mp4", "poster": "/clips/scoop-n-chill-v109-poster.webp", "href": "https://www.instagram.com/reel/DOfOJVwkRC_/", "platform": "Instagram", "credit": "Original by @scoopnchillberkeley, September 12, 2025. The business’s own Berkeley film, requested by Glenn."},
     logoTemplate: 'monogram', logoInitials: 'SC', logoFace: 'condensed',
     address: '2122 Shattuck Ave, Berkeley, CA',
     /* "Needs new website", his note — they publish an Instagram and nothing

@@ -1,0 +1,2754 @@
+{
+  "cutoff": "2026-11-08T15:29:34.621966-08:00",
+  "listings": [
+    {
+      "slug": "the-baked-bear",
+      "name": "The Baked Bear",
+      "label": "Baked Bear",
+      "cuisine": "Custom ice cream, cookies and desserts",
+      "tagline": "Custom cookies + ice cream in San Francisco",
+      "color": "#0d0f10",
+      "icon": "the-baked-bear-v109",
+      "prep": 0,
+      "category": "Ice Cream",
+      "items": [],
+      "sections": [
+        {
+          "name": "Custom Ice Cream Sandwiches",
+          "items": [
+            [
+              "Brownie Ice Cream Sandwich",
+              "",
+              1250
+            ],
+            [
+              "Custom Cookie Sandwich",
+              "",
+              1150
+            ],
+            [
+              "Vegan/GF Fudgy Brownie Cookie Sandwich",
+              "",
+              1250
+            ],
+            [
+              "Vegan Gluten Free Chocolate Chip Cookie Sandwich",
+              "",
+              1250
+            ],
+            [
+              "Mini Ice Cream Sandwich 3-pack",
+              "",
+              1695
+            ]
+          ]
+        },
+        {
+          "name": "Cookies",
+          "items": [
+            [
+              "Custom 6 Cookie Box",
+              "",
+              1695
+            ],
+            [
+              "1 Cookie",
+              "",
+              350
+            ],
+            [
+              "Custom Dozen Cookie Box",
+              "",
+              3295
+            ],
+            [
+              "Vegan/GF Fudgy Brownie Cookie Sandwich",
+              "",
+              1250
+            ],
+            [
+              "Brownie",
+              "",
+              450
+            ]
+          ]
+        },
+        {
+          "name": "Ice Cream Scoops",
+          "items": [
+            [
+              "Brownie Bear Bowl",
+              "",
+              1295
+            ],
+            [
+              "Choc Chip Cookie Bear Bowl",
+              "",
+              1295
+            ]
+          ]
+        },
+        {
+          "name": "Drinks",
+          "items": [
+            [
+              "Rockstar Energy Drink",
+              "",
+              695
+            ],
+            [
+              "Vitamin Water",
+              "",
+              525
+            ],
+            [
+              "Diet Coke-Soda",
+              "",
+              495
+            ],
+            [
+              "Monster Energy Drink",
+              "",
+              695
+            ],
+            [
+              "Snapple Drink",
+              "",
+              495
+            ],
+            [
+              "Milk",
+              "",
+              495
+            ],
+            [
+              "Sprite",
+              "",
+              495
+            ],
+            [
+              "Red Bull Energy Drink",
+              "",
+              695
+            ],
+            [
+              "Bottled Water",
+              "",
+              395
+            ],
+            [
+              "Honest Tea",
+              "",
+              425
+            ],
+            [
+              "Coke-Soda",
+              "",
+              495
+            ],
+            [
+              "Starbucks Frappuccino Drink",
+              "",
+              525
+            ]
+          ]
+        },
+        {
+          "name": "Pints",
+          "items": [
+            [
+              "Bear Batter Pint",
+              "",
+              1495
+            ],
+            [
+              "Blackberry Crumble Pint",
+              "",
+              1495
+            ],
+            [
+              "Cookie Dough Pint",
+              "",
+              1495
+            ],
+            [
+              "Cookies & Cream Pint",
+              "",
+              1495
+            ],
+            [
+              "Mint Chip Pint",
+              "",
+              1495
+            ],
+            [
+              "Old Fashioned Vanilla Pint",
+              "",
+              1495
+            ],
+            [
+              "Vegan Chocolate Chip Pint",
+              "",
+              1495
+            ],
+            [
+              "Toasted S'mores Pint",
+              "",
+              1495
+            ],
+            [
+              "Mud Pie Pint",
+              "",
+              1495
+            ],
+            [
+              "Caramel Pretzel Fudge Pint",
+              "",
+              1495
+            ],
+            [
+              "Milk & Cookies Pint",
+              "",
+              1495
+            ]
+          ]
+        }
+      ],
+      "site": "https://www.thebakedbear.com/locations/san-francisco/",
+      "orderUrl": "https://order.online/store/the-baked-bear-san-francisco-69841/?hideModal=true&pickup=true",
+      "address": "303 Columbus Ave, San Francisco, CA 94133",
+      "phone": "(415) 993-2327",
+      "email": "sanfrancisco@thebakedbear.com",
+      "hours": "Sun–Thu 11am–12am, Fri–Sat 11am–2am",
+      "siteNote": "Menu and prices are from the Columbus Avenue ordering page linked by The Baked Bear. Hours and contact details are from their official location page. Other-location reviews are identified in their credits.",
+      "panels": [
+        {
+          "head": "Other locations",
+          "body": [
+            "Chase Center — 680 Terry A Francois Blvd, Space 26, San Francisco, CA 94158. Grand-O’s review was filmed here, rather than at Columbus Avenue."
+          ],
+          "links": [
+            {
+              "label": "Chase Center shop",
+              "href": "https://www.thebakedbear.com/locations/chase-center/"
+            },
+            {
+              "label": "All Baked Bear locations",
+              "href": "https://www.thebakedbear.com/locations/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "arsicault-bakery",
+      "name": "Arsicault Bakery",
+      "label": "Arsicault",
+      "cuisine": "French bakery, croissants, pastries and bread",
+      "tagline": "French pastries and bread in San Francisco",
+      "color": "#00553c",
+      "icon": "arsicault-bakery-v109",
+      "prep": 0,
+      "category": "Bakery",
+      "items": [],
+      "sections": [
+        {
+          "name": "Daily pastries",
+          "items": [
+            [
+              "Plain Croissant",
+              "",
+              500
+            ],
+            [
+              "Chocolate Croissant",
+              "",
+              600
+            ],
+            [
+              "Ham & Cheese Croissant",
+              "",
+              725
+            ],
+            [
+              "Almond Croissant",
+              "",
+              600
+            ],
+            [
+              "Chocolate Almond Croissant",
+              "",
+              675
+            ],
+            [
+              "Blackberry Almond Hazelnut Croissant",
+              "",
+              675
+            ],
+            [
+              "Kouign Amann",
+              "",
+              550
+            ],
+            [
+              "Raisin Kouign",
+              "",
+              600
+            ],
+            [
+              "Morning Bun",
+              "",
+              550
+            ],
+            [
+              "Savory Scone",
+              "",
+              550
+            ],
+            [
+              "Cranberry Coconut Scone",
+              "",
+              450
+            ],
+            [
+              "Chocolate Chip Cookie",
+              "",
+              450
+            ],
+            [
+              "Vegetarian Galette",
+              "",
+              650
+            ],
+            [
+              "Apple Turnover",
+              "",
+              700
+            ],
+            [
+              "Palmier",
+              "",
+              550
+            ],
+            [
+              "Monkey Bread",
+              "",
+              550
+            ]
+          ]
+        },
+        {
+          "name": "Coffee bar",
+          "items": [
+            [
+              "Espresso",
+              "",
+              400
+            ],
+            [
+              "Espresso Macchiato",
+              "",
+              475
+            ],
+            [
+              "Cortado",
+              "",
+              475
+            ],
+            [
+              "Cappuccino",
+              "",
+              500
+            ],
+            [
+              "Latte: Small",
+              "",
+              550
+            ],
+            [
+              "Latte: Large",
+              "",
+              600
+            ],
+            [
+              "Vanilla Latte: Small",
+              "",
+              600
+            ],
+            [
+              "Vanilla Latte: Large",
+              "",
+              650
+            ],
+            [
+              "Mocha: Small",
+              "",
+              650
+            ],
+            [
+              "Mocha: Large",
+              "",
+              700
+            ],
+            [
+              "Drip: Small",
+              "",
+              350
+            ],
+            [
+              "Drip: Large",
+              "",
+              400
+            ],
+            [
+              "Au Lait: Small",
+              "",
+              450
+            ],
+            [
+              "Au Lait: Large",
+              "",
+              500
+            ],
+            [
+              "Americano",
+              "",
+              400
+            ],
+            [
+              "Cold Brew: Small",
+              "",
+              500
+            ],
+            [
+              "Cold Brew: Large",
+              "",
+              550
+            ],
+            [
+              "Tea",
+              "",
+              275
+            ],
+            [
+              "Tea Latte",
+              "",
+              375
+            ]
+          ]
+        },
+        {
+          "name": "Small bites",
+          "items": [
+            [
+              "Financier",
+              "",
+              1200
+            ],
+            [
+              "Shortbread Cookies",
+              "",
+              1000
+            ],
+            [
+              "Chocolate Shortbread Cookies",
+              "",
+              1200
+            ],
+            [
+              "Caramelized Puff Pastry",
+              "",
+              1000
+            ]
+          ]
+        },
+        {
+          "name": "Quiche",
+          "items": [
+            [
+              "Bacon Onion",
+              "",
+              1000
+            ],
+            [
+              "Mushroom",
+              "",
+              1000
+            ],
+            [
+              "Refrigerated Whole Bacon Onion",
+              "",
+              8000
+            ],
+            [
+              "Refrigerated Whole Mushroom",
+              "",
+              8000
+            ]
+          ]
+        },
+        {
+          "name": "Bread",
+          "items": [
+            [
+              "Baguette",
+              "",
+              500
+            ],
+            [
+              "Sourdough Country Bread",
+              "",
+              900
+            ],
+            [
+              "Walnut Sourdough",
+              "",
+              1100
+            ]
+          ]
+        },
+        {
+          "name": "Sandwiches",
+          "items": [
+            [
+              "The Parisian",
+              "Butter, ham, sea salt",
+              1400
+            ],
+            [
+              "The Londoner",
+              "Butter, ham, sea salt, orange marmalade",
+              1500
+            ],
+            [
+              "The Mediterranean",
+              "Homemade garlic aioli, ham, oven roasted tomatoes, sea salt",
+              1600
+            ],
+            [
+              "The Vegetarian",
+              "Homemade garlic aioli, roasted cauliflower, oven roasted tomatoes, arugula, sea salt",
+              1500
+            ],
+            [
+              "Add Aged Comté Cheese",
+              "Sandwich add-on",
+              200
+            ]
+          ]
+        }
+      ],
+      "site": "https://arsicault-bakery.com/",
+      "address": "87 McAllister Street, San Francisco, CA",
+      "phone": "(415) 926-5155",
+      "email": "info@arsicault-bakery.com",
+      "hours": "Daily 8am–3pm",
+      "siteNote": "The menu and prices below are the official Civic Center menu, matching the McAllister phone number Glenn supplied. Other branches have their own menus. Reviews with an unidentified branch describe the bakery rather than claiming this location.",
+      "clip": {
+        "src": "/clips/arsicault-bakery-v109.mp4",
+        "poster": "/clips/arsicault-bakery-v109-poster.webp",
+        "href": "https://www.instagram.com/reel/CtjxpYdM2Ro/",
+        "platform": "Instagram",
+        "credit": "Original by @arsicaultbakery, June 16, 2023. Archival kouign amann preparation; the post’s dated event is not a current offer."
+      },
+      "panels": [
+        {
+          "head": "Locations and menus",
+          "body": [
+            "Civic Center — 87 McAllister Street; (415) 926-5155. Daily 8am–3pm.",
+            "Inner Richmond — 397 Arguello Blvd; (415) 750-9460. Mon–Fri 8am–3pm, Sat–Sun 8am–3:30pm.",
+            "Mission Bay — 1070 Bridgeview Way Unit B; (415) 374-7310. Daily 8am–3pm.",
+            "All locations close on Thanksgiving Day, Christmas Day and New Year’s Day."
+          ],
+          "links": [
+            {
+              "label": "Civic Center menu",
+              "href": "https://arsicault-bakery.com/menus/mcallister/"
+            },
+            {
+              "label": "Inner Richmond menu",
+              "href": "https://arsicault-bakery.com/menus/arguello/"
+            },
+            {
+              "label": "Mission Bay menu",
+              "href": "https://arsicault-bakery.com/menus/missionrock/"
+            },
+            {
+              "label": "Official locations and hours",
+              "href": "https://arsicault-bakery.com/locations/"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "code": "DOfOJVwkRC_",
+      "batch": 109,
+      "source": "https://www.instagram.com/reel/DOfOJVwkRC_/",
+      "disposition": "local owner film",
+      "slug": "scoop-n-chill-v109",
+      "brand": "b_scoopnchill",
+      "postedBy": "scoopnchillberkeley",
+      "postedAt": "20250912",
+      "excerpt": "0s-13s of 13s",
+      "credit": "Original by @scoopnchillberkeley, September 12, 2025. The business’s own Berkeley film, requested by Glenn.",
+      "request": [
+        {
+          "at": "2026-11-08T15:15:22.188709-08:00",
+          "request": "Watch this video clip"
+        }
+      ]
+    },
+    {
+      "code": "DJapgu5pCj9",
+      "batch": 109,
+      "source": "https://www.instagram.com/reel/DJapgu5pCj9/",
+      "disposition": "local review film",
+      "slug": "review-DJapgu5pCj9",
+      "brand": "b_thebakedbear",
+      "postedBy": "thesnacksensei",
+      "postedAt": "20250509",
+      "excerpt": "30s-45s of 86s",
+      "credit": "Review by @thesnacksensei at The Baked Bear, Chase Center, 680 Terry A Francois Blvd, San Francisco. This is another branch of the Columbus Avenue business shown here.",
+      "request": [
+        {
+          "at": "2026-11-08T15:22:02.870907-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "by": "thesnacksensei"
+    },
+    {
+      "code": "DT_rN8lk6XZ",
+      "batch": 109,
+      "source": "https://www.instagram.com/reel/DT_rN8lk6XZ/",
+      "disposition": "local review film",
+      "slug": "review-DT_rN8lk6XZ",
+      "brand": "b_thebakedbear",
+      "postedBy": "unwntedtv",
+      "postedAt": "20260127",
+      "excerpt": "42s-57s of 63s",
+      "credit": "Review by @unwntedtv at The Baked Bear in San Francisco. The caption does not identify a branch.",
+      "request": [
+        {
+          "at": "2026-11-08T15:23:03.533036-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "by": "unwntedtv"
+    },
+    {
+      "code": "DQnL-OOEp7Y",
+      "batch": 109,
+      "source": "https://www.instagram.com/reel/DQnL-OOEp7Y/",
+      "disposition": "local review film",
+      "slug": "review-DQnL-OOEp7Y",
+      "brand": "b_arsicaultbakery",
+      "postedBy": "festusfeasts",
+      "postedAt": "20251103",
+      "excerpt": "119s-134s of 134s",
+      "credit": "Review by @festusfeasts at Arsicault Bakery, Mission Bay. This is another branch of the Civic Center business shown here.",
+      "request": [
+        {
+          "at": "2026-11-08T15:25:55.386851-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "by": "festusfeasts"
+    },
+    {
+      "code": "DV_hublk6ZA",
+      "batch": 109,
+      "source": "https://www.instagram.com/reel/DV_hublk6ZA/",
+      "disposition": "local review film",
+      "slug": "review-DV_hublk6ZA",
+      "brand": "b_arsicaultbakery",
+      "postedBy": "awesomejuliee",
+      "postedAt": "20260317",
+      "excerpt": "1s-16s of 82s",
+      "credit": "Review by @awesomejuliee of Arsicault Bakery in San Francisco; branch unspecified in the caption.",
+      "request": [
+        {
+          "at": "2026-11-08T15:26:46.327019-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "by": "awesomejuliee"
+    },
+    {
+      "code": "DTOxk2aj3HE",
+      "batch": 109,
+      "source": "https://www.instagram.com/reel/DTOxk2aj3HE/",
+      "disposition": "local review film",
+      "slug": "review-DTOxk2aj3HE",
+      "brand": "b_arsicaultbakery",
+      "postedBy": "keyanajoooon",
+      "postedAt": "20260108",
+      "excerpt": "2s-17s of 32s",
+      "credit": "Review by @keyanajoooon of Arsicault Bakery in San Francisco; branch unspecified in the caption.",
+      "request": [
+        {
+          "at": "2026-11-08T15:27:14.967639-08:00",
+          "request": "Clip this video plz \nFoodie\nHeavy Hitter"
+        }
+      ],
+      "by": "keyanajoooon"
+    },
+    {
+      "code": "DTJ7UZ4Fz_4",
+      "batch": 109,
+      "source": "https://www.instagram.com/reel/DTJ7UZ4Fz_4/",
+      "disposition": "local review film",
+      "slug": "review-DTJ7UZ4Fz_4",
+      "brand": "b_arsicaultbakery",
+      "postedBy": "charlikestoeat",
+      "postedAt": "20260106",
+      "excerpt": "0s-15s of 23s",
+      "credit": "@charlikestoeat discusses Arsicault croissants while dining at Atelier Crenn. The footage is not filmed at Arsicault, and no Michelin status is claimed for the bakery.",
+      "request": [
+        {
+          "at": "2026-11-08T15:27:21.447445-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "by": "charlikestoeat",
+      "playOn": "b_foodiecharlikestoeat"
+    },
+    {
+      "code": "DRi4rO9EXOT",
+      "batch": 109,
+      "source": "https://www.instagram.com/reel/DRi4rO9EXOT/",
+      "disposition": "local review film",
+      "slug": "review-DRi4rO9EXOT",
+      "brand": "b_arsicaultbakery",
+      "postedBy": "eatswithkath",
+      "postedAt": "20251127",
+      "excerpt": "0s-8s of 8s",
+      "credit": "Review by @eatswithkath of Arsicault Bakery, Mission Bay. This is another branch of the Civic Center business shown here.",
+      "request": [
+        {
+          "at": "2026-11-08T15:27:45.120419-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "by": "eatswithkath",
+      "playOn": "b_foodieeatswithkath"
+    },
+    {
+      "code": "CtjxpYdM2Ro",
+      "batch": 109,
+      "source": "https://www.instagram.com/reel/CtjxpYdM2Ro/",
+      "disposition": "local owner film",
+      "slug": "arsicault-bakery-v109",
+      "brand": "b_arsicaultbakery",
+      "postedBy": "arsicaultbakery",
+      "postedAt": "20230616",
+      "excerpt": "0s-10s of 10s",
+      "credit": "Original by @arsicaultbakery, June 16, 2023. Archival kouign amann preparation; the post’s dated event is not a current offer.",
+      "request": [
+        {
+          "at": "2026-11-08T15:29:08.789067-08:00",
+          "request": "Watch this video clip"
+        }
+      ]
+    },
+    {
+      "code": "DN9ZjY0AWdD",
+      "batch": 109,
+      "source": "https://www.instagram.com/reel/DN9ZjY0AWdD/",
+      "disposition": "local review film",
+      "slug": "review-DN9ZjY0AWdD",
+      "brand": "b_arsicaultbakery",
+      "postedBy": "charlikestoeat",
+      "postedAt": "20250830",
+      "excerpt": "8s-23s of 137s",
+      "credit": "Cookie comparison by @charlikestoeat featuring Arsicault, b.patisserie and Spruce. The excerpt focuses on Arsicault; the complete original compares all three. No branch is specified.",
+      "request": [
+        {
+          "at": "2026-11-08T15:29:34.532640-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "by": "charlikestoeat",
+      "playOn": "b_foodiecharlikestoeat"
+    }
+  ],
+  "placements": {
+    "san-francisco-goods2-82": "b_thebakedbear",
+    "san-francisco-goods2-83": "b_arsicaultbakery",
+    "beasty-icecream-3": "b_thebakedbear",
+    "beasty-bakery-22": "b_arsicaultbakery",
+    "beasty-foodies2-0": "b_foodiekeyanajoooon",
+    "beasty-foodies2-1": "b_foodiebayareafoodieadventures",
+    "beasty-foodies2-2": "b_foodiesiliconvalleyfoodies",
+    "beasty-foodies2-3": "b_foodiejacksdiningroom",
+    "beasty-foodies2-4": "b_foodieandreweatsinsf",
+    "beasty-foodies2-5": "b_foodieeatswithkath",
+    "beasty-foodies2-6": "b_foodiecestalmoco",
+    "beasty-foodies2-7": "b_foodiekangofrealty",
+    "beasty-foodies2-8": "b_foodiefedoramaelle",
+    "beasty-foodies2-9": "b_foodiepastrywithjenn",
+    "beasty-foodies2-10": "b_foodietravelwtiff",
+    "beasty-foodies2-11": "b_foodieemwong",
+    "beasty-foodies2-12": "b_foodiekimonieatss",
+    "beasty-foodies2-13": "b_foodiebaygirlseat",
+    "beasty-foodies2-14": "b_foodieheraldh",
+    "beasty-foodies2-15": "b_foodiefoodiswhyimbroke",
+    "beasty-foodies2-16": "b_foodiekeneats",
+    "beasty-foodies2-17": "b_e40",
+    "beasty-foodies2-18": "b_foodiemamamarquez888",
+    "beasty-foodies2-19": "b_foodiereelkevo",
+    "beasty-foodies2-20": "b_foodierollingwithdeneats",
+    "beasty-foodies2-21": "b_foodieagnespittioni",
+    "beasty-foodies2-22": "b_foodiej00diefoodie",
+    "beasty-foodies2-23": "b_foodiealiasharrief",
+    "beasty-foodies2-24": "b_foodiecarlosbradley",
+    "beasty-foodies2-25": "b_foodiejceeats",
+    "beasty-foodies2-26": "b_foodiemonaeatsnearby",
+    "beasty-foodies2-27": "b_foodiebayareafoodiecrew",
+    "beasty-foodies2-28": "b_foodiejanniners",
+    "beasty-foodies2-29": "b_foodiealwayshannegry",
+    "beasty-foodies2-30": "b_foodierainmoreturely",
+    "beasty-foodies2-31": "b_foodiewheresthefoodat",
+    "beasty-foodies2-32": "b_foodiesfbayfood",
+    "beasty-foodies2-33": "b_foodiezeynoern",
+    "beasty-foodies2-34": "b_foodiebooziebrunch",
+    "beasty-foodies2-35": "b_foodiethekhaysie",
+    "beasty-foodies2-36": "b_foodiekelmeleats",
+    "beasty-foodies2-37": "b_foodiecourtneylyneaa",
+    "beasty-foodies2-38": "b_foodiehungerefordiy",
+    "beasty-foodies2-39": "b_foodiejustmostie",
+    "beasty-foodies2-40": "b_foodiecapturedbysado",
+    "beasty-foodies2-41": "b_foodieallieeats",
+    "beasty-foodies2-42": "b_foodieseekeasyeats",
+    "beasty-foodies2-43": "b_foodieorangeginger",
+    "beasty-foodies2-44": "b_foodieantoinetterzz",
+    "beasty-foodies2-45": "b_foodiebayareakulture",
+    "beasty-foodies2-46": "b_foodiechefmelissaking",
+    "beasty-foodies2-47": "b_foodiecelineeats",
+    "beasty-foodies2-48": "b_foodiesinglecatm0m",
+    "beasty-foodies2-49": "b_foodiekimjsseats",
+    "beasty-foodies2-50": "b_foodieoaktowngrubhub",
+    "beasty-foodies2-51": "b_foodiethespoonlist",
+    "beasty-foodies2-52": "b_foodiesherryeatworld",
+    "beasty-foodies2-53": "b_foodiehungrydanz",
+    "beasty-foodies2-54": "b_foodieiamnikkieg",
+    "beasty-foodies2-55": "b_foodiejaneethefoodie",
+    "beasty-foodies2-56": "b_foodiepeggyshoo",
+    "beasty-foodies2-57": "b_foodiezarinanawabi",
+    "beasty-foodies2-58": "b_foodiejbrenes",
+    "beasty-foodies2-59": "b_foodiesimplydorothy",
+    "beasty-foodies2-60": "b_foodieacoupleofcooks",
+    "beasty-foodies2-61": "b_foodiejantrinanicole",
+    "beasty-foodies2-62": "b_foodiechriscorpz",
+    "beasty-foodies2-63": "b_foodiethealamedapulse",
+    "beasty-foodies2-64": "b_foodiebayareamunchies510",
+    "beasty-foodies2-65": "b_foodievictoriapham17",
+    "beasty-foodies2-66": "b_foodiefoodieberrie",
+    "beasty-foodies2-67": "b_foodiesamserved",
+    "beasty-foodies2-68": "b_foodieareweeatingyet",
+    "beasty-foodies2-69": "b_foodiesiusvision",
+    "beasty-foodies2-70": "b_foodiearianasade",
+    "beasty-foodies2-71": "b_foodiebayareafoodz",
+    "beasty-foodies2-72": "b_foodiebestbayareafood",
+    "beasty-foodies2-73": "b_foodieannnaeats",
+    "beasty-foodies2-74": "b_foodieugcwithfrances",
+    "beasty-foodies2-75": "b_foodiedariananthony",
+    "beasty-foodies2-76": "b_foodiecharweeezy",
+    "beasty-foodies2-77": "b_foodiemukbangyourmama",
+    "beasty-foodies2-78": "b_foodiewanderingstefany",
+    "beasty-foodies2-79": "b_foodielifebyvivien",
+    "beasty-foodies2-80": "b_foodieandrelucas",
+    "beasty-foodies2-81": "b_foodieshrimpfriedroice",
+    "beasty-foodies2-82": "b_foodiecynlacson",
+    "beasty-foodies2-83": "b_foodiealexytravels",
+    "beasty-foodies2-84": "b_foodieandygravs",
+    "beasty-foodies2-85": "b_foodielivingvivalakillah",
+    "beasty-foodies2-86": "b_foodieeighty6ix",
+    "beasty-foodies2-87": "b_foodiemayakayofficial",
+    "beasty-foodies2-88": "b_foodiebayareamagandaeats",
+    "beasty-foodies2-89": "b_foodieforkmeetsfood",
+    "beasty-foodies2-90": "b_foodiefoodiesnflightss",
+    "beasty-foodies2-91": "b_foodiecarlaylayyy",
+    "beasty-foodies2-92": "b_foodieshuatangco",
+    "beasty-foodies2-93": "b_foodiejennyhomeloans",
+    "beasty-foodies2-94": "b_foodiewthellydanyelly",
+    "beasty-foodies2-95": "b_foodiesophiaxbayarea",
+    "beasty-foodies2-96": "b_foodiesierraeats8",
+    "beasty-foodies2-97": "b_foodieyosiiiifoodie",
+    "beasty-foodies2-98": "b_foodieivkicks",
+    "beasty-foodies2-99": "b_foodieitsslydiia",
+    "beasty-foodies2-100": "b_foodiestartingfiresevrywhere",
+    "beasty-foodies2-101": "b_foodiebylizettexo",
+    "beasty-foodies2-102": "b_foodiebrianthebarber",
+    "beasty-foodies2-103": "b_foodienickk",
+    "beasty-foodies2-104": "b_foodiejamesbaylife",
+    "beasty-foodies2-105": "b_foodieshesvibinhigh",
+    "beasty-foodies2-106": "b_foodiedchangshangry",
+    "beasty-foodies2-107": "b_foodiebayareafoodiesan",
+    "beasty-foodies2-108": "b_foodietrulyathi",
+    "beasty-foodies2-109": "b_foodiejetsetjanine",
+    "beasty-foodies2-110": "b_foodiekvbitesandgo",
+    "beasty-foodies2-111": "b_foodiestunnaman02",
+    "beasty-foodies2-112": "b_foodiesavorwithcoral",
+    "beasty-foodies2-113": "b_foodiefirstdibsbayarea",
+    "beasty-foodies2-114": "b_foodiemargsout",
+    "beasty-foodies2-115": "b_foodieyogetasworld",
+    "beasty-foodies2-116": "b_foodieitsmayrazambrano",
+    "beasty-foodies2-117": "b_foodieyourtraveldaddy",
+    "beasty-foodies2-118": "b_foodiehellalocalmo",
+    "beasty-foodies2-119": "b_foodiethesnobbiefoodie",
+    "beasty-foodies2-120": "b_foodiekatfoodsf",
+    "beasty-foodies2-121": "b_foodiecharlikestoeat",
+    "beasty-foodies2-122": "b_foodiehellahansel",
+    "beasty-foodies2-123": "b_foodiegeraldfermin",
+    "beasty-foodies2-124": "b_foodiepimchanyum",
+    "beasty-foodies2-125": "b_foodiebayareawilson",
+    "beasty-foodies2-126": "b_foodiewhatthejessi",
+    "beasty-foodies2-127": "b_foodiefoodgiveness",
+    "beasty-foodies2-128": "b_foodieasideofsweet",
+    "beasty-foodies2-129": "b_foodietashamalan",
+    "beasty-foodies2-130": "b_foodiecamemzmin",
+    "beasty-foodies2-131": "b_foodieventurewithkelly",
+    "beasty-foodies2-132": "b_foodiecookwithhenny",
+    "beasty-foodies2-133": "b_foodieaemerieedance",
+    "beasty-foodies2-134": "b_foodiegreatonezfoodreview",
+    "beasty-foodies2-135": "b_foodiemrsmackreviews",
+    "beasty-foodies2-136": "b_foodiebpeats",
+    "beasty-foodies2-137": "b_foodieerinlovesfun",
+    "beasty-foodies2-138": "b_foodielovelivermore",
+    "beasty-foodies2-139": "b_foodieexplorewithtaka",
+    "beasty-foodies2-140": "b_foodiethehautesheet",
+    "beasty-foodies2-141": "b_foodiehumminglion",
+    "beasty-foodies2-142": "b_foodiewhatarethechances",
+    "beasty-foodies2-143": "b_foodiekatwalksf",
+    "beasty-foodies2-144": "b_foodieyulmool",
+    "beasty-foodies2-145": "b_foodiebarstoolsports",
+    "beasty-foodies2-146": "b_foodiexopinsta",
+    "beasty-foodies2-147": "b_foodielovemissfit",
+    "beasty-foodies2-148": "b_foodiechloechomps",
+    "beasty-foodies2-149": "b_foodierealtorandreviewer",
+    "beasty-foodies2-150": "b_foodiexoaramarie",
+    "beasty-foodies2-151": "b_foodiefoodiedreams",
+    "beasty-foodies2-152": "b_foodieeatswithfoodie",
+    "beasty-foodies2-153": "b_foodiejensintec",
+    "beasty-foodies2-154": "b_foodiesnackateriansf",
+    "beasty-foodies2-155": "b_foodieapoorvasharma1",
+    "beasty-foodies2-156": "b_foodievolhacreative",
+    "beasty-foodies2-157": "b_foodiebobaaddict",
+    "beasty-foodies2-158": "b_foodieruthannesturman",
+    "beasty-foodies2-159": "b_foodielarryjunetfm",
+    "beasty-foodies2-160": "b_foodieeileenhuynher",
+    "beasty-foodies2-161": "b_foodiecreatewithcv",
+    "beasty-foodies2-162": "b_foodiealohastephanie",
+    "beasty-foodies2-163": "b_foodiezoegabon",
+    "beasty-foodies2-164": "b_foodiemartiwantsmore",
+    "beasty-foodies2-165": "b_foodiebyhillaryn",
+    "beasty-foodies2-166": "b_foodiealyeatscali",
+    "beasty-foodies2-167": "b_foodiebayareafoodies",
+    "beasty-foodies2-168": "b_foodiemoniicamichelle",
+    "beasty-foodies2-169": "b_foodieryanbyryanchua",
+    "beasty-foodies2-170": "b_foodiehangrypotato",
+    "beasty-foodies2-171": "b_foodiemelsotel",
+    "beasty-foodies2-172": "b_foodiesanleandroeats",
+    "beasty-foodies2-173": "b_foodiebroitsva",
+    "beasty-foodies2-174": "b_foodiefatashfoodie",
+    "beasty-foodies2-175": "b_foodiefoodieshots",
+    "beasty-foodies2-176": "b_foodiekitkatvales",
+    "beasty-foodies2-177": "b_foodiefoodwookie",
+    "beasty-foodies2-178": "b_foodiesonomacountyliving",
+    "beasty-foodies2-179": "b_foodielovecartier25",
+    "beasty-foodies2-180": "b_foodiefoodelaventures",
+    "beasty-foodies2-181": "b_foodiefoodietravelhappiness",
+    "beasty-foodies2-182": "b_foodiepeterlyagent",
+    "beasty-foodies2-183": "b_foodieksmokeskitchen",
+    "beasty-foodies2-184": "b_foodietysfqods",
+    "beasty-foodies2-185": "b_foodieilisaeatssf",
+    "beasty-foodies2-186": "b_foodietundemodupee",
+    "beasty-foodies2-187": "b_foodiewafflebam",
+    "beasty-foodies2-188": "b_foodiegoyuliiago",
+    "beasty-foodies2-189": "b_foodiejamiebeoutside",
+    "beasty-foodies2-190": "b_foodieanjaliwandersoul",
+    "beasty-foodies2-191": "b_foodiegabriiellas",
+    "beasty-foodies2-192": "b_foodieploinsanfrancisco",
+    "beasty-foodies2-193": "b_foodiepiscesprincesspriya",
+    "beasty-foodies2-194": "b_foodiedbaylock",
+    "beasty-foodies2-195": "b_foodiehallojessa",
+    "beasty-foodies2-196": "b_foodielagrandedelabanda",
+    "beasty-foodies2-197": "b_foodiechaudownfood",
+    "beasty-foodies2-198": "b_foodiephoebe8food",
+    "beasty-foodies2-199": "b_foodiekaraxhuynh",
+    "beasty-foodies2-200": "b_foodiewakeyeats",
+    "beasty-foodies2-201": "b_foodiedodoeats",
+    "beasty-foodies2-202": "b_foodiemayamunches",
+    "beasty-foodies2-203": "b_foodiepreetkhatrii",
+    "beasty-foodies2-204": "b_foodiekogumahs",
+    "beasty-foodies2-205": "b_foodienursedanamae",
+    "beasty-foodies2-206": "b_foodiethehabibizeat",
+    "beasty-foodies2-207": "b_foodieeatwithbooboo",
+    "beasty-foodies2-208": "b_foodiebayareafoodogram",
+    "beasty-foodies2-209": "b_foodielubtoeat",
+    "beasty-foodies2-210": "b_foodiethismajourney",
+    "beasty-foodies2-211": "b_foodiesummerishungry",
+    "beasty-foodies2-212": "b_foodiejustfeediris",
+    "beasty-foodies2-213": "b_foodiehungryhungryheejin",
+    "beasty-foodies2-214": "b_foodieliltiffyvert",
+    "beasty-foodies2-215": "b_foodiejovanacamberos",
+    "beasty-foodies2-216": "b_foodiesullieats",
+    "beasty-foodies2-217": "b_foodiephamamiii",
+    "beasty-foodies2-218": "b_foodietastewithrach",
+    "beasty-foodies2-219": "b_foodiesisicooksandeats",
+    "beasty-foodies2-220": "b_foodiemyrealtoralexbradeis",
+    "beasty-foodies2-221": "b_foodierowbot408",
+    "beasty-foodies2-222": "b_foodierevrocrichboy",
+    "beasty-foodies2-223": "b_foodietakeoutwithtuck",
+    "beasty-foodies2-224": "b_foodiekatdazzzle",
+    "beasty-foodies2-225": "b_foodiequeenfoode",
+    "beasty-foodies2-226": "b_foodiecindydreamtravel",
+    "beasty-foodies2-227": "b_foodieyummylouey",
+    "beasty-foodies2-228": "b_foodieericasorelle",
+    "beasty-foodies2-229": "b_foodiechelchomps",
+    "beasty-foodies2-230": "b_foodiemonicaplatt",
+    "beasty-foodies2-231": "b_foodieimsarahchaz",
+    "beasty-foodies2-232": "b_foodieirenedony",
+    "beasty-foodies2-233": "b_foodiebiteswithnatalia",
+    "beasty-foodies2-234": "b_foodielaurenlovessfood",
+    "beasty-foodies2-235": "b_foodielisaaaaletseat",
+    "beasty-foodies2-236": "b_foodiemattiasblanco",
+    "beasty-foodies2-237": "b_foodiedeazylee",
+    "beasty-foodies2-238": "b_foodieedmunchthefoodie",
+    "beasty-foodies2-239": "b_foodielynniethefoodie",
+    "beasty-foodies2-240": "b_foodiekelsyannn",
+    "beasty-foodies2-241": "b_foodiefoodadventures21",
+    "beasty-foodies2-242": "b_foodietaratastessf",
+    "beasty-foodies2-243": "b_foodieziahazrati",
+    "beasty-foodies2-244": "b_foodiebennyeatsbayarea",
+    "beasty-foodies2-245": "b_foodiejourdynlynn",
+    "beasty-foodies2-246": "b_foodiebayeatss",
+    "beasty-foodies2-247": "b_foodiecharlizetse",
+    "beasty-foodies2-248": "b_foodieeatwithange",
+    "beasty-foodies2-249": "b_foodiehabibimocha",
+    "beasty-foodies2-250": "b_foodiemaddyeatssfbay",
+    "beasty-foodies2-251": "b_foodiemrbayareafoodie",
+    "beasty-foodies2-252": "b_foodiesoysupli",
+    "beasty-foodies2-253": "b_foodiethehungrycurator",
+    "beasty-foodies2-254": "b_foodiewithlovelysss",
+    "beasty-foodies2-255": "b_foodieoliviiacai",
+    "beasty-foodies2-256": "b_foodiekevinberkeleyfoodreviews",
+    "beasty-foodies2-257": "b_foodiemartiebautista",
+    "beasty-foodies2-258": "b_foodiebadiesaf",
+    "beasty-foodies2-259": "b_foodiesjfoodgram",
+    "beasty-foodies2-260": "b_foodietiensmunchies",
+    "beasty-foodies2-261": "b_foodiealexisbaybe",
+    "beasty-foodies2-262": "b_foodiedyannaluna",
+    "beasty-foodies2-263": "b_foodiesapphiesofire",
+    "beasty-foodies2-264": "b_foodiekimmmpossxble",
+    "beasty-foodies2-265": "b_foodiestaycationsfbayarea",
+    "beasty-foodies2-266": "b_foodieswooningspoon",
+    "beasty-foodies2-267": "b_foodievvveats",
+    "beasty-foodies2-268": "b_foodieelkattt",
+    "beasty-foodies2-269": "b_foodiealmightyalondra",
+    "beasty-foodies2-270": "b_foodieunwntedtv",
+    "beasty-foodies2-271": "b_foodieawesomejuliee",
+    "beasty-cookies-3": "b_thebakedbear"
+  },
+  "updatedIcons": [
+    "/icons/scoop-n-chill-v109.webp",
+    "/icons/the-baked-bear-v109.webp",
+    "/icons/arsicault-bakery-v109.webp",
+    "/icons/foodie-unwntedtv-v109.webp",
+    "/icons/foodie-awesomejuliee-v109.webp",
+    "/icons/foodie-keyanajoooon-v109.webp"
+  ],
+  "updatedBrands": [
+    "b_scoopnchill"
+  ],
+  "foodieOrder": [
+    {
+      "handle": "ronniebanks",
+      "brand": "b_foodieronniebanks",
+      "score": 3
+    },
+    {
+      "handle": "msashleyvee",
+      "brand": "b_foodiemsashleyvee",
+      "score": 3
+    },
+    {
+      "handle": "feed_happiness_",
+      "brand": "b_foodiefeedhappiness",
+      "score": 2
+    },
+    {
+      "handle": "ashleyveats",
+      "brand": "b_foodieashleyveats",
+      "score": 2
+    },
+    {
+      "handle": "blurgotti",
+      "brand": "b_foodieblurgotti",
+      "score": 2
+    },
+    {
+      "handle": "sebascastroficial",
+      "brand": "b_foodiesebascastroficial",
+      "score": 2
+    },
+    {
+      "handle": "festusfeasts",
+      "brand": "b_foodiefestusfeasts",
+      "score": 1
+    },
+    {
+      "handle": "thesnacksensei",
+      "brand": "b_grando",
+      "score": 1
+    },
+    {
+      "handle": "foodandsachi",
+      "brand": "b_foodiefoodandsachi",
+      "score": 1
+    },
+    {
+      "handle": "grubwitmike",
+      "brand": "b_foodiegrubwitmike",
+      "score": 1
+    },
+    {
+      "handle": "hungry4munchies",
+      "brand": "b_foodiehungry4munchies",
+      "score": 1
+    },
+    {
+      "handle": "bayarea_fooddreamz",
+      "brand": "b_foodiebayareafooddreamz",
+      "score": 1
+    },
+    {
+      "handle": "eatwithsie",
+      "brand": "b_foodieeatwithsie",
+      "score": 1
+    },
+    {
+      "handle": "daeatzwitbri",
+      "brand": "b_foodiedaeatzwitbri",
+      "score": 1
+    },
+    {
+      "handle": "thetastebud",
+      "brand": "b_foodiethetastebud",
+      "score": 1
+    },
+    {
+      "handle": "aztec.ed",
+      "brand": "b_foodieazteced",
+      "score": 1
+    },
+    {
+      "handle": "imadoniseats",
+      "brand": "b_foodieimadoniseats",
+      "score": 1
+    },
+    {
+      "handle": "mzz.juxtaposition",
+      "brand": "b_foodiemzzjuxtaposition",
+      "score": 1
+    },
+    {
+      "handle": "yourglobalfoodiebff",
+      "brand": "b_foodieyourglobalfoodiebff",
+      "score": 1
+    },
+    {
+      "handle": "felicitythefoodie",
+      "brand": "b_foodiefelicitythefoodie",
+      "score": 1
+    },
+    {
+      "handle": "trinhdoesthings",
+      "brand": "b_foodietrinhdoesthings",
+      "score": 1
+    },
+    {
+      "handle": "smackinfood",
+      "brand": "b_foodiesmackinfood",
+      "score": 1
+    },
+    {
+      "handle": "drooling.bae",
+      "brand": "b_foodiedroolingbae",
+      "score": 1
+    },
+    {
+      "handle": "thesauceboss_",
+      "brand": "b_foodiethesauceboss",
+      "score": 1
+    },
+    {
+      "handle": "keyanajoooon",
+      "brand": "b_foodiekeyanajoooon",
+      "score": 2
+    },
+    {
+      "handle": "bayarea.foodie.adventures",
+      "brand": "b_foodiebayareafoodieadventures",
+      "score": 1
+    },
+    {
+      "handle": "siliconvalley.foodies",
+      "brand": "b_foodiesiliconvalleyfoodies",
+      "score": 1
+    },
+    {
+      "handle": "jacksdiningroom",
+      "brand": "b_foodiejacksdiningroom",
+      "score": 1
+    },
+    {
+      "handle": "andreweatsinsf",
+      "brand": "b_foodieandreweatsinsf",
+      "score": 1
+    },
+    {
+      "handle": "eatswithkath",
+      "brand": "b_foodieeatswithkath",
+      "score": 1
+    },
+    {
+      "handle": "cestalmoco",
+      "brand": "b_foodiecestalmoco",
+      "score": 1
+    },
+    {
+      "handle": "kangofrealty",
+      "brand": "b_foodiekangofrealty",
+      "score": 1
+    },
+    {
+      "handle": "fedoramaelle",
+      "brand": "b_foodiefedoramaelle",
+      "score": 1
+    },
+    {
+      "handle": "pastrywithjenn",
+      "brand": "b_foodiepastrywithjenn",
+      "score": 1
+    },
+    {
+      "handle": "travelwtiff",
+      "brand": "b_foodietravelwtiff",
+      "score": 1
+    },
+    {
+      "handle": "_emwong_",
+      "brand": "b_foodieemwong",
+      "score": 1
+    },
+    {
+      "handle": "kimoni.eatss",
+      "brand": "b_foodiekimonieatss",
+      "score": 1
+    },
+    {
+      "handle": "baygirlseat",
+      "brand": "b_foodiebaygirlseat",
+      "score": 1
+    },
+    {
+      "handle": "heraldh",
+      "brand": "b_foodieheraldh",
+      "score": 1
+    },
+    {
+      "handle": "foodiswhyimbroke",
+      "brand": "b_foodiefoodiswhyimbroke",
+      "score": 1
+    },
+    {
+      "handle": "keneats_",
+      "brand": "b_foodiekeneats",
+      "score": 1
+    },
+    {
+      "handle": "e40",
+      "brand": "b_e40",
+      "score": 1
+    },
+    {
+      "handle": "mamamarquez888",
+      "brand": "b_foodiemamamarquez888",
+      "score": 1
+    },
+    {
+      "handle": "reelkevo",
+      "brand": "b_foodiereelkevo",
+      "score": 1
+    },
+    {
+      "handle": "rollingwithdeneats",
+      "brand": "b_foodierollingwithdeneats",
+      "score": 1
+    },
+    {
+      "handle": "agnespittioni",
+      "brand": "b_foodieagnespittioni",
+      "score": 1
+    },
+    {
+      "handle": "j00diefoodie",
+      "brand": "b_foodiej00diefoodie",
+      "score": 1
+    },
+    {
+      "handle": "aliasharrief",
+      "brand": "b_foodiealiasharrief",
+      "score": 1
+    },
+    {
+      "handle": "carlosbradley",
+      "brand": "b_foodiecarlosbradley",
+      "score": 1
+    },
+    {
+      "handle": "jc.eeats",
+      "brand": "b_foodiejceeats",
+      "score": 1
+    },
+    {
+      "handle": "monaeatsnearby",
+      "brand": "b_foodiemonaeatsnearby",
+      "score": 1
+    },
+    {
+      "handle": "bayareafoodiecrew",
+      "brand": "b_foodiebayareafoodiecrew",
+      "score": 1
+    },
+    {
+      "handle": "janniners",
+      "brand": "b_foodiejanniners",
+      "score": 1
+    },
+    {
+      "handle": "alwayshannegry",
+      "brand": "b_foodiealwayshannegry",
+      "score": 1
+    },
+    {
+      "handle": "rainmoreturely",
+      "brand": "b_foodierainmoreturely",
+      "score": 1
+    },
+    {
+      "handle": "_wheresthefoodat",
+      "brand": "b_foodiewheresthefoodat",
+      "score": 1
+    },
+    {
+      "handle": "sfbayfood",
+      "brand": "b_foodiesfbayfood",
+      "score": 1
+    },
+    {
+      "handle": "zeyno.ern",
+      "brand": "b_foodiezeynoern",
+      "score": 1
+    },
+    {
+      "handle": "booziebrunch",
+      "brand": "b_foodiebooziebrunch",
+      "score": 1
+    },
+    {
+      "handle": "thekhaysie",
+      "brand": "b_foodiethekhaysie",
+      "score": 1
+    },
+    {
+      "handle": "kelmeleats",
+      "brand": "b_foodiekelmeleats",
+      "score": 1
+    },
+    {
+      "handle": "courtneylyneaa",
+      "brand": "b_foodiecourtneylyneaa",
+      "score": 1
+    },
+    {
+      "handle": "hungere.for.diy",
+      "brand": "b_foodiehungerefordiy",
+      "score": 0
+    },
+    {
+      "handle": "justmostie",
+      "brand": "b_foodiejustmostie",
+      "score": 0
+    },
+    {
+      "handle": "capturedbysado",
+      "brand": "b_foodiecapturedbysado",
+      "score": 0
+    },
+    {
+      "handle": "allie.eats",
+      "brand": "b_foodieallieeats",
+      "score": 0
+    },
+    {
+      "handle": "seekeasyeats",
+      "brand": "b_foodieseekeasyeats",
+      "score": 0
+    },
+    {
+      "handle": "orangeginger",
+      "brand": "b_foodieorangeginger",
+      "score": 0
+    },
+    {
+      "handle": "antoinetterzz",
+      "brand": "b_foodieantoinetterzz",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.kulture",
+      "brand": "b_foodiebayareakulture",
+      "score": 0
+    },
+    {
+      "handle": "chefmelissaking",
+      "brand": "b_foodiechefmelissaking",
+      "score": 0
+    },
+    {
+      "handle": "celineeats",
+      "brand": "b_foodiecelineeats",
+      "score": 0
+    },
+    {
+      "handle": "singlecatm0m",
+      "brand": "b_foodiesinglecatm0m",
+      "score": 0
+    },
+    {
+      "handle": "kimjsseats",
+      "brand": "b_foodiekimjsseats",
+      "score": 0
+    },
+    {
+      "handle": "oaktowngrubhub",
+      "brand": "b_foodieoaktowngrubhub",
+      "score": 0
+    },
+    {
+      "handle": "thespoonlist",
+      "brand": "b_foodiethespoonlist",
+      "score": 0
+    },
+    {
+      "handle": "sherryeatworld",
+      "brand": "b_foodiesherryeatworld",
+      "score": 0
+    },
+    {
+      "handle": "hungrydanz",
+      "brand": "b_foodiehungrydanz",
+      "score": 0
+    },
+    {
+      "handle": "iamnikkieg",
+      "brand": "b_foodieiamnikkieg",
+      "score": 0
+    },
+    {
+      "handle": "janeethefoodie",
+      "brand": "b_foodiejaneethefoodie",
+      "score": 0
+    },
+    {
+      "handle": "peggy_shoo",
+      "brand": "b_foodiepeggyshoo",
+      "score": 0
+    },
+    {
+      "handle": "zarina.nawabi",
+      "brand": "b_foodiezarinanawabi",
+      "score": 0
+    },
+    {
+      "handle": "jbrenes_",
+      "brand": "b_foodiejbrenes",
+      "score": 0
+    },
+    {
+      "handle": "simply_dorothy_",
+      "brand": "b_foodiesimplydorothy",
+      "score": 0
+    },
+    {
+      "handle": "acoupleofcooks",
+      "brand": "b_foodieacoupleofcooks",
+      "score": 0
+    },
+    {
+      "handle": "jantrinanicole",
+      "brand": "b_foodiejantrinanicole",
+      "score": 0
+    },
+    {
+      "handle": "chris.corpz",
+      "brand": "b_foodiechriscorpz",
+      "score": 0
+    },
+    {
+      "handle": "thealamedapulse",
+      "brand": "b_foodiethealamedapulse",
+      "score": 0
+    },
+    {
+      "handle": "bayareamunchies510",
+      "brand": "b_foodiebayareamunchies510",
+      "score": 0
+    },
+    {
+      "handle": "victoria.pham17",
+      "brand": "b_foodievictoriapham17",
+      "score": 0
+    },
+    {
+      "handle": "foodieberrie",
+      "brand": "b_foodiefoodieberrie",
+      "score": 0
+    },
+    {
+      "handle": "samserved",
+      "brand": "b_foodiesamserved",
+      "score": 0
+    },
+    {
+      "handle": "areweeatingyet",
+      "brand": "b_foodieareweeatingyet",
+      "score": 0
+    },
+    {
+      "handle": "siusvision",
+      "brand": "b_foodiesiusvision",
+      "score": 0
+    },
+    {
+      "handle": "arianasade",
+      "brand": "b_foodiearianasade",
+      "score": 0
+    },
+    {
+      "handle": "bayareafoodz",
+      "brand": "b_foodiebayareafoodz",
+      "score": 0
+    },
+    {
+      "handle": "bestbayareafood",
+      "brand": "b_foodiebestbayareafood",
+      "score": 0
+    },
+    {
+      "handle": "annna_eats",
+      "brand": "b_foodieannnaeats",
+      "score": 0
+    },
+    {
+      "handle": "ugc.with.frances",
+      "brand": "b_foodieugcwithfrances",
+      "score": 0
+    },
+    {
+      "handle": "dariananthony_",
+      "brand": "b_foodiedariananthony",
+      "score": 0
+    },
+    {
+      "handle": "charweeezy",
+      "brand": "b_foodiecharweeezy",
+      "score": 0
+    },
+    {
+      "handle": "mukbangyourmama",
+      "brand": "b_foodiemukbangyourmama",
+      "score": 0
+    },
+    {
+      "handle": "wanderingstefany",
+      "brand": "b_foodiewanderingstefany",
+      "score": 0
+    },
+    {
+      "handle": "lifebyvivien",
+      "brand": "b_foodielifebyvivien",
+      "score": 0
+    },
+    {
+      "handle": "andre___lucas",
+      "brand": "b_foodieandrelucas",
+      "score": 0
+    },
+    {
+      "handle": "shrimpfriedroice",
+      "brand": "b_foodieshrimpfriedroice",
+      "score": 0
+    },
+    {
+      "handle": "_cynlacson",
+      "brand": "b_foodiecynlacson",
+      "score": 0
+    },
+    {
+      "handle": "alexytravels",
+      "brand": "b_foodiealexytravels",
+      "score": 0
+    },
+    {
+      "handle": "andygravs",
+      "brand": "b_foodieandygravs",
+      "score": 0
+    },
+    {
+      "handle": "livingvivalakillah",
+      "brand": "b_foodielivingvivalakillah",
+      "score": 0
+    },
+    {
+      "handle": "eighty6ix_",
+      "brand": "b_foodieeighty6ix",
+      "score": 0
+    },
+    {
+      "handle": "mayakay.official",
+      "brand": "b_foodiemayakayofficial",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.maganda.eats",
+      "brand": "b_foodiebayareamagandaeats",
+      "score": 0
+    },
+    {
+      "handle": "forkmeetsfood",
+      "brand": "b_foodieforkmeetsfood",
+      "score": 0
+    },
+    {
+      "handle": "foodiesnflightss",
+      "brand": "b_foodiefoodiesnflightss",
+      "score": 0
+    },
+    {
+      "handle": "carlaylayyy",
+      "brand": "b_foodiecarlaylayyy",
+      "score": 0
+    },
+    {
+      "handle": "shua.tangco",
+      "brand": "b_foodieshuatangco",
+      "score": 0
+    },
+    {
+      "handle": "jenny.home.loans",
+      "brand": "b_foodiejennyhomeloans",
+      "score": 0
+    },
+    {
+      "handle": "wthellydanyelly",
+      "brand": "b_foodiewthellydanyelly",
+      "score": 0
+    },
+    {
+      "handle": "sophiaxbayarea",
+      "brand": "b_foodiesophiaxbayarea",
+      "score": 0
+    },
+    {
+      "handle": "sierra.eats.8",
+      "brand": "b_foodiesierraeats8",
+      "score": 0
+    },
+    {
+      "handle": "yo_siiii_foodie",
+      "brand": "b_foodieyosiiiifoodie",
+      "score": 0
+    },
+    {
+      "handle": "ivkicks",
+      "brand": "b_foodieivkicks",
+      "score": 0
+    },
+    {
+      "handle": "itsslydiia",
+      "brand": "b_foodieitsslydiia",
+      "score": 0
+    },
+    {
+      "handle": "startingfiresevrywhere",
+      "brand": "b_foodiestartingfiresevrywhere",
+      "score": 0
+    },
+    {
+      "handle": "bylizettexo",
+      "brand": "b_foodiebylizettexo",
+      "score": 0
+    },
+    {
+      "handle": "brianthebarber",
+      "brand": "b_foodiebrianthebarber",
+      "score": 0
+    },
+    {
+      "handle": "ni.ckk_",
+      "brand": "b_foodienickk",
+      "score": 0
+    },
+    {
+      "handle": "jamesbaylife",
+      "brand": "b_foodiejamesbaylife",
+      "score": 0
+    },
+    {
+      "handle": "shesvibinhigh",
+      "brand": "b_foodieshesvibinhigh",
+      "score": 0
+    },
+    {
+      "handle": "dchangshangry",
+      "brand": "b_foodiedchangshangry",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.foodie.san",
+      "brand": "b_foodiebayareafoodiesan",
+      "score": 0
+    },
+    {
+      "handle": "truly_athi",
+      "brand": "b_foodietrulyathi",
+      "score": 0
+    },
+    {
+      "handle": "jetsetjanine",
+      "brand": "b_foodiejetsetjanine",
+      "score": 0
+    },
+    {
+      "handle": "kvbitesandgo",
+      "brand": "b_foodiekvbitesandgo",
+      "score": 0
+    },
+    {
+      "handle": "stunnaman02",
+      "brand": "b_foodiestunnaman02",
+      "score": 0
+    },
+    {
+      "handle": "savorwithcoral",
+      "brand": "b_foodiesavorwithcoral",
+      "score": 0
+    },
+    {
+      "handle": "firstdibs.bayarea",
+      "brand": "b_foodiefirstdibsbayarea",
+      "score": 0
+    },
+    {
+      "handle": "margs.out",
+      "brand": "b_foodiemargsout",
+      "score": 0
+    },
+    {
+      "handle": "yogetasworld",
+      "brand": "b_foodieyogetasworld",
+      "score": 0
+    },
+    {
+      "handle": "itsmayrazambrano",
+      "brand": "b_foodieitsmayrazambrano",
+      "score": 0
+    },
+    {
+      "handle": "your_travel_daddy",
+      "brand": "b_foodieyourtraveldaddy",
+      "score": 0
+    },
+    {
+      "handle": "hella._local.mo",
+      "brand": "b_foodiehellalocalmo",
+      "score": 0
+    },
+    {
+      "handle": "thesnobbiefoodie",
+      "brand": "b_foodiethesnobbiefoodie",
+      "score": 0
+    },
+    {
+      "handle": "katfoodsf",
+      "brand": "b_foodiekatfoodsf",
+      "score": 0
+    },
+    {
+      "handle": "charlikestoeat",
+      "brand": "b_foodiecharlikestoeat",
+      "score": 0
+    },
+    {
+      "handle": "hellahansel",
+      "brand": "b_foodiehellahansel",
+      "score": 0
+    },
+    {
+      "handle": "geraldfermin",
+      "brand": "b_foodiegeraldfermin",
+      "score": 0
+    },
+    {
+      "handle": "pimchanyum",
+      "brand": "b_foodiepimchanyum",
+      "score": 0
+    },
+    {
+      "handle": "bayareawilson",
+      "brand": "b_foodiebayareawilson",
+      "score": 0
+    },
+    {
+      "handle": "whatthejessi_",
+      "brand": "b_foodiewhatthejessi",
+      "score": 0
+    },
+    {
+      "handle": "foodgiveness",
+      "brand": "b_foodiefoodgiveness",
+      "score": 0
+    },
+    {
+      "handle": "asideofsweet",
+      "brand": "b_foodieasideofsweet",
+      "score": 0
+    },
+    {
+      "handle": "tasha.malan",
+      "brand": "b_foodietashamalan",
+      "score": 0
+    },
+    {
+      "handle": "camemzmin",
+      "brand": "b_foodiecamemzmin",
+      "score": 0
+    },
+    {
+      "handle": "venturewithkelly",
+      "brand": "b_foodieventurewithkelly",
+      "score": 0
+    },
+    {
+      "handle": "cookwithhenny",
+      "brand": "b_foodiecookwithhenny",
+      "score": 0
+    },
+    {
+      "handle": "_aemeriee.dance",
+      "brand": "b_foodieaemerieedance",
+      "score": 0
+    },
+    {
+      "handle": "greatonezfoodreview",
+      "brand": "b_foodiegreatonezfoodreview",
+      "score": 0
+    },
+    {
+      "handle": "mr.smackreviews",
+      "brand": "b_foodiemrsmackreviews",
+      "score": 0
+    },
+    {
+      "handle": "bp__eats",
+      "brand": "b_foodiebpeats",
+      "score": 0
+    },
+    {
+      "handle": "erinlovesfun",
+      "brand": "b_foodieerinlovesfun",
+      "score": 0
+    },
+    {
+      "handle": "lovelivermore",
+      "brand": "b_foodielovelivermore",
+      "score": 0
+    },
+    {
+      "handle": "explorewithtaka",
+      "brand": "b_foodieexplorewithtaka",
+      "score": 0
+    },
+    {
+      "handle": "thehautesheet",
+      "brand": "b_foodiethehautesheet",
+      "score": 0
+    },
+    {
+      "handle": "humminglion",
+      "brand": "b_foodiehumminglion",
+      "score": 0
+    },
+    {
+      "handle": "_whatarethechances_",
+      "brand": "b_foodiewhatarethechances",
+      "score": 0
+    },
+    {
+      "handle": "katwalksf",
+      "brand": "b_foodiekatwalksf",
+      "score": 0
+    },
+    {
+      "handle": "yulmoo_l",
+      "brand": "b_foodieyulmool",
+      "score": 0
+    },
+    {
+      "handle": "barstoolsports",
+      "brand": "b_foodiebarstoolsports",
+      "score": 0
+    },
+    {
+      "handle": "xo.pinsta",
+      "brand": "b_foodiexopinsta",
+      "score": 0
+    },
+    {
+      "handle": "lovemissfit",
+      "brand": "b_foodielovemissfit",
+      "score": 0
+    },
+    {
+      "handle": "chloe_chomps",
+      "brand": "b_foodiechloechomps",
+      "score": 0
+    },
+    {
+      "handle": "realtorandreviewer",
+      "brand": "b_foodierealtorandreviewer",
+      "score": 0
+    },
+    {
+      "handle": "xoaramarie",
+      "brand": "b_foodiexoaramarie",
+      "score": 0
+    },
+    {
+      "handle": "foodie.dreams",
+      "brand": "b_foodiefoodiedreams",
+      "score": 0
+    },
+    {
+      "handle": "eatswithfoodie",
+      "brand": "b_foodieeatswithfoodie",
+      "score": 0
+    },
+    {
+      "handle": "jensintec",
+      "brand": "b_foodiejensintec",
+      "score": 0
+    },
+    {
+      "handle": "snackateriansf",
+      "brand": "b_foodiesnackateriansf",
+      "score": 0
+    },
+    {
+      "handle": "apoorva_sharma1",
+      "brand": "b_foodieapoorvasharma1",
+      "score": 0
+    },
+    {
+      "handle": "volha_creative",
+      "brand": "b_foodievolhacreative",
+      "score": 0
+    },
+    {
+      "handle": "boba._.addict",
+      "brand": "b_foodiebobaaddict",
+      "score": 0
+    },
+    {
+      "handle": "ruthannesturman",
+      "brand": "b_foodieruthannesturman",
+      "score": 0
+    },
+    {
+      "handle": "larryjunetfm",
+      "brand": "b_foodielarryjunetfm",
+      "score": 0
+    },
+    {
+      "handle": "eileenhuynher",
+      "brand": "b_foodieeileenhuynher",
+      "score": 0
+    },
+    {
+      "handle": "createwithcv",
+      "brand": "b_foodiecreatewithcv",
+      "score": 0
+    },
+    {
+      "handle": "aloha_stephanie",
+      "brand": "b_foodiealohastephanie",
+      "score": 0
+    },
+    {
+      "handle": "zoegabon",
+      "brand": "b_foodiezoegabon",
+      "score": 0
+    },
+    {
+      "handle": "martiwantsmore",
+      "brand": "b_foodiemartiwantsmore",
+      "score": 0
+    },
+    {
+      "handle": "byhillaryn",
+      "brand": "b_foodiebyhillaryn",
+      "score": 0
+    },
+    {
+      "handle": "aly_eats_cali",
+      "brand": "b_foodiealyeatscali",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.foodies",
+      "brand": "b_foodiebayareafoodies",
+      "score": 0
+    },
+    {
+      "handle": "moniica.michelle",
+      "brand": "b_foodiemoniicamichelle",
+      "score": 0
+    },
+    {
+      "handle": "ryanbyryanchua",
+      "brand": "b_foodieryanbyryanchua",
+      "score": 0
+    },
+    {
+      "handle": "hangrypotato",
+      "brand": "b_foodiehangrypotato",
+      "score": 0
+    },
+    {
+      "handle": "melsotel",
+      "brand": "b_foodiemelsotel",
+      "score": 0
+    },
+    {
+      "handle": "sanleandroeats",
+      "brand": "b_foodiesanleandroeats",
+      "score": 0
+    },
+    {
+      "handle": "broitsva",
+      "brand": "b_foodiebroitsva",
+      "score": 0
+    },
+    {
+      "handle": "fat_ash_foodie",
+      "brand": "b_foodiefatashfoodie",
+      "score": 0
+    },
+    {
+      "handle": "_foodieshots_",
+      "brand": "b_foodiefoodieshots",
+      "score": 0
+    },
+    {
+      "handle": "kitkatvales",
+      "brand": "b_foodiekitkatvales",
+      "score": 0
+    },
+    {
+      "handle": "foodwookie",
+      "brand": "b_foodiefoodwookie",
+      "score": 0
+    },
+    {
+      "handle": "sonomacountyliving",
+      "brand": "b_foodiesonomacountyliving",
+      "score": 0
+    },
+    {
+      "handle": "lovecartier25",
+      "brand": "b_foodielovecartier25",
+      "score": 0
+    },
+    {
+      "handle": "foodelaventures",
+      "brand": "b_foodiefoodelaventures",
+      "score": 0
+    },
+    {
+      "handle": "foodie_travel_happiness",
+      "brand": "b_foodiefoodietravelhappiness",
+      "score": 0
+    },
+    {
+      "handle": "peterlyagent",
+      "brand": "b_foodiepeterlyagent",
+      "score": 0
+    },
+    {
+      "handle": "k.smokeskitchen",
+      "brand": "b_foodieksmokeskitchen",
+      "score": 0
+    },
+    {
+      "handle": "tysf.qods",
+      "brand": "b_foodietysfqods",
+      "score": 0
+    },
+    {
+      "handle": "ilisaeatssf",
+      "brand": "b_foodieilisaeatssf",
+      "score": 0
+    },
+    {
+      "handle": "tundemodupee",
+      "brand": "b_foodietundemodupee",
+      "score": 0
+    },
+    {
+      "handle": "wafflebam",
+      "brand": "b_foodiewafflebam",
+      "score": 0
+    },
+    {
+      "handle": "goyuliiago",
+      "brand": "b_foodiegoyuliiago",
+      "score": 0
+    },
+    {
+      "handle": "jamiebeoutside",
+      "brand": "b_foodiejamiebeoutside",
+      "score": 0
+    },
+    {
+      "handle": "anjali_wandersoul",
+      "brand": "b_foodieanjaliwandersoul",
+      "score": 0
+    },
+    {
+      "handle": "gabriiellas",
+      "brand": "b_foodiegabriiellas",
+      "score": 0
+    },
+    {
+      "handle": "ploinsanfrancisco",
+      "brand": "b_foodieploinsanfrancisco",
+      "score": 0
+    },
+    {
+      "handle": "piscesprincesspriya",
+      "brand": "b_foodiepiscesprincesspriya",
+      "score": 0
+    },
+    {
+      "handle": "d_baylock_",
+      "brand": "b_foodiedbaylock",
+      "score": 0
+    },
+    {
+      "handle": "hallojessa",
+      "brand": "b_foodiehallojessa",
+      "score": 0
+    },
+    {
+      "handle": "lagrandedelabanda",
+      "brand": "b_foodielagrandedelabanda",
+      "score": 0
+    },
+    {
+      "handle": "chaudownfood",
+      "brand": "b_foodiechaudownfood",
+      "score": 0
+    },
+    {
+      "handle": "phoebe8food",
+      "brand": "b_foodiephoebe8food",
+      "score": 0
+    },
+    {
+      "handle": "karaxhuynh",
+      "brand": "b_foodiekaraxhuynh",
+      "score": 0
+    },
+    {
+      "handle": "wakeyeats",
+      "brand": "b_foodiewakeyeats",
+      "score": 0
+    },
+    {
+      "handle": "dodo__eats",
+      "brand": "b_foodiedodoeats",
+      "score": 0
+    },
+    {
+      "handle": "maya_munches",
+      "brand": "b_foodiemayamunches",
+      "score": 0
+    },
+    {
+      "handle": "preet.khatrii",
+      "brand": "b_foodiepreetkhatrii",
+      "score": 0
+    },
+    {
+      "handle": "kogumahs",
+      "brand": "b_foodiekogumahs",
+      "score": 0
+    },
+    {
+      "handle": "nurse.danamae",
+      "brand": "b_foodienursedanamae",
+      "score": 0
+    },
+    {
+      "handle": "thehabibizeat",
+      "brand": "b_foodiethehabibizeat",
+      "score": 0
+    },
+    {
+      "handle": "eatwithbooboo",
+      "brand": "b_foodieeatwithbooboo",
+      "score": 0
+    },
+    {
+      "handle": "bayarea_foodogram",
+      "brand": "b_foodiebayareafoodogram",
+      "score": 0
+    },
+    {
+      "handle": "lub.to.eat",
+      "brand": "b_foodielubtoeat",
+      "score": 0
+    },
+    {
+      "handle": "thismajourney",
+      "brand": "b_foodiethismajourney",
+      "score": 0
+    },
+    {
+      "handle": "summer.ishungry",
+      "brand": "b_foodiesummerishungry",
+      "score": 0
+    },
+    {
+      "handle": "justfeediris",
+      "brand": "b_foodiejustfeediris",
+      "score": 0
+    },
+    {
+      "handle": "hungryhungryheejin",
+      "brand": "b_foodiehungryhungryheejin",
+      "score": 0
+    },
+    {
+      "handle": "liltiffyvert",
+      "brand": "b_foodieliltiffyvert",
+      "score": 0
+    },
+    {
+      "handle": "jovana.camberos",
+      "brand": "b_foodiejovanacamberos",
+      "score": 0
+    },
+    {
+      "handle": "sulli_eats",
+      "brand": "b_foodiesullieats",
+      "score": 0
+    },
+    {
+      "handle": "phamamiii",
+      "brand": "b_foodiephamamiii",
+      "score": 0
+    },
+    {
+      "handle": "tastewith.rach",
+      "brand": "b_foodietastewithrach",
+      "score": 0
+    },
+    {
+      "handle": "sisicooksandeats",
+      "brand": "b_foodiesisicooksandeats",
+      "score": 0
+    },
+    {
+      "handle": "myrealtoralexbradeis",
+      "brand": "b_foodiemyrealtoralexbradeis",
+      "score": 0
+    },
+    {
+      "handle": "rowbot408",
+      "brand": "b_foodierowbot408",
+      "score": 0
+    },
+    {
+      "handle": "revrocrichboy",
+      "brand": "b_foodierevrocrichboy",
+      "score": 0
+    },
+    {
+      "handle": "takeoutwithtuck",
+      "brand": "b_foodietakeoutwithtuck",
+      "score": 0
+    },
+    {
+      "handle": "kat.dazzzle",
+      "brand": "b_foodiekatdazzzle",
+      "score": 0
+    },
+    {
+      "handle": "queen.food.e",
+      "brand": "b_foodiequeenfoode",
+      "score": 0
+    },
+    {
+      "handle": "cindydreamtravel",
+      "brand": "b_foodiecindydreamtravel",
+      "score": 0
+    },
+    {
+      "handle": "yummylouey",
+      "brand": "b_foodieyummylouey",
+      "score": 0
+    },
+    {
+      "handle": "erica.sorelle",
+      "brand": "b_foodieericasorelle",
+      "score": 0
+    },
+    {
+      "handle": "chelchomps",
+      "brand": "b_foodiechelchomps",
+      "score": 0
+    },
+    {
+      "handle": "monicaplatt",
+      "brand": "b_foodiemonicaplatt",
+      "score": 0
+    },
+    {
+      "handle": "imsarahchaz",
+      "brand": "b_foodieimsarahchaz",
+      "score": 0
+    },
+    {
+      "handle": "irenedony",
+      "brand": "b_foodieirenedony",
+      "score": 0
+    },
+    {
+      "handle": "biteswithnatalia",
+      "brand": "b_foodiebiteswithnatalia",
+      "score": 0
+    },
+    {
+      "handle": "laurenlovessfood",
+      "brand": "b_foodielaurenlovessfood",
+      "score": 0
+    },
+    {
+      "handle": "lisaaaaletseat",
+      "brand": "b_foodielisaaaaletseat",
+      "score": 0
+    },
+    {
+      "handle": "mattiasblanco",
+      "brand": "b_foodiemattiasblanco",
+      "score": 0
+    },
+    {
+      "handle": "deazylee",
+      "brand": "b_foodiedeazylee",
+      "score": 0
+    },
+    {
+      "handle": "edmunchthefoodie",
+      "brand": "b_foodieedmunchthefoodie",
+      "score": 0
+    },
+    {
+      "handle": "lynniethefoodie",
+      "brand": "b_foodielynniethefoodie",
+      "score": 0
+    },
+    {
+      "handle": "kelsy.annn",
+      "brand": "b_foodiekelsyannn",
+      "score": 0
+    },
+    {
+      "handle": "food_adventures21",
+      "brand": "b_foodiefoodadventures21",
+      "score": 0
+    },
+    {
+      "handle": "taratastessf",
+      "brand": "b_foodietaratastessf",
+      "score": 0
+    },
+    {
+      "handle": "zia_hazrati",
+      "brand": "b_foodieziahazrati",
+      "score": 0
+    },
+    {
+      "handle": "bennyeats.bayarea",
+      "brand": "b_foodiebennyeatsbayarea",
+      "score": 0
+    },
+    {
+      "handle": "jourdyn.lynn",
+      "brand": "b_foodiejourdynlynn",
+      "score": 0
+    },
+    {
+      "handle": "bayeatss",
+      "brand": "b_foodiebayeatss",
+      "score": 0
+    },
+    {
+      "handle": "charlize_tse",
+      "brand": "b_foodiecharlizetse",
+      "score": 0
+    },
+    {
+      "handle": "eatwith_ange",
+      "brand": "b_foodieeatwithange",
+      "score": 0
+    },
+    {
+      "handle": "habibimocha",
+      "brand": "b_foodiehabibimocha",
+      "score": 0
+    },
+    {
+      "handle": "maddyeats.sfbay",
+      "brand": "b_foodiemaddyeatssfbay",
+      "score": 0
+    },
+    {
+      "handle": "mr.bayareafoodie",
+      "brand": "b_foodiemrbayareafoodie",
+      "score": 0
+    },
+    {
+      "handle": "soysupli",
+      "brand": "b_foodiesoysupli",
+      "score": 0
+    },
+    {
+      "handle": "thehungrycurator",
+      "brand": "b_foodiethehungrycurator",
+      "score": 0
+    },
+    {
+      "handle": "withlovelysss",
+      "brand": "b_foodiewithlovelysss",
+      "score": 0
+    },
+    {
+      "handle": "oliviiacai",
+      "brand": "b_foodieoliviiacai",
+      "score": 0
+    },
+    {
+      "handle": "kevinberkeleyfoodreviews",
+      "brand": "b_foodiekevinberkeleyfoodreviews",
+      "score": 0
+    },
+    {
+      "handle": "martiebautista",
+      "brand": "b_foodiemartiebautista",
+      "score": 0
+    },
+    {
+      "handle": "badies.af",
+      "brand": "b_foodiebadiesaf",
+      "score": 0
+    },
+    {
+      "handle": "sjfoodgram",
+      "brand": "b_foodiesjfoodgram",
+      "score": 0
+    },
+    {
+      "handle": "tiensmunchies",
+      "brand": "b_foodietiensmunchies",
+      "score": 0
+    },
+    {
+      "handle": "alexisbaybe_",
+      "brand": "b_foodiealexisbaybe",
+      "score": 0
+    },
+    {
+      "handle": "dyannaluna",
+      "brand": "b_foodiedyannaluna",
+      "score": 0
+    },
+    {
+      "handle": "sapphiesofire",
+      "brand": "b_foodiesapphiesofire",
+      "score": 0
+    },
+    {
+      "handle": "kimmmpossxble",
+      "brand": "b_foodiekimmmpossxble",
+      "score": 0
+    },
+    {
+      "handle": "staycation.sfbayarea",
+      "brand": "b_foodiestaycationsfbayarea",
+      "score": 0
+    },
+    {
+      "handle": "swooningspoon",
+      "brand": "b_foodieswooningspoon",
+      "score": 0
+    },
+    {
+      "handle": "vvveats",
+      "brand": "b_foodievvveats",
+      "score": 0
+    },
+    {
+      "handle": "el.kattt",
+      "brand": "b_foodieelkattt",
+      "score": 0
+    },
+    {
+      "handle": "almightyalondra",
+      "brand": "b_foodiealmightyalondra",
+      "score": 0
+    },
+    {
+      "handle": "unwntedtv",
+      "brand": "b_foodieunwntedtv",
+      "score": 0
+    },
+    {
+      "handle": "awesomejuliee",
+      "brand": "b_foodieawesomejuliee",
+      "score": 0
+    }
+  ],
+  "sourceMessages": [
+    {
+      "at": "2026-11-08T12:40:43.911674-08:00",
+      "disposition": "Non-catalog private project/maintenance discussion or acknowledgement; no catalog action and no reply sent."
+    },
+    {
+      "at": "2026-11-08T12:41:54.389221-08:00",
+      "disposition": "Non-catalog private project/maintenance discussion or acknowledgement; no catalog action and no reply sent."
+    },
+    {
+      "at": "2026-11-08T12:45:24.152909-08:00",
+      "disposition": "Non-catalog private project/maintenance discussion or acknowledgement; no catalog action and no reply sent."
+    },
+    {
+      "at": "2026-11-08T12:47:47.228625-08:00",
+      "disposition": "Non-catalog private project/maintenance discussion or acknowledgement; no catalog action and no reply sent."
+    },
+    {
+      "at": "2026-11-08T14:38:11.512495-08:00",
+      "disposition": "Non-catalog private project/maintenance discussion or acknowledgement; no catalog action and no reply sent."
+    },
+    {
+      "at": "2026-11-08T15:13:19.844257-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_9845.jpeg"
+      ]
+    },
+    {
+      "at": "2026-11-08T15:15:22.188709-08:00",
+      "text": "https://www.instagram.com/reel/DOfOJVwkRC_/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:15:22.358663-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:19:13.083486-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9848.PNG",
+        "IMG_9849.PNG",
+        "IMG_9847.PNG"
+      ]
+    },
+    {
+      "at": "2026-11-08T15:19:13.605435-08:00",
+      "text": "https://www.thebakedbear.com/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:19:13.712512-08:00",
+      "text": "San Francisco • Goods \nBEASTY • Ice Cream",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:22:02.870907-08:00",
+      "text": "https://www.instagram.com/reel/DJapgu5pCj9/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:22:02.957614-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:23:03.181565-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9850.png"
+      ]
+    },
+    {
+      "at": "2026-11-08T15:23:03.533036-08:00",
+      "text": "https://www.instagram.com/reel/DT_rN8lk6XZ/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:23:03.625824-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:25:43.515616-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9854.png",
+        "IMG_9855.png",
+        "IMG_9857.PNG"
+      ]
+    },
+    {
+      "at": "2026-11-08T15:25:43.886797-08:00",
+      "text": "https://arsicault-bakery.com/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:25:44.016306-08:00",
+      "text": "San Francisco • Goods \nBEASTY • Bakery",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:25:55.386851-08:00",
+      "text": "https://www.instagram.com/reel/DQnL-OOEp7Y/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:25:55.498965-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:26:45.862975-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9858.png"
+      ]
+    },
+    {
+      "at": "2026-11-08T15:26:46.327019-08:00",
+      "text": "https://www.instagram.com/reel/DV_hublk6ZA/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:26:46.449307-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:27:14.551043-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9859.png"
+      ]
+    },
+    {
+      "at": "2026-11-08T15:27:14.967639-08:00",
+      "text": "https://www.instagram.com/reel/DTOxk2aj3HE/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:27:15.666622-08:00",
+      "text": "Clip this video plz \nFoodie\nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:27:21.447445-08:00",
+      "text": "https://www.instagram.com/reel/DTJ7UZ4Fz_4/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:27:21.579447-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:27:45.120419-08:00",
+      "text": "https://www.instagram.com/reel/DRi4rO9EXOT/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:27:45.237201-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:29:08.789067-08:00",
+      "text": "https://www.instagram.com/reel/CtjxpYdM2Ro/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:29:08.920154-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:29:34.532640-08:00",
+      "text": "https://www.instagram.com/reel/DN9ZjY0AWdD/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T15:29:34.621966-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    }
+  ],
+  "sourceNotes": {
+    "scope": "35 new sends after Batch 108: 30 catalog sends and five non-catalog private project/maintenance messages. No reply, commitment, phone call, order or booking sent.",
+    "branches": "The Baked Bear uses Glenn’s supplied 303 Columbus Ave branch. Grand-O’s Chase Center review is clearly marked as another location. Arsicault uses 87 McAllister, matching the supplied phone; all three official branch contacts/menu links are in its panel. No duplicate unrequested branch pages.",
+    "menus": "Full published Columbus Avenue pickup sections: 35 rows (the official categories repeat one sandwich), excluding repeated Most Ordered promotions. Full official Civic Center menu: 51 rows. Prices are not inferred from reels. Other Arsicault menus remain linked rather than mixed into the Civic Center menu.",
+    "films": "Two explicitly requested owner films become Scoop N Chill and Arsicault heroes, with original posting credits. The 2023 Arsicault event is archival, not a current offer. Four films maximum per business: existing Sisi review remains linked on Scoop and plays on her creator page/Watch; Kath and both Char clips play on their creator pages/Watch and remain linked from Arsicault. All ten new films are local; none held.",
+    "context": "Char’s DTJ7UZ4Fz_4 discusses Arsicault while filmed at Atelier Crenn; no Michelin status or Arsicault premises is inferred. DN9ZjY0AWdD is a three-bakery cookie comparison, clipped to its Arsicault portion at 8–23 seconds. Festus and Kath identify Mission Bay; the remaining reviews do not invent a branch.",
+    "ranking": "Glenn’s new Heavy Hitter keyanajoooon leads More foodies; the first 24 are unchanged. All former city/business-category placements stay intact. Other new creators append to overflow; tags remain provenance, not public ratings.",
+    "artwork": "All six updated marks/profile pictures are Glenn’s supplied originals, fitted with complete artwork and no phone UI.",
+    "sources": [
+      "https://www.thebakedbear.com/locations/san-francisco/",
+      "https://www.thebakedbear.com/locations/chase-center/",
+      "https://order.online/store/the-baked-bear-san-francisco-69841/?hideModal=true&pickup=true",
+      "https://arsicault-bakery.com/locations/",
+      "https://arsicault-bakery.com/menus/mcallister/"
+    ]
+  }
+}
