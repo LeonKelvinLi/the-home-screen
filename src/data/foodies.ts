@@ -1753,6 +1753,12 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "@keyanajoooon",
     "label": "keyanajoooon",
     "icon": "foodie-keyanajoooon-v109"
+  },
+  {
+    "handle": "bvddiebri",
+    "name": "Bri",
+    "label": "Bri",
+    "icon": "foodie-bvddiebri-v110"
   }
 ]
 
@@ -2405,6 +2411,9 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "charlikestoeat", "place": "Arsicault Bakery", "city": "San Francisco", "brand": "b_arsicaultbakery", "reel": "https://www.instagram.com/reel/DTJ7UZ4Fz_4/", "clip": "creator", "credit": "@charlikestoeat discusses Arsicault croissants while dining at Atelier Crenn. The footage is not filmed at Arsicault, and no Michelin status is claimed for the bakery."},
   {"by": "eatswithkath", "place": "Arsicault Bakery", "city": "San Francisco", "brand": "b_arsicaultbakery", "reel": "https://www.instagram.com/reel/DRi4rO9EXOT/", "clip": "creator", "credit": "Review by @eatswithkath of Arsicault Bakery, Mission Bay. This is another branch of the Civic Center business shown here."},
   {"by": "charlikestoeat", "place": "Arsicault Bakery", "city": "San Francisco", "brand": "b_arsicaultbakery", "reel": "https://www.instagram.com/reel/DN9ZjY0AWdD/", "clip": "creator", "credit": "Cookie comparison by @charlikestoeat featuring Arsicault, b.patisserie and Spruce. The excerpt focuses on Arsicault; the complete original compares all three. No branch is specified."},
+
+  // Batch 110 — Glenn, November 8, 5:13 p.m.: Foodie / Newbie; creator discloses a gifted collaboration.
+  {"by": "bvddiebri", "place": "Simplycake Bakery", "city": "San Mateo", "brand": "b_simplycakebakery", "reel": "https://www.instagram.com/reel/Dffgm_FBlGk/", "clip": "creator", "credit": "Simplycake Bakery review by @bvddiebri in San Mateo. Gifted collaboration, as disclosed by the creator."},
 
 ]
 

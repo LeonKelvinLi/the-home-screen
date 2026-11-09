@@ -2570,4 +2570,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-270': 'b_foodieunwntedtv',
   'beasty-foodies2-271': 'b_foodieawesomejuliee',
 
+  // Batch 110 — new Foodie appended; every existing seat retained.
+  'beasty-foodies2-272': 'b_foodiebvddiebri',
+
 }

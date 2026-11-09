@@ -1,0 +1,62 @@
+{
+  "cutoff": "2026-11-08T17:13:38.955334-08:00",
+  "listings": [],
+  "posts": [
+    {
+      "code": "Dffgm_FBlGk",
+      "batch": 110,
+      "source": "https://www.instagram.com/reel/Dffgm_FBlGk/",
+      "disposition": "local review film",
+      "slug": "review-Dffgm_FBlGk",
+      "brand": "b_simplycakebakery",
+      "by": "bvddiebri",
+      "postedBy": "bvddiebri",
+      "postedAt": "20261108",
+      "excerpt": "11s-26s of 27s",
+      "credit": "Simplycake Bakery review by @bvddiebri in San Mateo. Gifted collaboration, as disclosed by the creator.",
+      "playOn": "b_foodiebvddiebri",
+      "request": [
+        {
+          "at": "2026-11-08T17:13:38.800996-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ]
+    }
+  ],
+  "placements": {
+    "beasty-foodies2-272": "b_foodiebvddiebri"
+  },
+  "updatedIcons": [
+    "/icons/foodie-bvddiebri-v110.webp"
+  ],
+  "updatedBrands": [
+    "b_simplycakebakery"
+  ],
+  "sourceMessages": [
+    {
+      "at": "2026-11-08T17:13:38.100815-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9861.png"
+      ]
+    },
+    {
+      "at": "2026-11-08T17:13:38.800996-08:00",
+      "text": "https://www.instagram.com/reel/Dffgm_FBlGk/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T17:13:38.955334-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    }
+  ],
+  "sourceNotes": {
+    "scope": "Three new Glenn sends, November 8 at 17:13:38 Pacific: supplied portrait, original reel and Clip this video plz / Foodie / Newbie. The business already has its San Mateo page; no duplicate business is added.",
+    "film": "The complete source shows the Simplycake storefront at number 132, matching the existing 132 E 3rd Ave page. Its caption explicitly tags @simplycakebakery and discloses Gifted collab. The 11–26 second excerpt includes pastries and the sea salt cake. No menu price or public rating is inferred from the review.",
+    "placement": "Bri is appended to More foodies seat 272. Every prior seat, including the first 24 Foodies and all city/business categories, remains unchanged.",
+    "fourFilmLimit": "Simplycake already has its owner film and three inline reviews. Bri’s new film plays on her creator page and Watch and remains linked from Simplycake. No old film is displaced, no owner hero is replaced and no new film is held.",
+    "businessFacts": "Existing menu, prices, hours, contact details, supplied business artwork and original owner film are retained; this batch does not refresh or claim to reverify them.",
+    "actions": "No message, call, comment, order, booking or commitment sent. Protected affiliate files/worktree and unrelated BSTY Goods drafts are untouched."
+  }
+}

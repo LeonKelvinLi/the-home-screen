@@ -677,3 +677,4 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-unwntedtv-v109.webp` | Glenn’s supplied IMG_9850.png, November 8, 2026 | Original profile image cropped and fitted; phone/blurred border removed. |
 | `foodie-awesomejuliee-v109.webp` | Glenn’s supplied IMG_9858.png, November 8, 2026 | Original profile image cropped and fitted; phone/blurred border removed. |
 | `foodie-keyanajoooon-v109.webp` | Glenn’s supplied IMG_9859.png, November 8, 2026 | Original profile image cropped and fitted; phone/blurred border removed. |
+| `foodie-bvddiebri-v110.webp` | Glenn’s supplied IMG_9861.png, November 8, 2026 | Original @bvddiebri profile portrait cropped and fitted; phone/blurred borders removed. |
