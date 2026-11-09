@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "base": "https://beastypages.com",
+  "messagesThrough": "2026-11-08T15:29:34.621966-08:00",
+  "newMessages": 35,
+  "catalogMessages": 30,
+  "nonCatalogMessages": 5,
+  "release": {
+    "commit": "d4574562eaf44c736e82fa664b9a51f7ae33672f",
+    "deploy": "dep-dboh6d8473hc73akj4e0",
+    "status": "live",
+    "providerFinishedAt": "2026-11-09T00:34:58.696474Z",
+    "publicReadyAt": "2026-11-09T00:36:36.709598+00:00",
+    "entry": "/assets/index-DBv0SGIW.js",
+    "health": {
+      "ok": true
+    },
+    "verifiedArtwork": {
+      "path": "/icons/arsicault-bakery-v109.webp",
+      "sha256": "6f0f457066356f145f98fd8c864137d7b7ec28ac69d9924c816fdbf4a28f7627"
+    },
+    "entryProvenance": "Matches Render build output for the implementation commit. Vite injects the commit version; the local pre-commit bundle had a different entry hash."
+  },
+  "batch": {
+    "newBusinesses": 2,
+    "newFoodies": 3,
+    "newFilms": 10,
+    "ownerFilms": 2,
+    "reviewFilms": 8,
+    "allNewFilmsPublishedLocally": true,
+    "newFilmsHeld": 0,
+    "menus": {
+      "b_thebakedbear": {
+        "branch": "303 Columbus Avenue",
+        "rows": 35,
+        "source": "https://order.online/store/the-baked-bear-san-francisco-69841/?hideModal=true&pickup=true"
+      },
+      "b_arsicaultbakery": {
+        "branch": "87 McAllister, Civic Center",
+        "rows": 51,
+        "source": "https://arsicault-bakery.com/menus/mcallister/"
+      }
+    },
+    "seats": {
+      "changed": 269,
+      "changedOnlyRankedFoodieOverflow": true,
+      "allPreviousCityBusinessSeatsPreserved": true,
+      "allPreviousCreatorsRetained": true,
+      "first24Preserved": true,
+      "added": [
+        [
+          "san-francisco-goods2-82",
+          "b_thebakedbear"
+        ],
+        [
+          "san-francisco-goods2-83",
+          "b_arsicaultbakery"
+        ],
+        [
+          "beasty-icecream-3",
+          "b_thebakedbear"
+        ],
+        [
+          "beasty-bakery-22",
+          "b_arsicaultbakery"
+        ],
+        [
+          "beasty-foodies2-269",
+          "b_foodiealmightyalondra"
+        ],
+        [
+          "beasty-foodies2-270",
+          "b_foodieunwntedtv"
+        ],
+        [
+          "beasty-foodies2-271",
+          "b_foodieawesomejuliee"
+        ],
+        [
+          "beasty-cookies-3",
+          "b_thebakedbear"
+        ]
+      ],
+      "brands": 1235,
+      "foodies": 296,
+      "watch": 744
+    }
+  },
+  "archive": {
+    "uniqueInstagramIds": 840,
+    "matchedInCompiledBuild": 789,
+    "olderDocumentedExceptions": 49,
+    "withdrawnOrSuperseded": 2,
+    "activeNewSourcesBatches103Through109": 114,
+    "updatedIconFilesToHash": 90,
+    "activeFilmPostersToHash": 114,
+    "watchFiles": 744,
+    "allWatchFilmsIndividuallyPlayed": false,
+    "newFilmsPlayedLocallyInBothEngines": 10,
+    "matchedInProduction": 789,
+    "exactIconHashesPassed": 90,
+    "exactPosterHashesPassed": 114,
+    "watchMp4ByteRangesPassed": 744,
+    "newFilmsPlayedInBothLiveEngines": 10
+  },
+  "localChecks": {
+    "build": "passed",
+    "dataAuditErrors": 0,
+    "dataAuditExistingWarnings": 203,
+    "dataAuditNotes": 377,
+    "chromeBatch": "passed",
+    "iphoneWebKitBatch": "passed",
+    "exactSeatComparison": "passed",
+    "archiveReconciliation": "passed",
+    "videoEncoding": "H.264 yuv420p / AAC, every new clip <=15.1 seconds"
+  },
+  "completedChecks": [
+    {
+      "name": "live-chrome",
+      "exit": 0,
+      "finishedAt": "2026-11-09T00:37:28.082124+00:00"
+    },
+    {
+      "name": "live-webkit",
+      "exit": 0,
+      "finishedAt": "2026-11-09T00:37:43.609463+00:00"
+    },
+    {
+      "name": "archive-live",
+      "exit": 0,
+      "finishedAt": "2026-11-09T00:37:00.490197+00:00"
+    },
+    {
+      "name": "full-live",
+      "exit": 0,
+      "finishedAt": "2026-11-09T00:52:51.537286+00:00"
+    }
+  ],
+  "checkScopes": {
+    "live-chrome": "BASE=https://beastypages.com ALL_REELS=1 node tools/audit-batch109.mjs",
+    "live-webkit": "BASE=https://beastypages.com BROWSER=webkit node tools/audit-batch109.mjs; node tools/audit-iphone-entry.mjs",
+    "archive-live": "Production-bundle reconciliation of every archived Instagram ID, SHA-256 of all 90 updated icons and 114 active film posters.",
+    "full-live": "node tools/live-verify.mjs, including all 239 historical business pages and site-wide functional/bundle/access checks."
+  },
+  "historicalAudit": {
+    "status": "passed",
+    "skippedRoster": false,
+    "historicalBusinessPages": 239,
+    "name": "full-live",
+    "exit": 0,
+    "finishedAt": "2026-11-09T00:52:51.537286+00:00"
+  },
+  "visibleChrome": {
+    "status": "passed",
+    "viewports": [
+      {
+        "width": 393,
+        "height": 852
+      },
+      {
+        "width": 320,
+        "height": 740
+      }
+    ],
+    "greenEntryAndHome": "passed",
+    "signedOutSearchPrompt": "unchanged; public /search used for category checks",
+    "iceCreamFourBusinesses": "passed",
+    "bakedBear35MenuRowsAndCompleteMark": "passed",
+    "arsicault51MenuRowsAndBranchPanel": "passed",
+    "bothNewSanFranciscoSeats": "passed",
+    "arsicaultCreatorOverflowNavigationAndContext": "passed",
+    "charReviewPlayback": {
+      "muted": true,
+      "startSeconds": 0,
+      "finalSeconds": 15,
+      "readyState": 4,
+      "mediaError": null
+    },
+    "arsicaultHero": {
+      "muted": true,
+      "readyState": 4,
+      "playing": true,
+      "loop": true,
+      "observedTimes": [
+        8.58833,
+        2.256388
+      ],
+      "mediaError": null
+    },
+    "scoopUpdatedMarkAndHero": {
+      "muted": true,
+      "readyState": 4,
+      "observedTimes": [
+        0.752904,
+        10.697914
+      ],
+      "mediaError": null
+    },
+    "keyanaPortraitAndFirstOverflowPage": "passed",
+    "horizontalOverflow": false,
+    "consoleErrors": [],
+    "temporaryViewportReset": true,
+    "ownedTabsClosed": true
+  },
+  "qaAudio": "muted",
+  "protectedAffiliateFilesAndWorktreeTouched": false,
+  "unrelatedBSTYGoodsDraftsTouched": false,
+  "messagesCommentsCallsBookingsOrdersSent": false,
+  "iphoneEntry": {
+    "engine": "WebKit",
+    "emulated": true,
+    "physicalMirroringTested": false,
+    "passedChecks": 16,
+    "stalledModuleAndRepeatedEntry": "passed",
+    "reloadOrCrash": false
+  }
+}
