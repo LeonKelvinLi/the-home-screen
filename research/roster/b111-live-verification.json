@@ -1,0 +1,368 @@
+{
+  "schemaVersion": 1,
+  "base": "https://beastypages.com",
+  "messagesThrough": "2026-11-09T11:03:37.891111-08:00",
+  "newMessages": 56,
+  "release": {
+    "commit": "788b869b1f73dfa1222ac0f90d1e69bbffacb923",
+    "initialImplementation": "40a145f9f6dcf44aa926fc5abd093f188ca48c24",
+    "deploy": "dep-dbp1m2b538fc73egs61g",
+    "status": "live",
+    "providerFinishedAt": "2026-11-09T19:31:14.678504Z",
+    "publicReadyAt": "2026-11-09T19:31:24.296373+00:00",
+    "entry": "/assets/index-Cw_8S0Q_.js",
+    "health": {
+      "ok": true
+    },
+    "verifiedArtwork": {
+      "path": "/icons/foodie-amandabushman-v111.webp",
+      "sha256": "de8bfb9ad39335727a86361ac9eedc4f2add9b3c53352da4a6c481b325a93c8a"
+    }
+  },
+  "batch": {
+    "newBusinesses": 3,
+    "newFoodies": 6,
+    "newFilms": 18,
+    "newFilmsHeld": 0,
+    "suppliedArtwork": 14,
+    "previousDataComparison": {
+      "unchangedPriorBrandRecords": 1229,
+      "brands": 1245,
+      "foodies": 303,
+      "watch": 763,
+      "allPriorBusinessAndCitySeatsPreserved": true,
+      "first24FoodiesPreserved": true,
+      "removed": [],
+      "overflowFoodieSeatsChanged": 272,
+      "changedBrands": [
+        "b_onehousebakery",
+        "b_laslomasribpalace",
+        "b_philomenapizza",
+        "b_okepokewalnutcreek",
+        "b_pacificpetgrooming",
+        "b_chronictacosdanville",
+        "b_foodieiamnikkieg"
+      ],
+      "newSeats": [
+        [
+          "alameda-goods-7",
+          "b_fowlfare"
+        ],
+        [
+          "beasty-chickensandwich-0",
+          "b_fowlfare"
+        ],
+        [
+          "oakland-goods2-50",
+          "b_almondandoak"
+        ],
+        [
+          "beasty-goods2-125",
+          "b_almondandoak"
+        ],
+        [
+          "beasty-diner2-1",
+          "b_almondandoak"
+        ],
+        [
+          "walnut-creek-services2-5",
+          "b_barkandmanewalnutcreek"
+        ],
+        [
+          "beasty-pets2-1",
+          "b_barkandmanewalnutcreek"
+        ],
+        [
+          "beasty-foodies2-273",
+          "b_foodiebvddiebri"
+        ],
+        [
+          "beasty-foodies2-274",
+          "b_foodiejadedancelrealtor"
+        ],
+        [
+          "beasty-foodies2-275",
+          "b_foodiemonicasdaniels"
+        ],
+        [
+          "beasty-foodies2-276",
+          "b_foodieecheneats"
+        ],
+        [
+          "beasty-foodies2-277",
+          "b_foodierosebuds"
+        ],
+        [
+          "beasty-friedchicken-8",
+          "b_fowlfare"
+        ],
+        [
+          "beasty-foodies2-278",
+          "b_foodieamandabushman"
+        ]
+      ]
+    },
+    "fourFilmLimitPreserved": true,
+    "previousCityBusinessAndFront24FoodieSeatsPreserved": true,
+    "overflowRankingPromotions": [
+      "takeoutwithtuck: Heavy Hitter",
+      "macmadame: Heavy Hitter",
+      "iamnikkieg: Mediocre"
+    ]
+  },
+  "archive": {
+    "uniqueInstagramIds": 859,
+    "matchedInProduction": 808,
+    "olderDocumentedExceptions": 49,
+    "withdrawnOrSuperseded": 2,
+    "activeNewSourcesBatches103Through111": 133,
+    "exactIconHashesPassed": 105,
+    "exactPosterHashesPassed": 133,
+    "watchMp4ByteRangesPassed": 763,
+    "allWatchFilmsIndividuallyPlayed": false,
+    "newFilmsPlayedInBothLiveEngines": 18
+  },
+  "localChecks": {
+    "build": "passed",
+    "dataAuditErrors": 0,
+    "dataAuditWarnings": 204,
+    "dataAuditNotes": 382,
+    "additionalWarning": "Sandwiches capacity; Fowl is explicitly on Chicken Sandwich and Fried Chicken",
+    "chromeBatch": "passed",
+    "iphoneWebKitBatch": "passed",
+    "encoding": [
+      {
+        "code": "De-1MuLPAkj",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "DfgdxkVoRv1",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "DdpqMXLjw_Q",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "DSS1u6GEky-",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "DM_J2O1BnWX",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "DMEaPGGvGip",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "Cy7FlMKJd1x",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "DIxvek5x_6v",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "DcjmLN2ndYa",
+        "duration": 12.78,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "Dffu4OFBNQT",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "Ddx0eL-zdif",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "DdfWyljp_mr",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "Db14_F6PJZP",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "DaW7vLHJbnZ",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "DfgvwLyzAx_",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "DfWBEPoRC4F",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "Dc1INSaMC1m",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      },
+      {
+        "code": "DfhrTuEsKhT",
+        "duration": 15.0,
+        "video": "h264",
+        "pixelFormat": "yuv420p",
+        "audio": "aac"
+      }
+    ]
+  },
+  "completedChecks": [
+    {
+      "name": "live-chrome",
+      "exit": 0,
+      "startedAt": "2026-11-09T19:31:24.636155+00:00",
+      "finishedAt": "2026-11-09T19:32:26.089214+00:00",
+      "command": [
+        "node",
+        "tools/audit-batch111.mjs"
+      ]
+    },
+    {
+      "name": "live-webkit",
+      "exit": 0,
+      "startedAt": "2026-11-09T19:33:59.461075+00:00",
+      "finishedAt": "2026-11-09T19:35:09.672622+00:00",
+      "command": [
+        "sh",
+        "-c",
+        "node tools/audit-batch111.mjs && node tools/audit-iphone-entry.mjs"
+      ]
+    },
+    {
+      "name": "archive-live",
+      "exit": 0,
+      "startedAt": "2026-11-09T19:31:24.622855+00:00",
+      "finishedAt": "2026-11-09T19:31:31.128792+00:00",
+      "command": [
+        "node",
+        "/tmp/beasty111/archive-verify.mjs"
+      ]
+    },
+    {
+      "name": "sitewide-live",
+      "exit": 0,
+      "startedAt": "2026-11-09T19:31:24.649715+00:00",
+      "finishedAt": "2026-11-09T19:44:52.805028+00:00",
+      "command": [
+        "node",
+        "tools/live-verify.mjs"
+      ]
+    }
+  ],
+  "retainedFailedAttempt": {
+    "check": "live-webkit",
+    "exit": 1,
+    "error": "page.goto: The network connection was lost while loading /search",
+    "applicationErrors": [],
+    "resolution": "Complete WebKit batch and sixteen entry checks passed unchanged on retry"
+  },
+  "historicalAudit": {
+    "status": "passed",
+    "repeatedOnThisRelease": true,
+    "historicalRosterAssertions": 235,
+    "uniqueHistoricalRosterPages": 231,
+    "introductoryPageAssertions": 3,
+    "exit": 0,
+    "finishedAt": "2026-11-09T19:44:52.805028+00:00"
+  },
+  "phone": {
+    "passed": true,
+    "browser": "Visible Chrome",
+    "base": "https://beastypages.com",
+    "viewports": [
+      {
+        "width": 393,
+        "height": 852
+      },
+      {
+        "width": 320,
+        "height": 740
+      }
+    ],
+    "physicalIphoneTested": false,
+    "greenEntryReachesRenderedHome": true,
+    "checks": [
+      "Fowl found through public Chicken Sandwich search and category, 29 menu rows, conflicting hours panel and Alameda city navigation",
+      "Almond and Oak address/hours, 90 menu rows and distinct dessert/drinks coffee sections, including $4 versus $5 espresso",
+      "Bark and Mane supplied logo, mobile service wording, office/service-area panel, phone target and quote link; no call placed",
+      "Christy Mac creator page and first More foodies sheet with Tuck and Keyana; supplied portraits visible",
+      "Amanda creator page, supplied portrait, Meadowlark original attribution and advancing silent playback",
+      "Penelope Berkeley five review rows, Eleanor hosted invitation/filming credit, Rose linked creator page preserving four inline films",
+      "Rose linked creator page at 320 pixels; no horizontal overflow"
+    ],
+    "publicGuestSearch": "Home Search shows its existing sign-in prompt. Keep looking around dismisses it; the public /search route and category/business navigation were tested without signing in.",
+    "playback": {
+      "source": "/clips/review-Dc1INSaMC1m.mp4",
+      "initialTimeSeconds": 0.024018,
+      "observedTimeSeconds": 12.460415,
+      "muted": true,
+      "paused": false,
+      "readyState": 4,
+      "mediaError": null
+    },
+    "horizontalOverflow": false,
+    "consoleErrors": [],
+    "allQaMediaMuted": true,
+    "viewportReset": true,
+    "ownedTabClosed": true
+  },
+  "actions": {
+    "allQaMediaMuted": true,
+    "noCallsMessagesOrdersOrBookings": true,
+    "affiliateFilesUntouched": true,
+    "unrelatedBstyGoodsDraftsUntouched": true
+  }
+}
