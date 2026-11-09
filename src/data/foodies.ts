@@ -528,7 +528,8 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   {
     "handle": "iamnikkieg",
     "name": "Nikkie G",
-    "label": "Nikkie G"
+    "label": "Nikkie G",
+    "icon": "foodie-iamnikkieg-v111"
   },
   {
     "handle": "janeethefoodie",
@@ -1759,7 +1760,40 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "name": "Bri",
     "label": "Bri",
     "icon": "foodie-bvddiebri-v110"
-  }
+  },
+  // Glenn, November 8–9: Jade, Monica, Eleanor and Rose Newbie; Christy Mac Heavy Hitter.
+  {
+    "handle": "jadedancelrealtor",
+    "name": "Jade Dancel",
+    "label": "Jade Dancel",
+    "icon": "foodie-jadedancelrealtor-v111"
+  },
+  {
+    "handle": "macmadame",
+    "name": "Christy Mac",
+    "label": "Christy Mac",
+    "icon": "foodie-macmadame-v111"
+  },
+  {
+    "handle": "monica.s.daniels",
+    "name": "Monica Daniels",
+    "label": "Monica Daniels",
+    "icon": "foodie-monica-s-daniels-v111"
+  },
+  {
+    "handle": "echen_eats",
+    "name": "eleanor",
+    "label": "eleanor",
+    "icon": "foodie-echen-eats-v111"
+  },
+  {
+    "handle": "rose_buds",
+    "name": "Rose Peterson",
+    "label": "Rose Peterson",
+    "icon": "foodie-rose-buds-v111"
+  },
+  // Glenn, November 9, 10:55 a.m.: Foodie / Newbie.
+  {"handle": "amandabushman", "name": "amanda", "label": "amanda", "icon": "foodie-amandabushman-v111"}
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -2414,6 +2448,24 @@ export const OTHER_REVIEWS: OtherReview[] = [
 
   // Batch 110 — Glenn, November 8, 5:13 p.m.: Foodie / Newbie; creator discloses a gifted collaboration.
   {"by": "bvddiebri", "place": "Simplycake Bakery", "city": "San Mateo", "brand": "b_simplycakebakery", "reel": "https://www.instagram.com/reel/Dffgm_FBlGk/", "clip": "creator", "credit": "Simplycake Bakery review by @bvddiebri in San Mateo. Gifted collaboration, as disclosed by the creator."},
+
+  // Batch 111 — Tuck Heavy Hitter; Nikkie Mediocre. Tags are provenance, not public ratings.
+  {"by": "jadedancelrealtor", "place": "One House Bakery", "city": "Benicia", "brand": "b_onehousebakery", "reel": "https://www.instagram.com/reel/De-1MuLPAkj/", "clip": true, "credit": "Review by @jadedancelrealtor at One House Bakery, Benicia."},
+  {"by": "_whatarethechances_", "place": "Ace King BBQ", "city": "Newark", "brand": "b_acekingbbq", "reel": "https://www.instagram.com/reel/DfgdxkVoRv1/", "clip": "creator", "credit": "Review by @_whatarethechances_ at Ace King BBQ, 6062 Mowry Ave, Newark."},
+  {"by": "booziebrunch", "place": "Fowl + Fare", "city": "Alameda", "brand": "b_fowlfare", "reel": "https://www.instagram.com/reel/DSS1u6GEky-/", "clip": true, "credit": "Review by @booziebrunch at Fowl + Fare, Alameda."},
+  {"by": "macmadame", "place": "Fowl + Fare", "city": "Alameda", "brand": "b_fowlfare", "reel": "https://www.instagram.com/reel/DM_J2O1BnWX/", "clip": true, "credit": "Review by @macmadame at Fowl + Fare, 2534 Santa Clara Ave, Alameda."},
+  {"by": "takeoutwithtuck", "place": "Fowl + Fare", "city": "Alameda", "brand": "b_fowlfare", "reel": "https://www.instagram.com/reel/DMEaPGGvGip/", "clip": true, "credit": "Review by @takeoutwithtuck at Fowl + Fare, Alameda."},
+  {"by": "festusfeasts", "place": "Almond and Oak", "city": "Oakland", "brand": "b_almondandoak", "reel": "https://www.instagram.com/reel/DIxvek5x_6v/", "clip": true, "credit": "Lunch review by @festusfeasts at Almond and Oak, Oakland. The creator’s own award is not a BEASTY rating."},
+  {"by": "monica.s.daniels", "place": "Penelope’s Coffee & Tea", "city": "Berkeley", "brand": "b_penelopescoffeeberkeley", "reel": "https://www.instagram.com/reel/Dffu4OFBNQT/", "clip": true, "credit": "Review by @monica.s.daniels. The film clearly shows Penelope’s signage; its caption identifies Berkeley."},
+  {"by": "dchangshangry", "place": "Penelope’s Coffee & Tea", "city": "Berkeley", "brand": "b_penelopescoffeeberkeley", "reel": "https://www.instagram.com/reel/Ddx0eL-zdif/", "clip": true, "credit": "Review by @dchangshangry at Penelope’s Coffee & Tea, downtown Berkeley."},
+  {"by": "echen_eats", "place": "Penelope’s Coffee & Tea", "city": "Berkeley", "brand": "b_penelopescoffeeberkeley", "reel": "https://www.instagram.com/reel/DdfWyljp_mr/", "clip": true, "credit": "Review by @echen_eats at Penelope’s Coffee & Tea, Berkeley. Hosted visit / invitation disclosed by the creator; filmed with help from @heykaytea."},
+  {"by": "iamnikkieg", "place": "Penelope’s Coffee & Tea", "city": "Berkeley", "brand": "b_penelopescoffeeberkeley", "reel": "https://www.instagram.com/reel/Db14_F6PJZP/", "clip": true, "credit": "Review by @iamnikkieg at Penelope’s Coffee & Tea, 2255 Shattuck Ave, Berkeley."},
+  {"by": "rose_buds", "place": "Penelope’s Coffee & Tea", "city": "Berkeley", "brand": "b_penelopescoffeeberkeley", "reel": "https://www.instagram.com/reel/DaW7vLHJbnZ/", "clip": "creator", "credit": "Review by @rose_buds at Penelope’s Coffee & Tea, Berkeley."},
+  {"by": "dchangshangry", "place": "Chronic Tacos", "city": "Danville", "brand": "b_chronictacosdanville", "reel": "https://www.instagram.com/reel/DfgvwLyzAx_/", "clip": true, "credit": "Review by @dchangshangry at Chronic Tacos, Danville. The dated Taco Tuesday promotion is not presented as a current offer."},
+
+  // Batch 111, late-morning continuation.
+  {"by": "yourglobalfoodiebff", "place": "Bibim Grill", "city": "Dublin", "brand": "b_bibimgrill", "reel": "https://www.instagram.com/reel/DfWBEPoRC4F/", "clip": "creator", "credit": "Review by @yourglobalfoodiebff at Bibim Grill, 3742 Fallon Rd, Dublin. A creator review requested as Watch; it is not an owner film."},
+  {"by": "amandabushman", "place": "Meadowlark Dairy", "city": "Pleasanton", "brand": "b_meadowlarkdairy", "reel": "https://www.instagram.com/reel/Dc1INSaMC1m/", "clip": true, "credit": "Review by @amandabushman at Meadowlark Dairy. The footage names Meadowlark Dairy and shows its Railroad Avenue storefront in Pleasanton."},
 
 ]
 

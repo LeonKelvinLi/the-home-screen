@@ -1,0 +1,3368 @@
+{
+  "cutoff": "2026-11-09T11:03:37.891111-08:00",
+  "listings": [
+    {
+      "slug": "fowl-fare",
+      "name": "Fowl + Fare",
+      "label": "Fowl + Fare",
+      "cuisine": "Fried chicken sandwiches",
+      "tagline": "Fried chicken sandwiches + biscuits in Alameda",
+      "color": "#F4F0E7",
+      "icon": "fowl-fare-v111",
+      "prep": 0,
+      "category": "Chicken Sandwich",
+      "items": [],
+      "sections": [
+        {
+          "name": "Fried chicken sandwiches",
+          "items": [
+            [
+              "Classic Fried Chicken Sandwich",
+              "Fried chicken thigh, Fowl Sauce, house pickles and pear slaw on toasted brioche.",
+              1500
+            ],
+            [
+              "Classic Combo",
+              "Classic sandwich with fries and water.",
+              2000
+            ],
+            [
+              "Citric Hot Fried Chicken Sandwich",
+              "Fried chicken thigh, Citric Hot Sauce, Fowl Sauce, house pickles and pear slaw on toasted brioche.",
+              1600
+            ],
+            [
+              "Citric Hot Combo",
+              "Citric Hot sandwich with fries and water.",
+              2000
+            ],
+            [
+              "Charred Lemon Pepper Fried Chicken Sandwich",
+              "Fried chicken thigh, herb lemon sauce, charred lemon pepper sauce, house pickles and pear slaw on brioche.",
+              1700
+            ],
+            [
+              "Black Garlic Fried Chicken Sandwich",
+              "Fried chicken thigh, black garlic sauce, house pickles and pear slaw on toasted brioche. Listed on the home menu.",
+              1700
+            ],
+            [
+              "Kiwi Habanero Fried Chicken Sandwich",
+              "Fried chicken thigh, kiwi habanero sauce, pear slaw, house pickles and herb lemon sauce on toasted brioche.",
+              1700
+            ],
+            [
+              "Strawberry Citric Hot Fried Chicken Sandwich",
+              "Fried chicken thigh, Citric Hot Sauce, strawberry purée, house pickles, Fowl Sauce and pear slaw on toasted brioche.",
+              1700
+            ],
+            [
+              "Thai Tea Fried Chicken Sandwich",
+              "Thai tea coconut glaze, popping makrut lime boba, Thai basil slaw with Viet coriander on toasted brioche. Listed as available later; check ordering page.",
+              2400
+            ]
+          ]
+        },
+        {
+          "name": "Specials and combos",
+          "items": [
+            [
+              "Red Curry Chicken Tacos",
+              "Red curry chicken in a fried white corn tortilla, with charred shallot sauce.",
+              500
+            ],
+            [
+              "Fowl Fry Combo",
+              "Seasoned fries, fried chicken thigh, pear slaw, chopped pickles and sauce, plus bottled water.",
+              2100
+            ],
+            [
+              "Fowl Box (Fri, Sat, Sun Only)",
+              "10-piece nuggets, fries, pear slaw, garlic toast and Fowl Sauce. Listed on the home menu.",
+              1900
+            ],
+            [
+              "Fowl Biscuit (Saturday only)",
+              "Fried chicken thigh, habanero honey and roasted vegetable gravy on a house buttermilk biscuit. Listed on the home menu.",
+              1600
+            ]
+          ]
+        },
+        {
+          "name": "Sides and dessert",
+          "items": [
+            [
+              "Seasoned Fries",
+              "House-seasoned fries with Fowl Sauce.",
+              600
+            ],
+            [
+              "Side Fowl Sauce",
+              "1.5 oz house-made chipotle aioli.",
+              200
+            ],
+            [
+              "Side of Black Garlic Sauce",
+              "1.5 oz house-made black garlic aioli.",
+              200
+            ],
+            [
+              "Side of Citric Hot Sauce",
+              "1.5 oz house-made Citric Hot Sauce.",
+              200
+            ],
+            [
+              "Side of Jerk Sauce",
+              "1.5 oz house-made jerk sauce.",
+              200
+            ],
+            [
+              "Side of Lemon Sauce",
+              "1.5 oz house-made lemon aioli.",
+              200
+            ],
+            [
+              "Side of Pickles",
+              "House-made pickles.",
+              200
+            ],
+            [
+              "Side of Slaw",
+              "",
+              300
+            ],
+            [
+              "Banana Pudding",
+              "Whipped cream and vanilla wafers; listed on the home menu.",
+              900
+            ]
+          ]
+        },
+        {
+          "name": "Drinks",
+          "items": [
+            [
+              "7 Up",
+              "",
+              200
+            ],
+            [
+              "Az Green Tea",
+              "",
+              200
+            ],
+            [
+              "Az Lemon",
+              "",
+              200
+            ],
+            [
+              "Az Peach",
+              "",
+              200
+            ],
+            [
+              "Brisk Ice Tea",
+              "",
+              200
+            ],
+            [
+              "Lemonade",
+              "",
+              200
+            ],
+            [
+              "Mug Root Beer",
+              "",
+              200
+            ]
+          ]
+        }
+      ],
+      "site": "https://fowl-fare.square.site/",
+      "orderUrl": "https://fowl-fare.square.site/s/order?location=LBC387ESJFBJP",
+      "address": "2534 Santa Clara Ave, Alameda, CA 94501",
+      "phone": "(510) 816-9012",
+      "email": "fowlfare@gmail.com",
+      "siteNote": "Menu and prices from their official Alameda Square store and home menu. Stock and specials vary; check the ordering page before visiting.",
+      "panels": [
+        {
+          "head": "Hours and availability",
+          "body": [
+            "Their home menu and supplied profile say Wednesday–Saturday 11am–3pm and 5–8pm, until sellout. The Square ordering footer instead starts dinner at 4pm. The home site and ordering footer list Sunday 11am–3pm. Monday and Tuesday are closed. Confirm the evening start and stock directly."
+          ],
+          "links": [
+            {
+              "label": "Official Alameda ordering menu",
+              "href": "https://fowl-fare.square.site/s/order?location=LBC387ESJFBJP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "almond-and-oak",
+      "name": "Almond and Oak",
+      "label": "Almond + Oak",
+      "cuisine": "Seasonal California restaurant and weekend brunch",
+      "tagline": "Seasonal dinner and weekend brunch on Grand Avenue",
+      "color": "#0D0D0D",
+      "icon": "almond-and-oak-v111",
+      "prep": 0,
+      "category": "Eats",
+      "items": [],
+      "sections": [
+        {
+          "name": "Dinner — Appetizers",
+          "items": [
+            [
+              "Housemade Herbed Focaccia",
+              "Extra virgin olive oil",
+              400
+            ],
+            [
+              "Marinated Olives",
+              "",
+              400
+            ],
+            [
+              "Oysters",
+              "Skookums, Puget Sound, WA, rosé mignonette, lemon",
+              350,
+              null,
+              "$3.50 each"
+            ],
+            [
+              "Roasted Tomato, Red Pepper  & Eggplant Soup",
+              "marinated feta, olives, parsley, oregano",
+              1500
+            ],
+            [
+              "Mixed Greens",
+              "plums, toasted pecans, red wine vinaigrette, soft herbs",
+              1500
+            ],
+            [
+              "Confit Tuna & Fresh Shell Beans",
+              "albacore tuna, cranberry & butter beans, blue lake beans, cherry tomatoes, kalamata olives, frisée, shallots, parsley, oregano, aioli",
+              2100
+            ],
+            [
+              "Gravlax",
+              "house-cured king salmon, roasted beets, english cucumber, creme fraiche, spring onion, capers, dill, fennel pollen",
+              2100
+            ],
+            [
+              "House-made Burrata",
+              "fried shishito peppers,  prosciutto san daniele, marinated olives,  meyer lemon, sunflower sprouts, maldon salt",
+              2200
+            ],
+            [
+              "Chicory Caesar",
+              "mixed chicories, caesar dressing, garlic breadcrumbs, parmigiano reggiano, diced meyer lemon, black pepper",
+              1700
+            ]
+          ]
+        },
+        {
+          "name": "Dinner — Mains",
+          "items": [
+            [
+              "Chicken & Mushroom Ragu",
+              "rigatoni pasta, white wine-braised chicken ragu, bacon, mushrooms, parmigiano reggiano, parley, oregano",
+              2900
+            ],
+            [
+              "Ratatouille",
+              "fried anson mills polenta, roasted summer squash, peppers, onion, confit garlic, onion,  confit cherry tomato, basil, pine nuts, ricotta salata, saba",
+              3300
+            ],
+            [
+              "Grilled Local King Salmon",
+              "wild king salmon, Brentwood corn, maitake mushrooms, spring onion, cherry tomatoes, baby savoy spinach, corn purée, basil oil",
+              4800
+            ],
+            [
+              "Grilled Chicken Breast",
+              "cornbread stuffing, sautéed swiss chard, roasted carrots & king trumpet mushrooms, beurre blanc",
+              4000
+            ],
+            [
+              "Confit Pork Shoulder",
+              "mashed potatoes, blue lake beans, shiitake mushrooms, cherry tomato-basil vinaigrette",
+              4300
+            ],
+            [
+              "Flat Iron Steak",
+              "sweet potato-swiss chard-butternut squash gratin, fried sage & toasted breadcrumb salsa verde",
+              5500
+            ],
+            [
+              "Hamburger",
+              "House-made pan de mie bun, bread ‘n butter pickles, french fries | Add aged white cheddar $2, add bacon $2, add avocado $3",
+              2200
+            ]
+          ]
+        },
+        {
+          "name": "Dinner — Sides",
+          "items": [
+            [
+              "Broccoli di Ciccio",
+              "Garlic, lemon, chili flake",
+              1000
+            ],
+            [
+              "Marinated Roasted Beets",
+              "Goat cheese, pistachio, chives",
+              1000
+            ],
+            [
+              "Mashed Potatoes",
+              "Confit garlic- chive butter",
+              1000
+            ]
+          ]
+        },
+        {
+          "name": "Happy hour — Food",
+          "items": [
+            [
+              "Marinated Olives",
+              "",
+              300
+            ],
+            [
+              "House-made Herbed Focaccia",
+              "sea salt, extra virgin olive oil",
+              300
+            ],
+            [
+              "Oysters on the half shell",
+              "Puget Sound, WA       rose mignonette, lemon",
+              250,
+              null,
+              "$2.50 each"
+            ],
+            [
+              "Fried Shishito Peppers",
+              "aioli, lemon, maldon salt",
+              1000
+            ],
+            [
+              "French Fries",
+              "garlic oil, soft herbs",
+              700
+            ],
+            [
+              "Burger",
+              "with housemade bun & fries, bread ‘n butter pickles",
+              1900
+            ]
+          ]
+        },
+        {
+          "name": "Brunch — Starters",
+          "items": [
+            [
+              "Oysters",
+              "Puget Sound, WA rosé mignonette, lemon",
+              350,
+              null,
+              "$3.50 each"
+            ],
+            [
+              "Beignets",
+              "Powdered sugar, served with strawberry jam    -or-   cardamom cinnamon sugar",
+              1100
+            ],
+            [
+              "Cast Iron Scallion Cornbread",
+              "Honey butter",
+              600
+            ],
+            [
+              "Buttermilk Biscuit",
+              "Butter, house strawberry jam",
+              400
+            ],
+            [
+              "Mixed Greens",
+              "asian pear, pecans, red wine vinaigrette",
+              1200
+            ],
+            [
+              "Granola",
+              "oats, nuts, seeds, coconut, goji berries,  cocoa nibs, dates, vanilla greek yogurt",
+              1000
+            ],
+            [
+              "Market Fruit",
+              "honeycrisp apple, persimmon,  medjool dates, grapes, warren & asian pear, clementine",
+              1200
+            ],
+            [
+              "Thick-cut Honey Wheat Toast",
+              "Butter, housemade strawberry jam",
+              600
+            ]
+          ]
+        },
+        {
+          "name": "Brunch — Mains",
+          "items": [
+            [
+              "Quiche",
+              "roasted butternut squash, cremini mushrooms, grilled onion, goat cheese, pumpkin seed pesto",
+              1900
+            ],
+            [
+              "Chive Scrambled Eggs",
+              "three eggs soft scrambled, applewood-smoked bacon, potatoes with grilled onions, sour cream",
+              1900
+            ],
+            [
+              "Benedict",
+              "buttermilk biscuit, house-cured gravlax, heirloom tomato, sautéed greens, herbed hollandaise,  poached eggs & mixed greens",
+              2500
+            ],
+            [
+              "Pozole",
+              "stewed pork shoulder & chicken, mushrooms, hominy, dried chiles, cabbage, cilantro,  pickled jalapeño & carrots, crispy tortillas",
+              2000
+            ],
+            [
+              "Baked French Toast",
+              "house-made blueberry swirl bread, blueberry compote, basil, whipped cream, maple syrup",
+              1800
+            ],
+            [
+              "Hot Honey Fried Chicken Sandwich",
+              "buttermilk fried chicken, spiced honey, bread 'n butter pickles, pickled fresno chili, aioli, house-made pan de mie  & mixed greens",
+              1800
+            ],
+            [
+              "Steak Sandwich",
+              "housemade focaccia, grilled thinly sliced NY strip, grilled onions, gruyère, arugula, sundried tomato aioli, mixed greens",
+              2100
+            ],
+            [
+              "Shrimp & Grits",
+              "grilled marinated shrimp, anson mills white grits, shrimp gravy, scallions, shishito peppers & poached eggs",
+              2100
+            ],
+            [
+              "Vegetable Hash",
+              "roasted kabocha squash, sweet potatoes, garnet yams, red bell pepper, sunchokes, cremini mushrooms, onion, savoy spinach & poached eggs",
+              1900
+            ],
+            [
+              "Brunch Burger",
+              "House-made pain de mie bun, french fries, bread ‘n butter pickles | Add white cheddar $2, avocado $3.50, bacon $2, egg $3.50",
+              2000
+            ]
+          ]
+        },
+        {
+          "name": "Brunch — Sides",
+          "items": [
+            [
+              "French Fries",
+              "",
+              800
+            ],
+            [
+              "Potatoes",
+              "",
+              700
+            ],
+            [
+              "Bacon",
+              "",
+              900
+            ],
+            [
+              "Anson Mills Grits",
+              "",
+              700
+            ]
+          ]
+        },
+        {
+          "name": "Dessert — Desserts",
+          "items": [
+            [
+              "Mud Pie",
+              "bittersweet chocolate pudding, fudge, toasted pecans, chocolate wafer crust, whipped cream & candied pecans, chocolate sauce",
+              1500
+            ],
+            [
+              "Pumpkin Panna Cotta",
+              "whipped cream & candied pepitas, brown sugar shortbread cookie",
+              1400
+            ],
+            [
+              "Warm Apple Bread Pudding",
+              "whipped cream & apple caramel sauce",
+              1500
+            ],
+            [
+              "S'more Cake",
+              "layered graham cracker & chocolate cake, marshmallow buttercream, ganache, toasted meringue",
+              1500
+            ]
+          ]
+        },
+        {
+          "name": "Dessert — Coffee",
+          "items": [
+            [
+              "Espresso",
+              "",
+              400
+            ],
+            [
+              "Americano",
+              "",
+              400
+            ],
+            [
+              "Cappucino",
+              "",
+              500
+            ],
+            [
+              "Latte",
+              "",
+              600
+            ]
+          ]
+        },
+        {
+          "name": "Dessert — Tea",
+          "items": [
+            [
+              "English Breakfast",
+              "",
+              400
+            ],
+            [
+              "Jasmine Green",
+              "",
+              500
+            ],
+            [
+              "Mint & Sage",
+              "",
+              500
+            ],
+            [
+              "Bergamot Rooibos",
+              "",
+              500
+            ]
+          ]
+        },
+        {
+          "name": "Drinks — Non-Alcoholic Cocktails",
+          "items": [
+            [
+              "N/A Michelada",
+              "Secret michelada mix, chamoy, chili salt, n/a cerveza",
+              1000
+            ],
+            [
+              "Athletic Brewing Mexican-Style N/A Copper Ale",
+              "",
+              600
+            ],
+            [
+              "Fieldwork N/A IPA",
+              "",
+              600
+            ],
+            [
+              "N/A Mimosa",
+              "N/A Sparkling white wine, orange or grapefruit juice",
+              1100
+            ],
+            [
+              "Housemade Peppercorn Tonic",
+              "",
+              700
+            ],
+            [
+              "N/A Sparkling White Wine",
+              "NV Layla, Austria",
+              1100
+            ],
+            [
+              "N/A Hot Spiced apple Cider",
+              "",
+              700
+            ]
+          ]
+        },
+        {
+          "name": "Drinks — Coffee",
+          "items": [
+            [
+              "Coffee",
+              "Mother Tongue Bittersweet",
+              500
+            ],
+            [
+              "Espresso",
+              "",
+              500
+            ],
+            [
+              "Americano",
+              "",
+              500
+            ],
+            [
+              "Cappucino",
+              "",
+              600
+            ],
+            [
+              "Latte",
+              "",
+              700
+            ]
+          ]
+        },
+        {
+          "name": "Drinks — Tea",
+          "items": [
+            [
+              "English Breakfast",
+              "",
+              600
+            ],
+            [
+              "Jasmine Green",
+              "",
+              600
+            ],
+            [
+              "Bergamot Rooibos",
+              "",
+              600
+            ],
+            [
+              "Mint & Sage",
+              "",
+              600
+            ]
+          ]
+        },
+        {
+          "name": "Drinks — Non-Alcoholic Drinks",
+          "items": [
+            [
+              "Fresh Squeezed Orange Juice",
+              "",
+              500
+            ],
+            [
+              "Fresh Squeezed Grapefruit Juice",
+              "",
+              500
+            ],
+            [
+              "Iced Tea",
+              "",
+              400
+            ],
+            [
+              "Lemonade",
+              "",
+              500
+            ],
+            [
+              "Arnold Palmer",
+              "",
+              500
+            ],
+            [
+              "Housemade Ginger Beer",
+              "",
+              600
+            ],
+            [
+              "Housemade Orange-Basil Soda",
+              "",
+              600
+            ],
+            [
+              "Housemade Tonic",
+              "",
+              700
+            ],
+            [
+              "Mexican Coke",
+              "",
+              500
+            ],
+            [
+              "Squirt",
+              "",
+              500
+            ],
+            [
+              "Devil’s Canyon Root Beer (on tap)",
+              "",
+              600
+            ],
+            [
+              "Mountain Valley Sparkling Water",
+              "",
+              600
+            ],
+            [
+              "Housemade Tepache",
+              "*slightly fermented",
+              700
+            ],
+            [
+              "Midnight Howl",
+              "mint & black tea, black lime, ginger, habanero",
+              1000
+            ],
+            [
+              "N/A Sparkling White Wine",
+              "NV Layla, Austria",
+              1100
+            ]
+          ]
+        }
+      ],
+      "site": "https://almondandoak.com/",
+      "address": "3311 Grand Ave, Oakland, CA 94610",
+      "phone": "(510) 250-9550",
+      "email": "admin@almondandoak.com",
+      "hours": "Tue–Fri 5–9pm; Sat 10am–2pm & 5–9pm; Sun 10am–2pm",
+      "siteNote": "Official food menu, read November 9. Dinner, happy-hour food, brunch, dessert and non-alcoholic drinks keep their own sections and published prices. Dessert coffee/tea and the drinks menu have different prices; both remain labeled. Alcohol and the beer-and-shot Happy Meal are omitted.",
+      "panels": [
+        {
+          "head": "Menus and visiting",
+          "body": [
+            "The current official website lists 3311 Grand Ave. Glenn’s supplied Instagram screenshot lists 3307 Grand Ave; confirm the entrance directly before visiting. Happy-hour prices apply only during the restaurant’s happy-hour service."
+          ],
+          "links": [
+            {
+              "label": "Official full menu",
+              "href": "https://almondandoak.com/oakland-almond-and-oak-food-menu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bark-and-mane-walnut-creek",
+      "name": "Bark & Mane of Walnut Creek",
+      "label": "Bark & Mane",
+      "cuisine": "Mobile dog and cat pet grooming",
+      "tagline": "One-on-one pet grooming at your door",
+      "color": "#07533D",
+      "icon": "bark-and-mane-walnut-creek-v111",
+      "prep": 0,
+      "category": "Pets",
+      "items": [],
+      "site": "https://www.barkandmane.com/pet-groomers/walnut-creek-ca/",
+      "phone": "(925) 932-9559",
+      "email": "info@barkandmane.com",
+      "contactOnly": "Mobile dog and cat grooming serving Walnut Creek and nearby East Bay communities. Their grooming van comes to you by appointment. Prices are quoted directly; request a quote from their official page.",
+      "siteNote": "Formerly Aussie Pet Mobile. Glenn requested Walnut Creek Services and BEASTY Pets. This is a service-area listing, not a walk-in salon.",
+      "panels": [
+        {
+          "head": "Dog and cat grooming",
+          "body": [
+            "Dog grooming includes a bath and blowout, brushing, light detangling, ear and eye cleaning, nail clipping, and paw-pad and sanitary trims. Haircuts, deshedding and other add-ons are discussed during booking.",
+            "Cat grooming is available through the same mobile team. Confirm your pet’s needs and price directly."
+          ],
+          "links": [
+            {
+              "label": "Dog grooming services",
+              "href": "https://www.barkandmane.com/dog-grooming/"
+            },
+            {
+              "label": "Cat grooming services",
+              "href": "https://www.barkandmane.com/cat-grooming/"
+            }
+          ]
+        },
+        {
+          "head": "Office and service area",
+          "body": [
+            "Office hours: Monday–Friday 9am–5pm; closed Saturday and Sunday. Appointment availability is arranged directly.",
+            "Their supplied profile lists an office at 111 Center Avenue, Suite C, Pacheco. Grooming appointments take place in the mobile van at the customer’s location, not as walk-in visits to that office."
+          ],
+          "links": [
+            {
+              "label": "Request a mobile grooming quote",
+              "href": "https://www.barkandmane.com/pet-groomers/walnut-creek-ca/"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/bark-and-mane-walnut-creek-v111.mp4",
+        "poster": "/clips/bark-and-mane-walnut-creek-v111-poster.webp",
+        "href": "https://www.instagram.com/reel/DcjmLN2ndYa/",
+        "platform": "Instagram",
+        "credit": "Original by @barkandmanewalnutcreek. Mobile grooming in the team’s van, booked at the customer’s location."
+      }
+    }
+  ],
+  "posts": [
+    {
+      "code": "De-1MuLPAkj",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/De-1MuLPAkj/",
+      "disposition": "local review film",
+      "slug": "review-De-1MuLPAkj",
+      "brand": "b_onehousebakery",
+      "postedBy": "jadedancelrealtor",
+      "postedAt": "20261027",
+      "excerpt": "10s-25.00s of 40.15s",
+      "credit": "Review by @jadedancelrealtor at One House Bakery, Benicia.",
+      "request": [
+        {
+          "at": "2026-11-08T18:10:34.245250-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "startSeconds": 10,
+      "endSeconds": 25,
+      "by": "jadedancelrealtor"
+    },
+    {
+      "code": "DfgdxkVoRv1",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/DfgdxkVoRv1/",
+      "disposition": "local review film",
+      "slug": "review-DfgdxkVoRv1",
+      "brand": "b_acekingbbq",
+      "postedBy": "_whatarethechances_",
+      "postedAt": "20261109",
+      "excerpt": "4s-19.00s of 23.25s",
+      "credit": "Review by @_whatarethechances_ at Ace King BBQ, 6062 Mowry Ave, Newark.",
+      "request": [
+        {
+          "at": "2026-11-08T20:52:31.168478-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "startSeconds": 4,
+      "endSeconds": 19,
+      "by": "_whatarethechances_",
+      "playOn": "b_foodiewhatarethechances"
+    },
+    {
+      "code": "DdpqMXLjw_Q",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/DdpqMXLjw_Q/",
+      "disposition": "local owner film",
+      "slug": "oke-poke-walnut-creek-v111",
+      "brand": "b_okepokewalnutcreek",
+      "postedBy": "okepokeco",
+      "postedAt": "20260924",
+      "excerpt": "4s-19.00s of 26.91s",
+      "credit": "Original by @okepokeco. Signature bowl preparation from the chain; the caption does not identify a filming branch. Linked to the existing Walnut Creek page.",
+      "request": [
+        {
+          "at": "2026-11-08T20:55:35.720194-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "startSeconds": 4,
+      "endSeconds": 19
+    },
+    {
+      "code": "DSS1u6GEky-",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/DSS1u6GEky-/",
+      "disposition": "local review film",
+      "slug": "review-DSS1u6GEky-",
+      "brand": "b_fowlfare",
+      "postedBy": "booziebrunch",
+      "postedAt": "20251215",
+      "excerpt": "15s-30.00s of 56.40s",
+      "credit": "Review by @booziebrunch at Fowl + Fare, Alameda.",
+      "request": [
+        {
+          "at": "2026-11-08T21:03:09.490354-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "startSeconds": 15,
+      "endSeconds": 30,
+      "by": "booziebrunch"
+    },
+    {
+      "code": "DM_J2O1BnWX",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/DM_J2O1BnWX/",
+      "disposition": "local review film",
+      "slug": "review-DM_J2O1BnWX",
+      "brand": "b_fowlfare",
+      "postedBy": "macmadame",
+      "postedAt": "20250805",
+      "excerpt": "8s-23.00s of 44.93s",
+      "credit": "Review by @macmadame at Fowl + Fare, 2534 Santa Clara Ave, Alameda.",
+      "request": [
+        {
+          "at": "2026-11-08T21:04:19.332230-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter"
+        }
+      ],
+      "startSeconds": 8,
+      "endSeconds": 23,
+      "by": "macmadame"
+    },
+    {
+      "code": "DMEaPGGvGip",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/DMEaPGGvGip/",
+      "disposition": "local review film",
+      "slug": "review-DMEaPGGvGip",
+      "brand": "b_fowlfare",
+      "postedBy": "takeoutwithtuck",
+      "postedAt": "20250714",
+      "excerpt": "3s-18.00s of 35.78s",
+      "credit": "Review by @takeoutwithtuck at Fowl + Fare, Alameda.",
+      "request": [
+        {
+          "at": "2026-11-08T21:04:34.711159-08:00",
+          "request": "Clip this video plz \nHeavy Hitter"
+        }
+      ],
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "by": "takeoutwithtuck"
+    },
+    {
+      "code": "Cy7FlMKJd1x",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/Cy7FlMKJd1x/",
+      "disposition": "local owner film",
+      "slug": "philomena-pizza-v111",
+      "brand": "b_philomenapizza",
+      "postedBy": "philomenaoakland",
+      "postedAt": "20231028",
+      "excerpt": "0s-15.00s of 15.07s",
+      "credit": "Original by @philomenaoakland, October 28, 2023. Archival pizza-pub atmosphere; the World Series and Warriors event mentioned in the caption is not a current event or offer.",
+      "request": [
+        {
+          "at": "2026-11-08T21:34:22.423950-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "startSeconds": 0,
+      "endSeconds": 15
+    },
+    {
+      "code": "DIxvek5x_6v",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/DIxvek5x_6v/",
+      "disposition": "local review film",
+      "slug": "review-DIxvek5x_6v",
+      "brand": "b_almondandoak",
+      "postedBy": "festusfeasts",
+      "postedAt": "20250423",
+      "excerpt": "0s-15.00s of 149.97s",
+      "credit": "Lunch review by @festusfeasts at Almond and Oak, Oakland. The creator’s own award is not a BEASTY rating.",
+      "request": [
+        {
+          "at": "2026-11-08T21:40:02.754681-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "by": "festusfeasts"
+    },
+    {
+      "code": "DcjmLN2ndYa",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/DcjmLN2ndYa/",
+      "disposition": "local owner film",
+      "slug": "bark-and-mane-walnut-creek-v111",
+      "brand": "b_barkandmanewalnutcreek",
+      "postedBy": "barkandmanewalnutcreek",
+      "postedAt": "20260827",
+      "excerpt": "0s-12.78s of 12.78s",
+      "credit": "Original by @barkandmanewalnutcreek. Mobile grooming in the team’s van, booked at the customer’s location.",
+      "request": [
+        {
+          "at": "2026-11-09T05:57:22.526224-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "startSeconds": 0,
+      "endSeconds": 12.78
+    },
+    {
+      "code": "Dffu4OFBNQT",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/Dffu4OFBNQT/",
+      "disposition": "local review film",
+      "slug": "review-Dffu4OFBNQT",
+      "brand": "b_penelopescoffeeberkeley",
+      "postedBy": "monica.s.daniels",
+      "postedAt": "20261108",
+      "excerpt": "2s-17.00s of 27.56s",
+      "credit": "Review by @monica.s.daniels. The film clearly shows Penelope’s signage; its caption identifies Berkeley.",
+      "request": [
+        {
+          "at": "2026-11-09T09:59:29.761481-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "startSeconds": 2,
+      "endSeconds": 17,
+      "by": "monica.s.daniels"
+    },
+    {
+      "code": "Ddx0eL-zdif",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/Ddx0eL-zdif/",
+      "disposition": "local review film",
+      "slug": "review-Ddx0eL-zdif",
+      "brand": "b_penelopescoffeeberkeley",
+      "postedBy": "dchangshangry",
+      "postedAt": "20260927",
+      "excerpt": "2s-17.00s of 21.11s",
+      "credit": "Review by @dchangshangry at Penelope’s Coffee & Tea, downtown Berkeley.",
+      "request": [
+        {
+          "at": "2026-11-09T10:00:49.466468-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "startSeconds": 2,
+      "endSeconds": 17,
+      "by": "dchangshangry"
+    },
+    {
+      "code": "DdfWyljp_mr",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/DdfWyljp_mr/",
+      "disposition": "local review film",
+      "slug": "review-DdfWyljp_mr",
+      "brand": "b_penelopescoffeeberkeley",
+      "postedBy": "echen_eats",
+      "postedAt": "20260920",
+      "excerpt": "0s-15.00s of 15.72s",
+      "credit": "Review by @echen_eats at Penelope’s Coffee & Tea, Berkeley. Hosted visit / invitation disclosed by the creator; filmed with help from @heykaytea.",
+      "request": [
+        {
+          "at": "2026-11-09T10:01:43.705217-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "by": "echen_eats"
+    },
+    {
+      "code": "Db14_F6PJZP",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/Db14_F6PJZP/",
+      "disposition": "local review film",
+      "slug": "review-Db14_F6PJZP",
+      "brand": "b_penelopescoffeeberkeley",
+      "postedBy": "iamnikkieg",
+      "postedAt": "20260810",
+      "excerpt": "12s-27.00s of 89.05s",
+      "credit": "Review by @iamnikkieg at Penelope’s Coffee & Tea, 2255 Shattuck Ave, Berkeley.",
+      "request": [
+        {
+          "at": "2026-11-09T10:02:49.917054-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "startSeconds": 12,
+      "endSeconds": 27,
+      "by": "iamnikkieg"
+    },
+    {
+      "code": "DaW7vLHJbnZ",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/DaW7vLHJbnZ/",
+      "disposition": "local review film",
+      "slug": "review-DaW7vLHJbnZ",
+      "brand": "b_penelopescoffeeberkeley",
+      "postedBy": "rose_buds",
+      "postedAt": "20260704",
+      "excerpt": "9s-24.00s of 84.00s",
+      "credit": "Review by @rose_buds at Penelope’s Coffee & Tea, Berkeley.",
+      "request": [
+        {
+          "at": "2026-11-09T10:04:10.350685-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "startSeconds": 9,
+      "endSeconds": 24,
+      "by": "rose_buds",
+      "playOn": "b_foodierosebuds"
+    },
+    {
+      "code": "DfgvwLyzAx_",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/DfgvwLyzAx_/",
+      "disposition": "local review film",
+      "slug": "review-DfgvwLyzAx_",
+      "brand": "b_chronictacosdanville",
+      "postedBy": "dchangshangry",
+      "postedAt": "20261109",
+      "excerpt": "1s-16.00s of 19.11s",
+      "credit": "Review by @dchangshangry at Chronic Tacos, Danville. The dated Taco Tuesday promotion is not presented as a current offer.",
+      "request": [
+        {
+          "at": "2026-11-09T10:23:12.325966-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "startSeconds": 1,
+      "endSeconds": 16,
+      "by": "dchangshangry"
+    },
+    {
+      "code": "DfWBEPoRC4F",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/DfWBEPoRC4F/",
+      "disposition": "local review film",
+      "slug": "review-DfWBEPoRC4F",
+      "brand": "b_bibimgrill",
+      "postedBy": "yourglobalfoodiebff",
+      "postedAt": "20261105",
+      "excerpt": "2s-17.00s of 60.81s",
+      "credit": "Review by @yourglobalfoodiebff at Bibim Grill, 3742 Fallon Rd, Dublin. A creator review requested as Watch; it is not an owner film.",
+      "request": [
+        {
+          "at": "2026-11-09T10:52:38.046571-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "startSeconds": 2,
+      "endSeconds": 17,
+      "by": "yourglobalfoodiebff",
+      "playOn": "b_foodieyourglobalfoodiebff"
+    },
+    {
+      "code": "Dc1INSaMC1m",
+      "batch": 111,
+      "source": "https://www.instagram.com/reel/Dc1INSaMC1m/",
+      "disposition": "local review film",
+      "slug": "review-Dc1INSaMC1m",
+      "brand": "b_meadowlarkdairy",
+      "postedBy": "amandabushman",
+      "postedAt": "20260903",
+      "excerpt": "0s-15.00s of 28.90s",
+      "credit": "Review by @amandabushman at Meadowlark Dairy. The footage names Meadowlark Dairy and shows its Railroad Avenue storefront in Pleasanton.",
+      "request": [
+        {
+          "at": "2026-11-09T10:55:55.391318-08:00",
+          "request": "Clip this video plz\nFoodie \nNewbie"
+        }
+      ],
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "by": "amandabushman"
+    },
+    {
+      "code": "DfhrTuEsKhT",
+      "batch": 111,
+      "source": "https://www.instagram.com/p/DfhrTuEsKhT/",
+      "disposition": "local owner film",
+      "slug": "chronic-tacos-owner-v111",
+      "brand": "b_chronictacosdanville",
+      "postedBy": "chronictacos",
+      "postedAt": "20261109",
+      "excerpt": "0s-15.00s of 28.01s",
+      "credit": "Original by @chronictacos, November 9, 2026. Chain food preparation; the posting metadata does not identify the filming branch. Linked to the existing Danville page without replacing its earlier credited review.",
+      "request": [
+        {
+          "at": "2026-11-09T11:03:37.891111-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "startSeconds": 0,
+      "endSeconds": 15
+    }
+  ],
+  "placements": {
+    "alameda-goods-7": "b_fowlfare",
+    "beasty-chickensandwich-0": "b_fowlfare",
+    "oakland-goods2-50": "b_almondandoak",
+    "beasty-goods2-125": "b_almondandoak",
+    "beasty-diner2-1": "b_almondandoak",
+    "walnut-creek-services2-5": "b_barkandmanewalnutcreek",
+    "beasty-pets2-1": "b_barkandmanewalnutcreek",
+    "beasty-foodies2-0": "b_foodiekeyanajoooon",
+    "beasty-foodies2-1": "b_foodietakeoutwithtuck",
+    "beasty-foodies2-2": "b_foodiemacmadame",
+    "beasty-foodies2-3": "b_foodiebayareafoodieadventures",
+    "beasty-foodies2-4": "b_foodiesiliconvalleyfoodies",
+    "beasty-foodies2-5": "b_foodiejacksdiningroom",
+    "beasty-foodies2-6": "b_foodieandreweatsinsf",
+    "beasty-foodies2-7": "b_foodieeatswithkath",
+    "beasty-foodies2-8": "b_foodiecestalmoco",
+    "beasty-foodies2-9": "b_foodiekangofrealty",
+    "beasty-foodies2-10": "b_foodiefedoramaelle",
+    "beasty-foodies2-11": "b_foodiepastrywithjenn",
+    "beasty-foodies2-12": "b_foodietravelwtiff",
+    "beasty-foodies2-13": "b_foodieemwong",
+    "beasty-foodies2-14": "b_foodiekimonieatss",
+    "beasty-foodies2-15": "b_foodiebaygirlseat",
+    "beasty-foodies2-16": "b_foodieheraldh",
+    "beasty-foodies2-17": "b_foodiefoodiswhyimbroke",
+    "beasty-foodies2-18": "b_foodiekeneats",
+    "beasty-foodies2-19": "b_e40",
+    "beasty-foodies2-20": "b_foodiemamamarquez888",
+    "beasty-foodies2-21": "b_foodiereelkevo",
+    "beasty-foodies2-22": "b_foodierollingwithdeneats",
+    "beasty-foodies2-23": "b_foodieagnespittioni",
+    "beasty-foodies2-24": "b_foodiej00diefoodie",
+    "beasty-foodies2-25": "b_foodiealiasharrief",
+    "beasty-foodies2-26": "b_foodiecarlosbradley",
+    "beasty-foodies2-27": "b_foodiejceeats",
+    "beasty-foodies2-28": "b_foodiemonaeatsnearby",
+    "beasty-foodies2-29": "b_foodiebayareafoodiecrew",
+    "beasty-foodies2-30": "b_foodiejanniners",
+    "beasty-foodies2-31": "b_foodiealwayshannegry",
+    "beasty-foodies2-32": "b_foodierainmoreturely",
+    "beasty-foodies2-33": "b_foodiewheresthefoodat",
+    "beasty-foodies2-34": "b_foodiesfbayfood",
+    "beasty-foodies2-35": "b_foodiezeynoern",
+    "beasty-foodies2-36": "b_foodiebooziebrunch",
+    "beasty-foodies2-37": "b_foodiethekhaysie",
+    "beasty-foodies2-38": "b_foodiekelmeleats",
+    "beasty-foodies2-39": "b_foodiecourtneylyneaa",
+    "beasty-foodies2-40": "b_foodieiamnikkieg",
+    "beasty-foodies2-41": "b_foodiehungerefordiy",
+    "beasty-foodies2-42": "b_foodiejustmostie",
+    "beasty-foodies2-43": "b_foodiecapturedbysado",
+    "beasty-foodies2-44": "b_foodieallieeats",
+    "beasty-foodies2-45": "b_foodieseekeasyeats",
+    "beasty-foodies2-46": "b_foodieorangeginger",
+    "beasty-foodies2-47": "b_foodieantoinetterzz",
+    "beasty-foodies2-48": "b_foodiebayareakulture",
+    "beasty-foodies2-49": "b_foodiechefmelissaking",
+    "beasty-foodies2-50": "b_foodiecelineeats",
+    "beasty-foodies2-51": "b_foodiesinglecatm0m",
+    "beasty-foodies2-52": "b_foodiekimjsseats",
+    "beasty-foodies2-53": "b_foodieoaktowngrubhub",
+    "beasty-foodies2-54": "b_foodiethespoonlist",
+    "beasty-foodies2-55": "b_foodiesherryeatworld",
+    "beasty-foodies2-56": "b_foodiehungrydanz",
+    "beasty-foodies2-57": "b_foodiejaneethefoodie",
+    "beasty-foodies2-58": "b_foodiepeggyshoo",
+    "beasty-foodies2-59": "b_foodiezarinanawabi",
+    "beasty-foodies2-60": "b_foodiejbrenes",
+    "beasty-foodies2-61": "b_foodiesimplydorothy",
+    "beasty-foodies2-62": "b_foodieacoupleofcooks",
+    "beasty-foodies2-63": "b_foodiejantrinanicole",
+    "beasty-foodies2-64": "b_foodiechriscorpz",
+    "beasty-foodies2-65": "b_foodiethealamedapulse",
+    "beasty-foodies2-66": "b_foodiebayareamunchies510",
+    "beasty-foodies2-67": "b_foodievictoriapham17",
+    "beasty-foodies2-68": "b_foodiefoodieberrie",
+    "beasty-foodies2-69": "b_foodiesamserved",
+    "beasty-foodies2-70": "b_foodieareweeatingyet",
+    "beasty-foodies2-71": "b_foodiesiusvision",
+    "beasty-foodies2-72": "b_foodiearianasade",
+    "beasty-foodies2-73": "b_foodiebayareafoodz",
+    "beasty-foodies2-74": "b_foodiebestbayareafood",
+    "beasty-foodies2-75": "b_foodieannnaeats",
+    "beasty-foodies2-76": "b_foodieugcwithfrances",
+    "beasty-foodies2-77": "b_foodiedariananthony",
+    "beasty-foodies2-78": "b_foodiecharweeezy",
+    "beasty-foodies2-79": "b_foodiemukbangyourmama",
+    "beasty-foodies2-80": "b_foodiewanderingstefany",
+    "beasty-foodies2-81": "b_foodielifebyvivien",
+    "beasty-foodies2-82": "b_foodieandrelucas",
+    "beasty-foodies2-83": "b_foodieshrimpfriedroice",
+    "beasty-foodies2-84": "b_foodiecynlacson",
+    "beasty-foodies2-85": "b_foodiealexytravels",
+    "beasty-foodies2-86": "b_foodieandygravs",
+    "beasty-foodies2-87": "b_foodielivingvivalakillah",
+    "beasty-foodies2-88": "b_foodieeighty6ix",
+    "beasty-foodies2-89": "b_foodiemayakayofficial",
+    "beasty-foodies2-90": "b_foodiebayareamagandaeats",
+    "beasty-foodies2-91": "b_foodieforkmeetsfood",
+    "beasty-foodies2-92": "b_foodiefoodiesnflightss",
+    "beasty-foodies2-93": "b_foodiecarlaylayyy",
+    "beasty-foodies2-94": "b_foodieshuatangco",
+    "beasty-foodies2-95": "b_foodiejennyhomeloans",
+    "beasty-foodies2-96": "b_foodiewthellydanyelly",
+    "beasty-foodies2-97": "b_foodiesophiaxbayarea",
+    "beasty-foodies2-98": "b_foodiesierraeats8",
+    "beasty-foodies2-99": "b_foodieyosiiiifoodie",
+    "beasty-foodies2-100": "b_foodieivkicks",
+    "beasty-foodies2-101": "b_foodieitsslydiia",
+    "beasty-foodies2-102": "b_foodiestartingfiresevrywhere",
+    "beasty-foodies2-103": "b_foodiebylizettexo",
+    "beasty-foodies2-104": "b_foodiebrianthebarber",
+    "beasty-foodies2-105": "b_foodienickk",
+    "beasty-foodies2-106": "b_foodiejamesbaylife",
+    "beasty-foodies2-107": "b_foodieshesvibinhigh",
+    "beasty-foodies2-108": "b_foodiedchangshangry",
+    "beasty-foodies2-109": "b_foodiebayareafoodiesan",
+    "beasty-foodies2-110": "b_foodietrulyathi",
+    "beasty-foodies2-111": "b_foodiejetsetjanine",
+    "beasty-foodies2-112": "b_foodiekvbitesandgo",
+    "beasty-foodies2-113": "b_foodiestunnaman02",
+    "beasty-foodies2-114": "b_foodiesavorwithcoral",
+    "beasty-foodies2-115": "b_foodiefirstdibsbayarea",
+    "beasty-foodies2-116": "b_foodiemargsout",
+    "beasty-foodies2-117": "b_foodieyogetasworld",
+    "beasty-foodies2-118": "b_foodieitsmayrazambrano",
+    "beasty-foodies2-119": "b_foodieyourtraveldaddy",
+    "beasty-foodies2-120": "b_foodiehellalocalmo",
+    "beasty-foodies2-121": "b_foodiethesnobbiefoodie",
+    "beasty-foodies2-122": "b_foodiekatfoodsf",
+    "beasty-foodies2-123": "b_foodiecharlikestoeat",
+    "beasty-foodies2-124": "b_foodiehellahansel",
+    "beasty-foodies2-125": "b_foodiegeraldfermin",
+    "beasty-foodies2-126": "b_foodiepimchanyum",
+    "beasty-foodies2-127": "b_foodiebayareawilson",
+    "beasty-foodies2-128": "b_foodiewhatthejessi",
+    "beasty-foodies2-129": "b_foodiefoodgiveness",
+    "beasty-foodies2-130": "b_foodieasideofsweet",
+    "beasty-foodies2-131": "b_foodietashamalan",
+    "beasty-foodies2-132": "b_foodiecamemzmin",
+    "beasty-foodies2-133": "b_foodieventurewithkelly",
+    "beasty-foodies2-134": "b_foodiecookwithhenny",
+    "beasty-foodies2-135": "b_foodieaemerieedance",
+    "beasty-foodies2-136": "b_foodiegreatonezfoodreview",
+    "beasty-foodies2-137": "b_foodiemrsmackreviews",
+    "beasty-foodies2-138": "b_foodiebpeats",
+    "beasty-foodies2-139": "b_foodieerinlovesfun",
+    "beasty-foodies2-140": "b_foodielovelivermore",
+    "beasty-foodies2-141": "b_foodieexplorewithtaka",
+    "beasty-foodies2-142": "b_foodiethehautesheet",
+    "beasty-foodies2-143": "b_foodiehumminglion",
+    "beasty-foodies2-144": "b_foodiewhatarethechances",
+    "beasty-foodies2-145": "b_foodiekatwalksf",
+    "beasty-foodies2-146": "b_foodieyulmool",
+    "beasty-foodies2-147": "b_foodiebarstoolsports",
+    "beasty-foodies2-148": "b_foodiexopinsta",
+    "beasty-foodies2-149": "b_foodielovemissfit",
+    "beasty-foodies2-150": "b_foodiechloechomps",
+    "beasty-foodies2-151": "b_foodierealtorandreviewer",
+    "beasty-foodies2-152": "b_foodiexoaramarie",
+    "beasty-foodies2-153": "b_foodiefoodiedreams",
+    "beasty-foodies2-154": "b_foodieeatswithfoodie",
+    "beasty-foodies2-155": "b_foodiejensintec",
+    "beasty-foodies2-156": "b_foodiesnackateriansf",
+    "beasty-foodies2-157": "b_foodieapoorvasharma1",
+    "beasty-foodies2-158": "b_foodievolhacreative",
+    "beasty-foodies2-159": "b_foodiebobaaddict",
+    "beasty-foodies2-160": "b_foodieruthannesturman",
+    "beasty-foodies2-161": "b_foodielarryjunetfm",
+    "beasty-foodies2-162": "b_foodieeileenhuynher",
+    "beasty-foodies2-163": "b_foodiecreatewithcv",
+    "beasty-foodies2-164": "b_foodiealohastephanie",
+    "beasty-foodies2-165": "b_foodiezoegabon",
+    "beasty-foodies2-166": "b_foodiemartiwantsmore",
+    "beasty-foodies2-167": "b_foodiebyhillaryn",
+    "beasty-foodies2-168": "b_foodiealyeatscali",
+    "beasty-foodies2-169": "b_foodiebayareafoodies",
+    "beasty-foodies2-170": "b_foodiemoniicamichelle",
+    "beasty-foodies2-171": "b_foodieryanbyryanchua",
+    "beasty-foodies2-172": "b_foodiehangrypotato",
+    "beasty-foodies2-173": "b_foodiemelsotel",
+    "beasty-foodies2-174": "b_foodiesanleandroeats",
+    "beasty-foodies2-175": "b_foodiebroitsva",
+    "beasty-foodies2-176": "b_foodiefatashfoodie",
+    "beasty-foodies2-177": "b_foodiefoodieshots",
+    "beasty-foodies2-178": "b_foodiekitkatvales",
+    "beasty-foodies2-179": "b_foodiefoodwookie",
+    "beasty-foodies2-180": "b_foodiesonomacountyliving",
+    "beasty-foodies2-181": "b_foodielovecartier25",
+    "beasty-foodies2-182": "b_foodiefoodelaventures",
+    "beasty-foodies2-183": "b_foodiefoodietravelhappiness",
+    "beasty-foodies2-184": "b_foodiepeterlyagent",
+    "beasty-foodies2-185": "b_foodieksmokeskitchen",
+    "beasty-foodies2-186": "b_foodietysfqods",
+    "beasty-foodies2-187": "b_foodieilisaeatssf",
+    "beasty-foodies2-188": "b_foodietundemodupee",
+    "beasty-foodies2-189": "b_foodiewafflebam",
+    "beasty-foodies2-190": "b_foodiegoyuliiago",
+    "beasty-foodies2-191": "b_foodiejamiebeoutside",
+    "beasty-foodies2-192": "b_foodieanjaliwandersoul",
+    "beasty-foodies2-193": "b_foodiegabriiellas",
+    "beasty-foodies2-194": "b_foodieploinsanfrancisco",
+    "beasty-foodies2-195": "b_foodiepiscesprincesspriya",
+    "beasty-foodies2-196": "b_foodiedbaylock",
+    "beasty-foodies2-197": "b_foodiehallojessa",
+    "beasty-foodies2-198": "b_foodielagrandedelabanda",
+    "beasty-foodies2-199": "b_foodiechaudownfood",
+    "beasty-foodies2-200": "b_foodiephoebe8food",
+    "beasty-foodies2-201": "b_foodiekaraxhuynh",
+    "beasty-foodies2-202": "b_foodiewakeyeats",
+    "beasty-foodies2-203": "b_foodiedodoeats",
+    "beasty-foodies2-204": "b_foodiemayamunches",
+    "beasty-foodies2-205": "b_foodiepreetkhatrii",
+    "beasty-foodies2-206": "b_foodiekogumahs",
+    "beasty-foodies2-207": "b_foodienursedanamae",
+    "beasty-foodies2-208": "b_foodiethehabibizeat",
+    "beasty-foodies2-209": "b_foodieeatwithbooboo",
+    "beasty-foodies2-210": "b_foodiebayareafoodogram",
+    "beasty-foodies2-211": "b_foodielubtoeat",
+    "beasty-foodies2-212": "b_foodiethismajourney",
+    "beasty-foodies2-213": "b_foodiesummerishungry",
+    "beasty-foodies2-214": "b_foodiejustfeediris",
+    "beasty-foodies2-215": "b_foodiehungryhungryheejin",
+    "beasty-foodies2-216": "b_foodieliltiffyvert",
+    "beasty-foodies2-217": "b_foodiejovanacamberos",
+    "beasty-foodies2-218": "b_foodiesullieats",
+    "beasty-foodies2-219": "b_foodiephamamiii",
+    "beasty-foodies2-220": "b_foodietastewithrach",
+    "beasty-foodies2-221": "b_foodiesisicooksandeats",
+    "beasty-foodies2-222": "b_foodiemyrealtoralexbradeis",
+    "beasty-foodies2-223": "b_foodierowbot408",
+    "beasty-foodies2-224": "b_foodierevrocrichboy",
+    "beasty-foodies2-225": "b_foodiekatdazzzle",
+    "beasty-foodies2-226": "b_foodiequeenfoode",
+    "beasty-foodies2-227": "b_foodiecindydreamtravel",
+    "beasty-foodies2-228": "b_foodieyummylouey",
+    "beasty-foodies2-229": "b_foodieericasorelle",
+    "beasty-foodies2-230": "b_foodiechelchomps",
+    "beasty-foodies2-231": "b_foodiemonicaplatt",
+    "beasty-foodies2-232": "b_foodieimsarahchaz",
+    "beasty-foodies2-233": "b_foodieirenedony",
+    "beasty-foodies2-234": "b_foodiebiteswithnatalia",
+    "beasty-foodies2-235": "b_foodielaurenlovessfood",
+    "beasty-foodies2-236": "b_foodielisaaaaletseat",
+    "beasty-foodies2-237": "b_foodiemattiasblanco",
+    "beasty-foodies2-238": "b_foodiedeazylee",
+    "beasty-foodies2-239": "b_foodieedmunchthefoodie",
+    "beasty-foodies2-240": "b_foodielynniethefoodie",
+    "beasty-foodies2-241": "b_foodiekelsyannn",
+    "beasty-foodies2-242": "b_foodiefoodadventures21",
+    "beasty-foodies2-243": "b_foodietaratastessf",
+    "beasty-foodies2-244": "b_foodieziahazrati",
+    "beasty-foodies2-245": "b_foodiebennyeatsbayarea",
+    "beasty-foodies2-246": "b_foodiejourdynlynn",
+    "beasty-foodies2-247": "b_foodiebayeatss",
+    "beasty-foodies2-248": "b_foodiecharlizetse",
+    "beasty-foodies2-249": "b_foodieeatwithange",
+    "beasty-foodies2-250": "b_foodiehabibimocha",
+    "beasty-foodies2-251": "b_foodiemaddyeatssfbay",
+    "beasty-foodies2-252": "b_foodiemrbayareafoodie",
+    "beasty-foodies2-253": "b_foodiesoysupli",
+    "beasty-foodies2-254": "b_foodiethehungrycurator",
+    "beasty-foodies2-255": "b_foodiewithlovelysss",
+    "beasty-foodies2-256": "b_foodieoliviiacai",
+    "beasty-foodies2-257": "b_foodiekevinberkeleyfoodreviews",
+    "beasty-foodies2-258": "b_foodiemartiebautista",
+    "beasty-foodies2-259": "b_foodiebadiesaf",
+    "beasty-foodies2-260": "b_foodiesjfoodgram",
+    "beasty-foodies2-261": "b_foodietiensmunchies",
+    "beasty-foodies2-262": "b_foodiealexisbaybe",
+    "beasty-foodies2-263": "b_foodiedyannaluna",
+    "beasty-foodies2-264": "b_foodiesapphiesofire",
+    "beasty-foodies2-265": "b_foodiekimmmpossxble",
+    "beasty-foodies2-266": "b_foodiestaycationsfbayarea",
+    "beasty-foodies2-267": "b_foodieswooningspoon",
+    "beasty-foodies2-268": "b_foodievvveats",
+    "beasty-foodies2-269": "b_foodieelkattt",
+    "beasty-foodies2-270": "b_foodiealmightyalondra",
+    "beasty-foodies2-271": "b_foodieunwntedtv",
+    "beasty-foodies2-272": "b_foodieawesomejuliee",
+    "beasty-foodies2-273": "b_foodiebvddiebri",
+    "beasty-foodies2-274": "b_foodiejadedancelrealtor",
+    "beasty-foodies2-275": "b_foodiemonicasdaniels",
+    "beasty-foodies2-276": "b_foodieecheneats",
+    "beasty-foodies2-277": "b_foodierosebuds",
+    "beasty-friedchicken-7": "b_hotboyschicken",
+    "beasty-friedchicken-8": "b_fowlfare",
+    "beasty-sandwiches-23": "b_sharescan",
+    "beasty-foodies2-278": "b_foodieamandabushman"
+  },
+  "updatedIcons": [
+    "/icons/one-house-bakery-v111.webp",
+    "/icons/las-lomas-rib-palace-v111.webp",
+    "/icons/pacific-pet-grooming-v111.webp",
+    "/icons/philomena-pizza-v111.webp",
+    "/icons/fowl-fare-v111.webp",
+    "/icons/almond-and-oak-v111.webp",
+    "/icons/bark-and-mane-walnut-creek-v111.webp",
+    "/icons/foodie-jadedancelrealtor-v111.webp",
+    "/icons/foodie-macmadame-v111.webp",
+    "/icons/foodie-monica-s-daniels-v111.webp",
+    "/icons/foodie-echen-eats-v111.webp",
+    "/icons/foodie-iamnikkieg-v111.webp",
+    "/icons/foodie-rose-buds-v111.webp",
+    "/icons/foodie-amandabushman-v111.webp"
+  ],
+  "updatedBrands": [
+    "b_onehousebakery",
+    "b_laslomasribpalace",
+    "b_pacificpetgrooming",
+    "b_philomenapizza",
+    "b_okepokewalnutcreek",
+    "b_acekingbbq",
+    "b_penelopescoffeeberkeley",
+    "b_chronictacosdanville",
+    "b_bibimgrill",
+    "b_meadowlarkdairy"
+  ],
+  "foodieOrder": [
+    {
+      "handle": "ronniebanks",
+      "brand": "b_foodieronniebanks",
+      "score": 3
+    },
+    {
+      "handle": "msashleyvee",
+      "brand": "b_foodiemsashleyvee",
+      "score": 3
+    },
+    {
+      "handle": "feed_happiness_",
+      "brand": "b_foodiefeedhappiness",
+      "score": 2
+    },
+    {
+      "handle": "ashleyveats",
+      "brand": "b_foodieashleyveats",
+      "score": 2
+    },
+    {
+      "handle": "blurgotti",
+      "brand": "b_foodieblurgotti",
+      "score": 2
+    },
+    {
+      "handle": "sebascastroficial",
+      "brand": "b_foodiesebascastroficial",
+      "score": 2
+    },
+    {
+      "handle": "festusfeasts",
+      "brand": "b_foodiefestusfeasts",
+      "score": 1
+    },
+    {
+      "handle": "thesnacksensei",
+      "brand": "b_grando",
+      "score": 1
+    },
+    {
+      "handle": "foodandsachi",
+      "brand": "b_foodiefoodandsachi",
+      "score": 1
+    },
+    {
+      "handle": "grubwitmike",
+      "brand": "b_foodiegrubwitmike",
+      "score": 1
+    },
+    {
+      "handle": "hungry4munchies",
+      "brand": "b_foodiehungry4munchies",
+      "score": 1
+    },
+    {
+      "handle": "bayarea_fooddreamz",
+      "brand": "b_foodiebayareafooddreamz",
+      "score": 1
+    },
+    {
+      "handle": "eatwithsie",
+      "brand": "b_foodieeatwithsie",
+      "score": 1
+    },
+    {
+      "handle": "daeatzwitbri",
+      "brand": "b_foodiedaeatzwitbri",
+      "score": 1
+    },
+    {
+      "handle": "thetastebud",
+      "brand": "b_foodiethetastebud",
+      "score": 1
+    },
+    {
+      "handle": "aztec.ed",
+      "brand": "b_foodieazteced",
+      "score": 1
+    },
+    {
+      "handle": "imadoniseats",
+      "brand": "b_foodieimadoniseats",
+      "score": 1
+    },
+    {
+      "handle": "mzz.juxtaposition",
+      "brand": "b_foodiemzzjuxtaposition",
+      "score": 1
+    },
+    {
+      "handle": "yourglobalfoodiebff",
+      "brand": "b_foodieyourglobalfoodiebff",
+      "score": 1
+    },
+    {
+      "handle": "felicitythefoodie",
+      "brand": "b_foodiefelicitythefoodie",
+      "score": 1
+    },
+    {
+      "handle": "trinhdoesthings",
+      "brand": "b_foodietrinhdoesthings",
+      "score": 1
+    },
+    {
+      "handle": "smackinfood",
+      "brand": "b_foodiesmackinfood",
+      "score": 1
+    },
+    {
+      "handle": "drooling.bae",
+      "brand": "b_foodiedroolingbae",
+      "score": 1
+    },
+    {
+      "handle": "thesauceboss_",
+      "brand": "b_foodiethesauceboss",
+      "score": 1
+    },
+    {
+      "handle": "keyanajoooon",
+      "brand": "b_foodiekeyanajoooon",
+      "score": 2
+    },
+    {
+      "handle": "takeoutwithtuck",
+      "brand": "b_foodietakeoutwithtuck",
+      "score": 2
+    },
+    {
+      "handle": "macmadame",
+      "brand": "b_foodiemacmadame",
+      "score": 2
+    },
+    {
+      "handle": "bayarea.foodie.adventures",
+      "brand": "b_foodiebayareafoodieadventures",
+      "score": 1
+    },
+    {
+      "handle": "siliconvalley.foodies",
+      "brand": "b_foodiesiliconvalleyfoodies",
+      "score": 1
+    },
+    {
+      "handle": "jacksdiningroom",
+      "brand": "b_foodiejacksdiningroom",
+      "score": 1
+    },
+    {
+      "handle": "andreweatsinsf",
+      "brand": "b_foodieandreweatsinsf",
+      "score": 1
+    },
+    {
+      "handle": "eatswithkath",
+      "brand": "b_foodieeatswithkath",
+      "score": 1
+    },
+    {
+      "handle": "cestalmoco",
+      "brand": "b_foodiecestalmoco",
+      "score": 1
+    },
+    {
+      "handle": "kangofrealty",
+      "brand": "b_foodiekangofrealty",
+      "score": 1
+    },
+    {
+      "handle": "fedoramaelle",
+      "brand": "b_foodiefedoramaelle",
+      "score": 1
+    },
+    {
+      "handle": "pastrywithjenn",
+      "brand": "b_foodiepastrywithjenn",
+      "score": 1
+    },
+    {
+      "handle": "travelwtiff",
+      "brand": "b_foodietravelwtiff",
+      "score": 1
+    },
+    {
+      "handle": "_emwong_",
+      "brand": "b_foodieemwong",
+      "score": 1
+    },
+    {
+      "handle": "kimoni.eatss",
+      "brand": "b_foodiekimonieatss",
+      "score": 1
+    },
+    {
+      "handle": "baygirlseat",
+      "brand": "b_foodiebaygirlseat",
+      "score": 1
+    },
+    {
+      "handle": "heraldh",
+      "brand": "b_foodieheraldh",
+      "score": 1
+    },
+    {
+      "handle": "foodiswhyimbroke",
+      "brand": "b_foodiefoodiswhyimbroke",
+      "score": 1
+    },
+    {
+      "handle": "keneats_",
+      "brand": "b_foodiekeneats",
+      "score": 1
+    },
+    {
+      "handle": "e40",
+      "brand": "b_e40",
+      "score": 1
+    },
+    {
+      "handle": "mamamarquez888",
+      "brand": "b_foodiemamamarquez888",
+      "score": 1
+    },
+    {
+      "handle": "reelkevo",
+      "brand": "b_foodiereelkevo",
+      "score": 1
+    },
+    {
+      "handle": "rollingwithdeneats",
+      "brand": "b_foodierollingwithdeneats",
+      "score": 1
+    },
+    {
+      "handle": "agnespittioni",
+      "brand": "b_foodieagnespittioni",
+      "score": 1
+    },
+    {
+      "handle": "j00diefoodie",
+      "brand": "b_foodiej00diefoodie",
+      "score": 1
+    },
+    {
+      "handle": "aliasharrief",
+      "brand": "b_foodiealiasharrief",
+      "score": 1
+    },
+    {
+      "handle": "carlosbradley",
+      "brand": "b_foodiecarlosbradley",
+      "score": 1
+    },
+    {
+      "handle": "jc.eeats",
+      "brand": "b_foodiejceeats",
+      "score": 1
+    },
+    {
+      "handle": "monaeatsnearby",
+      "brand": "b_foodiemonaeatsnearby",
+      "score": 1
+    },
+    {
+      "handle": "bayareafoodiecrew",
+      "brand": "b_foodiebayareafoodiecrew",
+      "score": 1
+    },
+    {
+      "handle": "janniners",
+      "brand": "b_foodiejanniners",
+      "score": 1
+    },
+    {
+      "handle": "alwayshannegry",
+      "brand": "b_foodiealwayshannegry",
+      "score": 1
+    },
+    {
+      "handle": "rainmoreturely",
+      "brand": "b_foodierainmoreturely",
+      "score": 1
+    },
+    {
+      "handle": "_wheresthefoodat",
+      "brand": "b_foodiewheresthefoodat",
+      "score": 1
+    },
+    {
+      "handle": "sfbayfood",
+      "brand": "b_foodiesfbayfood",
+      "score": 1
+    },
+    {
+      "handle": "zeyno.ern",
+      "brand": "b_foodiezeynoern",
+      "score": 1
+    },
+    {
+      "handle": "booziebrunch",
+      "brand": "b_foodiebooziebrunch",
+      "score": 1
+    },
+    {
+      "handle": "thekhaysie",
+      "brand": "b_foodiethekhaysie",
+      "score": 1
+    },
+    {
+      "handle": "kelmeleats",
+      "brand": "b_foodiekelmeleats",
+      "score": 1
+    },
+    {
+      "handle": "courtneylyneaa",
+      "brand": "b_foodiecourtneylyneaa",
+      "score": 1
+    },
+    {
+      "handle": "iamnikkieg",
+      "brand": "b_foodieiamnikkieg",
+      "score": 1
+    },
+    {
+      "handle": "hungere.for.diy",
+      "brand": "b_foodiehungerefordiy",
+      "score": 0
+    },
+    {
+      "handle": "justmostie",
+      "brand": "b_foodiejustmostie",
+      "score": 0
+    },
+    {
+      "handle": "capturedbysado",
+      "brand": "b_foodiecapturedbysado",
+      "score": 0
+    },
+    {
+      "handle": "allie.eats",
+      "brand": "b_foodieallieeats",
+      "score": 0
+    },
+    {
+      "handle": "seekeasyeats",
+      "brand": "b_foodieseekeasyeats",
+      "score": 0
+    },
+    {
+      "handle": "orangeginger",
+      "brand": "b_foodieorangeginger",
+      "score": 0
+    },
+    {
+      "handle": "antoinetterzz",
+      "brand": "b_foodieantoinetterzz",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.kulture",
+      "brand": "b_foodiebayareakulture",
+      "score": 0
+    },
+    {
+      "handle": "chefmelissaking",
+      "brand": "b_foodiechefmelissaking",
+      "score": 0
+    },
+    {
+      "handle": "celineeats",
+      "brand": "b_foodiecelineeats",
+      "score": 0
+    },
+    {
+      "handle": "singlecatm0m",
+      "brand": "b_foodiesinglecatm0m",
+      "score": 0
+    },
+    {
+      "handle": "kimjsseats",
+      "brand": "b_foodiekimjsseats",
+      "score": 0
+    },
+    {
+      "handle": "oaktowngrubhub",
+      "brand": "b_foodieoaktowngrubhub",
+      "score": 0
+    },
+    {
+      "handle": "thespoonlist",
+      "brand": "b_foodiethespoonlist",
+      "score": 0
+    },
+    {
+      "handle": "sherryeatworld",
+      "brand": "b_foodiesherryeatworld",
+      "score": 0
+    },
+    {
+      "handle": "hungrydanz",
+      "brand": "b_foodiehungrydanz",
+      "score": 0
+    },
+    {
+      "handle": "janeethefoodie",
+      "brand": "b_foodiejaneethefoodie",
+      "score": 0
+    },
+    {
+      "handle": "peggy_shoo",
+      "brand": "b_foodiepeggyshoo",
+      "score": 0
+    },
+    {
+      "handle": "zarina.nawabi",
+      "brand": "b_foodiezarinanawabi",
+      "score": 0
+    },
+    {
+      "handle": "jbrenes_",
+      "brand": "b_foodiejbrenes",
+      "score": 0
+    },
+    {
+      "handle": "simply_dorothy_",
+      "brand": "b_foodiesimplydorothy",
+      "score": 0
+    },
+    {
+      "handle": "acoupleofcooks",
+      "brand": "b_foodieacoupleofcooks",
+      "score": 0
+    },
+    {
+      "handle": "jantrinanicole",
+      "brand": "b_foodiejantrinanicole",
+      "score": 0
+    },
+    {
+      "handle": "chris.corpz",
+      "brand": "b_foodiechriscorpz",
+      "score": 0
+    },
+    {
+      "handle": "thealamedapulse",
+      "brand": "b_foodiethealamedapulse",
+      "score": 0
+    },
+    {
+      "handle": "bayareamunchies510",
+      "brand": "b_foodiebayareamunchies510",
+      "score": 0
+    },
+    {
+      "handle": "victoria.pham17",
+      "brand": "b_foodievictoriapham17",
+      "score": 0
+    },
+    {
+      "handle": "foodieberrie",
+      "brand": "b_foodiefoodieberrie",
+      "score": 0
+    },
+    {
+      "handle": "samserved",
+      "brand": "b_foodiesamserved",
+      "score": 0
+    },
+    {
+      "handle": "areweeatingyet",
+      "brand": "b_foodieareweeatingyet",
+      "score": 0
+    },
+    {
+      "handle": "siusvision",
+      "brand": "b_foodiesiusvision",
+      "score": 0
+    },
+    {
+      "handle": "arianasade",
+      "brand": "b_foodiearianasade",
+      "score": 0
+    },
+    {
+      "handle": "bayareafoodz",
+      "brand": "b_foodiebayareafoodz",
+      "score": 0
+    },
+    {
+      "handle": "bestbayareafood",
+      "brand": "b_foodiebestbayareafood",
+      "score": 0
+    },
+    {
+      "handle": "annna_eats",
+      "brand": "b_foodieannnaeats",
+      "score": 0
+    },
+    {
+      "handle": "ugc.with.frances",
+      "brand": "b_foodieugcwithfrances",
+      "score": 0
+    },
+    {
+      "handle": "dariananthony_",
+      "brand": "b_foodiedariananthony",
+      "score": 0
+    },
+    {
+      "handle": "charweeezy",
+      "brand": "b_foodiecharweeezy",
+      "score": 0
+    },
+    {
+      "handle": "mukbangyourmama",
+      "brand": "b_foodiemukbangyourmama",
+      "score": 0
+    },
+    {
+      "handle": "wanderingstefany",
+      "brand": "b_foodiewanderingstefany",
+      "score": 0
+    },
+    {
+      "handle": "lifebyvivien",
+      "brand": "b_foodielifebyvivien",
+      "score": 0
+    },
+    {
+      "handle": "andre___lucas",
+      "brand": "b_foodieandrelucas",
+      "score": 0
+    },
+    {
+      "handle": "shrimpfriedroice",
+      "brand": "b_foodieshrimpfriedroice",
+      "score": 0
+    },
+    {
+      "handle": "_cynlacson",
+      "brand": "b_foodiecynlacson",
+      "score": 0
+    },
+    {
+      "handle": "alexytravels",
+      "brand": "b_foodiealexytravels",
+      "score": 0
+    },
+    {
+      "handle": "andygravs",
+      "brand": "b_foodieandygravs",
+      "score": 0
+    },
+    {
+      "handle": "livingvivalakillah",
+      "brand": "b_foodielivingvivalakillah",
+      "score": 0
+    },
+    {
+      "handle": "eighty6ix_",
+      "brand": "b_foodieeighty6ix",
+      "score": 0
+    },
+    {
+      "handle": "mayakay.official",
+      "brand": "b_foodiemayakayofficial",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.maganda.eats",
+      "brand": "b_foodiebayareamagandaeats",
+      "score": 0
+    },
+    {
+      "handle": "forkmeetsfood",
+      "brand": "b_foodieforkmeetsfood",
+      "score": 0
+    },
+    {
+      "handle": "foodiesnflightss",
+      "brand": "b_foodiefoodiesnflightss",
+      "score": 0
+    },
+    {
+      "handle": "carlaylayyy",
+      "brand": "b_foodiecarlaylayyy",
+      "score": 0
+    },
+    {
+      "handle": "shua.tangco",
+      "brand": "b_foodieshuatangco",
+      "score": 0
+    },
+    {
+      "handle": "jenny.home.loans",
+      "brand": "b_foodiejennyhomeloans",
+      "score": 0
+    },
+    {
+      "handle": "wthellydanyelly",
+      "brand": "b_foodiewthellydanyelly",
+      "score": 0
+    },
+    {
+      "handle": "sophiaxbayarea",
+      "brand": "b_foodiesophiaxbayarea",
+      "score": 0
+    },
+    {
+      "handle": "sierra.eats.8",
+      "brand": "b_foodiesierraeats8",
+      "score": 0
+    },
+    {
+      "handle": "yo_siiii_foodie",
+      "brand": "b_foodieyosiiiifoodie",
+      "score": 0
+    },
+    {
+      "handle": "ivkicks",
+      "brand": "b_foodieivkicks",
+      "score": 0
+    },
+    {
+      "handle": "itsslydiia",
+      "brand": "b_foodieitsslydiia",
+      "score": 0
+    },
+    {
+      "handle": "startingfiresevrywhere",
+      "brand": "b_foodiestartingfiresevrywhere",
+      "score": 0
+    },
+    {
+      "handle": "bylizettexo",
+      "brand": "b_foodiebylizettexo",
+      "score": 0
+    },
+    {
+      "handle": "brianthebarber",
+      "brand": "b_foodiebrianthebarber",
+      "score": 0
+    },
+    {
+      "handle": "ni.ckk_",
+      "brand": "b_foodienickk",
+      "score": 0
+    },
+    {
+      "handle": "jamesbaylife",
+      "brand": "b_foodiejamesbaylife",
+      "score": 0
+    },
+    {
+      "handle": "shesvibinhigh",
+      "brand": "b_foodieshesvibinhigh",
+      "score": 0
+    },
+    {
+      "handle": "dchangshangry",
+      "brand": "b_foodiedchangshangry",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.foodie.san",
+      "brand": "b_foodiebayareafoodiesan",
+      "score": 0
+    },
+    {
+      "handle": "truly_athi",
+      "brand": "b_foodietrulyathi",
+      "score": 0
+    },
+    {
+      "handle": "jetsetjanine",
+      "brand": "b_foodiejetsetjanine",
+      "score": 0
+    },
+    {
+      "handle": "kvbitesandgo",
+      "brand": "b_foodiekvbitesandgo",
+      "score": 0
+    },
+    {
+      "handle": "stunnaman02",
+      "brand": "b_foodiestunnaman02",
+      "score": 0
+    },
+    {
+      "handle": "savorwithcoral",
+      "brand": "b_foodiesavorwithcoral",
+      "score": 0
+    },
+    {
+      "handle": "firstdibs.bayarea",
+      "brand": "b_foodiefirstdibsbayarea",
+      "score": 0
+    },
+    {
+      "handle": "margs.out",
+      "brand": "b_foodiemargsout",
+      "score": 0
+    },
+    {
+      "handle": "yogetasworld",
+      "brand": "b_foodieyogetasworld",
+      "score": 0
+    },
+    {
+      "handle": "itsmayrazambrano",
+      "brand": "b_foodieitsmayrazambrano",
+      "score": 0
+    },
+    {
+      "handle": "your_travel_daddy",
+      "brand": "b_foodieyourtraveldaddy",
+      "score": 0
+    },
+    {
+      "handle": "hella._local.mo",
+      "brand": "b_foodiehellalocalmo",
+      "score": 0
+    },
+    {
+      "handle": "thesnobbiefoodie",
+      "brand": "b_foodiethesnobbiefoodie",
+      "score": 0
+    },
+    {
+      "handle": "katfoodsf",
+      "brand": "b_foodiekatfoodsf",
+      "score": 0
+    },
+    {
+      "handle": "charlikestoeat",
+      "brand": "b_foodiecharlikestoeat",
+      "score": 0
+    },
+    {
+      "handle": "hellahansel",
+      "brand": "b_foodiehellahansel",
+      "score": 0
+    },
+    {
+      "handle": "geraldfermin",
+      "brand": "b_foodiegeraldfermin",
+      "score": 0
+    },
+    {
+      "handle": "pimchanyum",
+      "brand": "b_foodiepimchanyum",
+      "score": 0
+    },
+    {
+      "handle": "bayareawilson",
+      "brand": "b_foodiebayareawilson",
+      "score": 0
+    },
+    {
+      "handle": "whatthejessi_",
+      "brand": "b_foodiewhatthejessi",
+      "score": 0
+    },
+    {
+      "handle": "foodgiveness",
+      "brand": "b_foodiefoodgiveness",
+      "score": 0
+    },
+    {
+      "handle": "asideofsweet",
+      "brand": "b_foodieasideofsweet",
+      "score": 0
+    },
+    {
+      "handle": "tasha.malan",
+      "brand": "b_foodietashamalan",
+      "score": 0
+    },
+    {
+      "handle": "camemzmin",
+      "brand": "b_foodiecamemzmin",
+      "score": 0
+    },
+    {
+      "handle": "venturewithkelly",
+      "brand": "b_foodieventurewithkelly",
+      "score": 0
+    },
+    {
+      "handle": "cookwithhenny",
+      "brand": "b_foodiecookwithhenny",
+      "score": 0
+    },
+    {
+      "handle": "_aemeriee.dance",
+      "brand": "b_foodieaemerieedance",
+      "score": 0
+    },
+    {
+      "handle": "greatonezfoodreview",
+      "brand": "b_foodiegreatonezfoodreview",
+      "score": 0
+    },
+    {
+      "handle": "mr.smackreviews",
+      "brand": "b_foodiemrsmackreviews",
+      "score": 0
+    },
+    {
+      "handle": "bp__eats",
+      "brand": "b_foodiebpeats",
+      "score": 0
+    },
+    {
+      "handle": "erinlovesfun",
+      "brand": "b_foodieerinlovesfun",
+      "score": 0
+    },
+    {
+      "handle": "lovelivermore",
+      "brand": "b_foodielovelivermore",
+      "score": 0
+    },
+    {
+      "handle": "explorewithtaka",
+      "brand": "b_foodieexplorewithtaka",
+      "score": 0
+    },
+    {
+      "handle": "thehautesheet",
+      "brand": "b_foodiethehautesheet",
+      "score": 0
+    },
+    {
+      "handle": "humminglion",
+      "brand": "b_foodiehumminglion",
+      "score": 0
+    },
+    {
+      "handle": "_whatarethechances_",
+      "brand": "b_foodiewhatarethechances",
+      "score": 0
+    },
+    {
+      "handle": "katwalksf",
+      "brand": "b_foodiekatwalksf",
+      "score": 0
+    },
+    {
+      "handle": "yulmoo_l",
+      "brand": "b_foodieyulmool",
+      "score": 0
+    },
+    {
+      "handle": "barstoolsports",
+      "brand": "b_foodiebarstoolsports",
+      "score": 0
+    },
+    {
+      "handle": "xo.pinsta",
+      "brand": "b_foodiexopinsta",
+      "score": 0
+    },
+    {
+      "handle": "lovemissfit",
+      "brand": "b_foodielovemissfit",
+      "score": 0
+    },
+    {
+      "handle": "chloe_chomps",
+      "brand": "b_foodiechloechomps",
+      "score": 0
+    },
+    {
+      "handle": "realtorandreviewer",
+      "brand": "b_foodierealtorandreviewer",
+      "score": 0
+    },
+    {
+      "handle": "xoaramarie",
+      "brand": "b_foodiexoaramarie",
+      "score": 0
+    },
+    {
+      "handle": "foodie.dreams",
+      "brand": "b_foodiefoodiedreams",
+      "score": 0
+    },
+    {
+      "handle": "eatswithfoodie",
+      "brand": "b_foodieeatswithfoodie",
+      "score": 0
+    },
+    {
+      "handle": "jensintec",
+      "brand": "b_foodiejensintec",
+      "score": 0
+    },
+    {
+      "handle": "snackateriansf",
+      "brand": "b_foodiesnackateriansf",
+      "score": 0
+    },
+    {
+      "handle": "apoorva_sharma1",
+      "brand": "b_foodieapoorvasharma1",
+      "score": 0
+    },
+    {
+      "handle": "volha_creative",
+      "brand": "b_foodievolhacreative",
+      "score": 0
+    },
+    {
+      "handle": "boba._.addict",
+      "brand": "b_foodiebobaaddict",
+      "score": 0
+    },
+    {
+      "handle": "ruthannesturman",
+      "brand": "b_foodieruthannesturman",
+      "score": 0
+    },
+    {
+      "handle": "larryjunetfm",
+      "brand": "b_foodielarryjunetfm",
+      "score": 0
+    },
+    {
+      "handle": "eileenhuynher",
+      "brand": "b_foodieeileenhuynher",
+      "score": 0
+    },
+    {
+      "handle": "createwithcv",
+      "brand": "b_foodiecreatewithcv",
+      "score": 0
+    },
+    {
+      "handle": "aloha_stephanie",
+      "brand": "b_foodiealohastephanie",
+      "score": 0
+    },
+    {
+      "handle": "zoegabon",
+      "brand": "b_foodiezoegabon",
+      "score": 0
+    },
+    {
+      "handle": "martiwantsmore",
+      "brand": "b_foodiemartiwantsmore",
+      "score": 0
+    },
+    {
+      "handle": "byhillaryn",
+      "brand": "b_foodiebyhillaryn",
+      "score": 0
+    },
+    {
+      "handle": "aly_eats_cali",
+      "brand": "b_foodiealyeatscali",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.foodies",
+      "brand": "b_foodiebayareafoodies",
+      "score": 0
+    },
+    {
+      "handle": "moniica.michelle",
+      "brand": "b_foodiemoniicamichelle",
+      "score": 0
+    },
+    {
+      "handle": "ryanbyryanchua",
+      "brand": "b_foodieryanbyryanchua",
+      "score": 0
+    },
+    {
+      "handle": "hangrypotato",
+      "brand": "b_foodiehangrypotato",
+      "score": 0
+    },
+    {
+      "handle": "melsotel",
+      "brand": "b_foodiemelsotel",
+      "score": 0
+    },
+    {
+      "handle": "sanleandroeats",
+      "brand": "b_foodiesanleandroeats",
+      "score": 0
+    },
+    {
+      "handle": "broitsva",
+      "brand": "b_foodiebroitsva",
+      "score": 0
+    },
+    {
+      "handle": "fat_ash_foodie",
+      "brand": "b_foodiefatashfoodie",
+      "score": 0
+    },
+    {
+      "handle": "_foodieshots_",
+      "brand": "b_foodiefoodieshots",
+      "score": 0
+    },
+    {
+      "handle": "kitkatvales",
+      "brand": "b_foodiekitkatvales",
+      "score": 0
+    },
+    {
+      "handle": "foodwookie",
+      "brand": "b_foodiefoodwookie",
+      "score": 0
+    },
+    {
+      "handle": "sonomacountyliving",
+      "brand": "b_foodiesonomacountyliving",
+      "score": 0
+    },
+    {
+      "handle": "lovecartier25",
+      "brand": "b_foodielovecartier25",
+      "score": 0
+    },
+    {
+      "handle": "foodelaventures",
+      "brand": "b_foodiefoodelaventures",
+      "score": 0
+    },
+    {
+      "handle": "foodie_travel_happiness",
+      "brand": "b_foodiefoodietravelhappiness",
+      "score": 0
+    },
+    {
+      "handle": "peterlyagent",
+      "brand": "b_foodiepeterlyagent",
+      "score": 0
+    },
+    {
+      "handle": "k.smokeskitchen",
+      "brand": "b_foodieksmokeskitchen",
+      "score": 0
+    },
+    {
+      "handle": "tysf.qods",
+      "brand": "b_foodietysfqods",
+      "score": 0
+    },
+    {
+      "handle": "ilisaeatssf",
+      "brand": "b_foodieilisaeatssf",
+      "score": 0
+    },
+    {
+      "handle": "tundemodupee",
+      "brand": "b_foodietundemodupee",
+      "score": 0
+    },
+    {
+      "handle": "wafflebam",
+      "brand": "b_foodiewafflebam",
+      "score": 0
+    },
+    {
+      "handle": "goyuliiago",
+      "brand": "b_foodiegoyuliiago",
+      "score": 0
+    },
+    {
+      "handle": "jamiebeoutside",
+      "brand": "b_foodiejamiebeoutside",
+      "score": 0
+    },
+    {
+      "handle": "anjali_wandersoul",
+      "brand": "b_foodieanjaliwandersoul",
+      "score": 0
+    },
+    {
+      "handle": "gabriiellas",
+      "brand": "b_foodiegabriiellas",
+      "score": 0
+    },
+    {
+      "handle": "ploinsanfrancisco",
+      "brand": "b_foodieploinsanfrancisco",
+      "score": 0
+    },
+    {
+      "handle": "piscesprincesspriya",
+      "brand": "b_foodiepiscesprincesspriya",
+      "score": 0
+    },
+    {
+      "handle": "d_baylock_",
+      "brand": "b_foodiedbaylock",
+      "score": 0
+    },
+    {
+      "handle": "hallojessa",
+      "brand": "b_foodiehallojessa",
+      "score": 0
+    },
+    {
+      "handle": "lagrandedelabanda",
+      "brand": "b_foodielagrandedelabanda",
+      "score": 0
+    },
+    {
+      "handle": "chaudownfood",
+      "brand": "b_foodiechaudownfood",
+      "score": 0
+    },
+    {
+      "handle": "phoebe8food",
+      "brand": "b_foodiephoebe8food",
+      "score": 0
+    },
+    {
+      "handle": "karaxhuynh",
+      "brand": "b_foodiekaraxhuynh",
+      "score": 0
+    },
+    {
+      "handle": "wakeyeats",
+      "brand": "b_foodiewakeyeats",
+      "score": 0
+    },
+    {
+      "handle": "dodo__eats",
+      "brand": "b_foodiedodoeats",
+      "score": 0
+    },
+    {
+      "handle": "maya_munches",
+      "brand": "b_foodiemayamunches",
+      "score": 0
+    },
+    {
+      "handle": "preet.khatrii",
+      "brand": "b_foodiepreetkhatrii",
+      "score": 0
+    },
+    {
+      "handle": "kogumahs",
+      "brand": "b_foodiekogumahs",
+      "score": 0
+    },
+    {
+      "handle": "nurse.danamae",
+      "brand": "b_foodienursedanamae",
+      "score": 0
+    },
+    {
+      "handle": "thehabibizeat",
+      "brand": "b_foodiethehabibizeat",
+      "score": 0
+    },
+    {
+      "handle": "eatwithbooboo",
+      "brand": "b_foodieeatwithbooboo",
+      "score": 0
+    },
+    {
+      "handle": "bayarea_foodogram",
+      "brand": "b_foodiebayareafoodogram",
+      "score": 0
+    },
+    {
+      "handle": "lub.to.eat",
+      "brand": "b_foodielubtoeat",
+      "score": 0
+    },
+    {
+      "handle": "thismajourney",
+      "brand": "b_foodiethismajourney",
+      "score": 0
+    },
+    {
+      "handle": "summer.ishungry",
+      "brand": "b_foodiesummerishungry",
+      "score": 0
+    },
+    {
+      "handle": "justfeediris",
+      "brand": "b_foodiejustfeediris",
+      "score": 0
+    },
+    {
+      "handle": "hungryhungryheejin",
+      "brand": "b_foodiehungryhungryheejin",
+      "score": 0
+    },
+    {
+      "handle": "liltiffyvert",
+      "brand": "b_foodieliltiffyvert",
+      "score": 0
+    },
+    {
+      "handle": "jovana.camberos",
+      "brand": "b_foodiejovanacamberos",
+      "score": 0
+    },
+    {
+      "handle": "sulli_eats",
+      "brand": "b_foodiesullieats",
+      "score": 0
+    },
+    {
+      "handle": "phamamiii",
+      "brand": "b_foodiephamamiii",
+      "score": 0
+    },
+    {
+      "handle": "tastewith.rach",
+      "brand": "b_foodietastewithrach",
+      "score": 0
+    },
+    {
+      "handle": "sisicooksandeats",
+      "brand": "b_foodiesisicooksandeats",
+      "score": 0
+    },
+    {
+      "handle": "myrealtoralexbradeis",
+      "brand": "b_foodiemyrealtoralexbradeis",
+      "score": 0
+    },
+    {
+      "handle": "rowbot408",
+      "brand": "b_foodierowbot408",
+      "score": 0
+    },
+    {
+      "handle": "revrocrichboy",
+      "brand": "b_foodierevrocrichboy",
+      "score": 0
+    },
+    {
+      "handle": "kat.dazzzle",
+      "brand": "b_foodiekatdazzzle",
+      "score": 0
+    },
+    {
+      "handle": "queen.food.e",
+      "brand": "b_foodiequeenfoode",
+      "score": 0
+    },
+    {
+      "handle": "cindydreamtravel",
+      "brand": "b_foodiecindydreamtravel",
+      "score": 0
+    },
+    {
+      "handle": "yummylouey",
+      "brand": "b_foodieyummylouey",
+      "score": 0
+    },
+    {
+      "handle": "erica.sorelle",
+      "brand": "b_foodieericasorelle",
+      "score": 0
+    },
+    {
+      "handle": "chelchomps",
+      "brand": "b_foodiechelchomps",
+      "score": 0
+    },
+    {
+      "handle": "monicaplatt",
+      "brand": "b_foodiemonicaplatt",
+      "score": 0
+    },
+    {
+      "handle": "imsarahchaz",
+      "brand": "b_foodieimsarahchaz",
+      "score": 0
+    },
+    {
+      "handle": "irenedony",
+      "brand": "b_foodieirenedony",
+      "score": 0
+    },
+    {
+      "handle": "biteswithnatalia",
+      "brand": "b_foodiebiteswithnatalia",
+      "score": 0
+    },
+    {
+      "handle": "laurenlovessfood",
+      "brand": "b_foodielaurenlovessfood",
+      "score": 0
+    },
+    {
+      "handle": "lisaaaaletseat",
+      "brand": "b_foodielisaaaaletseat",
+      "score": 0
+    },
+    {
+      "handle": "mattiasblanco",
+      "brand": "b_foodiemattiasblanco",
+      "score": 0
+    },
+    {
+      "handle": "deazylee",
+      "brand": "b_foodiedeazylee",
+      "score": 0
+    },
+    {
+      "handle": "edmunchthefoodie",
+      "brand": "b_foodieedmunchthefoodie",
+      "score": 0
+    },
+    {
+      "handle": "lynniethefoodie",
+      "brand": "b_foodielynniethefoodie",
+      "score": 0
+    },
+    {
+      "handle": "kelsy.annn",
+      "brand": "b_foodiekelsyannn",
+      "score": 0
+    },
+    {
+      "handle": "food_adventures21",
+      "brand": "b_foodiefoodadventures21",
+      "score": 0
+    },
+    {
+      "handle": "taratastessf",
+      "brand": "b_foodietaratastessf",
+      "score": 0
+    },
+    {
+      "handle": "zia_hazrati",
+      "brand": "b_foodieziahazrati",
+      "score": 0
+    },
+    {
+      "handle": "bennyeats.bayarea",
+      "brand": "b_foodiebennyeatsbayarea",
+      "score": 0
+    },
+    {
+      "handle": "jourdyn.lynn",
+      "brand": "b_foodiejourdynlynn",
+      "score": 0
+    },
+    {
+      "handle": "bayeatss",
+      "brand": "b_foodiebayeatss",
+      "score": 0
+    },
+    {
+      "handle": "charlize_tse",
+      "brand": "b_foodiecharlizetse",
+      "score": 0
+    },
+    {
+      "handle": "eatwith_ange",
+      "brand": "b_foodieeatwithange",
+      "score": 0
+    },
+    {
+      "handle": "habibimocha",
+      "brand": "b_foodiehabibimocha",
+      "score": 0
+    },
+    {
+      "handle": "maddyeats.sfbay",
+      "brand": "b_foodiemaddyeatssfbay",
+      "score": 0
+    },
+    {
+      "handle": "mr.bayareafoodie",
+      "brand": "b_foodiemrbayareafoodie",
+      "score": 0
+    },
+    {
+      "handle": "soysupli",
+      "brand": "b_foodiesoysupli",
+      "score": 0
+    },
+    {
+      "handle": "thehungrycurator",
+      "brand": "b_foodiethehungrycurator",
+      "score": 0
+    },
+    {
+      "handle": "withlovelysss",
+      "brand": "b_foodiewithlovelysss",
+      "score": 0
+    },
+    {
+      "handle": "oliviiacai",
+      "brand": "b_foodieoliviiacai",
+      "score": 0
+    },
+    {
+      "handle": "kevinberkeleyfoodreviews",
+      "brand": "b_foodiekevinberkeleyfoodreviews",
+      "score": 0
+    },
+    {
+      "handle": "martiebautista",
+      "brand": "b_foodiemartiebautista",
+      "score": 0
+    },
+    {
+      "handle": "badies.af",
+      "brand": "b_foodiebadiesaf",
+      "score": 0
+    },
+    {
+      "handle": "sjfoodgram",
+      "brand": "b_foodiesjfoodgram",
+      "score": 0
+    },
+    {
+      "handle": "tiensmunchies",
+      "brand": "b_foodietiensmunchies",
+      "score": 0
+    },
+    {
+      "handle": "alexisbaybe_",
+      "brand": "b_foodiealexisbaybe",
+      "score": 0
+    },
+    {
+      "handle": "dyannaluna",
+      "brand": "b_foodiedyannaluna",
+      "score": 0
+    },
+    {
+      "handle": "sapphiesofire",
+      "brand": "b_foodiesapphiesofire",
+      "score": 0
+    },
+    {
+      "handle": "kimmmpossxble",
+      "brand": "b_foodiekimmmpossxble",
+      "score": 0
+    },
+    {
+      "handle": "staycation.sfbayarea",
+      "brand": "b_foodiestaycationsfbayarea",
+      "score": 0
+    },
+    {
+      "handle": "swooningspoon",
+      "brand": "b_foodieswooningspoon",
+      "score": 0
+    },
+    {
+      "handle": "vvveats",
+      "brand": "b_foodievvveats",
+      "score": 0
+    },
+    {
+      "handle": "el.kattt",
+      "brand": "b_foodieelkattt",
+      "score": 0
+    },
+    {
+      "handle": "almightyalondra",
+      "brand": "b_foodiealmightyalondra",
+      "score": 0
+    },
+    {
+      "handle": "unwntedtv",
+      "brand": "b_foodieunwntedtv",
+      "score": 0
+    },
+    {
+      "handle": "awesomejuliee",
+      "brand": "b_foodieawesomejuliee",
+      "score": 0
+    },
+    {
+      "handle": "bvddiebri",
+      "brand": "b_foodiebvddiebri",
+      "score": 0
+    },
+    {
+      "handle": "jadedancelrealtor",
+      "brand": "b_foodiejadedancelrealtor",
+      "score": 0
+    },
+    {
+      "handle": "monica.s.daniels",
+      "brand": "b_foodiemonicasdaniels",
+      "score": 0
+    },
+    {
+      "handle": "echen_eats",
+      "brand": "b_foodieecheneats",
+      "score": 0
+    },
+    {
+      "handle": "rose_buds",
+      "brand": "b_foodierosebuds",
+      "score": 0
+    },
+    {
+      "handle": "amandabushman",
+      "brand": "b_foodieamandabushman",
+      "score": 0
+    }
+  ],
+  "sourceMessages": [
+    {
+      "at": "2026-11-08T18:09:05.780354-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_9872.png"
+      ]
+    },
+    {
+      "at": "2026-11-08T18:10:33.510743-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9873.png"
+      ]
+    },
+    {
+      "at": "2026-11-08T18:10:34.085356-08:00",
+      "text": "https://www.instagram.com/reel/De-1MuLPAkj/?psln=MTRyZmJvN2JrdHM3aw==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T18:10:34.245250-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T20:37:42.333626-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_9878.png"
+      ]
+    },
+    {
+      "at": "2026-11-08T20:44:55.943119-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_9880.png"
+      ]
+    },
+    {
+      "at": "2026-11-08T20:52:31.082958-08:00",
+      "text": "https://www.instagram.com/reel/DfgdxkVoRv1/?mdxt=MXBqN3g2eXc1enIzbw==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T20:52:31.168478-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T20:55:35.635529-08:00",
+      "text": "https://www.instagram.com/reel/DdpqMXLjw_Q/?exln=bWd2ZTRjeW9lemJz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T20:55:35.720194-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:02:30.251801-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9883.png",
+        "IMG_9882.png",
+        "IMG_9884.png"
+      ]
+    },
+    {
+      "at": "2026-11-08T21:02:30.400349-08:00",
+      "text": "https://fowl-fare.square.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&utm_id=97760_v0_s00_e0_tv3",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:02:30.522029-08:00",
+      "text": "Alameda • Eats \nBEASTY • Chicken Sandwich",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:03:09.411154-08:00",
+      "text": "https://www.instagram.com/reel/DSS1u6GEky-/?srtk=cHZsc21zaTU3cjBt",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:03:09.490354-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:04:18.886654-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9885.png"
+      ]
+    },
+    {
+      "at": "2026-11-08T21:04:19.238967-08:00",
+      "text": "https://www.instagram.com/reel/DM_J2O1BnWX/?srtk=aDR0OHI3eGQ4eWJ4",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:04:19.332230-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:04:34.615635-08:00",
+      "text": "https://www.instagram.com/reel/DMEaPGGvGip/?mdxt=MXc0OG92NjAyb2sx",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:04:34.711159-08:00",
+      "text": "Clip this video plz \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:18:00.064217-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_9888.png"
+      ]
+    },
+    {
+      "at": "2026-11-08T21:34:22.332497-08:00",
+      "text": "https://www.instagram.com/reel/Cy7FlMKJd1x/?srtk=aDE4dHpjMXp6cjQx",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:34:22.423950-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:39:48.008081-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9890.png",
+        "IMG_9891.png",
+        "IMG_9893.PNG"
+      ]
+    },
+    {
+      "at": "2026-11-08T21:39:48.840317-08:00",
+      "text": "https://almondandoak.com/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:39:48.929534-08:00",
+      "text": "Oakland • Eats \nBEASTY • Eats",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:40:02.656745-08:00",
+      "text": "https://www.instagram.com/reel/DIxvek5x_6v/?exln=MXRpOGNvd3hnZHhtMw==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-08T21:40:02.754681-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T05:53:56.609828-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9899.PNG",
+        "IMG_9897.png",
+        "IMG_9898.PNG"
+      ]
+    },
+    {
+      "at": "2026-11-09T05:53:56.740246-08:00",
+      "text": "https://www.barkandmane.com/pet-groomers/walnut-creek-ca/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T05:53:56.819675-08:00",
+      "text": "Walnut Creek • Services\nBEASTY • Pets",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T05:57:22.389087-08:00",
+      "text": "https://www.instagram.com/reel/DcjmLN2ndYa/?mdxt=MWlwZGh3ZWl5aHBsMQ==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T05:57:22.526224-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T09:59:29.151560-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9905.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T09:59:29.676421-08:00",
+      "text": "https://www.instagram.com/reel/Dffu4OFBNQT/?obrf=NWMwZmphOGdqcmZ6",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T09:59:29.761481-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:00:49.291337-08:00",
+      "text": "https://www.instagram.com/reel/Ddx0eL-zdif/?srtk=dnJtNjZqcnA4bWVu",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:00:49.466468-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:01:43.322270-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9906.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T10:01:43.626216-08:00",
+      "text": "https://www.instagram.com/reel/DdfWyljp_mr/?dlrf=MXBzNHRzYndzMGQ3dQ==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:01:43.705217-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:02:49.316167-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9907.PNG"
+      ]
+    },
+    {
+      "at": "2026-11-09T10:02:49.779055-08:00",
+      "text": "https://www.instagram.com/reel/Db14_F6PJZP/?srtk=MTRlYmI5aHozbjdhOA==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:02:49.917054-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:04:09.833880-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9908.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T10:04:10.240796-08:00",
+      "text": "https://www.instagram.com/reel/DaW7vLHJbnZ/?dlrf=MXdwYTdrcjZ3eTAxag==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:04:10.350685-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:23:12.231225-08:00",
+      "text": "https://www.instagram.com/reel/DfgvwLyzAx_/?exln=MTcwbjV1bDMxamY4bA==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:23:12.325966-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:52:37.849700-08:00",
+      "text": "https://www.instagram.com/reel/DfWBEPoRC4F/?vrfl=MWx1bzk5b3U2Y2hlaw==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:52:38.046571-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:55:54.690826-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9912.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T10:55:55.254879-08:00",
+      "text": "https://www.instagram.com/reel/Dc1INSaMC1m/?dlrf=MWUyODg0dzFzdGtk",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T10:55:55.391318-08:00",
+      "text": "Clip this video plz\nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T11:03:37.708014-08:00",
+      "text": "https://www.instagram.com/p/DfhrTuEsKhT/?vrfl=MXY4ZGNwOGwxN21zeA==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T11:03:37.891111-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    }
+  ],
+  "sourceNotes": {
+    "scope": "All 56 new sends after Batch 110, through November 9 at 11:03:37.891111 Pacific.",
+    "businessSources": [
+      "https://fowl-fare.square.site/",
+      "https://fowl-fare.square.site/s/order?location=LBC387ESJFBJP",
+      "https://almondandoak.com/",
+      "https://almondandoak.com/oakland-almond-and-oak-food-menu",
+      "https://www.barkandmane.com/pet-groomers/walnut-creek-ca/",
+      "https://www.barkandmane.com/dog-grooming/",
+      "https://www.barkandmane.com/cat-grooming/"
+    ],
+    "association": "Monica’s Berkeley footage explicitly shows Penelope’s signage. All other reviews identify the business in the caption. Oke Poke is a chain owner film, without an invented filming branch.",
+    "fourFilmLimit": "Ace King is already full, so Chance plays on his creator page and Watch and links from the business. Penelope’s first four new reviews play inline; Rose plays on her creator page and Watch and links from Penelope’s. All old films remain.",
+    "facts": "Fowl hours conflict between homepage/profile and Square footer; no single hours field is asserted. Published menus include unavailable items and home-only specials with availability caveats. Almond’s current official 3311 address takes precedence over the supplied Instagram 3307 address, with both explicitly noted. Coffee and tea prices remain under their respective menus. Bark & Mane is a mobile service with Pacheco office, seated in the requested Walnut Creek service area, with no invented prices or walk-in address.",
+    "actions": "No call, message, booking, order or commitment. All QA playback muted. Protected affiliate work and unrelated BSTY Goods drafts untouched.",
+    "lateMorning": "Three more sources arrived during work. Tony’s Watch request is a creator review at full Bibim Grill, so it plays on his page and Watch. Amanda’s film names Meadowlark Dairy and shows its Railroad Avenue shop, matching Pleasanton. The chain’s own Chronic Tacos film is added alongside, preserving the original hosted hero. No filming branch is invented."
+  }
+}

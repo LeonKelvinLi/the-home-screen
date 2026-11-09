@@ -6322,7 +6322,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'pacific-pet-grooming',
-    icon: 'pacific-pet-grooming',
+    icon: 'pacific-pet-grooming-v111',
     name: 'Pacific Pet Grooming',
     label: 'Pacific Pet',
     cuisine: 'Mobile pet grooming',
@@ -64040,6 +64040,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       "platform": "Instagram",
       "by": "k.smokeskitchen"
     },
+    "clips": [{"src": "/clips/chronic-tacos-owner-v111.mp4", "poster": "/clips/chronic-tacos-owner-v111-poster.webp", "href": "https://www.instagram.com/p/DfhrTuEsKhT/", "platform": "Instagram", "credit": "Original by @chronictacos, November 9, 2026. Chain food preparation; the posting metadata does not identify the filming branch. Linked to the existing Danville page without replacing its earlier credited review."}],
     "sections": [
       {
         "name": "Tacos",
@@ -84581,6 +84582,824 @@ export const LOCAL_SEED: LocalSeed[] = [
         ]
       }
     ]
+  },
+
+
+  // Batch 111 — Glenn, November 8 evening–November 9 morning.
+  {
+    "slug": "fowl-fare",
+    "name": "Fowl + Fare",
+    "label": "Fowl + Fare",
+    "cuisine": "Fried chicken sandwiches",
+    "tagline": "Fried chicken sandwiches + biscuits in Alameda",
+    "color": "#F4F0E7",
+    "icon": "fowl-fare-v111",
+    "prep": 0,
+    "category": "Chicken Sandwich",
+    "items": [],
+    "sections": [
+      {
+        "name": "Fried chicken sandwiches",
+        "items": [
+          [
+            "Classic Fried Chicken Sandwich",
+            "Fried chicken thigh, Fowl Sauce, house pickles and pear slaw on toasted brioche.",
+            1500
+          ],
+          [
+            "Classic Combo",
+            "Classic sandwich with fries and water.",
+            2000
+          ],
+          [
+            "Citric Hot Fried Chicken Sandwich",
+            "Fried chicken thigh, Citric Hot Sauce, Fowl Sauce, house pickles and pear slaw on toasted brioche.",
+            1600
+          ],
+          [
+            "Citric Hot Combo",
+            "Citric Hot sandwich with fries and water.",
+            2000
+          ],
+          [
+            "Charred Lemon Pepper Fried Chicken Sandwich",
+            "Fried chicken thigh, herb lemon sauce, charred lemon pepper sauce, house pickles and pear slaw on brioche.",
+            1700
+          ],
+          [
+            "Black Garlic Fried Chicken Sandwich",
+            "Fried chicken thigh, black garlic sauce, house pickles and pear slaw on toasted brioche. Listed on the home menu.",
+            1700
+          ],
+          [
+            "Kiwi Habanero Fried Chicken Sandwich",
+            "Fried chicken thigh, kiwi habanero sauce, pear slaw, house pickles and herb lemon sauce on toasted brioche.",
+            1700
+          ],
+          [
+            "Strawberry Citric Hot Fried Chicken Sandwich",
+            "Fried chicken thigh, Citric Hot Sauce, strawberry purée, house pickles, Fowl Sauce and pear slaw on toasted brioche.",
+            1700
+          ],
+          [
+            "Thai Tea Fried Chicken Sandwich",
+            "Thai tea coconut glaze, popping makrut lime boba, Thai basil slaw with Viet coriander on toasted brioche. Listed as available later; check ordering page.",
+            2400
+          ]
+        ]
+      },
+      {
+        "name": "Specials and combos",
+        "items": [
+          [
+            "Red Curry Chicken Tacos",
+            "Red curry chicken in a fried white corn tortilla, with charred shallot sauce.",
+            500
+          ],
+          [
+            "Fowl Fry Combo",
+            "Seasoned fries, fried chicken thigh, pear slaw, chopped pickles and sauce, plus bottled water.",
+            2100
+          ],
+          [
+            "Fowl Box (Fri, Sat, Sun Only)",
+            "10-piece nuggets, fries, pear slaw, garlic toast and Fowl Sauce. Listed on the home menu.",
+            1900
+          ],
+          [
+            "Fowl Biscuit (Saturday only)",
+            "Fried chicken thigh, habanero honey and roasted vegetable gravy on a house buttermilk biscuit. Listed on the home menu.",
+            1600
+          ]
+        ]
+      },
+      {
+        "name": "Sides and dessert",
+        "items": [
+          [
+            "Seasoned Fries",
+            "House-seasoned fries with Fowl Sauce.",
+            600
+          ],
+          [
+            "Side Fowl Sauce",
+            "1.5 oz house-made chipotle aioli.",
+            200
+          ],
+          [
+            "Side of Black Garlic Sauce",
+            "1.5 oz house-made black garlic aioli.",
+            200
+          ],
+          [
+            "Side of Citric Hot Sauce",
+            "1.5 oz house-made Citric Hot Sauce.",
+            200
+          ],
+          [
+            "Side of Jerk Sauce",
+            "1.5 oz house-made jerk sauce.",
+            200
+          ],
+          [
+            "Side of Lemon Sauce",
+            "1.5 oz house-made lemon aioli.",
+            200
+          ],
+          [
+            "Side of Pickles",
+            "House-made pickles.",
+            200
+          ],
+          [
+            "Side of Slaw",
+            "",
+            300
+          ],
+          [
+            "Banana Pudding",
+            "Whipped cream and vanilla wafers; listed on the home menu.",
+            900
+          ]
+        ]
+      },
+      {
+        "name": "Drinks",
+        "items": [
+          [
+            "7 Up",
+            "",
+            200
+          ],
+          [
+            "Az Green Tea",
+            "",
+            200
+          ],
+          [
+            "Az Lemon",
+            "",
+            200
+          ],
+          [
+            "Az Peach",
+            "",
+            200
+          ],
+          [
+            "Brisk Ice Tea",
+            "",
+            200
+          ],
+          [
+            "Lemonade",
+            "",
+            200
+          ],
+          [
+            "Mug Root Beer",
+            "",
+            200
+          ]
+        ]
+      }
+    ],
+    "site": "https://fowl-fare.square.site/",
+    "orderUrl": "https://fowl-fare.square.site/s/order?location=LBC387ESJFBJP",
+    "address": "2534 Santa Clara Ave, Alameda, CA 94501",
+    "phone": "(510) 816-9012",
+    "email": "fowlfare@gmail.com",
+    "siteNote": "Menu and prices from their official Alameda Square store and home menu. Stock and specials vary; check the ordering page before visiting.",
+    "panels": [
+      {
+        "head": "Hours and availability",
+        "body": [
+          "Their home menu and supplied profile say Wednesday–Saturday 11am–3pm and 5–8pm, until sellout. The Square ordering footer instead starts dinner at 4pm. The home site and ordering footer list Sunday 11am–3pm. Monday and Tuesday are closed. Confirm the evening start and stock directly."
+        ],
+        "links": [
+          {
+            "label": "Official Alameda ordering menu",
+            "href": "https://fowl-fare.square.site/s/order?location=LBC387ESJFBJP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "almond-and-oak",
+    "name": "Almond and Oak",
+    "label": "Almond + Oak",
+    "cuisine": "Seasonal California restaurant and weekend brunch",
+    "tagline": "Seasonal dinner and weekend brunch on Grand Avenue",
+    "color": "#0D0D0D",
+    "icon": "almond-and-oak-v111",
+    "prep": 0,
+    "category": "Eats",
+    "items": [],
+    "sections": [
+      {
+        "name": "Dinner — Appetizers",
+        "items": [
+          [
+            "Housemade Herbed Focaccia",
+            "Extra virgin olive oil",
+            400
+          ],
+          [
+            "Marinated Olives",
+            "",
+            400
+          ],
+          [
+            "Oysters",
+            "Skookums, Puget Sound, WA, rosé mignonette, lemon",
+            350,
+            null,
+            "$3.50 each"
+          ],
+          [
+            "Roasted Tomato, Red Pepper  & Eggplant Soup",
+            "marinated feta, olives, parsley, oregano",
+            1500
+          ],
+          [
+            "Mixed Greens",
+            "plums, toasted pecans, red wine vinaigrette, soft herbs",
+            1500
+          ],
+          [
+            "Confit Tuna & Fresh Shell Beans",
+            "albacore tuna, cranberry & butter beans, blue lake beans, cherry tomatoes, kalamata olives, frisée, shallots, parsley, oregano, aioli",
+            2100
+          ],
+          [
+            "Gravlax",
+            "house-cured king salmon, roasted beets, english cucumber, creme fraiche, spring onion, capers, dill, fennel pollen",
+            2100
+          ],
+          [
+            "House-made Burrata",
+            "fried shishito peppers,  prosciutto san daniele, marinated olives,  meyer lemon, sunflower sprouts, maldon salt",
+            2200
+          ],
+          [
+            "Chicory Caesar",
+            "mixed chicories, caesar dressing, garlic breadcrumbs, parmigiano reggiano, diced meyer lemon, black pepper",
+            1700
+          ]
+        ]
+      },
+      {
+        "name": "Dinner — Mains",
+        "items": [
+          [
+            "Chicken & Mushroom Ragu",
+            "rigatoni pasta, white wine-braised chicken ragu, bacon, mushrooms, parmigiano reggiano, parley, oregano",
+            2900
+          ],
+          [
+            "Ratatouille",
+            "fried anson mills polenta, roasted summer squash, peppers, onion, confit garlic, onion,  confit cherry tomato, basil, pine nuts, ricotta salata, saba",
+            3300
+          ],
+          [
+            "Grilled Local King Salmon",
+            "wild king salmon, Brentwood corn, maitake mushrooms, spring onion, cherry tomatoes, baby savoy spinach, corn purée, basil oil",
+            4800
+          ],
+          [
+            "Grilled Chicken Breast",
+            "cornbread stuffing, sautéed swiss chard, roasted carrots & king trumpet mushrooms, beurre blanc",
+            4000
+          ],
+          [
+            "Confit Pork Shoulder",
+            "mashed potatoes, blue lake beans, shiitake mushrooms, cherry tomato-basil vinaigrette",
+            4300
+          ],
+          [
+            "Flat Iron Steak",
+            "sweet potato-swiss chard-butternut squash gratin, fried sage & toasted breadcrumb salsa verde",
+            5500
+          ],
+          [
+            "Hamburger",
+            "House-made pan de mie bun, bread ‘n butter pickles, french fries | Add aged white cheddar $2, add bacon $2, add avocado $3",
+            2200
+          ]
+        ]
+      },
+      {
+        "name": "Dinner — Sides",
+        "items": [
+          [
+            "Broccoli di Ciccio",
+            "Garlic, lemon, chili flake",
+            1000
+          ],
+          [
+            "Marinated Roasted Beets",
+            "Goat cheese, pistachio, chives",
+            1000
+          ],
+          [
+            "Mashed Potatoes",
+            "Confit garlic- chive butter",
+            1000
+          ]
+        ]
+      },
+      {
+        "name": "Happy hour — Food",
+        "items": [
+          [
+            "Marinated Olives",
+            "",
+            300
+          ],
+          [
+            "House-made Herbed Focaccia",
+            "sea salt, extra virgin olive oil",
+            300
+          ],
+          [
+            "Oysters on the half shell",
+            "Puget Sound, WA       rose mignonette, lemon",
+            250,
+            null,
+            "$2.50 each"
+          ],
+          [
+            "Fried Shishito Peppers",
+            "aioli, lemon, maldon salt",
+            1000
+          ],
+          [
+            "French Fries",
+            "garlic oil, soft herbs",
+            700
+          ],
+          [
+            "Burger",
+            "with housemade bun & fries, bread ‘n butter pickles",
+            1900
+          ]
+        ]
+      },
+      {
+        "name": "Brunch — Starters",
+        "items": [
+          [
+            "Oysters",
+            "Puget Sound, WA rosé mignonette, lemon",
+            350,
+            null,
+            "$3.50 each"
+          ],
+          [
+            "Beignets",
+            "Powdered sugar, served with strawberry jam    -or-   cardamom cinnamon sugar",
+            1100
+          ],
+          [
+            "Cast Iron Scallion Cornbread",
+            "Honey butter",
+            600
+          ],
+          [
+            "Buttermilk Biscuit",
+            "Butter, house strawberry jam",
+            400
+          ],
+          [
+            "Mixed Greens",
+            "asian pear, pecans, red wine vinaigrette",
+            1200
+          ],
+          [
+            "Granola",
+            "oats, nuts, seeds, coconut, goji berries,  cocoa nibs, dates, vanilla greek yogurt",
+            1000
+          ],
+          [
+            "Market Fruit",
+            "honeycrisp apple, persimmon,  medjool dates, grapes, warren & asian pear, clementine",
+            1200
+          ],
+          [
+            "Thick-cut Honey Wheat Toast",
+            "Butter, housemade strawberry jam",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Brunch — Mains",
+        "items": [
+          [
+            "Quiche",
+            "roasted butternut squash, cremini mushrooms, grilled onion, goat cheese, pumpkin seed pesto",
+            1900
+          ],
+          [
+            "Chive Scrambled Eggs",
+            "three eggs soft scrambled, applewood-smoked bacon, potatoes with grilled onions, sour cream",
+            1900
+          ],
+          [
+            "Benedict",
+            "buttermilk biscuit, house-cured gravlax, heirloom tomato, sautéed greens, herbed hollandaise,  poached eggs & mixed greens",
+            2500
+          ],
+          [
+            "Pozole",
+            "stewed pork shoulder & chicken, mushrooms, hominy, dried chiles, cabbage, cilantro,  pickled jalapeño & carrots, crispy tortillas",
+            2000
+          ],
+          [
+            "Baked French Toast",
+            "house-made blueberry swirl bread, blueberry compote, basil, whipped cream, maple syrup",
+            1800
+          ],
+          [
+            "Hot Honey Fried Chicken Sandwich",
+            "buttermilk fried chicken, spiced honey, bread 'n butter pickles, pickled fresno chili, aioli, house-made pan de mie  & mixed greens",
+            1800
+          ],
+          [
+            "Steak Sandwich",
+            "housemade focaccia, grilled thinly sliced NY strip, grilled onions, gruyère, arugula, sundried tomato aioli, mixed greens",
+            2100
+          ],
+          [
+            "Shrimp & Grits",
+            "grilled marinated shrimp, anson mills white grits, shrimp gravy, scallions, shishito peppers & poached eggs",
+            2100
+          ],
+          [
+            "Vegetable Hash",
+            "roasted kabocha squash, sweet potatoes, garnet yams, red bell pepper, sunchokes, cremini mushrooms, onion, savoy spinach & poached eggs",
+            1900
+          ],
+          [
+            "Brunch Burger",
+            "House-made pain de mie bun, french fries, bread ‘n butter pickles | Add white cheddar $2, avocado $3.50, bacon $2, egg $3.50",
+            2000
+          ]
+        ]
+      },
+      {
+        "name": "Brunch — Sides",
+        "items": [
+          [
+            "French Fries",
+            "",
+            800
+          ],
+          [
+            "Potatoes",
+            "",
+            700
+          ],
+          [
+            "Bacon",
+            "",
+            900
+          ],
+          [
+            "Anson Mills Grits",
+            "",
+            700
+          ]
+        ]
+      },
+      {
+        "name": "Dessert — Desserts",
+        "items": [
+          [
+            "Mud Pie",
+            "bittersweet chocolate pudding, fudge, toasted pecans, chocolate wafer crust, whipped cream & candied pecans, chocolate sauce",
+            1500
+          ],
+          [
+            "Pumpkin Panna Cotta",
+            "whipped cream & candied pepitas, brown sugar shortbread cookie",
+            1400
+          ],
+          [
+            "Warm Apple Bread Pudding",
+            "whipped cream & apple caramel sauce",
+            1500
+          ],
+          [
+            "S'more Cake",
+            "layered graham cracker & chocolate cake, marshmallow buttercream, ganache, toasted meringue",
+            1500
+          ]
+        ]
+      },
+      {
+        "name": "Dessert — Coffee",
+        "items": [
+          [
+            "Espresso",
+            "",
+            400
+          ],
+          [
+            "Americano",
+            "",
+            400
+          ],
+          [
+            "Cappucino",
+            "",
+            500
+          ],
+          [
+            "Latte",
+            "",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Dessert — Tea",
+        "items": [
+          [
+            "English Breakfast",
+            "",
+            400
+          ],
+          [
+            "Jasmine Green",
+            "",
+            500
+          ],
+          [
+            "Mint & Sage",
+            "",
+            500
+          ],
+          [
+            "Bergamot Rooibos",
+            "",
+            500
+          ]
+        ]
+      },
+      {
+        "name": "Drinks — Non-Alcoholic Cocktails",
+        "items": [
+          [
+            "N/A Michelada",
+            "Secret michelada mix, chamoy, chili salt, n/a cerveza",
+            1000
+          ],
+          [
+            "Athletic Brewing Mexican-Style N/A Copper Ale",
+            "",
+            600
+          ],
+          [
+            "Fieldwork N/A IPA",
+            "",
+            600
+          ],
+          [
+            "N/A Mimosa",
+            "N/A Sparkling white wine, orange or grapefruit juice",
+            1100
+          ],
+          [
+            "Housemade Peppercorn Tonic",
+            "",
+            700
+          ],
+          [
+            "N/A Sparkling White Wine",
+            "NV Layla, Austria",
+            1100
+          ],
+          [
+            "N/A Hot Spiced apple Cider",
+            "",
+            700
+          ]
+        ]
+      },
+      {
+        "name": "Drinks — Coffee",
+        "items": [
+          [
+            "Coffee",
+            "Mother Tongue Bittersweet",
+            500
+          ],
+          [
+            "Espresso",
+            "",
+            500
+          ],
+          [
+            "Americano",
+            "",
+            500
+          ],
+          [
+            "Cappucino",
+            "",
+            600
+          ],
+          [
+            "Latte",
+            "",
+            700
+          ]
+        ]
+      },
+      {
+        "name": "Drinks — Tea",
+        "items": [
+          [
+            "English Breakfast",
+            "",
+            600
+          ],
+          [
+            "Jasmine Green",
+            "",
+            600
+          ],
+          [
+            "Bergamot Rooibos",
+            "",
+            600
+          ],
+          [
+            "Mint & Sage",
+            "",
+            600
+          ]
+        ]
+      },
+      {
+        "name": "Drinks — Non-Alcoholic Drinks",
+        "items": [
+          [
+            "Fresh Squeezed Orange Juice",
+            "",
+            500
+          ],
+          [
+            "Fresh Squeezed Grapefruit Juice",
+            "",
+            500
+          ],
+          [
+            "Iced Tea",
+            "",
+            400
+          ],
+          [
+            "Lemonade",
+            "",
+            500
+          ],
+          [
+            "Arnold Palmer",
+            "",
+            500
+          ],
+          [
+            "Housemade Ginger Beer",
+            "",
+            600
+          ],
+          [
+            "Housemade Orange-Basil Soda",
+            "",
+            600
+          ],
+          [
+            "Housemade Tonic",
+            "",
+            700
+          ],
+          [
+            "Mexican Coke",
+            "",
+            500
+          ],
+          [
+            "Squirt",
+            "",
+            500
+          ],
+          [
+            "Devil’s Canyon Root Beer (on tap)",
+            "",
+            600
+          ],
+          [
+            "Mountain Valley Sparkling Water",
+            "",
+            600
+          ],
+          [
+            "Housemade Tepache",
+            "*slightly fermented",
+            700
+          ],
+          [
+            "Midnight Howl",
+            "mint & black tea, black lime, ginger, habanero",
+            1000
+          ],
+          [
+            "N/A Sparkling White Wine",
+            "NV Layla, Austria",
+            1100
+          ]
+        ]
+      }
+    ],
+    "site": "https://almondandoak.com/",
+    "address": "3311 Grand Ave, Oakland, CA 94610",
+    "phone": "(510) 250-9550",
+    "email": "admin@almondandoak.com",
+    "hours": "Tue–Fri 5–9pm; Sat 10am–2pm & 5–9pm; Sun 10am–2pm",
+    "siteNote": "Official food menu, read November 9. Dinner, happy-hour food, brunch, dessert and non-alcoholic drinks keep their own sections and published prices. Dessert coffee/tea and the drinks menu have different prices; both remain labeled. Alcohol and the beer-and-shot Happy Meal are omitted.",
+    "panels": [
+      {
+        "head": "Menus and visiting",
+        "body": [
+          "The current official website lists 3311 Grand Ave. Glenn’s supplied Instagram screenshot lists 3307 Grand Ave; confirm the entrance directly before visiting. Happy-hour prices apply only during the restaurant’s happy-hour service."
+        ],
+        "links": [
+          {
+            "label": "Official full menu",
+            "href": "https://almondandoak.com/oakland-almond-and-oak-food-menu"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "bark-and-mane-walnut-creek",
+    "name": "Bark & Mane of Walnut Creek",
+    "label": "Bark & Mane",
+    "cuisine": "Mobile dog and cat pet grooming",
+    "tagline": "One-on-one pet grooming at your door",
+    "color": "#07533D",
+    "icon": "bark-and-mane-walnut-creek-v111",
+    "prep": 0,
+    "category": "Pets",
+    "items": [],
+    "site": "https://www.barkandmane.com/pet-groomers/walnut-creek-ca/",
+    "phone": "(925) 932-9559",
+    "email": "info@barkandmane.com",
+    "contactOnly": "Mobile dog and cat grooming serving Walnut Creek and nearby East Bay communities. Their grooming van comes to you by appointment. Prices are quoted directly; request a quote from their official page.",
+    "siteNote": "Formerly Aussie Pet Mobile. Glenn requested Walnut Creek Services and BEASTY Pets. This is a service-area listing, not a walk-in salon.",
+    "panels": [
+      {
+        "head": "Dog and cat grooming",
+        "body": [
+          "Dog grooming includes a bath and blowout, brushing, light detangling, ear and eye cleaning, nail clipping, and paw-pad and sanitary trims. Haircuts, deshedding and other add-ons are discussed during booking.",
+          "Cat grooming is available through the same mobile team. Confirm your pet’s needs and price directly."
+        ],
+        "links": [
+          {
+            "label": "Dog grooming services",
+            "href": "https://www.barkandmane.com/dog-grooming/"
+          },
+          {
+            "label": "Cat grooming services",
+            "href": "https://www.barkandmane.com/cat-grooming/"
+          }
+        ]
+      },
+      {
+        "head": "Office and service area",
+        "body": [
+          "Office hours: Monday–Friday 9am–5pm; closed Saturday and Sunday. Appointment availability is arranged directly.",
+          "Their supplied profile lists an office at 111 Center Avenue, Suite C, Pacheco. Grooming appointments take place in the mobile van at the customer’s location, not as walk-in visits to that office."
+        ],
+        "links": [
+          {
+            "label": "Request a mobile grooming quote",
+            "href": "https://www.barkandmane.com/pet-groomers/walnut-creek-ca/"
+          }
+        ]
+      }
+    ],
+    "clip": {
+      "src": "/clips/bark-and-mane-walnut-creek-v111.mp4",
+      "poster": "/clips/bark-and-mane-walnut-creek-v111-poster.webp",
+      "href": "https://www.instagram.com/reel/DcjmLN2ndYa/",
+      "platform": "Instagram",
+      "credit": "Original by @barkandmanewalnutcreek. Mobile grooming in the team’s van, booked at the customer’s location."
+    }
   },
 
 ]

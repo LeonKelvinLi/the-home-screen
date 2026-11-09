@@ -1203,4 +1203,8 @@ export const ADDED_ON: Record<string, string> = {
   b_thebakedbear: '2026-11-08',
   b_arsicaultbakery: '2026-11-08',
 
+  // Batch 111
+  b_fowlfare: '2026-11-08',
+  b_almondandoak: '2026-11-08',
+  b_barkandmanewalnutcreek: '2026-11-09',
 }

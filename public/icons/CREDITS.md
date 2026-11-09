@@ -678,3 +678,17 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-awesomejuliee-v109.webp` | Glenn’s supplied IMG_9858.png, November 8, 2026 | Original profile image cropped and fitted; phone/blurred border removed. |
 | `foodie-keyanajoooon-v109.webp` | Glenn’s supplied IMG_9859.png, November 8, 2026 | Original profile image cropped and fitted; phone/blurred border removed. |
 | `foodie-bvddiebri-v110.webp` | Glenn’s supplied IMG_9861.png, November 8, 2026 | Original @bvddiebri profile portrait cropped and fitted; phone/blurred borders removed. |
+| `one-house-bakery-v111.webp` | Glenn’s supplied IMG_9872.png, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `las-lomas-rib-palace-v111.webp` | Glenn’s supplied IMG_9878.png, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `pacific-pet-grooming-v111.webp` | Glenn’s supplied IMG_9880.png, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `philomena-pizza-v111.webp` | Glenn’s supplied IMG_9888.png, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `fowl-fare-v111.webp` | Glenn’s supplied IMG_9884.png, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `almond-and-oak-v111.webp` | Glenn’s supplied IMG_9893.PNG, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `bark-and-mane-walnut-creek-v111.webp` | Glenn’s supplied IMG_9897.png, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `foodie-jadedancelrealtor-v111.webp` | Glenn’s supplied IMG_9873.png, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `foodie-macmadame-v111.webp` | Glenn’s supplied IMG_9885.png, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `foodie-monica-s-daniels-v111.webp` | Glenn’s supplied IMG_9905.png, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `foodie-echen-eats-v111.webp` | Glenn’s supplied IMG_9906.png, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `foodie-iamnikkieg-v111.webp` | Glenn’s supplied IMG_9907.PNG, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `foodie-rose-buds-v111.webp` | Glenn’s supplied IMG_9908.png, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
+| `foodie-amandabushman-v111.webp` | Glenn’s supplied IMG_9912.png, November 9, 2026 | Original portrait, cropped and fitted without phone controls. |

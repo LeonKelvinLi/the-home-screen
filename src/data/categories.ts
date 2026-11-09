@@ -149,6 +149,8 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'peruvian', heading: 'Peruvian', about: 'Peruvian restaurants and ceviche', wall: wall('diner'), test: /peruvian|cevicher/i },
   { kind: 'jamaican', heading: 'Jamaican', about: 'Jamaican restaurants and jerk cooking', wall: wall('bbq'), test: /jamaican|jerk chicken/i },
   { kind: 'friedchicken', heading: 'Fried Chicken', about: 'Fried chicken shops and sandwiches', wall: wall('diner'), test: /fried chicken|hot chicken|chicken wings/i },
+  // Glenn, November 8: Fowl + Fare, BEASTY • Chicken Sandwich.
+  { kind: 'chickensandwich', heading: 'Chicken Sandwich', about: 'Chicken sandwich shops', wall: wall('diner'), test: /chicken sandwich(?:es)?/i },
   { kind: 'pizza', heading: 'Pizza', about: 'Pizzerias and pizza shops', wall: wall('bakery'), test: /pizza|pizzeria/i },
   { kind: 'dumplings', heading: 'Dumplings', about: 'Dumplings, soup dumplings and potstickers', wall: wall('dimsum'), test: /dumplings?|xiao[ -]?long[ -]?bao|sheng[ -]?jian/i },
   { kind: 'sandwiches', heading: 'Sandwiches', about: 'Sandwich shops, subs and delis', wall: wall('diner'), test: /sandwich|\bsubs?\b|\bdelicatessen\b|\bdeli\b|banh mi/i },

@@ -929,7 +929,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.soltaqueriaberkeley.com/',
   }),
   seed('one-house-bakery', 'One House Bakery', 'One House Bak…', 'Bakery', '#6B4A22', {
-    icon: 'one-house-bakery',
+    icon: 'one-house-bakery-v111',
     logoTemplate: 'monogram', logoInitials: 'OH', logoFace: 'script',
     site: 'https://onehousebakery.com/',
     address: '918 1st St, Benicia',
@@ -1558,6 +1558,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: 'Brentwood',
   }),
   seed('las-lomas-rib-palace', 'Las Lomas Rib Palace', 'Las Lomas', 'Peruvian and BBQ ribs', '#7A1F14', {
+    icon: 'las-lomas-rib-palace-v111',
     logoTemplate: 'monogram', logoInitials: 'LL', logoFace: 'slab',
     phone: '(925) 499-7105',
     contactOnly:
@@ -1581,6 +1582,14 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.macsoldhouse.com/',
   }),
   seed('philomena-pizza', 'Philomena Pizza', 'Philomena', 'Pizza', '#2E4A2A', {
+    clip: {
+      "src": "/clips/philomena-pizza-v111.mp4",
+      "poster": "/clips/philomena-pizza-v111-poster.webp",
+      "href": "https://www.instagram.com/reel/Cy7FlMKJd1x/",
+      "platform": "Instagram",
+      "credit": "Original by @philomenaoakland, October 28, 2023. Archival pizza-pub atmosphere; the World Series and Warriors event mentioned in the caption is not a current event or offer."
+    },
+    icon: 'philomena-pizza-v111',
     logoTemplate: 'monogram', logoInitials: 'PP', logoFace: 'slab',
     site: 'https://order.philomenapizza.com/',
   }),
@@ -3209,6 +3218,13 @@ export const ROSTER_SEED: LocalSeed[] = [
   /* Oke Poke, "Walnut Creek • Goods" — poke takes the Sushi seat, as Truffle
      Poke's did on the Peninsula. */
   seed('oke-poke-walnut-creek', 'Oke Poke Walnut Creek', 'Oke Poke', 'Poke', '#1C1C1C', {
+    clip: {
+      "src": "/clips/oke-poke-walnut-creek-v111.mp4",
+      "poster": "/clips/oke-poke-walnut-creek-v111-poster.webp",
+      "href": "https://www.instagram.com/reel/DdpqMXLjw_Q/",
+      "platform": "Instagram",
+      "credit": "Original by @okepokeco. Signature bowl preparation from the chain; the caption does not identify a filming branch. Linked to the existing Walnut Creek page."
+    },
     icon: 'oke-poke-walnut-creek',
     logoTemplate: 'wordmark', logoLines: ['OKE', 'POKE'], logoFace: 'condensed',
     site: 'https://www.okepoke.com/',
