@@ -44,7 +44,7 @@ for (const key of Object.keys(env)) {
 Object.assign(env, {
   NODE_ENV: 'development', PORT: String(port), DATABASE_URL: db.url,
   PASS_SECRET: passSecret, BEASTY_PUBLIC_ORIGIN: origin,
-  GOODS_ENABLED: '1', GOODS_UPLOAD_DIR: join(temp, 'photos'),
+  GOODS_ENABLED: '1', GOODS_DEMO_CATALOG: '0', GOODS_UPLOAD_DIR: join(temp, 'photos'),
   CRM_ONLY: '0', CRM_OPEN: '0', CRM_AUTO_IMPORT: '0',
   CRM_URL: '', PUBLIC_URL: '', LEAD_WEBHOOK_URL: '', OTP_FROM_EMAIL: '',
   MAIL_MODE: 'spool', MAIL_FROM: '', SIMULATE_KITCHEN: '0', ALLOW_MOCK_PAYMENTS: '0',
@@ -84,7 +84,7 @@ class Browser {
   async request(path, { method = 'GET', body, originHeader = origin } = {}) {
     const url = new URL(path, origin)
     assert.equal(url.origin, origin, 'This audit never follows an external provider')
-    const selected = this.cookies.filter(c => url.pathname.startsWith(c.path) && !c.secure)
+    const selected = this.cookies.filter(c => (url.pathname === c.path || url.pathname.startsWith(c.path.endsWith('/') ? c.path : c.path + '/')) && !c.secure)
     const headers = new Headers()
     if (selected.length) headers.set('Cookie', selected.map(c => `${c.name}=${c.value}`).join('; '))
     this.sent.set(url.pathname, selected.map(c => c.name))
@@ -166,6 +166,36 @@ try {
   const memberId = verified.data.id
   assert.equal(verified.status, 201, `Synthetic OTP verification failed: ${verified.status} ${verified.data.error || ''}`)
   check('real Pages OTP verification creates and signs in one member', verified.status === 201 && /^mb_/.test(memberId))
+  const unknownEmail = `unknown-goods-host-${randomBytes(5).toString('hex')}@example.invalid`
+  const pendingLogStart = logs.length
+  const pendingSignup = await guest.json('/api/members/start', { method: 'POST', body: { name: 'Pending synthetic signup', email: unknownEmail } })
+  assert.equal(pendingSignup.status, 202)
+  let pendingSignupCode
+  for (let i = 0; i < 40 && !pendingSignupCode; i++) {
+    const line = logs.slice(pendingLogStart).split('\n').filter(line => line.includes(`[login-code] ${unknownEmail} `)).at(-1)
+    pendingSignupCode = line?.match(/ (\d{6}) /)?.[1]
+    if (!pendingSignupCode) await pause(50)
+  }
+  assert.ok(pendingSignupCode, 'The synthetic unknown member has a valid pending signup code')
+  const unknownStart = await guest.json('/api/members/start', { method: 'POST', body: { name: 'BEASTY member', email: unknownEmail, signinOnly: true } })
+  check('existing-only code request does not expose account existence or a code', unknownStart.status === 202 && unknownStart.data.sent === true && unknownStart.data.code === undefined)
+  const unknownVerify = await guest.json('/api/members/verify', { method: 'POST', body: { email: unknownEmail, code: pendingSignupCode, signinOnly: true } })
+  const unknownRows = await pool.query('SELECT id FROM public.members WHERE email=$1', [unknownEmail])
+  check('unknown existing-only login cannot turn an earlier valid signup code into a new account', unknownVerify.status === 403 && unknownRows.rowCount === 0)
+  await member.json('/api/members/signout', { method: 'POST', body: {} })
+  const signInLogStart = logs.length
+  const signInStart = await member.json('/api/members/start', { method: 'POST', body: { name: 'BEASTY member', email, signinOnly: true } })
+  check('existing-only Pages login accepts an email without city or profile fields', signInStart.status === 202 && signInStart.data.delivered === false && signInStart.data.code === undefined)
+  let signInCode
+  for (let i = 0; i < 40 && !signInCode; i++) {
+    const line = logs.slice(signInLogStart).split('\n').filter(line => line.includes(`[login-code] ${email} `)).at(-1)
+    signInCode = line?.match(/ (\d{6}) /)?.[1]
+    if (!signInCode) await pause(50)
+  }
+  assert.ok(signInCode, 'The development-only log contains the synthetic sign-in OTP')
+  const signedIn = await member.json('/api/members/verify', { method: 'POST', body: { email, code: signInCode, signinOnly: true } })
+  const unchanged = await pool.query('SELECT name,city,state FROM public.members WHERE id=$1', [memberId])
+  check('existing-only OTP returns the same account without replacing its stored profile', signedIn.status === 200 && signedIn.data.id === memberId && unchanged.rows[0].name === name && unchanged.rows[0].city === 'Oakland' && unchanged.rows[0].state === 'CA')
   const status = await member.json('/api/identity/status')
   check('Pages identity authority sees the existing member cookie', status.status === 200 && status.data.member?.id === memberId)
   const startSso = await member.json('/goods/api/identity/sign-in', { method: 'POST', body: { method: 'beastypages', returnTo: '/inventory' } })

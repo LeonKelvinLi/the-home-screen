@@ -234,6 +234,7 @@ export function registerMarketplace(
       const clauses = [
         `l.status IN ('active','reserved')`,
         `l.is_hidden=false`,
+        `l.demo_disabled=false`,
         `p.status='active'`,
       ];
       const args: unknown[] = [];
@@ -446,7 +447,7 @@ export function registerMarketplace(
       if (!allowed)
         allowed = !!(
           await pool.query(
-            `SELECT 1 FROM listing_photos lp JOIN listings l ON l.id=lp.listing_id JOIN profiles p ON p.id=l.owner_id WHERE lp.photo_id=$1 AND l.published_at IS NOT NULL AND l.status IN ('active','reserved','traded','archived') AND l.is_hidden=false AND p.status='active' LIMIT 1`,
+            `SELECT 1 FROM listing_photos lp JOIN listings l ON l.id=lp.listing_id JOIN profiles p ON p.id=l.owner_id WHERE lp.photo_id=$1 AND l.published_at IS NOT NULL AND l.status IN ('active','reserved','traded','archived') AND l.is_hidden=false AND l.demo_disabled=false AND p.status='active' LIMIT 1`,
             [photoId],
           )
         ).rowCount;
@@ -661,7 +662,7 @@ export function registerMarketplace(
         { limit, offset } = pagination(req);
       const rows = (
         await pool.query(
-          `SELECT f.listing_id FROM favorites f JOIN listings l ON l.id=f.listing_id JOIN profiles p ON p.id=l.owner_id WHERE f.user_id=$1 AND l.published_at IS NOT NULL AND l.status<>'draft' AND l.status<>'hidden' AND l.is_hidden=false AND p.status='active' ORDER BY f.created_at DESC,f.listing_id DESC LIMIT $2 OFFSET $3`,
+          `SELECT f.listing_id FROM favorites f JOIN listings l ON l.id=f.listing_id JOIN profiles p ON p.id=l.owner_id WHERE f.user_id=$1 AND l.published_at IS NOT NULL AND l.status<>'draft' AND l.status<>'hidden' AND l.is_hidden=false AND l.demo_disabled=false AND p.status='active' ORDER BY f.created_at DESC,f.listing_id DESC LIMIT $2 OFFSET $3`,
           [userId, limit + 1, offset],
         )
       ).rows;

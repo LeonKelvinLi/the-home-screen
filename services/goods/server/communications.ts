@@ -154,6 +154,12 @@ export function registerCommunications(
       const conversationId = await transaction(pool, async (db) => {
         await activePeople(db, [userId, body.sellerId], true);
         const r = (await lockListings(db, [body.listingId]))[0];
+        if (r?.is_demo)
+          fail(
+            409,
+            "Demo sample items are for browsing only. Messages are disabled.",
+            "DEMO_LISTING",
+          );
         if (
           !r ||
           r.owner_id !== body.sellerId ||

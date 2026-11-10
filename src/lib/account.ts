@@ -68,6 +68,8 @@ export interface Account {
 
 export interface SignUp {
   name: string
+  /** Request a code only for an existing account; never create a new member. */
+  signinOnly?: boolean
   /*
     A MOBILE NUMBER IS WHAT THE SCREEN ASKS FOR NOW — "we want only SMS".
     `email` stays on the type and stays optional because the accounts that
@@ -261,7 +263,7 @@ export async function startSignUp(fields: SignUp): Promise<StartResult> {
 export type VerifyResult = { ok: true; account: Account; created?: boolean } | { ok: false; error: string }
 
 /** Step two: prove the number. This is the only call that creates a member. */
-export async function verifyCode(destination: string, code: string): Promise<VerifyResult> {
+export async function verifyCode(destination: string, code: string, signinOnly = false): Promise<VerifyResult> {
   try {
     const r = await fetch('/api/members/verify', {
       method: 'POST',
@@ -273,9 +275,11 @@ export async function verifyCode(destination: string, code: string): Promise<Ver
         by the @ rather than by a flag threaded through three components: the
         two are never ambiguous and a flag can be passed wrong.
       */
-      body: JSON.stringify(
-        destination.includes('@') ? { email: destination, code } : { phone: destination, code },
-      ),
+      body: JSON.stringify({
+        ...(destination.includes('@') ? { email: destination } : { phone: destination }),
+        code,
+        ...(signinOnly ? { signinOnly: true } : {}),
+      }),
     })
     const body = await r.json().catch(() => ({}))
     if (!r.ok) return { ok: false, error: body?.error ?? 'That code did not work.' }

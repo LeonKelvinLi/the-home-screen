@@ -30,6 +30,8 @@ import {
 import {
   Avatar,
   Dialog,
+  DemoBadge,
+  DemoCatalogNotice,
   Empty,
   ErrorBox,
   Link,
@@ -201,6 +203,9 @@ export function Home() {
             View all <ArrowRight size={17} />
           </Link>
         </div>
+        {data?.items.some((item) => item.isDemo || item.owner.isDemo) && (
+          <DemoCatalogNotice />
+        )}
         {loading ? (
           <Loading cards />
         ) : error ? (
@@ -219,8 +224,16 @@ export function Home() {
         <section className="section seller-discovery-section">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">People behind the finds</span>
-              <h2>Fresh from their shelves.</h2>
+              <span className="eyebrow">
+                {sellers.every((seller) => seller.isDemo)
+                  ? "Explore the possibilities"
+                  : "People behind the finds"}
+              </span>
+              <h2>
+                {sellers.every((seller) => seller.isDemo)
+                  ? "A few sample shelves."
+                  : "Fresh from their shelves."}
+              </h2>
             </div>
           </div>
           <div className="seller-discovery-grid">
@@ -234,6 +247,7 @@ export function Home() {
                 <div>
                   <strong>{seller.name}</strong>
                   <span>@{seller.username}</span>
+                  {seller.isDemo && <DemoBadge />}
                   <small>{seller.location || "Newly listed goods"}</small>
                 </div>
                 <ArrowUpRight size={17} />
@@ -572,6 +586,9 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
                 {next ? " and more" : ""}
                 {search.get("q") ? " for “" + search.get("q") + "”" : ""}
               </p>
+              {items.some((item) => item.isDemo || item.owner.isDemo) && (
+                <DemoCatalogNotice />
+              )}
               {items.length ? (
                 <ProductGrid
                   items={items}
@@ -644,7 +661,7 @@ export function ItemPage({ id }: { id: string }) {
   }, [l?.id, user?.id]);
   useEffect(() => setIndex(0), [id]);
   const message = async () => {
-    if (!l || !requireUser()) return;
+    if (!l || l.isDemo || l.owner.isDemo || !requireUser()) return;
     setBusy(true);
     try {
       const d = await api<{ conversation: { id: string } }>(
@@ -681,6 +698,7 @@ export function ItemPage({ id }: { id: string }) {
   if (error) return <ErrorBox error={error} retry={reload} />;
   if (!l) return null;
   const owned = user?.id === l.owner.id;
+  const demo = l.isDemo || l.owner.isDemo;
   let touchStart: { x: number; y: number } | null = null;
   const gallery = (
     <div
@@ -783,19 +801,35 @@ export function ItemPage({ id }: { id: string }) {
         <section className="item-info">
           <div className="item-kicker">
             <span className="code-pill">{l.code}</span>
-            <Status value={l.status} />
+            {demo ? <DemoBadge /> : <Status value={l.status} />}
           </div>
           <h1>{l.title || "Untitled draft"}</h1>
           <p className="item-subtitle">
             {l.category} <span>·</span> {l.condition}
           </p>
-          <div className="item-price">{money(l.priceCents)}</div>
+          <div className="item-price">
+            {demo && l.priceCents === null
+              ? "Sample item"
+              : money(l.priceCents)}
+          </div>
           {l.priceCents !== null && (
             <p className="muted small-copy">
-              Listed value · Contact the seller to discuss this item.
+              {demo
+                ? "Example value for this sample item."
+                : "Listed value · Contact the seller to discuss this item."}
             </p>
           )}
-          {l.tradeEnabled && (
+          {demo && (
+            <div className="demo-item-notice">
+              <strong>A sample of what’s possible.</strong>
+              <p>
+                This illustrated item and its seller are part of the demo
+                catalog. You can browse and save it. Trades and messages are
+                available for real community listings.
+              </p>
+            </div>
+          )}
+          {l.tradeEnabled && !demo && (
             <div className="trade-callout">
               <ArrowLeftRight size={19} />
               <div>
@@ -806,7 +840,22 @@ export function ItemPage({ id }: { id: string }) {
           )}
           <Seller profile={l.owner} />
           <div className="item-actions">
-            {owned ? (
+            {demo ? (
+              <>
+                <Link
+                  className="button full"
+                  to={user ? "/sell/new" : "/signup?returnTo=%2Fsell%2Fnew"}
+                >
+                  {user
+                    ? "List your own item"
+                    : "Join BEASTY and list your own"}
+                  <ArrowRight size={18} />
+                </Link>
+                <Link className="button secondary full" to="/explore">
+                  Keep exploring
+                </Link>
+              </>
+            ) : owned ? (
               <Link className="button full" to={"/sell/" + l.id}>
                 Manage this listing
               </Link>
@@ -845,7 +894,9 @@ export function ItemPage({ id }: { id: string }) {
           </div>
           {l.tradePreferences && (
             <div className="item-detail-block">
-              <h3>Open to trading for</h3>
+              <h3>
+                {demo ? "Example trade preferences" : "Open to trading for"}
+              </h3>
               <p>{l.tradePreferences}</p>
             </div>
           )}
@@ -859,7 +910,7 @@ export function ItemPage({ id }: { id: string }) {
               <strong>{l.condition}</strong>
             </div>
             <div>
-              <span>Listed</span>
+              <span>{demo ? "Added to demo catalog" : "Listed"}</span>
               <strong>{new Date(l.createdAt).toLocaleDateString()}</strong>
             </div>
             <div>
@@ -867,7 +918,7 @@ export function ItemPage({ id }: { id: string }) {
               <small className="monospace">{l.id.slice(0, 12)}</small>
             </div>
           </div>
-          <ReportButton targetType="listing" targetId={l.id} />
+          {!demo && <ReportButton targetType="listing" targetId={l.id} />}
         </section>
       </div>
       {fullscreen && (
@@ -882,7 +933,9 @@ export function ItemPage({ id }: { id: string }) {
           </p>
         </Dialog>
       )}
-      {trade && <TradeComposer target={l} onClose={() => setTrade(false)} />}
+      {trade && !demo && (
+        <TradeComposer target={l} onClose={() => setTrade(false)} />
+      )}
     </>
   );
 }
@@ -919,8 +972,11 @@ export function SellerPage({ id }: { id: string }) {
       <section className="seller-profile">
         <Avatar profile={p} size={96} />
         <div>
-          <span className="eyebrow">The seller's shelf</span>
+          <span className="eyebrow">
+            {p.isDemo ? "Sample storefront" : "The seller's shelf"}
+          </span>
           <h1>{p.name}</h1>
+          {p.isDemo && <DemoBadge />}
           <span className="muted">@{p.username}</span>
           <p>{p.bio || "A little room for something good."}</p>
           <div className="profile-facts">
@@ -930,17 +986,21 @@ export function SellerPage({ id }: { id: string }) {
                 {p.location}
               </span>
             )}
-            <span>
-              Member since{" "}
-              {new Date(p.createdAt).toLocaleDateString(undefined, {
-                month: "short",
-                year: "numeric",
-              })}
-            </span>
-            <span>{p.completedTrades || 0} completed trades</span>
+            {!p.isDemo && (
+              <span>
+                Member since{" "}
+                {new Date(p.createdAt).toLocaleDateString(undefined, {
+                  month: "short",
+                  year: "numeric",
+                })}
+              </span>
+            )}
+            {!p.isDemo && (
+              <span>{p.completedTrades || 0} completed trades</span>
+            )}
           </div>
         </div>
-        {user?.id !== id && (
+        {user?.id !== id && !p.isDemo && (
           <div className="seller-controls">
             <button className="text-button" onClick={block} disabled={blocking}>
               Block user
@@ -949,6 +1009,7 @@ export function SellerPage({ id }: { id: string }) {
           </div>
         )}
       </section>
+      {p.isDemo && <DemoCatalogNotice />}
       <div className="section-heading">
         <div>
           <span className="eyebrow">Coded from A–1 to Z–3</span>
@@ -966,10 +1027,15 @@ export function SellerPage({ id }: { id: string }) {
             <Link to={"/items/" + l.id} className="shelf-item" key={l.id}>
               <Photo listing={l} />
               <span className="shelf-code">{l.code}</span>
+              {(l.isDemo || p.isDemo) && <DemoBadge />}
               <h3>{l.title}</h3>
               <div className="product-meta">
-                <span>{money(l.priceCents)}</span>
-                <Status value={l.status} />
+                <span>
+                  {(l.isDemo || p.isDemo) && l.priceCents === null
+                    ? "Sample item"
+                    : money(l.priceCents)}
+                </span>
+                {!(l.isDemo || p.isDemo) && <Status value={l.status} />}
               </div>
             </Link>
           ))}

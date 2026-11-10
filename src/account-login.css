@@ -220,6 +220,54 @@
 .beasty-account-code-form .join {
   padding-bottom: 15px;
 }
+.beasty-code-entry {
+  margin: 18px 18px 0;
+}
+.beasty-code-modes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #dedfd7;
+  border-radius: 7px;
+  padding: 4px;
+  gap: 4px;
+}
+.beasty-code-modes button,
+.beasty-code-channels button {
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #5b6052;
+  padding: 11px 8px;
+  min-height: 42px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.beasty-code-modes button[aria-pressed='true'] {
+  background: #f6d800;
+  color: #232416;
+}
+.beasty-code-entry > p {
+  margin: 13px 0 0;
+  color: #686b60;
+  font-size: 12px;
+  line-height: 1.75;
+}
+.beasty-code-channels {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.beasty-code-channels button {
+  border: 1px solid #d8dbd0;
+  padding: 8px 12px;
+}
+.beasty-code-channels button[aria-pressed='true'] {
+  background: #f7f7ee;
+  border-color: #7d805f;
+  color: #26291c;
+}
 .beasty-login-error {
   margin: 15px 18px 20px;
   border: 1px solid #e7d2cb;

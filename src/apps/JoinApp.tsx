@@ -43,7 +43,7 @@ function JoinFrame({ standalone, ...props }: React.ComponentProps<typeof AppChro
  * door and says which of the two steps you are on. Two steps with no marker
  * is the version where somebody types a code and wonders what else is coming.
  */
-function JoinHead({ step }: { step: 'details' | 'code' }) {
+function JoinHead({ step, signinOnly = false }: { step: 'details' | 'code'; signinOnly?: boolean }) {
   return (
     <div className="join-head">
       <span className="join-mark" aria-hidden="true">
@@ -51,7 +51,7 @@ function JoinHead({ step }: { step: 'details' | 'code' }) {
       </span>
       <ol className="join-steps" aria-label={`Step ${step === 'details' ? 1 : 2} of 2`}>
         <li className={step === 'details' ? 'is-on' : 'is-done'}>
-          <b>1</b> Your details
+          <b>1</b> {signinOnly ? 'Your account' : 'Your details'}
         </li>
         <li className={step === 'code' ? 'is-on' : ''}>
           <b>2</b> Your code
@@ -62,6 +62,9 @@ function JoinHead({ step }: { step: 'details' | 'code' }) {
 }
 
 export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, returnTo = '/account' }: { api: ShellApi; onDone?: (a: Account) => void; standalone?: boolean; hideGoogle?: boolean; returnTo?: string }) {
+  const [entryMode, setEntryMode] = useState<'signin' | 'join'>(standalone ? 'signin' : 'join')
+  const signinOnly = standalone && entryMode === 'signin'
+  const [signinChannel, setSigninChannel] = useState<'email' | 'sms'>('email')
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [instagram, setInstagram] = useState('')
@@ -102,13 +105,17 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
   const [sentTo, setSentTo] = useState<'sms' | 'email'>('email')
   useEffect(() => {
     let alive = true
-    loginChannels().then((c) => alive && setChannels(c))
+    loginChannels().then((c) => {
+      if (!alive) return
+      setChannels(c)
+      setSigninChannel(c.email ? 'email' : 'sms')
+    })
     return () => {
       alive = false
     }
   }, [])
   /* Text if it works, otherwise mail. */
-  const byText = channels.sms
+  const byText = signinOnly ? channels.sms && (signinChannel === 'sms' || !channels.email) : channels.sms
   /*
     A code that never arrives used to be a dead end.
 
@@ -158,13 +165,19 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
      properly. Only the field that will actually be used is required. */
   const emailLooksRight = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.trim())
   const cityLooksRight = !!cleanCity(city)
-  const ready = name.trim().length >= 2 && cityLooksRight && (byText ? phoneLooksRight : emailLooksRight)
+  const ready = (signinOnly || (name.trim().length >= 2 && cityLooksRight)) && (byText ? phoneLooksRight : emailLooksRight)
 
   /* The one send, called by the details form and by Resend. Both need the same
      handling of a failure, and two copies of it drift. */
   async function send(): Promise<boolean> {
     setError(null)
-    const r = await startSignUp({
+    const r = await startSignUp(signinOnly ? {
+      // The server validates a neutral request label for both known and unknown
+      // addresses. signinOnly prevents creation and never changes a member's name.
+      name: 'BEASTY member',
+      signinOnly: true,
+      ...(byText ? { phone: phone.trim() } : { email: email.trim() }),
+    } : {
       name: name.trim(),
       /* Both are sent when both are filled — the server picks the channel and
          keeps the other as the member's detail. What must never happen again
@@ -233,7 +246,7 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
       `sentTo` is what the server said it used, so this can no longer disagree
       with where the code went.
     */
-    const r = await verifyCode(sentTo === 'sms' ? phone.trim() : email.trim(), code)
+    const r = await verifyCode(sentTo === 'sms' ? phone.trim() : email.trim(), code, signinOnly)
     setBusy(false)
     if (!r.ok) {
       setError(r.error)
@@ -262,22 +275,41 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
   return (
     <JoinFrame
       standalone={standalone}
-      title={step === 'details' ? 'Sign in or join' : sentTo === 'sms' ? 'Check your texts' : 'Check your email'}
+      title={step === 'details' ? (signinOnly ? 'Sign in with a code' : 'Sign in or join') : sentTo === 'sms' ? 'Check your texts' : 'Check your email'}
       onBack={api.closeApp}
       tint="#141416"
     >
-      <JoinHead step={step} />
+      {standalone && step === 'details' && (
+        <div className="beasty-code-entry">
+          <div className="beasty-code-modes" aria-label="Code sign-in mode">
+            <button type="button" aria-pressed={signinOnly} disabled={busy} onClick={() => { setEntryMode('signin'); setError(null) }}>
+              Existing account
+            </button>
+            <button type="button" aria-pressed={!signinOnly} disabled={busy} onClick={() => { setEntryMode('join'); setError(null) }}>
+              Create an account
+            </button>
+          </div>
+          <p>{signinOnly ? 'Use the email or mobile number already on your BEASTY account.' : 'New to BEASTY? Create a free account with a sign-in code.'}</p>
+          {signinOnly && channels.email && channels.sms && (
+            <div className="beasty-code-channels" aria-label="Send your code by">
+              <button type="button" aria-pressed={!byText} disabled={busy} onClick={() => setSigninChannel('email')}>Email code</button>
+              <button type="button" aria-pressed={byText} disabled={busy} onClick={() => setSigninChannel('sms')}>Text message</button>
+            </div>
+          )}
+        </div>
+      )}
+      <JoinHead step={step} signinOnly={signinOnly} />
       {step === 'details' && !hideGoogle && <GoogleAccountSignIn returnTo={returnTo} />}
       {step === 'details' ? (
         <form className="join" key="details" onSubmit={askForCode}>
           {/* Said where it matters. A referred sign-up is the referrer's credit. */}
-          {ref && (
+          {ref && !signinOnly && (
             <p className="join-ref" role="status">
               You were invited with code <strong>{ref}</strong>.
             </p>
           )}
 
-          <label className="join-field">
+          {!signinOnly && <label className="join-field">
             <span>Name</span>
             <input
               value={name}
@@ -295,7 +327,7 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
               have typed addresses into. An existing member's stored name is
               never overwritten by what is typed here.
             */}
-          </label>
+          </label>}
 
           {/*
             THE MOBILE NUMBER IS THE ACCOUNT — "we want only SMS", 2026-08-29.
@@ -304,7 +336,7 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
             this one tap on a phone: iOS offers the number it knows and puts up
             the keypad rather than the alphabet.
           */}
-          <label className="join-field">
+          {(!signinOnly || byText) && <label className="join-field">
             <span>
               Mobile number {!byText && <em>optional</em>}
             </span>
@@ -318,7 +350,8 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
               enterKeyHint="next"
               required={byText}
             />
-            {byText && (
+            {byText && signinOnly && <small className="join-hint">We’ll text a six-digit sign-in code to the number on your account. Standard message rates may apply.</small>}
+            {byText && !signinOnly && (
               <small className="join-hint">
                 {/*
                     THE DISCLAIMER GLENN ASKED FOR, 2026-09-02: "you have to
@@ -330,8 +363,9 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
                 We text you a six-digit code. Standard message rates apply. By continuing you agree that BEASTY may also text you offers and news now and then; reply STOP to opt out.
               </small>
             )}
-          </label>
+          </label>}
 
+          {!signinOnly && <>
           <div className="join-row">
             <label className="join-field join-city">
               <span>City</span>
@@ -370,6 +404,7 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
               autoCorrect="off"
             />
           </label>
+          </>}
 
           {/*
             REQUIRED OR NOT DEPENDING ON WHAT CAN ACTUALLY SEND. With texting
@@ -377,9 +412,9 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
             it, this is the way in and asking for it as an afterthought is what
             left everybody stranded on the code screen.
           */}
-          <label className="join-field">
+          {(!signinOnly || !byText) && <label className="join-field">
             <span>
-              Email {byText && <em>optional</em>}
+              {signinOnly ? 'Email address' : 'Email'} {byText && <em>optional</em>}
             </span>
             <input
               type="email"
@@ -389,7 +424,7 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
               inputMode="email"
               required={!byText}
             />
-          </label>
+          </label>}
 
           {error && (
             <p className="join-error" role="alert">
@@ -398,7 +433,7 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
           )}
 
           <button className="btn-primary" type="submit" disabled={!ready || busy}>
-            {busy ? 'Sending your code…' : 'Send me a code'}
+            {busy ? 'Sending your code…' : signinOnly ? 'Send sign-in code' : 'Send me a code'}
           </button>
         </form>
       ) : (
@@ -417,8 +452,9 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
         */
         <form className="join" key="code" onSubmit={submitCode}>
           <p className="join-lead">
-            We sent a six-digit code to{' '}
-            <strong>{sentTo === 'sms' ? phone.trim() : email.trim()}</strong>.{' '}
+            {signinOnly ? 'If a BEASTY account uses ' : 'We sent a six-digit code to '}
+            <strong>{sentTo === 'sms' ? phone.trim() : email.trim()}</strong>
+            {signinOnly ? ', its sign-in code is on the way. ' : '. '}
             {expiresIn > 0 ? (
               <>
                 It expires in <strong>{mmss(expiresIn)}</strong>.
@@ -484,7 +520,7 @@ export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, r
               autoComplete="one-time-code"
               enterKeyHint="done"
               className="join-code"
-              aria-label="The six-digit code we emailed you"
+              aria-label={sentTo === 'sms' ? 'The six-digit code we texted you' : 'The six-digit code we emailed you'}
               maxLength={6}
               autoFocus
               required

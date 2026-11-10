@@ -181,6 +181,7 @@ export async function getProfile(db: DB, userId: string, privateRole = false) {
         : null,
     createdAt: r.joined_at.toISOString(),
     completedTrades: r.completed_trades,
+    isDemo: r.is_demo === true,
     ...(privateRole ? { role: r.role, status: r.status } : {}),
   };
 }
@@ -195,10 +196,16 @@ export async function blocked(db: DB, a: string, b: string) {
 export async function activePeople(db: DB, ids: string[], lock = false) {
   const rows = (
     await db.query(
-      `SELECT id,status FROM profiles WHERE id=ANY($1) ORDER BY id${lock ? " FOR NO KEY UPDATE" : ""}`,
+      `SELECT id,status,is_demo FROM profiles WHERE id=ANY($1) ORDER BY id${lock ? " FOR NO KEY UPDATE" : ""}`,
       [ids],
     )
   ).rows;
+  if (rows.some((r) => r.is_demo))
+    fail(
+      409,
+      "Demo sample sellers cannot receive messages or take part in trades.",
+      "DEMO_ACCOUNT",
+    );
   if (
     rows.length !== new Set(ids).size ||
     rows.some((r) => r.status !== "active")
@@ -236,6 +243,7 @@ export async function listing(db: DB, listingId: string, viewerId?: string) {
     tradePreferences: r.trade_preferences,
     status: r.status,
     isHidden: r.is_hidden,
+    isDemo: r.is_demo === true,
     version: r.version,
     photos: photos.map((p) => ({
       id: p.id,
@@ -290,6 +298,7 @@ export async function lockListings(db: DB, ids: string[]) {
   ).rows;
 }
 export async function canReadListing(db: DB, r: Row, userId?: string) {
+  if (r.is_demo && r.demo_disabled) return false;
   if (userId === r.owner_id) return true;
   const owner = (
     await db.query("SELECT status FROM profiles WHERE id=$1", [r.owner_id])

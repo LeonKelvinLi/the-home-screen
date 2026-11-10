@@ -195,6 +195,7 @@ export function Seller({
       <Avatar profile={profile} size={small ? 24 : 44} />
       <span>
         <strong>{profile.name || profile.username}</strong>
+        {profile.isDemo && <DemoBadge />}
         {!small && (
           <small>
             @{profile.username || "member"}
@@ -204,6 +205,29 @@ export function Seller({
       </span>
       {!small && <ArrowRight size={17} />}
     </Link>
+  );
+}
+export function DemoBadge() {
+  return <span className="demo-badge">Demo sample</span>;
+}
+
+export function DemoCatalogNotice() {
+  const { user } = useApp();
+  return (
+    <aside className="demo-catalog-notice" aria-label="Demo catalog">
+      <Box size={18} aria-hidden="true" />
+      <p>
+        <strong>A little inspiration.</strong> Demo items and sellers are
+        illustrated samples for browsing. Add your own goods to start a real
+        exchange.
+      </p>
+      <Link
+        to={user ? "/sell/new" : "/signup?returnTo=%2Fsell%2Fnew"}
+        className="text-button"
+      >
+        {user ? "List your own" : "Join BEASTY"} <ArrowRight size={15} />
+      </Link>
+    </aside>
   );
 }
 export function Status({ value }: { value: string }) {
@@ -374,6 +398,7 @@ export function ProductCard({
   const { requireUser, toast } = useApp();
   const [saved, setSaved] = useState(listing.isFavorite);
   const [busy, setBusy] = useState(false);
+  const demo = listing.isDemo || listing.owner.isDemo;
   useEffect(() => setSaved(listing.isFavorite), [listing.isFavorite]);
   const toggle = async () => {
     if (!requireUser()) return;
@@ -407,6 +432,7 @@ export function ProductCard({
           <Heart size={18} fill={saved ? "currentColor" : "none"} />
         </button>
         <span className="code-tag">{listing.code}</span>
+        {demo && <DemoBadge />}
         {listing.status !== "active" && (
           <span className="image-status">{listing.status}</span>
         )}
@@ -415,8 +441,14 @@ export function ProductCard({
         {listing.title || "Untitled draft"}
       </Link>
       <div className="product-meta">
-        <span>{moneyForCard(listing.priceCents)}</span>
-        {listing.tradeEnabled && <span className="trade-mark">↔ Trade</span>}
+        <span>
+          {demo && listing.priceCents === null
+            ? "Sample item"
+            : moneyForCard(listing.priceCents)}
+        </span>
+        {listing.tradeEnabled && !demo && (
+          <span className="trade-mark">↔ Trade</span>
+        )}
       </div>
       <span className="product-condition">{listing.condition}</span>
     </article>

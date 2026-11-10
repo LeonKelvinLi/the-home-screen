@@ -199,6 +199,7 @@ export async function migrate(
       [4, "./004-photo-thumbnails.sql"],
       [5, "./005-trade-event-order.sql"],
       [6, "./006-shared-identity.sql"],
+      [7, "./007-demo-catalog.sql"],
     ] as const) {
       const current = await lock.query(
         "SELECT version FROM goods_migrations WHERE version=$1",

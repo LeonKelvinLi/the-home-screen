@@ -65,6 +65,7 @@ export async function createConversation(
   listingId: string | null,
   tradeId: string | null,
 ) {
+  await activePeople(db, [a, b]);
   const pairs = (
     await db.query(
       "SELECT LEAST($1::text,$2::text) AS a,GREATEST($1::text,$2::text) AS b",
@@ -203,6 +204,12 @@ export function registerTrades(
           requested = rows.find((r) => r.id === body.requestedListingId);
         if (!offered || !requested)
           fail(404, "An item is unavailable.", "NOT_FOUND");
+        if (offered.is_demo || requested.is_demo)
+          fail(
+            409,
+            "Demo sample items are for browsing only and cannot be traded.",
+            "DEMO_LISTING",
+          );
         if (offered.owner_id !== userId)
           fail(
             403,

@@ -17,6 +17,7 @@ import { registerTrades } from "./trades.js";
 import { registerCommunications } from "./communications.js";
 import { requestContext } from "./runtime.js";
 import { registerSharedIdentity } from "./identity.js";
+import { initializeDemoCatalog } from "./demo-catalog.js";
 
 export async function createApp(overrides: NodeJS.ProcessEnv = {}) {
   const config = { ...process.env, ...overrides };
@@ -78,6 +79,7 @@ export async function createApp(overrides: NodeJS.ProcessEnv = {}) {
   const storage = createStorage(config);
   try {
     await migrate(pool, auth);
+    await initializeDemoCatalog(pool, storage, config);
   } catch (e) {
     await pool.end();
     storage.close();
@@ -188,6 +190,12 @@ export async function createApp(overrides: NodeJS.ProcessEnv = {}) {
   );
   const requireUser = (res: Response) => {
     if (!res.locals.user) fail(401, "Sign in to continue.", "UNAUTHENTICATED");
+    if (res.locals.profile?.is_demo)
+      fail(
+        403,
+        "Demo sample sellers cannot sign in or perform account actions.",
+        "DEMO_ACCOUNT",
+      );
     if (res.locals.profile?.status !== "active")
       fail(
         403,

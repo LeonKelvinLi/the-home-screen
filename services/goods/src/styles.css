@@ -5594,6 +5594,110 @@ textarea::placeholder {
   font-size: 12px;
   font-weight: 500;
 }
+.demo-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 5px 7px;
+  border: 1px solid #d3c55e;
+  border-radius: 4px;
+  background: #fff8cc;
+  color: #5e521b;
+  font-size: 9px;
+  line-height: 1.2;
+  font-weight: 650;
+  letter-spacing: 0.55px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.product-image > .demo-badge {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  pointer-events: none;
+}
+.seller .demo-badge {
+  margin-top: 5px;
+}
+.seller-discovery-card span.demo-badge {
+  margin: 5px 0 1px;
+  color: #5e521b;
+  font-size: 8px;
+}
+.seller-profile .demo-badge {
+  margin: 0 8px 9px 0;
+}
+.shelf-item > .demo-badge {
+  margin-top: 10px;
+}
+.demo-catalog-notice {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 13px;
+  margin: 0 0 24px;
+  padding: 16px 18px;
+  border: 1px solid #e6dfb8;
+  border-left: 3px solid var(--accent-edge);
+  border-radius: 5px;
+  background: #fffdf0;
+  color: #5e5b42;
+}
+.demo-catalog-notice > svg {
+  color: #8a7730;
+}
+.demo-catalog-notice p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.75;
+}
+.demo-catalog-notice strong {
+  color: #38361f;
+}
+.demo-catalog-notice .text-button {
+  font-size: 11px;
+  white-space: nowrap;
+}
+.demo-item-notice {
+  margin: 22px 0;
+  padding: 17px;
+  border: 1px solid #e6dfb8;
+  border-radius: 5px;
+  background: #fffdf0;
+}
+.demo-item-notice strong {
+  font-size: 13px;
+  color: #38361f;
+}
+.demo-item-notice p {
+  color: #68634a;
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 8px 0 0;
+}
+@media (max-width: 700px) {
+  .demo-catalog-notice {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 7px 11px;
+    padding: 14px;
+    margin-bottom: 20px;
+  }
+  .demo-catalog-notice > svg {
+    margin-top: 3px;
+  }
+  .demo-catalog-notice .text-button {
+    grid-column: 2;
+    justify-self: start;
+    min-height: 36px;
+    padding: 4px 0;
+  }
+  .product-image > .demo-badge {
+    top: 8px;
+    left: 8px;
+    font-size: 8px;
+  }
+}
 @media (max-width: 700px) {
   .shared-sign-in {
     margin-top: 23px;

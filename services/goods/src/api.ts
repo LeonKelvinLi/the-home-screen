@@ -21,6 +21,7 @@ export function withBase(path: string): string {
 
 export interface Profile {
   id: string;
+  isDemo?: boolean;
   name: string;
   username: string;
   bio: string;
@@ -43,6 +44,7 @@ export type ListingStatus =
   "draft" | "active" | "reserved" | "traded" | "archived" | "hidden";
 export interface Listing {
   id: string;
+  isDemo?: boolean;
   owner: Profile;
   code: string;
   title: string;
