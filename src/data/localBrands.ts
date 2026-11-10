@@ -63565,7 +63565,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     "cuisine": "Burgers, sandwiches, outdoor eats",
     "tagline": "An outdoor food garden with burgers, music and room to gather in Richmond.",
     "color": "#233429",
-    "icon": "the-richmond-backyard",
+    "icon": "the-richmond-backyard-v112",
     "prep": 0,
     "category": "Eats",
     "items": [
@@ -85402,4 +85402,2475 @@ export const LOCAL_SEED: LocalSeed[] = [
     }
   },
 
+
+  // Batch 112 — Glenn, November 9 evening–November 10 morning.
+{
+  "slug": "ones-cafe-alameda",
+  "name": "Ones Cafe & Bakery",
+  "label": "Ones Cafe",
+  "cuisine": "Cafe, coffee, croissants and pastries",
+  "tagline": "Cafe, coffee, croissants and pastries · Suite 1A",
+  "category": "Coffee",
+  "icon": "ones-cafe-alameda-v112",
+  "color": "#F6F1E5",
+  "prep": 0,
+  "items": [],
+  "address": "1926 Park St, Suite 1A, Alameda, CA 94501",
+  "site": "https://order.toasttab.com/online/ones-cafe-bakery-alameda-1926-park-st-1a",
+  "phone": "(510) 501-7946",
+  "hours": "Wed–Sun 8am–2:30pm; closed Mon–Tue",
+  "sections": [
+    {
+      "name": "Bakery",
+      "items": [
+        [
+          "French Tart",
+          "",
+          395
+        ],
+        [
+          "Pineapple Orange Kouign Amann",
+          "",
+          600
+        ],
+        [
+          "Caramel Crumble",
+          "",
+          750
+        ],
+        [
+          "Matcha Custard Stick",
+          "",
+          700
+        ],
+        [
+          "Almond Roll Bite",
+          "",
+          400
+        ],
+        [
+          "Butter Croissant",
+          "",
+          450
+        ],
+        [
+          "Chocolate Croissant",
+          "",
+          550
+        ],
+        [
+          "Almond Croissant",
+          "",
+          650
+        ],
+        [
+          "Strawberry Moon",
+          "",
+          799
+        ],
+        [
+          "Ube Moon",
+          "",
+          799
+        ],
+        [
+          "Coffee Cream Bow Tie",
+          "",
+          799
+        ],
+        [
+          "Black Sesame Onigiri Croissant",
+          "",
+          650
+        ],
+        [
+          "Pistachio Croissant",
+          "",
+          950
+        ],
+        [
+          "Almond swirl",
+          "",
+          800
+        ],
+        [
+          "matcha cheese cake",
+          "",
+          600
+        ],
+        [
+          "tofu cheese cake",
+          "",
+          600
+        ],
+        [
+          "Ham & Cheese",
+          "",
+          725
+        ],
+        [
+          "Spicy Lemongrass Chicken Croissant",
+          "",
+          799
+        ],
+        [
+          "Tuna Salad Danish",
+          "",
+          800
+        ],
+        [
+          "Wagyu Beef Cup",
+          "",
+          800
+        ],
+        [
+          "Sausage Cheese Danish",
+          "",
+          500
+        ],
+        [
+          "Passion Fruit Cruffin",
+          "",
+          750
+        ],
+        [
+          "Orange Danish",
+          "",
+          800
+        ]
+      ]
+    },
+    {
+      "name": "Hot Drink",
+      "items": [
+        [
+          "Hot Espresso Shot",
+          "",
+          300
+        ],
+        [
+          "Hot Drip Coffee",
+          "",
+          375
+        ],
+        [
+          "Hot Americano",
+          "",
+          425
+        ],
+        [
+          "Cortado",
+          "",
+          425
+        ],
+        [
+          "Macchiato",
+          "",
+          375
+        ],
+        [
+          "Cappucino",
+          "",
+          475
+        ],
+        [
+          "Flat White",
+          "",
+          475
+        ],
+        [
+          "Hot Latte",
+          "",
+          475
+        ],
+        [
+          "Hot Vanilla Latte",
+          "",
+          550
+        ],
+        [
+          "Hot Pumpkin Spice Latte",
+          "",
+          550
+        ],
+        [
+          "Hot Orange Latte",
+          "",
+          595
+        ],
+        [
+          "Hot Caramel Cinnamon Latte",
+          "",
+          595
+        ],
+        [
+          "Hot Black Sesame Latte",
+          "",
+          650
+        ],
+        [
+          "Hot Mocha Latte",
+          "",
+          595
+        ],
+        [
+          "Hot Orange Mocha",
+          "",
+          600
+        ],
+        [
+          "Hot MATCHA Latte",
+          "",
+          700
+        ],
+        [
+          "Hot Ube Latte",
+          "",
+          595
+        ],
+        [
+          "Hot Chai Latte",
+          "",
+          550
+        ],
+        [
+          "Hot Chocolate",
+          "",
+          425
+        ],
+        [
+          "Hot Milk",
+          "",
+          250
+        ],
+        [
+          "Hot Strawberry Matcha",
+          "",
+          750
+        ],
+        [
+          "Hot Black Tea",
+          "",
+          325
+        ],
+        [
+          "Hot Green Tea",
+          "",
+          325
+        ]
+      ]
+    },
+    {
+      "name": "Cold Drink",
+      "items": [
+        [
+          "Cold Espresso Shot",
+          "",
+          300
+        ],
+        [
+          "Cold Brew",
+          "",
+          500
+        ],
+        [
+          "Cold Americano",
+          "",
+          425
+        ],
+        [
+          "Cold Latte",
+          "",
+          475
+        ],
+        [
+          "Cold Vanilla Latte",
+          "",
+          500
+        ],
+        [
+          "Cold Orange Latte",
+          "",
+          595
+        ],
+        [
+          "Cold Pumpkin Spice Latte",
+          "",
+          550
+        ],
+        [
+          "Cold Black Sesame Latte",
+          "",
+          650
+        ],
+        [
+          "Sea Salt Cheese Latte",
+          "",
+          650
+        ],
+        [
+          "Cold Carrot Cake Latte",
+          "",
+          695
+        ],
+        [
+          "Cold Mocha Latte",
+          "",
+          595
+        ],
+        [
+          "Cold Orange Mocha",
+          "",
+          600
+        ],
+        [
+          "Cold MATCHA Latte",
+          "",
+          700
+        ],
+        [
+          "Iced Strawberry Matcha",
+          "",
+          750
+        ],
+        [
+          "Cold Ube Latte",
+          "",
+          595
+        ],
+        [
+          "Cold Chai Latte",
+          "",
+          550
+        ],
+        [
+          "Lemon Tea",
+          "",
+          475
+        ],
+        [
+          "Lavender Lemonde",
+          "",
+          475
+        ],
+        [
+          "Sparkling Yuzu Americano",
+          "",
+          600
+        ],
+        [
+          "Cold Milk",
+          "",
+          275
+        ],
+        [
+          "Soft Serve",
+          "",
+          600
+        ],
+        [
+          "Soft Serve Vanilla Pistachio Swirl",
+          "",
+          750
+        ],
+        [
+          "Milkshake",
+          "",
+          600
+        ],
+        [
+          "Affogato",
+          "",
+          700
+        ]
+      ]
+    },
+    {
+      "name": "Grab & Go",
+      "items": [
+        [
+          "Fiji Water",
+          "",
+          200
+        ],
+        [
+          "Tree Top Apple Juice",
+          "",
+          200
+        ],
+        [
+          "Pineapple Juice",
+          "",
+          150
+        ],
+        [
+          "Itoen Unsweetened Green Tea",
+          "",
+          250
+        ],
+        [
+          "Itoen Jasmine Tea",
+          "",
+          250
+        ],
+        [
+          "San Pelligrino",
+          "",
+          250
+        ],
+        [
+          "Poppi Juice",
+          "",
+          200
+        ],
+        [
+          "Coconut Water",
+          "",
+          180
+        ],
+        [
+          "Chocolate Whole Milk",
+          "",
+          150
+        ],
+        [
+          "Nutella Sticks",
+          "",
+          150
+        ],
+        [
+          "Roasted Seaweed",
+          "",
+          200
+        ],
+        [
+          "Kinder Joy",
+          "",
+          150
+        ],
+        [
+          "Ethiopia",
+          "",
+          1800
+        ],
+        [
+          "Golden Gate",
+          "",
+          1700
+        ],
+        [
+          "Espresso Beans",
+          "",
+          1700
+        ],
+        [
+          "Tejava Black Tea",
+          "",
+          200
+        ],
+        [
+          "Sunny D",
+          "",
+          200
+        ],
+        [
+          "Pediasure",
+          "",
+          250
+        ],
+        [
+          "Yerba",
+          "",
+          299
+        ],
+        [
+          "Alani",
+          "",
+          200
+        ]
+      ]
+    }
+  ],
+  "orderUrl": "https://order.toasttab.com/online/ones-cafe-bakery-alameda-1926-park-st-1a",
+  "menuNote": "Alameda’s published Toast menu. Items can sell out; confirm availability when ordering.",
+  "panels": [
+    {
+      "head": "Alameda and Castro Valley",
+      "body": [
+        "This is the Park Street location in Alameda. The separate Castro Valley shop is at 3483 Castro Valley Boulevard."
+      ],
+      "links": [
+        {
+          "label": "Alameda ordering menu",
+          "href": "https://order.toasttab.com/online/ones-cafe-bakery-alameda-1926-park-st-1a"
+        },
+        {
+          "label": "Castro Valley on BEASTY",
+          "href": "https://beastypages.com/?b=b_onescafebakery"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "fork-it-pasta",
+  "name": "Fork It Pasta To Go",
+  "label": "Fork It",
+  "cuisine": "Greek-inspired fresh pasta",
+  "tagline": "Greek-inspired fresh pasta · San Mateo",
+  "category": "Greek",
+  "icon": "fork-it-v112",
+  "color": "#F6F1E5",
+  "prep": 0,
+  "items": [],
+  "address": "1308 W Hillsdale Blvd, San Mateo, CA 94403",
+  "site": "https://forkitpasta.com/",
+  "hours": "Every day 10:30am–8:30pm",
+  "sections": [
+    {
+      "name": "Pasta — regular and large",
+      "items": [
+        [
+          "Macaronia Me Kima — Regular",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1495
+        ],
+        [
+          "Macaronia Me Kima — Large",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1695
+        ],
+        [
+          "Tomato Basil — Regular",
+          "Choice of rigatoni, radiatori or gemelli.",
+          795
+        ],
+        [
+          "Tomato Basil — Large",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1095
+        ],
+        [
+          "Carbonara — Regular",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1295
+        ],
+        [
+          "Carbonara — Large",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1595
+        ],
+        [
+          "Pink Sauce — Regular",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1195
+        ],
+        [
+          "Pink Sauce — Large",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1495
+        ],
+        [
+          "Chicken Tikka Masala — Regular",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1295
+        ],
+        [
+          "Chicken Tikka Masala — Large",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1595
+        ],
+        [
+          "Truffle Mushroom — Regular",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1495
+        ],
+        [
+          "Truffle Mushroom — Large",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1795
+        ],
+        [
+          "Basil Pesto — Regular",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1195
+        ],
+        [
+          "Basil Pesto — Large",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1395
+        ],
+        [
+          "Parmesan Chicken — Regular",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1495
+        ],
+        [
+          "Parmesan Chicken — Large",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1695
+        ],
+        [
+          "Alfredo — Regular",
+          "Choice of rigatoni, radiatori or gemelli.",
+          995
+        ],
+        [
+          "Alfredo — Large",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1195
+        ],
+        [
+          "Mac & Cheese — Regular",
+          "Choice of rigatoni, radiatori or gemelli.",
+          995
+        ],
+        [
+          "Mac & Cheese — Large",
+          "Choice of rigatoni, radiatori or gemelli.",
+          1195
+        ]
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        [
+          "Crispy Chicken Parm Bites",
+          "",
+          995
+        ],
+        [
+          "Crispy Cauliflower Bites",
+          "",
+          895
+        ]
+      ]
+    },
+    {
+      "name": "Salads",
+      "items": [
+        [
+          "Greek Salad",
+          "",
+          1095
+        ],
+        [
+          "Caesar Salad",
+          "",
+          995
+        ],
+        [
+          "Mediterranean Pasta Salad — Regular",
+          "",
+          895
+        ],
+        [
+          "Mediterranean Pasta Salad — Large",
+          "",
+          1095
+        ]
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        [
+          "Crispy Croissant Bites — Powdered Sugar",
+          "",
+          795
+        ],
+        [
+          "Crispy Croissant Bites — Powdered Sugar + Nutella",
+          "",
+          895
+        ]
+      ]
+    },
+    {
+      "name": "Kids",
+      "items": [
+        [
+          "Mac & Cheese + Nuggets",
+          "",
+          895
+        ],
+        [
+          "Plain Pasta + Nuggets",
+          "",
+          795
+        ]
+      ]
+    }
+  ],
+  "menuNote": "The complete published food menu, with regular and large pasta prices shown separately.",
+  "panels": [
+    {
+      "head": "Pasta choices and combo add-ons",
+      "body": [
+        "Choose rigatoni, radiatori or gemelli. Gluten-free pasta or protein pasta adds $3.95.",
+        "Add a Greek salad and drink for $5.75, Caesar salad and drink for $4.50, or bread and drink for $3.75. These are additions to a pasta order."
+      ],
+      "links": [
+        {
+          "label": "Official menu PDF",
+          "href": "https://img1.wsimg.com/blobby/go/79ca93f4-a91f-4bf1-8dbe-04df2f2d52c9/Menu_Draft_7.pdf"
+        }
+      ]
+    },
+    {
+      "head": "Grand opening — November 11, 2026",
+      "body": [
+        "The owner’s dated announcement lists November 11, 11am–2pm. One free food item and drink per person; one entry, with no re-entry into the line. Confirm details directly."
+      ],
+      "links": [
+        {
+          "label": "Owner’s announcement",
+          "href": "https://www.instagram.com/reel/DfdyvXhCgJV/"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b112-dfdyvxhcgjv.mp4",
+    "poster": "/clips/b112-dfdyvxhcgjv-poster.webp",
+    "href": "https://www.instagram.com/reel/DfdyvXhCgJV/",
+    "platform": "Instagram",
+    "credit": "Original by @forkitpasta. Visit to fork it pasta."
+  }
+},
+{
+  "slug": "new-england-lobster",
+  "name": "New England Lobster Market & Eatery",
+  "label": "New England Lobster",
+  "cuisine": "Lobster, crab and seafood",
+  "tagline": "Lobster, crab and seafood · Burlingame",
+  "category": "Seafood",
+  "icon": "new-england-lobster-v112",
+  "color": "#F6F1E5",
+  "prep": 0,
+  "items": [],
+  "address": "824 Cowan Rd, Burlingame, CA 94010",
+  "site": "https://newenglandlobster.net/",
+  "phone": "(650) 443-1559",
+  "hours": "Every day 11am–8pm",
+  "sections": [
+    {
+      "name": "Plates",
+      "items": [
+        [
+          "1 lb Lobster Plate",
+          "",
+          1995
+        ],
+        [
+          "2 lb Lobster Plate",
+          "",
+          6000
+        ],
+        [
+          "3 lb Lobster Plate",
+          "",
+          8000
+        ],
+        [
+          "4 lb Lobster Plate",
+          "",
+          10000
+        ],
+        [
+          "5 lb Lobster Plate",
+          "",
+          11000
+        ],
+        [
+          "3–4 oz Twin Lobster Tails",
+          "",
+          3500
+        ],
+        [
+          "5–6 oz Twin Lobster Tails",
+          "",
+          5000
+        ],
+        [
+          "Sampler",
+          "",
+          3200
+        ],
+        [
+          "Crab Mac n Cheese",
+          "",
+          2800
+        ],
+        [
+          "Lobster Mac n Cheese",
+          "",
+          3200
+        ],
+        [
+          "Dungeness Crab Plate",
+          "",
+          3795
+        ]
+      ]
+    },
+    {
+      "name": "Small plates",
+      "items": [
+        [
+          "Crab Nachos",
+          "",
+          3500
+        ],
+        [
+          "Lobster Nachos",
+          "",
+          3500
+        ],
+        [
+          "Crab Cocktail",
+          "",
+          2700
+        ],
+        [
+          "Shrimp Cocktail",
+          "",
+          2000
+        ],
+        [
+          "Bucket of EZ Peel Shrimp",
+          "",
+          2000
+        ],
+        [
+          "Ragin' Cajun Shrimp",
+          "",
+          3000
+        ],
+        [
+          "Lobster Musubi",
+          "",
+          1500
+        ],
+        [
+          "Dungeness Crab Slider",
+          "",
+          1500
+        ],
+        [
+          "Lobster Cocktail",
+          "",
+          3200
+        ],
+        [
+          "Ragin' Cajun Crab",
+          "",
+          3000
+        ],
+        [
+          "Bucket of Lobster Claws",
+          "",
+          2900
+        ],
+        [
+          "Single 3–4oz Lobster Tail",
+          "",
+          1495
+        ]
+      ]
+    },
+    {
+      "name": "Lobster rolls",
+      "items": [
+        [
+          "Seasonal Lobster Roll",
+          "",
+          4300
+        ],
+        [
+          "Dressed Lobster Roll",
+          "",
+          3900
+        ],
+        [
+          "Naked Lobster Roll",
+          "",
+          3900
+        ],
+        [
+          "Crobster Roll",
+          "",
+          3900
+        ],
+        [
+          "1/2 Lobster Roll and Cup of Soup",
+          "",
+          3700
+        ],
+        [
+          "The Knuckle Sandwich",
+          "",
+          4600
+        ]
+      ]
+    },
+    {
+      "name": "Crab sandwiches",
+      "items": [
+        [
+          "Seasonal Crab Roll",
+          "",
+          4300
+        ],
+        [
+          "Dressed Crab Roll",
+          "",
+          4000
+        ],
+        [
+          "Naked Crab Roll",
+          "",
+          4000
+        ],
+        [
+          "Dungeness Crab Sandwich",
+          "",
+          4000
+        ],
+        [
+          "Dungeness Crab Melt",
+          "",
+          4300
+        ],
+        [
+          "1/2 CRAB Roll and Cup of Soup",
+          "",
+          3900
+        ]
+      ]
+    },
+    {
+      "name": "Tacos",
+      "items": [
+        [
+          "Lobster Taco",
+          "",
+          1600
+        ],
+        [
+          "Crab Taco",
+          "",
+          1600
+        ],
+        [
+          "Shrimp Taco",
+          "",
+          1200
+        ],
+        [
+          "Fish Taco",
+          "",
+          1000
+        ],
+        [
+          "Lobster Taco Platter",
+          "",
+          4300
+        ],
+        [
+          "Crab Taco Platter",
+          "",
+          4300
+        ],
+        [
+          "3 Amigos Platter",
+          "",
+          4000
+        ],
+        [
+          "Shrimp Taco Platter",
+          "",
+          3000
+        ],
+        [
+          "Vegan Taco Platter",
+          "",
+          2500
+        ],
+        [
+          "Fish Taco Platter",
+          "",
+          2800
+        ]
+      ]
+    },
+    {
+      "name": "Soups and salads",
+      "items": [
+        [
+          "Lobster Corn Chowder",
+          "",
+          1300,
+          null,
+          "from $13.00"
+        ],
+        [
+          "Lobster Salad",
+          "",
+          3900
+        ],
+        [
+          "Crab Salad",
+          "",
+          3900
+        ],
+        [
+          "East meets West",
+          "",
+          4200
+        ],
+        [
+          "House Salad",
+          "",
+          1500
+        ],
+        [
+          "Shrimp Louie",
+          "",
+          2800
+        ],
+        [
+          "Dungeness Crab Manhattan",
+          "",
+          1300,
+          null,
+          "from $13.00"
+        ]
+      ]
+    },
+    {
+      "name": "Oysters & clams",
+      "items": [
+        [
+          "1/2 Dozen Kumamoto",
+          "",
+          3100
+        ],
+        [
+          "1/2 Dozen Summer Love",
+          "",
+          3100
+        ],
+        [
+          "1/2 Dozen Marin Miyagi",
+          "",
+          3100
+        ],
+        [
+          "1/2 Dozen Littleneck Clams",
+          "",
+          3100
+        ],
+        [
+          "1/2 Dozen Cherrystone Clams",
+          "",
+          3100
+        ],
+        [
+          "1/2 Dozen Fanny Bay",
+          "",
+          3100
+        ]
+      ]
+    },
+    {
+      "name": "Land lovers",
+      "items": [
+        [
+          "Wagyu Beef Hot Dog",
+          "",
+          1600
+        ],
+        [
+          "Grilled Cheese",
+          "",
+          900
+        ],
+        [
+          "BLT",
+          "",
+          1600
+        ]
+      ]
+    },
+    {
+      "name": "Coca-Cola beverages",
+      "items": [
+        [
+          "Mexican Coke",
+          "",
+          600
+        ],
+        [
+          "Coca-Cola Zero Sugar",
+          "",
+          600
+        ],
+        [
+          "Mexican Sprite",
+          "",
+          600
+        ],
+        [
+          "Mexican Fanta Orange",
+          "",
+          600
+        ]
+      ]
+    },
+    {
+      "name": "Sodas & such",
+      "items": [
+        [
+          "Root Beer",
+          "",
+          600
+        ],
+        [
+          "Ginger Brew",
+          "",
+          600
+        ],
+        [
+          "Mexican Coke",
+          "",
+          600
+        ],
+        [
+          "Diet Coke",
+          "",
+          600
+        ],
+        [
+          "Coca-Cola Zero Sugar",
+          "",
+          600
+        ],
+        [
+          "Mexican Fanta Orange",
+          "",
+          600
+        ],
+        [
+          "Mexican Sprite",
+          "",
+          600
+        ],
+        [
+          "Bottled Water",
+          "",
+          400
+        ],
+        [
+          "Apple Juice",
+          "",
+          500
+        ],
+        [
+          "Sparkling Water Pellegrino",
+          "",
+          500
+        ],
+        [
+          "Blueberry Lemonade",
+          "",
+          700
+        ],
+        [
+          "Lemonade",
+          "",
+          700
+        ],
+        [
+          "Unsweetened Ice Tea",
+          "",
+          400
+        ],
+        [
+          "Arnold Palmer",
+          "",
+          500
+        ],
+        [
+          "Coffee",
+          "",
+          400
+        ],
+        [
+          "Hot Tea",
+          "",
+          500
+        ],
+        [
+          "Vietnamese Ice Coffee",
+          "",
+          700
+        ],
+        [
+          "Small Pellegrino",
+          "",
+          250
+        ]
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        [
+          "Blueberry Cheesecake",
+          "",
+          900
+        ],
+        [
+          "Housemade Bread Pudding",
+          "",
+          700
+        ],
+        [
+          "Sue’s Famous Whoopie Pie",
+          "",
+          500
+        ]
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        [
+          "Housemade Potato Chips",
+          "",
+          350,
+          null,
+          "from $3.50"
+        ],
+        [
+          "Extra Roll",
+          "",
+          300
+        ],
+        [
+          "Cup of Cajun Sauce",
+          "",
+          500
+        ],
+        [
+          "Cup of White Rice",
+          "",
+          500
+        ],
+        [
+          "Jalapeño Sauce",
+          "",
+          300
+        ],
+        [
+          "Bread bowl — no soup",
+          "",
+          500
+        ],
+        [
+          "16oz coleslaw",
+          "",
+          1200
+        ]
+      ]
+    }
+  ],
+  "orderUrl": "https://order.toasttab.com/online/new-england-lobster-market-eatery",
+  "menuNote": "The restaurant’s published food and nonalcoholic-drink menu. Prices marked “from” depend on size; ordering availability can change.",
+  "panels": [
+    {
+      "head": "Eatery, market and catering",
+      "body": [
+        "Eatery dining hours are 11am–8pm daily; ordering windows may differ. The business lists credit-card payment only.",
+        "The standalone Coleslaw side has no published price; ask the eatery. The separately listed 16oz coleslaw is $12. Market seafood, catering, alcohol and merchandise are separate catalogs."
+      ],
+      "links": [
+        {
+          "label": "Eatery and market information",
+          "href": "https://newenglandlobster.net/eatery/"
+        },
+        {
+          "label": "Restaurant, market and catering menus",
+          "href": "https://order.toasttab.com/online/new-england-lobster-market-eatery"
+        }
+      ]
+    },
+    {
+      "head": "Recipe films",
+      "body": [
+        "Mike’s surf-and-turf sandwich is home cooking using lobster claw meat from New England Lobster and rib-eye from The Butcher Shop by Niku. It is not a dish promised on this eatery’s menu.",
+        "Emari’s crab-roll recipe also uses seafood from this supplier. The creator credits distinguish recipes from visits to the restaurant."
+      ],
+      "links": []
+    }
+  ],
+  "clip": {
+    "src": "/clips/b112-dzh5eg-kdtj.mp4",
+    "poster": "/clips/b112-dzh5eg-kdtj-poster.webp",
+    "href": "https://www.instagram.com/reel/DZh5eG-KDtJ/",
+    "platform": "Instagram",
+    "credit": "Original by @newenglandlobster. Visit to new england lobster."
+  }
+},
+{
+  "slug": "popbar-berkeley",
+  "name": "Popbar",
+  "label": "Popbar",
+  "cuisine": "Ice cream, gelato and sorbetto pops",
+  "tagline": "Ice cream, gelato and sorbetto pops · Berkeley",
+  "category": "Ice Cream",
+  "icon": "popbar-berkeley-v112",
+  "color": "#F6F1E5",
+  "prep": 0,
+  "items": [],
+  "address": "2125 University Ave, Berkeley, CA 94704",
+  "site": "https://www.pop-bar.com/pages/location-berkeley-ca",
+  "sections": [
+    {
+      "name": "Gelato and sorbetto — pictured on the Berkeley page",
+      "items": [
+        [
+          "Pistachio Gelato",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Strawberry Sorbetto",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Vanilla Bean Gelato",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Mango Sorbetto",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Chocolate Gelato",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Sea Salt Caramel Gelato",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    },
+    {
+      "name": "In-store treats",
+      "items": [
+        [
+          "Gelato Shakes",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "popWich",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    }
+  ],
+  "quoteOnly": "Walk in to choose a pop, dip and toppings. The Berkeley page does not publish prices or live flavor availability; ask in store. Berkeley online ordering is listed as coming soon.",
+  "menuNote": "Treats pictured or named on the official Berkeley page. Flavors and toppings rotate; this is not the New York shop’s availability list.",
+  "panels": [
+    {
+      "head": "Hours and local availability",
+      "body": [
+        "The official Berkeley webpage lists daily 10am–7pm. Its supplied local Instagram profile lists Sunday–Thursday 1:30pm–8:30pm and Friday–Saturday 1pm–9:30pm. These schedules disagree; confirm with the local shop before visiting.",
+        "The national flavor and topping catalogs describe the New York kitchen. Berkeley sets its own selection and prices."
+      ],
+      "links": [
+        {
+          "label": "Official Berkeley store page",
+          "href": "https://www.pop-bar.com/pages/location-berkeley-ca"
+        },
+        {
+          "label": "Local Instagram",
+          "href": "https://www.instagram.com/popbarbayarea/"
+        },
+        {
+          "label": "National flavor catalog — check Berkeley availability",
+          "href": "https://www.pop-bar.com/pages/gelato-and-sorbetto-flavors"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b112-deikxqjksog.mp4",
+    "poster": "/clips/b112-deikxqjksog-poster.webp",
+    "href": "https://www.instagram.com/reel/DeiKXQjKsOG/",
+    "platform": "Instagram",
+    "credit": "Original by @popbarbayarea. Gelato pops at the Berkeley location."
+  }
+},
+{
+  "slug": "hinata-sushi-kitchen",
+  "name": "Hinata Sushi Kitchen",
+  "label": "Hinata Sushi",
+  "cuisine": "Japanese AYCE sushi",
+  "tagline": "Japanese AYCE sushi · 2nd Floor",
+  "category": "AYCE",
+  "icon": "hinata-sushi-kitchen-v112",
+  "color": "#F6F1E5",
+  "prep": 0,
+  "items": [],
+  "address": "1071 B St, 2nd Floor, Hayward, CA 94541",
+  "site": "https://www.instagram.com/hinatasushihayward/",
+  "hours": "Every day 11:30am–9:30pm",
+  "contactOnly": "All-you-can-eat sushi in downtown Hayward. Ask the restaurant for its current menu, meal prices and availability.",
+  "panels": [
+    {
+      "head": "Hayward location",
+      "body": [
+        "The local restaurant’s supplied profile lists 1071 B Street, second floor, and daily hours of 11:30am–9:30pm. Older review prices are dated and are not a current price list."
+      ],
+      "links": [
+        {
+          "label": "Official local Instagram",
+          "href": "https://www.instagram.com/hinatasushihayward/"
+        },
+        {
+          "label": "Downtown Hayward listing",
+          "href": "https://downtownhayward.com/go/hinata-sushi-kitchen"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b112-de8rvmkoiot.mp4",
+    "poster": "/clips/b112-de8rvmkoiot-poster.webp",
+    "href": "https://www.instagram.com/reel/De8RVmKoiOt/",
+    "platform": "Instagram",
+    "credit": "Original by @hinatasushihayward. Visit to hinata sushi kitchen."
+  },
+  "phone": "(510) 881-8868"
+},
+{
+  "slug": "shabu-club-san-francisco",
+  "name": "Shabu Club",
+  "label": "Shabu Club",
+  "cuisine": "Japanese hot pot and shabu-shabu",
+  "tagline": "Japanese hot pot and shabu-shabu · San Francisco",
+  "category": "Hot Pot",
+  "icon": "shabu-club-v112",
+  "color": "#F6F1E5",
+  "prep": 0,
+  "items": [],
+  "address": "951 Clement St, San Francisco, CA 94118",
+  "site": "https://shabuclubsf.com/",
+  "phone": "(415) 742-5265",
+  "hours": "Every day 5pm–9pm",
+  "sections": [
+    {
+      "name": "Small plates",
+      "items": [
+        [
+          "Pork Gyoza",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kamikaze Wings",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Veggie Gyoza",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Calamari",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kobe Beef Fries",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Edamame",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    },
+    {
+      "name": "Broths",
+      "items": [
+        [
+          "Miso",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Tonkotsu",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kimchi",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Spicy Miso",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Spicy Tonkotsu",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Spicy Kimchi",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Water + Kelp",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Mushroom",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Veggie Miso",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    },
+    {
+      "name": "All-you-can-eat",
+      "items": [
+        [
+          "Adult AYCE",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Children ages 3–5 AYCE",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Children ages 6–10 AYCE",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    },
+    {
+      "name": "Shabu sets",
+      "items": [
+        [
+          "American Kobe Toro — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "American Kobe Toro — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "American Wagyu — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "American Wagyu — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Japanese A5 Wagyu — 6 oz",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kurobuta Pork — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kurobuta Pork — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Premium Lamb — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Premium Lamb — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Vegetarian — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Vegetarian — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "2 Meat Combo — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "2 Meat Combo — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "3 Meat Combo — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    },
+    {
+      "name": "Add-ons",
+      "items": [
+        [
+          "Extra Meat — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Extra Meat — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Napa Cabbage",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kimchi",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kabocha Pumpkin",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Spinach",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Noodles",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Tofu / Fried Tofu",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Baby Carrot",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Rice",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Raw Egg",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Mushrooms",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Veggie Bowl",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Habanero Sauce",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Zucchini",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Ice Cream",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    }
+  ],
+  "quoteOnly": "The official linked menu leaves prices blank. Ask the restaurant for current set, all-you-can-eat and add-on prices; dining is arranged directly.",
+  "menuNote": "The food menu linked by both official location pages, excluding alcohol. All prices require confirmation.",
+  "panels": [
+    {
+      "head": "Sets, broths and AYCE",
+      "body": [
+        "Choose two broths per pot; vegetarian broth options are listed. Sets include a vegetable bowl, udon or ramen, rice and ice cream.",
+        "AYCE has a 90-minute limit and requires the whole party to participate. It cannot be combined with sets or taken to go; unfinished-food charges may apply. Confirm all terms and prices directly."
+      ],
+      "links": [
+        {
+          "label": "Official linked food menu",
+          "href": "https://img1.wsimg.com/blobby/go/591b1d73-755c-4237-9438-7e3a4e815e71/downloads/2b637e52-3900-49a6-835d-089967d8e5ef/Shabu%20Club%20Menu%20Burlingame%208.19.26%20website%20pdf.pdf?ver=1787204478543"
+        },
+        {
+          "label": "Official locations and contact",
+          "href": "https://shabuclubsf.com/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "shabu-club-burlingame",
+  "name": "Shabu Club",
+  "label": "Shabu Club",
+  "cuisine": "Japanese hot pot and shabu-shabu",
+  "tagline": "Japanese hot pot and shabu-shabu · Burlingame",
+  "category": "Hot Pot",
+  "icon": "shabu-club-v112",
+  "color": "#F6F1E5",
+  "prep": 0,
+  "items": [],
+  "address": "1150 Paloma Ave, Burlingame, CA 94010",
+  "site": "https://shabuclubsf.com/",
+  "phone": "(650) 445-7246",
+  "hours": "Every day 5pm–9pm",
+  "sections": [
+    {
+      "name": "Small plates",
+      "items": [
+        [
+          "Pork Gyoza",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kamikaze Wings",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Veggie Gyoza",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Calamari",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kobe Beef Fries",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Edamame",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    },
+    {
+      "name": "Broths",
+      "items": [
+        [
+          "Miso",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Tonkotsu",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kimchi",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Spicy Miso",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Spicy Tonkotsu",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Spicy Kimchi",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Water + Kelp",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Mushroom",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Veggie Miso",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    },
+    {
+      "name": "All-you-can-eat",
+      "items": [
+        [
+          "Adult AYCE",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Children ages 3–5 AYCE",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Children ages 6–10 AYCE",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    },
+    {
+      "name": "Shabu sets",
+      "items": [
+        [
+          "American Kobe Toro — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "American Kobe Toro — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "American Wagyu — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "American Wagyu — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Japanese A5 Wagyu — 6 oz",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kurobuta Pork — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kurobuta Pork — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Premium Lamb — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Premium Lamb — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Vegetarian — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Vegetarian — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "2 Meat Combo — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "2 Meat Combo — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "3 Meat Combo — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    },
+    {
+      "name": "Add-ons",
+      "items": [
+        [
+          "Extra Meat — Regular",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Extra Meat — Large",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Napa Cabbage",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kimchi",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Kabocha Pumpkin",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Spinach",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Noodles",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Tofu / Fried Tofu",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Baby Carrot",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Rice",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Raw Egg",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Mushrooms",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Veggie Bowl",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Habanero Sauce",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Zucchini",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Ice Cream",
+          "",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    }
+  ],
+  "quoteOnly": "The official linked menu leaves prices blank. Ask the restaurant for current set, all-you-can-eat and add-on prices; dining is arranged directly.",
+  "menuNote": "The food menu linked by both official location pages, excluding alcohol. All prices require confirmation.",
+  "panels": [
+    {
+      "head": "Sets, broths and AYCE",
+      "body": [
+        "Choose two broths per pot; vegetarian broth options are listed. Sets include a vegetable bowl, udon or ramen, rice and ice cream.",
+        "AYCE has a 90-minute limit and requires the whole party to participate. It cannot be combined with sets or taken to go; unfinished-food charges may apply. Confirm all terms and prices directly."
+      ],
+      "links": [
+        {
+          "label": "Official linked food menu",
+          "href": "https://img1.wsimg.com/blobby/go/591b1d73-755c-4237-9438-7e3a4e815e71/downloads/2b637e52-3900-49a6-835d-089967d8e5ef/Shabu%20Club%20Menu%20Burlingame%208.19.26%20website%20pdf.pdf?ver=1787204478543"
+        },
+        {
+          "label": "Official locations and contact",
+          "href": "https://shabuclubsf.com/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "mikiya-santa-clara",
+  "name": "Mikiya Wagyu Shabu House",
+  "label": "Mikiya",
+  "cuisine": "Japanese Wagyu hot pot and shabu-shabu",
+  "tagline": "Wagyu shabu-shabu · Santa Clara",
+  "category": "Hot Pot",
+  "color": "#111111",
+  "icon": "mikiya-v112",
+  "prep": 0,
+  "items": [],
+  "sections": [
+    {
+      "name": "Published standard Wagyu sets",
+      "items": [
+        [
+          "Silver Wagyu Set — Regular",
+          "Per person; published standard 90-minute dining menu.",
+          5500
+        ],
+        [
+          "Silver Wagyu Set — Member",
+          "Per person; requires the restaurant’s paid annual membership. Confirm eligibility directly.",
+          4800
+        ],
+        [
+          "Gold Wagyu Set — Regular",
+          "Per person; published standard 90-minute dining menu.",
+          7800
+        ],
+        [
+          "Gold Wagyu Set — Member",
+          "Per person; requires the restaurant’s paid annual membership. Confirm eligibility directly.",
+          6800
+        ],
+        [
+          "Diamond Wagyu Set — Regular",
+          "Per person; published standard 90-minute dining menu.",
+          9800
+        ],
+        [
+          "Diamond Wagyu Set — Member",
+          "Per person; requires the restaurant’s paid annual membership. Confirm eligibility directly.",
+          8800
+        ]
+      ]
+    }
+  ],
+  "site": "https://mikiyashabu.com/project/santa-clara-ca/",
+  "address": "3590 Homestead Rd, Santa Clara, CA 95051",
+  "phone": "(747) 666-1394",
+  "hours": "Sun–Thu 11:30am–10pm; Fri–Sat 11:30am–11pm",
+  "quoteOnly": "Dine-in all-you-can-eat sets, arranged directly with the restaurant. The linked standard menu lists regular and member prices; confirm current branch pricing and lunch promotions before visiting.",
+  "menuNote": "The standard menu currently linked from both official location pages. Member prices require paid annual membership; promotional lunch pricing is separate.",
+  "panels": [
+    {
+      "head": "What each set includes",
+      "body": [
+        "Silver lists a choice of one specialty dish per person, Australian Wagyu chuck ribeye, brisket and shoulder, limited seafood platter, Jidori chicken and Kurobuta pork. Specialty choices include Wagyu bone marrow, tartare, nigiri and sweet shrimp sashimi.",
+        "Gold includes Silver items and lists Japanese A5 chuck ribeye and shoulder at one portion each per person, A5 brisket, full-blood M9+ Australian chuck ribeye and shoulder, and seasonal pearl grouper.",
+        "Diamond includes the preceding sets and lists unlimited specialty dishes, Japanese A5 chuck ribeye, brisket and shoulder, plus a seafood platter. Items depend on supply."
+      ],
+      "links": [
+        {
+          "label": "Official standard set menu",
+          "href": "https://mikiyashabu.com/wp-content/uploads/2025/02/二店菜单味喜屋-去38套餐-身高110-11.18.2024-03-min-scaled.jpg"
+        }
+      ]
+    },
+    {
+      "head": "Dining time and member prices",
+      "body": [
+        "The published menu has a 90-minute dining limit and requires the whole party to choose the same set price. It lists a $6 charge per wasted plate and, during peak hours, a 20% surcharge for each additional 30 minutes.",
+        "The linked policy lists annual membership at $28 per person. Its member prices are separate from the regular menu; membership is arranged directly with the restaurant.",
+        "The published child policy is height-based: 110cm and under free, 111–140cm half price, 141cm and above full price. Confirm current terms and any dated lunch offer directly."
+      ],
+      "links": [
+        {
+          "label": "Official membership policy",
+          "href": "https://mikiyashabu.com/wp-content/uploads/2025/02/二店菜单味喜屋-去38套餐-身高110-11.18.2024-02-min-scaled.jpg"
+        },
+        {
+          "label": "Official location information",
+          "href": "https://mikiyashabu.com/project/santa-clara-ca/"
+        }
+      ]
+    }
+  ],
+  "email": "santaclara@mikiyashabu.com",
+  "clip": {
+    "src": "/clips/b112-dexg1tevsce.mp4",
+    "poster": "/clips/b112-dexg1tevsce-poster.webp",
+    "href": "https://www.instagram.com/reel/DexG1tevsCE/",
+    "platform": "Instagram",
+    "credit": "Original by @mikiya.official. Original restaurant-channel Mikiya film, shared between its Bay Area location pages. The October 2026 lunch promotion is dated; confirm current branch prices directly."
+  }
+},
+{
+  "slug": "mikiya-san-mateo",
+  "name": "Mikiya Wagyu Shabu House",
+  "label": "Mikiya",
+  "cuisine": "Japanese Wagyu hot pot and shabu-shabu",
+  "tagline": "Wagyu shabu-shabu · San Mateo",
+  "category": "Hot Pot",
+  "color": "#111111",
+  "icon": "mikiya-v112",
+  "prep": 0,
+  "items": [],
+  "sections": [
+    {
+      "name": "Published standard Wagyu sets",
+      "items": [
+        [
+          "Silver Wagyu Set — Regular",
+          "Per person; published standard 90-minute dining menu.",
+          5500
+        ],
+        [
+          "Silver Wagyu Set — Member",
+          "Per person; requires the restaurant’s paid annual membership. Confirm eligibility directly.",
+          4800
+        ],
+        [
+          "Gold Wagyu Set — Regular",
+          "Per person; published standard 90-minute dining menu.",
+          7800
+        ],
+        [
+          "Gold Wagyu Set — Member",
+          "Per person; requires the restaurant’s paid annual membership. Confirm eligibility directly.",
+          6800
+        ],
+        [
+          "Diamond Wagyu Set — Regular",
+          "Per person; published standard 90-minute dining menu.",
+          9800
+        ],
+        [
+          "Diamond Wagyu Set — Member",
+          "Per person; requires the restaurant’s paid annual membership. Confirm eligibility directly.",
+          8800
+        ]
+      ]
+    }
+  ],
+  "site": "https://mikiyashabu.com/project/san-mateo-ca/",
+  "address": "68 Hillsdale Mall, San Mateo, CA 94403",
+  "phone": "(747) 286-7071",
+  "hours": "Mon–Thu 11:30am–10pm; Fri 11:30am–11pm; Sat 11am–11pm; Sun 11am–10pm",
+  "quoteOnly": "Dine-in all-you-can-eat sets, arranged directly with the restaurant. The linked standard menu lists regular and member prices; confirm current branch pricing and lunch promotions before visiting.",
+  "menuNote": "The standard menu currently linked from both official location pages. Member prices require paid annual membership; promotional lunch pricing is separate.",
+  "panels": [
+    {
+      "head": "What each set includes",
+      "body": [
+        "Silver lists a choice of one specialty dish per person, Australian Wagyu chuck ribeye, brisket and shoulder, limited seafood platter, Jidori chicken and Kurobuta pork. Specialty choices include Wagyu bone marrow, tartare, nigiri and sweet shrimp sashimi.",
+        "Gold includes Silver items and lists Japanese A5 chuck ribeye and shoulder at one portion each per person, A5 brisket, full-blood M9+ Australian chuck ribeye and shoulder, and seasonal pearl grouper.",
+        "Diamond includes the preceding sets and lists unlimited specialty dishes, Japanese A5 chuck ribeye, brisket and shoulder, plus a seafood platter. Items depend on supply."
+      ],
+      "links": [
+        {
+          "label": "Official standard set menu",
+          "href": "https://mikiyashabu.com/wp-content/uploads/2025/02/二店菜单味喜屋-去38套餐-身高110-11.18.2024-03-min-scaled.jpg"
+        }
+      ]
+    },
+    {
+      "head": "Dining time and member prices",
+      "body": [
+        "The published menu has a 90-minute dining limit and requires the whole party to choose the same set price. It lists a $6 charge per wasted plate and, during peak hours, a 20% surcharge for each additional 30 minutes.",
+        "The linked policy lists annual membership at $28 per person. Its member prices are separate from the regular menu; membership is arranged directly with the restaurant.",
+        "The published child policy is height-based: 110cm and under free, 111–140cm half price, 141cm and above full price. Confirm current terms and any dated lunch offer directly."
+      ],
+      "links": [
+        {
+          "label": "Official membership policy",
+          "href": "https://mikiyashabu.com/wp-content/uploads/2025/02/二店菜单味喜屋-去38套餐-身高110-11.18.2024-02-min-scaled.jpg"
+        },
+        {
+          "label": "Official location information",
+          "href": "https://mikiyashabu.com/project/san-mateo-ca/"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b112-dexg1tevsce.mp4",
+    "poster": "/clips/b112-dexg1tevsce-poster.webp",
+    "href": "https://www.instagram.com/reel/DexG1tevsCE/",
+    "platform": "Instagram",
+    "credit": "Original by @mikiya.official. Original restaurant-channel Mikiya film, shared between its Bay Area location pages. The October 2026 lunch promotion is dated; confirm current branch prices directly."
+  }
+},
 ]

@@ -1,0 +1,6131 @@
+{
+  "cutoff": "2026-11-10T08:40:18.240580-08:00",
+  "listings": [
+    {
+      "slug": "ones-cafe-alameda",
+      "name": "Ones Cafe & Bakery",
+      "label": "Ones Cafe",
+      "cuisine": "Cafe, coffee, croissants and pastries",
+      "tagline": "Cafe, coffee, croissants and pastries · Suite 1A",
+      "category": "Coffee",
+      "icon": "ones-cafe-alameda-v112",
+      "color": "#F6F1E5",
+      "prep": 0,
+      "items": [],
+      "address": "1926 Park St, Suite 1A, Alameda, CA 94501",
+      "site": "https://order.toasttab.com/online/ones-cafe-bakery-alameda-1926-park-st-1a",
+      "phone": "(510) 501-7946",
+      "hours": "Wed–Sun 8am–2:30pm; closed Mon–Tue",
+      "sections": [
+        {
+          "name": "Bakery",
+          "items": [
+            [
+              "French Tart",
+              "",
+              395
+            ],
+            [
+              "Pineapple Orange Kouign Amann",
+              "",
+              600
+            ],
+            [
+              "Caramel Crumble",
+              "",
+              750
+            ],
+            [
+              "Matcha Custard Stick",
+              "",
+              700
+            ],
+            [
+              "Almond Roll Bite",
+              "",
+              400
+            ],
+            [
+              "Butter Croissant",
+              "",
+              450
+            ],
+            [
+              "Chocolate Croissant",
+              "",
+              550
+            ],
+            [
+              "Almond Croissant",
+              "",
+              650
+            ],
+            [
+              "Strawberry Moon",
+              "",
+              799
+            ],
+            [
+              "Ube Moon",
+              "",
+              799
+            ],
+            [
+              "Coffee Cream Bow Tie",
+              "",
+              799
+            ],
+            [
+              "Black Sesame Onigiri Croissant",
+              "",
+              650
+            ],
+            [
+              "Pistachio Croissant",
+              "",
+              950
+            ],
+            [
+              "Almond swirl",
+              "",
+              800
+            ],
+            [
+              "matcha cheese cake",
+              "",
+              600
+            ],
+            [
+              "tofu cheese cake",
+              "",
+              600
+            ],
+            [
+              "Ham & Cheese",
+              "",
+              725
+            ],
+            [
+              "Spicy Lemongrass Chicken Croissant",
+              "",
+              799
+            ],
+            [
+              "Tuna Salad Danish",
+              "",
+              800
+            ],
+            [
+              "Wagyu Beef Cup",
+              "",
+              800
+            ],
+            [
+              "Sausage Cheese Danish",
+              "",
+              500
+            ],
+            [
+              "Passion Fruit Cruffin",
+              "",
+              750
+            ],
+            [
+              "Orange Danish",
+              "",
+              800
+            ]
+          ]
+        },
+        {
+          "name": "Hot Drink",
+          "items": [
+            [
+              "Hot Espresso Shot",
+              "",
+              300
+            ],
+            [
+              "Hot Drip Coffee",
+              "",
+              375
+            ],
+            [
+              "Hot Americano",
+              "",
+              425
+            ],
+            [
+              "Cortado",
+              "",
+              425
+            ],
+            [
+              "Macchiato",
+              "",
+              375
+            ],
+            [
+              "Cappucino",
+              "",
+              475
+            ],
+            [
+              "Flat White",
+              "",
+              475
+            ],
+            [
+              "Hot Latte",
+              "",
+              475
+            ],
+            [
+              "Hot Vanilla Latte",
+              "",
+              550
+            ],
+            [
+              "Hot Pumpkin Spice Latte",
+              "",
+              550
+            ],
+            [
+              "Hot Orange Latte",
+              "",
+              595
+            ],
+            [
+              "Hot Caramel Cinnamon Latte",
+              "",
+              595
+            ],
+            [
+              "Hot Black Sesame Latte",
+              "",
+              650
+            ],
+            [
+              "Hot Mocha Latte",
+              "",
+              595
+            ],
+            [
+              "Hot Orange Mocha",
+              "",
+              600
+            ],
+            [
+              "Hot MATCHA Latte",
+              "",
+              700
+            ],
+            [
+              "Hot Ube Latte",
+              "",
+              595
+            ],
+            [
+              "Hot Chai Latte",
+              "",
+              550
+            ],
+            [
+              "Hot Chocolate",
+              "",
+              425
+            ],
+            [
+              "Hot Milk",
+              "",
+              250
+            ],
+            [
+              "Hot Strawberry Matcha",
+              "",
+              750
+            ],
+            [
+              "Hot Black Tea",
+              "",
+              325
+            ],
+            [
+              "Hot Green Tea",
+              "",
+              325
+            ]
+          ]
+        },
+        {
+          "name": "Cold Drink",
+          "items": [
+            [
+              "Cold Espresso Shot",
+              "",
+              300
+            ],
+            [
+              "Cold Brew",
+              "",
+              500
+            ],
+            [
+              "Cold Americano",
+              "",
+              425
+            ],
+            [
+              "Cold Latte",
+              "",
+              475
+            ],
+            [
+              "Cold Vanilla Latte",
+              "",
+              500
+            ],
+            [
+              "Cold Orange Latte",
+              "",
+              595
+            ],
+            [
+              "Cold Pumpkin Spice Latte",
+              "",
+              550
+            ],
+            [
+              "Cold Black Sesame Latte",
+              "",
+              650
+            ],
+            [
+              "Sea Salt Cheese Latte",
+              "",
+              650
+            ],
+            [
+              "Cold Carrot Cake Latte",
+              "",
+              695
+            ],
+            [
+              "Cold Mocha Latte",
+              "",
+              595
+            ],
+            [
+              "Cold Orange Mocha",
+              "",
+              600
+            ],
+            [
+              "Cold MATCHA Latte",
+              "",
+              700
+            ],
+            [
+              "Iced Strawberry Matcha",
+              "",
+              750
+            ],
+            [
+              "Cold Ube Latte",
+              "",
+              595
+            ],
+            [
+              "Cold Chai Latte",
+              "",
+              550
+            ],
+            [
+              "Lemon Tea",
+              "",
+              475
+            ],
+            [
+              "Lavender Lemonde",
+              "",
+              475
+            ],
+            [
+              "Sparkling Yuzu Americano",
+              "",
+              600
+            ],
+            [
+              "Cold Milk",
+              "",
+              275
+            ],
+            [
+              "Soft Serve",
+              "",
+              600
+            ],
+            [
+              "Soft Serve Vanilla Pistachio Swirl",
+              "",
+              750
+            ],
+            [
+              "Milkshake",
+              "",
+              600
+            ],
+            [
+              "Affogato",
+              "",
+              700
+            ]
+          ]
+        },
+        {
+          "name": "Grab & Go",
+          "items": [
+            [
+              "Fiji Water",
+              "",
+              200
+            ],
+            [
+              "Tree Top Apple Juice",
+              "",
+              200
+            ],
+            [
+              "Pineapple Juice",
+              "",
+              150
+            ],
+            [
+              "Itoen Unsweetened Green Tea",
+              "",
+              250
+            ],
+            [
+              "Itoen Jasmine Tea",
+              "",
+              250
+            ],
+            [
+              "San Pelligrino",
+              "",
+              250
+            ],
+            [
+              "Poppi Juice",
+              "",
+              200
+            ],
+            [
+              "Coconut Water",
+              "",
+              180
+            ],
+            [
+              "Chocolate Whole Milk",
+              "",
+              150
+            ],
+            [
+              "Nutella Sticks",
+              "",
+              150
+            ],
+            [
+              "Roasted Seaweed",
+              "",
+              200
+            ],
+            [
+              "Kinder Joy",
+              "",
+              150
+            ],
+            [
+              "Ethiopia",
+              "",
+              1800
+            ],
+            [
+              "Golden Gate",
+              "",
+              1700
+            ],
+            [
+              "Espresso Beans",
+              "",
+              1700
+            ],
+            [
+              "Tejava Black Tea",
+              "",
+              200
+            ],
+            [
+              "Sunny D",
+              "",
+              200
+            ],
+            [
+              "Pediasure",
+              "",
+              250
+            ],
+            [
+              "Yerba",
+              "",
+              299
+            ],
+            [
+              "Alani",
+              "",
+              200
+            ]
+          ]
+        }
+      ],
+      "orderUrl": "https://order.toasttab.com/online/ones-cafe-bakery-alameda-1926-park-st-1a",
+      "menuNote": "Alameda’s published Toast menu. Items can sell out; confirm availability when ordering.",
+      "panels": [
+        {
+          "head": "Alameda and Castro Valley",
+          "body": [
+            "This is the Park Street location in Alameda. The separate Castro Valley shop is at 3483 Castro Valley Boulevard."
+          ],
+          "links": [
+            {
+              "label": "Alameda ordering menu",
+              "href": "https://order.toasttab.com/online/ones-cafe-bakery-alameda-1926-park-st-1a"
+            },
+            {
+              "label": "Castro Valley on BEASTY",
+              "href": "https://beastypages.com/?b=b_onescafebakery"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "fork-it-pasta",
+      "name": "Fork It Pasta To Go",
+      "label": "Fork It",
+      "cuisine": "Greek-inspired fresh pasta",
+      "tagline": "Greek-inspired fresh pasta · San Mateo",
+      "category": "Greek",
+      "icon": "fork-it-v112",
+      "color": "#F6F1E5",
+      "prep": 0,
+      "items": [],
+      "address": "1308 W Hillsdale Blvd, San Mateo, CA 94403",
+      "site": "https://forkitpasta.com/",
+      "hours": "Every day 10:30am–8:30pm",
+      "sections": [
+        {
+          "name": "Pasta — regular and large",
+          "items": [
+            [
+              "Macaronia Me Kima — Regular",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1495
+            ],
+            [
+              "Macaronia Me Kima — Large",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1695
+            ],
+            [
+              "Tomato Basil — Regular",
+              "Choice of rigatoni, radiatori or gemelli.",
+              795
+            ],
+            [
+              "Tomato Basil — Large",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1095
+            ],
+            [
+              "Carbonara — Regular",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1295
+            ],
+            [
+              "Carbonara — Large",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1595
+            ],
+            [
+              "Pink Sauce — Regular",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1195
+            ],
+            [
+              "Pink Sauce — Large",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1495
+            ],
+            [
+              "Chicken Tikka Masala — Regular",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1295
+            ],
+            [
+              "Chicken Tikka Masala — Large",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1595
+            ],
+            [
+              "Truffle Mushroom — Regular",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1495
+            ],
+            [
+              "Truffle Mushroom — Large",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1795
+            ],
+            [
+              "Basil Pesto — Regular",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1195
+            ],
+            [
+              "Basil Pesto — Large",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1395
+            ],
+            [
+              "Parmesan Chicken — Regular",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1495
+            ],
+            [
+              "Parmesan Chicken — Large",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1695
+            ],
+            [
+              "Alfredo — Regular",
+              "Choice of rigatoni, radiatori or gemelli.",
+              995
+            ],
+            [
+              "Alfredo — Large",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1195
+            ],
+            [
+              "Mac & Cheese — Regular",
+              "Choice of rigatoni, radiatori or gemelli.",
+              995
+            ],
+            [
+              "Mac & Cheese — Large",
+              "Choice of rigatoni, radiatori or gemelli.",
+              1195
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "Crispy Chicken Parm Bites",
+              "",
+              995
+            ],
+            [
+              "Crispy Cauliflower Bites",
+              "",
+              895
+            ]
+          ]
+        },
+        {
+          "name": "Salads",
+          "items": [
+            [
+              "Greek Salad",
+              "",
+              1095
+            ],
+            [
+              "Caesar Salad",
+              "",
+              995
+            ],
+            [
+              "Mediterranean Pasta Salad — Regular",
+              "",
+              895
+            ],
+            [
+              "Mediterranean Pasta Salad — Large",
+              "",
+              1095
+            ]
+          ]
+        },
+        {
+          "name": "Desserts",
+          "items": [
+            [
+              "Crispy Croissant Bites — Powdered Sugar",
+              "",
+              795
+            ],
+            [
+              "Crispy Croissant Bites — Powdered Sugar + Nutella",
+              "",
+              895
+            ]
+          ]
+        },
+        {
+          "name": "Kids",
+          "items": [
+            [
+              "Mac & Cheese + Nuggets",
+              "",
+              895
+            ],
+            [
+              "Plain Pasta + Nuggets",
+              "",
+              795
+            ]
+          ]
+        }
+      ],
+      "menuNote": "The complete published food menu, with regular and large pasta prices shown separately.",
+      "panels": [
+        {
+          "head": "Pasta choices and combo add-ons",
+          "body": [
+            "Choose rigatoni, radiatori or gemelli. Gluten-free pasta or protein pasta adds $3.95.",
+            "Add a Greek salad and drink for $5.75, Caesar salad and drink for $4.50, or bread and drink for $3.75. These are additions to a pasta order."
+          ],
+          "links": [
+            {
+              "label": "Official menu PDF",
+              "href": "https://img1.wsimg.com/blobby/go/79ca93f4-a91f-4bf1-8dbe-04df2f2d52c9/Menu_Draft_7.pdf"
+            }
+          ]
+        },
+        {
+          "head": "Grand opening — November 11, 2026",
+          "body": [
+            "The owner’s dated announcement lists November 11, 11am–2pm. One free food item and drink per person; one entry, with no re-entry into the line. Confirm details directly."
+          ],
+          "links": [
+            {
+              "label": "Owner’s announcement",
+              "href": "https://www.instagram.com/reel/DfdyvXhCgJV/"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/b112-dfdyvxhcgjv.mp4",
+        "poster": "/clips/b112-dfdyvxhcgjv-poster.webp",
+        "href": "https://www.instagram.com/reel/DfdyvXhCgJV/",
+        "platform": "Instagram",
+        "credit": "Original by @forkitpasta. Visit to fork it pasta."
+      }
+    },
+    {
+      "slug": "new-england-lobster",
+      "name": "New England Lobster Market & Eatery",
+      "label": "New England Lobster",
+      "cuisine": "Lobster, crab and seafood",
+      "tagline": "Lobster, crab and seafood · Burlingame",
+      "category": "Seafood",
+      "icon": "new-england-lobster-v112",
+      "color": "#F6F1E5",
+      "prep": 0,
+      "items": [],
+      "address": "824 Cowan Rd, Burlingame, CA 94010",
+      "site": "https://newenglandlobster.net/",
+      "phone": "(650) 443-1559",
+      "hours": "Every day 11am–8pm",
+      "sections": [
+        {
+          "name": "Plates",
+          "items": [
+            [
+              "1 lb Lobster Plate",
+              "",
+              1995
+            ],
+            [
+              "2 lb Lobster Plate",
+              "",
+              6000
+            ],
+            [
+              "3 lb Lobster Plate",
+              "",
+              8000
+            ],
+            [
+              "4 lb Lobster Plate",
+              "",
+              10000
+            ],
+            [
+              "5 lb Lobster Plate",
+              "",
+              11000
+            ],
+            [
+              "3–4 oz Twin Lobster Tails",
+              "",
+              3500
+            ],
+            [
+              "5–6 oz Twin Lobster Tails",
+              "",
+              5000
+            ],
+            [
+              "Sampler",
+              "",
+              3200
+            ],
+            [
+              "Crab Mac n Cheese",
+              "",
+              2800
+            ],
+            [
+              "Lobster Mac n Cheese",
+              "",
+              3200
+            ],
+            [
+              "Dungeness Crab Plate",
+              "",
+              3795
+            ]
+          ]
+        },
+        {
+          "name": "Small plates",
+          "items": [
+            [
+              "Crab Nachos",
+              "",
+              3500
+            ],
+            [
+              "Lobster Nachos",
+              "",
+              3500
+            ],
+            [
+              "Crab Cocktail",
+              "",
+              2700
+            ],
+            [
+              "Shrimp Cocktail",
+              "",
+              2000
+            ],
+            [
+              "Bucket of EZ Peel Shrimp",
+              "",
+              2000
+            ],
+            [
+              "Ragin' Cajun Shrimp",
+              "",
+              3000
+            ],
+            [
+              "Lobster Musubi",
+              "",
+              1500
+            ],
+            [
+              "Dungeness Crab Slider",
+              "",
+              1500
+            ],
+            [
+              "Lobster Cocktail",
+              "",
+              3200
+            ],
+            [
+              "Ragin' Cajun Crab",
+              "",
+              3000
+            ],
+            [
+              "Bucket of Lobster Claws",
+              "",
+              2900
+            ],
+            [
+              "Single 3–4oz Lobster Tail",
+              "",
+              1495
+            ]
+          ]
+        },
+        {
+          "name": "Lobster rolls",
+          "items": [
+            [
+              "Seasonal Lobster Roll",
+              "",
+              4300
+            ],
+            [
+              "Dressed Lobster Roll",
+              "",
+              3900
+            ],
+            [
+              "Naked Lobster Roll",
+              "",
+              3900
+            ],
+            [
+              "Crobster Roll",
+              "",
+              3900
+            ],
+            [
+              "1/2 Lobster Roll and Cup of Soup",
+              "",
+              3700
+            ],
+            [
+              "The Knuckle Sandwich",
+              "",
+              4600
+            ]
+          ]
+        },
+        {
+          "name": "Crab sandwiches",
+          "items": [
+            [
+              "Seasonal Crab Roll",
+              "",
+              4300
+            ],
+            [
+              "Dressed Crab Roll",
+              "",
+              4000
+            ],
+            [
+              "Naked Crab Roll",
+              "",
+              4000
+            ],
+            [
+              "Dungeness Crab Sandwich",
+              "",
+              4000
+            ],
+            [
+              "Dungeness Crab Melt",
+              "",
+              4300
+            ],
+            [
+              "1/2 CRAB Roll and Cup of Soup",
+              "",
+              3900
+            ]
+          ]
+        },
+        {
+          "name": "Tacos",
+          "items": [
+            [
+              "Lobster Taco",
+              "",
+              1600
+            ],
+            [
+              "Crab Taco",
+              "",
+              1600
+            ],
+            [
+              "Shrimp Taco",
+              "",
+              1200
+            ],
+            [
+              "Fish Taco",
+              "",
+              1000
+            ],
+            [
+              "Lobster Taco Platter",
+              "",
+              4300
+            ],
+            [
+              "Crab Taco Platter",
+              "",
+              4300
+            ],
+            [
+              "3 Amigos Platter",
+              "",
+              4000
+            ],
+            [
+              "Shrimp Taco Platter",
+              "",
+              3000
+            ],
+            [
+              "Vegan Taco Platter",
+              "",
+              2500
+            ],
+            [
+              "Fish Taco Platter",
+              "",
+              2800
+            ]
+          ]
+        },
+        {
+          "name": "Soups and salads",
+          "items": [
+            [
+              "Lobster Corn Chowder",
+              "",
+              1300,
+              null,
+              "from $13.00"
+            ],
+            [
+              "Lobster Salad",
+              "",
+              3900
+            ],
+            [
+              "Crab Salad",
+              "",
+              3900
+            ],
+            [
+              "East meets West",
+              "",
+              4200
+            ],
+            [
+              "House Salad",
+              "",
+              1500
+            ],
+            [
+              "Shrimp Louie",
+              "",
+              2800
+            ],
+            [
+              "Dungeness Crab Manhattan",
+              "",
+              1300,
+              null,
+              "from $13.00"
+            ]
+          ]
+        },
+        {
+          "name": "Oysters & clams",
+          "items": [
+            [
+              "1/2 Dozen Kumamoto",
+              "",
+              3100
+            ],
+            [
+              "1/2 Dozen Summer Love",
+              "",
+              3100
+            ],
+            [
+              "1/2 Dozen Marin Miyagi",
+              "",
+              3100
+            ],
+            [
+              "1/2 Dozen Littleneck Clams",
+              "",
+              3100
+            ],
+            [
+              "1/2 Dozen Cherrystone Clams",
+              "",
+              3100
+            ],
+            [
+              "1/2 Dozen Fanny Bay",
+              "",
+              3100
+            ]
+          ]
+        },
+        {
+          "name": "Land lovers",
+          "items": [
+            [
+              "Wagyu Beef Hot Dog",
+              "",
+              1600
+            ],
+            [
+              "Grilled Cheese",
+              "",
+              900
+            ],
+            [
+              "BLT",
+              "",
+              1600
+            ]
+          ]
+        },
+        {
+          "name": "Coca-Cola beverages",
+          "items": [
+            [
+              "Mexican Coke",
+              "",
+              600
+            ],
+            [
+              "Coca-Cola Zero Sugar",
+              "",
+              600
+            ],
+            [
+              "Mexican Sprite",
+              "",
+              600
+            ],
+            [
+              "Mexican Fanta Orange",
+              "",
+              600
+            ]
+          ]
+        },
+        {
+          "name": "Sodas & such",
+          "items": [
+            [
+              "Root Beer",
+              "",
+              600
+            ],
+            [
+              "Ginger Brew",
+              "",
+              600
+            ],
+            [
+              "Mexican Coke",
+              "",
+              600
+            ],
+            [
+              "Diet Coke",
+              "",
+              600
+            ],
+            [
+              "Coca-Cola Zero Sugar",
+              "",
+              600
+            ],
+            [
+              "Mexican Fanta Orange",
+              "",
+              600
+            ],
+            [
+              "Mexican Sprite",
+              "",
+              600
+            ],
+            [
+              "Bottled Water",
+              "",
+              400
+            ],
+            [
+              "Apple Juice",
+              "",
+              500
+            ],
+            [
+              "Sparkling Water Pellegrino",
+              "",
+              500
+            ],
+            [
+              "Blueberry Lemonade",
+              "",
+              700
+            ],
+            [
+              "Lemonade",
+              "",
+              700
+            ],
+            [
+              "Unsweetened Ice Tea",
+              "",
+              400
+            ],
+            [
+              "Arnold Palmer",
+              "",
+              500
+            ],
+            [
+              "Coffee",
+              "",
+              400
+            ],
+            [
+              "Hot Tea",
+              "",
+              500
+            ],
+            [
+              "Vietnamese Ice Coffee",
+              "",
+              700
+            ],
+            [
+              "Small Pellegrino",
+              "",
+              250
+            ]
+          ]
+        },
+        {
+          "name": "Desserts",
+          "items": [
+            [
+              "Blueberry Cheesecake",
+              "",
+              900
+            ],
+            [
+              "Housemade Bread Pudding",
+              "",
+              700
+            ],
+            [
+              "Sue’s Famous Whoopie Pie",
+              "",
+              500
+            ]
+          ]
+        },
+        {
+          "name": "Sides",
+          "items": [
+            [
+              "Housemade Potato Chips",
+              "",
+              350,
+              null,
+              "from $3.50"
+            ],
+            [
+              "Extra Roll",
+              "",
+              300
+            ],
+            [
+              "Cup of Cajun Sauce",
+              "",
+              500
+            ],
+            [
+              "Cup of White Rice",
+              "",
+              500
+            ],
+            [
+              "Jalapeño Sauce",
+              "",
+              300
+            ],
+            [
+              "Bread bowl — no soup",
+              "",
+              500
+            ],
+            [
+              "16oz coleslaw",
+              "",
+              1200
+            ]
+          ]
+        }
+      ],
+      "orderUrl": "https://order.toasttab.com/online/new-england-lobster-market-eatery",
+      "menuNote": "The restaurant’s published food and nonalcoholic-drink menu. Prices marked “from” depend on size; ordering availability can change.",
+      "panels": [
+        {
+          "head": "Eatery, market and catering",
+          "body": [
+            "Eatery dining hours are 11am–8pm daily; ordering windows may differ. The business lists credit-card payment only.",
+            "The standalone Coleslaw side has no published price; ask the eatery. The separately listed 16oz coleslaw is $12. Market seafood, catering, alcohol and merchandise are separate catalogs."
+          ],
+          "links": [
+            {
+              "label": "Eatery and market information",
+              "href": "https://newenglandlobster.net/eatery/"
+            },
+            {
+              "label": "Restaurant, market and catering menus",
+              "href": "https://order.toasttab.com/online/new-england-lobster-market-eatery"
+            }
+          ]
+        },
+        {
+          "head": "Recipe films",
+          "body": [
+            "Mike’s surf-and-turf sandwich is home cooking using lobster claw meat from New England Lobster and rib-eye from The Butcher Shop by Niku. It is not a dish promised on this eatery’s menu.",
+            "Emari’s crab-roll recipe also uses seafood from this supplier. The creator credits distinguish recipes from visits to the restaurant."
+          ],
+          "links": []
+        }
+      ],
+      "clip": {
+        "src": "/clips/b112-dzh5eg-kdtj.mp4",
+        "poster": "/clips/b112-dzh5eg-kdtj-poster.webp",
+        "href": "https://www.instagram.com/reel/DZh5eG-KDtJ/",
+        "platform": "Instagram",
+        "credit": "Original by @newenglandlobster. Visit to new england lobster."
+      }
+    },
+    {
+      "slug": "popbar-berkeley",
+      "name": "Popbar",
+      "label": "Popbar",
+      "cuisine": "Ice cream, gelato and sorbetto pops",
+      "tagline": "Ice cream, gelato and sorbetto pops · Berkeley",
+      "category": "Ice Cream",
+      "icon": "popbar-berkeley-v112",
+      "color": "#F6F1E5",
+      "prep": 0,
+      "items": [],
+      "address": "2125 University Ave, Berkeley, CA 94704",
+      "site": "https://www.pop-bar.com/pages/location-berkeley-ca",
+      "sections": [
+        {
+          "name": "Gelato and sorbetto — pictured on the Berkeley page",
+          "items": [
+            [
+              "Pistachio Gelato",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Strawberry Sorbetto",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Vanilla Bean Gelato",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Mango Sorbetto",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Chocolate Gelato",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Sea Salt Caramel Gelato",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        },
+        {
+          "name": "In-store treats",
+          "items": [
+            [
+              "Gelato Shakes",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "popWich",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        }
+      ],
+      "quoteOnly": "Walk in to choose a pop, dip and toppings. The Berkeley page does not publish prices or live flavor availability; ask in store. Berkeley online ordering is listed as coming soon.",
+      "menuNote": "Treats pictured or named on the official Berkeley page. Flavors and toppings rotate; this is not the New York shop’s availability list.",
+      "panels": [
+        {
+          "head": "Hours and local availability",
+          "body": [
+            "The official Berkeley webpage lists daily 10am–7pm. Its supplied local Instagram profile lists Sunday–Thursday 1:30pm–8:30pm and Friday–Saturday 1pm–9:30pm. These schedules disagree; confirm with the local shop before visiting.",
+            "The national flavor and topping catalogs describe the New York kitchen. Berkeley sets its own selection and prices."
+          ],
+          "links": [
+            {
+              "label": "Official Berkeley store page",
+              "href": "https://www.pop-bar.com/pages/location-berkeley-ca"
+            },
+            {
+              "label": "Local Instagram",
+              "href": "https://www.instagram.com/popbarbayarea/"
+            },
+            {
+              "label": "National flavor catalog — check Berkeley availability",
+              "href": "https://www.pop-bar.com/pages/gelato-and-sorbetto-flavors"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/b112-deikxqjksog.mp4",
+        "poster": "/clips/b112-deikxqjksog-poster.webp",
+        "href": "https://www.instagram.com/reel/DeiKXQjKsOG/",
+        "platform": "Instagram",
+        "credit": "Original by @popbarbayarea. Gelato pops at the Berkeley location."
+      }
+    },
+    {
+      "slug": "hinata-sushi-kitchen",
+      "name": "Hinata Sushi Kitchen",
+      "label": "Hinata Sushi",
+      "cuisine": "Japanese AYCE sushi",
+      "tagline": "Japanese AYCE sushi · 2nd Floor",
+      "category": "AYCE",
+      "icon": "hinata-sushi-kitchen-v112",
+      "color": "#F6F1E5",
+      "prep": 0,
+      "items": [],
+      "address": "1071 B St, 2nd Floor, Hayward, CA 94541",
+      "site": "https://www.instagram.com/hinatasushihayward/",
+      "hours": "Every day 11:30am–9:30pm",
+      "contactOnly": "All-you-can-eat sushi in downtown Hayward. Ask the restaurant for its current menu, meal prices and availability.",
+      "panels": [
+        {
+          "head": "Hayward location",
+          "body": [
+            "The local restaurant’s supplied profile lists 1071 B Street, second floor, and daily hours of 11:30am–9:30pm. Older review prices are dated and are not a current price list."
+          ],
+          "links": [
+            {
+              "label": "Official local Instagram",
+              "href": "https://www.instagram.com/hinatasushihayward/"
+            },
+            {
+              "label": "Downtown Hayward listing",
+              "href": "https://downtownhayward.com/go/hinata-sushi-kitchen"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/b112-de8rvmkoiot.mp4",
+        "poster": "/clips/b112-de8rvmkoiot-poster.webp",
+        "href": "https://www.instagram.com/reel/De8RVmKoiOt/",
+        "platform": "Instagram",
+        "credit": "Original by @hinatasushihayward. Visit to hinata sushi kitchen."
+      },
+      "phone": "(510) 881-8868"
+    },
+    {
+      "slug": "shabu-club-san-francisco",
+      "name": "Shabu Club",
+      "label": "Shabu Club",
+      "cuisine": "Japanese hot pot and shabu-shabu",
+      "tagline": "Japanese hot pot and shabu-shabu · San Francisco",
+      "category": "Hot Pot",
+      "icon": "shabu-club-v112",
+      "color": "#F6F1E5",
+      "prep": 0,
+      "items": [],
+      "address": "951 Clement St, San Francisco, CA 94118",
+      "site": "https://shabuclubsf.com/",
+      "phone": "(415) 742-5265",
+      "hours": "Every day 5pm–9pm",
+      "sections": [
+        {
+          "name": "Small plates",
+          "items": [
+            [
+              "Pork Gyoza",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kamikaze Wings",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Veggie Gyoza",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Calamari",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kobe Beef Fries",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Edamame",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        },
+        {
+          "name": "Broths",
+          "items": [
+            [
+              "Miso",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Tonkotsu",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kimchi",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Spicy Miso",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Spicy Tonkotsu",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Spicy Kimchi",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Water + Kelp",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Mushroom",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Veggie Miso",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        },
+        {
+          "name": "All-you-can-eat",
+          "items": [
+            [
+              "Adult AYCE",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Children ages 3–5 AYCE",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Children ages 6–10 AYCE",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        },
+        {
+          "name": "Shabu sets",
+          "items": [
+            [
+              "American Kobe Toro — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "American Kobe Toro — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "American Wagyu — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "American Wagyu — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Japanese A5 Wagyu — 6 oz",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kurobuta Pork — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kurobuta Pork — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Premium Lamb — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Premium Lamb — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Vegetarian — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Vegetarian — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "2 Meat Combo — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "2 Meat Combo — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "3 Meat Combo — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        },
+        {
+          "name": "Add-ons",
+          "items": [
+            [
+              "Extra Meat — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Extra Meat — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Napa Cabbage",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kimchi",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kabocha Pumpkin",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Spinach",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Noodles",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Tofu / Fried Tofu",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Baby Carrot",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Rice",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Raw Egg",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Mushrooms",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Veggie Bowl",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Habanero Sauce",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Zucchini",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Ice Cream",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        }
+      ],
+      "quoteOnly": "The official linked menu leaves prices blank. Ask the restaurant for current set, all-you-can-eat and add-on prices; dining is arranged directly.",
+      "menuNote": "The food menu linked by both official location pages, excluding alcohol. All prices require confirmation.",
+      "panels": [
+        {
+          "head": "Sets, broths and AYCE",
+          "body": [
+            "Choose two broths per pot; vegetarian broth options are listed. Sets include a vegetable bowl, udon or ramen, rice and ice cream.",
+            "AYCE has a 90-minute limit and requires the whole party to participate. It cannot be combined with sets or taken to go; unfinished-food charges may apply. Confirm all terms and prices directly."
+          ],
+          "links": [
+            {
+              "label": "Official linked food menu",
+              "href": "https://img1.wsimg.com/blobby/go/591b1d73-755c-4237-9438-7e3a4e815e71/downloads/2b637e52-3900-49a6-835d-089967d8e5ef/Shabu%20Club%20Menu%20Burlingame%208.19.26%20website%20pdf.pdf?ver=1787204478543"
+            },
+            {
+              "label": "Official locations and contact",
+              "href": "https://shabuclubsf.com/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "shabu-club-burlingame",
+      "name": "Shabu Club",
+      "label": "Shabu Club",
+      "cuisine": "Japanese hot pot and shabu-shabu",
+      "tagline": "Japanese hot pot and shabu-shabu · Burlingame",
+      "category": "Hot Pot",
+      "icon": "shabu-club-v112",
+      "color": "#F6F1E5",
+      "prep": 0,
+      "items": [],
+      "address": "1150 Paloma Ave, Burlingame, CA 94010",
+      "site": "https://shabuclubsf.com/",
+      "phone": "(650) 445-7246",
+      "hours": "Every day 5pm–9pm",
+      "sections": [
+        {
+          "name": "Small plates",
+          "items": [
+            [
+              "Pork Gyoza",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kamikaze Wings",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Veggie Gyoza",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Calamari",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kobe Beef Fries",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Edamame",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        },
+        {
+          "name": "Broths",
+          "items": [
+            [
+              "Miso",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Tonkotsu",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kimchi",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Spicy Miso",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Spicy Tonkotsu",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Spicy Kimchi",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Water + Kelp",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Mushroom",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Veggie Miso",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        },
+        {
+          "name": "All-you-can-eat",
+          "items": [
+            [
+              "Adult AYCE",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Children ages 3–5 AYCE",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Children ages 6–10 AYCE",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        },
+        {
+          "name": "Shabu sets",
+          "items": [
+            [
+              "American Kobe Toro — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "American Kobe Toro — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "American Wagyu — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "American Wagyu — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Japanese A5 Wagyu — 6 oz",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kurobuta Pork — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kurobuta Pork — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Premium Lamb — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Premium Lamb — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Vegetarian — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Vegetarian — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "2 Meat Combo — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "2 Meat Combo — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "3 Meat Combo — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        },
+        {
+          "name": "Add-ons",
+          "items": [
+            [
+              "Extra Meat — Regular",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Extra Meat — Large",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Napa Cabbage",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kimchi",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Kabocha Pumpkin",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Spinach",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Noodles",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Tofu / Fried Tofu",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Baby Carrot",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Rice",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Raw Egg",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Mushrooms",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Veggie Bowl",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Habanero Sauce",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Zucchini",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Ice Cream",
+              "",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        }
+      ],
+      "quoteOnly": "The official linked menu leaves prices blank. Ask the restaurant for current set, all-you-can-eat and add-on prices; dining is arranged directly.",
+      "menuNote": "The food menu linked by both official location pages, excluding alcohol. All prices require confirmation.",
+      "panels": [
+        {
+          "head": "Sets, broths and AYCE",
+          "body": [
+            "Choose two broths per pot; vegetarian broth options are listed. Sets include a vegetable bowl, udon or ramen, rice and ice cream.",
+            "AYCE has a 90-minute limit and requires the whole party to participate. It cannot be combined with sets or taken to go; unfinished-food charges may apply. Confirm all terms and prices directly."
+          ],
+          "links": [
+            {
+              "label": "Official linked food menu",
+              "href": "https://img1.wsimg.com/blobby/go/591b1d73-755c-4237-9438-7e3a4e815e71/downloads/2b637e52-3900-49a6-835d-089967d8e5ef/Shabu%20Club%20Menu%20Burlingame%208.19.26%20website%20pdf.pdf?ver=1787204478543"
+            },
+            {
+              "label": "Official locations and contact",
+              "href": "https://shabuclubsf.com/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mikiya-santa-clara",
+      "name": "Mikiya Wagyu Shabu House",
+      "label": "Mikiya",
+      "cuisine": "Japanese Wagyu hot pot and shabu-shabu",
+      "tagline": "Wagyu shabu-shabu · Santa Clara",
+      "category": "Hot Pot",
+      "color": "#111111",
+      "icon": "mikiya-v112",
+      "prep": 0,
+      "items": [],
+      "sections": [
+        {
+          "name": "Published standard Wagyu sets",
+          "items": [
+            [
+              "Silver Wagyu Set — Regular",
+              "Per person; published standard 90-minute dining menu.",
+              5500
+            ],
+            [
+              "Silver Wagyu Set — Member",
+              "Per person; requires the restaurant’s paid annual membership. Confirm eligibility directly.",
+              4800
+            ],
+            [
+              "Gold Wagyu Set — Regular",
+              "Per person; published standard 90-minute dining menu.",
+              7800
+            ],
+            [
+              "Gold Wagyu Set — Member",
+              "Per person; requires the restaurant’s paid annual membership. Confirm eligibility directly.",
+              6800
+            ],
+            [
+              "Diamond Wagyu Set — Regular",
+              "Per person; published standard 90-minute dining menu.",
+              9800
+            ],
+            [
+              "Diamond Wagyu Set — Member",
+              "Per person; requires the restaurant’s paid annual membership. Confirm eligibility directly.",
+              8800
+            ]
+          ]
+        }
+      ],
+      "site": "https://mikiyashabu.com/project/santa-clara-ca/",
+      "address": "3590 Homestead Rd, Santa Clara, CA 95051",
+      "phone": "(747) 666-1394",
+      "hours": "Sun–Thu 11:30am–10pm; Fri–Sat 11:30am–11pm",
+      "quoteOnly": "Dine-in all-you-can-eat sets, arranged directly with the restaurant. The linked standard menu lists regular and member prices; confirm current branch pricing and lunch promotions before visiting.",
+      "menuNote": "The standard menu currently linked from both official location pages. Member prices require paid annual membership; promotional lunch pricing is separate.",
+      "panels": [
+        {
+          "head": "What each set includes",
+          "body": [
+            "Silver lists a choice of one specialty dish per person, Australian Wagyu chuck ribeye, brisket and shoulder, limited seafood platter, Jidori chicken and Kurobuta pork. Specialty choices include Wagyu bone marrow, tartare, nigiri and sweet shrimp sashimi.",
+            "Gold includes Silver items and lists Japanese A5 chuck ribeye and shoulder at one portion each per person, A5 brisket, full-blood M9+ Australian chuck ribeye and shoulder, and seasonal pearl grouper.",
+            "Diamond includes the preceding sets and lists unlimited specialty dishes, Japanese A5 chuck ribeye, brisket and shoulder, plus a seafood platter. Items depend on supply."
+          ],
+          "links": [
+            {
+              "label": "Official standard set menu",
+              "href": "https://mikiyashabu.com/wp-content/uploads/2025/02/二店菜单味喜屋-去38套餐-身高110-11.18.2024-03-min-scaled.jpg"
+            }
+          ]
+        },
+        {
+          "head": "Dining time and member prices",
+          "body": [
+            "The published menu has a 90-minute dining limit and requires the whole party to choose the same set price. It lists a $6 charge per wasted plate and, during peak hours, a 20% surcharge for each additional 30 minutes.",
+            "The linked policy lists annual membership at $28 per person. Its member prices are separate from the regular menu; membership is arranged directly with the restaurant.",
+            "The published child policy is height-based: 110cm and under free, 111–140cm half price, 141cm and above full price. Confirm current terms and any dated lunch offer directly."
+          ],
+          "links": [
+            {
+              "label": "Official membership policy",
+              "href": "https://mikiyashabu.com/wp-content/uploads/2025/02/二店菜单味喜屋-去38套餐-身高110-11.18.2024-02-min-scaled.jpg"
+            },
+            {
+              "label": "Official location information",
+              "href": "https://mikiyashabu.com/project/santa-clara-ca/"
+            }
+          ]
+        }
+      ],
+      "email": "santaclara@mikiyashabu.com",
+      "clip": {
+        "src": "/clips/b112-dexg1tevsce.mp4",
+        "poster": "/clips/b112-dexg1tevsce-poster.webp",
+        "href": "https://www.instagram.com/reel/DexG1tevsCE/",
+        "platform": "Instagram",
+        "credit": "Original by @mikiya.official. Original restaurant-channel Mikiya film, shared between its Bay Area location pages. The October 2026 lunch promotion is dated; confirm current branch prices directly."
+      }
+    },
+    {
+      "slug": "mikiya-san-mateo",
+      "name": "Mikiya Wagyu Shabu House",
+      "label": "Mikiya",
+      "cuisine": "Japanese Wagyu hot pot and shabu-shabu",
+      "tagline": "Wagyu shabu-shabu · San Mateo",
+      "category": "Hot Pot",
+      "color": "#111111",
+      "icon": "mikiya-v112",
+      "prep": 0,
+      "items": [],
+      "sections": [
+        {
+          "name": "Published standard Wagyu sets",
+          "items": [
+            [
+              "Silver Wagyu Set — Regular",
+              "Per person; published standard 90-minute dining menu.",
+              5500
+            ],
+            [
+              "Silver Wagyu Set — Member",
+              "Per person; requires the restaurant’s paid annual membership. Confirm eligibility directly.",
+              4800
+            ],
+            [
+              "Gold Wagyu Set — Regular",
+              "Per person; published standard 90-minute dining menu.",
+              7800
+            ],
+            [
+              "Gold Wagyu Set — Member",
+              "Per person; requires the restaurant’s paid annual membership. Confirm eligibility directly.",
+              6800
+            ],
+            [
+              "Diamond Wagyu Set — Regular",
+              "Per person; published standard 90-minute dining menu.",
+              9800
+            ],
+            [
+              "Diamond Wagyu Set — Member",
+              "Per person; requires the restaurant’s paid annual membership. Confirm eligibility directly.",
+              8800
+            ]
+          ]
+        }
+      ],
+      "site": "https://mikiyashabu.com/project/san-mateo-ca/",
+      "address": "68 Hillsdale Mall, San Mateo, CA 94403",
+      "phone": "(747) 286-7071",
+      "hours": "Mon–Thu 11:30am–10pm; Fri 11:30am–11pm; Sat 11am–11pm; Sun 11am–10pm",
+      "quoteOnly": "Dine-in all-you-can-eat sets, arranged directly with the restaurant. The linked standard menu lists regular and member prices; confirm current branch pricing and lunch promotions before visiting.",
+      "menuNote": "The standard menu currently linked from both official location pages. Member prices require paid annual membership; promotional lunch pricing is separate.",
+      "panels": [
+        {
+          "head": "What each set includes",
+          "body": [
+            "Silver lists a choice of one specialty dish per person, Australian Wagyu chuck ribeye, brisket and shoulder, limited seafood platter, Jidori chicken and Kurobuta pork. Specialty choices include Wagyu bone marrow, tartare, nigiri and sweet shrimp sashimi.",
+            "Gold includes Silver items and lists Japanese A5 chuck ribeye and shoulder at one portion each per person, A5 brisket, full-blood M9+ Australian chuck ribeye and shoulder, and seasonal pearl grouper.",
+            "Diamond includes the preceding sets and lists unlimited specialty dishes, Japanese A5 chuck ribeye, brisket and shoulder, plus a seafood platter. Items depend on supply."
+          ],
+          "links": [
+            {
+              "label": "Official standard set menu",
+              "href": "https://mikiyashabu.com/wp-content/uploads/2025/02/二店菜单味喜屋-去38套餐-身高110-11.18.2024-03-min-scaled.jpg"
+            }
+          ]
+        },
+        {
+          "head": "Dining time and member prices",
+          "body": [
+            "The published menu has a 90-minute dining limit and requires the whole party to choose the same set price. It lists a $6 charge per wasted plate and, during peak hours, a 20% surcharge for each additional 30 minutes.",
+            "The linked policy lists annual membership at $28 per person. Its member prices are separate from the regular menu; membership is arranged directly with the restaurant.",
+            "The published child policy is height-based: 110cm and under free, 111–140cm half price, 141cm and above full price. Confirm current terms and any dated lunch offer directly."
+          ],
+          "links": [
+            {
+              "label": "Official membership policy",
+              "href": "https://mikiyashabu.com/wp-content/uploads/2025/02/二店菜单味喜屋-去38套餐-身高110-11.18.2024-02-min-scaled.jpg"
+            },
+            {
+              "label": "Official location information",
+              "href": "https://mikiyashabu.com/project/san-mateo-ca/"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/b112-dexg1tevsce.mp4",
+        "poster": "/clips/b112-dexg1tevsce-poster.webp",
+        "href": "https://www.instagram.com/reel/DexG1tevsCE/",
+        "platform": "Instagram",
+        "credit": "Original by @mikiya.official. Original restaurant-channel Mikiya film, shared between its Bay Area location pages. The October 2026 lunch promotion is dated; confirm current branch prices directly."
+      }
+    }
+  ],
+  "posts": [
+    {
+      "code": "Dfi9V_OTZH4",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/Dfi9V_OTZH4/",
+      "brand": "b_brunchandbloom",
+      "by": "justmostie",
+      "postedBy": "justmostie",
+      "postedAt": "20261110",
+      "request": [
+        {
+          "at": "2026-11-09T20:21:38.005679-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review by @justmostie at Brunch & Bloom, Brentwood.",
+      "slug": "review-Dfi9V_OTZH4",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 93.65s",
+      "disposition": "creator-page film, linked from business",
+      "playOn": "b_foodiejustmostie"
+    },
+    {
+      "code": "DbBFjWzhpja",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DbBFjWzhpja/",
+      "brand": "b_onescafealameda",
+      "by": "hungere.for.diy",
+      "postedBy": "hungere.for.diy",
+      "postedAt": "20260720",
+      "request": [
+        {
+          "at": "2026-11-09T20:46:15.070068-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review / coverage by @hungere.for.diy. Visit to ones cafe alameda.",
+      "slug": "review-DbBFjWzhpja",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 32.39s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DbHPuqiPoIm",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DbHPuqiPoIm/",
+      "brand": "b_onescafealameda",
+      "by": "cookwithhenny",
+      "postedBy": "cookwithhenny",
+      "postedAt": "20260722",
+      "request": [
+        {
+          "at": "2026-11-09T20:46:54.699991-08:00",
+          "request": "Clip this video plz\nFoodie \nMediocre"
+        }
+      ],
+      "credit": "Review / coverage by @cookwithhenny. Alameda visit, as identified in the caption opening and the submitted branch clarification. The caption footer instead names Castro Valley. Hosted visit disclosed by the creator.",
+      "slug": "review-DbHPuqiPoIm",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 32.58s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DN6yMSWgU_G",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DN6yMSWgU_G/",
+      "brand": "b_onescafebakery",
+      "by": "grubwitmike",
+      "postedBy": "grubwitmike",
+      "postedAt": "20250829",
+      "request": [
+        {
+          "at": "2026-11-09T20:47:56.930607-08:00",
+          "request": "Clip this video plz \nFor Castro Valley location"
+        },
+        {
+          "at": "2026-11-09T20:48:20.281961-08:00",
+          "request": "The other 2 are for the new Alameda Location"
+        }
+      ],
+      "credit": "Review / coverage by @grubwitmike. Castro Valley visit at 3483 Castro Valley Blvd; kept separate from the new Alameda location.",
+      "slug": "review-DN6yMSWgU_G",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 82.55s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DdnQiFSp-IL",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DdnQiFSp-IL/",
+      "brand": "b_onescafealameda",
+      "by": "bayarea.foodie.adventures",
+      "postedBy": "bayarea.foodie.adventures",
+      "postedAt": "20260923",
+      "request": [
+        {
+          "at": "2026-11-09T20:49:22.099123-08:00",
+          "request": "Clip this video plz \nAlameda"
+        }
+      ],
+      "credit": "Review / coverage by @bayarea.foodie.adventures. Alameda visit. The dated buy-five-get-one promotion is not a current offer.",
+      "slug": "review-DdnQiFSp-IL",
+      "startSeconds": 0,
+      "endSeconds": 10.66,
+      "excerpt": "0s–10.66s of 10.66s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DaMR1f3Jya4",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DaMR1f3Jya4/",
+      "brand": "b_onescafealameda",
+      "by": "thealamedapulse",
+      "postedBy": "thealamedapulse",
+      "postedAt": "20260630",
+      "request": [
+        {
+          "at": "2026-11-09T20:50:03.211994-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "credit": "Review / coverage by @thealamedapulse. Community coverage of the Alameda opening, posted June 30, 2026. Archival opening announcement, not an upcoming event.",
+      "slug": "review-DaMR1f3Jya4",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 47.53s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DdF3CFGu9Jd",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DdF3CFGu9Jd/",
+      "brand": "b_stansdonutshop",
+      "by": "limitlessfood",
+      "postedBy": "limitlessfood",
+      "postedAt": "20260910",
+      "request": [
+        {
+          "at": "2026-11-09T20:52:57.400580-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "credit": "Review / coverage by @limitlessfood. Visit to stans donut shop.",
+      "slug": "review-DdF3CFGu9Jd",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 25.43s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DbpUy5Ct2Vi",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DbpUy5Ct2Vi/",
+      "brand": "b_stansdonutshop",
+      "by": "bayarealumpia",
+      "postedBy": "bayarealumpia",
+      "postedAt": "20260805",
+      "request": [
+        {
+          "at": "2026-11-09T20:53:28.510675-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "credit": "Review / coverage by @bayarealumpia. The film shows Stan’s Donut Shop signage in Santa Clara.",
+      "slug": "review-DbpUy5Ct2Vi",
+      "startSeconds": 0,
+      "endSeconds": 13.77,
+      "excerpt": "0s–13.77s of 13.77s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DZNtHMKP_4H",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DZNtHMKP_4H/",
+      "brand": "b_stansdonutshop",
+      "by": "eighty6ix_",
+      "postedBy": "eighty6ix_",
+      "postedAt": "20260605",
+      "request": [
+        {
+          "at": "2026-11-09T20:54:02.853396-08:00",
+          "request": "Clip this video plz"
+        },
+        {
+          "at": "2026-11-09T21:00:03.669575-08:00",
+          "request": "XRP is dipping"
+        }
+      ],
+      "credit": "Review / coverage by @eighty6ix_. Stan’s Donut Shop visit in National Donut Day coverage from June 5, 2026. Other chains’ dated offers are not current Stan’s offers.",
+      "slug": "review-DZNtHMKP_4H",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 52.20s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DfjGqJwPDnm",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DfjGqJwPDnm/",
+      "brand": "b_forkitpasta",
+      "by": "iamnikkieg",
+      "postedBy": "iamnikkieg",
+      "postedAt": "20261110",
+      "request": [
+        {
+          "at": "2026-11-09T21:08:43.988472-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review / coverage by @iamnikkieg. Visit to fork it pasta.",
+      "slug": "review-DfjGqJwPDnm",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 73.31s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DffPiq8BxHu",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DffPiq8BxHu/",
+      "brand": "b_forkitpasta",
+      "by": "yaymeegoround",
+      "postedBy": "yaymeegoround",
+      "postedAt": "20261108",
+      "request": [
+        {
+          "at": "2026-11-09T21:10:18.009265-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "credit": "Review / coverage by @yaymeegoround. Visit to fork it pasta.",
+      "slug": "review-DffPiq8BxHu",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 30.73s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DfiJQkAPslq",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DfiJQkAPslq/",
+      "brand": "b_forkitpasta",
+      "by": "foodieclubsf",
+      "postedBy": "foodieclubsf",
+      "postedAt": "20261109",
+      "request": [
+        {
+          "at": "2026-11-09T21:11:19.610119-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "credit": "Review / coverage by @foodieclubsf. Visit to fork it pasta.",
+      "slug": "review-DfiJQkAPslq",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 42.57s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DfiJkqxPVKz",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DfiJkqxPVKz/",
+      "brand": "b_forkitpasta",
+      "by": "nomwithelaine",
+      "postedBy": "nomwithelaine",
+      "postedAt": "20261109",
+      "request": [
+        {
+          "at": "2026-11-09T21:11:43.198322-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "credit": "Review / coverage by @nomwithelaine. Visit to fork it pasta.",
+      "slug": "review-DfiJkqxPVKz",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 25.66s",
+      "disposition": "creator-page film, linked from business",
+      "playOn": "b_foodienomwithelaine"
+    },
+    {
+      "code": "DfdyvXhCgJV",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DfdyvXhCgJV/",
+      "brand": "b_forkitpasta",
+      "by": "forkitpasta",
+      "postedBy": "forkitpasta",
+      "postedAt": "20261108",
+      "request": [
+        {
+          "at": "2026-11-09T21:11:57.049674-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "credit": "Original by @forkitpasta. Visit to fork it pasta.",
+      "slug": "b112-dfdyvxhcgjv",
+      "startSeconds": 3,
+      "endSeconds": 18.016,
+      "excerpt": "3s–18.02s of 31.64s",
+      "disposition": "owner film"
+    },
+    {
+      "code": "Da28nlxRG0M",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/Da28nlxRG0M/",
+      "brand": "b_newenglandlobster",
+      "by": "chefemaristevens",
+      "postedBy": "chefemaristevens",
+      "postedAt": "20260716",
+      "request": [
+        {
+          "at": "2026-11-09T21:18:11.269115-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "credit": "Review / coverage by @chefemaristevens. Home recipe for a hot-honey butter crab roll using New England Lobster seafood. This is supplier context, not a restaurant menu dish or on-site visit.",
+      "slug": "review-Da28nlxRG0M",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 21.25s",
+      "disposition": "creator-page film, linked from business",
+      "playOn": "b_foodiechefemaristevens"
+    },
+    {
+      "code": "DZh5eG-KDtJ",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DZh5eG-KDtJ/",
+      "brand": "b_newenglandlobster",
+      "by": "newenglandlobster",
+      "postedBy": "newenglandlobster",
+      "postedAt": "20260613",
+      "request": [
+        {
+          "at": "2026-11-09T21:18:36.781099-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "credit": "Original by @newenglandlobster. Visit to new england lobster.",
+      "slug": "b112-dzh5eg-kdtj",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 41.31s",
+      "disposition": "owner film"
+    },
+    {
+      "code": "DTqL0Cljd4F",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DTqL0Cljd4F/",
+      "brand": "b_newenglandlobster",
+      "by": "forkandscore",
+      "postedBy": "forkandscore",
+      "postedAt": "20260118",
+      "request": [
+        {
+          "at": "2026-11-09T21:19:56.689342-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "credit": "Review / coverage by @forkandscore. Visit to new england lobster.",
+      "slug": "review-DTqL0Cljd4F",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 197.86s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DQ-CZNRERx0",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DQ-CZNRERx0/",
+      "brand": "b_newenglandlobster",
+      "by": "hungere.for.diy",
+      "postedBy": "hungere.for.diy",
+      "postedAt": "20251112",
+      "request": [
+        {
+          "at": "2026-11-09T21:20:34.622186-08:00",
+          "request": "Clip this video plz"
+        },
+        {
+          "at": "2026-11-09T21:22:01.500853-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "credit": "Review by @hungere.for.diy at New England Lobster in Burlingame. The creator thanks the business for the meal.",
+      "slug": "review-DQ-CZNRERx0",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 43.68s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DPt4qsJDz6o",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DPt4qsJDz6o/",
+      "brand": "b_newenglandlobster",
+      "by": "edeatstheworld",
+      "postedBy": "edeatstheworld",
+      "postedAt": "20251012",
+      "request": [
+        {
+          "at": "2026-11-09T21:22:35.619415-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "credit": "Review / coverage by @edeatstheworld. Visit to new england lobster.",
+      "slug": "review-DPt4qsJDz6o",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 48.97s",
+      "disposition": "creator-page film, linked from business",
+      "playOn": "b_foodieedeatstheworld"
+    },
+    {
+      "code": "DL5aeKuPXb7",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DL5aeKuPXb7/",
+      "brand": "b_newenglandlobster",
+      "by": "sophie_eats_world",
+      "postedBy": "sophie_eats_world",
+      "postedAt": "20250709",
+      "request": [
+        {
+          "at": "2026-11-09T21:23:39.138609-08:00",
+          "request": "Clip this video plz\nFoodie \nNewbie"
+        }
+      ],
+      "credit": "Review / coverage by @sophie_eats_world. Visit to new england lobster.",
+      "slug": "review-DL5aeKuPXb7",
+      "startSeconds": 0,
+      "endSeconds": 11.078,
+      "excerpt": "0s–11.08s of 11.08s",
+      "disposition": "creator-page film, linked from business",
+      "playOn": "b_foodiesophieeatsworld"
+    },
+    {
+      "code": "DKVo8ELToeo",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DKVo8ELToeo/",
+      "brand": "b_newenglandlobster",
+      "by": "grubwitmike",
+      "postedBy": "grubwitmike",
+      "postedAt": "20250601",
+      "request": [
+        {
+          "at": "2026-11-09T21:23:49.194411-08:00",
+          "request": "Clip this video plz \nHeavy Hitter"
+        },
+        {
+          "at": "2026-11-09T21:23:59.325502-08:00",
+          "request": "Put his on the top\nOf the list plz"
+        }
+      ],
+      "credit": "Home recipe by @grubwitmike using New England Lobster claw meat and rib-eye from The Butcher Shop by Niku. Home-cooked surf-and-turf sandwich, not a restaurant menu dish.",
+      "slug": "review-DKVo8ELToeo",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 62.40s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DfiPeP7P_el",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DfiPeP7P_el/",
+      "brand": "b_eastbaybuffet",
+      "by": "biteswithnatalia",
+      "postedBy": "biteswithnatalia",
+      "postedAt": "20261109",
+      "request": [
+        {
+          "at": "2026-11-10T04:49:06.790689-08:00",
+          "request": "Clip this video plz"
+        },
+        {
+          "at": "2026-11-10T04:51:48.900504-08:00",
+          "request": "Please update icon pic"
+        }
+      ],
+      "credit": "Review / coverage by @biteswithnatalia. Visit to east bay buffet.",
+      "slug": "review-DfiPeP7P_el",
+      "startSeconds": 3,
+      "endSeconds": 18.016,
+      "excerpt": "3s–18.02s of 99.67s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DeiKXQjKsOG",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DeiKXQjKsOG/",
+      "brand": "b_popbarberkeley",
+      "by": "popbarbayarea",
+      "postedBy": "popbarbayarea",
+      "postedAt": "20261015",
+      "request": [
+        {
+          "at": "2026-11-10T04:59:59.146327-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "credit": "Original by @popbarbayarea. Gelato pops at the Berkeley location.",
+      "slug": "b112-deikxqjksog",
+      "startSeconds": 0,
+      "endSeconds": 6.109,
+      "excerpt": "0s–6.11s of 6.11s",
+      "disposition": "owner film"
+    },
+    {
+      "code": "DeFXxJmyKon",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DeFXxJmyKon/",
+      "brand": "b_popbarberkeley",
+      "by": "phoebe8food",
+      "postedBy": "phoebe8food",
+      "postedAt": "20261004",
+      "request": [
+        {
+          "at": "2026-11-10T05:00:47.071292-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review / coverage by @phoebe8food. Visit to popbar berkeley.",
+      "slug": "review-DeFXxJmyKon",
+      "startSeconds": 0,
+      "endSeconds": 10.0,
+      "excerpt": "0s–10.00s of 10.00s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DbUINJ3ooPA",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DbUINJ3ooPA/",
+      "brand": "b_popbarberkeley",
+      "by": "eatswithglory",
+      "postedBy": "eatswithglory",
+      "postedAt": "20260727",
+      "request": [
+        {
+          "at": "2026-11-10T05:01:25.611838-08:00",
+          "request": "Clip this video plz \nFasho \nNewbie"
+        }
+      ],
+      "credit": "Review / coverage by @eatswithglory. Visit to popbar berkeley.",
+      "slug": "review-DbUINJ3ooPA",
+      "startSeconds": 0,
+      "endSeconds": 11.63,
+      "excerpt": "0s–11.63s of 11.63s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DcUjFT1vSqU",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DcUjFT1vSqU/",
+      "brand": "b_popbarberkeley",
+      "by": "lifestylebyangiee",
+      "postedBy": "lifestylebyangiee",
+      "postedAt": "20260821",
+      "request": [
+        {
+          "at": "2026-11-10T05:02:03.581360-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "credit": "Review / coverage by @lifestylebyangiee. Berkeley visit. The dated back-to-school Snackpass promotion is not presented as current.",
+      "slug": "review-DcUjFT1vSqU",
+      "startSeconds": 0,
+      "endSeconds": 10.067,
+      "excerpt": "0s–10.07s of 10.07s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "CDfTEtRJTjy",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/CDfTEtRJTjy/",
+      "brand": "b_popbarberkeley",
+      "by": "hungryhugh",
+      "postedBy": "hungryhugh",
+      "postedAt": "20200805",
+      "request": [
+        {
+          "at": "2026-11-10T05:07:50.538593-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter Heavy Hitter \n1/2 million"
+        },
+        {
+          "at": "2026-11-10T05:20:18.729065-08:00",
+          "request": "Hayward • Eats \nBEASTY • AYCE \nBEASTY Sushi"
+        }
+      ],
+      "credit": "Review / coverage by @hungryhugh. Popbar at Anaheim Packing District, posted August 5, 2020. Archival footage of another branch, not the Berkeley shop.",
+      "slug": "review-CDfTEtRJTjy",
+      "startSeconds": 0,
+      "endSeconds": 14.31,
+      "excerpt": "0s–14.31s of 14.31s",
+      "disposition": "creator-page film, linked from business",
+      "playOn": "b_foodiehungryhugh"
+    },
+    {
+      "code": "DKLSD9myqri",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DKLSD9myqri/",
+      "brand": "b_hinatasushikitchen",
+      "by": "realphdfoodie",
+      "postedBy": "realphdfoodie",
+      "postedAt": "20250527",
+      "request": [
+        {
+          "at": "2026-11-10T05:22:15.129034-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "credit": "Review / coverage by @realphdfoodie. Hayward visit posted May 27, 2025. The price quoted in the film is historical, not a current restaurant price.",
+      "slug": "review-DKLSD9myqri",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 30.58s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DdfCvmqyCdn",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DdfCvmqyCdn/",
+      "brand": "b_hinatasushikitchen",
+      "by": "agnespittioni",
+      "postedBy": "agnespittioni",
+      "postedAt": "20260919",
+      "request": [
+        {
+          "at": "2026-11-10T05:22:23.785083-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review / coverage by @agnespittioni. Visit to hinata sushi kitchen.",
+      "slug": "review-DdfCvmqyCdn",
+      "startSeconds": 0,
+      "endSeconds": 6.34,
+      "excerpt": "0s–6.34s of 6.34s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DfitSXWIGrD",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DfitSXWIGrD/",
+      "brand": "b_hinatasushikitchen",
+      "by": "eatswithvinni",
+      "postedBy": "eatswithvinni",
+      "postedAt": "20261110",
+      "request": [
+        {
+          "at": "2026-11-10T05:23:27.287027-08:00",
+          "request": "Clip this video plz \nFoodie\nNewbie"
+        }
+      ],
+      "credit": "Review / coverage by @eatswithvinni. Visit to hinata sushi kitchen.",
+      "slug": "review-DfitSXWIGrD",
+      "startSeconds": 0,
+      "endSeconds": 13.77,
+      "excerpt": "0s–13.77s of 13.77s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "De8RVmKoiOt",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/De8RVmKoiOt/",
+      "brand": "b_hinatasushikitchen",
+      "by": "hinatasushihayward",
+      "postedBy": "hinatasushihayward",
+      "postedAt": "20261026",
+      "request": [
+        {
+          "at": "2026-11-10T05:24:14.236323-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "credit": "Original by @hinatasushihayward. Visit to hinata sushi kitchen.",
+      "slug": "b112-de8rvmkoiot",
+      "startSeconds": 0,
+      "endSeconds": 15.0,
+      "excerpt": "0s–15.00s of 17.67s",
+      "disposition": "owner film"
+    },
+    {
+      "code": "DexG1tevsCE",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DexG1tevsCE/",
+      "brand": "b_mikiyasantaclara",
+      "by": "mikiya.official",
+      "postedBy": "mikiya.official",
+      "postedAt": "20261021",
+      "request": [
+        {
+          "at": "2026-11-10T06:00:59.396693-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "credit": "Original by @mikiya.official. Original restaurant-channel Mikiya film, shared between its Bay Area location pages. The October 2026 lunch promotion is dated; confirm current branch prices directly.",
+      "slug": "b112-dexg1tevsce",
+      "startSeconds": 0,
+      "endSeconds": 9.73,
+      "excerpt": "0s–9.73s of 9.73s",
+      "disposition": "owner film"
+    },
+    {
+      "code": "DNwcoap5Mye",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DNwcoap5Mye/",
+      "brand": "b_mikiyasanmateo",
+      "by": "yourglobalfoodiebff",
+      "postedBy": "yourglobalfoodiebff",
+      "postedAt": "20250824",
+      "request": [
+        {
+          "at": "2026-11-10T06:02:44.699770-08:00",
+          "request": "Clones"
+        }
+      ],
+      "credit": "Review by @yourglobalfoodiebff at Mikiya, 68 Hillsdale Shopping Center, San Mateo.",
+      "slug": "review-DNwcoap5Mye",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 91.88s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DYM4sl1ROTc",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DYM4sl1ROTc/",
+      "brand": "b_mikiyasantaclara",
+      "by": "baeareafo0die",
+      "postedBy": "baeareafo0die",
+      "postedAt": "20260511",
+      "request": [
+        {
+          "at": "2026-11-10T06:04:12.612967-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "credit": "Review / coverage by @baeareafo0die. Santa Clara visit; invitation disclosed by the creator. Dated tier promotions are not current prices.",
+      "slug": "review-DYM4sl1ROTc",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 38.43s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DcnJ8qsxdkC",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DcnJ8qsxdkC/",
+      "brand": "b_mikiyasantaclara",
+      "by": "chaudownfood",
+      "postedBy": "chaudownfood",
+      "postedAt": "20260829",
+      "request": [
+        {
+          "at": "2026-11-10T06:04:58.462933-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review / coverage by @chaudownfood. Mikiya chain review; invited visit disclosed. Its caption lists several locations without identifying the filming branch; linked to Santa Clara without claiming it was filmed there.",
+      "slug": "review-DcnJ8qsxdkC",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 71.12s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DfixQS5TNfP",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DfixQS5TNfP/",
+      "brand": "b_mikiyasanmateo",
+      "by": "martiwantsmore",
+      "postedBy": "martiwantsmore",
+      "postedAt": "20261110",
+      "request": [
+        {
+          "at": "2026-11-10T06:05:55.717915-08:00",
+          "request": "Clip this video plz \nFoodie \nMediocre"
+        }
+      ],
+      "credit": "Review / coverage by @martiwantsmore. Mikiya San Mateo visit at 68 Hillsdale Shopping Center.",
+      "slug": "review-DfixQS5TNfP",
+      "startSeconds": 3,
+      "endSeconds": 18.016,
+      "excerpt": "3s–18.02s of 20.13s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DfbKexVuC5q",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DfbKexVuC5q/",
+      "brand": "b_mikiyasantaclara",
+      "by": "latin_mami_",
+      "postedBy": "latin_mami_",
+      "postedAt": "20261107",
+      "request": [
+        {
+          "at": "2026-11-10T06:06:52.758059-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter Heavy Hitter"
+        }
+      ],
+      "credit": "Review / coverage by @latin_mami_. Mikiya Cerritos visit. Linked as another-branch chain coverage, not footage of Santa Clara.",
+      "slug": "review-DfbKexVuC5q",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 94.25s",
+      "disposition": "creator-page film, linked from business",
+      "playOn": "b_foodielatinmami"
+    },
+    {
+      "code": "DbmbVZLiDpM",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DbmbVZLiDpM/",
+      "brand": "b_mikiyasantaclara",
+      "by": "edmunchthefoodie",
+      "postedBy": "edmunchthefoodie",
+      "postedAt": "20260804",
+      "request": [
+        {
+          "at": "2026-11-10T06:07:35.488034-08:00",
+          "request": "Clip this video plz \nPlease update icon pic"
+        }
+      ],
+      "credit": "Review / coverage by @edmunchthefoodie. Mikiya Bay Area review. The caption lists both Santa Clara and San Mateo without identifying the filming branch.",
+      "slug": "review-DbmbVZLiDpM",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 20.37s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DfkLe46OqJe",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DfkLe46OqJe/",
+      "brand": "b_myomyberkeley",
+      "by": "carlaylayyy",
+      "postedBy": "carlacharisse_",
+      "postedAt": "20261110",
+      "request": [
+        {
+          "at": "2026-11-10T07:34:00.604612-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review / coverage by @carlacharisse_. My O My, Berkeley. Posted by @carlacharisse_; credited to Carla’s existing @carlaylayyy page.",
+      "slug": "review-DfkLe46OqJe",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 75.77s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DecrNOsS2fO",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DecrNOsS2fO/",
+      "brand": "b_myomyberkeley",
+      "by": "habibimocha",
+      "postedBy": "habibimocha",
+      "postedAt": "20261013",
+      "request": [
+        {
+          "at": "2026-11-10T07:35:34.793632-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review / coverage by @habibimocha. My O My, Berkeley. The bring-your-own-bag promotion is dated and not a current menu promise.",
+      "slug": "review-DecrNOsS2fO",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 31.23s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DfjON_XozUT",
+      "batch": 112,
+      "source": "https://www.instagram.com/reel/DfjON_XozUT/",
+      "brand": "b_forkitpasta",
+      "by": "_whatarethechances_",
+      "postedBy": "_whatarethechances_",
+      "postedAt": "20261110",
+      "request": [
+        {
+          "at": "2026-11-10T08:40:18.240580-08:00",
+          "request": "Shared source; included in the standing refetch-and-publish scope. No follow-up clip instruction at this snapshot."
+        }
+      ],
+      "slug": "review-DfjON_XozUT",
+      "playOn": "b_foodiewhatarethechances",
+      "disposition": "creator-page film, linked from business",
+      "credit": "Review by @_whatarethechances_ at Fork It Pasta To Go, San Mateo. The November 11, 2026 grand-opening announcement is dated, not an ongoing offer.",
+      "startSeconds": 3,
+      "endSeconds": 18.0,
+      "excerpt": "3s–18.00s of 26.50s"
+    }
+  ],
+  "placements": {
+    "beasty-foodies2-3": "b_foodiehungryhugh",
+    "beasty-foodies2-4": "b_foodielatinmami",
+    "beasty-foodies2-5": "b_foodiebayareafoodieadventures",
+    "beasty-foodies2-6": "b_foodiesiliconvalleyfoodies",
+    "beasty-foodies2-7": "b_foodiejacksdiningroom",
+    "beasty-foodies2-8": "b_foodieandreweatsinsf",
+    "beasty-foodies2-9": "b_foodieeatswithkath",
+    "beasty-foodies2-10": "b_foodiecestalmoco",
+    "beasty-foodies2-11": "b_foodiekangofrealty",
+    "beasty-foodies2-12": "b_foodiefedoramaelle",
+    "beasty-foodies2-13": "b_foodiepastrywithjenn",
+    "beasty-foodies2-14": "b_foodietravelwtiff",
+    "beasty-foodies2-15": "b_foodieemwong",
+    "beasty-foodies2-16": "b_foodiekimonieatss",
+    "beasty-foodies2-17": "b_foodiebaygirlseat",
+    "beasty-foodies2-18": "b_foodieheraldh",
+    "beasty-foodies2-19": "b_foodiefoodiswhyimbroke",
+    "beasty-foodies2-20": "b_foodiekeneats",
+    "beasty-foodies2-21": "b_e40",
+    "beasty-foodies2-22": "b_foodiemamamarquez888",
+    "beasty-foodies2-23": "b_foodiereelkevo",
+    "beasty-foodies2-24": "b_foodierollingwithdeneats",
+    "beasty-foodies2-25": "b_foodieagnespittioni",
+    "beasty-foodies2-26": "b_foodiej00diefoodie",
+    "beasty-foodies2-27": "b_foodiealiasharrief",
+    "beasty-foodies2-28": "b_foodiecarlosbradley",
+    "beasty-foodies2-29": "b_foodiejceeats",
+    "beasty-foodies2-30": "b_foodiemonaeatsnearby",
+    "beasty-foodies2-31": "b_foodiebayareafoodiecrew",
+    "beasty-foodies2-32": "b_foodiejanniners",
+    "beasty-foodies2-33": "b_foodiealwayshannegry",
+    "beasty-foodies2-34": "b_foodierainmoreturely",
+    "beasty-foodies2-35": "b_foodiewheresthefoodat",
+    "beasty-foodies2-36": "b_foodiesfbayfood",
+    "beasty-foodies2-37": "b_foodiezeynoern",
+    "beasty-foodies2-38": "b_foodiebooziebrunch",
+    "beasty-foodies2-39": "b_foodiethekhaysie",
+    "beasty-foodies2-40": "b_foodiekelmeleats",
+    "beasty-foodies2-41": "b_foodiecourtneylyneaa",
+    "beasty-foodies2-42": "b_foodieiamnikkieg",
+    "beasty-foodies2-43": "b_foodiehungerefordiy",
+    "beasty-foodies2-44": "b_foodiecookwithhenny",
+    "beasty-foodies2-45": "b_foodiemartiwantsmore",
+    "beasty-foodies2-46": "b_foodielimitlessfood",
+    "beasty-foodies2-47": "b_foodiechefemaristevens",
+    "beasty-foodies2-48": "b_foodieforkandscore",
+    "beasty-foodies2-49": "b_foodierealphdfoodie",
+    "beasty-foodies2-50": "b_foodiejustmostie",
+    "beasty-foodies2-51": "b_foodiecapturedbysado",
+    "beasty-foodies2-52": "b_foodieallieeats",
+    "beasty-foodies2-53": "b_foodieseekeasyeats",
+    "beasty-foodies2-54": "b_foodieorangeginger",
+    "beasty-foodies2-55": "b_foodieantoinetterzz",
+    "beasty-foodies2-56": "b_foodiebayareakulture",
+    "beasty-foodies2-57": "b_foodiechefmelissaking",
+    "beasty-foodies2-58": "b_foodiecelineeats",
+    "beasty-foodies2-59": "b_foodiesinglecatm0m",
+    "beasty-foodies2-60": "b_foodiekimjsseats",
+    "beasty-foodies2-61": "b_foodieoaktowngrubhub",
+    "beasty-foodies2-62": "b_foodiethespoonlist",
+    "beasty-foodies2-63": "b_foodiesherryeatworld",
+    "beasty-foodies2-64": "b_foodiehungrydanz",
+    "beasty-foodies2-65": "b_foodiejaneethefoodie",
+    "beasty-foodies2-66": "b_foodiepeggyshoo",
+    "beasty-foodies2-67": "b_foodiezarinanawabi",
+    "beasty-foodies2-68": "b_foodiejbrenes",
+    "beasty-foodies2-69": "b_foodiesimplydorothy",
+    "beasty-foodies2-70": "b_foodieacoupleofcooks",
+    "beasty-foodies2-71": "b_foodiejantrinanicole",
+    "beasty-foodies2-72": "b_foodiechriscorpz",
+    "beasty-foodies2-73": "b_foodiethealamedapulse",
+    "beasty-foodies2-74": "b_foodiebayareamunchies510",
+    "beasty-foodies2-75": "b_foodievictoriapham17",
+    "beasty-foodies2-76": "b_foodiefoodieberrie",
+    "beasty-foodies2-77": "b_foodiesamserved",
+    "beasty-foodies2-78": "b_foodieareweeatingyet",
+    "beasty-foodies2-79": "b_foodiesiusvision",
+    "beasty-foodies2-80": "b_foodiearianasade",
+    "beasty-foodies2-81": "b_foodiebayareafoodz",
+    "beasty-foodies2-82": "b_foodiebestbayareafood",
+    "beasty-foodies2-83": "b_foodieannnaeats",
+    "beasty-foodies2-84": "b_foodieugcwithfrances",
+    "beasty-foodies2-85": "b_foodiedariananthony",
+    "beasty-foodies2-86": "b_foodiecharweeezy",
+    "beasty-foodies2-87": "b_foodiemukbangyourmama",
+    "beasty-foodies2-88": "b_foodiewanderingstefany",
+    "beasty-foodies2-89": "b_foodielifebyvivien",
+    "beasty-foodies2-90": "b_foodieandrelucas",
+    "beasty-foodies2-91": "b_foodieshrimpfriedroice",
+    "beasty-foodies2-92": "b_foodiecynlacson",
+    "beasty-foodies2-93": "b_foodiealexytravels",
+    "beasty-foodies2-94": "b_foodieandygravs",
+    "beasty-foodies2-95": "b_foodielivingvivalakillah",
+    "beasty-foodies2-96": "b_foodieeighty6ix",
+    "beasty-foodies2-97": "b_foodiemayakayofficial",
+    "beasty-foodies2-98": "b_foodiebayareamagandaeats",
+    "beasty-foodies2-99": "b_foodieforkmeetsfood",
+    "beasty-foodies2-100": "b_foodiefoodiesnflightss",
+    "beasty-foodies2-101": "b_foodiecarlaylayyy",
+    "beasty-foodies2-102": "b_foodieshuatangco",
+    "beasty-foodies2-103": "b_foodiejennyhomeloans",
+    "beasty-foodies2-104": "b_foodiewthellydanyelly",
+    "beasty-foodies2-105": "b_foodiesophiaxbayarea",
+    "beasty-foodies2-106": "b_foodiesierraeats8",
+    "beasty-foodies2-107": "b_foodieyosiiiifoodie",
+    "beasty-foodies2-108": "b_foodieivkicks",
+    "beasty-foodies2-109": "b_foodieitsslydiia",
+    "beasty-foodies2-110": "b_foodiestartingfiresevrywhere",
+    "beasty-foodies2-111": "b_foodiebylizettexo",
+    "beasty-foodies2-112": "b_foodiebrianthebarber",
+    "beasty-foodies2-113": "b_foodienickk",
+    "beasty-foodies2-114": "b_foodiejamesbaylife",
+    "beasty-foodies2-115": "b_foodieshesvibinhigh",
+    "beasty-foodies2-116": "b_foodiedchangshangry",
+    "beasty-foodies2-117": "b_foodiebayareafoodiesan",
+    "beasty-foodies2-118": "b_foodietrulyathi",
+    "beasty-foodies2-119": "b_foodiejetsetjanine",
+    "beasty-foodies2-120": "b_foodiekvbitesandgo",
+    "beasty-foodies2-121": "b_foodiestunnaman02",
+    "beasty-foodies2-122": "b_foodiesavorwithcoral",
+    "beasty-foodies2-123": "b_foodiefirstdibsbayarea",
+    "beasty-foodies2-124": "b_foodiemargsout",
+    "beasty-foodies2-125": "b_foodieyogetasworld",
+    "beasty-foodies2-126": "b_foodieitsmayrazambrano",
+    "beasty-foodies2-127": "b_foodieyourtraveldaddy",
+    "beasty-foodies2-128": "b_foodiehellalocalmo",
+    "beasty-foodies2-129": "b_foodiethesnobbiefoodie",
+    "beasty-foodies2-130": "b_foodiekatfoodsf",
+    "beasty-foodies2-131": "b_foodiecharlikestoeat",
+    "beasty-foodies2-132": "b_foodiehellahansel",
+    "beasty-foodies2-133": "b_foodiegeraldfermin",
+    "beasty-foodies2-134": "b_foodiepimchanyum",
+    "beasty-foodies2-135": "b_foodiebayareawilson",
+    "beasty-foodies2-136": "b_foodiewhatthejessi",
+    "beasty-foodies2-137": "b_foodiefoodgiveness",
+    "beasty-foodies2-138": "b_foodieasideofsweet",
+    "beasty-foodies2-139": "b_foodietashamalan",
+    "beasty-foodies2-140": "b_foodiecamemzmin",
+    "beasty-foodies2-141": "b_foodieventurewithkelly",
+    "beasty-foodies2-142": "b_foodieaemerieedance",
+    "beasty-foodies2-143": "b_foodiegreatonezfoodreview",
+    "beasty-foodies2-144": "b_foodiemrsmackreviews",
+    "beasty-foodies2-145": "b_foodiebpeats",
+    "beasty-foodies2-146": "b_foodieerinlovesfun",
+    "beasty-foodies2-147": "b_foodielovelivermore",
+    "beasty-foodies2-148": "b_foodieexplorewithtaka",
+    "beasty-foodies2-149": "b_foodiethehautesheet",
+    "beasty-foodies2-150": "b_foodiehumminglion",
+    "beasty-foodies2-151": "b_foodiewhatarethechances",
+    "beasty-foodies2-152": "b_foodiekatwalksf",
+    "beasty-foodies2-153": "b_foodieyulmool",
+    "beasty-foodies2-154": "b_foodiebarstoolsports",
+    "beasty-foodies2-155": "b_foodiexopinsta",
+    "beasty-foodies2-156": "b_foodielovemissfit",
+    "beasty-foodies2-157": "b_foodiechloechomps",
+    "beasty-foodies2-158": "b_foodierealtorandreviewer",
+    "beasty-foodies2-159": "b_foodiexoaramarie",
+    "beasty-foodies2-160": "b_foodiefoodiedreams",
+    "beasty-foodies2-161": "b_foodieeatswithfoodie",
+    "beasty-foodies2-162": "b_foodiejensintec",
+    "beasty-foodies2-163": "b_foodiesnackateriansf",
+    "beasty-foodies2-164": "b_foodieapoorvasharma1",
+    "beasty-foodies2-165": "b_foodievolhacreative",
+    "beasty-foodies2-166": "b_foodiebobaaddict",
+    "beasty-foodies2-167": "b_foodieruthannesturman",
+    "beasty-foodies2-168": "b_foodielarryjunetfm",
+    "beasty-foodies2-169": "b_foodieeileenhuynher",
+    "beasty-foodies2-170": "b_foodiecreatewithcv",
+    "beasty-foodies2-171": "b_foodiealohastephanie",
+    "beasty-foodies2-172": "b_foodiezoegabon",
+    "beasty-foodies2-173": "b_foodiebyhillaryn",
+    "beasty-foodies2-174": "b_foodiealyeatscali",
+    "beasty-foodies2-175": "b_foodiebayareafoodies",
+    "beasty-foodies2-176": "b_foodiemoniicamichelle",
+    "beasty-foodies2-177": "b_foodieryanbyryanchua",
+    "beasty-foodies2-178": "b_foodiehangrypotato",
+    "beasty-foodies2-179": "b_foodiemelsotel",
+    "beasty-foodies2-180": "b_foodiesanleandroeats",
+    "beasty-foodies2-181": "b_foodiebroitsva",
+    "beasty-foodies2-182": "b_foodiefatashfoodie",
+    "beasty-foodies2-183": "b_foodiefoodieshots",
+    "beasty-foodies2-184": "b_foodiekitkatvales",
+    "beasty-foodies2-185": "b_foodiefoodwookie",
+    "beasty-foodies2-186": "b_foodiesonomacountyliving",
+    "beasty-foodies2-187": "b_foodielovecartier25",
+    "beasty-foodies2-188": "b_foodiefoodelaventures",
+    "beasty-foodies2-189": "b_foodiefoodietravelhappiness",
+    "beasty-foodies2-190": "b_foodiepeterlyagent",
+    "beasty-foodies2-191": "b_foodieksmokeskitchen",
+    "beasty-foodies2-192": "b_foodietysfqods",
+    "beasty-foodies2-193": "b_foodieilisaeatssf",
+    "beasty-foodies2-194": "b_foodietundemodupee",
+    "beasty-foodies2-195": "b_foodiewafflebam",
+    "beasty-foodies2-196": "b_foodiegoyuliiago",
+    "beasty-foodies2-197": "b_foodiejamiebeoutside",
+    "beasty-foodies2-198": "b_foodieanjaliwandersoul",
+    "beasty-foodies2-199": "b_foodiegabriiellas",
+    "beasty-foodies2-200": "b_foodieploinsanfrancisco",
+    "beasty-foodies2-201": "b_foodiepiscesprincesspriya",
+    "beasty-foodies2-202": "b_foodiedbaylock",
+    "beasty-foodies2-203": "b_foodiehallojessa",
+    "beasty-foodies2-204": "b_foodielagrandedelabanda",
+    "beasty-foodies2-205": "b_foodiechaudownfood",
+    "beasty-foodies2-206": "b_foodiephoebe8food",
+    "beasty-foodies2-207": "b_foodiekaraxhuynh",
+    "beasty-foodies2-208": "b_foodiewakeyeats",
+    "beasty-foodies2-209": "b_foodiedodoeats",
+    "beasty-foodies2-210": "b_foodiemayamunches",
+    "beasty-foodies2-211": "b_foodiepreetkhatrii",
+    "beasty-foodies2-212": "b_foodiekogumahs",
+    "beasty-foodies2-213": "b_foodienursedanamae",
+    "beasty-foodies2-214": "b_foodiethehabibizeat",
+    "beasty-foodies2-215": "b_foodieeatwithbooboo",
+    "beasty-foodies2-216": "b_foodiebayareafoodogram",
+    "beasty-foodies2-217": "b_foodielubtoeat",
+    "beasty-foodies2-218": "b_foodiethismajourney",
+    "beasty-foodies2-219": "b_foodiesummerishungry",
+    "beasty-foodies2-220": "b_foodiejustfeediris",
+    "beasty-foodies2-221": "b_foodiehungryhungryheejin",
+    "beasty-foodies2-222": "b_foodieliltiffyvert",
+    "beasty-foodies2-223": "b_foodiejovanacamberos",
+    "beasty-foodies2-224": "b_foodiesullieats",
+    "beasty-foodies2-225": "b_foodiephamamiii",
+    "beasty-foodies2-226": "b_foodietastewithrach",
+    "beasty-foodies2-227": "b_foodiesisicooksandeats",
+    "beasty-foodies2-228": "b_foodiemyrealtoralexbradeis",
+    "beasty-foodies2-229": "b_foodierowbot408",
+    "beasty-foodies2-230": "b_foodierevrocrichboy",
+    "beasty-foodies2-231": "b_foodiekatdazzzle",
+    "beasty-foodies2-232": "b_foodiequeenfoode",
+    "beasty-foodies2-233": "b_foodiecindydreamtravel",
+    "beasty-foodies2-234": "b_foodieyummylouey",
+    "beasty-foodies2-235": "b_foodieericasorelle",
+    "beasty-foodies2-236": "b_foodiechelchomps",
+    "beasty-foodies2-237": "b_foodiemonicaplatt",
+    "beasty-foodies2-238": "b_foodieimsarahchaz",
+    "beasty-foodies2-239": "b_foodieirenedony",
+    "beasty-foodies2-240": "b_foodiebiteswithnatalia",
+    "beasty-foodies2-241": "b_foodielaurenlovessfood",
+    "beasty-foodies2-242": "b_foodielisaaaaletseat",
+    "beasty-foodies2-243": "b_foodiemattiasblanco",
+    "beasty-foodies2-244": "b_foodiedeazylee",
+    "beasty-foodies2-245": "b_foodieedmunchthefoodie",
+    "beasty-foodies2-246": "b_foodielynniethefoodie",
+    "beasty-foodies2-247": "b_foodiekelsyannn",
+    "beasty-foodies2-248": "b_foodiefoodadventures21",
+    "beasty-foodies2-249": "b_foodietaratastessf",
+    "beasty-foodies2-250": "b_foodieziahazrati",
+    "beasty-foodies2-251": "b_foodiebennyeatsbayarea",
+    "beasty-foodies2-252": "b_foodiejourdynlynn",
+    "beasty-foodies2-253": "b_foodiebayeatss",
+    "beasty-foodies2-254": "b_foodiecharlizetse",
+    "beasty-foodies2-255": "b_foodieeatwithange",
+    "beasty-foodies2-256": "b_foodiehabibimocha",
+    "beasty-foodies2-257": "b_foodiemaddyeatssfbay",
+    "beasty-foodies2-258": "b_foodiemrbayareafoodie",
+    "beasty-foodies2-259": "b_foodiesoysupli",
+    "beasty-foodies2-260": "b_foodiethehungrycurator",
+    "beasty-foodies2-261": "b_foodiewithlovelysss",
+    "beasty-foodies2-262": "b_foodieoliviiacai",
+    "beasty-foodies2-263": "b_foodiekevinberkeleyfoodreviews",
+    "beasty-foodies2-264": "b_foodiemartiebautista",
+    "beasty-foodies2-265": "b_foodiebadiesaf",
+    "beasty-foodies2-266": "b_foodiesjfoodgram",
+    "beasty-foodies2-267": "b_foodietiensmunchies",
+    "beasty-foodies2-268": "b_foodiealexisbaybe",
+    "beasty-foodies2-269": "b_foodiedyannaluna",
+    "beasty-foodies2-270": "b_foodiesapphiesofire",
+    "beasty-foodies2-271": "b_foodiekimmmpossxble",
+    "beasty-foodies2-272": "b_foodiestaycationsfbayarea",
+    "beasty-foodies2-273": "b_foodieswooningspoon",
+    "beasty-foodies2-274": "b_foodievvveats",
+    "beasty-foodies2-275": "b_foodieelkattt",
+    "beasty-foodies2-276": "b_foodiealmightyalondra",
+    "beasty-foodies2-277": "b_foodieunwntedtv",
+    "beasty-foodies2-278": "b_foodieawesomejuliee",
+    "beasty-foodies2-279": "b_foodiebvddiebri",
+    "beasty-foodies2-280": "b_foodiejadedancelrealtor",
+    "beasty-foodies2-281": "b_foodiemonicasdaniels",
+    "beasty-foodies2-282": "b_foodieecheneats",
+    "beasty-foodies2-283": "b_foodierosebuds",
+    "beasty-foodies2-284": "b_foodieamandabushman",
+    "beasty-foodies2-285": "b_foodiebayarealumpia",
+    "beasty-foodies2-286": "b_foodieyaymeegoround",
+    "beasty-foodies2-287": "b_foodiefoodieclubsf",
+    "beasty-foodies2-288": "b_foodienomwithelaine",
+    "beasty-foodies2-289": "b_foodieedeatstheworld",
+    "beasty-foodies2-290": "b_foodiesophieeatsworld",
+    "beasty-foodies2-291": "b_foodieeatswithglory",
+    "beasty-foodies2-292": "b_foodielifestylebyangiee",
+    "beasty-foodies2-293": "b_foodieeatswithvinni",
+    "beasty-foodies2-294": "b_foodiebaeareafo0die",
+    "alameda-goods-13": "b_onescafealameda",
+    "beasty-coffee2-1": "b_onescafealameda",
+    "san-mateo-goods2-7": "b_forkitpasta",
+    "beasty-greek-0": "b_forkitpasta",
+    "beasty-goods2-126": "b_forkitpasta",
+    "burlingame-goods2-3": "b_newenglandlobster",
+    "beasty-seafood-12": "b_newenglandlobster",
+    "berkeley-goods2-24": "b_popbarberkeley",
+    "beasty-icecream-4": "b_popbarberkeley",
+    "hayward-goods-4": "b_hinatasushikitchen",
+    "beasty-ayce-23": "b_hinatasushikitchen",
+    "beasty-sushi2-1": "b_hinatasushikitchen",
+    "burlingame-goods2-4": "b_shabuclubburlingame",
+    "santa-clara-goods2-4": "b_mikiyasantaclara",
+    "san-mateo-goods2-8": "b_mikiyasanmateo",
+    "beasty-hotpot-11": "b_shabuclubsanfrancisco",
+    "beasty-hotpot-12": "b_mikiyasantaclara",
+    "san-francisco-goods2-84": "b_shabuclubsanfrancisco",
+    "beasty-greek-1": "b_demitristaverna",
+    "beasty-greek-2": "b_gyroking",
+    "beasty-greek-3": "b_dinosgreekfoodtruck"
+  },
+  "updatedIcons": [
+    "/icons/foodie-cookwithhenny-v112.webp",
+    "/icons/foodie-limitlessfood-v112.webp",
+    "/icons/foodie-bayarealumpia-v112.webp",
+    "/icons/foodie-yaymeegoround-v112.webp",
+    "/icons/foodie-foodieclubsf-v112.webp",
+    "/icons/foodie-nomwithelaine-v112.webp",
+    "/icons/foodie-chefemaristevens-v112.webp",
+    "/icons/foodie-forkandscore-v112.webp",
+    "/icons/foodie-hungerefordiy-v112.webp",
+    "/icons/foodie-edeatstheworld-v112.webp",
+    "/icons/foodie-sophieeatsworld-v112.webp",
+    "/icons/foodie-biteswithnatalia-v112.webp",
+    "/icons/foodie-eatswithglory-v112.webp",
+    "/icons/foodie-lifestylebyangiee-v112.webp",
+    "/icons/foodie-hungryhugh-v112.webp",
+    "/icons/foodie-realphdfoodie-v112.webp",
+    "/icons/foodie-eatswithvinni-v112.webp",
+    "/icons/foodie-baeareafo0die-v112.webp",
+    "/icons/foodie-martiwantsmore-v112.webp",
+    "/icons/foodie-latinmami-v112.webp",
+    "/icons/foodie-edmunchthefoodie-v112.webp",
+    "/icons/ones-cafe-alameda-v112.webp",
+    "/icons/fork-it-v112.webp",
+    "/icons/new-england-lobster-v112.webp",
+    "/icons/popbar-berkeley-v112.webp",
+    "/icons/hinata-sushi-kitchen-v112.webp",
+    "/icons/shabu-club-v112.webp",
+    "/icons/mikiya-v112.webp",
+    "/icons/the-richmond-backyard-v112.webp",
+    "/icons/one-house-bakery-v112.webp"
+  ],
+  "updatedBrands": [
+    "b_onehousebakery",
+    "b_therichmondbackyard",
+    "b_brunchandbloom",
+    "b_onescafebakery",
+    "b_stansdonutshop",
+    "b_eastbaybuffet",
+    "b_myomyberkeley"
+  ],
+  "foodieOrder": [
+    {
+      "handle": "ronniebanks",
+      "brand": "b_foodieronniebanks",
+      "score": 3
+    },
+    {
+      "handle": "msashleyvee",
+      "brand": "b_foodiemsashleyvee",
+      "score": 3
+    },
+    {
+      "handle": "feed_happiness_",
+      "brand": "b_foodiefeedhappiness",
+      "score": 2
+    },
+    {
+      "handle": "ashleyveats",
+      "brand": "b_foodieashleyveats",
+      "score": 2
+    },
+    {
+      "handle": "blurgotti",
+      "brand": "b_foodieblurgotti",
+      "score": 2
+    },
+    {
+      "handle": "sebascastroficial",
+      "brand": "b_foodiesebascastroficial",
+      "score": 2
+    },
+    {
+      "handle": "festusfeasts",
+      "brand": "b_foodiefestusfeasts",
+      "score": 1
+    },
+    {
+      "handle": "thesnacksensei",
+      "brand": "b_grando",
+      "score": 1
+    },
+    {
+      "handle": "foodandsachi",
+      "brand": "b_foodiefoodandsachi",
+      "score": 1
+    },
+    {
+      "handle": "grubwitmike",
+      "brand": "b_foodiegrubwitmike",
+      "score": 1
+    },
+    {
+      "handle": "hungry4munchies",
+      "brand": "b_foodiehungry4munchies",
+      "score": 1
+    },
+    {
+      "handle": "bayarea_fooddreamz",
+      "brand": "b_foodiebayareafooddreamz",
+      "score": 1
+    },
+    {
+      "handle": "eatwithsie",
+      "brand": "b_foodieeatwithsie",
+      "score": 1
+    },
+    {
+      "handle": "daeatzwitbri",
+      "brand": "b_foodiedaeatzwitbri",
+      "score": 1
+    },
+    {
+      "handle": "thetastebud",
+      "brand": "b_foodiethetastebud",
+      "score": 1
+    },
+    {
+      "handle": "aztec.ed",
+      "brand": "b_foodieazteced",
+      "score": 1
+    },
+    {
+      "handle": "imadoniseats",
+      "brand": "b_foodieimadoniseats",
+      "score": 1
+    },
+    {
+      "handle": "mzz.juxtaposition",
+      "brand": "b_foodiemzzjuxtaposition",
+      "score": 1
+    },
+    {
+      "handle": "yourglobalfoodiebff",
+      "brand": "b_foodieyourglobalfoodiebff",
+      "score": 1
+    },
+    {
+      "handle": "felicitythefoodie",
+      "brand": "b_foodiefelicitythefoodie",
+      "score": 1
+    },
+    {
+      "handle": "trinhdoesthings",
+      "brand": "b_foodietrinhdoesthings",
+      "score": 1
+    },
+    {
+      "handle": "smackinfood",
+      "brand": "b_foodiesmackinfood",
+      "score": 1
+    },
+    {
+      "handle": "drooling.bae",
+      "brand": "b_foodiedroolingbae",
+      "score": 1
+    },
+    {
+      "handle": "thesauceboss_",
+      "brand": "b_foodiethesauceboss",
+      "score": 1
+    },
+    {
+      "handle": "keyanajoooon",
+      "brand": "b_foodiekeyanajoooon",
+      "score": 2
+    },
+    {
+      "handle": "takeoutwithtuck",
+      "brand": "b_foodietakeoutwithtuck",
+      "score": 2
+    },
+    {
+      "handle": "macmadame",
+      "brand": "b_foodiemacmadame",
+      "score": 2
+    },
+    {
+      "handle": "hungryhugh",
+      "brand": "b_foodiehungryhugh",
+      "score": 2
+    },
+    {
+      "handle": "latin_mami_",
+      "brand": "b_foodielatinmami",
+      "score": 2
+    },
+    {
+      "handle": "bayarea.foodie.adventures",
+      "brand": "b_foodiebayareafoodieadventures",
+      "score": 1
+    },
+    {
+      "handle": "siliconvalley.foodies",
+      "brand": "b_foodiesiliconvalleyfoodies",
+      "score": 1
+    },
+    {
+      "handle": "jacksdiningroom",
+      "brand": "b_foodiejacksdiningroom",
+      "score": 1
+    },
+    {
+      "handle": "andreweatsinsf",
+      "brand": "b_foodieandreweatsinsf",
+      "score": 1
+    },
+    {
+      "handle": "eatswithkath",
+      "brand": "b_foodieeatswithkath",
+      "score": 1
+    },
+    {
+      "handle": "cestalmoco",
+      "brand": "b_foodiecestalmoco",
+      "score": 1
+    },
+    {
+      "handle": "kangofrealty",
+      "brand": "b_foodiekangofrealty",
+      "score": 1
+    },
+    {
+      "handle": "fedoramaelle",
+      "brand": "b_foodiefedoramaelle",
+      "score": 1
+    },
+    {
+      "handle": "pastrywithjenn",
+      "brand": "b_foodiepastrywithjenn",
+      "score": 1
+    },
+    {
+      "handle": "travelwtiff",
+      "brand": "b_foodietravelwtiff",
+      "score": 1
+    },
+    {
+      "handle": "_emwong_",
+      "brand": "b_foodieemwong",
+      "score": 1
+    },
+    {
+      "handle": "kimoni.eatss",
+      "brand": "b_foodiekimonieatss",
+      "score": 1
+    },
+    {
+      "handle": "baygirlseat",
+      "brand": "b_foodiebaygirlseat",
+      "score": 1
+    },
+    {
+      "handle": "heraldh",
+      "brand": "b_foodieheraldh",
+      "score": 1
+    },
+    {
+      "handle": "foodiswhyimbroke",
+      "brand": "b_foodiefoodiswhyimbroke",
+      "score": 1
+    },
+    {
+      "handle": "keneats_",
+      "brand": "b_foodiekeneats",
+      "score": 1
+    },
+    {
+      "handle": "e40",
+      "brand": "b_e40",
+      "score": 1
+    },
+    {
+      "handle": "mamamarquez888",
+      "brand": "b_foodiemamamarquez888",
+      "score": 1
+    },
+    {
+      "handle": "reelkevo",
+      "brand": "b_foodiereelkevo",
+      "score": 1
+    },
+    {
+      "handle": "rollingwithdeneats",
+      "brand": "b_foodierollingwithdeneats",
+      "score": 1
+    },
+    {
+      "handle": "agnespittioni",
+      "brand": "b_foodieagnespittioni",
+      "score": 1
+    },
+    {
+      "handle": "j00diefoodie",
+      "brand": "b_foodiej00diefoodie",
+      "score": 1
+    },
+    {
+      "handle": "aliasharrief",
+      "brand": "b_foodiealiasharrief",
+      "score": 1
+    },
+    {
+      "handle": "carlosbradley",
+      "brand": "b_foodiecarlosbradley",
+      "score": 1
+    },
+    {
+      "handle": "jc.eeats",
+      "brand": "b_foodiejceeats",
+      "score": 1
+    },
+    {
+      "handle": "monaeatsnearby",
+      "brand": "b_foodiemonaeatsnearby",
+      "score": 1
+    },
+    {
+      "handle": "bayareafoodiecrew",
+      "brand": "b_foodiebayareafoodiecrew",
+      "score": 1
+    },
+    {
+      "handle": "janniners",
+      "brand": "b_foodiejanniners",
+      "score": 1
+    },
+    {
+      "handle": "alwayshannegry",
+      "brand": "b_foodiealwayshannegry",
+      "score": 1
+    },
+    {
+      "handle": "rainmoreturely",
+      "brand": "b_foodierainmoreturely",
+      "score": 1
+    },
+    {
+      "handle": "_wheresthefoodat",
+      "brand": "b_foodiewheresthefoodat",
+      "score": 1
+    },
+    {
+      "handle": "sfbayfood",
+      "brand": "b_foodiesfbayfood",
+      "score": 1
+    },
+    {
+      "handle": "zeyno.ern",
+      "brand": "b_foodiezeynoern",
+      "score": 1
+    },
+    {
+      "handle": "booziebrunch",
+      "brand": "b_foodiebooziebrunch",
+      "score": 1
+    },
+    {
+      "handle": "thekhaysie",
+      "brand": "b_foodiethekhaysie",
+      "score": 1
+    },
+    {
+      "handle": "kelmeleats",
+      "brand": "b_foodiekelmeleats",
+      "score": 1
+    },
+    {
+      "handle": "courtneylyneaa",
+      "brand": "b_foodiecourtneylyneaa",
+      "score": 1
+    },
+    {
+      "handle": "iamnikkieg",
+      "brand": "b_foodieiamnikkieg",
+      "score": 1
+    },
+    {
+      "handle": "hungere.for.diy",
+      "brand": "b_foodiehungerefordiy",
+      "score": 1
+    },
+    {
+      "handle": "cookwithhenny",
+      "brand": "b_foodiecookwithhenny",
+      "score": 1
+    },
+    {
+      "handle": "martiwantsmore",
+      "brand": "b_foodiemartiwantsmore",
+      "score": 1
+    },
+    {
+      "handle": "limitlessfood",
+      "brand": "b_foodielimitlessfood",
+      "score": 1
+    },
+    {
+      "handle": "chefemaristevens",
+      "brand": "b_foodiechefemaristevens",
+      "score": 1
+    },
+    {
+      "handle": "forkandscore",
+      "brand": "b_foodieforkandscore",
+      "score": 1
+    },
+    {
+      "handle": "realphdfoodie",
+      "brand": "b_foodierealphdfoodie",
+      "score": 1
+    },
+    {
+      "handle": "justmostie",
+      "brand": "b_foodiejustmostie",
+      "score": 0
+    },
+    {
+      "handle": "capturedbysado",
+      "brand": "b_foodiecapturedbysado",
+      "score": 0
+    },
+    {
+      "handle": "allie.eats",
+      "brand": "b_foodieallieeats",
+      "score": 0
+    },
+    {
+      "handle": "seekeasyeats",
+      "brand": "b_foodieseekeasyeats",
+      "score": 0
+    },
+    {
+      "handle": "orangeginger",
+      "brand": "b_foodieorangeginger",
+      "score": 0
+    },
+    {
+      "handle": "antoinetterzz",
+      "brand": "b_foodieantoinetterzz",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.kulture",
+      "brand": "b_foodiebayareakulture",
+      "score": 0
+    },
+    {
+      "handle": "chefmelissaking",
+      "brand": "b_foodiechefmelissaking",
+      "score": 0
+    },
+    {
+      "handle": "celineeats",
+      "brand": "b_foodiecelineeats",
+      "score": 0
+    },
+    {
+      "handle": "singlecatm0m",
+      "brand": "b_foodiesinglecatm0m",
+      "score": 0
+    },
+    {
+      "handle": "kimjsseats",
+      "brand": "b_foodiekimjsseats",
+      "score": 0
+    },
+    {
+      "handle": "oaktowngrubhub",
+      "brand": "b_foodieoaktowngrubhub",
+      "score": 0
+    },
+    {
+      "handle": "thespoonlist",
+      "brand": "b_foodiethespoonlist",
+      "score": 0
+    },
+    {
+      "handle": "sherryeatworld",
+      "brand": "b_foodiesherryeatworld",
+      "score": 0
+    },
+    {
+      "handle": "hungrydanz",
+      "brand": "b_foodiehungrydanz",
+      "score": 0
+    },
+    {
+      "handle": "janeethefoodie",
+      "brand": "b_foodiejaneethefoodie",
+      "score": 0
+    },
+    {
+      "handle": "peggy_shoo",
+      "brand": "b_foodiepeggyshoo",
+      "score": 0
+    },
+    {
+      "handle": "zarina.nawabi",
+      "brand": "b_foodiezarinanawabi",
+      "score": 0
+    },
+    {
+      "handle": "jbrenes_",
+      "brand": "b_foodiejbrenes",
+      "score": 0
+    },
+    {
+      "handle": "simply_dorothy_",
+      "brand": "b_foodiesimplydorothy",
+      "score": 0
+    },
+    {
+      "handle": "acoupleofcooks",
+      "brand": "b_foodieacoupleofcooks",
+      "score": 0
+    },
+    {
+      "handle": "jantrinanicole",
+      "brand": "b_foodiejantrinanicole",
+      "score": 0
+    },
+    {
+      "handle": "chris.corpz",
+      "brand": "b_foodiechriscorpz",
+      "score": 0
+    },
+    {
+      "handle": "thealamedapulse",
+      "brand": "b_foodiethealamedapulse",
+      "score": 0
+    },
+    {
+      "handle": "bayareamunchies510",
+      "brand": "b_foodiebayareamunchies510",
+      "score": 0
+    },
+    {
+      "handle": "victoria.pham17",
+      "brand": "b_foodievictoriapham17",
+      "score": 0
+    },
+    {
+      "handle": "foodieberrie",
+      "brand": "b_foodiefoodieberrie",
+      "score": 0
+    },
+    {
+      "handle": "samserved",
+      "brand": "b_foodiesamserved",
+      "score": 0
+    },
+    {
+      "handle": "areweeatingyet",
+      "brand": "b_foodieareweeatingyet",
+      "score": 0
+    },
+    {
+      "handle": "siusvision",
+      "brand": "b_foodiesiusvision",
+      "score": 0
+    },
+    {
+      "handle": "arianasade",
+      "brand": "b_foodiearianasade",
+      "score": 0
+    },
+    {
+      "handle": "bayareafoodz",
+      "brand": "b_foodiebayareafoodz",
+      "score": 0
+    },
+    {
+      "handle": "bestbayareafood",
+      "brand": "b_foodiebestbayareafood",
+      "score": 0
+    },
+    {
+      "handle": "annna_eats",
+      "brand": "b_foodieannnaeats",
+      "score": 0
+    },
+    {
+      "handle": "ugc.with.frances",
+      "brand": "b_foodieugcwithfrances",
+      "score": 0
+    },
+    {
+      "handle": "dariananthony_",
+      "brand": "b_foodiedariananthony",
+      "score": 0
+    },
+    {
+      "handle": "charweeezy",
+      "brand": "b_foodiecharweeezy",
+      "score": 0
+    },
+    {
+      "handle": "mukbangyourmama",
+      "brand": "b_foodiemukbangyourmama",
+      "score": 0
+    },
+    {
+      "handle": "wanderingstefany",
+      "brand": "b_foodiewanderingstefany",
+      "score": 0
+    },
+    {
+      "handle": "lifebyvivien",
+      "brand": "b_foodielifebyvivien",
+      "score": 0
+    },
+    {
+      "handle": "andre___lucas",
+      "brand": "b_foodieandrelucas",
+      "score": 0
+    },
+    {
+      "handle": "shrimpfriedroice",
+      "brand": "b_foodieshrimpfriedroice",
+      "score": 0
+    },
+    {
+      "handle": "_cynlacson",
+      "brand": "b_foodiecynlacson",
+      "score": 0
+    },
+    {
+      "handle": "alexytravels",
+      "brand": "b_foodiealexytravels",
+      "score": 0
+    },
+    {
+      "handle": "andygravs",
+      "brand": "b_foodieandygravs",
+      "score": 0
+    },
+    {
+      "handle": "livingvivalakillah",
+      "brand": "b_foodielivingvivalakillah",
+      "score": 0
+    },
+    {
+      "handle": "eighty6ix_",
+      "brand": "b_foodieeighty6ix",
+      "score": 0
+    },
+    {
+      "handle": "mayakay.official",
+      "brand": "b_foodiemayakayofficial",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.maganda.eats",
+      "brand": "b_foodiebayareamagandaeats",
+      "score": 0
+    },
+    {
+      "handle": "forkmeetsfood",
+      "brand": "b_foodieforkmeetsfood",
+      "score": 0
+    },
+    {
+      "handle": "foodiesnflightss",
+      "brand": "b_foodiefoodiesnflightss",
+      "score": 0
+    },
+    {
+      "handle": "carlaylayyy",
+      "brand": "b_foodiecarlaylayyy",
+      "score": 0
+    },
+    {
+      "handle": "shua.tangco",
+      "brand": "b_foodieshuatangco",
+      "score": 0
+    },
+    {
+      "handle": "jenny.home.loans",
+      "brand": "b_foodiejennyhomeloans",
+      "score": 0
+    },
+    {
+      "handle": "wthellydanyelly",
+      "brand": "b_foodiewthellydanyelly",
+      "score": 0
+    },
+    {
+      "handle": "sophiaxbayarea",
+      "brand": "b_foodiesophiaxbayarea",
+      "score": 0
+    },
+    {
+      "handle": "sierra.eats.8",
+      "brand": "b_foodiesierraeats8",
+      "score": 0
+    },
+    {
+      "handle": "yo_siiii_foodie",
+      "brand": "b_foodieyosiiiifoodie",
+      "score": 0
+    },
+    {
+      "handle": "ivkicks",
+      "brand": "b_foodieivkicks",
+      "score": 0
+    },
+    {
+      "handle": "itsslydiia",
+      "brand": "b_foodieitsslydiia",
+      "score": 0
+    },
+    {
+      "handle": "startingfiresevrywhere",
+      "brand": "b_foodiestartingfiresevrywhere",
+      "score": 0
+    },
+    {
+      "handle": "bylizettexo",
+      "brand": "b_foodiebylizettexo",
+      "score": 0
+    },
+    {
+      "handle": "brianthebarber",
+      "brand": "b_foodiebrianthebarber",
+      "score": 0
+    },
+    {
+      "handle": "ni.ckk_",
+      "brand": "b_foodienickk",
+      "score": 0
+    },
+    {
+      "handle": "jamesbaylife",
+      "brand": "b_foodiejamesbaylife",
+      "score": 0
+    },
+    {
+      "handle": "shesvibinhigh",
+      "brand": "b_foodieshesvibinhigh",
+      "score": 0
+    },
+    {
+      "handle": "dchangshangry",
+      "brand": "b_foodiedchangshangry",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.foodie.san",
+      "brand": "b_foodiebayareafoodiesan",
+      "score": 0
+    },
+    {
+      "handle": "truly_athi",
+      "brand": "b_foodietrulyathi",
+      "score": 0
+    },
+    {
+      "handle": "jetsetjanine",
+      "brand": "b_foodiejetsetjanine",
+      "score": 0
+    },
+    {
+      "handle": "kvbitesandgo",
+      "brand": "b_foodiekvbitesandgo",
+      "score": 0
+    },
+    {
+      "handle": "stunnaman02",
+      "brand": "b_foodiestunnaman02",
+      "score": 0
+    },
+    {
+      "handle": "savorwithcoral",
+      "brand": "b_foodiesavorwithcoral",
+      "score": 0
+    },
+    {
+      "handle": "firstdibs.bayarea",
+      "brand": "b_foodiefirstdibsbayarea",
+      "score": 0
+    },
+    {
+      "handle": "margs.out",
+      "brand": "b_foodiemargsout",
+      "score": 0
+    },
+    {
+      "handle": "yogetasworld",
+      "brand": "b_foodieyogetasworld",
+      "score": 0
+    },
+    {
+      "handle": "itsmayrazambrano",
+      "brand": "b_foodieitsmayrazambrano",
+      "score": 0
+    },
+    {
+      "handle": "your_travel_daddy",
+      "brand": "b_foodieyourtraveldaddy",
+      "score": 0
+    },
+    {
+      "handle": "hella._local.mo",
+      "brand": "b_foodiehellalocalmo",
+      "score": 0
+    },
+    {
+      "handle": "thesnobbiefoodie",
+      "brand": "b_foodiethesnobbiefoodie",
+      "score": 0
+    },
+    {
+      "handle": "katfoodsf",
+      "brand": "b_foodiekatfoodsf",
+      "score": 0
+    },
+    {
+      "handle": "charlikestoeat",
+      "brand": "b_foodiecharlikestoeat",
+      "score": 0
+    },
+    {
+      "handle": "hellahansel",
+      "brand": "b_foodiehellahansel",
+      "score": 0
+    },
+    {
+      "handle": "geraldfermin",
+      "brand": "b_foodiegeraldfermin",
+      "score": 0
+    },
+    {
+      "handle": "pimchanyum",
+      "brand": "b_foodiepimchanyum",
+      "score": 0
+    },
+    {
+      "handle": "bayareawilson",
+      "brand": "b_foodiebayareawilson",
+      "score": 0
+    },
+    {
+      "handle": "whatthejessi_",
+      "brand": "b_foodiewhatthejessi",
+      "score": 0
+    },
+    {
+      "handle": "foodgiveness",
+      "brand": "b_foodiefoodgiveness",
+      "score": 0
+    },
+    {
+      "handle": "asideofsweet",
+      "brand": "b_foodieasideofsweet",
+      "score": 0
+    },
+    {
+      "handle": "tasha.malan",
+      "brand": "b_foodietashamalan",
+      "score": 0
+    },
+    {
+      "handle": "camemzmin",
+      "brand": "b_foodiecamemzmin",
+      "score": 0
+    },
+    {
+      "handle": "venturewithkelly",
+      "brand": "b_foodieventurewithkelly",
+      "score": 0
+    },
+    {
+      "handle": "_aemeriee.dance",
+      "brand": "b_foodieaemerieedance",
+      "score": 0
+    },
+    {
+      "handle": "greatonezfoodreview",
+      "brand": "b_foodiegreatonezfoodreview",
+      "score": 0
+    },
+    {
+      "handle": "mr.smackreviews",
+      "brand": "b_foodiemrsmackreviews",
+      "score": 0
+    },
+    {
+      "handle": "bp__eats",
+      "brand": "b_foodiebpeats",
+      "score": 0
+    },
+    {
+      "handle": "erinlovesfun",
+      "brand": "b_foodieerinlovesfun",
+      "score": 0
+    },
+    {
+      "handle": "lovelivermore",
+      "brand": "b_foodielovelivermore",
+      "score": 0
+    },
+    {
+      "handle": "explorewithtaka",
+      "brand": "b_foodieexplorewithtaka",
+      "score": 0
+    },
+    {
+      "handle": "thehautesheet",
+      "brand": "b_foodiethehautesheet",
+      "score": 0
+    },
+    {
+      "handle": "humminglion",
+      "brand": "b_foodiehumminglion",
+      "score": 0
+    },
+    {
+      "handle": "_whatarethechances_",
+      "brand": "b_foodiewhatarethechances",
+      "score": 0
+    },
+    {
+      "handle": "katwalksf",
+      "brand": "b_foodiekatwalksf",
+      "score": 0
+    },
+    {
+      "handle": "yulmoo_l",
+      "brand": "b_foodieyulmool",
+      "score": 0
+    },
+    {
+      "handle": "barstoolsports",
+      "brand": "b_foodiebarstoolsports",
+      "score": 0
+    },
+    {
+      "handle": "xo.pinsta",
+      "brand": "b_foodiexopinsta",
+      "score": 0
+    },
+    {
+      "handle": "lovemissfit",
+      "brand": "b_foodielovemissfit",
+      "score": 0
+    },
+    {
+      "handle": "chloe_chomps",
+      "brand": "b_foodiechloechomps",
+      "score": 0
+    },
+    {
+      "handle": "realtorandreviewer",
+      "brand": "b_foodierealtorandreviewer",
+      "score": 0
+    },
+    {
+      "handle": "xoaramarie",
+      "brand": "b_foodiexoaramarie",
+      "score": 0
+    },
+    {
+      "handle": "foodie.dreams",
+      "brand": "b_foodiefoodiedreams",
+      "score": 0
+    },
+    {
+      "handle": "eatswithfoodie",
+      "brand": "b_foodieeatswithfoodie",
+      "score": 0
+    },
+    {
+      "handle": "jensintec",
+      "brand": "b_foodiejensintec",
+      "score": 0
+    },
+    {
+      "handle": "snackateriansf",
+      "brand": "b_foodiesnackateriansf",
+      "score": 0
+    },
+    {
+      "handle": "apoorva_sharma1",
+      "brand": "b_foodieapoorvasharma1",
+      "score": 0
+    },
+    {
+      "handle": "volha_creative",
+      "brand": "b_foodievolhacreative",
+      "score": 0
+    },
+    {
+      "handle": "boba._.addict",
+      "brand": "b_foodiebobaaddict",
+      "score": 0
+    },
+    {
+      "handle": "ruthannesturman",
+      "brand": "b_foodieruthannesturman",
+      "score": 0
+    },
+    {
+      "handle": "larryjunetfm",
+      "brand": "b_foodielarryjunetfm",
+      "score": 0
+    },
+    {
+      "handle": "eileenhuynher",
+      "brand": "b_foodieeileenhuynher",
+      "score": 0
+    },
+    {
+      "handle": "createwithcv",
+      "brand": "b_foodiecreatewithcv",
+      "score": 0
+    },
+    {
+      "handle": "aloha_stephanie",
+      "brand": "b_foodiealohastephanie",
+      "score": 0
+    },
+    {
+      "handle": "zoegabon",
+      "brand": "b_foodiezoegabon",
+      "score": 0
+    },
+    {
+      "handle": "byhillaryn",
+      "brand": "b_foodiebyhillaryn",
+      "score": 0
+    },
+    {
+      "handle": "aly_eats_cali",
+      "brand": "b_foodiealyeatscali",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.foodies",
+      "brand": "b_foodiebayareafoodies",
+      "score": 0
+    },
+    {
+      "handle": "moniica.michelle",
+      "brand": "b_foodiemoniicamichelle",
+      "score": 0
+    },
+    {
+      "handle": "ryanbyryanchua",
+      "brand": "b_foodieryanbyryanchua",
+      "score": 0
+    },
+    {
+      "handle": "hangrypotato",
+      "brand": "b_foodiehangrypotato",
+      "score": 0
+    },
+    {
+      "handle": "melsotel",
+      "brand": "b_foodiemelsotel",
+      "score": 0
+    },
+    {
+      "handle": "sanleandroeats",
+      "brand": "b_foodiesanleandroeats",
+      "score": 0
+    },
+    {
+      "handle": "broitsva",
+      "brand": "b_foodiebroitsva",
+      "score": 0
+    },
+    {
+      "handle": "fat_ash_foodie",
+      "brand": "b_foodiefatashfoodie",
+      "score": 0
+    },
+    {
+      "handle": "_foodieshots_",
+      "brand": "b_foodiefoodieshots",
+      "score": 0
+    },
+    {
+      "handle": "kitkatvales",
+      "brand": "b_foodiekitkatvales",
+      "score": 0
+    },
+    {
+      "handle": "foodwookie",
+      "brand": "b_foodiefoodwookie",
+      "score": 0
+    },
+    {
+      "handle": "sonomacountyliving",
+      "brand": "b_foodiesonomacountyliving",
+      "score": 0
+    },
+    {
+      "handle": "lovecartier25",
+      "brand": "b_foodielovecartier25",
+      "score": 0
+    },
+    {
+      "handle": "foodelaventures",
+      "brand": "b_foodiefoodelaventures",
+      "score": 0
+    },
+    {
+      "handle": "foodie_travel_happiness",
+      "brand": "b_foodiefoodietravelhappiness",
+      "score": 0
+    },
+    {
+      "handle": "peterlyagent",
+      "brand": "b_foodiepeterlyagent",
+      "score": 0
+    },
+    {
+      "handle": "k.smokeskitchen",
+      "brand": "b_foodieksmokeskitchen",
+      "score": 0
+    },
+    {
+      "handle": "tysf.qods",
+      "brand": "b_foodietysfqods",
+      "score": 0
+    },
+    {
+      "handle": "ilisaeatssf",
+      "brand": "b_foodieilisaeatssf",
+      "score": 0
+    },
+    {
+      "handle": "tundemodupee",
+      "brand": "b_foodietundemodupee",
+      "score": 0
+    },
+    {
+      "handle": "wafflebam",
+      "brand": "b_foodiewafflebam",
+      "score": 0
+    },
+    {
+      "handle": "goyuliiago",
+      "brand": "b_foodiegoyuliiago",
+      "score": 0
+    },
+    {
+      "handle": "jamiebeoutside",
+      "brand": "b_foodiejamiebeoutside",
+      "score": 0
+    },
+    {
+      "handle": "anjali_wandersoul",
+      "brand": "b_foodieanjaliwandersoul",
+      "score": 0
+    },
+    {
+      "handle": "gabriiellas",
+      "brand": "b_foodiegabriiellas",
+      "score": 0
+    },
+    {
+      "handle": "ploinsanfrancisco",
+      "brand": "b_foodieploinsanfrancisco",
+      "score": 0
+    },
+    {
+      "handle": "piscesprincesspriya",
+      "brand": "b_foodiepiscesprincesspriya",
+      "score": 0
+    },
+    {
+      "handle": "d_baylock_",
+      "brand": "b_foodiedbaylock",
+      "score": 0
+    },
+    {
+      "handle": "hallojessa",
+      "brand": "b_foodiehallojessa",
+      "score": 0
+    },
+    {
+      "handle": "lagrandedelabanda",
+      "brand": "b_foodielagrandedelabanda",
+      "score": 0
+    },
+    {
+      "handle": "chaudownfood",
+      "brand": "b_foodiechaudownfood",
+      "score": 0
+    },
+    {
+      "handle": "phoebe8food",
+      "brand": "b_foodiephoebe8food",
+      "score": 0
+    },
+    {
+      "handle": "karaxhuynh",
+      "brand": "b_foodiekaraxhuynh",
+      "score": 0
+    },
+    {
+      "handle": "wakeyeats",
+      "brand": "b_foodiewakeyeats",
+      "score": 0
+    },
+    {
+      "handle": "dodo__eats",
+      "brand": "b_foodiedodoeats",
+      "score": 0
+    },
+    {
+      "handle": "maya_munches",
+      "brand": "b_foodiemayamunches",
+      "score": 0
+    },
+    {
+      "handle": "preet.khatrii",
+      "brand": "b_foodiepreetkhatrii",
+      "score": 0
+    },
+    {
+      "handle": "kogumahs",
+      "brand": "b_foodiekogumahs",
+      "score": 0
+    },
+    {
+      "handle": "nurse.danamae",
+      "brand": "b_foodienursedanamae",
+      "score": 0
+    },
+    {
+      "handle": "thehabibizeat",
+      "brand": "b_foodiethehabibizeat",
+      "score": 0
+    },
+    {
+      "handle": "eatwithbooboo",
+      "brand": "b_foodieeatwithbooboo",
+      "score": 0
+    },
+    {
+      "handle": "bayarea_foodogram",
+      "brand": "b_foodiebayareafoodogram",
+      "score": 0
+    },
+    {
+      "handle": "lub.to.eat",
+      "brand": "b_foodielubtoeat",
+      "score": 0
+    },
+    {
+      "handle": "thismajourney",
+      "brand": "b_foodiethismajourney",
+      "score": 0
+    },
+    {
+      "handle": "summer.ishungry",
+      "brand": "b_foodiesummerishungry",
+      "score": 0
+    },
+    {
+      "handle": "justfeediris",
+      "brand": "b_foodiejustfeediris",
+      "score": 0
+    },
+    {
+      "handle": "hungryhungryheejin",
+      "brand": "b_foodiehungryhungryheejin",
+      "score": 0
+    },
+    {
+      "handle": "liltiffyvert",
+      "brand": "b_foodieliltiffyvert",
+      "score": 0
+    },
+    {
+      "handle": "jovana.camberos",
+      "brand": "b_foodiejovanacamberos",
+      "score": 0
+    },
+    {
+      "handle": "sulli_eats",
+      "brand": "b_foodiesullieats",
+      "score": 0
+    },
+    {
+      "handle": "phamamiii",
+      "brand": "b_foodiephamamiii",
+      "score": 0
+    },
+    {
+      "handle": "tastewith.rach",
+      "brand": "b_foodietastewithrach",
+      "score": 0
+    },
+    {
+      "handle": "sisicooksandeats",
+      "brand": "b_foodiesisicooksandeats",
+      "score": 0
+    },
+    {
+      "handle": "myrealtoralexbradeis",
+      "brand": "b_foodiemyrealtoralexbradeis",
+      "score": 0
+    },
+    {
+      "handle": "rowbot408",
+      "brand": "b_foodierowbot408",
+      "score": 0
+    },
+    {
+      "handle": "revrocrichboy",
+      "brand": "b_foodierevrocrichboy",
+      "score": 0
+    },
+    {
+      "handle": "kat.dazzzle",
+      "brand": "b_foodiekatdazzzle",
+      "score": 0
+    },
+    {
+      "handle": "queen.food.e",
+      "brand": "b_foodiequeenfoode",
+      "score": 0
+    },
+    {
+      "handle": "cindydreamtravel",
+      "brand": "b_foodiecindydreamtravel",
+      "score": 0
+    },
+    {
+      "handle": "yummylouey",
+      "brand": "b_foodieyummylouey",
+      "score": 0
+    },
+    {
+      "handle": "erica.sorelle",
+      "brand": "b_foodieericasorelle",
+      "score": 0
+    },
+    {
+      "handle": "chelchomps",
+      "brand": "b_foodiechelchomps",
+      "score": 0
+    },
+    {
+      "handle": "monicaplatt",
+      "brand": "b_foodiemonicaplatt",
+      "score": 0
+    },
+    {
+      "handle": "imsarahchaz",
+      "brand": "b_foodieimsarahchaz",
+      "score": 0
+    },
+    {
+      "handle": "irenedony",
+      "brand": "b_foodieirenedony",
+      "score": 0
+    },
+    {
+      "handle": "biteswithnatalia",
+      "brand": "b_foodiebiteswithnatalia",
+      "score": 0
+    },
+    {
+      "handle": "laurenlovessfood",
+      "brand": "b_foodielaurenlovessfood",
+      "score": 0
+    },
+    {
+      "handle": "lisaaaaletseat",
+      "brand": "b_foodielisaaaaletseat",
+      "score": 0
+    },
+    {
+      "handle": "mattiasblanco",
+      "brand": "b_foodiemattiasblanco",
+      "score": 0
+    },
+    {
+      "handle": "deazylee",
+      "brand": "b_foodiedeazylee",
+      "score": 0
+    },
+    {
+      "handle": "edmunchthefoodie",
+      "brand": "b_foodieedmunchthefoodie",
+      "score": 0
+    },
+    {
+      "handle": "lynniethefoodie",
+      "brand": "b_foodielynniethefoodie",
+      "score": 0
+    },
+    {
+      "handle": "kelsy.annn",
+      "brand": "b_foodiekelsyannn",
+      "score": 0
+    },
+    {
+      "handle": "food_adventures21",
+      "brand": "b_foodiefoodadventures21",
+      "score": 0
+    },
+    {
+      "handle": "taratastessf",
+      "brand": "b_foodietaratastessf",
+      "score": 0
+    },
+    {
+      "handle": "zia_hazrati",
+      "brand": "b_foodieziahazrati",
+      "score": 0
+    },
+    {
+      "handle": "bennyeats.bayarea",
+      "brand": "b_foodiebennyeatsbayarea",
+      "score": 0
+    },
+    {
+      "handle": "jourdyn.lynn",
+      "brand": "b_foodiejourdynlynn",
+      "score": 0
+    },
+    {
+      "handle": "bayeatss",
+      "brand": "b_foodiebayeatss",
+      "score": 0
+    },
+    {
+      "handle": "charlize_tse",
+      "brand": "b_foodiecharlizetse",
+      "score": 0
+    },
+    {
+      "handle": "eatwith_ange",
+      "brand": "b_foodieeatwithange",
+      "score": 0
+    },
+    {
+      "handle": "habibimocha",
+      "brand": "b_foodiehabibimocha",
+      "score": 0
+    },
+    {
+      "handle": "maddyeats.sfbay",
+      "brand": "b_foodiemaddyeatssfbay",
+      "score": 0
+    },
+    {
+      "handle": "mr.bayareafoodie",
+      "brand": "b_foodiemrbayareafoodie",
+      "score": 0
+    },
+    {
+      "handle": "soysupli",
+      "brand": "b_foodiesoysupli",
+      "score": 0
+    },
+    {
+      "handle": "thehungrycurator",
+      "brand": "b_foodiethehungrycurator",
+      "score": 0
+    },
+    {
+      "handle": "withlovelysss",
+      "brand": "b_foodiewithlovelysss",
+      "score": 0
+    },
+    {
+      "handle": "oliviiacai",
+      "brand": "b_foodieoliviiacai",
+      "score": 0
+    },
+    {
+      "handle": "kevinberkeleyfoodreviews",
+      "brand": "b_foodiekevinberkeleyfoodreviews",
+      "score": 0
+    },
+    {
+      "handle": "martiebautista",
+      "brand": "b_foodiemartiebautista",
+      "score": 0
+    },
+    {
+      "handle": "badies.af",
+      "brand": "b_foodiebadiesaf",
+      "score": 0
+    },
+    {
+      "handle": "sjfoodgram",
+      "brand": "b_foodiesjfoodgram",
+      "score": 0
+    },
+    {
+      "handle": "tiensmunchies",
+      "brand": "b_foodietiensmunchies",
+      "score": 0
+    },
+    {
+      "handle": "alexisbaybe_",
+      "brand": "b_foodiealexisbaybe",
+      "score": 0
+    },
+    {
+      "handle": "dyannaluna",
+      "brand": "b_foodiedyannaluna",
+      "score": 0
+    },
+    {
+      "handle": "sapphiesofire",
+      "brand": "b_foodiesapphiesofire",
+      "score": 0
+    },
+    {
+      "handle": "kimmmpossxble",
+      "brand": "b_foodiekimmmpossxble",
+      "score": 0
+    },
+    {
+      "handle": "staycation.sfbayarea",
+      "brand": "b_foodiestaycationsfbayarea",
+      "score": 0
+    },
+    {
+      "handle": "swooningspoon",
+      "brand": "b_foodieswooningspoon",
+      "score": 0
+    },
+    {
+      "handle": "vvveats",
+      "brand": "b_foodievvveats",
+      "score": 0
+    },
+    {
+      "handle": "el.kattt",
+      "brand": "b_foodieelkattt",
+      "score": 0
+    },
+    {
+      "handle": "almightyalondra",
+      "brand": "b_foodiealmightyalondra",
+      "score": 0
+    },
+    {
+      "handle": "unwntedtv",
+      "brand": "b_foodieunwntedtv",
+      "score": 0
+    },
+    {
+      "handle": "awesomejuliee",
+      "brand": "b_foodieawesomejuliee",
+      "score": 0
+    },
+    {
+      "handle": "bvddiebri",
+      "brand": "b_foodiebvddiebri",
+      "score": 0
+    },
+    {
+      "handle": "jadedancelrealtor",
+      "brand": "b_foodiejadedancelrealtor",
+      "score": 0
+    },
+    {
+      "handle": "monica.s.daniels",
+      "brand": "b_foodiemonicasdaniels",
+      "score": 0
+    },
+    {
+      "handle": "echen_eats",
+      "brand": "b_foodieecheneats",
+      "score": 0
+    },
+    {
+      "handle": "rose_buds",
+      "brand": "b_foodierosebuds",
+      "score": 0
+    },
+    {
+      "handle": "amandabushman",
+      "brand": "b_foodieamandabushman",
+      "score": 0
+    },
+    {
+      "handle": "bayarealumpia",
+      "brand": "b_foodiebayarealumpia",
+      "score": 0
+    },
+    {
+      "handle": "yaymeegoround",
+      "brand": "b_foodieyaymeegoround",
+      "score": 0
+    },
+    {
+      "handle": "foodieclubsf",
+      "brand": "b_foodiefoodieclubsf",
+      "score": 0
+    },
+    {
+      "handle": "nomwithelaine",
+      "brand": "b_foodienomwithelaine",
+      "score": 0
+    },
+    {
+      "handle": "edeatstheworld",
+      "brand": "b_foodieedeatstheworld",
+      "score": 0
+    },
+    {
+      "handle": "sophie_eats_world",
+      "brand": "b_foodiesophieeatsworld",
+      "score": 0
+    },
+    {
+      "handle": "eatswithglory",
+      "brand": "b_foodieeatswithglory",
+      "score": 0
+    },
+    {
+      "handle": "lifestylebyangiee",
+      "brand": "b_foodielifestylebyangiee",
+      "score": 0
+    },
+    {
+      "handle": "eatswithvinni",
+      "brand": "b_foodieeatswithvinni",
+      "score": 0
+    },
+    {
+      "handle": "baeareafo0die",
+      "brand": "b_foodiebaeareafo0die",
+      "score": 0
+    }
+  ],
+  "sourceMessages": [
+    {
+      "at": "2026-11-09T16:01:21.164381-08:00",
+      "text": "Hey brother, would you be able to enlarge in the icon? I’m trying to make each icon look clean without any overlapping of backgrounds.",
+      "attachments": [
+        "IMG_9933.PNG"
+      ]
+    },
+    {
+      "at": "2026-11-09T16:43:29.051306-08:00",
+      "text": "[Non-catalog conversation; no directory or outreach action.]",
+      "attachments": [],
+      "disposition": "outside catalog scope"
+    },
+    {
+      "at": "2026-11-09T20:21:37.907173-08:00",
+      "text": "https://www.instagram.com/reel/Dfi9V_OTZH4/?srtk=MTMxaHg4dzVoZHdzZg==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:21:38.005679-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:45:06.386035-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9951.png",
+        "IMG_9946.PNG",
+        "IMG_9950.PNG",
+        "IMG_9945.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T20:45:06.840030-08:00",
+      "text": "https://order.toasttab.com/online/ones-cafe-bakery-alameda-1926-park-st-1a?utm_source=ig&utm_medium=social&utm_content=link_in_bio&utm_id=97760_v0_s00_e0_tv3",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:45:06.926197-08:00",
+      "text": "Alameda • Goods \nBEASTY • Cafe",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:46:14.991138-08:00",
+      "text": "https://www.instagram.com/reel/DbBFjWzhpja/?cplk=MW41cDRqZ3Q4Yjg2cg==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:46:15.070068-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:46:54.162461-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9952.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T20:46:54.595479-08:00",
+      "text": "https://www.instagram.com/reel/DbHPuqiPoIm/?xtok=c201aGFlMWhrbWNp",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:46:54.699991-08:00",
+      "text": "Clip this video plz\nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:47:56.851604-08:00",
+      "text": "https://www.instagram.com/reel/DN6yMSWgU_G/?rpxt=MXNidHRjZGZtaXhpOA==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:47:56.930607-08:00",
+      "text": "Clip this video plz \nFor Castro Valley location",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:48:20.281961-08:00",
+      "text": "The other 2 are for the new Alameda Location",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:49:22.008861-08:00",
+      "text": "https://www.instagram.com/reel/DdnQiFSp-IL/?srtk=MXVpNmU4bmxzcmVjbw==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:49:22.099123-08:00",
+      "text": "Clip this video plz \nAlameda",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:50:03.089280-08:00",
+      "text": "https://www.instagram.com/reel/DaMR1f3Jya4/?vrfl=Y3Q3Z2xoMTA5ajYy",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:50:03.211994-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:52:56.774228-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9953.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T20:52:57.295584-08:00",
+      "text": "https://www.instagram.com/reel/DdF3CFGu9Jd/?vrfl=dncyOWdvZ3p0dDVw",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:52:57.400580-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:53:27.906908-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9954.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T20:53:28.397357-08:00",
+      "text": "https://www.instagram.com/reel/DbpUy5Ct2Vi/?obrf=MWI5aW9lM3BhbGNrNQ==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:53:28.510675-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:54:02.763951-08:00",
+      "text": "https://www.instagram.com/reel/DZNtHMKP_4H/?srtk=Z213bWNyYWhia245",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T20:54:02.853396-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:00:03.669575-08:00",
+      "text": "[Non-catalog conversation; no directory or outreach action.]",
+      "attachments": [],
+      "disposition": "outside catalog scope"
+    },
+    {
+      "at": "2026-11-09T21:08:14.563925-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9961.PNG",
+        "IMG_9959.png",
+        "IMG_9960.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T21:08:15.174189-08:00",
+      "text": "https://forkitpasta.com/contact",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:08:15.252941-08:00",
+      "text": "San Mateo • Eats \nBEASTY • Greek \nNew Category",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:08:43.908498-08:00",
+      "text": "https://www.instagram.com/reel/DfjGqJwPDnm/?dlrf=aWs4amZ4c2E4cHpy",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:08:43.988472-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:10:17.504492-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9962.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T21:10:17.906747-08:00",
+      "text": "https://www.instagram.com/reel/DffPiq8BxHu/?cplk=MXF3em13eXA0M2Flcw==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:10:18.009265-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:11:19.041342-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9963.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T21:11:19.526579-08:00",
+      "text": "https://www.instagram.com/reel/DfiJQkAPslq/?vrfl=MWJ2M3RyOHFodWZhNQ==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:11:19.610119-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:11:42.650102-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9964.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T21:11:43.090315-08:00",
+      "text": "https://www.instagram.com/reel/DfiJkqxPVKz/?cplk=M2Z6MjNjNndobnhq",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:11:43.198322-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:11:56.960761-08:00",
+      "text": "https://www.instagram.com/reel/DfdyvXhCgJV/?vrfl=NzY1c2lkcmJiamxk",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:11:57.049674-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:16:05.011030-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9969.png",
+        "IMG_9967.PNG",
+        "IMG_9968.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T21:16:05.561757-08:00",
+      "text": "https://newenglandlobster.net/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:16:05.653930-08:00",
+      "text": "Burlingame • Eats \nBEASTY • Seafood",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:18:10.726400-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9970.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T21:18:11.153370-08:00",
+      "text": "https://www.instagram.com/reel/Da28nlxRG0M/?dlrf=MTk0MWJza2lnMXp5Mg==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:18:11.269115-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:18:36.700063-08:00",
+      "text": "https://www.instagram.com/reel/DZh5eG-KDtJ/?psln=MXZuNXlhdWJrMWZ5OA==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:18:36.781099-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:19:56.152056-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9971.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T21:19:56.561071-08:00",
+      "text": "https://www.instagram.com/reel/DTqL0Cljd4F/?cplk=MTFhaXpybWg4NDZkMw==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:19:56.689342-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:20:34.542686-08:00",
+      "text": "https://www.instagram.com/reel/DQ-CZNRERx0/?psln=MXFpbzhvbTVjc3VxZA==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:20:34.622186-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:22:00.790982-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9972.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T21:22:01.403908-08:00",
+      "text": "https://www.instagram.com/reel/DQ-CZNRERx0/?psln=MXFpbzhvbTVjc3VxZA==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:22:01.500853-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:22:35.017687-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9973.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T21:22:35.526235-08:00",
+      "text": "https://www.instagram.com/reel/DPt4qsJDz6o/?xtok=MXZrNTZ2ZWtneGJleg==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:22:35.619415-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:23:38.479810-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9974.png"
+      ]
+    },
+    {
+      "at": "2026-11-09T21:23:39.041721-08:00",
+      "text": "https://www.instagram.com/reel/DL5aeKuPXb7/?mdxt=ejRxYXhreGQzMXd4",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:23:39.138609-08:00",
+      "text": "Clip this video plz\nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:23:49.108351-08:00",
+      "text": "https://www.instagram.com/reel/DKVo8ELToeo/?dlrf=MWlrcmpkNHJ5dXE3bg==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:23:49.194411-08:00",
+      "text": "Clip this video plz \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-09T21:23:59.325502-08:00",
+      "text": "Put his on the top\nOf the list plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T04:49:06.705823-08:00",
+      "text": "https://www.instagram.com/reel/DfiPeP7P_el/?exln=bHpybmdrYzBrbDRx",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T04:49:06.790689-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T04:51:48.900504-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_9976.PNG"
+      ]
+    },
+    {
+      "at": "2026-11-10T04:51:49.264954-08:00",
+      "text": "https://www.instagram.com/biteswithnatalia?psln=MTA0aDJ0dHlrdGJtdw==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T04:57:44.629726-08:00",
+      "text": "Berkeley • Sweets \nBEASTY • Ice Cream",
+      "attachments": [
+        "IMG_9978.png",
+        "IMG_9979.png"
+      ]
+    },
+    {
+      "at": "2026-11-10T04:59:59.056316-08:00",
+      "text": "https://www.instagram.com/reel/DeiKXQjKsOG/?psln=bTY2bHR4bmdlaDdt",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T04:59:59.146327-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:00:46.981416-08:00",
+      "text": "https://www.instagram.com/reel/DeFXxJmyKon/?psln=MXc0aDN5YW45Mml2cw==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:00:47.071292-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:01:25.146461-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9980.png"
+      ]
+    },
+    {
+      "at": "2026-11-10T05:01:25.496370-08:00",
+      "text": "https://www.instagram.com/reel/DbUINJ3ooPA/?dlrf=NHZsMTkzZnhzc2E2",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:01:25.611838-08:00",
+      "text": "Clip this video plz \nFasho \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:02:03.054798-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9981.png"
+      ]
+    },
+    {
+      "at": "2026-11-10T05:02:03.479862-08:00",
+      "text": "https://www.instagram.com/reel/DcUjFT1vSqU/?srtk=MTA2NjhmcDdlMGRvcA==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:02:03.581360-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:07:49.580556-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9982.PNG"
+      ]
+    },
+    {
+      "at": "2026-11-10T05:07:50.453650-08:00",
+      "text": "https://www.instagram.com/reel/CDfTEtRJTjy/?vrfl=d25tbWNkbjVoM3Qz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:07:50.538593-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter Heavy Hitter \n1/2 million",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:20:18.729065-08:00",
+      "text": "Hayward • Eats \nBEASTY • AYCE \nBEASTY Sushi",
+      "attachments": [
+        "IMG_9985.png",
+        "IMG_9984.png"
+      ]
+    },
+    {
+      "at": "2026-11-10T05:22:14.340896-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9986.png"
+      ]
+    },
+    {
+      "at": "2026-11-10T05:22:14.990840-08:00",
+      "text": "https://www.instagram.com/reel/DKLSD9myqri/?cplk=MTl6Z3h3aWdud3EzZw==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:22:15.129034-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:22:23.636990-08:00",
+      "text": "https://www.instagram.com/reel/DdfCvmqyCdn/?cplk=b3VvZG8wcnQxdzRh",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:22:23.785083-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:23:26.598946-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9987.png"
+      ]
+    },
+    {
+      "at": "2026-11-10T05:23:27.166337-08:00",
+      "text": "https://www.instagram.com/reel/DfitSXWIGrD/?xtok=MWdhZGFmNmhneTVldQ==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:23:27.287027-08:00",
+      "text": "Clip this video plz \nFoodie\nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:24:14.141664-08:00",
+      "text": "https://www.instagram.com/reel/De8RVmKoiOt/?obrf=MTBxNmp3bDg0ZWpqcQ==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:24:14.236323-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:32:06.486255-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_9993.PNG",
+        "IMG_9991.PNG",
+        "IMG_9994.png",
+        "IMG_9989.PNG"
+      ]
+    },
+    {
+      "at": "2026-11-10T05:32:08.201392-08:00",
+      "text": "https://shabuclubsf.com/",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:32:08.300917-08:00",
+      "text": "San Francisco • Eats \nBurlingame  • Eats \nBEASTY • Hot Pot",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:42:57.005329-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_9995.jpeg"
+      ]
+    },
+    {
+      "at": "2026-11-10T05:59:31.148757-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0003.PNG",
+        "IMG_9999.PNG",
+        "IMG_9998.png"
+      ]
+    },
+    {
+      "at": "2026-11-10T05:59:31.566632-08:00",
+      "text": "https://linktr.ee/mikiyabayarea",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T05:59:31.707457-08:00",
+      "text": "Santa Clara  • Eats \nBEASTY • Hot Pot",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:00:59.296725-08:00",
+      "text": "https://www.instagram.com/reel/DexG1tevsCE/?dlrf=MTZmYTduaGV3M2RrNg==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:00:59.396693-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:02:44.600199-08:00",
+      "text": "https://www.instagram.com/reel/DNwcoap5Mye/?obrf=MXVwbGc1MDBka2hqZw==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:02:44.699770-08:00",
+      "text": "Clones",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:04:12.046143-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0005.png"
+      ]
+    },
+    {
+      "at": "2026-11-10T06:04:12.469832-08:00",
+      "text": "https://www.instagram.com/reel/DYM4sl1ROTc/?xtok=d29yY2ZxaHRvYWR1",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:04:12.612967-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:04:58.365323-08:00",
+      "text": "https://www.instagram.com/reel/DcnJ8qsxdkC/?dlrf=a2FhNmZwcWdzMzIy",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:04:58.462933-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:05:55.194104-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0006.png"
+      ]
+    },
+    {
+      "at": "2026-11-10T06:05:55.618885-08:00",
+      "text": "https://www.instagram.com/reel/DfixQS5TNfP/?cplk=MWZpMnVuMXI0Z2V3NQ==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:05:55.717915-08:00",
+      "text": "Clip this video plz \nFoodie \nMediocre",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:06:52.255888-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0007.png"
+      ]
+    },
+    {
+      "at": "2026-11-10T06:06:52.646979-08:00",
+      "text": "https://www.instagram.com/reel/DfbKexVuC5q/?vrfl=a2YweHZ1bnkyZHdv",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:06:52.758059-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter Heavy Hitter",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:07:34.987003-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0008.PNG"
+      ]
+    },
+    {
+      "at": "2026-11-10T06:07:35.387989-08:00",
+      "text": "https://www.instagram.com/reel/DbmbVZLiDpM/?cplk=MXZwOGoxcjdob2huZQ==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T06:07:35.488034-08:00",
+      "text": "Clip this video plz \nPlease update icon pic",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T07:34:00.526734-08:00",
+      "text": "https://www.instagram.com/reel/DfkLe46OqJe/?obrf=MTFwdzl4NmNuZmUybw==",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T07:34:00.604612-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T07:35:34.689543-08:00",
+      "text": "https://www.instagram.com/reel/DecrNOsS2fO/?mdxt=bjJwYnJ3ejV1dDFs",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T07:35:34.793632-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "at": "2026-11-10T08:40:18.240580-08:00",
+      "text": "https://www.instagram.com/reel/DfjON_XozUT/?vrfl=MWpzbHZ2MXZud2M0Yg==",
+      "attachments": []
+    }
+  ],
+  "sourceNotes": [
+    "127 sends and 44 image attachments after Batch111. Two non-catalog messages are recorded with their private conversation text omitted; no outreach or financial action was taken.",
+    "40 distinct source films; DQ-CZNRERx0 was sent twice. Both requests remain on one deduplicated film.",
+    "One House Bakery icon artwork enlarged within its original square without moving its seat; Backyard is the Richmond business, not Backyard Bayou.",
+    "Existing Hot Pot category retained and appended; Greek is the one new category. Both Shabu Club branches have city pages. Mikiya San Mateo is a separate page because the owner Linktree lists it and two submitted films name that branch.",
+    "Ones Alameda has its own current 90-row Toast menu and phone; the Castro Valley page retains its earlier menu/address and gets the explicitly requested Castro film. Henny caption footer conflicts with its Alameda opening text; Glenn explicitly identifies the first two as Alameda.",
+    "Popbar local page has eight pictured/named products but no current prices. National 103-flavor catalog is New York availability, not a Berkeley menu. Local Instagram hours conflict with official store-page hours; neither is asserted alone. Review prices and promotions are not current menu prices.",
+    "Shabu Club official linked menu leaves price spaces blank; 48 unpriced food/set/add-on entries per page display Ask for price and cannot order. Both location pages link the same Burlingame-titled August2026 menu.",
+    "Hinata supplied local profile verifies address and hours; current owner menu/prices not recovered. Former hinatasushikitchen.org unavailable; no menu or prices copied from unrelated Hinata SF or third-party aggregators. Local phone from Downtown Hayward association corroboration.",
+    "Mikiya standard menu linked on both canonical owner location pages has three tiers55/78/98 regular and48/68/88 member. Two priced variants per tier and complete set contents/terms preserved. Older four-tier images and dated October owner lunch promotion not substituted for this menu.",
+    "Home recipes by Mike and Emari use New England Lobster ingredients; not on-site reviews or restaurant menu dishes. Mike is first only in this business review list. Foodies first24 unchanged.",
+    "Popbar Hugh film is Anaheim2020; Nataly Mikiya film is Cerritos. Both play on creators/Watch with explicit other-branch attribution. Four-film per business cap preserved via creator links.",
+    "Fasho/Newbie and Clones are retained as literal submitted text without inventing extra instructions. Carla current @carlacharisse_ posts use her existing stable @carlaylayyy page.",
+    "Full priced restaurant menus: Ones90rows; Fork30rows plus paid option panel; Lobster93priced food/nonalcoholic rows. Unpriced standalone coleslaw held in information panel; market/catering/merchandise and alcohol outside restaurant menu scope. Fork site’s CashApp transfer is not exposed as online ordering.",
+    "Late pre-release refetch includes Chance’s Fork It review shared at08:40:18.240580. No follow-up message at this snapshot; included under the standing publish scope, on the existing creator page and Watch because Fork It already has four inline films."
+  ],
+  "researchSources": [
+    {
+      "slug": "ones-cafe-alameda",
+      "checkedAt": "2026-11-10",
+      "urls": [
+        "https://order.toasttab.com/online/ones-cafe-bakery-alameda-1926-park-st-1a"
+      ]
+    },
+    {
+      "slug": "fork-it-pasta",
+      "checkedAt": "2026-11-10",
+      "urls": [
+        "https://forkitpasta.com/contact",
+        "https://forkitpasta.com/menu",
+        "https://img1.wsimg.com/blobby/go/79ca93f4-a91f-4bf1-8dbe-04df2f2d52c9/Menu_Draft_7.pdf"
+      ]
+    },
+    {
+      "slug": "new-england-lobster",
+      "checkedAt": "2026-11-10",
+      "urls": [
+        "https://newenglandlobster.net/",
+        "https://newenglandlobster.net/eatery/",
+        "https://order.toasttab.com/online/new-england-lobster-market-eatery"
+      ]
+    },
+    {
+      "slug": "popbar-berkeley",
+      "checkedAt": "2026-11-10",
+      "urls": [
+        "https://www.pop-bar.com/pages/location-berkeley-ca",
+        "https://www.instagram.com/popbarbayarea/",
+        "https://www.pop-bar.com/pages/gelato-and-sorbetto-flavors"
+      ]
+    },
+    {
+      "slug": "hinata-sushi-kitchen",
+      "checkedAt": "2026-11-10",
+      "urls": [
+        "https://www.instagram.com/hinatasushihayward/",
+        "https://downtownhayward.com/go/hinata-sushi-kitchen",
+        "https://hinatasushikitchen.org/"
+      ]
+    },
+    {
+      "slug": "shabu-club-san-francisco",
+      "checkedAt": "2026-11-10",
+      "urls": [
+        "https://shabuclubsf.com/"
+      ]
+    },
+    {
+      "slug": "shabu-club-burlingame",
+      "checkedAt": "2026-11-10",
+      "urls": [
+        "https://shabuclubsf.com/"
+      ]
+    },
+    {
+      "slug": "mikiya-santa-clara",
+      "checkedAt": "2026-11-10",
+      "urls": [
+        "https://linktr.ee/mikiyabayarea",
+        "https://mikiyashabu.com/project/santa-clara-ca/"
+      ]
+    },
+    {
+      "slug": "mikiya-san-mateo",
+      "checkedAt": "2026-11-10",
+      "urls": [
+        "https://linktr.ee/mikiyabayarea",
+        "https://mikiyashabu.com/project/san-mateo-ca/"
+      ]
+    }
+  ]
+}

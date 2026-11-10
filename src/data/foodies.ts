@@ -432,11 +432,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "icon": "foodie-courtneylyneaa-v107"
   },
   {
-    "handle": "hungere.for.diy",
-    "icon": "foodie-hungere-for-diy-v85",
-    "name": "Hunger E for DIY",
-    "label": "Hunger E"
-  },
+  "handle": "hungere.for.diy",
+  "icon": "foodie-hungerefordiy-v112",
+  "name": "Hunger E for DIY",
+  "label": "Hunger E"
+},
   {
     "handle": "justmostie",
     "icon": "foodie-justmostie-v85",
@@ -937,10 +937,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "venturewithkelly"
   },
   {
-    "handle": "cookwithhenny",
-    "name": "@cookwithhenny",
-    "label": "cookwithhenny"
-  },
+  "handle": "cookwithhenny",
+  "name": "@cookwithhenny",
+  "label": "cookwithhenny",
+  "icon": "foodie-cookwithhenny-v112"
+},
   {
     "handle": "_aemeriee.dance",
     "name": "@_aemeriee.dance",
@@ -1100,10 +1101,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "zoegabon"
   },
   {
-    "handle": "martiwantsmore",
-    "name": "@martiwantsmore",
-    "label": "martiwantsmore"
-  },
+  "handle": "martiwantsmore",
+  "name": "@martiwantsmore",
+  "label": "martiwantsmore",
+  "icon": "foodie-martiwantsmore-v112"
+},
   {
     "handle": "byhillaryn",
     "name": "@byhillaryn",
@@ -1516,11 +1518,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "icon": "foodie-irenedony-v97"
   },
   {
-    "handle": "biteswithnatalia",
-    "name": "@biteswithnatalia",
-    "label": "biteswithnatalia",
-    "icon": "foodie-biteswithnatalia-v97"
-  },
+  "handle": "biteswithnatalia",
+  "name": "@biteswithnatalia",
+  "label": "biteswithnatalia",
+  "icon": "foodie-biteswithnatalia-v112"
+},
   {
     "handle": "laurenlovessfood",
     "name": "@laurenlovessfood",
@@ -1546,11 +1548,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "icon": "foodie-deazylee-v98"
   },
   {
-    "handle": "edmunchthefoodie",
-    "name": "@edmunchthefoodie",
-    "label": "edmunchthefoodie",
-    "icon": "foodie-edmunchthefoodie-v98"
-  },
+  "handle": "edmunchthefoodie",
+  "name": "@edmunchthefoodie",
+  "label": "edmunchthefoodie",
+  "icon": "foodie-edmunchthefoodie-v112"
+},
   {
     "handle": "lynniethefoodie",
     "name": "@lynniethefoodie",
@@ -1793,7 +1795,105 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "icon": "foodie-rose-buds-v111"
   },
   // Glenn, November 9, 10:55 a.m.: Foodie / Newbie.
-  {"handle": "amandabushman", "name": "amanda", "label": "amanda", "icon": "foodie-amandabushman-v111"}
+  {"handle": "amandabushman", "name": "amanda", "label": "amanda", "icon": "foodie-amandabushman-v111"},
+  // Batch 112 — supplied creator profiles; editorial tags stay in research.
+{
+  "handle": "limitlessfood",
+  "name": "Kristina",
+  "label": "Kristina",
+  "icon": "foodie-limitlessfood-v112"
+},
+{
+  "handle": "bayarealumpia",
+  "name": "Jamie",
+  "label": "Jamie",
+  "icon": "foodie-bayarealumpia-v112"
+},
+{
+  "handle": "yaymeegoround",
+  "name": "Jaimee",
+  "label": "Jaimee",
+  "icon": "foodie-yaymeegoround-v112"
+},
+{
+  "handle": "foodieclubsf",
+  "name": "Carol",
+  "label": "Carol",
+  "icon": "foodie-foodieclubsf-v112"
+},
+{
+  "handle": "nomwithelaine",
+  "name": "Elaine",
+  "label": "Elaine",
+  "icon": "foodie-nomwithelaine-v112"
+},
+{
+  "handle": "chefemaristevens",
+  "name": "Emari Stevens",
+  "label": "Emari Stevens",
+  "icon": "foodie-chefemaristevens-v112",
+  "cuisine": "Chef and food creator"
+},
+{
+  "handle": "forkandscore",
+  "name": "Fork & Score",
+  "label": "Fork & Score",
+  "icon": "foodie-forkandscore-v112"
+},
+{
+  "handle": "edeatstheworld",
+  "name": "Ed Eats the World",
+  "label": "Ed Eats the World",
+  "icon": "foodie-edeatstheworld-v112"
+},
+{
+  "handle": "sophie_eats_world",
+  "name": "Sophie",
+  "label": "Sophie",
+  "icon": "foodie-sophieeatsworld-v112"
+},
+{
+  "handle": "eatswithglory",
+  "name": "glory",
+  "label": "glory",
+  "icon": "foodie-eatswithglory-v112"
+},
+{
+  "handle": "lifestylebyangiee",
+  "name": "Angelina Chen",
+  "label": "Angelina Chen",
+  "icon": "foodie-lifestylebyangiee-v112"
+},
+{
+  "handle": "hungryhugh",
+  "name": "Hugh Harper",
+  "label": "Hugh Harper",
+  "icon": "foodie-hungryhugh-v112"
+},
+{
+  "handle": "realphdfoodie",
+  "name": "Angela",
+  "label": "Angela",
+  "icon": "foodie-realphdfoodie-v112"
+},
+{
+  "handle": "eatswithvinni",
+  "name": "Vinni",
+  "label": "Vinni",
+  "icon": "foodie-eatswithvinni-v112"
+},
+{
+  "handle": "baeareafo0die",
+  "name": "Bay Area Foodie",
+  "label": "Bay Area Foodie",
+  "icon": "foodie-baeareafo0die-v112"
+},
+{
+  "handle": "latin_mami_",
+  "name": "Nataly Alferez",
+  "label": "Nataly Alferez",
+  "icon": "foodie-latinmami-v112"
+},
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -2466,6 +2566,45 @@ export const OTHER_REVIEWS: OtherReview[] = [
   // Batch 111, late-morning continuation.
   {"by": "yourglobalfoodiebff", "place": "Bibim Grill", "city": "Dublin", "brand": "b_bibimgrill", "reel": "https://www.instagram.com/reel/DfWBEPoRC4F/", "clip": "creator", "credit": "Review by @yourglobalfoodiebff at Bibim Grill, 3742 Fallon Rd, Dublin. A creator review requested as Watch; it is not an owner film."},
   {"by": "amandabushman", "place": "Meadowlark Dairy", "city": "Pleasanton", "brand": "b_meadowlarkdairy", "reel": "https://www.instagram.com/reel/Dc1INSaMC1m/", "clip": true, "credit": "Review by @amandabushman at Meadowlark Dairy. The footage names Meadowlark Dairy and shows its Railroad Avenue storefront in Pleasanton."},
+
+  // Batch 112 — branch-specific reviews, recipes, and explicit other-branch credits.
+  {"by": "grubwitmike", "place": "Surf-and-turf recipe — New England Lobster ingredients", "city": "Burlingame", "brand": "b_newenglandlobster", "reel": "https://www.instagram.com/reel/DKVo8ELToeo/", "clip": true, "credit": "Home recipe by @grubwitmike using New England Lobster claw meat and rib-eye from The Butcher Shop by Niku. Home-cooked surf-and-turf sandwich, not a restaurant menu dish."},
+  {"by": "justmostie", "place": "Brunch & Bloom", "city": "Brentwood", "brand": "b_brunchandbloom", "reel": "https://www.instagram.com/reel/Dfi9V_OTZH4/", "clip": "creator", "credit": "Review by @justmostie at Brunch & Bloom, Brentwood."},
+  {"by": "hungere.for.diy", "place": "Ones Cafe & Bakery", "city": "Alameda", "brand": "b_onescafealameda", "reel": "https://www.instagram.com/reel/DbBFjWzhpja/", "clip": true, "credit": "Review / coverage by @hungere.for.diy. Visit to ones cafe alameda."},
+  {"by": "cookwithhenny", "place": "Ones Cafe & Bakery", "city": "Alameda", "brand": "b_onescafealameda", "reel": "https://www.instagram.com/reel/DbHPuqiPoIm/", "clip": true, "credit": "Review / coverage by @cookwithhenny. Alameda visit, as identified in the caption opening and the submitted branch clarification. The caption footer instead names Castro Valley. Hosted visit disclosed by the creator."},
+  {"by": "grubwitmike", "place": "Ones Cafe & Bakery", "city": "Castro Valley", "brand": "b_onescafebakery", "reel": "https://www.instagram.com/reel/DN6yMSWgU_G/", "clip": true, "credit": "Review / coverage by @grubwitmike. Castro Valley visit at 3483 Castro Valley Blvd; kept separate from the new Alameda location."},
+  {"by": "bayarea.foodie.adventures", "place": "Ones Cafe & Bakery", "city": "Alameda", "brand": "b_onescafealameda", "reel": "https://www.instagram.com/reel/DdnQiFSp-IL/", "clip": true, "credit": "Review / coverage by @bayarea.foodie.adventures. Alameda visit. The dated buy-five-get-one promotion is not a current offer."},
+  {"by": "thealamedapulse", "place": "Ones Cafe & Bakery", "city": "Alameda", "brand": "b_onescafealameda", "reel": "https://www.instagram.com/reel/DaMR1f3Jya4/", "clip": true, "credit": "Review / coverage by @thealamedapulse. Community coverage of the Alameda opening, posted June 30, 2026. Archival opening announcement, not an upcoming event."},
+  {"by": "limitlessfood", "place": "Stan’s Donut Shop", "city": "Santa Clara", "brand": "b_stansdonutshop", "reel": "https://www.instagram.com/reel/DdF3CFGu9Jd/", "clip": true, "credit": "Review / coverage by @limitlessfood. Visit to stans donut shop."},
+  {"by": "bayarealumpia", "place": "Stan’s Donut Shop", "city": "Santa Clara", "brand": "b_stansdonutshop", "reel": "https://www.instagram.com/reel/DbpUy5Ct2Vi/", "clip": true, "credit": "Review / coverage by @bayarealumpia. The film shows Stan’s Donut Shop signage in Santa Clara."},
+  {"by": "eighty6ix_", "place": "Stan’s Donut Shop", "city": "Santa Clara", "brand": "b_stansdonutshop", "reel": "https://www.instagram.com/reel/DZNtHMKP_4H/", "clip": true, "credit": "Review / coverage by @eighty6ix_. Stan’s Donut Shop visit in National Donut Day coverage from June 5, 2026. Other chains’ dated offers are not current Stan’s offers."},
+  {"by": "iamnikkieg", "place": "Fork It Pasta To Go", "city": "San Mateo", "brand": "b_forkitpasta", "reel": "https://www.instagram.com/reel/DfjGqJwPDnm/", "clip": true, "credit": "Review / coverage by @iamnikkieg. Visit to fork it pasta."},
+  {"by": "yaymeegoround", "place": "Fork It Pasta To Go", "city": "San Mateo", "brand": "b_forkitpasta", "reel": "https://www.instagram.com/reel/DffPiq8BxHu/", "clip": true, "credit": "Review / coverage by @yaymeegoround. Visit to fork it pasta."},
+  {"by": "foodieclubsf", "place": "Fork It Pasta To Go", "city": "San Mateo", "brand": "b_forkitpasta", "reel": "https://www.instagram.com/reel/DfiJQkAPslq/", "clip": true, "credit": "Review / coverage by @foodieclubsf. Visit to fork it pasta."},
+  {"by": "nomwithelaine", "place": "Fork It Pasta To Go", "city": "San Mateo", "brand": "b_forkitpasta", "reel": "https://www.instagram.com/reel/DfiJkqxPVKz/", "clip": "creator", "credit": "Review / coverage by @nomwithelaine. Visit to fork it pasta."},
+  {"by": "chefemaristevens", "place": "Crab-roll recipe — New England Lobster ingredients", "city": "Burlingame", "brand": "b_newenglandlobster", "reel": "https://www.instagram.com/reel/Da28nlxRG0M/", "clip": "creator", "credit": "Review / coverage by @chefemaristevens. Home recipe for a hot-honey butter crab roll using New England Lobster seafood. This is supplier context, not a restaurant menu dish or on-site visit."},
+  {"by": "forkandscore", "place": "New England Lobster Market & Eatery", "city": "Burlingame", "brand": "b_newenglandlobster", "reel": "https://www.instagram.com/reel/DTqL0Cljd4F/", "clip": true, "credit": "Review / coverage by @forkandscore. Visit to new england lobster."},
+  {"by": "hungere.for.diy", "place": "New England Lobster Market & Eatery", "city": "Burlingame", "brand": "b_newenglandlobster", "reel": "https://www.instagram.com/reel/DQ-CZNRERx0/", "clip": true, "credit": "Review by @hungere.for.diy at New England Lobster in Burlingame. The creator thanks the business for the meal."},
+  {"by": "edeatstheworld", "place": "New England Lobster Market & Eatery", "city": "Burlingame", "brand": "b_newenglandlobster", "reel": "https://www.instagram.com/reel/DPt4qsJDz6o/", "clip": "creator", "credit": "Review / coverage by @edeatstheworld. Visit to new england lobster."},
+  {"by": "sophie_eats_world", "place": "New England Lobster Market & Eatery", "city": "Burlingame", "brand": "b_newenglandlobster", "reel": "https://www.instagram.com/reel/DL5aeKuPXb7/", "clip": "creator", "credit": "Review / coverage by @sophie_eats_world. Visit to new england lobster."},
+  {"by": "biteswithnatalia", "place": "East Bay Buffet", "city": "Dublin", "brand": "b_eastbaybuffet", "reel": "https://www.instagram.com/reel/DfiPeP7P_el/", "clip": true, "credit": "Review / coverage by @biteswithnatalia. Visit to east bay buffet."},
+  {"by": "phoebe8food", "place": "Popbar", "city": "Berkeley", "brand": "b_popbarberkeley", "reel": "https://www.instagram.com/reel/DeFXxJmyKon/", "clip": true, "credit": "Review / coverage by @phoebe8food. Visit to popbar berkeley."},
+  {"by": "eatswithglory", "place": "Popbar", "city": "Berkeley", "brand": "b_popbarberkeley", "reel": "https://www.instagram.com/reel/DbUINJ3ooPA/", "clip": true, "credit": "Review / coverage by @eatswithglory. Visit to popbar berkeley."},
+  {"by": "lifestylebyangiee", "place": "Popbar", "city": "Berkeley", "brand": "b_popbarberkeley", "reel": "https://www.instagram.com/reel/DcUjFT1vSqU/", "clip": true, "credit": "Review / coverage by @lifestylebyangiee. Berkeley visit. The dated back-to-school Snackpass promotion is not presented as current."},
+  {"by": "hungryhugh", "place": "Popbar — Anaheim Packing District", "city": "Anaheim", "brand": "b_popbarberkeley", "reel": "https://www.instagram.com/reel/CDfTEtRJTjy/", "clip": "creator", "credit": "Review / coverage by @hungryhugh. Popbar at Anaheim Packing District, posted August 5, 2020. Archival footage of another branch, not the Berkeley shop."},
+  {"by": "realphdfoodie", "place": "Hinata Sushi Kitchen", "city": "Hayward", "brand": "b_hinatasushikitchen", "reel": "https://www.instagram.com/reel/DKLSD9myqri/", "clip": true, "credit": "Review / coverage by @realphdfoodie. Hayward visit posted May 27, 2025. The price quoted in the film is historical, not a current restaurant price."},
+  {"by": "agnespittioni", "place": "Hinata Sushi Kitchen", "city": "Hayward", "brand": "b_hinatasushikitchen", "reel": "https://www.instagram.com/reel/DdfCvmqyCdn/", "clip": true, "credit": "Review / coverage by @agnespittioni. Visit to hinata sushi kitchen."},
+  {"by": "eatswithvinni", "place": "Hinata Sushi Kitchen", "city": "Hayward", "brand": "b_hinatasushikitchen", "reel": "https://www.instagram.com/reel/DfitSXWIGrD/", "clip": true, "credit": "Review / coverage by @eatswithvinni. Visit to hinata sushi kitchen."},
+  {"by": "yourglobalfoodiebff", "place": "Mikiya Wagyu Shabu House", "city": "San Mateo", "brand": "b_mikiyasanmateo", "reel": "https://www.instagram.com/reel/DNwcoap5Mye/", "clip": true, "credit": "Review by @yourglobalfoodiebff at Mikiya, 68 Hillsdale Shopping Center, San Mateo."},
+  {"by": "baeareafo0die", "place": "Mikiya Wagyu Shabu House", "city": "Santa Clara", "brand": "b_mikiyasantaclara", "reel": "https://www.instagram.com/reel/DYM4sl1ROTc/", "clip": true, "credit": "Review / coverage by @baeareafo0die. Santa Clara visit; invitation disclosed by the creator. Dated tier promotions are not current prices."},
+  {"by": "chaudownfood", "place": "Mikiya Wagyu Shabu House", "city": "Santa Clara", "brand": "b_mikiyasantaclara", "reel": "https://www.instagram.com/reel/DcnJ8qsxdkC/", "clip": true, "credit": "Review / coverage by @chaudownfood. Mikiya chain review; invited visit disclosed. Its caption lists several locations without identifying the filming branch; linked to Santa Clara without claiming it was filmed there."},
+  {"by": "martiwantsmore", "place": "Mikiya Wagyu Shabu House", "city": "San Mateo", "brand": "b_mikiyasanmateo", "reel": "https://www.instagram.com/reel/DfixQS5TNfP/", "clip": true, "credit": "Review / coverage by @martiwantsmore. Mikiya San Mateo visit at 68 Hillsdale Shopping Center."},
+  {"by": "latin_mami_", "place": "Mikiya — Cerritos", "city": "Cerritos", "brand": "b_mikiyasantaclara", "reel": "https://www.instagram.com/reel/DfbKexVuC5q/", "clip": "creator", "credit": "Review / coverage by @latin_mami_. Mikiya Cerritos visit. Linked as another-branch chain coverage, not footage of Santa Clara."},
+  {"by": "edmunchthefoodie", "place": "Mikiya Wagyu Shabu House", "city": "Santa Clara", "brand": "b_mikiyasantaclara", "reel": "https://www.instagram.com/reel/DbmbVZLiDpM/", "clip": true, "credit": "Review / coverage by @edmunchthefoodie. Mikiya Bay Area review. The caption lists both Santa Clara and San Mateo without identifying the filming branch."},
+  {"by": "carlaylayyy", "place": "My O My", "city": "Berkeley", "brand": "b_myomyberkeley", "reel": "https://www.instagram.com/reel/DfkLe46OqJe/", "clip": true, "credit": "Review / coverage by @carlacharisse_. My O My, Berkeley. Posted by @carlacharisse_; credited to Carla’s existing @carlaylayyy page."},
+  {"by": "habibimocha", "place": "My O My", "city": "Berkeley", "brand": "b_myomyberkeley", "reel": "https://www.instagram.com/reel/DecrNOsS2fO/", "clip": true, "credit": "Review / coverage by @habibimocha. My O My, Berkeley. The bring-your-own-bag promotion is dated and not a current menu promise."},
+  // Batch112 late pre-release share, November10 08:40 Pacific.
+  {"by": "_whatarethechances_", "place": "Fork It Pasta To Go", "city": "San Mateo", "brand": "b_forkitpasta", "reel": "https://www.instagram.com/reel/DfjON_XozUT/", "clip": "creator", "credit": "Review by @_whatarethechances_ at Fork It Pasta To Go, San Mateo. The November 11, 2026 grand-opening announcement is dated, not an ongoing offer."},
 
 ]
 

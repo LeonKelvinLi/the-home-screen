@@ -692,3 +692,35 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-iamnikkieg-v111.webp` | Glenn’s supplied IMG_9907.PNG, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
 | `foodie-rose-buds-v111.webp` | Glenn’s supplied IMG_9908.png, November 8–9, 2026 | Original supplied artwork, cropped and fitted without phone controls. |
 | `foodie-amandabushman-v111.webp` | Glenn’s supplied IMG_9912.png, November 9, 2026 | Original portrait, cropped and fitted without phone controls. |
+
+<!-- Batch112: original supplied artwork; square fits preserve marks and portrait circles. -->
+| `foodie-cookwithhenny-v112.webp` | Glenn’s supplied creator profile | `IMG_9952.png` | Whole original profile circle, phone controls removed. |
+| `foodie-limitlessfood-v112.webp` | Glenn’s supplied creator profile | `IMG_9953.png` | Whole original profile circle, phone controls removed. |
+| `foodie-bayarealumpia-v112.webp` | Glenn’s supplied creator profile | `IMG_9954.png` | Whole original profile circle, phone controls removed. |
+| `foodie-yaymeegoround-v112.webp` | Glenn’s supplied creator profile | `IMG_9962.png` | Whole original profile circle, phone controls removed. |
+| `foodie-foodieclubsf-v112.webp` | Glenn’s supplied creator profile | `IMG_9963.png` | Whole original profile circle, phone controls removed. |
+| `foodie-nomwithelaine-v112.webp` | Glenn’s supplied creator profile | `IMG_9964.png` | Whole original profile circle, phone controls removed. |
+| `foodie-chefemaristevens-v112.webp` | Glenn’s supplied creator profile | `IMG_9970.png` | Whole original profile circle, phone controls removed. |
+| `foodie-forkandscore-v112.webp` | Glenn’s supplied business artwork | `IMG_9971.png` | Original mark fitted to square; no generated replacement. |
+| `foodie-hungerefordiy-v112.webp` | Glenn’s supplied creator profile | `IMG_9972.png` | Whole original profile circle, phone controls removed. |
+| `foodie-edeatstheworld-v112.webp` | Glenn’s supplied creator profile | `IMG_9973.png` | Whole original profile circle, phone controls removed. |
+| `foodie-sophieeatsworld-v112.webp` | Glenn’s supplied creator profile | `IMG_9974.png` | Whole original profile circle, phone controls removed. |
+| `foodie-biteswithnatalia-v112.webp` | Glenn’s supplied creator profile | `IMG_9976.PNG` | Whole original profile circle, phone controls removed. |
+| `foodie-eatswithglory-v112.webp` | Glenn’s supplied creator profile | `IMG_9980.png` | Whole original profile circle, phone controls removed. |
+| `foodie-lifestylebyangiee-v112.webp` | Glenn’s supplied creator profile | `IMG_9981.png` | Whole original profile circle, phone controls removed. |
+| `foodie-hungryhugh-v112.webp` | Glenn’s supplied creator profile | `IMG_9982.PNG` | Whole original profile circle, phone controls removed. |
+| `foodie-realphdfoodie-v112.webp` | Glenn’s supplied creator profile | `IMG_9986.png` | Whole original profile circle, phone controls removed. |
+| `foodie-eatswithvinni-v112.webp` | Glenn’s supplied creator profile | `IMG_9987.png` | Whole original profile circle, phone controls removed. |
+| `foodie-baeareafo0die-v112.webp` | Glenn’s supplied creator profile | `IMG_0005.png` | Whole original profile circle, phone controls removed. |
+| `foodie-martiwantsmore-v112.webp` | Glenn’s supplied creator profile | `IMG_0006.png` | Whole original profile circle, phone controls removed. |
+| `foodie-latinmami-v112.webp` | Glenn’s supplied creator profile | `IMG_0007.png` | Whole original profile circle, phone controls removed. |
+| `foodie-edmunchthefoodie-v112.webp` | Glenn’s supplied creator profile | `IMG_0008.PNG` | Whole original profile circle, phone controls removed. |
+| `ones-cafe-alameda-v112.webp` | Glenn’s supplied business artwork | `IMG_9950.PNG` | Original mark fitted to square; no generated replacement. |
+| `fork-it-v112.webp` | Glenn’s supplied business artwork | `IMG_9959.png` | Original mark fitted to square; no generated replacement. |
+| `new-england-lobster-v112.webp` | Glenn’s supplied business artwork | `IMG_9968.png` | Original mark fitted to square; no generated replacement. |
+| `popbar-berkeley-v112.webp` | Glenn’s supplied business artwork | `IMG_9978.png` | Original mark fitted to square; no generated replacement. |
+| `hinata-sushi-kitchen-v112.webp` | Glenn’s supplied business artwork | `IMG_9985.png` | Original mark fitted to square; no generated replacement. |
+| `shabu-club-v112.webp` | Glenn’s supplied business artwork | `IMG_9993.PNG` | Original mark fitted to square; no generated replacement. |
+| `mikiya-v112.webp` | Glenn’s supplied business artwork | `IMG_0003.PNG` | Original mark fitted to square; no generated replacement. |
+| `the-richmond-backyard-v112.webp` | Glenn’s supplied business artwork | `IMG_9995.jpeg` | Original mark fitted to square; no generated replacement. |
+| `one-house-bakery-v112.webp` | Glenn’s supplied business artwork | `one-house-bakery-v111.webp` | Original mark fitted to square; no generated replacement. |

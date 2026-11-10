@@ -929,7 +929,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.soltaqueriaberkeley.com/',
   }),
   seed('one-house-bakery', 'One House Bakery', 'One House Bak…', 'Bakery', '#6B4A22', {
-    icon: 'one-house-bakery-v111',
+    icon: 'one-house-bakery-v112',
     logoTemplate: 'monogram', logoInitials: 'OH', logoFace: 'script',
     site: 'https://onehousebakery.com/',
     address: '918 1st St, Benicia',
