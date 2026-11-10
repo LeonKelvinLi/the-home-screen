@@ -6,7 +6,7 @@
       "name": "Ones Cafe & Bakery",
       "label": "Ones Cafe",
       "cuisine": "Cafe, coffee, croissants and pastries",
-      "tagline": "Cafe, coffee, croissants and pastries · Suite 1A",
+      "tagline": "Cafe, coffee, croissants and pastries · Alameda",
       "category": "Coffee",
       "icon": "ones-cafe-alameda-v112",
       "color": "#F6F1E5",
@@ -1440,7 +1440,7 @@
       "name": "Hinata Sushi Kitchen",
       "label": "Hinata Sushi",
       "cuisine": "Japanese AYCE sushi",
-      "tagline": "Japanese AYCE sushi · 2nd Floor",
+      "tagline": "Japanese AYCE sushi · Hayward",
       "category": "AYCE",
       "icon": "hinata-sushi-kitchen-v112",
       "color": "#F6F1E5",
@@ -6126,6 +6126,230 @@
         "https://linktr.ee/mikiyabayarea",
         "https://mikiyashabu.com/project/san-mateo-ca/"
       ]
+    }
+  ],
+  "artworkDispositions": [
+    {
+      "file": "IMG_9933.PNG",
+      "disposition": "reference for requested enlargement",
+      "asset": "/icons/one-house-bakery-v112.webp",
+      "note": "Existing clean original enlarged; screenshot UI was not reused as artwork."
+    },
+    {
+      "file": "IMG_9951.png",
+      "disposition": "duplicate artwork inside Photos UI",
+      "asset": "/icons/ones-cafe-alameda-v112.webp",
+      "note": "Clean IMG_9950.PNG used instead."
+    },
+    {
+      "file": "IMG_9946.PNG",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_9950.PNG",
+      "disposition": "published original crop",
+      "asset": "/icons/ones-cafe-alameda-v112.webp"
+    },
+    {
+      "file": "IMG_9945.png",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_9952.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-cookwithhenny-v112.webp"
+    },
+    {
+      "file": "IMG_9953.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-limitlessfood-v112.webp"
+    },
+    {
+      "file": "IMG_9954.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-bayarealumpia-v112.webp"
+    },
+    {
+      "file": "IMG_9961.PNG",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_9959.png",
+      "disposition": "published original crop",
+      "asset": "/icons/fork-it-v112.webp"
+    },
+    {
+      "file": "IMG_9960.png",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_9962.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-yaymeegoround-v112.webp"
+    },
+    {
+      "file": "IMG_9963.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-foodieclubsf-v112.webp"
+    },
+    {
+      "file": "IMG_9964.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-nomwithelaine-v112.webp"
+    },
+    {
+      "file": "IMG_9969.png",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_9967.PNG",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_9968.png",
+      "disposition": "published original crop",
+      "asset": "/icons/new-england-lobster-v112.webp"
+    },
+    {
+      "file": "IMG_9970.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-chefemaristevens-v112.webp"
+    },
+    {
+      "file": "IMG_9971.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-forkandscore-v112.webp"
+    },
+    {
+      "file": "IMG_9972.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-hungerefordiy-v112.webp"
+    },
+    {
+      "file": "IMG_9973.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-edeatstheworld-v112.webp"
+    },
+    {
+      "file": "IMG_9974.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-sophieeatsworld-v112.webp"
+    },
+    {
+      "file": "IMG_9976.PNG",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-biteswithnatalia-v112.webp"
+    },
+    {
+      "file": "IMG_9978.png",
+      "disposition": "published original crop",
+      "asset": "/icons/popbar-berkeley-v112.webp"
+    },
+    {
+      "file": "IMG_9979.png",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_9980.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-eatswithglory-v112.webp"
+    },
+    {
+      "file": "IMG_9981.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-lifestylebyangiee-v112.webp"
+    },
+    {
+      "file": "IMG_9982.PNG",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-hungryhugh-v112.webp"
+    },
+    {
+      "file": "IMG_9985.png",
+      "disposition": "published original crop",
+      "asset": "/icons/hinata-sushi-kitchen-v112.webp"
+    },
+    {
+      "file": "IMG_9984.png",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_9986.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-realphdfoodie-v112.webp"
+    },
+    {
+      "file": "IMG_9987.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-eatswithvinni-v112.webp"
+    },
+    {
+      "file": "IMG_9993.PNG",
+      "disposition": "published original crop",
+      "asset": "/icons/shabu-club-v112.webp"
+    },
+    {
+      "file": "IMG_9991.PNG",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_9994.png",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_9989.PNG",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_9995.jpeg",
+      "disposition": "published original crop",
+      "asset": "/icons/the-richmond-backyard-v112.webp"
+    },
+    {
+      "file": "IMG_0003.PNG",
+      "disposition": "published original crop",
+      "asset": "/icons/mikiya-v112.webp"
+    },
+    {
+      "file": "IMG_9999.PNG",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_9998.png",
+      "disposition": "reviewed business profile / location reference",
+      "note": "Used to check the associated business facts; phone controls and blurred background not published."
+    },
+    {
+      "file": "IMG_0005.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-baeareafo0die-v112.webp"
+    },
+    {
+      "file": "IMG_0006.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-martiwantsmore-v112.webp"
+    },
+    {
+      "file": "IMG_0007.png",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-latinmami-v112.webp"
+    },
+    {
+      "file": "IMG_0008.PNG",
+      "disposition": "published original crop",
+      "asset": "/icons/foodie-edmunchthefoodie-v112.webp"
     }
   ]
 }
