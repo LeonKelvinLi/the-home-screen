@@ -6050,7 +6050,7 @@
     "Home recipes by Mike and Emari use New England Lobster ingredients; not on-site reviews or restaurant menu dishes. Mike is first only in this business review list. Foodies first24 unchanged.",
     "Popbar Hugh film is Anaheim2020; Nataly Mikiya film is Cerritos. Both play on creators/Watch with explicit other-branch attribution. Four-film per business cap preserved via creator links.",
     "Fasho/Newbie and Clones are retained as literal submitted text without inventing extra instructions. Carla current @carlacharisse_ posts use her existing stable @carlaylayyy page.",
-    "Full priced restaurant menus: Ones90rows; Fork30rows plus paid option panel; Lobster93priced food/nonalcoholic rows. Unpriced standalone coleslaw held in information panel; market/catering/merchandise and alcohol outside restaurant menu scope. Fork site’s CashApp transfer is not exposed as online ordering.",
+    "Full priced restaurant menus: Ones90rows; Fork30rows plus paid option panel; Lobster93priced food/soft-drink rows outside bar categories. Unpriced standalone coleslaw held in information panel; market/catering/merchandise and alcohol outside restaurant menu scope. Fork site’s CashApp transfer is not exposed as online ordering.",
     "Late pre-release refetch includes Chance’s Fork It review shared at08:40:18.240580. No follow-up message at this snapshot; included under the standing publish scope, on the existing creator page and Watch because Fork It already has four inline films."
   ],
   "researchSources": [
@@ -6350,6 +6350,38 @@
       "file": "IMG_0008.PNG",
       "disposition": "published original crop",
       "asset": "/icons/foodie-edmunchthefoodie-v112.webp"
+    }
+  ],
+  "heldFacts": [
+    {
+      "brands": [
+        "b_hinatasushikitchen"
+      ],
+      "facts": [
+        "Current owner menu",
+        "Current meal prices"
+      ],
+      "reason": "Former hinatasushikitchen.org returns NXDOMAIN; no alternate active owner menu verified. Local profile/address/hours/phone and four requested films are published."
+    },
+    {
+      "brands": [
+        "b_popbarberkeley"
+      ],
+      "facts": [
+        "Current local prices",
+        "One definitive hours schedule"
+      ],
+      "reason": "Official Berkeley page has no prices and conflicts with the supplied local Instagram hours. Eight local products and both schedules are published with confirmation requested."
+    },
+    {
+      "brands": [
+        "b_shabuclubsanfrancisco",
+        "b_shabuclubburlingame"
+      ],
+      "facts": [
+        "Current food, set and AYCE prices"
+      ],
+      "reason": "Both official location pages link the same menu with blank price spaces. All 48 food, set, broth and add-on entries are published per page as Ask for price, without ordering buttons."
     }
   ]
 }
