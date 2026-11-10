@@ -1,0 +1,13 @@
+# BSTY Goods website and shared accounts
+
+The Goods tile opens `https://beastypages.com/goods/`. The yellow responsive marketplace is built from `services/goods`, generated from the independent canonical Goods repository. `services/goods/SOURCE.json` identifies its source revision. The normal Render build compiles both websites; it provisions no services.
+
+BEASTY Pages owns the shared member identity. Both code sign-in and Google resolve to a Pages member. Goods authenticates through a first-party authorization code with S256 PKCE and binds the stable Pages member ID. Existing Goods email accounts must explicitly connect from Settings, proving both sessions. Matching emails never merge accounts automatically. Shared names and verified-email snapshots sync on sign-in; Goods keeps its credential email, inventory, username and bio. See [identity implementation](../server/IDENTITY.md).
+
+Google is configured in Glenn's `beasty-accounts-glenn-2026` project (number `640453720085`). The sole Google callback is `https://beastypages.com/api/identity/google/callback`; the first-party Goods callback is `/goods/api/auth/callback/beastypages`. Only OpenID basic profile/email scopes are requested. No Google API beyond sign-in is needed. Server credentials belong in Render environment settings, never source or browser bundles.
+
+Goods shares the existing Render web service, PostgreSQL server and persistent disk. Its PostgreSQL pool uses the isolated `bsty_goods` schema; photos live in `/var/data/goods/photos`. Its HttpOnly authentication cookie is scoped to `/goods`. The existing verified sender handles legacy Goods verification/reset emails. Separate purpose-derived secrets use `PASS_SECRET` unless explicitly overridden. `GOODS_ADMIN_EMAILS` bootstraps the operator role by verified sign-in email when creating a Goods profile.
+
+Local evidence: 34 Goods API integration tests, 8 desktop/mobile browser tests and `node tools/audit-goods-host.mjs` (27 actual-host checks). All use isolated synthetic accounts and no real delivery, payments or marketplace exchanges. The actual-host audit verifies existing OTP to SSO, schema/cookie isolation, private uploads and a full host restart. Real Google callback and live deployment proof must be recorded separately.
+
+Goods support and policy ownership, database/photo backups and restore rehearsal remain operator responsibilities. No shipping, payments, escrow or physical handoff verification is provided by this release.

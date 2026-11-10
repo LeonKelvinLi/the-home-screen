@@ -1270,6 +1270,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
                   glow={app.glow}
                   size={page.tile ?? screen.iconSize}
                   onOpen={(rect) => {
+                    if (app.href) return window.location.assign(app.href)
                     /* A category tile on BEASTY • Pages turns to that category's
                        page. One on the swipe is free like a swipe; one added
                        from outside it asks a signed-out visitor to sign up,
@@ -1636,11 +1637,11 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
             size={screen.iconSize}
             hideLabel
             /*
-              A dock entry carrying `page` is a PAGE, not a window — BSTY Goods
-              is the flagship sheet of the very screen the dock sits on, so
-              opening a window over it would cover the thing being asked for.
+              A dock entry carrying `page` turns to that home-screen page.
+              Entries with `href` open their first-party website.
             */
             onOpen={(rect) => {
+              if (app.href) return window.location.assign(app.href)
               /*
                 "or any of them lower 4 buttons" — the dock row itself, gated
                 as a group, but named one at a time. Four tiles sharing the

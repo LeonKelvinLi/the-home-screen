@@ -3,7 +3,9 @@ import type { NextFunction, Request, Response } from 'express'
 import { createHash, createHmac, randomBytes, randomInt, timingSafeEqual } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
-import { db, migrate } from './db/schema'
+import { db, migrate, pool } from './db/schema'
+import { registerIdentity } from './identity'
+import { accountSecret, createHostedGoods } from './goods-host'
 import { crmOnApplication, mountCrm } from './crm/routes'
 import { mountOnboarding, openRecruiterApplication } from './onboarding'
 import { creditPaidInvoice, creditWaiting, recordRecruiter, voidForCharge, mountBark } from './bark'
@@ -58,6 +60,9 @@ for (const method of ['get', 'post', 'put', 'patch', 'delete', 'all'] as const) 
 
 const PORT = Number(process.env.PORT ?? 8787)
 const PROD = process.env.NODE_ENV === 'production'
+const identityRouter = express()
+let identityService: Awaited<ReturnType<typeof registerIdentity>> | null = null
+let hostedGoods: Awaited<ReturnType<typeof createHostedGoods>> = null
 
 /*
   THE CRM AT AN ADDRESS OF ITS OWN. Leon, 2026-09-22: "CRM dashboard will be
@@ -214,11 +219,15 @@ if (!CRM_ONLY) {
   was refused. A rejection test passes just as happily when nothing can ever be
   accepted.
 */
+// Better Auth reads its own raw request stream; keep the Goods mount ahead of
+// the Pages JSON parser while retaining this host's HTTPS and security headers.
+app.use('/goods', (req, res) => hostedGoods ? hostedGoods.app(req, res) : res.status(503).json({ error: 'Goods is starting. Please try again shortly.' }))
 const parseJson = express.json({ limit: '256kb' })
 app.use((req, res, next) => {
   if (req.path === '/api/stripe/webhook') return next()
   parseJson(req, res, next)
 })
+app.use(identityRouter)
 /**
  * Fallback only. Real tax is per-vendor (`vendor.taxBps`) because California
  * charges prepared-food tax at the seller's location — a cart spanning two
@@ -3013,6 +3022,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
       existing.city = row.pending_city
       existing.state = row.pending_state
     }
+    if (!byPhone) await identityService?.recordEmailProof(existing.id, destination)
     const sessionId = await startSession(res, existing.id)
     /* The device they signed in on is theirs from now on; see server/intel.ts. */
     const anon = req.get('sec-gpc') === '1' ? null : visitorOf(req, res)
@@ -3059,6 +3069,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
   // Their referrer may have just crossed a milestone.
   if (referrer) await syncRaffleTickets(referrer.id)
 
+  if (!byPhone) await identityService?.recordEmailProof(id, destination)
   const sessionId = await startSession(res, id)
   /* The device they joined on, so their browsing before joining reads as their
      history; the anon id goes on the event itself too. */
@@ -3952,6 +3963,22 @@ app.use((err: unknown, _req: express.Request, res: express.Response, next: expre
 */
 async function start() {
   await migrate()
+  const origin = originOf(process.env.BEASTY_PUBLIC_ORIGIN) || (PROD ? 'https://beastypages.com' : `http://localhost:${PORT}`)
+  const baseSecret = process.env.BEASTY_IDENTITY_SECRET || process.env.PASS_SECRET || (PROD ? '' : randomBytes(32).toString('hex'))
+  if (baseSecret) {
+    const clientSecret = process.env.BEASTY_SSO_CLIENT_SECRET || accountSecret(baseSecret, 'goods-client')
+    identityService = await registerIdentity(identityRouter, {
+      pool, memberFromRequest, startSession, newReferralCode, origin,
+      secret: accountSecret(baseSecret, 'identity'), clientSecret,
+      clientRedirectUris: [origin + '/goods/api/auth/callback/beastypages'],
+      googleClientId: process.env.GOOGLE_CLIENT_ID || process.env.BEASTY_GOOGLE_CLIENT_ID,
+      googleClientSecret: process.env.GOOGLE_CLIENT_SECRET || process.env.BEASTY_GOOGLE_CLIENT_SECRET,
+    })
+    if (!CRM_ONLY && process.env.GOODS_ENABLED !== '0' && (PROD || process.env.GOODS_ENABLED === '1')) {
+      try { hostedGoods = await createHostedGoods(origin, baseSecret, clientSecret) }
+      catch (error) { console.error('Goods startup failed:', (error as Error).name); }
+    }
+  }
   await seedVendors()
   /* The CRM's copies of each listing's name, city and contacts, refreshed from
      the repo's data. Failing here must not keep the site down. */

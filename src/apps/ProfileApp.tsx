@@ -25,6 +25,7 @@ import { petFor } from './FriendFace'
 import { myPageLink, saveBio, savePlace, syncMyPet } from '../lib/friends'
 import { US_STATES, DEFAULT_STATE, CITY_MAX, placeLine } from '../data/usStates'
 import { shareOrCopy } from '../lib/share'
+import { SharedAccountConnection } from './AccountIdentity'
 
 /**
  * Someone's profile: where they have been, and what they liked.
@@ -624,6 +625,7 @@ export function ProfileApp({ api }: { api: ShellApi }) {
           paid sign-ups are not open, so it cannot promise a membership that
           cannot be bought yet.
         */}
+        {account && <SharedAccountConnection />}
         <div className="prof-member">
           {joined ? (
             <p className="prof-member-line">

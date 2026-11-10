@@ -16,6 +16,7 @@ import { wallpaperFor } from './ios/Wallpaper'
   the moment of the tap and saves the wait before the first paint.
 */
 const Shell = lazy(() => import('./Shell'))
+const AccountLogin = lazy(() => import('./apps/AccountLogin'))
 
 /** Resolve which brand the Water button opens without pulling in the catalogue. */
 const BEASTY_H20 = 'b_beastyh20'
@@ -31,7 +32,7 @@ const RESERVE = 'slot.join'
    BEASTY", his instructions for bringing a business in. */
 const LINKED_PANEL: Record<string, PanelPage | undefined> = { '/collab': 'collabs', '/money': 'careers' }
 /* /affiliate: the Affiliate dashboard, where a recruiter's BARK points and cash-outs are (server/bark.ts). */
-const LINKED_APP: Record<string, string | undefined> = { '/members': 'sys.members', '/contacts': 'sys.phone', '/search': 'sys.search', '/affiliate': 'sys.affiliate', '/designs': 'sys.designs' }
+const LINKED_APP: Record<string, string | undefined> = { '/members': 'sys.members', '/contacts': 'sys.phone', '/search': 'sys.search', '/affiliate': 'sys.affiliate', '/designs': 'sys.designs', '/account': 'sys.profile' }
 const path = () =>
   typeof window === 'undefined' ? '' : window.location.pathname.replace(/\/+$/, '') || '/'
 
@@ -41,6 +42,11 @@ const touchApple = () => /iPhone|iPad|iPod/.test(navigator.userAgent) ||
   (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
 
 export default function App() {
+  if (path() === '/login') return <GateProvider><Suspense fallback={<div className="shell-loading"/>}><AccountLogin/></Suspense></GateProvider>
+  return <PagesExperience/>
+}
+
+function PagesExperience() {
   /*
     The landing screen sits in front of the shell, not inside it — the home
     screen is the product, and it should not be paying to mount a page the

@@ -59,6 +59,8 @@ export interface AppDef {
    * Page carries, which is what HomeScreen already matches on for Search.
    */
   page?: string
+  /** A first-party website that opens from the home-screen tile. */
+  href?: string
 }
 
 /**
@@ -596,7 +598,7 @@ export const GOODS_APP: AppDef = {
   kind: 'system',
   tint: '#FFE63D',
   statusDark: true,
-  page: 'BEASTY',
+  href: '/goods/',
 }
 
 export const ALL_APPS: AppDef[] = [

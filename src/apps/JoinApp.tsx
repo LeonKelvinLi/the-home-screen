@@ -11,6 +11,11 @@ import {
 import { useGate } from '../lib/gate'
 import { US_STATES, DEFAULT_STATE, CITY_MAX, cleanCity } from '../data/usStates'
 import type { ShellApi } from '../ios/Device'
+import { GoogleAccountSignIn } from './AccountIdentity'
+
+function JoinFrame({ standalone, ...props }: React.ComponentProps<typeof AppChrome> & { standalone?: boolean }) {
+  return standalone ? <section className="beasty-account-code-form" aria-label="Sign in with a code">{props.children}</section> : <AppChrome {...props} />
+}
 
 /**
  * Sign up. Free, and it is what unlocks the rest of the app.
@@ -56,7 +61,7 @@ function JoinHead({ step }: { step: 'details' | 'code' }) {
   )
 }
 
-export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) => void }) {
+export function JoinApp({ api, onDone, standalone = false, hideGoogle = false, returnTo = '/account' }: { api: ShellApi; onDone?: (a: Account) => void; standalone?: boolean; hideGoogle?: boolean; returnTo?: string }) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [instagram, setInstagram] = useState('')
@@ -255,12 +260,14 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
     address is already a member.
   */
   return (
-    <AppChrome
+    <JoinFrame
+      standalone={standalone}
       title={step === 'details' ? 'Sign in or join' : sentTo === 'sms' ? 'Check your texts' : 'Check your email'}
       onBack={api.closeApp}
       tint="#141416"
     >
       <JoinHead step={step} />
+      {step === 'details' && !hideGoogle && <GoogleAccountSignIn returnTo={returnTo} />}
       {step === 'details' ? (
         <form className="join" key="details" onSubmit={askForCode}>
           {/* Said where it matters. A referred sign-up is the referrer's credit. */}
@@ -541,6 +548,6 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
           </button>
         </form>
       )}
-    </AppChrome>
+    </JoinFrame>
   )
 }

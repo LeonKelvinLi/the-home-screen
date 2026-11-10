@@ -1,0 +1,421 @@
+.beasty-google-option {
+  margin: 20px 18px 10px;
+}
+.beasty-google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  padding: 11px 16px;
+  background: #fff;
+  color: #1f1f1f;
+  border: 1px solid #747775;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.beasty-google-button:hover:not(:disabled) {
+  background: #f8fafd;
+  border-color: #4d5156;
+}
+.beasty-google-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.beasty-google-button svg {
+  flex-shrink: 0;
+}
+.beasty-google-option > p {
+  color: #66685f;
+  font-size: 12px;
+  line-height: 1.55;
+  margin: 10px 0 15px;
+  text-align: center;
+}
+.beasty-google-option > p button {
+  background: none;
+  border: 0;
+  font: inherit;
+  color: #3f3d21;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.beasty-code-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #696b63;
+  font-size: 11px;
+  margin-top: 22px;
+}
+.beasty-code-divider:before,
+.beasty-code-divider:after {
+  content: '';
+  height: 1px;
+  background: #dedfd7;
+  flex: 1;
+}
+.beasty-account-connection {
+  margin: 22px 18px;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #e0e1da;
+  border-radius: 12px;
+  color: #24251f;
+}
+.beasty-account-connection strong {
+  font-size: 15px;
+}
+.beasty-account-connection p {
+  color: #676a60;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 9px 0;
+}
+.beasty-account-connection a {
+  color: #41431e;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 0;
+}
+.beasty-login-page {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #f7f7f2;
+  color: #20211c;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.beasty-login-page *,
+.beasty-login-page *:before,
+.beasty-login-page *:after {
+  box-sizing: border-box;
+}
+.beasty-login-header {
+  min-height: 84px;
+  padding: 22px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #e1e2d9;
+}
+.beasty-login-wordmark {
+  color: #171813;
+  font-size: 24px;
+  font-weight: 850;
+  letter-spacing: -1px;
+  text-decoration: none;
+  line-height: 0.9;
+}
+.beasty-login-wordmark span {
+  display: block;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-top: 8px;
+}
+.beasty-login-header > a:last-child {
+  color: #484a40;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  gap: 8px;
+}
+.beasty-login-layout {
+  max-width: 1080px;
+  margin: 45px auto;
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 0;
+  align-items: stretch;
+}
+.beasty-login-story {
+  background: #f6d800;
+  color: #1d1e17;
+  border-radius: 14px 0 0 14px;
+  padding: 45px 36px;
+  position: relative;
+  overflow: hidden;
+}
+.beasty-login-story > img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  margin-bottom: 34px;
+}
+.beasty-login-eyebrow {
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 650;
+  line-height: 1.7;
+  display: block;
+  margin-bottom: 15px;
+}
+.beasty-login-story h1 {
+  font-size: 45px;
+  line-height: 1.05;
+  letter-spacing: -2.3px;
+  margin: 0 0 25px;
+  font-weight: 800;
+}
+.beasty-login-story p {
+  font-size: 13px;
+  line-height: 1.8;
+  max-width: 300px;
+  color: #504a24;
+}
+.beasty-login-story > a {
+  color: #24251b;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 650;
+  display: inline-flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+.beasty-login-card {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #e2e3dc;
+  border-left: 0;
+  border-radius: 0 14px 14px 0;
+  padding: 38px 26px 30px;
+}
+.beasty-login-card > .beasty-login-eyebrow {
+  color: #6a6c61;
+  margin-left: 18px;
+}
+.beasty-login-card > h2 {
+  font-size: 30px;
+  letter-spacing: -1.2px;
+  line-height: 1.1;
+  margin: 0 18px 15px;
+}
+.beasty-login-lead {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #686b60;
+  margin: 0 18px 24px;
+}
+.beasty-login-card .join-head {
+  padding-top: 14px;
+}
+.beasty-account-code-form .join-mark {
+  display: none;
+}
+.beasty-account-code-form .join {
+  padding-bottom: 15px;
+}
+.beasty-login-error {
+  margin: 15px 18px 20px;
+  border: 1px solid #e7d2cb;
+  border-radius: 7px;
+  padding: 13px;
+  background: #fff5f2;
+  color: #9a3433;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.beasty-login-error p {
+  margin: 0 0 10px;
+}
+.beasty-login-error button {
+  border: 0;
+  background: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  font-weight: 650;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.beasty-login-unavailable,
+.beasty-login-loading {
+  margin: 25px 18px;
+  font-size: 13px;
+  color: #6b6e63;
+  line-height: 1.7;
+}
+.beasty-account-summary {
+  margin: 25px 18px 0;
+  min-width: 0;
+}
+.beasty-account-summary dl {
+  margin: 0;
+  border-top: 1px solid #e3e5dc;
+}
+.beasty-account-summary dl > div {
+  border-bottom: 1px solid #e3e5dc;
+  padding: 15px 0;
+}
+.beasty-account-summary dt {
+  font-size: 10px;
+  color: #74786b;
+  margin-bottom: 6px;
+}
+.beasty-account-summary dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 550;
+  overflow-wrap: anywhere;
+}
+.beasty-google-connection {
+  padding: 24px 0;
+}
+.beasty-google-connection > strong {
+  font-size: 14px;
+}
+.beasty-google-connection p {
+  font-size: 12px;
+  color: #646b5a;
+  line-height: 1.75;
+  margin: 10px 0 15px;
+}
+.beasty-google-connection .beasty-connected {
+  color: #2c6f49;
+}
+.beasty-account-continue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #f6d800;
+  color: #202117;
+  border: 1px solid #9d8821;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+}
+.beasty-account-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+.beasty-account-links a {
+  font-size: 12px;
+  font-weight: 550;
+  color: #4b4e3e;
+}
+.beasty-account-signout {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: none;
+  padding: 10px;
+  margin: 25px 0 5px;
+  font: inherit;
+  color: #6a6d5f;
+  font-size: 12px;
+  cursor: pointer;
+}
+.beasty-session-note {
+  color: #717567;
+  font-size: 10px;
+  line-height: 1.7;
+  text-align: center;
+  margin: 0;
+}
+.beasty-login-footer {
+  max-width: 1020px;
+  padding: 0 30px 35px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 10px;
+  color: #707463;
+}
+.beasty-login-page :where(a, button, input, select):focus-visible {
+  outline: 3px solid #7a6812;
+  outline-offset: 3px;
+}
+.beasty-login-page input,
+.beasty-login-page select {
+  font-size: 16px;
+}
+@media (max-width: 750px) {
+  .beasty-login-header {
+    min-height: 72px;
+    padding: 20px;
+  }
+  .beasty-login-header > a:last-child {
+    font-size: 10px;
+  }
+  .beasty-login-wordmark {
+    font-size: 21px;
+  }
+  .beasty-login-layout {
+    display: block;
+    margin: 22px auto;
+    padding: 0 18px;
+    max-width: 500px;
+  }
+  .beasty-login-story {
+    border-radius: 12px 12px 0 0;
+    padding: 25px;
+  }
+  .beasty-login-story > img {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 20px;
+  }
+  .beasty-login-story h1 {
+    font-size: 33px;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    margin-bottom: 17px;
+  }
+  .beasty-login-story h1 br {
+    display: none;
+  }
+  .beasty-login-story h1 br:after {
+    content: ' ';
+  }
+  .beasty-login-story p {
+    font-size: 11px;
+    max-width: none;
+    margin-bottom: 0;
+  }
+  .beasty-login-story > a {
+    display: none;
+  }
+  .beasty-login-story > .beasty-login-eyebrow {
+    font-size: 8px;
+    margin-bottom: 12px;
+  }
+  .beasty-login-card {
+    padding: 28px 12px 24px;
+    border-left: 1px solid #e2e3dc;
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+  }
+  .beasty-login-card > h2 {
+    font-size: 28px;
+  }
+  .beasty-login-lead {
+    font-size: 11px;
+  }
+  .beasty-login-footer {
+    font-size: 9px;
+    padding-bottom: calc(25px + env(safe-area-inset-bottom));
+  }
+  .beasty-google-option > p {
+    font-size: 11px;
+  }
+}
