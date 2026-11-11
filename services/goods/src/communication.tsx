@@ -241,10 +241,7 @@ export function Inbox({ id }: { id?: string }) {
   };
   return (
     <>
-      <PageTitle
-        eyebrow="Good conversations make good exchanges"
-        title="Your inbox."
-      />
+      <PageTitle title="Inbox" />
       <div className={"inbox-layout " + (id ? "has-thread" : "")}>
         <aside className="conversation-list panel">
           {loading ? (
@@ -497,7 +494,7 @@ export function Notifications() {
   };
   return (
     <>
-      <PageTitle eyebrow="Stay in the loop" title="Your updates.">
+      <PageTitle title="Notifications">
         {items.some((n) => !n.readAt) && (
           <button
             className="button secondary"

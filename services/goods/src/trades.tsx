@@ -153,7 +153,7 @@ export function TradeComposer({
   };
   return (
     <Dialog
-      title={review ? "Review your trade" : "A good exchange."}
+      title={review ? "Review your trade" : "Propose a trade"}
       onClose={() => {
         if (!busy) onClose();
       }}
@@ -352,7 +352,7 @@ export function Trades() {
   const items = [...(data?.items || []), ...extra];
   return (
     <>
-      <PageTitle eyebrow="Give a little. Find a lot." title="Your exchanges." />
+      <PageTitle title="Your trades" />
       <div className="tab-bar">
         {[
           ["received", "Received"],
@@ -514,11 +514,7 @@ export function TradePage({ id }: { id: string }) {
   const cancellation = t.cancelRequestedBy.includes(user.id);
   return (
     <>
-      <PageTitle
-        eyebrow="Two sides to a good exchange"
-        title="Trade details."
-        back="/trades"
-      >
+      <PageTitle title="Trade details" back="/trades">
         <Status value={t.state} />
       </PageTitle>
       <div className="trade-detail-layout">

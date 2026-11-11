@@ -21,6 +21,7 @@ import {
   conditions,
   money,
   recentlyViewedIds,
+  listingPhotoUrl,
   recordViewed,
   clearRecentlyViewed,
   type Listing,
@@ -51,12 +52,11 @@ import { TradeComposer } from "./trades";
 import { shareUrl } from "./platform";
 
 export function Home() {
-  const { go, user } = useApp();
+  const { user } = useApp();
   const { data, error, loading, reload } = useResource<Page<Listing>>(
     "/listings?sort=newest&limit=12",
   );
   const { data: categories } = useResource<{ items: string[] }>("/categories");
-  const [query, setQuery] = useState("");
   const saved = useResource<Page<Listing>>(user ? "/favorites?limit=4" : null);
   const category = saved.data?.items.find(
     (item) => item.status === "active" && item.category,
@@ -118,89 +118,62 @@ export function Home() {
           !saved.data?.items.some((savedItem) => savedItem.id === item.id),
       )
       .slice(0, 4) || [];
+  const featured = [
+    data?.items.find(
+      (item) => item.category === "Electronics" && item.photos.length,
+    ),
+    data?.items.find(
+      (item) => item.category === "Collectibles" && item.photos.length,
+    ),
+  ].filter((item): item is Listing => Boolean(item));
   return (
-    <>
-      <section className="hero">
-        <div className="hero-copy">
-          <span className="eyebrow">
-            <span className="tiny-dot" /> A community for the good stuff
-          </span>
-          <h1>
-            Good finds.
-            <br />
-            <span>Better trades.</span>
-          </h1>
-          <p>
-            Find your next favorite. Pass on something great.
-            <br className="desktop-only" /> Make a little space for something
-            new.
-          </p>
-          <form
-            className="hero-search"
-            onSubmit={(e) => {
-              e.preventDefault();
-              go("/explore?q=" + encodeURIComponent(query));
-            }}
-          >
-            <Search size={21} />
-            <input
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="What are you looking for?"
-              aria-label="Search marketplace"
-            />
-            <button aria-label="Search">
-              <ArrowRight size={21} />
-            </button>
-          </form>
-          <div className="hero-links">
-            <Link to="/explore">
-              Explore the marketplace <ArrowUpRight size={15} />
-            </Link>
-            <Link to="/sell">
-              List your first item <ArrowUpRight size={15} />
-            </Link>
-          </div>
-        </div>
-        <div className="hero-art" aria-hidden="true">
-          <div className="art-caption">
-            A GOOD EXCHANGE
-            <br />
-            GOES BOTH WAYS.
-          </div>
-          <div className="exchange-orbit">
-            <ArrowLeftRight size={112} strokeWidth={1.25} />
-          </div>
-          <div className="art-code code-a">A—1</div>
-          <div className="art-code code-z">Z—3</div>
-          <span className="art-bottom">YOUR NEXT FAVORITE IS OUT THERE.</span>
-        </div>
-      </section>
-      <section className="category-strip">
-        <span className="eyebrow">Find your thing</span>
-        <div className="chips">
-          <Link className="chip selected" to="/explore">
-            All goods
+    <div className="market-home">
+      <section className="market-masthead" aria-labelledby="market-title">
+        <div className="market-intro">
+          <h1 id="market-title">The swap meet.</h1>
+          <p>Browse secondhand goods. List yours or make a trade.</p>
+          <Link to="/explore?tradeOnly=true" className="market-trade-link">
+            <ArrowLeftRight size={17} /> Browse tradeable items{" "}
+            <ArrowUpRight size={15} />
           </Link>
-          {categories?.items.slice(0, 7).map((c) => (
-            <Link
-              key={c}
-              className="chip"
-              to={"/explore?category=" + encodeURIComponent(c)}
-            >
-              {c}
-            </Link>
-          ))}
         </div>
-      </section>
-      <section className="section">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">Fresh on the shelves</span>
-            <h2>Just landed.</h2>
+        {featured.length > 0 && (
+          <div className="market-featured" aria-label="Featured listings">
+            {featured.map((item) => (
+              <Link
+                className="market-feature"
+                key={item.id}
+                to={"/items/" + item.id}
+              >
+                <Photo listing={item} />
+                <span>
+                  <span>{item.title}</span>
+                  <ArrowUpRight size={16} aria-hidden="true" />
+                </span>
+                {(item.isDemo || item.owner.isDemo) && <DemoBadge />}
+              </Link>
+            ))}
           </div>
+        )}
+      </section>
+      <nav className="market-categories" aria-label="Shop by category">
+        <Link className="market-all" to="/explore">
+          <Grid2X2 size={16} /> All goods
+        </Link>
+        {categories?.items.map((name) => (
+          <Link key={name} to={"/explore?category=" + encodeURIComponent(name)}>
+            {name}
+          </Link>
+        ))}
+      </nav>
+      <section
+        className="section market-feed"
+        aria-labelledby="new-listings-title"
+      >
+        <div className="section-heading">
+          <h2 id="new-listings-title">New listings</h2>
           <Link className="text-button" to="/explore">
-            View all <ArrowRight size={17} />
+            Browse all <ArrowRight size={18} />
           </Link>
         </div>
         {data?.items.some((item) => item.isDemo || item.owner.isDemo) && (
@@ -214,8 +187,8 @@ export function Home() {
           <ProductGrid items={data.items} />
         ) : (
           <Empty
-            title="The shelves are ready."
-            body="Be one of the first to bring something good to the community."
+            title="No listings yet"
+            body="List an item to start the marketplace."
             action={{ label: "List an item", to: "/sell/new" }}
           />
         )}
@@ -224,15 +197,10 @@ export function Home() {
         <section className="section seller-discovery-section">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">
-                {sellers.every((seller) => seller.isDemo)
-                  ? "Explore the possibilities"
-                  : "People behind the finds"}
-              </span>
               <h2>
                 {sellers.every((seller) => seller.isDemo)
-                  ? "A few sample shelves."
-                  : "Fresh from their shelves."}
+                  ? "Sample storefronts"
+                  : "Browse sellers"}
               </h2>
             </div>
           </div>
@@ -260,8 +228,7 @@ export function Home() {
         <section className="section">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">Keep a good thing close</span>
-              <h2>Saved for another look.</h2>
+              <h2>Saved goods</h2>
             </div>
             <Link className="text-button" to="/favorites">
               View saved <ArrowRight size={17} />
@@ -281,8 +248,7 @@ export function Home() {
         <section className="section">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">From a category you saved</span>
-              <h2>More in {category}.</h2>
+              <h2>More in {category}</h2>
             </div>
             <Link
               className="text-button"
@@ -302,8 +268,7 @@ export function Home() {
         <section className="section">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">Recently viewed · On this device</span>
-              <h2>Worth another look.</h2>
+              <h2>Recently viewed</h2>
             </div>
             <button
               className="text-button subtle"
@@ -325,31 +290,7 @@ export function Home() {
           <ProductGrid items={recent.slice(0, 4)} />
         </section>
       )}
-      <section className="trade-banner">
-        <div className="shelf-illustration" aria-hidden="true">
-          {["A–1", "A–2", "A–3", "B–1", "B–2", "B–3"].map((c, i) => (
-            <span key={c} className={i === 1 ? "highlighted" : ""}>
-              {c}
-            </span>
-          ))}
-        </div>
-        <div>
-          <span className="eyebrow">A shelf of your own</span>
-          <h2>
-            78 spots.
-            <br />A whole lot of possibility.
-          </h2>
-          <p>
-            Every item gets a place. Every trade has two sides.
-            <br />
-            Keep your collection organized from A–1 to Z–3.
-          </p>
-          <Link className="text-button" to="/sell">
-            Meet your inventory <ArrowRight size={18} />
-          </Link>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }
 
@@ -521,12 +462,7 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
   );
   return (
     <>
-      <PageTitle
-        eyebrow={
-          favorites ? "Keep the good stuff close" : "Discover something good"
-        }
-        title={favorites ? "Saved goods." : "The marketplace."}
-      >
+      <PageTitle title={favorites ? "Saved goods" : "Browse the market"}>
         {!favorites && (
           <button
             className="button secondary mobile-filter"
@@ -541,7 +477,7 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
           <form className="filters" onSubmit={apply}>
             <div className="filter-heading">
               <SlidersHorizontal size={17} />
-              <strong>Make it yours</strong>
+              <strong>Filter listings</strong>
             </div>
             {fields}
           </form>
@@ -552,7 +488,7 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
               <Search size={19} />
               <input
                 aria-label="Search listings"
-                placeholder="Search for good things…"
+                placeholder="Search listings"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
               />
@@ -604,7 +540,7 @@ export function Explore({ favorites = false }: { favorites?: boolean }) {
                   body={
                     favorites
                       ? "Tap the heart on any item to find it here later."
-                      : "Try a different search or give your filters a little room."
+                      : "Try another search or reset your filters."
                   }
                   action={
                     favorites
@@ -725,13 +661,14 @@ export function ItemPage({ id }: { id: string }) {
       {l.photos[index] ? (
         <img
           className="gallery-main"
-          src={l.photos[index].url}
+          src={listingPhotoUrl(l, l.photos[index])}
           alt={l.title + " — photo " + (index + 1)}
           onClick={() => !fullscreen && setFullscreen(true)}
         />
       ) : (
         <Photo listing={l} />
       )}
+      {demo && <DemoBadge />}
       <span className="gallery-counter">
         {l.photos.length ? index + 1 : 0} / {l.photos.length}
       </span>
@@ -792,7 +729,7 @@ export function ItemPage({ id }: { id: string }) {
                   className={i === index ? "selected" : ""}
                   aria-label={"View photo " + (i + 1)}
                 >
-                  <img src={p.url} alt="" />
+                  <img src={listingPhotoUrl(l, p, true)} alt="" />
                 </button>
               ))}
             </div>
@@ -821,7 +758,7 @@ export function ItemPage({ id }: { id: string }) {
           )}
           {demo && (
             <div className="demo-item-notice">
-              <strong>A sample of what’s possible.</strong>
+              <strong>Sample listing</strong>
               <p>
                 This illustrated item and its seller are part of the demo
                 catalog. You can browse and save it. Trades and messages are
@@ -833,7 +770,7 @@ export function ItemPage({ id }: { id: string }) {
             <div className="trade-callout">
               <ArrowLeftRight size={19} />
               <div>
-                <strong>Good things go both ways.</strong>
+                <strong>Open to trade</strong>
                 <p>Offer an item from your shelf to start a trade.</p>
               </div>
             </div>
@@ -889,7 +826,7 @@ export function ItemPage({ id }: { id: string }) {
             )}
           </div>
           <div className="item-detail-block">
-            <h3>The details</h3>
+            <h3>Description</h3>
             <p className="preserve-lines">{l.description}</p>
           </div>
           {l.tradePreferences && (
@@ -978,7 +915,7 @@ export function SellerPage({ id }: { id: string }) {
           <h1>{p.name}</h1>
           {p.isDemo && <DemoBadge />}
           <span className="muted">@{p.username}</span>
-          <p>{p.bio || "A little room for something good."}</p>
+          {p.bio && <p>{p.bio}</p>}
           <div className="profile-facts">
             {p.location && (
               <span>

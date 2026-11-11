@@ -114,35 +114,29 @@ export function AuthPage({
   };
   return (
     <div className="auth-layout">
-      <div className="auth-art">
-        <span className="eyebrow">BSTY GOODS / A GOOD EXCHANGE</span>
-        <h1>
-          Your next
+      <div className="auth-intro">
+        <span className="auth-brand">BSTY GOODS</span>
+        <strong>
+          One BEASTY
           <br />
-          favorite
-          <br />
-          <span>is out there.</span>
-        </h1>
-        <ArrowLeftRight size={106} strokeWidth={1} />
-        <span className="auth-art-foot">GOOD FINDS. BETTER TRADES.</span>
+          account.
+        </strong>
+        <p>
+          Use your BEASTY Pages account to sign in, list goods, and manage
+          trades.
+        </p>
+        <img src={withBase("/sample-products/field-notebook.webp")} alt="" />
       </div>
       <section className="auth-form-wrap">
         <div className="auth-form auth-shared-form">
-          <span className="eyebrow">
-            {mode === "signup"
-              ? "Make a little room"
-              : mode === "login"
-                ? "Good to see you"
-                : "Back to good things"}
-          </span>
           <h1>
             {mode === "signup"
-              ? "Join the exchange."
+              ? "Create an account"
               : mode === "login"
-                ? "Welcome back."
+                ? "Sign in"
                 : mode === "forgot"
                   ? "Forgot your password?"
-                  : "A fresh start."}
+                  : "Choose a new password"}
           </h1>
           {!sharedMode && (
             <p className="muted">
@@ -340,18 +334,13 @@ export function ProfilePage() {
   if (!user) return <SignedOut what="make your shelf your own" />;
   return (
     <>
-      <PageTitle
-        eyebrow="Your corner of the community"
-        title={"Hey, " + (user.name.split(" ")[0] || "there") + "."}
-      />
+      <PageTitle title="Your profile" />
       <section className="my-profile panel">
         <Avatar profile={user} size={88} />
         <div>
           <h2>{user.name}</h2>
           <p className="muted">@{user.username}</p>
-          <p>
-            {user.bio || "Your shelf is a little piece of you. Make it yours."}
-          </p>
+          <p>{user.bio || "Add a bio in account settings."}</p>
           <span className="small-copy muted">
             {user.completedTrades || 0} completed trades · Member since{" "}
             {new Date(user.createdAt).toLocaleDateString(undefined, {
@@ -544,11 +533,7 @@ export function SettingsPage() {
   };
   return (
     <>
-      <PageTitle
-        eyebrow="Make it yours"
-        title="Account settings."
-        back="/profile"
-      />
+      <PageTitle title="Account settings" back="/profile" />
       <div className="settings-layout">
         <form className="panel form" onSubmit={save}>
           <h2>Your public profile</h2>

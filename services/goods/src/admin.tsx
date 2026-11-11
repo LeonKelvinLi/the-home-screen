@@ -78,7 +78,7 @@ export function Admin() {
   };
   return (
     <>
-      <PageTitle eyebrow="Protected operator workspace" title="Community care.">
+      <PageTitle title="Moderation">
         <span className="operator-label">
           <Shield size={17} /> Operator
         </span>

@@ -16,7 +16,14 @@ import {
   UserRound,
   Heart,
 } from "lucide-react";
-import { api, withBase, withoutBase, type Listing, type Profile } from "./api";
+import {
+  api,
+  listingPhotoUrl,
+  withBase,
+  withoutBase,
+  type Listing,
+  type Profile,
+} from "./api";
 
 export const AppContext = createContext<{
   user: Profile | null;
@@ -217,9 +224,8 @@ export function DemoCatalogNotice() {
     <aside className="demo-catalog-notice" aria-label="Demo catalog">
       <Box size={18} aria-hidden="true" />
       <p>
-        <strong>A little inspiration.</strong> Demo items and sellers are
-        illustrated samples for browsing. Add your own goods to start a real
-        exchange.
+        <strong>Sample catalog.</strong> These illustrated samples are for
+        browsing only.
       </p>
       <Link
         to={user ? "/sell/new" : "/signup?returnTo=%2Fsell%2Fnew"}
@@ -377,7 +383,7 @@ export function Photo({
     <div className={"item-photo " + className}>
       {listing.photos?.[0] ? (
         <img
-          src={listing.photos[0].thumbnailUrl || listing.photos[0].url}
+          src={listingPhotoUrl(listing, listing.photos[0], true)}
           alt={listing.title}
           loading="lazy"
           decoding="async"
@@ -431,7 +437,6 @@ export function ProductCard({
         >
           <Heart size={18} fill={saved ? "currentColor" : "none"} />
         </button>
-        <span className="code-tag">{listing.code}</span>
         {demo && <DemoBadge />}
         {listing.status !== "active" && (
           <span className="image-status">{listing.status}</span>
@@ -450,7 +455,12 @@ export function ProductCard({
           <span className="trade-mark">↔ Trade</span>
         )}
       </div>
-      <span className="product-condition">{listing.condition}</span>
+      <div className="product-facts">
+        <span className="product-condition">{listing.condition}</span>
+        {!demo && listing.owner.location && (
+          <span>{listing.owner.location}</span>
+        )}
+      </div>
     </article>
   );
 }
@@ -544,7 +554,7 @@ export function ReportButton({
 export function SignedOut({ what = "continue" }: { what?: string }) {
   return (
     <Empty
-      title="Make room for good things."
+      title="Sign in to BSTY Goods"
       body={
         "Sign in to " +
         what +

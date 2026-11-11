@@ -1,3 +1,5 @@
+import { sampleProductImages } from "./sample-products";
+
 export const appBase = import.meta.env.BASE_URL.replace(/\/$/, "");
 export function withoutBase(path: string): string {
   if (!appBase) return path || "/";
@@ -62,6 +64,18 @@ export interface Listing {
   isFavorite: boolean;
   isHidden?: boolean;
 }
+export function listingPhotoUrl(
+  listing: Listing,
+  photo: Photo,
+  thumbnail = false,
+) {
+  const sample = listing.isDemo && sampleProductImages[listing.id];
+  if (sample && listing.photos[0]?.id === photo.id) {
+    return withBase("/sample-products/" + sample + ".webp");
+  }
+  return (thumbnail && photo.thumbnailUrl) || photo.url;
+}
+
 export interface Slot {
   code: string;
   listing: Listing | null;

@@ -157,15 +157,7 @@ export function SharedSignIn({
         <ShieldCheck size={16} />
         <span>BEASTY Pages + BSTY Goods</span>
       </div>
-      <h2>
-        One BEASTY account.
-        <br />
-        More good finds.
-      </h2>
-      <p>
-        Use your BEASTY Pages account for Goods. Your shared sign-in connects
-        both websites; your shelf, trades and marketplace profile stay in Goods.
-      </p>
+      <p>Use the same BEASTY account across both sites.</p>
       <div className="shared-sign-in-actions">
         <button
           className="button full"

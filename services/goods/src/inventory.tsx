@@ -91,7 +91,7 @@ export function Inventory() {
       : active.filter((l) => tab === "all" || l.status === tab);
   return (
     <>
-      <PageTitle eyebrow="A–1 through Z–3. All yours." title="Your shelf.">
+      <PageTitle title="Your shelf">
         <Link to="/sell/new" className="button">
           <Plus size={18} /> List an item
         </Link>
@@ -107,7 +107,7 @@ export function Inventory() {
         <div className="capacity-track">
           <span style={{ width: (occupied / 78) * 100 + "%" }} />
         </div>
-        <span>{78 - occupied} open for something good</span>
+        <span>{78 - occupied} positions available</span>
       </div>
       <div className="inventory-toolbar">
         <div className="tab-bar">
@@ -237,7 +237,7 @@ export function Inventory() {
               ? "Every item has a story."
               : tab === "draft"
                 ? "No unfinished business."
-                : "Make a little room."
+                : "No listings yet"
           }
           body={
             tab === "history"
@@ -586,11 +586,7 @@ export function ListingEditor({ id }: { id?: string }) {
   const steps = ["Photos", "Details", "Position", "Preview", "Publish"];
   return (
     <>
-      <PageTitle
-        eyebrow="Make room for something new"
-        title={id ? "Your item." : "List something good."}
-        back="/sell"
-      >
+      <PageTitle title={id ? "Edit listing" : "List an item"} back="/sell">
         {!immutable && (
           <button
             className="button secondary"
@@ -944,8 +940,7 @@ export function ListingEditor({ id }: { id?: string }) {
                   <div className="publish-symbol">
                     <Check size={40} />
                   </div>
-                  <span className="eyebrow">05 / Ready for a new chapter</span>
-                  <h2>Put something good out there.</h2>
+                  <h2>Review before publishing</h2>
                   <p className="muted">
                     Your item will be public at position{" "}
                     <strong>{form.code}</strong>. You can edit it while it’s
@@ -1002,20 +997,12 @@ export function ListingEditor({ id }: { id?: string }) {
               </div>
             </section>
             <aside className="editor-aside">
-              <span className="eyebrow">Good listing, good exchange</span>
-              <h3>A little care goes a long way.</h3>
-              <p>
-                Use your own photos. Show the details. Describe the wear. Great
-                listings make the next conversation easy.
-              </p>
+              <h3>Listing tips</h3>
+              <p>Use your own photos and describe any wear or damage.</p>
               <div className="mini-shelf">
                 <span>{form.code || "A-1"}</span>
                 <ArrowLeftRight size={30} strokeWidth={1} />
               </div>
-              <span className="muted">
-                One item. One position.
-                <br />A new possibility.
-              </span>
               {id && (
                 <button
                   className="text-button danger"

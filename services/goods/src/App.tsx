@@ -13,7 +13,6 @@ import {
   Compass,
   Heart,
   Home as HomeIcon,
-  Menu,
   MessageCircle,
   Plus,
   Search,
@@ -84,8 +83,8 @@ function AppRoute({ route }: { route: string }) {
   if (path === "/about") return <About />;
   return (
     <Empty
-      title="That spot is empty."
-      body="This page may have moved. There are plenty of good things in the marketplace."
+      title="Page unavailable"
+      body="Browse the marketplace or go back to your previous page."
       action={{ label: "Explore goods", to: "/explore" }}
     />
   );
@@ -93,29 +92,20 @@ function AppRoute({ route }: { route: string }) {
 function About() {
   return (
     <div className="about-page">
-      <span className="eyebrow">A good exchange</span>
-      <h1>
-        Good things deserve
-        <br />
-        another chapter.
-      </h1>
+      <h1>How BSTY Goods works</h1>
       <p className="about-lead">
-        BSTY Goods brings people and their collections together. Discover
-        something you like. Offer something of your own. Make the next exchange
-        a good one.
+        List an item, browse other shelves, and offer a trade.
       </p>
       <div className="about-grid">
         <section>
-          <span>01</span>
-          <h2>Make your shelf.</h2>
+          <h2>List your goods</h2>
           <p>
             Every member has 78 coded inventory positions: A–1 through Z–3. Add
             your own photos, describe the details and choose a spot.
           </p>
         </section>
         <section>
-          <span>02</span>
-          <h2>Find your match.</h2>
+          <h2>Propose a trade</h2>
           <p>
             Open a listing and propose a trade. Choose your item and theirs,
             review both sides, then send your request. Neither item is reserved
@@ -123,8 +113,7 @@ function About() {
           </p>
         </section>
         <section>
-          <span>03</span>
-          <h2>Keep it clear.</h2>
+          <h2>Complete the exchange</h2>
           <p>
             Accepting reserves both items. Use your private conversation to
             coordinate. Both people confirm the completed exchange; cancellation
@@ -134,7 +123,7 @@ function About() {
         </section>
       </div>
       <section className="panel about-care">
-        <h2>A little care goes a long way.</h2>
+        <h2>Trading safely</h2>
         <p>
           Use your own accurate photos, describe flaws honestly and keep
           conversations respectful. Report suspicious listings or messages using
@@ -148,7 +137,7 @@ function About() {
           you are comfortable providing.
         </p>
         <Link className="button" to="/explore">
-          Find something good <ArrowRight size={17} />
+          Browse listings <ArrowRight size={17} />
         </Link>
       </section>
     </div>
@@ -282,7 +271,7 @@ export default function App() {
     const path = route.split("?")[0];
     document.title =
       (path === "/"
-        ? "Good finds. Better trades."
+        ? "Secondhand marketplace"
         : path.split("/")[1].replace(/^./, (c) => c.toUpperCase())) +
       " · BSTY Goods";
   }, [route]);
@@ -294,6 +283,13 @@ export default function App() {
     return false;
   };
   const active = route.split("?")[0];
+  const showSearch = ![
+    "/explore",
+    "/login",
+    "/signup",
+    "/forgot-password",
+    "/reset-password",
+  ].includes(active);
   const nav = [
     { path: "/", name: "Home", icon: HomeIcon },
     { path: "/explore", name: "Explore", icon: Compass },
@@ -308,7 +304,10 @@ export default function App() {
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
-      <header className="site-header">
+      <header
+        className="site-header"
+        data-market-home={active === "/" || undefined}
+      >
         <div className="header-inner">
           <Link className="wordmark" to="/" aria-label="BSTY Goods home">
             <span>
@@ -316,8 +315,9 @@ export default function App() {
             </span>
             <small>GOODS</small>
           </Link>
+          {showSearch && <HeaderSearch key={route} go={go} />}
           <nav className="desktop-nav" aria-label="Main navigation">
-            {nav.slice(0, 4).map((n) => (
+            {nav.slice(1, 4).map((n) => (
               <Link
                 className={
                   (n.path === "/" ? active === "/" : active.startsWith(n.path))
@@ -332,13 +332,6 @@ export default function App() {
             ))}
           </nav>
           <div className="header-actions">
-            <Link
-              to="/explore"
-              className="icon-button mobile-search"
-              aria-label="Search marketplace"
-            >
-              <Search size={21} />
-            </Link>
             <Link
               to="/favorites"
               className="icon-button favorites-entry"
@@ -365,6 +358,12 @@ export default function App() {
                   {noticeCount > 99 ? "99+" : noticeCount}
                 </span>
               )}
+            </Link>
+            <Link
+              className="button compact header-listing"
+              to={user ? "/sell/new" : "/login?returnTo=%2Fsell%2Fnew"}
+            >
+              <Plus size={16} /> List an item
             </Link>
             {user ? (
               <Link
@@ -421,9 +420,8 @@ export default function App() {
       </main>
       <footer className="site-footer">
         <span className="footer-brand">BSTY GOODS</span>
-        <span>Good finds. Better trades.</span>
         <Link to="/about">
-          A good exchange <ArrowUpRightIcon />
+          How it works <ArrowUpRightIcon />
         </Link>
       </footer>
       <nav className="bottom-nav" aria-label="Mobile navigation">
@@ -457,6 +455,33 @@ export default function App() {
         </div>
       )}
     </AppContext.Provider>
+  );
+}
+function HeaderSearch({ go }: { go: (path: string) => void }) {
+  const [query, setQuery] = useState(
+    new URLSearchParams(location.search).get("q") || "",
+  );
+  return (
+    <form
+      className="header-search"
+      role="search"
+      onSubmit={(event) => {
+        event.preventDefault();
+        const term = query.trim();
+        go(term ? "/explore?q=" + encodeURIComponent(term) : "/explore");
+      }}
+    >
+      <input
+        aria-label="Search marketplace"
+        type="search"
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+        placeholder="Search BSTY Goods"
+      />
+      <button aria-label="Search marketplace" type="submit">
+        <Search size={19} aria-hidden="true" />
+      </button>
+    </form>
   );
 }
 function ArrowUpRightIcon() {
