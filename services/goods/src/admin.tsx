@@ -87,6 +87,9 @@ export function Admin() {
         Review concerns, protect the community and record the reason for every
         intervention.
       </p>
+      <Link className="button secondary" to="/admin/resale">
+        Managed resale requests
+      </Link>
       <div className="tab-bar">
         {[
           ["reports", "Reports"],

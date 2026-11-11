@@ -773,10 +773,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "itsslydiia"
   },
   {
-    "handle": "startingfiresevrywhere",
-    "name": "@startingfiresevrywhere",
-    "label": "startingfiresevrywhere"
-  },
+  "handle": "startingfiresevrywhere",
+  "name": "@startingfiresevrywhere",
+  "label": "startingfiresevrywhere",
+  "icon": "foodie-startingfiresevrywhere-v114"
+},
   {
     "handle": "bylizettexo",
     "name": "@bylizettexo",
@@ -906,10 +907,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "label": "bayareawilson"
   },
   {
-    "handle": "whatthejessi_",
-    "name": "@whatthejessi_",
-    "label": "whatthejessi_"
-  },
+  "handle": "whatthejessi_",
+  "name": "@whatthejessi_",
+  "label": "whatthejessi_",
+  "icon": "foodie-whatthejessi-v114"
+},
   {
     "handle": "foodgiveness",
     "icon": "foodie-foodgiveness-v86",
@@ -1495,10 +1497,11 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
     "instagram": "erica.sorelle"
   },
   {
-    "handle": "chelchomps",
-    "name": "@chelchomps",
-    "label": "chelchomps"
-  },
+  "handle": "chelchomps",
+  "name": "@chelchomps",
+  "label": "chelchomps",
+  "icon": "foodie-chelchomps-v114"
+},
   {
     "handle": "monicaplatt",
     "name": "@monicaplatt",
@@ -1850,7 +1853,7 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   "handle": "sophie_eats_world",
   "name": "Sophie",
   "label": "Sophie",
-  "icon": "foodie-sophieeatsworld-v112"
+  "icon": "foodie-sophieeatsworld-v114"
 },
 {
   "handle": "eatswithglory",
@@ -1893,6 +1896,49 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   "name": "Nataly Alferez",
   "label": "Nataly Alferez",
   "icon": "foodie-latinmami-v112"
+},
+  // Batch 114 — creator profiles with supplied portraits.
+{
+  "handle": "goeatwithangie",
+  "name": "Go Eat With Angie",
+  "label": "Angie",
+  "icon": "foodie-goeatwithangie-v114"
+},
+{
+  "handle": "naeemahtravels",
+  "name": "Naeemah Travels",
+  "label": "Naeemah",
+  "icon": "foodie-naeemahtravels-v114"
+},
+{
+  "handle": "feedchris_",
+  "name": "Feed Chris",
+  "label": "Feed Chris",
+  "icon": "foodie-feedchris-v114"
+},
+{
+  "handle": "k.traaaaan",
+  "name": "K. Tran",
+  "label": "K. Tran",
+  "icon": "foodie-ktraaaaan-v114"
+},
+{
+  "handle": "goutclout",
+  "name": "Gout Clout",
+  "label": "Gout Clout",
+  "icon": "foodie-goutclout-v114"
+},
+{
+  "handle": "bestinthegamme",
+  "name": "Best in the Gamme",
+  "label": "Best in Game",
+  "icon": "foodie-bestinthegamme-v114"
+},
+{
+  "handle": "bonjocbites",
+  "name": "Bonjoc Bites",
+  "label": "Bonjoc Bites",
+  "icon": "foodie-bonjocbites-v114"
 },
 ]
 
@@ -2609,6 +2655,20 @@ export const OTHER_REVIEWS: OtherReview[] = [
   // Batch 113 — fresh reviews; existing creator pages and prior inline films retained.
   {"by": "bayareamunchies510", "place": "Deli Board", "city": "San Francisco", "brand": "b_deliboard", "reel": "https://www.instagram.com/reel/Dfi6sPbRZHy/", "clip": true, "credit": "Review by @bayareamunchies510 at Deli Board, 1058 Folsom Street, San Francisco."},
   {"by": "iamnikkieg", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DflV2movJep/", "clip": "creator", "credit": "Review by @iamnikkieg at Flats Burgers, 4753 Mission Street, San Francisco."},
+  // Batch 114 — creator reviews; creator links preserve the four-film business limit.
+  {"by": "startingfiresevrywhere", "place": "HELLA GOOD BURGER", "city": "San Jose", "brand": "b_hellagoodburger", "reel": "https://www.instagram.com/reel/De0D6ipBS2B/", "clip": true, "credit": "Review by @startingfiresevrywhere at HELLA GOOD BURGER, San Jose."},
+  {"by": "feedchris_", "place": "Sugar Plum Coffee Shop", "city": "Concord", "brand": "b_sugarplumcoffeeshop", "reel": "https://www.instagram.com/reel/DfkZJihzU0s/", "clip": true, "credit": "Review by @feedchris_ at Sugar Plum Coffee Shop, Concord."},
+  {"by": "d_baylock_", "place": "Matzip — Union City", "city": "Union City", "brand": "b_matzipunioncity", "reel": "https://www.instagram.com/reel/DflcQpdNWWP/", "clip": true, "credit": "Review by @d_baylock_ at Matzip — Union City, Union City."},
+  {"by": "chelchomps", "place": "Matzip — Union City", "city": "Union City", "brand": "b_matzipunioncity", "reel": "https://www.instagram.com/reel/DX4wZNpvg9x/", "clip": true, "credit": "Review by @chelchomps at Matzip — Union City, Union City."},
+  {"by": "travelwtiff", "place": "Matzip — Union City", "city": "Union City", "brand": "b_matzipunioncity", "reel": "https://www.instagram.com/reel/DQ9zYNzAWgL/", "clip": true, "credit": "Review by @travelwtiff at Matzip — Union City, Union City."},
+  {"by": "whatthejessi_", "place": "Matzip — Union City", "city": "Union City", "brand": "b_matzipunioncity", "reel": "https://www.instagram.com/reel/DcfGVgOJukE/", "clip": "creator", "credit": "Review by @whatthejessi_ at Matzip — Union City, Union City."},
+  {"by": "sophie_eats_world", "place": "Matzip — Union City", "city": "Union City", "brand": "b_matzipunioncity", "reel": "https://www.instagram.com/reel/DZiDB5pykQr/", "clip": "creator", "credit": "Review by @sophie_eats_world at Matzip — Union City, Union City."},
+  {"by": "goeatwithangie", "place": "Bibim Grill", "city": "Dublin", "brand": "b_bibimgrill", "reel": "https://www.instagram.com/reel/DflcorXhzRc/", "clip": "creator", "credit": "Review by @goeatwithangie at Bibim Grill, 3742 Fallon Road, Dublin."},
+  {"by": "k.traaaaan", "place": "Gregory’s Gourmet Desserts — Oakland", "city": "Oakland", "brand": "b_gregorysgourmetdesserts", "reel": "https://www.instagram.com/reel/DeAEO9kviha/", "clip": true, "credit": "Review by @k.traaaaan at Gregory’s Gourmet Desserts — Oakland, Oakland."},
+  {"by": "bestinthegamme", "place": "Gregory’s Gourmet Desserts — San Ramon", "city": "San Ramon", "brand": "b_gregorysgourmetdessertssanramon", "reel": "https://www.instagram.com/reel/Dc6aSHzv4a-/", "clip": true, "credit": "Review by @bestinthegamme. Filmed at the San Ramon shop; the original also lists the Oakland location."},
+  {"by": "naeemahtravels", "place": "Gregory’s Gourmet Desserts — Oakland", "city": "Oakland", "brand": "b_gregorysgourmetdesserts", "reel": "https://www.instagram.com/reel/DcCkNkkoRgj/", "clip": true, "credit": "Review by @naeemahtravels at Gregory’s Gourmet Desserts — Oakland, Oakland."},
+  {"by": "goutclout", "place": "Gregory’s Gourmet Desserts — San Ramon", "city": "San Ramon", "brand": "b_gregorysgourmetdessertssanramon", "reel": "https://www.instagram.com/reel/DbHGlTZygC-/", "clip": true, "credit": "Review by @goutclout at Gregory’s Gourmet Desserts — San Ramon, San Ramon."},
+  {"by": "bonjocbites", "place": "The Sandwich Monkey", "city": "Foster City", "brand": "b_sandwichmonkey", "reel": "https://www.instagram.com/reel/Dd5UQRdqQ4x/", "clip": true, "credit": "Review by @bonjocbites at The Sandwich Monkey, Foster City."},
 ]
 
 /*

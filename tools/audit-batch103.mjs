@@ -197,6 +197,22 @@ export async function auditBatch(number) {
       await page.getByRole('button', { name: 'Go to the Berkeley Goods page', exact: true }).click()
       await page.locator('.brand-body').waitFor({ state: 'hidden' })
       await icon('Scoop N Chill').waitFor()
+    } else if (number === 114) {
+      await category('Sweets')
+      await page.getByRole('button', { name: 'Next page', exact: true }).click()
+      await icon('Cinnaholic Berkeley').waitFor()
+      for (const name of ['Boba', 'Ice Cream']) {
+        await category(name)
+        await icon('Devil & Angel Desserts').first().waitFor()
+        await page.getByText('Devil & Angel Daly', { exact: true }).waitFor()
+        assert.equal(await icon('Devil & Angel Desserts').count(), 2)
+      }
+      await category('Hot Pot', 'Dragon Beaux')
+      await category('Dim Sum', 'Dragon Beaux')
+      assert.equal(brandById('b_gregorysgourmetdessertssanramon').clip.href, 'https://www.instagram.com/reel/DfiYI4Ou_SB/')
+      assert(reviewsOf('b_gregorysgourmetdessertssanramon').some(r => r.by === 'goutclout' && r.src))
+      assert(reviewsOf('b_gregorysgourmetdesserts').some(r => r.by === 'naeemahtravels' && r.src))
+      assert(brandById('b_dragonbeaux').clip.credit.includes('@meggyeatz and reposted by @dragonbeaux'))
     } else if (number === 113) {
       await category('Dumplings', 'Dumpling Kitchen')
       await icon('Serious Dumpling').waitFor()

@@ -140,7 +140,9 @@ function extraFor(city: string, appId?: string, kind?: string): string | null {
   }
   if (kind) {
     const parent = ALL_BEASTY_PAGES.find((p) => p.kind === kind)?.parent ?? kind
-    return ON_HOME.has(parent) ? null : ALL_BEASTY_PAGES.some((p) => p.kind === parent) ? `kind:${parent}` : null
+    const hasOverflow = CATEGORY_OVERFLOW.some((p) => p.parent === parent)
+    if (ON_HOME.has(parent) && !hasOverflow) return null
+    return ALL_BEASTY_PAGES.some((p) => p.kind === parent) ? `kind:${parent}` : null
   }
   /* A business whose only BEASTY seat is on a category page past the nine. */
   if (appId) {
@@ -756,7 +758,9 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
        a city with no such tile (or Search, which names no app) gets its first. */
     const withApp = jumpToApp_ ? pages.findIndex((p) => onPage(p) && p.apps.some((a) => a.id === jumpToApp_)) : -1
     const anyWithApp = jumpToApp_ && withApp < 0 ? pages.findIndex((p) => inCity(p) && p.apps.some((a) => a.id === jumpToApp_)) : -1
-    const i = [withApp, anyWithApp, pages.findIndex(onPage), pages.findIndex(inCity)].find((n) => n >= 0) ?? -1
+    // A home category with an overflow opens in its own visit so Next reaches its overflow.
+    const visitingPage = want?.startsWith('kind:') ? pages.findIndex((p) => p.extra && onPage(p)) : -1
+    const i = [withApp, anyWithApp, visitingPage, pages.findIndex(onPage), pages.findIndex(inCity)].find((n) => n >= 0) ?? -1
     if (i >= 0) {
       if (tileJump && !jumpToCity) goToPage(i)
       else setPage(i)

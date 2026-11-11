@@ -1,0 +1,1875 @@
+{
+  "cutoff": "2026-11-11T10:31:42.327276-08:00",
+  "listings": [
+    {
+      "slug": "cinnaholic-berkeley",
+      "name": "Cinnaholic Berkeley",
+      "label": "Cinnaholic",
+      "cuisine": "Vegan cinnamon rolls and baked sweets",
+      "tagline": "Vegan cinnamon rolls and baked sweets",
+      "icon": "cinnaholic-berkeley-v114",
+      "color": "#F6F2E8",
+      "prep": 0,
+      "category": "Sweets",
+      "items": [],
+      "address": "2505 Hearst Ave Ste D, Berkeley, CA 94709",
+      "site": "https://locations.cinnaholic.com/ll/us/ca/berkeley/154/",
+      "phone": "(510) 495-4847",
+      "hours": "Daily 10:30am–9:30pm",
+      "instagram": "cinnaholicberkeley",
+      "email": "berkeley@cinnaholic.store",
+      "orderUrl": "https://cinnaholic.order.tryperdiem.com/order?fulfillmentType=PICKUP&locationId=L9XFMCA9KGH64",
+      "sections": [
+        {
+          "name": "From the Berkeley bakery",
+          "items": [
+            [
+              "Build Your Own Cinnamon Roll",
+              "Choose frosting and toppings.",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Brownies",
+              "Vegan baked brownies.",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Cookies",
+              "Vegan cookies.",
+              0,
+              null,
+              "Ask for price"
+            ],
+            [
+              "Edible Cookie Dough",
+              "Ask about available flavors.",
+              0,
+              null,
+              "Ask for price"
+            ]
+          ]
+        }
+      ],
+      "quoteOnly": "Use the bakery’s ordering page for current prices, seasonal items and availability.",
+      "panels": [
+        {
+          "head": "Order in Berkeley",
+          "body": [
+            "The Berkeley store lists baked cinnamon rolls, cookies, brownies and edible cookie dough. It also offers catering."
+          ],
+          "links": [
+            {
+              "label": "Berkeley ordering page",
+              "href": "https://cinnaholic.order.tryperdiem.com/order?fulfillmentType=PICKUP&locationId=L9XFMCA9KGH64"
+            },
+            {
+              "label": "Official store information",
+              "href": "https://locations.cinnaholic.com/ll/us/ca/berkeley/154/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "devil-and-angel-daly-city",
+      "name": "Devil & Angel Desserts",
+      "label": "Devil & Angel Daly",
+      "cuisine": "Boba, smoothies and soft serve",
+      "tagline": "Boba, smoothies and soft serve",
+      "icon": "devil-and-angel-v114",
+      "color": "#F6F2E8",
+      "prep": 0,
+      "category": "Sweets",
+      "items": [],
+      "address": "3 Serramonte Center, Daly City, CA 94015",
+      "site": "https://devilnangel.com/locations",
+      "instagram": "devilnangel_serramonte",
+      "orderUrl": "https://order.online/store/26168325",
+      "menuNote": "The Serramonte ordering menu currently shows drinks. Ask the shop for the in-store soft serve selection, prices and hours.",
+      "sections": [
+        {
+          "name": "Coco Sago Series",
+          "items": [
+            [
+              "Coco Strawberry Sago",
+              "",
+              850
+            ],
+            [
+              "Coco Taro Sago",
+              "",
+              850
+            ],
+            [
+              "Coco Mango Sago",
+              "",
+              850
+            ],
+            [
+              "Coco Coffee Sago",
+              "",
+              850
+            ]
+          ]
+        },
+        {
+          "name": "Boba Smoothie - Special Berry Smoothie",
+          "items": [
+            [
+              "Coconut Strawberry",
+              "",
+              850
+            ],
+            [
+              "Coconut Mango",
+              "",
+              850
+            ],
+            [
+              "Yogurt Strawberry",
+              "",
+              850
+            ],
+            [
+              "Yogurt Mango",
+              "",
+              850
+            ],
+            [
+              "Cookies & Cream Strawberry",
+              "",
+              850
+            ],
+            [
+              "Honeydew Mango",
+              "",
+              850
+            ]
+          ]
+        },
+        {
+          "name": "Boba Smoothie - Original Smoothie",
+          "items": [
+            [
+              "Taro",
+              "",
+              795
+            ],
+            [
+              "Strawberry",
+              "",
+              795
+            ],
+            [
+              "Cookies & Cream",
+              "",
+              795
+            ],
+            [
+              "Mango",
+              "",
+              795
+            ],
+            [
+              "Peach",
+              "",
+              795
+            ],
+            [
+              "Horchata",
+              "",
+              795
+            ],
+            [
+              "Honeydew",
+              "",
+              795
+            ],
+            [
+              "Vietnamese Coffee",
+              "",
+              795
+            ]
+          ]
+        },
+        {
+          "name": "Refresher",
+          "items": [
+            [
+              "Dragon Pineapple",
+              "",
+              795
+            ],
+            [
+              "Strawberry Mango",
+              "",
+              795
+            ],
+            [
+              "Mango Peach Tea",
+              "",
+              795
+            ],
+            [
+              "Sunset Galaxy",
+              "",
+              795
+            ],
+            [
+              "Blue Lagoon",
+              "",
+              795
+            ],
+            [
+              "Love Potion",
+              "",
+              795
+            ],
+            [
+              "Guava Lychee",
+              "",
+              795
+            ]
+          ]
+        },
+        {
+          "name": "Boba Milk Tea - Signature Fresh Milk",
+          "items": [
+            [
+              "Strawberry Fresh Milk",
+              "",
+              895
+            ],
+            [
+              "Black Sugar Fresh Milk",
+              "",
+              895
+            ],
+            [
+              "Black Sugar Crème Brûlée",
+              "",
+              895
+            ],
+            [
+              "Ube Crème Brûlée",
+              "",
+              895
+            ]
+          ]
+        },
+        {
+          "name": "Boba Milk Tea - Original Milk Tea",
+          "items": [
+            [
+              "Royal Milk Tea",
+              "",
+              795
+            ],
+            [
+              "Thai Tea",
+              "",
+              795
+            ],
+            [
+              "Taro",
+              "",
+              795
+            ],
+            [
+              "Vietnamese Coffee",
+              "",
+              795
+            ]
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "head": "Devil & Angel locations",
+          "body": [
+            "The brand lists Serramonte as unit 759, while the mall and the branch ordering menu list unit 130-D. Confirm the unit with the mall before visiting."
+          ],
+          "links": [
+            {
+              "label": "Serramonte Center directory",
+              "href": "https://www.serramontecenter.com/directory"
+            },
+            {
+              "label": "Official locations",
+              "href": "https://devilnangel.com/locations"
+            },
+            {
+              "label": "Concord on BEASTY",
+              "href": "https://beastypages.com/?b=b_devilandangeldesserts"
+            }
+          ]
+        },
+        {
+          "head": "Daly City ordering menu",
+          "body": [
+            "The branch’s online ordering menu shows milk tea, sago, smoothies and fruit refreshers."
+          ],
+          "links": [
+            {
+              "label": "Serramonte menu",
+              "href": "https://order.online/store/26168325"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "dragon-beaux",
+      "name": "Dragon Beaux",
+      "label": "Dragon Beaux",
+      "cuisine": "Dim sum and hot pot",
+      "tagline": "Dim sum and hot pot",
+      "icon": "dragon-beaux-v114",
+      "color": "#F6F2E8",
+      "prep": 0,
+      "category": "Dim Sum",
+      "items": [],
+      "address": "5700 Geary Blvd, San Francisco, CA 94121",
+      "site": "https://dragonbeaux.com/",
+      "instagram": "dragonbeaux",
+      "phone": "(415) 333-8899",
+      "hours": "Dine-in: Mon–Fri 11am–3pm; Sat–Sun 10am–3pm. Dinner daily 5–8:45pm.",
+      "orderUrl": "https://order.online/store/297076?pickup=true",
+      "sections": [
+        {
+          "name": "WEEKEND SPECIAL 週末推介",
+          "items": [
+            [
+              "Fried Glutinous Dumplings w/ Diced Pork 鹹水角",
+              "",
+              725
+            ]
+          ]
+        },
+        {
+          "name": "BAO 包包",
+          "items": [
+            [
+              "Classic Steamed BBQ Pork Bao 叉燒包",
+              "",
+              725
+            ],
+            [
+              "Steamed EggYolk Lava Bao 流沙包",
+              "",
+              725
+            ],
+            [
+              "Durian Custard Bao (2) 榴蓮包",
+              "",
+              950
+            ],
+            [
+              "Pan-Seared Black Pepper Waygu Beef Bao 煎和牛包",
+              "",
+              825
+            ],
+            [
+              "Rainbow Taro Paste Bao 芋泥包",
+              "",
+              825
+            ],
+            [
+              "Steamed Chicken Mushroom Bun 花菇雞包",
+              "",
+              725
+            ]
+          ]
+        },
+        {
+          "name": "WOK 少吵",
+          "items": [
+            [
+              "Sauteed Spareribs w/ Tangy Sweet - Sour Sauce 西汁排骨",
+              "",
+              1600
+            ],
+            [
+              "Soy Sauce Stir-Fried Noodles 豉油皇炒麵 (廚)",
+              "",
+              825
+            ],
+            [
+              "Chinese Broccoli w/ Oyster Sauce 蠔油芥蘭 (廚)",
+              "",
+              1100
+            ],
+            [
+              "Honey Glazed Pepper Chicken Wings 蜜椒雞翼",
+              "",
+              1300
+            ],
+            [
+              "Stir-Fry String Bean w/Diced Meat 乾煸四季豆 (廚)",
+              "",
+              950
+            ],
+            [
+              "Garlic Tender Green 蒜子油菜心 (廚)",
+              "",
+              1100
+            ],
+            [
+              "Poached Beef Tripe 白灼牛百葉",
+              "",
+              1100
+            ],
+            [
+              "Orange Chicken 香橙雞",
+              "",
+              2200
+            ],
+            [
+              "Domestic Wagyu with Roasted Garlic 香蒜美國和牛",
+              "",
+              3200
+            ],
+            [
+              "Dry Fried Sauce Spareribs 乾烹排骨",
+              "",
+              1600
+            ],
+            [
+              "Honey Glazed Walnut Shrimps with Cranberries Aioli 蔓越莓醬核桃蝦",
+              "",
+              2500
+            ],
+            [
+              "Malay Okra 馬拉盞炒秋葵 (廚)",
+              "",
+              1100
+            ],
+            [
+              "Peking Duck w/12 pcs Golden Buns 北京片皮鴨",
+              "",
+              5800
+            ],
+            [
+              "Salt & Pepper Chicken Wings 椒鹽雞翼",
+              "",
+              1300
+            ],
+            [
+              "Sauteed A Chow w/ Satay Sauce 沙茶啫啫油麥菜 (廚)",
+              "",
+              1100
+            ],
+            [
+              "Sauteed Tiger Prawns w/ Supreme Soy Sauce 豉油皇老虎蝦",
+              "",
+              3200
+            ],
+            [
+              "Spicy Wagyu & Mushroom 香辣和牛炒雜菌",
+              "",
+              2800
+            ],
+            [
+              "Sautéed Scallop & Prawns with XO Sauce and Broccoli XO醬翡翠蝦球炒帶子",
+              "",
+              3200
+            ],
+            [
+              "Crab Roe Seafood Tofu in Clay Pot 蟹黃海鮮豆腐煲",
+              "",
+              2800
+            ],
+            [
+              "Pan Fried Pork Tenderloin Fillet & String Bean with Supreme Soy Sauce 豉油皇煎豬柳",
+              "",
+              2400
+            ],
+            [
+              "Bang Bang Chicken 乾烹雞",
+              "",
+              1800
+            ]
+          ]
+        },
+        {
+          "name": "NOODLES - RICE 鍋撈",
+          "items": [
+            [
+              "Beef Chow-Fun 乾炒牛河",
+              "",
+              2000
+            ],
+            [
+              "Mixed Mushroom, Abalone E-Fu Noodles 什菌鮑魚乾燒伊麵",
+              "",
+              2300
+            ],
+            [
+              "Dried Scallop - Egg White Fried Rice 瑤柱蛋白炒飯",
+              "",
+              2200
+            ],
+            [
+              "Squid Ink Fried Rice 墨魚汁樱花蝦炒飯",
+              "",
+              2300
+            ],
+            [
+              "Ginger Scallion Lobster E-Fu Noodles 薑蒽龍蝦伊麵",
+              "",
+              4800
+            ],
+            [
+              "Yang Chou Fried Rice 揚州炒飯",
+              "",
+              2200
+            ],
+            [
+              "Black Truffle Duck Fried Rice 黑松露鴨鬆炒飯",
+              "",
+              2500
+            ],
+            [
+              "Crab Roe Seafood Fried Rice 蟹黃海鮮炒飯",
+              "",
+              2800
+            ],
+            [
+              "Dungeness Crab Lo Mein with Ginger Scallion 薑蔥大蟹撈粗面",
+              "",
+              5500
+            ],
+            [
+              "Steamed Rice 白飯",
+              "",
+              300
+            ],
+            [
+              "Seafood HK Crispy Noodles 海鮮兩面黄",
+              "",
+              2400
+            ],
+            [
+              "Wagyu Beef Fried Rice - Green Onion in XO Sauce XO醬青蒽和牛炒飯",
+              "",
+              2500
+            ],
+            [
+              "Wild Mushroom - Black Truffles Fried Rice (Vegetarian) 野菌黑松露炒飯",
+              "",
+              2100
+            ]
+          ]
+        },
+        {
+          "name": "SPECIALS 特色",
+          "items": [
+            [
+              "Five Guys Xiao Long Bao 五彩小籠包",
+              "",
+              1200
+            ],
+            [
+              "Jumbo Scallop Siu Mai 帶子燒賣",
+              "",
+              950
+            ],
+            [
+              "Sea Bass Dumpling 雪魚餃",
+              "",
+              950
+            ],
+            [
+              "Spicy Seafood Dumplin 麻辣海鮮餃",
+              "",
+              870
+            ],
+            [
+              "Spinach Beef Shiu Mai 牛燒賣",
+              "",
+              725
+            ],
+            [
+              "Ha Gow Collection 天然本色蝦餃皇",
+              "",
+              1380
+            ],
+            [
+              "Chinese Chive and Shrimp Dumplings 碧綠韭菜餃",
+              "",
+              825
+            ]
+          ]
+        },
+        {
+          "name": "STEAMER 蒸彩",
+          "items": [
+            [
+              "Crab Roe Siu Mai 蟹子燒賣",
+              "",
+              725
+            ],
+            [
+              "Black Bean Sauce Chicken Paw 鳳爪",
+              "",
+              725
+            ],
+            [
+              "Black Bean Sauce Spareribs 排骨",
+              "",
+              625
+            ],
+            [
+              "Classic Shrimp Dumpling 蝦餃",
+              "",
+              825
+            ],
+            [
+              "Juicy Pork Xiao Long Bao 小籠包",
+              "",
+              825
+            ],
+            [
+              "Crab Roe Xiao Long Bao蟹粉小籠包",
+              "",
+              1100
+            ],
+            [
+              "Abalone, Chicken Sticky Rice in Lotus Leaf 鮑魚糯米雞",
+              "",
+              1100
+            ],
+            [
+              "Pea Shoot Dumpling 豆苗餃",
+              "",
+              825
+            ],
+            [
+              "Chicken & Mushroom Siu Mai 香菇雞燒賣",
+              "",
+              725
+            ],
+            [
+              "Chili Oil Wonton 紅油炒手",
+              "",
+              825
+            ]
+          ]
+        },
+        {
+          "name": "FRYER 有脆",
+          "items": [
+            [
+              "Vegetarian Spring Roll 素春卷",
+              "",
+              625
+            ],
+            [
+              "Durian Puff 榴槤酥",
+              "",
+              1300
+            ],
+            [
+              "Stuffed Eggplant 釀茄子",
+              "",
+              825
+            ],
+            [
+              "Crispy Organic Milk Roll 有機奶",
+              "",
+              825
+            ],
+            [
+              "Sesame Scallion Flatbread 芝麻蔥油大餅",
+              "",
+              1200
+            ],
+            [
+              "Pot Sticker 鍋貼 (4)",
+              "",
+              725
+            ],
+            [
+              "Pan Seared Daikon Cake 煎蘿蔔糕",
+              "",
+              825
+            ]
+          ]
+        },
+        {
+          "name": "RICE CREPE ROLLS 長有",
+          "items": [
+            [
+              "Shrimp Rice Crepe Roll 蝦腸",
+              "",
+              1100
+            ],
+            [
+              "BBQ Pork Rice Crepe Roll 叉燒腸",
+              "",
+              950
+            ],
+            [
+              "XO Pan Seared Rice Crepe Roll XO煎腸粉",
+              "",
+              825
+            ],
+            [
+              "Street Side Plain Rice Crepe Roll 路邊腸",
+              "",
+              825
+            ],
+            [
+              "Beef & Coriander Rice Crepe Roll 香茜牛肉腸",
+              "",
+              1100
+            ],
+            [
+              "Beef Brisket Stew Rice Crepe Roll 牛腩腸粉煲",
+              "",
+              1600
+            ],
+            [
+              "Mixed Mushrooms Rice Crepe Roll(Vegetarian) 上素什菌腸",
+              "",
+              950
+            ]
+          ]
+        },
+        {
+          "name": "CONGEE 滿粥",
+          "items": [
+            [
+              "Seafood, Fish Maw Millet Congee 海鮮花膠小米粥",
+              "",
+              2300
+            ],
+            [
+              "Free Range Chicken Congee 雞粥",
+              "",
+              1300
+            ],
+            [
+              "Egg - Beef Congee 牛粥",
+              "",
+              1300
+            ],
+            [
+              "Dried Scallop Congee 瑶柱白粥",
+              "",
+              1000
+            ],
+            [
+              "Fish Maw Mountain Yam Congee 淮山枸子花膠粥",
+              "",
+              1300
+            ],
+            [
+              "Dungeness Crab Congee (Whole) 原隻蟹生滾粥",
+              "",
+              5800
+            ],
+            [
+              "Watercress & Sliced Fish Fillet Congee 西洋菜魚片粥",
+              "",
+              2300
+            ]
+          ]
+        },
+        {
+          "name": "ROASTER 味夠",
+          "items": [
+            [
+              "Honey Glazed Barbecued Pork 蜜汁叉燒皇",
+              "",
+              1600
+            ],
+            [
+              "Soya Tofu 鹵豆腐",
+              "",
+              725
+            ],
+            [
+              "Cold Mixed Spicy Beef Shank 涼拌麻辣牛展",
+              "",
+              1500
+            ],
+            [
+              "Roasted Duck(Quarter) 燒鴨 (廚)",
+              "",
+              1500
+            ],
+            [
+              "Pickled Cucumber 手拍黄瓜",
+              "",
+              725
+            ],
+            [
+              "Crispy Hand-Roasted Pork Belly 脆皮爆腩仔",
+              "",
+              1600
+            ],
+            [
+              "Salt Baked Chicken 客家鹽焗雞",
+              "",
+              1500
+            ],
+            [
+              "Crispy Salt & Pepper Pork Tenderloin Fillet 椒鹽豬柳",
+              "",
+              2200
+            ],
+            [
+              "Roasted Duck (Half) 燒鴨 (半隻)",
+              "",
+              2500
+            ],
+            [
+              "Roasted Squab (each) 紅燒乳鴿 (隻)",
+              "",
+              2400
+            ],
+            [
+              "Salt Baked Chicken (Half) 客家鹽焗雞 (半隻)",
+              "",
+              2400
+            ],
+            [
+              "Vegetarian Tofu Roulette 素鵝",
+              "",
+              1000
+            ]
+          ]
+        },
+        {
+          "name": "SWEETS 甜心",
+          "items": [
+            [
+              "Custard Crystal Dumpling 奶黃水晶包",
+              "",
+              600
+            ],
+            [
+              "Malay Sponge Cake 馬拉糕",
+              "",
+              725
+            ],
+            [
+              "Mango Tapioca Pudding 楊枝金露",
+              "",
+              825
+            ],
+            [
+              "Goji Berry Osmanthus Coconut Jelly Cake 桂花糕",
+              "",
+              575
+            ]
+          ]
+        }
+      ],
+      "menuNote": "Published pickup lunch prices. The dinner and hot pot menus are separate. Confirm service, selections and current pricing with Dragon Beaux.",
+      "panels": [
+        {
+          "head": "Dinner, hot pot and reservations",
+          "body": [
+            "For dinner, the restaurant asks guests to choose hot pot or the traditional menu when reserving. Dim sum is offered with either."
+          ],
+          "links": [
+            {
+              "label": "Official lunch, dinner and hot pot menus",
+              "href": "https://dragonbeaux.com/menus/"
+            },
+            {
+              "label": "Reservations",
+              "href": "https://dragonbeaux.com/reservations/"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/b114-dfko0cxvonf.mp4",
+        "poster": "/clips/b114-dfko0cxvonf-poster.webp",
+        "href": "https://www.instagram.com/reel/Dfko0CXvonf/",
+        "credit": "Filmed by @meggyeatz and reposted by @dragonbeaux. Dragon Beaux in San Francisco’s Richmond District.",
+        "platform": "Instagram"
+      }
+    },
+    {
+      "slug": "gregorys-gourmet-desserts-san-ramon",
+      "name": "Gregory’s Gourmet Desserts",
+      "label": "Gregory’s San Ramon",
+      "cuisine": "Cheesecakes and desserts",
+      "tagline": "Cheesecakes and desserts",
+      "icon": "gregorys-gourmet-desserts",
+      "color": "#F6F2E8",
+      "prep": 0,
+      "category": "Sweets",
+      "items": [],
+      "address": "2410 San Ramon Valley Blvd, Suite 140, San Ramon, CA 94583",
+      "site": "https://gregorysgourmetdesserts.com/",
+      "instagram": "gregorysgourmetdesserts",
+      "hours": "Wed–Sat 10:30am–6pm; Sun–Tue closed per the branch’s Toast listing.",
+      "contactOnly": "The San Ramon branch of Gregory’s Gourmet Desserts. Confirm the current slice selection and prices with the bakery.",
+      "panels": [
+        {
+          "head": "San Ramon and Oakland",
+          "body": [
+            "This is the San Ramon bakery. The Oakland shop has its own BEASTY page."
+          ],
+          "links": [
+            {
+              "label": "San Ramon catering",
+              "href": "https://www.toasttab.com/catering/gregorys-gourmet-desserts-san-ramon-2410-san-ramon-valley-blvd-140"
+            },
+            {
+              "label": "Oakland on BEASTY",
+              "href": "https://beastypages.com/?b=b_gregorysgourmetdesserts"
+            }
+          ]
+        }
+      ],
+      "clip": {
+        "src": "/clips/b114-dfiyi4ou_sb.mp4",
+        "poster": "/clips/b114-dfiyi4ou_sb-poster.webp",
+        "href": "https://www.instagram.com/reel/DfiYI4Ou_SB/",
+        "credit": "Posted by @gregorysgourmetdesserts. Launch coverage of the San Ramon bakery, 2410 San Ramon Valley Boulevard, Suite 140.",
+        "platform": "Instagram"
+      }
+    }
+  ],
+  "placements": {
+    "berkeley-goods-15": "b_cinnaholicberkeley",
+    "san-francisco-goods-17": "b_dragonbeaux",
+    "daly-city-goods-14": "b_devilandangeldalycity",
+    "san-ramon-goods-10": "b_gregorysgourmetdessertssanramon",
+    "beasty-sweets2-0": "b_cinnaholicberkeley",
+    "beasty-boba-16": "b_devilandangeldesserts",
+    "beasty-boba-17": "b_devilandangeldalycity",
+    "beasty-icecream-5": "b_devilandangeldesserts",
+    "beasty-icecream-6": "b_devilandangeldalycity",
+    "beasty-hotpot-13": "b_dragonbeaux",
+    "beasty-dimsum-15": "b_dragonbeaux",
+    "beasty-foodies2-295": "b_foodiegoeatwithangie",
+    "beasty-foodies2-296": "b_foodienaeemahtravels",
+    "beasty-foodies2-297": "b_foodiefeedchris",
+    "beasty-foodies2-298": "b_foodiektraaaaan",
+    "beasty-foodies2-299": "b_foodiegoutclout",
+    "beasty-foodies2-300": "b_foodiebestinthegamme",
+    "beasty-foodies2-301": "b_foodiebonjocbites"
+  },
+  "posts": [
+    {
+      "code": "De0D6ipBS2B",
+      "slug": "review-De0D6ipBS2B",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 55.0,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/De0D6ipBS2B/",
+      "brand": "b_hellagoodburger",
+      "by": "startingfiresevrywhere",
+      "postedBy": "startingfiresevrywhere",
+      "request": [
+        {
+          "at": "2026-11-11T05:00:22.030776-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "credit": "Review by @startingfiresevrywhere at HELLA GOOD BURGER, San Jose.",
+      "disposition": "business and creator review; global Watch",
+      "rank": "Newbie"
+    },
+    {
+      "code": "DfkZJihzU0s",
+      "slug": "review-DfkZJihzU0s",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 151.934,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DfkZJihzU0s/",
+      "brand": "b_sugarplumcoffeeshop",
+      "by": "feedchris_",
+      "postedBy": "feedchris_",
+      "request": [
+        {
+          "at": "2026-11-11T05:28:04.198723-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "credit": "Review by @feedchris_ at Sugar Plum Coffee Shop, Concord.",
+      "disposition": "business and creator review; global Watch",
+      "rank": "Newbie"
+    },
+    {
+      "code": "DflcQpdNWWP",
+      "slug": "review-DflcQpdNWWP",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 16.233,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DflcQpdNWWP/",
+      "brand": "b_matzipunioncity",
+      "by": "d_baylock_",
+      "postedBy": "d_baylock_",
+      "request": [
+        {
+          "at": "2026-11-11T07:30:51.346892-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review by @d_baylock_ at Matzip — Union City, Union City.",
+      "disposition": "business and creator review; global Watch"
+    },
+    {
+      "code": "DX4wZNpvg9x",
+      "slug": "review-DX4wZNpvg9x",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 18.7,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DX4wZNpvg9x/",
+      "brand": "b_matzipunioncity",
+      "by": "chelchomps",
+      "postedBy": "chelchomps",
+      "request": [
+        {
+          "at": "2026-11-11T07:31:10.000107-08:00",
+          "request": "Clip this video plz \nPlease update icon pic"
+        }
+      ],
+      "credit": "Review by @chelchomps at Matzip — Union City, Union City.",
+      "disposition": "business and creator review; global Watch"
+    },
+    {
+      "code": "DQ9zYNzAWgL",
+      "slug": "review-DQ9zYNzAWgL",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 19.437,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DQ9zYNzAWgL/",
+      "brand": "b_matzipunioncity",
+      "by": "travelwtiff",
+      "postedBy": "travelwtiff",
+      "request": [
+        {
+          "at": "2026-11-11T07:31:10.497123-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review by @travelwtiff at Matzip — Union City, Union City.",
+      "disposition": "business and creator review; global Watch"
+    },
+    {
+      "code": "DcfGVgOJukE",
+      "slug": "review-DcfGVgOJukE",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 27.61,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DcfGVgOJukE/",
+      "brand": "b_matzipunioncity",
+      "by": "whatthejessi_",
+      "postedBy": "whatthejessi_",
+      "request": [
+        {
+          "at": "2026-11-11T07:31:59.446038-08:00",
+          "request": "Clip this video plz \nPlease update icon pic"
+        }
+      ],
+      "credit": "Review by @whatthejessi_ at Matzip — Union City, Union City.",
+      "disposition": "creator-page film linked from the business; global Watch",
+      "playOn": "b_foodiewhatthejessi"
+    },
+    {
+      "code": "DZiDB5pykQr",
+      "slug": "review-DZiDB5pykQr",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 27.667,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DZiDB5pykQr/",
+      "brand": "b_matzipunioncity",
+      "by": "sophie_eats_world",
+      "postedBy": "sophie_eats_world",
+      "request": [
+        {
+          "at": "2026-11-11T07:32:53.086044-08:00",
+          "request": "Clip this video plz \nPlease update icon pic"
+        }
+      ],
+      "credit": "Review by @sophie_eats_world at Matzip — Union City, Union City.",
+      "disposition": "creator-page film linked from the business; global Watch",
+      "playOn": "b_foodiesophieeatsworld"
+    },
+    {
+      "code": "DflcorXhzRc",
+      "slug": "review-DflcorXhzRc",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 31.79,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DflcorXhzRc/",
+      "brand": "b_bibimgrill",
+      "by": "goeatwithangie",
+      "postedBy": "goeatwithangie",
+      "request": [
+        {
+          "at": "2026-11-11T07:47:45.050891-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter"
+        }
+      ],
+      "credit": "Review by @goeatwithangie at Bibim Grill, 3742 Fallon Road, Dublin.",
+      "disposition": "creator-page film linked from the business; global Watch",
+      "rank": "Heavy Hitter",
+      "playOn": "b_foodiegoeatwithangie"
+    },
+    {
+      "code": "DfiYI4Ou_SB",
+      "slug": "b114-dfiyi4ou_sb",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 42.843,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DfiYI4Ou_SB/",
+      "brand": "b_gregorysgourmetdessertssanramon",
+      "by": "gregorysgourmetdesserts",
+      "postedBy": "gregorysgourmetdesserts",
+      "request": [
+        {
+          "at": "2026-11-11T07:50:23.145050-08:00",
+          "request": "Move this to Watch this video clip \n\nand the review below to reviews"
+        }
+      ],
+      "credit": "Posted by @gregorysgourmetdesserts. Launch coverage of the San Ramon bakery, 2410 San Ramon Valley Boulevard, Suite 140.",
+      "disposition": "Watch their video and global Watch"
+    },
+    {
+      "code": "DeAEO9kviha",
+      "slug": "review-DeAEO9kviha",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 117.147,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DeAEO9kviha/",
+      "brand": "b_gregorysgourmetdesserts",
+      "by": "k.traaaaan",
+      "postedBy": "k.traaaaan",
+      "request": [
+        {
+          "at": "2026-11-11T07:53:14.189256-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "credit": "Review by @k.traaaaan at Gregory’s Gourmet Desserts — Oakland, Oakland.",
+      "disposition": "business and creator review; global Watch",
+      "rank": "Newbie"
+    },
+    {
+      "code": "Dc6aSHzv4a-",
+      "slug": "review-Dc6aSHzv4a-",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 124.767,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/Dc6aSHzv4a-/",
+      "brand": "b_gregorysgourmetdessertssanramon",
+      "by": "bestinthegamme",
+      "postedBy": "bestinthegamme",
+      "request": [
+        {
+          "at": "2026-11-11T07:54:02.866932-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie Newbie"
+        }
+      ],
+      "credit": "Review by @bestinthegamme. Filmed at the San Ramon shop; the original also lists the Oakland location.",
+      "disposition": "business and creator review; global Watch",
+      "rank": "Newbie Newbie"
+    },
+    {
+      "code": "DcCkNkkoRgj",
+      "slug": "review-DcCkNkkoRgj",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 38.139,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DcCkNkkoRgj/",
+      "brand": "b_gregorysgourmetdesserts",
+      "by": "naeemahtravels",
+      "postedBy": "naeemahtravels",
+      "request": [
+        {
+          "at": "2026-11-11T07:54:57.725714-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter"
+        }
+      ],
+      "credit": "Review by @naeemahtravels at Gregory’s Gourmet Desserts — Oakland, Oakland.",
+      "disposition": "business and creator review; global Watch",
+      "rank": "Heavy Hitter"
+    },
+    {
+      "code": "DbHGlTZygC-",
+      "slug": "review-DbHGlTZygC-",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 165.769,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DbHGlTZygC-/",
+      "brand": "b_gregorysgourmetdessertssanramon",
+      "by": "goutclout",
+      "postedBy": "goutclout",
+      "request": [
+        {
+          "at": "2026-11-11T07:57:13.647258-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "credit": "Review by @goutclout at Gregory’s Gourmet Desserts — San Ramon, San Ramon.",
+      "disposition": "business and creator review; global Watch",
+      "rank": "Newbie"
+    },
+    {
+      "code": "DfkpY0HB5lI",
+      "slug": "b114-dfkpy0hb5li",
+      "startSeconds": 0,
+      "endSeconds": 12.425,
+      "sourceDuration": 12.425,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DfkpY0HB5lI/",
+      "brand": "b_elagaveazul",
+      "by": "agaveazulca",
+      "postedBy": "agaveazulca",
+      "request": [
+        {
+          "at": "2026-11-11T07:58:26.545681-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "credit": "Published by @agaveazulca at El Agave Azul in Richmond.",
+      "disposition": "Watch their video and global Watch"
+    },
+    {
+      "code": "Dfko0CXvonf",
+      "slug": "b114-dfko0cxvonf",
+      "startSeconds": 0,
+      "endSeconds": 9.1,
+      "sourceDuration": 9.1,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/Dfko0CXvonf/",
+      "brand": "b_dragonbeaux",
+      "by": "meggyeatz",
+      "postedBy": "dragonbeaux",
+      "request": [
+        {
+          "at": "2026-11-11T08:10:57.007474-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "credit": "Filmed by @meggyeatz and reposted by @dragonbeaux. Dragon Beaux in San Francisco’s Richmond District.",
+      "disposition": "Watch their video and global Watch"
+    },
+    {
+      "code": "Dd5UQRdqQ4x",
+      "slug": "review-Dd5UQRdqQ4x",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 42.167,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/Dd5UQRdqQ4x/",
+      "brand": "b_sandwichmonkey",
+      "by": "bonjocbites",
+      "postedBy": "bonjocbites",
+      "request": [
+        {
+          "at": "2026-11-11T08:27:08.027838-08:00",
+          "request": "Clip this video plz\nFoodie \nNewbie Newbie"
+        }
+      ],
+      "credit": "Review by @bonjocbites at The Sandwich Monkey, Foster City.",
+      "disposition": "business and creator review; global Watch",
+      "rank": "Newbie Newbie"
+    },
+    {
+      "code": "DfdMpyHhKtK",
+      "slug": "b114-dfdmpyhhktk",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 15.675,
+      "audio": true,
+      "batch": 114,
+      "source": "https://www.instagram.com/reel/DfdMpyHhKtK/",
+      "brand": "b_doodlecakes",
+      "by": "doodlecakesbakery",
+      "postedBy": "doodlecakesbakery",
+      "request": [
+        {
+          "at": "2026-11-11T10:30:46.483684-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "credit": "Original bakery skit posted by @doodlecakesbakery in Alameda.",
+      "disposition": "Watch their video and global Watch"
+    }
+  ],
+  "updatedIcons": [
+    "/icons/foodie-startingfiresevrywhere-v114.webp",
+    "/icons/foodie-feedchris-v114.webp",
+    "/icons/foodie-chelchomps-v114.webp",
+    "/icons/foodie-whatthejessi-v114.webp",
+    "/icons/foodie-sophieeatsworld-v114.webp",
+    "/icons/foodie-goeatwithangie-v114.webp",
+    "/icons/foodie-ktraaaaan-v114.webp",
+    "/icons/foodie-bestinthegamme-v114.webp",
+    "/icons/foodie-naeemahtravels-v114.webp",
+    "/icons/foodie-goutclout-v114.webp",
+    "/icons/foodie-bonjocbites-v114.webp",
+    "/icons/cinnaholic-berkeley-v114.webp",
+    "/icons/devil-and-angel-v114.webp",
+    "/icons/dragon-beaux-v114.webp",
+    "/icons/sandwich-monkey-v114.webp",
+    "/icons/hella-good-burger-v114.webp"
+  ],
+  "updatedBrands": [
+    "b_hellagoodburger",
+    "b_sandwichmonkey",
+    "b_devilandangeldesserts"
+  ],
+  "artworkDispositions": [
+    {
+      "path": "/icons/foodie-startingfiresevrywhere-v114.webp",
+      "source": "IMG_0084.PNG",
+      "disposition": "Supplied current profile portrait; blurred screen and controls removed."
+    },
+    {
+      "path": "/icons/foodie-feedchris-v114.webp",
+      "source": "IMG_0092.png",
+      "disposition": "Supplied current profile portrait; blurred screen and controls removed."
+    },
+    {
+      "path": "/icons/foodie-chelchomps-v114.webp",
+      "source": "IMG_0104.PNG",
+      "disposition": "Supplied current profile portrait; blurred screen and controls removed."
+    },
+    {
+      "path": "/icons/foodie-whatthejessi-v114.webp",
+      "source": "IMG_0105.PNG",
+      "disposition": "Supplied current profile portrait; blurred screen and controls removed."
+    },
+    {
+      "path": "/icons/foodie-sophieeatsworld-v114.webp",
+      "source": "IMG_0106.PNG",
+      "disposition": "Supplied current profile portrait; blurred screen and controls removed."
+    },
+    {
+      "path": "/icons/foodie-goeatwithangie-v114.webp",
+      "source": "IMG_0108.png",
+      "disposition": "Supplied current profile portrait; blurred screen and controls removed."
+    },
+    {
+      "path": "/icons/foodie-ktraaaaan-v114.webp",
+      "source": "IMG_0109.png",
+      "disposition": "Supplied current profile portrait; blurred screen and controls removed."
+    },
+    {
+      "path": "/icons/foodie-bestinthegamme-v114.webp",
+      "source": "IMG_0110.png",
+      "disposition": "Supplied current profile portrait; blurred screen and controls removed."
+    },
+    {
+      "path": "/icons/foodie-naeemahtravels-v114.webp",
+      "source": "IMG_0111.png",
+      "disposition": "Supplied current profile portrait; blurred screen and controls removed."
+    },
+    {
+      "path": "/icons/foodie-goutclout-v114.webp",
+      "source": "IMG_0115.png",
+      "disposition": "Supplied current profile portrait; blurred screen and controls removed."
+    },
+    {
+      "path": "/icons/foodie-bonjocbites-v114.webp",
+      "source": "IMG_0125.PNG",
+      "disposition": "Supplied current profile portrait; blurred screen and controls removed."
+    },
+    {
+      "path": "/icons/cinnaholic-berkeley-v114.webp",
+      "source": "IMG_0074.png",
+      "disposition": "Complete supplied logo with screenshot borders removed, centered on a square with margin for the phone squircle."
+    },
+    {
+      "path": "/icons/devil-and-angel-v114.webp",
+      "source": "IMG_0088.png",
+      "disposition": "Complete supplied logo with screenshot borders removed, centered on a square with margin for the phone squircle."
+    },
+    {
+      "path": "/icons/dragon-beaux-v114.webp",
+      "source": "IMG_0120.png",
+      "disposition": "Complete supplied logo with screenshot borders removed, centered on a square with margin for the phone squircle."
+    },
+    {
+      "path": "/icons/sandwich-monkey-v114.webp",
+      "source": "IMG_0124.png",
+      "disposition": "Complete supplied logo with screenshot borders removed, centered on a square with margin for the phone squircle."
+    },
+    {
+      "path": "/icons/hella-good-burger-v114.webp",
+      "source": "https://images.squarespace-cdn.com/content/v1/613bd3f9ff19f11abaac35af/ef90fce1-bc5c-4cc0-a855-e1d85404c0f8/Hella+Good+Logo+2022+copy.png",
+      "disposition": "Higher-resolution matching owner mark from hellagoodsj.com, fitted on the supplied dark background. IMG_0083.png was the request/reference."
+    },
+    {
+      "source": "IMG_0070.PNG",
+      "disposition": "Official Berkeley location reference"
+    },
+    {
+      "source": "IMG_0071.PNG",
+      "disposition": "Berkeley contact evidence"
+    },
+    {
+      "source": "IMG_0072.png",
+      "disposition": "Berkeley profile and official handle"
+    },
+    {
+      "source": "IMG_0073.png",
+      "disposition": "Alternate supplied Cinnaholic logo view; clearer isolated copy IMG_0074 used"
+    },
+    {
+      "source": "IMG_0089.png",
+      "disposition": "Concord profile and location evidence"
+    },
+    {
+      "source": "IMG_0090.PNG",
+      "disposition": "Daly City profile and location evidence"
+    },
+    {
+      "source": "IMG_0119.png",
+      "disposition": "Dragon Beaux profile and original handle"
+    }
+  ],
+  "sourceMessages": [
+    {
+      "rowId": 251931,
+      "at": "2026-11-10T22:10:12.736530-08:00",
+      "text": "Expand the BSTY Goods homepage name to Buy • Sell • Trade Your Goods with highlighted initials. Replace the swap meet headline and explain item-for-item trades.",
+      "attachments": []
+    },
+    {
+      "rowId": 251932,
+      "at": "2026-11-10T23:13:19.283600-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0071.PNG",
+        "IMG_0073.png",
+        "IMG_0072.png",
+        "IMG_0074.png",
+        "IMG_0070.PNG"
+      ]
+    },
+    {
+      "rowId": 251933,
+      "at": "2026-11-10T23:13:19.393604-08:00",
+      "text": "https://locations.cinnaholic.com/locations-list/ca/berkeley/",
+      "attachments": []
+    },
+    {
+      "rowId": 251934,
+      "at": "2026-11-10T23:13:19.465362-08:00",
+      "text": "Berkeley • Sweets \nBEASTY • Sweets",
+      "attachments": []
+    },
+    {
+      "rowId": 251935,
+      "at": "2026-11-11T04:57:06.581242-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_0083.png"
+      ]
+    },
+    {
+      "rowId": 251936,
+      "at": "2026-11-11T05:00:21.340829-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0084.PNG"
+      ]
+    },
+    {
+      "rowId": 251937,
+      "at": "2026-11-11T05:00:21.820699-08:00",
+      "text": "https://www.instagram.com/reel/De0D6ipBS2B/",
+      "attachments": []
+    },
+    {
+      "rowId": 251938,
+      "at": "2026-11-11T05:00:22.030776-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 251939,
+      "at": "2026-11-11T05:18:34.251390-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0088.png",
+        "IMG_0090.PNG",
+        "IMG_0089.png"
+      ]
+    },
+    {
+      "rowId": 251940,
+      "at": "2026-11-11T05:18:34.691092-08:00",
+      "text": "https://devilnangel.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 251941,
+      "at": "2026-11-11T05:18:34.786087-08:00",
+      "text": "Daly city  • Sweets \nConcord • Sweets \nBEASTY • Boba\nBEASTY • Ice Cream",
+      "attachments": []
+    },
+    {
+      "rowId": 251942,
+      "at": "2026-11-11T05:28:03.636779-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0092.png"
+      ]
+    },
+    {
+      "rowId": 251943,
+      "at": "2026-11-11T05:28:04.053910-08:00",
+      "text": "https://www.instagram.com/reel/DfkZJihzU0s/",
+      "attachments": []
+    },
+    {
+      "rowId": 251944,
+      "at": "2026-11-11T05:28:04.198723-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 251946,
+      "at": "2026-11-11T07:30:51.218038-08:00",
+      "text": "https://www.instagram.com/reel/DflcQpdNWWP/",
+      "attachments": []
+    },
+    {
+      "rowId": 251947,
+      "at": "2026-11-11T07:30:51.346892-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 251948,
+      "at": "2026-11-11T07:31:09.466125-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0104.PNG"
+      ]
+    },
+    {
+      "rowId": 251949,
+      "at": "2026-11-11T07:31:09.869041-08:00",
+      "text": "https://www.instagram.com/reel/DX4wZNpvg9x/",
+      "attachments": []
+    },
+    {
+      "rowId": 251950,
+      "at": "2026-11-11T07:31:10.000107-08:00",
+      "text": "Clip this video plz \nPlease update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 251951,
+      "at": "2026-11-11T07:31:10.375135-08:00",
+      "text": "https://www.instagram.com/reel/DQ9zYNzAWgL/",
+      "attachments": []
+    },
+    {
+      "rowId": 251952,
+      "at": "2026-11-11T07:31:10.497123-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 251953,
+      "at": "2026-11-11T07:31:59.042031-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0105.PNG"
+      ]
+    },
+    {
+      "rowId": 251954,
+      "at": "2026-11-11T07:31:59.361171-08:00",
+      "text": "https://www.instagram.com/reel/DcfGVgOJukE/",
+      "attachments": []
+    },
+    {
+      "rowId": 251955,
+      "at": "2026-11-11T07:31:59.446038-08:00",
+      "text": "Clip this video plz \nPlease update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 251956,
+      "at": "2026-11-11T07:32:52.354059-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0106.PNG"
+      ]
+    },
+    {
+      "rowId": 251957,
+      "at": "2026-11-11T07:32:52.965516-08:00",
+      "text": "https://www.instagram.com/reel/DZiDB5pykQr/",
+      "attachments": []
+    },
+    {
+      "rowId": 251958,
+      "at": "2026-11-11T07:32:53.086044-08:00",
+      "text": "Clip this video plz \nPlease update icon pic",
+      "attachments": []
+    },
+    {
+      "rowId": 251959,
+      "at": "2026-11-11T07:47:44.085483-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0108.png"
+      ]
+    },
+    {
+      "rowId": 251960,
+      "at": "2026-11-11T07:47:44.911102-08:00",
+      "text": "https://www.instagram.com/reel/DflcorXhzRc/",
+      "attachments": []
+    },
+    {
+      "rowId": 251961,
+      "at": "2026-11-11T07:47:45.050891-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 251962,
+      "at": "2026-11-11T07:50:22.967054-08:00",
+      "text": "https://www.instagram.com/reel/DfiYI4Ou_SB/",
+      "attachments": []
+    },
+    {
+      "rowId": 251963,
+      "at": "2026-11-11T07:50:23.145050-08:00",
+      "text": "Move this to Watch this video clip \n\nand the review below to reviews",
+      "attachments": []
+    },
+    {
+      "rowId": 251964,
+      "at": "2026-11-11T07:53:13.632397-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0109.png"
+      ]
+    },
+    {
+      "rowId": 251965,
+      "at": "2026-11-11T07:53:14.093217-08:00",
+      "text": "https://www.instagram.com/reel/DeAEO9kviha/",
+      "attachments": []
+    },
+    {
+      "rowId": 251966,
+      "at": "2026-11-11T07:53:14.189256-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 251967,
+      "at": "2026-11-11T07:54:02.296046-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0110.png"
+      ]
+    },
+    {
+      "rowId": 251968,
+      "at": "2026-11-11T07:54:02.752991-08:00",
+      "text": "https://www.instagram.com/reel/Dc6aSHzv4a-/",
+      "attachments": []
+    },
+    {
+      "rowId": 251969,
+      "at": "2026-11-11T07:54:02.866932-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie Newbie",
+      "attachments": []
+    },
+    {
+      "rowId": 251970,
+      "at": "2026-11-11T07:54:57.135322-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0111.png"
+      ]
+    },
+    {
+      "rowId": 251971,
+      "at": "2026-11-11T07:54:57.610800-08:00",
+      "text": "https://www.instagram.com/reel/DcCkNkkoRgj/",
+      "attachments": []
+    },
+    {
+      "rowId": 251972,
+      "at": "2026-11-11T07:54:57.725714-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 251973,
+      "at": "2026-11-11T07:57:12.992729-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0115.png"
+      ]
+    },
+    {
+      "rowId": 251974,
+      "at": "2026-11-11T07:57:13.526635-08:00",
+      "text": "https://www.instagram.com/reel/DbHGlTZygC-/",
+      "attachments": []
+    },
+    {
+      "rowId": 251975,
+      "at": "2026-11-11T07:57:13.647258-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 251976,
+      "at": "2026-11-11T07:58:26.471723-08:00",
+      "text": "https://www.instagram.com/reel/DfkpY0HB5lI/",
+      "attachments": []
+    },
+    {
+      "rowId": 251977,
+      "at": "2026-11-11T07:58:26.545681-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 251978,
+      "at": "2026-11-11T08:10:27.600751-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0120.png",
+        "IMG_0119.png"
+      ]
+    },
+    {
+      "rowId": 251979,
+      "at": "2026-11-11T08:10:28.231456-08:00",
+      "text": "https://dragonbeaux.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 251980,
+      "at": "2026-11-11T08:10:28.364177-08:00",
+      "text": "San Francisco  • Eats \nBEASTY • Hot Pot \nBEASTY • Dim Sum",
+      "attachments": []
+    },
+    {
+      "rowId": 251981,
+      "at": "2026-11-11T08:10:56.899493-08:00",
+      "text": "https://www.instagram.com/reel/Dfko0CXvonf/",
+      "attachments": []
+    },
+    {
+      "rowId": 251982,
+      "at": "2026-11-11T08:10:57.007474-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 251984,
+      "at": "2026-11-11T08:26:00.575755-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_0124.png"
+      ]
+    },
+    {
+      "rowId": 251985,
+      "at": "2026-11-11T08:27:07.583840-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0125.PNG"
+      ]
+    },
+    {
+      "rowId": 251986,
+      "at": "2026-11-11T08:27:07.932892-08:00",
+      "text": "https://www.instagram.com/reel/Dd5UQRdqQ4x/",
+      "attachments": []
+    },
+    {
+      "rowId": 251987,
+      "at": "2026-11-11T08:27:08.027838-08:00",
+      "text": "Clip this video plz\nFoodie \nNewbie Newbie",
+      "attachments": []
+    },
+    {
+      "rowId": 251990,
+      "at": "2026-11-11T10:12:24.575931-08:00",
+      "text": "Requested managed resale and fundraising inquiries for public figures, with collection intake, storage, tagging and listings. Commercial and beneficiary terms subject to review.",
+      "attachments": []
+    },
+    {
+      "rowId": 251993,
+      "at": "2026-11-11T10:30:46.341673-08:00",
+      "text": "https://www.instagram.com/reel/DfdMpyHhKtK/",
+      "attachments": []
+    },
+    {
+      "rowId": 251994,
+      "at": "2026-11-11T10:30:46.483684-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "rowId": 251995,
+      "at": "2026-11-11T10:31:42.327276-08:00",
+      "text": "Liked “Sure I can implement that option too  ”",
+      "attachments": []
+    }
+  ],
+  "creatorTiers": {
+    "goeatwithangie": "Heavy Hitter",
+    "naeemahtravels": "Heavy Hitter",
+    "feedchris_": "Newbie",
+    "k.traaaaan": "Newbie",
+    "goutclout": "Newbie",
+    "bestinthegamme": "Newbie Newbie",
+    "bonjocbites": "Newbie Newbie"
+  },
+  "goodsChanges": [
+    "Expanded BUY • SELL • TRADE YOUR GOODS headline",
+    "Managed resale inquiry and operator review"
+  ]
+}

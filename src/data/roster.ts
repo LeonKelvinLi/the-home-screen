@@ -935,7 +935,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: '918 1st St, Benicia',
   }),
   seed('sandwich-monkey', 'The Sandwich Monkey', 'Sandwich Mo…', 'Sandwiches', '#8A5A18', {
-    icon: 'sandwich-monkey',
+    icon: 'sandwich-monkey-v114',
     logoTemplate: 'monogram', logoInitials: 'SM', logoFace: 'slab',
     site: 'https://thesandwichmonkey.com/',
     address: '3 Plaza View Ln, Foster City',
@@ -2100,6 +2100,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      with a vegan, gluten-free line. Alameda's bakery seat. */
   seed('doodle-cakes', 'Doodle Cakes', 'Doodle Cakes', 'Cake shop', '#F4A6C6', {
     icon: 'doodle-cakes',
+    clip: {"src": "/clips/b114-dfdmpyhhktk.mp4", "poster": "/clips/b114-dfdmpyhhktk-poster.webp", "href": "https://www.instagram.com/reel/DfdMpyHhKtK/", "credit": "Original bakery skit posted by @doodlecakesbakery in Alameda.", "platform": "Instagram"},
     logoTemplate: 'wordmark', logoLines: ['doodle', 'cakes'], logoFace: 'script',
     site: 'https://www.doodlecakesbakery.com/',
     siteCta: 'Order online',

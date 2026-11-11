@@ -130,8 +130,27 @@ export function Home() {
     <div className="market-home">
       <section className="market-masthead" aria-labelledby="market-title">
         <div className="market-intro">
-          <h1 id="market-title">The swap meet.</h1>
-          <p>Browse secondhand goods. List yours or make a trade.</p>
+          <h1
+            id="market-title"
+            className="market-acronym"
+            aria-label="Buy, Sell, Trade Your Goods"
+          >
+            <span>
+              <b>B</b>uy
+            </span>{" "}
+            <i aria-hidden="true">•</i>{" "}
+            <span>
+              <b>S</b>ell
+            </span>{" "}
+            <i aria-hidden="true">•</i>{" "}
+            <span>
+              <b>T</b>rade
+            </span>{" "}
+            <span>
+              <b>Y</b>our Goods
+            </span>
+          </h1>
+          <p>See something you want? Offer an item you own in exchange.</p>
           <Link to="/explore?tradeOnly=true" className="market-trade-link">
             <ArrowLeftRight size={17} /> Browse tradeable items{" "}
             <ArrowUpRight size={15} />
@@ -192,6 +211,18 @@ export function Home() {
             action={{ label: "List an item", to: "/sell/new" }}
           />
         )}
+      </section>
+      <section className="market-resale" aria-labelledby="market-resale-title">
+        <div>
+          <h2 id="market-resale-title">Managed resale</h2>
+          <p>
+            Have a collection to sell or a fundraiser to plan? Ask BSTY Goods
+            about storage, tagging, and listings.
+          </p>
+        </div>
+        <Link className="button" to="/managed-resale">
+          See how it works <ArrowRight size={17} />
+        </Link>
       </section>
       {sellers.length > 0 && (
         <section className="section seller-discovery-section">

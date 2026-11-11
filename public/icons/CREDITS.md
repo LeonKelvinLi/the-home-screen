@@ -729,3 +729,21 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `dumpling-kitchen-v113.webp` | Glenn’s supplied artwork | `IMG_0063.png` | Original supplied rainbow mark fitted to a 552 px square; phone margins removed. Monochrome owner PNG checked but supplied color artwork retained. |
 | `flats-burgers-v113.webp` | Glenn’s supplied artwork | `IMG_0068.png` | Late requested update; full wordmark retained with a larger fit and no screenshot border. |
 | `deli-board-v113.webp` | https://static.wixstatic.com/media/15e88d_8a2bb982ee6e4ad0b85811f8db7c5059~mv2.png | `Owner full-resolution PNG` | Full-resolution owner logo replaces the clipped/soft earlier profile crop. Alpha composited on white; complete Deli Board wordmark and sandwich preserved. |
+
+<!-- Batch 114 — original marks and profile artwork. -->
+| `foodie-startingfiresevrywhere-v114.webp` | IMG_0084.PNG | Supplied current profile portrait; blurred screen and controls removed. |
+| `foodie-feedchris-v114.webp` | IMG_0092.png | Supplied current profile portrait; blurred screen and controls removed. |
+| `foodie-chelchomps-v114.webp` | IMG_0104.PNG | Supplied current profile portrait; blurred screen and controls removed. |
+| `foodie-whatthejessi-v114.webp` | IMG_0105.PNG | Supplied current profile portrait; blurred screen and controls removed. |
+| `foodie-sophieeatsworld-v114.webp` | IMG_0106.PNG | Supplied current profile portrait; blurred screen and controls removed. |
+| `foodie-goeatwithangie-v114.webp` | IMG_0108.png | Supplied current profile portrait; blurred screen and controls removed. |
+| `foodie-ktraaaaan-v114.webp` | IMG_0109.png | Supplied current profile portrait; blurred screen and controls removed. |
+| `foodie-bestinthegamme-v114.webp` | IMG_0110.png | Supplied current profile portrait; blurred screen and controls removed. |
+| `foodie-naeemahtravels-v114.webp` | IMG_0111.png | Supplied current profile portrait; blurred screen and controls removed. |
+| `foodie-goutclout-v114.webp` | IMG_0115.png | Supplied current profile portrait; blurred screen and controls removed. |
+| `foodie-bonjocbites-v114.webp` | IMG_0125.PNG | Supplied current profile portrait; blurred screen and controls removed. |
+| `cinnaholic-berkeley-v114.webp` | IMG_0074.png | Complete supplied logo with screenshot borders removed, centered on a square with margin for the phone squircle. |
+| `devil-and-angel-v114.webp` | IMG_0088.png | Complete supplied logo with screenshot borders removed, centered on a square with margin for the phone squircle. |
+| `dragon-beaux-v114.webp` | IMG_0120.png | Complete supplied logo with screenshot borders removed, centered on a square with margin for the phone squircle. |
+| `sandwich-monkey-v114.webp` | IMG_0124.png | Complete supplied logo with screenshot borders removed, centered on a square with margin for the phone squircle. |
+| `hella-good-burger-v114.webp` | https://images.squarespace-cdn.com/content/v1/613bd3f9ff19f11abaac35af/ef90fce1-bc5c-4cc0-a855-e1d85404c0f8/Hella+Good+Logo+2022+copy.png | Higher-resolution matching owner mark from hellagoodsj.com, fitted on the supplied dark background. IMG_0083.png was the request/reference. |

@@ -731,3 +731,106 @@ h2,
     padding: 23px 17px;
   }
 }
+
+.market-intro .market-acronym {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.08em 0.15em;
+  font-size: clamp(46px, 5.4vw, 80px);
+}
+.market-acronym > span {
+  white-space: nowrap;
+}
+.market-acronym b {
+  display: inline-block;
+  padding-inline: 0.025em 0.07em;
+  color: var(--accent);
+  background: var(--ink);
+  font-weight: inherit;
+  line-height: 0.9;
+}
+.market-acronym i {
+  font-size: 0.52em;
+  font-style: normal;
+}
+.market-resale {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px 22px;
+  border: 1px solid var(--ink);
+  background: var(--accent-soft);
+}
+.market-resale h2 {
+  margin-bottom: 6px;
+  font-size: 36px;
+}
+.market-resale p,
+.resale-request p {
+  margin: 0;
+}
+.site-footer a + a {
+  margin-left: 0;
+}
+.resale-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.resale-layout > * {
+  min-width: 0;
+}
+.resale-intro {
+  background: var(--accent);
+  border: 1px solid var(--ink);
+  padding: clamp(18px, 4vw, 36px);
+}
+.resale-intro h2,
+.resale-form h2 {
+  font-size: clamp(32px, 4vw, 48px);
+}
+.resale-intro ul {
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  margin: 24px 0;
+  list-style: none;
+}
+.resale-intro li {
+  display: flex;
+  gap: 12px;
+  line-height: 1.55;
+  padding-top: 12px;
+  border-top: 1px solid var(--ink);
+}
+.resale-intro li strong {
+  display: block;
+}
+.resale-intro p:last-child {
+  margin-bottom: 0;
+}
+.resale-requests {
+  display: grid;
+  gap: 12px;
+  margin-block: 16px;
+  overflow-wrap: anywhere;
+}
+.resale-request {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 700px) {
+  .market-intro .market-acronym {
+    font-size: clamp(28px, 8vw, 48px);
+  }
+  .resale-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 13px;
+  }
+}

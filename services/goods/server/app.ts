@@ -17,6 +17,7 @@ import { registerTrades } from "./trades.js";
 import { registerCommunications } from "./communications.js";
 import { requestContext } from "./runtime.js";
 import { registerSharedIdentity } from "./identity.js";
+import { registerResale } from "./resale.js";
 import { initializeDemoCatalog } from "./demo-catalog.js";
 
 export async function createApp(overrides: NodeJS.ProcessEnv = {}) {
@@ -215,6 +216,7 @@ export async function createApp(overrides: NodeJS.ProcessEnv = {}) {
   registerMarketplace(app, pool, storage, requireUser);
   registerTrades(app, pool, requireUser);
   registerCommunications(app, pool, requireUser);
+  registerResale(app, pool, requireUser);
   app.use("/api", (_req, res) =>
     res.status(404).json({ error: "API route not found.", code: "NOT_FOUND" }),
   );

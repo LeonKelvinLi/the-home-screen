@@ -174,6 +174,10 @@ export function registerMarketplace(
           `UPDATE profiles SET status='deleted',name='Deleted member',bio='',location='',avatar_photo_id=NULL,updated_at=now() WHERE id=$1`,
           [userId],
         );
+        await db.query(
+          "DELETE FROM managed_resale_requests WHERE owner_id=$1",
+          [userId],
+        );
         await db.query("DELETE FROM favorites WHERE user_id=$1", [userId]);
         await db.query("DELETE FROM notifications WHERE user_id=$1", [userId]);
         await db.query('DELETE FROM session WHERE "userId"=$1', [userId]);

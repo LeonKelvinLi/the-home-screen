@@ -1061,3 +1061,22 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-Dfi6sPbRZHy.mp4` | [bayareamunchies510](https://www.instagram.com/reel/Dfi6sPbRZHy/) | 20261110 | 3s–18.00s of 88.54s | Review by @bayareamunchies510 at Deli Board, 1058 Folsom Street, San Francisco. |
 | `b113-dumpling-kitchen-millbrae.mp4` | [dumplingkitchenca](https://www.instagram.com/reel/DfkmQvZvv_C/) | 20261110 | 0s–7.13s of 7.13s | Original by @dumplingkitchenca. Millbrae soft-opening coverage, 455 Broadway, posted November 10, 2026. |
 | `review-DflV2movJep.mp4` | [iamnikkieg](https://www.instagram.com/reel/DflV2movJep/) | 20261111 | 3s–18.00s of 62.95s | Review by @iamnikkieg at Flats Burgers, 4753 Mission Street, San Francisco. |
+
+<!-- Batch 114 — Glenn’s November 11 intake. -->
+| `review-De0D6ipBS2B.mp4` | [Original post](https://www.instagram.com/reel/De0D6ipBS2B/) | Review by @startingfiresevrywhere at HELLA GOOD BURGER, San Jose. |
+| `review-DfkZJihzU0s.mp4` | [Original post](https://www.instagram.com/reel/DfkZJihzU0s/) | Review by @feedchris_ at Sugar Plum Coffee Shop, Concord. |
+| `review-DflcQpdNWWP.mp4` | [Original post](https://www.instagram.com/reel/DflcQpdNWWP/) | Review by @d_baylock_ at Matzip — Union City, Union City. |
+| `review-DX4wZNpvg9x.mp4` | [Original post](https://www.instagram.com/reel/DX4wZNpvg9x/) | Review by @chelchomps at Matzip — Union City, Union City. |
+| `review-DQ9zYNzAWgL.mp4` | [Original post](https://www.instagram.com/reel/DQ9zYNzAWgL/) | Review by @travelwtiff at Matzip — Union City, Union City. |
+| `review-DcfGVgOJukE.mp4` | [Original post](https://www.instagram.com/reel/DcfGVgOJukE/) | Review by @whatthejessi_ at Matzip — Union City, Union City. |
+| `review-DZiDB5pykQr.mp4` | [Original post](https://www.instagram.com/reel/DZiDB5pykQr/) | Review by @sophie_eats_world at Matzip — Union City, Union City. |
+| `review-DflcorXhzRc.mp4` | [Original post](https://www.instagram.com/reel/DflcorXhzRc/) | Review by @goeatwithangie at Bibim Grill, 3742 Fallon Road, Dublin. |
+| `b114-dfiyi4ou_sb.mp4` | [Original post](https://www.instagram.com/reel/DfiYI4Ou_SB/) | Posted by @gregorysgourmetdesserts. Launch coverage of the San Ramon bakery, 2410 San Ramon Valley Boulevard, Suite 140. |
+| `review-DeAEO9kviha.mp4` | [Original post](https://www.instagram.com/reel/DeAEO9kviha/) | Review by @k.traaaaan at Gregory’s Gourmet Desserts — Oakland, Oakland. |
+| `review-Dc6aSHzv4a-.mp4` | [Original post](https://www.instagram.com/reel/Dc6aSHzv4a-/) | Review by @bestinthegamme. Filmed at the San Ramon shop; the original also lists the Oakland location. |
+| `review-DcCkNkkoRgj.mp4` | [Original post](https://www.instagram.com/reel/DcCkNkkoRgj/) | Review by @naeemahtravels at Gregory’s Gourmet Desserts — Oakland, Oakland. |
+| `review-DbHGlTZygC-.mp4` | [Original post](https://www.instagram.com/reel/DbHGlTZygC-/) | Review by @goutclout at Gregory’s Gourmet Desserts — San Ramon, San Ramon. |
+| `b114-dfkpy0hb5li.mp4` | [Original post](https://www.instagram.com/reel/DfkpY0HB5lI/) | Published by @agaveazulca at El Agave Azul in Richmond. |
+| `b114-dfko0cxvonf.mp4` | [Original post](https://www.instagram.com/reel/Dfko0CXvonf/) | Filmed by @meggyeatz and reposted by @dragonbeaux. Dragon Beaux in San Francisco’s Richmond District. |
+| `review-Dd5UQRdqQ4x.mp4` | [Original post](https://www.instagram.com/reel/Dd5UQRdqQ4x/) | Review by @bonjocbites at The Sandwich Monkey, Foster City. |
+| `b114-dfdmpyhhktk.mp4` | [Original post](https://www.instagram.com/reel/DfdMpyHhKtK/) | Original bakery skit posted by @doodlecakesbakery in Alameda. |

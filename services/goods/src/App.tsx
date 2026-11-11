@@ -36,6 +36,7 @@ import { Trades, TradePage } from "./trades";
 import { AuthPage, ProfilePage, SettingsPage } from "./account";
 import { Inbox, Notifications } from "./communication";
 import { Admin } from "./admin";
+import { ManagedResale, ResaleQueue } from "./resale";
 import { initNativeNavigation } from "./platform";
 
 function AppRoute({ route }: { route: string }) {
@@ -61,6 +62,8 @@ function AppRoute({ route }: { route: string }) {
   if (path === "/profile") return <ProfilePage />;
   if (path === "/settings") return <SettingsPage />;
   if (path === "/admin") return <Admin />;
+  if (path === "/managed-resale") return <ManagedResale />;
+  if (path === "/admin/resale") return <ResaleQueue />;
   if (
     path === "/login" ||
     path === "/signup" ||
@@ -420,6 +423,9 @@ export default function App() {
       </main>
       <footer className="site-footer">
         <span className="footer-brand">BSTY GOODS</span>
+        <Link to="/managed-resale">
+          Managed resale <ArrowUpRightIcon />
+        </Link>
         <Link to="/about">
           How it works <ArrowUpRightIcon />
         </Link>

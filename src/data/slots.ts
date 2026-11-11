@@ -484,6 +484,9 @@ export const CATEGORY_OVERFLOW: SlotPage[] = [{
   kind: 'teas2', parent: 'teas', heading: 'More teas', about: 'More tea, boba and matcha shops', yellow: true,
   categories: Array.from({ length: 24 }, (_, i) => ({ n: i + 1, name: 'Teas/Boba/Matcha', label: 'Available' })),
 }, {
+  kind: 'sweets2', parent: 'sweets', heading: 'More sweets', about: 'More bakeries and dessert shops', yellow: true,
+  categories: Array.from({ length: 24 }, (_, i) => ({ n: i + 1, name: 'Sweets', label: 'Available' })),
+}, {
   kind: 'burgers2', parent: 'burgers', heading: 'More burgers', about: 'More burger and hot dog shops', yellow: true,
   categories: Array.from({ length: 24 }, (_, i) => ({ n: i + 1, name: 'Burgers/Hot Dogs', label: 'Available' })),
 }]

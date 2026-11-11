@@ -8742,6 +8742,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'hella-good-burger',
+    icon: 'hella-good-burger-v114',
     hours: 'Daily from 11am — to 9pm Mon–Tue, 9:30pm Wed–Thu & Sun, 11:30pm Fri–Sat',
     /* ALL CAPS, in their logo, their title and every heading. He filed them as
        "Hella Good SJ", which is their domain rather than a name they use. */
@@ -10605,6 +10606,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       and so are the bar's drinks. Richmond's Mexican food seat was open.
     */
     slug: "el-agave-azul",
+    clip: {"src": "/clips/b114-dfkpy0hb5li.mp4", "poster": "/clips/b114-dfkpy0hb5li-poster.webp", "href": "https://www.instagram.com/reel/DfkpY0HB5lI/", "credit": "Published by @agaveazulca at El Agave Azul in Richmond.", "platform": "Instagram"},
     icon: "el-agave-azul",
     name: "El Agave Azul",
     label: "Agave Azul",
@@ -39418,7 +39420,8 @@ export const LOCAL_SEED: LocalSeed[] = [
       "cuisine": "Dessert shop",
       "tagline": "A dessert shop at The Veranda in Concord: Dubai chewy cookies and Dubai chocolate strawberries, boba, soft serve, tanghulu and shaved ice.",
       "color": "#000000",
-      "icon": "devil-and-angel-desserts",
+      "icon": "devil-and-angel-v114",
+      "panels": [{"head": "Devil & Angel locations", "body": ["This listing is for the Concord shop at The Veranda."], "links": [{"label": "Concord store and hours", "href": "https://devilnangel.com/locations"}, {"label": "Serramonte on BEASTY", "href": "https://beastypages.com/?b=b_devilandangeldalycity"}]}],
       "prep": 0,
       "category": "Desserts",
       "items": [],
@@ -90046,5 +90049,946 @@ export const LOCAL_SEED: LocalSeed[] = [
     }
   ],
   "contactOnly": "Dumpling Kitchen’s Foster City factory store, listed on the business’s supplied profile. Contact the business for current hours, walk-in availability and products."
+},
+
+  // Batch 114 — four branch-specific pages.
+{
+  "slug": "cinnaholic-berkeley",
+  "name": "Cinnaholic Berkeley",
+  "label": "Cinnaholic",
+  "cuisine": "Vegan cinnamon rolls and baked sweets",
+  "tagline": "Vegan cinnamon rolls and baked sweets",
+  "icon": "cinnaholic-berkeley-v114",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Sweets",
+  "items": [],
+  "address": "2505 Hearst Ave Ste D, Berkeley, CA 94709",
+  "site": "https://locations.cinnaholic.com/ll/us/ca/berkeley/154/",
+  "phone": "(510) 495-4847",
+  "hours": "Daily 10:30am–9:30pm",
+  "instagram": "cinnaholicberkeley",
+  "email": "berkeley@cinnaholic.store",
+  "orderUrl": "https://cinnaholic.order.tryperdiem.com/order?fulfillmentType=PICKUP&locationId=L9XFMCA9KGH64",
+  "sections": [
+    {
+      "name": "From the Berkeley bakery",
+      "items": [
+        [
+          "Build Your Own Cinnamon Roll",
+          "Choose frosting and toppings.",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Brownies",
+          "Vegan baked brownies.",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Cookies",
+          "Vegan cookies.",
+          0,
+          null,
+          "Ask for price"
+        ],
+        [
+          "Edible Cookie Dough",
+          "Ask about available flavors.",
+          0,
+          null,
+          "Ask for price"
+        ]
+      ]
+    }
+  ],
+  "quoteOnly": "Use the bakery’s ordering page for current prices, seasonal items and availability.",
+  "panels": [
+    {
+      "head": "Order in Berkeley",
+      "body": [
+        "The Berkeley store lists baked cinnamon rolls, cookies, brownies and edible cookie dough. It also offers catering."
+      ],
+      "links": [
+        {
+          "label": "Berkeley ordering page",
+          "href": "https://cinnaholic.order.tryperdiem.com/order?fulfillmentType=PICKUP&locationId=L9XFMCA9KGH64"
+        },
+        {
+          "label": "Official store information",
+          "href": "https://locations.cinnaholic.com/ll/us/ca/berkeley/154/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "devil-and-angel-daly-city",
+  "name": "Devil & Angel Desserts",
+  "label": "Devil & Angel Daly",
+  "cuisine": "Boba, smoothies and soft serve",
+  "tagline": "Boba, smoothies and soft serve",
+  "icon": "devil-and-angel-v114",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Sweets",
+  "items": [],
+  "address": "3 Serramonte Center, Daly City, CA 94015",
+  "site": "https://devilnangel.com/locations",
+  "instagram": "devilnangel_serramonte",
+  "orderUrl": "https://order.online/store/26168325",
+  "menuNote": "The Serramonte ordering menu currently shows drinks. Ask the shop for the in-store soft serve selection, prices and hours.",
+  "sections": [
+    {
+      "name": "Coco Sago Series",
+      "items": [
+        [
+          "Coco Strawberry Sago",
+          "",
+          850
+        ],
+        [
+          "Coco Taro Sago",
+          "",
+          850
+        ],
+        [
+          "Coco Mango Sago",
+          "",
+          850
+        ],
+        [
+          "Coco Coffee Sago",
+          "",
+          850
+        ]
+      ]
+    },
+    {
+      "name": "Boba Smoothie - Special Berry Smoothie",
+      "items": [
+        [
+          "Coconut Strawberry",
+          "",
+          850
+        ],
+        [
+          "Coconut Mango",
+          "",
+          850
+        ],
+        [
+          "Yogurt Strawberry",
+          "",
+          850
+        ],
+        [
+          "Yogurt Mango",
+          "",
+          850
+        ],
+        [
+          "Cookies & Cream Strawberry",
+          "",
+          850
+        ],
+        [
+          "Honeydew Mango",
+          "",
+          850
+        ]
+      ]
+    },
+    {
+      "name": "Boba Smoothie - Original Smoothie",
+      "items": [
+        [
+          "Taro",
+          "",
+          795
+        ],
+        [
+          "Strawberry",
+          "",
+          795
+        ],
+        [
+          "Cookies & Cream",
+          "",
+          795
+        ],
+        [
+          "Mango",
+          "",
+          795
+        ],
+        [
+          "Peach",
+          "",
+          795
+        ],
+        [
+          "Horchata",
+          "",
+          795
+        ],
+        [
+          "Honeydew",
+          "",
+          795
+        ],
+        [
+          "Vietnamese Coffee",
+          "",
+          795
+        ]
+      ]
+    },
+    {
+      "name": "Refresher",
+      "items": [
+        [
+          "Dragon Pineapple",
+          "",
+          795
+        ],
+        [
+          "Strawberry Mango",
+          "",
+          795
+        ],
+        [
+          "Mango Peach Tea",
+          "",
+          795
+        ],
+        [
+          "Sunset Galaxy",
+          "",
+          795
+        ],
+        [
+          "Blue Lagoon",
+          "",
+          795
+        ],
+        [
+          "Love Potion",
+          "",
+          795
+        ],
+        [
+          "Guava Lychee",
+          "",
+          795
+        ]
+      ]
+    },
+    {
+      "name": "Boba Milk Tea - Signature Fresh Milk",
+      "items": [
+        [
+          "Strawberry Fresh Milk",
+          "",
+          895
+        ],
+        [
+          "Black Sugar Fresh Milk",
+          "",
+          895
+        ],
+        [
+          "Black Sugar Crème Brûlée",
+          "",
+          895
+        ],
+        [
+          "Ube Crème Brûlée",
+          "",
+          895
+        ]
+      ]
+    },
+    {
+      "name": "Boba Milk Tea - Original Milk Tea",
+      "items": [
+        [
+          "Royal Milk Tea",
+          "",
+          795
+        ],
+        [
+          "Thai Tea",
+          "",
+          795
+        ],
+        [
+          "Taro",
+          "",
+          795
+        ],
+        [
+          "Vietnamese Coffee",
+          "",
+          795
+        ]
+      ]
+    }
+  ],
+  "panels": [
+    {
+      "head": "Devil & Angel locations",
+      "body": [
+        "The brand lists Serramonte as unit 759, while the mall and the branch ordering menu list unit 130-D. Confirm the unit with the mall before visiting."
+      ],
+      "links": [
+        {
+          "label": "Serramonte Center directory",
+          "href": "https://www.serramontecenter.com/directory"
+        },
+        {
+          "label": "Official locations",
+          "href": "https://devilnangel.com/locations"
+        },
+        {
+          "label": "Concord on BEASTY",
+          "href": "https://beastypages.com/?b=b_devilandangeldesserts"
+        }
+      ]
+    },
+    {
+      "head": "Daly City ordering menu",
+      "body": [
+        "The branch’s online ordering menu shows milk tea, sago, smoothies and fruit refreshers."
+      ],
+      "links": [
+        {
+          "label": "Serramonte menu",
+          "href": "https://order.online/store/26168325"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "dragon-beaux",
+  "name": "Dragon Beaux",
+  "label": "Dragon Beaux",
+  "cuisine": "Dim sum and hot pot",
+  "tagline": "Dim sum and hot pot",
+  "icon": "dragon-beaux-v114",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Dim Sum",
+  "items": [],
+  "address": "5700 Geary Blvd, San Francisco, CA 94121",
+  "site": "https://dragonbeaux.com/",
+  "instagram": "dragonbeaux",
+  "phone": "(415) 333-8899",
+  "hours": "Dine-in: Mon–Fri 11am–3pm; Sat–Sun 10am–3pm. Dinner daily 5–8:45pm.",
+  "orderUrl": "https://order.online/store/297076?pickup=true",
+  "sections": [
+    {
+      "name": "WEEKEND SPECIAL 週末推介",
+      "items": [
+        [
+          "Fried Glutinous Dumplings w/ Diced Pork 鹹水角",
+          "",
+          725
+        ]
+      ]
+    },
+    {
+      "name": "BAO 包包",
+      "items": [
+        [
+          "Classic Steamed BBQ Pork Bao 叉燒包",
+          "",
+          725
+        ],
+        [
+          "Steamed EggYolk Lava Bao 流沙包",
+          "",
+          725
+        ],
+        [
+          "Durian Custard Bao (2) 榴蓮包",
+          "",
+          950
+        ],
+        [
+          "Pan-Seared Black Pepper Waygu Beef Bao 煎和牛包",
+          "",
+          825
+        ],
+        [
+          "Rainbow Taro Paste Bao 芋泥包",
+          "",
+          825
+        ],
+        [
+          "Steamed Chicken Mushroom Bun 花菇雞包",
+          "",
+          725
+        ]
+      ]
+    },
+    {
+      "name": "WOK 少吵",
+      "items": [
+        [
+          "Sauteed Spareribs w/ Tangy Sweet - Sour Sauce 西汁排骨",
+          "",
+          1600
+        ],
+        [
+          "Soy Sauce Stir-Fried Noodles 豉油皇炒麵 (廚)",
+          "",
+          825
+        ],
+        [
+          "Chinese Broccoli w/ Oyster Sauce 蠔油芥蘭 (廚)",
+          "",
+          1100
+        ],
+        [
+          "Honey Glazed Pepper Chicken Wings 蜜椒雞翼",
+          "",
+          1300
+        ],
+        [
+          "Stir-Fry String Bean w/Diced Meat 乾煸四季豆 (廚)",
+          "",
+          950
+        ],
+        [
+          "Garlic Tender Green 蒜子油菜心 (廚)",
+          "",
+          1100
+        ],
+        [
+          "Poached Beef Tripe 白灼牛百葉",
+          "",
+          1100
+        ],
+        [
+          "Orange Chicken 香橙雞",
+          "",
+          2200
+        ],
+        [
+          "Domestic Wagyu with Roasted Garlic 香蒜美國和牛",
+          "",
+          3200
+        ],
+        [
+          "Dry Fried Sauce Spareribs 乾烹排骨",
+          "",
+          1600
+        ],
+        [
+          "Honey Glazed Walnut Shrimps with Cranberries Aioli 蔓越莓醬核桃蝦",
+          "",
+          2500
+        ],
+        [
+          "Malay Okra 馬拉盞炒秋葵 (廚)",
+          "",
+          1100
+        ],
+        [
+          "Peking Duck w/12 pcs Golden Buns 北京片皮鴨",
+          "",
+          5800
+        ],
+        [
+          "Salt & Pepper Chicken Wings 椒鹽雞翼",
+          "",
+          1300
+        ],
+        [
+          "Sauteed A Chow w/ Satay Sauce 沙茶啫啫油麥菜 (廚)",
+          "",
+          1100
+        ],
+        [
+          "Sauteed Tiger Prawns w/ Supreme Soy Sauce 豉油皇老虎蝦",
+          "",
+          3200
+        ],
+        [
+          "Spicy Wagyu & Mushroom 香辣和牛炒雜菌",
+          "",
+          2800
+        ],
+        [
+          "Sautéed Scallop & Prawns with XO Sauce and Broccoli XO醬翡翠蝦球炒帶子",
+          "",
+          3200
+        ],
+        [
+          "Crab Roe Seafood Tofu in Clay Pot 蟹黃海鮮豆腐煲",
+          "",
+          2800
+        ],
+        [
+          "Pan Fried Pork Tenderloin Fillet & String Bean with Supreme Soy Sauce 豉油皇煎豬柳",
+          "",
+          2400
+        ],
+        [
+          "Bang Bang Chicken 乾烹雞",
+          "",
+          1800
+        ]
+      ]
+    },
+    {
+      "name": "NOODLES - RICE 鍋撈",
+      "items": [
+        [
+          "Beef Chow-Fun 乾炒牛河",
+          "",
+          2000
+        ],
+        [
+          "Mixed Mushroom, Abalone E-Fu Noodles 什菌鮑魚乾燒伊麵",
+          "",
+          2300
+        ],
+        [
+          "Dried Scallop - Egg White Fried Rice 瑤柱蛋白炒飯",
+          "",
+          2200
+        ],
+        [
+          "Squid Ink Fried Rice 墨魚汁樱花蝦炒飯",
+          "",
+          2300
+        ],
+        [
+          "Ginger Scallion Lobster E-Fu Noodles 薑蒽龍蝦伊麵",
+          "",
+          4800
+        ],
+        [
+          "Yang Chou Fried Rice 揚州炒飯",
+          "",
+          2200
+        ],
+        [
+          "Black Truffle Duck Fried Rice 黑松露鴨鬆炒飯",
+          "",
+          2500
+        ],
+        [
+          "Crab Roe Seafood Fried Rice 蟹黃海鮮炒飯",
+          "",
+          2800
+        ],
+        [
+          "Dungeness Crab Lo Mein with Ginger Scallion 薑蔥大蟹撈粗面",
+          "",
+          5500
+        ],
+        [
+          "Steamed Rice 白飯",
+          "",
+          300
+        ],
+        [
+          "Seafood HK Crispy Noodles 海鮮兩面黄",
+          "",
+          2400
+        ],
+        [
+          "Wagyu Beef Fried Rice - Green Onion in XO Sauce XO醬青蒽和牛炒飯",
+          "",
+          2500
+        ],
+        [
+          "Wild Mushroom - Black Truffles Fried Rice (Vegetarian) 野菌黑松露炒飯",
+          "",
+          2100
+        ]
+      ]
+    },
+    {
+      "name": "SPECIALS 特色",
+      "items": [
+        [
+          "Five Guys Xiao Long Bao 五彩小籠包",
+          "",
+          1200
+        ],
+        [
+          "Jumbo Scallop Siu Mai 帶子燒賣",
+          "",
+          950
+        ],
+        [
+          "Sea Bass Dumpling 雪魚餃",
+          "",
+          950
+        ],
+        [
+          "Spicy Seafood Dumplin 麻辣海鮮餃",
+          "",
+          870
+        ],
+        [
+          "Spinach Beef Shiu Mai 牛燒賣",
+          "",
+          725
+        ],
+        [
+          "Ha Gow Collection 天然本色蝦餃皇",
+          "",
+          1380
+        ],
+        [
+          "Chinese Chive and Shrimp Dumplings 碧綠韭菜餃",
+          "",
+          825
+        ]
+      ]
+    },
+    {
+      "name": "STEAMER 蒸彩",
+      "items": [
+        [
+          "Crab Roe Siu Mai 蟹子燒賣",
+          "",
+          725
+        ],
+        [
+          "Black Bean Sauce Chicken Paw 鳳爪",
+          "",
+          725
+        ],
+        [
+          "Black Bean Sauce Spareribs 排骨",
+          "",
+          625
+        ],
+        [
+          "Classic Shrimp Dumpling 蝦餃",
+          "",
+          825
+        ],
+        [
+          "Juicy Pork Xiao Long Bao 小籠包",
+          "",
+          825
+        ],
+        [
+          "Crab Roe Xiao Long Bao蟹粉小籠包",
+          "",
+          1100
+        ],
+        [
+          "Abalone, Chicken Sticky Rice in Lotus Leaf 鮑魚糯米雞",
+          "",
+          1100
+        ],
+        [
+          "Pea Shoot Dumpling 豆苗餃",
+          "",
+          825
+        ],
+        [
+          "Chicken & Mushroom Siu Mai 香菇雞燒賣",
+          "",
+          725
+        ],
+        [
+          "Chili Oil Wonton 紅油炒手",
+          "",
+          825
+        ]
+      ]
+    },
+    {
+      "name": "FRYER 有脆",
+      "items": [
+        [
+          "Vegetarian Spring Roll 素春卷",
+          "",
+          625
+        ],
+        [
+          "Durian Puff 榴槤酥",
+          "",
+          1300
+        ],
+        [
+          "Stuffed Eggplant 釀茄子",
+          "",
+          825
+        ],
+        [
+          "Crispy Organic Milk Roll 有機奶",
+          "",
+          825
+        ],
+        [
+          "Sesame Scallion Flatbread 芝麻蔥油大餅",
+          "",
+          1200
+        ],
+        [
+          "Pot Sticker 鍋貼 (4)",
+          "",
+          725
+        ],
+        [
+          "Pan Seared Daikon Cake 煎蘿蔔糕",
+          "",
+          825
+        ]
+      ]
+    },
+    {
+      "name": "RICE CREPE ROLLS 長有",
+      "items": [
+        [
+          "Shrimp Rice Crepe Roll 蝦腸",
+          "",
+          1100
+        ],
+        [
+          "BBQ Pork Rice Crepe Roll 叉燒腸",
+          "",
+          950
+        ],
+        [
+          "XO Pan Seared Rice Crepe Roll XO煎腸粉",
+          "",
+          825
+        ],
+        [
+          "Street Side Plain Rice Crepe Roll 路邊腸",
+          "",
+          825
+        ],
+        [
+          "Beef & Coriander Rice Crepe Roll 香茜牛肉腸",
+          "",
+          1100
+        ],
+        [
+          "Beef Brisket Stew Rice Crepe Roll 牛腩腸粉煲",
+          "",
+          1600
+        ],
+        [
+          "Mixed Mushrooms Rice Crepe Roll(Vegetarian) 上素什菌腸",
+          "",
+          950
+        ]
+      ]
+    },
+    {
+      "name": "CONGEE 滿粥",
+      "items": [
+        [
+          "Seafood, Fish Maw Millet Congee 海鮮花膠小米粥",
+          "",
+          2300
+        ],
+        [
+          "Free Range Chicken Congee 雞粥",
+          "",
+          1300
+        ],
+        [
+          "Egg - Beef Congee 牛粥",
+          "",
+          1300
+        ],
+        [
+          "Dried Scallop Congee 瑶柱白粥",
+          "",
+          1000
+        ],
+        [
+          "Fish Maw Mountain Yam Congee 淮山枸子花膠粥",
+          "",
+          1300
+        ],
+        [
+          "Dungeness Crab Congee (Whole) 原隻蟹生滾粥",
+          "",
+          5800
+        ],
+        [
+          "Watercress & Sliced Fish Fillet Congee 西洋菜魚片粥",
+          "",
+          2300
+        ]
+      ]
+    },
+    {
+      "name": "ROASTER 味夠",
+      "items": [
+        [
+          "Honey Glazed Barbecued Pork 蜜汁叉燒皇",
+          "",
+          1600
+        ],
+        [
+          "Soya Tofu 鹵豆腐",
+          "",
+          725
+        ],
+        [
+          "Cold Mixed Spicy Beef Shank 涼拌麻辣牛展",
+          "",
+          1500
+        ],
+        [
+          "Roasted Duck(Quarter) 燒鴨 (廚)",
+          "",
+          1500
+        ],
+        [
+          "Pickled Cucumber 手拍黄瓜",
+          "",
+          725
+        ],
+        [
+          "Crispy Hand-Roasted Pork Belly 脆皮爆腩仔",
+          "",
+          1600
+        ],
+        [
+          "Salt Baked Chicken 客家鹽焗雞",
+          "",
+          1500
+        ],
+        [
+          "Crispy Salt & Pepper Pork Tenderloin Fillet 椒鹽豬柳",
+          "",
+          2200
+        ],
+        [
+          "Roasted Duck (Half) 燒鴨 (半隻)",
+          "",
+          2500
+        ],
+        [
+          "Roasted Squab (each) 紅燒乳鴿 (隻)",
+          "",
+          2400
+        ],
+        [
+          "Salt Baked Chicken (Half) 客家鹽焗雞 (半隻)",
+          "",
+          2400
+        ],
+        [
+          "Vegetarian Tofu Roulette 素鵝",
+          "",
+          1000
+        ]
+      ]
+    },
+    {
+      "name": "SWEETS 甜心",
+      "items": [
+        [
+          "Custard Crystal Dumpling 奶黃水晶包",
+          "",
+          600
+        ],
+        [
+          "Malay Sponge Cake 馬拉糕",
+          "",
+          725
+        ],
+        [
+          "Mango Tapioca Pudding 楊枝金露",
+          "",
+          825
+        ],
+        [
+          "Goji Berry Osmanthus Coconut Jelly Cake 桂花糕",
+          "",
+          575
+        ]
+      ]
+    }
+  ],
+  "menuNote": "Published pickup lunch prices. The dinner and hot pot menus are separate. Confirm service, selections and current pricing with Dragon Beaux.",
+  "panels": [
+    {
+      "head": "Dinner, hot pot and reservations",
+      "body": [
+        "For dinner, the restaurant asks guests to choose hot pot or the traditional menu when reserving. Dim sum is offered with either."
+      ],
+      "links": [
+        {
+          "label": "Official lunch, dinner and hot pot menus",
+          "href": "https://dragonbeaux.com/menus/"
+        },
+        {
+          "label": "Reservations",
+          "href": "https://dragonbeaux.com/reservations/"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b114-dfko0cxvonf.mp4",
+    "poster": "/clips/b114-dfko0cxvonf-poster.webp",
+    "href": "https://www.instagram.com/reel/Dfko0CXvonf/",
+    "credit": "Filmed by @meggyeatz and reposted by @dragonbeaux. Dragon Beaux in San Francisco’s Richmond District.",
+    "platform": "Instagram"
+  }
+},
+{
+  "slug": "gregorys-gourmet-desserts-san-ramon",
+  "name": "Gregory’s Gourmet Desserts",
+  "label": "Gregory’s San Ramon",
+  "cuisine": "Cheesecakes and desserts",
+  "tagline": "Cheesecakes and desserts",
+  "icon": "gregorys-gourmet-desserts",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Sweets",
+  "items": [],
+  "address": "2410 San Ramon Valley Blvd, Suite 140, San Ramon, CA 94583",
+  "site": "https://gregorysgourmetdesserts.com/",
+  "instagram": "gregorysgourmetdesserts",
+  "hours": "Wed–Sat 10:30am–6pm; Sun–Tue closed per the branch’s Toast listing.",
+  "contactOnly": "The San Ramon branch of Gregory’s Gourmet Desserts. Confirm the current slice selection and prices with the bakery.",
+  "panels": [
+    {
+      "head": "San Ramon and Oakland",
+      "body": [
+        "This is the San Ramon bakery. The Oakland shop has its own BEASTY page."
+      ],
+      "links": [
+        {
+          "label": "San Ramon catering",
+          "href": "https://www.toasttab.com/catering/gregorys-gourmet-desserts-san-ramon-2410-san-ramon-valley-blvd-140"
+        },
+        {
+          "label": "Oakland on BEASTY",
+          "href": "https://beastypages.com/?b=b_gregorysgourmetdesserts"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b114-dfiyi4ou_sb.mp4",
+    "poster": "/clips/b114-dfiyi4ou_sb-poster.webp",
+    "href": "https://www.instagram.com/reel/DfiYI4Ou_SB/",
+    "credit": "Posted by @gregorysgourmetdesserts. Launch coverage of the San Ramon bakery, 2410 San Ramon Valley Boulevard, Suite 140.",
+    "platform": "Instagram"
+  }
 },
 ]
