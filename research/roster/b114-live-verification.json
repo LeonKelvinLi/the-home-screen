@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "base": "https://beastypages.com",
+  "messagesThrough": "2026-11-11T10:31:42.327276-08:00",
+  "newMessages": 59,
+  "lastSourceRefreshAt": "2026-11-11T11:01:29.223670-08:00",
+  "newMessagesAfterCutoffAtRefresh": 0,
+  "release": {
+    "goodsHealth": {
+      "ok": true,
+      "service": "bsty-goods"
+    },
+    "commit": "513dcdf0bc7aafdfa07615b52d1560c541d813d8",
+    "base": "https://beastypages.com",
+    "entry": "/assets/index-VppaZ6g-.js",
+    "publicReadyAt": "2026-11-11T19:13:20.398685+00:00",
+    "health": {
+      "ok": true
+    },
+    "verifiedArtwork": {
+      "path": "/icons/dragon-beaux-v114.webp",
+      "sha256": "61178fd6e42a7033c1daf49642db5f63f14c6434bb0667dcf1262ad1d075fd86"
+    },
+    "deploy": "dep-dbqbn5favr4c739uevo0",
+    "status": "live",
+    "providerFinishedAt": "2026-11-11T19:13:07.107979Z"
+  },
+  "listings": {
+    "cinnaholic-berkeley": 4,
+    "devil-and-angel-daly-city": 33,
+    "dragon-beaux": 95,
+    "gregorys-gourmet-desserts-san-ramon": 0
+  },
+  "categoryAndCitySeats": {
+    "berkeley-goods-15": "b_cinnaholicberkeley",
+    "san-francisco-goods-17": "b_dragonbeaux",
+    "daly-city-goods-14": "b_devilandangeldalycity",
+    "san-ramon-goods-10": "b_gregorysgourmetdessertssanramon",
+    "beasty-sweets2-0": "b_cinnaholicberkeley",
+    "beasty-boba-16": "b_devilandangeldesserts",
+    "beasty-boba-17": "b_devilandangeldalycity",
+    "beasty-icecream-5": "b_devilandangeldesserts",
+    "beasty-icecream-6": "b_devilandangeldalycity",
+    "beasty-hotpot-13": "b_dragonbeaux",
+    "beasty-dimsum-15": "b_dragonbeaux",
+    "beasty-foodies2-295": "b_foodiegoeatwithangie",
+    "beasty-foodies2-296": "b_foodienaeemahtravels",
+    "beasty-foodies2-297": "b_foodiefeedchris",
+    "beasty-foodies2-298": "b_foodiektraaaaan",
+    "beasty-foodies2-299": "b_foodiegoutclout",
+    "beasty-foodies2-300": "b_foodiebestinthegamme",
+    "beasty-foodies2-301": "b_foodiebonjocbites"
+  },
+  "previousCatalogSeatsPreserved": true,
+  "completedChecks": [
+    {
+      "name": "final-live-chrome",
+      "command": [
+        "node",
+        "tools/audit-batch114.mjs"
+      ],
+      "startedAt": "2026-11-11T19:13:21.350950+00:00",
+      "finishedAt": "2026-11-11T19:14:22.735109+00:00",
+      "exit": 0
+    },
+    {
+      "name": "final-live-webkit",
+      "command": [
+        "sh",
+        "-c",
+        "node tools/audit-batch114.mjs && node tools/audit-iphone-entry.mjs"
+      ],
+      "startedAt": "2026-11-11T19:13:21.350947+00:00",
+      "finishedAt": "2026-11-11T19:14:36.114099+00:00",
+      "exit": 0
+    },
+    {
+      "name": "final-archive-live",
+      "command": [
+        "node",
+        "/tmp/beasty114/archive-verify.mjs"
+      ],
+      "startedAt": "2026-11-11T19:13:21.350947+00:00",
+      "finishedAt": "2026-11-11T19:13:30.549960+00:00",
+      "exit": 0
+    },
+    {
+      "name": "final-sitewide-live",
+      "command": [
+        "node",
+        ".verify/b113-live-verify-parallel.mjs"
+      ],
+      "startedAt": "2026-11-11T19:13:21.350947+00:00",
+      "finishedAt": "2026-11-11T19:18:46.129819+00:00",
+      "exit": 0
+    }
+  ],
+  "archive": {
+    "at": "2026-11-11T19:13:30.527Z",
+    "base": "https://beastypages.com",
+    "entry": "/assets/index-VppaZ6g-.js",
+    "chunks": 10,
+    "messages": 7323,
+    "uniqueInstagramIds": 920,
+    "matched": 869,
+    "olderDocumentedExceptions": 49,
+    "withdrawn": [
+      "DdAZclrNJu-",
+      "DTnoBTMES1u"
+    ],
+    "missing": [
+      "DCIg1aNP4IJ",
+      "DbZjR1_hr-6",
+      "DWfXdRxgITo",
+      "C5G5e9buvV3",
+      "DYvfsi_TWcd",
+      "DcZ7IAxsFy6",
+      "C8XcIrmvXRN",
+      "Dc5CExIhdSX",
+      "DdCY9_wP5R_",
+      "Dc_mLl8uA__",
+      "DS8GlMgCf7b",
+      "DbvU5frRAWB",
+      "C40pt1TRanq",
+      "DLi5st0J5kq",
+      "DcSX7lpucp-",
+      "DdMhHiJsnc4",
+      "DAW5kk6yEWz",
+      "Dc4BefxI5b7",
+      "DXuAt06lPp9",
+      "DbzDNfLtM0R",
+      "Dd1qIgYqblI",
+      "DLGn3J7PcbM",
+      "DdeTKlrOHud",
+      "Dd_xLprMkKq",
+      "DeF5qVeAtYu",
+      "DeeZJIDzequ",
+      "DeX8snzS-Ae",
+      "DeNBS2rSB-3",
+      "DeODcFCCMKM",
+      "DeF-p4_hm_4",
+      "Ddxk-6MBHSr",
+      "DekxENESL3E",
+      "DelACp9h8Xf",
+      "DPnNRYQjL2s",
+      "DVPBUgCkpz_",
+      "DbCTb87pVBv",
+      "DcSCtHgRe7d",
+      "DehGqMzqom6",
+      "DWiG3RtgUwU",
+      "DdkhCGgIwOd",
+      "DadnELsBBrx",
+      "DZ53MrKy375",
+      "De5TN1uMOuN",
+      "DdaFOCUs2cx",
+      "Dajl4orSwQW",
+      "DaQgy6ApsEq",
+      "C2Sh1Iwxe7B",
+      "DZQJsLPB1UZ",
+      "Dd-S3otuokt",
+      "DdAZclrNJu-",
+      "DTnoBTMES1u"
+    ],
+    "activeSourcesBatches103Through114": 194,
+    "exactIconHashes": 154,
+    "exactPosterHashes": 194
+  },
+  "exactNewAssets": [
+    {
+      "path": "/icons/foodie-startingfiresevrywhere-v114.webp",
+      "sha256": "199d88e6cb01cef41cce30470fa724019ebcd74ee31670747ef25b69bbd098b9",
+      "bytes": 65990,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/foodie-feedchris-v114.webp",
+      "sha256": "602fcfeaf4a82f1b1d4a5462267647f49f3655a7ec4af293d9080890a8f15e90",
+      "bytes": 76920,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/foodie-chelchomps-v114.webp",
+      "sha256": "f1638158ced98f09eac28858ab2db8225c470550c6236ff2da98885bb09c50df",
+      "bytes": 55712,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/foodie-whatthejessi-v114.webp",
+      "sha256": "9528ec040096a654d093232cd2da8c41813c14a4f162ff6615584ac187bd6359",
+      "bytes": 52320,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/foodie-sophieeatsworld-v114.webp",
+      "sha256": "0491e70a89ba308d3a7822ecbe9581ea54ead60c84c76092f7d00ae539d12e4a",
+      "bytes": 77572,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/foodie-goeatwithangie-v114.webp",
+      "sha256": "b0887e4dcfad69443262d819e24a05feb77a72b8b4a83a6e18e996a4d354808b",
+      "bytes": 31494,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/foodie-ktraaaaan-v114.webp",
+      "sha256": "6a30aa668cb7e4ac7ebb41a60ab7fc526c29d64e3da0a6ea4ce22ab705d3eb04",
+      "bytes": 37568,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/foodie-bestinthegamme-v114.webp",
+      "sha256": "692357edc8c207eaf924ab5b89380388abe408aca3fc1a6ac8e63a44b8b66ac2",
+      "bytes": 43606,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/foodie-naeemahtravels-v114.webp",
+      "sha256": "66a49913e65a83d35e835bdc25ef873b7852cd0023e991e4109fdc8e17fd8558",
+      "bytes": 46538,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/foodie-goutclout-v114.webp",
+      "sha256": "cd2b75267af0019a8695293d5cb86c6f7639523ade97c222b6da66c381a35b9d",
+      "bytes": 39864,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/foodie-bonjocbites-v114.webp",
+      "sha256": "002f4df500cb4830d01a05f423eb0c5fb9c89d8e3243f90b5aa33d01325d0c79",
+      "bytes": 65188,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/cinnaholic-berkeley-v114.webp",
+      "sha256": "38f9b688e77041e626e71a92da8d4d189722dfda951b50d9f903408169520f3d",
+      "bytes": 14514,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/devil-and-angel-v114.webp",
+      "sha256": "f99771c6b692667b027a0a6c4538718e5b2f2a4826148d096ee9c7147885f20f",
+      "bytes": 13704,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/dragon-beaux-v114.webp",
+      "sha256": "61178fd6e42a7033c1daf49642db5f63f14c6434bb0667dcf1262ad1d075fd86",
+      "bytes": 37128,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/sandwich-monkey-v114.webp",
+      "sha256": "6104fdd0938021229b82844c5d032728e8fed84041d5b723661de656ba11870d",
+      "bytes": 45766,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/icons/hella-good-burger-v114.webp",
+      "sha256": "4bdba5f5a49b0c5d45b67e5aa92a503a9081cda5610fe0a247d8a8b390c0a67c",
+      "bytes": 29188,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "/clips/review-De0D6ipBS2B.mp4",
+      "sha256": "8fe65170077a1aa40935f13b33c8898585ea60a07d3d5e61be0a0881cc460800",
+      "bytes": 1957210,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-DfkZJihzU0s.mp4",
+      "sha256": "9b3595e4a1081ba677f5a145c5ed312f156b649910cc7476f68ee8fea783b3ba",
+      "bytes": 2165562,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-DflcQpdNWWP.mp4",
+      "sha256": "04256e128d2dd2db9e55c7b63b04a614b25e29138fcfa25bb134da6b62d20564",
+      "bytes": 3176939,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-DX4wZNpvg9x.mp4",
+      "sha256": "04010a9f424bbf2cf8d490ea7a3de39fe1191b7543f839012f53ee4261952edd",
+      "bytes": 3090948,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-DQ9zYNzAWgL.mp4",
+      "sha256": "698b433b3a86f32acbf7d50c89612e84926dc6a6a55cc4d992232a9cba7fa249",
+      "bytes": 1541924,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-DcfGVgOJukE.mp4",
+      "sha256": "d0ad2c6061cd10246f3d54458e9e2c31f1bfb58eaa35f1409fcfc61c5a4b7de9",
+      "bytes": 2589179,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-DZiDB5pykQr.mp4",
+      "sha256": "0328e0ff4c959f7fd35f83993a4bc67358c9e3c5cdbaece0ec80d5db6cc4531a",
+      "bytes": 2706699,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-DflcorXhzRc.mp4",
+      "sha256": "e52fb1ef2d6ba615b248eb3e1e9f23d9986607b464d1295a319a8b1beb95577d",
+      "bytes": 2453663,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/b114-dfiyi4ou_sb.mp4",
+      "sha256": "d95b2117f44253f3a4bb58bdf724dacadde996fe55b2bd16f5b3cc5b410a0765",
+      "bytes": 2079869,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-DeAEO9kviha.mp4",
+      "sha256": "35050da521308ad3facce1aeb2cb7edef439218d9e9518034200a333522f0977",
+      "bytes": 1503398,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-Dc6aSHzv4a-.mp4",
+      "sha256": "266ad59b0d3048638dc10f7703f384e844faba6d300e05a6b996008a3ac42a4e",
+      "bytes": 1780922,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-DcCkNkkoRgj.mp4",
+      "sha256": "419e0fc17dd62d8f3327f879e4e03a494d3d36f907ddb337458b6cd505731546",
+      "bytes": 3185870,
+      "durationSeconds": 15.016,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-DbHGlTZygC-.mp4",
+      "sha256": "f3d03925d0f61a60124907c0743d02700ef57e4426bd08d31483ffdacd3e220d",
+      "bytes": 2872868,
+      "durationSeconds": 15.066,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/b114-dfkpy0hb5li.mp4",
+      "sha256": "4f00992767bcaf267e3e0ed1a38f204ea622285eb3309153fffdfc19dbe902bd",
+      "bytes": 1747389,
+      "durationSeconds": 12.425,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/b114-dfko0cxvonf.mp4",
+      "sha256": "0fe9a517bbc8b996b141858164e72ddc584d985314c4d6731dd7573c1838e497",
+      "bytes": 1067114,
+      "durationSeconds": 9.1,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-Dd5UQRdqQ4x.mp4",
+      "sha256": "8acd2be67b308f2efc563fa8146a8e1499b4fb2eab23cd68d0bc9b388d66cdf4",
+      "bytes": 1887090,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/b114-dfdmpyhhktk.mp4",
+      "sha256": "becfaba593f4db0af36a495405355aed562749f4c7bc1490f731de01352942d7",
+      "bytes": 2289047,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-De0D6ipBS2B-poster.webp",
+      "sha256": "b957ddca96d31ea29bb4065fdd112811abe794b6ca6b4cf77ebce26976496676",
+      "bytes": 54868
+    },
+    {
+      "path": "/clips/review-DfkZJihzU0s-poster.webp",
+      "sha256": "8ae842b3dfe4c2384d9bab09a096dbba2077fff8014fe41e6183e4e5c9b53f81",
+      "bytes": 40806
+    },
+    {
+      "path": "/clips/review-DflcQpdNWWP-poster.webp",
+      "sha256": "b07d2c5eacff4f145b59029a3377063c68ba6f120c542bfc12910ab2c0a2c600",
+      "bytes": 64410
+    },
+    {
+      "path": "/clips/review-DX4wZNpvg9x-poster.webp",
+      "sha256": "51cd02e941c0d16890c8680cbbe1bafafed3bf717f05c758bd46a6615e61cf09",
+      "bytes": 109404
+    },
+    {
+      "path": "/clips/review-DQ9zYNzAWgL-poster.webp",
+      "sha256": "d40bb237b2713d8303f01c2ef5ea8b4d5c77e68b094fdedbf881fb2bded07180",
+      "bytes": 51504
+    },
+    {
+      "path": "/clips/review-DcfGVgOJukE-poster.webp",
+      "sha256": "b4a94c789f94140cab91e2a6bdc404adfb17341f351bcf9948dc9febf97f73f7",
+      "bytes": 45438
+    },
+    {
+      "path": "/clips/review-DZiDB5pykQr-poster.webp",
+      "sha256": "efc14bfd4a5e036f62b3c62da6a582d0de218d0bcacf29f94a3c12be0d43a670",
+      "bytes": 107662
+    },
+    {
+      "path": "/clips/review-DflcorXhzRc-poster.webp",
+      "sha256": "c2c18ac2a6aa7a9e9febd1e085eafbd45326a70ff585652fbf7e37094c7ac7d9",
+      "bytes": 58032
+    },
+    {
+      "path": "/clips/b114-dfiyi4ou_sb-poster.webp",
+      "sha256": "dff2673e5007e455b774c3324185f2060be58fa51276d39bac003b59fb8581e6",
+      "bytes": 36510
+    },
+    {
+      "path": "/clips/review-DeAEO9kviha-poster.webp",
+      "sha256": "e6c48145694b8a191f260d4e12dcfc5f89e1f80aafa4afc4ac42f4ae4703e5a3",
+      "bytes": 49702
+    },
+    {
+      "path": "/clips/review-Dc6aSHzv4a--poster.webp",
+      "sha256": "16316cc630bbbbd7135f262d1ea56f24ea100491ff3461ad6eb9ea5b13a140b5",
+      "bytes": 36192
+    },
+    {
+      "path": "/clips/review-DcCkNkkoRgj-poster.webp",
+      "sha256": "2cff40d8d0f72f3e38c0dd74ef78a802cad7f185bf7628f55e6f327548b4f21e",
+      "bytes": 86356
+    },
+    {
+      "path": "/clips/review-DbHGlTZygC--poster.webp",
+      "sha256": "d461e064af650a2401b571e9b8a72e11eb68d4903691e787e5fdb14b4e4ba007",
+      "bytes": 40524
+    },
+    {
+      "path": "/clips/b114-dfkpy0hb5li-poster.webp",
+      "sha256": "83385973c132b51c824d92b71bdd902f4f09bebff64327bd3ab71186096d2155",
+      "bytes": 52012
+    },
+    {
+      "path": "/clips/b114-dfko0cxvonf-poster.webp",
+      "sha256": "d264846181c128d5cba7ff62bf23f4c5ad635478173c3f181fd6bd8aff0f19ee",
+      "bytes": 58356
+    },
+    {
+      "path": "/clips/review-Dd5UQRdqQ4x-poster.webp",
+      "sha256": "26623665d26a3e9b24d47bb236f2e92208d35de1e5b997b8474d99021ff9bcd5",
+      "bytes": 60566
+    },
+    {
+      "path": "/clips/b114-dfdmpyhhktk-poster.webp",
+      "sha256": "bd3a610ddf0b164d35c4b4a5b4eab0ed679b6fa1d34b86b9f7404b7a54647bb5",
+      "bytes": 36254
+    }
+  ],
+  "goods": {
+    "live": {
+      "at": "2026-11-11T19:13:25.666Z",
+      "commit": "513dcdf",
+      "ownerAnonymousStatus": 401,
+      "operatorAnonymousStatus": 401,
+      "checks": [
+        {
+          "engine": "Chrome",
+          "heading": true,
+          "intakePage": true,
+          "signInReturn": true,
+          "beastyPages": true,
+          "google": true
+        },
+        {
+          "engine": "iPhone WebKit",
+          "heading": true,
+          "intakePage": true,
+          "signInReturn": true,
+          "beastyPages": true,
+          "google": true
+        }
+      ]
+    },
+    "releaseLocalBrowserChecks": 14,
+    "releaseLocalApiChecks": 40
+  }
+}

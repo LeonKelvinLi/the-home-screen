@@ -17,3 +17,7 @@ Draft ad copy for creators:
 - **Turn your next closet clear-out into a fundraiser.** Have a collection and a cause in mind? Propose both to BSTY Goods and ask how an accepted collection could work. Request a fundraising review.
 
 Both drafts point to the managed resale inquiry page. They describe review and proposal without quoting fees, intake limits, payout timing or tax treatment.
+
+The public site began serving `513dcdf` at 11:13 a.m. Pacific. Desktop Chrome and iPhone WebKit played all 17 new reels, checked the four listings and their category paths, and confirmed the managed resale page and both sign-in options. The 50 new media files matched the reviewed copies byte for byte. The full submission and review flow was exercised locally with test accounts.
+
+The historical regression passed 235 assertions across 231 older pages. The public Watch checks received byte ranges for all 824 unique video files. See the [live verification record](../research/roster/b114-live-verification.json) for the serving revision, test results, and file hashes.
