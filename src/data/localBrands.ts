@@ -77845,7 +77845,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     "cuisine": "Asian-inspired smash burgers",
     "tagline": "Asian-inspired smash burgers inside Rocks Den in the Excelsior.",
     "color": "#283F40",
-    "icon": "flats-burgers",
+    "icon": "flats-burgers-v113",
     "prep": 0,
     "category": "Asian-inspired smash burgers",
     "items": [],
@@ -87872,5 +87872,2179 @@ export const LOCAL_SEED: LocalSeed[] = [
     "platform": "Instagram",
     "credit": "Original by @mikiya.official. Original restaurant-channel Mikiya film, shared between its Bay Area location pages. The October 2026 lunch promotion is dated; confirm current branch prices directly."
   }
+},
+
+  // Batch 113 — Glenn, November 10 evening.
+{
+  "slug": "dumpling-kitchen-millbrae",
+  "name": "Dumpling Kitchen",
+  "label": "Dumpling Millbrae",
+  "cuisine": "Dumplings, dim sum and Chinese food",
+  "tagline": "Soup dumplings and Chinese food · Millbrae",
+  "color": "#F5F5F5",
+  "icon": "dumpling-kitchen-v113",
+  "prep": 0,
+  "category": "Dumplings",
+  "items": [],
+  "site": "https://www.dumplingkitchenca.com/",
+  "address": "455 Broadway, Millbrae, CA 94030",
+  "instagram": "dumplingkitchenca",
+  "email": "dumplingkitchenus@gmail.com",
+  "panels": [
+    {
+      "head": "Dumpling Kitchen locations",
+      "body": [
+        "This is the Millbrae location. Each restaurant has its own published menu; prices and availability can differ by branch."
+      ],
+      "links": [
+        {
+          "label": "Millbrae · 455 Broadway",
+          "href": "https://beastypages.com/?b=b_dumplingkitchenmillbrae"
+        },
+        {
+          "label": "San Francisco · 1935 Taraval St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchentaraval"
+        },
+        {
+          "label": "San Francisco · 544 Castro St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchencastro"
+        },
+        {
+          "label": "San Francisco · 3913 24th St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchennoe"
+        },
+        {
+          "label": "Foster City · 1459 Beach Park Blvd",
+          "href": "https://beastypages.com/?b=b_dumplingkitchenfactory"
+        }
+      ]
+    },
+    {
+      "head": "Contact and current availability",
+      "body": [
+        "The business’s supplied contact profile lists text enquiries at (415) 767-9563 and dumplingkitchenus@gmail.com. Check the branch’s live ordering page for hours and availability."
+      ],
+      "links": [
+        {
+          "label": "Official locations",
+          "href": "https://www.dumplingkitchenca.com/locations/"
+        },
+        {
+          "label": "Official Instagram",
+          "href": "https://www.instagram.com/dumplingkitchenca/"
+        }
+      ]
+    },
+    {
+      "head": "Published branch menu",
+      "body": [
+        "Use this location’s ordering page for current options and hours."
+      ],
+      "links": [
+        {
+          "label": "Official branch menu",
+          "href": "https://dumplingkitchennoevalley.toast.site/menu/dumpling-kitchen-nro-455-broadway"
+        }
+      ]
+    },
+    {
+      "head": "Millbrae contact details",
+      "body": [
+        "The main locations page lists (408) 667-1605 for Millbrae. Its Toast page lists (415) 767-9563, also the business’s supplied general text number. Confirm the preferred contact directly."
+      ],
+      "links": [
+        {
+          "label": "Owner’s locations page",
+          "href": "https://www.dumplingkitchenca.com/locations/"
+        }
+      ]
+    }
+  ],
+  "phone": "(408) 667-1605",
+  "sections": [
+    {
+      "name": "Dumplings & Dim Sum",
+      "items": [
+        [
+          "S01.Shanghai-Style Steamed Pork Dumplings (6 pcs)",
+          "",
+          1380
+        ],
+        [
+          "S02.Shanghai-Style Pan-Fried Pork Buns (4 pcs)",
+          "",
+          1195
+        ],
+        [
+          "S03.signature handmade potstickers ( 6pcs )",
+          "",
+          1595
+        ],
+        [
+          "S04.Vegetarian Dumplings (4 pcs)",
+          "",
+          1195
+        ],
+        [
+          "S05.Pork & Napa Cabbage Dumplings (4 pcs)",
+          "",
+          1195
+        ],
+        [
+          "S06.Pan-Fried Spicy Beef Potstickers(6 pcs)",
+          "",
+          1595
+        ],
+        [
+          "S07.signature Steamed Pork & Shrimp Siu mai ( 4pcs )",
+          "",
+          995
+        ],
+        [
+          "S08.Shanghai-Style Steamed Sticky Rice Siu mai (4 pcs)",
+          "",
+          895
+        ],
+        [
+          "S09.Steamed Beef Siu mai (4 pcs)",
+          "",
+          1095
+        ],
+        [
+          "S10.Steamed Shrimp Har Gow (4 pcs)",
+          "",
+          995
+        ],
+        [
+          "S11.Boiled Pork & Napa Cabbage Dumplings (8 pcs)",
+          "",
+          1180
+        ],
+        [
+          "S12.Boiled Pork & chive Dumplings (8pcs)",
+          "",
+          1280
+        ],
+        [
+          "S13.Boiled Chicken & Corn Dumplings (8 pcs)",
+          "",
+          1280
+        ],
+        [
+          "S14.Boiled Fish & Chive Dumplings (8 pcs)",
+          "",
+          1380
+        ],
+        [
+          "S15.Boiled Mongolian Beef Dumplings (8 pcs)",
+          "",
+          1480
+        ],
+        [
+          "S16.Wontons in Chili Oil (6 pcs) (Contained Peanut butt er)",
+          "",
+          1380
+        ],
+        [
+          "S17.Steamed BBQ Pork Baos (3 pcs)",
+          "",
+          995
+        ],
+        [
+          "S18.Steamed Vegetarian Baos (3 pcs)",
+          "",
+          995
+        ],
+        [
+          "S19.Steamed Chicken & Shiitake Baos (3 pcs)",
+          "",
+          995
+        ],
+        [
+          "S20.Green Onion Pancake",
+          "",
+          895
+        ],
+        [
+          "S21.Chinese Fried Dough (1pcs)",
+          "Listed as out of stock when checked; confirm current availability.",
+          445
+        ]
+      ]
+    },
+    {
+      "name": "Appetizer",
+      "items": [
+        [
+          "A01.Cucumber Salad",
+          "",
+          995
+        ],
+        [
+          "A02.Drunk Chicken",
+          "",
+          1695
+        ],
+        [
+          "A03.Vegetarian Chicken",
+          "",
+          1280
+        ],
+        [
+          "A04.Jellyfish w/ Scallion oil Salad",
+          "",
+          1495
+        ],
+        [
+          "A05. Shanghai-style Salted Duck",
+          "",
+          1695
+        ],
+        [
+          "A06.Smoked Fish",
+          "",
+          1595
+        ],
+        [
+          "A07.Shanghai-Style Vegetarian Spring Rolls (4 pcs)",
+          "",
+          875
+        ],
+        [
+          "A08. Golden Crunchy Wonton ( 6pcs )",
+          "",
+          1195
+        ]
+      ]
+    },
+    {
+      "name": "Soup",
+      "items": [
+        [
+          "B01.Shanghai Pork Soup with Bamboo & Tofu",
+          "",
+          2480
+        ],
+        [
+          "B02. Hot & Sour Soup",
+          "",
+          1595
+        ],
+        [
+          "B03.Chicken & Corn Soup",
+          "",
+          1595
+        ],
+        [
+          "B04.Wonton in House Broth (6pcs)",
+          "",
+          1595
+        ],
+        [
+          "B05.Beef w/ Cilantro Soup",
+          "",
+          1595
+        ],
+        [
+          "B06.Sizzling Rice Soup",
+          "Listed as out of stock when checked; confirm current availability.",
+          1695
+        ]
+      ]
+    },
+    {
+      "name": "Green",
+      "items": [
+        [
+          "V01.Dry-Braised String Beans",
+          "",
+          1750
+        ],
+        [
+          "V02.Pea Sprouts w/ Garlic",
+          "",
+          2050
+        ],
+        [
+          "V03.Eggplant w/ Garlic Sauce",
+          "",
+          1750
+        ],
+        [
+          "V04.Green Baby Bok Choy w/ Garlic",
+          "",
+          1750
+        ],
+        [
+          "V05.Braised Tofu with Bok Choy",
+          "",
+          1750
+        ],
+        [
+          "V06.Salt & Pepper Tofu",
+          "",
+          1750
+        ]
+      ]
+    },
+    {
+      "name": "Chef's Wok",
+      "items": [
+        [
+          "G01.Signature Dry-Fried Chicken Wings (8pcs)",
+          "",
+          1995
+        ],
+        [
+          "G02.Salt & Pepper Chicken Wings",
+          "",
+          1995
+        ],
+        [
+          "G03.Signature BBQ Beef Ribs",
+          "",
+          3895
+        ],
+        [
+          "G04.Shanghai Stir-Fried Three shreds",
+          "",
+          1895
+        ],
+        [
+          "G05.Braised Lion’s Head Meatballs (2 pcs)",
+          "",
+          1795
+        ],
+        [
+          "G06.Sichuan Style Chili Chicken",
+          "",
+          2080
+        ],
+        [
+          "G07.General Tso’s Chicken",
+          "",
+          1880
+        ],
+        [
+          "G08.Sweet & Sour Chicken",
+          "",
+          1880
+        ],
+        [
+          "G09.Kung Pao Chicken (w/ peanut)",
+          "",
+          1880
+        ],
+        [
+          "G10.Stir-Fried Black Pepper Beef Tenderloin",
+          "",
+          2695
+        ],
+        [
+          "G11.Broccoli Beef",
+          "",
+          2295
+        ],
+        [
+          "G12.Mongolian Beef",
+          "",
+          2295
+        ],
+        [
+          "G13.Basil Beef",
+          "",
+          2295
+        ],
+        [
+          "G14.Shanghai-style Sweet vinegar Spare Ribs",
+          "",
+          2095
+        ],
+        [
+          "G15.Mapo Tofu",
+          "",
+          1680
+        ],
+        [
+          "G16.Honey Walnut Prawns",
+          "",
+          2380
+        ],
+        [
+          "G17.Salt and Pepper Fish Fillets",
+          "",
+          2380
+        ],
+        [
+          "G18.Shanghai-style Braised Pork Hock",
+          "",
+          3680
+        ],
+        [
+          "G19.Mu Shu",
+          "",
+          2080
+        ]
+      ]
+    },
+    {
+      "name": "Carbs",
+      "items": [
+        [
+          "C01.The Black Truffle with Beef Fried Rice",
+          "",
+          2495
+        ],
+        [
+          "C02.Shanghai-Style Chow Mein w/ Pork",
+          "",
+          1795
+        ],
+        [
+          "C03.Shanghai-Style Stir-Fried Rice Cake w/ Pork",
+          "",
+          1795
+        ],
+        [
+          "C04.Shanghai Style Green Onion Noodle",
+          "",
+          1595
+        ],
+        [
+          "C05. Chow Mein",
+          "",
+          1795
+        ],
+        [
+          "C06. Fried Rice",
+          "",
+          1795
+        ],
+        [
+          "C07.Stir-Fried Beef Chow Fun",
+          "",
+          1895
+        ],
+        [
+          "C08.Beijing-Style Noodle in Black Bean Sauce w/ Pork",
+          "",
+          1695
+        ],
+        [
+          "C09.Szechuan Style Dan-dan Noodle w/ Pork",
+          "",
+          1695
+        ],
+        [
+          "C10.White Rice (Bowl)",
+          "",
+          275
+        ]
+      ]
+    },
+    {
+      "name": "Dessert",
+      "items": [
+        [
+          "D01.Pumpkin-Shape Egg Yolk Buns(3pcs)",
+          "",
+          895
+        ],
+        [
+          "D02. Salted Egg Custard Baos (3 pcs)",
+          "",
+          795
+        ],
+        [
+          "D03.Mini Sesame Balls (6 pcs)",
+          "",
+          725
+        ],
+        [
+          "D04.Yogurt Mochi (5 pcs)",
+          "Listed as out of stock when checked; confirm current availability.",
+          950
+        ],
+        [
+          "D05.Beijing-Style Buns (4 pcs)",
+          "",
+          725
+        ],
+        [
+          "D06.Sesame Glutinous Rice Balls in Sweet Rice Wine",
+          "",
+          1550
+        ],
+        [
+          "D07.Bird's Nest with Organic Snow Fungus",
+          "Listed as out of stock when checked; confirm current availability.",
+          1280
+        ]
+      ]
+    }
+  ],
+  "orderUrl": "https://dumplingkitchennoevalley.toast.site/menu/dumpling-kitchen-nro-455-broadway",
+  "menuNote": "The Millbrae branch’s published food menu. Confirm current prices, options and stock on the restaurant’s ordering page. Stock notes record what the published menu showed when checked.",
+  "clip": {
+    "src": "/clips/b113-dumpling-kitchen-millbrae.mp4",
+    "poster": "/clips/b113-dumpling-kitchen-millbrae-poster.webp",
+    "href": "https://www.instagram.com/reel/DfkmQvZvv_C/",
+    "platform": "Instagram",
+    "credit": "Original by @dumplingkitchenca. Millbrae soft-opening coverage, 455 Broadway, posted November 10, 2026."
+  }
+},
+{
+  "slug": "dumpling-kitchen-taraval",
+  "name": "Dumpling Kitchen",
+  "label": "Dumpling Taraval",
+  "cuisine": "Dumplings, dim sum and Chinese food",
+  "tagline": "Taraval · San Francisco",
+  "color": "#F5F5F5",
+  "icon": "dumpling-kitchen-v113",
+  "prep": 0,
+  "category": "Dumplings",
+  "items": [],
+  "site": "https://www.dumplingkitchenca.com/",
+  "address": "1935 Taraval St, San Francisco, CA 94116",
+  "instagram": "dumplingkitchenca",
+  "email": "dumplingkitchenus@gmail.com",
+  "panels": [
+    {
+      "head": "Dumpling Kitchen locations",
+      "body": [
+        "This is the Taraval location. Each restaurant has its own published menu; prices and availability can differ by branch."
+      ],
+      "links": [
+        {
+          "label": "Millbrae · 455 Broadway",
+          "href": "https://beastypages.com/?b=b_dumplingkitchenmillbrae"
+        },
+        {
+          "label": "San Francisco · 1935 Taraval St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchentaraval"
+        },
+        {
+          "label": "San Francisco · 544 Castro St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchencastro"
+        },
+        {
+          "label": "San Francisco · 3913 24th St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchennoe"
+        },
+        {
+          "label": "Foster City · 1459 Beach Park Blvd",
+          "href": "https://beastypages.com/?b=b_dumplingkitchenfactory"
+        }
+      ]
+    },
+    {
+      "head": "Contact and current availability",
+      "body": [
+        "The business’s supplied contact profile lists text enquiries at (415) 767-9563 and dumplingkitchenus@gmail.com. Check the branch’s live ordering page for hours and availability."
+      ],
+      "links": [
+        {
+          "label": "Official locations",
+          "href": "https://www.dumplingkitchenca.com/locations/"
+        },
+        {
+          "label": "Official Instagram",
+          "href": "https://www.instagram.com/dumplingkitchenca/"
+        }
+      ]
+    },
+    {
+      "head": "Published branch menu",
+      "body": [
+        "Use this location’s ordering page for current options and hours."
+      ],
+      "links": [
+        {
+          "label": "Official branch menu",
+          "href": "https://direct.chownow.com/order/25382/locations/37523"
+        }
+      ]
+    }
+  ],
+  "phone": "(415) 682-8938",
+  "sections": [
+    {
+      "name": "Specialty Dumpling & Dim Sum",
+      "items": [
+        [
+          "S01. Shanghai-Style Steamed Pork Dumplings (10 pcs)",
+          "",
+          1580
+        ],
+        [
+          "S02. Crab and Pork Steamed Dumplings (8 pcs)",
+          "",
+          1930
+        ],
+        [
+          "S03. Pan-Fried Pork Potstickers (6 pcs)",
+          "",
+          1530
+        ],
+        [
+          "S04. Pan-Fried Vegetarian Pot Stickers (6 pcs)",
+          "",
+          1530
+        ],
+        [
+          "S05. Pan-Fried Spicy Beef Potstickers (6 pcs)",
+          "",
+          1630
+        ],
+        [
+          "S06. Shanghai-Style Pan-Fried Pork Buns (6 pcs)",
+          "",
+          1530
+        ],
+        [
+          "S07. Boiled Pork and Chive Dumplings (10 pcs)",
+          "",
+          1550
+        ],
+        [
+          "S08. Boiled Chicken and Corn Dumplings (10 pcs)",
+          "",
+          1550
+        ],
+        [
+          "S09. Boiled Pork and Shrimp w/ Celery Dumplings (10 pcs)",
+          "",
+          1630
+        ],
+        [
+          "S10. Boiled Mongolian Beef Dumplings (10 pcs)",
+          "",
+          1650
+        ],
+        [
+          "S11. Steamed Pork & Cabbage Dumplings (8 pcs)",
+          "",
+          1750
+        ],
+        [
+          "S12. Steamed Vegetarian Dumplings (8 pcs)",
+          "",
+          1750
+        ],
+        [
+          "S13. Wontons in Chili Oil (8 pcs)",
+          "",
+          1550
+        ],
+        [
+          "S16. Steamed Beef Shumai (6 pcs)",
+          "",
+          1550
+        ],
+        [
+          "S15. Steamed Shrimp and Pork Shumai (6 pcs)",
+          "",
+          1580
+        ],
+        [
+          "S14. Shanghai-Style Steamed Sticky Rice Shumai (6 pcs)",
+          "",
+          1580
+        ],
+        [
+          "S17. Steamed Pumpkin Buns (4pcs)",
+          "",
+          925
+        ],
+        [
+          "S18. Steamed Shrimp Har Gow (6 pcs)",
+          "",
+          1430
+        ],
+        [
+          "S19. Steamed Chicken & Shiitake Baos (4 pcs)",
+          "",
+          1150
+        ],
+        [
+          "S20. Steamed BBQ Pork Baos (4 pcs)",
+          "",
+          1050
+        ],
+        [
+          "S21. Crab Shell Pastry (Sweet / Salty) (3 pcs)",
+          "",
+          925
+        ],
+        [
+          "S22. Steamed Vegetarian Baos (4 pcs)",
+          "",
+          1230
+        ],
+        [
+          "S23. Shanghai-Style Vegetarian Spring Rolls (6 pcs)",
+          "",
+          975
+        ],
+        [
+          "S24. Green Onion Pancake",
+          "",
+          975
+        ],
+        [
+          "S25. Chinese Fried Dough (1 Roll)",
+          "",
+          645
+        ],
+        [
+          "S26. Savory Soy-Milk (1 Bowl)",
+          "",
+          875
+        ],
+        [
+          "S27. Sticky Rice Roll (1 Roll)",
+          "",
+          925
+        ],
+        [
+          "Shredded Radish Pancakes (3 pcs)",
+          "",
+          799
+        ]
+      ]
+    },
+    {
+      "name": "Appetizer",
+      "items": [
+        [
+          "A01. Black Fungus Salad",
+          "",
+          945
+        ],
+        [
+          "A02. Beef Shank & Tripe in Chili Sauce",
+          "",
+          1680
+        ],
+        [
+          "A03. Chilled Spicy Pig Ear",
+          "",
+          1580
+        ],
+        [
+          "A04. Shredded Chicken w/ Cucumber in Chili Sauce",
+          "",
+          1680
+        ],
+        [
+          "A05. Drunken Chicken",
+          "",
+          1680
+        ],
+        [
+          "A06. Shanghai-Style Duck in House Sauce",
+          "",
+          1850
+        ],
+        [
+          "A07. Vegetarian Chicken",
+          "",
+          1280
+        ],
+        [
+          "A08. Cucumber Salad",
+          "",
+          1150
+        ],
+        [
+          "A09. Bean Curd Salad",
+          "",
+          950
+        ],
+        [
+          "A10. Shanghai-Style Smoked Fish",
+          "",
+          1850
+        ]
+      ]
+    },
+    {
+      "name": "Soup",
+      "items": [
+        [
+          "B01. Hot & Sour Soup",
+          "",
+          1480
+        ],
+        [
+          "B02. Beef with Cilantro Soup",
+          "",
+          1480
+        ],
+        [
+          "B03. Chicken and Corn Soup",
+          "",
+          1480
+        ],
+        [
+          "B04. Wonton in House Broth (6 pcs)",
+          "",
+          1480
+        ],
+        [
+          "B05. Sizzling Rice Soup",
+          "",
+          1680
+        ]
+      ]
+    },
+    {
+      "name": "Vege",
+      "items": [
+        [
+          "V01. Braised Tofu with Vegetables",
+          "",
+          1580
+        ],
+        [
+          "V02. Dry-Braised String Beans",
+          "",
+          1750
+        ],
+        [
+          "V03. Eggplant w/ Garlic Sauce",
+          "",
+          1750
+        ],
+        [
+          "V04. Green Bok Choy w/ Garlic",
+          "",
+          1750
+        ],
+        [
+          "V05. Pea Sprouts w/ Garlic",
+          "",
+          1980
+        ],
+        [
+          "V06. Salt & Pepper Tofu",
+          "",
+          1750
+        ]
+      ]
+    },
+    {
+      "name": "Chef's Wok",
+      "items": [
+        [
+          "G01. Sweet Vinegar Spare Ribs",
+          "",
+          1820
+        ],
+        [
+          "G02. Salt and Pepper Spare Ribs",
+          "",
+          1820
+        ],
+        [
+          "G03. Shanghai-Style Braised Pork",
+          "",
+          1880
+        ],
+        [
+          "G04. Braised Lion’s Head Meatballs (2 pcs)",
+          "",
+          1690
+        ],
+        [
+          "G05. Braised Pork Belly w/ Preserved Vegetables",
+          "",
+          2080
+        ],
+        [
+          "G06. Braised Beef Brisket w/ Turnip",
+          "",
+          2080
+        ],
+        [
+          "G07. Mapo Tofu",
+          "",
+          1720
+        ],
+        [
+          "G08. Mongolian Beef",
+          "",
+          1880
+        ],
+        [
+          "G09. Broccoli with",
+          "",
+          1780
+        ],
+        [
+          "G10. Dry-Fried Chicken",
+          "",
+          1880
+        ],
+        [
+          "G11. Salt & Pepper Chicken",
+          "",
+          1850
+        ],
+        [
+          "G12. Sweet & Sour Chicken",
+          "",
+          1850
+        ],
+        [
+          "G13. Kung Pao Chicken",
+          "",
+          1850
+        ],
+        [
+          "G14. Salt & Pepper Shrimp",
+          "",
+          1980
+        ],
+        [
+          "G15. Golden Salted Egg Yolk Pumpkin Prawns",
+          "",
+          2180
+        ],
+        [
+          "G16. Walnut Prawns",
+          "",
+          2080
+        ],
+        [
+          "G17. Salt and Pepper Fish Fillets",
+          "",
+          2080
+        ],
+        [
+          "G18. Moo Shu (Come w/ 6 wrapper)",
+          "",
+          1880
+        ],
+        [
+          "Extra Mu Shu Wrapper",
+          "",
+          45
+        ],
+        [
+          "C12. Steam Rice",
+          "",
+          275
+        ]
+      ]
+    },
+    {
+      "name": "Carbs",
+      "items": [
+        [
+          "C01. Shanghai-Style Chow Mein w/ pork",
+          "",
+          1750
+        ],
+        [
+          "C02. Shanghai-Style Stir-Fried Rice Cake w/ pork",
+          "",
+          1750
+        ],
+        [
+          "C03. Pork with Preserved Vegetable Rice Cake",
+          "",
+          1800
+        ],
+        [
+          "C04. Beef Chow Fun",
+          "",
+          1780
+        ],
+        [
+          "C05. Chinese Ham with Bok Choy Rice Clay Pot",
+          "",
+          2050
+        ],
+        [
+          "C06. The Black Truffle with Beef Fried Rice",
+          "",
+          2580
+        ],
+        [
+          "C07. Chow Mein",
+          "",
+          1750
+        ],
+        [
+          "C08. Fried Rice",
+          "",
+          1750
+        ],
+        [
+          "C09. Five-Spice Beef Stew Noodle Soup",
+          "",
+          2050
+        ],
+        [
+          "C10. Beijing-Style Noodle in Black Bean Sauce",
+          "",
+          1580
+        ],
+        [
+          "C11. Sichuan-Style Noodle in Peanut Sauce",
+          "",
+          1580
+        ],
+        [
+          "C12. Steam Rice",
+          "",
+          275
+        ]
+      ]
+    },
+    {
+      "name": "Drinks",
+      "items": [
+        [
+          "J01. Soy-Milk",
+          "",
+          375
+        ],
+        [
+          "J02. Apple Juice",
+          "",
+          325
+        ],
+        [
+          "Coke",
+          "",
+          275
+        ],
+        [
+          "Diet Coke",
+          "",
+          275
+        ],
+        [
+          "Sprite",
+          "",
+          275
+        ]
+      ]
+    },
+    {
+      "name": "Dessert",
+      "items": [
+        [
+          "D01. Glutinous Rice Dumpling in Sweet Rice Wine",
+          "",
+          1550
+        ],
+        [
+          "D02. Pan-Fried Red Bean Paste",
+          "",
+          850
+        ],
+        [
+          "D03. Deep-Fried Yogurt Mochi (6 pcs)",
+          "",
+          1050
+        ],
+        [
+          "D04. Salted Egg Custard Baos (3 pcs)",
+          "",
+          950
+        ],
+        [
+          "D05. Beijing Style Sweet Buns (4 pcs)",
+          "Beijing Style Sweet Buns (4 pcs) Dip w/ Condensed Milk",
+          725
+        ]
+      ]
+    }
+  ],
+  "orderUrl": "https://direct.chownow.com/order/25382/locations/37523",
+  "menuNote": "The Taraval branch’s published food menu. Confirm current prices, options and stock on the restaurant’s ordering page."
+},
+{
+  "slug": "dumpling-kitchen-castro",
+  "name": "Dumpling Kitchen",
+  "label": "Dumpling Castro",
+  "cuisine": "Dumplings, dim sum and Chinese food",
+  "tagline": "Castro · San Francisco",
+  "color": "#F5F5F5",
+  "icon": "dumpling-kitchen-v113",
+  "prep": 0,
+  "category": "Dumplings",
+  "items": [],
+  "site": "https://www.dumplingkitchenca.com/",
+  "address": "544 Castro St, San Francisco, CA 94114",
+  "instagram": "dumplingkitchenca",
+  "email": "dumplingkitchenus@gmail.com",
+  "panels": [
+    {
+      "head": "Dumpling Kitchen locations",
+      "body": [
+        "This is the Castro location. Each restaurant has its own published menu; prices and availability can differ by branch."
+      ],
+      "links": [
+        {
+          "label": "Millbrae · 455 Broadway",
+          "href": "https://beastypages.com/?b=b_dumplingkitchenmillbrae"
+        },
+        {
+          "label": "San Francisco · 1935 Taraval St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchentaraval"
+        },
+        {
+          "label": "San Francisco · 544 Castro St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchencastro"
+        },
+        {
+          "label": "San Francisco · 3913 24th St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchennoe"
+        },
+        {
+          "label": "Foster City · 1459 Beach Park Blvd",
+          "href": "https://beastypages.com/?b=b_dumplingkitchenfactory"
+        }
+      ]
+    },
+    {
+      "head": "Contact and current availability",
+      "body": [
+        "The business’s supplied contact profile lists text enquiries at (415) 767-9563 and dumplingkitchenus@gmail.com. Check the branch’s live ordering page for hours and availability."
+      ],
+      "links": [
+        {
+          "label": "Official locations",
+          "href": "https://www.dumplingkitchenca.com/locations/"
+        },
+        {
+          "label": "Official Instagram",
+          "href": "https://www.instagram.com/dumplingkitchenca/"
+        }
+      ]
+    },
+    {
+      "head": "Published branch menu",
+      "body": [
+        "Use this location’s ordering page for current options and hours."
+      ],
+      "links": [
+        {
+          "label": "Official branch menu",
+          "href": "https://direct.chownow.com/order/25382/locations/54317"
+        }
+      ]
+    }
+  ],
+  "phone": "(415) 874-9882",
+  "sections": [
+    {
+      "name": "Specialty Dumplings & Dim Sum",
+      "items": [
+        [
+          "S01.Shanghai-Style Steamed Pork Dumplings (6 pcs)",
+          "",
+          1280
+        ],
+        [
+          "S02.Steamed Crab & Shrimp Meat Dumplings (5 pcs)",
+          "",
+          1880
+        ],
+        [
+          "S03.Pork & Napa Cabbage Dumplings (4 pcs)",
+          "",
+          1080
+        ],
+        [
+          "S04.Vegetarian Dumplings(4 pcs)",
+          "",
+          1080
+        ],
+        [
+          "S05.Shanghai-Style Pan-Fried Pork Buns (4 pcs)",
+          "",
+          1180
+        ],
+        [
+          "S06.Boiled Pork & Chive Dumplings (8 pcs)",
+          "",
+          1280
+        ],
+        [
+          "S07.Boiled Chicken & Corn Dumplings (8 pcs)",
+          "",
+          1280
+        ],
+        [
+          "S08.Boiled Pork & Shrimp w/ Celery Dumplings (8 pcs)",
+          "",
+          1380
+        ],
+        [
+          "S09.Boiled Fish & Chive Dumplings (8 pcs)",
+          "",
+          1380
+        ],
+        [
+          "S10.Wontons in Chili Oil (6 pcs) (Contained Peanut butt?er)",
+          "",
+          1180
+        ],
+        [
+          "S11.Steamed Vege & Cashew Gow (4 pcs)",
+          "",
+          1080
+        ],
+        [
+          "S12.Steamed Shrimp Har Gow (4 pcs)",
+          "",
+          1080
+        ],
+        [
+          "S13.Steamed Scallop & Shrimp Har Gow (4pcs)",
+          "",
+          1180
+        ],
+        [
+          "S14.Steamed Beef Shumai (4pcs)",
+          "",
+          1080
+        ],
+        [
+          "S15.Steamed Shrimp & Pork Shumai (4 pcs)",
+          "",
+          1080
+        ],
+        [
+          "S16.Steamed BBQ Pork Baos (3 pcs)",
+          "",
+          920
+        ],
+        [
+          "S17.Steamed Chicken & Shiitake Baos (3 pcs)",
+          "",
+          980
+        ],
+        [
+          "S18.Steamed Vegetarian Baos (3 pcs)",
+          "",
+          980
+        ]
+      ]
+    },
+    {
+      "name": "Appetizer",
+      "items": [
+        [
+          "A01.Wakame Seaweed Salad",
+          "",
+          795
+        ],
+        [
+          "A02.Cucumber Salad",
+          "",
+          1080
+        ],
+        [
+          "A03.Butter & Garlic Edamame",
+          "",
+          995
+        ],
+        [
+          "A04.Shanghai-Style Vegetarian Spring Rolls (3 pcs)",
+          "",
+          815
+        ],
+        [
+          "A05.Green Onion Pancake",
+          "",
+          895
+        ],
+        [
+          "A06.Braised Beef Pancake Roll",
+          "",
+          1480
+        ]
+      ]
+    },
+    {
+      "name": "Soup",
+      "items": [
+        [
+          "B01.Hot & Sour Soup",
+          "",
+          1590
+        ],
+        [
+          "B02.Chicken & Corn Soup",
+          "",
+          1590
+        ],
+        [
+          "B03.Beef w/ Cilantro Soup",
+          "",
+          1590
+        ],
+        [
+          "B04.Wonton in House Broth (6pcs)",
+          "",
+          1590
+        ],
+        [
+          "B05.Sizzling Rice Soup",
+          "",
+          1680
+        ]
+      ]
+    },
+    {
+      "name": "Vege",
+      "items": [
+        [
+          "V01.Braised Tofu with Bok Choy",
+          "",
+          1780
+        ],
+        [
+          "V02.Thai Sweet and Sour Fried Tofu",
+          "",
+          1680
+        ],
+        [
+          "V03.Dry-Braised String Beans",
+          "",
+          1680
+        ],
+        [
+          "V04.Eggplant w/ Garlic Sauce",
+          "",
+          1680
+        ],
+        [
+          "V05.Green Baby Bok Choy w/ Garlic",
+          "",
+          1680
+        ],
+        [
+          "V06.Pea Sprouts w/ Garlic",
+          "",
+          2080
+        ],
+        [
+          "V07.Quick-Fried Broccoli w/ Chili & Garlic",
+          "",
+          1680
+        ],
+        [
+          "Broccoli w/ Garlic",
+          "",
+          1680
+        ]
+      ]
+    },
+    {
+      "name": "Chef's Wok",
+      "items": [
+        [
+          "G01.Stir-Fried Black Pepper Beef Tenderloin",
+          "",
+          2560
+        ],
+        [
+          "G02.Signature Sizzling Beef",
+          "",
+          2680
+        ],
+        [
+          "G03.Mongolian Beef",
+          "",
+          1880
+        ],
+        [
+          "G04.Broccoli",
+          "",
+          1880
+        ],
+        [
+          "G05.Mapo Tofu",
+          "",
+          1780
+        ],
+        [
+          "G06.Braised Lion’s Head Meatballs",
+          "",
+          1680
+        ],
+        [
+          "G07.Salt & Pepper Chicken Wings",
+          "",
+          1980
+        ],
+        [
+          "G08.Sichuan Spicy Chicken",
+          "",
+          2180
+        ],
+        [
+          "G10.Sweet & Sour Chicken",
+          "",
+          1880
+        ],
+        [
+          "G11.Signature Sesame Chicken",
+          "",
+          1980
+        ],
+        [
+          "G13.Lemon Chicken",
+          "",
+          1880
+        ],
+        [
+          "G14.Salt & peper Prawns",
+          "",
+          2180
+        ],
+        [
+          "G15.Honey Walnut Prawns",
+          "",
+          2180
+        ],
+        [
+          "G16.Salt & Pepper Fish Fillets",
+          "",
+          2080
+        ],
+        [
+          "G17.Spicy Fish Fillet in House Broth",
+          "",
+          2680
+        ],
+        [
+          "G18.Szechuan Fish Fillet w/ Pickled Cabbage in House Broth",
+          "",
+          2880
+        ],
+        [
+          "G19.Mu Shu",
+          "",
+          1980
+        ],
+        [
+          "Extra Mu Shu Wrapping",
+          "",
+          35
+        ],
+        [
+          "G09.Kung Pao Chicken (w/ Peanut)",
+          "",
+          1880
+        ],
+        [
+          "Basil Beef (Online Only)",
+          "",
+          1780
+        ]
+      ]
+    },
+    {
+      "name": "Carbs",
+      "items": [
+        [
+          "C01.Shanghai-Style Chow Mein w/ Pork",
+          "",
+          1720
+        ],
+        [
+          "C02.Shanghai-Style Stir-Fried Rice Cake w/ Pork",
+          "",
+          1720
+        ],
+        [
+          "C03.The Black Truffle with Beef Fried Rice",
+          "",
+          2380
+        ],
+        [
+          "C04.Chow Mein",
+          "",
+          1720
+        ],
+        [
+          "C05.Fried Rice",
+          "",
+          1720
+        ],
+        [
+          "C06.Five-Spice Beef Brisket Noodle Soup",
+          "",
+          1880
+        ],
+        [
+          "C07.Shanghai Style Green Onion Noodle",
+          "",
+          1480
+        ],
+        [
+          "C08.Beijing-Style Noodle in Black Bean Sauce",
+          "",
+          1680
+        ],
+        [
+          "C09.Szechuan Style Dan-dan Noodle (W/ Peanut)",
+          "",
+          1680
+        ],
+        [
+          "White Rice (16oz)",
+          "Simple and comforting white rice.",
+          300
+        ],
+        [
+          "White Rice (26oz)",
+          "",
+          425
+        ]
+      ]
+    },
+    {
+      "name": "Dessert",
+      "items": [
+        [
+          "D01.Steamed Chocolate Dumplings (6 pcs) (Contained Nutella)",
+          "",
+          1080
+        ],
+        [
+          "D02.Deep Fried Yogurt Mochi (6 pcs)",
+          "",
+          895
+        ],
+        [
+          "D03.Deep-Fried Mini Sesame Balls (6 pcs)",
+          "",
+          725
+        ],
+        [
+          "D04. Steamed Salted Egg Custard Baos (3 pcs)",
+          "",
+          825
+        ],
+        [
+          "D05.Beijing Style Sweet Buns (4 pcs)",
+          "",
+          725
+        ]
+      ]
+    },
+    {
+      "name": "Soft Drinks",
+      "items": [
+        [
+          "J01. Perrier Sparkling Water",
+          "",
+          395
+        ],
+        [
+          "J02. Sanpellegrino Sparkling Lemonade",
+          "",
+          375
+        ],
+        [
+          "J03. House Made Thai Iced Tea",
+          "",
+          595
+        ],
+        [
+          "J05. Coke",
+          "",
+          250
+        ],
+        [
+          "J05. Sprite",
+          "",
+          250
+        ],
+        [
+          "J05. Diet Coke",
+          "",
+          250
+        ]
+      ]
+    }
+  ],
+  "orderUrl": "https://direct.chownow.com/order/25382/locations/54317",
+  "menuNote": "The Castro branch’s published food menu. Confirm current prices, options and stock on the restaurant’s ordering page."
+},
+{
+  "slug": "dumpling-kitchen-noe",
+  "name": "Dumpling Kitchen",
+  "label": "Dumpling Noe",
+  "cuisine": "Dumplings, dim sum and Chinese food",
+  "tagline": "Noe Valley · San Francisco",
+  "color": "#F5F5F5",
+  "icon": "dumpling-kitchen-v113",
+  "prep": 0,
+  "category": "Dumplings",
+  "items": [],
+  "site": "https://www.dumplingkitchenca.com/",
+  "address": "3913 24th St, San Francisco, CA 94114",
+  "instagram": "dumplingkitchenca",
+  "email": "dumplingkitchenus@gmail.com",
+  "panels": [
+    {
+      "head": "Dumpling Kitchen locations",
+      "body": [
+        "This is the Noe Valley location. Each restaurant has its own published menu; prices and availability can differ by branch."
+      ],
+      "links": [
+        {
+          "label": "Millbrae · 455 Broadway",
+          "href": "https://beastypages.com/?b=b_dumplingkitchenmillbrae"
+        },
+        {
+          "label": "San Francisco · 1935 Taraval St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchentaraval"
+        },
+        {
+          "label": "San Francisco · 544 Castro St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchencastro"
+        },
+        {
+          "label": "San Francisco · 3913 24th St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchennoe"
+        },
+        {
+          "label": "Foster City · 1459 Beach Park Blvd",
+          "href": "https://beastypages.com/?b=b_dumplingkitchenfactory"
+        }
+      ]
+    },
+    {
+      "head": "Contact and current availability",
+      "body": [
+        "The business’s supplied contact profile lists text enquiries at (415) 767-9563 and dumplingkitchenus@gmail.com. Check the branch’s live ordering page for hours and availability."
+      ],
+      "links": [
+        {
+          "label": "Official locations",
+          "href": "https://www.dumplingkitchenca.com/locations/"
+        },
+        {
+          "label": "Official Instagram",
+          "href": "https://www.instagram.com/dumplingkitchenca/"
+        }
+      ]
+    },
+    {
+      "head": "Published branch menu",
+      "body": [
+        "Use this location’s ordering page for current options and hours."
+      ],
+      "links": [
+        {
+          "label": "Official branch menu",
+          "href": "https://dumplingkitchennoevalley.toast.site/menu/dumpling-kitchen-castro-2-nro-3913-24th-st"
+        }
+      ]
+    }
+  ],
+  "phone": "(415) 282-4969",
+  "sections": [
+    {
+      "name": "Appetizer",
+      "items": [
+        [
+          "A01. Shanghai Style Marinated Duck",
+          "Listed as out of stock when checked; confirm current availability.",
+          1680
+        ],
+        [
+          "A02. Szechuan Style Chicken in Chili Oil",
+          "",
+          1480
+        ],
+        [
+          "A03. Marinated Beef Shank",
+          "",
+          1480
+        ],
+        [
+          "A04. Cucumber Salad",
+          "",
+          1080
+        ],
+        [
+          "A05. Jiang-Nan Style Vegetarian Goose",
+          "",
+          1380
+        ],
+        [
+          "A06. Green Onion Pancake",
+          "",
+          895
+        ],
+        [
+          "A07. Deep Fried Vegetarian Spring Rolls (3 pcs)",
+          "",
+          725
+        ]
+      ]
+    },
+    {
+      "name": "Soup",
+      "items": [
+        [
+          "B01. Hot & Sour Soup",
+          "",
+          1590
+        ],
+        [
+          "B02. Chicken & Corn Soup",
+          "",
+          1590
+        ],
+        [
+          "B03. Beef w/ Cilantro Soup",
+          "",
+          1590
+        ],
+        [
+          "B04. Wonton Soup (6 pcs)",
+          "Listed as out of stock when checked; confirm current availability.",
+          1590
+        ],
+        [
+          "B05. Seafood Sizzling Rice Soup",
+          "",
+          1880
+        ]
+      ]
+    },
+    {
+      "name": "Specialty Dumplings & Dim Sum",
+      "items": [
+        [
+          "S01. Steamed Soup Pork Dumplings (6 pcs)",
+          "",
+          1280
+        ],
+        [
+          "S02. Steamed Crab & Shrimp Dumplings (5 pcs)",
+          "Listed as out of stock when checked; confirm current availability.",
+          1880
+        ],
+        [
+          "S03. Pork & Napa Cabbage Dumplings (4 pcs)",
+          "",
+          1080
+        ],
+        [
+          "S04. Vegetarian Dumplings (4 pcs)",
+          "",
+          1080
+        ],
+        [
+          "S05. Shanghai-Style Pan-Fried Pork Buns (4 pcs)",
+          "",
+          1180
+        ],
+        [
+          "S06. Pan-Fried Spicy Beef Potstickers (5pcs)",
+          "",
+          1180
+        ],
+        [
+          "S07. Boiled Pork & Chive Dumplings (8 pcs)",
+          "Listed as out of stock when checked; confirm current availability.",
+          1280
+        ],
+        [
+          "S08. Boiled Chicken & Corn Dumplings (8 pcs)",
+          "Listed as out of stock when checked; confirm current availability.",
+          1280
+        ],
+        [
+          "S09. Boiled Fish & Chive Dumplings (8 pcs)",
+          "Listed as out of stock when checked; confirm current availability.",
+          1380
+        ],
+        [
+          "S10. Boiled Mongolian Beef Dumplings (8 pcs)",
+          "Listed as out of stock when checked; confirm current availability.",
+          1380
+        ],
+        [
+          "S11. Wontons in Chili Oil (6 pcs) (Contained Peanut)",
+          "Listed as out of stock when checked; confirm current availability.",
+          1180
+        ],
+        [
+          "S12. Steamed Beef Shumai (4 pcs)",
+          "",
+          1080
+        ],
+        [
+          "S13. Steamed Shrimp & Pork Shumai (4 pcs)",
+          "",
+          1080
+        ],
+        [
+          "S14. Steamed Cashew & Veggie Gow (4 pcs)",
+          "Listed as out of stock when checked; confirm current availability.",
+          1080
+        ],
+        [
+          "S15. Steamed Scallop & Shrimp Har Gow (4 pcs)",
+          "",
+          1180
+        ],
+        [
+          "S16. Steamed Shrimp Har Gow (4 pcs)",
+          "",
+          1080
+        ],
+        [
+          "S17. BBQ Pork Baos (3 pcs)",
+          "",
+          920
+        ],
+        [
+          "S18. Steamed Chicken & Shiitake Baos (2pcs)",
+          "",
+          725
+        ],
+        [
+          "S19. Steamed Vegetarian Baos (2pcs)",
+          "",
+          725
+        ],
+        [
+          "S20. Steamed Sticky Rice Chicken in Lotus Leaf (2 pcs)",
+          "",
+          1080
+        ],
+        [
+          "Boiled Pork & Shrimp w/ Celery Dumplings (8 pcs)",
+          "Listed as out of stock when checked; confirm current availability.",
+          1380
+        ],
+        [
+          "Shanghai-Style Steamed Sticky Rice Shumai (4 pcs)",
+          "",
+          1080
+        ]
+      ]
+    },
+    {
+      "name": "Chef's Wok",
+      "items": [
+        [
+          "W01. Signature BBQ Beef Ribs",
+          "",
+          3880
+        ],
+        [
+          "W02. Stir-Fried Black Pepper Beef Tenderloin",
+          "",
+          2480
+        ],
+        [
+          "W03. Basil Beef",
+          "",
+          1880
+        ],
+        [
+          "W04. Mongolian Beef",
+          "",
+          1880
+        ],
+        [
+          "W05. Sizzling Lamb W/ Bell Pepper",
+          "",
+          2680
+        ],
+        [
+          "W06. Stir-fried Cumin Lamb",
+          "",
+          2480
+        ],
+        [
+          "W07. Crispy Salt & Pepper Pork Chop",
+          "",
+          2480
+        ],
+        [
+          "W08. Shredded Pork with Garlic Sauce",
+          "",
+          1880
+        ],
+        [
+          "W09. Mapo Tofu",
+          "",
+          1880
+        ],
+        [
+          "W10. Kung Pao",
+          "",
+          1880
+        ],
+        [
+          "W11. General Tso's Chicken",
+          "",
+          1880
+        ],
+        [
+          "W12. Mushrooms Chicken",
+          "",
+          1780
+        ],
+        [
+          "W14. Golden Pumpkin Prawns w/ Salted Egg Yolk Crust",
+          "",
+          2480
+        ],
+        [
+          "W15. Braised Asparagus w/ Scallops (6 pcs)",
+          "",
+          2680
+        ],
+        [
+          "W17. Spicy (Fish Fillet /Beef) in House Broth",
+          "",
+          2680
+        ],
+        [
+          "W18. Szechuan Fish Fillet w/ Pickled Cabbage in House Broth",
+          "",
+          2880
+        ],
+        [
+          "Sweet and Sour Chicken 甜酸鸡",
+          "Listed as out of stock when checked; confirm current availability.",
+          1880
+        ]
+      ]
+    },
+    {
+      "name": "Carbs",
+      "items": [
+        [
+          "C01. *Signature Crab meat Claypot Rice",
+          "",
+          2880,
+          null,
+          "from $28.80"
+        ],
+        [
+          "C02. Beef Chow Fun",
+          "",
+          1780
+        ],
+        [
+          "C03. Chow Mein",
+          "",
+          1680
+        ],
+        [
+          "C04. Fried Rice",
+          "",
+          1680
+        ],
+        [
+          "C05. Szechuan Beef Shank Noodle Soup",
+          "",
+          1980
+        ],
+        [
+          "C06. Seafood Noodle Soup",
+          "",
+          1980
+        ],
+        [
+          "C07. Beijing Style Noodle in Black Bean Sauce",
+          "",
+          1590
+        ],
+        [
+          "C08. Szechuan Style Dan-dan Noodle",
+          "",
+          1590
+        ],
+        [
+          "C09. Shanghai Style Green Onion Noodle",
+          "",
+          1480
+        ],
+        [
+          "C10. White Rice",
+          "",
+          275
+        ],
+        [
+          "C11. Brown Rice",
+          "Listed as out of stock when checked; confirm current availability.",
+          375
+        ],
+        [
+          "C12. White Rice",
+          "",
+          275
+        ],
+        [
+          "Plain Chicken",
+          "Listed as out of stock when checked; confirm current availability.",
+          500
+        ]
+      ]
+    },
+    {
+      "name": "Veggie",
+      "items": [
+        [
+          "V01. Chinese Yam w/ Black Fungus",
+          "",
+          1780
+        ],
+        [
+          "V02. Green Bok Choy w/ Garlic",
+          "",
+          1680
+        ],
+        [
+          "V03. Pea Sprouts w/ Garlic",
+          "",
+          1980
+        ],
+        [
+          "V04. Braised Tofu with Straw Mushroom",
+          "",
+          1680
+        ],
+        [
+          "V05. Eggplant w/ Garlic Sauce",
+          "",
+          1680
+        ],
+        [
+          "V06. Dry-Braised String Beans",
+          "",
+          1680
+        ],
+        [
+          "V08. Braised Asparagus w/ Mushrooms",
+          "",
+          1780
+        ],
+        [
+          "Salt & Pepper Tofu 椒盐豆腐",
+          "",
+          1680
+        ]
+      ]
+    },
+    {
+      "name": "Dessert",
+      "items": [
+        [
+          "D01. Steamed Chocolate Dumplings",
+          "Listed as out of stock when checked; confirm current availability.",
+          795,
+          null,
+          "from $7.95"
+        ],
+        [
+          "D02. Deep Fried Yogurt Mochi (6 pcs)",
+          "",
+          895
+        ],
+        [
+          "D03. Deep Fried Mini-Sesame Balls (6 pcs)",
+          "",
+          695
+        ],
+        [
+          "D04. Salted Egg Custard Baos (3 pcs)",
+          "",
+          825
+        ],
+        [
+          "D05. Beijing Style Sweet Buns (4 pcs)",
+          "",
+          725
+        ]
+      ]
+    }
+  ],
+  "orderUrl": "https://dumplingkitchennoevalley.toast.site/menu/dumpling-kitchen-castro-2-nro-3913-24th-st",
+  "menuNote": "The Noe Valley branch’s published food menu. Confirm current prices, options and stock on the restaurant’s ordering page. Stock notes record what the published menu showed when checked."
+},
+{
+  "slug": "dumpling-kitchen-factory",
+  "name": "Dumpling Kitchen",
+  "label": "Dumpling Factory",
+  "cuisine": "Dumpling factory store",
+  "tagline": "Factory store · Foster City",
+  "color": "#F5F5F5",
+  "icon": "dumpling-kitchen-v113",
+  "prep": 0,
+  "category": "Dumplings",
+  "items": [],
+  "site": "https://www.dumplingkitchenca.com/",
+  "address": "1459 Beach Park Blvd, Foster City, CA",
+  "instagram": "dumplingkitchenca",
+  "email": "dumplingkitchenus@gmail.com",
+  "panels": [
+    {
+      "head": "Dumpling Kitchen locations",
+      "body": [
+        "Factory store shown on the business’s supplied Instagram profile. Contact the business to confirm hours, walk-in access and available products."
+      ],
+      "links": [
+        {
+          "label": "Millbrae · 455 Broadway",
+          "href": "https://beastypages.com/?b=b_dumplingkitchenmillbrae"
+        },
+        {
+          "label": "San Francisco · 1935 Taraval St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchentaraval"
+        },
+        {
+          "label": "San Francisco · 544 Castro St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchencastro"
+        },
+        {
+          "label": "San Francisco · 3913 24th St",
+          "href": "https://beastypages.com/?b=b_dumplingkitchennoe"
+        },
+        {
+          "label": "Foster City · 1459 Beach Park Blvd",
+          "href": "https://beastypages.com/?b=b_dumplingkitchenfactory"
+        }
+      ]
+    },
+    {
+      "head": "Contact and current availability",
+      "body": [
+        "The business’s supplied contact profile lists text enquiries at (415) 767-9563 and dumplingkitchenus@gmail.com. Check the branch’s live ordering page for hours and availability."
+      ],
+      "links": [
+        {
+          "label": "Official locations",
+          "href": "https://www.dumplingkitchenca.com/locations/"
+        },
+        {
+          "label": "Official Instagram",
+          "href": "https://www.instagram.com/dumplingkitchenca/"
+        }
+      ]
+    }
+  ],
+  "contactOnly": "Dumpling Kitchen’s Foster City factory store, listed on the business’s supplied profile. Contact the business for current hours, walk-in availability and products."
 },
 ]

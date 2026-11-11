@@ -2629,4 +2629,13 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-hotpot-11': 'b_shabuclubsanfrancisco',
   'beasty-hotpot-12': 'b_mikiyasantaclara',
   'san-francisco-goods2-84': 'b_shabuclubsanfrancisco',
+  // Batch 113 — append branches and requested categories without moving prior seats.
+  "millbrae-goods2-0": "b_dumplingkitchenmillbrae",
+  "san-francisco-goods2-85": "b_dumplingkitchentaraval",
+  "san-francisco-goods2-86": "b_dumplingkitchencastro",
+  "san-francisco-goods2-87": "b_dumplingkitchennoe",
+  "foster-city-goods2-1": "b_dumplingkitchenfactory",
+  "beasty-dumplings-7": "b_dumplingkitchenmillbrae",
+  "beasty-dimsum-14": "b_dumplingkitchenmillbrae",
+  "beasty-burgers2-1": "b_flatsburgers",
 }

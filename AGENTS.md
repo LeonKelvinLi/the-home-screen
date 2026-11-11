@@ -1,0 +1,7 @@
+# BEASTY Pages workflow
+
+When Leon says “refetch”, carry the current Glenn intake through completion. Read the fresh Messages thread and all attachments, reconcile every requested business, branch, category, creator and clip against the current catalog, implement the updates, push the release, and verify the final live site. Refetch once more before release to catch late additions. A message summary alone does not complete a refetch.
+
+Icon quality is part of intake. Compare supplied artwork with the business or creator's current official profile/site. Prefer a clear original asset, preserve the actual mark, remove screenshot controls and excess margins, and keep the full lettering inside the phone squircle. Inspect the finished asset at full size and at phone tile size. Correct recoverable crop, padding, alpha and resolution problems during the same task so Glenn does not need to send another “update icon” request. Record the source and disposition with the batch.
+
+Keep original creator and posting-account credits on clips. Preserve existing business/category/city seats and the first-page Foodies unless the messages specifically request a change. Use an isolated worktree when other work is present, and include the existing Goods package and shared account configuration when building and verifying the host.

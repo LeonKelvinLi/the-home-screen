@@ -2753,7 +2753,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      same message as the listing, so it plays as a review under his protocol of
      2026-09-09 (see docs/FOODIES.md). */
   seed('deli-board', 'Deli Board', 'Deli Board', 'Sandwiches', '#1C1C1C', {
-    icon: 'deli-board',
+    icon: 'deli-board-v113',
     logoTemplate: 'wordmark', logoLines: ['DELI', 'BOARD'], logoFace: 'condensed',
     site: 'https://deliboardsf.com/',
     siteCta: 'See their menu',

@@ -2606,6 +2606,9 @@ export const OTHER_REVIEWS: OtherReview[] = [
   // Batch112 late pre-release share, November10 08:40 Pacific.
   {"by": "_whatarethechances_", "place": "Fork It Pasta To Go", "city": "San Mateo", "brand": "b_forkitpasta", "reel": "https://www.instagram.com/reel/DfjON_XozUT/", "clip": "creator", "credit": "Review by @_whatarethechances_ at Fork It Pasta To Go, San Mateo. The November 11, 2026 grand-opening announcement is dated, not an ongoing offer."},
 
+  // Batch 113 — fresh reviews; existing creator pages and prior inline films retained.
+  {"by": "bayareamunchies510", "place": "Deli Board", "city": "San Francisco", "brand": "b_deliboard", "reel": "https://www.instagram.com/reel/Dfi6sPbRZHy/", "clip": true, "credit": "Review by @bayareamunchies510 at Deli Board, 1058 Folsom Street, San Francisco."},
+  {"by": "iamnikkieg", "place": "Flats Burgers", "city": "San Francisco", "brand": "b_flatsburgers", "reel": "https://www.instagram.com/reel/DflV2movJep/", "clip": "creator", "credit": "Review by @iamnikkieg at Flats Burgers, 4753 Mission Street, San Francisco."},
 ]
 
 /*

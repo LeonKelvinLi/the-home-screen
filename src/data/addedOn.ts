@@ -1232,4 +1232,9 @@ export const ADDED_ON: Record<string, string> = {
   b_foodielifestylebyangiee: '2026-11-10',
   b_foodieeatswithvinni: '2026-11-10',
   b_foodiebaeareafo0die: '2026-11-10',
+  b_dumplingkitchenmillbrae: '2026-11-10',
+  b_dumplingkitchentaraval: '2026-11-10',
+  b_dumplingkitchencastro: '2026-11-10',
+  b_dumplingkitchennoe: '2026-11-10',
+  b_dumplingkitchenfactory: '2026-11-10',
 }

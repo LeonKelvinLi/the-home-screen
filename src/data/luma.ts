@@ -1080,6 +1080,9 @@ export const ICON_LUMA: Record<string, number> = {
   'z-and-y-peking-duck': 0.8209,
   'zadna-grill': 0.2671,
   'zut-on-fourth': 0.2444,
+  'dumpling-kitchen-v113': 0.7292,
+  'flats-burgers-v113': 0.6783,
+  'deli-board-v113': 0.7973,
 }
 
 export const WALLPAPER_TILT: Record<string, number> = {

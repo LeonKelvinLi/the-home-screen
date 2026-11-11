@@ -1,0 +1,3995 @@
+{
+  "cutoff": "2026-11-10T19:30:54.350663-08:00",
+  "listings": [
+    {
+      "slug": "dumpling-kitchen-millbrae",
+      "name": "Dumpling Kitchen",
+      "label": "Dumpling Millbrae",
+      "cuisine": "Dumplings, dim sum and Chinese food",
+      "tagline": "Soup dumplings and Chinese food · Millbrae",
+      "color": "#F5F5F5",
+      "icon": "dumpling-kitchen-v113",
+      "prep": 0,
+      "category": "Dumplings",
+      "items": [],
+      "site": "https://www.dumplingkitchenca.com/",
+      "address": "455 Broadway, Millbrae, CA 94030",
+      "instagram": "dumplingkitchenca",
+      "email": "dumplingkitchenus@gmail.com",
+      "panels": [
+        {
+          "head": "Dumpling Kitchen locations",
+          "body": [
+            "This is the Millbrae location. Each restaurant has its own published menu; prices and availability can differ by branch."
+          ],
+          "links": [
+            {
+              "label": "Millbrae · 455 Broadway",
+              "href": "https://beastypages.com/?b=b_dumplingkitchenmillbrae"
+            },
+            {
+              "label": "San Francisco · 1935 Taraval St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchentaraval"
+            },
+            {
+              "label": "San Francisco · 544 Castro St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchencastro"
+            },
+            {
+              "label": "San Francisco · 3913 24th St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchennoe"
+            },
+            {
+              "label": "Foster City · 1459 Beach Park Blvd",
+              "href": "https://beastypages.com/?b=b_dumplingkitchenfactory"
+            }
+          ]
+        },
+        {
+          "head": "Contact and current availability",
+          "body": [
+            "The business’s supplied contact profile lists text enquiries at (415) 767-9563 and dumplingkitchenus@gmail.com. Check the branch’s live ordering page for hours and availability."
+          ],
+          "links": [
+            {
+              "label": "Official locations",
+              "href": "https://www.dumplingkitchenca.com/locations/"
+            },
+            {
+              "label": "Official Instagram",
+              "href": "https://www.instagram.com/dumplingkitchenca/"
+            }
+          ]
+        },
+        {
+          "head": "Published branch menu",
+          "body": [
+            "Use this location’s ordering page for current options and hours."
+          ],
+          "links": [
+            {
+              "label": "Official branch menu",
+              "href": "https://dumplingkitchennoevalley.toast.site/menu/dumpling-kitchen-nro-455-broadway"
+            }
+          ]
+        },
+        {
+          "head": "Millbrae contact details",
+          "body": [
+            "The main locations page lists (408) 667-1605 for Millbrae. Its Toast page lists (415) 767-9563, also the business’s supplied general text number. Confirm the preferred contact directly."
+          ],
+          "links": [
+            {
+              "label": "Owner’s locations page",
+              "href": "https://www.dumplingkitchenca.com/locations/"
+            }
+          ]
+        }
+      ],
+      "phone": "(408) 667-1605",
+      "sections": [
+        {
+          "name": "Dumplings & Dim Sum",
+          "items": [
+            [
+              "S01.Shanghai-Style Steamed Pork Dumplings (6 pcs)",
+              "",
+              1380
+            ],
+            [
+              "S02.Shanghai-Style Pan-Fried Pork Buns (4 pcs)",
+              "",
+              1195
+            ],
+            [
+              "S03.signature handmade potstickers ( 6pcs )",
+              "",
+              1595
+            ],
+            [
+              "S04.Vegetarian Dumplings (4 pcs)",
+              "",
+              1195
+            ],
+            [
+              "S05.Pork & Napa Cabbage Dumplings (4 pcs)",
+              "",
+              1195
+            ],
+            [
+              "S06.Pan-Fried Spicy Beef Potstickers(6 pcs)",
+              "",
+              1595
+            ],
+            [
+              "S07.signature Steamed Pork & Shrimp Siu mai ( 4pcs )",
+              "",
+              995
+            ],
+            [
+              "S08.Shanghai-Style Steamed Sticky Rice Siu mai (4 pcs)",
+              "",
+              895
+            ],
+            [
+              "S09.Steamed Beef Siu mai (4 pcs)",
+              "",
+              1095
+            ],
+            [
+              "S10.Steamed Shrimp Har Gow (4 pcs)",
+              "",
+              995
+            ],
+            [
+              "S11.Boiled Pork & Napa Cabbage Dumplings (8 pcs)",
+              "",
+              1180
+            ],
+            [
+              "S12.Boiled Pork & chive Dumplings (8pcs)",
+              "",
+              1280
+            ],
+            [
+              "S13.Boiled Chicken & Corn Dumplings (8 pcs)",
+              "",
+              1280
+            ],
+            [
+              "S14.Boiled Fish & Chive Dumplings (8 pcs)",
+              "",
+              1380
+            ],
+            [
+              "S15.Boiled Mongolian Beef Dumplings (8 pcs)",
+              "",
+              1480
+            ],
+            [
+              "S16.Wontons in Chili Oil (6 pcs) (Contained Peanut butt er)",
+              "",
+              1380
+            ],
+            [
+              "S17.Steamed BBQ Pork Baos (3 pcs)",
+              "",
+              995
+            ],
+            [
+              "S18.Steamed Vegetarian Baos (3 pcs)",
+              "",
+              995
+            ],
+            [
+              "S19.Steamed Chicken & Shiitake Baos (3 pcs)",
+              "",
+              995
+            ],
+            [
+              "S20.Green Onion Pancake",
+              "",
+              895
+            ],
+            [
+              "S21.Chinese Fried Dough (1pcs)",
+              "Listed as out of stock when checked; confirm current availability.",
+              445
+            ]
+          ]
+        },
+        {
+          "name": "Appetizer",
+          "items": [
+            [
+              "A01.Cucumber Salad",
+              "",
+              995
+            ],
+            [
+              "A02.Drunk Chicken",
+              "",
+              1695
+            ],
+            [
+              "A03.Vegetarian Chicken",
+              "",
+              1280
+            ],
+            [
+              "A04.Jellyfish w/ Scallion oil Salad",
+              "",
+              1495
+            ],
+            [
+              "A05. Shanghai-style Salted Duck",
+              "",
+              1695
+            ],
+            [
+              "A06.Smoked Fish",
+              "",
+              1595
+            ],
+            [
+              "A07.Shanghai-Style Vegetarian Spring Rolls (4 pcs)",
+              "",
+              875
+            ],
+            [
+              "A08. Golden Crunchy Wonton ( 6pcs )",
+              "",
+              1195
+            ]
+          ]
+        },
+        {
+          "name": "Soup",
+          "items": [
+            [
+              "B01.Shanghai Pork Soup with Bamboo & Tofu",
+              "",
+              2480
+            ],
+            [
+              "B02. Hot & Sour Soup",
+              "",
+              1595
+            ],
+            [
+              "B03.Chicken & Corn Soup",
+              "",
+              1595
+            ],
+            [
+              "B04.Wonton in House Broth (6pcs)",
+              "",
+              1595
+            ],
+            [
+              "B05.Beef w/ Cilantro Soup",
+              "",
+              1595
+            ],
+            [
+              "B06.Sizzling Rice Soup",
+              "Listed as out of stock when checked; confirm current availability.",
+              1695
+            ]
+          ]
+        },
+        {
+          "name": "Green",
+          "items": [
+            [
+              "V01.Dry-Braised String Beans",
+              "",
+              1750
+            ],
+            [
+              "V02.Pea Sprouts w/ Garlic",
+              "",
+              2050
+            ],
+            [
+              "V03.Eggplant w/ Garlic Sauce",
+              "",
+              1750
+            ],
+            [
+              "V04.Green Baby Bok Choy w/ Garlic",
+              "",
+              1750
+            ],
+            [
+              "V05.Braised Tofu with Bok Choy",
+              "",
+              1750
+            ],
+            [
+              "V06.Salt & Pepper Tofu",
+              "",
+              1750
+            ]
+          ]
+        },
+        {
+          "name": "Chef's Wok",
+          "items": [
+            [
+              "G01.Signature Dry-Fried Chicken Wings (8pcs)",
+              "",
+              1995
+            ],
+            [
+              "G02.Salt & Pepper Chicken Wings",
+              "",
+              1995
+            ],
+            [
+              "G03.Signature BBQ Beef Ribs",
+              "",
+              3895
+            ],
+            [
+              "G04.Shanghai Stir-Fried Three shreds",
+              "",
+              1895
+            ],
+            [
+              "G05.Braised Lion’s Head Meatballs (2 pcs)",
+              "",
+              1795
+            ],
+            [
+              "G06.Sichuan Style Chili Chicken",
+              "",
+              2080
+            ],
+            [
+              "G07.General Tso’s Chicken",
+              "",
+              1880
+            ],
+            [
+              "G08.Sweet & Sour Chicken",
+              "",
+              1880
+            ],
+            [
+              "G09.Kung Pao Chicken (w/ peanut)",
+              "",
+              1880
+            ],
+            [
+              "G10.Stir-Fried Black Pepper Beef Tenderloin",
+              "",
+              2695
+            ],
+            [
+              "G11.Broccoli Beef",
+              "",
+              2295
+            ],
+            [
+              "G12.Mongolian Beef",
+              "",
+              2295
+            ],
+            [
+              "G13.Basil Beef",
+              "",
+              2295
+            ],
+            [
+              "G14.Shanghai-style Sweet vinegar Spare Ribs",
+              "",
+              2095
+            ],
+            [
+              "G15.Mapo Tofu",
+              "",
+              1680
+            ],
+            [
+              "G16.Honey Walnut Prawns",
+              "",
+              2380
+            ],
+            [
+              "G17.Salt and Pepper Fish Fillets",
+              "",
+              2380
+            ],
+            [
+              "G18.Shanghai-style Braised Pork Hock",
+              "",
+              3680
+            ],
+            [
+              "G19.Mu Shu",
+              "",
+              2080
+            ]
+          ]
+        },
+        {
+          "name": "Carbs",
+          "items": [
+            [
+              "C01.The Black Truffle with Beef Fried Rice",
+              "",
+              2495
+            ],
+            [
+              "C02.Shanghai-Style Chow Mein w/ Pork",
+              "",
+              1795
+            ],
+            [
+              "C03.Shanghai-Style Stir-Fried Rice Cake w/ Pork",
+              "",
+              1795
+            ],
+            [
+              "C04.Shanghai Style Green Onion Noodle",
+              "",
+              1595
+            ],
+            [
+              "C05. Chow Mein",
+              "",
+              1795
+            ],
+            [
+              "C06. Fried Rice",
+              "",
+              1795
+            ],
+            [
+              "C07.Stir-Fried Beef Chow Fun",
+              "",
+              1895
+            ],
+            [
+              "C08.Beijing-Style Noodle in Black Bean Sauce w/ Pork",
+              "",
+              1695
+            ],
+            [
+              "C09.Szechuan Style Dan-dan Noodle w/ Pork",
+              "",
+              1695
+            ],
+            [
+              "C10.White Rice (Bowl)",
+              "",
+              275
+            ]
+          ]
+        },
+        {
+          "name": "Dessert",
+          "items": [
+            [
+              "D01.Pumpkin-Shape Egg Yolk Buns(3pcs)",
+              "",
+              895
+            ],
+            [
+              "D02. Salted Egg Custard Baos (3 pcs)",
+              "",
+              795
+            ],
+            [
+              "D03.Mini Sesame Balls (6 pcs)",
+              "",
+              725
+            ],
+            [
+              "D04.Yogurt Mochi (5 pcs)",
+              "Listed as out of stock when checked; confirm current availability.",
+              950
+            ],
+            [
+              "D05.Beijing-Style Buns (4 pcs)",
+              "",
+              725
+            ],
+            [
+              "D06.Sesame Glutinous Rice Balls in Sweet Rice Wine",
+              "",
+              1550
+            ],
+            [
+              "D07.Bird's Nest with Organic Snow Fungus",
+              "Listed as out of stock when checked; confirm current availability.",
+              1280
+            ]
+          ]
+        }
+      ],
+      "orderUrl": "https://dumplingkitchennoevalley.toast.site/menu/dumpling-kitchen-nro-455-broadway",
+      "menuNote": "The Millbrae branch’s published food menu. Confirm current prices, options and stock on the restaurant’s ordering page. Stock notes record what the published menu showed when checked.",
+      "clip": {
+        "src": "/clips/b113-dumpling-kitchen-millbrae.mp4",
+        "poster": "/clips/b113-dumpling-kitchen-millbrae-poster.webp",
+        "href": "https://www.instagram.com/reel/DfkmQvZvv_C/",
+        "platform": "Instagram",
+        "credit": "Original by @dumplingkitchenca. Millbrae soft-opening coverage, 455 Broadway, posted November 10, 2026."
+      }
+    },
+    {
+      "slug": "dumpling-kitchen-taraval",
+      "name": "Dumpling Kitchen",
+      "label": "Dumpling Taraval",
+      "cuisine": "Dumplings, dim sum and Chinese food",
+      "tagline": "Taraval · San Francisco",
+      "color": "#F5F5F5",
+      "icon": "dumpling-kitchen-v113",
+      "prep": 0,
+      "category": "Dumplings",
+      "items": [],
+      "site": "https://www.dumplingkitchenca.com/",
+      "address": "1935 Taraval St, San Francisco, CA 94116",
+      "instagram": "dumplingkitchenca",
+      "email": "dumplingkitchenus@gmail.com",
+      "panels": [
+        {
+          "head": "Dumpling Kitchen locations",
+          "body": [
+            "This is the Taraval location. Each restaurant has its own published menu; prices and availability can differ by branch."
+          ],
+          "links": [
+            {
+              "label": "Millbrae · 455 Broadway",
+              "href": "https://beastypages.com/?b=b_dumplingkitchenmillbrae"
+            },
+            {
+              "label": "San Francisco · 1935 Taraval St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchentaraval"
+            },
+            {
+              "label": "San Francisco · 544 Castro St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchencastro"
+            },
+            {
+              "label": "San Francisco · 3913 24th St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchennoe"
+            },
+            {
+              "label": "Foster City · 1459 Beach Park Blvd",
+              "href": "https://beastypages.com/?b=b_dumplingkitchenfactory"
+            }
+          ]
+        },
+        {
+          "head": "Contact and current availability",
+          "body": [
+            "The business’s supplied contact profile lists text enquiries at (415) 767-9563 and dumplingkitchenus@gmail.com. Check the branch’s live ordering page for hours and availability."
+          ],
+          "links": [
+            {
+              "label": "Official locations",
+              "href": "https://www.dumplingkitchenca.com/locations/"
+            },
+            {
+              "label": "Official Instagram",
+              "href": "https://www.instagram.com/dumplingkitchenca/"
+            }
+          ]
+        },
+        {
+          "head": "Published branch menu",
+          "body": [
+            "Use this location’s ordering page for current options and hours."
+          ],
+          "links": [
+            {
+              "label": "Official branch menu",
+              "href": "https://direct.chownow.com/order/25382/locations/37523"
+            }
+          ]
+        }
+      ],
+      "phone": "(415) 682-8938",
+      "sections": [
+        {
+          "name": "Specialty Dumpling & Dim Sum",
+          "items": [
+            [
+              "S01. Shanghai-Style Steamed Pork Dumplings (10 pcs)",
+              "",
+              1580
+            ],
+            [
+              "S02. Crab and Pork Steamed Dumplings (8 pcs)",
+              "",
+              1930
+            ],
+            [
+              "S03. Pan-Fried Pork Potstickers (6 pcs)",
+              "",
+              1530
+            ],
+            [
+              "S04. Pan-Fried Vegetarian Pot Stickers (6 pcs)",
+              "",
+              1530
+            ],
+            [
+              "S05. Pan-Fried Spicy Beef Potstickers (6 pcs)",
+              "",
+              1630
+            ],
+            [
+              "S06. Shanghai-Style Pan-Fried Pork Buns (6 pcs)",
+              "",
+              1530
+            ],
+            [
+              "S07. Boiled Pork and Chive Dumplings (10 pcs)",
+              "",
+              1550
+            ],
+            [
+              "S08. Boiled Chicken and Corn Dumplings (10 pcs)",
+              "",
+              1550
+            ],
+            [
+              "S09. Boiled Pork and Shrimp w/ Celery Dumplings (10 pcs)",
+              "",
+              1630
+            ],
+            [
+              "S10. Boiled Mongolian Beef Dumplings (10 pcs)",
+              "",
+              1650
+            ],
+            [
+              "S11. Steamed Pork & Cabbage Dumplings (8 pcs)",
+              "",
+              1750
+            ],
+            [
+              "S12. Steamed Vegetarian Dumplings (8 pcs)",
+              "",
+              1750
+            ],
+            [
+              "S13. Wontons in Chili Oil (8 pcs)",
+              "",
+              1550
+            ],
+            [
+              "S16. Steamed Beef Shumai (6 pcs)",
+              "",
+              1550
+            ],
+            [
+              "S15. Steamed Shrimp and Pork Shumai (6 pcs)",
+              "",
+              1580
+            ],
+            [
+              "S14. Shanghai-Style Steamed Sticky Rice Shumai (6 pcs)",
+              "",
+              1580
+            ],
+            [
+              "S17. Steamed Pumpkin Buns (4pcs)",
+              "",
+              925
+            ],
+            [
+              "S18. Steamed Shrimp Har Gow (6 pcs)",
+              "",
+              1430
+            ],
+            [
+              "S19. Steamed Chicken & Shiitake Baos (4 pcs)",
+              "",
+              1150
+            ],
+            [
+              "S20. Steamed BBQ Pork Baos (4 pcs)",
+              "",
+              1050
+            ],
+            [
+              "S21. Crab Shell Pastry (Sweet / Salty) (3 pcs)",
+              "",
+              925
+            ],
+            [
+              "S22. Steamed Vegetarian Baos (4 pcs)",
+              "",
+              1230
+            ],
+            [
+              "S23. Shanghai-Style Vegetarian Spring Rolls (6 pcs)",
+              "",
+              975
+            ],
+            [
+              "S24. Green Onion Pancake",
+              "",
+              975
+            ],
+            [
+              "S25. Chinese Fried Dough (1 Roll)",
+              "",
+              645
+            ],
+            [
+              "S26. Savory Soy-Milk (1 Bowl)",
+              "",
+              875
+            ],
+            [
+              "S27. Sticky Rice Roll (1 Roll)",
+              "",
+              925
+            ],
+            [
+              "Shredded Radish Pancakes (3 pcs)",
+              "",
+              799
+            ]
+          ]
+        },
+        {
+          "name": "Appetizer",
+          "items": [
+            [
+              "A01. Black Fungus Salad",
+              "",
+              945
+            ],
+            [
+              "A02. Beef Shank & Tripe in Chili Sauce",
+              "",
+              1680
+            ],
+            [
+              "A03. Chilled Spicy Pig Ear",
+              "",
+              1580
+            ],
+            [
+              "A04. Shredded Chicken w/ Cucumber in Chili Sauce",
+              "",
+              1680
+            ],
+            [
+              "A05. Drunken Chicken",
+              "",
+              1680
+            ],
+            [
+              "A06. Shanghai-Style Duck in House Sauce",
+              "",
+              1850
+            ],
+            [
+              "A07. Vegetarian Chicken",
+              "",
+              1280
+            ],
+            [
+              "A08. Cucumber Salad",
+              "",
+              1150
+            ],
+            [
+              "A09. Bean Curd Salad",
+              "",
+              950
+            ],
+            [
+              "A10. Shanghai-Style Smoked Fish",
+              "",
+              1850
+            ]
+          ]
+        },
+        {
+          "name": "Soup",
+          "items": [
+            [
+              "B01. Hot & Sour Soup",
+              "",
+              1480
+            ],
+            [
+              "B02. Beef with Cilantro Soup",
+              "",
+              1480
+            ],
+            [
+              "B03. Chicken and Corn Soup",
+              "",
+              1480
+            ],
+            [
+              "B04. Wonton in House Broth (6 pcs)",
+              "",
+              1480
+            ],
+            [
+              "B05. Sizzling Rice Soup",
+              "",
+              1680
+            ]
+          ]
+        },
+        {
+          "name": "Vege",
+          "items": [
+            [
+              "V01. Braised Tofu with Vegetables",
+              "",
+              1580
+            ],
+            [
+              "V02. Dry-Braised String Beans",
+              "",
+              1750
+            ],
+            [
+              "V03. Eggplant w/ Garlic Sauce",
+              "",
+              1750
+            ],
+            [
+              "V04. Green Bok Choy w/ Garlic",
+              "",
+              1750
+            ],
+            [
+              "V05. Pea Sprouts w/ Garlic",
+              "",
+              1980
+            ],
+            [
+              "V06. Salt & Pepper Tofu",
+              "",
+              1750
+            ]
+          ]
+        },
+        {
+          "name": "Chef's Wok",
+          "items": [
+            [
+              "G01. Sweet Vinegar Spare Ribs",
+              "",
+              1820
+            ],
+            [
+              "G02. Salt and Pepper Spare Ribs",
+              "",
+              1820
+            ],
+            [
+              "G03. Shanghai-Style Braised Pork",
+              "",
+              1880
+            ],
+            [
+              "G04. Braised Lion’s Head Meatballs (2 pcs)",
+              "",
+              1690
+            ],
+            [
+              "G05. Braised Pork Belly w/ Preserved Vegetables",
+              "",
+              2080
+            ],
+            [
+              "G06. Braised Beef Brisket w/ Turnip",
+              "",
+              2080
+            ],
+            [
+              "G07. Mapo Tofu",
+              "",
+              1720
+            ],
+            [
+              "G08. Mongolian Beef",
+              "",
+              1880
+            ],
+            [
+              "G09. Broccoli with",
+              "",
+              1780
+            ],
+            [
+              "G10. Dry-Fried Chicken",
+              "",
+              1880
+            ],
+            [
+              "G11. Salt & Pepper Chicken",
+              "",
+              1850
+            ],
+            [
+              "G12. Sweet & Sour Chicken",
+              "",
+              1850
+            ],
+            [
+              "G13. Kung Pao Chicken",
+              "",
+              1850
+            ],
+            [
+              "G14. Salt & Pepper Shrimp",
+              "",
+              1980
+            ],
+            [
+              "G15. Golden Salted Egg Yolk Pumpkin Prawns",
+              "",
+              2180
+            ],
+            [
+              "G16. Walnut Prawns",
+              "",
+              2080
+            ],
+            [
+              "G17. Salt and Pepper Fish Fillets",
+              "",
+              2080
+            ],
+            [
+              "G18. Moo Shu (Come w/ 6 wrapper)",
+              "",
+              1880
+            ],
+            [
+              "Extra Mu Shu Wrapper",
+              "",
+              45
+            ],
+            [
+              "C12. Steam Rice",
+              "",
+              275
+            ]
+          ]
+        },
+        {
+          "name": "Carbs",
+          "items": [
+            [
+              "C01. Shanghai-Style Chow Mein w/ pork",
+              "",
+              1750
+            ],
+            [
+              "C02. Shanghai-Style Stir-Fried Rice Cake w/ pork",
+              "",
+              1750
+            ],
+            [
+              "C03. Pork with Preserved Vegetable Rice Cake",
+              "",
+              1800
+            ],
+            [
+              "C04. Beef Chow Fun",
+              "",
+              1780
+            ],
+            [
+              "C05. Chinese Ham with Bok Choy Rice Clay Pot",
+              "",
+              2050
+            ],
+            [
+              "C06. The Black Truffle with Beef Fried Rice",
+              "",
+              2580
+            ],
+            [
+              "C07. Chow Mein",
+              "",
+              1750
+            ],
+            [
+              "C08. Fried Rice",
+              "",
+              1750
+            ],
+            [
+              "C09. Five-Spice Beef Stew Noodle Soup",
+              "",
+              2050
+            ],
+            [
+              "C10. Beijing-Style Noodle in Black Bean Sauce",
+              "",
+              1580
+            ],
+            [
+              "C11. Sichuan-Style Noodle in Peanut Sauce",
+              "",
+              1580
+            ],
+            [
+              "C12. Steam Rice",
+              "",
+              275
+            ]
+          ]
+        },
+        {
+          "name": "Drinks",
+          "items": [
+            [
+              "J01. Soy-Milk",
+              "",
+              375
+            ],
+            [
+              "J02. Apple Juice",
+              "",
+              325
+            ],
+            [
+              "Coke",
+              "",
+              275
+            ],
+            [
+              "Diet Coke",
+              "",
+              275
+            ],
+            [
+              "Sprite",
+              "",
+              275
+            ]
+          ]
+        },
+        {
+          "name": "Dessert",
+          "items": [
+            [
+              "D01. Glutinous Rice Dumpling in Sweet Rice Wine",
+              "",
+              1550
+            ],
+            [
+              "D02. Pan-Fried Red Bean Paste",
+              "",
+              850
+            ],
+            [
+              "D03. Deep-Fried Yogurt Mochi (6 pcs)",
+              "",
+              1050
+            ],
+            [
+              "D04. Salted Egg Custard Baos (3 pcs)",
+              "",
+              950
+            ],
+            [
+              "D05. Beijing Style Sweet Buns (4 pcs)",
+              "Beijing Style Sweet Buns (4 pcs) Dip w/ Condensed Milk",
+              725
+            ]
+          ]
+        }
+      ],
+      "orderUrl": "https://direct.chownow.com/order/25382/locations/37523",
+      "menuNote": "The Taraval branch’s published food menu. Confirm current prices, options and stock on the restaurant’s ordering page."
+    },
+    {
+      "slug": "dumpling-kitchen-castro",
+      "name": "Dumpling Kitchen",
+      "label": "Dumpling Castro",
+      "cuisine": "Dumplings, dim sum and Chinese food",
+      "tagline": "Castro · San Francisco",
+      "color": "#F5F5F5",
+      "icon": "dumpling-kitchen-v113",
+      "prep": 0,
+      "category": "Dumplings",
+      "items": [],
+      "site": "https://www.dumplingkitchenca.com/",
+      "address": "544 Castro St, San Francisco, CA 94114",
+      "instagram": "dumplingkitchenca",
+      "email": "dumplingkitchenus@gmail.com",
+      "panels": [
+        {
+          "head": "Dumpling Kitchen locations",
+          "body": [
+            "This is the Castro location. Each restaurant has its own published menu; prices and availability can differ by branch."
+          ],
+          "links": [
+            {
+              "label": "Millbrae · 455 Broadway",
+              "href": "https://beastypages.com/?b=b_dumplingkitchenmillbrae"
+            },
+            {
+              "label": "San Francisco · 1935 Taraval St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchentaraval"
+            },
+            {
+              "label": "San Francisco · 544 Castro St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchencastro"
+            },
+            {
+              "label": "San Francisco · 3913 24th St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchennoe"
+            },
+            {
+              "label": "Foster City · 1459 Beach Park Blvd",
+              "href": "https://beastypages.com/?b=b_dumplingkitchenfactory"
+            }
+          ]
+        },
+        {
+          "head": "Contact and current availability",
+          "body": [
+            "The business’s supplied contact profile lists text enquiries at (415) 767-9563 and dumplingkitchenus@gmail.com. Check the branch’s live ordering page for hours and availability."
+          ],
+          "links": [
+            {
+              "label": "Official locations",
+              "href": "https://www.dumplingkitchenca.com/locations/"
+            },
+            {
+              "label": "Official Instagram",
+              "href": "https://www.instagram.com/dumplingkitchenca/"
+            }
+          ]
+        },
+        {
+          "head": "Published branch menu",
+          "body": [
+            "Use this location’s ordering page for current options and hours."
+          ],
+          "links": [
+            {
+              "label": "Official branch menu",
+              "href": "https://direct.chownow.com/order/25382/locations/54317"
+            }
+          ]
+        }
+      ],
+      "phone": "(415) 874-9882",
+      "sections": [
+        {
+          "name": "Specialty Dumplings & Dim Sum",
+          "items": [
+            [
+              "S01.Shanghai-Style Steamed Pork Dumplings (6 pcs)",
+              "",
+              1280
+            ],
+            [
+              "S02.Steamed Crab & Shrimp Meat Dumplings (5 pcs)",
+              "",
+              1880
+            ],
+            [
+              "S03.Pork & Napa Cabbage Dumplings (4 pcs)",
+              "",
+              1080
+            ],
+            [
+              "S04.Vegetarian Dumplings(4 pcs)",
+              "",
+              1080
+            ],
+            [
+              "S05.Shanghai-Style Pan-Fried Pork Buns (4 pcs)",
+              "",
+              1180
+            ],
+            [
+              "S06.Boiled Pork & Chive Dumplings (8 pcs)",
+              "",
+              1280
+            ],
+            [
+              "S07.Boiled Chicken & Corn Dumplings (8 pcs)",
+              "",
+              1280
+            ],
+            [
+              "S08.Boiled Pork & Shrimp w/ Celery Dumplings (8 pcs)",
+              "",
+              1380
+            ],
+            [
+              "S09.Boiled Fish & Chive Dumplings (8 pcs)",
+              "",
+              1380
+            ],
+            [
+              "S10.Wontons in Chili Oil (6 pcs) (Contained Peanut butt?er)",
+              "",
+              1180
+            ],
+            [
+              "S11.Steamed Vege & Cashew Gow (4 pcs)",
+              "",
+              1080
+            ],
+            [
+              "S12.Steamed Shrimp Har Gow (4 pcs)",
+              "",
+              1080
+            ],
+            [
+              "S13.Steamed Scallop & Shrimp Har Gow (4pcs)",
+              "",
+              1180
+            ],
+            [
+              "S14.Steamed Beef Shumai (4pcs)",
+              "",
+              1080
+            ],
+            [
+              "S15.Steamed Shrimp & Pork Shumai (4 pcs)",
+              "",
+              1080
+            ],
+            [
+              "S16.Steamed BBQ Pork Baos (3 pcs)",
+              "",
+              920
+            ],
+            [
+              "S17.Steamed Chicken & Shiitake Baos (3 pcs)",
+              "",
+              980
+            ],
+            [
+              "S18.Steamed Vegetarian Baos (3 pcs)",
+              "",
+              980
+            ]
+          ]
+        },
+        {
+          "name": "Appetizer",
+          "items": [
+            [
+              "A01.Wakame Seaweed Salad",
+              "",
+              795
+            ],
+            [
+              "A02.Cucumber Salad",
+              "",
+              1080
+            ],
+            [
+              "A03.Butter & Garlic Edamame",
+              "",
+              995
+            ],
+            [
+              "A04.Shanghai-Style Vegetarian Spring Rolls (3 pcs)",
+              "",
+              815
+            ],
+            [
+              "A05.Green Onion Pancake",
+              "",
+              895
+            ],
+            [
+              "A06.Braised Beef Pancake Roll",
+              "",
+              1480
+            ]
+          ]
+        },
+        {
+          "name": "Soup",
+          "items": [
+            [
+              "B01.Hot & Sour Soup",
+              "",
+              1590
+            ],
+            [
+              "B02.Chicken & Corn Soup",
+              "",
+              1590
+            ],
+            [
+              "B03.Beef w/ Cilantro Soup",
+              "",
+              1590
+            ],
+            [
+              "B04.Wonton in House Broth (6pcs)",
+              "",
+              1590
+            ],
+            [
+              "B05.Sizzling Rice Soup",
+              "",
+              1680
+            ]
+          ]
+        },
+        {
+          "name": "Vege",
+          "items": [
+            [
+              "V01.Braised Tofu with Bok Choy",
+              "",
+              1780
+            ],
+            [
+              "V02.Thai Sweet and Sour Fried Tofu",
+              "",
+              1680
+            ],
+            [
+              "V03.Dry-Braised String Beans",
+              "",
+              1680
+            ],
+            [
+              "V04.Eggplant w/ Garlic Sauce",
+              "",
+              1680
+            ],
+            [
+              "V05.Green Baby Bok Choy w/ Garlic",
+              "",
+              1680
+            ],
+            [
+              "V06.Pea Sprouts w/ Garlic",
+              "",
+              2080
+            ],
+            [
+              "V07.Quick-Fried Broccoli w/ Chili & Garlic",
+              "",
+              1680
+            ],
+            [
+              "Broccoli w/ Garlic",
+              "",
+              1680
+            ]
+          ]
+        },
+        {
+          "name": "Chef's Wok",
+          "items": [
+            [
+              "G01.Stir-Fried Black Pepper Beef Tenderloin",
+              "",
+              2560
+            ],
+            [
+              "G02.Signature Sizzling Beef",
+              "",
+              2680
+            ],
+            [
+              "G03.Mongolian Beef",
+              "",
+              1880
+            ],
+            [
+              "G04.Broccoli",
+              "",
+              1880
+            ],
+            [
+              "G05.Mapo Tofu",
+              "",
+              1780
+            ],
+            [
+              "G06.Braised Lion’s Head Meatballs",
+              "",
+              1680
+            ],
+            [
+              "G07.Salt & Pepper Chicken Wings",
+              "",
+              1980
+            ],
+            [
+              "G08.Sichuan Spicy Chicken",
+              "",
+              2180
+            ],
+            [
+              "G10.Sweet & Sour Chicken",
+              "",
+              1880
+            ],
+            [
+              "G11.Signature Sesame Chicken",
+              "",
+              1980
+            ],
+            [
+              "G13.Lemon Chicken",
+              "",
+              1880
+            ],
+            [
+              "G14.Salt & peper Prawns",
+              "",
+              2180
+            ],
+            [
+              "G15.Honey Walnut Prawns",
+              "",
+              2180
+            ],
+            [
+              "G16.Salt & Pepper Fish Fillets",
+              "",
+              2080
+            ],
+            [
+              "G17.Spicy Fish Fillet in House Broth",
+              "",
+              2680
+            ],
+            [
+              "G18.Szechuan Fish Fillet w/ Pickled Cabbage in House Broth",
+              "",
+              2880
+            ],
+            [
+              "G19.Mu Shu",
+              "",
+              1980
+            ],
+            [
+              "Extra Mu Shu Wrapping",
+              "",
+              35
+            ],
+            [
+              "G09.Kung Pao Chicken (w/ Peanut)",
+              "",
+              1880
+            ],
+            [
+              "Basil Beef (Online Only)",
+              "",
+              1780
+            ]
+          ]
+        },
+        {
+          "name": "Carbs",
+          "items": [
+            [
+              "C01.Shanghai-Style Chow Mein w/ Pork",
+              "",
+              1720
+            ],
+            [
+              "C02.Shanghai-Style Stir-Fried Rice Cake w/ Pork",
+              "",
+              1720
+            ],
+            [
+              "C03.The Black Truffle with Beef Fried Rice",
+              "",
+              2380
+            ],
+            [
+              "C04.Chow Mein",
+              "",
+              1720
+            ],
+            [
+              "C05.Fried Rice",
+              "",
+              1720
+            ],
+            [
+              "C06.Five-Spice Beef Brisket Noodle Soup",
+              "",
+              1880
+            ],
+            [
+              "C07.Shanghai Style Green Onion Noodle",
+              "",
+              1480
+            ],
+            [
+              "C08.Beijing-Style Noodle in Black Bean Sauce",
+              "",
+              1680
+            ],
+            [
+              "C09.Szechuan Style Dan-dan Noodle (W/ Peanut)",
+              "",
+              1680
+            ],
+            [
+              "White Rice (16oz)",
+              "Simple and comforting white rice.",
+              300
+            ],
+            [
+              "White Rice (26oz)",
+              "",
+              425
+            ]
+          ]
+        },
+        {
+          "name": "Dessert",
+          "items": [
+            [
+              "D01.Steamed Chocolate Dumplings (6 pcs) (Contained Nutella)",
+              "",
+              1080
+            ],
+            [
+              "D02.Deep Fried Yogurt Mochi (6 pcs)",
+              "",
+              895
+            ],
+            [
+              "D03.Deep-Fried Mini Sesame Balls (6 pcs)",
+              "",
+              725
+            ],
+            [
+              "D04. Steamed Salted Egg Custard Baos (3 pcs)",
+              "",
+              825
+            ],
+            [
+              "D05.Beijing Style Sweet Buns (4 pcs)",
+              "",
+              725
+            ]
+          ]
+        },
+        {
+          "name": "Soft Drinks",
+          "items": [
+            [
+              "J01. Perrier Sparkling Water",
+              "",
+              395
+            ],
+            [
+              "J02. Sanpellegrino Sparkling Lemonade",
+              "",
+              375
+            ],
+            [
+              "J03. House Made Thai Iced Tea",
+              "",
+              595
+            ],
+            [
+              "J05. Coke",
+              "",
+              250
+            ],
+            [
+              "J05. Sprite",
+              "",
+              250
+            ],
+            [
+              "J05. Diet Coke",
+              "",
+              250
+            ]
+          ]
+        }
+      ],
+      "orderUrl": "https://direct.chownow.com/order/25382/locations/54317",
+      "menuNote": "The Castro branch’s published food menu. Confirm current prices, options and stock on the restaurant’s ordering page."
+    },
+    {
+      "slug": "dumpling-kitchen-noe",
+      "name": "Dumpling Kitchen",
+      "label": "Dumpling Noe",
+      "cuisine": "Dumplings, dim sum and Chinese food",
+      "tagline": "Noe Valley · San Francisco",
+      "color": "#F5F5F5",
+      "icon": "dumpling-kitchen-v113",
+      "prep": 0,
+      "category": "Dumplings",
+      "items": [],
+      "site": "https://www.dumplingkitchenca.com/",
+      "address": "3913 24th St, San Francisco, CA 94114",
+      "instagram": "dumplingkitchenca",
+      "email": "dumplingkitchenus@gmail.com",
+      "panels": [
+        {
+          "head": "Dumpling Kitchen locations",
+          "body": [
+            "This is the Noe Valley location. Each restaurant has its own published menu; prices and availability can differ by branch."
+          ],
+          "links": [
+            {
+              "label": "Millbrae · 455 Broadway",
+              "href": "https://beastypages.com/?b=b_dumplingkitchenmillbrae"
+            },
+            {
+              "label": "San Francisco · 1935 Taraval St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchentaraval"
+            },
+            {
+              "label": "San Francisco · 544 Castro St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchencastro"
+            },
+            {
+              "label": "San Francisco · 3913 24th St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchennoe"
+            },
+            {
+              "label": "Foster City · 1459 Beach Park Blvd",
+              "href": "https://beastypages.com/?b=b_dumplingkitchenfactory"
+            }
+          ]
+        },
+        {
+          "head": "Contact and current availability",
+          "body": [
+            "The business’s supplied contact profile lists text enquiries at (415) 767-9563 and dumplingkitchenus@gmail.com. Check the branch’s live ordering page for hours and availability."
+          ],
+          "links": [
+            {
+              "label": "Official locations",
+              "href": "https://www.dumplingkitchenca.com/locations/"
+            },
+            {
+              "label": "Official Instagram",
+              "href": "https://www.instagram.com/dumplingkitchenca/"
+            }
+          ]
+        },
+        {
+          "head": "Published branch menu",
+          "body": [
+            "Use this location’s ordering page for current options and hours."
+          ],
+          "links": [
+            {
+              "label": "Official branch menu",
+              "href": "https://dumplingkitchennoevalley.toast.site/menu/dumpling-kitchen-castro-2-nro-3913-24th-st"
+            }
+          ]
+        }
+      ],
+      "phone": "(415) 282-4969",
+      "sections": [
+        {
+          "name": "Appetizer",
+          "items": [
+            [
+              "A01. Shanghai Style Marinated Duck",
+              "Listed as out of stock when checked; confirm current availability.",
+              1680
+            ],
+            [
+              "A02. Szechuan Style Chicken in Chili Oil",
+              "",
+              1480
+            ],
+            [
+              "A03. Marinated Beef Shank",
+              "",
+              1480
+            ],
+            [
+              "A04. Cucumber Salad",
+              "",
+              1080
+            ],
+            [
+              "A05. Jiang-Nan Style Vegetarian Goose",
+              "",
+              1380
+            ],
+            [
+              "A06. Green Onion Pancake",
+              "",
+              895
+            ],
+            [
+              "A07. Deep Fried Vegetarian Spring Rolls (3 pcs)",
+              "",
+              725
+            ]
+          ]
+        },
+        {
+          "name": "Soup",
+          "items": [
+            [
+              "B01. Hot & Sour Soup",
+              "",
+              1590
+            ],
+            [
+              "B02. Chicken & Corn Soup",
+              "",
+              1590
+            ],
+            [
+              "B03. Beef w/ Cilantro Soup",
+              "",
+              1590
+            ],
+            [
+              "B04. Wonton Soup (6 pcs)",
+              "Listed as out of stock when checked; confirm current availability.",
+              1590
+            ],
+            [
+              "B05. Seafood Sizzling Rice Soup",
+              "",
+              1880
+            ]
+          ]
+        },
+        {
+          "name": "Specialty Dumplings & Dim Sum",
+          "items": [
+            [
+              "S01. Steamed Soup Pork Dumplings (6 pcs)",
+              "",
+              1280
+            ],
+            [
+              "S02. Steamed Crab & Shrimp Dumplings (5 pcs)",
+              "Listed as out of stock when checked; confirm current availability.",
+              1880
+            ],
+            [
+              "S03. Pork & Napa Cabbage Dumplings (4 pcs)",
+              "",
+              1080
+            ],
+            [
+              "S04. Vegetarian Dumplings (4 pcs)",
+              "",
+              1080
+            ],
+            [
+              "S05. Shanghai-Style Pan-Fried Pork Buns (4 pcs)",
+              "",
+              1180
+            ],
+            [
+              "S06. Pan-Fried Spicy Beef Potstickers (5pcs)",
+              "",
+              1180
+            ],
+            [
+              "S07. Boiled Pork & Chive Dumplings (8 pcs)",
+              "Listed as out of stock when checked; confirm current availability.",
+              1280
+            ],
+            [
+              "S08. Boiled Chicken & Corn Dumplings (8 pcs)",
+              "Listed as out of stock when checked; confirm current availability.",
+              1280
+            ],
+            [
+              "S09. Boiled Fish & Chive Dumplings (8 pcs)",
+              "Listed as out of stock when checked; confirm current availability.",
+              1380
+            ],
+            [
+              "S10. Boiled Mongolian Beef Dumplings (8 pcs)",
+              "Listed as out of stock when checked; confirm current availability.",
+              1380
+            ],
+            [
+              "S11. Wontons in Chili Oil (6 pcs) (Contained Peanut)",
+              "Listed as out of stock when checked; confirm current availability.",
+              1180
+            ],
+            [
+              "S12. Steamed Beef Shumai (4 pcs)",
+              "",
+              1080
+            ],
+            [
+              "S13. Steamed Shrimp & Pork Shumai (4 pcs)",
+              "",
+              1080
+            ],
+            [
+              "S14. Steamed Cashew & Veggie Gow (4 pcs)",
+              "Listed as out of stock when checked; confirm current availability.",
+              1080
+            ],
+            [
+              "S15. Steamed Scallop & Shrimp Har Gow (4 pcs)",
+              "",
+              1180
+            ],
+            [
+              "S16. Steamed Shrimp Har Gow (4 pcs)",
+              "",
+              1080
+            ],
+            [
+              "S17. BBQ Pork Baos (3 pcs)",
+              "",
+              920
+            ],
+            [
+              "S18. Steamed Chicken & Shiitake Baos (2pcs)",
+              "",
+              725
+            ],
+            [
+              "S19. Steamed Vegetarian Baos (2pcs)",
+              "",
+              725
+            ],
+            [
+              "S20. Steamed Sticky Rice Chicken in Lotus Leaf (2 pcs)",
+              "",
+              1080
+            ],
+            [
+              "Boiled Pork & Shrimp w/ Celery Dumplings (8 pcs)",
+              "Listed as out of stock when checked; confirm current availability.",
+              1380
+            ],
+            [
+              "Shanghai-Style Steamed Sticky Rice Shumai (4 pcs)",
+              "",
+              1080
+            ]
+          ]
+        },
+        {
+          "name": "Chef's Wok",
+          "items": [
+            [
+              "W01. Signature BBQ Beef Ribs",
+              "",
+              3880
+            ],
+            [
+              "W02. Stir-Fried Black Pepper Beef Tenderloin",
+              "",
+              2480
+            ],
+            [
+              "W03. Basil Beef",
+              "",
+              1880
+            ],
+            [
+              "W04. Mongolian Beef",
+              "",
+              1880
+            ],
+            [
+              "W05. Sizzling Lamb W/ Bell Pepper",
+              "",
+              2680
+            ],
+            [
+              "W06. Stir-fried Cumin Lamb",
+              "",
+              2480
+            ],
+            [
+              "W07. Crispy Salt & Pepper Pork Chop",
+              "",
+              2480
+            ],
+            [
+              "W08. Shredded Pork with Garlic Sauce",
+              "",
+              1880
+            ],
+            [
+              "W09. Mapo Tofu",
+              "",
+              1880
+            ],
+            [
+              "W10. Kung Pao",
+              "",
+              1880
+            ],
+            [
+              "W11. General Tso's Chicken",
+              "",
+              1880
+            ],
+            [
+              "W12. Mushrooms Chicken",
+              "",
+              1780
+            ],
+            [
+              "W14. Golden Pumpkin Prawns w/ Salted Egg Yolk Crust",
+              "",
+              2480
+            ],
+            [
+              "W15. Braised Asparagus w/ Scallops (6 pcs)",
+              "",
+              2680
+            ],
+            [
+              "W17. Spicy (Fish Fillet /Beef) in House Broth",
+              "",
+              2680
+            ],
+            [
+              "W18. Szechuan Fish Fillet w/ Pickled Cabbage in House Broth",
+              "",
+              2880
+            ],
+            [
+              "Sweet and Sour Chicken 甜酸鸡",
+              "Listed as out of stock when checked; confirm current availability.",
+              1880
+            ]
+          ]
+        },
+        {
+          "name": "Carbs",
+          "items": [
+            [
+              "C01. *Signature Crab meat Claypot Rice",
+              "",
+              2880,
+              null,
+              "from $28.80"
+            ],
+            [
+              "C02. Beef Chow Fun",
+              "",
+              1780
+            ],
+            [
+              "C03. Chow Mein",
+              "",
+              1680
+            ],
+            [
+              "C04. Fried Rice",
+              "",
+              1680
+            ],
+            [
+              "C05. Szechuan Beef Shank Noodle Soup",
+              "",
+              1980
+            ],
+            [
+              "C06. Seafood Noodle Soup",
+              "",
+              1980
+            ],
+            [
+              "C07. Beijing Style Noodle in Black Bean Sauce",
+              "",
+              1590
+            ],
+            [
+              "C08. Szechuan Style Dan-dan Noodle",
+              "",
+              1590
+            ],
+            [
+              "C09. Shanghai Style Green Onion Noodle",
+              "",
+              1480
+            ],
+            [
+              "C10. White Rice",
+              "",
+              275
+            ],
+            [
+              "C11. Brown Rice",
+              "Listed as out of stock when checked; confirm current availability.",
+              375
+            ],
+            [
+              "C12. White Rice",
+              "",
+              275
+            ],
+            [
+              "Plain Chicken",
+              "Listed as out of stock when checked; confirm current availability.",
+              500
+            ]
+          ]
+        },
+        {
+          "name": "Veggie",
+          "items": [
+            [
+              "V01. Chinese Yam w/ Black Fungus",
+              "",
+              1780
+            ],
+            [
+              "V02. Green Bok Choy w/ Garlic",
+              "",
+              1680
+            ],
+            [
+              "V03. Pea Sprouts w/ Garlic",
+              "",
+              1980
+            ],
+            [
+              "V04. Braised Tofu with Straw Mushroom",
+              "",
+              1680
+            ],
+            [
+              "V05. Eggplant w/ Garlic Sauce",
+              "",
+              1680
+            ],
+            [
+              "V06. Dry-Braised String Beans",
+              "",
+              1680
+            ],
+            [
+              "V08. Braised Asparagus w/ Mushrooms",
+              "",
+              1780
+            ],
+            [
+              "Salt & Pepper Tofu 椒盐豆腐",
+              "",
+              1680
+            ]
+          ]
+        },
+        {
+          "name": "Dessert",
+          "items": [
+            [
+              "D01. Steamed Chocolate Dumplings",
+              "Listed as out of stock when checked; confirm current availability.",
+              795,
+              null,
+              "from $7.95"
+            ],
+            [
+              "D02. Deep Fried Yogurt Mochi (6 pcs)",
+              "",
+              895
+            ],
+            [
+              "D03. Deep Fried Mini-Sesame Balls (6 pcs)",
+              "",
+              695
+            ],
+            [
+              "D04. Salted Egg Custard Baos (3 pcs)",
+              "",
+              825
+            ],
+            [
+              "D05. Beijing Style Sweet Buns (4 pcs)",
+              "",
+              725
+            ]
+          ]
+        }
+      ],
+      "orderUrl": "https://dumplingkitchennoevalley.toast.site/menu/dumpling-kitchen-castro-2-nro-3913-24th-st",
+      "menuNote": "The Noe Valley branch’s published food menu. Confirm current prices, options and stock on the restaurant’s ordering page. Stock notes record what the published menu showed when checked."
+    },
+    {
+      "slug": "dumpling-kitchen-factory",
+      "name": "Dumpling Kitchen",
+      "label": "Dumpling Factory",
+      "cuisine": "Dumpling factory store",
+      "tagline": "Factory store · Foster City",
+      "color": "#F5F5F5",
+      "icon": "dumpling-kitchen-v113",
+      "prep": 0,
+      "category": "Dumplings",
+      "items": [],
+      "site": "https://www.dumplingkitchenca.com/",
+      "address": "1459 Beach Park Blvd, Foster City, CA",
+      "instagram": "dumplingkitchenca",
+      "email": "dumplingkitchenus@gmail.com",
+      "panels": [
+        {
+          "head": "Dumpling Kitchen locations",
+          "body": [
+            "Factory store shown on the business’s supplied Instagram profile. Contact the business to confirm hours, walk-in access and available products."
+          ],
+          "links": [
+            {
+              "label": "Millbrae · 455 Broadway",
+              "href": "https://beastypages.com/?b=b_dumplingkitchenmillbrae"
+            },
+            {
+              "label": "San Francisco · 1935 Taraval St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchentaraval"
+            },
+            {
+              "label": "San Francisco · 544 Castro St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchencastro"
+            },
+            {
+              "label": "San Francisco · 3913 24th St",
+              "href": "https://beastypages.com/?b=b_dumplingkitchennoe"
+            },
+            {
+              "label": "Foster City · 1459 Beach Park Blvd",
+              "href": "https://beastypages.com/?b=b_dumplingkitchenfactory"
+            }
+          ]
+        },
+        {
+          "head": "Contact and current availability",
+          "body": [
+            "The business’s supplied contact profile lists text enquiries at (415) 767-9563 and dumplingkitchenus@gmail.com. Check the branch’s live ordering page for hours and availability."
+          ],
+          "links": [
+            {
+              "label": "Official locations",
+              "href": "https://www.dumplingkitchenca.com/locations/"
+            },
+            {
+              "label": "Official Instagram",
+              "href": "https://www.instagram.com/dumplingkitchenca/"
+            }
+          ]
+        }
+      ],
+      "contactOnly": "Dumpling Kitchen’s Foster City factory store, listed on the business’s supplied profile. Contact the business for current hours, walk-in availability and products."
+    }
+  ],
+  "posts": [
+    {
+      "code": "Dfi6sPbRZHy",
+      "batch": 113,
+      "source": "https://www.instagram.com/reel/Dfi6sPbRZHy/",
+      "brand": "b_deliboard",
+      "by": "bayareamunchies510",
+      "postedBy": "bayareamunchies510",
+      "postedAt": "20261110",
+      "request": [
+        {
+          "at": "2026-11-10T19:05:27.424505-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review by @bayareamunchies510 at Deli Board, 1058 Folsom Street, San Francisco.",
+      "slug": "review-Dfi6sPbRZHy",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "excerpt": "3s–18.00s of 88.54s",
+      "disposition": "local review film"
+    },
+    {
+      "code": "DfkmQvZvv_C",
+      "batch": 113,
+      "source": "https://www.instagram.com/reel/DfkmQvZvv_C/",
+      "brand": "b_dumplingkitchenmillbrae",
+      "by": "dumplingkitchenca",
+      "postedBy": "dumplingkitchenca",
+      "postedAt": "20261110",
+      "request": [
+        {
+          "at": "2026-11-10T19:11:55.278674-08:00",
+          "request": "Watch this video clip"
+        }
+      ],
+      "credit": "Original by @dumplingkitchenca. Millbrae soft-opening coverage, 455 Broadway, posted November 10, 2026.",
+      "slug": "b113-dumpling-kitchen-millbrae",
+      "startSeconds": 0,
+      "endSeconds": 7.13,
+      "excerpt": "0s–7.13s of 7.13s",
+      "disposition": "owner film on Millbrae page and Watch"
+    },
+    {
+      "code": "DflV2movJep",
+      "batch": 113,
+      "source": "https://www.instagram.com/reel/DflV2movJep/",
+      "brand": "b_flatsburgers",
+      "by": "iamnikkieg",
+      "postedBy": "iamnikkieg",
+      "postedAt": "20261111",
+      "request": [
+        {
+          "at": "2026-11-10T19:12:20.250410-08:00",
+          "request": "Clip this video plz"
+        }
+      ],
+      "credit": "Review by @iamnikkieg at Flats Burgers, 4753 Mission Street, San Francisco.",
+      "slug": "review-DflV2movJep",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "excerpt": "3s–18.00s of 62.95s",
+      "disposition": "creator-page film, linked from business",
+      "playOn": "b_foodieiamnikkieg"
+    }
+  ],
+  "placements": {
+    "millbrae-goods2-0": "b_dumplingkitchenmillbrae",
+    "san-francisco-goods2-85": "b_dumplingkitchentaraval",
+    "san-francisco-goods2-86": "b_dumplingkitchencastro",
+    "san-francisco-goods2-87": "b_dumplingkitchennoe",
+    "foster-city-goods2-1": "b_dumplingkitchenfactory",
+    "beasty-dumplings-7": "b_dumplingkitchenmillbrae",
+    "beasty-dimsum-14": "b_dumplingkitchenmillbrae",
+    "beasty-burgers2-1": "b_flatsburgers"
+  },
+  "updatedIcons": [
+    "/icons/dumpling-kitchen-v113.webp",
+    "/icons/flats-burgers-v113.webp",
+    "/icons/deli-board-v113.webp"
+  ],
+  "updatedBrands": [
+    "b_deliboard",
+    "b_flatsburgers"
+  ],
+  "foodieOrder": [
+    {
+      "handle": "ronniebanks",
+      "brand": "b_foodieronniebanks",
+      "score": 3
+    },
+    {
+      "handle": "msashleyvee",
+      "brand": "b_foodiemsashleyvee",
+      "score": 3
+    },
+    {
+      "handle": "feed_happiness_",
+      "brand": "b_foodiefeedhappiness",
+      "score": 2
+    },
+    {
+      "handle": "ashleyveats",
+      "brand": "b_foodieashleyveats",
+      "score": 2
+    },
+    {
+      "handle": "blurgotti",
+      "brand": "b_foodieblurgotti",
+      "score": 2
+    },
+    {
+      "handle": "sebascastroficial",
+      "brand": "b_foodiesebascastroficial",
+      "score": 2
+    },
+    {
+      "handle": "festusfeasts",
+      "brand": "b_foodiefestusfeasts",
+      "score": 1
+    },
+    {
+      "handle": "thesnacksensei",
+      "brand": "b_grando",
+      "score": 1
+    },
+    {
+      "handle": "foodandsachi",
+      "brand": "b_foodiefoodandsachi",
+      "score": 1
+    },
+    {
+      "handle": "grubwitmike",
+      "brand": "b_foodiegrubwitmike",
+      "score": 1
+    },
+    {
+      "handle": "hungry4munchies",
+      "brand": "b_foodiehungry4munchies",
+      "score": 1
+    },
+    {
+      "handle": "bayarea_fooddreamz",
+      "brand": "b_foodiebayareafooddreamz",
+      "score": 1
+    },
+    {
+      "handle": "eatwithsie",
+      "brand": "b_foodieeatwithsie",
+      "score": 1
+    },
+    {
+      "handle": "daeatzwitbri",
+      "brand": "b_foodiedaeatzwitbri",
+      "score": 1
+    },
+    {
+      "handle": "thetastebud",
+      "brand": "b_foodiethetastebud",
+      "score": 1
+    },
+    {
+      "handle": "aztec.ed",
+      "brand": "b_foodieazteced",
+      "score": 1
+    },
+    {
+      "handle": "imadoniseats",
+      "brand": "b_foodieimadoniseats",
+      "score": 1
+    },
+    {
+      "handle": "mzz.juxtaposition",
+      "brand": "b_foodiemzzjuxtaposition",
+      "score": 1
+    },
+    {
+      "handle": "yourglobalfoodiebff",
+      "brand": "b_foodieyourglobalfoodiebff",
+      "score": 1
+    },
+    {
+      "handle": "felicitythefoodie",
+      "brand": "b_foodiefelicitythefoodie",
+      "score": 1
+    },
+    {
+      "handle": "trinhdoesthings",
+      "brand": "b_foodietrinhdoesthings",
+      "score": 1
+    },
+    {
+      "handle": "smackinfood",
+      "brand": "b_foodiesmackinfood",
+      "score": 1
+    },
+    {
+      "handle": "drooling.bae",
+      "brand": "b_foodiedroolingbae",
+      "score": 1
+    },
+    {
+      "handle": "thesauceboss_",
+      "brand": "b_foodiethesauceboss",
+      "score": 1
+    },
+    {
+      "handle": "keyanajoooon",
+      "brand": "b_foodiekeyanajoooon",
+      "score": 2
+    },
+    {
+      "handle": "takeoutwithtuck",
+      "brand": "b_foodietakeoutwithtuck",
+      "score": 2
+    },
+    {
+      "handle": "macmadame",
+      "brand": "b_foodiemacmadame",
+      "score": 2
+    },
+    {
+      "handle": "hungryhugh",
+      "brand": "b_foodiehungryhugh",
+      "score": 2
+    },
+    {
+      "handle": "latin_mami_",
+      "brand": "b_foodielatinmami",
+      "score": 2
+    },
+    {
+      "handle": "bayarea.foodie.adventures",
+      "brand": "b_foodiebayareafoodieadventures",
+      "score": 1
+    },
+    {
+      "handle": "siliconvalley.foodies",
+      "brand": "b_foodiesiliconvalleyfoodies",
+      "score": 1
+    },
+    {
+      "handle": "jacksdiningroom",
+      "brand": "b_foodiejacksdiningroom",
+      "score": 1
+    },
+    {
+      "handle": "andreweatsinsf",
+      "brand": "b_foodieandreweatsinsf",
+      "score": 1
+    },
+    {
+      "handle": "eatswithkath",
+      "brand": "b_foodieeatswithkath",
+      "score": 1
+    },
+    {
+      "handle": "cestalmoco",
+      "brand": "b_foodiecestalmoco",
+      "score": 1
+    },
+    {
+      "handle": "kangofrealty",
+      "brand": "b_foodiekangofrealty",
+      "score": 1
+    },
+    {
+      "handle": "fedoramaelle",
+      "brand": "b_foodiefedoramaelle",
+      "score": 1
+    },
+    {
+      "handle": "pastrywithjenn",
+      "brand": "b_foodiepastrywithjenn",
+      "score": 1
+    },
+    {
+      "handle": "travelwtiff",
+      "brand": "b_foodietravelwtiff",
+      "score": 1
+    },
+    {
+      "handle": "_emwong_",
+      "brand": "b_foodieemwong",
+      "score": 1
+    },
+    {
+      "handle": "kimoni.eatss",
+      "brand": "b_foodiekimonieatss",
+      "score": 1
+    },
+    {
+      "handle": "baygirlseat",
+      "brand": "b_foodiebaygirlseat",
+      "score": 1
+    },
+    {
+      "handle": "heraldh",
+      "brand": "b_foodieheraldh",
+      "score": 1
+    },
+    {
+      "handle": "foodiswhyimbroke",
+      "brand": "b_foodiefoodiswhyimbroke",
+      "score": 1
+    },
+    {
+      "handle": "keneats_",
+      "brand": "b_foodiekeneats",
+      "score": 1
+    },
+    {
+      "handle": "e40",
+      "brand": "b_e40",
+      "score": 1
+    },
+    {
+      "handle": "mamamarquez888",
+      "brand": "b_foodiemamamarquez888",
+      "score": 1
+    },
+    {
+      "handle": "reelkevo",
+      "brand": "b_foodiereelkevo",
+      "score": 1
+    },
+    {
+      "handle": "rollingwithdeneats",
+      "brand": "b_foodierollingwithdeneats",
+      "score": 1
+    },
+    {
+      "handle": "agnespittioni",
+      "brand": "b_foodieagnespittioni",
+      "score": 1
+    },
+    {
+      "handle": "j00diefoodie",
+      "brand": "b_foodiej00diefoodie",
+      "score": 1
+    },
+    {
+      "handle": "aliasharrief",
+      "brand": "b_foodiealiasharrief",
+      "score": 1
+    },
+    {
+      "handle": "carlosbradley",
+      "brand": "b_foodiecarlosbradley",
+      "score": 1
+    },
+    {
+      "handle": "jc.eeats",
+      "brand": "b_foodiejceeats",
+      "score": 1
+    },
+    {
+      "handle": "monaeatsnearby",
+      "brand": "b_foodiemonaeatsnearby",
+      "score": 1
+    },
+    {
+      "handle": "bayareafoodiecrew",
+      "brand": "b_foodiebayareafoodiecrew",
+      "score": 1
+    },
+    {
+      "handle": "janniners",
+      "brand": "b_foodiejanniners",
+      "score": 1
+    },
+    {
+      "handle": "alwayshannegry",
+      "brand": "b_foodiealwayshannegry",
+      "score": 1
+    },
+    {
+      "handle": "rainmoreturely",
+      "brand": "b_foodierainmoreturely",
+      "score": 1
+    },
+    {
+      "handle": "_wheresthefoodat",
+      "brand": "b_foodiewheresthefoodat",
+      "score": 1
+    },
+    {
+      "handle": "sfbayfood",
+      "brand": "b_foodiesfbayfood",
+      "score": 1
+    },
+    {
+      "handle": "zeyno.ern",
+      "brand": "b_foodiezeynoern",
+      "score": 1
+    },
+    {
+      "handle": "booziebrunch",
+      "brand": "b_foodiebooziebrunch",
+      "score": 1
+    },
+    {
+      "handle": "thekhaysie",
+      "brand": "b_foodiethekhaysie",
+      "score": 1
+    },
+    {
+      "handle": "kelmeleats",
+      "brand": "b_foodiekelmeleats",
+      "score": 1
+    },
+    {
+      "handle": "courtneylyneaa",
+      "brand": "b_foodiecourtneylyneaa",
+      "score": 1
+    },
+    {
+      "handle": "iamnikkieg",
+      "brand": "b_foodieiamnikkieg",
+      "score": 1
+    },
+    {
+      "handle": "hungere.for.diy",
+      "brand": "b_foodiehungerefordiy",
+      "score": 1
+    },
+    {
+      "handle": "cookwithhenny",
+      "brand": "b_foodiecookwithhenny",
+      "score": 1
+    },
+    {
+      "handle": "martiwantsmore",
+      "brand": "b_foodiemartiwantsmore",
+      "score": 1
+    },
+    {
+      "handle": "limitlessfood",
+      "brand": "b_foodielimitlessfood",
+      "score": 1
+    },
+    {
+      "handle": "chefemaristevens",
+      "brand": "b_foodiechefemaristevens",
+      "score": 1
+    },
+    {
+      "handle": "forkandscore",
+      "brand": "b_foodieforkandscore",
+      "score": 1
+    },
+    {
+      "handle": "realphdfoodie",
+      "brand": "b_foodierealphdfoodie",
+      "score": 1
+    },
+    {
+      "handle": "justmostie",
+      "brand": "b_foodiejustmostie",
+      "score": 0
+    },
+    {
+      "handle": "capturedbysado",
+      "brand": "b_foodiecapturedbysado",
+      "score": 0
+    },
+    {
+      "handle": "allie.eats",
+      "brand": "b_foodieallieeats",
+      "score": 0
+    },
+    {
+      "handle": "seekeasyeats",
+      "brand": "b_foodieseekeasyeats",
+      "score": 0
+    },
+    {
+      "handle": "orangeginger",
+      "brand": "b_foodieorangeginger",
+      "score": 0
+    },
+    {
+      "handle": "antoinetterzz",
+      "brand": "b_foodieantoinetterzz",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.kulture",
+      "brand": "b_foodiebayareakulture",
+      "score": 0
+    },
+    {
+      "handle": "chefmelissaking",
+      "brand": "b_foodiechefmelissaking",
+      "score": 0
+    },
+    {
+      "handle": "celineeats",
+      "brand": "b_foodiecelineeats",
+      "score": 0
+    },
+    {
+      "handle": "singlecatm0m",
+      "brand": "b_foodiesinglecatm0m",
+      "score": 0
+    },
+    {
+      "handle": "kimjsseats",
+      "brand": "b_foodiekimjsseats",
+      "score": 0
+    },
+    {
+      "handle": "oaktowngrubhub",
+      "brand": "b_foodieoaktowngrubhub",
+      "score": 0
+    },
+    {
+      "handle": "thespoonlist",
+      "brand": "b_foodiethespoonlist",
+      "score": 0
+    },
+    {
+      "handle": "sherryeatworld",
+      "brand": "b_foodiesherryeatworld",
+      "score": 0
+    },
+    {
+      "handle": "hungrydanz",
+      "brand": "b_foodiehungrydanz",
+      "score": 0
+    },
+    {
+      "handle": "janeethefoodie",
+      "brand": "b_foodiejaneethefoodie",
+      "score": 0
+    },
+    {
+      "handle": "peggy_shoo",
+      "brand": "b_foodiepeggyshoo",
+      "score": 0
+    },
+    {
+      "handle": "zarina.nawabi",
+      "brand": "b_foodiezarinanawabi",
+      "score": 0
+    },
+    {
+      "handle": "jbrenes_",
+      "brand": "b_foodiejbrenes",
+      "score": 0
+    },
+    {
+      "handle": "simply_dorothy_",
+      "brand": "b_foodiesimplydorothy",
+      "score": 0
+    },
+    {
+      "handle": "acoupleofcooks",
+      "brand": "b_foodieacoupleofcooks",
+      "score": 0
+    },
+    {
+      "handle": "jantrinanicole",
+      "brand": "b_foodiejantrinanicole",
+      "score": 0
+    },
+    {
+      "handle": "chris.corpz",
+      "brand": "b_foodiechriscorpz",
+      "score": 0
+    },
+    {
+      "handle": "thealamedapulse",
+      "brand": "b_foodiethealamedapulse",
+      "score": 0
+    },
+    {
+      "handle": "bayareamunchies510",
+      "brand": "b_foodiebayareamunchies510",
+      "score": 0
+    },
+    {
+      "handle": "victoria.pham17",
+      "brand": "b_foodievictoriapham17",
+      "score": 0
+    },
+    {
+      "handle": "foodieberrie",
+      "brand": "b_foodiefoodieberrie",
+      "score": 0
+    },
+    {
+      "handle": "samserved",
+      "brand": "b_foodiesamserved",
+      "score": 0
+    },
+    {
+      "handle": "areweeatingyet",
+      "brand": "b_foodieareweeatingyet",
+      "score": 0
+    },
+    {
+      "handle": "siusvision",
+      "brand": "b_foodiesiusvision",
+      "score": 0
+    },
+    {
+      "handle": "arianasade",
+      "brand": "b_foodiearianasade",
+      "score": 0
+    },
+    {
+      "handle": "bayareafoodz",
+      "brand": "b_foodiebayareafoodz",
+      "score": 0
+    },
+    {
+      "handle": "bestbayareafood",
+      "brand": "b_foodiebestbayareafood",
+      "score": 0
+    },
+    {
+      "handle": "annna_eats",
+      "brand": "b_foodieannnaeats",
+      "score": 0
+    },
+    {
+      "handle": "ugc.with.frances",
+      "brand": "b_foodieugcwithfrances",
+      "score": 0
+    },
+    {
+      "handle": "dariananthony_",
+      "brand": "b_foodiedariananthony",
+      "score": 0
+    },
+    {
+      "handle": "charweeezy",
+      "brand": "b_foodiecharweeezy",
+      "score": 0
+    },
+    {
+      "handle": "mukbangyourmama",
+      "brand": "b_foodiemukbangyourmama",
+      "score": 0
+    },
+    {
+      "handle": "wanderingstefany",
+      "brand": "b_foodiewanderingstefany",
+      "score": 0
+    },
+    {
+      "handle": "lifebyvivien",
+      "brand": "b_foodielifebyvivien",
+      "score": 0
+    },
+    {
+      "handle": "andre___lucas",
+      "brand": "b_foodieandrelucas",
+      "score": 0
+    },
+    {
+      "handle": "shrimpfriedroice",
+      "brand": "b_foodieshrimpfriedroice",
+      "score": 0
+    },
+    {
+      "handle": "_cynlacson",
+      "brand": "b_foodiecynlacson",
+      "score": 0
+    },
+    {
+      "handle": "alexytravels",
+      "brand": "b_foodiealexytravels",
+      "score": 0
+    },
+    {
+      "handle": "andygravs",
+      "brand": "b_foodieandygravs",
+      "score": 0
+    },
+    {
+      "handle": "livingvivalakillah",
+      "brand": "b_foodielivingvivalakillah",
+      "score": 0
+    },
+    {
+      "handle": "eighty6ix_",
+      "brand": "b_foodieeighty6ix",
+      "score": 0
+    },
+    {
+      "handle": "mayakay.official",
+      "brand": "b_foodiemayakayofficial",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.maganda.eats",
+      "brand": "b_foodiebayareamagandaeats",
+      "score": 0
+    },
+    {
+      "handle": "forkmeetsfood",
+      "brand": "b_foodieforkmeetsfood",
+      "score": 0
+    },
+    {
+      "handle": "foodiesnflightss",
+      "brand": "b_foodiefoodiesnflightss",
+      "score": 0
+    },
+    {
+      "handle": "carlaylayyy",
+      "brand": "b_foodiecarlaylayyy",
+      "score": 0
+    },
+    {
+      "handle": "shua.tangco",
+      "brand": "b_foodieshuatangco",
+      "score": 0
+    },
+    {
+      "handle": "jenny.home.loans",
+      "brand": "b_foodiejennyhomeloans",
+      "score": 0
+    },
+    {
+      "handle": "wthellydanyelly",
+      "brand": "b_foodiewthellydanyelly",
+      "score": 0
+    },
+    {
+      "handle": "sophiaxbayarea",
+      "brand": "b_foodiesophiaxbayarea",
+      "score": 0
+    },
+    {
+      "handle": "sierra.eats.8",
+      "brand": "b_foodiesierraeats8",
+      "score": 0
+    },
+    {
+      "handle": "yo_siiii_foodie",
+      "brand": "b_foodieyosiiiifoodie",
+      "score": 0
+    },
+    {
+      "handle": "ivkicks",
+      "brand": "b_foodieivkicks",
+      "score": 0
+    },
+    {
+      "handle": "itsslydiia",
+      "brand": "b_foodieitsslydiia",
+      "score": 0
+    },
+    {
+      "handle": "startingfiresevrywhere",
+      "brand": "b_foodiestartingfiresevrywhere",
+      "score": 0
+    },
+    {
+      "handle": "bylizettexo",
+      "brand": "b_foodiebylizettexo",
+      "score": 0
+    },
+    {
+      "handle": "brianthebarber",
+      "brand": "b_foodiebrianthebarber",
+      "score": 0
+    },
+    {
+      "handle": "ni.ckk_",
+      "brand": "b_foodienickk",
+      "score": 0
+    },
+    {
+      "handle": "jamesbaylife",
+      "brand": "b_foodiejamesbaylife",
+      "score": 0
+    },
+    {
+      "handle": "shesvibinhigh",
+      "brand": "b_foodieshesvibinhigh",
+      "score": 0
+    },
+    {
+      "handle": "dchangshangry",
+      "brand": "b_foodiedchangshangry",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.foodie.san",
+      "brand": "b_foodiebayareafoodiesan",
+      "score": 0
+    },
+    {
+      "handle": "truly_athi",
+      "brand": "b_foodietrulyathi",
+      "score": 0
+    },
+    {
+      "handle": "jetsetjanine",
+      "brand": "b_foodiejetsetjanine",
+      "score": 0
+    },
+    {
+      "handle": "kvbitesandgo",
+      "brand": "b_foodiekvbitesandgo",
+      "score": 0
+    },
+    {
+      "handle": "stunnaman02",
+      "brand": "b_foodiestunnaman02",
+      "score": 0
+    },
+    {
+      "handle": "savorwithcoral",
+      "brand": "b_foodiesavorwithcoral",
+      "score": 0
+    },
+    {
+      "handle": "firstdibs.bayarea",
+      "brand": "b_foodiefirstdibsbayarea",
+      "score": 0
+    },
+    {
+      "handle": "margs.out",
+      "brand": "b_foodiemargsout",
+      "score": 0
+    },
+    {
+      "handle": "yogetasworld",
+      "brand": "b_foodieyogetasworld",
+      "score": 0
+    },
+    {
+      "handle": "itsmayrazambrano",
+      "brand": "b_foodieitsmayrazambrano",
+      "score": 0
+    },
+    {
+      "handle": "your_travel_daddy",
+      "brand": "b_foodieyourtraveldaddy",
+      "score": 0
+    },
+    {
+      "handle": "hella._local.mo",
+      "brand": "b_foodiehellalocalmo",
+      "score": 0
+    },
+    {
+      "handle": "thesnobbiefoodie",
+      "brand": "b_foodiethesnobbiefoodie",
+      "score": 0
+    },
+    {
+      "handle": "katfoodsf",
+      "brand": "b_foodiekatfoodsf",
+      "score": 0
+    },
+    {
+      "handle": "charlikestoeat",
+      "brand": "b_foodiecharlikestoeat",
+      "score": 0
+    },
+    {
+      "handle": "hellahansel",
+      "brand": "b_foodiehellahansel",
+      "score": 0
+    },
+    {
+      "handle": "geraldfermin",
+      "brand": "b_foodiegeraldfermin",
+      "score": 0
+    },
+    {
+      "handle": "pimchanyum",
+      "brand": "b_foodiepimchanyum",
+      "score": 0
+    },
+    {
+      "handle": "bayareawilson",
+      "brand": "b_foodiebayareawilson",
+      "score": 0
+    },
+    {
+      "handle": "whatthejessi_",
+      "brand": "b_foodiewhatthejessi",
+      "score": 0
+    },
+    {
+      "handle": "foodgiveness",
+      "brand": "b_foodiefoodgiveness",
+      "score": 0
+    },
+    {
+      "handle": "asideofsweet",
+      "brand": "b_foodieasideofsweet",
+      "score": 0
+    },
+    {
+      "handle": "tasha.malan",
+      "brand": "b_foodietashamalan",
+      "score": 0
+    },
+    {
+      "handle": "camemzmin",
+      "brand": "b_foodiecamemzmin",
+      "score": 0
+    },
+    {
+      "handle": "venturewithkelly",
+      "brand": "b_foodieventurewithkelly",
+      "score": 0
+    },
+    {
+      "handle": "_aemeriee.dance",
+      "brand": "b_foodieaemerieedance",
+      "score": 0
+    },
+    {
+      "handle": "greatonezfoodreview",
+      "brand": "b_foodiegreatonezfoodreview",
+      "score": 0
+    },
+    {
+      "handle": "mr.smackreviews",
+      "brand": "b_foodiemrsmackreviews",
+      "score": 0
+    },
+    {
+      "handle": "bp__eats",
+      "brand": "b_foodiebpeats",
+      "score": 0
+    },
+    {
+      "handle": "erinlovesfun",
+      "brand": "b_foodieerinlovesfun",
+      "score": 0
+    },
+    {
+      "handle": "lovelivermore",
+      "brand": "b_foodielovelivermore",
+      "score": 0
+    },
+    {
+      "handle": "explorewithtaka",
+      "brand": "b_foodieexplorewithtaka",
+      "score": 0
+    },
+    {
+      "handle": "thehautesheet",
+      "brand": "b_foodiethehautesheet",
+      "score": 0
+    },
+    {
+      "handle": "humminglion",
+      "brand": "b_foodiehumminglion",
+      "score": 0
+    },
+    {
+      "handle": "_whatarethechances_",
+      "brand": "b_foodiewhatarethechances",
+      "score": 0
+    },
+    {
+      "handle": "katwalksf",
+      "brand": "b_foodiekatwalksf",
+      "score": 0
+    },
+    {
+      "handle": "yulmoo_l",
+      "brand": "b_foodieyulmool",
+      "score": 0
+    },
+    {
+      "handle": "barstoolsports",
+      "brand": "b_foodiebarstoolsports",
+      "score": 0
+    },
+    {
+      "handle": "xo.pinsta",
+      "brand": "b_foodiexopinsta",
+      "score": 0
+    },
+    {
+      "handle": "lovemissfit",
+      "brand": "b_foodielovemissfit",
+      "score": 0
+    },
+    {
+      "handle": "chloe_chomps",
+      "brand": "b_foodiechloechomps",
+      "score": 0
+    },
+    {
+      "handle": "realtorandreviewer",
+      "brand": "b_foodierealtorandreviewer",
+      "score": 0
+    },
+    {
+      "handle": "xoaramarie",
+      "brand": "b_foodiexoaramarie",
+      "score": 0
+    },
+    {
+      "handle": "foodie.dreams",
+      "brand": "b_foodiefoodiedreams",
+      "score": 0
+    },
+    {
+      "handle": "eatswithfoodie",
+      "brand": "b_foodieeatswithfoodie",
+      "score": 0
+    },
+    {
+      "handle": "jensintec",
+      "brand": "b_foodiejensintec",
+      "score": 0
+    },
+    {
+      "handle": "snackateriansf",
+      "brand": "b_foodiesnackateriansf",
+      "score": 0
+    },
+    {
+      "handle": "apoorva_sharma1",
+      "brand": "b_foodieapoorvasharma1",
+      "score": 0
+    },
+    {
+      "handle": "volha_creative",
+      "brand": "b_foodievolhacreative",
+      "score": 0
+    },
+    {
+      "handle": "boba._.addict",
+      "brand": "b_foodiebobaaddict",
+      "score": 0
+    },
+    {
+      "handle": "ruthannesturman",
+      "brand": "b_foodieruthannesturman",
+      "score": 0
+    },
+    {
+      "handle": "larryjunetfm",
+      "brand": "b_foodielarryjunetfm",
+      "score": 0
+    },
+    {
+      "handle": "eileenhuynher",
+      "brand": "b_foodieeileenhuynher",
+      "score": 0
+    },
+    {
+      "handle": "createwithcv",
+      "brand": "b_foodiecreatewithcv",
+      "score": 0
+    },
+    {
+      "handle": "aloha_stephanie",
+      "brand": "b_foodiealohastephanie",
+      "score": 0
+    },
+    {
+      "handle": "zoegabon",
+      "brand": "b_foodiezoegabon",
+      "score": 0
+    },
+    {
+      "handle": "byhillaryn",
+      "brand": "b_foodiebyhillaryn",
+      "score": 0
+    },
+    {
+      "handle": "aly_eats_cali",
+      "brand": "b_foodiealyeatscali",
+      "score": 0
+    },
+    {
+      "handle": "bayarea.foodies",
+      "brand": "b_foodiebayareafoodies",
+      "score": 0
+    },
+    {
+      "handle": "moniica.michelle",
+      "brand": "b_foodiemoniicamichelle",
+      "score": 0
+    },
+    {
+      "handle": "ryanbyryanchua",
+      "brand": "b_foodieryanbyryanchua",
+      "score": 0
+    },
+    {
+      "handle": "hangrypotato",
+      "brand": "b_foodiehangrypotato",
+      "score": 0
+    },
+    {
+      "handle": "melsotel",
+      "brand": "b_foodiemelsotel",
+      "score": 0
+    },
+    {
+      "handle": "sanleandroeats",
+      "brand": "b_foodiesanleandroeats",
+      "score": 0
+    },
+    {
+      "handle": "broitsva",
+      "brand": "b_foodiebroitsva",
+      "score": 0
+    },
+    {
+      "handle": "fat_ash_foodie",
+      "brand": "b_foodiefatashfoodie",
+      "score": 0
+    },
+    {
+      "handle": "_foodieshots_",
+      "brand": "b_foodiefoodieshots",
+      "score": 0
+    },
+    {
+      "handle": "kitkatvales",
+      "brand": "b_foodiekitkatvales",
+      "score": 0
+    },
+    {
+      "handle": "foodwookie",
+      "brand": "b_foodiefoodwookie",
+      "score": 0
+    },
+    {
+      "handle": "sonomacountyliving",
+      "brand": "b_foodiesonomacountyliving",
+      "score": 0
+    },
+    {
+      "handle": "lovecartier25",
+      "brand": "b_foodielovecartier25",
+      "score": 0
+    },
+    {
+      "handle": "foodelaventures",
+      "brand": "b_foodiefoodelaventures",
+      "score": 0
+    },
+    {
+      "handle": "foodie_travel_happiness",
+      "brand": "b_foodiefoodietravelhappiness",
+      "score": 0
+    },
+    {
+      "handle": "peterlyagent",
+      "brand": "b_foodiepeterlyagent",
+      "score": 0
+    },
+    {
+      "handle": "k.smokeskitchen",
+      "brand": "b_foodieksmokeskitchen",
+      "score": 0
+    },
+    {
+      "handle": "tysf.qods",
+      "brand": "b_foodietysfqods",
+      "score": 0
+    },
+    {
+      "handle": "ilisaeatssf",
+      "brand": "b_foodieilisaeatssf",
+      "score": 0
+    },
+    {
+      "handle": "tundemodupee",
+      "brand": "b_foodietundemodupee",
+      "score": 0
+    },
+    {
+      "handle": "wafflebam",
+      "brand": "b_foodiewafflebam",
+      "score": 0
+    },
+    {
+      "handle": "goyuliiago",
+      "brand": "b_foodiegoyuliiago",
+      "score": 0
+    },
+    {
+      "handle": "jamiebeoutside",
+      "brand": "b_foodiejamiebeoutside",
+      "score": 0
+    },
+    {
+      "handle": "anjali_wandersoul",
+      "brand": "b_foodieanjaliwandersoul",
+      "score": 0
+    },
+    {
+      "handle": "gabriiellas",
+      "brand": "b_foodiegabriiellas",
+      "score": 0
+    },
+    {
+      "handle": "ploinsanfrancisco",
+      "brand": "b_foodieploinsanfrancisco",
+      "score": 0
+    },
+    {
+      "handle": "piscesprincesspriya",
+      "brand": "b_foodiepiscesprincesspriya",
+      "score": 0
+    },
+    {
+      "handle": "d_baylock_",
+      "brand": "b_foodiedbaylock",
+      "score": 0
+    },
+    {
+      "handle": "hallojessa",
+      "brand": "b_foodiehallojessa",
+      "score": 0
+    },
+    {
+      "handle": "lagrandedelabanda",
+      "brand": "b_foodielagrandedelabanda",
+      "score": 0
+    },
+    {
+      "handle": "chaudownfood",
+      "brand": "b_foodiechaudownfood",
+      "score": 0
+    },
+    {
+      "handle": "phoebe8food",
+      "brand": "b_foodiephoebe8food",
+      "score": 0
+    },
+    {
+      "handle": "karaxhuynh",
+      "brand": "b_foodiekaraxhuynh",
+      "score": 0
+    },
+    {
+      "handle": "wakeyeats",
+      "brand": "b_foodiewakeyeats",
+      "score": 0
+    },
+    {
+      "handle": "dodo__eats",
+      "brand": "b_foodiedodoeats",
+      "score": 0
+    },
+    {
+      "handle": "maya_munches",
+      "brand": "b_foodiemayamunches",
+      "score": 0
+    },
+    {
+      "handle": "preet.khatrii",
+      "brand": "b_foodiepreetkhatrii",
+      "score": 0
+    },
+    {
+      "handle": "kogumahs",
+      "brand": "b_foodiekogumahs",
+      "score": 0
+    },
+    {
+      "handle": "nurse.danamae",
+      "brand": "b_foodienursedanamae",
+      "score": 0
+    },
+    {
+      "handle": "thehabibizeat",
+      "brand": "b_foodiethehabibizeat",
+      "score": 0
+    },
+    {
+      "handle": "eatwithbooboo",
+      "brand": "b_foodieeatwithbooboo",
+      "score": 0
+    },
+    {
+      "handle": "bayarea_foodogram",
+      "brand": "b_foodiebayareafoodogram",
+      "score": 0
+    },
+    {
+      "handle": "lub.to.eat",
+      "brand": "b_foodielubtoeat",
+      "score": 0
+    },
+    {
+      "handle": "thismajourney",
+      "brand": "b_foodiethismajourney",
+      "score": 0
+    },
+    {
+      "handle": "summer.ishungry",
+      "brand": "b_foodiesummerishungry",
+      "score": 0
+    },
+    {
+      "handle": "justfeediris",
+      "brand": "b_foodiejustfeediris",
+      "score": 0
+    },
+    {
+      "handle": "hungryhungryheejin",
+      "brand": "b_foodiehungryhungryheejin",
+      "score": 0
+    },
+    {
+      "handle": "liltiffyvert",
+      "brand": "b_foodieliltiffyvert",
+      "score": 0
+    },
+    {
+      "handle": "jovana.camberos",
+      "brand": "b_foodiejovanacamberos",
+      "score": 0
+    },
+    {
+      "handle": "sulli_eats",
+      "brand": "b_foodiesullieats",
+      "score": 0
+    },
+    {
+      "handle": "phamamiii",
+      "brand": "b_foodiephamamiii",
+      "score": 0
+    },
+    {
+      "handle": "tastewith.rach",
+      "brand": "b_foodietastewithrach",
+      "score": 0
+    },
+    {
+      "handle": "sisicooksandeats",
+      "brand": "b_foodiesisicooksandeats",
+      "score": 0
+    },
+    {
+      "handle": "myrealtoralexbradeis",
+      "brand": "b_foodiemyrealtoralexbradeis",
+      "score": 0
+    },
+    {
+      "handle": "rowbot408",
+      "brand": "b_foodierowbot408",
+      "score": 0
+    },
+    {
+      "handle": "revrocrichboy",
+      "brand": "b_foodierevrocrichboy",
+      "score": 0
+    },
+    {
+      "handle": "kat.dazzzle",
+      "brand": "b_foodiekatdazzzle",
+      "score": 0
+    },
+    {
+      "handle": "queen.food.e",
+      "brand": "b_foodiequeenfoode",
+      "score": 0
+    },
+    {
+      "handle": "cindydreamtravel",
+      "brand": "b_foodiecindydreamtravel",
+      "score": 0
+    },
+    {
+      "handle": "yummylouey",
+      "brand": "b_foodieyummylouey",
+      "score": 0
+    },
+    {
+      "handle": "erica.sorelle",
+      "brand": "b_foodieericasorelle",
+      "score": 0
+    },
+    {
+      "handle": "chelchomps",
+      "brand": "b_foodiechelchomps",
+      "score": 0
+    },
+    {
+      "handle": "monicaplatt",
+      "brand": "b_foodiemonicaplatt",
+      "score": 0
+    },
+    {
+      "handle": "imsarahchaz",
+      "brand": "b_foodieimsarahchaz",
+      "score": 0
+    },
+    {
+      "handle": "irenedony",
+      "brand": "b_foodieirenedony",
+      "score": 0
+    },
+    {
+      "handle": "biteswithnatalia",
+      "brand": "b_foodiebiteswithnatalia",
+      "score": 0
+    },
+    {
+      "handle": "laurenlovessfood",
+      "brand": "b_foodielaurenlovessfood",
+      "score": 0
+    },
+    {
+      "handle": "lisaaaaletseat",
+      "brand": "b_foodielisaaaaletseat",
+      "score": 0
+    },
+    {
+      "handle": "mattiasblanco",
+      "brand": "b_foodiemattiasblanco",
+      "score": 0
+    },
+    {
+      "handle": "deazylee",
+      "brand": "b_foodiedeazylee",
+      "score": 0
+    },
+    {
+      "handle": "edmunchthefoodie",
+      "brand": "b_foodieedmunchthefoodie",
+      "score": 0
+    },
+    {
+      "handle": "lynniethefoodie",
+      "brand": "b_foodielynniethefoodie",
+      "score": 0
+    },
+    {
+      "handle": "kelsy.annn",
+      "brand": "b_foodiekelsyannn",
+      "score": 0
+    },
+    {
+      "handle": "food_adventures21",
+      "brand": "b_foodiefoodadventures21",
+      "score": 0
+    },
+    {
+      "handle": "taratastessf",
+      "brand": "b_foodietaratastessf",
+      "score": 0
+    },
+    {
+      "handle": "zia_hazrati",
+      "brand": "b_foodieziahazrati",
+      "score": 0
+    },
+    {
+      "handle": "bennyeats.bayarea",
+      "brand": "b_foodiebennyeatsbayarea",
+      "score": 0
+    },
+    {
+      "handle": "jourdyn.lynn",
+      "brand": "b_foodiejourdynlynn",
+      "score": 0
+    },
+    {
+      "handle": "bayeatss",
+      "brand": "b_foodiebayeatss",
+      "score": 0
+    },
+    {
+      "handle": "charlize_tse",
+      "brand": "b_foodiecharlizetse",
+      "score": 0
+    },
+    {
+      "handle": "eatwith_ange",
+      "brand": "b_foodieeatwithange",
+      "score": 0
+    },
+    {
+      "handle": "habibimocha",
+      "brand": "b_foodiehabibimocha",
+      "score": 0
+    },
+    {
+      "handle": "maddyeats.sfbay",
+      "brand": "b_foodiemaddyeatssfbay",
+      "score": 0
+    },
+    {
+      "handle": "mr.bayareafoodie",
+      "brand": "b_foodiemrbayareafoodie",
+      "score": 0
+    },
+    {
+      "handle": "soysupli",
+      "brand": "b_foodiesoysupli",
+      "score": 0
+    },
+    {
+      "handle": "thehungrycurator",
+      "brand": "b_foodiethehungrycurator",
+      "score": 0
+    },
+    {
+      "handle": "withlovelysss",
+      "brand": "b_foodiewithlovelysss",
+      "score": 0
+    },
+    {
+      "handle": "oliviiacai",
+      "brand": "b_foodieoliviiacai",
+      "score": 0
+    },
+    {
+      "handle": "kevinberkeleyfoodreviews",
+      "brand": "b_foodiekevinberkeleyfoodreviews",
+      "score": 0
+    },
+    {
+      "handle": "martiebautista",
+      "brand": "b_foodiemartiebautista",
+      "score": 0
+    },
+    {
+      "handle": "badies.af",
+      "brand": "b_foodiebadiesaf",
+      "score": 0
+    },
+    {
+      "handle": "sjfoodgram",
+      "brand": "b_foodiesjfoodgram",
+      "score": 0
+    },
+    {
+      "handle": "tiensmunchies",
+      "brand": "b_foodietiensmunchies",
+      "score": 0
+    },
+    {
+      "handle": "alexisbaybe_",
+      "brand": "b_foodiealexisbaybe",
+      "score": 0
+    },
+    {
+      "handle": "dyannaluna",
+      "brand": "b_foodiedyannaluna",
+      "score": 0
+    },
+    {
+      "handle": "sapphiesofire",
+      "brand": "b_foodiesapphiesofire",
+      "score": 0
+    },
+    {
+      "handle": "kimmmpossxble",
+      "brand": "b_foodiekimmmpossxble",
+      "score": 0
+    },
+    {
+      "handle": "staycation.sfbayarea",
+      "brand": "b_foodiestaycationsfbayarea",
+      "score": 0
+    },
+    {
+      "handle": "swooningspoon",
+      "brand": "b_foodieswooningspoon",
+      "score": 0
+    },
+    {
+      "handle": "vvveats",
+      "brand": "b_foodievvveats",
+      "score": 0
+    },
+    {
+      "handle": "el.kattt",
+      "brand": "b_foodieelkattt",
+      "score": 0
+    },
+    {
+      "handle": "almightyalondra",
+      "brand": "b_foodiealmightyalondra",
+      "score": 0
+    },
+    {
+      "handle": "unwntedtv",
+      "brand": "b_foodieunwntedtv",
+      "score": 0
+    },
+    {
+      "handle": "awesomejuliee",
+      "brand": "b_foodieawesomejuliee",
+      "score": 0
+    },
+    {
+      "handle": "bvddiebri",
+      "brand": "b_foodiebvddiebri",
+      "score": 0
+    },
+    {
+      "handle": "jadedancelrealtor",
+      "brand": "b_foodiejadedancelrealtor",
+      "score": 0
+    },
+    {
+      "handle": "monica.s.daniels",
+      "brand": "b_foodiemonicasdaniels",
+      "score": 0
+    },
+    {
+      "handle": "echen_eats",
+      "brand": "b_foodieecheneats",
+      "score": 0
+    },
+    {
+      "handle": "rose_buds",
+      "brand": "b_foodierosebuds",
+      "score": 0
+    },
+    {
+      "handle": "amandabushman",
+      "brand": "b_foodieamandabushman",
+      "score": 0
+    },
+    {
+      "handle": "bayarealumpia",
+      "brand": "b_foodiebayarealumpia",
+      "score": 0
+    },
+    {
+      "handle": "yaymeegoround",
+      "brand": "b_foodieyaymeegoround",
+      "score": 0
+    },
+    {
+      "handle": "foodieclubsf",
+      "brand": "b_foodiefoodieclubsf",
+      "score": 0
+    },
+    {
+      "handle": "nomwithelaine",
+      "brand": "b_foodienomwithelaine",
+      "score": 0
+    },
+    {
+      "handle": "edeatstheworld",
+      "brand": "b_foodieedeatstheworld",
+      "score": 0
+    },
+    {
+      "handle": "sophie_eats_world",
+      "brand": "b_foodiesophieeatsworld",
+      "score": 0
+    },
+    {
+      "handle": "eatswithglory",
+      "brand": "b_foodieeatswithglory",
+      "score": 0
+    },
+    {
+      "handle": "lifestylebyangiee",
+      "brand": "b_foodielifestylebyangiee",
+      "score": 0
+    },
+    {
+      "handle": "eatswithvinni",
+      "brand": "b_foodieeatswithvinni",
+      "score": 0
+    },
+    {
+      "handle": "baeareafo0die",
+      "brand": "b_foodiebaeareafo0die",
+      "score": 0
+    }
+  ],
+  "sourceMessages": [
+    {
+      "row": 251897,
+      "at": "2026-11-10T19:05:27.276284-08:00",
+      "text": "https://www.instagram.com/reel/Dfi6sPbRZHy/?dlrf=MXgwaTVuYXc0Y3dwMA==",
+      "attachments": []
+    },
+    {
+      "row": 251898,
+      "at": "2026-11-10T19:05:27.424505-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "row": 251900,
+      "at": "2026-11-10T19:11:31.510614-08:00",
+      "text": "Multiple locations • Eats \nBEASTY • Dumplings \nNew Category",
+      "attachments": [
+        "IMG_0064.png",
+        "IMG_0065.PNG",
+        "IMG_0063.png"
+      ]
+    },
+    {
+      "row": 251901,
+      "at": "2026-11-10T19:11:39.081567-08:00",
+      "text": "https://www.dumplingkitchenca.com/",
+      "attachments": []
+    },
+    {
+      "row": 251902,
+      "at": "2026-11-10T19:11:55.188656-08:00",
+      "text": "https://www.instagram.com/reel/DfkmQvZvv_C/?dlrf=MXBpaDJ0bjFtNnNjeQ==",
+      "attachments": []
+    },
+    {
+      "row": 251903,
+      "at": "2026-11-10T19:11:55.278674-08:00",
+      "text": "Watch this video clip",
+      "attachments": []
+    },
+    {
+      "row": 251904,
+      "at": "2026-11-10T19:12:20.128726-08:00",
+      "text": "https://www.instagram.com/reel/DflV2movJep/?vrfl=MTk0OW5lbWEydjR5ag==",
+      "attachments": []
+    },
+    {
+      "row": 251905,
+      "at": "2026-11-10T19:12:20.250410-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "row": 251907,
+      "at": "2026-11-10T19:29:58.766230-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_0068.png"
+      ]
+    },
+    {
+      "row": 251910,
+      "at": "2026-11-10T19:30:54.350663-08:00",
+      "text": "BEASTY • Burgers \nas well",
+      "attachments": []
+    }
+  ],
+  "sourceNotes": [
+    "Dumplings already exists. Reuse it and append the chain after its seven earlier occupants. Existing Dim Sum occupants and all prior placements are retained.",
+    "Flats Burgers late request adds a Burgers overflow seat; its earlier four inline films and city seat stay fixed. New Nikki film plays on her existing page and Watch.",
+    "Five branch pages: four locations from the official website and the Foster City factory store explicitly listed on the supplied business profile. Each restaurant uses its own menu.",
+    "Icon quality is part of refetch intake. Original supplied and official assets are checked before release, at 512px and phone tile size, with provenance retained."
+  ],
+  "researchSources": [
+    {
+      "url": "https://www.dumplingkitchenca.com/",
+      "role": "Owner location directory and branch contacts"
+    },
+    {
+      "url": "https://direct.chownow.com/order/25382/locations/37523",
+      "role": "taraval published menu"
+    },
+    {
+      "url": "https://direct.chownow.com/order/25382/locations/54317",
+      "role": "castro published menu"
+    },
+    {
+      "url": "https://dumplingkitchennoevalley.toast.site/menu/dumpling-kitchen-castro-2-nro-3913-24th-st",
+      "role": "noe published menu"
+    },
+    {
+      "url": "https://dumplingkitchennoevalley.toast.site/menu/dumpling-kitchen-nro-455-broadway",
+      "role": "millbrae published menu"
+    },
+    {
+      "url": "https://www.deliboardsf.com/",
+      "role": "Official full-resolution Deli Board mark"
+    }
+  ],
+  "artworkDispositions": [
+    {
+      "originalfilename": "IMG_0064.png",
+      "kind": "profile evidence",
+      "disposition": "Branch addresses and factory-store context; full private UI screenshot not republished."
+    },
+    {
+      "originalfilename": "IMG_0065.PNG",
+      "kind": "contact evidence",
+      "disposition": "Business email and general text number captured in branch contact panels."
+    },
+    {
+      "originalfilename": "IMG_0063.png",
+      "kind": "business logo",
+      "path": "/icons/dumpling-kitchen-v113.webp",
+      "disposition": "Original supplied rainbow mark fitted to 512 square; phone margins removed. Monochrome owner PNG checked but supplied color artwork retained."
+    },
+    {
+      "originalfilename": "IMG_0068.png",
+      "kind": "business logo",
+      "path": "/icons/flats-burgers-v113.webp",
+      "disposition": "Late requested update; full wordmark retained with a larger fit and no screenshot border."
+    },
+    {
+      "source": "https://static.wixstatic.com/media/15e88d_8a2bb982ee6e4ad0b85811f8db7c5059~mv2.png",
+      "kind": "proactive quality correction",
+      "path": "/icons/deli-board-v113.webp",
+      "disposition": "Full-resolution owner logo replaces the clipped/soft earlier profile crop. Alpha composited on white; complete Deli Board wordmark and sandwich preserved."
+    }
+  ],
+  "heldFacts": [
+    "The factory store has no published current menu or hours in the supplied/official sources. It is a contact-only page.",
+    "2699 Taylor Street appears only in the Toast selector with ordering disabled, absent from the main owner directory and supplied profile. Active branch status is unconfirmed; no new page is asserted.",
+    "Millbrae phone differs between the main directory and Toast; both sources and their distinction are retained in the contact panel.",
+    "Branch menus exclude utensil/condiment packages and duplicate Popular Items sections; food and soft drinks remain."
+  ]
+}

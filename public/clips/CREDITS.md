@@ -1056,3 +1056,8 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-DfkLe46OqJe.mp4` | [carlacharisse_](https://www.instagram.com/reel/DfkLe46OqJe/) | 20261110 | 3s–18.00s of 75.77s | Review / coverage by @carlacharisse_. My O My, Berkeley. Posted by @carlacharisse_; credited to Carla’s existing @carlaylayyy page. |
 | `review-DecrNOsS2fO.mp4` | [habibimocha](https://www.instagram.com/reel/DecrNOsS2fO/) | 20261013 | 3s–18.00s of 31.23s | Review / coverage by @habibimocha. My O My, Berkeley. The bring-your-own-bag promotion is dated and not a current menu promise. |
 | `review-DfjON_XozUT.mp4` | [_whatarethechances_](https://www.instagram.com/reel/DfjON_XozUT/) | 20261110 | 3s–18.00s of 26.50s | Review by @_whatarethechances_ at Fork It Pasta To Go, San Mateo. November 11, 2026 opening coverage; dated announcement, not an ongoing offer. |
+
+<!-- Batch113: all three requested sources. -->
+| `review-Dfi6sPbRZHy.mp4` | [bayareamunchies510](https://www.instagram.com/reel/Dfi6sPbRZHy/) | 20261110 | 3s–18.00s of 88.54s | Review by @bayareamunchies510 at Deli Board, 1058 Folsom Street, San Francisco. |
+| `b113-dumpling-kitchen-millbrae.mp4` | [dumplingkitchenca](https://www.instagram.com/reel/DfkmQvZvv_C/) | 20261110 | 0s–7.13s of 7.13s | Original by @dumplingkitchenca. Millbrae soft-opening coverage, 455 Broadway, posted November 10, 2026. |
+| `review-DflV2movJep.mp4` | [iamnikkieg](https://www.instagram.com/reel/DflV2movJep/) | 20261111 | 3s–18.00s of 62.95s | Review by @iamnikkieg at Flats Burgers, 4753 Mission Street, San Francisco. |
