@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "base": "https://beastypages.com",
+  "messagesThrough": "2026-11-10T19:30:54.350663-08:00",
+  "newMessages": 10,
+  "lastSourceRefreshAt": "2026-11-10T19:46:04.538342-08:00",
+  "newMessagesAfterCutoffAtRefresh": 0,
+  "release": {
+    "goodsHealth": {
+      "ok": true,
+      "service": "bsty-goods"
+    },
+    "commit": "d81e27ef6a64cfac82dae55b9ba5ed2a9834cf07",
+    "base": "https://beastypages.com",
+    "entry": "/assets/index-DjaeLh7x.js",
+    "publicReadyAt": "2026-11-11T03:50:55.255887+00:00",
+    "health": {
+      "ok": true
+    },
+    "verifiedArtwork": {
+      "path": "/icons/dumpling-kitchen-v113.webp",
+      "sha256": "530ad6129ab2419806b8ad14d3820b56d257bc388ab11819e6cd2960500f91dd"
+    },
+    "deploy": "dep-dbpu7p0ae00c73fhvoq0",
+    "status": "live",
+    "providerFinishedAt": "2026-11-11T03:50:41.783003Z"
+  },
+  "listings": {
+    "dumpling-kitchen-millbrae": 77,
+    "dumpling-kitchen-taraval": 91,
+    "dumpling-kitchen-castro": 79,
+    "dumpling-kitchen-noe": 77,
+    "dumpling-kitchen-factory": 0
+  },
+  "categoryAndCitySeats": {
+    "millbrae-goods2-0": "b_dumplingkitchenmillbrae",
+    "san-francisco-goods2-85": "b_dumplingkitchentaraval",
+    "san-francisco-goods2-86": "b_dumplingkitchencastro",
+    "san-francisco-goods2-87": "b_dumplingkitchennoe",
+    "foster-city-goods2-1": "b_dumplingkitchenfactory",
+    "beasty-dumplings-7": "b_dumplingkitchenmillbrae",
+    "beasty-dimsum-14": "b_dumplingkitchenmillbrae",
+    "beasty-burgers2-1": "b_flatsburgers"
+  },
+  "completedChecks": [
+    {
+      "name": "final-live-chrome",
+      "command": [
+        "node",
+        "tools/audit-batch113.mjs"
+      ],
+      "startedAt": "2026-11-11T03:50:57.743843+00:00",
+      "finishedAt": "2026-11-11T03:51:27.664859+00:00",
+      "exit": 0
+    },
+    {
+      "name": "final-live-webkit",
+      "command": [
+        "sh",
+        "-c",
+        "node tools/audit-batch113.mjs && node tools/audit-iphone-entry.mjs"
+      ],
+      "startedAt": "2026-11-11T03:50:57.743873+00:00",
+      "finishedAt": "2026-11-11T03:51:34.689634+00:00",
+      "exit": 0
+    },
+    {
+      "name": "final-archive-live",
+      "command": [
+        "node",
+        "/tmp/beasty113/archive-verify.mjs"
+      ],
+      "startedAt": "2026-11-11T03:50:57.743673+00:00",
+      "finishedAt": "2026-11-11T03:51:06.084825+00:00",
+      "exit": 0
+    },
+    {
+      "name": "final-sitewide-live",
+      "command": [
+        "node",
+        ".verify/b113-live-verify-parallel.mjs"
+      ],
+      "startedAt": "2026-11-11T03:50:57.743694+00:00",
+      "finishedAt": "2026-11-11T03:56:16.226833+00:00",
+      "exit": 0
+    }
+  ],
+  "phone": {
+    "verifiedAt": "2026-11-11T03:55:23.378Z",
+    "browser": "Chrome",
+    "viewports": [
+      {
+        "width": 393,
+        "height": 852
+      },
+      {
+        "width": 320,
+        "height": 740
+      }
+    ],
+    "physicalIphoneTested": false,
+    "dumplingCategory": {
+      "height": 852,
+      "overflow": false,
+      "tiles": [
+        {
+          "images": [
+            {
+              "src": "/icons/dumpling-kitchen-v113.webp",
+              "width": 66
+            }
+          ],
+          "label": "Dumpling Millbrae",
+          "x": 306,
+          "y": 163
+        }
+      ],
+      "width": 393
+    },
+    "millbraeVideo": {
+      "duration": 7.13,
+      "error": null,
+      "muted": true,
+      "paused": false,
+      "time": 5.545846
+    },
+    "flatsCategory": {
+      "height": 852,
+      "overflow": false,
+      "tiles": [
+        {
+          "images": [
+            {
+              "src": "/icons/flats-burgers-v113.webp",
+              "width": 66
+            }
+          ],
+          "label": "Flats Burgers",
+          "x": 13,
+          "y": 64
+        }
+      ],
+      "width": 393
+    },
+    "deliLogo": {
+      "height": 740,
+      "logo": [
+        {
+          "src": "/icons/deli-board-v113.webp",
+          "width": 78
+        }
+      ],
+      "overflow": false,
+      "width": 320
+    },
+    "flatsTileOpensListing": true,
+    "flatsReviewLinkedToNikkieG": true
+  },
+  "mediaByteMatches": [
+    {
+      "path": "/icons/dumpling-kitchen-v113.webp",
+      "sha256": "530ad6129ab2419806b8ad14d3820b56d257bc388ab11819e6cd2960500f91dd",
+      "bytes": 28884,
+      "width": 552,
+      "height": 552
+    },
+    {
+      "path": "/icons/flats-burgers-v113.webp",
+      "sha256": "00e16e10ce171f371d7ed130f318d829066e49e75d12a586ae53e0090855e365",
+      "bytes": 13964,
+      "width": 552,
+      "height": 552
+    },
+    {
+      "path": "/icons/deli-board-v113.webp",
+      "sha256": "8f8aeedbbada3dcebe6b1d28c59ea80eeeccd97a120f291502dd7625d788a8ed",
+      "bytes": 42828,
+      "width": 552,
+      "height": 552
+    },
+    {
+      "path": "/clips/review-Dfi6sPbRZHy.mp4",
+      "sha256": "c2743beeacd192f46d5a5eb9cb735a9b47483adce138ac15ba5fe40ef0e56f54",
+      "bytes": 4258528,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/b113-dumpling-kitchen-millbrae.mp4",
+      "sha256": "bf2bdd80ef9313319c9e969fcfd480608bc0e574c675161d2f42b094fa83e401",
+      "bytes": 758550,
+      "durationSeconds": 7.13,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-DflV2movJep.mp4",
+      "sha256": "88a725802e96e369ff9faf222e3c2289fc817032d533f89fef120ce11d52743b",
+      "bytes": 1572459,
+      "durationSeconds": 15.0,
+      "codec_name": "h264",
+      "width": 540,
+      "height": 960,
+      "audioCodec": "aac"
+    },
+    {
+      "path": "/clips/review-Dfi6sPbRZHy-poster.webp",
+      "sha256": "0918541cd34382732a55e62b2c81b68e0ae142c9439270fed7a41f565eacf2bb",
+      "bytes": 55246
+    },
+    {
+      "path": "/clips/b113-dumpling-kitchen-millbrae-poster.webp",
+      "sha256": "3ffffa778a54cc99a01b7e561fec93147e70c8281bfd5445a39109e90be570d8",
+      "bytes": 27352
+    },
+    {
+      "path": "/clips/review-DflV2movJep-poster.webp",
+      "sha256": "c400e84f5a5f2cb7583c6474680e2f9e758a4bb9c0d0944e462037aaf0d962cd",
+      "bytes": 35154
+    }
+  ],
+  "archive": {
+    "at": "2026-11-11T03:51:06.073Z",
+    "base": "https://beastypages.com",
+    "entry": "/assets/index-DjaeLh7x.js",
+    "chunks": 10,
+    "messages": 7264,
+    "uniqueInstagramIds": 903,
+    "matched": 852,
+    "olderDocumentedExceptions": 49,
+    "withdrawn": [
+      "DdAZclrNJu-",
+      "DTnoBTMES1u"
+    ],
+    "missing": [
+      "DCIg1aNP4IJ",
+      "DbZjR1_hr-6",
+      "DWfXdRxgITo",
+      "C5G5e9buvV3",
+      "DYvfsi_TWcd",
+      "DcZ7IAxsFy6",
+      "C8XcIrmvXRN",
+      "Dc5CExIhdSX",
+      "DdCY9_wP5R_",
+      "Dc_mLl8uA__",
+      "DS8GlMgCf7b",
+      "DbvU5frRAWB",
+      "C40pt1TRanq",
+      "DLi5st0J5kq",
+      "DcSX7lpucp-",
+      "DdMhHiJsnc4",
+      "DAW5kk6yEWz",
+      "Dc4BefxI5b7",
+      "DXuAt06lPp9",
+      "DbzDNfLtM0R",
+      "Dd1qIgYqblI",
+      "DLGn3J7PcbM",
+      "DdeTKlrOHud",
+      "Dd_xLprMkKq",
+      "DeF5qVeAtYu",
+      "DeeZJIDzequ",
+      "DeX8snzS-Ae",
+      "DeNBS2rSB-3",
+      "DeODcFCCMKM",
+      "DeF-p4_hm_4",
+      "Ddxk-6MBHSr",
+      "DekxENESL3E",
+      "DelACp9h8Xf",
+      "DPnNRYQjL2s",
+      "DVPBUgCkpz_",
+      "DbCTb87pVBv",
+      "DcSCtHgRe7d",
+      "DehGqMzqom6",
+      "DWiG3RtgUwU",
+      "DdkhCGgIwOd",
+      "DadnELsBBrx",
+      "DZ53MrKy375",
+      "De5TN1uMOuN",
+      "DdaFOCUs2cx",
+      "Dajl4orSwQW",
+      "DaQgy6ApsEq",
+      "C2Sh1Iwxe7B",
+      "DZQJsLPB1UZ",
+      "Dd-S3otuokt",
+      "DdAZclrNJu-",
+      "DTnoBTMES1u"
+    ],
+    "activeSourcesBatches103Through113": 177,
+    "exactIconHashes": 138,
+    "exactPosterHashes": 177
+  },
+  "historicalAudit": {
+    "status": "passed",
+    "rosterAssertions": 235,
+    "uniquePages": 231,
+    "rosterWorkers": 3,
+    "originalScript": "tools/live-verify.mjs",
+    "changes": "Ran the unchanged roster assertions on three independent pages; all other checks ran in the original order."
+  },
+  "newClipsPlayedInEachEngine": 3,
+  "allWatchFileRangeResponses": 807,
+  "iphoneWebKitEntryChecks": 16,
+  "previousPlacementsPreserved": true
+}

@@ -726,6 +726,6 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `one-house-bakery-v112.webp` | Glenn’s supplied business artwork | `one-house-bakery-v111.webp` | Original mark fitted to square; no generated replacement. |
 
 <!-- Batch113: supplied originals and proactive owner-source quality correction. -->
-| `dumpling-kitchen-v113.webp` | Glenn’s supplied artwork | `IMG_0063.png` | Original supplied rainbow mark fitted to 512 square; phone margins removed. Monochrome owner PNG checked but supplied color artwork retained. |
+| `dumpling-kitchen-v113.webp` | Glenn’s supplied artwork | `IMG_0063.png` | Original supplied rainbow mark fitted to a 552 px square; phone margins removed. Monochrome owner PNG checked but supplied color artwork retained. |
 | `flats-burgers-v113.webp` | Glenn’s supplied artwork | `IMG_0068.png` | Late requested update; full wordmark retained with a larger fit and no screenshot border. |
 | `deli-board-v113.webp` | https://static.wixstatic.com/media/15e88d_8a2bb982ee6e4ad0b85811f8db7c5059~mv2.png | `Owner full-resolution PNG` | Full-resolution owner logo replaces the clipped/soft earlier profile crop. Alpha composited on white; complete Deli Board wordmark and sandwich preserved. |
