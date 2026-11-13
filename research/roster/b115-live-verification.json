@@ -1,0 +1,809 @@
+{
+  "base": "https://beastypages.com",
+  "release": {
+    "commit": "3d4bdda2a8d2be1bc292ec8c4bad156edb6e2bb9",
+    "entry": "/assets/index-KvPOK4JA.js",
+    "base": "https://beastypages.com",
+    "verifiedAt": "2026-11-13T04:08:01.321187+00:00",
+    "siteHealthy": true,
+    "goodsHealthy": true,
+    "goodsEntry": "/goods/assets/index-BWiLqGqz.js",
+    "exactIcon": {
+      "path": "/icons/palette-tea-house-v115.webp",
+      "sha256": "ccce8fff9f19ed3d97ef6d06a2c1e1f72b7dd5b215295b4b2e0a845bd0a44f6e"
+    },
+    "deploy": "dep-dbr8hmsnov2c73adp070",
+    "finishedAt": "2026-11-13T04:07:49.155668Z"
+  },
+  "intake": {
+    "messages": 155,
+    "cutoff": "2026-11-12T18:43:38.737107-08:00",
+    "attachments": 69,
+    "posts": 47
+  },
+  "listings": 23,
+  "keptSeats": 2141,
+  "newSeats": 73,
+  "previousWatchEntriesPreserved": 824,
+  "playedSilentlyPerBrowser": 44,
+  "watchFilesRangeChecked": 867,
+  "iphoneEntryChecks": 16,
+  "completed": {
+    "chrome-live": 0,
+    "webkit-live": 0,
+    "iphone-entry-live": 0,
+    "full-live": 0,
+    "archive-live": 0,
+    "goods-live": 0
+  },
+  "goods": {
+    "checks": [
+      {
+        "engine": "Chrome",
+        "home": true,
+        "managedResale": true,
+        "returnTo": true,
+        "sharedAccount": true,
+        "google": true
+      },
+      {
+        "engine": "iPhone WebKit",
+        "home": true,
+        "managedResale": true,
+        "returnTo": true,
+        "sharedAccount": true,
+        "google": true
+      }
+    ],
+    "ownerAnonymous": 401,
+    "operatorAnonymous": 401
+  },
+  "archive": {
+    "at": "2026-11-13T04:08:16.331Z",
+    "base": "https://beastypages.com",
+    "entry": "/assets/index-KvPOK4JA.js",
+    "chunks": 10,
+    "messages": 7478,
+    "uniqueInstagramIds": 965,
+    "matched": 913,
+    "olderDocumentedExceptions": 49,
+    "withdrawn": [
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "missing": [
+      "DCIg1aNP4IJ",
+      "DbZjR1_hr-6",
+      "DWfXdRxgITo",
+      "C5G5e9buvV3",
+      "DYvfsi_TWcd",
+      "DcZ7IAxsFy6",
+      "C8XcIrmvXRN",
+      "Dc5CExIhdSX",
+      "DdCY9_wP5R_",
+      "Dc_mLl8uA__",
+      "DS8GlMgCf7b",
+      "DbvU5frRAWB",
+      "C40pt1TRanq",
+      "DLi5st0J5kq",
+      "DcSX7lpucp-",
+      "DdMhHiJsnc4",
+      "DAW5kk6yEWz",
+      "Dc4BefxI5b7",
+      "DXuAt06lPp9",
+      "DbzDNfLtM0R",
+      "Dd1qIgYqblI",
+      "DLGn3J7PcbM",
+      "DdeTKlrOHud",
+      "Dd_xLprMkKq",
+      "DeF5qVeAtYu",
+      "DeeZJIDzequ",
+      "DeX8snzS-Ae",
+      "DeNBS2rSB-3",
+      "DeODcFCCMKM",
+      "DeF-p4_hm_4",
+      "Ddxk-6MBHSr",
+      "DekxENESL3E",
+      "DelACp9h8Xf",
+      "DPnNRYQjL2s",
+      "DVPBUgCkpz_",
+      "DbCTb87pVBv",
+      "DcSCtHgRe7d",
+      "DehGqMzqom6",
+      "DWiG3RtgUwU",
+      "DdkhCGgIwOd",
+      "DadnELsBBrx",
+      "DZ53MrKy375",
+      "De5TN1uMOuN",
+      "DdaFOCUs2cx",
+      "Dajl4orSwQW",
+      "DaQgy6ApsEq",
+      "C2Sh1Iwxe7B",
+      "DZQJsLPB1UZ",
+      "Dd-S3otuokt",
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "activeSourcesBatches103Through115": 238,
+    "exactIconHashes": 194,
+    "exactPosterHashes": 238
+  },
+  "assets": [
+    {
+      "path": "/icons/palette-tea-house-v115.webp",
+      "sha256": "ccce8fff9f19ed3d97ef6d06a2c1e1f72b7dd5b215295b4b2e0a845bd0a44f6e",
+      "bytes": 16854
+    },
+    {
+      "path": "/icons/mr-dewies-v115.webp",
+      "sha256": "f798eb9194112171d1b4a03a9f055770824f143fb96437d88b47d41ba43b7003",
+      "bytes": 26238
+    },
+    {
+      "path": "/icons/butter-and-crumble-v115.webp",
+      "sha256": "e32b04512842bc7abfb1c9571a0eb1fb96c21497338cf8a87bd59b3bc596faf8",
+      "bytes": 14676
+    },
+    {
+      "path": "/icons/umma-sf-v115.webp",
+      "sha256": "e6388123e78e102d94ffff6f88926915acc4a4af501e40a9723f2c7f234948f3",
+      "bytes": 22238
+    },
+    {
+      "path": "/icons/meowvelous-bakes-v115.webp",
+      "sha256": "8817042b233eec5cd98219a2ba03c7ed2ea424b2963b603fd61e3599f6254879",
+      "bytes": 26610
+    },
+    {
+      "path": "/icons/bonbon-matcha-v115.webp",
+      "sha256": "48295ac96ed861dbf5a695b4ae6f9e5bed931a16fc49d46b0b77dc09e091f990",
+      "bytes": 9968
+    },
+    {
+      "path": "/icons/salt-and-straw-v115.webp",
+      "sha256": "3148f65baa00a2a4db56624002a3b22038af2b4675258f11865a8ce5191ace22",
+      "bytes": 10732
+    },
+    {
+      "path": "/icons/bay-area-hot-tub-boat-v115.webp",
+      "sha256": "9ae41843a39cd7438217048f720b8fc9076d5741ad4610653b8d358babafe76c",
+      "bytes": 20516
+    },
+    {
+      "path": "/icons/bella-trattoria-v115.webp",
+      "sha256": "20af5dfd790673302712d593da095f930707b0ef1b30b3899e099faf9961bca9",
+      "bytes": 19680
+    },
+    {
+      "path": "/icons/bay-pocha-v115.webp",
+      "sha256": "5f8506583f51fedcecf161496aeda9ae8283d8346a33bb4a6c6486da3e0ad164",
+      "bytes": 22846
+    },
+    {
+      "path": "/icons/bens-burger-v115.webp",
+      "sha256": "2c1f66076ad88866326f16056cd6b9a6e4f1e9a3ffe6224ae48445cd93eb3135",
+      "bytes": 28208
+    },
+    {
+      "path": "/icons/sabrina-soto-v115.webp",
+      "sha256": "17d308ff2b2e8c1c50ab3a1781e05f4cb735551a273ebbbdc235041d4cb0538d",
+      "bytes": 20658
+    },
+    {
+      "path": "/icons/beeps-burgers-v115.webp",
+      "sha256": "ded3dc2ab57ded13afc708d9c67c8aa17faa6afe9439bb691f0e291484357484",
+      "bytes": 24800
+    },
+    {
+      "path": "/icons/miracle-mile-cafe-v115.webp",
+      "sha256": "f7e36ff92c7d2095ab0e7f1ed58254c9c7d465ad638fdcc13de336a5eb79c361",
+      "bytes": 14720
+    },
+    {
+      "path": "/icons/stk-steakhouse-v115.webp",
+      "sha256": "af11545aefd0a905e63d9ea04ef678bb366bf3eb1b96586e7ccc5abac9b999f2",
+      "bytes": 8888
+    },
+    {
+      "path": "/icons/wrap-n-slurp-v115.webp",
+      "sha256": "bf9e9e970e321d755387cfbc5e016889da760c833678a3712940138e010de965",
+      "bytes": 21648
+    },
+    {
+      "path": "/icons/foodie-eatwcass-v115.webp",
+      "sha256": "7e626695f9694efd59ae0340a80b14339dc11ed112fa9033ccc049e036975870",
+      "bytes": 50624
+    },
+    {
+      "path": "/icons/foodie-sherryeatworld-v115.webp",
+      "sha256": "7f88cea72b1d1729e5dc99c3c0ae575073d1cd91d7657c315cca0c4ce0faff43",
+      "bytes": 81256
+    },
+    {
+      "path": "/icons/foodie-tundemodupee-v115.webp",
+      "sha256": "b812a8dea0f72f0f727d2606b31a3b413fae2430dea714abf229cf707c083852",
+      "bytes": 67988
+    },
+    {
+      "path": "/icons/foodie-heatherreats-v115.webp",
+      "sha256": "e0e5d5b172e85afa9659a6cdeb03bc6bd10d737692746b0c029476927f07b91b",
+      "bytes": 22838
+    },
+    {
+      "path": "/icons/foodie-janeezhao-v115.webp",
+      "sha256": "7cbbb9e0eca7121169a7f2470c494b5ac6a444c75306432f40bc326930dcebf9",
+      "bytes": 22426
+    },
+    {
+      "path": "/icons/foodie-bvddiebri-v115.webp",
+      "sha256": "cbd8c43c12a591d447b5ba4fa5b0db62c3145d5e33bc53861bca47733221f859",
+      "bytes": 24822
+    },
+    {
+      "path": "/icons/foodie-jeaninthebay-v115.webp",
+      "sha256": "fbd57c388d48d0235b000d0780776ac41ec4a5daf47dea445f90d2a99b7b76ea",
+      "bytes": 55620
+    },
+    {
+      "path": "/icons/foodie-jasminibites-v115.webp",
+      "sha256": "f4124b06cb43c138a227e1bbe665d5f02a0be3bb5692e13abf2457123d8140ed",
+      "bytes": 49960
+    },
+    {
+      "path": "/icons/foodie-sfbaydiaries-v115.webp",
+      "sha256": "5ada016f5ce759492fd3bb21261dd846a221a8c402161f82a57d042a5c3e3d04",
+      "bytes": 28932
+    },
+    {
+      "path": "/icons/foodie-simplydorothy-v115.webp",
+      "sha256": "f636cf75a719372400a92af70b084b37487139c2f55453bef182da00a8b2d96e",
+      "bytes": 74024
+    },
+    {
+      "path": "/icons/foodie-oliviiacai-v115.webp",
+      "sha256": "90d39da38da0247393fa2c2e6276cb886c24b86f96b14466f3089c407bb7d134",
+      "bytes": 40216
+    },
+    {
+      "path": "/icons/foodie-bobaaddict-v115.webp",
+      "sha256": "5b2ebbe6b3fbf3cbf7a23ea8736d8e94880a051351b4ebe1c5f609588d25792e",
+      "bytes": 66946
+    },
+    {
+      "path": "/icons/foodie-baygirlseat-v115.webp",
+      "sha256": "6636bd0276d32bca2b22b07f48a38f42fcdb5a93cf46152813d56cc30e63970f",
+      "bytes": 76664
+    },
+    {
+      "path": "/icons/foodie-vrutichokshi-v115.webp",
+      "sha256": "8fd4f0b81caade737ced90e21e53c851576f1e3227d9989536f0b028fa3096a9",
+      "bytes": 77936
+    },
+    {
+      "path": "/icons/foodie-chubbiebunnies-v115.webp",
+      "sha256": "26b3829d4584eeff223d1dc3a1471d197e433a92a0b92a0b66eb1f7ca097dc60",
+      "bytes": 34728
+    },
+    {
+      "path": "/icons/foodie-gillynova-v115.webp",
+      "sha256": "6e345afaa82ede30cdae98a45a2e976f95d157dd974bd20e0d54a74ed8ed208c",
+      "bytes": 28254
+    },
+    {
+      "path": "/icons/foodie-bayareapineapples-v115.webp",
+      "sha256": "e78c94ce2db11e672ba6cc73d32115b8d71c2874fc221925c236f106e075e7ea",
+      "bytes": 34480
+    },
+    {
+      "path": "/icons/foodie-aymibabyeats-v115.webp",
+      "sha256": "10aded77d07a9ba48333eb69d69e2a7267ead894209db005bb75f44afd0464aa",
+      "bytes": 40196
+    },
+    {
+      "path": "/icons/foodie-crenshawvisuals-v115.webp",
+      "sha256": "fd82a8420c4639095866abdd72c2088d6b600b135302bd8dd2651eb4dad6d568",
+      "bytes": 13718
+    },
+    {
+      "path": "/icons/foodie-cooldadcoolermom-v115.webp",
+      "sha256": "eecbe73be5f984bb24578edfef75392c7c94e6114ff5b9266ed903626442df94",
+      "bytes": 31170
+    },
+    {
+      "path": "/icons/foodie-nomzsaiyan-v115.webp",
+      "sha256": "ff3c9b749fbb05b6e933a08437787b0f4c4dcd9cfa8b3c6d3e03d9fbad9d50cf",
+      "bytes": 65660
+    },
+    {
+      "path": "/icons/foodie-kelsyannn-v115.webp",
+      "sha256": "a1e42e60df01b2634f47d60f2e80be8c55ea841fd7843716df22def78bea3639",
+      "bytes": 52326
+    },
+    {
+      "path": "/icons/foodie-ugcwithdiana-v115.webp",
+      "sha256": "2574a1f957217fbbefa50a242c109e692496f79779022dfb0aaa9b0fba39b72b",
+      "bytes": 64934
+    },
+    {
+      "path": "/icons/foodie-brojackson-v115.webp",
+      "sha256": "1a9e48ff9b91138b75dbfdc3b3107d0632fb8216054fbe6ea118d5b949e7ca3d",
+      "bytes": 25854
+    },
+    {
+      "path": "/clips/review-Dfiuysdx9_t.mp4",
+      "sha256": "0364c0b3c7a56d138847050e230b28cd0daab69c96a7644af553cb8731b308a0",
+      "bytes": 2237919
+    },
+    {
+      "path": "/clips/review-Dfiuysdx9_t-poster.webp",
+      "sha256": "17da867b21483e4c4127f4d7d6010d9d2c671e4d24d4850d5cf4f6a147202c94",
+      "bytes": 27442
+    },
+    {
+      "path": "/clips/review-DdPEF9wCQzw.mp4",
+      "sha256": "80251a0027d5dcc199426c1d57587c35ea0b16a83f77e695a300eafe0ae7a5c1",
+      "bytes": 1504574
+    },
+    {
+      "path": "/clips/review-DdPEF9wCQzw-poster.webp",
+      "sha256": "4c970fdc4f09fa7d36d5159bb3d02e5479d43ff3269605591fe042d6c5787bab",
+      "bytes": 25452
+    },
+    {
+      "path": "/clips/review-DfNcVPxSWvW.mp4",
+      "sha256": "b825b474804209ccf79015b36dce11f30a0bf071153c53101cb18a15aa913181",
+      "bytes": 2056400
+    },
+    {
+      "path": "/clips/review-DfNcVPxSWvW-poster.webp",
+      "sha256": "7bcf576613b227af1681b4bf62759b09a6336d63915c32f8b0cc76b273eebac5",
+      "bytes": 108392
+    },
+    {
+      "path": "/clips/review-DGRMgtxTwOu.mp4",
+      "sha256": "c78e512875388f08ff6d05e45e9641c3d1e52dcdf5e2ab7709e844da5e5cdf47",
+      "bytes": 2365987
+    },
+    {
+      "path": "/clips/review-DGRMgtxTwOu-poster.webp",
+      "sha256": "5f4ce0b2926efacb18657e2e97f6af5299e3b7e13e6e1f8a90fd4937fff5a8f1",
+      "bytes": 85288
+    },
+    {
+      "path": "/clips/review-DR-f_sWk2xr.mp4",
+      "sha256": "b803bf1e0c5747f311fd2352b8eba6327bbb13e7042569dfac657701bd7f1e9e",
+      "bytes": 1894549
+    },
+    {
+      "path": "/clips/review-DR-f_sWk2xr-poster.webp",
+      "sha256": "a32b2a69aed52a1e85edd8fe39d8c2a406f38a7ca61834b305ff61a0ae96a569",
+      "bytes": 27036
+    },
+    {
+      "path": "/clips/review-DG9CZZxAQcE.mp4",
+      "sha256": "8d5bd5e32a30993be5198b03c115eddd6176835a9d416b3286985d056a159e6c",
+      "bytes": 3732362
+    },
+    {
+      "path": "/clips/review-DG9CZZxAQcE-poster.webp",
+      "sha256": "6e15afa60163f01f496c2da813735e852710d87b49deedb77986b37bd803fe21",
+      "bytes": 123696
+    },
+    {
+      "path": "/clips/review-Deff-jlPRFz.mp4",
+      "sha256": "8bb202fecb1b14dd6e2b4f0ca5777ed145c16a3de54d308441bc44c42e489b20",
+      "bytes": 2918887
+    },
+    {
+      "path": "/clips/review-Deff-jlPRFz-poster.webp",
+      "sha256": "8b308a80c90d099020b24577d8f9005ce030a82f95cf24e7355b3a60c41513b8",
+      "bytes": 35264
+    },
+    {
+      "path": "/clips/review-DflX5p9RBFH.mp4",
+      "sha256": "a7b237f3e889c0d6a6738999b66df5a90a2d22f7dd3f195cbe903fbaed8261c8",
+      "bytes": 3358991
+    },
+    {
+      "path": "/clips/review-DflX5p9RBFH-poster.webp",
+      "sha256": "549c39421895d51daac678ec0ef35408eed0c6e7e576ef22ce5970e9d0d1e58d",
+      "bytes": 78810
+    },
+    {
+      "path": "/clips/review-DflGEj6OXnl.mp4",
+      "sha256": "5958edd9dea6d7fe659da2ef1cb1eb1f35b880dbf833485f8fa2c8e388e558a6",
+      "bytes": 2557909
+    },
+    {
+      "path": "/clips/review-DflGEj6OXnl-poster.webp",
+      "sha256": "0d8e9bfefba93f740f6127a3ff9cccb8a735cbef60e437c5ae9b78eb4067f2e0",
+      "bytes": 66782
+    },
+    {
+      "path": "/clips/review-DegCdkKCPSm.mp4",
+      "sha256": "a522a28ba7acdca243e93027e46eb6b13e4f3cb7a89aac176da1735783e26048",
+      "bytes": 3429018
+    },
+    {
+      "path": "/clips/review-DegCdkKCPSm-poster.webp",
+      "sha256": "7354ea9ae6ca9345ad71be2b00368a169c14e163a69a11aebda2e36d79683b1f",
+      "bytes": 57574
+    },
+    {
+      "path": "/clips/review-Dd1MuraSlGp.mp4",
+      "sha256": "47d27fe9d610cecfeb43080df1661cc527d948c1caaed90a9c4918b3c4f83a77",
+      "bytes": 2789234
+    },
+    {
+      "path": "/clips/review-Dd1MuraSlGp-poster.webp",
+      "sha256": "7c1f45304712f5c645bda14a204f8bf1bad52922ed82d05705e8c8fd37976144",
+      "bytes": 65352
+    },
+    {
+      "path": "/clips/review-DdfClsShLy4.mp4",
+      "sha256": "0850dd9eb67e037c23b64a12bd518d82a357e4c19afe864fc3ae714a05bb4a99",
+      "bytes": 1447284
+    },
+    {
+      "path": "/clips/review-DdfClsShLy4-poster.webp",
+      "sha256": "0db7224e4c4ac3a8a762bc1577bd0451e68d91e279177fd190fc2fff34afe508",
+      "bytes": 84158
+    },
+    {
+      "path": "/clips/review-Dc2wl4tNfOX.mp4",
+      "sha256": "fe5c6ffc0db2f67697a5d221877837a105bd64b26d2f4dabf993e397f422adfb",
+      "bytes": 3742977
+    },
+    {
+      "path": "/clips/review-Dc2wl4tNfOX-poster.webp",
+      "sha256": "a435c794e13975efb436514dbb824d37e1e5301c50ba699543ac69302e0cfb6e",
+      "bytes": 37036
+    },
+    {
+      "path": "/clips/review-Dfn1kQZhPaP.mp4",
+      "sha256": "3db80aa2bb85f8e79977705560b14c987c7a17a778b11351fa51e04305a1c2bf",
+      "bytes": 3075820
+    },
+    {
+      "path": "/clips/review-Dfn1kQZhPaP-poster.webp",
+      "sha256": "618f47e3cbd005296b2bc454dceec0a5bdf6d130a44a4f6cee7e4767a69ba72a",
+      "bytes": 66472
+    },
+    {
+      "path": "/clips/b115-dfp1boeygcc.mp4",
+      "sha256": "a810c9afc69b114c477bfe3430646c6641626d42603205a1826e3ecebc591b0a",
+      "bytes": 856729
+    },
+    {
+      "path": "/clips/b115-dfp1boeygcc-poster.webp",
+      "sha256": "250117b755894bf69bd0560482604acfc896e7438e30d115d800231f693fbeb3",
+      "bytes": 36216
+    },
+    {
+      "path": "/clips/review-DcISNRzMYBf.mp4",
+      "sha256": "34566267ce39204d4da3b92cefa667c49b1c322227a89e86f41a1b1ead6d200f",
+      "bytes": 2445317
+    },
+    {
+      "path": "/clips/review-DcISNRzMYBf-poster.webp",
+      "sha256": "3888cc3aacc81d0bfa717aad076f14e76ac9ef8f931fa39379167e7923207af5",
+      "bytes": 48428
+    },
+    {
+      "path": "/clips/review-DcAs4jkonVO.mp4",
+      "sha256": "d2243a6d91b5d3a3cf5b0fe494dfc4276d1f2f292d2e9446ae15dd906de8426f",
+      "bytes": 2054747
+    },
+    {
+      "path": "/clips/review-DcAs4jkonVO-poster.webp",
+      "sha256": "365cafa6b833fa40b19418be8bb3c0b5c9ab7634de8171b70d187a3b26bc0ebd",
+      "bytes": 61562
+    },
+    {
+      "path": "/clips/review-DbjE75GBFXr.mp4",
+      "sha256": "3a8a4157aad8d5c2ec930fa2350a249209920a9459f4872576c33e86e5937fde",
+      "bytes": 1916156
+    },
+    {
+      "path": "/clips/review-DbjE75GBFXr-poster.webp",
+      "sha256": "bfca4f2963c79878a7ca14580dee0bad53a4b67d6a0ca9a3a4847bb96c43e5b7",
+      "bytes": 43524
+    },
+    {
+      "path": "/clips/review-DZbKwczzVYd.mp4",
+      "sha256": "855455a2f8cf541f0c0989093497c53dadd25aa42325b3ce284adc3d17ce4a1d",
+      "bytes": 2229488
+    },
+    {
+      "path": "/clips/review-DZbKwczzVYd-poster.webp",
+      "sha256": "4da2321d9f3d486ae6d5864a778728a2232c0d7ef38f55622f199f08c0020eed",
+      "bytes": 83774
+    },
+    {
+      "path": "/clips/review-DfQTr6DSVQs.mp4",
+      "sha256": "b4d37f42a4ccfa99624e9bc142e59db0f05f73fe71e3c10f29446b36ff5df205",
+      "bytes": 1735974
+    },
+    {
+      "path": "/clips/review-DfQTr6DSVQs-poster.webp",
+      "sha256": "3f72a3066e4f6c24032fdb5c7a8f70597f8b3a1eb8b359c1de28e3e7476de6e8",
+      "bytes": 59518
+    },
+    {
+      "path": "/clips/review-DfhmshpJdsL.mp4",
+      "sha256": "c2ae55424b970763ae1cd2519e48441d925864c1d67e5866303967a882e338ed",
+      "bytes": 2534918
+    },
+    {
+      "path": "/clips/review-DfhmshpJdsL-poster.webp",
+      "sha256": "e716e1dd2a9747d45bb4040f2074ec9b901efc0f2d36a6d42794f90b2d9290af",
+      "bytes": 26236
+    },
+    {
+      "path": "/clips/review-Dfn9Qw3B8iB.mp4",
+      "sha256": "e0557122bedfa5d6291a500033d32a203e89146948d83b9d5ef4c07ed14a12c1",
+      "bytes": 1939104
+    },
+    {
+      "path": "/clips/review-Dfn9Qw3B8iB-poster.webp",
+      "sha256": "e8cda2e1cc954a404a956d16216da3cc86dbf36b43c3e22854ccb7af30ae5b65",
+      "bytes": 35970
+    },
+    {
+      "path": "/clips/review-DbMg9PCO3dt.mp4",
+      "sha256": "36dc1ca762583a39a9494ecb03917400c0487cd3619c2e0c8f55ef8201a47608",
+      "bytes": 1969852
+    },
+    {
+      "path": "/clips/review-DbMg9PCO3dt-poster.webp",
+      "sha256": "50116b4bef22e9ee2bdbaf870d021adce88c65c265ebe00819b32c3b2a21edef",
+      "bytes": 48176
+    },
+    {
+      "path": "/clips/review-Dfn3nf-RKnc.mp4",
+      "sha256": "9837bbad973c239d2b12b1468b6860467205fcc4d6c8db1131ecd81657b5fd59",
+      "bytes": 1879053
+    },
+    {
+      "path": "/clips/review-Dfn3nf-RKnc-poster.webp",
+      "sha256": "1f43aeb8675d5e80f7fa8194e3af0ba4f8a91e360a4f6044f5b33c25bf9c4b95",
+      "bytes": 41696
+    },
+    {
+      "path": "/clips/review-Cs16qMPvcyU.mp4",
+      "sha256": "dfd701fff3906c526fe0d5f3edfaebbec84d9bcec81af50ad70c2b1b5ef3b8ea",
+      "bytes": 2145848
+    },
+    {
+      "path": "/clips/review-Cs16qMPvcyU-poster.webp",
+      "sha256": "005a62a8161fba69d7d539be281f189a24e782bc94cea6cdb4ff4629bc6f281f",
+      "bytes": 63324
+    },
+    {
+      "path": "/clips/review-Dfp0agGhT6V.mp4",
+      "sha256": "add28f068f556c027e84722f68f4387dbbea3b25e5187f2b178b7188e959fdca",
+      "bytes": 2768599
+    },
+    {
+      "path": "/clips/review-Dfp0agGhT6V-poster.webp",
+      "sha256": "08fcfd67a86b7195cea086454e1fcb35580c150cb0f468c40f217e6f70387442",
+      "bytes": 88074
+    },
+    {
+      "path": "/clips/review-DeiHhp3uzRo.mp4",
+      "sha256": "a92e68ddf89fca5c91a2b7c622559570de81388a8737b95e524de736487d1896",
+      "bytes": 3183374
+    },
+    {
+      "path": "/clips/review-DeiHhp3uzRo-poster.webp",
+      "sha256": "88d23d3a6aa9f0dc5812adc1ac78e3956f90631eee4d6a7657fc05f9d0590f26",
+      "bytes": 43748
+    },
+    {
+      "path": "/clips/review-DdwajnIT-VI.mp4",
+      "sha256": "70ebff6170412938a1383206960ef090f192af448e1be00e3c38d343adf712e0",
+      "bytes": 2549817
+    },
+    {
+      "path": "/clips/review-DdwajnIT-VI-poster.webp",
+      "sha256": "96e624377e8496b288deaa99e5b379ed0c052b75999deba8edfbd439608c3d25",
+      "bytes": 35746
+    },
+    {
+      "path": "/clips/b115-dddbcq1ct-b.mp4",
+      "sha256": "39d44fc995595ddd9e8bea2073fd596382ab6fdc579e6b676ab0bbd9279308fd",
+      "bytes": 4322618
+    },
+    {
+      "path": "/clips/b115-dddbcq1ct-b-poster.webp",
+      "sha256": "e215704738ec549b3891c6911996addc293322bfdf07b8de18a9e6188ddf3f0c",
+      "bytes": 37366
+    },
+    {
+      "path": "/clips/review-Db4OcTLviSg.mp4",
+      "sha256": "52c14aadba5f5b3b1ba08bba90521d346a48e8eaff6bc495506899bce15af2cf",
+      "bytes": 1554328
+    },
+    {
+      "path": "/clips/review-Db4OcTLviSg-poster.webp",
+      "sha256": "5435e7d4448a99284e4ea651a17ccc68b9e4bfd4fbf2c41a70a02e43c5eee985",
+      "bytes": 52186
+    },
+    {
+      "path": "/clips/review-DbeQxR0ydN1.mp4",
+      "sha256": "447893d043f75f747c403709a19e7b64e4e219651fb68b56f94cbdb697f411ed",
+      "bytes": 2025312
+    },
+    {
+      "path": "/clips/review-DbeQxR0ydN1-poster.webp",
+      "sha256": "f3c2035b4739c6cdcbe80c2e978f9f0c94c304258579e076324f033ca0889f07",
+      "bytes": 79738
+    },
+    {
+      "path": "/clips/review-DbMoEvkPAX3.mp4",
+      "sha256": "a22310643e70adb84d9365aebeb799fc761967e670bc61d9758e581a0e469cc9",
+      "bytes": 2877240
+    },
+    {
+      "path": "/clips/review-DbMoEvkPAX3-poster.webp",
+      "sha256": "924f466aff810f5bbe72bf90257f8e4aa7f9000f201bef86cc4fdb38e4330d0d",
+      "bytes": 33854
+    },
+    {
+      "path": "/clips/review-Dfp65W-hS5-.mp4",
+      "sha256": "df51415d26c0742f43d44214154ba555f1ca28efcc726571b89c34c7eb0f98cf",
+      "bytes": 1951498
+    },
+    {
+      "path": "/clips/review-Dfp65W-hS5--poster.webp",
+      "sha256": "46bf1fa275152fadde42f95ff9ebd8269608fd9bd7569de2a43d4b9cb599b7be",
+      "bytes": 55994
+    },
+    {
+      "path": "/clips/review-Dfls5FwTf0k.mp4",
+      "sha256": "28a04f5e76b3071123443eb8f4d24a724f584d884b2437c69e4d898631dc186d",
+      "bytes": 1685118
+    },
+    {
+      "path": "/clips/review-Dfls5FwTf0k-poster.webp",
+      "sha256": "b20c990d053064456fd5c1e4a24b627689d13af363a73aacafb826a117e4816e",
+      "bytes": 47758
+    },
+    {
+      "path": "/clips/review-DfVcTVTynVo.mp4",
+      "sha256": "b14ee5b5ae54f86ae26ce6ca56dad3070c001804476dc63dfbb03e6e2b9bd61c",
+      "bytes": 2581965
+    },
+    {
+      "path": "/clips/review-DfVcTVTynVo-poster.webp",
+      "sha256": "ce8e729bbef9af50a63cc54a3740c82425fe6b08811e6d376b37290c26c35345",
+      "bytes": 51752
+    },
+    {
+      "path": "/clips/b115-dcwe2agmyyo.mp4",
+      "sha256": "272d9b2dfaa7a0ce4c6e4fefe97e03b2c36ddf1ade318c91b6911abc658f7148",
+      "bytes": 1652173
+    },
+    {
+      "path": "/clips/b115-dcwe2agmyyo-poster.webp",
+      "sha256": "edee07d1de4fdb1f579f59ca61300377f167fd8df824e2f0365052e1792e5980",
+      "bytes": 26340
+    },
+    {
+      "path": "/clips/b115-c2vpjcxp3qx.mp4",
+      "sha256": "100069383388cd6250a9bf4bd160b972e5931d466301841cc89eea543eeb139a",
+      "bytes": 2133930
+    },
+    {
+      "path": "/clips/b115-c2vpjcxp3qx-poster.webp",
+      "sha256": "9132e5cd07b6680dc45f87ad146a7525e97238a52bcf15bef09879794bb25b43",
+      "bytes": 56486
+    },
+    {
+      "path": "/clips/review-DQ8FBpvCes-.mp4",
+      "sha256": "c369a6b513086720ac551a84264f74d928ced4124c1623e580a5938c5b266725",
+      "bytes": 2104401
+    },
+    {
+      "path": "/clips/review-DQ8FBpvCes--poster.webp",
+      "sha256": "29841b44ef537ae9e096a3390f5c82b611ba6e5a37013c7048616420f3547ac5",
+      "bytes": 40038
+    },
+    {
+      "path": "/clips/review-DV4GoFkDSkB.mp4",
+      "sha256": "81fa4d79e75a7067ddc46f09681bff37d2b175b1d68779d899f4c9cffc5193bc",
+      "bytes": 2490010
+    },
+    {
+      "path": "/clips/review-DV4GoFkDSkB-poster.webp",
+      "sha256": "70436aed42fa134eed012f64ba3c1eaa35426da0f38043e8df929a2b39358f44",
+      "bytes": 61926
+    },
+    {
+      "path": "/clips/review-DfTyuampYIe.mp4",
+      "sha256": "c6d0ae83af4af928a1c2943a14584a691a40bc56c85de2c8f4f10b78ea1976dd",
+      "bytes": 1924624
+    },
+    {
+      "path": "/clips/review-DfTyuampYIe-poster.webp",
+      "sha256": "3b8254ec668baa2c1a82e01f993331309ffc46a6808fce4cf383de6fa47e8654",
+      "bytes": 44724
+    },
+    {
+      "path": "/clips/review-DfqPKmOxBZy.mp4",
+      "sha256": "d69f2198a063b2960d2f3a533090f880364047798739ec50b68925ab39bff113",
+      "bytes": 2140029
+    },
+    {
+      "path": "/clips/review-DfqPKmOxBZy-poster.webp",
+      "sha256": "2a784a0288bc19414d90759baf8be40742fad532658a4430301b6bee94f53c52",
+      "bytes": 56138
+    },
+    {
+      "path": "/clips/b115-dfn5h9yg9g4.mp4",
+      "sha256": "1661d9b9368bcd4152275d8ca02c9cf7e74531aa56db1674070055dd6037c1fb",
+      "bytes": 1860070
+    },
+    {
+      "path": "/clips/b115-dfn5h9yg9g4-poster.webp",
+      "sha256": "d099c9d7403f974ece723fd752a2d560d9150e59721b88db72394e647bd2b1b2",
+      "bytes": 39296
+    },
+    {
+      "path": "/clips/review-C0x_cWireRk.mp4",
+      "sha256": "5719aa7ad7d28ba5dddbd3954f0336d8eb09e2533ee8d990ec91db244af353f5",
+      "bytes": 1702576
+    },
+    {
+      "path": "/clips/review-C0x_cWireRk-poster.webp",
+      "sha256": "5b960e6f047e049876d7616c82d112a1ceaeb22aaf43198d99717761b571a205",
+      "bytes": 43340
+    },
+    {
+      "path": "/clips/review-DfPDJmEJoBX.mp4",
+      "sha256": "4367f09390cc2ce3560a82c6047d5eaa88a30393de0acb979c28af931d75d9b7",
+      "bytes": 1794765
+    },
+    {
+      "path": "/clips/review-DfPDJmEJoBX-poster.webp",
+      "sha256": "38645c887f72754e96397b9f6fd357f4118f144306571f537f697b5929a5a45f",
+      "bytes": 42932
+    }
+  ],
+  "visibleChrome": {
+    "revision": "f209509",
+    "engine": "Visible Chrome",
+    "entryViewport": [
+      393,
+      852
+    ],
+    "greenEnterReachedGrid": true,
+    "greenEnterSameDocumentTimeOrigin": true,
+    "paletteSearchAndBusiness": true,
+    "paletteFilmMutedPlayed": true,
+    "paletteFoodAndPickupMenus": true,
+    "narrowViewport": [
+      320,
+      740
+    ],
+    "frymazingPageFit": true,
+    "frymazingPreviousFilmMutedPlayed": true,
+    "goodsManagedResaleFit": true,
+    "goodsUsedExistingSignedInStateWithoutSubmitting": true,
+    "testTabClosedAndViewportRestored": true,
+    "finalRevisionSTK": {
+      "revision": "3d4bdda",
+      "entry": "/assets/index-KvPOK4JA.js",
+      "viewport": [
+        393,
+        852
+      ],
+      "fit": true,
+      "logoZoomOpened": true,
+      "browserAssetCacheStillHadFirstBuild": true,
+      "exactOriginAssetVerifiedBySha256": true
+    }
+  }
+}

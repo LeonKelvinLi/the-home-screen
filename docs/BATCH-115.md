@@ -10,4 +10,12 @@ The [intake ledger](../research/roster/batch115.json) records 155 messages throu
 
 Use the official menu links for current selections and prices. Butter & Crumble reports that cake orders are paused. The Bay Area Hot Tub Boat lists $400 starting and $412 including booking fees. Miracle Mile Cafe, Beep’s Burgers and Bay Pocha include item prices from their published menus.
 
-Live verification is recorded here after deployment.
+## Live verification
+
+Render served `3d4bdda` at [beastypages.com](https://beastypages.com) after deploying `dep-dbr8hmsnov2c73adp070`. Both site health checks passed.
+
+- The batch audit passed in Chrome and iPhone WebKit emulation: 23 listings, 44 affected films played muted in each browser, city and category seats, and 40 icons. The iPhone entry audit passed all 16 checks.
+- Full `tools/live-verify.mjs` passed. The thread archive check found 913 of 965 Instagram sources on the site; the other 52 are 49 previously documented exceptions and three explicit withdrawals or replacements. All 867 Watch files returned valid MP4 byte ranges.
+- Checked 128 exact live asset hashes. Hosted BSTY Goods managed resale and shared sign-in rendered in both browsers; both private resale endpoints returned 401 when signed out.
+- Kept all 2,141 existing seats and added 73. All new business domains are represented; 19 older domain flags remain, including redirects and known exceptions.
+- See the [verification record](../research/roster/b115-live-verification.json) for the revision, audit results and file hashes.
