@@ -1,0 +1,90 @@
+{
+  "cutoff": "2026-11-13T13:01:20.561133-08:00",
+  "listings": [],
+  "placements": {
+    "berkeley-goods2-15": "b_headsandtailsbarbecue",
+    "beasty-goods2-65": "b_headsandtailsbarbecue",
+    "beasty-bbq-18": "b_headsandtailsbarbecue"
+  },
+  "posts": [],
+  "updatedIcons": [],
+  "updatedBrands": [
+    "b_headsandtailsbarbecue"
+  ],
+  "categoryOnly": [],
+  "updates": [
+    {
+      "brand": "b_headsandtailsbarbecue",
+      "name": "Heads & Tails Barbecue",
+      "hours": "Mon–Wed 11:30am–9pm, Thu 11:30am–10pm, Fri 11:30am–12am, Sat 11am–12am, Sun 11am–9pm",
+      "address": "2121 San Pablo Ave, Berkeley, CA 94702",
+      "phone": "(510) 380-7497",
+      "site": "https://headsandtailsbarbecue.com/",
+      "menu": "https://headsandtailsbarbecue.com/menu",
+      "orderUrl": "https://headsandtailsbarbecue.com/order/heads-tails-barbecue-2121-san-pablo-avenue",
+      "existingArtwork": "/icons/heads-and-tails-barbecue.webp",
+      "retainedFilms": [
+        {
+          "code": "DPC1u5EgXUe",
+          "by": "thesnacksensei",
+          "credit": "Filmed by @thesnacksensei"
+        },
+        {
+          "code": "DUBxC2xEnTG",
+          "by": "festusfeasts",
+          "credit": "Filmed by Festus Ezeli"
+        }
+      ]
+    }
+  ],
+  "artworkDispositions": [
+    {
+      "source": "IMG_0452.PNG",
+      "path": "/icons/heads-and-tails-barbecue.webp",
+      "disposition": "Matches the intact brick-red shield already used by the Berkeley listing. Retained the clear original 512-pixel icon."
+    },
+    {
+      "source": "IMG_0453.PNG",
+      "disposition": "Pinned post from the business profile announces the weekend 11 a.m. opening and weekday 11:30 a.m. opening."
+    },
+    {
+      "source": "IMG_0454.png",
+      "disposition": "Confirms the Berkeley address and phone against the existing listing."
+    }
+  ],
+  "sourceMessages": [
+    {
+      "rowId": 252260,
+      "at": "2026-11-13T13:01:18.895978-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0452.PNG",
+        "IMG_0453.PNG",
+        "IMG_0454.png"
+      ]
+    },
+    {
+      "rowId": 252261,
+      "at": "2026-11-13T13:01:20.453056-08:00",
+      "text": "https://www.headsandtailsbarbecue.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252262,
+      "at": "2026-11-13T13:01:20.561133-08:00",
+      "text": "Berkeley  • Eats \nBEASTY • BBQ",
+      "attachments": []
+    }
+  ],
+  "priorUnresolved": [
+    {
+      "batch": 117,
+      "rows": [
+        252242,
+        252243,
+        252244
+      ],
+      "reason": "No identifiable source video or creator for the separate Wing Bros Heavy Hitter clip."
+    }
+  ]
+}

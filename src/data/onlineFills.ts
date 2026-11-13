@@ -2627,8 +2627,8 @@ export const ONLINE_FILLS: Record<string, Partial<LocalSeed>> = {
     siteNote: "Hours are from the Hours & Location page on their own website."
   },
   'heads-and-tails-barbecue': {
-    hours: "Mon–Wed 11:30am–9pm, Thu 11:30am–10pm, Fri 11:30am–12am, Sat 10am–12am, Sun 10am–9pm",
-    siteNote: "Hours come from the All hours list on Heads & Tails' own website; the kitchen serves until 9pm daily."
+    hours: "Mon–Wed 11:30am–9pm, Thu 11:30am–10pm, Fri 11:30am–12am, Sat 11am–12am, Sun 11am–9pm",
+    siteNote: "The kitchen serves until 9pm daily. The bar stays open until midnight on Fridays and Saturdays."
   },
   'hey-yogurt': {
     hours: "Mon–Thu 12–9pm, Fri 12–10pm, Sat 11am–10pm, Sun 11am–9pm",

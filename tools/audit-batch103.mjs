@@ -203,6 +203,25 @@ export async function auditBatch(number) {
       await page.getByRole('button', { name: 'Go to the Berkeley Goods page', exact: true }).click()
       await page.locator('.brand-body').waitFor({ state: 'hidden' })
       await icon('Scoop N Chill').waitFor()
+    } else if (number === 118) {
+      const update = batch.updates[0], b = brandById(update.brand)
+      assert.equal(b.hours, update.hours)
+      assert.equal(b.orderUrl, update.orderUrl)
+      assert.deepEqual(new Set(batch.sourceMessages.flatMap(m => m.attachments)), new Set(batch.artworkDispositions.map(a => a.source)))
+      for (const film of update.retainedFilms) {
+        assert(REELS.some(r => r.href?.includes(film.code) && r.credit === film.credit && r.src), film.code)
+      }
+      const displayedHours = page.locator('.brand-hours')
+      assert.equal((await displayedHours.innerText()).trim(), update.hours)
+      await page.locator('.brand-foot a[href="' + update.site + '"]').waitFor()
+      await page.getByRole('button', { name: 'Go to the Berkeley More goods page', exact: true }).click()
+      await page.locator('.brand-body').waitFor({ state: 'hidden' })
+      await icon(update.name).waitFor()
+      await category('BBQ', update.name)
+      await icon(update.name).click()
+      await page.getByRole('heading', { name: update.name, exact: true }).waitFor()
+      await page.setViewportSize({ width: 320, height: 740 })
+      assert.equal((await displayedHours.innerText()).trim(), update.hours)
     } else if (number === 117) {
       await category('Wings', 'Wing Bros')
       await icon("Tony's Style").waitFor()
