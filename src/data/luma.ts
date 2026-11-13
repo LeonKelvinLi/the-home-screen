@@ -986,7 +986,7 @@ export const ICON_LUMA: Record<string, number> = {
   'stefanos-solar-pizza': 0.0988,
   'stella-pastry': 0.1324,
   'steves-mobile-security': 0.4837,
-  'stk-steakhouse-v115': 0.1213,
+  'stk-steakhouse-v115': 0.1457,
   'studio-floras': 0.9539,
   'subs-inc': 0.1086,
   'sugar-plum-coffee-shop': 0.7309,
