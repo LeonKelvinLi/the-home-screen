@@ -83,6 +83,8 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
      type line is about pets fills it: groomers, walkers, daycare, pet gear.
      Hot dogs and the like are not pets, and breeding stays on Pit's. */
   { kind: 'pets', heading: 'Pets', about: 'Pet food, treats, grooming and care', wall: wall('pets'), test: /\bpets?\b|\bdogs?\b|\bdoggy\b|\bcats?\b|\bpupp(y|ies)\b|\bkennels?\b|\bk9\b|\bcanine\b|\bfeline\b/i, not: /pit ?bull|hot ?dogs?|corn ?dogs?|burgers? ?& ?dogs|breed|reproduction/i },
+  { kind: 'adoptfoster', heading: 'Adopt/Foster', about: 'Pet adoption and foster programs', wall: wall('pets') },
+  { kind: 'italian', heading: 'Italian', about: 'Italian restaurants, trattorias and pasta', wall: wall('diner'), test: /\bitalian\b|trattoria|\bpasta\b/i, not: /ice cream|italian ice|gelato|cannoli|dessert|bakery|sandwich|deli/i },
   { kind: 'models', heading: 'Models', about: 'Models and modeling agencies', wall: wall('models'), test: /\bmodel(s|ing)?\b/i },
   { kind: 'meats', heading: 'Meats', about: 'Independent ranchers and butchers', wall: wall('meats'), test: /rancher|\branch\b|butcher/i },
   { kind: 'gyms', heading: 'Gyms', about: 'Gyms, studios and climbing walls', wall: wall('gyms'), test: /\bgym\b|fitness|crossfit|boxing|climbing|yoga|barre|martial arts|pilates/i },

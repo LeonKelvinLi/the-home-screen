@@ -1080,3 +1080,49 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `b114-dfko0cxvonf.mp4` | [Original post](https://www.instagram.com/reel/Dfko0CXvonf/) | Filmed by @meggyeatz and reposted by @dragonbeaux. Dragon Beaux in San Francisco’s Richmond District. |
 | `review-Dd5UQRdqQ4x.mp4` | [Original post](https://www.instagram.com/reel/Dd5UQRdqQ4x/) | Review by @bonjocbites at The Sandwich Monkey, Foster City. |
 | `b114-dfdmpyhhktk.mp4` | [Original post](https://www.instagram.com/reel/DfdMpyHhKtK/) | Original bakery skit posted by @doodlecakesbakery in Alameda. |
+
+<!-- Batch 115 — Glenn’s November 12 intake. -->
+| `review-Dfiuysdx9_t.mp4` | [Original post](https://www.instagram.com/reel/Dfiuysdx9_t/) | Review by @eatwcass at Butter & Crumble, San Francisco. |
+| `review-DdPEF9wCQzw.mp4` | [Original post](https://www.instagram.com/reel/DdPEF9wCQzw/) | Review by @festusfeasts at Butter & Crumble, San Francisco. |
+| `review-DfNcVPxSWvW.mp4` | [Original post](https://www.instagram.com/reel/DfNcVPxSWvW/) | Review by @ilisaeatssf at Butter & Crumble, San Francisco. |
+| `review-DGRMgtxTwOu.mp4` | [Original post](https://www.instagram.com/reel/DGRMgtxTwOu/) | Review by @sherryeatworld at Butter & Crumble, San Francisco. |
+| `review-DR-f_sWk2xr.mp4` | [Original post](https://www.instagram.com/reel/DR-f_sWk2xr/) | Review by @tundemodupee at Butter & Crumble, San Francisco. |
+| `review-DG9CZZxAQcE.mp4` | [Original post](https://www.instagram.com/reel/DG9CZZxAQcE/) | Review by @heatherr.eats at Butter & Crumble, San Francisco. |
+| `review-Deff-jlPRFz.mp4` | [Original post](https://www.instagram.com/reel/Deff-jlPRFz/) | Review by @janeezhao at Butter & Crumble, San Francisco. |
+| `review-DflX5p9RBFH.mp4` | [Original post](https://www.instagram.com/reel/DflX5p9RBFH/) | Review by @bvddiebri at Um.Ma, San Francisco. |
+| `review-DflGEj6OXnl.mp4` | [Original post](https://www.instagram.com/reel/DflGEj6OXnl/) | Review by @jeaninthebay at Um.Ma, San Francisco. |
+| `review-DegCdkKCPSm.mp4` | [Original post](https://www.instagram.com/reel/DegCdkKCPSm/) | Review by @jasminibites at Um.Ma, San Francisco. |
+| `review-Dd1MuraSlGp.mp4` | [Original post](https://www.instagram.com/reel/Dd1MuraSlGp/) | Review by @sfbaydiaries at Um.Ma, San Francisco. |
+| `review-DdfClsShLy4.mp4` | [Original post](https://www.instagram.com/reel/DdfClsShLy4/) | Original restaurant skit by @mae.eats.bay, filmed at Um.Ma in San Francisco. |
+| `review-Dc2wl4tNfOX.mp4` | [Original post](https://www.instagram.com/reel/Dc2wl4tNfOX/) | Review by @simply_dorothy_ at Um.Ma, San Francisco. |
+| `review-Dfn1kQZhPaP.mp4` | [Original post](https://www.instagram.com/reel/Dfn1kQZhPaP/) | Review by @boba._.addict at Wooga Korean BBQ, Cupertino. |
+| `b115-dfp1boeygcc.mp4` | [Original post](https://www.instagram.com/reel/DfP1BoeygCC/) | Posted by @meowvelous.bakes at Meowvelous Bakes, San Francisco. |
+| `review-DcISNRzMYBf.mp4` | [Original post](https://www.instagram.com/reel/DcISNRzMYBf/) | Review by @biteswithnatalia at Bonbon Matcha Cupertino, Cupertino. |
+| `review-DcAs4jkonVO.mp4` | [Original post](https://www.instagram.com/reel/DcAs4jkonVO/) | Review by @baygirlseat at Bonbon Matcha Cupertino, Cupertino. |
+| `review-DbjE75GBFXr.mp4` | [Original post](https://www.instagram.com/reel/DbjE75GBFXr/) | Review by @vrutichokshi at Bonbon Matcha Cupertino, Cupertino. |
+| `review-DZbKwczzVYd.mp4` | [Original post](https://www.instagram.com/reel/DZbKwczzVYd/) | Review by @kimoni.eatss at Bonbon Matcha Cupertino, Cupertino. |
+| `review-DfQTr6DSVQs.mp4` | [Original post](https://www.instagram.com/reel/DfQTr6DSVQs/) | Review by @chubbiebunnies at Bonbon Matcha Palo Alto, Palo Alto. |
+| `review-DfhmshpJdsL.mp4` | [Original post](https://www.instagram.com/reel/DfhmshpJdsL/) | Review by @hungere.for.diy at Bishop Ranch in San Ramon. The featured November flavor is seasonal. |
+| `review-Dfn9Qw3B8iB.mp4` | [Original post](https://www.instagram.com/reel/Dfn9Qw3B8iB/) | Review by @kevinberkeleyfoodreviews at Nono’s Doughnuts & Cafe, Berkeley. |
+| `review-DbMg9PCO3dt.mp4` | [Original post](https://www.instagram.com/reel/DbMg9PCO3dt/) | Review by @gillynova at Beep’s Burgers, San Francisco. |
+| `review-Dfn3nf-RKnc.mp4` | [Original post](https://www.instagram.com/reel/Dfn3nf-RKnc/) | Review by @grubwitmike at Beep’s Burgers, San Francisco. |
+| `review-Cs16qMPvcyU.mp4` | [Original post](https://www.instagram.com/reel/Cs16qMPvcyU/) | Review by @bayareapineapples at Beep’s Burgers, San Francisco. |
+| `review-Dfp0agGhT6V.mp4` | [Original post](https://www.instagram.com/reel/Dfp0agGhT6V/) | Review by @aymibabyeats at Frymazing, Fairfield. |
+| `review-DeiHhp3uzRo.mp4` | [Original post](https://www.instagram.com/reel/DeiHhp3uzRo/) | Filmed by @carlaylayyy; posted by @carlacharisse_. The previous Frymazing feature is now in Foodie reviews. |
+| `review-DdwajnIT-VI.mp4` | [Original post](https://www.instagram.com/reel/DdwajnIT-VI/) | Review by @feedchris_ at Frymazing, Fairfield. |
+| `b115-dddbcq1ct-b.mp4` | [Original post](https://www.instagram.com/reel/DddBcq1CT-B/) | Review by @crenshawvisuals at Frymazing, Fairfield. |
+| `review-Db4OcTLviSg.mp4` | [Original post](https://www.instagram.com/reel/Db4OcTLviSg/) | Review by @withlovelysss at Frymazing, Fairfield. |
+| `review-DbeQxR0ydN1.mp4` | [Original post](https://www.instagram.com/reel/DbeQxR0ydN1/) | Review by @cooldad_coolermom at Frymazing, Fairfield. |
+| `review-DbMoEvkPAX3.mp4` | [Original post](https://www.instagram.com/reel/DbMoEvkPAX3/) | Sponsored Frymazing review by @nomz_saiyan, disclosed as an ad on the original post. |
+| `review-Dfp65W-hS5-.mp4` | [Original post](https://www.instagram.com/reel/Dfp65W-hS5-/) | Review by @kelsy.annn at STK Steakhouse San Francisco, San Francisco. |
+| `review-Dfls5FwTf0k.mp4` | [Original post](https://www.instagram.com/reel/Dfls5FwTf0k/) | Review by @ugcwith_diana at Bella Trattoria, San Francisco. |
+| `review-DfVcTVTynVo.mp4` | [Original post](https://www.instagram.com/reel/DfVcTVTynVo/) | Review by @goyuliiago at Bella Trattoria, San Francisco. |
+| `b115-dcwe2agmyyo.mp4` | [Original post](https://www.instagram.com/reel/DcwE2aGMYyo/) | Pasta film posted by @bella_trattoria at Bella Trattoria in San Francisco. |
+| `b115-c2vpjcxp3qx.mp4` | [Original post](https://www.instagram.com/reel/C2VpjcXP3Qx/) | Galbijjim film posted by @baypocha in San Francisco, January 2024. Check the restaurant for current availability. |
+| `review-DQ8FBpvCes-.mp4` | [Original post](https://www.instagram.com/reel/DQ8FBpvCes-/) | Review by @justmostie at Ben’s Burger Bay Point, Bay Point. |
+| `review-DV4GoFkDSkB.mp4` | [Original post](https://www.instagram.com/reel/DV4GoFkDSkB/) | Review by @brojackson at Ben’s Burger Bay Point, Bay Point. |
+| `review-DfTyuampYIe.mp4` | [Original post](https://www.instagram.com/reel/DfTyuampYIe/) | Review by @aymibabyeats at M Dumpling, San Ramon. |
+| `review-DfqPKmOxBZy.mp4` | [Original post](https://www.instagram.com/reel/DfqPKmOxBZy/) | Review by @hungrydanz at Mikiya San Mateo, with narration credited to ElevenLabs in the original. |
+| `b115-dfn5h9yg9g4.mp4` | [Original post](https://www.instagram.com/p/Dfn5H9Yg9G4/) | Original restaurant video posted by @paletteteahouse at Ghirardelli Square. |
+| `review-C0x_cWireRk.mp4` | [Original post](https://www.instagram.com/reel/C0x_cWireRk/) | Review by @sherryeatworld at Palette Tea House, San Francisco. |
+| `review-DfPDJmEJoBX.mp4` | [Original post](https://www.instagram.com/reel/DfPDJmEJoBX/) | Review by @aymibabyeats at North Beach Pizza, Berkeley. |

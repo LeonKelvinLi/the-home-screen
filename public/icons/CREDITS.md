@@ -747,3 +747,45 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `dragon-beaux-v114.webp` | IMG_0120.png | Complete supplied logo with screenshot borders removed, centered on a square with margin for the phone squircle. |
 | `sandwich-monkey-v114.webp` | IMG_0124.png | Complete supplied logo with screenshot borders removed, centered on a square with margin for the phone squircle. |
 | `hella-good-burger-v114.webp` | https://images.squarespace-cdn.com/content/v1/613bd3f9ff19f11abaac35af/ef90fce1-bc5c-4cc0-a855-e1d85404c0f8/Hella+Good+Logo+2022+copy.png | Higher-resolution matching owner mark from hellagoodsj.com, fitted on the supplied dark background. IMG_0083.png was the request/reference. |
+
+<!-- Batch 115 — original marks and profile artwork. -->
+| `palette-tea-house-v115.webp` | IMG_0390.png | Original supplied artwork; removed screenshot frame and fit the complete mark inside the squircle. |
+| `mr-dewies-v115.webp` | IMG_0218.png | Original supplied artwork; removed screenshot frame and fit the complete mark inside the squircle. |
+| `butter-and-crumble-v115.webp` | IMG_0150.PNG | Original supplied artwork; removed screenshot frame and fit the complete mark inside the squircle. |
+| `umma-sf-v115.webp` | IMG_0167.PNG | Original supplied artwork; removed screenshot frame and fit the complete mark inside the squircle. |
+| `meowvelous-bakes-v115.webp` | IMG_0196.png | Original supplied artwork; removed screenshot frame and fit the complete mark inside the squircle. |
+| `bonbon-matcha-v115.webp` | IMG_0232.png | Original supplied artwork; removed screenshot frame and fit the complete mark inside the squircle. |
+| `salt-and-straw-v115.webp` | IMG_0248.png | Original supplied artwork; removed screenshot frame and fit the complete mark inside the squircle. |
+| `bay-area-hot-tub-boat-v115.webp` | IMG_0258.png | Original supplied artwork; removed screenshot frame and fit the complete mark inside the squircle. |
+| `bella-trattoria-v115.webp` | IMG_0327.jpeg | Original supplied artwork; removed screenshot frame and fit the complete mark inside the squircle. |
+| `bay-pocha-v115.webp` | IMG_0366.png | Original supplied artwork; removed screenshot frame and fit the complete mark inside the squircle. |
+| `bens-burger-v115.webp` | IMG_0377.png | Original supplied artwork; removed screenshot frame and fit the complete mark inside the squircle. |
+| `sabrina-soto-v115.webp` | IMG_0214.jpeg | Original supplied artwork; removed screenshot frame and fit the complete mark inside the squircle. |
+| `beeps-burgers-v115.webp` | https://www.beepsburgers.com/ | Official brand artwork fitted to the tile. |
+| `miracle-mile-cafe-v115.webp` | https://miraclemilecafe.com/food-menu/ | Official brand artwork fitted to the tile. |
+| `stk-steakhouse-v115.webp` | https://stksteakhouse.com/en-us/location/san-francisco/ | Official brand artwork fitted to the tile. |
+| `wrap-n-slurp-v115.webp` | https://www.wrapnslurp.com/ | Official brand artwork fitted to the tile. |
+| `foodie-eatwcass-v115.webp` | IMG_0151.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-sherryeatworld-v115.webp` | IMG_0153.PNG | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-tundemodupee-v115.webp` | IMG_0154.PNG | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-heatherreats-v115.webp` | IMG_0155.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-janeezhao-v115.webp` | IMG_0156.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-bvddiebri-v115.webp` | IMG_0169.PNG | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-jeaninthebay-v115.webp` | IMG_0170.PNG | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-jasminibites-v115.webp` | IMG_0171.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-sfbaydiaries-v115.webp` | IMG_0172.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-simplydorothy-v115.webp` | IMG_0173.PNG | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-oliviiacai-v115.webp` | IMG_0192.PNG | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-bobaaddict-v115.webp` | IMG_0193.PNG | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-baygirlseat-v115.webp` | IMG_0233.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-vrutichokshi-v115.webp` | IMG_0234.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-chubbiebunnies-v115.webp` | IMG_0235.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-gillynova-v115.webp` | IMG_0265.PNG | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-bayareapineapples-v115.webp` | IMG_0266.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-aymibabyeats-v115.webp` | IMG_0337.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-crenshawvisuals-v115.webp` | IMG_0339.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-cooldadcoolermom-v115.webp` | IMG_0340.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-nomzsaiyan-v115.webp` | IMG_0342.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-kelsyannn-v115.webp` | IMG_0355.PNG | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-ugcwithdiana-v115.webp` | IMG_0359.png | Supplied creator profile artwork; removed account controls and background. |
+| `foodie-brojackson-v115.webp` | IMG_0382.png | Supplied creator profile artwork; removed account controls and background. |

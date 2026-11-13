@@ -15725,7 +15725,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       "email": "hi@frymazing.com",
       "hours": "Mon–Sat 10:30am–7pm; Sun closed",
       "contactOnly": "Korean fusion and wings, bulgogi rice bowls and loaded fries. Open their own menu for current prices and ordering.",
-      "panels": [
+      "panels": [{"head": "Wrap & Slurp at Frymazing", "body": ["The DIY Korean ramen and gimbap counter shares this address."], "links": [{"label": "Wrap & Slurp on BEASTY", "href": "https://beastypages.com/?b=b_wrapnslurp"}]},
           {
               "head": "Menu & ordering",
               "links": [
@@ -15736,14 +15736,7 @@ export const LOCAL_SEED: LocalSeed[] = [
               ]
           }
       ],
-      "clip": {
-          "src": "/clips/frymazing.mp4",
-          "poster": "/clips/frymazing-poster.webp",
-          "href": "https://www.instagram.com/reel/DeiHhp3uzRo/",
-          "credit": "Filmed by @carlaylayyy",
-          "platform": "Instagram",
-          "by": "carlaylayyy"
-      }
+      "clip": {"src": "/clips/b115-dddbcq1ct-b.mp4", "poster": "/clips/b115-dddbcq1ct-b-poster.webp", "href": "https://www.instagram.com/reel/DddBcq1CT-B/", "credit": "Review by @crenshawvisuals at Frymazing, Fairfield.", "platform": "Instagram", "by": "crenshawvisuals"}
   },
   {
       "slug": "d-monaghans",
@@ -68717,7 +68710,7 @@ export const LOCAL_SEED: LocalSeed[] = [
         ]
       }
     ],
-    "icon": "mr-dewies",
+    "icon": "mr-dewies-v115",
     "clip": {
       "href": "https://www.instagram.com/reel/De_J0MKC1gH/",
       "credit": "Original by @mrdewies.",
@@ -90988,6 +90981,2166 @@ export const LOCAL_SEED: LocalSeed[] = [
     "poster": "/clips/b114-dfiyi4ou_sb-poster.webp",
     "href": "https://www.instagram.com/reel/DfiYI4Ou_SB/",
     "credit": "Posted by @gregorysgourmetdesserts. Launch coverage of the San Ramon bakery, 2410 San Ramon Valley Boulevard, Suite 140.",
+    "platform": "Instagram"
+  }
+},
+
+  // Batch 115 — November 12 locations and services.
+{
+  "slug": "butter-and-crumble",
+  "name": "Butter & Crumble",
+  "label": "Butter & Crumble",
+  "cuisine": "Croissants, pastries and cake bakery",
+  "tagline": "Seasonal croissants and other pastries. The bakery says cake orders are on hold while it works on a separate cake shop.",
+  "icon": "butter-and-crumble-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Bakery",
+  "items": [],
+  "site": "https://www.butterandcrumble.com/",
+  "contactOnly": "Seasonal croissants and other pastries. The bakery says cake orders are on hold while it works on a separate cake shop.",
+  "address": "271 Francisco St, San Francisco, CA 94133",
+  "hours": "Thu–Sun 9am until sold out",
+  "panels": [
+    {
+      "head": "Pastries & cake updates",
+      "body": [
+        "Check the bakery for the current pastry menu and when cake orders return."
+      ],
+      "links": [
+        {
+          "label": "Butter & Crumble menu and updates",
+          "href": "https://www.butterandcrumble.com/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "miracle-mile-cafe",
+  "name": "Miracle Mile Cafe",
+  "label": "Miracle Mile Cafe",
+  "cuisine": "Breakfast, brunch and Peruvian comfort food",
+  "tagline": "San Rafael breakfast and lunch cafe with American and Peruvian dishes.",
+  "icon": "miracle-mile-cafe-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Breakfast & brunch",
+  "items": [],
+  "site": "https://miraclemilecafe.com/food-menu/",
+  "address": "2130 4th St, San Rafael, CA 94901",
+  "phone": "(415) 454-7700",
+  "email": "miracleorderss@gmail.com",
+  "sections": [
+    {
+      "name": "Egg Breakfast",
+      "items": [
+        [
+          "Two Eggs Any Style",
+          "",
+          1495
+        ],
+        [
+          "Two Eggs & Louisiana or Chicken Apple Sausage",
+          "",
+          1895
+        ],
+        [
+          "Two Eggs & Burger Patty",
+          "",
+          1995
+        ],
+        [
+          "Two Eggs & Bacon, Ham or Sausage",
+          "",
+          1795
+        ],
+        [
+          "Two Eggs & Homemade Veggie Patty",
+          "",
+          1795
+        ],
+        [
+          "Two Eggs & N.Y. Steak",
+          "",
+          2295
+        ]
+      ]
+    },
+    {
+      "name": "Create Your Own Scramble or Omelet",
+      "items": [
+        [
+          "Create Your Own Scramble",
+          "",
+          2095
+        ],
+        [
+          "Create Your Own Omelet",
+          "",
+          2095
+        ]
+      ]
+    },
+    {
+      "name": "On the Lighter Side",
+      "items": [
+        [
+          "Marin Avocado Toast",
+          "",
+          1995
+        ],
+        [
+          "Bagel & Smoked Wild Salmon",
+          "",
+          2095
+        ],
+        [
+          "Organic Steel Cut Oatmeal",
+          "",
+          1095
+        ],
+        [
+          "Banana Split Parfait",
+          "",
+          1295
+        ]
+      ]
+    },
+    {
+      "name": "Sweet of the Griddle",
+      "items": [
+        [
+          "Belgian Waffle",
+          "",
+          1395
+        ],
+        [
+          "Chocolate Chip Waffle",
+          "",
+          1295
+        ]
+      ]
+    },
+    {
+      "name": "From the Chef",
+      "items": [
+        [
+          "Huevos Rancheros",
+          "",
+          1995
+        ],
+        [
+          "Peruvian Pulled Pork Breakfast Plate",
+          "",
+          1895
+        ],
+        [
+          "San Rafael Chilaquiles",
+          "",
+          2095
+        ],
+        [
+          "Homemade Corned Beef Hash",
+          "",
+          2195
+        ],
+        [
+          "Salmon Hash",
+          "",
+          2095
+        ],
+        [
+          "Frisco Burrito",
+          "",
+          1895
+        ],
+        [
+          "Breakfast Burrito",
+          "",
+          1895
+        ],
+        [
+          "Biscuits & Gravy",
+          "",
+          1895
+        ]
+      ]
+    },
+    {
+      "name": "Benedicts",
+      "items": [
+        [
+          "Classic Benedict",
+          "",
+          1895
+        ],
+        [
+          "Market Benedict",
+          "",
+          2095
+        ],
+        [
+          "Blackstone",
+          "",
+          1895
+        ],
+        [
+          "Smoked Wild Salmon Benedict",
+          "",
+          2095
+        ],
+        [
+          "Corned Beef Benedict",
+          "",
+          2295
+        ]
+      ]
+    },
+    {
+      "name": "Salads & Soups",
+      "items": [
+        [
+          "Chinese Chicken Salad",
+          "",
+          2095
+        ],
+        [
+          "Taco Salad",
+          "",
+          1995
+        ],
+        [
+          "Chicken Caesar Salad",
+          "",
+          1995
+        ],
+        [
+          "Popeye's Spinach Salad",
+          "",
+          1795
+        ],
+        [
+          "House Salad",
+          "",
+          1295
+        ],
+        [
+          "Lunch Combo",
+          "",
+          1595
+        ],
+        [
+          "Chicken Cobb Salad",
+          "",
+          2095
+        ],
+        [
+          "Chicken Beet Salad",
+          "",
+          1895
+        ],
+        [
+          "Salmon Avocado Salad",
+          "",
+          1995
+        ],
+        [
+          "Tuna Salad",
+          "",
+          1995
+        ],
+        [
+          "House Soup",
+          "",
+          795
+        ]
+      ]
+    },
+    {
+      "name": "House Specials",
+      "items": [
+        [
+          "Lomo Saltado",
+          "",
+          2495
+        ],
+        [
+          "Veggie Saltado",
+          "",
+          1995
+        ],
+        [
+          "Peru Chicken Sandwich",
+          "",
+          2095
+        ],
+        [
+          "Tito's Chicken Tacos",
+          "",
+          1795
+        ],
+        [
+          "Chicken Saltado",
+          "",
+          2095
+        ],
+        [
+          "Peru Steak Sandwich",
+          "",
+          2495
+        ],
+        [
+          "MMC Quesadilla",
+          "",
+          1795
+        ]
+      ]
+    },
+    {
+      "name": "Kids Corner",
+      "items": [
+        [
+          "Kid's Local Plate",
+          "",
+          1395
+        ],
+        [
+          "Grilled Cheese & Fries",
+          "",
+          1295
+        ],
+        [
+          "Cheese Burger & Fries",
+          "",
+          1395
+        ],
+        [
+          "Chicken Nuggets & Fries",
+          "",
+          1295
+        ]
+      ]
+    },
+    {
+      "name": "Burgers & Sandwiches",
+      "items": [
+        [
+          "The Burger Obsession",
+          "",
+          2195
+        ],
+        [
+          "Cheese Burger",
+          "",
+          1795
+        ],
+        [
+          "Vegan Burger",
+          "",
+          1695
+        ],
+        [
+          "The Club Sandwich",
+          "",
+          1895
+        ],
+        [
+          "Veggie Melt",
+          "",
+          1795
+        ],
+        [
+          "Wild West Sandwich",
+          "",
+          1795
+        ],
+        [
+          "Patty Melt",
+          "",
+          1795
+        ],
+        [
+          "Tuna Salad Sandwich",
+          "",
+          1795
+        ],
+        [
+          "Tuna Melt",
+          "",
+          1795
+        ],
+        [
+          "Owl Burger",
+          "",
+          1995
+        ],
+        [
+          "Peruvian Turkey Burger",
+          "",
+          1795
+        ],
+        [
+          "Deluxe Chicken Breast Sandwich",
+          "",
+          1895
+        ],
+        [
+          "B.L.T.",
+          "",
+          1795
+        ],
+        [
+          "Salmon Sandwich",
+          "",
+          1995
+        ],
+        [
+          "Pastrami Sandwich",
+          "",
+          1795
+        ],
+        [
+          "Reuben Sandwich",
+          "",
+          1795
+        ],
+        [
+          "The Gobbler",
+          "",
+          1795
+        ],
+        [
+          "Tuna Melt",
+          "",
+          1795
+        ]
+      ]
+    },
+    {
+      "name": "Signature Omelets & Scrams",
+      "items": [
+        [
+          "Marin Scramble (No Egg)",
+          "",
+          1995
+        ],
+        [
+          "South Scram",
+          "",
+          1995
+        ],
+        [
+          "Bacon Omelet",
+          "",
+          1995
+        ],
+        [
+          "Primavera Scram",
+          "",
+          1695
+        ],
+        [
+          "Catch Omelet",
+          "",
+          1995
+        ],
+        [
+          "Denver Omelet",
+          "",
+          1995
+        ],
+        [
+          "Tortilla Scram",
+          "",
+          1995
+        ],
+        [
+          "Joe's Special",
+          "",
+          1995
+        ]
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        [
+          "One Egg",
+          "",
+          300
+        ],
+        [
+          "Two Eggs",
+          "",
+          500
+        ],
+        [
+          "Egg Whites",
+          "",
+          600
+        ],
+        [
+          "Toast & Jam",
+          "",
+          500
+        ],
+        [
+          "House Biscuit",
+          "",
+          495
+        ],
+        [
+          "Gluten Free Biscuit",
+          "",
+          595
+        ],
+        [
+          "Bagel with Cream Cheese",
+          "",
+          595
+        ],
+        [
+          "Home Fries",
+          "",
+          595
+        ],
+        [
+          "French Fries",
+          "",
+          595
+        ],
+        [
+          "Garlic Fries",
+          "",
+          695
+        ],
+        [
+          "Sweet Potato Fries",
+          "",
+          695
+        ],
+        [
+          "Sauteed Veggies",
+          "",
+          695
+        ],
+        [
+          "Avocado",
+          "",
+          300
+        ],
+        [
+          "One Pancake",
+          "Of any kind",
+          695
+        ],
+        [
+          "House Sausage Gravy",
+          "",
+          795
+        ],
+        [
+          "Homemade Veggie Patty",
+          "",
+          695
+        ],
+        [
+          "Breakfast Meat",
+          "",
+          595
+        ],
+        [
+          "Sausage",
+          "",
+          695
+        ],
+        [
+          "Smoked Salmon",
+          "",
+          795
+        ],
+        [
+          "Grilled Salmon",
+          "",
+          995
+        ],
+        [
+          "Grilled Chicken",
+          "",
+          695
+        ],
+        [
+          "Burger Patty",
+          "",
+          995
+        ],
+        [
+          "NY Steak",
+          "",
+          1095
+        ],
+        [
+          "Filet Mignon",
+          "",
+          1295
+        ],
+        [
+          "Corned Beef Hash",
+          "",
+          995
+        ]
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        [
+          "Banana Split",
+          "",
+          1295
+        ],
+        [
+          "Homemade Pie",
+          "",
+          1095
+        ],
+        [
+          "Chocolate Cake",
+          "",
+          1095
+        ],
+        [
+          "Affogato",
+          "",
+          795
+        ]
+      ]
+    }
+  ],
+  "menuNote": "Prices from the cafe’s published food menu. Options and add-ons may cost extra.",
+  "panels": [
+    {
+      "head": "Official food menu",
+      "body": [
+        "Check the restaurant’s menu for substitutions, sides and add-ons."
+      ],
+      "links": [
+        {
+          "label": "Miracle Mile Cafe food menu",
+          "href": "https://miraclemilecafe.com/food-menu/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "umma-sf",
+  "name": "Um.Ma",
+  "label": "Um.Ma",
+  "cuisine": "Korean food and barbecue",
+  "tagline": "Korean cooking in the Inner Sunset, with grilled meats, wings, rice bowls and soups.",
+  "icon": "umma-sf-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Korean",
+  "items": [],
+  "site": "https://www.ummasf.com/",
+  "contactOnly": "Korean cooking in the Inner Sunset, with grilled meats, wings, rice bowls and soups.",
+  "address": "1220 9th Ave, San Francisco, CA 94122",
+  "phone": "(415) 943-6071",
+  "email": "info@ummasf.com",
+  "hours": "Mon, Wed–Thu 11am–2pm and 5–9pm; Tue 5–9pm; Fri–Sat 11am–10pm; Sun 11am–9pm",
+  "panels": [
+    {
+      "head": "Lunch & dinner menus",
+      "body": [
+        "The restaurant publishes separate menus for weekday lunch and dinner."
+      ],
+      "links": [
+        {
+          "label": "Weekday lunch",
+          "href": "https://www.ummasf.com/menus/weekday-lunch"
+        },
+        {
+          "label": "Dinner",
+          "href": "https://www.ummasf.com/menus/umma-dinner-menu-ordering"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "meowvelous-bakes",
+  "name": "Meowvelous Bakes",
+  "label": "Meowvelous Bakes",
+  "cuisine": "Custom cakes, macarons and baking workshops",
+  "tagline": "Custom cakes and macarons by inquiry. Ask the baker for availability, pickup details and a quote.",
+  "icon": "meowvelous-bakes-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Cakes",
+  "items": [],
+  "site": "https://meowvelousbakes.com/",
+  "contactOnly": "Custom cakes and macarons by inquiry. Ask the baker for availability, pickup details and a quote.",
+  "address": "682 Castro St, San Francisco, CA",
+  "email": "meowvelous.bakes@gmail.com",
+  "panels": [
+    {
+      "head": "Custom orders & workshops",
+      "body": [
+        "Use the bakery’s own site for custom orders and workshop details."
+      ],
+      "links": [
+        {
+          "label": "Meowvelous Bakes",
+          "href": "https://meowvelousbakes.com/"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b115-dfp1boeygcc.mp4",
+    "poster": "/clips/b115-dfp1boeygcc-poster.webp",
+    "href": "https://www.instagram.com/reel/DfP1BoeygCC/",
+    "credit": "Posted by @meowvelous.bakes at Meowvelous Bakes, San Francisco.",
+    "platform": "Instagram"
+  }
+},
+{
+  "slug": "sabrina-soto",
+  "name": "Sabrina Soto",
+  "label": "Sabrina Soto",
+  "cuisine": "Mobile massage therapist and model",
+  "tagline": "Mobile chair and table massage by appointment in the Bay Area. Ask Sabrina about travel and availability.",
+  "icon": "sabrina-soto-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Massage/Therapy",
+  "items": [],
+  "site": "https://www.instagram.com/brazilgirlfromca/",
+  "contactOnly": "Mobile chair and table massage by appointment in the Bay Area. Ask Sabrina about travel and availability.",
+  "phone": "(408) 431-3150",
+  "email": "BookYourMassage888@yahoo.com",
+  "panels": [
+    {
+      "head": "Massage & modeling inquiries",
+      "body": [
+        "Sabrina lists mobile massage in English, Portuguese and Spanish. Her public profile is also the contact point for modeling inquiries."
+      ],
+      "links": [
+        {
+          "label": "Sabrina’s public profile",
+          "href": "https://www.instagram.com/brazilgirlfromca/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "bonbon-matcha-cupertino",
+  "name": "Bonbon Matcha Cupertino",
+  "label": "Bonbon Cupertino",
+  "cuisine": "Matcha and tea cafe",
+  "tagline": "Matcha drinks and seasonal specials. Check the shop’s profile for current hours, drinks and availability.",
+  "icon": "bonbon-matcha-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Coffee/teas",
+  "items": [],
+  "site": "https://www.instagram.com/bonbon_matcha/",
+  "contactOnly": "Matcha drinks and seasonal specials. Check the shop’s profile for current hours, drinks and availability.",
+  "address": "19900 Vallco Pkwy Ste 170, Cupertino, CA 95014",
+  "email": "bonbonmatcha@gmail.com",
+  "panels": [
+    {
+      "head": "Two Bay Area cafes",
+      "body": [
+        "This is the Cupertino cafe. The other branch has its own BEASTY page."
+      ],
+      "links": [
+        {
+          "label": "Bonbon Matcha profile",
+          "href": "https://www.instagram.com/bonbon_matcha/"
+        },
+        {
+          "label": "Other Bonbon location",
+          "href": "https://beastypages.com/?b=b_bonbonmatchapaloalto"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "bonbon-matcha-palo-alto",
+  "name": "Bonbon Matcha Palo Alto",
+  "label": "Bonbon Palo Alto",
+  "cuisine": "Matcha and tea cafe",
+  "tagline": "Matcha drinks and seasonal specials. Check the shop’s profile for current hours, drinks and availability.",
+  "icon": "bonbon-matcha-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Coffee/teas",
+  "items": [],
+  "site": "https://www.instagram.com/bonbon_matcha/",
+  "contactOnly": "Matcha drinks and seasonal specials. Check the shop’s profile for current hours, drinks and availability.",
+  "address": "439 Waverley St, Palo Alto, CA 94301",
+  "email": "bonbonmatcha@gmail.com",
+  "panels": [
+    {
+      "head": "Two Bay Area cafes",
+      "body": [
+        "This is the Palo Alto cafe. The other branch has its own BEASTY page."
+      ],
+      "links": [
+        {
+          "label": "Bonbon Matcha profile",
+          "href": "https://www.instagram.com/bonbon_matcha/"
+        },
+        {
+          "label": "Other Bonbon location",
+          "href": "https://beastypages.com/?b=b_bonbonmatchacupertino"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "salt-and-straw-bishop-ranch",
+  "name": "Salt & Straw Bishop Ranch",
+  "label": "Salt & Straw Bishop Ranch",
+  "cuisine": "Ice cream scoop shop",
+  "tagline": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "icon": "salt-and-straw-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Ice Cream",
+  "items": [],
+  "site": "https://saltandstraw.com/pages/locations",
+  "contactOnly": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "address": "6000 Bollinger Canyon Rd, San Ramon, CA 94583",
+  "phone": "(925) 361-3195",
+  "hours": "Daily 11am–11pm",
+  "panels": [
+    {
+      "head": "Local flavors & shop hours",
+      "body": [
+        "Use the Northern California section of the official shop directory for the in-store menu and local ordering."
+      ],
+      "links": [
+        {
+          "label": "Northern California scoop shops",
+          "href": "https://saltandstraw.com/pages/locations"
+        }
+      ]
+    },
+    {
+      "head": "Bay Area branches",
+      "body": [
+        "Choose another Salt & Straw shop on BEASTY."
+      ],
+      "links": [
+        {
+          "label": "Burlingame",
+          "href": "https://beastypages.com/?b=b_saltandstrawburlingame"
+        },
+        {
+          "label": "Fillmore",
+          "href": "https://beastypages.com/?b=b_saltandstrawfillmore"
+        },
+        {
+          "label": "Hayes Valley",
+          "href": "https://beastypages.com/?b=b_saltandstrawhayesvalley"
+        },
+        {
+          "label": "Santa Rosa",
+          "href": "https://beastypages.com/?b=b_saltandstrawsantarosa"
+        },
+        {
+          "label": "Valley Fair",
+          "href": "https://beastypages.com/?b=b_saltandstrawvalleyfair"
+        },
+        {
+          "label": "Palo Alto",
+          "href": "https://beastypages.com/?b=b_saltandstrawpaloalto"
+        },
+        {
+          "label": "Los Gatos",
+          "href": "https://beastypages.com/?b=b_saltandstrawlosgatos"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "salt-and-straw-burlingame",
+  "name": "Salt & Straw Burlingame",
+  "label": "Salt & Straw Burlingame",
+  "cuisine": "Ice cream scoop shop",
+  "tagline": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "icon": "salt-and-straw-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Ice Cream",
+  "items": [],
+  "site": "https://saltandstraw.com/pages/locations",
+  "contactOnly": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "address": "1309 Burlingame Blvd, Burlingame, CA 94010",
+  "phone": "(650) 437-2242",
+  "hours": "Daily 11am–11pm",
+  "panels": [
+    {
+      "head": "Local flavors & shop hours",
+      "body": [
+        "Use the Northern California section of the official shop directory for the in-store menu and local ordering."
+      ],
+      "links": [
+        {
+          "label": "Northern California scoop shops",
+          "href": "https://saltandstraw.com/pages/locations"
+        }
+      ]
+    },
+    {
+      "head": "Bay Area branches",
+      "body": [
+        "Choose another Salt & Straw shop on BEASTY."
+      ],
+      "links": [
+        {
+          "label": "Bishop Ranch",
+          "href": "https://beastypages.com/?b=b_saltandstrawbishopranch"
+        },
+        {
+          "label": "Fillmore",
+          "href": "https://beastypages.com/?b=b_saltandstrawfillmore"
+        },
+        {
+          "label": "Hayes Valley",
+          "href": "https://beastypages.com/?b=b_saltandstrawhayesvalley"
+        },
+        {
+          "label": "Santa Rosa",
+          "href": "https://beastypages.com/?b=b_saltandstrawsantarosa"
+        },
+        {
+          "label": "Valley Fair",
+          "href": "https://beastypages.com/?b=b_saltandstrawvalleyfair"
+        },
+        {
+          "label": "Palo Alto",
+          "href": "https://beastypages.com/?b=b_saltandstrawpaloalto"
+        },
+        {
+          "label": "Los Gatos",
+          "href": "https://beastypages.com/?b=b_saltandstrawlosgatos"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "salt-and-straw-fillmore",
+  "name": "Salt & Straw Fillmore",
+  "label": "Salt & Straw Fillmore",
+  "cuisine": "Ice cream scoop shop",
+  "tagline": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "icon": "salt-and-straw-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Ice Cream",
+  "items": [],
+  "site": "https://saltandstraw.com/pages/locations",
+  "contactOnly": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "address": "2201 Fillmore St, San Francisco, CA 94115",
+  "phone": "(415) 829-2803",
+  "hours": "Daily 11am–11pm",
+  "panels": [
+    {
+      "head": "Local flavors & shop hours",
+      "body": [
+        "Use the Northern California section of the official shop directory for the in-store menu and local ordering."
+      ],
+      "links": [
+        {
+          "label": "Northern California scoop shops",
+          "href": "https://saltandstraw.com/pages/locations"
+        }
+      ]
+    },
+    {
+      "head": "Bay Area branches",
+      "body": [
+        "Choose another Salt & Straw shop on BEASTY."
+      ],
+      "links": [
+        {
+          "label": "Bishop Ranch",
+          "href": "https://beastypages.com/?b=b_saltandstrawbishopranch"
+        },
+        {
+          "label": "Burlingame",
+          "href": "https://beastypages.com/?b=b_saltandstrawburlingame"
+        },
+        {
+          "label": "Hayes Valley",
+          "href": "https://beastypages.com/?b=b_saltandstrawhayesvalley"
+        },
+        {
+          "label": "Santa Rosa",
+          "href": "https://beastypages.com/?b=b_saltandstrawsantarosa"
+        },
+        {
+          "label": "Valley Fair",
+          "href": "https://beastypages.com/?b=b_saltandstrawvalleyfair"
+        },
+        {
+          "label": "Palo Alto",
+          "href": "https://beastypages.com/?b=b_saltandstrawpaloalto"
+        },
+        {
+          "label": "Los Gatos",
+          "href": "https://beastypages.com/?b=b_saltandstrawlosgatos"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "salt-and-straw-hayes-valley",
+  "name": "Salt & Straw Hayes Valley",
+  "label": "Salt & Straw Hayes Valley",
+  "cuisine": "Ice cream scoop shop",
+  "tagline": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "icon": "salt-and-straw-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Ice Cream",
+  "items": [],
+  "site": "https://saltandstraw.com/pages/locations",
+  "contactOnly": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "address": "586 Hayes St, San Francisco, CA 94102",
+  "phone": "(415) 549-7445",
+  "hours": "Daily 11am–11pm",
+  "panels": [
+    {
+      "head": "Local flavors & shop hours",
+      "body": [
+        "Use the Northern California section of the official shop directory for the in-store menu and local ordering."
+      ],
+      "links": [
+        {
+          "label": "Northern California scoop shops",
+          "href": "https://saltandstraw.com/pages/locations"
+        }
+      ]
+    },
+    {
+      "head": "Bay Area branches",
+      "body": [
+        "Choose another Salt & Straw shop on BEASTY."
+      ],
+      "links": [
+        {
+          "label": "Bishop Ranch",
+          "href": "https://beastypages.com/?b=b_saltandstrawbishopranch"
+        },
+        {
+          "label": "Burlingame",
+          "href": "https://beastypages.com/?b=b_saltandstrawburlingame"
+        },
+        {
+          "label": "Fillmore",
+          "href": "https://beastypages.com/?b=b_saltandstrawfillmore"
+        },
+        {
+          "label": "Santa Rosa",
+          "href": "https://beastypages.com/?b=b_saltandstrawsantarosa"
+        },
+        {
+          "label": "Valley Fair",
+          "href": "https://beastypages.com/?b=b_saltandstrawvalleyfair"
+        },
+        {
+          "label": "Palo Alto",
+          "href": "https://beastypages.com/?b=b_saltandstrawpaloalto"
+        },
+        {
+          "label": "Los Gatos",
+          "href": "https://beastypages.com/?b=b_saltandstrawlosgatos"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "salt-and-straw-santa-rosa",
+  "name": "Salt & Straw Santa Rosa",
+  "label": "Salt & Straw Santa Rosa",
+  "cuisine": "Ice cream scoop shop",
+  "tagline": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "icon": "salt-and-straw-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Ice Cream",
+  "items": [],
+  "site": "https://saltandstraw.com/pages/locations",
+  "contactOnly": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "address": "700 Village Ct, Santa Rosa, CA 95405",
+  "phone": "(707) 360-6349",
+  "hours": "Daily 11am–11pm",
+  "panels": [
+    {
+      "head": "Local flavors & shop hours",
+      "body": [
+        "Use the Northern California section of the official shop directory for the in-store menu and local ordering."
+      ],
+      "links": [
+        {
+          "label": "Northern California scoop shops",
+          "href": "https://saltandstraw.com/pages/locations"
+        }
+      ]
+    },
+    {
+      "head": "Bay Area branches",
+      "body": [
+        "Choose another Salt & Straw shop on BEASTY."
+      ],
+      "links": [
+        {
+          "label": "Bishop Ranch",
+          "href": "https://beastypages.com/?b=b_saltandstrawbishopranch"
+        },
+        {
+          "label": "Burlingame",
+          "href": "https://beastypages.com/?b=b_saltandstrawburlingame"
+        },
+        {
+          "label": "Fillmore",
+          "href": "https://beastypages.com/?b=b_saltandstrawfillmore"
+        },
+        {
+          "label": "Hayes Valley",
+          "href": "https://beastypages.com/?b=b_saltandstrawhayesvalley"
+        },
+        {
+          "label": "Valley Fair",
+          "href": "https://beastypages.com/?b=b_saltandstrawvalleyfair"
+        },
+        {
+          "label": "Palo Alto",
+          "href": "https://beastypages.com/?b=b_saltandstrawpaloalto"
+        },
+        {
+          "label": "Los Gatos",
+          "href": "https://beastypages.com/?b=b_saltandstrawlosgatos"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "salt-and-straw-valley-fair",
+  "name": "Salt & Straw Valley Fair",
+  "label": "Salt & Straw Valley Fair",
+  "cuisine": "Ice cream scoop shop",
+  "tagline": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "icon": "salt-and-straw-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Ice Cream",
+  "items": [],
+  "site": "https://saltandstraw.com/pages/locations",
+  "contactOnly": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "address": "2855 Stevens Creek Blvd, Santa Clara, CA 95050",
+  "phone": "(408) 512-2500",
+  "hours": "Daily 11am–10pm",
+  "panels": [
+    {
+      "head": "Local flavors & shop hours",
+      "body": [
+        "Use the Northern California section of the official shop directory for the in-store menu and local ordering."
+      ],
+      "links": [
+        {
+          "label": "Northern California scoop shops",
+          "href": "https://saltandstraw.com/pages/locations"
+        }
+      ]
+    },
+    {
+      "head": "Bay Area branches",
+      "body": [
+        "Choose another Salt & Straw shop on BEASTY."
+      ],
+      "links": [
+        {
+          "label": "Bishop Ranch",
+          "href": "https://beastypages.com/?b=b_saltandstrawbishopranch"
+        },
+        {
+          "label": "Burlingame",
+          "href": "https://beastypages.com/?b=b_saltandstrawburlingame"
+        },
+        {
+          "label": "Fillmore",
+          "href": "https://beastypages.com/?b=b_saltandstrawfillmore"
+        },
+        {
+          "label": "Hayes Valley",
+          "href": "https://beastypages.com/?b=b_saltandstrawhayesvalley"
+        },
+        {
+          "label": "Santa Rosa",
+          "href": "https://beastypages.com/?b=b_saltandstrawsantarosa"
+        },
+        {
+          "label": "Palo Alto",
+          "href": "https://beastypages.com/?b=b_saltandstrawpaloalto"
+        },
+        {
+          "label": "Los Gatos",
+          "href": "https://beastypages.com/?b=b_saltandstrawlosgatos"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "salt-and-straw-palo-alto",
+  "name": "Salt & Straw Palo Alto",
+  "label": "Salt & Straw Palo Alto",
+  "cuisine": "Ice cream scoop shop",
+  "tagline": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "icon": "salt-and-straw-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Ice Cream",
+  "items": [],
+  "site": "https://saltandstraw.com/pages/locations",
+  "contactOnly": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "address": "250 University Ave, Palo Alto, CA 94301",
+  "phone": "(650) 656-9224",
+  "hours": "Daily 11am–11pm",
+  "panels": [
+    {
+      "head": "Local flavors & shop hours",
+      "body": [
+        "Use the Northern California section of the official shop directory for the in-store menu and local ordering."
+      ],
+      "links": [
+        {
+          "label": "Northern California scoop shops",
+          "href": "https://saltandstraw.com/pages/locations"
+        }
+      ]
+    },
+    {
+      "head": "Bay Area branches",
+      "body": [
+        "Choose another Salt & Straw shop on BEASTY."
+      ],
+      "links": [
+        {
+          "label": "Bishop Ranch",
+          "href": "https://beastypages.com/?b=b_saltandstrawbishopranch"
+        },
+        {
+          "label": "Burlingame",
+          "href": "https://beastypages.com/?b=b_saltandstrawburlingame"
+        },
+        {
+          "label": "Fillmore",
+          "href": "https://beastypages.com/?b=b_saltandstrawfillmore"
+        },
+        {
+          "label": "Hayes Valley",
+          "href": "https://beastypages.com/?b=b_saltandstrawhayesvalley"
+        },
+        {
+          "label": "Santa Rosa",
+          "href": "https://beastypages.com/?b=b_saltandstrawsantarosa"
+        },
+        {
+          "label": "Valley Fair",
+          "href": "https://beastypages.com/?b=b_saltandstrawvalleyfair"
+        },
+        {
+          "label": "Los Gatos",
+          "href": "https://beastypages.com/?b=b_saltandstrawlosgatos"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "salt-and-straw-los-gatos",
+  "name": "Salt & Straw Los Gatos",
+  "label": "Salt & Straw Los Gatos",
+  "cuisine": "Ice cream scoop shop",
+  "tagline": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "icon": "salt-and-straw-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Ice Cream",
+  "items": [],
+  "site": "https://saltandstraw.com/pages/locations",
+  "contactOnly": "Classic and rotating seasonal scoops. Check the shop for current flavors, scoop prices and availability.",
+  "address": "50 University Ave, Los Gatos, CA 95030",
+  "phone": "(669) 837-1924",
+  "hours": "Daily 11am–11pm",
+  "panels": [
+    {
+      "head": "Local flavors & shop hours",
+      "body": [
+        "Use the Northern California section of the official shop directory for the in-store menu and local ordering."
+      ],
+      "links": [
+        {
+          "label": "Northern California scoop shops",
+          "href": "https://saltandstraw.com/pages/locations"
+        }
+      ]
+    },
+    {
+      "head": "Bay Area branches",
+      "body": [
+        "Choose another Salt & Straw shop on BEASTY."
+      ],
+      "links": [
+        {
+          "label": "Bishop Ranch",
+          "href": "https://beastypages.com/?b=b_saltandstrawbishopranch"
+        },
+        {
+          "label": "Burlingame",
+          "href": "https://beastypages.com/?b=b_saltandstrawburlingame"
+        },
+        {
+          "label": "Fillmore",
+          "href": "https://beastypages.com/?b=b_saltandstrawfillmore"
+        },
+        {
+          "label": "Hayes Valley",
+          "href": "https://beastypages.com/?b=b_saltandstrawhayesvalley"
+        },
+        {
+          "label": "Santa Rosa",
+          "href": "https://beastypages.com/?b=b_saltandstrawsantarosa"
+        },
+        {
+          "label": "Valley Fair",
+          "href": "https://beastypages.com/?b=b_saltandstrawvalleyfair"
+        },
+        {
+          "label": "Palo Alto",
+          "href": "https://beastypages.com/?b=b_saltandstrawpaloalto"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "bay-area-hot-tub-boat",
+  "name": "Bay Area Hot Tub Boat",
+  "label": "Hot Tub Boat",
+  "cuisine": "Private hot tub boat rentals",
+  "tagline": "Private 90-minute hot tub boat rentals for 2–6 people. The operator lists $400 starting price, or $412 including booking fees.",
+  "icon": "bay-area-hot-tub-boat-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Boat rentals",
+  "items": [],
+  "site": "https://bayareahottubboat.com/",
+  "contactOnly": "Private 90-minute hot tub boat rentals for 2–6 people. The operator lists $400 starting price, or $412 including booking fees.",
+  "address": "1070 Marina Village Pkwy, Gate 10, Alameda, CA 94501",
+  "phone": "(415) 919-9882",
+  "email": "info@bayareahottubboat.com",
+  "panels": [
+    {
+      "head": "Pricing & bookings",
+      "body": [
+        "Check the operator for current prices and available time slots. Published combined passenger weight limit is 950 lb."
+      ],
+      "links": [
+        {
+          "label": "Official rental prices",
+          "href": "https://bayareahottubboat.com/pricing/"
+        },
+        {
+          "label": "Booking page",
+          "href": "https://bayareahottubboat.com/booking/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "beeps-burgers",
+  "name": "Beep’s Burgers",
+  "label": "Beep’s Burgers",
+  "cuisine": "Burgers, fries and shakes",
+  "tagline": "Ocean Avenue burger stand serving burgers, fries, chicken and shakes.",
+  "icon": "beeps-burgers-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Burgers",
+  "items": [],
+  "site": "https://www.beepsburgers.com/",
+  "address": "1051 Ocean Ave, San Francisco, CA 94112",
+  "phone": "(415) 584-2650",
+  "hours": "Mon–Sat 10am–2am; Sun 11am–2am",
+  "sections": [
+    {
+      "name": "BURGERS",
+      "items": [
+        [
+          "1/4 LB BEEP'S BURGER",
+          "Lettuce, tomato and Beep's sauce",
+          975
+        ],
+        [
+          "1/2 LB BEEP'S BURGER",
+          "Lettuce, tomato and Beep's sauce",
+          1325
+        ],
+        [
+          "VEGGIE BURGER",
+          "Lettuce, tomato and Beep’s sauce",
+          1200
+        ]
+      ]
+    },
+    {
+      "name": "FRIES",
+      "items": [
+        [
+          "FRENCH FRIES",
+          "",
+          600
+        ],
+        [
+          "GARLIC FRIES",
+          "",
+          675
+        ],
+        [
+          "CURLY FRIES",
+          "",
+          625
+        ],
+        [
+          "ONION RINGS",
+          "",
+          700
+        ]
+      ]
+    },
+    {
+      "name": "SANDWICHES",
+      "items": [
+        [
+          "FRIED CHICKEN SANDWICH",
+          "Free range chicken breast with lettuce, tomato and Beep’s sauce",
+          1300
+        ],
+        [
+          "GRILLED CHICKEN SANDWICH",
+          "Mary's free range chicken breast with lettuce, tomato and Beep's sauce",
+          1300
+        ],
+        [
+          "FISH SANDWICH",
+          "Breaded cod, lettuce, tomato and tartar sauce",
+          1300
+        ]
+      ]
+    },
+    {
+      "name": "BASKETS",
+      "items": [
+        [
+          "CHICKEN STRIPS",
+          "",
+          1300
+        ],
+        [
+          "CHICKEN NUGGETS",
+          "",
+          900,
+          null,
+          "$ 9.00 for 6pc"
+        ]
+      ]
+    },
+    {
+      "name": "BREAKFAST",
+      "items": [
+        [
+          "SAUSAGE, EGG & CHEESE",
+          "",
+          675
+        ],
+        [
+          "BACON, EGG & CHEESE",
+          "",
+          675
+        ],
+        [
+          "HASHBROWN",
+          "",
+          400
+        ],
+        [
+          "TATER TOTS",
+          "",
+          600
+        ]
+      ]
+    },
+    {
+      "name": "DRINKS",
+      "items": [
+        [
+          "FOUNTAIN SODAS",
+          "Pepsi, Diet Pepsi, Starry, Root Beer, Dr. Pepper, Lemonade, Pink Lemonade, Lipton Sweet Black Tea",
+          295,
+          null,
+          "$ 2.95 sm, $3.95 lg"
+        ],
+        [
+          "MILKSHAKES",
+          "Vanilla, Chocolate, Strawberry, Oreo, Twinkie",
+          725
+        ],
+        [
+          "ROOT BEER FLOAT",
+          "",
+          650
+        ]
+      ]
+    },
+    {
+      "name": "DESSERTS",
+      "items": [
+        [
+          "ICE CREAM CONE",
+          "Vanilla, chocolate or swirl",
+          550
+        ]
+      ]
+    }
+  ],
+  "menuNote": "Prices from Beep’s official menu. Some sizes and add-ons are listed separately.",
+  "panels": [
+    {
+      "head": "Menu & add-ons",
+      "body": [
+        "See the shop’s menu for burger toppings, drink sizes and the full list of sides."
+      ],
+      "links": [
+        {
+          "label": "Beep’s current menu",
+          "href": "https://www.beepsburgers.com/#menu"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "stk-steakhouse-sf",
+  "name": "STK Steakhouse San Francisco",
+  "label": "STK Steakhouse",
+  "cuisine": "Steakhouse and weekend brunch",
+  "tagline": "Steaks, seafood, lunch and weekend brunch at the San Francisco location.",
+  "icon": "stk-steakhouse-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Steakhouse",
+  "items": [],
+  "site": "https://stksteakhouse.com/en-us/location/san-francisco/",
+  "contactOnly": "Steaks, seafood, lunch and weekend brunch at the San Francisco location.",
+  "address": "1 Market St, San Francisco, CA 94105",
+  "phone": "(415) 375-8094",
+  "panels": [
+    {
+      "head": "San Francisco menus & hours",
+      "body": [
+        "The official location page lists dinner, lunch, brunch, happy hour and reservations. Check its current service hours before visiting."
+      ],
+      "links": [
+        {
+          "label": "STK San Francisco",
+          "href": "https://stksteakhouse.com/en-us/location/san-francisco/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "bella-trattoria",
+  "name": "Bella Trattoria",
+  "label": "Bella Trattoria",
+  "cuisine": "Italian trattoria and house-made pasta",
+  "tagline": "House-made pasta and Italian cooking in the Inner Richmond. This is the Trattoria at 3854 Geary, next to Bella’s other spaces.",
+  "icon": "bella-trattoria-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Italian",
+  "items": [],
+  "site": "https://www.bellatrattoriasf.com/",
+  "contactOnly": "House-made pasta and Italian cooking in the Inner Richmond. This is the Trattoria at 3854 Geary, next to Bella’s other spaces.",
+  "address": "3854 Geary Blvd, San Francisco, CA 94118",
+  "phone": "(415) 221-0305",
+  "hours": "Trattoria dinner: daily 4–9pm",
+  "panels": [
+    {
+      "head": "Trattoria menus",
+      "body": [
+        "See Bella’s own menu for current dinner selections and prices."
+      ],
+      "links": [
+        {
+          "label": "Bella Trattoria menus",
+          "href": "https://mhme.nu/lp/bellatrattoria"
+        },
+        {
+          "label": "Bella locations & hours",
+          "href": "https://www.bellatrattoriasf.com/"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b115-dcwe2agmyyo.mp4",
+    "poster": "/clips/b115-dcwe2agmyyo-poster.webp",
+    "href": "https://www.instagram.com/reel/DcwE2aGMYyo/",
+    "credit": "Pasta film posted by @bella_trattoria at Bella Trattoria in San Francisco.",
+    "platform": "Instagram"
+  }
+},
+{
+  "slug": "bay-pocha",
+  "name": "Bay Pocha",
+  "label": "Bay Pocha",
+  "cuisine": "Korean pub and grill",
+  "tagline": "Korean pub food including pancakes, stews and grilled dishes.",
+  "icon": "bay-pocha-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Korean",
+  "items": [],
+  "site": "https://baypocha.menu11.com/sanfrancisco/order",
+  "address": "2642 Ocean Ave, San Francisco, CA 94132",
+  "phone": "(415) 564-1500",
+  "email": "baypocha@gmail.com",
+  "orderUrl": "https://baypocha.menu11.com/sanfrancisco/order",
+  "sections": [
+    {
+      "name": "Munchies",
+      "items": [
+        [
+          "Seaweed Noodle Tempuras (5pcs)",
+          "Crispy Korean fried seaweed roll made with seasoned glass noodles. 김말이 튀김",
+          1195
+        ],
+        [
+          "Beef Potstickers (6pcs)",
+          "Deep-fried potstickers with beef and vegetable filling. 소고기만두",
+          1195
+        ],
+        [
+          "Vege Potstickers (8pcs)",
+          "Deep-fried potstickers with vegetable and imitation meat (soybean-based) filling. 야채만두",
+          1195
+        ],
+        [
+          "Kimchi Potstickers (5pcs)",
+          "Deep-fried potstickers with Kimchi, pork, and vegetable filling. 김치만두",
+          1195
+        ],
+        [
+          "French Fries",
+          "Add garlic +$1, add cheese +$2 감자튀김",
+          1195
+        ],
+        [
+          "Loaded Fries",
+          "Fries with kimchi, pork, cheese and spicy mayo sauce.",
+          1695
+        ],
+        [
+          "Steamed Egg",
+          "Korean steamed egg souffle aka. GyeRanJjim. Custardy, fluffy, seasoned with shrimp paste and topped with scallions. 계란찜",
+          1395
+        ],
+        [
+          "Croquette (4pcs)",
+          "Deep-fried roll panko-crumbed mashed potato with vegetables. 고로케",
+          1295
+        ],
+        [
+          "Grilled Squid w/Butter",
+          "Grilled squid with butter topped with scallions served with ponzu sauce on the side. 버터오징어구이",
+          2795
+        ],
+        [
+          "Crispy Calamari (8pcs)",
+          "Deep-fried calamari served with soy-based tempura sauce on the side. 오징어튀김",
+          1795
+        ],
+        [
+          "Corn Cheese",
+          "Stir-fried sweet corn and mozzarella cheese. 콘치즈",
+          1395
+        ],
+        [
+          "Chicken Wings (10pcs)",
+          "Korean-style deep-fried chicken wings served with a side of pickled radish. 닭날개튀김",
+          2395
+        ],
+        [
+          "Spicy Fried Chicken Wings",
+          "Korean-style deep-fried chicken wings in spicy and tangy sauce and peanuts. served with a side of pickled radish. If you are allergic to peanuts, please inform your server. 양념치킨",
+          2595
+        ],
+        [
+          "Glazed Pig Feet",
+          "Thinly sliced cut braised pork feet served with sliced garlic, jalapeño, and shrimp paste sauce. 족발",
+          5195
+        ],
+        [
+          "Spicy Pig Feet",
+          "Thinly sliced cut braised pork feet with house-made spicy sauce. 매운족발",
+          5395
+        ]
+      ]
+    },
+    {
+      "name": "Soup & Stew",
+      "items": [
+        [
+          "Soft Tofu Stew",
+          "Spicy soft tofu stew with beef and seafood. 순두부찌개",
+          2195
+        ],
+        [
+          "Kimchi Stew",
+          "Kimchi stew with pork and tofu. 김치찌개",
+          2395
+        ],
+        [
+          "Korean Miso Stew",
+          "Bean paste soup with seafood, tofu, and vegetables. 해물된장찌개",
+          2395
+        ],
+        [
+          "Spicy Ramen",
+          "Korean spicy ramen Add fried egg +$2 Add spam or rice cake or dumplings +$3 라면",
+          1795
+        ],
+        [
+          "Rice Cake & Dumpling Soup",
+          "Rice cake with dumpling and egg in beef broth. 떡만두국",
+          2295
+        ],
+        [
+          "Fish Roe Stew",
+          "Spicy pollack roe stew with tofu and vegetables. 알찌개",
+          2695
+        ],
+        [
+          "Sausage Stew aka. Army Stew",
+          "Spicy pork, kimchi, spam, sausage, vegetables and ramen noodles in a hot spicy broth (size for 2-3) 부대찌개",
+          6495
+        ],
+        [
+          "Bulgogi Mushroom Stew",
+          "Marinated beef, mushroom, vegetables and noodles in a sweet broth (size for 2-3) 불고기전골",
+          6995
+        ],
+        [
+          "Fishcake Skewer Hot Pot",
+          "Fishcake skewer with tofu pockets, and anchovy soy sauce-based broth soup (size for 2-3) 어묵꼬치전골",
+          4495
+        ],
+        [
+          "Beef Tripe Hot Pot",
+          "Spicy Korean stew made by boiling beef tripe, udong noodle, vegetables, and seasoning in beef broth. 양곱창전골",
+          5895
+        ],
+        [
+          "Seafood Hot Pot",
+          "Crab, clams, mussel, pollack, pollack roe, squid, shrimp, vegetables and in a hot spicy broth (size for 2-3)|해물전골",
+          6095
+        ],
+        [
+          "GamJaTang",
+          "Pork backbones and potatoes simmerd with dried radish greens, roasted soybean powder, ground perilla seeds and perilla leaves in a spicy broth",
+          6595
+        ]
+      ]
+    },
+    {
+      "name": "Korean Pancake",
+      "items": [
+        [
+          "Seafood Pancake",
+          "Korean pancake made out of mussels, shrimp, clams, and calamari with egg-based batter. 해물파전",
+          2595
+        ],
+        [
+          "Kimchi Seafood Pancake",
+          "Korean pancake made out of kimchi and seafood with egg-based batter. 김치해물전",
+          2595
+        ],
+        [
+          "Kimchi Pork Pancake",
+          "Korean pancake made out of kimchi and pork with egg-based batter. 김치고기전",
+          2595
+        ]
+      ]
+    },
+    {
+      "name": "Sauteed & Stir Fry",
+      "items": [
+        [
+          "Spicy Rice Cake aka. Tteokbokki",
+          "Stir fried rice cake and fishcake in a sweet and spicy sauce. 떡볶이",
+          2095
+        ],
+        [
+          "Carbonara Rice Cake",
+          "Rice cake and fishcake in creamy sauce. 크림떡볶이",
+          2195
+        ],
+        [
+          "Rose Rice Cake",
+          "Rice cake, fishcake and sausage in spicy and creamy sauce. 로제떡볶이",
+          2495
+        ],
+        [
+          "Stir Fried Calamari",
+          "Spicy sautéed squid with vegetables. 오징어볶음",
+          3195
+        ],
+        [
+          "Stir Fried Chicken",
+          "Spicy sautéed chicken with vegetables. 닭갈비",
+          3495
+        ],
+        [
+          "Stir Fried Pork Belly",
+          "Spicy sautéed pork belly with vegetables. 매운삼겹살볶음",
+          3895
+        ],
+        [
+          "Jap Chae",
+          "Sauteed sweet potato glass noodles with vegetables in a sweet soy sauce and sesame oil 잡채",
+          2195
+        ],
+        [
+          "Tofu Kimchi",
+          "Stir fried kimchi and pork with tofu. 두부김치",
+          3295
+        ],
+        [
+          "Chicken Gizzard",
+          "Stir fried chicken gizzard with garlic, onion, and green onion. 닭똥집",
+          2595
+        ],
+        [
+          "Stir Fried Spicy Chicken Feet",
+          "Stir fried chicken feet with house made spicy sauce aka. Dakbal. 닭발",
+          3195
+        ],
+        [
+          "Braised Short Rib",
+          "Tender premium square cut short ribs slowly braised in a rich house special sweet soy garlic sauce with carrots, potatoes, and scalion aka. GalBiJjim 갈비찜",
+          7995
+        ],
+        [
+          "Braised Pork Belly aka. Bossam",
+          "Tender slices of slow-boiled pork belly with house made special sauce. 보쌈",
+          5995
+        ]
+      ]
+    },
+    {
+      "name": "Broiled",
+      "items": [
+        [
+          "Gal Bi",
+          "Beef short ribs marinated in house special sauce. 갈비",
+          4795
+        ],
+        [
+          "Bulgogi",
+          "Thinly sliced beef marinated in house special sauce. 불고기",
+          4195
+        ],
+        [
+          "Squid Bulgogi",
+          "Squid and thinly sliced beef marinated in house special sauce. 오징어불고기",
+          3995
+        ],
+        [
+          "Spicy Pork",
+          "Sliced pork marinated in a spciy sauce. 돼지불고기",
+          3995
+        ],
+        [
+          "Pork Belly",
+          "Salt and pepper pork belly with onion and garlic. 삼겹살구이",
+          3895
+        ]
+      ]
+    },
+    {
+      "name": "Rice",
+      "items": [
+        [
+          "Bibimbop",
+          "Fresh vegetables, beef and fried egg over rice. 비빔밥",
+          2295
+        ],
+        [
+          "Kimchi Fried Rice",
+          "Kimchi fried rice with choice of beef or spam and fried egg. 김치볶음밥",
+          2195
+        ],
+        [
+          "Omelette Rice",
+          "Fried rice with shrimp and vegetables wrapped in an egg omelette. 오므라이스",
+          2295
+        ],
+        [
+          "Chicken Katsu",
+          "Deep-fried chicken cutlet served with a side of salad and rice. 치킨까스",
+          2395
+        ],
+        [
+          "Pork Katsu",
+          "Deep-fried pork cutlet served with a side of salad and rice. 돈까스",
+          2495
+        ],
+        [
+          "Cheese Pork Katsu",
+          "Deep fried pork cutlet wirh mozzarella cheese 치즈돈까스",
+          2595
+        ]
+      ]
+    },
+    {
+      "name": "Beverage/Sides",
+      "items": [
+        [
+          "Coke",
+          "",
+          350
+        ],
+        [
+          "Diet Coke",
+          "",
+          350
+        ],
+        [
+          "Sprite",
+          "",
+          350
+        ],
+        [
+          "Coke Zero",
+          "",
+          350
+        ],
+        [
+          "San Pellegrino Sparkling Water",
+          "",
+          500
+        ],
+        [
+          "Watermelon Soda",
+          "",
+          500
+        ],
+        [
+          "Hallabong Soda",
+          "",
+          500
+        ],
+        [
+          "Milkis",
+          "K-Cream Soda",
+          450
+        ],
+        [
+          "Pear Juice",
+          "",
+          450
+        ],
+        [
+          "Extra Rice",
+          "",
+          300
+        ],
+        [
+          "Extra sidedish",
+          "assorted sidedish",
+          400
+        ],
+        [
+          "Korean Toasted Seaweed",
+          "",
+          150
+        ],
+        [
+          "Ssam",
+          "Lettuces wrap for BBQ with housemade sauces",
+          595
+        ],
+        [
+          "Scalion Salad",
+          "",
+          395
+        ]
+      ]
+    }
+  ],
+  "menuNote": "Prices from Bay Pocha’s online ordering menu. Options, restaurant prices and availability may differ.",
+  "panels": [
+    {
+      "head": "Official ordering menu",
+      "body": [
+        "See the restaurant’s ordering page for current items, modifiers and hours."
+      ],
+      "links": [
+        {
+          "label": "Bay Pocha menu",
+          "href": "https://baypocha.menu11.com/sanfrancisco/order"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b115-c2vpjcxp3qx.mp4",
+    "poster": "/clips/b115-c2vpjcxp3qx-poster.webp",
+    "href": "https://www.instagram.com/reel/C2VpjcXP3Qx/",
+    "credit": "Galbijjim film posted by @baypocha in San Francisco, January 2024. Check the restaurant for current availability.",
+    "platform": "Instagram"
+  }
+},
+{
+  "slug": "bens-burger-bay-point",
+  "name": "Ben’s Burger Bay Point",
+  "label": "Ben’s Burger",
+  "cuisine": "Burgers, hot dogs and breakfast",
+  "tagline": "Burgers, hot dogs and breakfast in Bay Point. Listed on the Pittsburg area sheet as requested.",
+  "icon": "bens-burger-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Burgers/Hot Dogs",
+  "items": [],
+  "site": "https://www.instagram.com/bensburger.baypoint/",
+  "contactOnly": "Burgers, hot dogs and breakfast in Bay Point. Listed on the Pittsburg area sheet as requested.",
+  "address": "2775 Willow Pass Rd, Bay Point, CA 94565",
+  "phone": "(925) 458-4040",
+  "needsSite": true,
+  "panels": [
+    {
+      "head": "Location & current menu",
+      "body": [
+        "Use the shop’s public profile for hours and menu updates."
+      ],
+      "links": [
+        {
+          "label": "Ben’s Burger Bay Point profile",
+          "href": "https://www.instagram.com/bensburger.baypoint/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "wrap-n-slurp",
+  "name": "Wrap & Slurp Co.",
+  "label": "Wrap & Slurp",
+  "cuisine": "Korean DIY ramen and gimbap",
+  "tagline": "Build your own Korean instant ramen and order gimbap at this counter inside Frymazing.",
+  "icon": "wrap-n-slurp-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Ramen",
+  "items": [],
+  "site": "https://www.wrapnslurp.com/",
+  "contactOnly": "Build your own Korean instant ramen and order gimbap at this counter inside Frymazing.",
+  "address": "4455 Central Way, Suite D, Fairfield, CA 94534",
+  "phone": "(707) 673-2090",
+  "panels": [
+    {
+      "head": "Menu & original video",
+      "body": [
+        "The counter is inside Frymazing. The original video is on Instagram."
+      ],
+      "links": [
+        {
+          "label": "Wrap & Slurp menu",
+          "href": "https://www.wrapnslurp.com/menu"
+        },
+        {
+          "label": "Taste with Rach’s original video",
+          "href": "https://www.instagram.com/reel/Da_C3sQqfFO/"
+        },
+        {
+          "label": "Frymazing on BEASTY",
+          "href": "https://beastypages.com/?b=b_frymazing"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "palette-tea-house",
+  "name": "Palette Tea House",
+  "label": "Palette Tea House",
+  "cuisine": "Cantonese dim sum and seafood",
+  "tagline": "Cantonese dim sum, seafood and tea at Ghirardelli Square.",
+  "icon": "palette-tea-house-v115",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Dim Sum",
+  "items": [],
+  "site": "https://paletteteahouse.com/",
+  "contactOnly": "Cantonese dim sum, seafood and tea at Ghirardelli Square.",
+  "address": "900 North Point St, Suite B201A, San Francisco, CA 94109",
+  "phone": "(415) 347-8888",
+  "email": "sf@paletteteahouse.com",
+  "hours": "Sun–Thu 11:30am–7:30pm; Fri–Sat 11:30am–8pm",
+  "orderUrl": "https://order.toasttab.com/online/palette-tea-house",
+  "panels": [
+    {
+      "head": "Dim sum & seafood menu",
+      "body": [
+        "The restaurant publishes current dine-in and takeout menus separately."
+      ],
+      "links": [
+        {
+          "label": "Palette Tea House food menu",
+          "href": "https://paletteteahouse.com/san-francisco-palette-tea-house-food-menu"
+        },
+        {
+          "label": "Palette Tea House pickup menu",
+          "href": "https://order.toasttab.com/online/palette-tea-house"
+        }
+      ]
+    }
+  ],
+  "clip": {
+    "src": "/clips/b115-dfn5h9yg9g4.mp4",
+    "poster": "/clips/b115-dfn5h9yg9g4-poster.webp",
+    "href": "https://www.instagram.com/p/Dfn5H9Yg9G4/",
+    "credit": "Original restaurant video posted by @paletteteahouse at Ghirardelli Square.",
     "platform": "Instagram"
   }
 },

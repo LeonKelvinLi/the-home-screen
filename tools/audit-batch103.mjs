@@ -120,6 +120,11 @@ export async function auditBatch(number) {
         for (const link of panel.links ?? []) assert.equal(await page.getByRole('link', { name: link.label, exact: true }).getAttribute('href'), link.href)
       }
       const seat = Object.entries(batch.placements).find(([s, b]) => b === id && !s.startsWith('beasty-'))?.[0]
+      if (batch.categoryOnly?.includes(id)) {
+        assert(!seat && Object.entries(batch.placements).some(([s, b]) => b === id && s.startsWith('beasty-')), id)
+        console.log('ok category-only listing', id)
+        continue
+      }
       assert(seat, id)
       const city = seat.replace(/-(?:goods|services)2?-\d+$/, '').split('-').map(s => s[0].toUpperCase() + s.slice(1)).join(' ')
       const kind = seat.includes('-services') ? 'services' : 'goods'
@@ -133,6 +138,7 @@ export async function auditBatch(number) {
     }
     for (const post of active) {
       let owner = post.brand, index = reviewsOf(owner).findIndex(r => r.href === post.source)
+      if (post.featured) index = -1
       if (post.playOn) { owner = post.playOn; index = reviewsBy(post.by).findIndex(r => r.href === post.source) }
       const review = index >= 0 ? reviewsOf(owner)[index] : null
       if (review && !review.src) {
@@ -197,6 +203,42 @@ export async function auditBatch(number) {
       await page.getByRole('button', { name: 'Go to the Berkeley Goods page', exact: true }).click()
       await page.locator('.brand-body').waitFor({ state: 'hidden' })
       await icon('Scoop N Chill').waitFor()
+    } else if (number === 115) {
+      const onPageTwo = async (name, names) => {
+        await category(name)
+        await page.getByRole('button', { name: 'Next page', exact: true }).click()
+        for (const target of names) await icon(target).waitFor()
+      }
+      await category('Italian', 'Bella Trattoria')
+      await category('Adopt/Foster', 'Joybound People & Pets')
+      await open('b_joybound')
+      await expand(page.getByRole('button', { name: 'Adopt or foster', exact: true }))
+      assert.equal(await page.getByRole('link', { name: 'Foster with Joybound' }).getAttribute('href'), 'https://joybound.org/get-involved/foster/')
+      await category('Massage/Therapy', 'Sabrina Soto')
+      await category('Models', 'Sabrina Soto')
+      await category('Korean', 'Um.Ma')
+      await icon('Bay Pocha').waitFor()
+      await category('Bakery', 'Butter & Crumble')
+      await category('Cakes', 'Meowvelous Bakes')
+      await icon('Butter & Crumble').waitFor()
+      await category('Ice Cream', 'Salt & Straw Bishop Ranch')
+      await category('Steakhouse', 'STK Steakhouse San Francisco')
+      await category('Ramen', 'Wrap & Slurp Co.')
+      await category('Dim Sum', 'Palette Tea House')
+      await onPageTwo('Coffee/teas', ['Bonbon Matcha Cupertino', 'Bonbon Matcha Palo Alto'])
+      await onPageTwo('Breakfast/Diner', ['Miracle Mile Cafe'])
+      await onPageTwo('Burgers/Hot Dogs', ['Beep’s Burgers', 'Ben’s Burger Bay Point'])
+      assert.equal(brandById('b_bensburgerbaypoint').needsSite, true)
+      assert(brandById('b_frymazing').clip.href.includes('DddBcq1CT-B'))
+      assert(reviewsOf('b_frymazing').some(r => r.href.includes('DeiHhp3uzRo') && r.src && r.credit.includes('@carlacharisse_')))
+      assert.equal(hash(readFileSync('public/clips/review-DeiHhp3uzRo.mp4')), hash(readFileSync('public/clips/frymazing.mp4')))
+      assert(reviewsOf('b_woogakoreanbbq').some(r => r.href.includes('Dfn1kQZhPaP') && r.creatorClip && !r.src))
+      assert(reviewsOf('b_wrapnslurp').some(r => r.href.includes('Da_C3sQqfFO') && !r.src))
+      assert.equal(REELS.filter(r => r.href?.includes('Dfn-jWPNq8o')).length, 0)
+      assert.equal(REELS.filter(r => r.href?.includes('DfThSHUtrVK')).length, 1)
+      assert.deepEqual(Object.values(batch.placements).filter(id => id.startsWith('b_saltandstraw')).length, 9)
+      assert.deepEqual(new Set(batch.sourceMessages.flatMap(m => m.attachments)), new Set(batch.artworkDispositions.filter(a => (a.reference ?? a.source).startsWith('IMG_')).map(a => a.reference ?? a.source)))
+      for (const [i, f] of read('research/roster/batch109.json').foodieOrder.slice(0, 24).entries()) assert.equal(ALL_PLACEMENTS['beasty-foodies-' + i], f.brand)
     } else if (number === 114) {
       await category('Sweets')
       await page.getByRole('button', { name: 'Next page', exact: true }).click()

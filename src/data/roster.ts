@@ -1020,13 +1020,12 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'monogram', logoInitials: 'FS', logoFace: 'script',
     site: 'https://www.thefrenchspotsf.com/',
   }),
-  seed('joybound', 'Joybound People & Pets', 'Joybound', 'Animal welfare, vet clinic', '#1F5E5A', {
+  seed('joybound', 'Joybound People & Pets', 'Joybound', 'Animal welfare and vet clinic', '#1F5E5A', {
     logoTemplate: 'monogram', logoInitials: 'JB', logoFace: 'grotesk',
-    site: 'https://linktr.ee/joyboundpeopleandpets',
-    contactOnly:
-      'Sent 2026-08-12 with "needs website" and marked a potential BPRF candidate. They are ' +
-      'an animal-welfare organisation that also runs a community clinic, which is why they ' +
-      'sit under the veterinary spot rather than grooming.',
+    site: 'https://joybound.org/',
+    address: '2890 Mitchell Dr, Walnut Creek, CA 94598',
+    contactOnly: 'Joybound runs a community veterinary clinic and helps cats and dogs find adoptive and foster homes.',
+    panels: [{"head": "Adopt or foster", "body": ["Find pets available for adoption, or learn how to provide a temporary foster home."], "links": [{"label": "Adopt from Joybound", "href": "https://joybound.org/adopt/"}, {"label": "Foster with Joybound", "href": "https://joybound.org/get-involved/foster/"}]}]
   }),
   seed('bodylines-day-spa', 'Bodylines Day Spa', 'Bodylines', 'Day spa', '#4A2C52', {
     logoTemplate: 'monogram', logoInitials: 'BD', logoFace: 'script',
