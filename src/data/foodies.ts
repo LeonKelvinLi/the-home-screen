@@ -2045,6 +2045,10 @@ export const MORE_FOODIE_PAGES: FoodiePage[] = [
   "label": "brojackson",
   "icon": "foodie-brojackson-v115"
 },
+  // Batch 116 — Glenn’s November 13 intake.
+  {"handle": "meenaaqureshi", "name": "@meenaaqureshi", "label": "meenaaqureshi", "icon": "foodie-meenaaqureshi-v116"},
+  {"handle": "masstache_", "name": "@masstache_", "label": "masstache_", "icon": "foodie-masstache-v116"},
+  {"handle": "diorabelle", "name": "@diorabelle", "label": "diorabelle", "icon": "foodie-diorabelle-v116"},
 ]
 
 export const FOODIE_PAGES: FoodiePage[] = [...TOP_FOODIE_PAGES, ...MORE_FOODIE_PAGES]
@@ -2815,6 +2819,16 @@ export const OTHER_REVIEWS: OtherReview[] = [
   {"by": "hungrydanz", "place": "Mikiya Wagyu Shabu House", "city": "San Mateo", "brand": "b_mikiyasanmateo", "reel": "https://www.instagram.com/reel/DfqPKmOxBZy/", "credit": "Review by @hungrydanz at Mikiya San Mateo, with narration credited to ElevenLabs in the original.", "clip": true},
   {"by": "sherryeatworld", "place": "Palette Tea House", "city": "San Francisco", "brand": "b_paletteteahouse", "reel": "https://www.instagram.com/reel/C0x_cWireRk/", "credit": "Review by @sherryeatworld at Palette Tea House, San Francisco.", "clip": true},
   {"by": "aymibabyeats", "place": "North Beach Pizza", "city": "Berkeley", "brand": "b_northbeachpizzaberkeley", "reel": "https://www.instagram.com/reel/DfPDJmEJoBX/", "credit": "Review by @aymibabyeats at North Beach Pizza, Berkeley.", "clip": true},
+  // Batch 116 — Glenn’s November 13 intake.
+  {"by": "thismajourney", "place": "Shish Grill", "city": "San Ramon", "brand": "b_theshishgrill", "reel": "https://www.instagram.com/reel/Dfp44knygRv/", "clip": true, "credit": "Review by @thismajourney at Shish Grill, San Ramon."},
+  {"by": "wthellydanyelly", "place": "Shish Grill", "city": "San Ramon", "brand": "b_theshishgrill", "reel": "https://www.instagram.com/reel/DenRkIkN8Ns/", "clip": true, "credit": "Review by @wthellydanyelly at Shish Grill, San Ramon."},
+  {"by": "heraldh", "place": "Shish Grill", "city": "San Ramon", "brand": "b_theshishgrill", "reel": "https://www.instagram.com/reel/DeMsQHmqyrc/", "clip": true, "credit": "Review by @heraldh at Shish Grill, San Ramon."},
+  {"by": "meenaaqureshi", "place": "Shish Grill", "city": "San Ramon", "brand": "b_theshishgrill", "reel": "https://www.instagram.com/reel/DeAC3wYq2Fp/", "clip": true, "credit": "Review by @meenaaqureshi at Shish Grill, San Ramon."},
+  {"by": "masstache_", "place": "June’s Pizza", "city": "Oakland", "brand": "b_junespizza", "reel": "https://www.instagram.com/reel/DfSzszSyG_4/", "clip": true, "credit": "Review by @masstache_ at June’s Pizza, Oakland."},
+  {"by": "dariananthony_", "place": "Ox & Tiger", "city": "San Francisco", "brand": "b_oxandtiger", "reel": "https://www.instagram.com/reel/Dfqa6Q6BLJL/", "clip": true, "credit": "Review by @dariananthony_ at Ox & Tiger, San Francisco. The “Family Meal” menu shown was seasonal."},
+  {"by": "imadoniseats", "place": "Ox & Tiger", "city": "San Francisco", "brand": "b_oxandtiger", "reel": "https://www.instagram.com/reel/DXNwbJGDewl/", "clip": true, "credit": "Review by @imadoniseats at Ox & Tiger, San Francisco."},
+  {"by": "bennyeats.bayarea", "place": "Bun Appétit Donuts", "city": "Fremont", "brand": "b_bunappetitdonuts", "reel": "https://www.instagram.com/reel/Dfpv2bEBM3y/", "clip": true, "credit": "Review by @bennyeats.bayarea at Bun Appétit Donuts, Fremont."},
+  {"by": "diorabelle", "place": "Bun Appétit Donuts", "city": "Fremont", "brand": "b_bunappetitdonuts", "reel": "https://www.instagram.com/reel/De9mwbPT5us/", "clip": true, "credit": "Review by @diorabelle at Bun Appétit Donuts, Fremont. Featured flavors are seasonal."},
 ]
 
 /*

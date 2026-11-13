@@ -1126,3 +1126,14 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `b115-dfn5h9yg9g4.mp4` | [Original post](https://www.instagram.com/p/Dfn5H9Yg9G4/) | Original restaurant video posted by @paletteteahouse at Ghirardelli Square. |
 | `review-C0x_cWireRk.mp4` | [Original post](https://www.instagram.com/reel/C0x_cWireRk/) | Review by @sherryeatworld at Palette Tea House, San Francisco. |
 | `review-DfPDJmEJoBX.mp4` | [Original post](https://www.instagram.com/reel/DfPDJmEJoBX/) | Review by @aymibabyeats at North Beach Pizza, Berkeley. |
+
+<!-- Batch 116 — Glenn’s November 13 intake. -->
+| `review-Dfp44knygRv.mp4` | [Original post](https://www.instagram.com/reel/Dfp44knygRv/) | Review by @thismajourney at Shish Grill, San Ramon. |
+| `review-DenRkIkN8Ns.mp4` | [Original post](https://www.instagram.com/reel/DenRkIkN8Ns/) | Review by @wthellydanyelly at Shish Grill, San Ramon. |
+| `review-DeMsQHmqyrc.mp4` | [Original post](https://www.instagram.com/reel/DeMsQHmqyrc/) | Review by @heraldh at Shish Grill, San Ramon. |
+| `review-DeAC3wYq2Fp.mp4` | [Original post](https://www.instagram.com/reel/DeAC3wYq2Fp/) | Review by @meenaaqureshi at Shish Grill, San Ramon. |
+| `review-DfSzszSyG_4.mp4` | [Original post](https://www.instagram.com/reel/DfSzszSyG_4/) | Review by @masstache_ at June’s Pizza, Oakland. |
+| `review-Dfqa6Q6BLJL.mp4` | [Original post](https://www.instagram.com/reel/Dfqa6Q6BLJL/) | Review by @dariananthony_ at Ox & Tiger, San Francisco. The “Family Meal” menu shown was seasonal. |
+| `review-DXNwbJGDewl.mp4` | [Original post](https://www.instagram.com/reel/DXNwbJGDewl/) | Review by @imadoniseats at Ox & Tiger, San Francisco. |
+| `review-Dfpv2bEBM3y.mp4` | [Original post](https://www.instagram.com/reel/Dfpv2bEBM3y/) | Review by @bennyeats.bayarea at Bun Appétit Donuts, Fremont. |
+| `review-De9mwbPT5us.mp4` | [Original post](https://www.instagram.com/reel/De9mwbPT5us/) | Review by @diorabelle at Bun Appétit Donuts, Fremont. Featured flavors are seasonal. |

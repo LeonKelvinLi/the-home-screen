@@ -789,3 +789,13 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-kelsyannn-v115.webp` | IMG_0355.PNG | Supplied creator profile artwork; removed account controls and background. |
 | `foodie-ugcwithdiana-v115.webp` | IMG_0359.png | Supplied creator profile artwork; removed account controls and background. |
 | `foodie-brojackson-v115.webp` | IMG_0382.png | Supplied creator profile artwork; removed account controls and background. |
+
+<!-- Batch 116 — business marks and creator profiles. -->
+| `junes-pizza-v116.webp` | https://junespizza.com/images/junes_logo.svg | Official matching mark, with enough space to show the full design in the phone tile. |
+| `ox-and-tiger-v116.webp` | https://linktr.ee/oxandtiger | Current profile mark from the supplied artwork. Phone borders removed and the full mark retained. |
+| `bun-appetit-donuts-v116.webp` | https://www.instagram.com/bunappetitdonuts/ | Current profile mark from the supplied artwork. Phone borders removed and the full mark retained. |
+| `shish-grill-v116.webp` | IMG_0410.png | Supplied round Shish Grill mark with the phone frame removed. Compared with the restaurant’s official mark. |
+| `foodie-meenaaqureshi-v116.webp` | IMG_0409.png | Supplied profile portrait, cropped inside the profile circle and cleared of all app controls. |
+| `foodie-masstache-v116.webp` | IMG_0411.png | Supplied profile portrait, cropped inside the profile circle and cleared of all app controls. |
+| `life-of-kaiya-v116.webp` | IMG_0420.png | Supplied profile portrait, cropped inside the profile circle and cleared of all app controls. |
+| `foodie-diorabelle-v116.webp` | IMG_0427.png | Supplied profile portrait, cropped inside the profile circle and cleared of all app controls. |

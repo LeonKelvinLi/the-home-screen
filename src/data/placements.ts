@@ -2718,4 +2718,17 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-316': 'b_foodienomzsaiyan',
   'beasty-foodies2-317': 'b_foodieugcwithdiana',
   'beasty-foodies2-318': 'b_foodiebrojackson',
+
+  // Batch 116 — city, Filipino Food, sweets, artist and creator seats.
+  'san-francisco-goods2-92': 'b_oxandtiger',
+  'beasty-filipino-0': 'b_oxandtiger',
+  'fremont-goods-14': 'b_bunappetitdonuts',
+  'beasty-donuts-8': 'b_bunappetitdonuts',
+  'beasty-sweets2-1': 'b_bunappetitdonuts',
+  'beasty-artists-8': 'b_lifeofkaiya',
+  'oakland-goods2-51': 'b_junespizza',
+  'beasty-pizza2-1': 'b_junespizza',
+  'beasty-foodies2-319': 'b_foodiemeenaaqureshi',
+  'beasty-foodies2-320': 'b_foodiemasstache',
+  'beasty-foodies2-321': 'b_foodiediorabelle',
 }

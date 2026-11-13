@@ -3750,7 +3750,7 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
   /* Shish Grill, "San Ramon • Goods": Mediterranean is Alora Social's, so the yellow sheet. Halal, by the logo on their own site. */
   seed('the-shish-grill', 'Shish Grill', 'Shish Grill', 'Lebanese', '#C4401F', {
-    icon: 'shish-grill',
+    icon: 'shish-grill-v116',
     logoTemplate: 'wordmark', logoLines: ['SHISH', 'GRILL'], logoFace: 'slab',
     site: 'https://theshishgrill.com/',
     orderUrl: 'https://order.toasttab.com/online/shishgrill',

@@ -93144,4 +93144,144 @@ export const LOCAL_SEED: LocalSeed[] = [
     "platform": "Instagram"
   }
 },
+
+  // Batch 116 — restaurants and artist.
+{
+  "slug": "ox-and-tiger",
+  "name": "Ox & Tiger",
+  "label": "Ox & Tiger",
+  "cuisine": "Filipino and Japanese tasting menu",
+  "tagline": "A reservation-only chef’s counter in the Tenderloin, with a seasonal tasting menu from EJ Macayan and Hitomi Wada.",
+  "icon": "ox-and-tiger-v116",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Filipino Food",
+  "items": [],
+  "site": "https://oxandtiger.co/",
+  "contactOnly": "A reservation-only chef’s counter in the Tenderloin, with a seasonal tasting menu from EJ Macayan and Hitomi Wada.",
+  "address": "552 Jones St, San Francisco, CA 94102",
+  "phone": "(415) 992-3827",
+  "email": "hello@oxandtiger.co",
+  "panels": [
+    {
+      "head": "Tasting menu & reservations",
+      "body": [
+        "The menu changes with the season. The restaurant publishes an example menu and reservation details."
+      ],
+      "links": [
+        {
+          "label": "Ox & Tiger reservations",
+          "href": "https://oxandtiger.co/reservations"
+        },
+        {
+          "label": "Ox & Tiger official links",
+          "href": "https://linktr.ee/oxandtiger"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "bun-appetit-donuts",
+  "name": "Bun Appétit Donuts",
+  "label": "Bun Appétit",
+  "cuisine": "Brioche donuts and coffee",
+  "tagline": "Handcrafted brioche donuts and coffee at Artist Walk in Fremont. Flavors rotate, and walk-in items can sell out.",
+  "icon": "bun-appetit-donuts-v116",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Donuts",
+  "items": [],
+  "site": "https://bunappetitdonuts.com/",
+  "contactOnly": "Handcrafted brioche donuts and coffee at Artist Walk in Fremont. Flavors rotate, and walk-in items can sell out.",
+  "address": "37120 Fremont Blvd, Suite A, Fremont, CA 94536",
+  "phone": "(510) 565-1292",
+  "email": "info@bunappetitdonuts.com",
+  "orderUrl": "https://bunappetitdonuts.square.site/",
+  "panels": [
+    {
+      "head": "Hours & preorders",
+      "body": [
+        "Both official pages list Monday and Tuesday closed and Wednesday 8am–2pm. Thursday and Friday opening times differ across the site. Check the shop before an early visit."
+      ],
+      "links": [
+        {
+          "label": "Official visit information",
+          "href": "https://bunappetitdonuts.com/visit-us/"
+        },
+        {
+          "label": "Current preorder selection",
+          "href": "https://bunappetitdonuts.square.site/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "life-of-kaiya",
+  "name": "Life of Kaiya",
+  "label": "Life of Kaiya",
+  "cuisine": "Visual artist and art prints",
+  "tagline": "Life of Kaiya’s official shop features original art prints, including Paris, Lion Trance and Heart Cornrows.",
+  "icon": "life-of-kaiya-v116",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Artists",
+  "items": [],
+  "site": "https://life-of-kaiya-shop.fourthwall.com/",
+  "contactOnly": "Life of Kaiya’s official shop features original art prints, including Paris, Lion Trance and Heart Cornrows.",
+  "panels": [
+    {
+      "head": "Prints & artist profile",
+      "body": [
+        "Browse available prints and current prices from the artist."
+      ],
+      "links": [
+        {
+          "label": "Life of Kaiya shop",
+          "href": "https://life-of-kaiya-shop.fourthwall.com/"
+        },
+        {
+          "label": "Life of Kaiya on Instagram",
+          "href": "https://www.instagram.com/lifeofkai.ya/"
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "junes-pizza",
+  "name": "June’s Pizza",
+  "label": "June’s Pizza",
+  "cuisine": "Wood-fired pizza",
+  "tagline": "Wood-fired pizza in West Oakland. Check the shop for the current pie selection.",
+  "icon": "junes-pizza-v116",
+  "color": "#F6F2E8",
+  "prep": 0,
+  "category": "Pizza",
+  "items": [],
+  "site": "https://junespizza.com/",
+  "contactOnly": "Wood-fired pizza in West Oakland. Check the shop for the current pie selection.",
+  "address": "2408 Mandela Pkwy, Oakland, CA 94607",
+  "email": "info@junespizza.com",
+  "hours": "Daily 4pm–midnight",
+  "panels": [
+    {
+      "head": "Current shop updates",
+      "body": [
+        "The pizzeria posts shop updates on its official site and profile."
+      ],
+      "links": [
+        {
+          "label": "June’s Pizza website",
+          "href": "https://junespizza.com/"
+        },
+        {
+          "label": "June’s Pizza on Instagram",
+          "href": "https://www.instagram.com/junes_pizza/"
+        }
+      ]
+    }
+  ]
+},
 ]

@@ -203,6 +203,22 @@ export async function auditBatch(number) {
       await page.getByRole('button', { name: 'Go to the Berkeley Goods page', exact: true }).click()
       await page.locator('.brand-body').waitFor({ state: 'hidden' })
       await icon('Scoop N Chill').waitFor()
+    } else if (number === 116) {
+      await category('Filipino Food', 'Ox & Tiger')
+      await icon('The Lumpia Company').waitFor()
+      await category('Donuts', 'Bun Appétit Donuts')
+      await category('Artists', 'Life of Kaiya')
+      await category('Pizza')
+      await page.getByRole('button', { name: 'Next page', exact: true }).click()
+      await icon('June’s Pizza').waitFor()
+      await category('Sweets')
+      await page.getByRole('button', { name: 'Next page', exact: true }).click()
+      await icon('Bun Appétit Donuts').waitFor()
+      assert.equal(ALL_PLACEMENTS['beasty-filipino-0'], 'b_oxandtiger')
+      assert.equal(ALL_PLACEMENTS['san-ramon-goods2-0'], 'b_theshishgrill')
+      assert.equal(reviewsOf('b_theshishgrill').filter(r => r.src).length, 4)
+      assert.deepEqual(new Set(batch.sourceMessages.flatMap(m => m.attachments)), new Set(batch.artworkDispositions.filter(a => (a.reference ?? a.source).startsWith('IMG_')).map(a => a.reference ?? a.source)))
+      for (const [i, f] of read('research/roster/batch109.json').foodieOrder.slice(0, 24).entries()) assert.equal(ALL_PLACEMENTS['beasty-foodies-' + i], f.brand)
     } else if (number === 115) {
       const onPageTwo = async (name, names) => {
         await category(name)

@@ -1,0 +1,660 @@
+{
+  "cutoff": "2026-11-13T04:53:58.742230-08:00",
+  "listings": [
+    {
+      "slug": "ox-and-tiger",
+      "name": "Ox & Tiger",
+      "label": "Ox & Tiger",
+      "cuisine": "Filipino and Japanese tasting menu",
+      "tagline": "A reservation-only chef’s counter in the Tenderloin, with a seasonal tasting menu from EJ Macayan and Hitomi Wada.",
+      "icon": "ox-and-tiger-v116",
+      "color": "#F6F2E8",
+      "prep": 0,
+      "category": "Filipino Food",
+      "items": [],
+      "site": "https://oxandtiger.co/",
+      "contactOnly": "A reservation-only chef’s counter in the Tenderloin, with a seasonal tasting menu from EJ Macayan and Hitomi Wada.",
+      "address": "552 Jones St, San Francisco, CA 94102",
+      "phone": "(415) 992-3827",
+      "email": "hello@oxandtiger.co",
+      "panels": [
+        {
+          "head": "Tasting menu & reservations",
+          "body": [
+            "The menu changes with the season. The restaurant publishes an example menu and reservation details."
+          ],
+          "links": [
+            {
+              "label": "Ox & Tiger reservations",
+              "href": "https://oxandtiger.co/reservations"
+            },
+            {
+              "label": "Ox & Tiger official links",
+              "href": "https://linktr.ee/oxandtiger"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bun-appetit-donuts",
+      "name": "Bun Appétit Donuts",
+      "label": "Bun Appétit",
+      "cuisine": "Brioche donuts and coffee",
+      "tagline": "Handcrafted brioche donuts and coffee at Artist Walk in Fremont. Flavors rotate, and walk-in items can sell out.",
+      "icon": "bun-appetit-donuts-v116",
+      "color": "#F6F2E8",
+      "prep": 0,
+      "category": "Donuts",
+      "items": [],
+      "site": "https://bunappetitdonuts.com/",
+      "contactOnly": "Handcrafted brioche donuts and coffee at Artist Walk in Fremont. Flavors rotate, and walk-in items can sell out.",
+      "address": "37120 Fremont Blvd, Suite A, Fremont, CA 94536",
+      "phone": "(510) 565-1292",
+      "email": "info@bunappetitdonuts.com",
+      "orderUrl": "https://bunappetitdonuts.square.site/",
+      "panels": [
+        {
+          "head": "Hours & preorders",
+          "body": [
+            "Both official pages list Monday and Tuesday closed and Wednesday 8am–2pm. Thursday and Friday opening times differ across the site. Check the shop before an early visit."
+          ],
+          "links": [
+            {
+              "label": "Official visit information",
+              "href": "https://bunappetitdonuts.com/visit-us/"
+            },
+            {
+              "label": "Current preorder selection",
+              "href": "https://bunappetitdonuts.square.site/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "life-of-kaiya",
+      "name": "Life of Kaiya",
+      "label": "Life of Kaiya",
+      "cuisine": "Visual artist and art prints",
+      "tagline": "Life of Kaiya’s official shop features original art prints, including Paris, Lion Trance and Heart Cornrows.",
+      "icon": "life-of-kaiya-v116",
+      "color": "#F6F2E8",
+      "prep": 0,
+      "category": "Artists",
+      "items": [],
+      "site": "https://life-of-kaiya-shop.fourthwall.com/",
+      "contactOnly": "Life of Kaiya’s official shop features original art prints, including Paris, Lion Trance and Heart Cornrows.",
+      "panels": [
+        {
+          "head": "Prints & artist profile",
+          "body": [
+            "Browse available prints and current prices from the artist."
+          ],
+          "links": [
+            {
+              "label": "Life of Kaiya shop",
+              "href": "https://life-of-kaiya-shop.fourthwall.com/"
+            },
+            {
+              "label": "Life of Kaiya on Instagram",
+              "href": "https://www.instagram.com/lifeofkai.ya/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "junes-pizza",
+      "name": "June’s Pizza",
+      "label": "June’s Pizza",
+      "cuisine": "Wood-fired pizza",
+      "tagline": "Wood-fired pizza in West Oakland. Check the shop for the current pie selection.",
+      "icon": "junes-pizza-v116",
+      "color": "#F6F2E8",
+      "prep": 0,
+      "category": "Pizza",
+      "items": [],
+      "site": "https://junespizza.com/",
+      "contactOnly": "Wood-fired pizza in West Oakland. Check the shop for the current pie selection.",
+      "address": "2408 Mandela Pkwy, Oakland, CA 94607",
+      "email": "info@junespizza.com",
+      "hours": "Daily 4pm–midnight",
+      "panels": [
+        {
+          "head": "Current shop updates",
+          "body": [
+            "The pizzeria posts shop updates on its official site and profile."
+          ],
+          "links": [
+            {
+              "label": "June’s Pizza website",
+              "href": "https://junespizza.com/"
+            },
+            {
+              "label": "June’s Pizza on Instagram",
+              "href": "https://www.instagram.com/junes_pizza/"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "placements": {
+    "san-francisco-goods2-92": "b_oxandtiger",
+    "beasty-filipino-0": "b_oxandtiger",
+    "fremont-goods-14": "b_bunappetitdonuts",
+    "beasty-donuts-8": "b_bunappetitdonuts",
+    "beasty-sweets2-1": "b_bunappetitdonuts",
+    "beasty-artists-8": "b_lifeofkaiya",
+    "oakland-goods2-51": "b_junespizza",
+    "beasty-pizza2-1": "b_junespizza",
+    "beasty-foodies2-319": "b_foodiemeenaaqureshi",
+    "beasty-foodies2-320": "b_foodiemasstache",
+    "beasty-foodies2-321": "b_foodiediorabelle"
+  },
+  "posts": [
+    {
+      "code": "Dfp44knygRv",
+      "slug": "review-Dfp44knygRv",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 37.781,
+      "audio": true,
+      "batch": 116,
+      "source": "https://www.instagram.com/reel/Dfp44knygRv/",
+      "brand": "b_theshishgrill",
+      "by": "thismajourney",
+      "postedBy": "thismajourney",
+      "postedDate": "20261112",
+      "credit": "Review by @thismajourney at Shish Grill, San Ramon.",
+      "disposition": "Business and creator review, plus Watch.",
+      "request": [
+        {
+          "rowId": 252200,
+          "at": "2026-11-12T21:41:04.330836-08:00",
+          "request": "Clip this video plz"
+        }
+      ]
+    },
+    {
+      "code": "DenRkIkN8Ns",
+      "slug": "review-DenRkIkN8Ns",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 24.963,
+      "audio": true,
+      "batch": 116,
+      "source": "https://www.instagram.com/reel/DenRkIkN8Ns/",
+      "brand": "b_theshishgrill",
+      "by": "wthellydanyelly",
+      "postedBy": "wthellydanyelly",
+      "postedDate": "20261017",
+      "credit": "Review by @wthellydanyelly at Shish Grill, San Ramon.",
+      "disposition": "Business and creator review, plus Watch.",
+      "request": [
+        {
+          "rowId": 252202,
+          "at": "2026-11-12T21:42:26.599141-08:00",
+          "request": "Clip this video plz"
+        }
+      ]
+    },
+    {
+      "code": "DeMsQHmqyrc",
+      "slug": "review-DeMsQHmqyrc",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 36.9,
+      "audio": true,
+      "batch": 116,
+      "source": "https://www.instagram.com/reel/DeMsQHmqyrc/",
+      "brand": "b_theshishgrill",
+      "by": "heraldh",
+      "postedBy": "heraldh",
+      "postedDate": "20261007",
+      "credit": "Review by @heraldh at Shish Grill, San Ramon.",
+      "disposition": "Business and creator review, plus Watch.",
+      "request": [
+        {
+          "rowId": 252204,
+          "at": "2026-11-12T21:43:01.374500-08:00",
+          "request": "Clip this video plz"
+        }
+      ]
+    },
+    {
+      "code": "DeAC3wYq2Fp",
+      "slug": "review-DeAC3wYq2Fp",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 19.669,
+      "audio": true,
+      "batch": 116,
+      "source": "https://www.instagram.com/reel/DeAC3wYq2Fp/",
+      "brand": "b_theshishgrill",
+      "by": "meenaaqureshi",
+      "postedBy": "meenaaqureshi",
+      "postedDate": "20261002",
+      "credit": "Review by @meenaaqureshi at Shish Grill, San Ramon.",
+      "disposition": "Business and creator review, plus Watch.",
+      "request": [
+        {
+          "rowId": 252207,
+          "at": "2026-11-12T21:44:00.552740-08:00",
+          "request": "Clip this video plz \nFoodie\nHeavy Hitter"
+        }
+      ],
+      "rank": "Heavy Hitter"
+    },
+    {
+      "code": "DfSzszSyG_4",
+      "slug": "review-DfSzszSyG_4",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 75.211,
+      "audio": true,
+      "batch": 116,
+      "source": "https://www.instagram.com/reel/DfSzszSyG_4/",
+      "brand": "b_junespizza",
+      "by": "masstache_",
+      "postedBy": "masstache_",
+      "postedDate": "20261103",
+      "credit": "Review by @masstache_ at June’s Pizza, Oakland.",
+      "disposition": "Business and creator review, plus Watch.",
+      "request": [
+        {
+          "rowId": 252211,
+          "at": "2026-11-12T21:50:44.960169-08:00",
+          "request": "Clip this video plz \nFoodie \nNewbie"
+        }
+      ],
+      "rank": "Newbie"
+    },
+    {
+      "code": "Dfqa6Q6BLJL",
+      "slug": "review-Dfqa6Q6BLJL",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 38.71,
+      "audio": true,
+      "batch": 116,
+      "source": "https://www.instagram.com/reel/Dfqa6Q6BLJL/",
+      "brand": "b_oxandtiger",
+      "by": "dariananthony_",
+      "postedBy": "dariananthony_",
+      "postedDate": "20261113",
+      "credit": "Review by @dariananthony_ at Ox & Tiger, San Francisco. The “Family Meal” menu shown was seasonal.",
+      "disposition": "Business and creator review, plus Watch.",
+      "request": [
+        {
+          "rowId": 252216,
+          "at": "2026-11-12T22:17:21.903571-08:00",
+          "request": "Clip this video plz"
+        }
+      ]
+    },
+    {
+      "code": "DXNwbJGDewl",
+      "slug": "review-DXNwbJGDewl",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 97.224,
+      "audio": true,
+      "batch": 116,
+      "source": "https://www.instagram.com/reel/DXNwbJGDewl/",
+      "brand": "b_oxandtiger",
+      "by": "imadoniseats",
+      "postedBy": "imadoniseats",
+      "postedDate": "20260417",
+      "credit": "Review by @imadoniseats at Ox & Tiger, San Francisco.",
+      "disposition": "Business and creator review, plus Watch.",
+      "request": [
+        {
+          "rowId": 252218,
+          "at": "2026-11-12T22:17:44.095940-08:00",
+          "request": "Clip this video plz"
+        }
+      ]
+    },
+    {
+      "code": "Dfpv2bEBM3y",
+      "slug": "review-Dfpv2bEBM3y",
+      "startSeconds": 0,
+      "endSeconds": 15,
+      "sourceDuration": 15.49,
+      "audio": true,
+      "batch": 116,
+      "source": "https://www.instagram.com/reel/Dfpv2bEBM3y/",
+      "brand": "b_bunappetitdonuts",
+      "by": "bennyeats.bayarea",
+      "postedBy": "bennyeats.bayarea",
+      "postedDate": "20261112",
+      "credit": "Review by @bennyeats.bayarea at Bun Appétit Donuts, Fremont.",
+      "disposition": "Business and creator review, plus Watch.",
+      "request": [
+        {
+          "rowId": 252227,
+          "at": "2026-11-13T04:52:43.672321-08:00",
+          "request": "Clip this video plz"
+        }
+      ]
+    },
+    {
+      "code": "De9mwbPT5us",
+      "slug": "review-De9mwbPT5us",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 28.307,
+      "audio": true,
+      "batch": 116,
+      "source": "https://www.instagram.com/reel/De9mwbPT5us/",
+      "brand": "b_bunappetitdonuts",
+      "by": "diorabelle",
+      "postedBy": "diorabelle",
+      "postedDate": "20261026",
+      "credit": "Review by @diorabelle at Bun Appétit Donuts, Fremont. Featured flavors are seasonal.",
+      "disposition": "Business and creator review, plus Watch.",
+      "request": [
+        {
+          "rowId": 252230,
+          "at": "2026-11-13T04:53:58.742230-08:00",
+          "request": "Clip this video plz \nFoodie \nHeavy Hitter"
+        }
+      ],
+      "rank": "Heavy Hitter"
+    }
+  ],
+  "updatedIcons": [
+    "/icons/junes-pizza-v116.webp",
+    "/icons/ox-and-tiger-v116.webp",
+    "/icons/bun-appetit-donuts-v116.webp",
+    "/icons/shish-grill-v116.webp",
+    "/icons/foodie-meenaaqureshi-v116.webp",
+    "/icons/foodie-masstache-v116.webp",
+    "/icons/life-of-kaiya-v116.webp",
+    "/icons/foodie-diorabelle-v116.webp"
+  ],
+  "updatedBrands": [
+    "b_theshishgrill"
+  ],
+  "categoryOnly": [
+    "b_lifeofkaiya"
+  ],
+  "artworkDispositions": [
+    {
+      "path": "/icons/junes-pizza-v116.webp",
+      "source": "https://junespizza.com/images/junes_logo.svg",
+      "disposition": "Official matching mark, with enough space to show the full design in the phone tile."
+    },
+    {
+      "path": "/icons/ox-and-tiger-v116.webp",
+      "source": "https://linktr.ee/oxandtiger",
+      "disposition": "Current profile mark from the supplied artwork. Phone borders removed and the full mark retained.",
+      "reference": "IMG_0419.PNG"
+    },
+    {
+      "path": "/icons/bun-appetit-donuts-v116.webp",
+      "source": "https://www.instagram.com/bunappetitdonuts/",
+      "disposition": "Current profile mark from the supplied artwork. Phone borders removed and the full mark retained.",
+      "reference": "IMG_0425.jpeg"
+    },
+    {
+      "path": "/icons/shish-grill-v116.webp",
+      "source": "IMG_0410.png",
+      "disposition": "Supplied round Shish Grill mark with the phone frame removed. Compared with the restaurant’s official mark."
+    },
+    {
+      "path": "/icons/foodie-meenaaqureshi-v116.webp",
+      "source": "IMG_0409.png",
+      "disposition": "Supplied profile portrait, cropped inside the profile circle and cleared of all app controls."
+    },
+    {
+      "path": "/icons/foodie-masstache-v116.webp",
+      "source": "IMG_0411.png",
+      "disposition": "Supplied profile portrait, cropped inside the profile circle and cleared of all app controls."
+    },
+    {
+      "path": "/icons/life-of-kaiya-v116.webp",
+      "source": "IMG_0420.png",
+      "disposition": "Supplied profile portrait, cropped inside the profile circle and cleared of all app controls."
+    },
+    {
+      "path": "/icons/foodie-diorabelle-v116.webp",
+      "source": "IMG_0427.png",
+      "disposition": "Supplied profile portrait, cropped inside the profile circle and cleared of all app controls."
+    },
+    {
+      "source": "IMG_0416.png",
+      "rowId": 252212,
+      "disposition": "Checked against the official site or profile. The supplied screenshot is not published."
+    },
+    {
+      "source": "IMG_0415.png",
+      "rowId": 252212,
+      "disposition": "Checked against the official site or profile. The supplied screenshot is not published."
+    },
+    {
+      "source": "IMG_0426.png",
+      "rowId": 252223,
+      "disposition": "Checked against the official site or profile. The supplied screenshot is not published."
+    },
+    {
+      "source": "IMG_0424.PNG",
+      "rowId": 252223,
+      "disposition": "Checked against the official site or profile. The supplied screenshot is not published."
+    }
+  ],
+  "sourceMessages": [
+    {
+      "rowId": 252199,
+      "at": "2026-11-12T21:41:04.235959-08:00",
+      "text": "https://www.instagram.com/reel/Dfp44knygRv/",
+      "attachments": []
+    },
+    {
+      "rowId": 252200,
+      "at": "2026-11-12T21:41:04.330836-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252201,
+      "at": "2026-11-12T21:42:26.508373-08:00",
+      "text": "https://www.instagram.com/reel/DenRkIkN8Ns/",
+      "attachments": []
+    },
+    {
+      "rowId": 252202,
+      "at": "2026-11-12T21:42:26.599141-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252203,
+      "at": "2026-11-12T21:43:01.267028-08:00",
+      "text": "https://www.instagram.com/reel/DeMsQHmqyrc/",
+      "attachments": []
+    },
+    {
+      "rowId": 252204,
+      "at": "2026-11-12T21:43:01.374500-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252205,
+      "at": "2026-11-12T21:44:00.077520-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0409.png"
+      ]
+    },
+    {
+      "rowId": 252206,
+      "at": "2026-11-12T21:44:00.455528-08:00",
+      "text": "https://www.instagram.com/reel/DeAC3wYq2Fp/",
+      "attachments": []
+    },
+    {
+      "rowId": 252207,
+      "at": "2026-11-12T21:44:00.552740-08:00",
+      "text": "Clip this video plz \nFoodie\nHeavy Hitter",
+      "attachments": []
+    },
+    {
+      "rowId": 252208,
+      "at": "2026-11-12T21:47:13.423387-08:00",
+      "text": "Please update icon pic",
+      "attachments": [
+        "IMG_0410.png"
+      ]
+    },
+    {
+      "rowId": 252209,
+      "at": "2026-11-12T21:50:44.455702-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0411.png"
+      ]
+    },
+    {
+      "rowId": 252210,
+      "at": "2026-11-12T21:50:44.869915-08:00",
+      "text": "https://www.instagram.com/reel/DfSzszSyG_4/",
+      "attachments": []
+    },
+    {
+      "rowId": 252211,
+      "at": "2026-11-12T21:50:44.960169-08:00",
+      "text": "Clip this video plz \nFoodie \nNewbie",
+      "attachments": []
+    },
+    {
+      "rowId": 252212,
+      "at": "2026-11-12T22:17:04.386472-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0416.png",
+        "IMG_0419.PNG",
+        "IMG_0415.png"
+      ]
+    },
+    {
+      "rowId": 252213,
+      "at": "2026-11-12T22:17:04.831632-08:00",
+      "text": "https://linktr.ee/oxandtiger",
+      "attachments": []
+    },
+    {
+      "rowId": 252214,
+      "at": "2026-11-12T22:17:04.979617-08:00",
+      "text": "San Francisco • Eats \nBEASTY • Filipino Food\nNew Category",
+      "attachments": []
+    },
+    {
+      "rowId": 252215,
+      "at": "2026-11-12T22:17:21.822059-08:00",
+      "text": "https://www.instagram.com/reel/Dfqa6Q6BLJL/",
+      "attachments": []
+    },
+    {
+      "rowId": 252216,
+      "at": "2026-11-12T22:17:21.903571-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252217,
+      "at": "2026-11-12T22:17:43.999568-08:00",
+      "text": "https://www.instagram.com/reel/DXNwbJGDewl/",
+      "attachments": []
+    },
+    {
+      "rowId": 252218,
+      "at": "2026-11-12T22:17:44.095940-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252219,
+      "at": "2026-11-12T23:02:22.743065-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0420.png"
+      ]
+    },
+    {
+      "rowId": 252220,
+      "at": "2026-11-12T23:02:23.299040-08:00",
+      "text": "https://www.instagram.com/lifeofkai.ya",
+      "attachments": []
+    },
+    {
+      "rowId": 252221,
+      "at": "2026-11-12T23:02:23.391876-08:00",
+      "text": "BEASTY • Artist",
+      "attachments": []
+    },
+    {
+      "rowId": 252222,
+      "at": "2026-11-12T23:02:42.508180-08:00",
+      "text": "https://life-of-kaiya-shop.fourthwall.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252223,
+      "at": "2026-11-13T04:52:18.863088-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0425.jpeg",
+        "IMG_0426.png",
+        "IMG_0424.PNG"
+      ]
+    },
+    {
+      "rowId": 252224,
+      "at": "2026-11-13T04:52:21.259719-08:00",
+      "text": "https://bunappetitdonuts.com/",
+      "attachments": []
+    },
+    {
+      "rowId": 252225,
+      "at": "2026-11-13T04:52:21.340890-08:00",
+      "text": "Fremont • Sweets \nBEASTY • Donuts",
+      "attachments": []
+    },
+    {
+      "rowId": 252226,
+      "at": "2026-11-13T04:52:43.551091-08:00",
+      "text": "https://www.instagram.com/reel/Dfpv2bEBM3y/",
+      "attachments": []
+    },
+    {
+      "rowId": 252227,
+      "at": "2026-11-13T04:52:43.672321-08:00",
+      "text": "Clip this video plz",
+      "attachments": []
+    },
+    {
+      "rowId": 252228,
+      "at": "2026-11-13T04:53:58.244254-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0427.png"
+      ]
+    },
+    {
+      "rowId": 252229,
+      "at": "2026-11-13T04:53:58.642303-08:00",
+      "text": "https://www.instagram.com/reel/De9mwbPT5us/",
+      "attachments": []
+    },
+    {
+      "rowId": 252230,
+      "at": "2026-11-13T04:53:58.742230-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    }
+  ]
+}
