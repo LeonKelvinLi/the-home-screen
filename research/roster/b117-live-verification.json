@@ -1,0 +1,185 @@
+{
+  "base": "https://beastypages.com",
+  "release": {
+    "commit": "c6b01fb23be530fe88b684f6de38aaf0b94dfa6c",
+    "entry": "/assets/index-LiabW2Li.js",
+    "base": "https://beastypages.com",
+    "verifiedAt": "2026-11-13T17:41:33.955599+00:00",
+    "siteHealthy": true,
+    "goodsHealthy": true,
+    "goodsEntry": "/goods/assets/index-BWiLqGqz.js",
+    "exactIcon": {
+      "path": "/icons/wing-bros-antioch-v117.webp",
+      "sha256": "fd120e447ad6b6139afab098607fde18d2832736e5fd34c3af215d4a76a69642"
+    },
+    "deploy": "dep-dbrkhm142hec73c8pd6g",
+    "finishedAt": "2026-11-13T17:40:51.118601Z"
+  },
+  "intake": {
+    "messages": 9,
+    "cutoff": "2026-11-13T09:24:46.538895-08:00",
+    "attachments": 5,
+    "posts": 1,
+    "held": [
+      {
+        "rows": [
+          252242,
+          252243,
+          252244
+        ],
+        "reason": "The Heavy Hitter clip request repeats the Wing Bros Linktree. The link has only the two ordering pages, and the unlabelled profile screenshot does not establish a creator or source video."
+      }
+    ]
+  },
+  "listings": 1,
+  "keptSeats": 2243,
+  "newSeats": 13,
+  "playedSilentlyPerBrowser": 1,
+  "watchFilesRangeChecked": 877,
+  "iphoneEntryChecks": 16,
+  "completed": {
+    "chrome-live": 0,
+    "webkit-live": 0,
+    "iphone-entry-live": 0,
+    "full-live": 0,
+    "archive-live": 0,
+    "goods-live": 0
+  },
+  "goods": {
+    "checks": [
+      {
+        "engine": "Chrome",
+        "managedResale": true,
+        "sharedAccount": true,
+        "google": true
+      },
+      {
+        "engine": "iPhone WebKit",
+        "managedResale": true,
+        "sharedAccount": true,
+        "google": true
+      }
+    ],
+    "ownerAnonymous": 401,
+    "operatorAnonymous": 401
+  },
+  "archive": {
+    "at": "2026-11-13T17:41:52.418Z",
+    "base": "https://beastypages.com",
+    "entry": "/assets/index-LiabW2Li.js",
+    "chunks": 10,
+    "messages": 7519,
+    "uniqueInstagramIds": 975,
+    "matched": 923,
+    "olderDocumentedExceptions": 49,
+    "withdrawn": [
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "missing": [
+      "DCIg1aNP4IJ",
+      "DbZjR1_hr-6",
+      "DWfXdRxgITo",
+      "C5G5e9buvV3",
+      "DYvfsi_TWcd",
+      "DcZ7IAxsFy6",
+      "C8XcIrmvXRN",
+      "Dc5CExIhdSX",
+      "DdCY9_wP5R_",
+      "Dc_mLl8uA__",
+      "DS8GlMgCf7b",
+      "DbvU5frRAWB",
+      "C40pt1TRanq",
+      "DLi5st0J5kq",
+      "DcSX7lpucp-",
+      "DdMhHiJsnc4",
+      "DAW5kk6yEWz",
+      "Dc4BefxI5b7",
+      "DXuAt06lPp9",
+      "DbzDNfLtM0R",
+      "Dd1qIgYqblI",
+      "DLGn3J7PcbM",
+      "DdeTKlrOHud",
+      "Dd_xLprMkKq",
+      "DeF5qVeAtYu",
+      "DeeZJIDzequ",
+      "DeX8snzS-Ae",
+      "DeNBS2rSB-3",
+      "DeODcFCCMKM",
+      "DeF-p4_hm_4",
+      "Ddxk-6MBHSr",
+      "DekxENESL3E",
+      "DelACp9h8Xf",
+      "DPnNRYQjL2s",
+      "DVPBUgCkpz_",
+      "DbCTb87pVBv",
+      "DcSCtHgRe7d",
+      "DehGqMzqom6",
+      "DWiG3RtgUwU",
+      "DdkhCGgIwOd",
+      "DadnELsBBrx",
+      "DZ53MrKy375",
+      "De5TN1uMOuN",
+      "DdaFOCUs2cx",
+      "Dajl4orSwQW",
+      "DaQgy6ApsEq",
+      "C2Sh1Iwxe7B",
+      "DZQJsLPB1UZ",
+      "Dd-S3otuokt",
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "activeSourcesBatches103Through117": 248,
+    "exactIconHashes": 204,
+    "exactPosterHashes": 248
+  },
+  "assets": [
+    {
+      "path": "/icons/mysteryskool-ai-v117.webp",
+      "sha256": "366885b6d7d8372065acfdf6a4f36eba4c18649f93ee985219604639ee5a66d5",
+      "bytes": 54272
+    },
+    {
+      "path": "/icons/wing-bros-antioch-v117.webp",
+      "sha256": "fd120e447ad6b6139afab098607fde18d2832736e5fd34c3af215d4a76a69642",
+      "bytes": 29212
+    },
+    {
+      "path": "/clips/b117-dfq84mfu_e0.mp4",
+      "sha256": "cd8e9b7cf9c81c51abb4a68a9c853b4ec1a6f16d198482b951b96e778f753ae2",
+      "bytes": 2159831
+    },
+    {
+      "path": "/clips/b117-dfq84mfu_e0-poster.webp",
+      "sha256": "062286cf6c2b34a30461dafa7c770f0f8f9f17b8075507fd69fe31734a7ed783",
+      "bytes": 17842
+    }
+  ],
+  "initialExits": {
+    "chrome-live": 0,
+    "webkit-live": 1,
+    "iphone-entry-live": 0,
+    "full-live": 0,
+    "archive-live": 0,
+    "goods-live": 0
+  },
+  "visibleChrome": {
+    "revision": "c6b01fb",
+    "entry": "/assets/index-LiabW2Li.js",
+    "entryViewport": [
+      393,
+      852
+    ],
+    "greenEnterReachedHomeWithoutReload": true,
+    "wingsCategoryOpenedFromSearch": true,
+    "wingBrosAntiochAddressVisible": true,
+    "narrowViewport": [
+      320,
+      740
+    ],
+    "mysterySkoolClipPlayedMuted": true,
+    "testTabClosedAndViewportRestored": true
+  }
+}
