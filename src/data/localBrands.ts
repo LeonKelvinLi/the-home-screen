@@ -23852,7 +23852,8 @@ export const LOCAL_SEED: LocalSeed[] = [
       "label": "Wing Bros",
       "cuisine": "Wings & seafood boils",
       "color": "#000000",
-      "icon": "wing-bros",
+      "icon": "wing-bros-antioch-v117",
+      "site": "https://linktr.ee/wingbross88",
       "tagline": "Wings in sixteen sauces, tenders, loaded fries and Cajun-style seafood boils on Lone Tree Way in Antioch.",
       "prep": 0,
       "category": "Wings & seafood boils",
@@ -24436,7 +24437,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       "orderUrl": "https://order.toasttab.com/online/wing-bros-8610-brentwood-blvd",
       "siteCta": "Order online",
       "needsSite": true,
-      "siteNote": "Prices are from their Antioch online ordering page; they have no website of their own. Their second shop, at 8610 Brentwood Blvd in Brentwood, has its own ordering page and a shorter menu.",
+      "siteNote": "Prices are from the Antioch ordering page. Confirm the Lone Tree Way address when ordering. Wing Bros also has a Brentwood location with a separate menu.",
       "clip": {
           "src": "/clips/wing-bros.mp4",
           "poster": "/clips/wing-bros-poster.webp",
@@ -93283,5 +93284,28 @@ export const LOCAL_SEED: LocalSeed[] = [
       ]
     }
   ]
+},
+
+  // Batch 117 — Mystery Skool AI.
+{
+  "slug": "mysteryskool-ai",
+  "name": "Mystery Skool AI",
+  "label": "Mystery Skool",
+  "cuisine": "AI animation creator",
+  "tagline": "AI fan films inspired by retro games.",
+  "icon": "mysteryskool-ai-v117",
+  "color": "#191919",
+  "prep": 0,
+  "category": "AI",
+  "items": [],
+  "site": "https://www.instagram.com/mysteryskool.ai/",
+  "contactOnly": "Mystery Skool AI shares unofficial fan films inspired by retro games. The featured clip depicts Sodom from Final Fight in a fictional scene.",
+  "clip": {
+    "src": "/clips/b117-dfq84mfu_e0.mp4",
+    "poster": "/clips/b117-dfq84mfu_e0-poster.webp",
+    "href": "https://www.instagram.com/reel/Dfq84mFu_E0/",
+    "credit": "AI fan film featuring Sodom from Final Fight. Posted by @mysteryskool.ai.",
+    "platform": "Instagram"
+  }
 },
 ]

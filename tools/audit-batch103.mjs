@@ -203,6 +203,18 @@ export async function auditBatch(number) {
       await page.getByRole('button', { name: 'Go to the Berkeley Goods page', exact: true }).click()
       await page.locator('.brand-body').waitFor({ state: 'hidden' })
       await icon('Scoop N Chill').waitFor()
+    } else if (number === 117) {
+      await category('Wings', 'Wing Bros')
+      await icon("Tony's Style").waitFor()
+      await category('Seafood/Crab Boil', 'Wing Bros')
+      await category('AI', 'Mystery Skool AI')
+      assert.equal(ALL_PLACEMENTS['beasty-wings-0'], 'b_wingbros')
+      assert.equal(ALL_PLACEMENTS['antioch-goods-8'], 'b_wingbros')
+      assert.equal(ALL_PLACEMENTS['beasty-seafood-7'], 'b_wingbros')
+      assert.equal(brandById('b_wingbros').orderUrl, 'https://order.toasttab.com/online/wing-bros-8610-brentwood-blvd')
+      assert.equal(reviewsOf('b_wingbros').filter(r => r.src).length, 2)
+      assert.equal(batch.held.length, 1)
+      assert.deepEqual(new Set(batch.sourceMessages.flatMap(m => m.attachments)), new Set(batch.artworkDispositions.map(a => a.source)))
     } else if (number === 116) {
       await category('Filipino Food', 'Ox & Tiger')
       await icon('The Lumpia Company').waitFor()

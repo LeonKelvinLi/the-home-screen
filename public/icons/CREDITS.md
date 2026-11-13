@@ -799,3 +799,7 @@ Hee Jin’s supplied portrait is held pending permission under her profile’s e
 | `foodie-masstache-v116.webp` | IMG_0411.png | Supplied profile portrait, cropped inside the profile circle and cleared of all app controls. |
 | `life-of-kaiya-v116.webp` | IMG_0420.png | Supplied profile portrait, cropped inside the profile circle and cleared of all app controls. |
 | `foodie-diorabelle-v116.webp` | IMG_0427.png | Supplied profile portrait, cropped inside the profile circle and cleared of all app controls. |
+
+<!-- Batch 117 — creator portrait and Antioch mark. -->
+| `mysteryskool-ai-v117.webp` | IMG_0437.PNG | Original creator profile artwork cropped inside the image circle. Phone controls excluded. |
+| `wing-bros-antioch-v117.webp` | IMG_0440.PNG | Supplied Antioch logo. Preserved all lettering and the full outer ring in the phone tile. |

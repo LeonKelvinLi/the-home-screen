@@ -2731,4 +2731,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies2-319': 'b_foodiemeenaaqureshi',
   'beasty-foodies2-320': 'b_foodiemasstache',
   'beasty-foodies2-321': 'b_foodiediorabelle',
+
+  // Batch 117 — new creator and category anchor.
+  'beasty-ai-9': 'b_mysteryskoolai',
+  'beasty-wings-0': 'b_wingbros',
 }

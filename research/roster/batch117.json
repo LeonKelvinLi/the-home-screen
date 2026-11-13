@@ -1,0 +1,163 @@
+{
+  "cutoff": "2026-11-13T09:24:46.538895-08:00",
+  "listings": [
+    {
+      "slug": "mysteryskool-ai",
+      "name": "Mystery Skool AI",
+      "label": "Mystery Skool",
+      "cuisine": "AI animation creator",
+      "tagline": "AI fan films inspired by retro games.",
+      "icon": "mysteryskool-ai-v117",
+      "color": "#191919",
+      "prep": 0,
+      "category": "AI",
+      "items": [],
+      "site": "https://www.instagram.com/mysteryskool.ai/",
+      "contactOnly": "Mystery Skool AI shares unofficial fan films inspired by retro games. The featured clip depicts Sodom from Final Fight in a fictional scene.",
+      "clip": {
+        "src": "/clips/b117-dfq84mfu_e0.mp4",
+        "poster": "/clips/b117-dfq84mfu_e0-poster.webp",
+        "href": "https://www.instagram.com/reel/Dfq84mFu_E0/",
+        "credit": "AI fan film featuring Sodom from Final Fight. Posted by @mysteryskool.ai.",
+        "platform": "Instagram"
+      }
+    }
+  ],
+  "placements": {
+    "beasty-ai-9": "b_mysteryskoolai",
+    "beasty-wings-0": "b_wingbros"
+  },
+  "posts": [
+    {
+      "code": "Dfq84mFu_E0",
+      "slug": "b117-dfq84mfu_e0",
+      "startSeconds": 3,
+      "endSeconds": 18,
+      "sourceDuration": 26.914,
+      "audio": true,
+      "batch": 117,
+      "source": "https://www.instagram.com/reel/Dfq84mFu_E0/",
+      "brand": "b_mysteryskoolai",
+      "by": "mysteryskool.ai",
+      "postedBy": "mysteryskool.ai",
+      "postedDate": "20261113",
+      "credit": "AI fan film featuring Sodom from Final Fight. Posted by @mysteryskool.ai.",
+      "disposition": "Creator page and Watch.",
+      "request": [
+        {
+          "rowId": 252236,
+          "at": "2026-11-13T08:11:51.365146-08:00",
+          "request": "Clip this video plz \nBEASTY • Ai"
+        }
+      ]
+    }
+  ],
+  "updatedIcons": [
+    "/icons/mysteryskool-ai-v117.webp",
+    "/icons/wing-bros-antioch-v117.webp"
+  ],
+  "updatedBrands": [
+    "b_wingbros"
+  ],
+  "categoryOnly": [
+    "b_mysteryskoolai"
+  ],
+  "artworkDispositions": [
+    {
+      "source": "IMG_0437.PNG",
+      "path": "/icons/mysteryskool-ai-v117.webp",
+      "disposition": "Original creator profile artwork cropped inside the image circle. Phone controls excluded."
+    },
+    {
+      "source": "IMG_0440.PNG",
+      "path": "/icons/wing-bros-antioch-v117.webp",
+      "disposition": "Supplied Antioch logo. Preserved all lettering and the full outer ring in the phone tile."
+    },
+    {
+      "source": "IMG_0441.PNG",
+      "disposition": "Confirms the official profile and the Linktree for Antioch and Brentwood."
+    },
+    {
+      "source": "IMG_0442.PNG",
+      "disposition": "Confirms the shared business email. The Antioch page uses the branch number verified on the linked Toast menu."
+    },
+    {
+      "source": "IMG_0443.PNG",
+      "disposition": "Held until the original reel or creator account identifies the subject."
+    }
+  ],
+  "sourceMessages": [
+    {
+      "rowId": 252234,
+      "at": "2026-11-13T08:11:50.759001-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0437.PNG"
+      ]
+    },
+    {
+      "rowId": 252235,
+      "at": "2026-11-13T08:11:51.272154-08:00",
+      "text": "https://www.instagram.com/reel/Dfq84mFu_E0/",
+      "attachments": []
+    },
+    {
+      "rowId": 252236,
+      "at": "2026-11-13T08:11:51.365146-08:00",
+      "text": "Clip this video plz \nBEASTY • Ai",
+      "attachments": []
+    },
+    {
+      "rowId": 252238,
+      "at": "2026-11-13T09:23:39.371776-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0440.PNG",
+        "IMG_0442.PNG",
+        "IMG_0441.PNG"
+      ]
+    },
+    {
+      "rowId": 252239,
+      "at": "2026-11-13T09:23:40.509487-08:00",
+      "text": "https://linktr.ee/wingbross88",
+      "attachments": []
+    },
+    {
+      "rowId": 252240,
+      "at": "2026-11-13T09:23:40.581808-08:00",
+      "text": "Antioch  • Eats \nBEASTY • Seafood/Crab boil\nBEASTY • Wings\nNew Category",
+      "attachments": []
+    },
+    {
+      "rowId": 252242,
+      "at": "2026-11-13T09:24:45.931479-08:00",
+      "text": "",
+      "attachments": [
+        "IMG_0443.PNG"
+      ]
+    },
+    {
+      "rowId": 252243,
+      "at": "2026-11-13T09:24:46.451966-08:00",
+      "text": "https://linktr.ee/wingbross88",
+      "attachments": []
+    },
+    {
+      "rowId": 252244,
+      "at": "2026-11-13T09:24:46.538895-08:00",
+      "text": "Clip this video plz \nFoodie \nHeavy Hitter",
+      "attachments": []
+    }
+  ],
+  "held": [
+    {
+      "rows": [
+        252242,
+        252243,
+        252244
+      ],
+      "reason": "The Heavy Hitter clip request repeats the Wing Bros Linktree. The link has only the two ordering pages, and the unlabelled profile screenshot does not establish a creator or source video."
+    }
+  ]
+}

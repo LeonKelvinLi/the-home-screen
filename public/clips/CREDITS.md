@@ -1137,3 +1137,6 @@ Bibim original links DfGZWFXpfX8, DfDFR78P2Hi, DfCmQ2EpPsr and DfALmKdtaig remai
 | `review-DXNwbJGDewl.mp4` | [Original post](https://www.instagram.com/reel/DXNwbJGDewl/) | Review by @imadoniseats at Ox & Tiger, San Francisco. |
 | `review-Dfpv2bEBM3y.mp4` | [Original post](https://www.instagram.com/reel/Dfpv2bEBM3y/) | Review by @bennyeats.bayarea at Bun Appétit Donuts, Fremont. |
 | `review-De9mwbPT5us.mp4` | [Original post](https://www.instagram.com/reel/De9mwbPT5us/) | Review by @diorabelle at Bun Appétit Donuts, Fremont. Featured flavors are seasonal. |
+
+<!-- Batch 117 — Mystery Skool AI. -->
+| `b117-dfq84mfu_e0.mp4` | [Original post](https://www.instagram.com/reel/Dfq84mFu_E0/) | AI fan film featuring Sodom from Final Fight. Posted by @mysteryskool.ai. |
