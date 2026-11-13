@@ -1,0 +1,284 @@
+{
+  "base": "https://beastypages.com",
+  "release": {
+    "commit": "20005a6019e5ac534a4cd05e9bc473a9a7ba2704",
+    "entry": "/assets/index-BWVQVSaL.js",
+    "base": "https://beastypages.com",
+    "verifiedAt": "2026-11-13T15:52:02.415757+00:00",
+    "siteHealthy": true,
+    "goodsHealthy": true,
+    "goodsEntry": "/goods/assets/index-BWiLqGqz.js",
+    "exactIcon": {
+      "path": "/icons/ox-and-tiger-v116.webp",
+      "sha256": "6f4d16ea4525a153f6364647112a0b6b0aa9917b7fbb54139d71977db497ea8e"
+    },
+    "deploy": "dep-dbriutojo6nc73f823eg",
+    "finishedAt": "2026-11-13T15:51:50.758414Z"
+  },
+  "intake": {
+    "messages": 32,
+    "cutoff": "2026-11-13T04:53:58.742230-08:00",
+    "attachments": 11,
+    "posts": 9
+  },
+  "listings": 4,
+  "keptSeats": 2214,
+  "newSeats": 29,
+  "playedSilentlyPerBrowser": 9,
+  "watchFilesRangeChecked": 876,
+  "iphoneEntryChecks": 16,
+  "completed": {
+    "chrome-live": 0,
+    "webkit-live": 0,
+    "iphone-entry-live": 0,
+    "full-live": 0,
+    "archive-live": 0,
+    "goods-live": 0
+  },
+  "webkitInitialExit": 1,
+  "goods": {
+    "checks": [
+      {
+        "engine": "Chrome",
+        "home": true,
+        "managedResale": true,
+        "returnTo": true,
+        "sharedAccount": true,
+        "google": true
+      },
+      {
+        "engine": "iPhone WebKit",
+        "home": true,
+        "managedResale": true,
+        "returnTo": true,
+        "sharedAccount": true,
+        "google": true
+      }
+    ],
+    "ownerAnonymous": 401,
+    "operatorAnonymous": 401
+  },
+  "archive": {
+    "at": "2026-11-13T15:52:13.487Z",
+    "base": "https://beastypages.com",
+    "entry": "/assets/index-BWVQVSaL.js",
+    "chunks": 10,
+    "messages": 7510,
+    "uniqueInstagramIds": 974,
+    "matched": 922,
+    "olderDocumentedExceptions": 49,
+    "withdrawn": [
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "missing": [
+      "DCIg1aNP4IJ",
+      "DbZjR1_hr-6",
+      "DWfXdRxgITo",
+      "C5G5e9buvV3",
+      "DYvfsi_TWcd",
+      "DcZ7IAxsFy6",
+      "C8XcIrmvXRN",
+      "Dc5CExIhdSX",
+      "DdCY9_wP5R_",
+      "Dc_mLl8uA__",
+      "DS8GlMgCf7b",
+      "DbvU5frRAWB",
+      "C40pt1TRanq",
+      "DLi5st0J5kq",
+      "DcSX7lpucp-",
+      "DdMhHiJsnc4",
+      "DAW5kk6yEWz",
+      "Dc4BefxI5b7",
+      "DXuAt06lPp9",
+      "DbzDNfLtM0R",
+      "Dd1qIgYqblI",
+      "DLGn3J7PcbM",
+      "DdeTKlrOHud",
+      "Dd_xLprMkKq",
+      "DeF5qVeAtYu",
+      "DeeZJIDzequ",
+      "DeX8snzS-Ae",
+      "DeNBS2rSB-3",
+      "DeODcFCCMKM",
+      "DeF-p4_hm_4",
+      "Ddxk-6MBHSr",
+      "DekxENESL3E",
+      "DelACp9h8Xf",
+      "DPnNRYQjL2s",
+      "DVPBUgCkpz_",
+      "DbCTb87pVBv",
+      "DcSCtHgRe7d",
+      "DehGqMzqom6",
+      "DWiG3RtgUwU",
+      "DdkhCGgIwOd",
+      "DadnELsBBrx",
+      "DZ53MrKy375",
+      "De5TN1uMOuN",
+      "DdaFOCUs2cx",
+      "Dajl4orSwQW",
+      "DaQgy6ApsEq",
+      "C2Sh1Iwxe7B",
+      "DZQJsLPB1UZ",
+      "Dd-S3otuokt",
+      "DdAZclrNJu-",
+      "DTnoBTMES1u",
+      "Dfn-jWPNq8o"
+    ],
+    "activeSourcesBatches103Through116": 247,
+    "exactIconHashes": 202,
+    "exactPosterHashes": 247
+  },
+  "assets": [
+    {
+      "path": "/icons/junes-pizza-v116.webp",
+      "sha256": "da387216e888d5c26b2a26f92b69847f6fb8589e9f4066aa23c257acc341845b",
+      "bytes": 10858
+    },
+    {
+      "path": "/icons/ox-and-tiger-v116.webp",
+      "sha256": "6f4d16ea4525a153f6364647112a0b6b0aa9917b7fbb54139d71977db497ea8e",
+      "bytes": 13202
+    },
+    {
+      "path": "/icons/bun-appetit-donuts-v116.webp",
+      "sha256": "a502aa6339ff57aa5833d5efd9a1cd02ed11cd7d72269f205682729c53b4e786",
+      "bytes": 20662
+    },
+    {
+      "path": "/icons/shish-grill-v116.webp",
+      "sha256": "2d0069b9802dd7b7c153825407003fe82cb6a74fe6dbc7848168ee3745c44df1",
+      "bytes": 40708
+    },
+    {
+      "path": "/icons/foodie-meenaaqureshi-v116.webp",
+      "sha256": "4472f4bc2b8407cfc40810ef6c59880ef24e5c3d18c9f46daed726f5f397599e",
+      "bytes": 41374
+    },
+    {
+      "path": "/icons/foodie-masstache-v116.webp",
+      "sha256": "9f8fe91918e9e25509097156201a4e51137cd77e30f78c20c59e9387b3e15563",
+      "bytes": 40110
+    },
+    {
+      "path": "/icons/life-of-kaiya-v116.webp",
+      "sha256": "452119c1bf43075cbda97cb2cf5e07f894c6871d3bfebac6bc4bfe5bcdc33fda",
+      "bytes": 51228
+    },
+    {
+      "path": "/icons/foodie-diorabelle-v116.webp",
+      "sha256": "c53bd6adb51848db96129489aea196ad9e3ec881ba504f0a47001401ac263ae8",
+      "bytes": 50310
+    },
+    {
+      "path": "/clips/review-Dfp44knygRv.mp4",
+      "sha256": "59fdf854638945d98f57d939268ed6e98551dd91946a815dea6596d6fa097316",
+      "bytes": 2062944
+    },
+    {
+      "path": "/clips/review-Dfp44knygRv-poster.webp",
+      "sha256": "96609cf1a837d6f4060865f0655e003bc1ff6e3fe0e38b3b43b5935a3d4e9734",
+      "bytes": 52988
+    },
+    {
+      "path": "/clips/review-DenRkIkN8Ns.mp4",
+      "sha256": "6a80fa1a11b983864fd67cfdb77131ed6b42de6d3d9d8e2c192e62951a1f2101",
+      "bytes": 2813682
+    },
+    {
+      "path": "/clips/review-DenRkIkN8Ns-poster.webp",
+      "sha256": "255c8ccad7189ae93ffe4f813b168b744c7a1f2c4044bd196c0205d3d817f6ba",
+      "bytes": 71632
+    },
+    {
+      "path": "/clips/review-DeMsQHmqyrc.mp4",
+      "sha256": "70a14deea96dbbbb0a2b45d127fa6a39d557788b6149b91995d685cf553a7a4c",
+      "bytes": 3359596
+    },
+    {
+      "path": "/clips/review-DeMsQHmqyrc-poster.webp",
+      "sha256": "4d826f69ef0cd9e50febfaef36c5c2558ba234f36486ba7ef5d3a53e9de99ce1",
+      "bytes": 73868
+    },
+    {
+      "path": "/clips/review-DeAC3wYq2Fp.mp4",
+      "sha256": "687ef73979abaad62c63339089a5a1d5f3c021125403e24565a19e28d2c65eca",
+      "bytes": 2297941
+    },
+    {
+      "path": "/clips/review-DeAC3wYq2Fp-poster.webp",
+      "sha256": "5b058ad19fc863c01f6192bce8da8fb550520e8add9e674a20716e798ba58bbe",
+      "bytes": 43038
+    },
+    {
+      "path": "/clips/review-DfSzszSyG_4.mp4",
+      "sha256": "2076afb8015ec12f65225ab50d67bf914e780f0b5c526f9a0f4d5171d79de513",
+      "bytes": 2042710
+    },
+    {
+      "path": "/clips/review-DfSzszSyG_4-poster.webp",
+      "sha256": "caf3913dbc6dc597d7d09894bb8ff9e824d203f71a7a853fe923729ff2ef1f47",
+      "bytes": 55624
+    },
+    {
+      "path": "/clips/review-Dfqa6Q6BLJL.mp4",
+      "sha256": "081b16644d1a5d22d696e68f73148069212d2de495ab5960c8949da1574baee3",
+      "bytes": 2069260
+    },
+    {
+      "path": "/clips/review-Dfqa6Q6BLJL-poster.webp",
+      "sha256": "24011400d71938126214dd13283a7888658bb04595607d015c47e4d796a0ad02",
+      "bytes": 63866
+    },
+    {
+      "path": "/clips/review-DXNwbJGDewl.mp4",
+      "sha256": "5c659cd313538664736744a793568be1debb2fea2b51fb6890a7fdb7c6408a2c",
+      "bytes": 2865431
+    },
+    {
+      "path": "/clips/review-DXNwbJGDewl-poster.webp",
+      "sha256": "b586bb86f6060ced4077c2cce7ce3e9e13ef31197fb88f9eedafa53c6299b831",
+      "bytes": 35702
+    },
+    {
+      "path": "/clips/review-Dfpv2bEBM3y.mp4",
+      "sha256": "6079e3b4d9d0ed82c686633cf6748d2cf9a2291f89d6ffb258be91238ad91825",
+      "bytes": 2533467
+    },
+    {
+      "path": "/clips/review-Dfpv2bEBM3y-poster.webp",
+      "sha256": "f140c59d8321f892784f75af6f900fc091e80efa26199abd264b3bcceba29ec8",
+      "bytes": 45220
+    },
+    {
+      "path": "/clips/review-De9mwbPT5us.mp4",
+      "sha256": "3d5b0a681611851896d66d4e9ebfa80a49804c1c8398f68b9238442f42ff1c03",
+      "bytes": 2346408
+    },
+    {
+      "path": "/clips/review-De9mwbPT5us-poster.webp",
+      "sha256": "a541bb4503858f2f3c1218c5d41d4bd56f0a1f2acf91455ad9d5e0e0f9764de9",
+      "bytes": 40286
+    }
+  ],
+  "visibleChrome": {
+    "revision": "20005a6",
+    "entry": "/assets/index-BWVQVSaL.js",
+    "entryViewport": [
+      393,
+      852
+    ],
+    "greenEnterReachedHomeWithoutReload": true,
+    "filipinoCategoryOpenedFromSearch": true,
+    "oxAndTigerClipPlayedMuted": true,
+    "narrowViewport": [
+      320,
+      740
+    ],
+    "bunAppetitPageFit": true,
+    "bunAppetitLogoZoomOpened": true,
+    "bunAppetitPreorderLinkVerified": true,
+    "testTabClosedAndViewportRestored": true
+  }
+}

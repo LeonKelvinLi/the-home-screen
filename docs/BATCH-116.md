@@ -8,4 +8,12 @@ The [intake ledger](../research/roster/batch116.json) accounts for 32 messages t
 - Added June’s Pizza to Oakland and the Pizza overflow to give the requested review its own business page.
 - Refreshed Shish Grill’s mark and added four reviews to its existing San Ramon page. Added three creator profiles with supplied artwork. Each excerpt retains its original creator and post link.
 
-Live verification is recorded here after deployment.
+## Live verification
+
+Render served `20005a6` after deploying `dep-dbriutojo6nc73f823eg`. Both BEASTY Pages and hosted Goods health checks passed.
+
+- Chrome and iPhone WebKit passed the four listing checks and played all nine clips muted. The iPhone entry audit passed all 16 checks. WebKit passed after a transient asset response and navigation timeout on earlier attempts.
+- The full historical site audit passed. The archive matched 922 of 974 Instagram sources. The other 52 are previously documented exceptions or withdrawals. All 876 Watch files returned valid MP4 byte ranges.
+- Matched all 26 new or updated assets to the files on production. Goods managed resale and shared sign-in rendered in both browsers. Both private resale routes returned 401 when signed out.
+- The catalog kept all 2,214 existing placements and added 29. Both new domains from Glenn’s thread are represented.
+- [Release evidence and asset hashes](../research/roster/b116-live-verification.json)
